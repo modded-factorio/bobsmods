@@ -192,7 +192,7 @@ function bobmods.lib.tech.add_science_packs(technology, science_packs)
   then
     for i, science_pack in pairs(science_packs) do
       if type(science_pack) == "table" and type(science_pack[1]) == "string" and data.raw.tool[science_pack[1]] and type(science_pack[2]) == "number" then
-        bobmods.lib.recipe.add_science_pack(technology, science_pack[1], science_pack[2])
+        bobmods.lib.tech.add_science_pack(technology, science_pack[1], science_pack[2])
       end
     end
   else
