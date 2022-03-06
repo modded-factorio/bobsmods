@@ -1,0 +1,51 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - Icon overhaul.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Removed Alien Artifact cost from Exoskeleton MK2.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Bugfixes:
+    - Fixed icon mipmap log error messages
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Added chemical-science-pack prerequisite to Exoskeleton technology.
+    - Added zinc processing prerequisite to personal roboport 2 technology.
+    - Added Advanced Electronics 2 prerequisites to personal roboport 3.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+  Bugfixes:
+    - Added color_lookup to Nightvision 2 and 3.
+    - Fixed icons (nightvision, exoskeleton)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 19. 05. 2019
+  Changes:
+    - Recoloured the lights on robot charge pads 2 and 3.
+  Bugfixes:
+    - Fixed that Roboports weren't all supposed to cost steel plates
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 09. 05. 2019
+  Bugfixes:
+    - Added missing beams.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 04. 05. 2019
+  Changes:
+    - Initial release.

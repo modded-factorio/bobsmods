@@ -1,0 +1,9 @@
+{
+  "entity":
+  [
+    ["blue-inserter", "fast-inserter"],
+    ["blue-filter-inserter", "filter-inserter"],
+    ["blue-stack-inserter", "stack-inserter"],
+    ["blue-stack-filter-inserter", "stack-filter-inserter"]
+  ]
+}

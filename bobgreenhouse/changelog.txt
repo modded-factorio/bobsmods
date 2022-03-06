@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 17. 08. 2020
+  Info:
+    - Updated to 1.0 with no changes
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 16. 04. 2020
+  Changes:
+    - Added wood pellets as a fuel item
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 22. 06. 2019
+  Changes:
+    - Added allow_decomposition = false to greenhouse cycle recipes to get rid of strange added ingredients to total raw.
+    - updated greenhouse technology icon.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17 without any changes
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.16
+  Changes:
+    - icon_size tags added.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 15. 05. 2017
+  Changes:
+    - New recipe override for Fertilizer. Nitric Acid + Ammonia if both fluids exist. Falls back on old recipes if they don't.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 02. 05. 2017
+  Changes:
+    - Added fuel category to seedlings
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 29. 04. 2017
+  Info:
+    - Updated to work with Factorio 0.15
+  Changes:
+    - multiplied fluids by 10
+    - made the recipes a little better to add an expensive version that wasn't going backwards.

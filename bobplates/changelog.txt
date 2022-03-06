@@ -1,0 +1,449 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 09. 04. 2021
+  Changes:
+    - Updated nuclear fuel and empty fuel cell icons to size 64
+    - Added locale entry for Crude oil processing
+    - Added Sulfuric-acid-3 and Sulfur-3 recipes to productivity filter list.
+  Features:
+    - Added new item: Empty nuclear fuel cell, With Nuclear overhaul turned on. Costs lead and steel, fuel cells cost these instead of lead plates.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - Plutonium existed regardless of thorium being present, but the Bobingabout process was only available if thorium was present. Now the Bobingabout process is always present too.
+  Features:
+    - Added speed multipliers to nuclear fuels. (Useful for any possible nuclear powered vehicles)
+    - Added Plutonium nucleosynthesis if nuclear overhaul is turned on. It's an annoying recipe that should help you get some plutonium without the need to use nuclear fuel.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 26. 11. 2020
+  Changes:
+    - Renamed alloy-processing-1 technoloy to alloy-processing internally.
+  Features:
+    - Added Expensive electrolysis option, this pushes the electricity cost to make hydrogen from electrolysis above what you gain from burning it for power.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Copy sounds of Chemical plant onto Electrolyser
+  Bugfixes:
+    - Removed the Chemical science pack prerequisite from gem polishing.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 20. 08. 2020
+  Bugfixes:
+    - Fixed Chemical furnace recipe error.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 17. 08. 2020
+  Bugfixes:
+    - Fixed Deuterium fuel cell 2 errors.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Features:
+    - Added a Deuterium Fuel cell 2 that costs extra ingredients and lasts longer.
+  Bugfixes:
+    - Fixed some replace errors in entity-recipe-updates
+    - Fixed battry recipe tint.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.9
+Date: 29. 06. 2020
+  Changes:
+    - Updated electric furnace graphics and colours.
+    - Internally renamed the furnaces to a standard naming scheme.
+    - Changed distillery from type assembling-machine (pick a recipe) to furnace (auto recipe)
+    - Updated my oil processing recipe icon
+    - Added Bobingabout process to productivity filters
+---------------------------------------------------------------------------------------------------
+Version: 0.18.8
+Date: 23. 05. 2020
+  Changes:
+    - Updated Salt-water-electrolysis icon to size 64
+    - Renamed technology Alloy processing 2 to Steel mixing furnace
+    - Moved Chemical steel furnace to it's own technology
+    - Renamed Chemical processing 3 to Electric chemical furnace
+    - Moved enriched-fuel-from-liquid-fuel to Advanced oil processing
+    - Removed the chemical science pack requirement from gem processing 2.
+    - Changed the Chemical and Mixing stone furnaces to cost stone instead of stone bricks (to match the normal stone furnace)
+    - Reduce cost of Electric furnaces to match that of the base game.
+  Features:
+    - Added recipes to convert between Chemical <-> Normal <-> Mixing furnaces of stone, steel and electric types.
+  Bugfixes:
+    - Fixed solid-fuel-from-light-oil technology migration
+    - Fixed solid-fuel-from-heavy-oil technology migration
+    - Fixed Locale entry typo for Electrolysis description.
+    - Fixed smoke on Stone Chemical furnace, Stone mixing furnace and Steel chemical furnace.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.7
+Date: 16. 04. 2020
+  Changes:
+    - Added a wood to coal recipe.
+  Balancing:
+    - removed production science pack from nuclear fuel reprocessing and plutonium fuel cell technologies
+    - Resin from oil now gives 2 per run. (it was actually cheaper to make it from wood when you consider the synthetic wood recipe)
+  Bugfixes:
+    - Fixed icon mipmap log error messages
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 08. 04. 2020
+  Changes:
+    - Changed the void fluid recipe definitions to use the new function.
+    - Needs library version 0.18.4
+    - Removed MK from the number on compressor and pump, Renamed Waterbore "Pump" to Barrelling pump, to be less confusing about what it does.
+  Features:
+    - Added bobmods.plates.make_void_fluid_recipe(name, amount, polution) which takes a fluid's name, the amount to vent per cycle, and the polution multiplier.
+    - Also added bobmods.plates.get_void_icon(name) used by the above function, which places a reduced sized icon of a fluid on top of a the void icon.
+  Balancing:
+    - lithium-water-electrolysis gives double the hydrogen (Balance)
+    - Changed the amounts that some gasses vent by slightly (increased most of my gasses to 25, Oxygen was already 25, hydrogen and deuterium left at 20 and reduced steam and petroleum-gas to 10.)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 26. 03. 2020
+  Changes:
+    - Added uranium-processing prerequisite to deuterium-fuel-reprocessing (Centrifuge is required to recycle a fuel cell)
+    - Added an alternate icon for deuterium-fuel-reprocessing (Recipe and technology) with the nuclear update on, that shows a Fusion catalyst instead of Lithium
+    - Added icons to Uranium and Thorium fuel reprocessing icons (Recipe and technology) when secondary products can be obtained regularly.
+    - Changed Bobingabout Enrichement Process prerequisite from Thorium fuel reprocessing to uranium fuel reprocessing when nuclear update on (plutonium required, and where to get it was changed to uranium)
+    - Nuclear fuel reprocessing recipes doubled (time, ingredients and results) to give 1 fusion catalyst instead of a 50% chance.
+    - With the nuclear update turned on, Plutonium based fuels now have their own research with prerequisites of uranium/nuclear fuel reprocessing(Because it's the entry point of Plutonium) and Thorium processing.
+    - With the nuclear update turned on, Nuclear fuel reprocessing is included in Module productivity filters (you can use them), with catalyst filtering, to give fewer products on the bonus cycles. (Needs library 0.18.3 for the bonus cycles to give the correct results)
+  Bugfixes:
+    - Added missing plutonium-fuel-cell productivity limitation filter.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 25. 03. 2020
+  Changes:
+    - Reduced Speed and energy consumption of Electrolyser slightly from 0.8 and 450kW to 0.75 and 420kW.
+    - Added New Electrolyser graphics by kirazy.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 17. 03. 2020
+  Changes:
+    - My batteries are now built in a chemical plant.
+    - Added colours to the battery crafting recipes.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 12. 03. 2020
+  Changes:
+    - Added logistic-science-pack prerequisite to Electrolysis 2 and Lithium processing.
+    - Added chemical-science-pack prerequisite to Titanium processing, gem processing 2 and ceramics
+    - Added production-science-pack prerequisite to Advanced Electronics 3, Nitinol and tungsten alloy processing
+    - Added nickel-processing and chemical-science-pack prerequisites to Tungsten processing
+    - Added Electronics prerequisite to Water bore and Air compressor technology if Electronics mod is installed.
+    - Added Aluminium processing prerequisite to Fluid Handling 2
+    - Added logistic-science-pack and steel-processing prerequisites to Gas Canisters research
+    - Added Automation 2 prerequisite to Gem Processing 1
+    - Added sulfur-processing prerequisite to Cobalt Processing
+    - Added science pack prerequisites to Battery 2 and 3 research.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 28. 01. 2020
+  Bugfixes:
+    - Fixed water bore technology icons.
+  Changes:
+    - Improved description for the Nuclear Update option.
+  Balancing:
+    - Balanced alien fluid recipes.
+  Features:
+    - Added a fuel value of 2.6MJ to Alien Fire Fluid
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Changed deuterium-fuel-reprocessing to give 5 lead plates instead of 3 to 7.
+    - New Nuclear overhaul turned on by default.
+  Balancing:
+    - Electrolysis 2 no longer requires 2 automation science packs.
+    - Increased health of Chemical/Mixing furnaces to match base game versions
+  Bugfixes:
+    - Changed Plutonium item to always exist (not conditional) as this caused an error if thorium didn't exist.
+    - Fixed Icons (Crude oil processing, sulfuric acid, water)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.13
+Date: 28. 10. 2019
+  Changes:
+    - Halved the fuel value of Deuterium, the old value was based on pre-0.17 calculations.
+  Features:
+    - Added a nuclear overhaul. It's optional, off by default. It makes plutonium harder to get, adds a plutonium fuel cell for the uranium reactor, and adds fusion catalyst needed to make the deuterium fuel cell, and changes most used-up fuel cell results and fuel cell's recipes and fuel values.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.12
+Date: 13. 10. 2019
+  Changes:
+    - Changed crude oil processing recipe to have oil input on only one pipe, like new basic oil processing.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.11
+Date: 08. 08. 2019
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+    - Added sulfuric acid from Hydrogen Sulfide recipe
+    - Moved "Crude oil processing" from advanced-oil-processing to oil-processing to help with the oil changes.
+    - Reverse some 0.17.60 changes
+---------------------------------------------------------------------------------------------------
+Version: 0.17.10
+Date: 27. 06. 2019
+  Changes:
+    - Renamed heavy water recipe only to bob-heavy-water internally, to fix a Py mods conflict.
+    - Swapped the output of "water" and heavy water on the heavy water recipe so that it's consistant between using pure water or not.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.9
+Date: 17. 06. 2019
+  Changes:
+    - Removed lead result randomness from nuclear reprocessing, instead of an average of 5 it always just gives 5.
+  Features:
+    - Added small storage tank.
+    - Added bobingabout-enrichment-process as a method to get more plutonium from uranium 238.
+    - added plutonium as a possible result of recycling uranium fuel cells, 10% chance to get 1.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.8
+Date: 30. 05. 2019
+  Changes:
+    - Updated to work with ores 0.17.2
+    - Thorium is enabled with the ore overrides
+    - Removed the large fluid icon barrelling fix as it is now in factorio 0.17.43
+    - Added Alien fire liquid to flame thrower turret ammo list.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.7
+Date: 21. 05. 2019
+  Changes:
+    - New battery icon, in both Classic and tier colour versions.
+    - Increased the size of many icons, mostly related to Metals and Gasses.
+    - Added Hydrogen Sulfide, Heavy water and Deuterium, and methods to get them.
+    - Added Deuterium nuclear fuel cell and chain.
+    - Added a script to fix fill/empty barrel icons for fluids of icon_size > 32
+  Bugfixes:
+    - Fixed Steel plate crafting category when Cheaper steel is on and new steel is off.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 17. 05. 2019
+  Changes:
+    - Added lead and random result component from nuclear fuel reprocessing recipes.
+    - Added allow_decomposition = false to a lot of key resources. (to avoid confusing entries like it telling you electronics need lithia water)
+    - Edited the centrifuge to use colours set on recipes (the green graphics will default to black if other modded recipes haven't set a colour.)
+    - Side effect, the glow on the centrifuge is always white now, a game update to read colour from recipes on light sources could fix this
+  Bugfixes:
+    - Updated steel plate recipe changes in such a way it shouldn't error if steel recipe has been previously removed.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 15. 05. 2019
+  Changes:
+    - Added Steam and Petroleum gas for gas venting (void) pump
+    - Added sulfur-dioxide to productivity filter list
+    - Fixed order of gears and bearings.
+  Features:
+    - Added Thorium nuclear fuel processing chain.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 01. 05. 2019
+  Changes:
+    - Updated for 0.17.35 player -> character changes
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 22. 04. 2019
+  Balancing:
+    - Changed cheaper steel energy_required to match 0.17 values
+  Features:
+    - Added new steel alternative recipe in the options, on by default.
+  Changes:
+    - Removed upgrade from non-effect technologies
+    - Updated for 0.17.29 pollution method
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 16. 03. 2019
+  Balancing:
+    - Halved the power usage of my burner furnaces to bring them in line with new base game.
+    - Furnace based resource (rubber and glass), metal plate and alloy recipes are now multiples of 3.2 instead of 3.5
+    - change advanced electronics 3 to use production science instead of utility
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 11. 03. 2019
+  Changes:
+    - Converted Furnaces to new pollution
+    - converted pumps to new pollution
+    - Converted Distillery to new pollution
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - ingredient_count removed from all entities.
+    - adapted to all the changes to fuel values.
+    - Distillery graphics updated
+    - Added upgrade planner defaults to Chemical and mixing furnaces
+    - Added upgrade planner defaults to water and air pumps
+---------------------------------------------------------------------------------------------------
+Version: 0.16.5
+Date: 14. 09. 2018
+  Bugfixes:
+    - Removed redundant migration scripts that could potentially cause issues.
+  Changes:
+    - Added crude oil fuel value of 3.8MJ, and emissions multiplier of 5. (dirty fuel!)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.4
+Date: 10. 06. 2018
+  Changes:
+    - Updated the Logistic tab icon to use new robot graphics
+    - Removed electrum
+  Bugfixes:
+    - Added Pure water recipe colours for the chemical plant.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: 30. 03. 2018
+  Bugfixes:
+    - Added productivity filter for cobalt gears and bearings
+  Balancing:
+    - Fixed lithium Ion and silver zinc battery energy_required costs.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 13. 03. 2018
+  Balancing:
+    - Adjusted fuel value of hydrogen (Give opinion of if I should just outright remove it)
+  Features:
+    - Added new tag emissions_multiplier to all gas venting recipes.
+    - Added new tag emissions_multiplier to all fuel value fluids
+    - Added new tag fuel_emissions_multiplier to fuel items
+    - Added cobalt steel gear wheels and bearings
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 20. 02. 2018
+  Balancing:
+    - Changed empty gas bottle, and fuel canister to stack size 10
+    - Rebalanced Petroleum Gas to Hydrogen cracking recipe
+    - Rebalanced Heavy oil from Coal cracking recipe
+    - Rebalanced fuel block from hydrogen recipe.
+    - Increased electrolyser power consumption to 2.5x
+    - Decreased collision box of Electrolyser so it is possible to walk between it and other entities.
+  Changes:
+    - Made gasses use gas pipe graphics instead of fluid.
+  Features:
+    - Added fuel value of 4MJ to liquid fuel. (for future use)
+    - Added fuel value of 4.6MJ to Petroleum Gas. Also made it use gas pipe graphics.
+    - Added fuel value of 3MJ to Light oil.
+    - Added fuel value of 2MJ to Heavy oil.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Added icon_size all over the place.
+    - Battery built time is now 5 seconds.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.12
+Date: 03. 07. 2017
+  Changes:
+    - Added inventory size option to effect god entity (For 0.15.26+ of factorio)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.11
+Date: 31. 05. 2017
+  Changes:
+    - Added a on_configuration_changed recipe updates
+    - Added stack size increase for Uranium ore and Sulfur
+---------------------------------------------------------------------------------------------------
+Version: 0.15.10
+Date: 21. 05. 2017
+  Changes:
+    - updated electrolysis (tech and recipe) icon, and changed pure water to molecular icon
+    - remove automation 2 from the electrolysis prerequisite when pure water is turned on
+    - pure water turned on by default now
+  Bugfixes:
+    - fixed canister stack sizes
+  Balancing:
+    - Enriched fuel block balance
+  Features:
+    - Added Vanilla barrelling option, which allows you to barrel in assembling machines if enabled.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.9
+Date: 20. 05. 2017
+  Features:
+    - Added enriched-fuel
+    - Added recipe to make enriched fuel from liquid fuel
+    - Added Distillery (to turn water or lithia water into pure water)
+  Balancing:
+    - minor fluid recipe rebalance
+    - Changed advanced electronics 3 cost to high-tech
+---------------------------------------------------------------------------------------------------
+Version: 0.15.8
+Date: 16. 05. 2017
+  Changes:
+    - Barrelling recipes should now be craftable in both the barrelling and assembling machines.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.7
+Date: 14. 05. 2017
+  Changes:
+    - Made barreling recipes for pure water always unlocked (due to migration issues related with turning it off and on again)
+    - Added petroleum gas to gas canisters instead of barrels.
+    - Added the Canister back in for ferric chloride and liquid fuel barrelling
+    - Removed synthetic wood, synthetic recipe gives real wood.
+  Bugfixes:
+    - Added fuel_category = "chemical" to chemical and mixing furnaces (burner)
+  Features:
+    - Added steel versions of Metal mixing furnace unlocked via new technology (Ideally it should have been alloy processing 2, but that would mean bumping 2 to 3, and since it is referenced by my others mods, thought it would be easier to make a new technology branch for it)
+    - Added steel version of Chemical furnace, unlocked by chemical processing 2.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.6
+Date: 14. 05. 2017
+  Bugfixes:
+    - Changed Oxygen output from water electrolysis back to 12.5, that's where it was supposed to be, oops.
+  Features:
+    - Added fuel value to liquid fuel barrel (Will not return an empty barrel when burned right now, as this would require a return slot in everything that burns fuel)
+    - Added 2 new settings options:
+    - Enable Pure water. If enabled, pure water will exist and be required for electrolysis. It replaces the result of normal water mining splotches, and can be condensed via steam.
+    - Water Bore recipes. If enabled the classic "Water from anywhere" on the water pump will be enabled... I wasn't going to do this, but it was requested.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.5
+Date: 11. 05. 2017
+  Balancing:
+    - Increased oxygen output of water electrolysis to 25.
+  Changes:
+    - Re-added ware pump for barrelling.
+    - Moved barrelling recipes to use the water pump
+    - Changed gas barrels into gas bottles.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.4
+Date: 08. 05. 2017
+  Bugfixes:
+    - Add icon_size tags to categories.
+    - Fixed battery recipe override in expensive mode.
+    - removed conditional require: multiplayer checksum fix
+  Features:
+    - Added an ores enable override for required ores as a settings option.
+  Changes:
+    - added an exception to gems to check if gems from other ores is enabled before activating the gem ore.
+    - added an exception to nickel to check if lead gives nickel is enabled before activating the nickel ore.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 30. 04. 2017
+  Changes:
+    - Added fuel category to synthetic wood and carbon.
+    - Added water mining to all mining machines that mine "basic-fluid", AKA, Pumpjacks (Needed for Lithia water if you don't have bobmining installed)
+    - Added expensive recipes for gears, bearings and batteries.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 29. 04. 2017
+  Balancing:
+    - Slight change to science packs on some technologies.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 29. 04. 2017
+  Balancing:
+    - Multiply all fluid values by 10 to conform to new base game standard.
+    - Edit a few recipes slightly to require less electrolysis based "fluids"(gasses).
+    - Key change so far, 1 output of hydrogen chloride can now feed 2 tungstic acid factories instead of 1, and ~2 ferric-chloride factories. (Noted as they were most likely to be direct feeds, rather than more of a bus system)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 28. 04. 2017
+  Info:
+    - Updated to work with Factorio 0.15
+  Changes:
+    - All the barrelling stuff removed/disabled in favour of the base game stuff.
+    - Science packs changed to new base game packs.
+    - Inventory size default changed to base game value.
+  Features:
+    - Settings for Inventory size, Cheaper steel and Battery updated included.

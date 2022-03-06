@@ -1,0 +1,136 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - Technology icon overhaul.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 26. 11. 2020
+  Changes:
+    - Added Advanced electronics prerequisite to vehicle belt immunity equipment and vehile solar panel equipment 2 research.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 30. 09. 2020
+  Changes:
+    - Added "spidertron" category to Roboport modular equipment
+    - Added vehicle belt immunity equipment.
+  Balancing:
+    - Nerfed Plasma defence equipment. All damage values reduced to 10x instead of 15x (66%)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Changes:
+    - Changed Spidertron equipment grid to use vehicle equipment.
+    - Added "spidertron" category to Speed equipment and Roboports (they don't use the generic "vehicle" group, because speed equipment doesn't work on thanks that can't move itself, and roboports don't work in things without an inventory)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Added alien technology prerequisites to vehicle Shield, fusion, plasma turret, and battery technologies.
+    - Added science pack prerequisites to vehicle Shield technologies.
+    - Added science packs to speed increase equipment.
+    - Added Advanced Electronics 2 prerequisites to vehicle fusion power technologies 1 and vehicle roboport 3.
+    - Added science packs to Vehicle fusion power technologies 2 and 3
+    - Added zinc processing prerequisite to vehicle roboport 2 technology.
+    - Added Science pack prerequisites to plasma defense technologies.
+    - Added advanced electronics prerequisites to vehicle energy shield and laser defence technologies.
+    - Added utility science pack prerequisite to vehicle solar energy 5.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 17. 06. 2019
+  Changes:
+    - Increased plasma explosion scale to 400% to reflect damage area.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 03. 06. 2019
+  Changes:
+    - Added lead_target_for_projectile_speed to plasma turrets.
+  Features:
+    - Changed plasma projectile's laser damage type to new damage type plasma, made it the highest damage type, and creates a plasma sticker.
+  Balancing:
+    - reduced plasma blast radius from 11 to 8
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 19. 05. 2019
+  Changes:
+    - Recoloured the lights on robot charge pads 2 and 3.
+  Bugfixes:
+    - fixed laser defence 2 buffer capacity.
+    - Fixed that Roboports weren't all supposed to cost steel plates
+    - Fixed science pack replacements when Bobtech Logistic science pack exists.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 02. 05. 2019
+  Changes:
+    - Added allow_robot_dispatch_in_automatic_mode to cargo wagons
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 22. 04. 2019
+  Changes:
+    - Vehicle Roboport no longer draws power. Like personal version.
+    - Removed upgrade from all technologies
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Vehicle laser defence now shoot beams
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 09. 02. 2018
+  Bugfixes:
+    - Added clamp_position = true to plasma artillery. This should fix the min_range issue.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 28. 01. 2018
+  Changes:
+    - Increase plasma cannon range to 54, 56, 58, 60, 62, 64 for the 6 tiers.
+    - Increase projectile speed from 0.3 to 1.
+    - Also added direction_deviation = 0 and range_deviation = 0 to plasma cannon
+    - Changed fluid wagon grid type to not include "cargo-wagon", excluding roboports from being used.
+    - Upgraded artillery cannon grid to armored type, and removed cargo-wagon, excluding roboports from being usable. 
+    - Added armoured type grids to bob-artillery-wagon-2 and 3
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Added basic cargo wagon grid to Artillery Wagon.
+    - Added icon_size lines.
+    - perimeter changed to radius on plasma weapon for AOE damage.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 31. 05. 2017
+  Changes:
+    - added Plasma cannon minimum range 20
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 14. 05. 2017
+  Bugfixes:
+    - Fixed a technology prerequisite on vehicle-big-turret-equipment-4
+  Features:
+    - Added vehicle roboport 2
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 03. 05. 2017
+  Info:
+    - Updated to work with Factorio 0.15
+  Changes:
+    - Updated all science packs
+    - added alien artifact alternative to recipes.
+    - adjusted laser defence stats (damage x 15 and power x 2 all round).
+    - Added vehicle equipment grids from logistics and warfare mods to add to vehicles when this mod is installed.

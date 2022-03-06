@@ -1,0 +1,44 @@
+{
+  "item":
+  [
+    ["green-inserter", "turbo-inserter"],
+    ["green-filter-inserter", "turbo-filter-inserter"],
+    ["green-stack-inserter", "turbo-stack-inserter"],
+    ["green-stack-filter-inserter", "turbo-stack-filter-inserter"],
+    ["black-transport-belt", "basic-transport-belt"],
+    ["green-transport-belt", "turbo-transport-belt"],
+    ["green-underground-belt", "turbo-underground-belt"],
+    ["green-splitter", "turbo-splitter"],
+    ["purple-transport-belt", "ultimate-transport-belt"],
+    ["purple-underground-belt", "ultimate-underground-belt"],
+    ["purple-splitter", "ultimate-splitter"]
+  ],
+  "entity":
+  [
+    ["green-inserter", "turbo-inserter"],
+    ["green-filter-inserter", "turbo-filter-inserter"],
+    ["green-stack-inserter", "turbo-stack-inserter"],
+    ["green-stack-filter-inserter", "turbo-stack-filter-inserter"],
+    ["black-transport-belt", "basic-transport-belt"],
+    ["green-transport-belt", "turbo-transport-belt"],
+    ["green-underground-belt", "turbo-underground-belt"],
+    ["green-splitter", "turbo-splitter"],
+    ["purple-transport-belt", "ultimate-transport-belt"],
+    ["purple-underground-belt", "ultimate-underground-belt"],
+    ["purple-splitter", "ultimate-splitter"]
+  ],
+  "recipe":
+  [
+    ["green-inserter", "turbo-inserter"],
+    ["green-filter-inserter", "turbo-filter-inserter"],
+    ["green-stack-inserter", "turbo-stack-inserter"],
+    ["green-stack-filter-inserter", "turbo-stack-filter-inserter"],
+    ["black-transport-belt", "basic-transport-belt"],
+    ["green-transport-belt", "turbo-transport-belt"],
+    ["green-underground-belt", "turbo-underground-belt"],
+    ["green-splitter", "turbo-splitter"],
+    ["purple-transport-belt", "ultimate-transport-belt"],
+    ["purple-underground-belt", "ultimate-underground-belt"],
+    ["purple-splitter", "ultimate-splitter"]
+  ]
+}

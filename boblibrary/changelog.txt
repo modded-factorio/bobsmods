@@ -1,0 +1,269 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 09. 05. 2021
+  Features:
+    - Put the duplicate ingredient checking on an option.
+    - Put the Technology prerequisite checking on an option too.
+  Changes:
+    - Added new item types to the valid item checklist (to fix the error of it removing "rail" from production science pack)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 09. 04. 2021
+  Features:
+    - Added a duplicate prerequsites check to the Technology prerequisites cleanup. (Handles split difficulty too)
+    - Added a duplicate ingredient checking to library final fixes. (Handles split difficulty too)
+  Changes:
+    - Added icon_mipmaps to item/resource icon in ore-functions
+    - Added icon embedded locale entry for created autoplace-controls
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Features:
+    - Added function bobmods.lib.recipe.set_energy_required(recipe, time) and set_difficulty_energy_required(recipe, difficulty, time)
+    - Added function bobmods.lib.tech.has_recipe_unlock(technology, recipe) which returns true if any difficulty on the technology unlocks that recipe.
+    - Added function bobmods.lib.tech.has_difficulty_recipe_unlock(technology, difficulty, recipe) which returns true if that difficult unlocks that recipe (doesn't split the technology by difficulty if it isn't already, just returns the standard result instead)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Included resource_autoplace global (it was removed as a global from base game, it was easier to just re-add a global than add it locally in every instance I used it)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 15. 08. 2020
+  Features:
+    - Added function bobmods.lib.recipe.clear_ingredients(recipe) that deletes all incredients from a recipe
+    - Added function bobmods.lib.recipe.add_ingredients(recipe, ingredients) that adds multiple ingredients to a recipe with a single instruction
+    - Added function bobmods.lib.recipe.set_ingredients(recipe, ingredients), which calls the clear then add to change the recipe to the specified array of ingredients.
+    - Streamlined function bobmods.lib.recipe.replace_ingredient(recipe, old, new) a bit to remove some of the duplicated code.
+    - Added function bobmods.lib.tech.clear_science_packs(technology) which deletes all science packs from a technology
+    - Added function bobmods.lib.tech.add_science_packs(technology, science_packs) which adds multiple science packs to a technology with a single instruction
+    - Added function bobmods.lib.tech.set_science_packs(technology, science_packs), which calls the clear then add to change the science packs to the specified array.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.10
+Date: 16. 07. 2020
+  Changes:
+    - Added a few more safety checks to Technology prerequisites.
+    - Technology functions now take difficulty into account.
+  Features:
+    - Added function versions for editing a specific difficulty.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.9
+Date: 20. 04. 2020
+  Changes:
+    - Added more checks for prerequisite validity to function bobmods.lib.tech.get_prerequisites_in_tree(technology)
+    - Added more checks for prerequisite validity to function get_prerequisites_in_tree_cached(technology)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.8
+Date: 19. 04. 2020
+  Changes:
+    - Added validity check to get_prerequisites_in_tree_cached to make sure a technology actually exists.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.7
+Date: 18. 04. 2020
+  Changes:
+    - function bobmods.lib.tech.prerequisite_cleanup() now uses a buffered version of the functions to save a lot of loading time going through all the technologies.
+  Features:
+    - Added function bobmods.lib.tech.get_prerequisites(technology), which returns a copy of the prerequisites table on a technology.
+    - Added function bobmods.lib.tech.get_prerequisites_in_tree(technology), which returns a table of technology names including it's prerequisites table, and the prerequisites of those prerequisites, recursively.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 16. 04. 2020
+  Features:
+    - Added function bobmods.lib.tech.has_prerequisite(technology, prerequisite), returns true if technology has prerequisite on it's prerequisites list
+    - Added function bobmods.lib.tech.has_prerequisite_in_tree(technology, prerequisite), same as above, but recursively checks all prerequisites of prerequisites
+    - Added function bobmods.lib.tech.has_prerequisite_in_tree_only(technology, prerequisite), same as above, but doesn't check for the prerequisite on that technology
+    - Added function bobmods.lib.tech.get_redundant_prerequisites(technology), which returns a table of prerequisites that exist in the prerequisites tree of other prerequisites on the technology
+    - Added function bobmods.lib.tech.get_redundant_prerequisites_smart(technology), Same as above, but doesn't include derivatives of it's own name. (performs a filter on the name for letters, meaning it drops numbers and dashes from a typical technology name, then compares) EG: automation 2 won't return automation in the list.
+    - Added function bobmods.lib.tech.prerequisite_cleanup(), which scans all technologies and deletes prerequisites as found by the above function.
+    - function bobmods.lib.tech.prerequisite_cleanup() is called in the data-final-fixes phase of loading.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 08. 04. 2020
+  Changes:
+    - Added the 0.18.4 changes to the change log file.
+    - Added (even more) robustness to bobmods.lib.item.ingredient and bobmods.lib.item.result (and derivative) functions.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 07. 04. 2020
+  Changes:
+    - Minor crashproof change to bobmods.lib.resource.generate_updates_stage
+  Features:
+    - Added bobmods.lib.icons_from_item(item) function, which takes an item/fluid/entity(maybe even recipe) and returns a complete icons array. (if it has no icons= tag, it builds one from icon, icon_size and icon_mipmaps). Example use bobmods.lib.icons_from_item(data.raw.item.wood)
+    - Added support for fluidbox_index on ingredients/results
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 26. 03. 2020
+  Changes:
+    - Added support for catalyst_amount in bobmods.lib.item.ingredient/result/combine functions. (used by bobmods.lib.recipe.add_ingredient/recipe and similar functions)
+    - bobmods.lib.recipe.set_ingredient/recipe will now add an ingredient/result if it doesn't already exist.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 22. 03. 2020
+  Bugfixes:
+    - Wasn't removing a prerequisite or recipe unlock from a technology if the entry didn't exist (it should only need a name and remove it anyway, it not existing could be why you're removing it.)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 22. 03. 2020
+  Changes:
+    - Made add/remove/replace science pack functions more robust with better error logging.
+    - Made add/remove/replace recipe unlock functions more robust with better error logging.
+    - Made add/remove/replace prerequisite functions more robust with better error logging.
+    - Made add/remove/replace ingredient functions more robust with better error logging.
+    - Made add productivity limitation functions more robust with better error logging.
+    - Made item functions more robust with better error logging.
+  Features:
+    - Added item.ingredient and item.result functions, which are copies of item.basic_item and item.item functions. This better reflects what they're supposed to be used for.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+    - Removed my custom ore generation system from the library (It's not needed anymore as all my functions actually use the 0.17 ore generator)
+  Changes:
+    - Changed bobmods.lib.recipe.enabled to actually use bool (Bool isn't actually a string of "true" or "false" anymore (it was in older versions of factorio)) 
+    - Changed particle to optimized-particle on ore-particle generator
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 24. 06. 2019
+  Features:
+    - Added bobmods.lib.safe_insert function. Adds a string to the specified table only if it doesn't already exist.
+    - Added bobmods.lib.recipe.enabled(recipe, bool) and bobmods.lib.recipe.difficulty_enabled(recipe, difficulty, bool) (Bool is actually a string of "true" or "false") to make adding enabled = "false" to recipes easier. (enabled needs to be on the difficulty)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 17. 06. 2019
+  Changes:
+    - Added compatabillity for fluids that have an icons table instead of icon tag.
+    - Adjusted the resource automatic icon generation slightly.
+  Bugfixes:
+    - Fix ore 5 HR glow effect.
+  Features:
+    - Added an icon randomiser for resource generation.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 31. 05. 2019
+  Bugfixes:
+    - Added to try prevent loading errors.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 30. 05. 2019
+  Changes:
+    - Added resource-generation, based on the 0.17 resource autoplace system.
+    - Also added bobmods.lib.resource.generate_autoplace_control(control) function. it creates an autoplace-control with the given name, and adds it to the list of map-gen-presets.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 21. 05. 2019
+  Changes:
+    - Added many missing entries to bobmods.lib.recipe.difficulty_split
+    - Added ingredient/result entry check for table on add and set functions.
+    - Auto-bottle functions will now account for fluids with an icon size not set to 32.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Updated bobmods.lib.belt_speed_ips(ips) for new belt speed items per second.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.6
+Date: 10. 06. 2018
+  Features:
+    - Added bobmods.lib.recipe.set_ingredient(recipe, item). use case is the same as add, but instead of adding an item, it edits the count of an existing item.
+    - Added bobmods.lib.recipe.set_result(recipe, item). Use case same as above, but also allows for complex counts with min, max and probability.
+  Bugfixes:
+    - Fixed error reporting error that caused an error in add_new_science_pack and add_science_pack
+---------------------------------------------------------------------------------------------------
+Version: 0.16.5
+Date: 23. 03. 2018
+  Features:
+    - Added bobmods.lib.belt_speed_ips(). Send it desired Items per second and it will return the tiles per tick value used by the game LUA.
+    - EG: speed = bobmods.lib.belt_speed_ips(60) will create a tiles per tick belt speed that can transport 60 items per second.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.4
+Date: 20. 02. 2018
+  Bugfixes:
+    - Tablemerge now functions as intended
+---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: 19. 01. 2018
+  Bugfixes:
+    - Changes to autoplace broke infinite ores.
+  Changes:
+    - Changed gas bottle stack size to 10
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 19. 01. 2018
+  Changes:
+    - updating ore autoplace settings
+    - changed default of state_mult from 1 to 100
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 22. 12. 2017
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 17. 12. 2017
+  Features:
+    - Added icon_size tags to ore-functions.
+    - Added category resource to autoplace functions
+---------------------------------------------------------------------------------------------------
+Version: 0.15.10
+Date: 08. 12. 2017
+  Bugfixes:
+    - Fixed bobmods.lib.machine.type_if_add_resource_category function
+---------------------------------------------------------------------------------------------------
+Version: 0.15.9
+Date: 06. 11. 2017
+  Bugfixes:
+    - Fixed liquid_required lines for ores.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.8
+Date: 31. 05. 2017
+  Bugfixes:
+    - Fixed recipe difficulty split function's enable tag copy
+  Features:
+    - ore create function can now accept stage_counts as an array variable.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.7
+Date: 21. 05. 2017
+  Features:
+    - added function bobmods.lib.recipe.difficulty_split(recipe)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.6
+Date: 11. 05. 2017
+  Features:
+    - Added a function for barrel item/recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.15.5
+Date: 10. 05. 2017
+  Changes:
+    - Changed infinite_depletion_amount default when infinite ores is turned on from 10 to 1.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.4
+Date: 07. 05. 2017
+  Features:
+    - Added dynamic icon generation to resource generation!
+    - Added effect(glow) compatibility to resource generation
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 06. 05. 2017
+  Changes:
+    - Updated ore graphics to the new style, added HD versions too
+    - Updated ore functions to handle this
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 01. 05. 2017
+  Bugfixes:
+    - Edited replace ingredient to handle expensive properly.
+  Features:
+    - Added difficulty specific versions of remove, add and add new ingredient, remove and add recipe functions.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 29. 04. 2017
+  Bugfixes:
+    - Edit to make recipe manipulation functions handle expensive mode recipe variations. Fluids also divide by 10 when transforming into items and vica verca on recipe item replacement.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 25. 04. 2017
+  Info:
+    - Updated to work with Factorio 0.15 without any changes

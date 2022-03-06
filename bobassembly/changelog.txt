@@ -1,0 +1,235 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 09. 04. 2021
+  Changes:
+    - Fluid burning metal mixing to/from fluid burning no longer cost/return pipes.
+  Bugfixes:
+    - Steam power local fix
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - Removed ignore_tech_cost_multiplier from Automation technology, and moved it to Basic Automation when burner assembling machine is enabled.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 26. 11. 2020
+  Changes:
+    - Added Steel processing prerequisite to distillery 2 technology.
+    - Changed checks for alloy-processing-1 to alloy-processing
+  Features:
+    - Reads and uses Expensive electrolysis option from MCI.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Copy sounds of Chemical plant onto all chemical plants and Electrolysers
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Changes:
+    - Added a check if data.raw.furnace["electric-furnace"] exists to the extra electric furnaces files.
+    - Added an ingredient limit option to burner and steam assembling machines.
+    - Check to make sure fluid-mixing/chemical-furnace exists before trying to add an ingredient limit to them.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.7
+Date: 29. 06. 2020
+  Bugfixes:
+    - Fixed loading error when Ingredient Limits were turned on.
+  Changes:
+    - Added Ingredient limits to Fluid furnaces
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 29. 06. 2020
+  Changes:
+    - Fixed alignment of multipurpose furnaces
+    - Internally renamed the furnaces to a standard naming scheme.
+    - Updated for MCI 0.18.9 compatabillity.
+    - Added fuel values and polution multipliers to Light/Heavy/Crude oil and Petroleum Gas to match MCI and Power mods. (to fuel the Fluid burning furnaces)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 23. 05. 2020
+  Changes:
+    - Reduced polution of Steam assembling machine at max power to 5.
+    - Updated to work with MCI 0.18.8
+    - Changed technology icons for fluid powered furnaces and multipurpose furnace.
+    - Reduced cost of electric (and chemical mixing) furnaces to match base game costs.
+  Features:
+    - Added recipes to convert between Chemical <-> Normal <-> Mixing furnaces of fluid burning types.
+    - Added recipes to convert between item fuelled <-> fluid fuelled furnaces of Normal, Chemical and Mixing types.
+  Bugfixes:
+    - Fixed icon mipmap log error messages
+    - Fixed smoke position on fluid burning steel furnaces.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 26. 03. 2020
+  Features:
+    - Added Centrifuge 2 and 3.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 25. 03. 2020
+  Changes:
+    - Added basic-automation prerequisite to automation technology
+    - Added tinted chemical plant icons coloured for each tier.
+    - Added Production science pack and prerequisite to Automation 5, Chemical plant 3, multi-purpose furnace, advanced material processing 3 and Oil refinery 3 research.
+    - Added Utility science pack and prerequisite to Automation 6, Chemical plant 4, multi-purpose furnace 2, advanced material processing 4 and Oil refinery 4 research.
+    - Added Electrolyser 5 with stats of old Electrlyser 4, but with 600 health.
+    - Changed Electrolyser 3 to have 4 module slots, and Electrolyser 4 to have 5 module slots
+    - Changed speed and power consumption of Electrolysers 2 to 4 to scale between E1 and the new E5.
+    - Full Electrolyser recipe rework to suit 5 tiers.
+    - Added New Electrloyser graphics by kirazy.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 17. 03. 2020
+  Changes:
+    - Updated chemical plant graphics.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Renamed Oil powered Steel furnaces to Fluid burning.
+    - Added Steel processing and Logistic science pack as prerequisite to Automation 2
+    - Added Chemical science pack prerequisite to Automation 4, oil refinery 2 and chemical plant 2 research
+    - Added Production science pack prerequisite to Automation 6
+    - Added science pack prerequisites to all distillery researchs.
+    - Updated chemical plant technology icon.
+    - Updated chemical plant graphics, mask graphics by kirazy
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Changed assembling machine 3's to have only 3 module slots and assembling machine 4's have 4 module slots.
+  Balancing:
+    - Increased health of Electric Furnaces to be more than base game version.
+    - Increased health of multi-purpose furnaces to reflect changes in other electric furnaces
+  Bugfixes:
+    - Fixed icons
+    - Changed multi-purpose furnaces fluid box height from 2 to 1, fluids won't flow back out.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 27. 06. 2019
+  Changes:
+    - no longer uses the icon from bobplates, but it's own copy of it.
+    - Steam assembling machine causes pollution. (the electric does, so I can't use "the pollution is generated by the boilers" as an excuse, as that effects electric too)
+  Balancing:
+    - Slight balance to steam assembling machine. (uses a little less power, 300kW instead of 400kW, or 60kW per tier instead of 80kW)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 23. 06. 2019
+  Features:
+    - Added a set of oil powered steel furnaces (normal, metal mixing and chemical)
+    - Added a burner assembling machine with speed 0.25, 60kW and size 2x2
+    - Added a steam powered assembling machine with pass through steam pipe. The entity is tuned to work best with top tier steam, this means it will scale in power based on steam tier. speed 0.4 and 80kW per tier (speed 2 and 400kW at maximum)
+  Changes:
+    - Updated graphics of Assembling machines to include HR versions (Except assembling machine 4 with updated colours turned off)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 01. 05. 2019
+  Changes:
+    - Updated for 0.17.35 player -> character changes
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 22. 04. 2019
+  Balancing:
+    - Chemical plant power usage reduced from 210kW to 160kW
+    - Assembling machine 3 power usage reduced from 375kW to 210kW
+  Changes:
+    - Updated for 0.17.29 pollution method
+    - Updated furnace and oil refinery graphics to HD
+    - Removed upgrade from non-effect technologies
+  Features:
+    - Added colours update option
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 15. 03. 2019
+  Changes:
+    - Converted assembling machines to new 0.17.12 pollution method
+    - Converted electronic assembling machines to new pollution method
+    - Converted Electronic furnaces to new pollution method
+    - Converted chemical plants to new pollution method
+    - Converted Electrolysers to new pollution method
+    - Converted Oil refineries to new pollution method
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 11. 03. 2019
+  Changes:
+    - Chemical plant 2 speed changed to 1.75 and power consumption 260kW instead of 2 and 300kW to scale better against Chemical plant speed reduction from 1.25 to 1.
+    - Updated recipes to use Copper tungsten pipe and Nitinol pipe if available.
+  Features:
+    - Added an option to turn ingredient limits back on
+    - Added a thumbnail icon
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Changes:
+    - ingredient_count removed from all entities.
+    - Distillery added 5 levels
+  Features:
+    - Added upgrade planner defaults to Assembling machines
+    - Added upgrade planner defaults to Electronic assembling machines
+    - Added upgrade planner defaults to Chemical, mixing and electric furnaces
+    - Added upgrade planner defaults to Chemical plants
+    - Added upgrade planner defaults to Oil refinery
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 20. 02. 2018
+  Balancing:
+    - Increased electrolyser power consumption to 2.5x
+    - Decreased collision box of chemical plant and Electrolyser so it is possible to walk between it and other entities.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Bugfixes:
+    - Added icon_size to all entities and items
+---------------------------------------------------------------------------------------------------
+Version: 0.15.7
+Date: 03. 07. 2017
+  Changes:
+    - Added god entity crafting for electronics (For 0.15.26+ of factorio)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.6
+Date: 31. 05. 2017
+  Changes:
+    - updated electrolyser tech icon.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.5
+Date: 20. 05. 2017
+  Changes:
+    - adjusted electrolyser recipe times.
+  Bugfixes:
+    - fixed furnace mask shift
+---------------------------------------------------------------------------------------------------
+Version: 0.15.4
+Date: 15. 05. 2017
+  Bugfixes:
+    - fixed chemical plant east/west graphics being swapped.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 09. 05. 2017
+  Bugfixes:
+    - Added icon_size tags to categories.
+  Changes:
+    - removed conditional require: multiplayer checksum fix
+  Balancing:
+    - Changed science packs in technologies from 1+2+P to 1+2+3
+    - Reduced build times for chemical plant and oil refinery to match base game changes
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 01. 05. 2017
+  Features:
+    - Electronics machines is now an option.
+  Changes:
+    - Turn it off for sandbox mode, "God" can't craft electronics if they're enabled, which leads to not being able to build the machine.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 29. 04. 2017
+  Changes:
+    - Changed Chemical plant to use new (and HD) graphics, with coloured animation for new recipes.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 29. 04. 2017
+  Changes:
+    - Science packs tweaked, Config options added.

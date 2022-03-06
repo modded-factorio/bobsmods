@@ -1,0 +1,34 @@
+{
+  "item":
+  [
+    ["oil-steel-furnace", "fluid-furnace"],
+    ["oil-mixing-steel-furnace", "fluid-mixing-furnace"],
+    ["oil-chemical-steel-furnace", "fluid-chemical-furnace"]
+  ],
+  "recipe":
+  [
+    ["oil-steel-furnace", "fluid-furnace"],
+    ["steel-furnace-from-oil-steel-furnace", "steel-furnace-from-fluid-furnace"],
+    ["oil-mixing-steel-furnace", "fluid-mixing-furnace"],
+    ["mixing-steel-furnace-from-oil-mixing-steel-furnace", "steel-mixing-furnace-from-fluid-mixing-furnace"],
+    ["oil-mixing-steel-furnace-from-oil-steel-furnace", "fluid-mixing-furnace-from-fluid-furnace"],
+    ["oil-steel-furnace-from-oil-mixing-steel-furnace", "fluid-furnace-from-fluid-mixing-furnace"],
+    ["oil-chemical-steel-furnace", "fluid-chemical-furnace"],
+    ["chemical-steel-furnace-from-oil-chemical-steel-furnace", "steel-chemical-furnace-from-fluid-chemical-furnace"],
+    ["oil-chemical-steel-furnace-from-oil-steel-furnace", "fluid-chemical-furnace-from-fluid-furnace"],
+    ["oil-steel-furnace-from-oil-chemical-steel-furnace", "fluid-furnace-from-fluid-chemical-furnace"]
+  ],
+  "entity":
+  [
+    ["oil-steel-furnace", "fluid-furnace"],
+    ["oil-mixing-steel-furnace", "fluid-mixing-furnace"],
+    ["oil-chemical-steel-furnace", "fluid-chemical-furnace"]
+  ],
+  "technology":
+  [
+    ["oil-steel-furnace", "fluid-furnace"],
+    ["oil-mixing-steel-furnace", "fluid-mixing-furnace"],
+    ["oil-chemical-steel-furnace", "fluid-chemical-furnace"]
+  ]
+}
+

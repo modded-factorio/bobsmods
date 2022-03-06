@@ -1,0 +1,17 @@
+{
+  "item":
+  [
+    ["basic-electronic-circuit-board", "electronic-circuit"],
+    ["electronic-circuit-board", "advanced-circuit"],
+    ["electronic-processing-board", "processing-unit"],
+    ["electronic-processing-board-2", "advanced-processing-unit"],
+
+    ["synthetic-wood", "wood"]
+  ],
+  "recipe":
+  [
+    ["wooden-board-synthetic", "wooden-board"],
+    ["phenolic-board-synthetic", "phenolic-board"]
+  ]
+}
+

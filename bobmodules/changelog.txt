@@ -1,0 +1,134 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - Renamed Effectivity to Efficiency in Locale
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Fixed several descriptions in mod settings. 
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Bugfixes:
+    - Perform +0.001 on every stat calculation to prevent rounding down issues.
+  Changes:
+    - Renamed (In locale only) Raw speed and Raw productivity modules to Pure speed and Pure productivity.
+    - Swaped colours around for productivity with raw productivity, and green with efficiency.
+    - Productivity is now Red.
+    - Pure Productivity is now Purple.
+    - Green is now Green.
+    - Efficiency is now Yellow.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 16. 06. 2020
+  Bugfixes:
+    - Fixed for older versions of the game.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 16. 06. 2020
+  Changes:
+    - Updated for Factorio 0.18.32
+  Bugfixes:
+    - Fixed beacon fast_replaceable_group and next_upgrade (To fix the upgrade planner)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 23. 05. 2020
+  Changes:
+    - Removed MK from beacon name numbers.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 17. 03. 2020
+  Changes:
+    - Added DiscoScience compatabillity
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Added Gold and Aluminium Processing prerequisites to Modules research.
+    - Added science pack prerequisites to Effect Transmission research.
+    - Added gem processing 2 prerequisite to level 5 module technologies
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+  Bugfixes:
+    - Added icon-size tags for all base game module change lists.
+    - Fixed beacon icons
+  Features:
+    - Added fast_replaceable_group and next_upgrade to Beacons
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 17. 05. 2019
+  Changes:
+    - Removed polluting circuits from module merging technologiy, as no merged modules actually use them.
+  Bugfixes:
+    - Added allow_as_intermediate = false to all module combining recipes. This should cause hand crafting a no side effects high end module avoid trying to make the previous tier using the combine recipe.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 22. 04. 2019
+  Changes:
+    - Removed upgrade from non-effect technologies
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 11. 03. 2019
+  Balancing:
+    - balanced technology prerequisites of effect transmission 1 and 3
+  Bugfixes:
+    - fixed that Productivity/Speed/Efficiency 2 requires advanced electronics 2 and P/S/E 3 requires production science pack research
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 26. 02. 2019
+  Bugfixes:
+    - fixed game breaking crash with productivity filters
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17 with no changes
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.16
+  Bugfixes:
+    - Icon size tags all round!
+    - Fixed lab graphics (and added HR version)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.4
+Date: 26. 09. 2017
+  Changes:
+    - Changed minimum per level from 1% to 0%
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 08. 05. 2017
+  Balancing:
+    - Multiply fluid values by 10.
+  Bugfixes:
+    - Option productivity costs speed should now actually work
+    - removed conditional require: multiplayer checksum fix
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 01. 05. 2017
+  Bugfixes:
+    - Alien artifacts are checked before being used, if they don't exist, there's a hole in the recipe.(Gems are prefered anyway).
+    - Added icon_size tag to all researchs and modules category.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 01. 05. 2017
+  Balancing:
+    - Fixed beacon science
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 01. 05. 2017
+  Info:
+    - Updated to work with Factorio 0.15
+  Features:
+    - Added config options, more customisable than before too.
+    - Added a lot of expensive recipes.

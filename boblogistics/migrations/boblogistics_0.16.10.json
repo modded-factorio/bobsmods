@@ -1,0 +1,18 @@
+{
+  "item":
+  [
+    ["red-inserter", "long-handed-inserter"],
+    ["blue-inserter", "fast-inserter"],
+    ["blue-filter-inserter", "filter-inserter"],
+    ["blue-stack-inserter", "stack-inserter"],
+    ["blue-stack-filter-inserter", "stack-filter-inserter"]
+  ],
+  "recipe":
+  [
+    ["red-inserter", "long-handed-inserter"],
+    ["blue-inserter", "fast-inserter"],
+    ["blue-filter-inserter", "filter-inserter"],
+    ["blue-stack-inserter", "stack-inserter"],
+    ["blue-stack-filter-inserter", "stack-filter-inserter"]
+  ]
+}

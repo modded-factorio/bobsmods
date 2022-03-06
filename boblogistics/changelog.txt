@@ -1,0 +1,556 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 09. 04. 2021
+  Changes:
+    - Belt speed overhaul can be used even if Belt overhaul is turned off.
+    - Added "related_underground_belt" to belts for smart dragging feature.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - added allow_burner_leech = true to burner-inserter
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 26. 11. 2020
+  Changes:
+    - Added logistic-science-pack prerequisite to inserter-stack-size-bonus-1 technology.
+    - Removed science pack prerequisites from toolbelt 2 to 4 technologies.
+    - Removed Advanced electronics prerequisite from Stack inserter technology when inserter overhaul is turned on.
+    - Changed checks for alloy-processing-1 to alloy-processing
+  Features:
+    - Added Steam powered inserter. Like the other steam powered entities, it runs faster with higher temperature steam.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Adjusted roboport sounds.
+  Balancing:
+    - Adjusted the power consumption of Roboport 2.
+    - Reduced energy capacity and increased energy flow limit of the Logistic Zone Expanders by 10x. (This should decrease charge time from an hour to less than a minute, but reduce battery time from an hour, to 6 minutes)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Changes:
+    - Replaced a require (pump tank connection graphics) with a table.deepcopy off the original.
+    - Makes use of new library function bobmods.lib.recipe.set_ingredients if it exists (difficulty-split safe version) for the roboport and construction/logistic robot recipes.
+    - Updated logistics technology icons to match new base game.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.9
+Date: 30. 04. 2020
+  Bugfixes:
+    - Fixed issue where hand overrides wouldn't be applied to the placed inserter if it was your last inserter (Hand became empty by placing it)
+    - Fixed Factorio 0.18.21 start-up crash
+---------------------------------------------------------------------------------------------------
+Version: 0.18.8
+Date: 16. 04. 2020
+  Changes:
+    - Added RTGs as a prefered option for fusion powered robots.
+    - Updated the Express/Ultimate (name depends if you have inserter overhaul turned on) inserters are now clones of fast/filter/stack/stack-filter vanilla inserters (Like the other inserter overhaul inserters) to fix issues with the 0.18.18 inserter sound update.
+  Bugfixes:
+    - Fixed library log error messages when Roboports are disabled.
+    - Fixed icon mipmap log error messages
+---------------------------------------------------------------------------------------------------
+Version: 0.18.7
+Date: 25. 03. 2020
+  Changes:
+    - Updated Nitinol and Copper tungsten pipe graphics.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 22. 03. 2020
+  Changes:
+    - Removed character-logistic-slots and character-logistic-trash-slots technology references from science pack changes.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 17. 03. 2020
+  Changes:
+    - Added Expensive mode pipe recipes.
+    - Removed character Logistic slots upgrades (for 0.18.13, you now have infinite once unlocked)
+    - Changed prerequisite for the infinite logistic trash slot upgrade to Logistic Robots.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 12. 03. 2020
+  Bugfixes:
+    - Fixed crash when placing inserter.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 12. 03. 2020
+  Changes:
+    - Changed the description for Inserter Overhaul option.
+    - Added Advanced Electronics prerequisite to Modular Roboports, and Logistic/Construction robotics.
+    - Added science pack prerequisites to Modular roboports, robotics and Logistic system technologies.
+    - Changed fluid_box height of all pumps to 4, to match base game.
+    - Updated the inserter hand position overrides to explicitly check for holding the item (or ghost) of the inserter being placed.
+    - Added Zinc Processing prerequisite to fluid handling 3
+    - Added Logistic science pack and Tungsten alloy processing prerequisites to Fluid handling 4
+    - Added science packs prerequisites to Logistic systems and Modular roboports research 
+    - Added Logistic science pack and Advanced electronics 2 to Armoured railway 2.
+    - Added Tungsten Alloy Processing and Nitinol Processing prerequisites to Advanced Logistic and Construction Robotics 3
+    - Added utility science pack prerequisite to logistics 5
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 28. 01. 2020
+  Bugfixes:
+    - Fixed Robot sounds.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 25. 01. 2020
+  Bugfixes:
+    - Fixed error with fusion powered logistic/construction robots when vehicle equipment mod is not installed.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Change the recipe for fusion powered robots to use vehicle-fusion-cell (and prerequisite) if it exists instead of fusion-reactor-equipment
+  Bugfixes:
+    - Fixed Icon name for Locomotive (It's no longer Diesel Locomotive)
+    - Added icon_size = 64, icon_mipmaps = 4, to entities that use Base game icons
+    - Added icon-size tags for all base game construction/logistics robots change lists.
+    - Fixed that Bob's Adjustable Inserters mod didn't properly disable inserter hand position overrides. (could be a problem if you added bob's inserters to an old game using Logistics.)
+  Features:
+    - Added an event when inserter positions are changed, detailed here: https://forums.factorio.com/viewtopic.php?p=474709#p474709
+---------------------------------------------------------------------------------------------------
+Version: 0.17.17
+Date: 13. 10. 2019
+  Bugfixes:
+    - Fixed turbo inserter locale entries.
+    - Fixed "Mod contents are different even though versions are the same" error.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.16
+Date: 03. 09. 2019
+  Features:
+    - Added Storage tank with pipe connections in all 4 corners.
+  Bugfixes:
+    - Fixed pump bounding box change causing error.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.15
+Date: 08. 08. 2019
+  Changes:
+    - changed inserter graphic definitions to be friendlier to other mods.
+    - updated all inserter stats.
+    - Reverse some 0.17.60 changes
+    - Fixed science packs for modular roboport technology.
+  Bugfixes:
+    - Fixed possible inserter locale name overrides where there shouldn't have been.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.14
+Date: 15. 07. 2019
+  Changes:
+    - Moved pump next update to bob-pump-2 to the data-updates phase.
+    - Reworked the inserter overhaul to not break (delete wires and filters etc) vanilla blueprints.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.13
+Date: 01. 07. 2019
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+  Bugfixes:
+    - Fixed underground belt bounding boxes causing an error in 0.17.53.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.12
+Date: 27. 06. 2019
+  Features:
+    - Added Top up valve, lets fluid flow if the output pipe is less than 20% full.
+    - Added an option to disable new trains.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.11
+Date: 17. 06. 2019
+  Changes:
+    - Changed belt speed overhaul default to false, as the speeds aren't what I originally intended (0.17 only works correctly with multiples of 1.875)
+    - Increased some train plasma resistances.
+    - Added solder to robot brain recipes.
+  Features:
+    - Added overflow valve
+  Bugfixes:
+    - Minor fix to Storage tanks.
+    - Fix possible issue with Miniloaders mod.
+  Balancing:
+    - Changed all pipe (but not UG) stack sizes to 100
+---------------------------------------------------------------------------------------------------
+Version: 0.17.10
+Date: 03. 06. 2019
+  Changes:
+    - Added plasma resistances to trains.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.9
+Date: 17. 05. 2019
+  Changes:
+    - New titanium chest graphics.
+    - Added animated port to the top of the new logistic chests.
+    - Recoloured Robochests and added HR Door animation.
+    - Recoloured the lights on robot charge pads 2 and 3.
+    - Adjusted Logistic zone expander to include an antenna on top instead of a chargepad. It was misleading as it hasn't had a charge pad for a long time.
+    - Included HR Antenna graphics for LZE and LZI.
+    - Added tier colours and HR graphics to the Roboports.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.8
+Date: 11. 05. 2019
+  Changes:
+    - Added higher tiers of repair packs.
+    - Added "infinite" (max level 10) logistic trash slots research.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.7
+Date: 22. 04. 2019
+  Changes:
+    - Removed upgrade from non-effect technologies
+    - Renamed bob-infinite-worker-robots-storage technologiy to bob-infinite-worker-robots-storage-1 to make it display a number
+    - Fixed iron underground pipe fast replace (And all other methods such as upgrade planner)
+    - Changed default value of belt speed overhaul speed per level to 15. strange things happen unless you use specific numbers (multiples of 3.75)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 31. 03. 2019
+  Changes:
+    - Renamed worker-robots-storage-4 technologiy to bob-infinite-worker-robots-storage to fix the Factorio 0.17.23 technology name issue when used with Big bags mod.
+    - Added Space science pack technology prerequisite to infinite research.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 29. 03. 2019
+  Features:
+    - Added options for fluid wagon and storage tank size base. this is the MK1 size and higher tiers will scale up accordingly.
+  Balancing:
+    - Logistics 3 now has Logistics 2 as a prerequisite
+    - Adjusted costs of Logistics 2, 3, 4 and 5, costs changing depending on Inserter overhaul being enabled.
+    - Reduced cost of Fluid wagon technology.
+  Bugfixes:
+    - Renamed bob-logistics technologies to logistics to fix the Factorio 0.17.23 non-contiguous technology name issue.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 21. 03. 2019
+  Changes:
+    - Removed Lubricant from Logistics 3 research.
+  Balancing:
+    - Updated pipe cost of underground pipes to match tiers.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 16. 03. 2019
+  Balancing:
+    - Removed pump pollution
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 11. 03. 2019
+  Features:
+    - added pipes for nitinol and copper-tungsten
+  Changes:
+    - Change fast replace group of underground pipes to pipe
+    - Updated underground belt icons
+    - Reworked inserter technology around fast inserters.
+  Bugfixes:
+    - Fixed belt non-HR graphics out of alignment.
+    - Fixed wrong belts on basic underground belt.
+    - Fixed mining times of belts and pipes
+    - Fixed train wagons and locomotive had no sprite in map view
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 26. 02. 2019
+  Bugfixes:
+    - Fixed game breaking error when placing with a ghost inserter in hand.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Toolbelt technology now gives +10 inventory space, and adds levels of character inventory space to the end.
+  Features:
+    - Added upgrade planner defaults to Belts (and UG and Splitter)
+    - Added upgrade planner defaults to Inserters (and stack)
+    - Added upgrade planner defaults to Chests
+    - Added upgrade planner defaults to Storage tanks
+    - Added upgrade planner defaults to Pumps
+---------------------------------------------------------------------------------------------------
+Version: 0.16.23
+Date: 10. 06. 2018
+  Balancing:
+    - Ultimate inserters now have 200 health in non-overhaul mode.
+    - All inserters have a health update in overhaul mode (in steps of +25 health per tier starting 100 for burner up to 225 for ultimate)
+  Bugfixes:
+    - Fixed underground belt selection box offset.
+  Changes:
+    - Added fast replace restrictions to belts, so it shouldn't turn splitters into belts while moving.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.22
+Date: 11. 04. 2018
+  Bugfixes:
+    - Fixed crash when researching long inserters technology completes.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.21
+Date: 11. 04. 2018
+  Changes:
+    - removed high-tech-science-pack from logistic system 2.
+    - Updated the logistic robot technology icons to use new robot graphics.
+    - Updated the Logistic tab icon too.
+    - The long toggle can only be used if inserter overhaul is turned on.
+    - The inserter configuration button only appears if the inserter overhaul is turned on.
+  Bugfixes:
+    - Fixed storage tanks used 4 directions instead of 2.
+  Balancing:
+    - Moved long handed technology to Logistics.
+  Features:
+    - added remote.call("boblogistics", "blacklist_inserter", inserter_name) to prevent inserter configuration from being able to configure this inserter
+    - added remote.call("boblogistics", "blacklist_inserters", table_of_inserter_names) same as above for multiple entries at once.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.20
+Date: 03. 04. 2018
+  Bugfixes:
+    - Fixed Green and Purple underground belt cover graphic allignment for real.
+  Features:
+    - Added an option to make the belt speed change as part of belt overhaul optional.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.19
+Date: 31. 03. 2018
+  Bugfixes:
+    - Deleted a problem migration script.
+    - fixed offset green inserter base
+    - Fixed green and purple belt cover alignment
+  Changes:
+    - Cleaned up the description of some settings.
+    - Add coloured bot graphics by zombiee
+---------------------------------------------------------------------------------------------------
+Version: 0.16.18
+Date: 31. 03. 2018
+  Bugfixes:
+    - Fixed basic splitter funky animation.
+    - Fixed the functions for pipe distance, and added similar functions for belt speed and distance.
+  Changes:
+    - Distances and speeds are now fully tweaked in the data phase.
+    - Updated Transport belt overhaul. turning it off now sets things back to how they were in 0.16.7
+---------------------------------------------------------------------------------------------------
+Version: 0.16.17
+Date: 30. 03. 2018
+  Bugfixes:
+    - Fixed a sprite name error for black underground belts.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.16
+Date: 30. 03. 2018
+  Changes:
+    - Removed pipe size (english) locale entries.
+    - Swapped green and purple colours around.
+    - Removed the option for final tier belts (they're always on now)
+  Bugfixes:
+    - Added a check to not apply the inserter long-handed over-ride if the entity is revived.
+  Features:
+    - Added belt overhaul option (it only overhauls belt speeds, and adds black underground and splitter)
+    - Added underground distance overhaul option and values options to set belt and pipe underground distances.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.15
+Date: 16. 03. 2018
+  Bugfixes:
+    - Fixed that fast stack and fast stack filter inserters would deconstruct into express versions
+  Balancing:
+    - removed steel bearings from red belts and related entities.
+  Changes:
+    - Added Zombiee's high res pipe graphics with permission.
+    - Changed all pipe sizes to 1.
+    - Adjusted Roboport (and related items) MK2 recipes to not use steel
+    - cleaned up some roboport related tab ordering.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.14
+Date: 13. 03. 2018
+  Changes:
+    - Lab now costs basic belt instead of yellow.
+    - Removed "not-on-map" flag from train entities.
+    - Added filter to storage chest
+    - cleaned up logistics crafting tabs.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.13
+Date: 13. 03. 2018
+  Balancing:
+    - Changed the cost of yellow belts down to 2 plates 2 gears.
+  Changes:
+    - Yellow belt and related entities take tin plate instead of iron.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.12
+Date: 12. 03. 2018
+  Bugfixes:
+    - Fixed scripting error if inserter overhaul was turned off.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.11
+Date: 12. 03. 2018
+  Bugfixes:
+    - Fixed .png.png issue with express inserters graphics.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.10
+Date: 11. 03. 2018
+  Changes:
+    - Added an icon overlay for inserters to more easily identify filter
+    - Changed back to using base game items and recipes so that other mods that use these items still work.
+    - Removed bearings cost from red inserters to allow them to be crafted in an assembling machine 2
+  Features:
+    - Added an option to make the change to inserters optional (you may need to check express filter inserter recipe, it seems the old version was missing gear wheels)
+    - Moved basic inserter to standard logistics tab.
+    - Added Long range hotkey (SHIFT + L) changes both the pickup and drop tile distance to toggle long handed inserter mode.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.9
+Date: 10. 03. 2018
+  Changes:
+    - All "new" inserters are known internally by their colour
+    - All "old" inserters still exist and have an item to build them (to not break old worlds, and maintain blueprints to work) but when removed give their equivalent new type item.
+    - Added yellow filter inserter on Electronics
+    - Added Red stack and stack filter inserters
+    - Added checks to use Cobalt steel gears and bearings if they exist.
+    - All existing "old" items and recipes are migrated to their new equivalent.
+    - Added a script to auto-migrate old inserter entities to their new equivalent on blueprint place.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.8
+Date: 10. 03. 2018
+  Changes:
+    - Added HR green/purple (ug)belt/splitter graphics.
+    - Added Basic transport Belt (belt only)
+    - Added Turbo inserters as Tier 4.
+    - Added Fast filter inserter
+    - Reworked all inserter graphics to colour code by tier
+    - Science pack 2(green) costs Basic transport belt(grey) instead of standard(yellow)
+    - Added option for belts to cost previous tier.
+    - Added option for inserters to cost previous tier.
+    - Reworked all the belt and related entity recipes.
+    - Re-added a cut down inserters pre-place menu with long inserters option only.
+    - Reworked all the inserter recipes.
+    - Tier 1 - Standard (no prefix) - Yellow - Costs Iron.
+    - Tier 2 - Fast - Red - Costs Steel
+    - Tier 3 - Express - Blue - Costs Brass and Aluminium
+    - Tier 4 - Turbo - Green - Costs Titanium
+    - Tier 5 - Ultimate - Purple - Costs Nitinol
+---------------------------------------------------------------------------------------------------
+Version: 0.16.7
+Date: 20. 02. 2018
+  Balancing:
+    - Increased request slots of MK3 buffer and requester chests to 24.
+  Changes:
+    - Updated valve locale entry to be something more compatible.
+    - Recoloured Titanium chest (and as a result MK3 Logistic chests) to make it more obvious
+  Features:
+    - Added an option to disable roboports, making it so you have to use the modular parts. (disables base game recipe, but not entity/item.)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.6
+Date: 06. 02. 2018
+  Changes:
+    - Removed redundant technologies: More inserters and Near inserters (and their icons)
+    - Added Production/Blue science pack to inserter-stack-size-bonus-3 (Depending if bobtech is installed)
+    - Added Hi-tech science pack to inserter-stack-size-bonus-4
+    - Added infinite researches for inserter and stack inserter stack size increase. (+1 for inserter and +3 for stack inserter per level)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.5
+Date: 05. 02. 2018
+  Changes:
+    - changed logistic roboport flag to goes-to-main-inventory
+    - updated graphics and added dynamic recipe of Logistic chests MK2 to use brass chest
+  Balancing:
+    - added missing piercing damage resistance to fluid wagons
+    - increased cost of Logistics 4 and 5
+  Features:
+    - Added infinite research to robot carry capacity.
+    - Added Brass chest (64 slots) and Titanium chest (80 slots)
+    - Added Logistic chests MK3.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.4
+Date: 20. 01. 2018
+  Bugfixes:
+    - Fix that Robotics 3 and Advanced Robots 2 required a Production science pack instead of Logistic.
+    - Fix that roboport was still unlockable by construction/logistic robotics when recipe was overwritten for modular.
+    - Fixed that Logistics 4 had production science pack instead of science pack 3
+    - Fixed LZE circuit network connection.
+    - Fixed Valve circuit network connection.
+  Balancing:
+    - Fluid wagons now cost only 1 fluid storage tank each.
+    - Removed fluid wagon x3 capacity multipliers, to bring them in line with base game (1 = 25k, 2 = 37.5k, 3 = 50k, A1 = 25k, A2 = 37.5k)
+    - All fluid wagon weights changed to bring them in line with base game (1 = 1000, 2 = 1500, 3 = 2000, A1 = 2000, A2 = 2500)
+    - Armored cargo wagon 2 weight increased to 2500 (was 2000, same as A1, when it can carry more cargo, so should have the +500 like 1 to 2, and 2 to 3)
+    - Construction Robot Technology now unlocks only Storage chest
+    - Logistic Robot Technology now unlocks Passive provider and requester chests.
+    - Logistic system technology now unlocks active provider and buffer chests.
+    - Balanced robot costs when flying robot frames are turned off.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: 28. 12. 2017
+  Changes:
+    - removed GUI locale entries
+    - Changed fast replace group of green and purple underground belts and splitters to "transport-belt" to match new base game.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 25. 12. 2017
+  Bugfixes:
+    - Fixed inserter wire connections
+  Changes:
+    - Added resistances to logistic robots
+  Features:
+    - Added fusion powered versions of MK4 robots
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 22. 12. 2017
+  Bugfixes:
+    - Fixed fluid wagons for Factorio 0.16.7.
+  Changes:
+    - Divided wind resistance by 5 to equate to the new base game values.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.16
+  Changes:
+    - Removed inserter pre-place GUI stuff
+    - updated storage tank graphics
+  Bugfixes:
+    - Fixed circuit wire connections
+    - Icon_size fix
+    - underground belt fix
+  Features:
+    - Added buffer 2 logistic chest
+---------------------------------------------------------------------------------------------------
+Version: 0.15.6
+Date: 01. 06. 2017
+  Bugfixes:
+    - Add inserter config fix for 0.15.17
+    - fix logistics button off centre
+---------------------------------------------------------------------------------------------------
+Version: 0.15.5
+Date: 14. 05. 2017
+  Changes:
+    - Changed logistics 4 technology cost to 1+2+3+L and 5 to 1+2+3+L+H
+    - changed character logistics slots max level to 20, and changed cost formula to double each level
+---------------------------------------------------------------------------------------------------
+Version: 0.15.4
+Date: 10. 05. 2017
+  Changes:
+    - all my added robotics and robots researches now require an extra tier science pack
+    - Removed production and high tech pack requirement from Logistic system
+  Bugfixes:
+    - Fixed valve. Since it's based on the storage tank, which is now two_direction_only = true, and the entity type is true by default. I set it to false.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 10. 05. 2017
+  Bugfixes:
+    - removed conditional require: multiplayer checksum fix
+    - Fixed Valve locale entry
+  Changes:
+    - Move long inserter unlock from Automation to Long inserters 1 research.
+    - Belt recipe ballance
+    - character-logistic-slots-10 is now infinitely researchable.
+    - Replaced a lot of production science packs with logistics if it exists
+    - Added infinite research for logistic slots, and calculated research for inventory size
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 04. 05. 2017
+  Bugfixes:
+    - added icon_size to category.
+    - fixed logistic system 2 icon size.
+    - Fixed Valve error.
+  Changes:
+    - Increased roboport construction range slightly to bring in line with new roboport ranges.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 02. 05. 2017
+  Bugfixes:
+    - fixed a minor science pack issue.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 02. 05. 2017
+  Info:
+    - Updated to work with Factorio 0.15
+  Changes:
+    - Did the usual (Make things work, science updates etc.)
+    - Upgraded train and cargo wagon graphics to HD, Added fluid wagon
+    - Converted "small pump" to new "pump" specifications.
+    - Lots of other small patches.
+    - Added config options too. Vehicle equipment grids removed.

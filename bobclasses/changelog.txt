@@ -1,0 +1,159 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - miner 2 class character recipe now uses an electric furnace 2 if available.
+    - changed caption = {"entity-name." .. entity.name} to caption = entity.prototype.localised_name in scripts.
+    - Added descriptions about the classes to their Items.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 15. 08. 2020
+  Changes:
+    - Changed charactor entity creation to add "smelting" to crafting_categories of miner classes instead of setting the value.
+  Bugfixes:
+    - Added a check to open Class Select on cutscene end, due to 1.0 adding an opening cutscene on new game.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.8
+Date: 07. 06. 2020
+  Changes:
+    - Class select window will re-open when closing editor mode if you've never selected a class before.
+    - Updated header/button filler styles
+    - Added close buttons to the top right corner of both GUIs.
+    - Removed the big green close button from bottom right corner of class select GUI
+    - Updated Locale entries to refer to the GUIs as Windows.
+  Bugfixes:
+    - Fixed issue where character entity would be deleted if you entered editor mode using a command, then selected a character from the Avatar switcher.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.7
+Date: 31. 05. 2020
+  Changes:
+    - Changed table style to fix spacing issues with 0.18.27 update.
+    - Added a check to make sure the global table for a player exists in the on_init (and on_configuration_changed) function.
+    - Added information about the current character to the Avatar GUI.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 23. 05. 2020
+  Bugfixes:
+    - Added missing locale entries for Engineer and Prospector class technologies.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 16. 04. 2020
+  Bugfixes:
+    - Fixed line 401 on_init error when you have no character entity.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 16. 04. 2020
+  Changes:
+    - RTGs can be a component of the Power core.
+    - Avatar switcher GUI now displays Class icon instead of item icon.
+    - Added a script to update bonuses on configuration change.
+    - Moved electric engine unit and chest ingredient from body recipe to frame recipe
+  Features:
+    - Added new T2 classes, Balanced 2, Builder 2, Fighter 2, Miner 2, Engineer and Prospector, which all need to be researched before they can be chosen.
+    - Added the ability to set your own icon for your characters. (click the pencil icon to enter edit mode, then click on the set icon button while holding an item)
+  Bugfixes:
+    - Fixed unknown locale entry "gui.open-in-map" error (base game changed it to gui-train.open-in-map)
+    - Fixed Builder class build speed was +20% when it should have been double.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 08. 04. 2020
+  Changes:
+    - Added animations copying to new character classes in data-updates phase (Allows new armours to be recognised on new classes)
+  Bugfixes:
+    - Fixed inventory size check function.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 22. 03. 2020
+  Changes:
+    - Added raise_built = true in the function that replaces your character entity when you choose a class.
+    - Moved the class specific bodies to their own technology.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Changed capitilisation of the mod name.
+    - Added automation-3 and advanced-material-processing-2 prerequisites to bodies
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Bugfixes:
+    - Fixed icon for player entity.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.7
+Date: 18. 07. 2019
+  Bugfixes:
+    - Fixed crash when using /editor command.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 15. 07. 2019
+  Bugfixes:
+    - Fixed inventory size differences.
+  Changes:
+    - Minor GUI update.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 09. 07. 2019
+  Bugfixes:
+    - Fixed boot rubber ingredient.
+  Features:
+    - Added rename button to the Avatar switcher GUI, to allow you to set a name for your characters,
+    - Added God mode, Editor mode and switch class buttons to the Avatar switcher GUI if button is enabled and it's single player, or if the player is an admin if the game is multiplayer. Use with caution. each button is enabled with a setting.
+    - Added close button to class select GUI, exits without choosing a class.
+    - Removed position coordinates from the Avatar switcher GUI
+    - Added a map and minimap button to each character on the Avatar switcher GUI
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 01. 05. 2019
+  Changes:
+    - Updated for 0.17.35 player -> character changes
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 21. 03. 2019
+  Balancing:
+    - Updated class values to reflect 0.17 changes
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 15. 03. 2019
+  Changes:
+    - Fixed that the character entity wasn't actually replaced.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 11. 03. 2019
+  Bugfixes:
+    - Fixed class select would show even when it shouldn't, such as if you were in spectator mode or map editor.
+    - removed old classes to prevent a crash.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 15. 05. 2018
+  Changes:
+    - Fixed trying to switch bodies on different surfaces causes a crash.
+    - Builder's build speed bonus up from 20% to 100% (Doesn't effect existing players)
+    - Miner's mining speed bonus down from 400% to 100% (Does effect existing players)
+    - Added descriptions to the class button locale entries.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 10. 02. 2018
+  Changes:
+    - Converted some values to globals to make remote calls work. example function add_classes() in control.lua
+    - Changed buttons to a standard style.
+    - over-all code clean-ups
+    - Fixed builder starting inventory.
+    - Added a technology filter on class definitions as an unlocker. Works like prerequisites on technology (need them all to unlock)
+    - Made all 4 current classes buildable on the "Bodies" research.
+    - Added the whole "Select a Character" menu for the multiple bodies system.
+    - all bodies you build will be associated to you as a player so you can switch between them.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 26. 01. 2018
+  Info:
+    - Initial release
+

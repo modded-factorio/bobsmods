@@ -1,0 +1,49 @@
+{
+  "item":
+  [
+    ["chemical-boiler", "stone-chemical-furnace"],
+    ["chemical-steel-furnace", "steel-chemical-furnace"],
+    ["chemical-furnace", "electric-chemical-furnace"],
+
+    ["mixing-furnace", "stone-mixing-furnace"],
+    ["mixing-steel-furnace", "steel-mixing-furnace"],
+    ["mixing-steel-furnace", "steel-mixing-furnace"]
+  ],
+  "recipe":
+  [
+    ["chemical-boiler", "stone-chemical-furnace"],
+    ["chemical-steel-furnace", "steel-chemical-furnace"],
+    ["chemical-furnace", "electric-chemical-furnace"],
+
+    ["mixing-furnace", "stone-mixing-furnace"],
+    ["mixing-steel-furnace", "steel-mixing-furnace"],
+    ["mixing-steel-furnace", "steel-mixing-furnace"],
+
+
+    ["mixing-furnace-from-stone-furnace", "stone-mixing-furnace-from-stone-furnace"],
+    ["chemical-furnace-from-stone-furnace", "stone-chemical-furnace-from-stone-furnace"],
+    ["mixing-steel-furnace-from-steel-furnace", "steel-mixing-furnace-from-steel-furnace"],
+    ["chemical-steel-furnace-from-steel-furnace", "steel-chemical-furnace-from-steel-furnace"],
+
+    ["stone-furnace-from-chemical-furnace", "stone-furnace-from-stone-chemical-furnace"],
+    ["stone-furnace-from-mixing-furnace", "stone-furnace-from-stone-mixing-furnace"],
+    ["steel-furnace-from-chemical-steel-furnace", "steel-furnace-from-steel-chemical-furnace"],
+    ["steel-furnace-from-mixing-steel-furnace", "steel-furnace-from-steel-mixing-furnace"]
+  ],
+  "entity":
+  [
+    ["chemical-boiler", "stone-chemical-furnace"],
+    ["chemical-steel-furnace", "steel-chemical-furnace"],
+    ["chemical-furnace", "electric-chemical-furnace"],
+
+    ["mixing-furnace", "stone-mixing-furnace"],
+    ["mixing-steel-furnace", "steel-mixing-furnace"],
+    ["mixing-steel-furnace", "steel-mixing-furnace"]
+  ],
+  "technology":
+  [
+    ["mixing-steel-furnace", "steel-mixing-furnace"],
+    ["chemical-steel-furnace", "steel-chemical-furnace"]
+  ]
+}
+

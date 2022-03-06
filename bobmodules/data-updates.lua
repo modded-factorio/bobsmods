@@ -1,0 +1,76 @@
+require("prototypes.recipe.beacon-updates")
+require("prototypes.recipe.electronics-updates")
+require("prototypes.recipe.module-updates")
+require("prototypes.recipe.module-merged-updates")
+
+
+if settings.startup["bobmods-modules-transmitproductivity"].value == true then
+  for i, beacon in pairs(data.raw.beacon) do
+    table.insert(beacon.allowed_effects, "productivity")
+  end
+end
+
+bobmods.lib.tech.remove_science_pack("effect-transmission", "utility-science-pack")
+bobmods.lib.tech.remove_science_pack("effect-transmission", "production-science-pack")
+
+bobmods.lib.tech.remove_prerequisite("effect-transmission", "production-science-pack")
+bobmods.lib.tech.add_prerequisite("effect-transmission", "modules")
+bobmods.lib.tech.add_prerequisite("effect-transmission", "chemical-science-pack")
+
+
+bobmods.lib.tech.remove_prerequisite("speed-module-2", "advanced-electronics-2")
+bobmods.lib.tech.remove_prerequisite("productivity-module-2", "advanced-electronics-2")
+bobmods.lib.tech.remove_prerequisite("effectivity-module-2", "advanced-electronics-2")
+bobmods.lib.tech.remove_prerequisite("speed-module-3", "production-science-pack")
+bobmods.lib.tech.remove_prerequisite("productivity-module-3", "production-science-pack")
+bobmods.lib.tech.remove_prerequisite("effectivity-module-3", "production-science-pack")
+
+
+if data.raw["recipe-category"]["electronics-machine"] then
+  data.raw.recipe["module-circuit-board"].category = "electronics-machine"
+  data.raw.recipe["module-processor-board"].category = "electronics-machine"
+  data.raw.recipe["module-processor-board-2"].category = "electronics-machine"
+  data.raw.recipe["module-processor-board-3"].category = "electronics-machine"
+end
+
+if data.raw["recipe-category"]["electronics"] then
+  data.raw.recipe["speed-processor"].category = "electronics"
+  data.raw.recipe["effectivity-processor"].category = "electronics"
+  data.raw.recipe["productivity-processor"].category = "electronics"
+  data.raw.recipe["pollution-clean-processor"].category = "electronics"
+  data.raw.recipe["pollution-create-processor"].category = "electronics"
+  data.raw.recipe["speed-processor-2"].category = "electronics"
+  data.raw.recipe["effectivity-processor-2"].category = "electronics"
+  data.raw.recipe["productivity-processor-2"].category = "electronics"
+  data.raw.recipe["pollution-clean-processor-2"].category = "electronics"
+  data.raw.recipe["pollution-create-processor-2"].category = "electronics"
+  data.raw.recipe["speed-processor-3"].category = "electronics"
+  data.raw.recipe["effectivity-processor-3"].category = "electronics"
+  data.raw.recipe["productivity-processor-3"].category = "electronics"
+  data.raw.recipe["pollution-clean-processor-3"].category = "electronics"
+  data.raw.recipe["pollution-create-processor-3"].category = "electronics"
+end
+
+bobmods.lib.module.add_productivity_limitation("module-case")
+bobmods.lib.module.add_productivity_limitation("module-contact")
+bobmods.lib.module.add_productivity_limitation("module-circuit-board")
+bobmods.lib.module.add_productivity_limitation("module-processor-board")
+bobmods.lib.module.add_productivity_limitation("module-processor-board-2")
+bobmods.lib.module.add_productivity_limitation("module-processor-board-3")
+bobmods.lib.module.add_productivity_limitation("speed-processor")
+bobmods.lib.module.add_productivity_limitation("effectivity-processor")
+bobmods.lib.module.add_productivity_limitation("productivity-processor")
+bobmods.lib.module.add_productivity_limitation("pollution-clean-processor")
+bobmods.lib.module.add_productivity_limitation("pollution-create-processor")
+bobmods.lib.module.add_productivity_limitation("speed-processor-2")
+bobmods.lib.module.add_productivity_limitation("effectivity-processor-2")
+bobmods.lib.module.add_productivity_limitation("productivity-processor-2")
+bobmods.lib.module.add_productivity_limitation("pollution-clean-processor-2")
+bobmods.lib.module.add_productivity_limitation("pollution-create-processor-2")
+bobmods.lib.module.add_productivity_limitation("speed-processor-3")
+bobmods.lib.module.add_productivity_limitation("effectivity-processor-3")
+bobmods.lib.module.add_productivity_limitation("productivity-processor-3")
+bobmods.lib.module.add_productivity_limitation("pollution-clean-processor-3")
+bobmods.lib.module.add_productivity_limitation("pollution-create-processor-3")
+
+

@@ -1,0 +1,180 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 09. 04. 2021
+  Changes:
+    - Checks if vehicle-roboport-equipment-2 exists.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Bugfixes:
+    - Fixed old technology name references.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 26. 11. 2020
+  Changes:
+    - Changed checks for alloy-processing-1 to alloy-processing
+    - Added an check for steam inserter, and locks it behind steam power technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16. 08. 2020
+  Changes:
+    - Fixed Burner lab entity icon.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 22. 03. 2020
+  Changes:
+    - Removed character-logistic-slots and character-logistic-trash-slots technology references from science pack changes.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 17. 03. 2020
+  Changes:
+    - Added DiscoScience compatabillity
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Added Fast/Express inserter prerequisite to Advanced lab and Logistic science pack technologies as appropriate
+    - Added Zinc processing prerequisite to Logistic science pack technology.
+  Bugfixes:
+    - Fixed steam power technology icon.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Changes:
+    - Added a little more AAI Industry compatabillity.
+    - Change all recipe enabled = "false" lines to enabled = false
+  Bugfixes:
+    - Fixed science pack icon update
+  Balancing:
+    - Utility science now costs Lithium-Ion battery instead of Silver-zinc
+---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 27. 06. 2019
+  Changes:
+    - Changed internal name of burner lab from bob-burner-lab to burner-lab
+    - Lab now costs a burner lab to build.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 24. 06. 2019
+  Bugfixes:
+    - Fixed that a few recipes were still enabled when they shouldn't have been in burner stage (needs library update)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 23. 06. 2019
+  Changes:
+    - made adding the Logistic science pack "safe" (won't add it if it is already on the lab)
+    - Updated lab graphics and include HR version.
+  Features:
+    - Added "Burner stage" option.
+    - Burner stage adds steam science pack and burner lab.
+    - Burner stage locks boiler behind new Steam power technology
+    - Burner stage locks Steam engine and all entities that require Electricity behind new Electricity technology.
+    - Burner stage also adds new technology to unlock the Automation science pack and electric powered lab.
+    - Burner stage also adds all appropriate prerequisites to base game and bob's mods technologies.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 01. 05. 2019
+  Changes:
+    - updated personal-roboport-equipment-2 for 0.17.35 changes
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 11. 03. 2019
+  Bugfixes:
+    - fix Productivity science pack requirement
+  Changes:
+    - changed logistic trash slots technology to use Logistic science pack
+    - Same to personal/vehicle roboport 2
+    - Utility science pack gives 4 items per cycle over 28 seconds
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 02. 03. 2019
+  Balancing:
+    - Science pack cost balance.
+    - Chemical changed to 14 seconds for 2 packs, same recipe.
+    - Logistics now costs 2 brass chests instead of 1 steel chest.
+    - Utility now costs 6 processing units instead of 2.
+  Changes:
+    - Production science pack now costs assembling machine 2 instead of 3, and chemical plant instead of mining drill.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Science pack rename and ingredient change to account for 0.17 changes
+---------------------------------------------------------------------------------------------------
+Version: 0.16.6
+Date: 10. 06. 2018
+  Changes:
+    - Replacing the science pack icons sets icon_size too
+---------------------------------------------------------------------------------------------------
+Version: 0.16.5
+Date: 04. 04. 2018
+  Changes:
+    - Changed science pack colour change default to false
+    - Updated the locale entries for science pack remaining amount.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.4
+Date: 30. 03. 2018
+  Changes:
+    - Change science pack colour order to yellow, red, blue, purple, green. (optional)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: 15. 03. 2018
+  Changes:
+    - Fixed Logistic science pack requiring wrong inserter.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 10. 03. 2018
+  Changes:
+    - Replaced Express inserter as possibility for Logistics science pack with express filter inserter.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 20. 02. 2018
+  Bugfixes:
+    - Changed Science pack gold item to require alien science to exist. (recipe already required it)
+  Features:
+    - Added global bobmods.tech
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.16
+  Changes:
+    - the icon_size fix!
+    - The "Battery -> Electric engine unit -> Electric mining drill -> Battery" swap around on the High-tech, Production and 3rd science packs is always done, rather than being dependant on Lithium Ion Battery.
+    - Science pack 3 recipe gives 2 packs now.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 14. 05. 2017
+  Changes:
+    - Adjusted Logistic science pack to take the same time as production/high-tech science packs, and give 2 per run.
+  Bugfixes:
+    - Fixed braking force science pack replacement.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 10. 05. 2017
+  Changes:
+    - Added a lot of tech overrides for logistic science pack
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 10. 05. 2017
+  Balancing:
+    - rebalanced logistics pack to be of science pack 4 tier(like productivity), instead of 2.5
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 08. 05. 2017
+  Info:
+    - Updated to work with Factorio 0.15
+  Changes:
+    - re-added alien science pack
+    - Advanced lab is now just a faster lab, no extra science packs
+    - Science pack 4 removed
+    - Logistics science pack added

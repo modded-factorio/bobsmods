@@ -1,0 +1,251 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 09. 04. 2021
+  Changes:
+    - Moved the Brine Electrolysis recipe to the RTG unlock (where Brine is unlocked)
+    - Account for empty-nuclear-fuel-cell
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 06. 12. 2020
+  Changes:
+    - Extra Chemistry will replace Water with Hydrogen Peroxide in Sulfuric acid and Nitric acid recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 26. 11. 2020
+  Changes:
+    - Added Fluid handling prerequisite to Cliff explosives technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 11. 2020
+  Info:
+    - Updated to work with Factorio 1.1
+  Changes:
+    - Added a replace of Stone for Limestone to the cobalt-oxide-from-copper and cobalt-oxide recipes when Extra chemistry is enabled.
+  Features:
+    - Added carbon + oxygen -> Carbon dioxide recipe to Extra chemistry mode
+    - Added Carbon dioxide mediated oil processing to Extra chemistry mode
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 17. 08. 2020
+  Bugfixes:
+    - Fixed Deuterium fuel cell 2 fuel category, it can now correctly be used in the Deuterium reactor.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 17. 08. 2020
+  Changes:
+    - Added a move for Deuterium fuel cell 2.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 29. 06. 2020
+  Changes:
+    - Changed Rocket Silo recipe, makes use of some Rocket parts, and bob materials.
+    - Updated oil icons
+    - Removed ammonium-chloride-recycling from productivity module list.
+    - Added a lot of byproducts as Catalyst (you don't get this result from Productivity bonus)
+    - Added recipe for ammonia venting
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 23. 05. 2020
+  Changes:
+    - new oil update moves enriched-fuel-from-liquid-fuel unlock onto solid-fuel technology
+    - Updated for MCI 0.18.8
+  Bugfixes:
+    - Fixed solid-fuel-from-light-oil technology migration
+    - Fixed solid-fuel-from-heavy-oil technology migration
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 24. 04. 2020
+  Changes:
+    - Removed prerequisites for accumulators and solar energy from Space Science technology when related items are removed from the satelite recipe
+    - Added missing "Electrolysis 2" prerequisite to Plastics technology.
+    - Added petroleum-gas-sweetening unlock to Sulfur Processing too (Just in case you end up with sulfur processing and oil processing before plastics, and want to actually split the sour gas to get the Hydrogen Sulfide.)
+    - Added brine-electrolysis recipe that takes Brine and gives same results as Salt-water-electrolysis (just an alternate recipe, but slightly faster)
+  Balancing:
+    - Changed RTG to cost only 1 Plutonium instead of 10.
+    - Changed satellite Recipe to cost 10 RTGs instead of 20.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 16. 04. 2020
+  Changes:
+    - In Nuclear overhaul, moved the fuel cell unlock to the related nuclear power technology, and changed some prerequisites to suit.
+    - With RTGs on, the Satalite (for space science) uses 20 RTGs instead of 100 solar panels, and only 50 accumulators/batteries.
+    - Recoloured the RTG to an orangey yellow colour, like Plutonium glow.
+    - Moved Brine and Ammoniated brine recipes to the fluid tab.
+  Balancing:
+    - removed production science pack from RTGs technology.
+  Bugfixes:
+    - Fixed missing locale entry on calcium-chloride recipe by setting main_product
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 08. 04. 2020
+  Changes:
+    - Changed Chemical plant technology icon to be tinted red.
+    - Extra chemistry mode adds Carbon dioxide and Limestone as new biproducts/ingredients.
+    - Extra chemistry mode adds sodium chlorate and sodium perchlorate as intermediates for the Lithium perchlorate chain.
+    - Changed the Rocket fuel/Hydrazine chemistry chain to only include the Nitric Oxide step of Nitrogen dioxide in "Extra chemistry" mode, Nitrogen dioxide recipe remains the same as in MCI without this option.
+  Features:
+    - Added "Extra chemistry" option, which will effect Nitrogen dioxide, Lithium perchlorate, Calcium chloride and Petroleum gas cracking to Hydrogen recipes.
+    - Added a production chain to make Sodium cobaltate, with an extra long version in Extra chemistry mode.
+    - Added an RTG(Radio-Thermo-electric Generator) intermediate item, which requires Plutonium and the new Sodium cobaltate
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 12. 03. 2020
+  Changes:
+    - Added Pumpjack prerequisite to Oil processing.
+    - Added logistic-science-pack prerequisite to Chemical plant and pumpjack research.
+    - Added Electrnics prerequisite to pumpjack technology if Electronics mod is installed.
+    - Added Rocket engine to Rocket part, and Rocketry prerequisite to Rocket Silo
+    - Updated chemical plant technology icon.
+  Bugfixes:
+    - Fixed solid fuel technology icon.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 23. 01. 2020
+  Info:
+    - Updated to work with Factorio 0.18
+  Bugfixes:
+    - Added icon_size tag to advanced-oil-processing change list
+  Changes:
+    - Added new icons for Basic and my Crude oil processing to make it clearer what each gives if crude oil processing exists (and oil overhaul is enabled)
+    - New Oil overhaul turned on by default.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.8
+Date: 13. 10. 2019
+  Changes:
+  Bugfixes:
+    - Fixed the coal liquifaction changes.
+  Balancing:
+    - Balanced enriched fuel from hydrazine recipe.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.7
+Date: 08. 08. 2019
+  Changes:
+    - Adapted to Factorio 0.17.60.
+    - Added chemical-science-pack to rocket fuel research.
+  Balancing:
+    - reduced heavy oil input from coal liquifaction to help with balance.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 18. 07. 2019
+  Changes:
+    - Change all recipe enabled = "false" lines to enabled = false
+  Features:
+    - Oil overhaul is now an option.
+    - Added a new oil overhaul(on another option) that doesn't add the extra oil processing recipes, instead it replaces petroleum gas on other oil processing recipes with sour gas. This can be split into petroleum gas to make plastic and hydrogen sulfide to make sulfur and sulfuric acid. sour gas can also be vented, burned or made into fuel blocks generating more pollution than petroleum gas.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 27. 06. 2019
+  Changes:
+    - Nuclear update moves nuclear fuel reprocessing from a prerequisite of nuclear power to uranium processing.
+    - Added default_fuel_glow_color to reactors.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 21. 05. 2019
+  Changes:
+    - Removed the yellow glow graphics of the thorium reactor, to allow BobPower's tintable versions.
+    - Increased the size of gas and fluid icons.
+    - replaced prerequisite of nitrogen-processing from chemical-processing-2 to chemical-plant
+    - Added Deuterium reactor overides
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 17. 05. 2019
+  Changes:
+    - Added all rocket fuel production chain fluids to productivity filter.
+    - Added Thorium reactor overides
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 22. 04. 2019
+  Changes:
+    - Removed upgrade from chemical plant technology
+    - Changes to satellite recipe now effect space science pack technology (Which unlocks the satellite in 0.17) instead of rocket silo.
+    - Change rocket-fuel-updates.lua to check for what rocket-fuel.lua created instead of what it's looking for, to prevent it tripping up from other non-bob mods.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 21. 03. 2019
+  Changes:
+    - Changed lubricant prerequisite to include "chemical plant" and removed the unlock from other technologies.
+    - Removed the move of liquid fuel and resin from oil from oil processing to chemical processing 2.
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 26. 02. 2019
+  Info:
+    - Updated to work with Factorio 0.17
+  Changes:
+    - Adapted to all the changes to fuel values.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: 14. 09. 2018
+  Bugfixes:
+    - changed rocket-silo to have +1 slots on data-updates instead of forcing 5 (So that defaults to 4 with no other mods)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 13. 03. 2018
+  Bugfixes:
+    - Added heat-shield-tile to productivity allow list.
+  Features:
+    - Added fuel emissions multiplier to Hydrazine, rocket fuel and nuclear fuel.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 20. 02. 2018
+  Balancing:
+    - Nuclear fuel changes. acceleration multiplier 200%, top speed multiplier 125%, stack size 2.
+  Changes:
+    - Made gasses use gas pipe graphics instead of fluid.
+  Features:
+    - Added fuel value of 380kJ to hydrazine.
+    - Added global bobmods.revamp
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 19. 12. 2017
+  Info:
+    - Updated to work with Factorio 0.16
+  Changes:
+    - Icon size fix.
+  Balancing:
+    - Slight rebalance to oil recipes.
+  Features:
+    - Added solid-fuel to enriched-fuel-from-hydrazine recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.15.5
+Date: 26. 09. 2017
+  Balancing:
+    - Changed sulfur output count from 20 to 2.
+---------------------------------------------------------------------------------------------------
+Version: 0.15.4
+Date: 22. 05. 2017
+  Changes:
+    - increase ingredient count on rocket silo
+---------------------------------------------------------------------------------------------------
+Version: 0.15.3
+Date: 21. 05. 2017
+  Balancing:
+    - Enriched fuel block recipe balance
+  Changes:
+    - Rocket part recipe upgrade
+    - added heat shield tiles and research, and added to rocket parts recipe
+    - reworked low density structure recipe and added research
+    - reworked rocket control circuit recipe
+    - reworked satellite recipe
+    - completely changed the prerequisites of rocket silo research (removed modules research, there's no need for them any more)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 20. 05. 2017
+  Features:
+    - Added barrelling
+    - Added Hydrazine to enriched fuel recipe.
+  Balancing:
+    - fluid recipe rebalance (to bring new chains in line with MCI chains)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 16. 05. 2017
+  Features:
+    - Rocket silo revamp part 1:
+    - Added 5 new fluid intermediates
+    - remapped the progression to rocket-silo, giving rocket fuel it's own research
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 06. 05. 2017
+  Info:
+    - Updated to work with Factorio 0.16
+  Changes:
+    - Multiplied all fluid values by 10
