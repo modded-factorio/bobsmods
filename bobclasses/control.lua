@@ -1071,6 +1071,9 @@ function switch_character(player_index, new_character)
   if player.controller_type == defines.controllers.editor then
     player.toggle_map_editor() --safety restores the character entity.
   end
+  if remote.interfaces["space-exploration"] then
+    remote.call("space-exploration", "remote_view_stop", {player=player}) --Attempt to safe exit SatNav mode
+  end
   local old_character = player.character
   if new_character.surface ~= player.surface then --are we looking at the same surface as the new character?
     player.character = nil --we're not, disconnect the player
