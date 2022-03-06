@@ -45,7 +45,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
     bobmods.lib.tech.add_prerequisite("pumpjack", "electronics")
   end 
 
-  if data.raw.recipe["basic-oil-processing"].results and data.raw.recipe["basic-oil-processing"].results[1].name == "petroleum-gas" and data.raw.recipe["basic-oil-processing"].results[1].amount == 45 then
+  if data.raw.recipe["basic-oil-processing"] and data.raw.recipe["basic-oil-processing"].results and data.raw.recipe["basic-oil-processing"].results[1].name == "petroleum-gas" and data.raw.recipe["basic-oil-processing"].results[1].amount == 45 then
     data.raw.recipe["basic-oil-processing"].results[1].amount = 70 --increase PG count for 0.17.60.
   end
   bobmods.lib.recipe.set_ingredient("coal-liquefaction", {"heavy-oil", 10})
