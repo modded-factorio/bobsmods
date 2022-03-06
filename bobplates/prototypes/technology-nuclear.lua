@@ -48,7 +48,8 @@ data:extend(
     type = "technology",
     name = "plutonium-fuel-cell",
     icon = "__bobplates__/graphics/icons/nuclear/plutonium-fuel-cell.png",
-    icon_size = 32,
+    icon_size = 64,
+    icon_mipmaps = 4,
     effects =
     {
       {
@@ -156,7 +157,8 @@ data:extend(
     type = "technology",
     name = "thorium-plutonium-fuel-cell",
     icon = "__bobplates__/graphics/icons/nuclear/thorium-plutonium-fuel-cell.png",
-    icon_size = 32,
+    icon_size = 64,
+    icon_mipmaps = 4,
     effects =
     {
       {
