@@ -1,9 +1,12 @@
 data.raw["technology"]["speed-module"].icon = "__bobmodules__/graphics/icons/speed-module-1.png"
 data.raw["technology"]["speed-module"].icon_size = 32
+data.raw["technology"]["speed-module"].icon_mipmaps = 0
 data.raw["technology"]["speed-module-2"].icon = "__bobmodules__/graphics/icons/speed-module-2.png"
 data.raw["technology"]["speed-module-2"].icon_size = 32
+data.raw["technology"]["speed-module-2"].icon_mipmaps = 0
 data.raw["technology"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/speed-module-3.png"
 data.raw["technology"]["speed-module-3"].icon_size = 32
+data.raw["technology"]["speed-module-3"].icon_mipmaps = 0
 
 data.raw["technology"]["speed-module"].unit = {count = 25, ingredients = {{"speed-processor", 1}}, time = 30}
 data.raw["technology"]["speed-module-2"].unit = {count = 50, ingredients = {{"speed-processor", 1}}, time = 30}
@@ -152,6 +155,10 @@ data.raw["technology"]["effectivity-module"].icon_size = 32
 data.raw["technology"]["effectivity-module-2"].icon_size = 32
 data.raw["technology"]["effectivity-module-3"].icon_size = 32
 
+data.raw["technology"]["effectivity-module"].icon_mipmaps = 0
+data.raw["technology"]["effectivity-module-2"].icon_mipmaps = 0
+data.raw["technology"]["effectivity-module-3"].icon_mipmaps = 0
+
 data.raw["technology"]["effectivity-module"].unit = {count = 25, ingredients = {{"effectivity-processor", 1}}, time = 30}
 data.raw["technology"]["effectivity-module-2"].unit = {count = 50, ingredients = {{"effectivity-processor", 1}}, time = 30}
 data.raw["technology"]["effectivity-module-3"].unit = {count = 50, ingredients = {{"effectivity-processor", 2},{"module-circuit-board", 1}}, time = 60}
@@ -298,6 +305,10 @@ data.raw["technology"]["productivity-module-3"].icon = "__bobmodules__/graphics/
 data.raw["technology"]["productivity-module"].icon_size = 32
 data.raw["technology"]["productivity-module-2"].icon_size = 32
 data.raw["technology"]["productivity-module-3"].icon_size = 32
+
+data.raw["technology"]["productivity-module"].icon_mipmaps = 0
+data.raw["technology"]["productivity-module-2"].icon_mipmaps = 0
+data.raw["technology"]["productivity-module-3"].icon_mipmaps = 0
 
 data.raw["technology"]["productivity-module"].unit = {count = 25, ingredients = {{"productivity-processor", 1}}, time = 30}
 data.raw["technology"]["productivity-module-2"].unit = {count = 50, ingredients = {{"productivity-processor", 1}}, time = 30}
