@@ -460,6 +460,7 @@ script.on_event(defines.events.on_gui_opened, function(event)
   local player = game.players[event.player_index]
   if
     event.gui_type == defines.gui_type.entity
+    and event.entity
     and event.entity.type == "inserter"
     and not global.bobmods.inserters.blacklist[event.entity.name]
     and settings.get_player_settings(player)["bobmods-inserters-gui-position"].value ~= "off"
