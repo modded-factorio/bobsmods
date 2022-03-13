@@ -3,6 +3,8 @@ Version: 1.1.5
 Date: ???
   Bugfixes:
     - Fixed error in bobmods.lib.tech.add_science_packs
+  Changes:
+    - Added function bobmods.lib.module.remove_productivity_limitations(recipes) #2
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 09. 05. 2021

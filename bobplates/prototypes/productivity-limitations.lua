@@ -131,19 +131,25 @@ bobmods.lib.module.add_productivity_limitations(resources)
 
 bobmods.lib.module.add_productivity_limitations{
   "thorium-processing",
-  "thorium-fuel-cell",
-  "thorium-plutonium-fuel-cell",
   "bobingabout-enrichment-process"
 }
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.module.add_productivity_limitations{
     "empty-nuclear-fuel-cell",
-    "plutonium-fuel-cell",
     "nuclear-fuel-reprocessing",
     "thorium-fuel-reprocessing",
     "deuterium-fuel-reprocessing",
     "plutonium-nucleosynthesis"
+  }
+  bobmods.lib.module.remove_productivity_limitations{
+    "uranium-fuel-cell"
+  }
+else
+  bobmods.lib.module.add_productivity_limitations{
+    "thorium-fuel-cell",
+    "thorium-plutonium-fuel-cell",
+    "deuterium-fuel-cell"
   }
 end
 
@@ -152,6 +158,5 @@ bobmods.lib.module.add_productivity_limitations{
   "lead-oxide-2",
   "hydrogen-sulfide",
   "sulfur-3",
-  "heavy-water-electrolysis",
-  "deuterium-fuel-cell"
+  "heavy-water-electrolysis"
 }
