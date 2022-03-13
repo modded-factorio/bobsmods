@@ -36,7 +36,9 @@ function bobmods.lib.module.remove_productivity_limitation(recipe)
     for i, module in pairs(data.raw.module) do
       if module.limitation and module.effect.productivity then
         for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          table.remove(module.limitation, limitationIndex)
+          if recipe == limitationRecipeName then
+            table.remove(module.limitation, limitationIndex)
+          end
         end
       end
     end

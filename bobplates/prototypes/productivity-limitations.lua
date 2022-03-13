@@ -129,17 +129,23 @@ bobmods.lib.module.add_productivity_limitations(electronics)
 bobmods.lib.module.add_productivity_limitations(plates)
 bobmods.lib.module.add_productivity_limitations(resources)
 
-bobmods.lib.module.add_productivity_limitations{
-  "thorium-processing",
-  "bobingabout-enrichment-process"
-}
+if data.raw.item["thorium-ore"] then
+  bobmods.lib.module.add_productivity_limitations{
+    "thorium-processing",
+    "thorium-fuel-reprocessing"
+  }
+  
+  if settings.startup["bobmods-plates-nuclearupdate"].value ~= true then
+    bobmods.lib.module.add_productivity_limitations{
+      "thorium-fuel-cell",
+      "thorium-plutonium-fuel-cell"
+    }
+  end
+end
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.module.add_productivity_limitations{
     "empty-nuclear-fuel-cell",
-    "nuclear-fuel-reprocessing",
-    "thorium-fuel-reprocessing",
-    "deuterium-fuel-reprocessing",
     "plutonium-nucleosynthesis"
   }
   bobmods.lib.module.remove_productivity_limitations{
@@ -147,16 +153,15 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   }
 else
   bobmods.lib.module.add_productivity_limitations{
-    "thorium-fuel-cell",
-    "thorium-plutonium-fuel-cell",
     "deuterium-fuel-cell"
   }
 end
-
 
 bobmods.lib.module.add_productivity_limitations{
   "lead-oxide-2",
   "hydrogen-sulfide",
   "sulfur-3",
-  "heavy-water-electrolysis"
+  "heavy-water-electrolysis",
+  "deuterium-fuel-reprocessing",
+  "bobingabout-enrichment-process"
 }
