@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: ???
+  Bugfixes:
+    - Fixed module technology sort order
   Changes:
     - Prevent machines with no fluid input from showing electronics recipes with a fluid ingredient #5
 ---------------------------------------------------------------------------------------------------
@@ -72,7 +74,7 @@ Date: 23. 01. 2020
 Version: 0.17.4
 Date: 17. 05. 2019
   Changes:
-    - Removed polluting circuits from module merging technologiy, as no merged modules actually use them.
+    - Removed polluting circuits from module merging technology, as no merged modules actually use them.
   Bugfixes:
     - Added allow_as_intermediate = false to all module combining recipes. This should cause hand crafting a no side effects high end module avoid trying to make the previous tier using the combine recipe.
 ---------------------------------------------------------------------------------------------------

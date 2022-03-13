@@ -30,10 +30,10 @@ data:extend(
     prerequisites = {"speed-module-3"},
     unit =
     {
-      count = 100,
+      count = 50,
       ingredients = {
-        {"speed-processor", 2},
-        {"module-circuit-board", 1},
+        {"speed-processor", 4},
+        {"module-circuit-board", 2},
       },
       time = 60
     },
@@ -181,10 +181,10 @@ data:extend(
     prerequisites = {"effectivity-module-3"},
     unit =
     {
-      count = 100,
+      count = 50,
       ingredients = {
-        {"effectivity-processor", 2},
-        {"module-circuit-board", 1},
+        {"effectivity-processor", 4},
+        {"module-circuit-board", 2},
       },
       time = 60
     },
@@ -332,10 +332,10 @@ data:extend(
     prerequisites = {"productivity-module-3"},
     unit =
     {
-      count = 100,
+      count = 50,
       ingredients = {
-        {"productivity-processor", 2},
-        {"module-circuit-board", 1},
+        {"productivity-processor", 4},
+        {"module-circuit-board", 2},
       },
       time = 60
     },
@@ -541,10 +541,10 @@ data:extend(
     prerequisites = {"pollution-clean-module-3"},
     unit =
     {
-      count = 100,
+      count = 50,
       ingredients = {
-        {"pollution-clean-processor", 2},
-        {"module-circuit-board", 1},
+        {"pollution-clean-processor", 4},
+        {"module-circuit-board", 2},
       },
       time = 60
     },
@@ -748,11 +748,11 @@ data:extend(
     prerequisites = {"pollution-create-module-3"},
     unit =
     {
-      count = 100,
+      count = 50,
       ingredients =
       {
-        {"pollution-create-processor", 2},
-        {"module-circuit-board", 1},
+        {"pollution-create-processor", 4},
+        {"module-circuit-board", 2},
       },
       time = 60
     },
