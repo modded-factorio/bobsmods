@@ -76,7 +76,7 @@ if data.raw.item["gold-plate"] then
     {
       type = "recipe",
       name = "gilded-copper-cable",
-      category = "electronics",
+      category = "electronics-machine",
       enabled = false,
       ingredients =
       {
@@ -237,7 +237,7 @@ data:extend(
   {
     type = "recipe",
     name = "intergrated-electronics",
-    category = "electronics-machine",
+    category = "electronics-with-fluid",
     normal =
     {
       energy_required = 5,
@@ -287,7 +287,7 @@ data:extend(
   {
     type = "recipe",
     name = "processing-electronics",
-    category = "electronics-machine",
+    category = "electronics-with-fluid",
     normal = 
     {
       energy_required = 7,
@@ -451,7 +451,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-board",
-    category = "electronics-machine",
+    category = "electronics-with-fluid",
     energy_required = 5,
     enabled = false,
     ingredients =
@@ -482,7 +482,7 @@ data:extend(
   {
     type = "recipe",
     name = "superior-circuit-board",
-    category = "electronics-machine",
+    category = "electronics-with-fluid",
     energy_required = 10,
     enabled = false,
     ingredients =
@@ -513,7 +513,7 @@ data:extend(
   {
     type = "recipe",
     name = "multi-layer-circuit-board",
-    category = "electronics-machine",
+    category = "electronics-with-fluid",
     energy_required = 15,
     enabled = false,
     ingredients =

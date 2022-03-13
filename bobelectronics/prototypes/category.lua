@@ -12,6 +12,10 @@ data:extend(
     type = "recipe-category",
     name = "electronics-machine"
   },
+  {
+    type = "recipe-category",
+    name = "electronics-with-fluid"
+  },
 
 
   {

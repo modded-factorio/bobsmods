@@ -26,11 +26,11 @@ bobmods.lib.tech.remove_prerequisite("productivity-module-3", "production-scienc
 bobmods.lib.tech.remove_prerequisite("effectivity-module-3", "production-science-pack")
 
 
-if data.raw["recipe-category"]["electronics-machine"] then
-  data.raw.recipe["module-circuit-board"].category = "electronics-machine"
-  data.raw.recipe["module-processor-board"].category = "electronics-machine"
-  data.raw.recipe["module-processor-board-2"].category = "electronics-machine"
-  data.raw.recipe["module-processor-board-3"].category = "electronics-machine"
+if data.raw["recipe-category"]["electronics-with-fluid"] then
+  data.raw.recipe["module-circuit-board"].category = "electronics-with-fluid"
+  data.raw.recipe["module-processor-board"].category = "electronics-with-fluid"
+  data.raw.recipe["module-processor-board-2"].category = "electronics-with-fluid"
+  data.raw.recipe["module-processor-board-3"].category = "electronics-with-fluid"
 end
 
 if data.raw["recipe-category"]["electronics"] then
@@ -39,16 +39,19 @@ if data.raw["recipe-category"]["electronics"] then
   data.raw.recipe["productivity-processor"].category = "electronics"
   data.raw.recipe["pollution-clean-processor"].category = "electronics"
   data.raw.recipe["pollution-create-processor"].category = "electronics"
-  data.raw.recipe["speed-processor-2"].category = "electronics"
-  data.raw.recipe["effectivity-processor-2"].category = "electronics"
-  data.raw.recipe["productivity-processor-2"].category = "electronics"
-  data.raw.recipe["pollution-clean-processor-2"].category = "electronics"
-  data.raw.recipe["pollution-create-processor-2"].category = "electronics"
-  data.raw.recipe["speed-processor-3"].category = "electronics"
-  data.raw.recipe["effectivity-processor-3"].category = "electronics"
-  data.raw.recipe["productivity-processor-3"].category = "electronics"
-  data.raw.recipe["pollution-clean-processor-3"].category = "electronics"
-  data.raw.recipe["pollution-create-processor-3"].category = "electronics"
+end
+
+if data.raw["recipe-category"]["electronics-machine"] then
+  data.raw.recipe["speed-processor-2"].category = "electronics-machine"
+  data.raw.recipe["effectivity-processor-2"].category = "electronics-machine"
+  data.raw.recipe["productivity-processor-2"].category = "electronics-machine"
+  data.raw.recipe["pollution-clean-processor-2"].category = "electronics-machine"
+  data.raw.recipe["pollution-create-processor-2"].category = "electronics-machine"
+  data.raw.recipe["speed-processor-3"].category = "electronics-machine"
+  data.raw.recipe["effectivity-processor-3"].category = "electronics-machine"
+  data.raw.recipe["productivity-processor-3"].category = "electronics-machine"
+  data.raw.recipe["pollution-clean-processor-3"].category = "electronics-machine"
+  data.raw.recipe["pollution-create-processor-3"].category = "electronics-machine"
 end
 
 bobmods.lib.module.add_productivity_limitation("module-case")

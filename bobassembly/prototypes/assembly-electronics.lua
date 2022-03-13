@@ -10,6 +10,10 @@ data:extend(
     type = "recipe-category",
     name = "electronics-machine"
   },
+  {
+    type = "recipe-category",
+    name = "electronics-with-fluid"
+  }
 }
 )
 
@@ -310,7 +314,7 @@ data:extend(
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 1.5,
     },
-    crafting_categories = {"electronics", "electronics-machine"},
+    crafting_categories = {"electronics", "electronics-machine", "electronics-with-fluid"},
     crafting_speed = 2.25,
     energy_source =
     {
@@ -497,7 +501,7 @@ data:extend(
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 1.5,
     },
-    crafting_categories = {"electronics", "electronics-machine"},
+    crafting_categories = {"electronics", "electronics-machine", "electronics-with-fluid"},
     crafting_speed = 4,
     energy_source =
     {

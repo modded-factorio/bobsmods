@@ -30,6 +30,7 @@ bobmods.lib.machine.type_if_add_category("character", "crafting", "electronics")
 bobmods.lib.machine.type_if_add_category("god-controller", "crafting", "electronics")
 bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "electronics")
 bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "electronics-machine")
+bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "electronics-with-fluid")
 
 
 if settings.startup["bobmods-colorupdate"].value == true then
