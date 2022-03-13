@@ -312,7 +312,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
         subgroup = "void",
         order = "sour-gas",
         category = "void-fluid",
-        hidden = "true",
+        hide_from_player_crafting = true,
         energy_required = 1,
         ingredients =
         {

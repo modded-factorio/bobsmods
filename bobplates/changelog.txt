@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: ???
+  Changes:
+    - Fluid void recipes are now marked as hide_from_player_crafting instead of hidden #3
   Bugfixes:
     - Fixed tech icon size of Plutonium fuel cell and Thorium-plutonium fuel cell techs #1
 ---------------------------------------------------------------------------------------------------
