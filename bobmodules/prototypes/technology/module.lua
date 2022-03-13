@@ -12,6 +12,9 @@ data.raw["technology"]["speed-module"].unit = {count = 25, ingredients = {{"spee
 data.raw["technology"]["speed-module-2"].unit = {count = 50, ingredients = {{"speed-processor", 1}}, time = 30}
 data.raw["technology"]["speed-module-3"].unit = {count = 50, ingredients = {{"speed-processor", 2},{"module-circuit-board", 1}}, time = 60}
 
+data.raw["technology"]["speed-module"].upgrade = false
+data.raw["technology"]["speed-module-2"].upgrade = false
+data.raw["technology"]["speed-module-3"].upgrade = false
 
 data:extend(
 {
@@ -163,6 +166,9 @@ data.raw["technology"]["effectivity-module"].unit = {count = 25, ingredients = {
 data.raw["technology"]["effectivity-module-2"].unit = {count = 50, ingredients = {{"effectivity-processor", 1}}, time = 30}
 data.raw["technology"]["effectivity-module-3"].unit = {count = 50, ingredients = {{"effectivity-processor", 2},{"module-circuit-board", 1}}, time = 60}
 
+data.raw["technology"]["effectivity-module"].upgrade = false
+data.raw["technology"]["effectivity-module-2"].upgrade = false
+data.raw["technology"]["effectivity-module-3"].upgrade = false
 
 data:extend(
 {
@@ -314,6 +320,9 @@ data.raw["technology"]["productivity-module"].unit = {count = 25, ingredients = 
 data.raw["technology"]["productivity-module-2"].unit = {count = 50, ingredients = {{"productivity-processor", 1}}, time = 30}
 data.raw["technology"]["productivity-module-3"].unit = {count = 50, ingredients = {{"productivity-processor", 2},{"module-circuit-board", 1}}, time = 60}
 
+data.raw["technology"]["productivity-module"].upgrade = false
+data.raw["technology"]["productivity-module-2"].upgrade = false
+data.raw["technology"]["productivity-module-3"].upgrade = false
 
 data:extend(
 {
