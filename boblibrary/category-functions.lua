@@ -106,9 +106,11 @@ function bobmods.lib.machine.type_if_add_resource_category(machine_type, categor
     end
   else
     if not data.raw["resource-category"][category] then
+      log(debug.traceback())
       log("Resource category " .. category .. " does not exist.")
     end
     if not data.raw["resource-category"][category_to_add] then
+      log(debug.traceback())
       log("Resource category " .. category_to_add .. " does not exist.")
     end
   end
