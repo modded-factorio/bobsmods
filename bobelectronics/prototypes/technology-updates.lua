@@ -87,3 +87,6 @@ data.raw.technology["electronics"].icon_size = 128
 data.raw.technology["advanced-electronics"].icon_size = 128
 data.raw.technology["advanced-electronics-2"].icon_size = 128
 
+data.raw.technology["electronics"].icon_mipmaps = 0
+data.raw.technology["advanced-electronics"].icon_mipmaps = 0
+data.raw.technology["advanced-electronics-2"].icon_mipmaps = 0
