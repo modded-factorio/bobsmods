@@ -28,8 +28,9 @@ bobmods.lib.tech.replace_science_pack("worker-robots-storage-3", "production-sci
 bobmods.lib.tech.replace_prerequisite("worker-robots-storage-2", "production-science-pack", "advanced-logistic-science-pack")
 
 bobmods.lib.tech.replace_science_pack("personal-roboport-mk2-equipment", "utility-science-pack", "advanced-logistic-science-pack")
-bobmods.lib.tech.replace_science_pack("vehicle-roboport-equipment-2", "utility-science-pack", "advanced-logistic-science-pack")
-
+if mods["bobvehicleequipment"] then
+  bobmods.lib.tech.replace_science_pack("vehicle-roboport-equipment-2", "utility-science-pack", "advanced-logistic-science-pack")
+end
 
 bobmods.lib.tech.add_prerequisite("chemical-science-pack", "alloy-processing")
 bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")
