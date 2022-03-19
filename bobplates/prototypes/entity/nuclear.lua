@@ -4,11 +4,7 @@ data.raw["assembling-machine"]["centrifuge"].working_visualisations =
   {
     -- Centrifuge C, Top.
     apply_recipe_tint = "tertiary",
-    north_position = {0, 0},
-    west_position = {0, 0},
-    south_position = {0, 0},
-    east_position = {0, 0},
-    animation = 
+    animation =
     {
       filename = "__bobplates__/graphics/entity/centrifuge/centrifuge-C-light.png",
       priority = "high",
@@ -35,11 +31,7 @@ data.raw["assembling-machine"]["centrifuge"].working_visualisations =
     -- Centrifuge B, Bottom right.
   {
     apply_recipe_tint = "secondary",
-    north_position = {0, 0},
-    west_position = {0, 0},
-    south_position = {0, 0},
-    east_position = {0, 0},
-    animation = 
+    animation =
     {
       filename = "__bobplates__/graphics/entity/centrifuge/centrifuge-B-light.png",
       priority = "high",
@@ -66,11 +58,7 @@ data.raw["assembling-machine"]["centrifuge"].working_visualisations =
     -- Centrifuge A, Bottom left.
   {
     apply_recipe_tint = "primary",
-    north_position = {0, 0},
-    west_position = {0, 0},
-    south_position = {0, 0},
-    east_position = {0, 0},
-    animation = 
+    animation =
     {
       filename = "__bobplates__/graphics/entity/centrifuge/centrifuge-A-light.png",
       priority = "high",
@@ -94,20 +82,29 @@ data.raw["assembling-machine"]["centrifuge"].working_visualisations =
       }
     }
   },
+
+  -- Centrifuge C, Top.
   {
-    apply_recipe_tint = "primary",
-    effect = "uranium-glow", -- changes alpha based on energy source light intensity
-    light = {intensity = 0.4, size = 8, shift = {-1.0, 0.5}, apply_recipe_tint = "primary"}
-  },
-  {
-    apply_recipe_tint = "secondary",
-    effect = "uranium-glow", -- changes alpha based on energy source light intensity
-    light = {intensity = 0.4, size = 8, shift = {1.0, 0.5}, apply_recipe_tint = "secondary"}
-  },
-  {
+    effect = "uranium-glow",
     apply_recipe_tint = "tertiary",
-    effect = "uranium-glow", -- changes alpha based on energy source light intensity
-    light = {intensity = 0.4, size = 8, shift = {0.0, -1.2}, apply_recipe_tint = "tertiary"}
-  }
+    fadeout = true,
+    light = {intensity = 0.066, size = 8.9, shift = {0, -1.2}}
+  },
+
+  -- Centrifuge B, Bottom right.
+  {
+      effect = "uranium-glow",
+      apply_recipe_tint = "secondary",
+      fadeout = true,
+      light = {intensity = 0.066, size = 8.9, shift = {1, 0.5}}
+  },
+
+  -- Centrifuge A, Bottom left.
+  {
+      effect = "uranium-glow",
+      apply_recipe_tint = "primary",
+      fadeout = true,
+      light = {intensity = 0.066, size = 8.9, shift = {-1, 0.5}}
+  },
 }
 
