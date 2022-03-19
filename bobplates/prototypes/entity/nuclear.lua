@@ -83,29 +83,28 @@ data.raw["assembling-machine"]["centrifuge"].working_visualisations =
     }
   },
 
-  -- AREA LIGHTS
-  -- Centrifuge C (Rear)
+  -- Centrifuge C, Top.
   {
     effect = "uranium-glow",
     apply_recipe_tint = "tertiary",
     fadeout = true,
-    light = {intensity = 0.06, size = 8.9, shift = {0, -1.2}}
+    light = {intensity = 0.066, size = 8.9, shift = {0, -1.2}}
   },
 
-  -- Centrifuge B (Front Right)
+  -- Centrifuge B, Bottom right.
   {
       effect = "uranium-glow",
       apply_recipe_tint = "secondary",
       fadeout = true,
-      light = {intensity = 0.06, size = 8.9, shift = {1, 0.5}}
+      light = {intensity = 0.066, size = 8.9, shift = {1, 0.5}}
   },
 
-  -- Centrifuge A (Front Left)
+  -- Centrifuge A, Bottom left.
   {
       effect = "uranium-glow",
       apply_recipe_tint = "primary",
       fadeout = true,
-      light = {intensity = 0.06, size = 8.9, shift = {-1, 0.5}}
+      light = {intensity = 0.066, size = 8.9, shift = {-1, 0.5}}
   },
 }
 
