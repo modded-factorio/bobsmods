@@ -19,7 +19,7 @@ data:extend(
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
     icon_size = 64,
     placed_as_equipment_result = "energy-shield-mk3-equipment",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "b[shield]-c[energy-shield-equipment-mk3]",
     stack_size = 50,
     default_request_amount = 10
@@ -30,7 +30,7 @@ data:extend(
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
     icon_size = 64,
     placed_as_equipment_result = "energy-shield-mk4-equipment",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "b[shield]-d[energy-shield-equipment-mk4]",
     stack_size = 50,
     default_request_amount = 10
@@ -41,7 +41,7 @@ data:extend(
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
     icon_size = 64,
     placed_as_equipment_result = "energy-shield-mk5-equipment",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "b[shield]-e[energy-shield-equipment-mk5]",
     stack_size = 50,
     default_request_amount = 10
@@ -52,7 +52,7 @@ data:extend(
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
     icon_size = 64,
     placed_as_equipment_result = "energy-shield-mk6-equipment",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "b[shield]-f[energy-shield-equipment-mk6]",
     stack_size = 50,
     default_request_amount = 10
@@ -160,7 +160,7 @@ data:extend(
     icon = "__bobequipment__/graphics/icons/distractor.png",
     icon_size = 32,
     placed_as_equipment_result = "combat-robot-dispenser-equipment",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "d[active-defense]-c[combat-robot-dispenser-equipment-2]",
     stack_size = 20
   },
@@ -242,7 +242,7 @@ data:extend(
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
     icon_size = 128,
     placed_as_equipment_result = "personal-laser-defense-equipment-2",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-2]",
     stack_size = 20
   },
@@ -252,7 +252,7 @@ data:extend(
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
     icon_size = 128,
     placed_as_equipment_result = "personal-laser-defense-equipment-3",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-3]",
     stack_size = 20
   },
@@ -262,7 +262,7 @@ data:extend(
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
     icon_size = 128,
     placed_as_equipment_result = "personal-laser-defense-equipment-4",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-4]",
     stack_size = 20
   },
@@ -272,7 +272,7 @@ data:extend(
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
     icon_size = 128,
     placed_as_equipment_result = "personal-laser-defense-equipment-5",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-5]",
     stack_size = 20
   },
@@ -282,7 +282,7 @@ data:extend(
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
     icon_size = 128,
     placed_as_equipment_result = "personal-laser-defense-equipment-6",
-    subgroup = "equipment",
+    subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-6]",
     stack_size = 20
   },
