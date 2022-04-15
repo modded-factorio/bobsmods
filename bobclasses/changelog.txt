@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.1
+Version: 1.1.5
 Date: ???
   Bugfixes:
     - Added call to space-exploration remote_view_stop before switching character

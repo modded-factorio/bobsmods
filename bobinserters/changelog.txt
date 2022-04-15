@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.1
+Version: 1.1.5
 Date: ???
   Bugfixes:
     - Fixed error that could occur when opening inserter gui #6
   Changes:
-    - Allow long handed inserter to fast replace other inserter types
+    - Allow long handed inserter to fast replace other inserter types #8
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 25. 11. 2020

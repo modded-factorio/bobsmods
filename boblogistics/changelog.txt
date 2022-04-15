@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.4
+Version: 1.1.5
 Date: ???
   Bugfixes:
     - Prevent error if inserter capacity techs do not exist

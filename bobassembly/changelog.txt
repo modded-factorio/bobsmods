@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.4
+Version: 1.1.5
 Date: ???
   Changes:
     - Prevent machines with no fluid input from showing electronics recipes with a fluid ingredient #5

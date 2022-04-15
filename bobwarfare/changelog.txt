@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.4
+Version: 1.1.5
 Date: ???
   Bugfixes:
     - Fixed mech brain ingredient fallback: Module case > Aluminium plate > Steel plate #4

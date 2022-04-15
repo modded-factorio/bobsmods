@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.4
+Version: 1.1.5
 Date: ???
   Changes:
     - Only check vehicle-roboport-equipment-2 if bobvehicleequipment is enabled #4
