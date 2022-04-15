@@ -237,10 +237,8 @@ bobmods.lib.create_gas_bottle(data.raw.fluid["petroleum-gas"])
 
 
 if settings.startup["bobmods-plates-purewater"].value == true then
-  if mods["bobores"] then
-    bobmods.lib.resource.remove_result("ground-water", "water")
-    bobmods.lib.resource.add_result("ground-water", { type = "fluid", name = "pure-water", amount = 10, probability = 1})
-  end
+  bobmods.lib.resource.remove_result("ground-water", "water")
+  bobmods.lib.resource.add_result("ground-water", { type = "fluid", name = "pure-water", amount = 10, probability = 1})
 
   bobmods.lib.recipe.replace_ingredient("water-electrolysis", "water", "pure-water")
   bobmods.lib.recipe.replace_ingredient("salt-water-electrolysis", "water", "pure-water")

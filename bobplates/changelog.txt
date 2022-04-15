@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Prevent productivity modules from being used on fuel cell recipes that take Empty nuclear fuel cells #2
     - Fluid void recipes are now marked as hide_from_player_crafting instead of hidden #3
+    - Changed Bob's Ores mod from an optional to a required dependency #14
     - Bring centrifuge lighting in-line with current vanilla lighting #15
   Bugfixes:
     - Fixed tech icon size of Plutonium fuel cell and Thorium-plutonium fuel cell techs #1
