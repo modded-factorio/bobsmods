@@ -162,7 +162,8 @@ data:extend(
     placed_as_equipment_result = "combat-robot-dispenser-equipment",
     subgroup = "military-equipment",
     order = "d[active-defense]-c[combat-robot-dispenser-equipment-2]",
-    stack_size = 20
+    stack_size = 20,
+    flags = {"hidden"}
   },
 
 
