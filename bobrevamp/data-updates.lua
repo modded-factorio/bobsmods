@@ -39,7 +39,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.remove_prerequisite("oil-processing", "steel-processing")
   bobmods.lib.tech.add_prerequisite("oil-processing", "pumpjack")
   data.raw.technology["oil-processing"].icon = "__base__/graphics/technology/oil-processing.png"
-  data.raw.technology["oil-processing"].unit.count = 30
+  bobmods.lib.tech.set_science_pack_count("oil-processing", 30)
 
   if bobmods.electronics then
     bobmods.lib.tech.add_prerequisite("pumpjack", "electronics")
@@ -52,7 +52,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
 
 
   bobmods.lib.tech.replace_prerequisite("fluid-handling", "oil-processing", "steel-processing")
-  data.raw.technology["fluid-handling"].unit.count = 30
+  bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)
 
   bobmods.lib.tech.replace_prerequisite("sulfur-processing", "oil-processing", "chemical-plant")
   bobmods.lib.tech.add_prerequisite("cliff-explosives", "fluid-handling")

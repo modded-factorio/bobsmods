@@ -5,6 +5,8 @@ Date: ???
     - Fixed error in bobmods.lib.tech.add_science_packs
   Changes:
     - Added function bobmods.lib.module.remove_productivity_limitations(recipes) #2
+    - Added function bobmods.lib.recipe.hide_recipe(recipe) #12
+    - Added function bobmods.lib.tech.set_science_pack_count(technology, count) #18
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 09. 05. 2021

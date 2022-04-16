@@ -59,13 +59,6 @@ local function generate_empty_barrel_icons(fluid)
   return icon 
 end
 
--- If the fill/empty recipes effect production statistics
-local hide_barreling_from_production_stats = true
--- If the fill/empty recipes should be included in the list of valid recipes things can use when calculating raw materials
-local allow_barreling_decomposition = false
-
-
-
 -- Generates a barrel item with the provided name and fluid definition using the provided empty barrel stack size
 local function create_barrel_item(fluid)
   local result =

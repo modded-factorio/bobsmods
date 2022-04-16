@@ -3,7 +3,7 @@ bobmods.lib.tech.add_prerequisite("automation-2", "steel-processing")
 bobmods.lib.tech.add_prerequisite("automation-2", "logistic-science-pack")
 
 data.raw.technology["automation-3"].prerequisites = {"automation-2", "steel-processing", "advanced-electronics"}
-data.raw.technology["automation-3"].unit.count = 60
+bobmods.lib.tech.set_science_pack_count("automation-3", 60)
 data.raw.technology["automation-3"].unit.ingredients = {{"automation-science-pack", 2}, {"logistic-science-pack", 1}}
 data.raw.technology["automation-3"].unit.time = 30
 

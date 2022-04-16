@@ -256,7 +256,23 @@ function bobmods.lib.tech.set_science_packs(technology, science_packs)
   end
 end
 
-
+function bobmods.lib.tech.set_science_pack_count(technology, count)
+  if type(technology) == "string" and data.raw.technology[technology] then
+    local prototype = data.raw.technology[technology]
+    if prototype.unit then
+      prototype.unit.count = count
+    end
+    if prototype.normal and prototype.normal.unit then
+      prototype.normal.unit.count = count
+    end
+    if prototype.expensive and prototype.expensive.unit then
+      prototype.expensive.unit.count = count
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.technology(technology)
+  end
+end
 
 function bobmods.lib.tech.replace_difficulty_science_pack(technology, difficulty, old, new)
   if
