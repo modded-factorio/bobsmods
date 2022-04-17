@@ -62,7 +62,7 @@ data:extend(
     {
       "vehicle-solar-panel-equipment-1",
       "laser-turret",
-      "chemical-science-pack",
+      "military-3"
     },
     unit =
     {
@@ -241,7 +241,7 @@ data:extend(
     prerequisites =
     {
       "vehicle-big-turret-equipment-2",
-      "utility-science-pack",
+      "military-4",
     },
     unit =
     {
