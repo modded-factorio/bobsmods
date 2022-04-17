@@ -152,7 +152,7 @@ data:extend(
     },
     unit =
     {
-      count = 75,
+      count = 150,
       time = 30,
       ingredients =
       {
@@ -177,7 +177,7 @@ data:extend(
     },
     unit =
     {
-      count = 75,
+      count = 200,
       time = 30,
       ingredients =
       {
@@ -211,7 +211,7 @@ data:extend(
     },
     unit =
     {
-      count = 100,
+      count = 250,
       time = 30,
       ingredients =
       {
@@ -245,7 +245,7 @@ data:extend(
     },
     unit =
     {
-      count = 100,
+      count = 300,
       time = 30,
       ingredients =
       {

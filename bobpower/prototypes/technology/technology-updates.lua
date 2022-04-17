@@ -20,5 +20,7 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.tech.add_prerequisite("electric-substation-4", "advanced-logistic-science-pack")
   end
 
+  bobmods.lib.tech.set_science_pack_count("electric-energy-distribution-1", 100)
+  bobmods.lib.tech.set_science_pack_count("electric-energy-distribution-2", 250)
 end
 

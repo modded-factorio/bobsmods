@@ -25,7 +25,7 @@ data:extend(
     },
     unit =
     {
-      count = 75,
+      count = 150,
       ingredients =
       {
         {"automation-science-pack", 1},
@@ -60,7 +60,7 @@ data:extend(
     },
     unit =
     {
-      count = 100,
+      count = 200,
       ingredients =
       {
         {"automation-science-pack", 1},
@@ -96,7 +96,7 @@ data:extend(
     },
     unit =
     {
-      count = 150,
+      count = 250,
       ingredients =
       {
         {"automation-science-pack", 1},
@@ -130,7 +130,7 @@ data:extend(
     },
     unit =
     {
-      count = 150,
+      count = 300,
       ingredients =
       {
         {"automation-science-pack", 1},
@@ -162,7 +162,7 @@ data:extend(
     },
     unit =
     {
-      count = 200,
+      count = 350,
       ingredients =
       {
         {"automation-science-pack", 1},
@@ -193,7 +193,7 @@ data:extend(
     },
     unit =
     {
-      count = 200,
+      count = 400,
       ingredients =
       {
         {"automation-science-pack", 1},

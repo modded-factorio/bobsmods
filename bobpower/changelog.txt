@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Tidied up technology prerequisites #12
     - Added fuel value to the tooltip of burnable fluids #13
+    - Adjusted tech costs #18
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 09. 04. 2021

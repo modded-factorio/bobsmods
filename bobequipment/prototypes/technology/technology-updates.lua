@@ -13,6 +13,7 @@ end
 
 bobmods.lib.tech.remove_science_pack("personal-roboport-mk2-equipment", "utility-science-pack")
 bobmods.lib.tech.replace_prerequisite("personal-roboport-mk2-equipment", "utility-science-pack", "chemical-science-pack")
+bobmods.lib.tech.set_science_pack_count("personal-roboport-mk2-equipment", 100)
 
 if data.raw.tool["science-pack-gold"] and
   data.raw.tool["alien-science-pack-blue"] and

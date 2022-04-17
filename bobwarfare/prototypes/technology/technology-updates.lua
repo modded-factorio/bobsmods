@@ -298,7 +298,7 @@ bobmods.lib.tech.remove_science_pack("laser-shooting-speed-2", "chemical-science
 bobmods.lib.tech.remove_science_pack("laser", "chemical-science-pack")
 bobmods.lib.tech.remove_prerequisite("laser", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-turret", "chemical-science-pack")
-
+bobmods.lib.tech.set_science_pack_count("laser-turret", 100)
 
 if data.raw.recipe["gun-cotton-synthetic"] then
   bobmods.lib.tech.add_recipe_unlock("cordite-processing", "gun-cotton-synthetic")

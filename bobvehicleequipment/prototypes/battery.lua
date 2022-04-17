@@ -341,7 +341,7 @@ data:extend(
     },
     unit =
     {
-      count = 150,
+      count = 200,
       time = 45,
       ingredients =
       {
@@ -432,7 +432,7 @@ data:extend(
     },
     unit =
     {
-      count = 200,
+      count = 250,
       time = 45,
       ingredients =
       {
@@ -524,7 +524,7 @@ data:extend(
     },
     unit =
     {
-      count = 250,
+      count = 300,
       time = 45,
       ingredients =
       {
