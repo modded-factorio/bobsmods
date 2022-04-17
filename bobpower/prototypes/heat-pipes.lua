@@ -198,6 +198,7 @@ data:extend(
     prerequisites =
     {
       "bob-heat-pipe-2",
+      "production-science-pack"
     },
     effects =
     {

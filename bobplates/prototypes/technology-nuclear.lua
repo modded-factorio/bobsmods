@@ -169,7 +169,8 @@ data:extend(
     prerequisites =
     {
       "thorium-processing",
-      "nuclear-fuel-reprocessing"
+      "nuclear-fuel-reprocessing",
+      "production-science-pack"
     },
     unit =
     {
@@ -276,6 +277,7 @@ data:extend(
     {
       "deuterium-processing",
       "uranium-processing",
+      "utility-science-pack"
     },
     unit =
     {
@@ -286,7 +288,8 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1}
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1}
       },
     },
     effects =
@@ -319,7 +322,8 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       },
       prerequisites =
       {
-        "deuterium-processing"
+        "deuterium-processing",
+        "utility-science-pack"
       },
       unit =
       {
@@ -329,6 +333,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
           {"logistic-science-pack", 1},
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
+          {"utility-science-pack", 1}
         },
         time = 30,
         count = 50

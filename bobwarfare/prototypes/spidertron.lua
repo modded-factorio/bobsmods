@@ -754,7 +754,8 @@ data:extend(
     {
       "military-3",
       "gun-turret",
-      "electric-engine"
+      "electric-engine",
+      "production-science-pack"
     },
     unit =
     {
@@ -825,6 +826,7 @@ data:extend(
     {
       "logistics-3",
       "walking-vehicle",
+      "utility-science-pack"
     },
     unit =
     {

@@ -283,11 +283,8 @@ end
 
 if data.raw.tool["module-case"] then
   bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment", {"module-case", 1})
+  bobmods.lib.tech.add_prerequisite("personal-roboport-modular-equipment-1", "modules")
 end
-
-
-
-
 
 
 if data.raw.item["glass"] then

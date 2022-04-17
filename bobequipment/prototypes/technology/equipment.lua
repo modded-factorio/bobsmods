@@ -3,6 +3,7 @@ data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.
   icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk2-equipment.png",
   icon_size = 128
 }
+bobmods.lib.tech.remove_prerequisite("energy-shield-mk2-equipment", "low-density-structure")
 
 data:extend(
 {
@@ -19,6 +20,7 @@ data:extend(
     {
       "energy-shield-mk2-equipment",
       "productivity-module-2",
+      "production-science-pack"
     },
     unit =
     {
@@ -30,6 +32,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
     },
     effects =
@@ -64,7 +67,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
-        {"utility-science-pack", 1}
+        {"production-science-pack", 1}
       },
     },
     effects =
@@ -87,7 +90,8 @@ data:extend(
     order = "g-e-e",
     prerequisites =
     {
-      "bob-energy-shield-equipment-4"
+      "bob-energy-shield-equipment-4",
+      "utility-science-pack"
     },
     unit =
     {
@@ -99,6 +103,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
     },
@@ -134,6 +139,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
     },
@@ -159,6 +165,7 @@ data.raw["technology"]["battery-mk2-equipment"].icons = bobmods.equipment.techno
   icon = "__bobequipment__/graphics/icons/technology/battery-mk2-equipment.png",
   icon_size = 64
 }
+bobmods.lib.tech.remove_prerequisite("battery-mk2-equipment", "low-density-structure")
 
 data:extend(
 {
@@ -207,6 +214,7 @@ data:extend(
     prerequisites =
     {
       "bob-battery-equipment-3",
+      "production-science-pack"
     },
     unit =
     {
@@ -274,7 +282,8 @@ data:extend(
     order = "g-i-f",
     prerequisites =
     {
-      "bob-battery-equipment-5"
+      "bob-battery-equipment-5",
+      "utility-science-pack"
     },
     unit =
     {
@@ -305,6 +314,8 @@ data.raw["technology"]["fusion-reactor-equipment"].icons = bobmods.equipment.tec
   icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-1.png",
   icon_size = 128
 }
+bobmods.lib.tech.remove_science_pack("fusion-reactor-equipment", "military-science-pack")
+bobmods.lib.tech.remove_prerequisite("fusion-reactor-equipment", "military-science-pack")
 
 data:extend(
 {
@@ -320,6 +331,7 @@ data:extend(
     prerequisites =
     {
       "fusion-reactor-equipment",
+      "production-science-pack"
     },
     effects =
     {
@@ -606,6 +618,7 @@ data.raw["technology"]["personal-laser-defense-equipment"].icons = bobmods.equip
   icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png",
   icon_size = 128
 }
+bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "low-density-structure")
 
 data:extend(
 {
@@ -655,6 +668,7 @@ data:extend(
     prerequisites =
     {
       "personal-laser-defense-equipment-2",
+      "production-science-pack"
     },
     effects =
     {
@@ -673,6 +687,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
     },
   },
@@ -707,7 +722,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
-        {"utility-science-pack", 1}
+        {"production-science-pack", 1}
       },
     },
   },
@@ -724,6 +739,7 @@ data:extend(
     prerequisites =
     {
       "personal-laser-defense-equipment-4",
+      "military-4"
     },
     effects =
     {
@@ -742,6 +758,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
     },
@@ -777,6 +794,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
     },
@@ -800,7 +818,7 @@ data:extend(
     prerequisites =
     {
       "exoskeleton-equipment",
-      "chemical-science-pack",
+      "advanced-electronics-2"
     },
     effects =
     {

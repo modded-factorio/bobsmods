@@ -3,6 +3,7 @@ Version: 1.1.5
 Date: ???
   Changes:
     - Only check vehicle-roboport-equipment-2 if bobvehicleequipment is enabled #4
+    - Tidied up technology prerequisites #12
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 09. 04. 2021

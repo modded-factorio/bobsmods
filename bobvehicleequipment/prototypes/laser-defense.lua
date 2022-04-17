@@ -187,7 +187,8 @@ data:extend(
     prerequisites =
     {
       "vehicle-solar-panel-equipment-1",
-      "laser-turret"
+      "laser-turret",
+      "military-3"
     },
     unit =
     {
@@ -268,6 +269,7 @@ data:extend(
     prerequisites =
     {
       "vehicle-laser-defense-equipment-1",
+      "advanced-electronics"
     },
     unit =
     {
@@ -348,6 +350,7 @@ data:extend(
     prerequisites =
     {
       "vehicle-laser-defense-equipment-2",
+      "production-science-pack"
     },
     unit =
     {
@@ -359,6 +362,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
     },
     effects =
@@ -440,6 +444,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
     },
     effects =
@@ -509,6 +514,7 @@ data:extend(
     prerequisites =
     {
       "vehicle-laser-defense-equipment-4",
+      "military-4"
     },
     unit =
     {
@@ -520,6 +526,8 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1}
       },
     },
     effects =
@@ -600,6 +608,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1},
       },
     },

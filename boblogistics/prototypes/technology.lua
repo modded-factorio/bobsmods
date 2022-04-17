@@ -46,7 +46,8 @@ data:extend(
     icon_mipmaps = 4,
     prerequisites =
     {
-      "bob-fluid-handling-2"
+      "bob-fluid-handling-2",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -85,7 +86,8 @@ data:extend(
     icon_mipmaps = 4,
     prerequisites =
     {
-      "bob-fluid-handling-3"
+      "bob-fluid-handling-3",
+      "production-science-pack"
     },
     effects =
     {
@@ -216,7 +218,8 @@ data:extend(
     prerequisites =
     {
       "railway",
-      "automated-rail-transportation"
+      "automated-rail-transportation",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -253,6 +256,7 @@ data:extend(
     {
       "bob-armoured-railway",
       "advanced-electronics-2",
+      "production-science-pack"
     },
     unit =
     {
@@ -356,7 +360,8 @@ data:extend(
     prerequisites =
     {
       "fluid-wagon",
-      "automated-rail-transportation"
+      "automated-rail-transportation",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -389,7 +394,8 @@ data:extend(
     {
       "fluid-wagon",
       "bob-armoured-fluid-wagon",
-      "bob-fluid-handling-3"
+      "bob-fluid-handling-3",
+      "production-science-pack"
     },
     unit =
     {
@@ -432,6 +438,7 @@ data:extend(
     {
       "construction-robotics",
       "logistic-robotics",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -466,6 +473,7 @@ data:extend(
     prerequisites =
     {
       "bob-robots-1",
+      "utility-science-pack"
     },
     unit =
     {
@@ -475,7 +483,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
       },
       time = 30
     },
@@ -501,6 +509,7 @@ data:extend(
     prerequisites =
     {
       "bob-robots-2",
+      "production-science-pack"
     },
     unit =
     {
@@ -721,7 +730,7 @@ data:extend(
     prerequisites =
     {
       "bob-robo-modular-2",
-      "production-science-pack"
+      "utility-science-pack"
     },
     unit =
     {
@@ -731,7 +740,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
       },
       time = 30
     },
@@ -781,7 +790,7 @@ data:extend(
     prerequisites =
     {
       "bob-robo-modular-3",
-      "utility-science-pack"
+      "production-science-pack"
     },
     unit =
     {
@@ -832,7 +841,7 @@ data:extend(
     {
       "logistic-system",
       "advanced-electronics-2",
-      "production-science-pack"
+      "utility-science-pack"
     },
     unit =
     {
@@ -841,7 +850,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
       },
       time = 30
     },
@@ -879,7 +888,7 @@ data:extend(
     prerequisites =
     {
       "logistic-system-2",
-      "utility-science-pack"
+      "production-science-pack"
     },
     unit =
     {
@@ -957,7 +966,8 @@ data:extend(
     },
     prerequisites = {
       "logistics-3",
-      "advanced-electronics-2"
+      "advanced-electronics-2",
+      "production-science-pack"
     },
     unit =
     {

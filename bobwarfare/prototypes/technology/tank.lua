@@ -43,7 +43,7 @@ data:extend(
     prerequisites =
     {
       "bob-tanks-2",
-      "utility-science-pack",
+      "military-4"
     },
     effects =
     {
@@ -61,6 +61,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
       time = 45

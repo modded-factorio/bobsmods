@@ -337,6 +337,7 @@ data:extend(
     prerequisites =
     {
       "vehicle-battery-equipment-3",
+      "production-science-pack"
     },
     unit =
     {
@@ -518,7 +519,8 @@ data:extend(
     order = "v-g-i-f",
     prerequisites =
     {
-      "vehicle-battery-equipment-5"
+      "vehicle-battery-equipment-5",
+      "utility-science-pack"
     },
     unit =
     {

@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ???
+  Changes:
+    - Tidied up technology prerequisites #12
   Bugfixes:
     - Prevent error if inserter capacity techs do not exist
 ---------------------------------------------------------------------------------------------------

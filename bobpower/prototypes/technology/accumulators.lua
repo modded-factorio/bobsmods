@@ -63,7 +63,8 @@ data:extend(
     prerequisites =
     {
       "bob-electric-energy-accumulators-2",
-      "advanced-electronics"
+      "advanced-electronics",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -103,7 +104,8 @@ data:extend(
     prerequisites =
     {
       "bob-electric-energy-accumulators-3",
-      "advanced-electronics-2"
+      "advanced-electronics-2",
+      "production-science-pack"
     },
     unit =
     {

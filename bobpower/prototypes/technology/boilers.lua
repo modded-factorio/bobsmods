@@ -36,6 +36,7 @@ data:extend(
     prerequisites =
     {
       "bob-boiler-2",
+      "logistic-science-pack"
     },
     icon = "__bobpower__/graphics/icons/technology/boiler.png",
     icon_size = 128,
@@ -65,6 +66,7 @@ data:extend(
     prerequisites =
     {
       "bob-boiler-3",
+      "chemical-science-pack"
     },
     icon = "__bobpower__/graphics/icons/technology/boiler.png",
     icon_size = 128,
@@ -95,6 +97,7 @@ data:extend(
     prerequisites =
     {
       "bob-boiler-4",
+      "production-science-pack"
     },
     icon = "__bobpower__/graphics/icons/technology/boiler.png",
     icon_size = 128,

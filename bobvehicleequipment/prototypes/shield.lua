@@ -160,7 +160,7 @@ data:extend(
     {
       "vehicle-energy-shield-equipment-1",
       "advanced-electronics-2",
-      "chemical-science-pack",
+      "military-3"
     },
     unit =
     {
@@ -255,6 +255,7 @@ data:extend(
     {
       "vehicle-energy-shield-equipment-2",
       "productivity-module-2",
+      "production-science-pack"
     },
     unit =
     {
@@ -266,6 +267,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
     },
     effects =
@@ -360,7 +362,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
-        {"utility-science-pack", 1}
+        {"production-science-pack", 1}
       },
     },
     effects =
@@ -443,7 +445,8 @@ data:extend(
     order = "v-g-e-e",
     prerequisites =
     {
-      "vehicle-energy-shield-equipment-4"
+      "vehicle-energy-shield-equipment-4",
+      "utility-science-pack"
     },
     unit =
     {
@@ -455,6 +458,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
     },
@@ -550,6 +554,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
     },

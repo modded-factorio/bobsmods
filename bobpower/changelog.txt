@@ -2,6 +2,7 @@
 Version: 1.1.5
 Date: ???
   Changes:
+    - Tidied up technology prerequisites #12
     - Added fuel value to the tooltip of burnable fluids #13
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3

@@ -338,7 +338,11 @@ data:extend(
         recipe = "bob-laser-robot-capsule"
       }
     },
-    prerequisites = {"destroyer"},
+    prerequisites =
+    {
+      "destroyer",
+      "production-science-pack"
+    },
     unit =
     {
       count = 500,
@@ -348,6 +352,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
       time = 30

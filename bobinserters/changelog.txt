@@ -5,6 +5,7 @@ Date: ???
     - Fixed error that could occur when opening inserter gui #6
   Changes:
     - Allow long handed inserter to fast replace other inserter types #8
+    - Tidied up technology prerequisites #12
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 25. 11. 2020

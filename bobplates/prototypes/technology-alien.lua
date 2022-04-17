@@ -16,6 +16,8 @@ data:extend(
     prerequisites =
     {
       "tungsten-processing",
+      "military-science-pack",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -31,8 +33,8 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+        {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -47,6 +49,8 @@ data:extend(
     prerequisites =
     {
       "steel-processing",
+      "military-science-pack",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -62,8 +66,8 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+        {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -78,6 +82,8 @@ data:extend(
     prerequisites =
     {
       "sulfur-processing",
+      "military-science-pack",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -93,8 +99,8 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+        {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -109,6 +115,8 @@ data:extend(
     prerequisites =
     {
       "sulfur-processing",
+      "military-science-pack",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -124,8 +132,8 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+        {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -140,6 +148,8 @@ data:extend(
     prerequisites =
     {
       "nitrogen-processing",
+      "military-science-pack",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -155,8 +165,8 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+        {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -171,6 +181,8 @@ data:extend(
     prerequisites =
     {
       "oil-processing",
+      "military-science-pack",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -186,8 +198,8 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+        {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },

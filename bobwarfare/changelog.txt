@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ???
+  Changes:
+    - Tidied up technology prerequisites #12
   Bugfixes:
     - Fixed mech brain ingredient fallback: Module case > Aluminium plate > Steel plate #4
 ---------------------------------------------------------------------------------------------------

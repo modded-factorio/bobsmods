@@ -1,15 +1,3 @@
-if data.raw.tool["advanced-logistic-science-pack"] then
-  bobmods.lib.tech.replace_science_pack("vehicle-roboport-equipment-3", "utility-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("vehicle-roboport-equipment-3", "utility-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("vehicle-roboport-equipment-4", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("vehicle-roboport-equipment-4", "production-science-pack", "utility-science-pack")
-
-  bobmods.lib.tech.replace_science_pack("vehicle-roboport-modular-equipment-3", "utility-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("vehicle-roboport-modular-equipment-4", "production-science-pack", "advanced-logistic-science-pack")
-end
-
-
-
 if data.raw.tool["science-pack-gold"] and
   data.raw.tool["alien-science-pack"] and
   data.raw.tool["alien-science-pack-blue"] and

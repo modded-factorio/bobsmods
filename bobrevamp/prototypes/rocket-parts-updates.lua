@@ -1,6 +1,6 @@
 if data.raw.item["rocket-engine"] then
   bobmods.lib.recipe.add_ingredient("rocket-part", {"rocket-engine", 10})
-  bobmods.lib.tech.add_prerequisite("rocket-silo", "rocketry")
+  bobmods.lib.tech.add_recipe_unlock("rocket-silo", "rocket-engine")  
 end
 
 
@@ -68,7 +68,7 @@ elseif data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("rocket-control-unit", "speed-module", "advanced-processing-unit")
   bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
 end
-
+bobmods.lib.tech.add_science_pack("rocket-control-unit", "production-science-pack", 1)
 
 bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "rocket-control-unit")
 

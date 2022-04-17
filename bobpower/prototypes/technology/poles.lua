@@ -56,6 +56,7 @@ data:extend(
     prerequisites =
     {
       "electric-pole-2",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -91,6 +92,7 @@ data:extend(
     prerequisites =
     {
       "electric-pole-3",
+      "production-science-pack"
     },
     unit =
     {

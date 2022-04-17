@@ -72,3 +72,10 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
   end
 end
 
+if data.raw.item["enriched-fuel"] then
+  if data.raw.technology["solid-fuel"] then
+    bobmods.lib.tech.add_prerequisite("hydrazine", "solid-fuel")
+  else
+    bobmods.lib.tech.add_prerequisite("hydrazine", "oil-processing")
+  end
+end

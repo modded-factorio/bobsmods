@@ -68,7 +68,7 @@ data:extend(
     {
       "vehicle-solar-panel-equipment-1",
       "electric-engine",
-      "chemical-science-pack",
+      "advanced-electronics-2"
     },
     unit =
     {

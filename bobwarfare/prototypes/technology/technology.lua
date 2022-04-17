@@ -8,6 +8,7 @@ data:extend(
     prerequisites =
     {
       "oil-processing",
+      "sulfur-processing",
       "military-science-pack",
     },
     effects =

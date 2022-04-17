@@ -2,6 +2,8 @@ bobmods.lib.tech.remove_science_pack("follower-robot-count-7", "production-scien
 
 bobmods.lib.tech.remove_science_pack("artillery", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("artillery", "military-4")
+bobmods.lib.tech.add_prerequisite("artillery", "advanced-electronics-2")
+bobmods.lib.tech.add_prerequisite("artillery", "concrete")
 bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "military-4")
 bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-2", "military-4")
 
@@ -75,6 +77,9 @@ then
     {"alien-science-pack-green", 1},
     {"alien-science-pack-red", 1},
   }
+  data.raw.technology["bob-poison-artillery-shells"].unit.ingredients = {{"science-pack-gold", 1}, {"alien-science-pack-green", 1}}
+  data.raw.technology["bob-fire-artillery-shells"].unit.ingredients = {{"science-pack-gold", 1}, {"alien-science-pack-red", 1}}
+  data.raw.technology["bob-explosive-artillery-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-yellow", 1}}
 end
 
 
@@ -87,6 +92,12 @@ if data.raw.technology["alien-research"] then
 
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "bob-rocket")
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "alien-research")
+
+  bobmods.lib.tech.add_prerequisite("bob-poison-artillery-shells", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-fire-artillery-shells", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "alien-research")
+
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "alien-research")
 else
   bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "bob-ap-bullets")
   bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "bob-electric-bullets")
@@ -115,15 +126,26 @@ if data.raw.technology["alien-blue-research"] then
   bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "alien-blue-research")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "alien-blue-research")
   bobmods.lib.tech.add_prerequisite("bob-piercing-rocket", "alien-blue-research")
-elseif data.raw.technology["tungsten-processing"] then
-  bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "tungsten-processing")
-  bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "tungsten-processing")
+else
+  if data.raw.technology["tungsten-processing"] then
+    bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "tungsten-processing")
+    bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "tungsten-processing")
+  end
+  if data.raw.technology["alien-research"] then
+    bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-piercing-rocket", "alien-research")
+  end
 end
 
 if data.raw.technology["alien-orange-research"] then
   bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "alien-orange-research")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "alien-orange-research")
   bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "alien-orange-research")
+elseif data.raw.technology["alien-research"] then
+  bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "alien-research")
 end
 
 if data.raw.technology["alien-purple-research"] then
@@ -132,6 +154,11 @@ if data.raw.technology["alien-purple-research"] then
   bobmods.lib.tech.add_prerequisite("bob-acid-rocket", "alien-purple-research")
 else
   bobmods.lib.tech.add_prerequisite("bob-acid-rocket", "nitrogen-processing")
+  if data.raw.technology["alien-research"] then
+    bobmods.lib.tech.add_prerequisite("bob-acid-bullets", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-shotgun-acid-shells", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-acid-rocket", "alien-research")
+  end
 end
 
 if data.raw.technology["alien-yellow-research"] then
@@ -141,12 +168,21 @@ if data.raw.technology["alien-yellow-research"] then
 else
   bobmods.lib.tech.add_prerequisite("bob-he-bullets", "explosives")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-explosive-shells", "explosives")
+  if data.raw.technology["alien-research"] then
+    bobmods.lib.tech.add_prerequisite("bob-he-bullets", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-shotgun-explosive-shells", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-explosive-rocket", "alien-research")
+  end
 end
 
 if data.raw.technology["alien-green-research"] then
   bobmods.lib.tech.add_prerequisite("bob-poison-bullets", "alien-green-research")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-poison-shells", "alien-green-research")
   bobmods.lib.tech.add_prerequisite("bob-poison-rocket", "alien-green-research")
+elseif data.raw.technology["alien-research"] then
+  bobmods.lib.tech.add_prerequisite("bob-poison-bullets", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-poison-shells", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-poison-rocket", "alien-research")
 end
 
 if data.raw.technology["alien-red-research"] then
@@ -156,6 +192,11 @@ if data.raw.technology["alien-red-research"] then
 else
   bobmods.lib.tech.add_prerequisite("bob-flame-bullets", "flammables")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-flame-shells", "flammables")
+  if data.raw.technology["alien-research"] then
+    bobmods.lib.tech.add_prerequisite("bob-flame-bullets", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-shotgun-flame-shells", "alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-flame-rocket", "alien-research")
+  end
 end
 
 
@@ -163,15 +204,10 @@ bobmods.lib.tech.add_recipe_unlock("military-3", "rifle")
 bobmods.lib.tech.add_recipe_unlock("military-3", "sniper-rifle")
 bobmods.lib.tech.add_recipe_unlock("military-3", "fire-capsule")
 
-bobmods.lib.tech.add_recipe_unlock("rocketry", "rocket-engine")
-if data.raw.technology["tungsten-processing"] then
-  bobmods.lib.tech.add_prerequisite("bob-rocket", "tungsten-processing")
-end
-
 bobmods.lib.tech.add_recipe_unlock("uranium-ammo", "uranium-bullet-projectile")
 bobmods.lib.tech.add_recipe_unlock("uranium-ammo", "uranium-bullet")
 bobmods.lib.tech.add_prerequisite("uranium-ammo", "bob-bullets")
-
+bobmods.lib.tech.add_prerequisite("uranium-ammo", "bob-shotgun-shells")
 bobmods.lib.tech.add_recipe_unlock("uranium-ammo", "shotgun-uranium-shell")
 
 
@@ -291,4 +327,11 @@ end
 
 if data.raw.technology["effectivity-module-8"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "effectivity-module-8")
+end
+
+if mods['boblogistics'] then
+  bobmods.lib.tech.remove_science_pack("bob-robot-gun-drones", "chemical-science-pack")
+  bobmods.lib.tech.remove_science_pack("bob-robot-laser-drones", "chemical-science-pack")
+  bobmods.lib.tech.remove_science_pack("bob-robot-flamethrower-drones", "chemical-science-pack")
+  bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
 end

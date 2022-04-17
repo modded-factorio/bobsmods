@@ -77,7 +77,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
       order = "d-a-d",
       prerequisites =
       {
-        "chemical-plant",
+        "oil-processing",
       },
       unit =
       {

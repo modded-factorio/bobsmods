@@ -16,9 +16,9 @@ if data.raw.item["titanium-pipe"] then
 end
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("rocket-silo", "nitinol-processing")
 end
 if data.raw.item["nitinol-alloy"] then
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "steel-plate", "nitinol-alloy")
 end
 
@@ -38,6 +38,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
   bobmods.lib.tech.remove_prerequisite("oil-processing", "steel-processing")
   bobmods.lib.tech.add_prerequisite("oil-processing", "pumpjack")
+  bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
   data.raw.technology["oil-processing"].icon = "__base__/graphics/technology/oil-processing.png"
   bobmods.lib.tech.set_science_pack_count("oil-processing", 30)
 

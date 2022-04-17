@@ -129,7 +129,7 @@ data:extend(
     prerequisites =
     {
       "bob-robotics-2",
-      "production-science-pack"
+      "utility-science-pack"
     },
     unit =
     {
@@ -139,7 +139,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1}
+        {"utility-science-pack", 1}
       },
       time = 30
     },
@@ -162,7 +162,7 @@ data:extend(
     prerequisites =
     {
       "bob-robotics-3",
-      "utility-science-pack"
+      "production-science-pack"
     },
     unit =
     {

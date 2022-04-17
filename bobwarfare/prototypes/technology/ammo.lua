@@ -54,6 +54,7 @@ data:extend(
     prerequisites =
     {
       "bob-bullets",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -93,6 +94,7 @@ data:extend(
     prerequisites =
     {
       "bob-bullets",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -132,6 +134,7 @@ data:extend(
     prerequisites =
     {
       "bob-bullets",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -171,6 +174,7 @@ data:extend(
     prerequisites =
     {
       "bob-bullets",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -210,6 +214,7 @@ data:extend(
     prerequisites =
     {
       "bob-bullets",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -249,6 +254,7 @@ data:extend(
     prerequisites =
     {
       "bob-bullets",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -328,6 +334,7 @@ data:extend(
     prerequisites =
     {
       "bob-shotgun-shells",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -359,6 +366,7 @@ data:extend(
     prerequisites =
     {
       "bob-shotgun-shells",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -390,6 +398,7 @@ data:extend(
     prerequisites =
     {
       "bob-shotgun-shells",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -421,6 +430,7 @@ data:extend(
     prerequisites =
     {
       "bob-shotgun-shells",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -452,6 +462,7 @@ data:extend(
     prerequisites =
     {
       "bob-shotgun-shells",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -483,6 +494,7 @@ data:extend(
     prerequisites =
     {
       "bob-shotgun-shells",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -532,7 +544,7 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
+        {"military-science-pack", 1}
       },
       time = 30
     },
@@ -562,7 +574,6 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
         {"military-science-pack", 1},
       },
       time = 30
@@ -578,6 +589,7 @@ data:extend(
     prerequisites =
     {
       "bob-laser-rifle-ammo-2",
+      "chemical-science-pack"
     },
     effects =
     {
@@ -640,6 +652,7 @@ data:extend(
     prerequisites =
     {
       "bob-laser-rifle-ammo-4",
+      "production-science-pack"
     },
     effects =
     {
@@ -657,6 +670,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
       time = 30
     },
@@ -688,6 +702,7 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"military-science-pack", 1},
+        {"production-science-pack", 1}
       },
       time = 30
     },
@@ -704,6 +719,8 @@ data:extend(
     {
       "oil-processing",
       "rocketry",
+      "advanced-electronics-2",
+      "military-3"
     },
     effects =
     {
@@ -719,6 +736,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "rocket-warhead"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "rocket-engine"
+      }
     },
     unit =
     {
@@ -728,6 +749,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"military-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -1190,8 +1212,7 @@ data:extend(
     },
     prerequisites =
     {
-      "military-4",
-      "kovarex-enrichment-process",
+      "atomic-bomb",
       "artillery",
     },
     effects =
@@ -1231,6 +1252,7 @@ data:extend(
     icon_size = 32,
     prerequisites =
     {
+      "utility-science-pack"
     },
     effects =
     {
@@ -1269,6 +1291,7 @@ data:extend(
     icon_size = 32,
     prerequisites =
     {
+      "utility-science-pack"
     },
     effects =
     {
@@ -1299,6 +1322,7 @@ data:extend(
     icon_size = 32,
     prerequisites =
     {
+      "utility-science-pack"
     },
     effects =
     {

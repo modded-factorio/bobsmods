@@ -7,7 +7,8 @@ data:extend(
     icon_size = 64,
     prerequisites =
     {
-      "military-3",
+      "advanced-electronics",
+      "military-science-pack",
       "laser",
       "battery",
     },
@@ -33,7 +34,7 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
+        {"military-science-pack", 1}
       },
       time = 30
     },
