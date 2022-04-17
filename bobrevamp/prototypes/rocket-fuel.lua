@@ -402,6 +402,7 @@ data:extend(
     {
       "flammables",
       "hydrazine",
+      "chemical-science-pack"
     },
     effects =
     {
