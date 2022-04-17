@@ -57,13 +57,19 @@ if mods["bobwarfare"] then
   end
 end
 
-bobmods.lib.tech.add_prerequisite("chemical-science-pack", "alloy-processing")
+if data.raw.item["bronze-alloy"] then
+  bobmods.lib.tech.add_prerequisite("chemical-science-pack", "alloy-processing")
+end
 bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")
 bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
 
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
-bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery-2")
-bobmods.lib.tech.add_prerequisite("utility-science-pack", "ceramics")
+if data.raw.item["lithium-ion-battery"] then
+  bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery-2")
+end
+if data.raw.item["silicon-nitride"] then
+  bobmods.lib.tech.add_prerequisite("utility-science-pack", "ceramics")
+end
 
 if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   bobmods.lib.tech.add_prerequisite("advanced-research", "express-inserters")

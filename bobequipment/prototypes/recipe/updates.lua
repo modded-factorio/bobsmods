@@ -54,7 +54,9 @@ if data.raw.item["roboport-antenna-2"] and data.raw.item["roboport-chargepad-2"]
   bobmods.lib.tech.add_recipe_unlock("personal-roboport-mk2-equipment", "roboport-chargepad-2")
   bobmods.lib.tech.add_recipe_unlock("personal-roboport-mk2-equipment", "roboport-door-2")
 
-  bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "zinc-processing")
+  if data.raw.item["brass-gear-wheel"] then
+    bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "zinc-processing")
+  end
 else
   data.raw.recipe["personal-roboport-mk2-equipment"].ingredients =
   {

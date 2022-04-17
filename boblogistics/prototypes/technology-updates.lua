@@ -155,9 +155,13 @@ end
 
 if data.raw.technology["bob-robotics-2"] then
   bobmods.lib.tech.add_prerequisite("bob-robots-1", "bob-robotics-2")
-  bobmods.lib.tech.add_prerequisite("bob-robotics-2", "aluminium-processing")
+  if data.raw.technology["aluminium-processing"] then
+    bobmods.lib.tech.add_prerequisite("bob-robotics-2", "aluminium-processing")
+  end
 else
-  bobmods.lib.tech.add_prerequisite("bob-robots-1", "aluminium-processing")
+  if data.raw.technology["aluminium-processing"] then
+    bobmods.lib.tech.add_prerequisite("bob-robots-1", "aluminium-processing")
+  end
 end
 
 
@@ -165,10 +169,14 @@ end
 if data.raw.technology["bob-robotics-3"] then
   bobmods.lib.tech.add_prerequisite("bob-robots-2", "bob-robotics-3")
   bobmods.lib.tech.add_prerequisite("bob-robotics-3", "advanced-electronics-2")
-  bobmods.lib.tech.add_prerequisite("bob-robotics-3", "titanium-processing")
+  if data.raw.technology["titanium-processing"] then
+    bobmods.lib.tech.add_prerequisite("bob-robotics-3", "titanium-processing")
+  end
 else
   bobmods.lib.tech.add_prerequisite("bob-robots-2", "advanced-electronics-2")
-  bobmods.lib.tech.add_prerequisite("bob-robots-2", "titanium-processing")
+  if data.raw.technology["titanium-processing"] then
+    bobmods.lib.tech.add_prerequisite("bob-robots-2", "titanium-processing")
+  end
 end
 
 bobmods.lib.tech.add_prerequisite("bob-robo-modular-3", "advanced-electronics-2")
@@ -185,10 +193,14 @@ end
 if data.raw.technology["bob-robotics-4"] then
   bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-robotics-4")
   bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-electronics-3")
-  bobmods.lib.tech.add_prerequisite("bob-robotics-4", "ceramics")
+  if data.raw.item["silicon-nitride"] then
+    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "ceramics")
+  end
 else
   bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-electronics-3")
-  bobmods.lib.tech.add_prerequisite("bob-robots-3", "ceramics")
+  if data.raw.item["silicon-nitride"] then
+    bobmods.lib.tech.add_prerequisite("bob-robots-3", "ceramics")
+  end
 end
 
 if data.raw.item["silver-zinc-battery"] and data.raw.technology["battery-3"] then
