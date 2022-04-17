@@ -6,7 +6,6 @@ if not mods['extended-descriptions'] then
     else
       prototype.localised_description = localised_string
     end
-    log(prototype.localised_description)
   end
 
   for fluid_name, fluid in pairs(data.raw.fluid) do
