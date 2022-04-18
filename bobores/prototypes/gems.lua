@@ -2,12 +2,22 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
 data:extend(
 {
   {
+    type = "item",
+    name = "gem-ore",
+    icon = "__bobores__/graphics/icons/gem-ore.png",
+    icon_size = 32,
+    
+    subgroup = "bob-ores",
+    order = "a-0[gem-ore]",
+    stack_size = 200
+  },
+  {
     type = "recipe",
     name = "sort-gem-ore",
     energy_required = 1,
     ingredients =
     {
-	  {"gem-ore", 1},
+      {"gem-ore", 1},
     },
     results =
     {
@@ -29,17 +39,6 @@ end
 
 data:extend(
 {
-  {
-    type = "item",
-    name = "gem-ore",
-    icon = "__bobores__/graphics/icons/gem-ore.png",
-    icon_size = 32,
-    
-    subgroup = "bob-ores",
-    order = "a-0[gem-ore]",
-    stack_size = 200
-  },
-
   {
     type = "item",
     name = "ruby-ore",
