@@ -176,7 +176,7 @@ data:extend(
       time = 10,
       ingredients =
       {
-        {"steam-science-pack", 1}
+        {"automation-science-pack", 1}
       },
     },
   },
