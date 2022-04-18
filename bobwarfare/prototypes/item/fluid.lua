@@ -10,23 +10,6 @@ if data.raw.fluid["nitric-acid"] then data:extend(
     max_temperature = 100,
     icon = "__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png",
     icon_size = 32,
---[[
-    icons =
-    {
-      {
-        icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
-        icon_size = 32,
-        scale = 0.625,
-        shift = {-6, -6}
-      },
-      {
-        icon = "__bobplates__/graphics/icons/nitric-acid.png",
-        icon_size = 64,
-        scale = 0.625 * 0.5,
-        shift = {6, 6}
-      }
-    },
-]]--
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[sulfuric-nitric-acid]"

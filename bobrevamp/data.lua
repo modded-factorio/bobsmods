@@ -231,8 +231,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       gas_temperature = -42,
       emissions_multiplier = 2,
       fuel_value = "2.3MJ", --"4.6MJ",
-      order = "a[fluid]-f[sour-gas]",
-      auto_barrel = false
+      order = "a[fluid]-f[sour-gas]"
     },
     {
       type = "recipe",

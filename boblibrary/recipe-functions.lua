@@ -44,7 +44,6 @@ function bobmods.lib.recipe.replace_ingredient(recipe, old, new)
     type(old) == "string" and
     type(new) == "string" and
     data.raw.recipe[recipe] and
---    bobmods.lib.item.get_type(old) and
     bobmods.lib.item.get_type(new)
   then
     local retval = false
@@ -82,7 +81,6 @@ function bobmods.lib.recipe.replace_ingredient_in_all(old, new)
   if
     type(old) == "string" and
     type(new) == "string" and
---    bobmods.lib.item.get_type(old) and
     bobmods.lib.item.get_type(new)
   then
     for i, recipe in pairs(data.raw.recipe) do

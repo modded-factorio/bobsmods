@@ -204,14 +204,7 @@ end
 
 data.raw["item-subgroup"]["fill-barrel"].group = "bob-fluid-products"
 data.raw["item-subgroup"]["empty-barrel"].group = "bob-fluid-products"
-
-for i, recipe in pairs(data.raw.recipe) do
-  if (string.sub(recipe.name, 1, 5) == "fill-" or string.sub(recipe.name, 1, 6) == "empty-") and recipe.category == "crafting-with-fluid" then
-    data.raw.recipe[recipe.name].category = "barrelling"
-  end
-end
-
-
+data.raw["item-subgroup"]["barrel"].group = "bob-fluid-products"
 
 bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["oxygen"])
@@ -220,21 +213,34 @@ bobmods.lib.create_gas_bottle(data.raw.fluid["chlorine"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen-chloride"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["nitrogen-dioxide"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["sulfur-dioxide"])
-
 bobmods.lib.create_gas_bottle(data.raw.fluid["deuterium"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen-sulfide"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["petroleum-gas"])
 
+bobmods.lib.create_fluid_canister(data.raw.fluid["liquid-fuel"], {r = 0.9, g = 0.2, b = 0})
+bobmods.lib.create_fluid_canister(data.raw.fluid["ferric-chloride-solution"], {r = 0.5, g = 0.4, b = 0.3})
+bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["nitric-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-nitric-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["tungstic-acid"])
 
+for i, recipe in pairs(data.raw.recipe) do
+  if (string.sub(recipe.name, 1, 5) == "fill-" or string.sub(recipe.name, 1, 6) == "empty-") and recipe.category == "crafting-with-fluid" then
+    data.raw.recipe[recipe.name].category = "barrelling"
+    if bobmods.lib.tech.has_recipe_unlock("fluid-handling", recipe.name) then
+      bobmods.lib.tech.remove_recipe_unlock("fluid-handling", recipe.name)
+      bobmods.lib.tech.add_recipe_unlock("fluid-barrel-processing", recipe.name)
+    end
+  end
+end
 
 if settings.startup["bobmods-plates-vanillabarrelling"].value == true then
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "barrelling") -- Adds barrelling to assembling machines
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "air-pump") -- Adds barrelling to assembling machines
 end
-data.raw.item["petroleum-gas-barrel"] = nil
-data.raw.recipe["fill-petroleum-gas-barrel"] = nil
-data.raw.recipe["empty-petroleum-gas-barrel"] = nil
-bobmods.lib.create_gas_bottle(data.raw.fluid["petroleum-gas"])
 
+bobmods.lib.tech.add_prerequisite("cliff-explosives", "fluid-barrel-processing")
+bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "empty-barrel")
 
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("ground-water", "water")
@@ -253,55 +259,6 @@ if settings.startup["bobmods-plates-purewater"].value == true then
 end
 
 
-local function set_canister(name, colour)
-  data.raw.item[name .. "-barrel"].icons = {
-    {
-      icon = "__bobplates__/graphics/icons/empty-canister.png",
-      icon_size = 32,
-      tint = colour
-    }
-  }
-  data.raw.item[name .. "-barrel"].localised_name = {"item-name.filled-canister", {"fluid-name." .. name}}
-  data.raw.item[name .. "-barrel"].stack_size = 10
-
-  data.raw.recipe["fill-" .. name .. "-barrel"].icons = {
-    {
-      icon = "__bobplates__/graphics/icons/empty-canister.png",
-      icon_size = 32,
-      tint = colour
-    },
-    {
-      icon = data.raw.fluid[name].icon,
-      icon_size = data.raw.fluid[name].icon_size,
-      scale = 16.0 / data.raw.fluid[name].icon_size,
-      shift = {-4, -8}
-    }
-  }
-  data.raw.recipe["fill-" .. name .. "-barrel"].energy_required = 0.2
-  data.raw.recipe["fill-" .. name .. "-barrel"].ingredients = {{type = "fluid", name = name, amount = 50}, {type = "item", name = "empty-canister", amount = 1}}
-  data.raw.recipe["fill-" .. name .. "-barrel"].localised_name = {"recipe-name.fill-canister", {"fluid-name." .. name}}
-
-  data.raw.recipe["empty-" .. name .. "-barrel"].icons = {
-    {
-      icon = "__bobplates__/graphics/icons/empty-canister.png",
-      icon_size = 32,
-      tint = colour
-    },
-    {
-      icon = data.raw.fluid[name].icon,
-      icon_size = data.raw.fluid[name].icon_size,
-      scale = 16.0 / data.raw.fluid[name].icon_size,
-      shift = {8, 8}
-    }
-  }
-  data.raw.recipe["empty-" .. name .. "-barrel"].energy_required = 0.2
-  data.raw.recipe["empty-" .. name .. "-barrel"].results = {{type = "fluid", name = name, amount = 50}, {type = "item", name = "empty-canister", amount = 1}}
-  data.raw.recipe["empty-" .. name .. "-barrel"].localised_name = {"recipe-name.empty-filled-canister", {"fluid-name." .. name}}
-end
-
-
-set_canister("liquid-fuel", {r = 0.9, g = 0.2, b = 0})
-set_canister("ferric-chloride-solution", {r = 0.5, g = 0.4, b = 0.3})
 
 
 

@@ -13,8 +13,7 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=0.5, g=0.5, b=1.0},
     flow_color = {r=0.5, g=0.5, b=1.0},
-    gas_temperature = -34,
-    auto_barrel = false
+    gas_temperature = -34
   },
 
   {
@@ -78,8 +77,7 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=0.8, g=0.0, b=1.0},
     flow_color = {r=0.8, g=0.0, b=1.0},
-    gas_temperature = -12,
-    auto_barrel = false
+    gas_temperature = -12
   },
 }
 )
@@ -250,8 +248,7 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=1.0, g=0.0, b=1.0},
     flow_color = {r=1.0, g=0.2, b=1.0},
-    gas_temperature = -152,
-    auto_barrel = false
+    gas_temperature = -152
   },
 
   {

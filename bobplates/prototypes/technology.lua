@@ -731,6 +731,67 @@ data:extend(
 
   {
     type = "technology",
+    name = "fluid-barrel-processing",
+    icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
+    icon_size = 64,
+    prerequisites =
+    {
+      "water-bore-1",
+      "logistic-science-pack",
+      "steel-processing"
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "empty-barrel"
+      },
+    },
+    unit =
+    {
+      count = 50,
+      ingredients = 
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+      },
+      time = 30
+    },
+    order = "d-b-a1"
+  },
+
+  {
+    type = "technology",
+    name = "fluid-canister-processing",
+    icon = "__bobplates__/graphics/icons/empty-canister.png",
+    icon_size = 32,
+    prerequisites =
+    {
+      "water-bore-1",
+      "plastics"
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "empty-canister"
+      },
+    },
+    unit =
+    {
+      count = 50,
+      ingredients = 
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+      },
+      time = 30
+    },
+    order = "d-b-a1"
+  },
+
+  {
+    type = "technology",
     name = "grinding",
     icon = "__bobplates__/graphics/icons/technology/grinding.png",
     icon_size = 64,

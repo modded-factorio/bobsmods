@@ -12,8 +12,7 @@ data:extend(
     gas_temperature = -56.6,
     heat_capacity = "1KJ",
     base_color = {r=0.5, g=0.0, b=0.0},
-    flow_color = {r=0.0, g=0.0, b=0.0},
-    auto_barrel = false
+    flow_color = {r=0.0, g=0.0, b=0.0}
   },
 
 

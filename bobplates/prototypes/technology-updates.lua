@@ -98,9 +98,6 @@ bobmods.lib.tech.add_recipe_unlock("nitinol-processing", "nitinol-bearing-ball")
 bobmods.lib.tech.add_recipe_unlock("nitinol-processing", "nitinol-bearing")
 
 
-bobmods.lib.tech.add_recipe_unlock("fluid-handling", "empty-canister")
-
-
 if data.raw.technology["alien-research"] then
   bobmods.lib.tech.add_prerequisite("alien-blue-research", "alien-research")
   bobmods.lib.tech.add_prerequisite("alien-orange-research", "alien-research")

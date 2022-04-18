@@ -208,20 +208,4 @@ data:extend(
 }
 )
 
---[[
-if data.raw.technology.barrels then
-  bobmods.lib.tech.add_recipe_unlock("barrels", "fill-alien-acid-barrel")
-  bobmods.lib.tech.add_recipe_unlock("barrels", "empty-alien-acid-barrel")
-
-  bobmods.lib.tech.add_recipe_unlock("barrels", "fill-alien-explosive-barrel")
-  bobmods.lib.tech.add_recipe_unlock("barrels", "empty-alien-explosive-barrel")
-
-  bobmods.lib.tech.add_recipe_unlock("barrels", "fill-alien-poison-barrel")
-  bobmods.lib.tech.add_recipe_unlock("barrels", "empty-alien-poison-barrel")
-
-  bobmods.lib.tech.add_recipe_unlock("barrels", "fill-alien-fire-barrel")
-  bobmods.lib.tech.add_recipe_unlock("barrels", "empty-alien-fire-barrel")
-end
-]]--
-
 end

@@ -79,7 +79,7 @@ data:extend(
     name = "gas-canister",
     icon = "__bobplates__/graphics/icons/gas-canister.png",
     icon_size = 32,
-    subgroup = "bob-gas-bottle",
+    subgroup = "bob-intermediates",
     order = "f-b[gas-canister]",
     stack_size = 10
   },
@@ -89,7 +89,7 @@ data:extend(
     name = "empty-canister",
     icon = "__bobplates__/graphics/icons/empty-canister.png",
     icon_size = 32,
-    subgroup = "bob-barrel",
+    subgroup = "bob-intermediates",
     order = "f-c[empty-canister]",
     stack_size = 10
   },

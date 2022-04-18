@@ -242,26 +242,6 @@ data:extend(
     result_count = 1,
   },
 
-
---[[
-  {
-    type = "recipe",
-    name = "flame-thrower-acid",
-    category = "chemistry",
-    subgroup = "bob-ammo",
-    energy_required = 0.1,
-    enabled = false,
-    ingredients =
-    {
-      {"empty-canister", 1},
-      {type="fluid", name="nitric-acid", amount=50},
-    },
-    result = "flame-thrower-acid",
-    result_count = 1,
-  },
-]]--
-
-
   {
     type = "recipe",
     name = "laser-rifle-battery",

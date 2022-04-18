@@ -61,8 +61,7 @@ data:extend(
     order = "a[fluid]-g[hydrogen]",
     gas_temperature = -252.76,
     fuel_value = "45kJ", --"90KJ", -- should be 100k, but i'm balancing, halved for 0.17
-    emissions_multiplier = 0.1,
-    auto_barrel = false
+    emissions_multiplier = 0.1
   },
 
   {
@@ -76,8 +75,7 @@ data:extend(
     icon = "__bobplates__/graphics/icons/oxygen.png",
     icon_size = 64,
     order = "a[fluid]-g[oxygen]",
-    gas_temperature = -219,
-    auto_barrel = false
+    gas_temperature = -219
   },
 
   {
@@ -93,8 +91,7 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[nitrogen]",
-    gas_temperature = -210,
-    auto_barrel = false
+    gas_temperature = -210
   },
 
   {
@@ -110,8 +107,7 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[chlorine]",
-    gas_temperature = -102,
-    auto_barrel = false
+    gas_temperature = -102
   },
 
   {
@@ -127,9 +123,7 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[hydrogen-chloride]",
-    gas_temperature = -115,
-    auto_barrel = false
-
+    gas_temperature = -115
   },
 
   {
@@ -145,8 +139,7 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[nitrogen-dioxide]",
-    gas_temperature = -12,
-    auto_barrel = false
+    gas_temperature = -12
   },
 
   {
@@ -162,8 +155,7 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[sulfur-dioxide]",
-    gas_temperature = -72,
-    auto_barrel = false
+    gas_temperature = -72
   },
 
   {
@@ -411,8 +403,7 @@ data:extend(
     base_color = {r=0.7, g=0.7, b=0.4},
     flow_color = {r=1, g=1, b=0.6},
     fuel_value = "3.55MJ",
-    emissions_multiplier = 0.1,
-    auto_barrel = false
+    emissions_multiplier = 0.1
   },
   {
     type = "fluid",
@@ -425,8 +416,7 @@ data:extend(
     gas_temperature = -60,
     heat_capacity = "1KJ",
     base_color = {r=0.7, g=0.7, b=0},
-    flow_color = {r=1, g=1, b=0.5},
-    auto_barrel = false
+    flow_color = {r=1, g=1, b=0.5}
   },
 }
 )
