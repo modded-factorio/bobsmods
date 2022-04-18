@@ -1,5 +1,9 @@
 if settings.startup["bobmods-enemies-enableartifacts"].value == true and settings.startup["bobmods-enemies-aliensdropartifacts"].value == true then
 
+if settings.startup["bobmods-enemies-enablesmallartifacts"].value == true then
+  bobmods.enemies.small_alien_artifacts = true
+end
+
 if data.raw.unit["small-biter"] then
   if data.raw.unit["small-biter"].loot == nil then 
     data.raw.unit["small-biter"].loot = {}
@@ -511,3 +515,33 @@ end
 
 end
 
+if bobmods.enemies.small_alien_artifacts ~= true then
+  -- hide items
+  for _, item_name in pairs({
+    "small-alien-artifact",
+    "small-alien-artifact-red",
+    "small-alien-artifact-orange",
+    "small-alien-artifact-yellow",
+    "small-alien-artifact-green",
+    "small-alien-artifact-blue",
+    "small-alien-artifact-purple"
+  }) do
+    if data.raw.item[item_name] then
+      data.raw.item[item_name].flags = {"hidden"}
+    end
+  end
+  -- hide recipies
+  for _, recipe_name in pairs({
+    "alien-artifact-from-small",
+    "alien-artifact-red-from-small",
+    "alien-artifact-orange-from-small",
+    "alien-artifact-yellow-from-small",
+    "alien-artifact-green-from-small",
+    "alien-artifact-blue-from-small",
+    "alien-artifact-purple-from-small"
+  }) do
+    if data.raw.recipe[recipe_name] then
+      bobmods.lib.recipe.hide_recipe(recipe_name)
+    end
+  end
+end

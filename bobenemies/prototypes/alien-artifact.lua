@@ -1,3 +1,5 @@
+bobmods.enemies.small_alien_artifacts = false
+
 if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
 data:extend(
