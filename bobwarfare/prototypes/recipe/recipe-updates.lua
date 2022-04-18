@@ -27,6 +27,7 @@ end
 
 if data.raw.item["tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("rocket-engine", "steel-plate", "tungsten-plate")
+  bobmods.lib.recipe.add_ingredient("rocket-engine", "tungsten-gear-wheel")
   bobmods.lib.tech.add_prerequisite("bob-rocket", "tungsten-processing")
 end
 
