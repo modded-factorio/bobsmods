@@ -38,7 +38,6 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
   bobmods.lib.tech.remove_prerequisite("oil-processing", "steel-processing")
   bobmods.lib.tech.add_prerequisite("oil-processing", "pumpjack")
-  bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
   data.raw.technology["oil-processing"].icon = "__base__/graphics/technology/oil-processing.png"
   bobmods.lib.tech.set_science_pack_count("oil-processing", 30)
 
@@ -58,6 +57,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.replace_prerequisite("sulfur-processing", "oil-processing", "chemical-plant")
 
   if data.raw.technology["chemical-processing-2"] then --chemical plant before oil processing
+    bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
     bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "chemical-plant")
     bobmods.lib.tech.add_prerequisite("chemical-processing-2", "chemical-plant")
     bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
