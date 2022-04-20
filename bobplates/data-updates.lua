@@ -217,12 +217,16 @@ bobmods.lib.create_gas_bottle(data.raw.fluid["deuterium"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen-sulfide"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["petroleum-gas"])
 
-bobmods.lib.create_fluid_canister(data.raw.fluid["liquid-fuel"], {r = 0.9, g = 0.2, b = 0})
-bobmods.lib.create_fluid_canister(data.raw.fluid["ferric-chloride-solution"], {r = 0.5, g = 0.4, b = 0.3})
+bobmods.lib.create_fluid_canister(data.raw.fluid["liquid-fuel"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["ferric-chloride-solution"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["nitric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-nitric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["tungstic-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["alien-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["alien-explosive"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["alien-poison"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["alien-fire"])
 
 for i, recipe in pairs(data.raw.recipe) do
   if (string.sub(recipe.name, 1, 5) == "fill-" or string.sub(recipe.name, 1, 6) == "empty-") and recipe.category == "crafting-with-fluid" then
