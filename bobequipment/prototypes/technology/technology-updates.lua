@@ -7,8 +7,6 @@ if mods['boblogistics'] then
   bobmods.lib.tech.remove_prerequisite("personal-roboport-equipment", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("personal-roboport-equipment", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("personal-roboport-modular-equipment-1", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("vehicle-roboport-equipment", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("vehicle-roboport-modular-equipment-1", "chemical-science-pack")
 end  
 
 bobmods.lib.tech.remove_science_pack("personal-roboport-mk2-equipment", "utility-science-pack")
