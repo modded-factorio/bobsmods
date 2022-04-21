@@ -3,6 +3,7 @@ Version: 1.1.5
 Date: ???
   Bugfixes:
     - Fixed error that could occur when opening inserter gui #6
+    - Fixed error that could occur with Editor Extensions #21
   Changes:
     - Allow long handed inserter to fast replace other inserter types #8
     - Tidied up technology prerequisites #12
