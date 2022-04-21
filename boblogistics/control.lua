@@ -168,12 +168,12 @@ function bobmods.logistics.create_gui_button(player_index)
   if not game.active_mods["bobinserters"] then
     local player = game.players[player_index]
 
-  -- remove legacy GUI
+    -- remove legacy GUI
     if player.gui.top.bob_logistics_inserter_gui then
       player.gui.top.bob_logistics_inserter_gui.destroy()
     end
 
-  -- remove legacy button
+    -- remove legacy button
     if player.gui.top.bob_logistics_inserter_button then
       player.gui.top.bob_logistics_inserter_button.destroy()
     end
@@ -218,6 +218,10 @@ end
 
 function bobmods.logistics.show_gui_options(player_index)
   local player = game.players[player_index]
+  
+  if not global.bobmods then
+    bobmods.logistics.player_setup(player_index)
+  end
 
   if player.gui.left.bob_logistics_inserter_gui then
     player.gui.left.bob_logistics_inserter_gui.destroy()
