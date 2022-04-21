@@ -32,6 +32,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
 else
   data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
   data.raw.item["battery"].icon_size = 64
+  data.raw.item["battery"].icon_mipmaps = nil
 end
 
 
