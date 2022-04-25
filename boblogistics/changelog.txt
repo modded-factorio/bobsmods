@@ -5,6 +5,7 @@ Date: ???
     - Tidied up technology prerequisites #12
   Bugfixes:
     - Prevent error if inserter capacity techs do not exist
+    - Fixed logistics chests 2 and 3 sorting before vanilla logistics chests #24
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 09. 04. 2021

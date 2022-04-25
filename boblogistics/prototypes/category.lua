@@ -117,13 +117,13 @@ data:extend(
     type = "item-subgroup",
     name = "logistic-chests-2",
     group = "logistics",
-    order = "f-2",
+    order = "g-2",
   },
   {
     type = "item-subgroup",
     name = "logistic-chests-3",
     group = "logistics",
-    order = "f-3",
+    order = "g-3",
   },
   {
     type = "item-subgroup",
