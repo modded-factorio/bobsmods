@@ -652,7 +652,6 @@ script.on_event(defines.events.on_research_finished, function(event)
   end
 end)
 
-
 script.on_event(defines.events.on_built_entity, function(event)
   local player = game.players[event.player_index]
   local entity = event.created_entity
@@ -669,6 +668,12 @@ script.on_event(defines.events.on_built_entity, function(event)
     and not global.bobmods.inserters.blacklist[entity_name]
   then
     bobmods.logistics.set_positions(entity, event.player_index)
+  end
+end)
+
+script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
+  if event.setting == "bobmods-inserters-button-enable" then
+    bobmods.logistics.create_gui_button(event.player_index)
   end
 end)
 
@@ -1158,9 +1163,7 @@ function bobmods.inserters.near_range(entity, player)
 end
 
 
-
-
-function bobmods.logistics.create_gui_button(player_index)
+function bobmods.logistics.destroy_gui_button(player_index)
   local player = game.players[player_index]
 
   -- remove legacy GUI
@@ -1173,11 +1176,40 @@ function bobmods.logistics.create_gui_button(player_index)
     player.gui.top.bob_logistics_inserter_button.destroy()
   end
 
-  if mod_gui.get_button_flow(player).bob_logistics_inserter_button then
-    mod_gui.get_button_flow(player).bob_logistics_inserter_button.destroy()
+  local gui = player.gui.top
+  local flow = gui.mod_gui_button_flow or (gui.mod_gui_top_frame and gui.mod_gui_top_frame.mod_gui_inner_frame)
+
+  if flow and flow.bob_logistics_inserter_button then
+    flow.bob_logistics_inserter_button.destroy()
+    -- Remove empty frame if we're the only thing there, remove the parent frame if we just removed the only child
+    if #flow.children_names == 0 then
+      local parent = flow.parent
+      flow.destroy()
+      if parent and #parent.children_names == 0 then
+        parent.destroy()
+      end
+    end
+  end
+end
+
+
+function bobmods.logistics.create_gui_button(player_index)
+  bobmods.logistics.destroy_gui_button(player_index)
+
+  local player = game.players[player_index]
+
+  if not settings.get_player_settings(player)["bobmods-inserters-button-enable"].value then
+    return 
   end
 
-  mod_gui.get_button_flow(player).add{type = "sprite-button", name = "bob_logistics_inserter_button", tooltip = {"gui.bob-inserter-open-gui"}, sprite = "item/fast-inserter", style = "mod_gui_button"}
+  mod_gui.get_button_flow(player).add{
+    type = "sprite-button",
+    name = "bob_logistics_inserter_button",
+    tooltip = {"gui.bob-inserter-open-gui"},
+    sprite = "item/fast-inserter",
+    style = "mod_gui_button",
+    visible = settings.get_player_settings(player)["bobmods-inserters-button-enable"].value
+  }
 end
 
 
@@ -1202,6 +1234,10 @@ function bobmods.logistics.create_gui(player_index)
 
   if player.gui.left.bob_logistics_inserter_gui then
     player.gui.left.bob_logistics_inserter_gui.destroy()
+  end
+
+  if not settings.get_player_settings(player)["bobmods-inserters-button-enable"].value then
+    return
   end
 
   local gui = player.gui.left.add({type = "frame", name = "bob_logistics_inserter_gui", direction = "vertical"})
