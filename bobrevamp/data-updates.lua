@@ -234,7 +234,7 @@ if data.raw.item["thorium-fuel-cell"] and data.raw.reactor["nuclear-reactor-2"] 
   bobmods.lib.tech.add_prerequisite("thorium-processing", "production-science-pack")
   bobmods.lib.tech.replace_prerequisite("thorium-processing", "nuclear-power", "uranium-processing")
   bobmods.lib.tech.remove_recipe_unlock("thorium-processing", "thorium-fuel-cell")
-  bobmods.lib.tech.replace_prerequisite("bob-nuclear-power-2", "nuclear-power", "thorium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "thorium-processing")
   bobmods.lib.tech.remove_prerequisite("bob-nuclear-power-2", "production-science-pack")
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
   bobmods.lib.tech.remove_prerequisite("thorium-fuel-reprocessing", "production-science-pack")
@@ -258,7 +258,7 @@ if data.raw.item["deuterium-fuel-cell"] and data.raw.reactor["nuclear-reactor-3"
     data.raw.item["deuterium-fuel-cell-2"].fuel_category = "deuterium"
   end
   if data.raw.technology["deuterium-fuel-cell-2"] then
-    bobmods.lib.tech.replace_prerequisite("deuterium-fuel-cell-2", "deuterium-processing", "bob-nuclear-power-3")
+    bobmods.lib.tech.add_prerequisite("deuterium-fuel-cell-2", "bob-nuclear-power-3")
   end
 
   data.raw.item["nuclear-reactor-3"].localised_name = {"entity-name.deuterium-reactor"}
@@ -272,7 +272,7 @@ if data.raw.item["deuterium-fuel-cell"] and data.raw.reactor["nuclear-reactor-3"
 
   bobmods.lib.tech.remove_prerequisite("deuterium-processing", "nuclear-power")
   bobmods.lib.tech.remove_recipe_unlock("deuterium-processing", "deuterium-fuel-cell")
-  bobmods.lib.tech.replace_prerequisite("bob-nuclear-power-3", "bob-nuclear-power-2", "deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "deuterium-processing")
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "nuclear-fuel-reprocessing")
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
   bobmods.lib.tech.add_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)
