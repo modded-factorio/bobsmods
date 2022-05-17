@@ -22,14 +22,14 @@ end
 
 bobmods.lib.tech.add_prerequisite ("utility-science-pack", "production-science-pack")
 bobmods.lib.tech.add_prerequisite ("utility-science-pack", "advanced-logistic-science-pack")
-if data.raw.item["flying-robot-frame-3"]
+if data.raw.item["flying-robot-frame-3"] then
   bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "flying-robot-frame-3")
   bobmods.lib.tech.add_prerequisite ("utility-science-pack", "robotics-3")
 end
-if data.raw.item["advanced-processing-unit"]
+if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("utility-science-pack", "processing-unit", "advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite ("utility-science-pack", "advanced-electronics-3")
-if data.raw.item["small-solar-panel-2"]
+if data.raw.item["small-solar-panel-2"] then
   bobmods.lib.recipe.add_ingredient("utility-science-pack", {"small-solar-panel-2", 1})
   bobmods.lib.tech.add_prerequisite ("utility-science-pack", "solar-energy-3")
 else
