@@ -5,7 +5,14 @@ data.raw.recipe["chemical-science-pack"].energy_required = 14
 
 bobmods.lib.recipe.remove_ingredient("production-science-pack", "productivity-module")
 bobmods.lib.recipe.remove_ingredient("production-science-pack", "rail")
-bobmods.lib.recipe.add_ingredient("production-science-pack", {"assembling-machine-2", 1})
+if data.raw.item["electronics-assembling-machine-3"] then
+  bobmods.lib.recipe.add_ingredient("production-science-pack", {"electronics-assembling-machine-3", 1})
+  bobmods.lib.tech.add_prerequisite ("production-science-pack", "electronics-assembling machine-3")
+else
+  bobmods.lib.recipe.add_ingredient("production-science-pack", {"assembling-machine-2", 1})
+  bobmods.lib.recipe.add_ingredient("production-science-pack", {"processing-unit", 3})
+  bobmods.lib.tech.add_prerequisite ("production-science-pack", "advanced-electronics-2")
+end
 bobmods.lib.recipe.add_ingredient("production-science-pack", {"chemical-plant", 1})
 
 if data.raw.item["brass-chest"] then
@@ -13,20 +20,22 @@ if data.raw.item["brass-chest"] then
   bobmods.lib.tech.add_prerequisite ("advanced-logistic-science-pack", "zinc-processing")
 end
 
-bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "electric-engine-unit")
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"processing-unit", 4})
-if data.raw.item["lithium-ion-battery"] then
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"lithium-ion-battery", 4})
+bobmods.lib.tech.add_prerequisite ("utility-science-pack", "production-science-pack")
+bobmods.lib.tech.add_prerequisite ("utility-science-pack", "advanced-logistic-science-pack")
+if data.raw.item["flying-robot-frame-3"]
+  bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "flying-robot-frame-3")
+  bobmods.lib.tech.add_prerequisite ("utility-science-pack", "robotics-3")
+end
+if data.raw.item["advanced-processing-unit"]
+  bobmods.lib.recipe.replace_ingredient("utility-science-pack", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite ("utility-science-pack", "advanced-electronics-3")
+if data.raw.item["small-solar-panel-2"]
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"small-solar-panel-2", 1})
+  bobmods.lib.tech.add_prerequisite ("utility-science-pack", "solar-energy-3")
 else
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"battery", 4})
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"solar-panel", 1})
+  bobmods.lib.tech.add_prerequisite ("utility-science-pack", "solar-energy")
 end
-if data.raw.item["silicon-nitride"] then
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"silicon-nitride", 4})
-end
-if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"titanium-bearing", 4})
-end
-
 data.raw.recipe["utility-science-pack"].energy_required = 28
 data.raw.recipe["utility-science-pack"].result_count = 4
 
