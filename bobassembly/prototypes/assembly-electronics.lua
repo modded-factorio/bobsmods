@@ -548,7 +548,8 @@ data:extend(
     prerequisites =
     {
       "electronics-machine-2",
-      "advanced-electronics-2"
+      "advanced-electronics-2",
+      "production-science-pack"
     },
     unit =
     {
@@ -559,6 +560,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"production-science-pack", 1}
       },
     },
     order = "a-c-c",
