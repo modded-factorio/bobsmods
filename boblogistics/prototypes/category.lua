@@ -4,7 +4,6 @@ data:extend(
     type = "item-group",
     name = "bob-logistics",
     order = "aaa-a",
-    inventory_order = "c-a",
     icon = "__boblogistics__/graphics/icons/technology/logistics.png",
     icon_size = 64,
   },
