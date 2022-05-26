@@ -15,7 +15,7 @@ class BobModBuilder:
   def __isReleased(self, modName:str) -> None:
     if modName.find("bob") >= 0:
       return True # all bobs mods on git are released
-    return False # not part of angels
+    return False # not part of bobs
 
   def __getModVersion(self, modName:str) -> str:
     with open("{0}/info.json".format(modName)) as modDataFile:
