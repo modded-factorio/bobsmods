@@ -1196,7 +1196,6 @@ data:extend(
     {
       range_modifier = 3,
       cooldown_modifier = 3,
-
       category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
