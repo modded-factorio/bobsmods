@@ -763,8 +763,8 @@ data:extend(
   {
     type = "technology",
     name = "fluid-canister-processing",
-    icon = "__bobplates__/graphics/icons/empty-canister.png",
-    icon_size = 32,
+    icon = "__bobplates__/graphics/icons/technology/fluid-canister.png",
+    icon_size = 720,
     prerequisites =
     {
       "water-bore-1",
