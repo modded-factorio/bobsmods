@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: ???
+Date: 06.06.2022
   Changes:
     - Prevent productivity modules from being used on fuel cell recipes that take Empty nuclear fuel cells #2
     - Fluid void recipes are now marked as hide_from_player_crafting instead of hidden #3

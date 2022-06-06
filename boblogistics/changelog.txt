@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: ???
+Date: 06.06.2022
   Changes:
     - Tidied up technology prerequisites #12
   Bugfixes:

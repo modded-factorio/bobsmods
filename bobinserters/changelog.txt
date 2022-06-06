@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: ???
+Date: 06.06.2022
   Bugfixes:
     - Fixed error that could occur when opening inserter gui #6
     - Fixed error that could occur with Editor Extensions #21
