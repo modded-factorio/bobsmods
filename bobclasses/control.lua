@@ -1,6 +1,64 @@
 local mod_gui = require("mod-gui")
 
+if script.active_mods["gvv"] then
+  require("__gvv__.gvv")()
+end
+
+local wlog
+if script.active_mods["_debug"] then
+  wlog = function(msg)
+    log(string.format("BOB'S CLASSES:\n%s", msg))
+  end
+else
+  wlog = function() end
+end
+
+
+-- For easier debugging
+local controllers = {}
+for k, v in pairs(defines.controllers) do
+  controllers[v] = k
+end
+
+minime_events = {}
+
+------------------------------------------------------------------------------------
+-- Notify other mods that a character has been exchanged
+announce_character_swap = {}
+
+-- "minime" must update GUI
+announce_character_swap.minime = function(data)
+  wlog("Entered function announce_character_swap.minime("..serpent.line(data)..")")
+  if remote.interfaces.minime and remote.interfaces.minime.on_character_swapped then
+    wlog("Calling remote.interfaces.minime.on_character_swapped")
+    remote.call("minime", "on_character_swapped", data)
+  end
+end
+
+-- "jetpack" must update to new character
+announce_character_swap.jetpack = function(data)
+  wlog("Entered function announce_character_swap.jetpack("..serpent.line(data)..")")
+  if remote.interfaces.jetpack and remote.interfaces.jetpack.swap_jetpack_character then
+    wlog("Calling remote.interfaces.jetpack.swap_jetpack_character")
+    remote.call("jetpack", "swap_jetpack_character", data)
+  end
+end
+
+-- Call remote functions from other mods
+local function announce(mod_name, data)
+  wlog("Entered function announce("..tostring(mod_name)..", "..serpent.line(data)..")")
+
+  if mod_name and announce_character_swap[mod_name] then
+    announce_character_swap[mod_name](data or {})
+  else
+    error("No such function: announce_character_swap["..tostring(mod_name).."]!")
+  end
+end
+------------------------------------------------------------------------------------
+
 function gui_add_title(gui, title, button_name, drag_target)
+  wlog("Entered function gui_add_title("..serpent.line(gui)..", "..serpent.line(title)..", ".. serpent.line(button_name)..", "..serpent.line(drag_target)..")")
+
   gui.add({type = "flow", name = "title_flow"})
   gui.title_flow.add({type = "label", name = "title", style = "frame_title", caption = title})
   gui.title_flow.add({type = "empty-widget", name = "filler", style = "bob_draggable_header"})
@@ -17,6 +75,9 @@ remote.add_interface("bobclasses", {
     for name, class in pairs(data) do
       add_class(name, class)
     end
+    if remote.interfaces["minime"] and remote.interfaces["minime"].bob_classes_update then
+      remote.call("minime", "bob_classes_update")
+    end
   end,
 
   add_starting_inventory = function(data)
@@ -29,20 +90,49 @@ remote.add_interface("bobclasses", {
     for i, item in pairs(data) do
       table.insert(global.respawn_inventory, item)
     end
-  end
-}
-)
+  end,
+
+  -- Added by Pi-C (2021-10-28)
+  get_classes = function()
+    wlog("Entered remote function get_classes!")
+    wlog("next(global.classes): " .. tostring(global.classes and next(global.classes) and true or false))
+    return global.classes
+  end,
+
+  -- Jetpack expects this function on other mods' remote interfaces to inform them
+  -- when a character's flying state has been toggled.
+  -- {new_unit_number = uint, old_unit_number = uint,
+  --  new_character = luaEntity, old_character = luaEntity}
+  on_character_swapped = function(event)
+    wlog("Entered remote function get_classes!")
+    wlog("next(global.classes): " .. tostring(global.classes and next(global.classes) and true or false))
+    local new, old = event.new_character, event.old_character
+    local player = (new and new.valid and new.player or new.associated_player) or
+                   (old and old.valid and old.player or old.associated_player)
+    if player then
+      refresh_avatar_gui(player.index)
+    end
+  end,
+})
 
 
 function add_class(name, class)
-  if name and class then
+  wlog("Entered function add_class(" .. name..", "..serpent.line(class)..")")
+
+  -- "class" must be a table so we can add class_name
+  --~ if name and class then
+  if name and type(class) == "table" then
+    -- "name" won't be available when global.classes[name] is passed on to a
+    -- function. That is a problem when remote functions from other mods are
+    -- called with just the class data, so better store the name with the data!
+    class.class_name = name
     global.classes[name] = class
   end
 end
 
 
 function add_classes()
--- example call to add a class. Call on on_init.
+  -- example call to add a class. Call on on_init.
   remote.call("bobclasses", "add_classes", {
     builder = {
       entity_name = "bob-character-builder",
@@ -70,9 +160,8 @@ function add_classes()
         }
       }
     }
-  }
-  )
--- example call to add items on spawn and respawn. Call on on_init.
+  })
+  -- example call to add items on spawn and respawn. Call on on_init.
   remote.call("bobclasses", "add_starting_inventory", {
       {name="iron-plate", count = 8},
       {name="copper-plate", count = 8}
@@ -104,6 +193,7 @@ end)
 
 
 function create_button(player_index)
+  wlog("Entered function create_button("..player_index..")")
   if mod_gui.get_button_flow(game.players[player_index]).bob_avatar_toggle_gui then
     mod_gui.get_button_flow(game.players[player_index]).bob_avatar_toggle_gui.destroy()
   end
@@ -111,18 +201,66 @@ function create_button(player_index)
 end
 
 
+function minime_exchanged_characters(event)
+  wlog("Entered function minime_exchanged_characters("..serpent.line(event)..")")
+  local player_index = event.player_index
+  local old_character = event.old_character
+  local new_character = event.new_character
+  local editor = event.editor_mode
+  local god = event.god_mode
 
+  -- Switch to another character
+  if new_character and not (editor or god) then
+    wlog("Calling refresh_avatar_gui("..player_index..")!")
+    refresh_avatar_gui(player_index)
+
+  -- Enter editor mode
+  elseif editor then
+    wlog("Calling switch_to_editor("..player_index..", "..tostring(old_character and old_character.name)..")!")
+    switch_to_editor(player_index, old_character)
+  -- Enter god mode
+  elseif god then
+    wlog("Calling switch_to_god("..player_index..", "..tostring(old_character and old_character.name)..")!")
+    switch_to_god(player_index, old_character)
+  end
+end
+
+
+function get_minime_events()
+  wlog("Entered function get_minime_events()")
+
+  return (remote.interfaces["minime"] and
+            remote.interfaces["minime"].get_minime_event_ids and
+            remote.call("minime", "get_minime_event_ids")) or {}
+end
+
+
+function register_minime_events()
+  wlog("Entered function register_minime_events()")
+
+  -- The two if-statements could be combined, but keeping them separate makes
+  -- it easy to look for more events if that should ever be necessary.
+  if minime_events then
+
+    -- Player changed skin
+    if minime_events["minime_exchanged_characters"] then
+      wlog("Registering handler for custom event \"minime_exchanged_characters\"!")
+      script.on_event(minime_events["minime_exchanged_characters"], minime_exchanged_characters)
+    end
+  end
+end
 
 
 function init()
+  wlog("Entered function init()")
   if not global.players then
     global.players = {}
   end
   if not global.names then
-  	global.names = {}
+    global.names = {}
   end
   if not global.sprite then
-  	global.sprite = {}
+    global.sprite = {}
   end
   if not global.classes then
     global.classes = {}
@@ -404,7 +542,7 @@ function init()
       global.players[i] = { respawn = false, first_character = true }
     end
 
---reset class bonuses
+    -- reset class bonuses
     for _, class in pairs(global.classes) do
       if player.character and player.character.name == class.entity_name then
         for i, bonus in pairs(class.bonuses) do
@@ -424,14 +562,28 @@ function init()
     end
     close_avatar_gui(i) --reworked the GUI in 0.18.8, this should force close any old versions.
   end
+
+  if remote.interfaces["minime"] and remote.interfaces["minime"].bob_classes_update then
+    remote.call("minime", "bob_classes_update")
+  end
+
+  wlog("Looking for custom events from \"minime\" (on_configuration_changed)")
+  minime_events = get_minime_events()
+  register_minime_events()
+
 end
 
 script.on_init(init)
 script.on_configuration_changed(init)
 
-
+script.on_load(function()
+  wlog("Looking for custom events from \"minime\" (on_load)")
+  minime_events = get_minime_events()
+  register_minime_events()
+end)
 
 script.on_event(defines.events.on_player_created, function(event)
+  wlog("Entered event handler on_player_created(" .. serpent.line(event)..")")
   create_button(event.player_index)
   global.players[event.player_index] = { respawn = false, first_character = true }
   class_select(event.player_index)
@@ -439,8 +591,9 @@ end)
 
 
 script.on_event(defines.events.on_player_respawned, function(event)
---player_index :: uint
---player_port :: LuaEntity (optional): The player port used to respawn if one was used.
+  wlog("Entered event handler on_player_respawned(" .. serpent.line(event)..")")
+  --player_index :: uint
+  --player_port :: LuaEntity (optional): The player port used to respawn if one was used.
   if not global.players[event.player_index] then
     global.players[event.player_index] = {}
   end
@@ -451,8 +604,9 @@ end)
 
 
 script.on_event(defines.events.on_built_entity, function(event)
+  wlog("Entered event handler on_built_entity(" .. serpent.line(event)..")")
   if event.created_entity.type == "character" then
- --when a player builds a character entity, it gets associated to them.
+    -- when a player builds a character entity, it gets associated to them.
     game.players[event.player_index].associate_character(event.created_entity)
 --    event.created_entity.associated_player = game.players[event.player_index] -- an alternate that should do the same thing as above.
     refresh_avatar_gui(event.player_index)
@@ -466,7 +620,7 @@ script.on_event(defines.events.on_built_entity, function(event)
     end
 
   end
--- due to how I want this to work, character entities can't have ghosts.
+  -- due to how I want this to work, character entities can't have ghosts.
   if event.created_entity.type == "entity-ghost" and event.created_entity.ghost_type == "character" then
     event.created_entity.destroy()
   end
@@ -476,6 +630,7 @@ end)
 
 -- Calls when a player dies. we're going to use it to force you to switch to a backup body on death instead of respawning.
 script.on_event(defines.events.on_pre_player_died, function(event)
+  wlog("Entered event handler on_pre_player_died(" .. serpent.line(event)..")")
   next_character(event.player_index)
 end)
 
@@ -488,7 +643,13 @@ end)
 
 -- Called when an entity dies. we're going to refresh the GUI if it was one of our entities that died.
 script.on_event(defines.events.on_entity_died, function(event)
+  wlog("Entered event handler on_entity_died(" .. serpent.line(event)..")")
+  wlog("entity.type: "..tostring(event.entity.type).."\tentity.name: "..tostring(event.entity.name))
   if event.entity.type == "character" then
+    if remote.interfaces.minime and remote.interfaces.minime.on_entity_died then
+      wlog("Inform minime about dead entity!")
+      remote.call("minime", "on_entity_died", event)
+    end
     local player = event.entity.associated_player
     if player then
       player.disassociate_character(event.entity)
@@ -498,10 +659,13 @@ script.on_event(defines.events.on_entity_died, function(event)
     global.names[event.entity.unit_number] = nil --character name cleanup
     global.sprite[event.entity.unit_number] = nil --character icon cleanup
   end
-end)
+--~ end)
+end, {{filter = "type", type = "character"}})
 
 
 script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
+  wlog("Entered event handler on_runtime_mod_setting_changed(" .. serpent.line(event)..")")
+
   if event.setting_type == "runtime-global" then
     if
       event.setting == "bobmods-classes-god-mode" or
@@ -518,6 +682,7 @@ end)
 
 
 script.on_event(defines.events.on_research_finished, function(event)
+  wlog("Entered event handler on_research_finished(" .. serpent.line(event)..")")
   for i, player in pairs(event.research.force.players) do
     refresh_class_gui_classes(player.index)
   end
@@ -527,6 +692,9 @@ end)
 
 
 script.on_event(defines.events.on_gui_click, function(event)
+  wlog("Entered event handler on_gui_click(" .. serpent.line(event)..")")
+
+  wlog("Name of clicked button: "..tostring(event.element.valid and event.element.name))
   local player = game.players[event.player_index]
   if event.element.valid and event.element.name == "bob_avatar_toggle_gui" then
     toggle_avatar_gui(event.element.player_index)
@@ -537,10 +705,16 @@ script.on_event(defines.events.on_gui_click, function(event)
     local characters = game.players[event.player_index].get_associated_characters()
     local character = characters[i]
     if character then
-      switch_character(event.player_index, character)
+      wlog("Calling switch_character for player " .. event.player_index .. "!")
+      -- Must call switch_character AFTER delete_minimap_gui!
+      --~ switch_character(event.player_index, character)
+      --~ if character.unit_number == global.players[event.player_index].minimap_unit then
+      --~ delete_minimap_gui(event.player_index)
+      --~ end
       if character.unit_number == global.players[event.player_index].minimap_unit then
         delete_minimap_gui(event.player_index)
       end
+      switch_character(event.player_index, character)
     end
   end
 
@@ -595,8 +769,10 @@ script.on_event(defines.events.on_gui_click, function(event)
     refresh_buttons_row(event.player_index)
   end
 
+  wlog("Checking class buttons")
   for i, class in pairs(global.classes) do
     if event.element.valid and event.element.name == class.button.name then
+      wlog("Must create character of class "..class.button.name.."!")
       create_character(event.player_index, class)
       global.players[event.player_index].respawn = false
       global.players[event.player_index].first_character = false
@@ -617,6 +793,7 @@ end)
 
 
 script.on_event(defines.events.on_gui_text_changed, function(event)
+  wlog("Entered event handler on_gui_text_changed(" .. serpent.line(event)..")")
   if event.element.valid and string.find(event.element.name, "bob_avatar_list_textfield_") then
     local characters = game.players[event.player_index].get_associated_characters()
     local i = tonumber(string.match(event.element.name, "%d+"))
@@ -636,6 +813,7 @@ end)
 
 
 function try_to_reopen_class_select(event)
+  wlog("Entered function try_to_reopen_class_select(" .. serpent.line(event)..")")
   local player = game.players[event.player_index]
   if global.players[event.player_index].first_character and player.controller_type == defines.controllers.character and player.character and player.character.valid then
     draw_class_gui(event.player_index)
@@ -653,6 +831,7 @@ script.on_event(defines.events.on_cutscene_cancelled, try_to_reopen_class_select
 
 
 function class_select(player_index)
+  wlog("Entered function class_select(" .. player_index..")")
   local player = game.players[player_index]
   if player.controller_type == defines.controllers.character and player.character and player.character.valid then
     draw_class_gui(player_index)
@@ -661,6 +840,7 @@ end
 
 
 function draw_class_gui(player_index)
+  wlog("Entered function draw_class_gui(" .. player_index..")")
   local player = game.players[player_index]
   if not player.gui.center.bob_class_gui then
     local gui = player.gui.center.add{type = "frame", name = "bob_class_gui", direction = "vertical"}
@@ -680,37 +860,39 @@ function draw_class_gui(player_index)
 end
 
 function add_class_gui_classes(gui, player_index)
+  wlog("Entered function add_class_gui_classes("..serpent.line(gui)..", "..player_index..")")
   local player = game.players[player_index]
-    gui.add({type = "table", name = "table", column_count = 2})
-    gui.table.style.horizontal_spacing = 7
-    gui.table.style.vertical_spacing = 7
-    gui.table.add({type = "table", name = "t1", column_count = 5})
-    gui.table.add({type = "table", name = "t1_advanced", column_count = 5})
-    gui.table.add({type = "table", name = "t2", column_count = 5})
-    gui.table.add({type = "table", name = "t2_advanced", column_count = 5})
-    gui.table.add({type = "table", name = "t3", column_count = 5})
-    gui.table.add({type = "table", name = "t3_advanced", column_count = 5})
-    gui.add({type = "table", name = "other", column_count = 5})
-    for i, class in pairs(global.classes) do
-      local add_it = true
-      if class.prerequisites then
-        for i, technology in pairs(class.prerequisites) do
-          if player.force.technologies[technology] and player.force.technologies[technology].researched == false then
-            add_it = false
-          end
-        end
-      end
-      if add_it then
-        if class.button.group and gui.table[class.button.group] then
-          gui.table[class.button.group].add{type = "sprite-button", name = class.button.name, tooltip = class.button.tooltip, sprite = class.button.sprite, style = "mod_gui_item_button"}
-        else
-          gui.other.add{type = "sprite-button", name = class.button.name, tooltip = class.button.tooltip, sprite = class.button.sprite, style = "mod_gui_item_button"}
+  gui.add({type = "table", name = "table", column_count = 2})
+  gui.table.style.horizontal_spacing = 7
+  gui.table.style.vertical_spacing = 7
+  gui.table.add({type = "table", name = "t1", column_count = 5})
+  gui.table.add({type = "table", name = "t1_advanced", column_count = 5})
+  gui.table.add({type = "table", name = "t2", column_count = 5})
+  gui.table.add({type = "table", name = "t2_advanced", column_count = 5})
+  gui.table.add({type = "table", name = "t3", column_count = 5})
+  gui.table.add({type = "table", name = "t3_advanced", column_count = 5})
+  gui.add({type = "table", name = "other", column_count = 5})
+  for i, class in pairs(global.classes) do
+    local add_it = true
+    if class.prerequisites then
+      for i, technology in pairs(class.prerequisites) do
+        if player.force.technologies[technology] and player.force.technologies[technology].researched == false then
+          add_it = false
         end
       end
     end
+    if add_it then
+      if class.button.group and gui.table[class.button.group] then
+        gui.table[class.button.group].add{type = "sprite-button", name = class.button.name, tooltip = class.button.tooltip, sprite = class.button.sprite, style = "mod_gui_item_button"}
+      else
+        gui.other.add{type = "sprite-button", name = class.button.name, tooltip = class.button.tooltip, sprite = class.button.sprite, style = "mod_gui_item_button"}
+      end
+    end
+  end
 end
 
 function refresh_class_gui_classes(player_index)
+  wlog("Entered function refresh_class_gui_classes(" .. player_index..")")
   local player = game.players[player_index]
   if player.gui.center.bob_class_gui and player.gui.center.bob_class_gui.table then
     player.gui.center.bob_class_gui.table.clear()
@@ -719,6 +901,7 @@ function refresh_class_gui_classes(player_index)
 end
 
 function close_class_gui(player_index)
+  wlog("Entered function close_class_gui(" .. player_index..")")
   local player = game.players[player_index]
   if player.gui.center.bob_class_gui then
     player.gui.center.bob_class_gui.destroy()
@@ -729,6 +912,7 @@ end
 
 
 function toggle_avatar_gui(player_index)
+  wlog("Entered function toggle_avator_gui(" .. player_index..")")
   local player = game.players[player_index]
   if not player.gui.left.bob_avatar_gui then
     draw_avatar_gui(player_index)
@@ -738,6 +922,7 @@ function toggle_avatar_gui(player_index)
 end
 
 function close_avatar_gui(player_index)
+  wlog("Entered function close_avatar_gui(" .. player_index..")")
   local player = game.players[player_index]
   if player.gui.left.bob_avatar_gui then
     player.gui.left.bob_avatar_gui.destroy()
@@ -754,6 +939,7 @@ function close_avatar_gui(player_index)
 end
 
 function draw_avatar_gui(player_index)
+  wlog("Entered function draw_avatar_gui(" .. player_index..")")
   close_avatar_gui(player_index)
   local globtable = global.players[player_index]
 
@@ -770,7 +956,7 @@ function draw_avatar_gui(player_index)
   gui.current_character_info.style.vertical_align = "center"
   draw_current_character_info(player_index)
 
-  
+
   gui.add({type = "flow", name = "main_flow", style = "horizontal_flow"})
   gui.main_flow.style.horizontal_spacing = 8
 
@@ -794,6 +980,7 @@ function draw_avatar_gui(player_index)
 end
 
 function draw_current_character_info(player_index)
+  wlog("Entered function draw_current_character_info(" .. player_index..")")
   local player = game.players[player_index]
   local gui = global.players[player_index].current_character
   if gui then
@@ -829,6 +1016,7 @@ function draw_current_character_info(player_index)
 end
 
 function draw_buttons_row(player_index)
+  wlog("Entered function draw_buttons_row(" .. player_index..")")
   local player = game.players[player_index]
   local gui = global.players[player_index].buttons_row
   if gui then
@@ -859,6 +1047,7 @@ function draw_buttons_row(player_index)
 end
 
 function draw_characters_list(player_index)
+  wlog("Entered function draw_characters_list(" .. player_index..")")
   if not global.players[player_index] then -- If this doesn't exist, something went wrong.
     global.players[player_index] = {respawn = false, rename_mode = false} --so we'll attempt to fix it
   end
@@ -908,16 +1097,19 @@ end
 
 
 function refresh_buttons_row(player_index)
+  wlog("Entered function refresh_buttons_row(" .. player_index..")")
   draw_buttons_row(player_index)
 end
 
 function refresh_avatar_gui(player_index)
+  wlog("Entered function refresh_avatar_gui("..player_index..")!")
   draw_current_character_info(player_index)
   draw_characters_list(player_index)
 end
 
 
 function refresh_minimap_buttons(player_index)
+  wlog("Entered function refresh_minimap_buttons(" .. player_index..")")
   local characters = game.players[player_index].get_associated_characters()
   local gui = global.players[player_index].characters_list
   if gui and gui.table then
@@ -934,6 +1126,8 @@ function refresh_minimap_buttons(player_index)
 end
 
 function draw_minimap_gui(player_index, entity)
+  wlog("Entered function draw_minimap_gui(" .. player_index..")")
+
   local player = game.players[player_index]
   local gui = global.players[player_index].minimap_gui
 
@@ -957,6 +1151,7 @@ end
 
 
 function delete_minimap_gui(player_index)
+  wlog("Entered function delete_minimap_gui(" .. player_index..")")
   local gui = global.players[player_index].minimap_gui
   if gui then
     gui.destroy()
@@ -969,6 +1164,8 @@ end
 
 
 function set_character_icon(player_index, entity)
+  wlog("Entered function set_character_icon("..player_index..", "..entity.name")!")
+
   local player = game.players[player_index]
   local hand_item = nil
   if player.cursor_stack and player.cursor_stack.valid and player.cursor_stack.valid_for_read and player.cursor_stack.name then
@@ -984,6 +1181,7 @@ function set_character_icon(player_index, entity)
 end
 
 function reset_character_icon(entity)
+  wlog("Entered function reset_character_icon(" .. entity.name..")")
   local sprite = "entity/" .. entity.name
   for i, class in pairs(global.classes) do
     if entity.name == class.entity_name then
@@ -998,15 +1196,91 @@ end
 
 
 function create_character(player_index, class)
+  wlog("Entered function create_character(".. player_index..", ".. serpent.line(class)..")!")
   local player = game.players[player_index]
 
   if player.controller_type == defines.controllers.character and player.character ~= nil and player.character.valid then
     local position = player.character.position
     local surface = player.surface
     local force = player.force
+    local direction = player.character.direction
+    local orientation = player.character.orientation
 
-    if player.character ~= nil and player.character.name ~= class.entity_name then
-      player.character = surface.create_entity{name = class.entity_name, position = position, force = force, fast_replace = true, raise_built = true}
+
+    wlog("Creating new character!")
+    --~ if player.character ~= nil and player.character.name ~= class.entity_name then
+      --~ player.character = surface.create_entity{name = class.entity_name, position = position, force = force, fast_replace = true, raise_built = true}
+    --~ end
+    local old = player.character
+    wlog("Old character: "..tostring(old and old.name).." ("..tostring(old and old.unit_number)..")")
+    wlog(tostring(old and old.name).." ~= "..tostring(class and class.entity_name)..": ".. tostring(old and old.valid and old.name ~= class.entity_name))
+    --~ if player.character ~= nil and player.character.name ~= class.entity_name then
+    if old and old.valid and old.name ~= class.entity_name then
+      wlog("Passed old character test")
+      local skin
+      local old_id = old.unit_number
+
+      -- Let "minime" determine the final character version. Currently, it only has
+      -- support for Bob's classes and Jetpack, but perhaps more mods will provide
+      -- new versions of a character in the future, and as "minime" is a character
+      -- selector mod, it's probably better at picking the correct character.
+      if remote.interfaces["minime"] and
+          remote.interfaces["minime"].bob_class_pick_character then
+        skin = remote.call("minime", "bob_class_pick_character", player_index, class)
+      end
+      wlog("Old entity still exists after call to minime: "..tostring(old and old.valid))
+      -- For some reason, "minime" could have returned nil!
+      if not (skin and game.entity_prototypes[skin]) then
+        -- Basic compatibility with "jetpack". This assumes that "jetpack" will be the
+        -- last mod creating new character versions, so that the names of flying
+        -- characters will always end with "-jetpack". This may or may not be true.
+        local flying = old.name:match("^(.+)%-jetpack")
+        local new = class.entity_name.."-jetpack"
+        if flying and game.entity_prototypes[new] then
+          wlog(new.." is a flying prototype!")
+          skin = new
+        else
+          wlog(new.." is NOT a flying prototype!")
+          skin = class.entity_name
+        end
+      end
+      wlog("skin: " .. tostring(skin))
+      wlog("Old entity still exists after setting skin: "..tostring(old and old.valid))
+
+      -- Added direction
+      player.character = surface.create_entity{name = skin, position = position, direction = direction, force = force, fast_replace = true, raise_built = true}
+      wlog("New character name: "..player.character.name)
+      wlog("Old entity still exists after creating new character: "..tostring(old and old.valid))
+      -- "minime" already knows of the character change, but we must notify
+      -- other mods!
+      wlog("old_id: "..tostring(old_id))
+      announce("jetpack", {
+        old_character = old,
+        new_character = player.character,
+        old_character_unit_number = old_id,
+      })
+      wlog("Old entity still exists after announcing new character: "..tostring(old and old.valid))
+
+
+      -- This is strange: orientation is more fine-grained than direction, but can't be
+      -- used with create_entity. If direction is set only in surface.create_entity, the
+      -- character will only look at N, E, S, W, but not at NE, SE, SW, and NW. Therefore,
+      -- we should apply orientation after creating the new character. However, for some
+      -- reason that doesn't have any effect, but setting player.character.direction again
+      -- does.
+      if player.character then
+        player.character.direction = direction
+      end
+      wlog("Old entity still exists after setting direction: "..tostring(old and old.valid))
+
+      -- It seems that creating a character with fast_replace would destroy the old entity.
+      -- But there are situations where the old character may still be around and block the
+      -- new one. Make sure the old character is really removed!
+      --~ wlog("Removing old character \""..old.name.."\" ("..old.unit_number..")!")
+      if old and old.valid then
+        wlog("Removing old character!")
+        old.destroy()
+      end
     end
 
     if class and player.character then
@@ -1059,14 +1333,19 @@ end
 
 --Switches to the first character in the association list.
 function next_character(player_index)
+  wlog("Entered function next_character(" .. player_index..")")
   local characters = game.players[player_index].get_associated_characters()
   if characters[1] then
+    wlog(string.format("Bobclasses -- Calling switch_character for olayer %s. New character: %s",
+                    player_index, characters[1].name))
     switch_character(player_index, characters[1])
   end
 end
 
 --Switches to the new character, then adds the old one to the (end of the) association list.
 function switch_character(player_index, new_character)
+  wlog("Entered function switch_character("..player_index..", "..tostring(new_character and new_character.name)..")!")
+
   local player = game.players[player_index]
   if player.controller_type == defines.controllers.editor then
     player.toggle_map_editor() --safety restores the character entity.
@@ -1080,31 +1359,126 @@ function switch_character(player_index, new_character)
     player.teleport(new_character.position, new_character.surface) --look at the new surface
   end
   player.character = new_character
+
   if old_character then
     player.associate_character(old_character)
   end
+
+  local old_unit_number = old_character and old_character.unit_number
+  local new_unit_number = new_character and new_character.unit_number
+
+  announce("minime", {
+    old_character = old_character,
+    new_character = new_character,
+    --~ old_unit_number = old_character and old_character.unit_number,
+    --~ new_unit_number = new_character and new_character.unit_number,
+    old_unit_number = old_unit_number,
+    new_unit_number = new_unit_number,
+  })
+  --~ announce("jetpack", {
+    --~ old_character = old_character,
+    --~ new_character = new_character,
+    --~ old_unitnumber = old_character and old_character.unit_number,
+    --~ new_unitnumber = new_character and new_character.unit_number,
+  --~ })
+--~ end
+  if remote.interfaces["jetpack"] then
+    wlog("Jetpack is active!")
+    local jetpacks = remote.interfaces["jetpack"].get_jetpacks and
+                      remote.call("jetpack", "get_jetpacks", {})
+    wlog("Jetpacks: " .. serpent.block(jetpacks))
+    -- Block jetpack of old character
+    --~ if jetpacks[old_character.unit_number] and remote.interfaces["jetpack"].block_jetpack then
+    if old_unit_number and
+        jetpacks[old_unit_number] and
+        remote.interfaces["jetpack"].block_jetpack then
+      wlog("Old character was flying. Must block jetpack of character " .. old_unit_number)
+      remote.call("jetpack", "block_jetpack", {character = old_character})
+      old_character.active = false
+    end
+    -- Unblock jetpack of new character
+    if new_unit_number and
+        jetpacks[new_unit_number] and
+        remote.interfaces["jetpack"].unblock_jetpack then
+      wlog("New character is flying. Must unblock jetpack of character " .. new_unit_number)
+      remote.call("jetpack", "unblock_jetpack", {character = new_character})
+      new_character.active = true
+    end
+  end
+
   global.players[player_index].respawn = false
   global.players[player_index].first_character = false
   refresh_avatar_gui(player_index)
 end
 
 --Switches to the god controller, then adds the connected character to the (end of the) association list.
-function switch_to_god(player_index)
-  local old_character = game.players[player_index].character
+-- Added optional argument old_char. Per default, the player's current character will be used, but
+-- if this function is called from a remote function, this allows to pass on a different character.
+--~ function switch_to_god(player_index)
+function switch_to_god(player_index, old_char)
+  wlog("Entered function switch_to_god(" .. player_index..")")
+
+  --~ local old_character = game.players[player_index].character
+  local old_character = old_char or game.players[player_index].character
   game.players[player_index].set_controller{type = defines.controllers.god}
   if old_character then
     game.players[player_index].associate_character(old_character)
   end
+
+  -- Skip this if called with old_char, i.e. if this function is called in response
+  -- to changes by another mod. If another mod toggled editor/god mode, it's their
+  -- responsibility to announce the change.
+  if not old_char then
+    -- Notify other mods that a character has been exchanged
+    --~ announce("minime", {old = old_character})
+    announce("minime", {
+      old_character = old_character,
+      old_unit_number = old_character and old_character.unit_number,
+      player_index = player_index,
+      god_mode = true
+    })
+    announce("jetpack", {
+      old_character = old_character,
+      old_character_unit_number = old_character and old_character.unit_number,
+    })
+  end
+
   refresh_avatar_gui(player_index)
 end
 
 --Switches to the editor controller, then adds the connected character to the (end of the) association list.
-function switch_to_editor(player_index)
-  local old_character = game.players[player_index].character
+-- Added optional argument old_char. Per default, the player's current character will be used, but
+-- if this function is called from a remote function, this allows to pass on a different character.
+--~ function switch_to_editor(player_index)
+function switch_to_editor(player_index, old_char)
+  wlog("Entered function switch_to_editor(" .. player_index..", "..tostring(old_char and old_char.name)..")")
+  wlog(string.format("Controller of player %s: %s", player_index, controllers[game.players[player_index].controller_type]))
+
+  --~ local old_character = game.players[player_index].character
+  local old_character = old_char or game.players[player_index].character
   game.players[player_index].set_controller{type = defines.controllers.editor}
+  wlog(string.format("Controller of player %s after change: %s", player_index, controllers[game.players[player_index].controller_type]))
   if old_character then
     game.players[player_index].associate_character(old_character)
   end
+
+  -- Skip this if called with old_char, i.e. if this function is called in response
+  -- to changes by another mod. If another mod toggled editor/god mode, it's their
+  -- responsibility to announce the change.
+  if not old_char then
+    -- Notify other mods that a character has been exchanged
+    announce("minime", {
+      old_character = old_character,
+      old_unit_number = old_character and old_character.unit_number,
+      player_index = player_index,
+      editor_mode = true
+    })
+    announce("jetpack", {
+      old_character = old_character,
+      old_character_unit_number = old_character and old_character.unit_number,
+    })
+  end
+
   refresh_avatar_gui(player_index)
 end
 

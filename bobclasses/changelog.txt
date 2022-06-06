@@ -1,8 +1,17 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ???
+  Changes:
+    - Added function get_classes() to remote interface.
+    - Added handler for custom event from the Minime mod.
+    - Added class_name to class data, so the new class name can be passed on to remote calls.
+    - Interact with the Minime mod, so that you can switch to another character skin.
+    - Interact directly with the Jetpack mod if Minime is not active. This way, you can still swtich between the flying/non-flying versions of a character.
+    - Call Minime from on_entity_died, before removing the association of character and player. This way, Minime can store what player was associated with the character's corpse.
   Bugfixes:
     - Added call to space-exploration remote_view_stop before switching character
+    - If minime was asked to pick a new character version, and it returned nil, use a fallback.
+    - Remove the old character when a player already had a character and a new one was created. This could happen when the class selector was used after respawning.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 25. 11. 2020
