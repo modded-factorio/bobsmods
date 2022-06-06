@@ -11,7 +11,9 @@ bobmods.lib.tech.remove_science_pack("logistic-robotics", "chemical-science-pack
 bobmods.lib.tech.remove_science_pack("worker-robots-speed-1", "chemical-science-pack")
 bobmods.lib.tech.add_prerequisite("worker-robots-speed-2", "bob-robots-1")
 bobmods.lib.tech.add_prerequisite("worker-robots-storage-1", "bob-robots-1")
-
+if not mods["bobequipment"] then
+  bobmods.lib.tech.add_prerequisite("personal-roboport-equipment", "chemical-science-pack")
+end
 bobmods.lib.tech.add_prerequisite("construction-robotics", "advanced-electronics")
 bobmods.lib.tech.add_prerequisite("logistic-robotics", "advanced-electronics")
 
