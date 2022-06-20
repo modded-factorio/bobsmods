@@ -820,6 +820,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 1.5,
       base_area = 1,
       pipe_connections =
       {
@@ -866,6 +867,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 1.5,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("steel"),
       pipe_connections =
@@ -919,6 +921,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 2.25,
       base_area = 1,--2,
       pipe_connections =
       {
@@ -965,6 +968,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 2.25,
       base_area = 1,--2,
       pipe_covers = bob_pipecoverspictures("plastic"),
       pipe_connections =
@@ -1023,6 +1027,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 1.5,
       base_area = 1,--0.5,
       pipe_connections =
       {
@@ -1069,6 +1074,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 1.5,
       base_area = 1,--0.5,
       pipe_covers = bob_pipecoverspictures("bronze"),
       pipe_connections =
@@ -1128,6 +1134,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 2.25,
       base_area = 1,--0.5,
       pipe_connections =
       {
@@ -1174,6 +1181,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 2.25,
       base_area = 1,--0.5,
       pipe_covers = bob_pipecoverspictures("brass"),
       pipe_connections =
@@ -1233,6 +1241,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 3.5,
       base_area = 1,--2,
       pipe_connections =
       {
@@ -1279,6 +1288,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 3.5,
       base_area = 1,--2,
       pipe_covers = bob_pipecoverspictures("ceramic"),
       pipe_connections =
@@ -1338,6 +1348,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 3.5,
       base_area = 1,
       pipe_connections =
       {
@@ -1384,6 +1395,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 3.5,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("titanium"),
       pipe_connections =
@@ -1443,6 +1455,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 3.5,
       base_area = 1,
       pipe_connections =
       {
@@ -1489,6 +1502,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 3.5,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("tungsten"),
       pipe_connections =
@@ -1547,6 +1561,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 5,
       base_area = 1,
       pipe_connections =
       {
@@ -1593,6 +1608,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 5,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("nitinol"),
       pipe_connections =
@@ -1651,6 +1667,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 5,
       base_area = 1,
       pipe_connections =
       {
@@ -1697,6 +1714,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
+      height = 5,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("copper-tungsten"),
       pipe_connections =
