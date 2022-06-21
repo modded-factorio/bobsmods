@@ -414,8 +414,8 @@ if settings.startup["bobmods-logistics-highpipes"].value == true then
 
 
   bobmods.logistics.set_pump_height("bob-pump-2", 1)
-  bobmods.logistics.set_pipe_height("bob-pump-3", 2)
-  bobmods.logistics.set_pipe_height("bob-pump-4", 4) --level 3 is skipped becoue there are only 4 pump levels and level 4 takes T5 pipes as ingridient
+  bobmods.logistics.set_pump_height("bob-pump-3", 2)
+  bobmods.logistics.set_pump_height("bob-pump-4", 4) --level 3 is skipped becoue there are only 4 pump levels and level 4 takes T5 pipes as ingridient
 
 
   --Send Pump Speed for Pump
