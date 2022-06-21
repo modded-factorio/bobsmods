@@ -3,6 +3,13 @@ function bobmods.logistics.pipe_distance(level)
   return range
 end
 
+--Write a function that takes a level and returns 1.5 to the power of the level roundet to the nearest multiple of 0.25
+function bobmods.logistics.pipe_height(level)
+  local height = 1.5^(level)
+  
+  return math.floor(height*4)/4
+end
+
 function bobmods.logistics.set_pipe_distance(pipe, level)
   if data.raw["pipe-to-ground"][pipe] then
     for index, connection in pairs(data.raw["pipe-to-ground"][pipe].fluid_box.pipe_connections) do
@@ -12,6 +19,16 @@ function bobmods.logistics.set_pipe_distance(pipe, level)
     end
   end
 end
+
+function bobmods.logistics.set_pipe_height(pipe, level)
+  if (data.raw["pipe"][pipe]) then
+    data.raw["pipe"][pipe].fluid_box.height = bobmods.logistics.pipe_height(level)
+  end
+  if (data.raw["pipe-to-ground"][pipe]) then
+    data.raw["pipe-to-ground"][pipe].fluid_box.height = bobmods.logistics.pipe_height(level)
+  end
+end
+
 
 
 function bob_pipepictures(pipe_type)
@@ -820,7 +837,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 1.5,
+      height = 1,
       base_area = 1,
       pipe_connections =
       {
@@ -867,7 +884,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 1.5,
+      height = 1,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("steel"),
       pipe_connections =
@@ -921,7 +938,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 2.25,
+      height = 1,
       base_area = 1,--2,
       pipe_connections =
       {
@@ -968,7 +985,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 2.25,
+      height = 1,
       base_area = 1,--2,
       pipe_covers = bob_pipecoverspictures("plastic"),
       pipe_connections =
@@ -1027,7 +1044,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 1.5,
+      height = 1,
       base_area = 1,--0.5,
       pipe_connections =
       {
@@ -1074,7 +1091,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 1.5,
+      height = 1,
       base_area = 1,--0.5,
       pipe_covers = bob_pipecoverspictures("bronze"),
       pipe_connections =
@@ -1134,7 +1151,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 2.25,
+      height = 1,
       base_area = 1,--0.5,
       pipe_connections =
       {
@@ -1181,7 +1198,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 2.25,
+      height = 1,
       base_area = 1,--0.5,
       pipe_covers = bob_pipecoverspictures("brass"),
       pipe_connections =
@@ -1241,7 +1258,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 3.5,
+      height = 1,
       base_area = 1,--2,
       pipe_connections =
       {
@@ -1288,7 +1305,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 3.5,
+      height = 1,
       base_area = 1,--2,
       pipe_covers = bob_pipecoverspictures("ceramic"),
       pipe_connections =
@@ -1348,7 +1365,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 3.5,
+      height = 1,
       base_area = 1,
       pipe_connections =
       {
@@ -1395,7 +1412,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 3.5,
+      height = 1,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("titanium"),
       pipe_connections =
@@ -1455,7 +1472,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 3.5,
+      height = 1,
       base_area = 1,
       pipe_connections =
       {
@@ -1502,7 +1519,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 3.5,
+      height = 1,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("tungsten"),
       pipe_connections =
@@ -1561,7 +1578,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 5,
+      height = 1,
       base_area = 1,
       pipe_connections =
       {
@@ -1608,7 +1625,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 5,
+      height = 1,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("nitinol"),
       pipe_connections =
@@ -1667,7 +1684,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 5,
+      height = 1,
       base_area = 1,
       pipe_connections =
       {
@@ -1714,7 +1731,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      height = 5,
+      height = 1,
       base_area = 1,
       pipe_covers = bob_pipecoverspictures("copper-tungsten"),
       pipe_connections =
@@ -1764,3 +1781,25 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("copper-tungsten-pipe-to-ground", 5)
 end
 
+if settings.startup["bobmods-logistics-highpipes"].value == true then
+  bobmods.logistics.set_pipe_height("steel-pipe-to-ground", 1)
+  bobmods.logistics.set_pipe_height("bronze-pipe-to-ground", 1)
+  bobmods.logistics.set_pipe_height("plastic-pipe-to-ground", 2)
+  bobmods.logistics.set_pipe_height("brass-pipe-to-ground", 2)
+  bobmods.logistics.set_pipe_height("ceramic-pipe-to-ground", 3)
+  bobmods.logistics.set_pipe_height("titanium-pipe-to-ground", 3)
+  bobmods.logistics.set_pipe_height("tungsten-pipe-to-ground", 3)
+  bobmods.logistics.set_pipe_height("nitinol-pipe-to-ground", 4)
+  bobmods.logistics.set_pipe_height("copper-tungsten-pipe-to-ground", 4)
+
+  --Also call set_pipe_height for non pipe-to-ground pipes
+  bobmods.logistics.set_pipe_height("steel-pipe", 1)
+  bobmods.logistics.set_pipe_height("bronze-pipe", 1)
+  bobmods.logistics.set_pipe_height("plastic-pipe", 2)
+  bobmods.logistics.set_pipe_height("brass-pipe", 2)
+  bobmods.logistics.set_pipe_height("ceramic-pipe", 3)
+  bobmods.logistics.set_pipe_height("titanium-pipe", 3)
+  bobmods.logistics.set_pipe_height("tungsten-pipe", 3)
+  bobmods.logistics.set_pipe_height("nitinol-pipe", 4)
+  bobmods.logistics.set_pipe_height("copper-tungsten-pipe", 4)
+end
