@@ -21,7 +21,7 @@ function bobmods.logistics.set_pipe_distance(pipe, level)
 end
 
 function bobmods.logistics.set_pipe_height(pipe, level)
-  if (data.raw["pipe"][pipe]) then
+  if data.raw["pipe"][pipe] then
     data.raw["pipe"][pipe].fluid_box.height = bobmods.logistics.pipe_height(level)
   end
   if (data.raw["pipe-to-ground"][pipe]) then
