@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: 06.06.2022
+  Changes:
+    - Added Bigger pipes setting that increases capacity and throughput of higher tier pipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
   Changes:
