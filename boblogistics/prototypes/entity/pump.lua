@@ -1,3 +1,23 @@
+function bobmods.logistics.pump_height(level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  return bobmods.logistics.pipe_height(level) * 4
+end
+
+function bobmods.logistics.pump_pumping_speed(level) --Pumping speed should match the capacity of the same tier pipe
+  return bobmods.logistics.pipe_height(level) * 100
+end
+
+function bobmods.logistics.set_pump_height(pump, level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  if (data.raw["pump"][pump]) then
+    data.raw["pump"][pump].fluid_box.height = bobmods.logistics.pump_height(level)
+  end
+end 
+
+function bobmods.logistics.set_pumping_speed(pump , level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  if (data.raw["pump"][pump]) then
+    data.raw["pump"][pump].pumping_speed = bobmods.logistics.pump_pumping_speed(level)
+  end
+end 
+
 function bobmods.logistics.pump_animations(tint)
   return {
       north =
@@ -390,4 +410,17 @@ data:extend(
 )
 
 
+if settings.startup["bobmods-logistics-highpipes"].value == true then
 
+
+  bobmods.logistics.set_pump_height("bob-pump-2", 1)
+  bobmods.logistics.set_pump_height("bob-pump-3", 2)
+  bobmods.logistics.set_pump_height("bob-pump-4", 4) --level 3 is skipped because there are only 4 pump levels and level 4 takes T5 pipes as ingredient
+
+
+  --Send Pump Speed for Pump
+  bobmods.logistics.set_pumping_speed("bob-pump-2", 1)
+  bobmods.logistics.set_pumping_speed("bob-pump-3", 2)
+  bobmods.logistics.set_pumping_speed("bob-pump-4", 4)
+
+end
