@@ -346,4 +346,23 @@ function bobmods.lib.item.set(list, item_in)
   end
 end
 
+function bobmods.lib.item.hide(item_name)
+  if type(item_name) == "string" then
+    local item = data.raw.item[item_name]
+    if item then
+      if not item.flags then
+        item.flags = {}
+      end
+      bobmods.lib.safe_insert(item.flags, "hidden")
+    else
+      item = data.raw.fluid[item_name]
+      if item then
+        item.hidden = true
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.item(item_name)
+  end
+end
 

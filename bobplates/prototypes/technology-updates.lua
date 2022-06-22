@@ -49,6 +49,7 @@ bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide-2")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "bob-lead-plate")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "silver-from-lead")
+bobmods.lib.tech.add_prerequisite("lead-processing", "nickel-processing")
 
 bobmods.lib.tech.add_recipe_unlock("aluminium-processing", "alumina")
 bobmods.lib.tech.add_recipe_unlock("aluminium-processing", "bob-aluminium-plate")
@@ -90,6 +91,7 @@ bobmods.lib.tech.add_recipe_unlock("lithium-processing", "lithium-water-electrol
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "titanium-gear-wheel")
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "titanium-bearing-ball")
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "titanium-bearing")
+bobmods.lib.tech.add_prerequisite("titanium-processing", "lubricant")
 
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungsten-gear-wheel")
 

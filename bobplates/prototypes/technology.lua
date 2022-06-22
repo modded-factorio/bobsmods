@@ -405,6 +405,7 @@ data:extend(
       "nitrogen-processing",
       "silicon-processing",
       "chemical-science-pack",
+      "lubricant"
     },
     effects =
     {

@@ -669,6 +669,7 @@ data:extend(
 )
 
 bobmods.lib.tech.add_recipe_unlock("fluid-reactor-1", "fluid-reactor-from-fluid-furnace")
+bobmods.lib.tech.add_prerequisite("fluid-reactor-1", "fluid-furnace")
 
 end
 

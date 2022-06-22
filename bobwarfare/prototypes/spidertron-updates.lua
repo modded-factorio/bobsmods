@@ -246,7 +246,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     data.raw.item["intergrated-electronics"] and 
     data.raw.item["processing-electronics"]
   then
---    bobmods.lib.tech.replace_prerequisite("spidertron", "rocket-control-unit", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
 
     bobmods.lib.recipe.difficulty_split("mech-brain")
     bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", {"basic-electronic-components", 80})
