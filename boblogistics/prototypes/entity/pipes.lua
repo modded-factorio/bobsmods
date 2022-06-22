@@ -3,7 +3,7 @@ function bobmods.logistics.pipe_distance(level)
   return range
 end
 
---Write a function that takes a level and returns 1.5 to the power of the level roundet to the nearest multiple of 0.25
+--Write a function that takes a level and returns 1.5 to the power of the level rounded to the nearest multiple of 0.25
 function bobmods.logistics.pipe_height(level)
   local height = 1.5^(level)
   
