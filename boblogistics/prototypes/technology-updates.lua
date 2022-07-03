@@ -6,6 +6,7 @@ bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-storage-tank-all-corne
 -- 0.17.60 balancing
 bobmods.lib.tech.remove_science_pack("robotics", "chemical-science-pack")
 bobmods.lib.tech.remove_prerequisite("robotics", "advanced-oil-processing")
+bobmods.lib.tech.remove_prerequisite("robotics", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("construction-robotics", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("logistic-robotics", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("worker-robots-speed-1", "chemical-science-pack")

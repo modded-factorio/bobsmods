@@ -268,7 +268,7 @@ if data.raw.item["deuterium-fuel-cell"] and data.raw.reactor["nuclear-reactor-3"
   data.raw.technology["bob-nuclear-power-3"].localised_name = {"technology-name.deuterium-power"}
   data.raw.technology["bob-nuclear-power-3"].icon_size = 128
 
-  bobmods.lib.tech.remove_prerequisite("deuterium-processing", "nuclear-power")
+  bobmods.lib.tech.remove_prerequisite("deuterium-processing", "nuclear-fuel-reprocessing")
   bobmods.lib.tech.remove_recipe_unlock("deuterium-processing", "deuterium-fuel-cell")
   bobmods.lib.tech.replace_prerequisite("bob-nuclear-power-3", "bob-nuclear-power-2", "deuterium-processing")
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "nuclear-fuel-reprocessing")

@@ -240,7 +240,7 @@ data:extend(
     {
       "heavy-water-processing",
       "electrolysis-1",
-      "nuclear-power"
+      "nuclear-fuel-reprocessing"
     },
     unit =
     {
