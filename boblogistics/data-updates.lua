@@ -79,9 +79,9 @@ for index, inserter in pairs(data.raw.inserter) do
 end
 
 if settings.startup["bobmods-logistics-disableroboports"].value == true then
---  data.raw.item.roboport = nil
---  data.raw.roboport.roboport = nil
-  data.raw.recipe.roboport = nil
+  bobmods.lib.item.hide_entity("roboport", "roboport")
+  bobmods.lib.item.hide("roboport")
+  bobmods.lib.recipe.hide_recipe("roboport")
 end
 
 data.raw.item["transport-belt"].subgroup = "bob-logistic-tier-1"
