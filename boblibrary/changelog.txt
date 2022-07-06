@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.5
-Date: 06.06.2022
+Version: 1.1.6
+Date: ???
   Changes:
     - Added function bobmods.lib.item.hide(item_name) #38
+    - Added function bobmods.lib.item.hide_entity(type_name, entity_name) #38
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
