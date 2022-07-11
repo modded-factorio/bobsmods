@@ -1185,7 +1185,7 @@ function bobmods.logistics.destroy_gui_button(player_index)
     if #flow.children_names == 0 then
       local parent = flow.parent
       flow.destroy()
-      if parent and #parent.children_names == 0 then
+      if parent and parent.name ~= "top" and #parent.children_names == 0 then
         parent.destroy()
       end
     end
