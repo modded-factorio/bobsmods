@@ -66,6 +66,8 @@ bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
 if data.raw.item["lithium-ion-battery"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery-2")
+else
+  bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery")
 end
 if data.raw.item["silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "ceramics")
