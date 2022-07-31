@@ -2,12 +2,12 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 if data.raw.unit["behemoth-biter"]~=nil then
-  data.raw.unit["behemoth-biter"].attack_parameters.animation = biterattackanimation(bob_behemoth_scale, behemoth_biter_tint1, behemoth_biter_tint2)
-  data.raw.unit["behemoth-biter"].run_animation = biterrunanimation(bob_behemoth_scale, behemoth_biter_tint1, behemoth_biter_tint2)
+  data.raw.unit["behemoth-biter"].attack_parameters.animation = biterattackanimation(bobmods.enemies.behemoth_scale, behemoth_biter_tint1, behemoth_biter_tint2)
+  data.raw.unit["behemoth-biter"].run_animation = biterrunanimation(bobmods.enemies.behemoth_scale, behemoth_biter_tint1, behemoth_biter_tint2)
   data.raw.unit["behemoth-biter"].collision_box = {{-0.8, -0.8}, {0.8, 0.8}}
   data.raw.unit["behemoth-biter"].selection_box = {{-1.5, -3}, {1.5, 0.6}}
 
-  data.raw.corpse["behemoth-biter-corpse"].animation = biterdieanimation(bob_behemoth_scale, behemoth_biter_tint1, behemoth_biter_tint2)
+  data.raw.corpse["behemoth-biter-corpse"].animation = biterdieanimation(bobmods.enemies.behemoth_scale, behemoth_biter_tint1, behemoth_biter_tint2)
   data.raw.corpse["behemoth-biter-corpse"].selection_box = {{-2, -2}, {2, 2}}
 end
 
@@ -92,7 +92,7 @@ data:extend(
       range = 1.5,
       cooldown = 35,
       sound =  sounds.biter_roars_big(0.6),
-      animation = biterattackanimation(bob_big_scale, bob_pierce_tint, bob_pierce_tint2)
+      animation = biterattackanimation(bobmods.enemies.big_scale, bobmods.enemies.pierce_tint, bobmods.enemies.pierce_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.17,
@@ -104,14 +104,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(0.9),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.7),
-    run_animation = biterrunanimation(bob_big_scale, bob_pierce_tint, bob_pierce_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.big_scale, bobmods.enemies.pierce_tint, bobmods.enemies.pierce_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_big_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.big_scale)
   },
 
-  add_biter_die_animation(bob_big_scale, bob_pierce_tint, bob_pierce_tint2,
+  add_biter_die_animation(bobmods.enemies.big_scale, bobmods.enemies.pierce_tint, bobmods.enemies.pierce_tint2,
   {
     type = "corpse",
     name = "bob-big-piercing-biter-corpse",
@@ -220,7 +220,7 @@ data:extend(
       range = 1,
       cooldown = 35,
       sound =  sounds.biter_roars_big(0.7),
-      animation = biterattackanimation(bob_huge_scale, bob_acid_tint, bob_acid_tint2)
+      animation = biterattackanimation(bobmods.enemies.huge_scale, bobmods.enemies.acid_tint, bobmods.enemies.acid_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.16,
@@ -232,14 +232,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.2),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.75),
-    run_animation = biterrunanimation(bob_huge_scale, bob_acid_tint, bob_acid_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.huge_scale, bobmods.enemies.acid_tint, bobmods.enemies.acid_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_huge_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.huge_scale)
   },
 
-  add_biter_die_animation(bob_huge_scale, bob_acid_tint, bob_acid_tint2,
+  add_biter_die_animation(bobmods.enemies.huge_scale, bobmods.enemies.acid_tint, bobmods.enemies.acid_tint2,
   {
     type = "corpse",
     name = "bob-huge-acid-biter-corpse",
@@ -348,7 +348,7 @@ data:extend(
       range = 1,
       cooldown = 35,
       sound =  sounds.biter_roars_big(0.7),
-      animation = biterattackanimation(bob_huge_scale, bob_explosive_tint, bob_explosive_tint2)
+      animation = biterattackanimation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.16,
@@ -360,14 +360,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.2),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.75),
-    run_animation = biterrunanimation(bob_huge_scale, bob_explosive_tint, bob_explosive_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_huge_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.huge_scale)
   },
 
-  add_biter_die_animation(bob_huge_scale, bob_explosive_tint, bob_explosive_tint2,
+  add_biter_die_animation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2,
   {
     type = "corpse",
     name = "bob-huge-explosive-biter-corpse",
@@ -482,7 +482,7 @@ data:extend(
         }
       },
       sound =  sounds.biter_roars_big(0.8),
-      animation = biterattackanimation(bob_giant_scale, bob_poison_tint, bob_poison_tint2)
+      animation = biterattackanimation(bobmods.enemies.giant_scale, bobmods.enemies.poison_tint, bobmods.enemies.poison_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.12,
@@ -494,14 +494,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.5),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.8),
-    run_animation = biterrunanimation(bob_giant_scale, bob_poison_tint, bob_poison_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.giant_scale, bobmods.enemies.poison_tint, bobmods.enemies.poison_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_giant_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.giant_scale)
   },
 
-  add_biter_die_animation(bob_giant_scale, bob_poison_tint, bob_poison_tint2,
+  add_biter_die_animation(bobmods.enemies.giant_scale, bobmods.enemies.poison_tint, bobmods.enemies.poison_tint2,
   {
     type = "corpse",
     name = "bob-giant-poison-biter-corpse",
@@ -616,7 +616,7 @@ data:extend(
         }
       },
       sound =  sounds.biter_roars_big(0.8),
-      animation = biterattackanimation(bob_giant_scale, bob_fire_tint, bob_fire_tint2)
+      animation = biterattackanimation(bobmods.enemies.giant_scale, bobmods.enemies.fire_tint, bobmods.enemies.fire_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.12,
@@ -628,14 +628,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.5),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.8),
-    run_animation = biterrunanimation(bob_giant_scale, bob_fire_tint, bob_fire_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.giant_scale, bobmods.enemies.fire_tint, bobmods.enemies.fire_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_giant_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.giant_scale)
   },
 
-  add_biter_die_animation(bob_giant_scale, bob_fire_tint, bob_fire_tint2,
+  add_biter_die_animation(bobmods.enemies.giant_scale, bobmods.enemies.fire_tint, bobmods.enemies.fire_tint2,
   {
     type = "corpse",
     name = "bob-giant-fire-biter-corpse",
@@ -759,7 +759,7 @@ data:extend(
         }
       },
       sound =  sounds.biter_roars_big(0.9),
-      animation = biterattackanimation(bob_titan_scale, bob_titan_tint, bob_titan_tint2)
+      animation = biterattackanimation(bobmods.enemies.titan_scale, bobmods.enemies.titan_tint, bobmods.enemies.titan_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.15,
@@ -771,14 +771,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.5),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.85),
-    run_animation = biterrunanimation(bob_titan_scale, bob_titan_tint, bob_titan_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.titan_scale, bobmods.enemies.titan_tint, bobmods.enemies.titan_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_titan_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.titan_scale)
   },
 
-  add_biter_die_animation(bob_titan_scale, bob_titan_tint, bob_titan_tint2,
+  add_biter_die_animation(bobmods.enemies.titan_scale, bobmods.enemies.titan_tint, bobmods.enemies.titan_tint2,
   {
     type = "corpse",
     name = "bob-titan-biter-corpse",
@@ -908,7 +908,7 @@ data:extend(
         }
       },
       sound =  sounds.biter_roars_big(0.9),
-      animation = biterattackanimation(bob_behemoth_scale, bob_behemoth_tint, bob_behemoth_tint2)
+      animation = biterattackanimation(bobmods.enemies.behemoth_scale, bobmods.enemies.behemoth_tint, bobmods.enemies.behemoth_tint2)
     },
     vision_distance = 30,
     movement_speed = 0.2,
@@ -920,14 +920,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.5),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(0.9),
-    run_animation = biterrunanimation(bob_behemoth_scale, bob_behemoth_tint, bob_behemoth_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.behemoth_scale, bobmods.enemies.behemoth_tint, bobmods.enemies.behemoth_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_behemoth_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.behemoth_scale)
   },
 
-  add_biter_die_animation(bob_behemoth_scale, bob_behemoth_tint, bob_behemoth_tint2,
+  add_biter_die_animation(bobmods.enemies.behemoth_scale, bobmods.enemies.behemoth_tint, bobmods.enemies.behemoth_tint2,
   {
     type = "corpse",
     name = "bob-behemoth-biter-corpse",
@@ -1070,7 +1070,7 @@ data:extend(
         }
       },
       sound =  sounds.biter_roars_big(0.9),
-      animation = biterattackanimation(bob_leviathan_scale, bob_leviathan_tint, bob_leviathan_tint2)
+      animation = biterattackanimation(bobmods.enemies.leviathan_scale, bobmods.enemies.leviathan_tint, bobmods.enemies.leviathan_tint2)
     },
     vision_distance = 50,
     movement_speed = 0.2,
@@ -1082,14 +1082,14 @@ data:extend(
     working_sound = sounds.biter_calls_big(1.5),
     dying_sound = sounds.biter_dying_big(1.0),
     walking_sound = sounds.biter_walk_big(1.0),
-    run_animation = biterrunanimation(bob_leviathan_scale, bob_leviathan_tint, bob_leviathan_tint2),
+    run_animation = biterrunanimation(bobmods.enemies.leviathan_scale, bobmods.enemies.leviathan_tint, bobmods.enemies.leviathan_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     running_sound_animation_positions = {2,},
     ai_settings = biter_ai_settings,
-    water_reflection = biter_water_reflection(bob_leviathan_scale)
+    water_reflection = biter_water_reflection(bobmods.enemies.leviathan_scale)
   },
 
-  add_biter_die_animation(bob_leviathan_scale, bob_leviathan_tint, bob_leviathan_tint2,
+  add_biter_die_animation(bobmods.enemies.leviathan_scale, bobmods.enemies.leviathan_tint, bobmods.enemies.leviathan_tint2,
   {
     type = "corpse",
     name = "bob-leviathan-biter-corpse",

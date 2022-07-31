@@ -19,7 +19,7 @@ data:extend(
 data.raw.item["electrolyser"].subgroup = "bob-electrolyser-machine"
 
 
-function bob_electrolyser_fluid_boxes()
+local function bob_electrolyser_fluid_boxes()
   return {
     {
       production_type = "input",
@@ -67,7 +67,7 @@ function bob_electrolyser_fluid_boxes()
   }
 end
 
-function bob_electrolyser_animation_facing(directory, tier, tint, facing)
+local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
   return
   {
     layers =
@@ -158,7 +158,7 @@ function bob_electrolyser_animation_facing(directory, tier, tint, facing)
   }
 end
 
-function bob_electrolyser_animation(directory, tier, tint)
+local function bob_electrolyser_animation(directory, tier, tint)
   return
   {
     north = bob_electrolyser_animation_facing(directory, tier, tint, 0),

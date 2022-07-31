@@ -31,7 +31,7 @@ end
 
 
 
-function bob_pipepictures(pipe_type)
+local function bob_pipepictures(pipe_type)
   return
   {
     straight_vertical_single =
@@ -395,7 +395,7 @@ function bob_pipepictures(pipe_type)
   }
 end
 
-function bob_pipetogroundpictures(pipe_type)
+local function bob_pipetogroundpictures(pipe_type)
   return
   {
     up =
@@ -461,7 +461,7 @@ function bob_pipetogroundpictures(pipe_type)
   }
 end
 
-function bob_pipecoverspictures(pipe_type)
+local function bob_pipecoverspictures(pipe_type)
   return
   {
     north =

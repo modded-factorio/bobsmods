@@ -584,7 +584,7 @@ data:extend(
 )
 
 
-function bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, beam, damage_modifier, cooldown, range)
+local function bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, beam, damage_modifier, cooldown, range)
 return
   {
     type = "active-defense-equipment",

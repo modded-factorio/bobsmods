@@ -7,7 +7,7 @@ if settings.startup["bobmods-assembly-multipurposefurnaces"].value and
 then
 
 
-function bob_electric_multipurpose_furnace_working_visualisations()
+local function bob_electric_multipurpose_furnace_working_visualisations()
   return
   {
     {

@@ -46,29 +46,15 @@ bobmods.ores.thorium =
 
 
 function bobmods.ores.thorium.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("thorium-ore", {
-      name = "thorium-ore",
-      order = "c",
-      base_density = 0.9,
-      base_spots_per_km2 = 1.25,
-      has_starting_area_placement = false,
-      random_spot_size_minimum = 2,
-      random_spot_size_maximum = 4,
-      regular_rq_factor_multiplier = 1
-    }
-    )
-  else
-    data.raw.resource["thorium-ore"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "thorium-ore",
-      order = "c",
-      base_density = 0.9,
-      base_spots_per_km2 = 1.25,
-      has_starting_area_placement = false,
-      random_spot_size_minimum = 2,
-      random_spot_size_maximum = 4,
-      regular_rq_factor_multiplier = 1
-    }
-  end
+  data.raw.resource["thorium-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "thorium-ore",
+    order = "c",
+    base_density = 0.9,
+    base_spots_per_km2 = 1.25,
+    has_starting_area_placement = false,
+    random_spot_size_minimum = 2,
+    random_spot_size_maximum = 4,
+    regular_rq_factor_multiplier = 1
+  }
   bobmods.ores.thorium.enabled = true
 end

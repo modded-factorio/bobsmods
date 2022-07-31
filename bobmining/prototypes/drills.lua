@@ -116,7 +116,7 @@ data:extend(
 
 data:extend(
 {
-  bob_electric_mining_drill
+  bobmods.mining.electric_mining_drill
   {
     name = "bob-mining-drill-1",
     icon = "__base__/graphics/icons/electric-mining-drill.png",
@@ -131,7 +131,7 @@ data:extend(
     emissions_per_minute = 8,
   },
 
-  bob_electric_mining_drill
+  bobmods.mining.electric_mining_drill
   {
     name = "bob-mining-drill-2",
     icon = "__base__/graphics/icons/electric-mining-drill.png",
@@ -146,7 +146,7 @@ data:extend(
     emissions_per_minute = 6,
   },
 
-  bob_electric_mining_drill
+  bobmods.mining.electric_mining_drill
   {
     name = "bob-mining-drill-3",
     icon = "__base__/graphics/icons/electric-mining-drill.png",
@@ -161,7 +161,7 @@ data:extend(
     emissions_per_minute = 4,
   },
 
-  bob_electric_mining_drill
+  bobmods.mining.electric_mining_drill
   {
     name = "bob-mining-drill-4",
     icon = "__base__/graphics/icons/electric-mining-drill.png",

@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: ???
+  Bugfixes:
+    - Fixing accidental global variables #50
   Changes:
     - Added function bobmods.lib.item.hide(item_name) #38
     - Added function bobmods.lib.item.hide_entity(type_name, entity_name) #38

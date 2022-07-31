@@ -1,4 +1,4 @@
-function boblaserammo(catagory, projectile)
+local function boblaserammo(catagory, projectile)
   return
   {
     type = "beam",
@@ -20,7 +20,7 @@ end
 
 
 
-function bobmissileammo(catagory, projectile)
+local function bobmissileammo(catagory, projectile)
   return
   {
     category = catagory,

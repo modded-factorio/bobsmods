@@ -19,7 +19,7 @@ local function set_electric_mining_drill_animation_speed(object, animation_speed
 end
 
 
-function bob_electric_mining_drill(inputs)
+function bobmods.mining.electric_mining_drill(inputs)
   local mining_drill = util.copy(data.raw["mining-drill"]["electric-mining-drill"])
   mining_drill.name = inputs.name
   mining_drill.minable.result = inputs.name
