@@ -184,7 +184,7 @@ data:extend{
   {
     type = "technology",
     name = "bob-infinite-worker-robots-storage-1",
-    icon = "__base__/graphics/technology/worker-robots-storage.png",
+    icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     icon_size = 256,
     icon_mipmaps = 4,
     effects =
