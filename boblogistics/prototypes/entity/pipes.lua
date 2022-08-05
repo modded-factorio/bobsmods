@@ -607,7 +607,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/stone-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "stone-pipe"},
+    minable = {mining_time = 0.3, result = "stone-pipe"},
     max_health = 100,
     corpse = "small-remnants",
     resistances =
@@ -653,7 +653,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/stone-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "stone-pipe-to-ground"},
+    minable = {mining_time = 0.3, result = "stone-pipe-to-ground"},
     max_health = 150,
     corpse = "small-remnants",
     resistances =
@@ -706,7 +706,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/copper-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "copper-pipe"},
+    minable = {mining_time = 0.3, result = "copper-pipe"},
     max_health = 100,
     corpse = "small-remnants",
     resistances =
@@ -752,7 +752,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/copper-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "copper-pipe-to-ground"},
+    minable = {mining_time = 0.3, result = "copper-pipe-to-ground"},
     max_health = 150,
     corpse = "small-remnants",
     resistances =
@@ -805,7 +805,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/steel-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "steel-pipe"},
+    minable = {mining_time = 0.3, result = "steel-pipe"},
     max_health = 150,
     corpse = "small-remnants",
     resistances =
@@ -851,7 +851,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/steel-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "steel-pipe-to-ground"},
+    minable = {mining_time = 0.3, result = "steel-pipe-to-ground"},
     max_health = 200,
     corpse = "small-remnants",
     resistances =
@@ -904,7 +904,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/plastic-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.1, mining_time = 0.1, result = "plastic-pipe"},
+    minable = {mining_time = 0.1, result = "plastic-pipe"},
     max_health = 200,
     corpse = "small-remnants",
     resistances =
@@ -950,7 +950,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/plastic-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.1, mining_time = 0.1, result = "plastic-pipe-to-ground"},
+    minable = {mining_time = 0.1, result = "plastic-pipe-to-ground"},
     max_health = 250,
     corpse = "small-remnants",
     resistances =
@@ -1008,7 +1008,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/bronze-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "bronze-pipe"},
+    minable = {mining_time = 0.3, result = "bronze-pipe"},
     max_health = 150,
     corpse = "small-remnants",
     resistances =
@@ -1054,7 +1054,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/bronze-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.3, mining_time = 0.3, result = "bronze-pipe-to-ground"},
+    minable = {mining_time = 0.3, result = "bronze-pipe-to-ground"},
     max_health = 200,
     corpse = "small-remnants",
     resistances =
@@ -1113,7 +1113,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/brass-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.1, mining_time = 0.1, result = "brass-pipe"},
+    minable = {mining_time = 0.1, result = "brass-pipe"},
     max_health = 200,
     corpse = "small-remnants",
     resistances =
@@ -1159,7 +1159,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/brass-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.1, mining_time = 0.1, result = "brass-pipe-to-ground"},
+    minable = {mining_time = 0.1, result = "brass-pipe-to-ground"},
     max_health = 250,
     corpse = "small-remnants",
     resistances =
@@ -1218,7 +1218,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.2, result = "ceramic-pipe"},
+    minable = {mining_time = 0.2, result = "ceramic-pipe"},
     max_health = 250,
     corpse = "small-remnants",
     resistances =
@@ -1264,7 +1264,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.2, result = "ceramic-pipe-to-ground"},
+    minable = {mining_time = 0.2, result = "ceramic-pipe-to-ground"},
     max_health = 300,
     corpse = "small-remnants",
     resistances =
@@ -1323,7 +1323,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/titanium-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.4, mining_time = 0.4, result = "titanium-pipe"},
+    minable = {mining_time = 0.4, result = "titanium-pipe"},
     max_health = 250,
     corpse = "small-remnants",
     resistances =
@@ -1369,7 +1369,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/titanium-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.4, mining_time = 0.4, result = "titanium-pipe-to-ground"},
+    minable = {mining_time = 0.4, result = "titanium-pipe-to-ground"},
     max_health = 300,
     corpse = "small-remnants",
     resistances =
@@ -1428,7 +1428,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/tungsten-pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.4, mining_time = 0.4, result = "tungsten-pipe"},
+    minable = {mining_time = 0.4, result = "tungsten-pipe"},
     max_health = 250,
     corpse = "small-remnants",
     resistances =
@@ -1474,7 +1474,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/tungsten-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.4, mining_time = 0.4, result = "tungsten-pipe-to-ground"},
+    minable = {mining_time = 0.4, result = "tungsten-pipe-to-ground"},
     max_health = 300,
     corpse = "small-remnants",
     resistances =
@@ -1682,7 +1682,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/pipe/copper-tungsten-pipe-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.4, mining_time = 0.4, result = "copper-tungsten-pipe-to-ground"},
+    minable = {mining_time = 0.4, result = "copper-tungsten-pipe-to-ground"},
     max_health = 350,
     corpse = "small-remnants",
     resistances =
@@ -1745,4 +1745,3 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("nitinol-pipe-to-ground", 5)
   bobmods.logistics.set_pipe_distance("copper-tungsten-pipe-to-ground", 5)
 end
-
