@@ -46,8 +46,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "electrolysis-1",
-      "chemical-processing-1",
+      "steel-processing",
       "logistic-science-pack"
     },
     effects =
@@ -405,6 +404,7 @@ data:extend(
       "nitrogen-processing",
       "silicon-processing",
       "chemical-science-pack",
+      "lubricant"
     },
     effects =
     {

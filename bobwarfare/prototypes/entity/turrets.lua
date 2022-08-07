@@ -18,7 +18,7 @@ local green = {r=0.5, g=1, b=0.5, a=1}
 
 
 
-function bob_gun_turret_extension(inputs)
+local function bob_gun_turret_extension(inputs)
 return
 {
   layers =
@@ -56,7 +56,7 @@ return
 }
 end
 
-function bob_gun_turret_attack(inputs)
+local function bob_gun_turret_attack(inputs)
 return
 {
   layers =
@@ -262,7 +262,7 @@ return
 }
 end
 
-function bob_gun_turret_base(inputs)
+local function bob_gun_turret_base(inputs)
 local size = inputs.size or 1
 return
 {
@@ -320,7 +320,7 @@ end
 
 
 
-function bob_laser_turret_extension(inputs)
+local function bob_laser_turret_extension(inputs)
 local size = inputs.size or 1
 return
 {
@@ -414,7 +414,7 @@ end
 
 
 
-function bob_laser_turret_attack(inputs)
+local function bob_laser_turret_attack(inputs)
 local size = inputs.size or 1
 return
 {
@@ -492,7 +492,7 @@ return
 }
 end
 
-function bob_laser_turret_base(inputs)
+local function bob_laser_turret_base(inputs)
 local size = inputs.size or 1
 return
 {
@@ -555,7 +555,7 @@ return
 end
 
 
-function bob_artillery_turret_base(inputs)
+local function bob_artillery_turret_base(inputs)
 local size = inputs.size or 1
 return
 {
@@ -613,7 +613,7 @@ return
 end
 
 
-function bob_turret_base(inputs)
+local function bob_turret_base(inputs)
   local size = inputs.size or 1
   local anim
   if inputs.type == "gun" then
@@ -626,7 +626,7 @@ function bob_turret_base(inputs)
   return anim
 end
 
-function bob_turret_attack(inputs)
+local function bob_turret_attack(inputs)
   local anim
   if inputs.type == "gun" then
     anim = bob_gun_turret_attack(inputs)
@@ -636,7 +636,7 @@ function bob_turret_attack(inputs)
   return anim
 end
 
-function bob_turret_extension(inputs)
+local function bob_turret_extension(inputs)
   local anim
   if inputs.type == "gun" then
     anim = bob_gun_turret_extension(inputs)
@@ -647,7 +647,7 @@ function bob_turret_extension(inputs)
 end
 
 
-function bob_gun_turret(inputs)
+local function bob_gun_turret(inputs)
 return
   {
     type = "ammo-turret",
@@ -706,7 +706,7 @@ end
 
 
 
-function bob_laser_turret(inputs)
+local function bob_laser_turret(inputs)
 local size = inputs.size or 1
 local turret =
   {

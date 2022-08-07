@@ -32,23 +32,12 @@ bobmods.ores.sulfur =
 }
 
 function bobmods.ores.sulfur.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("sulfur", {
-      name = "sulfur",
-      order = "c",
-      base_density = 8,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 1,
-    }
-    )
-  else
-    data.raw.resource["sulfur"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "sulfur",
-      order = "c",
-      base_density = 8,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 1,
-    }
-  end
+  data.raw.resource["sulfur"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "sulfur",
+    order = "c",
+    base_density = 8,
+    has_starting_area_placement = false,
+    regular_rq_factor_multiplier = 1,
+  }
   bobmods.ores.sulfur.enabled = true
 end

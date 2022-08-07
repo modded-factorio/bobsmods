@@ -1,4 +1,4 @@
-function boblaserbubbleanimation(scale, tint)
+local function boblaserbubbleanimation(scale, tint)
   return
   {
     {

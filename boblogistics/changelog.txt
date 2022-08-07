@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: ???
+  Bugfixes:
+    - Fixing accidental global variables #50
+    Changes:
+    - Added Bigger pipes setting that increases capacity and throughput of higher tier pipes #35
+    - Moved Long inserters 2 to blue science #51
+---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
   Changes:

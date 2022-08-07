@@ -1,6 +1,6 @@
 if not bobmods.lib.resource then bobmods.lib.resource = {} end
 
-resource_autoplace = require("resource-autoplace")
+bobmods.lib.resource_autoplace = require("resource-autoplace")
 
 
 function bobmods.lib.resource.create_autoplace(inputs)
@@ -50,7 +50,7 @@ end
 
 
 function bobmods.lib.resource.add_result(resource, item_in)
-  item = bobmods.lib.item.result(item_in)
+  local item = bobmods.lib.item.result(item_in)
   if
     item and
     type(resource) == "string" and
@@ -163,10 +163,12 @@ function bobmods.lib.resource.hr_sprite(inputs)
   local height = 128
   local frame_count = 8
   local variation_count = 8
+  local scale = 0.5
   if inputs.width then width = inputs.width end
   if inputs.height then height = inputs.height end
   if inputs.frame_count then frame_count = inputs.frame_count end
   if inputs.variation_count then variation_count = inputs.variation_count end
+  if inputs.scale then scale = inputs.scale end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -199,7 +201,7 @@ function bobmods.lib.resource.hr_sprite(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
-    scale = inputs.scale or 0.5
+    scale = scale
   }
 end
 
@@ -254,10 +256,12 @@ function bobmods.lib.resource.hr_effect(inputs)
   local height = 128
   local frame_count = 8
   local variation_count = 8
+  local scale = 0.5
   if inputs.width then width = inputs.width end
   if inputs.height then height = inputs.height end
   if inputs.frame_count then frame_count = inputs.frame_count end
   if inputs.variation_count then variation_count = inputs.variation_count end
+  if inputs.scale then scale = inputs.scale end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -280,7 +284,7 @@ function bobmods.lib.resource.hr_effect(inputs)
     tint = inputs.tint,
     blend_mode = "additive",
     flags = {"light"},
-    scale = inputs.scale or 0.5
+    scale = scale
   }
 end
 

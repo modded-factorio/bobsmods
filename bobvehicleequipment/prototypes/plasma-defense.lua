@@ -1,3 +1,80 @@
+local function bob_active_weapon_equipment(data)
+--name, sprite, width, height, buffer_capacity, input_flow_limit, target_type, energy_consumption, projectile, sound, damage_modifier, cooldown, range, categories, starting_speed
+local equipment =
+  {
+    type = "active-defense-equipment",
+    name = data.name,
+    sprite = 
+    {
+      filename = data.sprite,
+      width = (data.width or 1) * 32,
+      height = (data.height or 1) * 32,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = data.width or 1,
+      height = data.height or 1,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      buffer_capacity = data.buffer_capacity,
+      input_flow_limit = data.input_flow_limit
+    },
+    attack_parameters =
+    {
+      type = "projectile",
+      cooldown = data.cooldown or 20,
+      damage_modifier = 10 * data.damage_modifier or 1,
+      lead_target_for_projectile_speed = data.lead_target_for_projectile_speed,
+      projectile_center = {0, 0},
+      projectile_creation_distance = 0.6,
+      range = data.range or 15,
+      sound = data.sound,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser",
+        target_type = data.target_type,
+        energy_consumption = data.energy_consumption,
+        projectile = data.projectile,
+        speed = 1,
+        action = 
+        {
+          {
+            type = "direct",
+            action_delivery =
+            {
+              {
+                type = "projectile",
+                projectile = data.projectile,
+                starting_speed = data.starting_speed or 0.28,
+
+                direction_deviation = data.direction_deviation or nil,
+                range_deviation = data.range_deviation or nil,
+
+                max_range = (data.range * 2) or 30,
+              }
+            }
+          }
+        }
+      }
+    },
+    automatic = true,
+    categories = data.categories
+  }
+  if data.min_range then
+    equipment.attack_parameters.min_range = data.min_range
+  end
+  if data.clamp_position then
+    equipment.attack_parameters.ammo_type.clamp_position = true
+  end
+return equipment
+end
+
 data:extend(
 {
   {

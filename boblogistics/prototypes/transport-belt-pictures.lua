@@ -1,4 +1,4 @@
-black_belt_animation_set = 
+bobmods.logistics.black_belt_animation_set = 
 {
   animation_set =
   {
@@ -53,7 +53,7 @@ black_belt_animation_set =
   --ends_with_stopper = false
 }
 
-purple_belt_animation_set =
+bobmods.logistics.purple_belt_animation_set =
 {
   animation_set =
   {
@@ -105,7 +105,7 @@ purple_belt_animation_set =
   ending_east_index = 20
 }
 
-green_belt_animation_set =
+bobmods.logistics.green_belt_animation_set =
 {
   animation_set =
   {

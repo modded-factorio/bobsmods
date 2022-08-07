@@ -30,23 +30,12 @@ bobmods.ores.gold =
 }
 
 function bobmods.ores.gold.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("gold-ore", {
-      name = "gold-ore",
-      order = "c",
-      base_density = 4,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 0.9,
-    }
-    )
-  else
-    data.raw.resource["gold-ore"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "gold-ore",
-      order = "c",
-      base_density = 4,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 0.9,
-    }
-  end
+  data.raw.resource["gold-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "gold-ore",
+    order = "c",
+    base_density = 4,
+    has_starting_area_placement = false,
+    regular_rq_factor_multiplier = 0.9,
+  }
   bobmods.ores.gold.enabled = true
 end

@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local nuke_shockwave_starting_speed_deviation = 0.075
 
 data:extend(
 {

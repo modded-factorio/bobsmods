@@ -43,7 +43,7 @@ data:extend(
     prerequisites =
     {
       "long-inserters-1",
-      "logistics-3",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -52,8 +52,7 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1}
+        {"chemical-science-pack", 1}
       },
       time = 15
     },
@@ -139,7 +138,7 @@ data:extend(
     prerequisites =
     {
       "more-inserters-1",
-      "logistics-3",
+      "logistics-3"
     },
     unit =
     {

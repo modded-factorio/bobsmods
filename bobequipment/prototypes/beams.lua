@@ -1,3 +1,5 @@
+local laser_beam_blend_mode = "additive"
+
 data:extend(
 {
   {

@@ -66,6 +66,8 @@ bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
 if data.raw.item["lithium-ion-battery"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery-2")
+else
+  bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery")
 end
 if data.raw.item["silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "ceramics")
@@ -99,6 +101,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["electrolysis-1"] then
     bobmods.lib.tech.add_prerequisite("electrolysis-1", "automation-science-pack")
     bobmods.lib.tech.add_prerequisite("electrolysis-1", "electricity")
+    bobmods.lib.tech.add_prerequisite("electrolysis-1", "steam-power")
   end
   if data.raw.technology["alloy-processing"] then
     bobmods.lib.tech.add_prerequisite("alloy-processing", "automation-science-pack")
@@ -108,6 +111,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
     if not (settings.startup["bobmods-plates-newsteel"] and settings.startup["bobmods-plates-newsteel"].value == true) then
       bobmods.lib.tech.add_prerequisite("steel-processing", "automation-science-pack")
     end
+    bobmods.lib.tech.add_prerequisite("chemical-processing-1", "steam-power")
   end
   if data.raw.technology["air-compressor-1"] then
     bobmods.lib.tech.add_prerequisite("air-compressor-1", "automation-science-pack")
@@ -120,6 +124,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["bob-greenhouse"] then
     bobmods.lib.tech.add_prerequisite("bob-greenhouse", "automation-science-pack")
     bobmods.lib.tech.add_prerequisite("bob-greenhouse", "electricity")
+    bobmods.lib.tech.add_prerequisite("bob-greenhouse", "steam-power")
   end
   if data.raw.technology["water-miner-1"] then
     bobmods.lib.tech.add_prerequisite("water-miner-1", "automation-science-pack")

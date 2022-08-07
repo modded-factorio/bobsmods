@@ -54,8 +54,6 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.replace_prerequisite("fluid-handling", "oil-processing", "steel-processing")
   bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)
 
-  bobmods.lib.tech.replace_prerequisite("sulfur-processing", "oil-processing", "chemical-plant")
-
   if data.raw.technology["chemical-processing-2"] then --chemical plant before oil processing
     bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
     bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "chemical-plant")
@@ -69,6 +67,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
     bobmods.lib.tech.add_prerequisite("chemical-plant", "electronics")
     bobmods.lib.tech.replace_prerequisite("nitrogen-processing", "chemical-processing-2", "chemical-plant")
   else --chemical plant after oil processing
+    bobmods.lib.tech.replace_prerequisite("sulfur-processing", "oil-processing", "chemical-plant")
     bobmods.lib.tech.add_prerequisite("chemical-plant", "oil-processing")
     bobmods.lib.tech.replace_prerequisite("lubricant", "oil-processing", "chemical-plant")
     bobmods.lib.tech.replace_prerequisite("plastics", "oil-processing", "chemical-plant")
@@ -127,8 +126,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
   end
   bobmods.lib.tech.add_recipe_unlock("solid-fuel", "solid-fuel-from-sour-gas")
   bobmods.lib.module.add_productivity_limitation("solid-fuel-from-sour-gas")
-  bobmods.lib.tech.add_recipe_unlock("plastics", "petroleum-gas-sweetening")
-  bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "petroleum-gas-sweetening")--secondary unlock, just in case.
+  bobmods.lib.tech.add_recipe_unlock("oil-processing", "petroleum-gas-sweetening")
   bobmods.lib.create_gas_bottle(data.raw.fluid["sour-gas"])
 
   if data.raw.fluid["hydrogen-sulfide"] then
@@ -234,7 +232,7 @@ if data.raw.item["thorium-fuel-cell"] and data.raw.reactor["nuclear-reactor-2"] 
   bobmods.lib.tech.add_prerequisite("thorium-processing", "production-science-pack")
   bobmods.lib.tech.replace_prerequisite("thorium-processing", "nuclear-power", "uranium-processing")
   bobmods.lib.tech.remove_recipe_unlock("thorium-processing", "thorium-fuel-cell")
-  bobmods.lib.tech.replace_prerequisite("bob-nuclear-power-2", "nuclear-power", "thorium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "thorium-processing")
   bobmods.lib.tech.remove_prerequisite("bob-nuclear-power-2", "production-science-pack")
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
   bobmods.lib.tech.remove_prerequisite("thorium-fuel-reprocessing", "production-science-pack")
@@ -270,7 +268,7 @@ if data.raw.item["deuterium-fuel-cell"] and data.raw.reactor["nuclear-reactor-3"
   data.raw.technology["bob-nuclear-power-3"].localised_name = {"technology-name.deuterium-power"}
   data.raw.technology["bob-nuclear-power-3"].icon_size = 128
 
-  bobmods.lib.tech.remove_prerequisite("deuterium-processing", "nuclear-power")
+  bobmods.lib.tech.remove_prerequisite("deuterium-processing", "nuclear-fuel-reprocessing")
   bobmods.lib.tech.remove_recipe_unlock("deuterium-processing", "deuterium-fuel-cell")
   bobmods.lib.tech.replace_prerequisite("bob-nuclear-power-3", "bob-nuclear-power-2", "deuterium-processing")
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "nuclear-fuel-reprocessing")

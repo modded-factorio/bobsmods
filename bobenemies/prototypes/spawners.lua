@@ -1,4 +1,4 @@
-leviathanfrequency = settings.startup["bobmods-enemies-leviathanfrequency"].value
+local leviathanfrequency = settings.startup["bobmods-enemies-leviathanfrequency"].value
 
 data:extend(
 {
@@ -87,10 +87,10 @@ data:extend(
     max_friends_around_to_spawn = 5,
     animations =
     {
-      spawner_idle_animation(0, bob_biter_spawner_tint),
-      spawner_idle_animation(1, bob_biter_spawner_tint),
-      spawner_idle_animation(2, bob_biter_spawner_tint),
-      spawner_idle_animation(3, bob_biter_spawner_tint)
+      spawner_idle_animation(0, bobmods.enemies.biter_spawner_tint),
+      spawner_idle_animation(1, bobmods.enemies.biter_spawner_tint),
+      spawner_idle_animation(2, bobmods.enemies.biter_spawner_tint),
+      spawner_idle_animation(3, bobmods.enemies.biter_spawner_tint)
     },
     result_units =
     {
@@ -134,10 +134,10 @@ data:extend(
     final_render_layer = "corpse",
     animation =
     {
-      spawner_die_animation(0, bob_biter_spawner_tint),
-      spawner_die_animation(1, bob_biter_spawner_tint),
-      spawner_die_animation(2, bob_biter_spawner_tint),
-      spawner_die_animation(3, bob_biter_spawner_tint)
+      spawner_die_animation(0, bobmods.enemies.biter_spawner_tint),
+      spawner_die_animation(1, bobmods.enemies.biter_spawner_tint),
+      spawner_die_animation(2, bobmods.enemies.biter_spawner_tint),
+      spawner_die_animation(3, bobmods.enemies.biter_spawner_tint)
     }
   },
 
@@ -223,10 +223,10 @@ data:extend(
     max_friends_around_to_spawn = 5,
     animations =
     {
-      spawner_idle_animation(0, bob_spitter_spawner_tint),
-      spawner_idle_animation(1, bob_spitter_spawner_tint),
-      spawner_idle_animation(2, bob_spitter_spawner_tint),
-      spawner_idle_animation(3, bob_spitter_spawner_tint)
+      spawner_idle_animation(0, bobmods.enemies.spitter_spawner_tint),
+      spawner_idle_animation(1, bobmods.enemies.spitter_spawner_tint),
+      spawner_idle_animation(2, bobmods.enemies.spitter_spawner_tint),
+      spawner_idle_animation(3, bobmods.enemies.spitter_spawner_tint)
     },
     result_units =
     {
@@ -271,10 +271,10 @@ data:extend(
     final_render_layer = "corpse",
     animation =
     {
-      spawner_die_animation(0, bob_spitter_spawner_tint),
-      spawner_die_animation(1, bob_spitter_spawner_tint),
-      spawner_die_animation(2, bob_spitter_spawner_tint),
-      spawner_die_animation(3, bob_spitter_spawner_tint)
+      spawner_die_animation(0, bobmods.enemies.spitter_spawner_tint),
+      spawner_die_animation(1, bobmods.enemies.spitter_spawner_tint),
+      spawner_die_animation(2, bobmods.enemies.spitter_spawner_tint),
+      spawner_die_animation(3, bobmods.enemies.spitter_spawner_tint)
     }
   },
 }
@@ -377,10 +377,10 @@ data:extend(
     max_friends_around_to_spawn = 10,
     animations =
     {
-      spawner_idle_animation(0, bob_super_spawner_tint),
-      spawner_idle_animation(1, bob_super_spawner_tint),
-      spawner_idle_animation(2, bob_super_spawner_tint),
-      spawner_idle_animation(3, bob_super_spawner_tint)
+      spawner_idle_animation(0, bobmods.enemies.super_spawner_tint),
+      spawner_idle_animation(1, bobmods.enemies.super_spawner_tint),
+      spawner_idle_animation(2, bobmods.enemies.super_spawner_tint),
+      spawner_idle_animation(3, bobmods.enemies.super_spawner_tint)
     },
     result_units =
     {
@@ -428,10 +428,10 @@ data:extend(
     final_render_layer = "corpse",
     animation =
     {
-      spawner_die_animation(0, bob_super_spawner_tint),
-      spawner_die_animation(1, bob_super_spawner_tint),
-      spawner_die_animation(2, bob_super_spawner_tint),
-      spawner_die_animation(3, bob_super_spawner_tint)
+      spawner_die_animation(0, bobmods.enemies.super_spawner_tint),
+      spawner_die_animation(1, bobmods.enemies.super_spawner_tint),
+      spawner_die_animation(2, bobmods.enemies.super_spawner_tint),
+      spawner_die_animation(3, bobmods.enemies.super_spawner_tint)
     }
   },
 }

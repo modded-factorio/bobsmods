@@ -1,7 +1,10 @@
-bobmods.lib.tech.add_prerequisite("oil-processing", "electronics")
-bobmods.lib.tech.add_prerequisite("gate", "electronics")
-bobmods.lib.tech.add_prerequisite("advanced-electronics", "plastics")
+bobmods.lib.tech.add_prerequisite("logistic-science-pack", "electronics")
+bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
+bobmods.lib.tech.remove_prerequisite("circuit-network", "electronics")
+bobmods.lib.tech.remove_prerequisite("solar-energy", "electronics")
+bobmods.lib.tech.remove_prerequisite("electric-energy-distribution-1", "electronics")
 
+bobmods.lib.tech.add_prerequisite("advanced-electronics", "plastics")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 

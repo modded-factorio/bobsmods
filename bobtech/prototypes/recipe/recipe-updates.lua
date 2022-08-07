@@ -14,7 +14,7 @@ if data.raw.item["brass-chest"] then
 end
 
 bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "electric-engine-unit")
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"processing-unit", 4})
+bobmods.lib.recipe.add_ingredient("utility-science-pack", {"processing-unit", 4})
 if data.raw.item["lithium-ion-battery"] then
   bobmods.lib.recipe.add_ingredient("utility-science-pack", {"lithium-ion-battery", 4})
 else

@@ -1,6 +1,6 @@
 if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furnace["electric-furnace"] then
 
-function bob_electric_furnace_animation(tint)
+local function bob_electric_furnace_animation(tint)
   return
   {
     layers =
@@ -56,7 +56,7 @@ function bob_electric_furnace_animation(tint)
   }
 end
 
-function bob_electric_furnace_working_visualisations()
+local function bob_electric_furnace_working_visualisations()
   return
   {
     {
@@ -133,7 +133,7 @@ function bob_electric_furnace_working_visualisations()
 end
 
 
-function bob_electric_furnace(input)
+local function bob_electric_furnace(input)
   return
   {
     type = "furnace",

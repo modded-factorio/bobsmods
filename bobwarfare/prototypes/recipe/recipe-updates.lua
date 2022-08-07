@@ -105,6 +105,7 @@ if data.raw.item["aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("radar-3", "steel-plate", "aluminium-plate")
   bobmods.lib.tech.add_prerequisite("radars-2", "aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("rifle", "copper-plate", "aluminium-plate")
+  bobmods.lib.tech.add_prerequisite("military-3", "aluminium-processing")
 end
 
 if data.raw.item["lithium-ion-battery"] then
