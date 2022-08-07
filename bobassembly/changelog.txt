@@ -3,6 +3,10 @@ Version: 1.1.6
 Date: ???
   Bugfixes:
     - Fixing accidental global variables #50
+  Changes:
+    - Space Exploration / Krastorio 2 support #53
+      - Added crafting category "basic-crafting" to assembling machines
+      - Added crafting category "kiln" to furnaces
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
