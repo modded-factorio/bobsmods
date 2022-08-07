@@ -14,6 +14,7 @@ if data.raw.technology["logistics-4"] then
 end
 if data.raw.tool["advanced-logistic-science-pack"] then
   bobmods.lib.tech.replace_science_pack("logistic-spidertron", "utility-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.remove_prerequisite("logistic-spidertron", "utility-science-pack")
   bobmods.lib.tech.add_prerequisite("logistic-spidertron", "advanced-logistic-science-pack")
 end
 
