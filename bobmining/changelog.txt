@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: ???
+  Changes:
+    - Compatibility changes for Krastorio 2 mod #42
+      - Fixed upgrading mining drills
+      - Pumpjacks can now be placed on oil
   Bugfixes:
     - Fixing accidental global variables #50
 ---------------------------------------------------------------------------------------------------
