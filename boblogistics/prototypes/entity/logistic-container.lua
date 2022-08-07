@@ -6,7 +6,7 @@ function bobmods.logistics.logistic_container(inputs)
     icons = inputs.icons,
     icon_size = inputs.icon_size or 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = inputs.name},
+    minable = {mining_time = 0.5, result = inputs.name},
     max_health = inputs.max_health or 150,
     corpse = "small-remnants",
     collision_box = {{-0.35, -0.35}, {0.35, 0.35}},

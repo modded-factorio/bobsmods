@@ -6,7 +6,7 @@ data:extend(
     icon = "__bobgreenhouse__/graphics/icons/greenhouse.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "bob-greenhouse"},
+    minable = {mining_time = 0.5, result = "bob-greenhouse"},
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     max_health = 250,
