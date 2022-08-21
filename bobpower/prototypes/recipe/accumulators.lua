@@ -4,26 +4,13 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "large-accumulator",
-    energy_required = 10,
-    enabled = false,
-    ingredients =
-    {
-      {"iron-plate", 3},
-      {"battery", 10},
-    },
-    result = "large-accumulator"
-  },
-
-  {
-    type = "recipe",
     name = "fast-accumulator",
     energy_required = 10,
     enabled = false,
     ingredients =
     {
       {"iron-plate", 2},
-      {"electronic-circuit", 2},
+      {"electronic-circuit", 4},
       {"battery", 4},
     },
     result = "fast-accumulator"
@@ -37,7 +24,7 @@ data:extend(
     ingredients =
     {
       {"iron-plate", 2},
-      {"electronic-circuit", 2},
+      {"electronic-circuit", 4},
       {"battery", 4},
     },
     result = "slow-accumulator"
@@ -51,8 +38,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"large-accumulator", 1},
-      {"steel-plate", 3},
+      {"accumulator", 1},
+      {"steel-plate", 2},
       {"advanced-circuit", 2},
       {"battery", 10},
     },
@@ -98,7 +85,7 @@ data:extend(
     ingredients =
     {
       {"large-accumulator-2", 1},
-      {"steel-plate", 3},
+      {"steel-plate", 2},
       {"processing-unit", 2},
       {"battery", 10},
     },
