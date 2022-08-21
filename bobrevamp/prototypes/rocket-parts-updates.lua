@@ -80,7 +80,7 @@ if data.raw.item.rtg then
   bobmods.lib.tech.add_prerequisite("space-science-pack", "rtg")
 elseif data.raw.item["solar-panel-3"] then
   bobmods.lib.recipe.replace_ingredient("satellite", "solar-panel", "solar-panel-3")
-  bobmods.lib.tech.add_prerequisite("space-science-pack", "bob-solar-energy-4")
+  bobmods.lib.tech.add_prerequisite("space-science-pack", "bob-solar-energy-3")
   bobmods.lib.tech.remove_prerequisite("space-science-pack", "solar-energy")
 end
 

@@ -28,3 +28,7 @@ if settings.startup["bobmods-power-poles"].value == true then
   bobmods.lib.tech.set_science_pack_count("electric-energy-distribution-2", 250)
 end
 
+if settings.startup["bobmods-power-solar"].value == true then
+  bobmods.lib.tech.add_recipe_unlock("solar-energy", "solar-panel-small")
+  bobmods.lib.tech.add_recipe_unlock("solar-energy", "solar-panel-large")
+end
