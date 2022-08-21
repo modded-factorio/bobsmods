@@ -13,7 +13,7 @@ end
 
 if settings.startup["bobmods-power-poles"].value == true then
 
-  if data.raw.tool["advanced-logistic-science-pack"] then
+  if bobmods.tech and bobmods.tech.advanced_logistic_science then
     bobmods.lib.tech.add_science_pack("electric-pole-2", "chemical-science-pack", 1)
     bobmods.lib.tech.add_prerequisite("electric-pole-2", "chemical-science-pack", 1)
     bobmods.lib.tech.add_science_pack("electric-pole-3", "advanced-logistic-science-pack", 1)

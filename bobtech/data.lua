@@ -1,6 +1,8 @@
 if not bobmods then bobmods = {} end
 if not bobmods.tech then bobmods.tech = {} end
 
+bobmods.tech.advanced_logistic_science = true
+
 require("prototypes.technology.technology")
 require("prototypes.item.item")
 require("prototypes.entity.entity")
