@@ -297,5 +297,5 @@ data.raw.item["wood"].stack_size = 200
 
 if not bobmods.ores.cobalt.enabled then
   bobmods.lib.tech.remove_recipe_unlock("cobalt-processing", "cobalt-oxide")
-  bobmods.lib.recipe.hide_recipe("cobalt-oxide")
+  bobmods.lib.recipe.hide("cobalt-oxide")
 end

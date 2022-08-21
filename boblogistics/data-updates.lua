@@ -81,7 +81,7 @@ end
 if settings.startup["bobmods-logistics-disableroboports"].value == true then
   bobmods.lib.item.hide_entity("roboport", "roboport")
   bobmods.lib.item.hide("roboport")
-  bobmods.lib.recipe.hide_recipe("roboport")
+  bobmods.lib.recipe.hide("roboport")
 end
 
 data.raw.item["transport-belt"].subgroup = "bob-logistic-tier-1"

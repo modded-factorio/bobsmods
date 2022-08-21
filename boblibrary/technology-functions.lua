@@ -1018,3 +1018,27 @@ function bobmods.lib.tech.prerequisite_cleanup()
     end
   end
 end
+
+function bobmods.lib.tech.hide(technology_name)
+  if
+    type(technology_name) == "string" and
+    data.raw.technology[technology_name]
+  then
+    local technology = data.raw.technology[technology_name]
+    if technology.normal then
+      technology.normal.hidden = true
+      technology.normal.enabled = false
+    end
+    if technology.expensive then
+      technology.expensive.hidden = true
+      technology.expensive.enabled = false
+    end
+    if not technology.normal and not technology.expensive then
+      technology.hidden = true
+      technology.enabled = false
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.technology(technology_name)
+  end
+end

@@ -95,14 +95,14 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
     for i, technology in pairs(data.raw.technology) do
       bobmods.lib.tech.remove_recipe_unlock(technology.name, "sulfuric-acid")
     end
-    bobmods.lib.recipe.hide_recipe("sulfuric-acid")
+    bobmods.lib.recipe.hide("sulfuric-acid")
   end
 end
 
 --old oil overhaul
 if settings.startup["bobmods-revamp-old-oil"].value == true and not settings.startup["bobmods-revamp-oil"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
-  bobmods.lib.recipe.hide_recipe("sulfur")
+  bobmods.lib.recipe.hide("sulfur")
   bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "oil-processing-with-sulfur")
   bobmods.lib.module.add_productivity_limitation("oil-processing-with-sulfur")
 
@@ -122,7 +122,7 @@ end
 if settings.startup["bobmods-revamp-oil"].value == true then
   if data.raw.recipe["sulfur-2"] or data.raw.recipe["sulfur-3"] then
     bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
-    bobmods.lib.recipe.hide_recipe("sulfur")
+    bobmods.lib.recipe.hide("sulfur")
   end
   bobmods.lib.tech.add_recipe_unlock("solid-fuel", "solid-fuel-from-sour-gas")
   bobmods.lib.module.add_productivity_limitation("solid-fuel-from-sour-gas")
