@@ -1,3 +1,4 @@
+local warefareSounds = require("prototypes.entity.sounds")
 local laser_beam_blend_mode = "additive"
 
 data:extend(
@@ -5,7 +6,7 @@ data:extend(
   {
     type = "beam",
     name = "bob-laser-beam-glass",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -19,7 +20,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "laser" }
           }
         }
       }
@@ -27,8 +28,8 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-      tint = {r = 0.8, g = 0.8, b = 0.8},
-      flags = {"mipmap"},
+      tint = { r = 0.8, g = 0.8, b = 0.8 },
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -40,7 +41,7 @@ data:extend(
     tail =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-end.png",
-      tint = {r = 0.8, g = 0.8, b = 0.8},
+      tint = { r = 0.8, g = 0.8, b = 0.8 },
       flags = { "no-crop", "mipmap" },
       width = 110,
       height = 62,
@@ -54,8 +55,8 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8},
-        flags = {"mipmap"},
+        tint = { r = 0.8, g = 0.8, b = 0.8 },
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -65,18 +66,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-sapphire",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -90,7 +85,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "laser" }
           }
         }
       }
@@ -98,7 +93,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-sapphire.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -123,7 +118,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-sapphire.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -133,18 +128,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-emerald",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -158,7 +147,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "laser" }
           }
         }
       }
@@ -166,7 +155,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-emerald.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -191,7 +180,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-emerald.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -201,18 +190,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-amethyst",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -226,7 +209,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "laser" }
           }
         }
       }
@@ -234,7 +217,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-amethyst.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -259,7 +242,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-amethyst.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -269,18 +252,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-topaz",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -294,7 +271,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "laser" }
           }
         }
       }
@@ -302,7 +279,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-topaz.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -327,7 +304,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-topaz.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -337,18 +314,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-diamond",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -362,7 +333,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "laser" }
           }
         }
       }
@@ -370,7 +341,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -395,7 +366,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -405,13 +376,7 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   }
 }
 )
@@ -423,7 +388,7 @@ data:extend(
   {
     type = "beam",
     name = "bob-laser-beam-glass-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -437,7 +402,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 75, type = "laser"}
+            damage = { amount = 75, type = "laser" }
           }
         }
       }
@@ -445,8 +410,8 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-      tint = {r = 0.8, g = 0.8, b = 0.8},
-      flags = {"mipmap"},
+      tint = { r = 0.8, g = 0.8, b = 0.8 },
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -458,7 +423,7 @@ data:extend(
     tail =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-end.png",
-      tint = {r = 0.8, g = 0.8, b = 0.8},
+      tint = { r = 0.8, g = 0.8, b = 0.8 },
       flags = { "no-crop", "mipmap" },
       width = 110,
       height = 62,
@@ -472,8 +437,8 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8},
-        flags = {"mipmap"},
+        tint = { r = 0.8, g = 0.8, b = 0.8 },
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -483,18 +448,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-ruby-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -508,7 +467,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 100, type = "laser"}
+            damage = { amount = 100, type = "laser" }
           }
         }
       }
@@ -516,7 +475,7 @@ data:extend(
     head =
     {
       filename = "__base__/graphics/entity/laser-turret/hr-laser-body.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -541,7 +500,7 @@ data:extend(
     {
       {
         filename = "__base__/graphics/entity/laser-turret/hr-laser-body.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -551,18 +510,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-sapphire-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -576,7 +529,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 110, type = "laser"}
+            damage = { amount = 110, type = "laser" }
           }
         }
       }
@@ -584,7 +537,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-sapphire.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -609,7 +562,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-sapphire.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -619,18 +572,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-emerald-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -644,7 +591,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 120, type = "laser"}
+            damage = { amount = 120, type = "laser" }
           }
         }
       }
@@ -652,7 +599,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-emerald.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -677,7 +624,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-emerald.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -687,18 +634,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-amethyst-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -712,7 +653,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 130, type = "laser"}
+            damage = { amount = 130, type = "laser" }
           }
         }
       }
@@ -720,7 +661,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-amethyst.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -745,7 +686,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-amethyst.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -755,18 +696,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-topaz-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -780,7 +715,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 140, type = "laser"}
+            damage = { amount = 140, type = "laser" }
           }
         }
       }
@@ -788,7 +723,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body-topaz.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -813,7 +748,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body-topaz.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -823,18 +758,12 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
   {
     type = "beam",
     name = "bob-laser-beam-diamond-ammo",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
     random_target_offset = true,
@@ -848,7 +777,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 150, type = "laser"}
+            damage = { amount = 150, type = "laser" }
           }
         }
       }
@@ -856,7 +785,7 @@ data:extend(
     head =
     {
       filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-      flags = {"mipmap"},
+      flags = { "mipmap" },
       line_length = 8,
       width = 64,
       height = 12,
@@ -881,7 +810,7 @@ data:extend(
     {
       {
         filename = "__bobwarfare__/graphics/entities/beam/laser-body.png",
-        flags = {"mipmap"},
+        flags = { "mipmap" },
         line_length = 8,
         width = 64,
         height = 12,
@@ -891,15 +820,7 @@ data:extend(
         blend_mode = laser_beam_blend_mode
       }
     },
-    working_sound =
-    {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7
-      }
-    }
+    cyclic_sound = warefareSounds.laserBeam
   },
 }
 )
-
-
