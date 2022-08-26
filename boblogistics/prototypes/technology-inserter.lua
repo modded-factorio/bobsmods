@@ -11,6 +11,7 @@ data:extend(
     prerequisites =
     {
       "fast-inserter",
+      "chemical-science-pack"
     },
     unit =
     {
@@ -19,6 +20,7 @@ data:extend(
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 30
     },

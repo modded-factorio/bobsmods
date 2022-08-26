@@ -97,7 +97,9 @@ end
 
 --balance
 bobmods.lib.tech.remove_science_pack("logistics-3", "production-science-pack")
-bobmods.lib.tech.remove_prerequisite("logistics-3", "lubricant")
+if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+  bobmods.lib.tech.remove_prerequisite("logistics-3", "lubricant")
+end
 bobmods.lib.tech.add_prerequisite("logistics-3", "logistics-2")
 bobmods.lib.tech.replace_prerequisite("logistics-3", "production-science-pack", "chemical-science-pack")
 
@@ -143,7 +145,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   bobmods.lib.tech.add_recipe_unlock("ultimate-inserter", "express-filter-inserter")
 
   bobmods.lib.tech.add_science_pack("fast-inserter", "logistic-science-pack", 1)
-  bobmods.lib.tech.add_science_pack("express-inserters", "chemical-science-pack", 1)
   if bobmods.tech and bobmods.tech.advanced_logistic_science then
     bobmods.lib.tech.replace_science_pack("turbo-inserter", "production-science-pack", "advanced-logistic-science-pack")
     bobmods.lib.tech.add_science_pack("ultimate-inserter", "advanced-logistic-science-pack", 1)
