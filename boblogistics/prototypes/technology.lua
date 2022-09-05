@@ -937,6 +937,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         time = 10
       },
       order = "a-f-0",
+      ignore_tech_cost_multiplier = true
     }
   }
   )

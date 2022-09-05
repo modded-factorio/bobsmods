@@ -1042,3 +1042,26 @@ function bobmods.lib.tech.hide(technology_name)
     bobmods.lib.error.technology(technology_name)
   end
 end
+
+function bobmods.lib.tech.ignore_tech_cost_multiplier(technology_name, ignore)
+  if
+    type(technology_name) == "string" and
+    type(ignore) == "boolean"
+  then
+    local technology = data.raw.technology[technology_name]
+    if technology then
+      if technology.normal then
+        technology.normal.ignore_tech_cost_multiplier = ignore
+      end
+      if technology.expensive then
+        technology.expensive.ignore_tech_cost_multiplier = ignore
+      end
+      if not technology.normal and not technology.expensive then
+        technology.ignore_tech_cost_multiplier = ignore
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.technology(technology_name)
+  end
+end

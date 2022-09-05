@@ -367,7 +367,7 @@ data:extend(
 )
 
 bobmods.lib.tech.add_prerequisite("automation", "basic-automation")
-data.raw.technology.automation.ignore_tech_cost_multiplier = false
+bobmods.lib.tech.ignore_tech_cost_multiplier("automation", false)
 
 if settings.startup["bobmods-assembly-limits"].value == true then
   data.raw["assembling-machine"]["burner-assembling-machine"].ingredient_count = 2
