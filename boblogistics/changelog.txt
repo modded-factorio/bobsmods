@@ -3,6 +3,7 @@ Version: 1.1.6
 Date: ???
   Bugfixes:
     - Fixing accidental global variables #50
+    - Machines Showing In/Out Fluidbox arrows #66
   Changes:
     - Added Bigger pipes setting that increases capacity and throughput of higher tier pipes #35
     - Moved Long inserters 2 to blue science #51

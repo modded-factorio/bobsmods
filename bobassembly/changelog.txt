@@ -7,6 +7,8 @@ Date: ???
     - Space Exploration / Krastorio 2 support #53
       - Added crafting category "basic-crafting" to assembling machines
       - Added crafting category "kiln" to furnaces
+  Bugfixes:
+    - Machines Showing In/Out Fluidbox arrows #66
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022

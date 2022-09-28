@@ -58,11 +58,11 @@ data:extend(
       {
         {
           position = {0, -1},
-          type="output"
+          type = "output"
         },
         {
           position = {0, 1},
-          type="input"
+          type = "input"
         }
       },
     },
@@ -265,11 +265,11 @@ data:extend(
       {
         {
           position = {0, -1},
-          type="output"
+          type = "output"
         },
         {
           position = {0, 1},
-          type="input"
+          type = "input"
         }
       },
     },
@@ -471,11 +471,11 @@ data:extend(
       {
         {
           position = {0, -1},
-          type="output"
+          type = "output"
         },
         {
           position = {0, 1},
-          type="input"
+          type = "input"
         }
       },
     },

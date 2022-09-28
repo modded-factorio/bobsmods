@@ -166,7 +166,8 @@ data:extend(
       pipe_connections =
       {
         {
-          positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
+          type = "output",
+          positions = {{1, -2}, {2, -1}, {-1, 2}, {-2, 1}}
         }
       },
     },
@@ -240,7 +241,8 @@ data:extend(
       pipe_connections =
       {
         {
-          positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
+          type = "output",
+          positions = {{1, -2}, {2, -1}, {-1, 2}, {-2, 1}}
         }
       },
     },
@@ -316,7 +318,8 @@ data:extend(
       pipe_connections =
       {
         {
-          positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
+          type = "output",
+          positions = {{1, -2}, {2, -1}, {-1, 2}, {-2, 1}}
         }
       },
     },
@@ -392,7 +395,8 @@ data:extend(
       pipe_connections =
       {
         {
-          positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
+          type = "output",
+          positions = {{1, -2}, {2, -1}, {-1, 2}, {-2, 1}}
         }
       },
     },
@@ -468,7 +472,8 @@ data:extend(
       pipe_connections =
       {
         {
-          positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
+          type = "output",
+          positions = {{1, -2}, {2, -1}, {-1, 2}, {-2, 1}}
         }
       },
     },
