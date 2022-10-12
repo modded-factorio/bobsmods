@@ -1,28 +1,20 @@
 if settings.startup["bobmods-mining-miningaxes"].value == true then
+  data.raw.technology["steel-axe"].upgrade = "true"
 
-data.raw.technology["steel-axe"].upgrade = "true"
-
-data:extend(
-{
-  {
+  data:extend({{
     type = "technology",
     name = "steel-axe-2",
     icon_size = 64,
     icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 1
-      }
-    },
+    effects = {{
+      type = "character-mining-speed",
+      modifier = 1
+    }},
     prerequisites = {"steel-axe"},
-    unit =
-    {
+    unit = {
       count = 150,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1}
       },
@@ -30,26 +22,20 @@ data:extend(
     },
     upgrade = "true",
     order = "c-c-a-b"
-  },
-  {
+  }, {
     type = "technology",
     name = "steel-axe-3",
     icon_size = 64,
     icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 1
-      }
-    },
+    effects = {{
+      type = "character-mining-speed",
+      modifier = 1
+    }},
     prerequisites = {"steel-axe-2"},
-    unit =
-    {
+    unit = {
       count = 250,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1}
       },
@@ -57,26 +43,20 @@ data:extend(
     },
     upgrade = "true",
     order = "c-c-a-c"
-  },
-  {
+  }, {
     type = "technology",
     name = "steel-axe-4",
     icon_size = 64,
     icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 1
-      }
-    },
+    effects = {{
+      type = "character-mining-speed",
+      modifier = 1
+    }},
     prerequisites = {"steel-axe-3"},
-    unit =
-    {
+    unit = {
       count = 250,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
@@ -85,26 +65,20 @@ data:extend(
     },
     upgrade = "true",
     order = "c-c-a-d"
-  },
-  {
+  }, {
     type = "technology",
     name = "steel-axe-5",
     icon_size = 64,
     icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 2
-      }
-    },
+    effects = {{
+      type = "character-mining-speed",
+      modifier = 2
+    }},
     prerequisites = {"steel-axe-4"},
-    unit =
-    {
+    unit = {
       count = 250,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -114,26 +88,20 @@ data:extend(
     },
     upgrade = "true",
     order = "c-c-a-e"
-  },
-  {
+  }, {
     type = "technology",
     name = "steel-axe-6",
     icon_size = 64,
     icon_mipmaps = 4,
     icon = "__base__/graphics/icons/steel-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 3
-      }
-    },
+    effects = {{
+      type = "character-mining-speed",
+      modifier = 3
+    }},
     prerequisites = {"steel-axe-5"},
-    unit =
-    {
+    unit = {
       count = 250,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -144,9 +112,5 @@ data:extend(
     },
     upgrade = "true",
     order = "c-c-a-f"
-  },
-}
-)
-
-
+  }})
 end

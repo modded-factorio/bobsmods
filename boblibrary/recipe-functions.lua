@@ -1,11 +1,16 @@
-if not bobmods.lib.recipe then bobmods.lib.recipe = {} end
-
+if not bobmods.lib.recipe then
+  bobmods.lib.recipe = {}
+end
 
 local function quantity_convertion(amount, old, new)
-  if bobmods.lib.item.get_type(old) == "fluid" and bobmods.lib.item.get_type(new) == "item" then
+  if bobmods.lib.item.get_type(old) == "fluid" and bobmods.lib.item.get_type(
+    new
+  ) == "item" then
     amount = math.ceil(amount / 10)
   end
-  if bobmods.lib.item.get_type(old) == "item" and bobmods.lib.item.get_type(new) == "fluid" then
+  if bobmods.lib.item.get_type(old) == "item" and bobmods.lib.item.get_type(
+    new
+  ) == "fluid" then
     amount = amount * 10
   end
   return amount
@@ -20,7 +25,7 @@ local function get_old_quantity(ingredients, old)
         amount = item.amount + amount
       end
     else
-      log("recipe " ..  recipe .. " contains an invalid ingredient")
+      log("recipe " .. recipe .. " contains an invalid ingredient")
     end
   end
   return amount
@@ -37,15 +42,12 @@ local function replace_ingredient(ingredients, old, new)
   return false
 end
 
-
 function bobmods.lib.recipe.replace_ingredient(recipe, old, new)
-  if
-    type(recipe) == "string" and
-    type(old) == "string" and
-    type(new) == "string" and
-    data.raw.recipe[recipe] and
-    bobmods.lib.item.get_type(new)
-  then
+  if type(recipe) == "string" and type(old) == "string" and type(
+    new
+  ) == "string" and data.raw.recipe[recipe] and bobmods.lib.item.get_type(
+    new
+  ) then
     local retval = false
 
     if data.raw.recipe[recipe].ingredients then
@@ -55,13 +57,21 @@ function bobmods.lib.recipe.replace_ingredient(recipe, old, new)
     end
 
     if data.raw.recipe[recipe].normal and data.raw.recipe[recipe].normal.ingredients then
-      if replace_ingredient(data.raw.recipe[recipe].normal.ingredients, old, new) then
+      if replace_ingredient(
+        data.raw.recipe[recipe].normal.ingredients,
+        old,
+        new
+      ) then
         retval = true
       end
     end
 
     if data.raw.recipe[recipe].expensive and data.raw.recipe[recipe].expensive.ingredients then
-      if replace_ingredient(data.raw.recipe[recipe].expensive.ingredients, old, new) then
+      if replace_ingredient(
+        data.raw.recipe[recipe].expensive.ingredients,
+        old,
+        new
+      ) then
         retval = true
       end
     end
@@ -76,13 +86,10 @@ function bobmods.lib.recipe.replace_ingredient(recipe, old, new)
   end
 end
 
-
 function bobmods.lib.recipe.replace_ingredient_in_all(old, new)
-  if
-    type(old) == "string" and
-    type(new) == "string" and
-    bobmods.lib.item.get_type(new)
-  then
+  if type(old) == "string" and type(
+    new
+  ) == "string" and bobmods.lib.item.get_type(new) then
     for i, recipe in pairs(data.raw.recipe) do
       bobmods.lib.recipe.replace_ingredient(recipe.name, old, new)
     end
@@ -93,15 +100,15 @@ function bobmods.lib.recipe.replace_ingredient_in_all(old, new)
   end
 end
 
-
 function bobmods.lib.recipe.remove_ingredient(recipe, item)
-  if
-    type(recipe) == "string" and
-    type(item) == "string" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and type(
+    item
+  ) == "string" and data.raw.recipe[recipe] then
     if data.raw.recipe[recipe].expensive then
-      bobmods.lib.item.remove(data.raw.recipe[recipe].expensive.ingredients, item)
+      bobmods.lib.item.remove(
+        data.raw.recipe[recipe].expensive.ingredients,
+        item
+      )
     end
     if data.raw.recipe[recipe].normal then
       bobmods.lib.item.remove(data.raw.recipe[recipe].normal.ingredients, item)
@@ -117,10 +124,7 @@ function bobmods.lib.recipe.remove_ingredient(recipe, item)
 end
 
 function bobmods.lib.recipe.clear_ingredients(recipe)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] then
     if data.raw.recipe[recipe].expensive then
       data.raw.recipe[recipe].expensive.ingredients = {}
     end
@@ -136,18 +140,16 @@ function bobmods.lib.recipe.clear_ingredients(recipe)
   end
 end
 
-
 function bobmods.lib.recipe.add_new_ingredient(recipe, item_in)
   local item = bobmods.lib.item.ingredient(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name)
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(item.name) then
     if data.raw.recipe[recipe].expensive then
-      bobmods.lib.item.add_new(data.raw.recipe[recipe].expensive.ingredients, item)
+      bobmods.lib.item.add_new(
+        data.raw.recipe[recipe].expensive.ingredients,
+        item
+      )
     end
     if data.raw.recipe[recipe].normal then
       bobmods.lib.item.add_new(data.raw.recipe[recipe].normal.ingredients, item)
@@ -156,12 +158,7 @@ function bobmods.lib.recipe.add_new_ingredient(recipe, item_in)
       bobmods.lib.item.add_new(data.raw.recipe[recipe].ingredients, item)
     end
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe]
-      )
-    then
+    if not (type(recipe) == "string" and data.raw.recipe[recipe]) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
     end
@@ -170,13 +167,9 @@ end
 
 function bobmods.lib.recipe.add_ingredient(recipe, item_in)
   local item = bobmods.lib.item.ingredient(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name)
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(item.name) then
     if data.raw.recipe[recipe].expensive then
       bobmods.lib.item.add(data.raw.recipe[recipe].expensive.ingredients, item)
     end
@@ -187,12 +180,7 @@ function bobmods.lib.recipe.add_ingredient(recipe, item_in)
       bobmods.lib.item.add(data.raw.recipe[recipe].ingredients, item)
     end
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe]
-      )
-    then
+    if not (type(recipe) == "string" and data.raw.recipe[recipe]) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
     end
@@ -200,11 +188,9 @@ function bobmods.lib.recipe.add_ingredient(recipe, item_in)
 end
 
 function bobmods.lib.recipe.add_ingredients(recipe, ingredients)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    type(ingredients) == "table"
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and type(
+    ingredients
+  ) == "table" then
     for i, ingredient in pairs(ingredients) do
       bobmods.lib.recipe.add_ingredient(recipe, ingredient)
     end
@@ -216,13 +202,9 @@ end
 
 function bobmods.lib.recipe.set_ingredient(recipe, item_in)
   local item = bobmods.lib.item.ingredient(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name)
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(item.name) then
     if data.raw.recipe[recipe].expensive then
       bobmods.lib.item.set(data.raw.recipe[recipe].expensive.ingredients, item)
     end
@@ -233,12 +215,7 @@ function bobmods.lib.recipe.set_ingredient(recipe, item_in)
       bobmods.lib.item.set(data.raw.recipe[recipe].ingredients, item)
     end
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe]
-      )
-    then
+    if not (type(recipe) == "string" and data.raw.recipe[recipe]) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
     end
@@ -246,11 +223,9 @@ function bobmods.lib.recipe.set_ingredient(recipe, item_in)
 end
 
 function bobmods.lib.recipe.set_ingredients(recipe, ingredients)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    type(ingredients) == "table"
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and type(
+    ingredients
+  ) == "table" then
     bobmods.lib.recipe.clear_ingredients(recipe)
     bobmods.lib.recipe.add_ingredients(recipe, ingredients)
   else
@@ -259,17 +234,11 @@ function bobmods.lib.recipe.set_ingredients(recipe, ingredients)
   end
 end
 
-
-
 function bobmods.lib.recipe.add_result(recipe, item_in)
   local item = bobmods.lib.item.result(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name)
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(item.name) then
     if data.raw.recipe[recipe].expensive then
       bobmods.lib.result_check(data.raw.recipe[recipe].expensive)
       bobmods.lib.item.add(data.raw.recipe[recipe].expensive.results, item)
@@ -283,12 +252,7 @@ function bobmods.lib.recipe.add_result(recipe, item_in)
       bobmods.lib.item.add(data.raw.recipe[recipe].results, item)
     end
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe]
-      )
-    then
+    if not (type(recipe) == "string" and data.raw.recipe[recipe]) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
     end
@@ -297,14 +261,9 @@ end
 
 function bobmods.lib.recipe.set_result(recipe, item_in)
   local item = bobmods.lib.item.result(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name)
-  then
-
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(item.name) then
     if data.raw.recipe[recipe].expensive then
       bobmods.lib.result_check(data.raw.recipe[recipe].expensive)
       bobmods.lib.item.set(data.raw.recipe[recipe].expensive.results, item)
@@ -317,14 +276,8 @@ function bobmods.lib.recipe.set_result(recipe, item_in)
       bobmods.lib.result_check(data.raw.recipe[recipe])
       bobmods.lib.item.set(data.raw.recipe[recipe].results, item)
     end
-
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe]
-      )
-    then
+    if not (type(recipe) == "string" and data.raw.recipe[recipe]) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
     end
@@ -332,11 +285,9 @@ function bobmods.lib.recipe.set_result(recipe, item_in)
 end
 
 function bobmods.lib.recipe.remove_result(recipe, item)
-  if
-    type(recipe) == "string" and
-    type(item) == "string" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and type(
+    item
+  ) == "string" and data.raw.recipe[recipe] then
     if data.raw.recipe[recipe].expensive then
       bobmods.lib.result_check(data.raw.recipe[recipe].expensive)
       bobmods.lib.item.remove(data.raw.recipe[recipe].expensive.results, item)
@@ -356,15 +307,15 @@ function bobmods.lib.recipe.remove_result(recipe, item)
   end
 end
 
-
-
 local function split_line(recipe, tag)
   if data.raw.recipe[recipe][tag] then
     if not data.raw.recipe[recipe].normal[tag] then
-      data.raw.recipe[recipe].normal[tag] = table.deepcopy(data.raw.recipe[recipe][tag])
+      data.raw.recipe[recipe].normal[tag] =
+        table.deepcopy(data.raw.recipe[recipe][tag])
     end
     if not data.raw.recipe[recipe].expensive[tag] then
-      data.raw.recipe[recipe].expensive[tag] = table.deepcopy(data.raw.recipe[recipe][tag])
+      data.raw.recipe[recipe].expensive[tag] =
+        table.deepcopy(data.raw.recipe[recipe][tag])
     end
   end
 end
@@ -380,17 +331,13 @@ local function split_line_bool(recipe, tag)
   end
 end
 
-
 function bobmods.lib.recipe.difficulty_split(recipe)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe]
-  then
-    if not data.raw.recipe[recipe].normal then 
-      data.raw.recipe[recipe].normal = {} 
+  if type(recipe) == "string" and data.raw.recipe[recipe] then
+    if not data.raw.recipe[recipe].normal then
+      data.raw.recipe[recipe].normal = {}
     end
-    if not data.raw.recipe[recipe].expensive then 
-      data.raw.recipe[recipe].expensive = {} 
+    if not data.raw.recipe[recipe].expensive then
+      data.raw.recipe[recipe].expensive = {}
     end
 
     split_line(recipe, "energy_required")
@@ -411,37 +358,34 @@ function bobmods.lib.recipe.difficulty_split(recipe)
     split_line_bool(recipe, "always_show_made_in")
     split_line_bool(recipe, "show_amount_in_title")
     split_line_bool(recipe, "always_show_products")
-
   else
     log(debug.traceback())
     bobmods.lib.error.recipe(recipe)
   end
 end
 
-
-
-function bobmods.lib.recipe.add_new_difficulty_ingredient(recipe, difficulty, item_in)
+function bobmods.lib.recipe.add_new_difficulty_ingredient(
+recipe,
+  difficulty,
+  item_in
+)
   local item = bobmods.lib.item.ingredient(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name) and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(
+    item.name
+  ) and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
-    bobmods.lib.item.add_new(data.raw.recipe[recipe][difficulty].ingredients, item)
+    bobmods.lib.item.add_new(
+      data.raw.recipe[recipe][difficulty].ingredients,
+      item
+    )
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe] and
-        (difficulty == "normal" or difficulty == "expensive")
-      )
-    then
+    if not (type(
+      recipe
+    ) == "string" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive")) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
       bobmods.lib.error.difficulty(difficulty)
@@ -449,28 +393,25 @@ function bobmods.lib.recipe.add_new_difficulty_ingredient(recipe, difficulty, it
   end
 end
 
-function bobmods.lib.recipe.add_difficulty_ingredient(recipe, difficulty, item_in)
+function bobmods.lib.recipe.add_difficulty_ingredient(
+recipe,
+  difficulty,
+  item_in
+)
   local item = bobmods.lib.item.ingredient(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name) and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(
+    item.name
+  ) and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
     bobmods.lib.item.add(data.raw.recipe[recipe][difficulty].ingredients, item)
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe] and
-        (difficulty == "normal" or difficulty == "expensive")
-      )
-    then
+    if not (type(
+      recipe
+    ) == "string" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive")) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
       bobmods.lib.error.difficulty(difficulty)
@@ -478,19 +419,21 @@ function bobmods.lib.recipe.add_difficulty_ingredient(recipe, difficulty, item_i
   end
 end
 
-function bobmods.lib.recipe.remove_difficulty_ingredient(recipe, difficulty, item)
-  if
-    type(recipe) == "string" and
-    type(item) == "string" and
-    data.raw.recipe[recipe] and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
-
+function bobmods.lib.recipe.remove_difficulty_ingredient(
+recipe,
+  difficulty,
+  item
+)
+  if type(recipe) == "string" and type(
+    item
+  ) == "string" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
-    bobmods.lib.item.remove(data.raw.recipe[recipe][difficulty].ingredients, item)
-
+    bobmods.lib.item.remove(
+      data.raw.recipe[recipe][difficulty].ingredients,
+      item
+    )
   else
     log(debug.traceback())
     bobmods.lib.error.recipe(recipe)
@@ -499,30 +442,22 @@ function bobmods.lib.recipe.remove_difficulty_ingredient(recipe, difficulty, ite
   end
 end
 
-
 function bobmods.lib.recipe.add_difficulty_result(recipe, difficulty, item_in)
   local item = bobmods.lib.item.result(item_in)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe] and
-    item and
-    type(item) == "table" and
-    bobmods.lib.item.get_type(item.name) and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] and item and type(
+    item
+  ) == "table" and bobmods.lib.item.get_type(
+    item.name
+  ) and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
     bobmods.lib.result_check(data.raw.recipe[recipe][difficulty])
     bobmods.lib.item.add(data.raw.recipe[recipe][difficulty].results, item)
   else
-    if not
-      (
-        type(recipe) == "string" and
-        data.raw.recipe[recipe] and
-        (difficulty == "normal" or difficulty == "expensive")
-      )
-    then
+    if not (type(
+      recipe
+    ) == "string" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive")) then
       log(debug.traceback())
       bobmods.lib.error.recipe(recipe)
       bobmods.lib.error.difficulty(difficulty)
@@ -531,12 +466,9 @@ function bobmods.lib.recipe.add_difficulty_result(recipe, difficulty, item_in)
 end
 
 function bobmods.lib.recipe.remove_difficulty_result(recipe, difficulty, item)
-  if
-    type(recipe) == "string" and
-    type(item) == "string" and
-    data.raw.recipe[recipe] and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
+  if type(recipe) == "string" and type(
+    item
+  ) == "string" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
@@ -550,13 +482,10 @@ function bobmods.lib.recipe.remove_difficulty_result(recipe, difficulty, item)
   end
 end
 
-
 function bobmods.lib.recipe.enabled(recipe, bool)
-  if
-    type(recipe) == "string" and
-    type(bool) == "boolean" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and type(
+    bool
+  ) == "boolean" and data.raw.recipe[recipe] then
     if data.raw.recipe[recipe].normal then
       data.raw.recipe[recipe].normal.enabled = bool or false
     end
@@ -597,12 +526,9 @@ function bobmods.lib.recipe.hide(recipe)
 end
 
 function bobmods.lib.recipe.difficulty_enabled(recipe, difficulty, bool)
-  if
-    type(recipe) == "string" and
-    type(bool) == "boolean" and
-    data.raw.recipe[recipe] and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
+  if type(recipe) == "string" and type(
+    bool
+  ) == "boolean" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
@@ -617,13 +543,10 @@ function bobmods.lib.recipe.difficulty_enabled(recipe, difficulty, bool)
   end
 end
 
-
 function bobmods.lib.recipe.set_energy_required(recipe, time)
-  if
-    type(recipe) == "string" and
-    type(time) == "number" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and type(
+    time
+  ) == "number" and data.raw.recipe[recipe] then
     if data.raw.recipe[recipe].normal then
       data.raw.recipe[recipe].normal.energy_required = time
     end
@@ -642,13 +565,14 @@ function bobmods.lib.recipe.set_energy_required(recipe, time)
   end
 end
 
-function bobmods.lib.recipe.set_difficulty_energy_required(recipe, difficulty, time)
-  if
-    type(recipe) == "string" and
-    type(time) == "number" and
-    data.raw.recipe[recipe] and
-    (difficulty == "normal" or difficulty == "expensive")
-  then
+function bobmods.lib.recipe.set_difficulty_energy_required(
+recipe,
+  difficulty,
+  time
+)
+  if type(recipe) == "string" and type(
+    time
+  ) == "number" and data.raw.recipe[recipe] and (difficulty == "normal" or difficulty == "expensive") then
     if not data.raw.recipe[recipe][difficulty] then
       bobmods.lib.recipe.difficulty_split(recipe)
     end
@@ -663,8 +587,6 @@ function bobmods.lib.recipe.set_difficulty_energy_required(recipe, difficulty, t
   end
 end
 
-
-
 local function duplicate_ingredient_check(recipe_name, ingredients)
   local new_ingredients = {}
   local items = {}
@@ -674,14 +596,16 @@ local function duplicate_ingredient_check(recipe_name, ingredients)
     if item then -- duplicate value
       if items[item.name] then
         rebuild = true
-log("Duplicate item " .. item.name .. " found on recipe " .. recipe_name .. ".")
+        log(
+          "Duplicate item " .. item.name .. " found on recipe " .. recipe_name .. "."
+        )
       else
         items[item.name] = true
         bobmods.lib.item.add(new_ingredients, ingredient)
-      end
-    else --invalid value
+      end --invalid value
+    else
       rebuild = true
-log("Invalid item found on recipe " .. recipe_name .. ".")
+      log("Invalid item found on recipe " .. recipe_name .. ".")
     end
   end
   if rebuild == true then
@@ -690,21 +614,33 @@ log("Invalid item found on recipe " .. recipe_name .. ".")
 end
 
 local function duplicate_ingredient_check_full(recipe)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] then
     if data.raw.recipe[recipe].ingredients then
-      local ingredients = duplicate_ingredient_check(recipe, data.raw.recipe[recipe].ingredients)
-      if ingredients then data.raw.recipe[recipe].ingredients = ingredients end
+      local ingredients =
+        duplicate_ingredient_check(recipe, data.raw.recipe[recipe].ingredients)
+      if ingredients then
+        data.raw.recipe[recipe].ingredients = ingredients
+      end
     end
     if data.raw.recipe[recipe].normal and data.raw.recipe[recipe].normal.ingredients then
-      local ingredients = duplicate_ingredient_check(recipe, data.raw.recipe[recipe].normal.ingredients)
-      if ingredients then data.raw.recipe[recipe].normal.ingredients = ingredients end
+      local ingredients =
+        duplicate_ingredient_check(
+          recipe,
+          data.raw.recipe[recipe].normal.ingredients
+        )
+      if ingredients then
+        data.raw.recipe[recipe].normal.ingredients = ingredients
+      end
     end
     if data.raw.recipe[recipe].expensive and data.raw.recipe[recipe].expensive.ingredients then
-      local ingredients = duplicate_ingredient_check(recipe, data.raw.recipe[recipe].expensive.ingredients)
-      if ingredients then data.raw.recipe[recipe].expensive.ingredients = ingredients end
+      local ingredients =
+        duplicate_ingredient_check(
+          recipe,
+          data.raw.recipe[recipe].expensive.ingredients
+        )
+      if ingredients then
+        data.raw.recipe[recipe].expensive.ingredients = ingredients
+      end
     end
   else
     log(debug.traceback())

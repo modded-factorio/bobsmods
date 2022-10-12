@@ -6,9 +6,6 @@
   "author": "Bobingabout",
   "contact": "robertagius@hotmail.com",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
-  "dependencies": [
-    "base >= 1.1.0",
-    "boblibrary >= 1.1.6"
-  ],
+  "dependencies": ["base >= 1.1.0", "boblibrary >= 1.1.6"],
   "description": "Requires Bob's functions library mod.\n\nAdds some useful ores, designed for use by Bob's Metals, Chemicals and Intermediates mod (MCI).\nAll ores are disabled by default, MCI will turn on the minimum required ores.\nOther mods may make use of these ores.\n\nOres include, Bauxite(Aluminium), Cobalt, Gems, Gold, Galena(Lead), Nickel, Quartz(Glass, Silicon), Rutile(Titanium), Silver, Sulfur, Thorium, Tin, Tungsten and Zinc.\nAlso includes Ground water and Lithia water mining fluid nodes, which function similar to Oil."
 }

@@ -1,15 +1,5 @@
 {
-  "item":
-  [
-    ["burner-generator", "bob-burner-generator"]
-  ],
-  "recipe":
-  [
-    ["burner-generator", "bob-burner-generator"]
-  ],
-  "entity":
-  [
-    ["burner-generator", "bob-burner-generator"]
-  ]
+  "item": [["burner-generator", "bob-burner-generator"]],
+  "recipe": [["burner-generator", "bob-burner-generator"]],
+  "entity": [["burner-generator", "bob-burner-generator"]]
 }
-

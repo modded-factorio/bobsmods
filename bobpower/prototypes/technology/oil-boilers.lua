@@ -1,118 +1,72 @@
 if settings.startup["bobmods-power-steam"].value == true then
-
-data:extend(
-{
-  {
+  data:extend({{
     type = "technology",
     name = "bob-oil-boiler-1",
-    prerequisites =
-    {
-      "bob-boiler-2",
-    },
+    prerequisites = {"bob-boiler-2"},
     icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
     icon_size = 128,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "oil-boiler"
-      },
-    },
-    unit =
-    {
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "oil-boiler"
+    }},
+    unit = {
       count = 100,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-      },
+      ingredients = {{"automation-science-pack", 1}},
       time = 30
     },
-    order = "[oil-boiler]-1",
-  },
-
-  {
+    order = "[oil-boiler]-1"
+  }, {
     type = "technology",
     name = "bob-oil-boiler-2",
-    prerequisites =
-    {
-      "bob-oil-boiler-1",
-      "logistic-science-pack"
-    },
+    prerequisites = {"bob-oil-boiler-1", "logistic-science-pack"},
     icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
     icon_size = 128,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "oil-boiler-2"
-      },
-    },
-    unit =
-    {
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "oil-boiler-2"
+    }},
+    unit = {
       count = 100,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1}
       },
       time = 30
     },
-    order = "[oil-boiler]-2",
-  },
-
-  {
+    order = "[oil-boiler]-2"
+  }, {
     type = "technology",
     name = "bob-oil-boiler-3",
-    prerequisites =
-    {
-      "bob-oil-boiler-2",
-      "chemical-science-pack"
-    },
+    prerequisites = {"bob-oil-boiler-2", "chemical-science-pack"},
     icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
     icon_size = 128,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "oil-boiler-3"
-      },
-    },
-    unit =
-    {
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "oil-boiler-3"
+    }},
+    unit = {
       count = 100,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
       },
       time = 30
     },
-    order = "[oil-boiler]-3",
-  },
-
-  {
+    order = "[oil-boiler]-3"
+  }, {
     type = "technology",
     name = "bob-oil-boiler-4",
-    prerequisites =
-    {
-      "bob-oil-boiler-3",
-      "production-science-pack"
-    },
+    prerequisites = {"bob-oil-boiler-3", "production-science-pack"},
     icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
     icon_size = 128,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "oil-boiler-4"
-      },
-    },
-    unit =
-    {
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "oil-boiler-4"
+    }},
+    unit = {
       count = 100,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -120,9 +74,6 @@ data:extend(
       },
       time = 30
     },
-    order = "[oil-steam]-4",
-  },
-}
-)
-
+    order = "[oil-steam]-4"
+  }})
 end

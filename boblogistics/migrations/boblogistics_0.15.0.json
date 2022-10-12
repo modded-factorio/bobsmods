@@ -1,6 +1,5 @@
 {
-  "item":
-  [
+  "item": [
     ["small-pump-2", "bob-pump-2"],
     ["small-pump-3", "bob-pump-3"],
     ["small-pump-4", "bob-pump-4"],
@@ -9,8 +8,7 @@
     ["bob-armoured-diesel-locomotive", "bob-armoured-locomotive"],
     ["bob-armoured-diesel-locomotive-2", "bob-armoured-locomotive-2"]
   ],
-  "entity":
-  [
+  "entity": [
     ["small-pump-2", "bob-pump-2"],
     ["small-pump-3", "bob-pump-3"],
     ["small-pump-4", "bob-pump-4"],
@@ -19,8 +17,7 @@
     ["bob-armoured-diesel-locomotive", "bob-armoured-locomotive"],
     ["bob-armoured-diesel-locomotive-2", "bob-armoured-locomotive-2"]
   ],
-  "recipe":
-  [
+  "recipe": [
     ["small-pump-2", "bob-pump-2"],
     ["small-pump-3", "bob-pump-3"],
     ["small-pump-4", "bob-pump-4"],

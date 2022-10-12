@@ -1,8 +1,5 @@
 if settings.startup["bobmods-power-solar"].value == true then
-
-data:extend(
-{
-  {
+  data:extend({{
     type = "technology",
     name = "bob-solar-energy-2",
     localised_name = {"", {"technology-name.solar-energy"}, " 2"},
@@ -10,42 +7,32 @@ data:extend(
     icon = "__base__/graphics/technology/solar-energy.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-small-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-large-2"
-      }
-    },
-    prerequisites =
-    {
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "solar-panel-small-2"
+    }, {
+      type = "unlock-recipe",
+      recipe = "solar-panel-2"
+    }, {
+      type = "unlock-recipe",
+      recipe = "solar-panel-large-2"
+    }},
+    prerequisites = {
       "solar-energy",
       "advanced-electronics",
       "chemical-science-pack"
     },
-    unit =
-    {
+    unit = {
       count = 250,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
       },
       time = 30
     },
-    order = "a-h-c-b",
-  },
-
-  {
+    order = "a-h-c-b"
+  }, {
     type = "technology",
     name = "bob-solar-energy-3",
     localised_name = {"", {"technology-name.solar-energy"}, " 3"},
@@ -53,32 +40,24 @@ data:extend(
     icon = "__base__/graphics/technology/solar-energy.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-small-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-large-3"
-      }
-    },
-    prerequisites =
-    {
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "solar-panel-small-3"
+    }, {
+      type = "unlock-recipe",
+      recipe = "solar-panel-3"
+    }, {
+      type = "unlock-recipe",
+      recipe = "solar-panel-large-3"
+    }},
+    prerequisites = {
       "bob-solar-energy-2",
       "advanced-electronics-2",
       "production-science-pack"
     },
-    unit =
-    {
+    unit = {
       count = 250,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -86,10 +65,6 @@ data:extend(
       },
       time = 30
     },
-    order = "a-h-c-c",
-  }
-}
-)
-
-
+    order = "a-h-c-c"
+  }})
 end

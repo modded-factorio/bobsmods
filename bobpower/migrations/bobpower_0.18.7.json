@@ -1,7 +1,5 @@
 {
-  "recipe":
-  [
+  "recipe": [
     ["fluid-reactor-from-oil-steel-furnace", "fluid-reactor-from-fluid-furnace"]
   ]
 }
-

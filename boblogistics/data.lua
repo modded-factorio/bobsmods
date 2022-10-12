@@ -1,16 +1,16 @@
-if not bobmods then bobmods = {} end
-if not bobmods.logistics then bobmods.logistics = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.logistics then
+  bobmods.logistics = {}
+end
 
-data:extend(
-{
-  {
-    type = "custom-input",
-    name = "bob-inserter-long",
-    key_sequence = "SHIFT + L",
-    consuming = "none"
-  }
-}
-)
+data:extend({{
+  type = "custom-input",
+  name = "bob-inserter-long",
+  key_sequence = "SHIFT + L",
+  consuming = "none"
+}})
 
 require("prototypes.category")
 
@@ -48,7 +48,6 @@ require("prototypes.recipe.storage-tank-recipe")
 require("prototypes.recipe.logistic-container-recipe")
 require("prototypes.recipe.pump-recipe")
 
-
 require("prototypes.technology")
 require("prototypes.technology-logistics")
 require("prototypes.technology-inserter")
@@ -56,5 +55,3 @@ require("prototypes.technology-inserter")
 require("prototypes.valves")
 require("prototypes.chests")
 require("prototypes.repair-pack")
-
-

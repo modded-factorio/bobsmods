@@ -1,7 +1,3 @@
 {
-  "technology":
-  [
-    ["alloy-processing-1", "alloy-processing"]
-  ]
+  "technology": [["alloy-processing-1", "alloy-processing"]]
 }
-

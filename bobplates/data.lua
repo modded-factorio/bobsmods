@@ -1,5 +1,9 @@
-if not bobmods then bobmods = {} end
-if not bobmods.plates then bobmods.plates = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.plates then
+  bobmods.plates = {}
+end
 
 if bobmods.ores and settings.startup["bobmods-plates-oreoverride"].value == true then
   if bobmods.ores.bauxite.create_autoplace then -- Checks to see if the 0.17.2 of bobores function exists.
@@ -22,8 +26,8 @@ if bobmods.ores and settings.startup["bobmods-plates-oreoverride"].value == true
       bobmods.ores.water.create_autoplace()
       bobmods.ores.lithia_water.create_autoplace()
     end
-    bobmods.ores.thorium.create_autoplace()
-  else -- Older versions
+    bobmods.ores.thorium.create_autoplace() -- Older versions
+  else
     bobmods.ores.bauxite.enabled = true
     bobmods.ores.gold.enabled = true
     bobmods.ores.lead.enabled = true
@@ -46,7 +50,6 @@ if bobmods.ores and settings.startup["bobmods-plates-oreoverride"].value == true
     bobmods.ores.thorium.enabled = true
   end
 end
-
 
 require("prototypes.category")
 
@@ -85,5 +88,3 @@ require("prototypes.technology-nuclear")
 require("prototypes.item.alien")
 require("prototypes.recipe.alien-recipe")
 require("prototypes.technology-alien")
-
-

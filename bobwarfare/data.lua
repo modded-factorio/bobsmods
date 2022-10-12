@@ -1,23 +1,28 @@
-if not bobmods then bobmods = {} end
-if not bobmods.warfare then bobmods.warfare = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.warfare then
+  bobmods.warfare = {}
+end
 
 bobmods.warfare.FlyingRobotFrames = true
 bobmods.warfare.RobotParts = true
 bobmods.warfare.RobotRequirePrevious = true
 
-
 if settings.startup["bobmods-logistics-flyingrobotframes"] then
-  bobmods.warfare.FlyingRobotFrames = settings.startup["bobmods-logistics-flyingrobotframes"].value
+  bobmods.warfare.FlyingRobotFrames =
+    settings.startup["bobmods-logistics-flyingrobotframes"].value
 end
 
 if settings.startup["bobmods-logistics-robotparts"] then
-  bobmods.warfare.RobotParts = settings.startup["bobmods-logistics-robotparts"].value
+  bobmods.warfare.RobotParts =
+    settings.startup["bobmods-logistics-robotparts"].value
 end
 
 if settings.startup["bobmods-logistics-robotrequireprevious"] then
-  bobmods.warfare.RobotRequirePrevious = settings.startup["bobmods-logistics-robotrequireprevious"].value
+  bobmods.warfare.RobotRequirePrevious =
+    settings.startup["bobmods-logistics-robotrequireprevious"].value
 end
-
 
 require("prototypes.damage-type")
 require("prototypes.category")
@@ -67,7 +72,6 @@ require("prototypes.technology.wall")
 require("prototypes.technology.turrets")
 require("prototypes.technology.tank")
 require("prototypes.technology.radar")
-
 
 require("prototypes.robots")
 require("prototypes.robot-parts")

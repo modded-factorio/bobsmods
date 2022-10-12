@@ -1,5 +1,6 @@
-if not bobmods.lib.machine then bobmods.lib.machine = {} end
-
+if not bobmods.lib.machine then
+  bobmods.lib.machine = {}
+end
 
 function bobmods.lib.machine.has_category(machine, category_in)
   local hasit = false
@@ -42,7 +43,11 @@ function bobmods.lib.machine.if_add_category(machine, category, category_to_add)
   end
 end
 
-function bobmods.lib.machine.type_if_add_category(machine_type, category, category_to_add)
+function bobmods.lib.machine.type_if_add_category(
+machine_type,
+  category,
+  category_to_add
+)
   if data.raw["recipe-category"][category] and data.raw["recipe-category"][category_to_add] then
     for i, machine in pairs(data.raw[machine_type]) do
       bobmods.lib.machine.if_add_category(machine, category, category_to_add)
@@ -56,7 +61,6 @@ function bobmods.lib.machine.type_if_add_category(machine_type, category, catego
     end
   end
 end
-
 
 function bobmods.lib.machine.has_resource_category(machine, category_in)
   local hasit = false
@@ -84,7 +88,11 @@ function bobmods.lib.machine.add_resource_category(machine, category)
   end
 end
 
-function bobmods.lib.machine.if_add_resource_category(machine, category, category_to_add)
+function bobmods.lib.machine.if_add_resource_category(
+machine,
+  category,
+  category_to_add
+)
   if machine and data.raw["resource-category"][category] and data.raw["resource-category"][category_to_add] then
     if bobmods.lib.machine.has_resource_category(machine, category) then
       bobmods.lib.machine.add_resource_category(machine, category_to_add)
@@ -99,10 +107,18 @@ function bobmods.lib.machine.if_add_resource_category(machine, category, categor
   end
 end
 
-function bobmods.lib.machine.type_if_add_resource_category(machine_type, category, category_to_add)
+function bobmods.lib.machine.type_if_add_resource_category(
+machine_type,
+  category,
+  category_to_add
+)
   if data.raw["resource-category"][category] and data.raw["resource-category"][category_to_add] then
     for i, machine in pairs(data.raw[machine_type]) do
-      bobmods.lib.machine.if_add_resource_category(machine, category, category_to_add)
+      bobmods.lib.machine.if_add_resource_category(
+        machine,
+        category,
+        category_to_add
+      )
     end
   else
     if not data.raw["resource-category"][category] then
@@ -115,5 +131,3 @@ function bobmods.lib.machine.type_if_add_resource_category(machine_type, categor
     end
   end
 end
-
-

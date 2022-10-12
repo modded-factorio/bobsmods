@@ -1,14 +1,5 @@
 {
-  "item":
-  [
-    ["valve", "bob-valve"]
-  ],
-  "entity":
-  [
-    ["valve", "bob-valve"]
-  ],
-  "recipe":
-  [
-    ["valve", "bob-valve"]
-  ]
+  "item": [["valve", "bob-valve"]],
+  "entity": [["valve", "bob-valve"]],
+  "recipe": [["valve", "bob-valve"]]
 }

@@ -1,6 +1,5 @@
 {
-  "item":
-  [
+  "item": [
     ["green-inserter", "turbo-inserter"],
     ["green-filter-inserter", "turbo-filter-inserter"],
     ["green-stack-inserter", "turbo-stack-inserter"],
@@ -13,8 +12,7 @@
     ["purple-underground-belt", "ultimate-underground-belt"],
     ["purple-splitter", "ultimate-splitter"]
   ],
-  "entity":
-  [
+  "entity": [
     ["green-inserter", "turbo-inserter"],
     ["green-filter-inserter", "turbo-filter-inserter"],
     ["green-stack-inserter", "turbo-stack-inserter"],
@@ -27,8 +25,7 @@
     ["purple-underground-belt", "ultimate-underground-belt"],
     ["purple-splitter", "ultimate-splitter"]
   ],
-  "recipe":
-  [
+  "recipe": [
     ["green-inserter", "turbo-inserter"],
     ["green-filter-inserter", "turbo-filter-inserter"],
     ["green-stack-inserter", "turbo-stack-inserter"],

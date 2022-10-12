@@ -1,14 +1,5 @@
 {
-  "recipe":
-  [
-    ["large-accumulator", "accumulator"]
-  ],
-  "entity":
-  [
-    ["large-accumulator", "accumulator"]
-  ],
-  "item":
-  [
-    ["large-accumulator", "accumulator"]
-  ]
+  "recipe": [["large-accumulator", "accumulator"]],
+  "entity": [["large-accumulator", "accumulator"]],
+  "item": [["large-accumulator", "accumulator"]]
 }

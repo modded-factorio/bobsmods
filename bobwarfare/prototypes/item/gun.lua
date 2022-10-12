@@ -1,374 +1,299 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
-data:extend(
-{
-  {
-    type = "gun",
-    name = "rifle",
-    icon = "__bobwarfare__/graphics/icons/rifle.png",
-    icon_size = 32,
-    subgroup = "gun",
-    order = "a[basic-clips]-c[rifle]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "bullet",
-      cooldown = 30,
-      movement_slow_down_factor = 0.5,
-      projectile_creation_distance = 0.6,
-      range = 20,
-      damage_modifier = 7,--7.5
-      sound = sounds.heavy_gunshot,
-      shell_particle =
-      {
-        name = "shell-particle",
-        direction_deviation = 0.1,
-        speed = 0.1,
-        speed_deviation = 0.03,
-        center = {0, 0.6},
-        creation_distance = 0.6,
-        starting_frame_speed = 0.4,
-        starting_frame_speed_deviation = 0.1
-      },
-    },
-  },
-
-  {
-    type = "gun",
-    name = "sniper-rifle",
-    icon = "__bobwarfare__/graphics/icons/sniper-rifle.png",
-    icon_size = 32,
-    subgroup = "gun",
-    order = "a[basic-clips]-d[sniper-rifle]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "bullet",
-      cooldown = 120,
-      movement_slow_down_factor = 0.75,
-      projectile_creation_distance = 0.6,
-      range = 30,--60
-      damage_modifier = 25,--30
-      sound = sounds.heavy_gunshot,
-      shell_particle =
-      {
-        name = "shell-particle",
-        direction_deviation = 0.1,
-        speed = 0.1,
-        speed_deviation = 0.03,
-        center = {0, 0.6},
-        creation_distance = 0.6,
-        starting_frame_speed = 0.4,
-        starting_frame_speed_deviation = 0.1
-      },
-    },
-  },
-
-  {
-    type = "gun",
-    name = "laser-rifle",
-    icon = "__bobwarfare__/graphics/icons/laser-rifle.png",
-    icon_size = 32,
-    subgroup = "gun",
-    order = "b[laser-rifle]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "beam",
-      ammo_category = "laser-rifle",
-      cooldown = 20,
-      movement_slow_down_factor = 0.5,
-      damage_modifier = 1.2,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 20,
-    },
-  },
-}
-)
-
+data:extend({{ --7.5 --60 --30
+  type = "gun",
+  name = "rifle",
+  icon = "__bobwarfare__/graphics/icons/rifle.png",
+  icon_size = 32,
+  subgroup = "gun",
+  order = "a[basic-clips]-c[rifle]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "bullet",
+    cooldown = 30,
+    movement_slow_down_factor = 0.5,
+    projectile_creation_distance = 0.6,
+    range = 20,
+    damage_modifier = 7,
+    sound = sounds.heavy_gunshot,
+    shell_particle = {
+      name = "shell-particle",
+      direction_deviation = 0.1,
+      speed = 0.1,
+      speed_deviation = 0.03,
+      center = {0, 0.6},
+      creation_distance = 0.6,
+      starting_frame_speed = 0.4,
+      starting_frame_speed_deviation = 0.1
+    }
+  }
+}, {
+  type = "gun",
+  name = "sniper-rifle",
+  icon = "__bobwarfare__/graphics/icons/sniper-rifle.png",
+  icon_size = 32,
+  subgroup = "gun",
+  order = "a[basic-clips]-d[sniper-rifle]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "bullet",
+    cooldown = 120,
+    movement_slow_down_factor = 0.75,
+    projectile_creation_distance = 0.6,
+    range = 30,
+    damage_modifier = 25,
+    sound = sounds.heavy_gunshot,
+    shell_particle = {
+      name = "shell-particle",
+      direction_deviation = 0.1,
+      speed = 0.1,
+      speed_deviation = 0.03,
+      center = {0, 0.6},
+      creation_distance = 0.6,
+      starting_frame_speed = 0.4,
+      starting_frame_speed_deviation = 0.1
+    }
+  }
+}, {
+  type = "gun",
+  name = "laser-rifle",
+  icon = "__bobwarfare__/graphics/icons/laser-rifle.png",
+  icon_size = 32,
+  subgroup = "gun",
+  order = "b[laser-rifle]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "beam",
+    ammo_category = "laser-rifle",
+    cooldown = 20,
+    movement_slow_down_factor = 0.5,
+    damage_modifier = 1.2,
+    projectile_center = {0, 0},
+    projectile_creation_distance = 0.6,
+    range = 20
+  }
+}})
 
 --tank weapons
-data:extend(
-{
-  {
-    type = "gun",
-    name = "gatling-gun",
-    icon = "__bobwarfare__/graphics/icons/gatling-gun.png",
-    icon_size = 32,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "a[basic-clips]-e[gatling-gun]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "bullet",
-      cooldown = 2,
-      movement_slow_down_factor = 0.8,
-      projectile_center = {-0.15625, -0.07812},
-      projectile_creation_distance = 1,
-      range = 20,
-      damage_modifier = 1.5,
-      sound = sounds.heavy_gunshot,
-      shell_particle =
-      {
-        name = "shell-particle",
-        direction_deviation = 0.1,
-        speed = 0.1,
-        speed_deviation = 0.03,
-        center = {0, 0},
-        creation_distance = -0.6875,
-        starting_frame_speed = 0.4,
-        starting_frame_speed_deviation = 0.1
-      },
-    },
+data:extend({{ --90
+  type = "gun",
+  name = "gatling-gun",
+  icon = "__bobwarfare__/graphics/icons/gatling-gun.png",
+  icon_size = 32,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "a[basic-clips]-e[gatling-gun]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "bullet",
+    cooldown = 2,
+    movement_slow_down_factor = 0.8,
+    projectile_center = {-0.15625, -0.07812},
+    projectile_creation_distance = 1,
+    range = 20,
+    damage_modifier = 1.5,
+    sound = sounds.heavy_gunshot,
+    shell_particle = {
+      name = "shell-particle",
+      direction_deviation = 0.1,
+      speed = 0.1,
+      speed_deviation = 0.03,
+      center = {0, 0},
+      creation_distance = -0.6875,
+      starting_frame_speed = 0.4,
+      starting_frame_speed_deviation = 0.1
+    }
+  }
+}, {
+  type = "gun",
+  name = "tank-cannon-2",
+  icon = "__base__/graphics/icons/tank-cannon.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "z[tank]-a[cannon-2]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "cannon-shell",
+    cooldown = 60,
+    movement_slow_down_factor = 0,
+    projectile_creation_distance = 1.6,
+    projectile_center = {-0.15625, -0.07812},
+    range = 25,
+    damage_modifier = 1.5,
+    sound = {{
+      filename = "__base__/sound/fight/tank-cannon.ogg",
+      volume = 0.7
+    }}
+  }
+}, {
+  type = "gun",
+  name = "tank-cannon-3",
+  icon = "__base__/graphics/icons/tank-cannon.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "z[tank]-a[cannon-3]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "cannon-shell",
+    cooldown = 30,
+    movement_slow_down_factor = 0,
+    projectile_creation_distance = 1.6,
+    projectile_center = {-0.15625, -0.07812},
+    range = 25,
+    damage_modifier = 2,
+    sound = {{
+      filename = "__base__/sound/fight/tank-cannon.ogg",
+      volume = 0.7
+    }}
+  }
+}, {
+  type = "gun",
+  name = "tank-artillery-1",
+  icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
+  icon_size = 32,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "z[tank]-b[artillery-1]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "artillery-shell",
+    cooldown = 225,
+    movement_slow_down_factor = 0,
+    projectile_creation_distance = 1.6,
+    projectile_center = {-0.15625, -0.07812},
+    range = 96,
+    min_range = 15,
+    sound = {{
+      filename = "__base__/sound/fight/tank-cannon.ogg",
+      volume = 0.7
+    }}
+  }
+}, {
+  type = "gun",
+  name = "tank-artillery-2",
+  icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
+  icon_size = 32,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "z[tank]-b[artillery-2]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "projectile",
+    ammo_category = "artillery-shell",
+    cooldown = 200,
+    movement_slow_down_factor = 0,
+    projectile_creation_distance = 1.6,
+    projectile_center = {-0.15625, -0.07812},
+    range = 128,
+    min_range = 15,
+    damage_modifier = 1.5,
+    sound = {{
+      filename = "__base__/sound/fight/tank-cannon.ogg",
+      volume = 0.7
+    }}
+  }
+}, {
+  type = "gun",
+  name = "tank-laser",
+  icon = "__bobwarfare__/graphics/icons/tank-laser.png",
+  icon_size = 32,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "z[tank]-c[laser]",
+  stack_size = 5,
+  attack_parameters = {
+    type = "beam",
+    ammo_category = "laser-rifle",
+    cooldown = 20,
+    movement_slow_down_factor = 0,
+    damage_modifier = 2,
+    projectile_creation_distance = 1.6,
+    projectile_center = {-0.15625, -0.07812},
+    range = 25
+  }
+}, {
+  type = "gun",
+  name = "tank-flamethrower-2",
+  localised_name = {"item-name.tank-flamethrower"},
+  icon = "__base__/graphics/icons/flamethrower.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "b[flamethrower]-b[tank-flamethrower]2",
+  attack_parameters = {
+    type = "stream",
+    ammo_category = "flamethrower",
+    cooldown = 1,
+    projectile_creation_distance = 0.6,
+    gun_barrel_length = 1.4,
+    gun_center_shift = {-0.17, -1.15},
+    range = 11,
+    damage_modifier = 1.2,
+    min_range = 3,
+    cyclic_sound = {
+      begin_sound = {{
+        filename = "__base__/sound/fight/flamethrower-start.ogg",
+        volume = 1
+      }},
+      middle_sound = {{
+        filename = "__base__/sound/fight/flamethrower-mid.ogg",
+        volume = 1
+      }},
+      end_sound = {{
+        filename = "__base__/sound/fight/flamethrower-end.ogg",
+        volume = 1
+      }}
+    }
   },
-
-
-  {
-    type = "gun",
-    name = "tank-cannon-2",
-    icon = "__base__/graphics/icons/tank-cannon.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "z[tank]-a[cannon-2]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "cannon-shell",
-      cooldown = 60, --90
-      movement_slow_down_factor = 0,
-      projectile_creation_distance = 1.6,
-      projectile_center = {-0.15625, -0.07812},
-      range = 25,
-      damage_modifier = 1.5,
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7
-        }
-      }
-    },
+  stack_size = 1
+}, {
+  type = "gun",
+  name = "tank-flamethrower-3",
+  icon = "__base__/graphics/icons/flamethrower.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
+  localised_name = {"item-name.tank-flamethrower"},
+  flags = {"hidden"},
+  subgroup = "gun",
+  order = "b[flamethrower]-b[tank-flamethrower]3",
+  attack_parameters = {
+    type = "stream",
+    ammo_category = "flamethrower",
+    cooldown = 1,
+    projectile_creation_distance = 0.6,
+    gun_barrel_length = 1.4,
+    gun_center_shift = {-0.17, -1.15},
+    range = 13,
+    damage_modifier = 1.5,
+    min_range = 3,
+    cyclic_sound = {
+      begin_sound = {{
+        filename = "__base__/sound/fight/flamethrower-start.ogg",
+        volume = 1
+      }},
+      middle_sound = {{
+        filename = "__base__/sound/fight/flamethrower-mid.ogg",
+        volume = 1
+      }},
+      end_sound = {{
+        filename = "__base__/sound/fight/flamethrower-end.ogg",
+        volume = 1
+      }}
+    }
   },
-
-  {
-    type = "gun",
-    name = "tank-cannon-3",
-    icon = "__base__/graphics/icons/tank-cannon.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "z[tank]-a[cannon-3]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "cannon-shell",
-      cooldown = 30,
-      movement_slow_down_factor = 0,
-      projectile_creation_distance = 1.6,
-      projectile_center = {-0.15625, -0.07812},
-      range = 25,
-      damage_modifier = 2,
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7
-        }
-      }
-    },
-  },
-
-
-  {
-    type = "gun",
-    name = "tank-artillery-1",
-    icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
-    icon_size = 32,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "z[tank]-b[artillery-1]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "artillery-shell",
-      cooldown = 225,
-      movement_slow_down_factor = 0,
-      projectile_creation_distance = 1.6,
-      projectile_center = {-0.15625, -0.07812},
-      range = 96,
-      min_range = 15,
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7
-        }
-      }
-    },
-  },
-
-  {
-    type = "gun",
-    name = "tank-artillery-2",
-    icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
-    icon_size = 32,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "z[tank]-b[artillery-2]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "artillery-shell",
-      cooldown = 200,
-      movement_slow_down_factor = 0,
-      projectile_creation_distance = 1.6,
-      projectile_center = {-0.15625, -0.07812},
-      range = 128,
-      min_range = 15,
-      damage_modifier = 1.5,
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7
-        }
-      }
-    },
-  },
-
-  {
-    type = "gun",
-    name = "tank-laser",
-    icon = "__bobwarfare__/graphics/icons/tank-laser.png",
-    icon_size = 32,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "z[tank]-c[laser]",
-    stack_size = 5,
-    attack_parameters =
-    {
-      type = "beam",
-      ammo_category = "laser-rifle",
-      cooldown = 20,
-      movement_slow_down_factor = 0,
-      damage_modifier = 2,
-      projectile_creation_distance = 1.6,
-      projectile_center = {-0.15625, -0.07812},
-      range = 25,
-    },
-  },
-
-  {
-    type = "gun",
-    name = "tank-flamethrower-2",
-    localised_name = {"item-name.tank-flamethrower"},
-    icon = "__base__/graphics/icons/flamethrower.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "b[flamethrower]-b[tank-flamethrower]2",
-    attack_parameters =
-    {
-      type = "stream",
-      ammo_category = "flamethrower",
-      cooldown = 1,
-      projectile_creation_distance = 0.6,
-      gun_barrel_length = 1.4,
-      gun_center_shift = { -0.17, -1.15 },
-      range = 11,
-      damage_modifier = 1.2,
-      min_range = 3,
-      cyclic_sound =
-      {
-        begin_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-start.ogg",
-            volume = 1
-          }
-        },
-        middle_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-mid.ogg",
-            volume = 1
-          }
-        },
-        end_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-end.ogg",
-            volume = 1
-          }
-        }
-      }
-    },
-    stack_size = 1
-  },
-  {
-    type = "gun",
-    name = "tank-flamethrower-3",
-    icon = "__base__/graphics/icons/flamethrower.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    localised_name = {"item-name.tank-flamethrower"},
-    flags = {"hidden"},
-    subgroup = "gun",
-    order = "b[flamethrower]-b[tank-flamethrower]3",
-    attack_parameters =
-    {
-      type = "stream",
-      ammo_category = "flamethrower",
-      cooldown = 1,
-      projectile_creation_distance = 0.6,
-      gun_barrel_length = 1.4,
-      gun_center_shift = { -0.17, -1.15 },
-      range = 13,
-      damage_modifier = 1.5,
-      min_range = 3,
-      cyclic_sound =
-      {
-        begin_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-start.ogg",
-            volume = 1
-          }
-        },
-        middle_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-mid.ogg",
-            volume = 1
-          }
-        },
-        end_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-end.ogg",
-            volume = 1
-          }
-        }
-      }
-    },
-    stack_size = 1
-  },
-}
-)
-
+  stack_size = 1
+}})
 
 local weapon = util.table.deepcopy(data.raw.gun["artillery-wagon-cannon"])
 
@@ -379,7 +304,6 @@ weapon.attack_parameters.damage_modifier = 1.3
 
 data:extend({weapon})
 
-
 weapon = util.table.deepcopy(data.raw.gun["artillery-wagon-cannon"])
 
 weapon.name = "bob-artillery-wagon-cannon-3"
@@ -388,7 +312,3 @@ weapon.attack_parameters.range = 9 * 32
 weapon.attack_parameters.damage_modifier = 1.6
 
 data:extend({weapon})
-
-
-
-

@@ -1,35 +1,41 @@
-if not bobmods.lib.item then bobmods.lib.item = {} end
+if not bobmods.lib.item then
+  bobmods.lib.item = {}
+end
 
-
-function bobmods.lib.item.get_type(name) --returns actual item type
+function bobmods.lib.item.get_type(
+name --returns actual item type
+)
   local item_type = nil
   if type(name) == "string" then
-    local item_types = {
-      "ammo",
-      "armor",
-      "capsule",
-      "fluid",
-      "gun",
-      "item",
-      "mining-tool",
-      "repair-tool",
-      "module",
-      "tool",
-      "item-with-entity-data",
-      "rail-planner",
-      "item-with-label",
-      "item-with-inventory",
-      "blueprint-book",
-      "item-with-tags",
-      "selection-tool",
-      "blueprint",
-      "copy-paste-tool",
-      "deconstruction-item",
-      "upgrade-item",
-      "spidertron-remote"
-    }
+    local item_types =
+      {
+        "ammo",
+        "armor",
+        "capsule",
+        "fluid",
+        "gun",
+        "item",
+        "mining-tool",
+        "repair-tool",
+        "module",
+        "tool",
+        "item-with-entity-data",
+        "rail-planner",
+        "item-with-label",
+        "item-with-inventory",
+        "blueprint-book",
+        "item-with-tags",
+        "selection-tool",
+        "blueprint",
+        "copy-paste-tool",
+        "deconstruction-item",
+        "upgrade-item",
+        "spidertron-remote"
+      }
     for i, type_name in pairs(item_types) do
-      if data.raw[type_name][name] then item_type = type_name end
+      if data.raw[type_name][name] then
+        item_type = type_name
+      end
     end
   else
     log("Item name is not a string")
@@ -37,12 +43,9 @@ function bobmods.lib.item.get_type(name) --returns actual item type
   return item_type
 end
 
-
-
-
-
-
-function bobmods.lib.item.get_basic_type(name) --returns fluid for fluid, item for all other types.
+function bobmods.lib.item.get_basic_type(
+name --returns fluid for fluid, item for all other types.
+)
   local item_type = bobmods.lib.item.get_type(name)
   if not (item_type == "fluid" or item_type == nil) then
     item_type = "item"
@@ -50,7 +53,9 @@ function bobmods.lib.item.get_basic_type(name) --returns fluid for fluid, item f
   return item_type
 end
 
-function bobmods.lib.item.get_basic_type_simple(name) --assumes type is item, even if the item doesn't exist
+function bobmods.lib.item.get_basic_type_simple(
+name --assumes type is item, even if the item doesn't exist
+)
   local item_type = "item"
   if data.raw.fluid[name] then
     item_type = "fluid"
@@ -58,8 +63,9 @@ function bobmods.lib.item.get_basic_type_simple(name) --assumes type is item, ev
   return item_type
 end
 
-
-function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item actually exists or not, returns if a valid ingredient structure can be determined.
+function bobmods.lib.item.ingredient_simple(
+inputs --doesn't care if the item actually exists or not, returns if a valid ingredient structure can be determined.
+)
   local item = {}
 
   if type(inputs) == "table" then
@@ -105,11 +111,9 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
     item.type = bobmods.lib.item.get_basic_type_simple(item.name)
     item.amount = 1
   end
-  if
-    type(item.name) == "string" and
-    type(item.amount) == "number" and
-    (item.type == "item" or item.type == "fluid")
-  then
+  if type(item.name) == "string" and type(
+    item.amount
+  ) == "number" and (item.type == "item" or item.type == "fluid") then
     return item
   else
     log(debug.traceback())
@@ -118,13 +122,12 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
   end
 end
 
-
-function bobmods.lib.item.ingredient(inputs) --returns a valid ingredient only if the item exists.
+function bobmods.lib.item.ingredient(
+inputs --returns a valid ingredient only if the item exists.
+)
   local item = bobmods.lib.item.ingredient_simple(inputs)
   if item then
-    if
-      bobmods.lib.item.get_type(item.name)
-    then
+    if bobmods.lib.item.get_type(item.name) then
       return item
     else
       log(debug.traceback())
@@ -136,12 +139,14 @@ function bobmods.lib.item.ingredient(inputs) --returns a valid ingredient only i
   end
 end
 
-function bobmods.lib.item.basic_item(inputs) --old name
+function bobmods.lib.item.basic_item(
+inputs --old name
+)
   return bobmods.lib.item.ingredient(inputs)
 end
 
- --Same as ingredient, but has support for amount_min, amount_max and probability
- function bobmods.lib.item.result_simple(inputs)
+--Same as ingredient, but has support for amount_min, amount_max and probability
+function bobmods.lib.item.result_simple(inputs)
   local item = {}
 
   if type(inputs) == "table" then
@@ -166,7 +171,9 @@ end
       item.amount = 1
     end
 
-    if inputs.probability then item.probability = inputs.probability end
+    if inputs.probability then
+      item.probability = inputs.probability
+    end
 
     if inputs.type then
       item.type = inputs.type
@@ -203,19 +210,19 @@ end
     if inputs.catalyst_amount then
       item.catalyst_amount = inputs.catalyst_amount
     end
-
   elseif type(inputs) == "string" then
     item.name = inputs
     item.type = bobmods.lib.item.get_basic_type_simple(item.name)
     item.amount = 1
   end
 
-  if
-    type(item.name) == "string" and
-    (type(item.amount) == "number" or (type(item.amount_min) == "number" and type(item.amount_max) == "number")) and
-    (item.probability == nil or type(item.probability) == "number") and
-    (item.type == "item" or item.type == "fluid")
-  then
+  if type(item.name) == "string" and (type(item.amount) == "number" or (type(
+    item.amount_min
+  ) == "number" and type(
+    item.amount_max
+  ) == "number")) and (item.probability == nil or type(
+    item.probability
+  ) == "number") and (item.type == "item" or item.type == "fluid") then
     return item
   else
     log(debug.traceback())
@@ -224,12 +231,12 @@ end
   end
 end
 
-function bobmods.lib.item.result(inputs) --returns a valid result only if the item exists.
+function bobmods.lib.item.result(
+inputs --returns a valid result only if the item exists.
+)
   local item = bobmods.lib.item.result_simple(inputs)
   if item then
-    if
-      bobmods.lib.item.get_type(item.name)
-    then
+    if bobmods.lib.item.get_type(item.name) then
       return item
     else
       log(debug.traceback())
@@ -241,10 +248,11 @@ function bobmods.lib.item.result(inputs) --returns a valid result only if the it
   end
 end
 
-function bobmods.lib.item.item(inputs) -- old name
+function bobmods.lib.item.item(
+inputs -- old name
+)
   return bobmods.lib.item.result(inputs)
 end
-
 
 function bobmods.lib.item.combine(item1_in, item2_in)
   local item = {}
@@ -292,8 +300,10 @@ function bobmods.lib.item.combine(item1_in, item2_in)
   end
 end
 
-
-function bobmods.lib.item.add(list, item_in) --increments amount if exists
+function bobmods.lib.item.add(
+list,
+  item_in --increments amount if exists
+)
   local item = bobmods.lib.item.result(item_in)
   if type(list) == "table" and item then
     local addit = true
@@ -303,19 +313,28 @@ function bobmods.lib.item.add(list, item_in) --increments amount if exists
         list[i] = bobmods.lib.item.combine(object, item)
       end
     end
-    if addit then table.insert(list, item) end
+    if addit then
+      table.insert(list, item)
+    end
   end
 end
 
-function bobmods.lib.item.add_new(list, item_in) --ignores if exists
+function bobmods.lib.item.add_new(
+list,
+  item_in --ignores if exists
+)
   local item = bobmods.lib.item.result(item_in)
   if type(list) == "table" and item then
     local addit = true
     for i, object in pairs(list) do
       local basic_object = bobmods.lib.item.result(object)
-      if basic_object and item.name == basic_object.name then addit = false end
+      if basic_object and item.name == basic_object.name then
+        addit = false
+      end
     end
-    if addit then table.insert(list, item) end
+    if addit then
+      table.insert(list, item)
+    end
   end
 end
 
@@ -342,7 +361,9 @@ function bobmods.lib.item.set(list, item_in)
         addit = false
       end
     end
-    if addit then table.insert(list, item) end
+    if addit then
+      table.insert(list, item)
+    end
   end
 end
 

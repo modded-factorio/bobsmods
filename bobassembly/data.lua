@@ -1,5 +1,9 @@
-if not bobmods then bobmods = {} end
-if not bobmods.assembly then bobmods.assembly = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.assembly then
+  bobmods.assembly = {}
+end
 
 require("prototypes.assembly")
 require("prototypes.assembly-electronics")

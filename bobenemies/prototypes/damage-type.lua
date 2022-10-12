@@ -1,12 +1,7 @@
-data:extend(
-{
-  {
-    type = "damage-type",
-    name = "bob-pierce"
-  },
-  {
-    type = "damage-type",
-    name = "plasma"
-  },
-}
-)
+data:extend({{
+  type = "damage-type",
+  name = "bob-pierce"
+}, {
+  type = "damage-type",
+  name = "plasma"
+}})

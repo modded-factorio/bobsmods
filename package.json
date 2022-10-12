@@ -1,0 +1,13 @@
+{
+  "name": "formatting",
+  "description": "package.json used to define formatting via prettier",
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,json,lua}\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prettier/plugin-lua": "github:prettier/plugin-lua",
+    "prettier": "^2.7.1"
+  }
+}

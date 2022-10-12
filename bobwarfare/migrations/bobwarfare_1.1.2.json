@@ -1,7 +1,3 @@
 {
-  "technology":
-  [
-    ["combat-robotics-4", "bob-laser-robot"]
-  ]
+  "technology": [["combat-robotics-4", "bob-laser-robot"]]
 }
-

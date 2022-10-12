@@ -1,20 +1,17 @@
 {
-  "item":
-  [
+  "item": [
     ["player", "character"],
     ["bob-player-miner", "bob-character-miner"],
     ["bob-player-fighter", "bob-character-fighter"],
     ["bob-player-builder", "bob-character-builder"]
   ],
-  "entity":
-  [
+  "entity": [
     ["player", "character"],
     ["bob-player-miner", "bob-character-miner"],
     ["bob-player-fighter", "bob-character-fighter"],
     ["bob-player-builder", "bob-character-builder"]
   ],
-  "recipe":
-  [
+  "recipe": [
     ["player", "character"],
     ["bob-player-miner", "bob-character-miner"],
     ["bob-player-fighter", "bob-character-fighter"],
