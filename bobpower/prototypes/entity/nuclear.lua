@@ -41,16 +41,16 @@ data:extend({util.merge{data.raw.reactor["nuclear-reactor"],
     lower_layer_picture =
     {
       filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes-2.png",
-      width = 160,
-      height = 160,
-      shift = { -0.03125, -0.1875 },
+      width = 156,
+      height = 156,
+      shift = { -0.0625, -0.125 },
       hr_version =
       {
         filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-pipes-2.png",
         width = 320,
-        height = 320,
+        height = 316,
         scale = 0.5,
-        shift = { -0.03125, -0.1875 }
+        shift = { -0.03125, -0.15625 }
       }
     },
     connection_patches_connected =
@@ -112,16 +112,16 @@ data:extend({util.merge{data.raw.reactor["nuclear-reactor"],
     lower_layer_picture =
     {
       filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes-3.png",
-      width = 160,
-      height = 160,
-      shift = { -0.03125, -0.1875 },
+      width = 156,
+      height = 156,
+      shift = { -0.0625, -0.125 },
       hr_version =
       {
         filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-pipes-3.png",
         width = 320,
-        height = 320,
+        height = 316,
         scale = 0.5,
-        shift = { -0.03125, -0.1875 }
+        shift = { -0.03125, -0.15625 }
       }
     },
     connection_patches_connected =
