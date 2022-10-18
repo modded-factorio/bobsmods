@@ -3,9 +3,19 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 if settings.startup["bobmods-power-accumulators"].value == true then
 
-
-data.raw["accumulator"]["accumulator"].fast_replaceable_group = "accumulator"
-data.raw["accumulator"]["accumulator"].next_upgrade = "large-accumulator"
+local accumulator = data.raw["accumulator"]["accumulator"]
+accumulator.fast_replaceable_group = "accumulator"
+accumulator.next_upgrade = "large-accumulator-2"
+accumulator.energy_source =
+  {
+    type = "electric",
+    buffer_capacity = "10MJ",
+    usage_priority = "tertiary",
+    input_flow_limit = "600kW",
+    output_flow_limit = "600kW"
+  }
+accumulator.localised_name = {"entity-name.large-accumulator"}
+accumulator.localised_description = {"entity-description.large-accumulator"}
 
 function bobmods.power.large_accumulator_picture(tint, repeat_count)
   return
@@ -129,67 +139,12 @@ data:extend(
 {
   {
     type = "accumulator",
-    name = "large-accumulator",
-    icon = "__base__/graphics/icons/accumulator.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "large-accumulator"},
-    max_health = 150,
-    corpse = "accumulator-remnants",
-    dying_explosion = "accumulator-explosion",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
---    damaged_trigger_effect = hit_effects.entity(),
-    drawing_box = {{-1, -1.5}, {1, 1}},
-    energy_source =
-    {
-      type = "electric",
-      buffer_capacity = "10MJ",
-      usage_priority = "tertiary",
-      input_flow_limit = "600kW",
-      output_flow_limit = "600kW"
-    },
-    picture = bobmods.power.large_accumulator_picture(),
-    charge_animation = bobmods.power.large_accumulator_charge(),
-    water_reflection = accumulator_reflection(),
-    charge_cooldown = 30,
-    charge_light = {intensity = 0.3, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
-    discharge_animation = bobmods.power.large_accumulator_discharge(),
-    discharge_cooldown = 60,
-    discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
-    vehicle_impact_sound = sounds.generic_impact,
-    working_sound =
-    {
-      sound =
-      {
-        filename = "__base__/sound/accumulator-working.ogg",
-        volume = 1
-      },
-      idle_sound = {
-        filename = "__base__/sound/accumulator-idle.ogg",
-        volume = 0.4
-      },
-      max_sounds_per_type = 3,
-      fade_in_ticks = 10,
-      fade_out_ticks = 30
-    },
-    fast_replaceable_group = "accumulator",
-    next_upgrade = "large-accumulator-2",
-    circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-    circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
-    circuit_wire_max_distance = 7.5,
-    default_output_signal = {type = "virtual", name = "signal-A"}
-  },
-
-  {
-    type = "accumulator",
     name = "fast-accumulator",
     icon = "__base__/graphics/icons/accumulator.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "fast-accumulator"},
+    minable = {mining_time = 0.5, result = "fast-accumulator"},
     max_health = 150,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -214,6 +169,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -233,7 +190,7 @@ data:extend(
     next_upgrade = "fast-accumulator-2",
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
     circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
-    circuit_wire_max_distance = 7.5,
+    circuit_wire_max_distance = 9,
     default_output_signal = {type = "virtual", name = "signal-A"}
   },
 
@@ -244,7 +201,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "slow-accumulator"},
+    minable = {mining_time = 0.5, result = "slow-accumulator"},
     max_health = 150,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -269,6 +226,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -288,7 +247,7 @@ data:extend(
     next_upgrade = "slow-accumulator-2",
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
     circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
-    circuit_wire_max_distance = 7.5,
+    circuit_wire_max_distance = 9,
     default_output_signal = {type = "virtual", name = "signal-A"}
   },
 
@@ -300,7 +259,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "large-accumulator-2"},
+    minable = {mining_time = 0.5, result = "large-accumulator-2"},
     max_health = 250,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -325,6 +284,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -355,7 +316,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "fast-accumulator-2"},
+    minable = {mining_time = 0.5, result = "fast-accumulator-2"},
     max_health = 250,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -380,6 +341,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -410,7 +373,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "slow-accumulator-2"},
+    minable = {mining_time = 0.5, result = "slow-accumulator-2"},
     max_health = 250,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -435,6 +398,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -466,7 +431,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "large-accumulator-3"},
+    minable = {mining_time = 0.5, result = "large-accumulator-3"},
     max_health = 350,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -491,6 +456,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -520,7 +487,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "fast-accumulator-3"},
+    minable = {mining_time = 0.5, result = "fast-accumulator-3"},
     max_health = 350,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -545,6 +512,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =
@@ -574,7 +543,7 @@ data:extend(
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "slow-accumulator-3"},
+    minable = {mining_time = 0.5, result = "slow-accumulator-3"},
     max_health = 350,
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
@@ -599,6 +568,8 @@ data:extend(
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     working_sound =
     {
       sound =

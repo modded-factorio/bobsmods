@@ -2,7 +2,7 @@
 Version: 1.1.6
 Date: ???
   Changes:
-    - Added electronics as a prerequisite for green science pack #38
+    - Added electronics as a prerequisite for Logistic science pack #38
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022

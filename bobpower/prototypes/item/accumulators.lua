@@ -1,22 +1,10 @@
 if settings.startup["bobmods-power-accumulators"].value == true then
 
-data.raw["item"]["accumulator"].order="e[accumulator]-a[accumulator]-a-b"
+data.raw["item"]["accumulator"].order="e[accumulator]-a[accumulator]-a-l"
 data.raw["item"]["accumulator"].subgroup = "bob-energy-accumulator"
 
 data:extend(
 {
-  {
-    type = "item",
-    name = "large-accumulator",
-    icon = "__base__/graphics/icons/accumulator.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "bob-energy-accumulator",
-    order = "e[accumulator]-a[accumulator]-a-l",
-    place_result = "large-accumulator",
-    stack_size = 50
-  },
-
   {
     type = "item",
     name = "fast-accumulator",

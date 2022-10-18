@@ -112,6 +112,18 @@ elseif data.raw.item["tungsten-pipe"] then
   bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "tungsten-processing")
 end
 
-
+if mods["Krastorio2"] then
+  for _, pumpjack in pairs({
+    "bob-pumpjack-1",
+    "bob-pumpjack-2",
+    "bob-pumpjack-3",
+    "bob-pumpjack-4"
+  }) do
+    local prototype = data.raw["mining-drill"][pumpjack]
+    if prototype and prototype.resource_categories then
+      table.insert(prototype.resource_categories, "oil")
+    end
+  end
 end
 
+end

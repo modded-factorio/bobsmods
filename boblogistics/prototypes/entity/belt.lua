@@ -41,7 +41,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/black-transport-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-cross-type-while-moving"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "basic-transport-belt"},
+    minable = {mining_time = 0.1, result = "basic-transport-belt"},
     max_health = 140,
     corpse = "small-remnants",
     resistances = 
@@ -80,7 +80,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/black-underground-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "basic-underground-belt"},
+    minable = {mining_time = 0.1, result = "basic-underground-belt"},
     max_health = 140,
     corpse = "small-remnants",
     underground_sprite =
@@ -246,7 +246,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/black-splitter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "basic-splitter"},
+    minable = {mining_time = 0.1, result = "basic-splitter"},
     max_health = 160,
     corpse = "medium-remnants",
     resistances = 
@@ -366,7 +366,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/purple-transport-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-cross-type-while-moving"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "turbo-transport-belt"},
+    minable = {mining_time = 0.1, result = "turbo-transport-belt"},
     max_health = 180,
     corpse = "small-remnants",
     resistances = 
@@ -405,7 +405,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/purple-transport-belt-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "turbo-underground-belt"},
+    minable = {mining_time = 0.1, result = "turbo-underground-belt"},
     max_health = 180,
     corpse = "small-remnants",
     underground_sprite =
@@ -571,7 +571,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/purple-splitter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "turbo-splitter"},
+    minable = {mining_time = 0.1, result = "turbo-splitter"},
     max_health = 200,
     corpse = "medium-remnants",
     resistances = 
@@ -690,7 +690,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/green-transport-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-cross-type-while-moving"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "ultimate-transport-belt"},
+    minable = {mining_time = 0.1, result = "ultimate-transport-belt"},
     max_health = 190,
     corpse = "small-remnants",
     resistances =
@@ -728,7 +728,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/green-transport-belt-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "ultimate-underground-belt"},
+    minable = {mining_time = 0.1, result = "ultimate-underground-belt"},
     max_health = 190,
     corpse = "small-remnants",
     underground_sprite =
@@ -893,7 +893,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/green-splitter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "ultimate-splitter"},
+    minable = {mining_time = 0.1, result = "ultimate-splitter"},
     max_health = 210,
     corpse = "medium-remnants",
     resistances = 
@@ -1072,5 +1072,3 @@ else
   data.raw["underground-belt"]["fast-underground-belt"].max_distance = 10
   data.raw["underground-belt"]["express-underground-belt"].max_distance = 15
 end
-
-

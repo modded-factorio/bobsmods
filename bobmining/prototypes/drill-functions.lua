@@ -36,5 +36,9 @@ function bobmods.mining.electric_mining_drill(inputs)
 
   set_electric_mining_drill_animation_speed(mining_drill, inputs.animation_speed*0.8)
 
+  if mods["Krastorio2"] then
+    mining_drill.fast_replaceable_group = "electric-mining-drill"
+  end
+
   return mining_drill
 end

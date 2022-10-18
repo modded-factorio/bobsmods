@@ -26,14 +26,14 @@ local function bob_electrolyser_fluid_boxes()
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {-1, -2} }}
+      pipe_connections = {{type = "input", position = {-1, -2}}}
     },
     {
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {1, -2} }}
+      pipe_connections = {{type = "input", position = {1, -2}}}
     },
 --[[
     {
@@ -44,11 +44,11 @@ local function bob_electrolyser_fluid_boxes()
       base_level = -1,
       pipe_connections =
       {
-        { type="input-output", position = {-1, -2} },
-        { type="input-output", position = {1, -2} },
+        {type = "input", position = {-1, -2}},
+        {type = "input", position = {1, -2}},
 
-        { type="input-output", position = {-2, -1} },
-        { type="input-output", position = {2, -1} },
+        {type = "input", position = {-2, -1}},
+        {type = "input", position = {2, -1}}
       }
     },
 ]]--
@@ -56,13 +56,13 @@ local function bob_electrolyser_fluid_boxes()
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       base_level = 1,
-      pipe_connections = {{ position = {-1, 2} }}
+      pipe_connections = {{type = "output", position = {-1, 2}}}
     },
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       base_level = 1,
-      pipe_connections = {{ position = {1, 2} }}
+      pipe_connections = {{type = "output", position = {1, 2}}}
     }
   }
 end
@@ -289,7 +289,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/electrolyser-2.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electrolyser-2"},
+    minable = {mining_time = 0.5, result = "electrolyser-2"},
     fast_replaceable_group = "electrolyser",
     next_upgrade = "electrolyser-3",
     corpse = "big-remnants",
@@ -321,7 +321,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/electrolyser-3.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electrolyser-3"},
+    minable = {mining_time = 0.5, result = "electrolyser-3"},
     fast_replaceable_group = "electrolyser",
     next_upgrade = "electrolyser-4",
     corpse = "big-remnants",
@@ -353,7 +353,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/electrolyser-4.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electrolyser-4"},
+    minable = {mining_time = 0.5, result = "electrolyser-4"},
     fast_replaceable_group = "electrolyser",
     next_upgrade = "electrolyser-5",
     corpse = "big-remnants",

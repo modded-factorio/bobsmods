@@ -166,7 +166,6 @@ data:extend(
       "chemical-science-pack",
       "military-science-pack",
       "production-science-pack",
-      "advanced-logistic-science-pack",
       "utility-science-pack",
       "space-science-pack"
     },

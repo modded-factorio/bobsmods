@@ -32,8 +32,16 @@ if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.tech.add_prerequisite("advanced-material-processing-4", "advanced-electronics-3")
 end
 
-
+if mods["space-exploration"] then
+  for _, furnace in pairs({
+    "electric-furnace-2",
+    "electric-furnace-3"
+  }) do
+    local prototype = data.raw["furnace"][furnace]
+    if prototype and prototype.crafting_categories then
+      table.insert(prototype.crafting_categories, "kiln")
+    end
+  end
 end
 
-
-
+end

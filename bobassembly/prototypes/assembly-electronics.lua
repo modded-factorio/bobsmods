@@ -36,7 +36,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/electronics-machine-1.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electronics-machine-1"},
+    minable = {mining_time = 0.5, result = "electronics-machine-1"},
     max_health = 250,
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
@@ -210,7 +210,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/electronics-machine-2.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electronics-machine-2"},
+    minable = {mining_time = 0.5, result = "electronics-machine-2"},
     max_health = 350,
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
@@ -229,7 +229,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0.5, -1.5} }}
+        pipe_connections = {{type = "input", position = {0.5, -1.5}}}
       },
       off_when_no_fluid_recipe = true
     },
@@ -398,7 +398,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/electronics-machine-3.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electronics-machine-3"},
+    minable = {mining_time = 0.5, result = "electronics-machine-3"},
     max_health = 450,
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
@@ -417,7 +417,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0.5, -1.5} }}
+        pipe_connections = {{type = "input", position = {0.5, -1.5}}}
       },
       off_when_no_fluid_recipe = true
     },

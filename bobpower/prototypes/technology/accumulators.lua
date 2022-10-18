@@ -5,43 +5,8 @@ data:extend(
   {
     type = "technology",
     name = "bob-electric-energy-accumulators-2",
-    icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-    icon_size = 256,
-    icon_mipmaps = 4,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "large-accumulator"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "fast-accumulator"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slow-accumulator"
-      }
-    },
-    prerequisites =
-    {
-    },
-    unit =
-    {
-      count = 150,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1}
-      },
-      time = 30
-    },
-    order = "c-e-a-2",
-  },
-
-  {
-    type = "technology",
-    name = "bob-electric-energy-accumulators-3",
+    localised_name = {"", {"technology-name.electric-energy-accumulators-1"}, " 2"},
+    localised_description = {"technology-description.electric-energy-accumulators"},
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     icon_size = 256,
     icon_mipmaps = 4,
@@ -58,11 +23,11 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "slow-accumulator-2"
-      },
+      }
     },
     prerequisites =
     {
-      "bob-electric-energy-accumulators-2",
+      "electric-energy-accumulators",
       "advanced-electronics",
       "chemical-science-pack"
     },
@@ -77,12 +42,14 @@ data:extend(
       },
       time = 30
     },
-    order = "c-e-a-3",
+    order = "c-e-a-2",
   },
 
   {
     type = "technology",
-    name = "bob-electric-energy-accumulators-4",
+    name = "bob-electric-energy-accumulators-3",
+    localised_name = {"", {"technology-name.electric-energy-accumulators-1"}, " 3"},
+    localised_description = {"technology-description.electric-energy-accumulators"},
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     icon_size = 256,
     icon_mipmaps = 4,
@@ -99,11 +66,11 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "slow-accumulator-3"
-      },
+      }
     },
     prerequisites =
     {
-      "bob-electric-energy-accumulators-3",
+      "bob-electric-energy-accumulators-2",
       "advanced-electronics-2",
       "production-science-pack"
     },
@@ -115,20 +82,13 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+        {"production-science-pack", 1}
       },
       time = 30
     },
-    order = "c-e-a-4",
-  },
+    order = "c-e-a-3",
+  }
 }
 )
-
-if data.raw.technology["electric-energy-accumulators-1"] then
-  bobmods.lib.tech.add_prerequisite ("bob-electric-energy-accumulators-2", "electric-energy-accumulators-1")
-else
-  bobmods.lib.tech.add_prerequisite ("bob-electric-energy-accumulators-2", "electric-energy-accumulators")
-end
-
 
 end

@@ -64,10 +64,12 @@ else
 
   if data.raw.item["titanium-plate"] then
     bobmods.lib.recipe.add_ingredient("destroyer-robot", {"titanium-plate", 1})
+    bobmods.lib.tech.add_prerequisite("destroyer", "titanium-processing")
   else
     bobmods.lib.recipe.add_ingredient("destroyer-robot", {"steel-plate", 1})
   end
   bobmods.lib.recipe.add_ingredient("destroyer-robot", {"processing-unit", 1})
+  bobmods.lib.tech.add_prerequisite("destroyer", "advanced-electronics-2")
   if data.raw.item["titanium-gear-wheel"] then
     bobmods.lib.recipe.add_ingredient("destroyer-robot", {"titanium-gear-wheel", 3})
   else
@@ -76,11 +78,13 @@ else
 
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.recipe.add_ingredient("bob-laser-robot", {"silicon-nitride", 1})
+    bobmods.lib.tech.add_prerequisite("bob-laser-robot", "ceramics")
   else
     bobmods.lib.recipe.add_ingredient("bob-laser-robot", {"steel-plate", 1})
   end
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.add_ingredient("bob-laser-robot", {"advanced-processing-unit", 1})
+    bobmods.lib.tech.add_prerequisite("bob-laser-robot", "advanced-electronics-3")
   else
     bobmods.lib.recipe.add_ingredient("bob-laser-robot", {"processing-unit", 1})
   end
@@ -289,6 +293,7 @@ if data.raw.recipe["robot-tool-combat-2"] then
   bobmods.lib.recipe.add_ingredient("distractor-robot", {"robot-tool-combat-2", 1})
 else
   bobmods.lib.recipe.add_ingredient("distractor-robot", {"laser-rifle-battery", 1})
+  bobmods.lib.tech.add_prerequisite("distractor", "bob-laser-rifle")
 end
 
 if data.raw.recipe["robot-tool-combat-3"] then
@@ -296,6 +301,7 @@ if data.raw.recipe["robot-tool-combat-3"] then
   bobmods.lib.recipe.add_ingredient("destroyer-robot", {"robot-tool-combat-3", 1})
 else
   bobmods.lib.recipe.add_ingredient("destroyer-robot", {"laser-rifle-battery-emerald", 1})
+  bobmods.lib.tech.add_prerequisite("destroyer", "bob-laser-rifle-ammo-3")
 end
 
 if data.raw.recipe["robot-tool-combat-4"] then
@@ -303,6 +309,7 @@ if data.raw.recipe["robot-tool-combat-4"] then
   bobmods.lib.recipe.add_ingredient("bob-laser-robot", {"robot-tool-combat-4", 1})
 else
   bobmods.lib.recipe.add_ingredient("bob-laser-robot", {"laser-rifle-battery-diamond", 1})
+  bobmods.lib.tech.add_prerequisite("bob-laser-robot", "bob-laser-rifle-ammo-6")
 end
 
 
