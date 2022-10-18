@@ -183,8 +183,10 @@ data:extend(
 data:extend{
   {
     type = "technology",
-    name = "bob-infinite-worker-robots-storage-1",
-    icon = "__base__/graphics/technology/worker-robots-storage.png",
+    name = "bob-infinite-worker-robots-storage-4",
+    localised_name = {"technology-name.worker-robots-storage"},
+    localised_description = {"technology-description.worker-robots-storage"},
+    icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     icon_size = 256,
     icon_mipmaps = 4,
     effects =
@@ -201,7 +203,7 @@ data:extend{
     },
     unit =
     {
-      count_formula = "2^(L-1)*800",
+      count_formula = "2^(L-4)*800",
       time = 60,
       ingredients =
       {

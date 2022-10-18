@@ -3,6 +3,7 @@ Version: 1.1.6
 Date: ???
   Bugfixes:
     - Fixing accidental global variables #50
+    - Fixing Infinite worker robot cargo size tech icon and level #52
     - Machines Showing In/Out Fluidbox arrows #66
   Changes:
     - Added Bigger pipes setting that increases capacity and throughput of higher tier pipes #35
