@@ -31,4 +31,3 @@ if settings.startup["bobmods-tech-colorupdate"].value == true then
   data.raw.technology["utility-science-pack"].icon_size = 256
   data.raw.technology["utility-science-pack"].icon_mipmaps = 4
 end
-

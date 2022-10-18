@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-classes-god-mode",
@@ -24,5 +23,4 @@ data:extend(
     setting_type = "runtime-global",
     default_value = false,
   },
-}
-)
+})

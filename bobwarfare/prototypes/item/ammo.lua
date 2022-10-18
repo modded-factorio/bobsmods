@@ -1,51 +1,40 @@
 local function boblaserammo(catagory, projectile)
   return
-  {
+{
     type = "beam",
     category = catagory,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "beam",
         beam = projectile,
         max_length = 25,
         duration = 20,
-      }
-    }
+      },
+    },
   }
 end
-
-
-
 
 local function bobmissileammo(catagory, projectile)
   return
-  {
+{
     category = catagory,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "projectile",
         projectile = projectile,
         starting_speed = 0.1,
-        source_effects =
-        {
+        source_effects = {
           type = "create-entity",
-          entity_name = "explosion-gunshot"
-        }
-      }
-    }
+          entity_name = "explosion-gunshot",
+        },
+      },
+    },
   }
 end
 
-
-
-data:extend(
-{
+data:extend({
   {
     type = "ammo",
     name = "bullet-magazine",
@@ -55,39 +44,34 @@ data:extend(
     order = "a[basic-clips]-a[bullet-magazine]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         {
           type = "direct",
-          action_delivery =
-          {
+          action_delivery = {
             {
               type = "instant",
-              source_effects =
-              {
+              source_effects = {
                 {
                   type = "create-entity",
-                  entity_name = "explosion-gunshot"
-                }
+                  entity_name = "explosion-gunshot",
+                },
               },
-              target_effects =
-              {
+              target_effects = {
                 {
                   type = "create-entity",
-                  entity_name = "explosion-gunshot"
+                  entity_name = "explosion-gunshot",
                 },
                 {
                   type = "damage",
-                  damage = { amount = 16, type = "physical"}
-                }
-              }
-            }
-          }
-        }
-      }
+                  damage = { amount = 16, type = "physical" },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
 
@@ -100,37 +84,32 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-ap]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
-              type = "create-entity",
-              entity_name = "explosion-gunshot"
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion-gunshot"
+              entity_name = "explosion-gunshot",
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "bob-pierce"}
-            }
-          }
-        }
-      }
+              damage = { amount = 12, type = "bob-pierce" },
+            },
+          },
+        },
+      },
     },
   },
 
@@ -143,55 +122,46 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-he]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
+          source_effects = {
             type = "create-entity",
-            entity_name = "explosion-gunshot"
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion"
+              entity_name = "explosion",
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "nested-result",
-              action =
-              {
+              action = {
                 type = "area",
                 radius = 3,
-                action_delivery =
-                {
+                action_delivery = {
                   type = "instant",
-                  target_effects =
-                  {
+                  target_effects = {
                     {
                       type = "damage",
-                      damage = {amount = 12, type = "explosion"}
+                      damage = { amount = 12, type = "explosion" },
                     },
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
-
 
   {
     type = "ammo",
@@ -202,52 +172,44 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-flame]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
+          source_effects = {
             type = "create-entity",
-            entity_name = "explosion-gunshot"
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion-gunshot"
+              entity_name = "explosion-gunshot",
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "nested-result",
-              action =
-              {
+              action = {
                 type = "area",
                 radius = 3,
-                action_delivery =
-                {
+                action_delivery = {
                   type = "instant",
-                  target_effects =
-                  {
+                  target_effects = {
                     {
                       type = "damage",
-                      damage = {amount = 12, type = "fire"}
+                      damage = { amount = 12, type = "fire" },
                     },
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
 
@@ -260,52 +222,44 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-acid]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
+          source_effects = {
             type = "create-entity",
-            entity_name = "explosion-gunshot"
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion-gunshot"
+              entity_name = "explosion-gunshot",
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "nested-result",
-              action =
-              {
+              action = {
                 type = "area",
                 radius = 3,
-                action_delivery =
-                {
+                action_delivery = {
                   type = "instant",
-                  target_effects =
-                  {
+                  target_effects = {
                     {
                       type = "damage",
-                      damage = {amount = 12, type = "acid"}
+                      damage = { amount = 12, type = "acid" },
                     },
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
 
@@ -318,52 +272,44 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-poison]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
+          source_effects = {
             type = "create-entity",
-            entity_name = "explosion-gunshot"
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion-gunshot"
+              entity_name = "explosion-gunshot",
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "nested-result",
-              action =
-              {
+              action = {
                 type = "area",
                 radius = 3,
-                action_delivery =
-                {
+                action_delivery = {
                   type = "instant",
-                  target_effects =
-                  {
+                  target_effects = {
                     {
                       type = "damage",
-                      damage = {amount = 12, type = "poison"}
+                      damage = { amount = 12, type = "poison" },
                     },
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
 
@@ -376,40 +322,34 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-electric]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
-              type = "create-entity",
-              entity_name = "explosion-gunshot"
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion-gunshot"
+              entity_name = "explosion-gunshot",
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "damage",
-              damage = {amount = 12, type = "electric"}
+              damage = { amount = 12, type = "electric" },
             },
-          }
-        }
-      }
+          },
+        },
+      },
     },
   },
-
 
   {
     type = "ammo",
@@ -420,29 +360,25 @@ data:extend(
     order = "f[shotgun-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 20,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "better-shotgun-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -455,29 +391,25 @@ data:extend(
     order = "f[shotgun-ap-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 20,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-ap-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -490,29 +422,25 @@ data:extend(
     order = "f[shotgun-electric-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 20,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-electric-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -525,29 +453,25 @@ data:extend(
     order = "f[shotgun-explosive-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 10,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-explosive-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -560,29 +484,25 @@ data:extend(
     order = "f[shotgun-flame-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 10,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-flame-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -595,29 +515,25 @@ data:extend(
     order = "f[shotgun-acid-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 10,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-acid-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -630,29 +546,25 @@ data:extend(
     order = "f[shotgun-poison-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 10,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-poison-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
@@ -665,35 +577,29 @@ data:extend(
     order = "f[shotgun-uranium-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 20,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-uranium-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
 
-
-
---[[
+  --[[
   {
     type = "ammo",
     name = "flame-thrower-acid",
@@ -727,7 +633,8 @@ data:extend(
       }
     },
   },
-]]--
+]]
+  --
 
   {
     type = "ammo",
@@ -813,7 +720,6 @@ data:extend(
     ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-diamond-ammo"),
   },
 
-
   {
     type = "ammo",
     name = "bob-rocket",
@@ -822,7 +728,7 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-0",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -833,7 +739,7 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-piercing-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-1",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -844,7 +750,7 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-electric-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-2",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -855,7 +761,7 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-explosive-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-3",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -866,7 +772,7 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-flame-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-4",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -877,7 +783,7 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-poison-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-5",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -888,21 +794,15 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-acid-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-6",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})
 
-
-
-
-data:extend(
-{
+data:extend({
   {
     type = "ammo",
     name = "scatter-cannon-shell",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
         icon_size = 64,
@@ -913,91 +813,75 @@ data:extend(
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.25,
-        shift = {-8, -8}
-      }
+        shift = { -8, -8 },
+      },
     },
-    ammo_type =
-    {
+    ammo_type = {
       category = "cannon-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-explosion",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 20,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "cannon-projectile-pellet",
           starting_speed = 1,
           direction_deviation = 0.5,
           range_deviation = 0.3,
           max_range = 20,
-        }
+        },
       },
     },
     subgroup = "ammo",
     order = "d[cannon-shell]-c[scatter]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "capsule",
     name = "fire-capsule",
     icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
     icon_size = 32,
-    capsule_action =
-    {
+    capsule_action = {
       type = "throw",
-      attack_parameters =
-      {
+      attack_parameters = {
         type = "projectile",
         activation_type = "throw",
         ammo_category = "capsule",
         cooldown = 30,
         projectile_creation_distance = 0.6,
         range = 25,
-        ammo_type =
-        {
+        ammo_type = {
           category = "capsule",
           target_type = "position",
-          action =
-          {
+          action = {
             type = "direct",
-            action_delivery =
-            {
+            action_delivery = {
               type = "projectile",
               projectile = "fire-capsule",
-              starting_speed = 0.3
-            }
-          }
-        }
-      }
+              starting_speed = 0.3,
+            },
+          },
+        },
+      },
     },
     subgroup = "capsule",
     order = "b[fire-capsule]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "ammo",
     name = "poison-artillery-shell",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
@@ -1007,42 +891,37 @@ data:extend(
         icon = "__base__/graphics/icons/poison-capsule.png",
         icon_size = 64,
         scale = 0.25,
-        shift = {-8, -8}
-      }
+        shift = { -8, -8 },
+      },
     },
     icon_size = 32,
-    ammo_type =
-    {
+    ammo_type = {
       category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "artillery",
           projectile = "poison-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
-          source_effects =
-          {
+          source_effects = {
             type = "create-explosion",
-            entity_name = "artillery-cannon-muzzle-flash"
-          }
-        }
-      }
+            entity_name = "artillery-cannon-muzzle-flash",
+          },
+        },
+      },
     },
     subgroup = "ammo",
     order = "e[artillery-shell]-a[poison]",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "ammo",
     name = "fire-artillery-shell",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
@@ -1052,42 +931,37 @@ data:extend(
         icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
         icon_size = 32,
         scale = 0.5,
-        shift = {-8, -8}
-      }
+        shift = { -8, -8 },
+      },
     },
     icon_size = 32,
-    ammo_type =
-    {
+    ammo_type = {
       category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "artillery",
           projectile = "fire-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
-          source_effects =
-          {
+          source_effects = {
             type = "create-explosion",
-            entity_name = "artillery-cannon-muzzle-flash"
-          }
-        }
-      }
+            entity_name = "artillery-cannon-muzzle-flash",
+          },
+        },
+      },
     },
     subgroup = "ammo",
     order = "e[artillery-shell]-a[fire]",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "ammo",
     name = "explosive-artillery-shell",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
@@ -1097,42 +971,37 @@ data:extend(
         icon = "__base__/graphics/icons/grenade.png",
         icon_size = 64,
         scale = 0.25,
-        shift = {-8, -8}
-      }
+        shift = { -8, -8 },
+      },
     },
     icon_size = 32,
-    ammo_type =
-    {
+    ammo_type = {
       category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "artillery",
           projectile = "explosive-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
-          source_effects =
-          {
+          source_effects = {
             type = "create-explosion",
-            entity_name = "artillery-cannon-muzzle-flash"
-          }
-        }
-      }
+            entity_name = "artillery-cannon-muzzle-flash",
+          },
+        },
+      },
     },
     subgroup = "ammo",
     order = "e[artillery-shell]-a[explosive]",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "ammo",
     name = "distractor-artillery-shell",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
@@ -1142,42 +1011,37 @@ data:extend(
         icon = "__bobwarfare__/graphics/icons/distractor.png",
         icon_size = 32,
         scale = 0.5,
-        shift = {-8, -8}
-      }
+        shift = { -8, -8 },
+      },
     },
     icon_size = 32,
-    ammo_type =
-    {
+    ammo_type = {
       category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "artillery",
           projectile = "distractor-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
-          source_effects =
-          {
+          source_effects = {
             type = "create-explosion",
-            entity_name = "artillery-cannon-muzzle-flash"
-          }
-        }
-      }
+            entity_name = "artillery-cannon-muzzle-flash",
+          },
+        },
+      },
     },
     subgroup = "ammo",
     order = "e[artillery-shell]-a[distractor]",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "ammo",
     name = "atomic-artillery-shell",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
@@ -1188,45 +1052,38 @@ data:extend(
         icon_size = 256,
         icon_mipmaps = 4,
         scale = 0.0625,
-        shift = {-8, -8}
-      }
+        shift = { -8, -8 },
+      },
     },
     icon_size = 32,
-    ammo_type =
-    {
+    ammo_type = {
       range_modifier = 3,
       cooldown_modifier = 3,
       category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "artillery",
           projectile = "atomic-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
-          source_effects =
-          {
+          source_effects = {
             type = "create-explosion",
-            entity_name = "artillery-cannon-muzzle-flash"
-          }
-        }
-      }
+            entity_name = "artillery-cannon-muzzle-flash",
+          },
+        },
+      },
     },
     subgroup = "ammo",
     order = "e[artillery-shell]-a[atomic-bomb]",
-    stack_size = 20
+    stack_size = 20,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "ammo",
     name = "plasma-bullet-magazine",
@@ -1236,52 +1093,44 @@ data:extend(
     order = "a[basic-clips]-b[bullet-magazine-plasma]",
     stack_size = 200,
     magazine_size = 25,
-    ammo_type =
-    {
+    ammo_type = {
       category = "bullet",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "instant",
-          source_effects =
-          {
+          source_effects = {
             type = "create-entity",
-            entity_name = "explosion-gunshot"
+            entity_name = "explosion-gunshot",
           },
-          target_effects =
-          {
+          target_effects = {
             {
               type = "create-entity",
-              entity_name = "explosion-gunshot"
+              entity_name = "explosion-gunshot",
             },
             {
               type = "damage",
-              damage = {amount = 12, type = "physical"}
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "nested-result",
-              action =
-              {
+              action = {
                 type = "area",
                 radius = 3,
-                action_delivery =
-                {
+                action_delivery = {
                   type = "instant",
-                  target_effects =
-                  {
+                  target_effects = {
                     {
                       type = "damage",
-                      damage = {amount = 15, type = "plasma"}
+                      damage = { amount = 15, type = "plasma" },
                     },
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
   },
   {
@@ -1293,29 +1142,25 @@ data:extend(
     order = "f[shotgun-plasma-shell]",
     stack_size = 200,
     magazine_size = 10,
-    ammo_type =
-    {
+    ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects =
-      {
+      source_effects = {
         type = "create-entity",
-        entity_name = "explosion-gunshot"
+        entity_name = "explosion-gunshot",
       },
-      action =
-      {
+      action = {
         type = "direct",
         repeat_count = 10,
-        action_delivery =
-        {
+        action_delivery = {
           type = "projectile",
           projectile = "shotgun-plasma-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
-          max_range = 15
-        }
-      }
+          max_range = 15,
+        },
+      },
     },
   },
   {
@@ -1326,10 +1171,6 @@ data:extend(
     ammo_type = bobmissileammo("rocket", "bob-plasma-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-7",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
-
-
-
+})

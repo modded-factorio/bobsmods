@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "plutonium-239",
@@ -7,15 +6,12 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "r[plutonium-239]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
-
+})
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = "plutonium-fuel-cell",
@@ -29,8 +25,8 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       fuel_value = "40GJ",
       fuel_acceleration_multiplier = 1.6,
       fuel_top_speed_multiplier = 1.3,
-      fuel_glow_color = {r = 0.7, g = 1, b = 0},
-      stack_size = 50
+      fuel_glow_color = { r = 0.7, g = 1, b = 0 },
+      stack_size = 50,
     },
     {
       type = "item",
@@ -40,16 +36,13 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       icon_mipmaps = 4,
       subgroup = "intermediate-product",
       order = "r[uranium-processing]-0[empty-nuclear-fuel-cell]",
-      stack_size = 50
-    }
-  }
-  )
+      stack_size = 50,
+    },
+  })
 end
 
-
 if data.raw.item["thorium-ore"] then
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = "thorium-232",
@@ -57,7 +50,7 @@ if data.raw.item["thorium-ore"] then
       icon_size = 64,
       subgroup = "bob-material",
       order = "r[thorium-232]",
-      stack_size = 100
+      stack_size = 100,
     },
     {
       type = "item",
@@ -70,10 +63,10 @@ if data.raw.item["thorium-ore"] then
       fuel_category = "nuclear",
       burnt_result = "used-up-thorium-fuel-cell",
       fuel_value = "6GJ",
-      fuel_glow_color = {r = 1, g = 1, b = 0},
+      fuel_glow_color = { r = 1, g = 1, b = 0 },
       fuel_acceleration_multiplier = 1.1,
       fuel_top_speed_multiplier = 1.05,
-      stack_size = 50
+      stack_size = 50,
     },
     {
       type = "item",
@@ -88,8 +81,8 @@ if data.raw.item["thorium-ore"] then
       fuel_value = "40GJ",
       fuel_acceleration_multiplier = 1.8,
       fuel_top_speed_multiplier = 1.4,
-      fuel_glow_color = {r = 1, g = 0.7, b = 0},
-      stack_size = 50
+      fuel_glow_color = { r = 1, g = 0.7, b = 0 },
+      stack_size = 50,
     },
     {
       type = "item",
@@ -99,10 +92,9 @@ if data.raw.item["thorium-ore"] then
       icon_mipmaps = 4,
       subgroup = "intermediate-product",
       order = "s[used-up-thorium-fuel-cell]",
-      stack_size = 50
-    }
-  }
-  )
+      stack_size = 50,
+    },
+  })
 
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     data.raw.item["thorium-fuel-cell"].fuel_value = "12GJ"
@@ -110,9 +102,7 @@ if data.raw.item["thorium-ore"] then
   end
 end
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "deuterium-fuel-cell",
@@ -126,8 +116,8 @@ data:extend(
     fuel_value = "100GJ",
     fuel_acceleration_multiplier = 1.2,
     fuel_top_speed_multiplier = 1.1,
-    fuel_glow_color = {r = 1, g = 0, b = 0.57},
-    stack_size = 50
+    fuel_glow_color = { r = 1, g = 0, b = 0.57 },
+    stack_size = 50,
   },
   {
     type = "item",
@@ -137,15 +127,13 @@ data:extend(
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "t[used-up-deuterium-fuel-cell]",
-    stack_size = 50
-  }
-}
-)
+    stack_size = 50,
+  },
+})
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data.raw.item["deuterium-fuel-cell"].fuel_value = "80GJ"
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = "deuterium-fuel-cell-2",
@@ -159,8 +147,8 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       fuel_value = "120GJ",
       fuel_acceleration_multiplier = 2,
       fuel_top_speed_multiplier = 1.5,
-      fuel_glow_color = {r = 1, g = 0, b = 0.9},
-      stack_size = 50
+      fuel_glow_color = { r = 1, g = 0, b = 0.9 },
+      stack_size = 50,
     },
     {
       type = "item",
@@ -169,18 +157,18 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       icon_size = 64,
       subgroup = "bob-resource-chemical",
       order = "f[fusion-catalyst]",
-      stack_size = 50
-    }
-  }
-  )
+      stack_size = 50,
+    },
+  })
 end
 
 if settings.startup["bobmods-plates-bluedeuterium"].value == true then
-  data.raw.item["deuterium-fuel-cell"].fuel_glow_color = {r = 0, g = 0.7, b = 1}
+  data.raw.item["deuterium-fuel-cell"].fuel_glow_color = { r = 0, g = 0.7, b = 1 }
   data.raw.item["deuterium-fuel-cell"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-blue.png"
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-    data.raw.item["deuterium-fuel-cell-2"].fuel_glow_color = {r = 0, g = 1, b = 0.85}
+    data.raw.item["deuterium-fuel-cell-2"].fuel_glow_color = { r = 0, g = 1, b = 0.85 }
     data.raw.item["deuterium-fuel-cell-2"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-2-blue.png"
   end
-  data.raw.item["used-up-deuterium-fuel-cell"].icon = "__bobplates__/graphics/icons/nuclear/used-up-deuterium-fuel-cell-blue.png"
+  data.raw.item["used-up-deuterium-fuel-cell"].icon =
+    "__bobplates__/graphics/icons/nuclear/used-up-deuterium-fuel-cell-blue.png"
 end

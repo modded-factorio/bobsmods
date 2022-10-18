@@ -1,6 +1,6 @@
 local fluids = {
   "glycerol",
-  "nitroglycerin"
+  "nitroglycerin",
 }
 
 local parts = {
@@ -40,9 +40,6 @@ local bullets = {
   "electric-bullet",
 }
 
-
-
-
 bobmods.lib.module.add_productivity_limitations(fluids)
 if data.raw.fluid["sulfuric-nitric-acid"] then
   bobmods.lib.module.add_productivity_limitation("sulfuric-nitric-acid")
@@ -53,18 +50,18 @@ bobmods.lib.module.add_productivity_limitations(parts)
 --bobmods.lib.module.add_productivity_limitations(bullets)
 
 if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
-  bobmods.lib.module.add_productivity_limitations{
+  bobmods.lib.module.add_productivity_limitations({
     "mech-leg-segment",
     "mech-knee",
     "mech-foot",
     "mech-hip",
     "mech-brain",
-    "mech-armor-plate"
-  }
+    "mech-armor-plate",
+  })
 end
 
 if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.warfare.RobotParts == true then
-  bobmods.lib.module.add_productivity_limitations{
+  bobmods.lib.module.add_productivity_limitations({
     "robot-brain-combat",
     "robot-brain-combat-2",
     "robot-brain-combat-3",
@@ -72,7 +69,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
     "robot-tool-combat",
     "robot-tool-combat-2",
     "robot-tool-combat-3",
-    "robot-tool-combat-4"
-  }
+    "robot-tool-combat-4",
+  })
 end
-

@@ -2,8 +2,7 @@ data.raw["item-with-entity-data"]["tank"].order = "b[personal-transport]-b[tank-
 data.raw["item-with-entity-data"]["tank"].stack_size = 10
 data.raw["item-with-entity-data"]["tank"].default_request_amount = 1
 
-data:extend(
-{
+data:extend({
   {
     type = "item-with-entity-data",
     name = "bob-tank-2",
@@ -27,6 +26,4 @@ data:extend(
     stack_size = 10,
     default_request_amount = 1,
   },
-}
-)
-
+})

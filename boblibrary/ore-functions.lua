@@ -1,10 +1,11 @@
-if not bobmods.lib.resource then bobmods.lib.resource = {} end
+if not bobmods.lib.resource then
+  bobmods.lib.resource = {}
+end
 
 bobmods.lib.resource_autoplace = require("resource-autoplace")
 
-
 function bobmods.lib.resource.create_autoplace(inputs)
-  local autoplace = {control = inputs.control or inputs.name}
+  local autoplace = { control = inputs.control or inputs.name }
   local richness = inputs.richness or 1
   local size = inputs.size and inputs.size or 1.2
   autoplace.sharpness = 1
@@ -19,9 +20,21 @@ function bobmods.lib.resource.create_autoplace(inputs)
     autoplace.starting_area_amount = 1300 * size
   end
   if inputs.starting_area then
-    table.insert(autoplace.peaks,bobmods.lib.resource.autoplace_peak{starting_area = 1, noise = {layer = inputs.name, octaves = -0.85, persistance = 0.4}})
+    table.insert(
+      autoplace.peaks,
+      bobmods.lib.resource.autoplace_peak({
+        starting_area = 1,
+        noise = { layer = inputs.name, octaves = -0.85, persistance = 0.4 },
+      })
+    )
   end
-    table.insert(autoplace.peaks,bobmods.lib.resource.autoplace_peak{starting_area = 0, noise = {layer = inputs.name, octaves = -0.85, persistance = 0.4}})
+  table.insert(
+    autoplace.peaks,
+    bobmods.lib.resource.autoplace_peak({
+      starting_area = 0,
+      noise = { layer = inputs.name, octaves = -0.85, persistance = 0.4 },
+    })
+  )
   return autoplace
 end
 
@@ -44,19 +57,12 @@ function bobmods.lib.resource.autoplace_peak(inputs)
 end
 
 function bobmods.lib.resource.add_autoplace_peak(inputs)
-  table.insert(data.raw.resource[inputs.resource].autoplace.peaks,bobmods.lib.resource.autoplace_peak(inputs))
+  table.insert(data.raw.resource[inputs.resource].autoplace.peaks, bobmods.lib.resource.autoplace_peak(inputs))
 end
-
-
 
 function bobmods.lib.resource.add_result(resource, item_in)
   local item = bobmods.lib.item.result(item_in)
-  if
-    item and
-    type(resource) == "string" and
-    data.raw.resource[resource] and
-    bobmods.lib.item.get_type(item.name)
-  then
+  if item and type(resource) == "string" and data.raw.resource[resource] and bobmods.lib.item.get_type(item.name) then
     bobmods.lib.result_check(data.raw.resource[resource].minable)
     bobmods.lib.item.add_new(data.raw.resource[resource].minable.results, item)
   else
@@ -66,11 +72,7 @@ function bobmods.lib.resource.add_result(resource, item_in)
 end
 
 function bobmods.lib.resource.remove_result(resource, item)
-  if
-    type(resource) == "string" and
-    type(item) == "string" and
-    data.raw.resource[resource]
-  then
+  if type(resource) == "string" and type(item) == "string" and data.raw.resource[resource] then
     bobmods.lib.result_check(data.raw.resource[resource].minable)
     bobmods.lib.item.remove(data.raw.resource[resource].minable.results, item)
   else
@@ -80,13 +82,12 @@ function bobmods.lib.resource.remove_result(resource, item)
   end
 end
 
-
 function bobmods.lib.resource.stage_counts(stages, mult)
   local stage_counts = {}
   local stage = stages
   while stage > 0 do
     stage = stage - 1
-    table.insert(stage_counts, mult * (2^stage))
+    table.insert(stage_counts, mult * (2 ^ stage))
   end
   return stage_counts
 end
@@ -98,11 +99,21 @@ function bobmods.lib.resource.sprite(inputs)
   local frame_count = 4
   local variation_count = 8
   local hr_version = nil
-  if inputs.width then width = inputs.width end
-  if inputs.height then height = inputs.height end
-  if inputs.frame_count then frame_count = inputs.frame_count end
-  if inputs.variation_count then variation_count = inputs.variation_count end
-  if inputs.hr_version then hr_version = bobmods.lib.resource.hr_sprite(inputs.hr_version) end
+  if inputs.width then
+    width = inputs.width
+  end
+  if inputs.height then
+    height = inputs.height
+  end
+  if inputs.frame_count then
+    frame_count = inputs.frame_count
+  end
+  if inputs.variation_count then
+    variation_count = inputs.variation_count
+  end
+  if inputs.hr_version then
+    hr_version = bobmods.lib.resource.hr_sprite(inputs.hr_version)
+  end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -111,18 +122,18 @@ function bobmods.lib.resource.sprite(inputs)
     height = 64
     frame_count = 8
     variation_count = 8
-    hr_version = bobmods.lib.resource.hr_sprite{sheet = 1, tint = inputs.tint}
+    hr_version = bobmods.lib.resource.hr_sprite({ sheet = 1, tint = inputs.tint })
     if inputs.sheet == 2 then
       filename = "__boblibrary__/graphics/entity/ores/ore-2.png"
-      hr_version = bobmods.lib.resource.hr_sprite{sheet = 2, tint = inputs.tint}
+      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 2, tint = inputs.tint })
     end
     if inputs.sheet == 3 then
       filename = "__boblibrary__/graphics/entity/ores/ore-3.png"
-      hr_version = bobmods.lib.resource.hr_sprite{sheet = 3, tint = inputs.tint}
+      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 3, tint = inputs.tint })
     end
     if inputs.sheet == 4 then
       filename = "__boblibrary__/graphics/entity/ores/ore-4.png"
-      hr_version = bobmods.lib.resource.hr_sprite{sheet = 4, tint = inputs.tint}
+      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 4, tint = inputs.tint })
     end
     if inputs.sheet == 5 then
       filename = "__boblibrary__/graphics/entity/liquid.png"
@@ -134,26 +145,27 @@ function bobmods.lib.resource.sprite(inputs)
     end
     if inputs.sheet == 6 then
       filename = "__boblibrary__/graphics/entity/ores/ore-5.png"
-      hr_version = bobmods.lib.resource.hr_sprite{sheet = 5, tint = inputs.tint}
+      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 5, tint = inputs.tint })
     end
   end
 
-  local sheet =
-    {
-      filename = filename,
-      priority = "extra-high",
-      width = width,
-      height = height,
-      frame_count = frame_count,
-      variation_count = variation_count,
-      tint = inputs.tint,
-      scale = inputs.scale or 1,
-    }
-  if hr_version then sheet.hr_version = hr_version end
+  local sheet = {
+    filename = filename,
+    priority = "extra-high",
+    width = width,
+    height = height,
+    frame_count = frame_count,
+    variation_count = variation_count,
+    tint = inputs.tint,
+    scale = inputs.scale or 1,
+  }
+  if hr_version then
+    sheet.hr_version = hr_version
+  end
 
   return
-  {
-    sheet = sheet
+{
+    sheet = sheet,
   }
 end
 
@@ -164,11 +176,21 @@ function bobmods.lib.resource.hr_sprite(inputs)
   local frame_count = 8
   local variation_count = 8
   local scale = 0.5
-  if inputs.width then width = inputs.width end
-  if inputs.height then height = inputs.height end
-  if inputs.frame_count then frame_count = inputs.frame_count end
-  if inputs.variation_count then variation_count = inputs.variation_count end
-  if inputs.scale then scale = inputs.scale end
+  if inputs.width then
+    width = inputs.width
+  end
+  if inputs.height then
+    height = inputs.height
+  end
+  if inputs.frame_count then
+    frame_count = inputs.frame_count
+  end
+  if inputs.variation_count then
+    variation_count = inputs.variation_count
+  end
+  if inputs.scale then
+    scale = inputs.scale
+  end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -193,7 +215,7 @@ function bobmods.lib.resource.hr_sprite(inputs)
   end
 
   return
-  {
+{
     filename = filename,
     priority = "extra-high",
     width = width,
@@ -201,10 +223,9 @@ function bobmods.lib.resource.hr_sprite(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
-    scale = scale
+    scale = scale,
   }
 end
-
 
 function bobmods.lib.resource.effect(inputs)
   local filename
@@ -213,11 +234,21 @@ function bobmods.lib.resource.effect(inputs)
   local frame_count = 8
   local variation_count = 8
   local hr_version = nil
-  if inputs.width then width = inputs.width end
-  if inputs.height then height = inputs.height end
-  if inputs.frame_count then frame_count = inputs.frame_count end
-  if inputs.variation_count then variation_count = inputs.variation_count end
-  if inputs.hr_version then hr_version = bobmods.lib.resource.hr_effect(inputs.hr_version) end
+  if inputs.width then
+    width = inputs.width
+  end
+  if inputs.height then
+    height = inputs.height
+  end
+  if inputs.frame_count then
+    frame_count = inputs.frame_count
+  end
+  if inputs.variation_count then
+    variation_count = inputs.variation_count
+  end
+  if inputs.hr_version then
+    hr_version = bobmods.lib.resource.hr_effect(inputs.hr_version)
+  end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -226,27 +257,28 @@ function bobmods.lib.resource.effect(inputs)
     height = 64
     frame_count = 8
     variation_count = 8
-    hr_version = bobmods.lib.resource.hr_effect{sheet = 5, tint = inputs.tint}
+    hr_version = bobmods.lib.resource.hr_effect({ sheet = 5, tint = inputs.tint })
   end
 
-  local sheet =
-    {
-      filename = filename,
-      priority = "extra-high",
-      width = width,
-      height = height,
-      frame_count = frame_count,
-      variation_count = variation_count,
-      tint = inputs.tint,
-      scale = inputs.scale or 1,
-      blend_mode = "additive",
-      flags = {"light"},
-    }
-  if hr_version then sheet.hr_version = hr_version end
+  local sheet = {
+    filename = filename,
+    priority = "extra-high",
+    width = width,
+    height = height,
+    frame_count = frame_count,
+    variation_count = variation_count,
+    tint = inputs.tint,
+    scale = inputs.scale or 1,
+    blend_mode = "additive",
+    flags = { "light" },
+  }
+  if hr_version then
+    sheet.hr_version = hr_version
+  end
 
   return
-  {
-    sheet = sheet
+{
+    sheet = sheet,
   }
 end
 
@@ -257,11 +289,21 @@ function bobmods.lib.resource.hr_effect(inputs)
   local frame_count = 8
   local variation_count = 8
   local scale = 0.5
-  if inputs.width then width = inputs.width end
-  if inputs.height then height = inputs.height end
-  if inputs.frame_count then frame_count = inputs.frame_count end
-  if inputs.variation_count then variation_count = inputs.variation_count end
-  if inputs.scale then scale = inputs.scale end
+  if inputs.width then
+    width = inputs.width
+  end
+  if inputs.height then
+    height = inputs.height
+  end
+  if inputs.frame_count then
+    frame_count = inputs.frame_count
+  end
+  if inputs.variation_count then
+    variation_count = inputs.variation_count
+  end
+  if inputs.scale then
+    scale = inputs.scale
+  end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -274,7 +316,7 @@ function bobmods.lib.resource.hr_effect(inputs)
   end
 
   return
-  {
+{
     filename = filename,
     priority = "extra-high",
     width = width,
@@ -283,25 +325,21 @@ function bobmods.lib.resource.hr_effect(inputs)
     variation_count = variation_count,
     tint = inputs.tint,
     blend_mode = "additive",
-    flags = {"light"},
-    scale = scale
+    flags = { "light" },
+    scale = scale,
   }
 end
 
-
-
 function bobmods.lib.resource.create_item(inputs)
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = inputs.name,
       subgroup = inputs.subgroup or "raw-resource",
-      order = "b-d[" .. inputs.name .."]",
-      stack_size = inputs.stack_size or 200
-    }
-  }
-  )
+      order = "b-d[" .. inputs.name .. "]",
+      stack_size = inputs.stack_size or 200,
+    },
+  })
   if inputs.icon then
     data.raw.item[inputs.name].icon = inputs.icon
     data.raw.item[inputs.name].icon_size = inputs.icon_size or 32
@@ -322,12 +360,14 @@ function bobmods.lib.resource.create_item(inputs)
       end
     end
     data.raw.item[inputs.name].pictures = {}
-    for i = 16,1,-1 do --do it 16 times
-      table.insert( data.raw.item[inputs.name].pictures, bobmods.lib.resource.get_icon_variation_single(type, inputs.tint) )
+    for i = 16, 1, -1 do --do it 16 times
+      table.insert(
+        data.raw.item[inputs.name].pictures,
+        bobmods.lib.resource.get_icon_variation_single(type, inputs.tint)
+      )
     end
   end
 end
-
 
 function bobmods.lib.resource.create(inputs)
   local sprite = {}
@@ -356,31 +396,29 @@ function bobmods.lib.resource.create(inputs)
   end
 
   local sheet = bobmods.lib.resource.sprite(sprite)
-  data:extend(
-  {
+  data:extend({
     {
       type = "resource",
       name = inputs.name,
-      flags = {"placeable-neutral"},
+      flags = { "placeable-neutral" },
       category = inputs.category,
       order = "b-d-" .. inputs.name,
       minimum = minimum,
       normal = normal,
       resource_patch_search_radius = inputs.resource_patch_search_radius,
       infinite = inputs.infinite,
-      collision_box = inputs.collision_box or {{ -0.1, -0.1}, {0.1, 0.1}},
-      selection_box = inputs.selection_box or {{ -0.5, -0.5}, {0.5, 0.5}},
+      collision_box = inputs.collision_box or { { -0.1, -0.1 }, { 0.1, 0.1 } },
+      selection_box = inputs.selection_box or { { -0.5, -0.5 }, { 0.5, 0.5 } },
       stages = sheet,
-      stage_counts = inputs.stage_counts or bobmods.lib.resource.stage_counts(sheet.sheet.variation_count, inputs.stage_mult or 100),
+      stage_counts = inputs.stage_counts
+        or bobmods.lib.resource.stage_counts(sheet.sheet.variation_count, inputs.stage_mult or 100),
       map_color = inputs.map_color,
-      minable =
-      {
+      minable = {
         mining_particle = inputs.particle,
         mining_time = inputs.mining_time or 2,
       },
-    }
-  }
-  )
+    },
+  })
   if inputs.disable_map_grid then
     data.raw.resource[inputs.name].map_grid = false
   end
@@ -413,7 +451,6 @@ function bobmods.lib.resource.create(inputs)
   end
 end
 
-
 function bobmods.lib.resource.create_icon(inputs)
   local icon = { icon = "__boblibrary__/graphics/icons/ore-1.png", tint = inputs.tint, icon_size = 32 }
   if inputs.sprite then
@@ -433,172 +470,187 @@ function bobmods.lib.resource.create_icon(inputs)
       icon.icon = "__boblibrary__/graphics/icons/ore-5.png"
     end
   end
-  return {icon}
+  return { icon }
 end
-
 
 function bobmods.lib.resource.create_particle(inputs)
-data:extend(
-{
-  {
-    type = "optimized-particle",
-    name = inputs.name,
-    flags = {"not-on-map"},
-    life_time = 180,
-    pictures =
+  data:extend({
     {
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-1.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 5,
-        height = 5,
-        frame_count = 1
+      type = "optimized-particle",
+      name = inputs.name,
+      flags = { "not-on-map" },
+      life_time = 180,
+      pictures = {
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-1.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 5,
+          height = 5,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-2.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 7,
+          height = 5,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-3.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 6,
+          height = 7,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-4.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 9,
+          height = 8,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-5.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 5,
+          height = 5,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-6.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 6,
+          height = 4,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-7.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 7,
+          height = 8,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-8.png",
+          priority = "extra-high",
+          tint = inputs.tint,
+          width = 6,
+          height = 5,
+          frame_count = 1,
+        },
       },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-2.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 7,
-        height = 5,
-        frame_count = 1
+      shadows = {
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-1.png",
+          priority = "extra-high",
+          width = 5,
+          height = 5,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-2.png",
+          priority = "extra-high",
+          width = 7,
+          height = 5,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-3.png",
+          priority = "extra-high",
+          width = 6,
+          height = 7,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-4.png",
+          priority = "extra-high",
+          width = 9,
+          height = 8,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-5.png",
+          priority = "extra-high",
+          width = 5,
+          height = 5,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-6.png",
+          priority = "extra-high",
+          width = 6,
+          height = 4,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-7.png",
+          priority = "extra-high",
+          width = 7,
+          height = 8,
+          frame_count = 1,
+        },
+        {
+          filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-8.png",
+          priority = "extra-high",
+          width = 6,
+          height = 5,
+          frame_count = 1,
+        },
       },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-3.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 6,
-        height = 7,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-4.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 9,
-        height = 8,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-5.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 5,
-        height = 5,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-6.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 6,
-        height = 4,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-7.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 7,
-        height = 8,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-8.png",
-        priority = "extra-high",
-        tint = inputs.tint,
-        width = 6,
-        height = 5,
-        frame_count = 1
-      }
     },
-    shadows =
-    {
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-1.png",
-        priority = "extra-high",
-        width = 5,
-        height = 5,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-2.png",
-        priority = "extra-high",
-        width = 7,
-        height = 5,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-3.png",
-        priority = "extra-high",
-        width = 6,
-        height = 7,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-4.png",
-        priority = "extra-high",
-        width = 9,
-        height = 8,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-5.png",
-        priority = "extra-high",
-        width = 5,
-        height = 5,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-6.png",
-        priority = "extra-high",
-        width = 6,
-        height = 4,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-7.png",
-        priority = "extra-high",
-        width = 7,
-        height = 8,
-        frame_count = 1
-      },
-      {
-        filename = "__boblibrary__/graphics/entity/ores/ore-particle-shadow-8.png",
-        priority = "extra-high",
-        width = 6,
-        height = 5,
-        frame_count = 1
-      }
-    }
-  }
-}
-)
+  })
 end
-
 
 function bobmods.lib.resource.generate_data_stage(inputs)
   if inputs.name then
     if not inputs.particle then
       inputs.particle = inputs.name .. "-particle"
-      bobmods.lib.resource.create_particle{name = inputs.particle, tint = inputs.tint}
+      bobmods.lib.resource.create_particle({ name = inputs.particle, tint = inputs.tint })
     end
 
     if inputs.item and inputs.item.create then
-      if not inputs.items then inputs.items = {} end
-      local item = {name = inputs.name, icon = inputs.icon, subgroup = inputs.item.subgroup, stack_size = inputs.item.stack_size, tint = inputs.tint, create_variations = inputs.item.create_variations}
+      if not inputs.items then
+        inputs.items = {}
+      end
+      local item = {
+        name = inputs.name,
+        icon = inputs.icon,
+        subgroup = inputs.item.subgroup,
+        stack_size = inputs.item.stack_size,
+        tint = inputs.tint,
+        create_variations = inputs.item.create_variations,
+      }
       if inputs.sprite then
         item.sprite = inputs.sprite
       end
       bobmods.lib.resource.create_item(item)
-      table.insert(inputs.items,{name = inputs.name})
+      table.insert(inputs.items, { name = inputs.name })
     end
 
     if inputs.autoplace == nil then
-      inputs.autoplace = bobmods.lib.resource.create_autoplace{control = inputs.name or inputs.name, name = inputs.name, starting_area = true, size = 1, richness = 1}
+      inputs.autoplace = bobmods.lib.resource.create_autoplace({
+        control = inputs.name or inputs.name,
+        name = inputs.name,
+        starting_area = true,
+        size = 1,
+        richness = 1,
+      })
     elseif type(inputs.autoplace) == "table" then
       if inputs.autoplace.create then
-        local autoplace = bobmods.lib.resource.create_autoplace{control = inputs.autoplace.control or inputs.name, name = inputs.name, starting_area = inputs.autoplace.starting_area, size = inputs.autoplace.size, richness = inputs.autoplace.richness}
+        local autoplace = bobmods.lib.resource.create_autoplace({
+          control = inputs.autoplace.control or inputs.name,
+          name = inputs.name,
+          starting_area = inputs.autoplace.starting_area,
+          size = inputs.autoplace.size,
+          richness = inputs.autoplace.richness,
+        })
         inputs.autoplace = autoplace
       end
     end
@@ -615,20 +667,21 @@ end
 
 function bobmods.lib.resource.generate_autoplace_control(control)
   if not data.raw["autoplace-control"][control] then
-    data:extend(
-    {
+    data:extend({
       {
         type = "autoplace-control",
         name = control,
         richness = true,
         order = "b-d-" .. control,
-        category = "resource"
-      }
-    }
-    )
-    data.raw["map-gen-presets"].default["rich-resources"].basic_settings.autoplace_controls[control] = {richness = "very-good"}
-    data.raw["map-gen-presets"].default["rail-world"].basic_settings.autoplace_controls[control] = {frequency = 0.33333333333, size = 3}
-    data.raw["map-gen-presets"].default["ribbon-world"].basic_settings.autoplace_controls[control] = {frequency = 3, size = 0.5, richness = 2}
+        category = "resource",
+      },
+    })
+    data.raw["map-gen-presets"].default["rich-resources"].basic_settings.autoplace_controls[control] =
+      { richness = "very-good" }
+    data.raw["map-gen-presets"].default["rail-world"].basic_settings.autoplace_controls[control] =
+      { frequency = 0.33333333333, size = 3 }
+    data.raw["map-gen-presets"].default["ribbon-world"].basic_settings.autoplace_controls[control] =
+      { frequency = 3, size = 0.5, richness = 2 }
   end
 end
 
@@ -637,19 +690,18 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
     local control = inputs.name
     if type(inputs.autoplace) == "table" and inputs.autoplace.control then
       control = inputs.autoplace.control
-log(inputs.autoplace.control)
+      log(inputs.autoplace.control)
     end
     bobmods.lib.resource.generate_autoplace_control(control)
-    data.raw["autoplace-control"][control].localised_name = {"", "[entity=" .. inputs.name .. "] ", {"entity-name." .. inputs.name}}
+    data.raw["autoplace-control"][control].localised_name =
+      { "", "[entity=" .. inputs.name .. "] ", { "entity-name." .. inputs.name } }
     if not data.raw["noise-layer"][inputs.name] and inputs.autoplace ~= "control-only" then
-      data:extend(
-      {
+      data:extend({
         {
           type = "noise-layer",
-          name = inputs.name
+          name = inputs.name,
         },
-      }
-      )
+      })
     end
     if inputs.autoplace ~= "control-only" then
       data.raw.resource[inputs.name].autoplace = inputs.autoplace
@@ -661,4 +713,3 @@ function bobmods.lib.resource.generate(inputs)
   bobmods.lib.resource.generate_data_stage(inputs)
   bobmods.lib.resource.generate_updates_stage(inputs)
 end
-

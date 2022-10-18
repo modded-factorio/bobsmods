@@ -76,7 +76,6 @@ for index, force in pairs(game.forces) do
     end
   end
 
-
   force.recipes["basic-circuit-board"].enabled = true
   if force.recipes["basic-electronic-circuit-board"] then
     force.recipes["basic-electronic-circuit-board"].enabled = false
@@ -91,8 +90,11 @@ for index, force in pairs(game.forces) do
     force.recipes["electronic-processing-board-2"].enabled = false
   end
 
-  if force.technologies["alloy-processing-2"] and force.technologies["alloy-processing-2"].researched and force.recipes["solder-alloy"] then
+  if
+    force.technologies["alloy-processing-2"]
+    and force.technologies["alloy-processing-2"].researched
+    and force.recipes["solder-alloy"]
+  then
     force.recipes["solder-alloy"].enabled = true
   end
 end
-

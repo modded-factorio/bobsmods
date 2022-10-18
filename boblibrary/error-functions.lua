@@ -1,8 +1,14 @@
-if not bobmods.lib.error then bobmods.lib.error = {} end
+if not bobmods.lib.error then
+  bobmods.lib.error = {}
+end
 
 function bobmods.lib.error.technology(technology, name, desc)
-  if name == nil then name = "Technology" end
-  if desc == nil then desc = name end
+  if name == nil then
+    name = "Technology"
+  end
+  if desc == nil then
+    desc = name
+  end
   if technology == nil then
     log(name .. " variable not passed")
   elseif type(technology) == "table" then
@@ -15,8 +21,12 @@ function bobmods.lib.error.technology(technology, name, desc)
 end
 
 function bobmods.lib.error.recipe(recipe, name, desc)
-  if name == nil then name = "Recipe" end
-  if desc == nil then desc = name end
+  if name == nil then
+    name = "Recipe"
+  end
+  if desc == nil then
+    desc = name
+  end
   if recipe == nil then
     log(name .. " variable not passed")
   elseif type(recipe) == "table" then
@@ -29,8 +39,12 @@ function bobmods.lib.error.recipe(recipe, name, desc)
 end
 
 function bobmods.lib.error.resource(resource, name, desc)
-  if name == nil then name = "Resource" end
-  if desc == nil then desc = name end
+  if name == nil then
+    name = "Resource"
+  end
+  if desc == nil then
+    desc = name
+  end
   if resource == nil then
     log(name .. " variable not passed")
   elseif type(resource) == "table" then
@@ -43,7 +57,9 @@ function bobmods.lib.error.resource(resource, name, desc)
 end
 
 function bobmods.lib.error.item(item, name)
-  if name == nil then name = "Item" end
+  if name == nil then
+    name = "Item"
+  end
   if item == nil then
     log(name .. " variable not passed")
   elseif type(item) == "table" then
@@ -59,7 +75,9 @@ function bobmods.lib.error.item(item, name)
 end
 
 function bobmods.lib.error.item_of_type(item, item_type_in, name)
-  if name == nil then name = "Item" end
+  if name == nil then
+    name = "Item"
+  end
   if item == nil then
     log(name .. " variable not passed")
   elseif type(item) == "table" then
@@ -77,7 +95,9 @@ function bobmods.lib.error.item_of_type(item, item_type_in, name)
 end
 
 function bobmods.lib.error.ingredient(ingredient, name)
-  if name == nil then name = "Ingredient" end
+  if name == nil then
+    name = "Ingredient"
+  end
   if ingredient == nil then
     log(name .. " variable not passed")
   elseif not (type(ingredient == "table")) then
@@ -85,7 +105,7 @@ function bobmods.lib.error.ingredient(ingredient, name)
   elseif not (type(ingredient.name) == "string") then
     log(name .. ".name variable not a string.")
   elseif bobmods.lib.item.get_type(ingredient.name) == nil then
-    log (name .. ".name not a valid item of any type.")
+    log(name .. ".name not a valid item of any type.")
   end
   if not (type(ingredient.amount) == "number") then
     log(name .. ".amount variable not a number.")
@@ -96,7 +116,9 @@ function bobmods.lib.error.ingredient(ingredient, name)
 end
 
 function bobmods.lib.error.result(result, name)
-  if name == nil then name = "Result" end
+  if name == nil then
+    name = "Result"
+  end
   if result == nil then
     log(name .. " variable not passed")
   elseif not (type(result == "table")) then
@@ -104,10 +126,10 @@ function bobmods.lib.error.result(result, name)
   elseif not (type(result.name) == "string") then
     log(name .. ".name variable not a string.")
   elseif bobmods.lib.item.get_type(result.name) == nil then
-    log (name .. ".name not a valid item of any type.")
+    log(name .. ".name not a valid item of any type.")
   end
   if result.amount then
-    if (type(result.amount) == "number") then
+    if type(result.amount) == "number" then
       log(name .. ".amount variable not a number.")
     end
   elseif result.amount_min and result.amount_max then
@@ -129,8 +151,12 @@ function bobmods.lib.error.result(result, name)
 end
 
 function bobmods.lib.error.difficulty(difficulty, name, desc)
-  if name == nil then name = "Difficulty" end
-  if desc == nil then desc = name end
+  if name == nil then
+    name = "Difficulty"
+  end
+  if desc == nil then
+    desc = name
+  end
   if difficulty == nil then
     log(name .. " variable not passed")
   elseif type(difficulty) == "table" then
@@ -141,5 +167,3 @@ function bobmods.lib.error.difficulty(difficulty, name, desc)
     log(desc .. " " .. difficulty .. " is invalid.")
   end
 end
-
-

@@ -3,4 +3,3 @@ script.on_configuration_changed(function(event)
     force.reset_technology_effects()
   end
 end)
-

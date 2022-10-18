@@ -1,501 +1,447 @@
-data:extend{
-  bobmods.enemies.acid_stream{
+data:extend({
+  bobmods.enemies.acid_stream({
     name = "bob-acid-stream",
     scale = 1,
     tint = bobmods.enemies.acid_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-fire",
-            entity_name = "acid-splash-fire-worm-big"
+            entity_name = "acid-splash-fire-worm-big",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 10, type = "acid"}
+                    damage = { amount = 10, type = "acid" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
-                }
-              }
-            }
-          }
-        }
-      }
+                },
+              },
+            },
+          },
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-poison-stream",
     scale = 1,
     tint = bobmods.enemies.poison_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
-            entity_name = "small-poison-cloud"
+            entity_name = "small-poison-cloud",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 8, type = "poison"}
+                    damage = { amount = 8, type = "poison" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-fire-stream",
     scale = 1,
     tint = bobmods.enemies.fire_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-fire",
-            entity_name = "fire-flame"
+            entity_name = "fire-flame",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 8, type = "fire"}
+                    damage = { amount = 8, type = "fire" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-explosive-stream",
     scale = 1,
     tint = bobmods.enemies.explosive_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
-            entity_name = "explosion"
+            entity_name = "explosion",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 10, type = "explosion"}
+                    damage = { amount = 10, type = "explosion" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-electric-stream",
     scale = 1,
     tint = bobmods.enemies.electric_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 10, type = "electric"}
+                    damage = { amount = 10, type = "electric" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-piercing-stream",
     scale = 1,
     tint = bobmods.enemies.pierce_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 10, type = "bob-pierce"}
+                    damage = { amount = 10, type = "bob-pierce" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-titan-stream",
     scale = 1.25,
     tint = bobmods.enemies.titan_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
-            entity_name = "explosion"
+            entity_name = "explosion",
           },
           {
             type = "create-fire",
-            entity_name = "fire-flame"
+            entity_name = "fire-flame",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "electric"}
+                    damage = { amount = 3, type = "electric" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "explosion"}
+                    damage = { amount = 3, type = "explosion" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "fire"}
+                    damage = { amount = 3, type = "fire" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
                   {
                     type = "create-sticker",
-                    sticker = "fire-sticker"
+                    sticker = "fire-sticker",
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-behemoth-stream",
     scale = 1.5,
     tint = bobmods.enemies.behemoth_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
-            entity_name = "explosion"
+            entity_name = "explosion",
           },
           {
             type = "create-entity",
-            entity_name = "small-poison-cloud"
+            entity_name = "small-poison-cloud",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "electric"}
+                    damage = { amount = 3, type = "electric" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "explosion"}
+                    damage = { amount = 3, type = "explosion" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "fire"}
+                    damage = { amount = 3, type = "fire" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "poison"}
+                    damage = { amount = 3, type = "poison" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
                   {
                     type = "create-sticker",
-                    sticker = "poison-sticker"
+                    sticker = "poison-sticker",
                   },
-                }
-              }
+                },
+              },
             },
           },
-        }
-      }
+        },
+      },
     },
-  },
+  }),
 
-  bobmods.enemies.acid_stream{
+  bobmods.enemies.acid_stream({
     name = "bob-leviathan-stream",
     scale = 2,
     tint = bobmods.enemies.leviathan_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
-            entity_name = "explosion"
+            entity_name = "explosion",
           },
           {
             type = "create-entity",
-            entity_name = "small-poison-cloud"
+            entity_name = "small-poison-cloud",
           },
           {
             type = "create-fire",
-            entity_name = "fire-flame"
+            entity_name = "fire-flame",
           },
           {
             type = "create-fire",
-            entity_name = "acid-splash-fire-worm-behemoth"
+            entity_name = "acid-splash-fire-worm-behemoth",
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 3,
               force = "enemy",
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "electric"}
+                    damage = { amount = 3, type = "electric" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "bob-pierce"}
+                    damage = { amount = 3, type = "bob-pierce" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "explosion"}
+                    damage = { amount = 3, type = "explosion" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "acid"}
+                    damage = { amount = 3, type = "acid" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "fire"}
+                    damage = { amount = 3, type = "fire" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 3, type = "poison"}
+                    damage = { amount = 3, type = "poison" },
                   },
                   {
                     type = "damage",
-                    damage = {amount = 2, type = "impact"}
+                    damage = { amount = 2, type = "impact" },
                   },
                   {
                     type = "create-sticker",
-                    sticker = "fire-sticker"
+                    sticker = "fire-sticker",
                   },
                   {
                     type = "create-sticker",
-                    sticker = "poison-sticker"
+                    sticker = "poison-sticker",
                   },
-                }
-              }
-            }
-          }
-        }
-      }
+                },
+              },
+            },
+          },
+        },
+      },
     },
-  },
-}
+  }),
+})

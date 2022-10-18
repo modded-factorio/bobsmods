@@ -1,31 +1,26 @@
-data:extend(
-{
+data:extend({
   {
     type = "technology",
     name = "radars",
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "military",
       "steel-processing",
-      "electronics"
+      "electronics",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-2"
+        recipe = "radar-2",
       },
     },
-    unit =
-    {
+    unit = {
       count = 25,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
     order = "e-b-a",
   },
@@ -35,28 +30,24 @@ data:extend(
     name = "radars-2",
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "radars",
       "military-2",
-      "advanced-electronics"
+      "advanced-electronics",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-3"
+        recipe = "radar-3",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
     order = "e-b-b",
   },
@@ -66,28 +57,24 @@ data:extend(
     name = "radars-3",
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "radars-2",
-      "advanced-electronics-2"
+      "advanced-electronics-2",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-4"
+        recipe = "radar-4",
       },
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
     order = "e-b-c",
   },
@@ -97,32 +84,26 @@ data:extend(
     name = "radars-4",
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "radars-3",
-      "production-science-pack"
+      "production-science-pack",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-5"
+        recipe = "radar-5",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1}
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
     order = "e-b-d",
   },
-}
-)
-
+})

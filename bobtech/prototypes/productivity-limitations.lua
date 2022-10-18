@@ -27,5 +27,3 @@ end
 if data.raw.recipe["alien-science-pack-red"] then
   bobmods.lib.module.add_productivity_limitation("alien-science-pack-red")
 end
-
-

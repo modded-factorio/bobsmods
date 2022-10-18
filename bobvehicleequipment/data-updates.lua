@@ -1,8 +1,6 @@
 require("prototypes.recipe-updates")
 require("prototypes.technology-updates")
 
-
-
 if settings.startup["bobmods-vehicleequipment-enablevehiclegrids"].value == true then
   data.raw["locomotive"]["locomotive"].equipment_grid = "bob-locomotive"
   data.raw["cargo-wagon"]["cargo-wagon"].equipment_grid = "bob-cargo-wagon"
@@ -13,8 +11,6 @@ if settings.startup["bobmods-vehicleequipment-enablevehiclegrids"].value == true
   data.raw.car.car.equipment_grid = "bob-car"
   data.raw.car.tank.equipment_grid = "bob-tank"
 end
-
-
 
 if data.raw["locomotive"]["bob-locomotive-2"] then
   data.raw["locomotive"]["bob-locomotive-2"].equipment_grid = "bob-locomotive-2"
@@ -66,7 +62,6 @@ if data.raw["artillery-wagon"]["bob-artillery-wagon-3"] then
   data.raw["artillery-wagon"]["bob-artillery-wagon-3"].equipment_grid = "bob-armoured-wagon-3"
 end
 
-
 if data.raw.car["bob-tank-2"] then
   data.raw.car["bob-tank-2"].equipment_grid = "bob-tank-2"
 end
@@ -74,8 +69,5 @@ if data.raw.car["bob-tank-3"] then
   data.raw.car["bob-tank-3"].equipment_grid = "bob-tank-3"
 end
 
-
-
-data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"spidertron", "vehicle", "armoured-vehicle"}
-
-
+data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories =
+  { "spidertron", "vehicle", "armoured-vehicle" }

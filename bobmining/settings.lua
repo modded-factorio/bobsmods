@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-mining-miningdrills",
@@ -41,7 +40,4 @@ data:extend(
     setting_type = "startup",
     default_value = true,
   },
-}
-)
-
-
+})

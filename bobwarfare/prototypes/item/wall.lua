@@ -1,8 +1,7 @@
 data.raw.item["stone-wall"].order = "a[wall]-a[stone-wall]"
 data.raw.item["gate"].order = "a[wall]-b[gate]"
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "reinforced-wall",
@@ -24,6 +23,4 @@ data:extend(
     place_result = "reinforced-gate",
     stack_size = 50,
   },
-}
-)
-
+})

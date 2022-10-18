@@ -1,36 +1,31 @@
-data:extend(
-{
+data:extend({
   {
     type = "technology",
     name = "poison-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "land-mine",
-      "military-3"
+      "military-3",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "poison-mine"
+        recipe = "poison-mine",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "e-e-a"
+    order = "e-e-a",
   },
 
   {
@@ -39,31 +34,27 @@ data:extend(
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "land-mine",
-      "military-3"
+      "military-3",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "slowdown-mine"
+        recipe = "slowdown-mine",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "e-e-b"
+    order = "e-e-b",
   },
 
   {
@@ -72,34 +63,26 @@ data:extend(
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "land-mine",
-      "distractor"
+      "distractor",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "distractor-mine"
+        recipe = "distractor-mine",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "e-e-c"
+    order = "e-e-c",
   },
-}
-)
-
-
-
+})

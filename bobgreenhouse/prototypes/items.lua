@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bob-greenhouse",
@@ -8,7 +7,7 @@ data:extend(
     subgroup = "bob-greenhouse",
     order = "g[greenhouse]",
     place_result = "bob-greenhouse",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -17,7 +16,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-greenhouse-items",
     order = "g[fertiliser]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -28,7 +27,7 @@ data:extend(
     fuel_category = "chemical",
     subgroup = "bob-greenhouse-items",
     order = "g[seedling]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -40,7 +39,6 @@ data:extend(
     fuel_emissions_multiplier = 0.9,
     subgroup = "raw-resource",
     order = "a[wood-pellets]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})

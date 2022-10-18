@@ -1,24 +1,28 @@
-if not bobmods then bobmods = {} end
-if not bobmods.ores then bobmods.ores = {} end
-if not bobmods.gems then bobmods.gems = {} end
-if not bobmods.ores.settings then bobmods.ores.settings = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.ores then
+  bobmods.ores = {}
+end
+if not bobmods.gems then
+  bobmods.gems = {}
+end
+if not bobmods.ores.settings then
+  bobmods.ores.settings = {}
+end
 
-data:extend(
-{
+data:extend({
   {
     type = "item-subgroup",
     name = "bob-ores",
     group = "intermediate-products",
-    order = "b-a"
+    order = "b-a",
   },
   {
     type = "resource-category",
-    name = "water"
-  }
-}
-)
-
-
+    name = "water",
+  },
+})
 
 bobmods.ores.settings.UnsortedGemOre = settings.startup["bobmods-ores-unsortedgemore"].value
 bobmods.ores.settings.GemsFromOtherOres = settings.startup["bobmods-ores-gemsfromotherores"].value
@@ -56,12 +60,9 @@ require("prototypes.gem-ore")
 
 require("prototypes.fluids")
 
-
 for i, ore in pairs(bobmods.ores) do
   bobmods.lib.resource.generate_data_stage(ore)
 end
-
-
 
 if settings.startup["bobmods-ores-enablebauxite"].value == true then
   bobmods.ores.bauxite.create_autoplace()
@@ -109,8 +110,6 @@ end
 if settings.startup["bobmods-ores-enablethoriumore"].value == true then
   bobmods.ores.thorium.create_autoplace()
 end
-
-
 
 data.raw.item["copper-ore"].stack_size = 200
 data.raw.item["iron-ore"].stack_size = 200
