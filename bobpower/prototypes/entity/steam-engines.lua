@@ -10,64 +10,66 @@ SE2: 0.2kW * 60 * 0.5 * ( 315 -15) =  1800kW
 SE3: 0.2kW * 60 * 0.5 * ( 465 -15) =  2700kW
 SE4: 0.2kW * 60 * 0.5 * ( 615 -15) =  3600kW
 SE5: 0.2kW * 60 * 0.5 * ( 765 -15) =  4500kW
-]]--
+]]
+--
 
 if settings.startup["bobmods-power-steam"].value == true then
+  data:extend({
+    util.merge({
+      data.raw.generator["steam-engine"],
+      {
+        name = "steam-engine-2",
+        icon = "__base__/graphics/icons/steam-engine.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        minable = { mining_time = 1, result = "steam-engine-2" },
+        max_health = 500,
+        maximum_temperature = 315,
+        next_upgrade = "steam-engine-3",
+      },
+    }),
 
-data:extend({
-util.merge{data.raw.generator["steam-engine"],
-  {
-    name = "steam-engine-2",
-    icon = "__base__/graphics/icons/steam-engine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    minable = {mining_time = 1, result = "steam-engine-2"},
-    max_health = 500,
-    maximum_temperature = 315,
-    next_upgrade = "steam-engine-3"
-  }
-},
+    util.merge({
+      data.raw.generator["steam-engine"],
+      {
+        name = "steam-engine-3",
+        icon = "__base__/graphics/icons/steam-engine.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        minable = { mining_time = 1, result = "steam-engine-3" },
+        max_health = 600,
+        maximum_temperature = 465,
+        next_upgrade = "steam-engine-4",
+      },
+    }),
 
-util.merge{data.raw.generator["steam-engine"],
-  {
-    name = "steam-engine-3",
-    icon = "__base__/graphics/icons/steam-engine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    minable = {mining_time = 1, result = "steam-engine-3"},
-    max_health = 600,
-    maximum_temperature = 465,
-    next_upgrade = "steam-engine-4"
-  }
-},
+    util.merge({
+      data.raw.generator["steam-engine"],
+      {
+        name = "steam-engine-4",
+        icon = "__base__/graphics/icons/steam-engine.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        minable = { mining_time = 1, result = "steam-engine-4" },
+        max_health = 700,
+        maximum_temperature = 615,
+        next_upgrade = "steam-engine-5",
+      },
+    }),
 
-util.merge{data.raw.generator["steam-engine"],
-  {
-    name = "steam-engine-4",
-    icon = "__base__/graphics/icons/steam-engine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    minable = {mining_time = 1, result = "steam-engine-4"},
-    max_health = 700,
-    maximum_temperature = 615,
-    next_upgrade = "steam-engine-5"
-  }
-},
+    util.merge({
+      data.raw.generator["steam-engine"],
+      {
+        name = "steam-engine-5",
+        icon = "__base__/graphics/icons/steam-engine.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        minable = { mining_time = 1, result = "steam-engine-5" },
+        max_health = 800,
+        maximum_temperature = 765,
+      },
+    }),
+  })
 
-util.merge{data.raw.generator["steam-engine"],
-  {
-    name = "steam-engine-5",
-    icon = "__base__/graphics/icons/steam-engine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    minable = {mining_time = 1, result = "steam-engine-5"},
-    max_health = 800,
-    maximum_temperature = 765,
-  }
-},
-
-})
-
-data.raw.generator["steam-engine"].next_upgrade = "steam-engine-2"
-
+  data.raw.generator["steam-engine"].next_upgrade = "steam-engine-2"
 end

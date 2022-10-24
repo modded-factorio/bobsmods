@@ -1,16 +1,18 @@
-if not bobmods then bobmods = {} end
-if not bobmods.mining then bobmods.mining = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.mining then
+  bobmods.mining = {}
+end
 
-data:extend(
-{
+data:extend({
   {
     type = "item-subgroup",
     name = "bob-tool",
     group = "production",
     order = "a-1",
   },
-}
-)
+})
 
 require("prototypes.drill-functions")
 

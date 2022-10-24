@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-logistics-roboportrecipeupdate",
@@ -119,7 +118,6 @@ data:extend(
     maximum_value = 30,
   },
 
-
   {
     type = "bool-setting",
     name = "bobmods-logistics-trains",
@@ -150,5 +148,4 @@ data:extend(
     setting_type = "startup",
     default_value = false,
   },
-}
-)
+})

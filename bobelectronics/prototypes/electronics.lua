@@ -1,6 +1,5 @@
 if data.raw.item["tin-plate"] then
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = "tinned-copper-cable",
@@ -8,7 +7,7 @@ if data.raw.item["tin-plate"] then
       icon_size = 32,
       subgroup = "bob-electronic-components",
       order = "0-a1[tinned-copper-cable]",
-      stack_size = 200
+      stack_size = 200,
     },
 
     {
@@ -16,22 +15,18 @@ if data.raw.item["tin-plate"] then
       name = "tinned-copper-cable",
       category = "electronics",
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 3},
-        {"tin-plate", 1},
+      ingredients = {
+        { "copper-cable", 3 },
+        { "tin-plate", 1 },
       },
       result = "tinned-copper-cable",
       result_count = 3,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-  }
-  )
+  })
 end
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "insulated-cable",
@@ -39,7 +34,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-electronic-components",
     order = "0-a2[insulated-cable]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -47,22 +42,18 @@ data:extend(
     name = "insulated-cable",
     category = "electronics",
     enabled = false,
-    ingredients =
-    {
-      {"copper-cable", 2},
-      {"rubber", 1},
+    ingredients = {
+      { "copper-cable", 2 },
+      { "rubber", 1 },
     },
     result = "insulated-cable",
     result_count = 2,
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
-
+})
 
 if data.raw.item["gold-plate"] then
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = "gilded-copper-cable",
@@ -70,7 +61,7 @@ if data.raw.item["gold-plate"] then
       icon_size = 32,
       subgroup = "bob-electronic-components",
       order = "0-a3[gilded-copper-cable]",
-      stack_size = 200
+      stack_size = 200,
     },
 
     {
@@ -78,23 +69,19 @@ if data.raw.item["gold-plate"] then
       name = "gilded-copper-cable",
       category = "electronics-machine",
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 3},
-        {"gold-plate", 1},
+      ingredients = {
+        { "copper-cable", 3 },
+        { "gold-plate", 1 },
       },
       result = "gilded-copper-cable",
       result_count = 3,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-  }
-  )
+  })
 end
 
-
 if data.raw.item["solder-alloy"] then
-  data:extend(
-  {
+  data:extend({
     {
       type = "item",
       name = "solder",
@@ -102,7 +89,7 @@ if data.raw.item["solder-alloy"] then
       icon_size = 32,
       subgroup = "bob-electronic-components",
       order = "0-a4[solder]",
-      stack_size = 200
+      stack_size = 200,
     },
 
     {
@@ -111,23 +98,18 @@ if data.raw.item["solder-alloy"] then
       category = "electronics",
       energy_required = 2,
       enabled = false,
-      ingredients =
-      {
-        {"solder-alloy", 4},
-        {"resin", 1},
+      ingredients = {
+        { "solder-alloy", 4 },
+        { "resin", 1 },
       },
       result = "solder",
       result_count = 8,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-  }
-  )
+  })
 end
 
-
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "basic-electronic-components",
@@ -135,47 +117,40 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b1[basic-electronic-components]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "basic-electronic-components",
     category = "electronics-machine",
-    normal =
-    {
+    normal = {
       energy_required = 2,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 1},
-        {"coal", 1},
+      ingredients = {
+        { "copper-cable", 1 },
+        { "coal", 1 },
       },
       result = "basic-electronic-components",
       result_count = 5,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 3,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 1},
-        {"coal", 1},
+      ingredients = {
+        { "copper-cable", 1 },
+        { "coal", 1 },
       },
       result = "basic-electronic-components",
       result_count = 3,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "electronic-components",
@@ -183,47 +158,40 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b2[electronic-components]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "electronic-components",
     category = "electronics-machine",
-    normal =
-    {
+    normal = {
       energy_required = 3.5,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 1},
-        {"plastic-bar", 1},
+      ingredients = {
+        { "copper-cable", 1 },
+        { "plastic-bar", 1 },
       },
       result = "electronic-components",
       result_count = 5,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 6,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 1},
-        {"plastic-bar", 1},
+      ingredients = {
+        { "copper-cable", 1 },
+        { "plastic-bar", 1 },
       },
       result = "electronic-components",
       result_count = 3,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "intergrated-electronics",
@@ -231,49 +199,42 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b3[integrated-electronics]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "intergrated-electronics",
     category = "electronics-with-fluid",
-    normal =
-    {
+    normal = {
       energy_required = 5,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 1},
-        {"plastic-bar", 1},
-        {type="fluid", name = "sulfuric-acid", amount = 5},
+      ingredients = {
+        { "copper-cable", 1 },
+        { "plastic-bar", 1 },
+        { type = "fluid", name = "sulfuric-acid", amount = 5 },
       },
       result = "intergrated-electronics",
       result_count = 5,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 9,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 1},
-        {"plastic-bar", 1},
-        {type="fluid", name = "sulfuric-acid", amount = 5},
+      ingredients = {
+        { "copper-cable", 1 },
+        { "plastic-bar", 1 },
+        { type = "fluid", name = "sulfuric-acid", amount = 5 },
       },
       result = "intergrated-electronics",
       result_count = 3,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "processing-electronics",
@@ -281,49 +242,42 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b4[cpu]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "processing-electronics",
     category = "electronics-with-fluid",
-    normal = 
-    {
+    normal = {
       energy_required = 7,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 2},
-        {"plastic-bar", 1},
-        {type="fluid", name = "sulfuric-acid", amount = 5},
+      ingredients = {
+        { "copper-cable", 2 },
+        { "plastic-bar", 1 },
+        { type = "fluid", name = "sulfuric-acid", amount = 5 },
       },
       result = "processing-electronics",
       result_count = 5,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive = 
-    {
+    expensive = {
       energy_required = 12,
       enabled = false,
-      ingredients =
-      {
-        {"copper-cable", 2},
-        {"plastic-bar", 1},
-        {type="fluid", name = "sulfuric-acid", amount = 10},
+      ingredients = {
+        { "copper-cable", 2 },
+        { "plastic-bar", 1 },
+        { type = "fluid", name = "sulfuric-acid", amount = 10 },
       },
       result = "processing-electronics",
       result_count = 3,
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "wooden-board",
@@ -331,26 +285,22 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-boards",
     order = "c-a1[wooden-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "wooden-board",
     category = "electronics",
-    ingredients =
-    {
-      {"wood", 1},
+    ingredients = {
+      { "wood", 1 },
     },
     result = "wooden-board",
-    result_count = 2
+    result_count = 2,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "phenolic-board",
@@ -358,7 +308,7 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-boards",
     order = "c-a2[phenolic-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -366,20 +316,16 @@ data:extend(
     name = "phenolic-board",
     category = "electronics-machine",
     enabled = false,
-    ingredients =
-    {
-      {"wood", 1},
-      {"resin", 1},
+    ingredients = {
+      { "wood", 1 },
+      { "resin", 1 },
     },
     result = "phenolic-board",
-    result_count = 2
+    result_count = 2,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "fibreglass-board",
@@ -387,7 +333,7 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-boards",
     order = "c-a3[fibreglass-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -395,20 +341,15 @@ data:extend(
     name = "fibreglass-board",
     category = "electronics-machine",
     enabled = false,
-    ingredients =
-    {
-      {"plastic-bar", 1},
+    ingredients = {
+      { "plastic-bar", 1 },
     },
     result = "fibreglass-board",
-    result_count = 2
+    result_count = 2,
   },
-}
-)
+})
 
-
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "basic-circuit-board",
@@ -416,7 +357,7 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-b1[basic-circuit-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -424,20 +365,16 @@ data:extend(
     name = "basic-circuit-board",
     category = "electronics",
     energy_required = 1,
-    ingredients =
-    {
-      {"wooden-board", 1},
-      {"copper-cable", 3},
+    ingredients = {
+      { "wooden-board", 1 },
+      { "copper-cable", 3 },
     },
     result = "basic-circuit-board",
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "circuit-board",
@@ -445,7 +382,7 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-b2[circuit-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -454,21 +391,17 @@ data:extend(
     category = "electronics-with-fluid",
     energy_required = 5,
     enabled = false,
-    ingredients =
-    {
-      {"phenolic-board", 1},
-      {"copper-plate", 1},
-      {type="fluid", name="ferric-chloride-solution", amount=5}
+    ingredients = {
+      { "phenolic-board", 1 },
+      { "copper-plate", 1 },
+      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
     },
     result = "circuit-board",
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "superior-circuit-board",
@@ -476,7 +409,7 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-b3[superior-circuit-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -485,21 +418,17 @@ data:extend(
     category = "electronics-with-fluid",
     energy_required = 10,
     enabled = false,
-    ingredients =
-    {
-      {"fibreglass-board", 1},
-      {"copper-plate", 1},
-      {type="fluid", name="ferric-chloride-solution", amount=5}
+    ingredients = {
+      { "fibreglass-board", 1 },
+      { "copper-plate", 1 },
+      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
     },
     result = "superior-circuit-board",
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "multi-layer-circuit-board",
@@ -507,7 +436,7 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-b4[multi-layer-circuit-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -516,21 +445,17 @@ data:extend(
     category = "electronics-with-fluid",
     energy_required = 15,
     enabled = false,
-    ingredients =
-    {
-      {"fibreglass-board", 1},
-      {"copper-plate", 2},
-      {type="fluid", name="ferric-chloride-solution", amount=10}
+    ingredients = {
+      { "fibreglass-board", 1 },
+      { "copper-plate", 2 },
+      { type = "fluid", name = "ferric-chloride-solution", amount = 10 },
     },
     result = "multi-layer-circuit-board",
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "electronic-circuit",
@@ -538,45 +463,38 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-c1[basic-electronic-circuit-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "electronic-circuit",
     category = "electronics",
-    normal =
-    {
+    normal = {
       energy_required = 1,
       enabled = false,
-      ingredients =
-      {
-        {"basic-circuit-board", 1},
-        {"basic-electronic-components", 5},
+      ingredients = {
+        { "basic-circuit-board", 1 },
+        { "basic-electronic-components", 5 },
       },
       result = "electronic-circuit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 3,
       enabled = false,
-      ingredients =
-      {
-        {"basic-circuit-board", 1},
-        {"basic-electronic-components", 6},
+      ingredients = {
+        { "basic-circuit-board", 1 },
+        { "basic-electronic-components", 6 },
       },
       result = "electronic-circuit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "advanced-circuit",
@@ -584,47 +502,40 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-c2[electronic-circuit-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "advanced-circuit",
     category = "electronics",
-    normal =
-    {
+    normal = {
       energy_required = 5,
       enabled = false,
-      ingredients =
-      {
-        {"circuit-board", 1},
-        {"basic-electronic-components", 4},
-        {"electronic-components", 4},
+      ingredients = {
+        { "circuit-board", 1 },
+        { "basic-electronic-components", 4 },
+        { "electronic-components", 4 },
       },
       result = "advanced-circuit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 8,
       enabled = false,
-      ingredients =
-      {
-        {"circuit-board", 1},
-        {"basic-electronic-components", 6},
-        {"electronic-components", 6},
+      ingredients = {
+        { "circuit-board", 1 },
+        { "basic-electronic-components", 6 },
+        { "electronic-components", 6 },
       },
       result = "advanced-circuit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "processing-unit",
@@ -632,49 +543,42 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-c3[electronic-logic-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "processing-unit",
     category = "electronics",
-    normal =
-    {
+    normal = {
       energy_required = 10,
       enabled = false,
-      ingredients =
-      {
-        {"superior-circuit-board", 1},
-        {"basic-electronic-components", 2},
-        {"electronic-components", 4},
-        {"intergrated-electronics", 2},
+      ingredients = {
+        { "superior-circuit-board", 1 },
+        { "basic-electronic-components", 2 },
+        { "electronic-components", 4 },
+        { "intergrated-electronics", 2 },
       },
       result = "processing-unit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 16,
       enabled = false,
-      ingredients =
-      {
-        {"superior-circuit-board", 1},
-        {"basic-electronic-components", 3},
-        {"electronic-components", 6},
-        {"intergrated-electronics", 3},
+      ingredients = {
+        { "superior-circuit-board", 1 },
+        { "basic-electronic-components", 3 },
+        { "electronic-components", 6 },
+        { "intergrated-electronics", 3 },
       },
       result = "processing-unit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "advanced-processing-unit",
@@ -682,46 +586,39 @@ data:extend(
     icon_size = 128,
     subgroup = "bob-electronic-boards",
     order = "c-c4[electronic-processing-board]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
     type = "recipe",
     name = "advanced-processing-unit",
     category = "electronics",
-    normal =
-    {
+    normal = {
       energy_required = 15,
       enabled = false,
-      ingredients =
-      {
-        {"multi-layer-circuit-board", 1},
-        {"basic-electronic-components", 1},
-        {"electronic-components", 2},
-        {"intergrated-electronics", 4},
-        {"processing-electronics", 1},
+      ingredients = {
+        { "multi-layer-circuit-board", 1 },
+        { "basic-electronic-components", 1 },
+        { "electronic-components", 2 },
+        { "intergrated-electronics", 4 },
+        { "processing-electronics", 1 },
       },
       result = "advanced-processing-unit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    expensive =
-    {
+    expensive = {
       energy_required = 24,
       enabled = false,
-      ingredients =
-      {
-        {"multi-layer-circuit-board", 1},
-        {"basic-electronic-components", 3},
-        {"electronic-components", 3},
-        {"intergrated-electronics", 6},
-        {"processing-electronics", 3},
+      ingredients = {
+        { "multi-layer-circuit-board", 1 },
+        { "basic-electronic-components", 3 },
+        { "electronic-components", 3 },
+        { "intergrated-electronics", 6 },
+        { "processing-electronics", 3 },
       },
       result = "advanced-processing-unit",
-      allow_decomposition = false
+      allow_decomposition = false,
     },
-    allow_decomposition = false
+    allow_decomposition = false,
   },
-}
-)
-
-
+})

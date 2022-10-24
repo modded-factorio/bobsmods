@@ -1,5 +1,4 @@
-data:extend
-{
+data:extend({
   {
     type = "item-subgroup",
     name = "bodies",
@@ -10,7 +9,6 @@ data:extend
     type = "item-subgroup",
     name = "body-parts",
     group = "intermediate-products",
-    order = "i"
+    order = "i",
   },
-}
-
+})

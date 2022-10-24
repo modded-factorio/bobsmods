@@ -1,22 +1,20 @@
-data:extend(
-{
+data:extend({
   {
     type = "recipe-category",
-    name = "crafting-machine"
+    name = "crafting-machine",
   },
   {
     type = "recipe-category",
-    name = "electronics"
+    name = "electronics",
   },
   {
     type = "recipe-category",
-    name = "electronics-machine"
+    name = "electronics-machine",
   },
   {
     type = "recipe-category",
-    name = "electronics-with-fluid"
+    name = "electronics-with-fluid",
   },
-
 
   {
     type = "item-group",
@@ -30,9 +28,8 @@ data:extend(
     type = "item-subgroup",
     name = "bob-fluid",
     group = "bob-fluid-products",
-    order = "a-a"
+    order = "a-a",
   },
-
 
   {
     type = "item-group",
@@ -46,33 +43,32 @@ data:extend(
     type = "item-subgroup",
     name = "bob-resource",
     group = "bob-resource-products",
-    order = "b-b"
+    order = "b-b",
   },
   {
     type = "item-subgroup",
     name = "bob-resource-chemical",
     group = "bob-resource-products",
-    order = "b-b-a"
+    order = "b-b-a",
   },
   {
     type = "item-subgroup",
     name = "bob-material-smelting",
     group = "bob-resource-products",
-    order = "c-a-a"
+    order = "c-a-a",
   },
   {
     type = "item-subgroup",
     name = "bob-material-chemical",
     group = "bob-resource-products",
-    order = "c-a-b"
+    order = "c-a-b",
   },
   {
     type = "item-subgroup",
     name = "bob-alloy",
     group = "bob-resource-products",
-    order = "c-b"
+    order = "c-b",
   },
-
 
   {
     type = "item-group",
@@ -86,19 +82,18 @@ data:extend(
     type = "item-subgroup",
     name = "bob-electronic-components",
     group = "bob-intermediate-products",
-    order = "e-a1"
+    order = "e-a1",
   },
   {
     type = "item-subgroup",
     name = "bob-boards",
     group = "bob-intermediate-products",
-    order = "e-a2"
+    order = "e-a2",
   },
   {
     type = "item-subgroup",
     name = "bob-electronic-boards",
     group = "bob-intermediate-products",
-    order = "e-a3"
+    order = "e-a3",
   },
-}
-)
+})

@@ -1,7 +1,6 @@
 data.raw.item["processing-unit"].order = "g[processing-unit-1]"
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "advanced-processing-unit",
@@ -9,7 +8,6 @@ data:extend(
     icon_size = 32,
     subgroup = "intermediate-product",
     order = "g[processing-unit-2]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

@@ -1,6 +1,12 @@
-if not bobmods then bobmods = {} end
-if not bobmods.classes then bobmods.classes = {} end
-if not bobmods.avatars then bobmods.avatars = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.classes then
+  bobmods.classes = {}
+end
+if not bobmods.avatars then
+  bobmods.avatars = {}
+end
 
 require("prototypes.category")
 require("prototypes.style")
@@ -8,8 +14,7 @@ require("prototypes.character")
 require("prototypes.bodies")
 require("prototypes.parts")
 
-
-data:extend{
+data:extend({
   {
     type = "sprite",
     name = "class-balanced-button",
@@ -92,4 +97,4 @@ data:extend{
     width = 32,
     height = 32,
   },
-}
+})

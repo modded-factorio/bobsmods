@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "steel-gear-wheel",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-gears",
     order = "ba[steel-gear-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -17,7 +16,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "baa[ball-bearing-steel]",
-    stack_size = 500
+    stack_size = 500,
   },
 
   {
@@ -27,9 +26,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bba[bearing-steel]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -38,9 +36,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-gears",
     order = "bb[brass-gear-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -49,7 +46,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-gears",
     order = "bc[cobalt-steel-gear-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -59,7 +56,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bac[ball-bearing-cobalt-steel]",
-    stack_size = 500
+    stack_size = 500,
   },
 
   {
@@ -69,9 +66,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bbc[bearing-cobalt-steel]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -80,7 +76,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-gears",
     order = "bd[titanium-gear-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -90,7 +86,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bad[ball-bearing-titanium]",
-    stack_size = 500
+    stack_size = 500,
   },
 
   {
@@ -100,9 +96,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bbd[bearing-titanium]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -111,9 +106,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-gears",
     order = "be[tungsten-gear-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -122,7 +116,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bae[ball-bearing-ceramic]",
-    stack_size = 500
+    stack_size = 500,
   },
 
   {
@@ -132,9 +126,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bbe[bearing-ceramic]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -143,7 +136,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-gears",
     order = "bf[nitinol-gear-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -153,7 +146,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "baf[ball-bearing-nitinol]",
-    stack_size = 500
+    stack_size = 500,
   },
 
   {
@@ -163,9 +156,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-bearings",
     order = "bbf[bearing-nitinol]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -174,7 +166,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-intermediates",
     order = "f-cba[lithium-ion-battery]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -184,9 +176,8 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-intermediates",
     order = "f-cbb[silver-zinc-battery]",
-    stack_size = 200
+    stack_size = 200,
   },
-
 
   {
     type = "item",
@@ -195,7 +186,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-intermediates",
     order = "f-cca[grinding-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -205,9 +196,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-intermediates",
     order = "f-ccb[polishing-wheel]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
-
-
+})

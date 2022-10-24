@@ -1,9 +1,8 @@
 local chemicals = {
   "ferric-chloride-solution",
   "coal-cracking",
-  "bob-oil-processing"
+  "bob-oil-processing",
 }
-
 
 local electronics = {
   "insulated-cable",
@@ -18,7 +17,7 @@ local electronics = {
   "circuit-board",
   "superior-circuit-board",
   "multi-layer-circuit-board",
-  "advanced-processing-unit"
+  "advanced-processing-unit",
 }
 
 if data.raw.recipe["solder"] then
@@ -30,7 +29,6 @@ end
 if data.raw.recipe["gilded-copper-cable"] then
   table.insert(electronics, "gilded-copper-cable")
 end
-
 
 local resource = {
   "bob-resin-wood",
@@ -48,9 +46,6 @@ if data.raw.recipe["solder"] then
   table.insert(electronics, "solder-alloy-lead")
 end
 
-
 bobmods.lib.module.add_productivity_limitations(chemicals)
 bobmods.lib.module.add_productivity_limitations(electronics)
 bobmods.lib.module.add_productivity_limitations(resource)
-
-

@@ -1,59 +1,56 @@
-data:extend(
-{
+data:extend({
   {
     type = "item-subgroup",
     name = "vehicle-equipment",
     group = "combat",
-    order = "e-v"
-  },
-
-
-  {
-    type = "equipment-category",
-    name = "vehicle"
-  },
-  {
-    type = "equipment-category",
-    name = "armoured-vehicle"
+    order = "e-v",
   },
 
   {
     type = "equipment-category",
-    name = "car"
+    name = "vehicle",
   },
   {
     type = "equipment-category",
-    name = "tank"
-  },
-  {
-    type = "equipment-category",
-    name = "spidertron"
+    name = "armoured-vehicle",
   },
 
   {
     type = "equipment-category",
-    name = "train"
+    name = "car",
   },
   {
     type = "equipment-category",
-    name = "locomotive"
+    name = "tank",
   },
   {
     type = "equipment-category",
-    name = "cargo-wagon"
+    name = "spidertron",
   },
 
   {
     type = "equipment-category",
-    name = "armoured-train"
+    name = "train",
   },
   {
     type = "equipment-category",
-    name = "armoured-locomotive"
+    name = "locomotive",
   },
   {
     type = "equipment-category",
-    name = "armoured-cargo-wagon"
+    name = "cargo-wagon",
   },
-}
-)
+
+  {
+    type = "equipment-category",
+    name = "armoured-train",
+  },
+  {
+    type = "equipment-category",
+    name = "armoured-locomotive",
+  },
+  {
+    type = "equipment-category",
+    name = "armoured-cargo-wagon",
+  },
+})

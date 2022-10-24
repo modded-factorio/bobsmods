@@ -1,5 +1,9 @@
-if not bobmods then bobmods = {} end
-if not bobmods.enemies then bobmods.enemies = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.enemies then
+  bobmods.enemies = {}
+end
 
 require("prototypes.values")
 require("prototypes.functions")
@@ -13,4 +17,3 @@ require("prototypes.biters")
 require("prototypes.spitters")
 require("prototypes.spawners")
 require("prototypes.worms")
-

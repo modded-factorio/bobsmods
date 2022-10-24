@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "tin-plate",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-material",
     order = "c-a-a[tin-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -16,7 +15,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-material",
     order = "c-a-c[silver-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -25,7 +24,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-f[lead-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -34,7 +33,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-d[gold-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -43,7 +42,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-f[nickel-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -52,7 +51,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-material",
     order = "c-a-b[zinc-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -61,7 +60,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-g[aluminium-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -70,7 +69,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-material",
     order = "c-a-h[titanium-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -79,7 +78,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-material",
     order = "c-a-i[tungsten-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -88,7 +87,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-material",
     order = "c-a-e[silicon-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -97,7 +96,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-e[lithium-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -106,8 +105,6 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-j[cobalt-plate]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
-
+})

@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-tech-colorupdate",
@@ -12,5 +11,4 @@ data:extend(
     setting_type = "startup",
     default_value = false,
   },
-}
-)
+})
