@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
     prerequisites = {
-      "military"
+      "military",
     },
     effects = {
       {
