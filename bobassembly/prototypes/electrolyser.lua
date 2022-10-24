@@ -151,8 +151,7 @@ then
   end
 
   local function bob_electrolyser_animation(directory, tier, tint)
-    return
-{
+    return {
       north = bob_electrolyser_animation_facing(directory, tier, tint, 0),
       east = bob_electrolyser_animation_facing(directory, tier, tint, 1),
       south = bob_electrolyser_animation_facing(directory, tier, tint, 2),

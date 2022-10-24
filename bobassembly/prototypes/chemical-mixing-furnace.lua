@@ -7,8 +7,7 @@ if
   and (data.raw.technology["chemical-processing-3"] or data.raw.technology["electric-chemical-furnace"])
 then
   local function bob_electric_multipurpose_furnace_working_visualisations()
-    return
-{
+    return {
       {
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",

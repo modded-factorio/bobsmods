@@ -1,6 +1,5 @@
 local function boblaserammo(catagory, projectile)
-  return
-{
+  return {
     type = "beam",
     category = catagory,
     action = {
@@ -16,8 +15,7 @@ local function boblaserammo(catagory, projectile)
 end
 
 local function bobmissileammo(catagory, projectile)
-  return
-{
+  return {
     category = catagory,
     action = {
       type = "direct",

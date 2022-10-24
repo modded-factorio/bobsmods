@@ -1,7 +1,6 @@
 local graphics = {}
 function graphics.hand_base_shadow()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/inserter-hand-base-shadow.png",
     priority = "extra-high",
     width = 8,
@@ -16,8 +15,7 @@ function graphics.hand_base_shadow()
   }
 end
 function graphics.hand_closed_shadow()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/inserter-hand-closed-shadow.png",
     priority = "extra-high",
     width = 18,
@@ -32,8 +30,7 @@ function graphics.hand_closed_shadow()
   }
 end
 function graphics.hand_open_shadow()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/inserter-hand-open-shadow.png",
     priority = "extra-high",
     width = 18,
@@ -50,8 +47,7 @@ end
 
 graphics.stack = {}
 function graphics.stack.hand_closed_shadow()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/stack-inserter-hand-closed-shadow.png",
     priority = "extra-high",
     width = 24,
@@ -66,8 +62,7 @@ function graphics.stack.hand_closed_shadow()
   }
 end
 function graphics.stack.hand_open_shadow()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/stack-inserter-hand-open-shadow.png",
     priority = "extra-high",
     width = 32,
@@ -84,8 +79,7 @@ end
 
 graphics.filter = {}
 function graphics.filter.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__base__/graphics/entity/stack-filter-inserter/stack-filter-inserter-platform.png",
       priority = "extra-high",
@@ -106,8 +100,7 @@ end
 
 graphics.white = {}
 function graphics.white.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/white-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -122,8 +115,7 @@ function graphics.white.hand_base_picture()
   }
 end
 function graphics.white.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/white-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -138,8 +130,7 @@ function graphics.white.hand_closed_picture()
   }
 end
 function graphics.white.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/white-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -154,8 +145,7 @@ function graphics.white.hand_open_picture()
   }
 end
 function graphics.white.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/white-inserter-platform.png",
       priority = "extra-high",
@@ -192,8 +182,7 @@ function graphics.yellow.hand_base_picture()
     }
 end
 function graphics.yellow.hand_closed_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/inserter/inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -208,8 +197,7 @@ function graphics.yellow.hand_closed_picture()
   }
 end
 function graphics.yellow.hand_open_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/inserter/inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -226,8 +214,7 @@ end
 
 graphics.red = {}
 function graphics.red.hand_base_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -242,8 +229,7 @@ function graphics.red.hand_base_picture()
   }
 end
 function graphics.red.hand_closed_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -258,8 +244,7 @@ function graphics.red.hand_closed_picture()
   }
 end
 function graphics.red.hand_open_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -274,8 +259,7 @@ function graphics.red.hand_open_picture()
   }
 end
 function graphics.red.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
       priority = "extra-high",
@@ -296,8 +280,7 @@ end
 
 graphics.red.stack = {}
 function graphics.red.stack.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/red-stack-inserter-hand-closed.png",
     priority = "extra-high",
     width = 24,
@@ -312,8 +295,7 @@ function graphics.red.stack.hand_closed_picture()
   }
 end
 function graphics.red.stack.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/red-stack-inserter-hand-open.png",
     priority = "extra-high",
     width = 32,
@@ -330,8 +312,7 @@ end
 
 graphics.blue = {}
 function graphics.blue.hand_base_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -346,8 +327,7 @@ function graphics.blue.hand_base_picture()
   }
 end
 function graphics.blue.hand_closed_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -362,8 +342,7 @@ function graphics.blue.hand_closed_picture()
   }
 end
 function graphics.blue.hand_open_picture()
-  return
-{
+  return {
     filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -378,8 +357,7 @@ function graphics.blue.hand_open_picture()
   }
 end
 function graphics.blue.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png",
       priority = "extra-high",
@@ -400,8 +378,7 @@ end
 
 graphics.blue.stack = {}
 function graphics.blue.stack.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/blue-stack-inserter-hand-closed.png",
     priority = "extra-high",
     width = 24,
@@ -416,8 +393,7 @@ function graphics.blue.stack.hand_closed_picture()
   }
 end
 function graphics.blue.stack.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/blue-stack-inserter-hand-open.png",
     priority = "extra-high",
     width = 32,
@@ -434,8 +410,7 @@ end
 
 graphics.purple = {}
 function graphics.purple.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -450,8 +425,7 @@ function graphics.purple.hand_base_picture()
   }
 end
 function graphics.purple.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -466,8 +440,7 @@ function graphics.purple.hand_closed_picture()
   }
 end
 function graphics.purple.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -482,8 +455,7 @@ function graphics.purple.hand_open_picture()
   }
 end
 function graphics.purple.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/purple-inserter-platform.png",
       priority = "extra-high",
@@ -504,8 +476,7 @@ end
 
 graphics.purple.stack = {}
 function graphics.purple.stack.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-stack-inserter-hand-closed.png",
     priority = "extra-high",
     width = 24,
@@ -520,8 +491,7 @@ function graphics.purple.stack.hand_closed_picture()
   }
 end
 function graphics.purple.stack.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-stack-inserter-hand-open.png",
     priority = "extra-high",
     width = 32,
@@ -538,8 +508,7 @@ end
 
 graphics.green = {}
 function graphics.green.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/green-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -554,8 +523,7 @@ function graphics.green.hand_base_picture()
   }
 end
 function graphics.green.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/green-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -570,8 +538,7 @@ function graphics.green.hand_closed_picture()
   }
 end
 function graphics.green.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/green-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -586,8 +553,7 @@ function graphics.green.hand_open_picture()
   }
 end
 function graphics.green.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/green-inserter-platform.png",
       priority = "extra-high",
@@ -608,8 +574,7 @@ end
 
 graphics.green.stack = {}
 function graphics.green.stack.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/green-stack-inserter-hand-closed.png",
     priority = "extra-high",
     width = 24,
@@ -624,8 +589,7 @@ function graphics.green.stack.hand_closed_picture()
   }
 end
 function graphics.green.stack.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/green-stack-inserter-hand-open.png",
     priority = "extra-high",
     width = 32,
@@ -642,8 +606,7 @@ end
 
 graphics.cyan = {}
 function graphics.cyan.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/cyan-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -658,8 +621,7 @@ function graphics.cyan.hand_base_picture()
   }
 end
 function graphics.cyan.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/cyan-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -674,8 +636,7 @@ function graphics.cyan.hand_closed_picture()
   }
 end
 function graphics.cyan.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/cyan-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -690,8 +651,7 @@ function graphics.cyan.hand_open_picture()
   }
 end
 function graphics.cyan.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/cyan-inserter-platform.png",
       priority = "extra-high",
@@ -712,8 +672,7 @@ end
 
 graphics.magenta = {}
 function graphics.magenta.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/magenta-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -728,8 +687,7 @@ function graphics.magenta.hand_base_picture()
   }
 end
 function graphics.magenta.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/magenta-inserter-hand-closed.png",
     priority = "extra-high",
     width = 18,
@@ -744,8 +702,7 @@ function graphics.magenta.hand_closed_picture()
   }
 end
 function graphics.magenta.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/magenta-inserter-hand-open.png",
     priority = "extra-high",
     width = 18,
@@ -760,8 +717,7 @@ function graphics.magenta.hand_open_picture()
   }
 end
 function graphics.magenta.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/magenta-inserter-platform.png",
       priority = "extra-high",
@@ -782,8 +738,7 @@ end
 
 graphics.dark_green = {}
 function graphics.dark_green.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/dark-green-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -798,8 +753,7 @@ function graphics.dark_green.hand_base_picture()
   }
 end
 function graphics.dark_green.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/dark-green-inserter-platform.png",
       priority = "extra-high",
@@ -819,8 +773,7 @@ function graphics.dark_green.platform_picture()
 end
 graphics.dark_green.stack = {}
 function graphics.dark_green.stack.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/dark-green-big-inserter-hand-closed.png",
     priority = "extra-high",
     width = 24,
@@ -835,8 +788,7 @@ function graphics.dark_green.stack.hand_closed_picture()
   }
 end
 function graphics.dark_green.stack.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/dark-green-big-inserter-hand-open.png",
     priority = "extra-high",
     width = 32,
@@ -853,8 +805,7 @@ end
 
 graphics.stripe = {}
 function graphics.stripe.hand_base_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/stripe-inserter-hand-base.png",
     priority = "extra-high",
     width = 8,
@@ -869,8 +820,7 @@ function graphics.stripe.hand_base_picture()
   }
 end
 function graphics.stripe.platform_picture()
-  return
-{
+  return {
     sheet = {
       filename = "__boblogistics__/graphics/entity/inserter/stripe-inserter-platform.png",
       priority = "extra-high",
@@ -890,8 +840,7 @@ function graphics.stripe.platform_picture()
 end
 graphics.stripe.stack = {}
 function graphics.stripe.stack.hand_closed_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/stripe-inserter-hand-closed.png",
     priority = "extra-high",
     width = 24,
@@ -906,8 +855,7 @@ function graphics.stripe.stack.hand_closed_picture()
   }
 end
 function graphics.stripe.stack.hand_open_picture()
-  return
-{
+  return {
     filename = "__boblogistics__/graphics/entity/inserter/stripe-inserter-hand-open.png",
     priority = "extra-high",
     width = 32,

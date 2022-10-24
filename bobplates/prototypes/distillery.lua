@@ -132,8 +132,7 @@ function bobmods.plates.distillery_animation(tint)
 end
 
 function bobmods.plates.distillery_working_visualisations(speed)
-  return
-{
+  return {
     {
       north_position = { 0, 0 },
       west_position = { 0, 0 },

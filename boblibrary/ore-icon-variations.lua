@@ -362,8 +362,7 @@ function bobmods.lib.resource.get_random_icon_layer(type, tint, layer)
     size_shift[1] = (height - width) / 2
   end
 
-  return
-{
+  return {
     icon = string.format("__boblibrary__/graphics/icons/ore/%d/%d.png", type, piece),
     icon_size = icon_size,
     tint = tint,
@@ -376,8 +375,7 @@ function bobmods.lib.resource.get_random_icon_layer(type, tint, layer)
 end
 
 function bobmods.lib.resource.get_random_icon(type, tint)
-  return
-{
+  return {
     { icon = "__boblibrary__/graphics/icons/ore/blank.png", icon_size = 64, scale = 0.5 },
     bobmods.lib.resource.get_random_icon_layer(type, tint, 1),
     bobmods.lib.resource.get_random_icon_layer(type, tint, 2),
@@ -398,8 +396,7 @@ function bobmods.lib.resource.get_icon_variation_layer(type, tint, layer)
       (32 - (height * 0.5)) * layer_shift_directions[layer][2] * 0.25
     ) -- hard to the corner of the quadrant, overlap into the middle of the icon
   end
-  return
-{
+  return {
     filename = string.format("__boblibrary__/graphics/icons/ore/%d/%d.png", type, piece),
     width = width,
     height = height,
@@ -416,8 +413,7 @@ function bobmods.lib.resource.get_icon_variation_single(type, tint)
   local scale = 0.5 * math.min(32.0 / width, 32.0 / height, 1.0)
   --  if width > 32 or height > 32 then
   --  end
-  return
-{
+  return {
     filename = string.format("__boblibrary__/graphics/icons/ore/%d/%d.png", type, piece),
     width = width,
     height = height,
@@ -427,8 +423,7 @@ function bobmods.lib.resource.get_icon_variation_single(type, tint)
 end
 
 function bobmods.lib.resource.get_icon_variation(type, tint)
-  return
-{
+  return {
     layers = {
       bobmods.lib.resource.get_icon_variation_layer(type, tint, 1),
       bobmods.lib.resource.get_icon_variation_layer(type, tint, 2),

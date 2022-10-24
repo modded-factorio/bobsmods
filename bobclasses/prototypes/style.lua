@@ -1,6 +1,5 @@
 local function glow_function(tint_value)
-  return
-{
+  return {
     position = { 200, 128 },
     corner_size = 8,
     tint = tint_value,

@@ -32,8 +32,7 @@ function bobmods.logistics.set_pipe_height(pipe, level)
 end
 
 local function bob_pipepictures(pipe_type)
-  return
-{
+  return {
     straight_vertical_single = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-vertical-single.png",
       priority = "extra-high",
@@ -349,8 +348,7 @@ local function bob_pipepictures(pipe_type)
 end
 
 local function bob_pipetogroundpictures(pipe_type)
-  return
-{
+  return {
     up = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-up.png",
       priority = "high",
@@ -407,8 +405,7 @@ local function bob_pipetogroundpictures(pipe_type)
 end
 
 local function bob_pipecoverspictures(pipe_type)
-  return
-{
+  return {
     north = {
       layers = {
         {

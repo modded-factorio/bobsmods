@@ -163,8 +163,7 @@ function bobmods.lib.resource.sprite(inputs)
     sheet.hr_version = hr_version
   end
 
-  return
-{
+  return {
     sheet = sheet,
   }
 end
@@ -214,8 +213,7 @@ function bobmods.lib.resource.hr_sprite(inputs)
     end
   end
 
-  return
-{
+  return {
     filename = filename,
     priority = "extra-high",
     width = width,
@@ -276,8 +274,7 @@ function bobmods.lib.resource.effect(inputs)
     sheet.hr_version = hr_version
   end
 
-  return
-{
+  return {
     sheet = sheet,
   }
 end
@@ -315,8 +312,7 @@ function bobmods.lib.resource.hr_effect(inputs)
     scale = 0.5
   end
 
-  return
-{
+  return {
     filename = filename,
     priority = "extra-high",
     width = width,

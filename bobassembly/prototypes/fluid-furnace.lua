@@ -1,7 +1,6 @@
 if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
   local function fluid_energy_source()
-    return
-{
+    return {
       type = "fluid",
       emissions_per_minute = 3,
       burns_fluid = true,

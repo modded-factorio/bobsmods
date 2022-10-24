@@ -70,11 +70,15 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["bob-power-armor-5"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack", 1 }, { "alien-science-pack-green", 1 }, {
+  data.raw.technology["bob-power-armor-5"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
       "alien-science-pack-red",
       1,
-    } }
+    },
+  }
 
   data.raw.technology["bob-plasma-bullets"].unit.ingredients = {
     { "science-pack-gold", 1 },

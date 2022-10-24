@@ -20,11 +20,15 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["vehicle-big-turret-equipment-6"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack", 1 }, { "alien-science-pack-green", 1 }, {
+  data.raw.technology["vehicle-big-turret-equipment-6"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
       "alien-science-pack-red",
       1,
-    } }
+    },
+  }
 
   data.raw.technology["vehicle-fusion-cell-equipment-4"].unit.ingredients = {
     { "science-pack-gold", 1 },
@@ -38,11 +42,15 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["vehicle-fusion-cell-equipment-6"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack", 1 }, { "alien-science-pack-green", 1 }, {
+  data.raw.technology["vehicle-fusion-cell-equipment-6"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
       "alien-science-pack-red",
       1,
-    } }
+    },
+  }
 
   data.raw.technology["vehicle-fusion-reactor-equipment-4"].unit.ingredients = {
     { "science-pack-gold", 1 },
@@ -56,11 +64,15 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["vehicle-fusion-reactor-equipment-6"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack", 1 }, { "alien-science-pack-green", 1 }, {
+  data.raw.technology["vehicle-fusion-reactor-equipment-6"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
       "alien-science-pack-red",
       1,
-    } }
+    },
+  }
 
   data.raw.technology["vehicle-energy-shield-equipment-4"].unit.ingredients = {
     { "science-pack-gold", 1 },
@@ -74,11 +86,15 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["vehicle-energy-shield-equipment-6"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack", 1 }, { "alien-science-pack-green", 1 }, {
+  data.raw.technology["vehicle-energy-shield-equipment-6"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
       "alien-science-pack-red",
       1,
-    } }
+    },
+  }
 
   data.raw.technology["vehicle-battery-equipment-4"].unit.ingredients = {
     { "science-pack-gold", 1 },
@@ -92,11 +108,15 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["vehicle-battery-equipment-6"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack", 1 }, { "alien-science-pack-green", 1 }, {
+  data.raw.technology["vehicle-battery-equipment-6"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
       "alien-science-pack-red",
       1,
-    } }
+    },
+  }
 
   if data.raw.technology["alien-research"] then
     bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-4", "alien-research")

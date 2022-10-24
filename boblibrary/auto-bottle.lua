@@ -18,8 +18,7 @@ end
 
 -- Generates the icons definition for a barrel item with the provided name and fluid definition using the provided empty barrel base icon
 local function generate_gas_bottle_item_icons(fluid)
-  return
-{
+  return {
     { icon = "__boblibrary__/graphics/icons/cylinder/gas-canister.png", icon_size = 32 },
     { icon = "__boblibrary__/graphics/icons/cylinder/cylinder-top.png", icon_size = 32, tint = fluid.flow_color },
     { icon = "__boblibrary__/graphics/icons/cylinder/cylinder-mid.png", icon_size = 32, tint = fluid.base_color },
@@ -27,8 +26,7 @@ local function generate_gas_bottle_item_icons(fluid)
 end
 
 local function generate_fluid_canister_item_icons(fluid)
-  return
-{
+  return {
     { icon = "__boblibrary__/graphics/icons/cylinder/empty-canister.png", icon_size = 32 },
     { icon = "__boblibrary__/graphics/icons/cylinder/canister-top.png", icon_size = 32, tint = fluid.flow_color },
     { icon = "__boblibrary__/graphics/icons/cylinder/canister-bottom.png", icon_size = 32, tint = fluid.base_color },
@@ -170,7 +168,10 @@ local function create_empty_gas_bottle_recipe(fluid)
   local recipe = {
     type = "recipe",
     name = "empty-" .. fluid.name .. "-barrel",
-    localised_name = { "recipe-name.empty-filled-gas-canister", fluid.localised_name or { "fluid-name." .. fluid.name } },
+    localised_name = {
+      "recipe-name.empty-filled-gas-canister",
+      fluid.localised_name or { "fluid-name." .. fluid.name },
+    },
     category = "air-pump",
     subgroup = "bob-empty-gas-bottle",
     energy_required = 0.2,

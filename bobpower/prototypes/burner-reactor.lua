@@ -1,7 +1,6 @@
 if settings.startup["bobmods-power-heatsources"].value == true then
   local function lower_layer_picture(suffix)
-    return
-{
+    return {
       filename = "__bobpower__/graphics/burner-reactor/reactor-pipes" .. suffix .. ".png",
       width = 96,
       height = 96,
@@ -17,8 +16,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   end
 
   local function connection_patches_connected(suffix)
-    return
-{
+    return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
         width = 32,
@@ -36,8 +34,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   end
 
   local function connection_patches_disconnected(suffix)
-    return
-{
+    return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
         width = 32,

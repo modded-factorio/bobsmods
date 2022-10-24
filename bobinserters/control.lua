@@ -1328,18 +1328,14 @@ function bobmods.logistics.create_gui(player_index)
       caption = { "gui.bob-logistics-enabled2" },
     })
     if global.bobmods.logistics[player_index].enabled2 then
-      remote.call(
-        "bobinserters",
-        "draw_gui",
-        {
-          player_index = player_index,
-          gui = gui,
-          name = "bob_logistics",
-          pickup = global.bobmods.logistics[player_index].pickup,
-          drop = global.bobmods.logistics[player_index].drop,
-          offset = global.bobmods.logistics[player_index].offset,
-        }
-      )
+      remote.call("bobinserters", "draw_gui", {
+        player_index = player_index,
+        gui = gui,
+        name = "bob_logistics",
+        pickup = global.bobmods.logistics[player_index].pickup,
+        drop = global.bobmods.logistics[player_index].drop,
+        offset = global.bobmods.logistics[player_index].offset,
+      })
     end
   end
 end
@@ -1505,7 +1501,12 @@ function bobmods.inserters.draw_inserter_gui_main_table(
     style = "heading_2_label",
     caption = { "gui.bob-inserter-pickup" },
   })
-  main_table.add({ type = "label", name = "drop_label", style = "heading_2_label", caption = { "gui.bob-inserter-drop" } })
+  main_table.add({
+    type = "label",
+    name = "drop_label",
+    style = "heading_2_label",
+    caption = { "gui.bob-inserter-drop" },
+  })
 
   main_table.add({ type = "frame", name = "pickup", style = "inside_shallow_frame_with_padding" })
   main_table.add({ type = "frame", name = "drop", style = "inside_shallow_frame_with_padding" })

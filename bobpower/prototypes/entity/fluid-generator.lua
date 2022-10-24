@@ -56,8 +56,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   function bobmods.power.fluid_generator_working_visualisations()
-    return
-{
+    return {
       {
         north_position = { 0.0, 0.0 },
         east_position = { 0.0, 0.0 },

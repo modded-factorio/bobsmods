@@ -16,8 +16,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   accumulator.localised_description = { "entity-description.large-accumulator" }
 
   function bobmods.power.large_accumulator_picture(tint, repeat_count)
-    return
-{
+    return {
       layers = {
         {
           filename = "__bobpower__/graphics/accumulator/large-accumulator.png",
@@ -64,8 +63,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   end
 
   function bobmods.power.large_accumulator_charge()
-    return
-{
+    return {
       layers = {
         bobmods.power.large_accumulator_picture({ r = 1, g = 1, b = 1, a = 1 }, 24),
         {
@@ -94,8 +92,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   end
 
   function bobmods.power.large_accumulator_discharge()
-    return
-{
+    return {
       layers = {
         bobmods.power.large_accumulator_picture({ r = 1, g = 1, b = 1, a = 1 }, 24),
         {

@@ -1,7 +1,6 @@
 if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furnace["electric-furnace"] then
   local function bob_electric_furnace_animation(tint)
-    return
-{
+    return {
       layers = {
         {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace.png",
@@ -53,8 +52,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
   end
 
   local function bob_electric_furnace_working_visualisations()
-    return
-{
+    return {
       {
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
@@ -123,8 +121,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
   end
 
   local function bob_electric_furnace(input)
-    return
-{
+    return {
       type = "furnace",
       name = input.name,
       icon = input.icon,

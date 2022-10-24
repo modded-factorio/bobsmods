@@ -7,8 +7,7 @@ function bobmods.warfare.tank_drone_animation(scale, tint1, tint2)
   if tint2 == nil then
     tint2 = { r = 1, g = 1, b = 1 }
   end
-  return
-{
+  return {
     layers = {
       {
         priority = "low",

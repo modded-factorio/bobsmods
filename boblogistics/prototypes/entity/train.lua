@@ -1,7 +1,6 @@
 if settings.startup["bobmods-logistics-trains"].value == true then
   local function rolling_stock_resistances()
-    return
-{
+    return {
       {
         type = "fire",
         decrease = 15,
@@ -47,8 +46,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   end
 
   local function rolling_stock_armor_resistances()
-    return
-{
+    return {
       {
         type = "fire",
         decrease = 25,

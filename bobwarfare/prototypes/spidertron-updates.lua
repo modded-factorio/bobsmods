@@ -19,8 +19,7 @@ if bobmods.tech and bobmods.tech.advanced_logistic_science then
 end
 
 local function spidertron_burner_energy_source()
-  return
-{
+  return {
     type = "burner",
     fuel_category = "chemical",
     effectivity = 1,
@@ -39,8 +38,7 @@ local function spidertron_burner_energy_source()
 end
 
 local function spidertron_nuclear_energy_source()
-  return
-{
+  return {
     type = "burner",
     fuel_category = "nuclear",
     effectivity = 1,

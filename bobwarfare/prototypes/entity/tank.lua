@@ -6,8 +6,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
 end
 
 function bobmods.warfare.tank_animation(tint)
-  return
-{
+  return {
     layers = {
       {
         priority = "low",
@@ -203,8 +202,7 @@ function bobmods.warfare.tank_animation(tint)
 end
 
 function bobmods.warfare.tank_turret_animation(tint)
-  return
-{
+  return {
     layers = {
       {
         filename = "__base__/graphics/entity/tank/tank-turret.png",

@@ -514,8 +514,7 @@ local function bob_personal_laser_defense_equipment(
   cooldown,
   range
 )
-  return
-{
+  return {
     type = "active-defense-equipment",
     name = name,
     sprite = {
