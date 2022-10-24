@@ -4,12 +4,11 @@ local function regenerate_entity(ore)
   end
 end
 
-remote.add_interface("bobores",
-{
+remote.add_interface("bobores", {
   Regenerate = function()
---    for i, player in ipairs(game.players) do
---      player.print("Regenerating all ores now, this may take some time...")
---    end
+    --    for i, player in ipairs(game.players) do
+    --      player.print("Regenerating all ores now, this may take some time...")
+    --    end
     regenerate_entity("tin-ore")
     regenerate_entity("lead-ore")
     regenerate_entity("quartz")
@@ -32,7 +31,5 @@ remote.add_interface("bobores",
     for i, player in ipairs(game.players) do
       player.print("All ores successfully regenerated!")
     end
-  end
-}
-)
-
+  end,
+})

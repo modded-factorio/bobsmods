@@ -10,7 +10,6 @@ for index, character in pairs(bobmods.classes.characters) do
   end
 end
 
-
 --if mixing furnace category exists, add it to characters with smelting category
 if data.raw["recipe-category"]["mixing-furnace"] then
   for index, character in pairs(bobmods.classes.characters) do
@@ -18,11 +17,8 @@ if data.raw["recipe-category"]["mixing-furnace"] then
   end
 end
 
-
 if data.raw["item-group"]["bob-intermediate-products"] then
   data.raw["item-subgroup"]["body-parts"].group = "bob-intermediate-products"
 end
 
 require("prototypes.recipe-updates")
-
-

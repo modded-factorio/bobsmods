@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-modules-enablegreenmodules",
@@ -55,7 +54,6 @@ data:extend(
     default_value = false,
     per_user = false,
   },
-
 
   {
     type = "double-setting",
@@ -131,7 +129,6 @@ data:extend(
     per_user = false,
   },
 
-
   {
     type = "double-setting",
     name = "bobmods-modules-start-bonus-speed",
@@ -205,7 +202,4 @@ data:extend(
     minimum_value = 0,
     per_user = false,
   },
-}
-)
-
-
+})

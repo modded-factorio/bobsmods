@@ -1,34 +1,31 @@
-data:extend(
-{
+data:extend({
   {
     type = "module-category",
-    name = "pollution-clean"
+    name = "pollution-clean",
   },
   {
     type = "module-category",
-    name = "pollution-create"
+    name = "pollution-create",
   },
   {
     type = "module-category",
-    name = "raw-productivity"
+    name = "raw-productivity",
   },
   {
     type = "module-category",
-    name = "raw-speed"
+    name = "raw-speed",
   },
   {
     type = "module-category",
-    name = "green"
+    name = "green",
   },
   {
     type = "module-category",
-    name = "god"
+    name = "god",
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item-group",
     name = "bobmodules",
@@ -42,86 +39,84 @@ data:extend(
     type = "item-subgroup",
     name = "module-intermediates",
     group = "bobmodules",
-    order = "f-0"
+    order = "f-0",
   },
   {
     type = "item-subgroup",
     name = "speed-module",
     group = "bobmodules",
-    order = "f-1"
+    order = "f-1",
   },
   {
     type = "item-subgroup",
     name = "effectivity-module",
     group = "bobmodules",
-    order = "f-2"
+    order = "f-2",
   },
   {
     type = "item-subgroup",
     name = "productivity-module",
     group = "bobmodules",
-    order = "f-3"
+    order = "f-3",
   },
   {
     type = "item-subgroup",
     name = "pollution-create-module",
     group = "bobmodules",
-    order = "f-4"
+    order = "f-4",
   },
   {
     type = "item-subgroup",
     name = "pollution-clean-module",
     group = "bobmodules",
-    order = "f-5"
+    order = "f-5",
   },
   {
     type = "item-subgroup",
     name = "raw-speed-module",
     group = "bobmodules",
-    order = "f-6"
+    order = "f-6",
   },
   {
     type = "item-subgroup",
     name = "raw-speed-module-combine",
     group = "bobmodules",
-    order = "f-6-1"
+    order = "f-6-1",
   },
   {
     type = "item-subgroup",
     name = "green-module",
     group = "bobmodules",
-    order = "f-7"
+    order = "f-7",
   },
   {
     type = "item-subgroup",
     name = "green-module-combine",
     group = "bobmodules",
-    order = "f-7-1"
+    order = "f-7-1",
   },
   {
     type = "item-subgroup",
     name = "raw-productivity-module",
     group = "bobmodules",
-    order = "f-8"
+    order = "f-8",
   },
   {
     type = "item-subgroup",
     name = "raw-productivity-module-combine",
     group = "bobmodules",
-    order = "f-8-1"
+    order = "f-8-1",
   },
   {
     type = "item-subgroup",
     name = "god-module",
     group = "bobmodules",
-    order = "f-9"
+    order = "f-9",
   },
   {
     type = "item-subgroup",
     name = "module-beacon",
     group = "bobmodules",
-    order = "f-z"
+    order = "f-z",
   },
-}
-)
-
+})

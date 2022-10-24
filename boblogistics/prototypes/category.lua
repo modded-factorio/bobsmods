@@ -1,6 +1,5 @@
-data:extend(
-{
-   {
+data:extend({
+  {
     type = "item-group",
     name = "bob-logistics",
     order = "aaa-a",
@@ -80,13 +79,13 @@ data:extend(
     type = "item-subgroup",
     name = "pipe",
     group = "bob-logistics",
-    order = "d-a-1"
+    order = "d-a-1",
   },
   {
     type = "item-subgroup",
     name = "pipe-to-ground",
     group = "bob-logistics",
-    order = "d-a-2"
+    order = "d-a-2",
   },
   {
     type = "item-subgroup",
@@ -165,35 +164,34 @@ data:extend(
     type = "item-subgroup",
     name = "bob-roboport-parts",
     group = "intermediate-products",
-    order = "e-d"
+    order = "e-d",
   },
   {
     type = "item-subgroup",
     name = "bob-roboport-parts-antenna",
     group = "intermediate-products",
-    order = "e-d1"
+    order = "e-d1",
   },
   {
     type = "item-subgroup",
     name = "bob-roboport-parts-door",
     group = "intermediate-products",
-    order = "e-d2"
+    order = "e-d2",
   },
   {
     type = "item-subgroup",
     name = "bob-roboport-parts-charge",
     group = "intermediate-products",
-    order = "e-d3"
+    order = "e-d3",
   },
 
   {
     type = "item-subgroup",
     name = "bob-robot-parts",
     group = "intermediate-products",
-    order = "e-e"
+    order = "e-e",
   },
-}
-)
+})
 
 if data.raw["item-group"]["bob-intermediate-products"] then
   data.raw["item-subgroup"]["bob-roboport-parts"].group = "bob-intermediate-products"
@@ -202,4 +200,3 @@ if data.raw["item-group"]["bob-intermediate-products"] then
   data.raw["item-subgroup"]["bob-roboport-parts-charge"].group = "bob-intermediate-products"
   data.raw["item-subgroup"]["bob-robot-parts"].group = "bob-intermediate-products"
 end
-

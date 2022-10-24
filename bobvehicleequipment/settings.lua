@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-vehicleequipment-enablevehiclegrids",
@@ -7,8 +6,4 @@ data:extend(
     default_value = true,
     per_user = false,
   },
-}
-)
-
-
-
+})

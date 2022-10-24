@@ -1,11 +1,9 @@
-if not bobmods.lib.module then bobmods.lib.module = {} end
-
+if not bobmods.lib.module then
+  bobmods.lib.module = {}
+end
 
 function bobmods.lib.module.add_productivity_limitation(recipe)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] then
     for i, module in pairs(data.raw.module) do
       if module.limitation and module.effect.productivity then
         table.insert(module.limitation, recipe)
@@ -29,10 +27,7 @@ function bobmods.lib.module.add_productivity_limitations(recipes)
 end
 
 function bobmods.lib.module.remove_productivity_limitation(recipe)
-  if
-    type(recipe) == "string" and
-    data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and data.raw.recipe[recipe] then
     for i, module in pairs(data.raw.module) do
       if module.limitation and module.effect.productivity then
         for limitationIndex, limitationRecipeName in pairs(module.limitation) do

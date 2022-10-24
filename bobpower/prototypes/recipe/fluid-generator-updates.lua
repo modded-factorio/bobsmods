@@ -1,10 +1,9 @@
 if settings.startup["bobmods-power-fluidgenerator"].value == true then
-
   if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "normal", {"steel-bearing", 10})
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "expensive", {"steel-bearing", 20})
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "normal", { "steel-bearing", 10 })
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "expensive", { "steel-bearing", 20 })
   else
-    bobmods.lib.recipe.add_ingredient("fluid-generator", {"iron-gear-wheel", 10})
+    bobmods.lib.recipe.add_ingredient("fluid-generator", { "iron-gear-wheel", 10 })
   end
 
   if data.raw.item["steel-gear-wheel"] then
@@ -21,22 +20,20 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "normal", {"electronic-circuit", 5})
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "expensive", {"electronic-circuit", 10})
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "normal", { "electronic-circuit", 5 })
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator", "expensive", { "electronic-circuit", 10 })
     bobmods.lib.tech.add_prerequisite("fluid-generator-1", "electronics")
   end
 
-
-
   if data.raw.item["cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "normal", {"cobalt-steel-bearing", 5})
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "expensive", {"cobalt-steel-bearing", 10})
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "normal", { "cobalt-steel-bearing", 5 })
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "expensive", { "cobalt-steel-bearing", 10 })
     bobmods.lib.tech.add_prerequisite("fluid-generator-2", "cobalt-processing")
   elseif data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "normal", {"steel-bearing", 10})
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "expensive", {"steel-bearing", 20})
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "normal", { "steel-bearing", 10 })
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-2", "expensive", { "steel-bearing", 20 })
   else
-    bobmods.lib.recipe.add_ingredient("fluid-generator-2", {"iron-gear-wheel", 10})
+    bobmods.lib.recipe.add_ingredient("fluid-generator-2", { "iron-gear-wheel", 10 })
   end
 
   if data.raw.item["cobalt-steel-gear-wheel"] then
@@ -60,10 +57,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["brass-pipe"] then
-    bobmods.lib.recipe.add_ingredient("fluid-generator-2", {"brass-pipe", 5})
+    bobmods.lib.recipe.add_ingredient("fluid-generator-2", { "brass-pipe", 5 })
     bobmods.lib.tech.add_prerequisite("fluid-generator-2", "zinc-processing")
   elseif data.raw.item["steel-pipe"] then
-    bobmods.lib.recipe.add_ingredient("fluid-generator-2", {"steel-pipe", 5})
+    bobmods.lib.recipe.add_ingredient("fluid-generator-2", { "steel-pipe", 5 })
   end
 
   if data.raw.item["advanced-processing-unit"] then
@@ -71,16 +68,14 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("fluid-generator-2", "advanced-electronics")
   end
 
-
-
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "normal", {"titanium-bearing", 10})
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "expensive", {"titanium-bearing", 20})
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "normal", { "titanium-bearing", 10 })
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "expensive", { "titanium-bearing", 20 })
   elseif data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "normal", {"steel-bearing", 10})
-    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "expensive", {"steel-bearing", 20})
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "normal", { "steel-bearing", 10 })
+    bobmods.lib.recipe.add_difficulty_ingredient("fluid-generator-3", "expensive", { "steel-bearing", 20 })
   else
-    bobmods.lib.recipe.add_ingredient("fluid-generator-3", {"iron-gear-wheel", 10})
+    bobmods.lib.recipe.add_ingredient("fluid-generator-3", { "iron-gear-wheel", 10 })
   end
 
   if data.raw.item["titanium-gear-wheel"] then
@@ -100,7 +95,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["ceramic-pipe"] then
-    bobmods.lib.recipe.add_ingredient("fluid-generator-3", {"ceramic-pipe", 5})
+    bobmods.lib.recipe.add_ingredient("fluid-generator-3", { "ceramic-pipe", 5 })
     bobmods.lib.tech.add_prerequisite("fluid-generator-3", "ceramics")
   end
 
@@ -109,14 +104,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("fluid-generator-3", "advanced-electronics-2")
   end
 
-
-
   if mods["bobrevamp"] and data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
     if data.raw.item["nitinol-bearing"] then
-      bobmods.lib.recipe.add_difficulty_ingredient("hydrazine-generator", "normal", {"nitinol-bearing", 10})
-      bobmods.lib.recipe.add_difficulty_ingredient("hydrazine-generator", "expensive", {"nitinol-bearing", 20})
+      bobmods.lib.recipe.add_difficulty_ingredient("hydrazine-generator", "normal", { "nitinol-bearing", 10 })
+      bobmods.lib.recipe.add_difficulty_ingredient("hydrazine-generator", "expensive", { "nitinol-bearing", 20 })
     else
-      bobmods.lib.recipe.add_ingredient("hydrazine-generator", {"iron-gear-wheel", 10})
+      bobmods.lib.recipe.add_ingredient("hydrazine-generator", { "iron-gear-wheel", 10 })
     end
 
     if data.raw.item["nitinol-gear-wheel"] then
@@ -134,10 +127,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     end
 
     if data.raw.item["copper-tungsten-pipe"] then
-      bobmods.lib.recipe.add_ingredient("hydrazine-generator", {"copper-tungsten-pipe", 5})
+      bobmods.lib.recipe.add_ingredient("hydrazine-generator", { "copper-tungsten-pipe", 5 })
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "tungsten-alloy-processing")
     elseif data.raw.item["tungsten-pipe"] then
-      bobmods.lib.recipe.add_ingredient("hydrazine-generator", {"tungsten-pipe", 5})
+      bobmods.lib.recipe.add_ingredient("hydrazine-generator", { "tungsten-pipe", 5 })
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "tungsten-processing")
     end
 
@@ -148,5 +141,4 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-electronics-2")
     end
   end
-
 end

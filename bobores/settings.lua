@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-ores-infiniteore",
@@ -13,7 +12,6 @@ data:extend(
     setting_type = "startup",
     default_value = false,
   },
-
 
   {
     type = "bool-setting",
@@ -30,7 +28,6 @@ data:extend(
     minimum_value = 0,
   },
 
-
   {
     type = "bool-setting",
     name = "bobmods-ores-nickelgivescobalt",
@@ -46,7 +43,6 @@ data:extend(
     minimum_value = 0,
   },
 
-
   {
     type = "bool-setting",
     name = "bobmods-ores-gemsfromotherores",
@@ -61,7 +57,6 @@ data:extend(
     maximum_value = 1,
     minimum_value = 0,
   },
-
 
   {
     type = "double-setting",
@@ -111,7 +106,6 @@ data:extend(
     maximum_value = 1,
     minimum_value = 0,
   },
-
 
   {
     type = "bool-setting",
@@ -203,7 +197,4 @@ data:extend(
     setting_type = "startup",
     default_value = false,
   },
-}
-)
-
-
+})

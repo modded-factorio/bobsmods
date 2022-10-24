@@ -1,94 +1,81 @@
-data:extend(
-{
+data:extend({
   {
     type = "night-vision-equipment",
     name = "night-vision-equipment-2",
-    sprite = 
-    {
+    sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "180kJ",
       input_flow_limit = "360kW",
-      usage_priority = "primary-input"
+      usage_priority = "primary-input",
     },
     energy_input = "15kW",
-    tint = {r = 0, g = 0, b = 0, a = 0},
-    desaturation_params = 
-    { 
+    tint = { r = 0, g = 0, b = 0, a = 0 },
+    desaturation_params = {
       smoothstep_min = 0.1,
       smoothstep_max = 0.7,
       minimum = 0.5,
-      maximum = 1.0
+      maximum = 1.0,
     },
-    light_params = 
-    { 
+    light_params = {
       smoothstep_min = 0.1,
       smoothstep_max = 0.7,
       minimum = 0.8,
       maximum = 1.0,
     },
-    categories = {"armor"},
+    categories = { "armor" },
     darkness_to_turn_on = 0.4,
-    color_lookup = {{0.5, "__core__/graphics/color_luts/lut-dawn.png"}}
+    color_lookup = { { 0.5, "__core__/graphics/color_luts/lut-dawn.png" } },
   },
   {
     type = "night-vision-equipment",
     name = "night-vision-equipment-3",
-    sprite = 
-    {
+    sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "240kJ",
       input_flow_limit = "480kW",
-      usage_priority = "primary-input"
+      usage_priority = "primary-input",
     },
     energy_input = "20kW",
-    tint = {r = 0, g = 0, b = 0, a = 0},
-    desaturation_params = 
-    { 
+    tint = { r = 0, g = 0, b = 0, a = 0 },
+    desaturation_params = {
       smoothstep_min = 0.1,
       smoothstep_max = 0.7,
       minimum = 0.7,
-      maximum = 1.0
+      maximum = 1.0,
     },
-    light_params = 
-    { 
+    light_params = {
       smoothstep_min = 0.1,
       smoothstep_max = 0.7,
       minimum = 1.0,
       maximum = 1.0,
     },
-    categories = {"armor"},
+    categories = { "armor" },
     darkness_to_turn_on = 0.05,
-    color_lookup = {{0.5, "__core__/graphics/color_luts/identity-lut.png"}}
+    color_lookup = { { 0.5, "__core__/graphics/color_luts/identity-lut.png" } },
   },
-}
-)
-
+})
 
 -- energy_per_shield MK1 is 20J per shield unit, MK2 is 30J.
 -- max_shield_value MK1 is 50, MK2 is 150
@@ -96,51 +83,45 @@ data:extend(
 -- input_flow_limit MK1 is "240W", MK2 is 360W
 
 data.raw["energy-shield-equipment"]["energy-shield-equipment"].max_shield_value = 75
-data.raw["energy-shield-equipment"]["energy-shield-equipment"].sprite = 
-{
+data.raw["energy-shield-equipment"]["energy-shield-equipment"].sprite = {
   filename = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png",
   width = 64,
   height = 64,
-  priority = "medium"
+  priority = "medium",
 }
 
 data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].energy_per_shield = "20kJ"
-data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].sprite = 
-{
+data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].sprite = {
   filename = "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png",
   width = 64,
   height = 64,
-  priority = "medium"
+  priority = "medium",
 }
 
-data:extend(
-{
+data:extend({
   {
     type = "energy-shield-equipment",
     name = "energy-shield-mk3-equipment",
     max_shield_value = 300,
     energy_per_shield = "20kJ",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "240kJ",
       input_flow_limit = "480kW",
-      usage_priority = "primary-input"
+      usage_priority = "primary-input",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
 
   {
@@ -148,27 +129,24 @@ data:extend(
     name = "energy-shield-mk4-equipment",
     max_shield_value = 600,
     energy_per_shield = "20kJ",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "300kJ",
       input_flow_limit = "600kW",
-      usage_priority = "primary-input"
+      usage_priority = "primary-input",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
 
   {
@@ -176,27 +154,24 @@ data:extend(
     name = "energy-shield-mk5-equipment",
     max_shield_value = 1200,
     energy_per_shield = "20kJ",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "360kJ",
       input_flow_limit = "720kW",
-      usage_priority = "primary-input"
+      usage_priority = "primary-input",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
 
   {
@@ -204,513 +179,492 @@ data:extend(
     name = "energy-shield-mk6-equipment",
     max_shield_value = 2400,
     energy_per_shield = "20kJ",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "420kJ",
       input_flow_limit = "840kW",
-      usage_priority = "primary-input"
+      usage_priority = "primary-input",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
-}
-)
+})
 
+data.raw["battery-equipment"]["battery-equipment"].sprite.filename =
+  "__bobequipment__/graphics/equipment/battery-equipment.png"
 
-data.raw["battery-equipment"]["battery-equipment"].sprite.filename = "__bobequipment__/graphics/equipment/battery-equipment.png"
-
-data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__bobequipment__/graphics/equipment/battery-mk2-equipment.png"
+data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename =
+  "__bobequipment__/graphics/equipment/battery-mk2-equipment.png"
 data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.buffer_capacity = "50MJ"
 data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.input_flow_limit = "500MW"
 data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.output_flow_limit = "500MW"
 
-
-data:extend(
-{
+data:extend({
   {
     type = "battery-equipment",
     name = "battery-mk3-equipment",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk3-equipment.png",
       width = 32,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "120MJ",
       input_flow_limit = "1200MW",
       output_flow_limit = "1200MW",
-      usage_priority = "tertiary"
+      usage_priority = "tertiary",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "battery-equipment",
     name = "battery-mk4-equipment",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk4-equipment.png",
       width = 32,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "300MJ",
       input_flow_limit = "3000MW",
       output_flow_limit = "3000MW",
-      usage_priority = "tertiary"
+      usage_priority = "tertiary",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "battery-equipment",
     name = "battery-mk5-equipment",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk5-equipment.png",
       width = 32,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "750MJ",
       input_flow_limit = "7500MW",
       output_flow_limit = "7500MW",
-      usage_priority = "tertiary"
+      usage_priority = "tertiary",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "battery-equipment",
     name = "battery-mk6-equipment",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk6-equipment.png",
       width = 32,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "1800MJ",
       input_flow_limit = "18000MW",
       output_flow_limit = "18000MW",
-      usage_priority = "tertiary"
+      usage_priority = "tertiary",
     },
-    categories = {"armor"}
+    categories = { "armor" },
   },
-}
-)
+})
 
-data.raw["solar-panel-equipment"]["solar-panel-equipment"].sprite = 
-{
+data.raw["solar-panel-equipment"]["solar-panel-equipment"].sprite = {
   filename = "__bobequipment__/graphics/icons/solar-panel-equipment-1.png",
   width = 32,
   height = 32,
-  priority = "medium"
+  priority = "medium",
 }
 
-data:extend(
-{
+data:extend({
   {
     type = "solar-panel-equipment",
     name = "solar-panel-equipment-2",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/solar-panel-equipment-2.png",
       width = 32,
       height = 32,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 1,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "45kW",
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "solar-panel-equipment",
     name = "solar-panel-equipment-3",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/solar-panel-equipment-3.png",
       width = 32,
       height = 32,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 1,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "75kW",
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "solar-panel-equipment",
     name = "solar-panel-equipment-4",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
       width = 32,
       height = 32,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 1,
       height = 1,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "120kW",
-    categories = {"armor"}
+    categories = { "armor" },
   },
-}
-)
+})
 
-
-data.raw["generator-equipment"]["fusion-reactor-equipment"].sprite = 
-{
+data.raw["generator-equipment"]["fusion-reactor-equipment"].sprite = {
   filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-1.png",
   width = 128,
   height = 128,
-  priority = "medium"
+  priority = "medium",
 }
 
-data:extend(
-{
+data:extend({
   {
     type = "generator-equipment",
     name = "fusion-reactor-equipment-2",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-2.png",
       width = 128,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 4,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "1250kW",
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "generator-equipment",
     name = "fusion-reactor-equipment-3",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-3.png",
       width = 128,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 4,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "2000kW",
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "generator-equipment",
     name = "fusion-reactor-equipment-4",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-4.png",
       width = 128,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 4,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "3000kW",
-    categories = {"armor"}
+    categories = { "armor" },
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "active-defense-equipment",
     name = "combat-robot-dispenser-equipment",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobequipment__/graphics/icons/distractor.png",
       width = 32,
       height = 32,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      buffer_capacity = "6MJ"
+      buffer_capacity = "6MJ",
     },
-    attack_parameters =
-    {
+    attack_parameters = {
       type = "projectile",
       ammo_category = "electric",
       cooldown = 60 * 15,
       damage_modifier = 1,
-      projectile_center = {0, 0},
+      projectile_center = { 0, 0 },
       projectile_creation_distance = 0.6,
       range = 10,
-      ammo_type =
-      {
+      ammo_type = {
         type = "projectile",
         category = "electric",
         energy_consumption = "5MJ",
-        action = 
-        {
+        action = {
           {
             type = "direct",
-            action_delivery =
-            {
+            action_delivery = {
               type = "instant",
-              source_effects =
-              {
+              source_effects = {
                 {
                   type = "create-entity",
                   show_in_tooltip = true,
                   entity_name = "distractor",
                 },
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      },
     },
     automatic = true,
-    categories = {"armor"}
+    categories = { "armor" },
   },
-}
+})
+
+local function bob_personal_laser_defense_equipment(
+  name,
+  sprite,
+  buffer_capacity,
+  energy_consumption,
+  beam,
+  damage_modifier,
+  cooldown,
+  range
 )
-
-
-function bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, beam, damage_modifier, cooldown, range)
-return
-  {
+  return {
     type = "active-defense-equipment",
     name = name,
-    sprite = 
-    {
+    sprite = {
       filename = sprite,
       width = 128,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      buffer_capacity = buffer_capacity
+      buffer_capacity = buffer_capacity,
     },
-    attack_parameters =
-    {
+    attack_parameters = {
       type = "beam",
       cooldown = cooldown,
       damage_modifier = 4 * damage_modifier,
       range = range,
-      ammo_type =
-      {
+      ammo_type = {
         category = "laser",
         energy_consumption = energy_consumption,
-        action = 
-        {
+        action = {
           {
             type = "direct",
-            action_delivery =
-            {
+            action_delivery = {
 
               type = "beam",
               beam = beam,
               max_length = range,
               duration = cooldown,
-              source_offset = {0, -1.31439 }
-            }
-          }
-        }
-      }
+              source_offset = { 0, -1.31439 },
+            },
+          },
+        },
+      },
     },
     automatic = true,
-    categories = {"armor"}
+    categories = { "armor" },
   }
 end
 
-data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].sprite = 
-{
+data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].sprite = {
   filename = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png",
   width = 128,
   height = 128,
-  priority = "medium"
+  priority = "medium",
 }
 
-data:extend(
-{
---  bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, projectile, damage_modifier, cooldown, range)
-  bob_personal_laser_defense_equipment("personal-laser-defense-equipment-2", "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png", "380kJ", "60kJ", "bob-laser-beam-sapphire", 1.5, 15, 16),
-  bob_personal_laser_defense_equipment("personal-laser-defense-equipment-3", "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png", "580kJ", "70kJ", "bob-laser-beam-emerald", 2.1, 12, 17),
-  bob_personal_laser_defense_equipment("personal-laser-defense-equipment-4", "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png", "820kJ", "80kJ", "bob-laser-beam-amethyst", 2.8, 10, 18),
-  bob_personal_laser_defense_equipment("personal-laser-defense-equipment-5", "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png", "1100kJ", "90kJ", "bob-laser-beam-topaz", 3.6, 8.5, 19),
-  bob_personal_laser_defense_equipment("personal-laser-defense-equipment-6", "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png", "1420kJ", "100kJ", "bob-laser-beam-diamond", 4.5, 7.5, 20),
-}
-)
+data:extend({
+  --  bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, projectile, damage_modifier, cooldown, range)
+  bob_personal_laser_defense_equipment(
+    "personal-laser-defense-equipment-2",
+    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
+    "380kJ",
+    "60kJ",
+    "bob-laser-beam-sapphire",
+    1.5,
+    15,
+    16
+  ),
+  bob_personal_laser_defense_equipment(
+    "personal-laser-defense-equipment-3",
+    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
+    "580kJ",
+    "70kJ",
+    "bob-laser-beam-emerald",
+    2.1,
+    12,
+    17
+  ),
+  bob_personal_laser_defense_equipment(
+    "personal-laser-defense-equipment-4",
+    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
+    "820kJ",
+    "80kJ",
+    "bob-laser-beam-amethyst",
+    2.8,
+    10,
+    18
+  ),
+  bob_personal_laser_defense_equipment(
+    "personal-laser-defense-equipment-5",
+    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
+    "1100kJ",
+    "90kJ",
+    "bob-laser-beam-topaz",
+    3.6,
+    8.5,
+    19
+  ),
+  bob_personal_laser_defense_equipment(
+    "personal-laser-defense-equipment-6",
+    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
+    "1420kJ",
+    "100kJ",
+    "bob-laser-beam-diamond",
+    4.5,
+    7.5,
+    20
+  ),
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "movement-bonus-equipment",
     name = "exoskeleton-equipment-2",
-    sprite = 
-    {
+    sprite = {
       filename = "__base__/graphics/equipment/exoskeleton-equipment.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "secondary-input"
+      usage_priority = "secondary-input",
     },
     energy_consumption = "300kW",
     movement_bonus = 0.45,
-    categories = {"armor"}
+    categories = { "armor" },
   },
   {
     type = "movement-bonus-equipment",
     name = "exoskeleton-equipment-3",
-    sprite = 
-    {
+    sprite = {
       filename = "__base__/graphics/equipment/exoskeleton-equipment.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "secondary-input"
+      usage_priority = "secondary-input",
     },
     energy_consumption = "400kW",
     movement_bonus = 0.6,
-    categories = {"armor"}
+    categories = { "armor" },
   },
-}
-)
+})

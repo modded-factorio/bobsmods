@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bronze-alloy",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-alloy",
     order = "c-b-a[bronze]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -16,7 +15,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-alloy",
     order = "c-b-b[brass]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -25,7 +24,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-alloy",
     order = "c-b-d[copper-tungsten]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -34,7 +33,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-alloy",
     order = "c-b-d[tungsten-carbide]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -43,7 +42,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-alloy",
     order = "c-b-e[gunmetal]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -53,7 +52,7 @@ data:extend(
     icon_size = 64,
     subgroup = "bob-alloy",
     order = "c-b-f[invar]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -62,7 +61,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-alloy",
     order = "c-b-g[nitinol]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -71,8 +70,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-alloy",
     order = "c-b-i[cobalt-steel]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
-
+})
