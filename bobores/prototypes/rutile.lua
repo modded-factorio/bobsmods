@@ -30,23 +30,12 @@ bobmods.ores.rutile =
 }
 
 function bobmods.ores.rutile.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("rutile-ore", {
-      name = "rutile-ore",
-      order = "c",
-      base_density = 8,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 1,
-    }
-    )
-  else
-    data.raw.resource["rutile-ore"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "rutile-ore",
-      order = "c",
-      base_density = 8,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 1,
-    }
-  end
+  data.raw.resource["rutile-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "rutile-ore",
+    order = "c",
+    base_density = 8,
+    has_starting_area_placement = false,
+    regular_rq_factor_multiplier = 1,
+  }
   bobmods.ores.rutile.enabled = true
 end

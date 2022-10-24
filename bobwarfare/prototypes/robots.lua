@@ -260,7 +260,7 @@ data:extend(
     icon = "__bobwarfare__/graphics/icons/laser-robot.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map", "not-repairable"},
-    minable = {hardness = 0.1, mining_time = 0.1, result = "bob-laser-robot"},
+    minable = {mining_time = 0.1, result = "bob-laser-robot"},
     subgroup="capsule",
     order="e-a-d",
     max_health = 100,

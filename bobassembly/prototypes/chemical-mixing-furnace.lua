@@ -7,7 +7,7 @@ if settings.startup["bobmods-assembly-multipurposefurnaces"].value and
 then
 
 
-function bob_electric_multipurpose_furnace_working_visualisations()
+local function bob_electric_multipurpose_furnace_working_visualisations()
   return
   {
     {
@@ -144,8 +144,8 @@ data:extend(
         base_level = -1,
         pipe_connections =
         {
-          { type="input-output", position = {0, -2} },
---          { type="input-output", position = {0, 2} },
+          { type="input", position = {0, -2} },
+--          { type="input", position = {0, 2} },
         }
       },
       off_when_no_fluid_recipe = true
@@ -218,8 +218,8 @@ data:extend(
         base_level = -1,
         pipe_connections =
         {
-          { type="input-output", position = {0, -2} },
---          { type="input-output", position = {0, 2} },
+          { type="input", position = {0, -2} },
+--          { type="input", position = {0, 2} },
         }
       },
       off_when_no_fluid_recipe = true

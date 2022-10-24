@@ -2,7 +2,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-acid-stream",
     scale = 1,
-    tint = bob_acid_tint,
+    tint = bobmods.enemies.acid_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -13,7 +13,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-fire",
             entity_name = "acid-splash-fire-worm-big"
@@ -50,7 +50,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-poison-stream",
     scale = 1,
-    tint = bob_poison_tint,
+    tint = bobmods.enemies.poison_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -61,7 +61,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
             entity_name = "small-poison-cloud"
@@ -98,7 +98,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-fire-stream",
     scale = 1,
-    tint = bob_fire_tint,
+    tint = bobmods.enemies.fire_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -109,7 +109,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-fire",
             entity_name = "fire-flame"
@@ -146,7 +146,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-explosive-stream",
     scale = 1,
-    tint = bob_explosive_tint,
+    tint = bobmods.enemies.explosive_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -157,7 +157,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
             entity_name = "explosion"
@@ -194,7 +194,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-electric-stream",
     scale = 1,
-    tint = bob_electric_tint,
+    tint = bobmods.enemies.electric_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -205,7 +205,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "nested-result",
             action =
@@ -238,7 +238,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-piercing-stream",
     scale = 1,
-    tint = bob_pierce_tint,
+    tint = bobmods.enemies.pierce_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -249,7 +249,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "nested-result",
             action =
@@ -282,7 +282,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-titan-stream",
     scale = 1.25,
-    tint = bob_titan_tint,
+    tint = bobmods.enemies.titan_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -293,7 +293,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
             entity_name = "explosion"
@@ -346,7 +346,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-behemoth-stream",
     scale = 1.5,
-    tint = bob_behemoth_tint,
+    tint = bobmods.enemies.behemoth_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -357,7 +357,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
             entity_name = "explosion"
@@ -414,7 +414,7 @@ data:extend{
   bobmods.enemies.acid_stream{
     name = "bob-leviathan-stream",
     scale = 2,
-    tint = bob_leviathan_tint,
+    tint = bobmods.enemies.leviathan_tint,
     particle_spawn_interval = 1,
     particle_spawn_timeout = 6,
     action =
@@ -425,7 +425,7 @@ data:extend{
         type = "instant",
         target_effects =
         {
-          bob_spit_target_sound,
+          bobmods.enemies.spit_target_sound,
           {
             type = "create-entity",
             entity_name = "explosion"

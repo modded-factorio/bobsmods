@@ -39,7 +39,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/assembling-machine-4.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-4"},
+    minable = {mining_time = 0.5, result = "assembling-machine-4"},
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -58,7 +58,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       {
         production_type = "output",
@@ -66,7 +66,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 2} }}
+        pipe_connections = {{type = "output", position = {0, 2}}}
       },
       off_when_no_fluid_recipe = true
     },
@@ -101,7 +101,7 @@ data:extend(
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 1.5,
     },
-    crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"},
+    crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid"},
     crafting_speed = 2,
     energy_source =
     {
@@ -189,7 +189,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/assembling-machine-5.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-5"},
+    minable = {mining_time = 0.5, result = "assembling-machine-5"},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -208,7 +208,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       {
         production_type = "output",
@@ -216,7 +216,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 2} }}
+        pipe_connections = {{type = "output", position = {0, 2}}}
       },
       off_when_no_fluid_recipe = true
     },
@@ -298,7 +298,7 @@ data:extend(
         }
       }
     },
-    crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"},
+    crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid"},
     crafting_speed = 2.75,
     energy_source =
     {
@@ -388,7 +388,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/assembling-machine-6.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-6"},
+    minable = {mining_time = 0.5, result = "assembling-machine-6"},
     max_health = 600,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -407,7 +407,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       {
         production_type = "output",
@@ -415,7 +415,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 2} }}
+        pipe_connections = {{type = "output", position = {0, 2}}}
       },
       off_when_no_fluid_recipe = true
     },
@@ -496,7 +496,7 @@ data:extend(
         }
       }
     },
-    crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"},
+    crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid"},
     crafting_speed = 3.5,
     energy_source =
     {

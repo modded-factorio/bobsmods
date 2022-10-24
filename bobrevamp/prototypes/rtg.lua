@@ -348,7 +348,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       icon_size = 128,
       prerequisites =
       {
+        "nitrogen-processing",
         "cobalt-processing",
+        "aluminium-processing",
         "nuclear-fuel-reprocessing",
       },
       effects =

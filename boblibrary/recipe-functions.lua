@@ -575,7 +575,7 @@ function bobmods.lib.recipe.enabled(recipe, bool)
   end
 end
 
-function bobmods.lib.recipe.hide_recipe(recipe)
+function bobmods.lib.recipe.hide(recipe)
   if type(recipe) == "string" and data.raw.recipe[recipe] then
     local prototype = data.raw.recipe[recipe]
     if prototype.normal then

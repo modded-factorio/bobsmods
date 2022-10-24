@@ -1,8 +1,12 @@
 require("prototypes.recipe.recipe-updates")
 require("prototypes.productivity-limitations")
 require("prototypes.technology.technology-updates")
+require("prototypes.item.item-updates")
 
-bobmods.lib.safe_insert(data.raw["lab"]["lab"].inputs, "advanced-logistic-science-pack")
+if bobmods.tech.advanced_logistic_science then
+  bobmods.lib.safe_insert(data.raw["lab"]["lab"].inputs, "advanced-logistic-science-pack")
+  bobmods.lib.safe_insert(data.raw["lab"]["lab-2"].inputs, "advanced-logistic-science-pack")
+end
 
 if settings.startup["bobmods-tech-colorupdate"].value == true then
   data.raw.tool["automation-science-pack"].icon = "__base__/graphics/icons/utility-science-pack.png"

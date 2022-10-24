@@ -31,23 +31,12 @@ bobmods.ores.nickel =
 
 
 function bobmods.ores.nickel.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("nickel-ore", {
-      name = "nickel-ore",
-      order = "c",
-      base_density = 5,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 1.1,
-    }
-    )
-  else
-    data.raw.resource["nickel-ore"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "nickel-ore",
-      order = "c",
-      base_density = 5,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 1.1,
-    }
-  end
+  data.raw.resource["nickel-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "nickel-ore",
+    order = "c",
+    base_density = 5,
+    has_starting_area_placement = false,
+    regular_rq_factor_multiplier = 1.1,
+  }
   bobmods.ores.nickel.enabled = true
 end

@@ -295,6 +295,7 @@ data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["sulfur"].stack_size = 200
 data.raw.item["wood"].stack_size = 200
 
-
-
-
+if not bobmods.ores.cobalt.enabled then
+  bobmods.lib.tech.remove_recipe_unlock("cobalt-processing", "cobalt-oxide")
+  bobmods.lib.recipe.hide("cobalt-oxide")
+end

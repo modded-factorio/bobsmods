@@ -29,23 +29,12 @@ bobmods.ores.cobalt =
 }
 
 function bobmods.ores.cobalt.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("cobalt-ore", {
-      name = "cobalt-ore",
-      order = "c",
-      base_density = 4,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 0.8,
-    }
-    )
-  else
-    data.raw.resource["cobalt-ore"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "cobalt-ore",
-      order = "c",
-      base_density = 4,
-      has_starting_area_placement = false,
-      regular_rq_factor_multiplier = 0.8,
-    }
-  end
+  data.raw.resource["cobalt-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "cobalt-ore",
+    order = "c",
+    base_density = 4,
+    has_starting_area_placement = false,
+    regular_rq_factor_multiplier = 0.8,
+  }
   bobmods.ores.cobalt.enabled = true
 end

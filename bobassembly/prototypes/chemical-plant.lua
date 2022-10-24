@@ -208,26 +208,26 @@ function bob_chemical_plant_fluid_boxes()
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {-1, -2} }}
+      pipe_connections = {{type = "input", position = {-1, -2}}}
     },
     {
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {1, -2} }}
+      pipe_connections = {{type = "input", position = {1, -2}}}
     },
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       base_level = 1,
-      pipe_connections = {{ position = {-1, 2} }}
+      pipe_connections = {{type = "output", position = {-1, 2}}}
     },
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       base_level = 1,
-      pipe_connections = {{ position = {1, 2} }}
+      pipe_connections = {{type = "output", position = {1, 2}}}
     }
   }
 end
@@ -430,7 +430,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/chemical-plant-2.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-2"},
+    minable = {mining_time = 0.5, result = "chemical-plant-2"},
     max_health = 350,
     corpse = "chemical-plant-remnants",
     dying_explosion = "medium-explosion",
@@ -467,7 +467,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/chemical-plant-3.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-3"},
+    minable = {mining_time = 0.5, result = "chemical-plant-3"},
     max_health = 400,
     corpse = "chemical-plant-remnants",
     dying_explosion = "medium-explosion",
@@ -503,7 +503,7 @@ data:extend(
     icon = "__bobassembly__/graphics/icons/chemical-plant-4.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-4"},
+    minable = {mining_time = 0.5, result = "chemical-plant-4"},
     max_health = 500,
     corpse = "chemical-plant-remnants",
     dying_explosion = "medium-explosion",

@@ -66,7 +66,7 @@ end
 
 
 
-bob_spit_begin_sound_big =
+bobmods.enemies.spit_begin_sound_big =
 {
   {
     filename = "__base__/sound/creatures/spitter-spit-start-big-1.ogg",
@@ -110,7 +110,7 @@ bob_spit_begin_sound_big =
   }
 }
 
-bob_spit_begin_sound_behemoth =
+bobmods.enemies.spit_begin_sound_behemoth =
 {
   {
     filename = "__base__/sound/creatures/spitter-spit-start-behemoth-1.ogg",
@@ -146,7 +146,7 @@ bob_spit_begin_sound_behemoth =
   }
 }
 
-bob_spit_target_sound =
+bobmods.enemies.spit_target_sound =
 {
   type = "play-sound",
   sound =

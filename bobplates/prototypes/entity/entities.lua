@@ -1,4 +1,4 @@
-function bob_electrolyser_animation_facing(directory, tier, tint, facing)
+local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
   return
   {
     layers =
@@ -89,7 +89,7 @@ function bob_electrolyser_animation_facing(directory, tier, tint, facing)
   }
 end
 
-function bob_electrolyser_animation(directory, tier, tint)
+local function bob_electrolyser_animation(directory, tier, tint)
 return {
   north = bob_electrolyser_animation_facing(directory, tier, tint, 0),
   east = bob_electrolyser_animation_facing(directory, tier, tint, 1),
@@ -108,7 +108,7 @@ data:extend(
     icon = "__bobplates__/graphics/icons/electrolyser.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "electrolyser"},
+    minable = {mining_time = 0.5, result = "electrolyser"},
     fast_replaceable_group = "electrolyser",
     corpse = "big-remnants",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -135,26 +135,26 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1, -2} }}
+        pipe_connections = {{type = "input", position = {-1, -2}}}
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1, -2} }}
+        pipe_connections = {{type = "input", position = {1, -2}}}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_level = 1,
-        pipe_connections = {{ position = {-1, 2} }}
+        pipe_connections = {{type = "output", position = {-1, 2}}}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_level = 1,
-        pipe_connections = {{ position = {1, 2} }}
+        pipe_connections = {{type = "output", position = {1, 2}}}
       }
     },
     animation = bob_electrolyser_animation("__bobplates__/graphics/entity/electrolyser", 1, {r = 0.5, g = 0.5, b = 0}),
@@ -196,7 +196,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0.5, -1.5} }}
+        pipe_connections = {{type = "input", position = {0.5, -1.5}}}
       },
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
@@ -336,7 +336,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0.5, -1.5} }}
+        pipe_connections = {{type = "input", position = {0.5, -1.5}}}
       },
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
@@ -393,7 +393,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       off_when_no_fluid_recipe = true
     },
@@ -1039,7 +1039,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 1,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, 1} }}
+        pipe_connections = {{type = "input", position = {0, 1}}}
       },
     },
     energy_source =

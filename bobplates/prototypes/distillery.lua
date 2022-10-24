@@ -1,4 +1,4 @@
-function bob_distillery_animation(tint)
+function bobmods.plates.distillery_animation(tint)
 return
 {
   north =
@@ -140,7 +140,7 @@ return
 }
 end
 
-function bob_distillery_working_visualisations(speed)
+function bobmods.plates.distillery_working_visualisations(speed)
   return
   {
     {
@@ -256,19 +256,19 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0.5, 1.5} }}
+        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{ type="output", position = {0.5, -1.5} }}
+        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
       },
       off_when_no_fluid_recipe = false
     },
-    animation = bob_distillery_animation({r = 0.7, g = 0.7, b = 0.1}),
-    working_visualisations = bob_distillery_working_visualisations(1),
+    animation = bobmods.plates.distillery_animation({r = 0.7, g = 0.7, b = 0.1}),
+    working_visualisations = bobmods.plates.distillery_working_visualisations(1),
     allowed_effects = {"consumption", "speed", "pollution"},
     module_specification =
     {

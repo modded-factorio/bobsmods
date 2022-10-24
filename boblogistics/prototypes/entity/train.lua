@@ -1,6 +1,6 @@
 if settings.startup["bobmods-logistics-trains"].value == true then
 
-function rolling_stock_resistances()
+local function rolling_stock_resistances()
   return
   {
     {
@@ -47,7 +47,7 @@ function rolling_stock_resistances()
   }
 end
 
-function rolling_stock_armor_resistances()
+local function rolling_stock_armor_resistances()
   return
   {
     {

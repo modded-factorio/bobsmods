@@ -199,7 +199,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }},
+        pipe_connections = {{type = "input", position = {0, -2}}},
         secondary_draw_orders = { north = -1 }
       },
       {
@@ -208,7 +208,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 2} }},
+        pipe_connections = {{type = "output", position = {0, 2}}},
         secondary_draw_orders = { north = -1 }
       },
       off_when_no_fluid_recipe = true
@@ -367,7 +367,7 @@ data:extend(
 )
 
 bobmods.lib.tech.add_prerequisite("automation", "basic-automation")
-data.raw.technology.automation.ignore_tech_cost_multiplier = false
+bobmods.lib.tech.ignore_tech_cost_multiplier("automation", false)
 
 if settings.startup["bobmods-assembly-limits"].value == true then
   data.raw["assembling-machine"]["burner-assembling-machine"].ingredient_count = 2

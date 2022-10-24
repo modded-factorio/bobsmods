@@ -41,7 +41,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/black-transport-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-cross-type-while-moving"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "basic-transport-belt"},
+    minable = {mining_time = 0.1, result = "basic-transport-belt"},
     max_health = 140,
     corpse = "small-remnants",
     resistances = 
@@ -63,7 +63,7 @@ data:extend(
       persistent = true
     },
     animation_speed_coefficient = 32,
-    belt_animation_set = black_belt_animation_set,
+    belt_animation_set = bobmods.logistics.black_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     related_underground_belt = "basic-underground-belt",
     next_upgrade = "transport-belt",
@@ -80,7 +80,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/black-underground-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "basic-underground-belt"},
+    minable = {mining_time = 0.1, result = "basic-underground-belt"},
     max_health = 140,
     corpse = "small-remnants",
     underground_sprite =
@@ -116,7 +116,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     distance_to_enter = 0.5,
     animation_speed_coefficient = 32,
-    belt_animation_set = black_belt_animation_set,
+    belt_animation_set = bobmods.logistics.black_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     next_upgrade = "underground-belt",
     speed = 0.5/32,
@@ -246,7 +246,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/black-splitter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "basic-splitter"},
+    minable = {mining_time = 0.1, result = "basic-splitter"},
     max_health = 160,
     corpse = "medium-remnants",
     resistances = 
@@ -261,7 +261,7 @@ data:extend(
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 0.7,
     structure_animation_movement_cooldown = 10,
-    belt_animation_set = black_belt_animation_set,
+    belt_animation_set = bobmods.logistics.black_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     next_upgrade = "splitter",
     speed = 0.5/32,
@@ -366,7 +366,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/purple-transport-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-cross-type-while-moving"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "turbo-transport-belt"},
+    minable = {mining_time = 0.1, result = "turbo-transport-belt"},
     max_health = 180,
     corpse = "small-remnants",
     resistances = 
@@ -388,7 +388,7 @@ data:extend(
       persistent = true
     },
     animation_speed_coefficient = 32,
-    belt_animation_set = purple_belt_animation_set,
+    belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     related_underground_belt = "turbo-underground-belt",
     next_upgrade = "ultimate-transport-belt",
@@ -405,7 +405,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/purple-transport-belt-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "turbo-underground-belt"},
+    minable = {mining_time = 0.1, result = "turbo-underground-belt"},
     max_health = 180,
     corpse = "small-remnants",
     underground_sprite =
@@ -441,7 +441,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     distance_to_enter = 0.5,
     animation_speed_coefficient = 32,
-    belt_animation_set = purple_belt_animation_set,
+    belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     next_upgrade = "ultimate-underground-belt",
     speed = 0.125,
@@ -571,7 +571,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/purple-splitter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "turbo-splitter"},
+    minable = {mining_time = 0.1, result = "turbo-splitter"},
     max_health = 200,
     corpse = "medium-remnants",
     resistances = 
@@ -586,7 +586,7 @@ data:extend(
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
-    belt_animation_set = purple_belt_animation_set,
+    belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     next_upgrade = "ultimate-splitter",
     speed = 0.125,
@@ -690,7 +690,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/green-transport-belt.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-cross-type-while-moving"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "ultimate-transport-belt"},
+    minable = {mining_time = 0.1, result = "ultimate-transport-belt"},
     max_health = 190,
     corpse = "small-remnants",
     resistances =
@@ -712,7 +712,7 @@ data:extend(
       max_sounds_per_type = 3
     },
     animation_speed_coefficient = 32,
-    belt_animation_set = green_belt_animation_set,
+    belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     related_underground_belt = "ultimate-underground-belt",
     speed = 0.15625,
@@ -728,7 +728,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/green-transport-belt-to-ground.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "ultimate-underground-belt"},
+    minable = {mining_time = 0.1, result = "ultimate-underground-belt"},
     max_health = 190,
     corpse = "small-remnants",
     underground_sprite =
@@ -764,7 +764,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     distance_to_enter = 0.5,
     animation_speed_coefficient = 32,
-    belt_animation_set = green_belt_animation_set,
+    belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     speed = 0.15625,
     max_distance = 25,
@@ -893,7 +893,7 @@ data:extend(
     icon = "__boblogistics__/graphics/icons/green-splitter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.1, result = "ultimate-splitter"},
+    minable = {mining_time = 0.1, result = "ultimate-splitter"},
     max_health = 210,
     corpse = "medium-remnants",
     resistances = 
@@ -908,7 +908,7 @@ data:extend(
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
-    belt_animation_set = green_belt_animation_set,
+    belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     speed = 0.15625,
     structure =
@@ -1072,5 +1072,3 @@ else
   data.raw["underground-belt"]["fast-underground-belt"].max_distance = 10
   data.raw["underground-belt"]["express-underground-belt"].max_distance = 15
 end
-
-

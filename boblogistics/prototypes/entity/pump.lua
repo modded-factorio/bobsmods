@@ -1,3 +1,23 @@
+function bobmods.logistics.pump_height(level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  return bobmods.logistics.pipe_height(level) * 4
+end
+
+function bobmods.logistics.pump_pumping_speed(level) --Pumping speed should match the capacity of the same tier pipe
+  return bobmods.logistics.pipe_height(level) * 100
+end
+
+function bobmods.logistics.set_pump_height(pump, level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  if (data.raw["pump"][pump]) then
+    data.raw["pump"][pump].fluid_box.height = bobmods.logistics.pump_height(level)
+  end
+end 
+
+function bobmods.logistics.set_pumping_speed(pump , level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  if (data.raw["pump"][pump]) then
+    data.raw["pump"][pump].pumping_speed = bobmods.logistics.pump_pumping_speed(level)
+  end
+end 
+
 function bobmods.logistics.pump_animations(tint)
   return {
       north =
@@ -88,134 +108,136 @@ end
 
 
 
-local pump_fluid_animation = {
-      north =
-      {
-        filename = "__base__/graphics/entity/pump/pump-north-liquid.png",
-        apply_runtime_tint = true,
-        width = 20,
-        height = 13,
-        line_length =8,
-        frame_count =32,
-        shift = util.by_pixel(-0.500, -14.500),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-north-liquid.png",
-          apply_runtime_tint = true,
-          width = 38,
-          height = 22,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          shift = util.by_pixel(-0.250, -16.750)
-        }
-      },
-
-      east =
-      {
-        filename = "__base__/graphics/entity/pump/pump-east-liquid.png",
-        width = 18,
-        height = 24,
-        line_length =8,
-        frame_count =32,
-        shift = util.by_pixel(6.000, -8.000),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-east-liquid.png",
-          width = 35,
-          height = 46,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          shift = util.by_pixel(6.250, -8.500)
-        },
-      },
-
-      south =
-      {
-        filename = "__base__/graphics/entity/pump/pump-south-liquid.png",
-        width = 26,
-        height = 55,
-        line_length =8,
-        frame_count =32,
-        shift = util.by_pixel(3.500, 6.500),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-south-liquid.png",
-          width = 38,
-          height = 45,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          shift = util.by_pixel(0.500, -9.250)
-        },
-      },
-      west =
-      {
-        filename = "__base__/graphics/entity/pump/pump-west-liquid.png",
-        width = 18,
-        height = 24,
-        line_length =8,
-        frame_count =32,
-        shift = util.by_pixel(-6.000, -9.000),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-west-liquid.png",
-          width = 35,
-          height = 47,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          shift = util.by_pixel(-6.500, -9.500)
-        },
-      }
+local pump_fluid_animation =
+{
+  north =
+  {
+    filename = "__base__/graphics/entity/pump/pump-north-liquid.png",
+    apply_runtime_tint = true,
+    width = 20,
+    height = 13,
+    line_length =8,
+    frame_count =32,
+    shift = util.by_pixel(-0.500, -14.500),
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-north-liquid.png",
+      apply_runtime_tint = true,
+      width = 38,
+      height = 22,
+      scale = 0.5,
+      line_length =8,
+      frame_count =32,
+      shift = util.by_pixel(-0.250, -16.750)
     }
+  },
 
-    pump_glass_pictures = {
-      north = {
-        filename = "__base__/graphics/entity/pump/pump-north-glass.png",
-        width = 32,
-        height = 64,
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-north-glass.png",
-          width = 64,
-          height = 128,
-          scale = 0.5,
-        },
-      },
-      east = {
-        filename = "__base__/graphics/entity/pump/pump-east-glass.png",
-        width = 32,
-        height = 32,
-        shift = util.by_pixel(0.000, -16.000),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-east-glass.png",
-          width = 128,
-          height = 192,
-          scale = 0.5,
-        },
-      },
-      south = {
-        filename = "__base__/graphics/entity/pump/pump-south-glass.png",
-        width = 32,
-        height = 64,
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-south-glass.png",
-          width = 64,
-          height = 128,
-          scale = 0.5,
-        },
-      },
-      west = {
-        filename = "__base__/graphics/entity/pump/pump-west-glass.png",
-        width = 32,
-        height = 96,
-        shift = util.by_pixel(0.000, 15.000),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-west-glass.png",
-          width = 192,
-          height = 192,
-          scale = 0.5,
-          shift = util.by_pixel(-16.000, 0.000)
-        },
-      }
-    }
+  east =
+  {
+    filename = "__base__/graphics/entity/pump/pump-east-liquid.png",
+    width = 18,
+    height = 24,
+    line_length =8,
+    frame_count =32,
+    shift = util.by_pixel(6.000, -8.000),
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-east-liquid.png",
+      width = 35,
+      height = 46,
+      scale = 0.5,
+      line_length =8,
+      frame_count =32,
+      shift = util.by_pixel(6.250, -8.500)
+    },
+  },
+
+  south =
+  {
+    filename = "__base__/graphics/entity/pump/pump-south-liquid.png",
+    width = 26,
+    height = 55,
+    line_length =8,
+    frame_count =32,
+    shift = util.by_pixel(3.500, 6.500),
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-south-liquid.png",
+      width = 38,
+      height = 45,
+      scale = 0.5,
+      line_length =8,
+      frame_count =32,
+      shift = util.by_pixel(0.500, -9.250)
+    },
+  },
+  west =
+  {
+    filename = "__base__/graphics/entity/pump/pump-west-liquid.png",
+    width = 18,
+    height = 24,
+    line_length =8,
+    frame_count =32,
+    shift = util.by_pixel(-6.000, -9.000),
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-west-liquid.png",
+      width = 35,
+      height = 47,
+      scale = 0.5,
+      line_length =8,
+      frame_count =32,
+      shift = util.by_pixel(-6.500, -9.500)
+    },
+  }
+}
+
+local pump_glass_pictures = 
+{
+  north = {
+    filename = "__base__/graphics/entity/pump/pump-north-glass.png",
+    width = 32,
+    height = 64,
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-north-glass.png",
+      width = 64,
+      height = 128,
+      scale = 0.5,
+    },
+  },
+  east = {
+    filename = "__base__/graphics/entity/pump/pump-east-glass.png",
+    width = 32,
+    height = 32,
+    shift = util.by_pixel(0.000, -16.000),
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-east-glass.png",
+      width = 128,
+      height = 192,
+      scale = 0.5,
+    },
+  },
+  south = {
+    filename = "__base__/graphics/entity/pump/pump-south-glass.png",
+    width = 32,
+    height = 64,
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-south-glass.png",
+      width = 64,
+      height = 128,
+      scale = 0.5,
+    },
+  },
+  west = {
+    filename = "__base__/graphics/entity/pump/pump-west-glass.png",
+    width = 32,
+    height = 96,
+    shift = util.by_pixel(0.000, 15.000),
+    hr_version = {
+      filename = "__base__/graphics/entity/pump/hr-pump-west-glass.png",
+      width = 192,
+      height = 192,
+      scale = 0.5,
+      shift = util.by_pixel(-16.000, 0.000)
+    },
+  }
+}
 
 
 data.raw.pump.pump.energy_usage = "15kW"
@@ -260,8 +282,8 @@ data:extend(
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type="output" },
-        { position = {0, 1.5}, type="input" },
+        { position = {0, -1.5}, type = "output"},
+        { position = {0, 1.5}, type = "input"}
       },
     },
     energy_source =
@@ -313,8 +335,8 @@ data:extend(
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type="output" },
-        { position = {0, 1.5}, type="input" },
+        { position = {0, -1.5}, type = "output"},
+        { position = {0, 1.5}, type = "input"}
       },
     },
     energy_source =
@@ -365,8 +387,8 @@ data:extend(
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type="output" },
-        { position = {0, 1.5}, type="input" },
+        { position = {0, -1.5}, type = "output"},
+        { position = {0, 1.5}, type = "input"}
       },
     },
     energy_source =
@@ -390,4 +412,17 @@ data:extend(
 )
 
 
+if settings.startup["bobmods-logistics-highpipes"].value == true then
 
+
+  bobmods.logistics.set_pump_height("bob-pump-2", 1)
+  bobmods.logistics.set_pump_height("bob-pump-3", 2)
+  bobmods.logistics.set_pump_height("bob-pump-4", 4) --level 3 is skipped because there are only 4 pump levels and level 4 takes T5 pipes as ingredient
+
+
+  --Send Pump Speed for Pump
+  bobmods.logistics.set_pumping_speed("bob-pump-2", 1)
+  bobmods.logistics.set_pumping_speed("bob-pump-3", 2)
+  bobmods.logistics.set_pumping_speed("bob-pump-4", 4)
+
+end

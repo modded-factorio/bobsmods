@@ -2,12 +2,12 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 if data.raw.unit["behemoth-spitter"]~=nil then
-  data.raw.unit["behemoth-spitter"].attack_parameters = spitter_attack_parameters({acid_stream_name = "acid-stream-spitter-behemoth", range=range_spitter_behemoth, min_attack_distance=10, cooldown=100, damage_modifier=damage_modifier_spitter_behemoth, scale=bob_behemoth_scale, tint1=tint_1_spitter_behemoth, tint2=tint_2_spitter_behemoth, roarvolume=0.8})
-  data.raw.unit["behemoth-spitter"].run_animation = spitterrunanimation(bob_behemoth_scale, tint_1_spitter_behemoth, tint_2_spitter_behemoth)
+  data.raw.unit["behemoth-spitter"].attack_parameters = spitter_attack_parameters({acid_stream_name = "acid-stream-spitter-behemoth", range=range_spitter_behemoth, min_attack_distance=10, cooldown=100, damage_modifier=damage_modifier_spitter_behemoth, scale=bobmods.enemies.behemoth_scale, tint1=tint_1_spitter_behemoth, tint2=tint_2_spitter_behemoth, roarvolume=0.8})
+  data.raw.unit["behemoth-spitter"].run_animation = spitterrunanimation(bobmods.enemies.behemoth_scale, tint_1_spitter_behemoth, tint_2_spitter_behemoth)
   data.raw.unit["behemoth-spitter"].collision_box = {{-1, -1}, {1, 1}}
   data.raw.unit["behemoth-spitter"].selection_box = {{-1.5, -2}, {1.5, 2}}
 
-  data.raw.corpse["behemoth-spitter-corpse"].animation = spitterdyinganimation(bob_behemoth_scale, tint_1_spitter_behemoth, tint_2_spitter_behemoth)
+  data.raw.corpse["behemoth-spitter-corpse"].animation = spitterdyinganimation(bobmods.enemies.behemoth_scale, tint_1_spitter_behemoth, tint_2_spitter_behemoth)
   data.raw.corpse["behemoth-spitter-corpse"].collision_box = {{-1.5, -1.5}, {1.5, 1.5}}
   data.raw.corpse["behemoth-spitter-corpse"].selection_box = {{-1.5, -2}, {1.5, 2}}
 end
@@ -63,10 +63,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 3,
-      scale = bob_big_scale,
-      tint1 = bob_electric_tint,
-      tint2 = bob_electric_tint2,
-      begin_sound = bob_spit_begin_sound_big,
+      scale = bobmods.enemies.big_scale,
+      tint1 = bobmods.enemies.electric_tint,
+      tint2 = bobmods.enemies.electric_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_big,
     },
     vision_distance = 30,
     movement_speed = 0.15,
@@ -78,14 +78,14 @@ data:extend(
     working_sound = sounds.spitter_calls(0.9),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.6),
-    run_animation = spitterrunanimation(bob_big_scale, bob_electric_tint, bob_electric_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.big_scale, bobmods.enemies.electric_tint, bobmods.enemies.electric_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_big_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.big_scale)
   },
 
-  add_spitter_die_animation(bob_big_scale, bob_electric_tint, bob_electric_tint2,
+  add_spitter_die_animation(bobmods.enemies.big_scale, bobmods.enemies.electric_tint, bobmods.enemies.electric_tint2,
   {
     type = "corpse",
     name = "bob-big-electric-spitter-corpse",
@@ -170,10 +170,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 4,
-      scale = bob_huge_scale,
-      tint1 = bob_explosive_tint,
-      tint2 = bob_explosive_tint2,
-      begin_sound = bob_spit_begin_sound_big,
+      scale = bobmods.enemies.huge_scale,
+      tint1 = bobmods.enemies.explosive_tint,
+      tint2 = bobmods.enemies.explosive_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_big,
     },
     vision_distance = 30,
     movement_speed = 0.12,
@@ -185,14 +185,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.0),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.7),
-    run_animation = spitterrunanimation(bob_huge_scale, bob_explosive_tint, bob_explosive_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_huge_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.huge_scale)
   },
 
-  add_spitter_die_animation(bob_huge_scale, bob_explosive_tint, bob_explosive_tint2,
+  add_spitter_die_animation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2,
   {
     type = "corpse",
     name = "bob-huge-explosive-spitter-corpse",
@@ -278,10 +278,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 4,
-      scale = bob_huge_scale,
-      tint1 = bob_acid_tint,
-      tint2 = bob_acid_tint2,
-      begin_sound = bob_spit_begin_sound_big,
+      scale = bobmods.enemies.huge_scale,
+      tint1 = bobmods.enemies.acid_tint,
+      tint2 = bobmods.enemies.acid_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_big,
     },
     vision_distance = 30,
     movement_speed = 0.12,
@@ -293,14 +293,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.0),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.7),
-    run_animation = spitterrunanimation(bob_huge_scale, bob_acid_tint, bob_acid_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.huge_scale, bobmods.enemies.acid_tint, bobmods.enemies.acid_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_huge_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.huge_scale)
   },
 
-  add_spitter_die_animation(bob_huge_scale, bob_acid_tint, bob_acid_tint2,
+  add_spitter_die_animation(bobmods.enemies.huge_scale, bobmods.enemies.acid_tint, bobmods.enemies.acid_tint2,
   {
     type = "corpse",
     name = "bob-huge-acid-spitter-corpse",
@@ -387,10 +387,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 5,
-      scale = bob_giant_scale,
-      tint1 = bob_acid_tint,
-      tint2 = bob_acid_tint2,
-      begin_sound = bob_spit_begin_sound_big,
+      scale = bobmods.enemies.giant_scale,
+      tint1 = bobmods.enemies.acid_tint,
+      tint2 = bobmods.enemies.acid_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_big,
     },
     vision_distance = 30,
     movement_speed = 0.1,
@@ -401,14 +401,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.2),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.8),
-    run_animation = spitterrunanimation(bob_giant_scale, bob_fire_tint, bob_fire_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.giant_scale, bobmods.enemies.fire_tint, bobmods.enemies.fire_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_giant_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.giant_scale)
   },
 
-  add_spitter_die_animation(bob_giant_scale, bob_fire_tint, bob_fire_tint2,
+  add_spitter_die_animation(bobmods.enemies.giant_scale, bobmods.enemies.fire_tint, bobmods.enemies.fire_tint2,
   {
     type = "corpse",
     name = "bob-giant-fire-spitter-corpse",
@@ -495,10 +495,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 5,
-      scale = bob_giant_scale,
-      tint1 = bob_poison_tint,
-      tint2 = bob_poison_tint2,
-      begin_sound = bob_spit_begin_sound_big,
+      scale = bobmods.enemies.giant_scale,
+      tint1 = bobmods.enemies.poison_tint,
+      tint2 = bobmods.enemies.poison_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_big,
     },
     vision_distance = 30,
     movement_speed = 0.1,
@@ -509,14 +509,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.2),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.8),
-    run_animation = spitterrunanimation(bob_giant_scale, bob_poison_tint, bob_poison_tint2 ),
+    run_animation = spitterrunanimation(bobmods.enemies.giant_scale, bobmods.enemies.poison_tint, bobmods.enemies.poison_tint2 ),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_giant_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.giant_scale)
   },
 
-  add_spitter_die_animation(bob_giant_scale, bob_poison_tint, bob_poison_tint2,
+  add_spitter_die_animation(bobmods.enemies.giant_scale, bobmods.enemies.poison_tint, bobmods.enemies.poison_tint2,
   {
     type = "corpse",
     name = "bob-giant-poison-spitter-corpse",
@@ -605,10 +605,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 5,
-      scale = bob_titan_scale,
-      tint1 = bob_titan_tint,
-      tint2 = bob_titan_tint2,
-      begin_sound = bob_spit_begin_sound_behemoth,
+      scale = bobmods.enemies.titan_scale,
+      tint1 = bobmods.enemies.titan_tint,
+      tint2 = bobmods.enemies.titan_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_behemoth,
     },
     vision_distance = 30,
     movement_speed = 0.1,
@@ -619,14 +619,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.2),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.9),
-    run_animation = spitterrunanimation(bob_titan_scale, bob_titan_tint, bob_titan_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.titan_scale, bobmods.enemies.titan_tint, bobmods.enemies.titan_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_titan_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.titan_scale)
   },
 
-  add_spitter_die_animation(bob_titan_scale, bob_titan_tint, bob_titan_tint2,
+  add_spitter_die_animation(bobmods.enemies.titan_scale, bobmods.enemies.titan_tint, bobmods.enemies.titan_tint2,
   {
     type = "corpse",
     name = "bob-titan-spitter-corpse",
@@ -716,10 +716,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 10,
-      scale = bob_behemoth_scale,
-      tint1 = bob_behemoth_tint,
-      tint2 = bob_behemoth_tint2,
-      begin_sound = bob_spit_begin_sound_behemoth,
+      scale = bobmods.enemies.behemoth_scale,
+      tint1 = bobmods.enemies.behemoth_tint,
+      tint2 = bobmods.enemies.behemoth_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_behemoth,
     },
     vision_distance = 30,
     movement_speed = 0.15,
@@ -730,14 +730,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.2),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(0.9),
-    run_animation = spitterrunanimation(bob_behemoth_scale, bob_behemoth_tint, bob_behemoth_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.behemoth_scale, bobmods.enemies.behemoth_tint, bobmods.enemies.behemoth_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_behemoth_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.behemoth_scale)
   },
 
-  add_spitter_die_animation(bob_behemoth_scale, bob_behemoth_tint, bob_behemoth_tint2,
+  add_spitter_die_animation(bobmods.enemies.behemoth_scale, bobmods.enemies.behemoth_tint, bobmods.enemies.behemoth_tint2,
   {
     type = "corpse",
     name = "bob-behemoth-spitter-corpse",
@@ -829,10 +829,10 @@ data:extend(
       cooldown = 100,
       cooldown_deviation = 0.15,
       damage_modifier = 10,
-      scale = bob_leviathan_scale,
-      tint1 = bob_leviathan_tint,
-      tint2 = bob_leviathan_tint2,
-      begin_sound = bob_spit_begin_sound_behemoth,
+      scale = bobmods.enemies.leviathan_scale,
+      tint1 = bobmods.enemies.leviathan_tint,
+      tint2 = bobmods.enemies.leviathan_tint2,
+      begin_sound = bobmods.enemies.spit_begin_sound_behemoth,
     },
     vision_distance = 50,
     movement_speed = 0.15,
@@ -843,14 +843,14 @@ data:extend(
     working_sound = sounds.spitter_calls(1.2),
     dying_sound = sounds.spitter_dying(1.0),
     walking_sound = sounds.spitter_walk(1.0),
-    run_animation = spitterrunanimation(bob_leviathan_scale, bob_leviathan_tint, bob_leviathan_tint2),
+    run_animation = spitterrunanimation(bobmods.enemies.leviathan_scale, bobmods.enemies.leviathan_tint, bobmods.enemies.leviathan_tint2),
     damaged_trigger_effect = hit_effects.biter(),
     walking_sound = sounds.spitter_walk(0.6),
     ai_settings = biter_ai_settings,
-    water_reflection = spitter_water_reflection(bob_leviathan_scale)
+    water_reflection = spitter_water_reflection(bobmods.enemies.leviathan_scale)
   },
 
-  add_spitter_die_animation(bob_leviathan_scale, bob_leviathan_tint, bob_leviathan_tint2,
+  add_spitter_die_animation(bobmods.enemies.leviathan_scale, bobmods.enemies.leviathan_tint, bobmods.enemies.leviathan_tint2,
   {
     type = "corpse",
     name = "bob-leviathan-spitter-corpse",

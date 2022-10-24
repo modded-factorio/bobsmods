@@ -8,13 +8,17 @@ bobmods.lib.recipe.remove_ingredient("production-science-pack", "rail")
 bobmods.lib.recipe.add_ingredient("production-science-pack", {"assembling-machine-2", 1})
 bobmods.lib.recipe.add_ingredient("production-science-pack", {"chemical-plant", 1})
 
-if data.raw.item["brass-chest"] then
-  bobmods.lib.recipe.replace_ingredient("advanced-logistic-science-pack", "steel-chest", "brass-chest")
-  bobmods.lib.tech.add_prerequisite ("advanced-logistic-science-pack", "zinc-processing")
+if bobmods.tech.advanced_logistic_science then
+  if data.raw.item["brass-chest"] then
+    bobmods.lib.recipe.replace_ingredient("advanced-logistic-science-pack", "steel-chest", "brass-chest")
+    bobmods.lib.tech.add_prerequisite ("advanced-logistic-science-pack", "zinc-processing")
+  end
+else
+  bobmods.lib.recipe.hide("advanced-logistic-science-pack")
 end
 
 bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "electric-engine-unit")
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", {"processing-unit", 4})
+bobmods.lib.recipe.add_ingredient("utility-science-pack", {"processing-unit", 4})
 if data.raw.item["lithium-ion-battery"] then
   bobmods.lib.recipe.add_ingredient("utility-science-pack", {"lithium-ion-battery", 4})
 else

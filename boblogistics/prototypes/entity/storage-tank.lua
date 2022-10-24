@@ -29,6 +29,7 @@ data:extend(
         { position = {1, 2} },
         { position = {-2, -1} },
       },
+      hide_connection_info = true
     },
     two_direction_only = true,
     fast_replaceable_group = "pipe",
@@ -171,6 +172,7 @@ data:extend(
         { position = {1, 2} },
         { position = {-2, -1} },
       },
+      hide_connection_info = true
     },
     two_direction_only = true,
     fast_replaceable_group = "pipe",
@@ -313,6 +315,7 @@ data:extend(
         { position = {1, 2} },
         { position = {-2, -1} },
       },
+      hide_connection_info = true
     },
     two_direction_only = true,
     fast_replaceable_group = "pipe",
@@ -461,7 +464,8 @@ data:extend(
         { position = {-2,  1} },
         { position = { 2, -1} },
         { position = { 2,  1} }
-      }
+      },
+      hide_connection_info = true
     },
     fast_replaceable_group = "pipe",
     next_upgrade = "bob-storage-tank-all-corners-2",
@@ -592,6 +596,7 @@ data:extend(
         { position = { 2, -1} },
         { position = { 2,  1} }
       },
+      hide_connection_info = true
     },
     fast_replaceable_group = "pipe",
     next_upgrade = "bob-storage-tank-all-corners-3",
@@ -721,6 +726,7 @@ data:extend(
         { position = { 2, -1} },
         { position = { 2,  1} }
       },
+      hide_connection_info = true
     },
     fast_replaceable_group = "pipe",
     next_upgrade = "bob-storage-tank-all-corners-4",
@@ -850,6 +856,7 @@ data:extend(
         { position = { 2, -1} },
         { position = { 2,  1} }
       },
+      hide_connection_info = true
     },
     fast_replaceable_group = "pipe",
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},

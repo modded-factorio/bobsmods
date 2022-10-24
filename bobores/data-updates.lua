@@ -40,8 +40,8 @@ if bobmods.ores.settings.NickelGivesCobalt == true then
       bobmods.lib.resource.add_result("lead-ore", {name = "cobalt-ore", probability = bobmods.ores.settings.LeadNickelRatio * bobmods.ores.settings.NickelCobaltRatio})
     end
   end
+  bobmods.ores.cobalt.enabled = true
 end
-
 
 for i, drill in pairs(data.raw["mining-drill"]) do
   if not drill.storage_slots then drill.storage_slots = 6 end
@@ -49,8 +49,12 @@ end
 
 if data.raw.item["obsidian"] then
   bobmods.lib.resource.add_result("cobalt-ore", {name = "obsidian", amount_min = 1, amount_max = 12, probability = 0.25})
+  bobmods.ores.cobalt.enabled = true
 end
 
+if not bobmods.ores.cobalt.enabled then
+  bobmods.lib.item.hide("cobalt-ore")
+end
 
 if bobmods.ores.settings.UnsortedGemOre == true then
   if data.raw["item-subgroup"]["bob-gems-ore"] then

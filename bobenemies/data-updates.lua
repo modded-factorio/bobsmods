@@ -541,7 +541,7 @@ if bobmods.enemies.small_alien_artifacts ~= true then
     "alien-artifact-purple-from-small"
   }) do
     if data.raw.recipe[recipe_name] then
-      bobmods.lib.recipe.hide_recipe(recipe_name)
+      bobmods.lib.recipe.hide(recipe_name)
     end
   end
 end

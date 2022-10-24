@@ -30,25 +30,13 @@ bobmods.ores.quartz =
 }
 
 function bobmods.ores.quartz.create_autoplace()
-  if resource_generator then
-    resource_generator.setup_resource_autoplace_data("quartz", {
-      name = "quartz",
-      order = "c",
-      base_density = 4,
-      has_starting_area_placement = true,
-      regular_rq_factor_multiplier = 1,
-      starting_rq_factor_multiplier = 1
-    }
-    )
-  else
-    data.raw.resource["quartz"].autoplace = resource_autoplace.resource_autoplace_settings{
-      name = "quartz",
-      order = "c",
-      base_density = 4,
-      has_starting_area_placement = true,
-      regular_rq_factor_multiplier = 1,
-      starting_rq_factor_multiplier = 1
-    }
-  end
+  data.raw.resource["quartz"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings{
+    name = "quartz",
+    order = "c",
+    base_density = 4,
+    has_starting_area_placement = true,
+    regular_rq_factor_multiplier = 1,
+    starting_rq_factor_multiplier = 1
+  }
   bobmods.ores.quartz.enabled = true
 end
