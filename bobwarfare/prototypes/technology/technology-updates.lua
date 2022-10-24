@@ -556,3 +556,6 @@ if mods["boblogistics"] then
   bobmods.lib.tech.remove_science_pack("bob-robot-flamethrower-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
 end
+
+bobmods.lib.tech.add_prerequisite("artillery", "radars-1")
+bobmods.lib.tech.add_prerequisite("spidertron", "radars-1")
