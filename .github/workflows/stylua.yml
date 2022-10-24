@@ -22,6 +22,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           author_name: StyLuaFormatter
-          message: 'Formatt Code'
+          message: 'Format Code'
           add: '*.lua'
 
