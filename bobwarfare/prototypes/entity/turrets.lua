@@ -393,98 +393,92 @@ local function bob_laser_turret_extension(inputs)
 end
 
 function bob_laser_turret_extension_eight(inputs)
-local size = inputs.size or 1
-return
-{
-  layers =
-  {
-    {
-      filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-8.png",
-      priority = "medium",
-      width = 64,
-      height = 60,
-      frame_count = inputs.frame_count and inputs.frame_count or 15,
-      line_length = inputs.line_length and inputs.line_length or 0,
-      run_mode = inputs.run_mode and inputs.run_mode or "forward",
-      axially_symmetrical = false,
-      direction_count = 8,
-      shift = util.by_pixel(0, -35 * size),
-      scale = size,
-      hr_version =
+  local size = inputs.size or 1
+  return {
+    layers = {
       {
-        filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-8.png",
+        filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-8.png",
         priority = "medium",
-        width = 126,
-        height = 120,
+        width = 64,
+        height = 60,
         frame_count = inputs.frame_count and inputs.frame_count or 15,
         line_length = inputs.line_length and inputs.line_length or 0,
         run_mode = inputs.run_mode and inputs.run_mode or "forward",
         axially_symmetrical = false,
         direction_count = 8,
         shift = util.by_pixel(0, -35 * size),
-        scale = 0.5 * size
-      }
-    },
-    {
-      filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-mask-8.png",
-      flags = { "mask" },
-      width = 46,
-      height = 42,
-      frame_count = inputs.frame_count or 15,
-      line_length = inputs.line_length or 0,
-      run_mode = inputs.run_mode or "forward",
-      axially_symmetrical = false,
-      tint = inputs.tint or white,
-      direction_count = 8,
-      shift = util.by_pixel(0, -43 * size),
-      scale = size,
-      hr_version = {
-        filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-mask-8.png",
+        scale = size,
+        hr_version = {
+          filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-8.png",
+          priority = "medium",
+          width = 126,
+          height = 120,
+          frame_count = inputs.frame_count and inputs.frame_count or 15,
+          line_length = inputs.line_length and inputs.line_length or 0,
+          run_mode = inputs.run_mode and inputs.run_mode or "forward",
+          axially_symmetrical = false,
+          direction_count = 8,
+          shift = util.by_pixel(0, -35 * size),
+          scale = 0.5 * size,
+        },
+      },
+      {
+        filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-mask-8.png",
         flags = { "mask" },
-        width = 92,
-        height = 80,
+        width = 46,
+        height = 42,
         frame_count = inputs.frame_count or 15,
         line_length = inputs.line_length or 0,
         run_mode = inputs.run_mode or "forward",
         axially_symmetrical = false,
         tint = inputs.tint or white,
         direction_count = 8,
-        shift = util.by_pixel(0, -43.5 * size),
-        scale = 0.5 * size
-      }
-    },
-    {
-      filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-shadow-8.png",
-      width = 86,
-      height = 46,
-      frame_count = inputs.frame_count or 15,
-      line_length = inputs.line_length or 0,
-      run_mode = inputs.run_mode or "forward",
-      axially_symmetrical = false,
-      direction_count = 8,
-      draw_as_shadow = true,
-      shift = util.by_pixel(51 * size, 2 * size),
-      scale = size,
-      hr_version =
+        shift = util.by_pixel(0, -43 * size),
+        scale = size,
+        hr_version = {
+          filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-mask-8.png",
+          flags = { "mask" },
+          width = 92,
+          height = 80,
+          frame_count = inputs.frame_count or 15,
+          line_length = inputs.line_length or 0,
+          run_mode = inputs.run_mode or "forward",
+          axially_symmetrical = false,
+          tint = inputs.tint or white,
+          direction_count = 8,
+          shift = util.by_pixel(0, -43.5 * size),
+          scale = 0.5 * size,
+        },
+      },
       {
-        filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-shadow-8.png",
-        width = 170,
-        height = 92,
+        filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-shadow-8.png",
+        width = 86,
+        height = 46,
         frame_count = inputs.frame_count or 15,
         line_length = inputs.line_length or 0,
         run_mode = inputs.run_mode or "forward",
         axially_symmetrical = false,
         direction_count = 8,
         draw_as_shadow = true,
-        shift = util.by_pixel(50.5 * size, 2.5 * size),
-        scale = 0.5 * size
-      }
-    }
+        shift = util.by_pixel(51 * size, 2 * size),
+        scale = size,
+        hr_version = {
+          filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-shadow-8.png",
+          width = 170,
+          height = 92,
+          frame_count = inputs.frame_count or 15,
+          line_length = inputs.line_length or 0,
+          run_mode = inputs.run_mode or "forward",
+          axially_symmetrical = false,
+          direction_count = 8,
+          draw_as_shadow = true,
+          shift = util.by_pixel(50.5 * size, 2.5 * size),
+          scale = 0.5 * size,
+        },
+      },
+    },
   }
-}
 end
-
-
 
 local function bob_laser_turret_attack(inputs)
   local size = inputs.size or 1
@@ -788,19 +782,21 @@ local function bob_laser_turret(inputs)
       drain = inputs.drain or "24kW",
       usage_priority = "primary-input",
     },
-    prepared_animation = bob_laser_turret_attack{tint = inputs.tint, size = size},
+    prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
     base_picture = inputs.base,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     call_for_help_radius = 40,
   }
   if inputs.turret_base_8_directions == true then
-    turret.flags = { "placeable-player", "placeable-enemy", "player-creation", "building-direction-8-way"}
-    turret.folded_animation = bob_laser_turret_extension_eight{frame_count=1, line_length = 1, tint = inputs.tint, size = size}
+    turret.flags = { "placeable-player", "placeable-enemy", "player-creation", "building-direction-8-way" }
+    turret.folded_animation =
+      bob_laser_turret_extension_eight({ frame_count = 1, line_length = 1, tint = inputs.tint, size = size })
   else
-    turret.flags = { "placeable-player", "placeable-enemy", "player-creation"}
-    turret.folded_animation = bob_laser_turret_extension{frame_count=1, line_length = 1, tint = inputs.tint, size = size}
-    turret.preparing_animation = bob_laser_turret_extension{tint = inputs.tint, size = size}
-    turret.folding_animation = bob_laser_turret_extension{run_mode = "backward", tint = inputs.tint, size = size}
+    turret.flags = { "placeable-player", "placeable-enemy", "player-creation" }
+    turret.folded_animation =
+      bob_laser_turret_extension({ frame_count = 1, line_length = 1, tint = inputs.tint, size = size })
+    turret.preparing_animation = bob_laser_turret_extension({ tint = inputs.tint, size = size })
+    turret.folding_animation = bob_laser_turret_extension({ run_mode = "backward", tint = inputs.tint, size = size })
   end
   if inputs.type == "projectile" then
     turret.attack_parameters = {
