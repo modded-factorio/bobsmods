@@ -1,18 +1,16 @@
 data:extend({
   {
     type = "technology",
-    name = "radars",
+    name = "radars-1",
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
     prerequisites = {
-      "military",
-      "steel-processing",
-      "electronics",
+      "military"
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-2",
+        recipe = "radar",
       },
     },
     unit = {
@@ -31,14 +29,15 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
     prerequisites = {
-      "radars",
+      "radars-1",
       "military-2",
-      "advanced-electronics",
+      "steel-processing",
+      "electronics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-3",
+        recipe = "radar-2",
       },
     },
     unit = {
@@ -59,12 +58,13 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "radars-2",
-      "advanced-electronics-2",
+      "military-3",
+      "advanced-electronics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-4",
+        recipe = "radar-3",
       },
     },
     unit = {
@@ -87,11 +87,12 @@ data:extend({
     prerequisites = {
       "radars-3",
       "production-science-pack",
+      "advanced-electronics-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-5",
+        recipe = "radar-4",
       },
     },
     unit = {
@@ -105,5 +106,34 @@ data:extend({
       time = 30,
     },
     order = "e-b-d",
+  },
+
+  {
+    type = "technology",
+    name = "radars-5",
+    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
+    icon_size = 128,
+    prerequisites = {
+      "radars-4",
+      "military-4",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "radar-5",
+      },
+    },
+    unit = {
+      count = 150,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "e-b-e",
   },
 })

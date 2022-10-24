@@ -88,5 +88,5 @@ end
 
 if data.raw.item["radar-5"] then
   bobmods.lib.recipe.replace_ingredient("satellite", "radar", "radar-5")
-  bobmods.lib.tech.add_prerequisite("space-science-pack", "radars-4")
+  bobmods.lib.tech.add_prerequisite("space-science-pack", "radars-5")
 end

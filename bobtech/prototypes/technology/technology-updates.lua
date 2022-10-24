@@ -201,6 +201,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
 
   bobmods.lib.tech.add_prerequisite("automation", "electricity")
   bobmods.lib.tech.add_prerequisite("optics", "electricity")
+  bobmods.lib.tech.add_prerequisite("radars-1", "electricity")
 
   bobmods.lib.tech.add_prerequisite("logistic-science-pack", "lab")
   if data.raw.technology["electrolysis-1"] then
