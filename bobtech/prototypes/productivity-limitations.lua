@@ -1,7 +1,7 @@
 bobmods.lib.module.add_productivity_limitation("advanced-logistic-science-pack")
 
-if data.raw.recipe["science-pack-gold"] then
-  bobmods.lib.module.add_productivity_limitation("science-pack-gold")
+if data.raw.recipe["alien-science-pack"] then
+  bobmods.lib.module.add_productivity_limitation("alien-science-pack")
 end
 
 if data.raw.recipe["alien-science-pack-blue"] then
