@@ -581,7 +581,7 @@ data:extend({
       max_sounds_per_type = 3,
     },
     horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-    vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+    vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
   },
 
   {
@@ -670,7 +670,7 @@ data:extend({
       max_sounds_per_type = 3,
     },
     horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-    vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+    vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
   },
 
   {
@@ -760,7 +760,7 @@ data:extend({
       max_sounds_per_type = 3,
     },
     horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-    vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+    vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
   },
 
   {
@@ -851,7 +851,7 @@ data:extend({
       max_sounds_per_type = 3,
     },
     horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-    vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+    vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
   },
 
   {
@@ -945,7 +945,7 @@ if data.raw.item["bronze-alloy"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
@@ -1040,7 +1040,7 @@ if data.raw.item["brass-alloy"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
@@ -1135,7 +1135,7 @@ if data.raw.item["silicon-nitride"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
@@ -1230,7 +1230,7 @@ if data.raw.item["titanium-plate"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
@@ -1325,7 +1325,7 @@ if data.raw.item["tungsten-plate"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
@@ -1420,7 +1420,7 @@ if data.raw.item["nitinol-alloy"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
@@ -1515,7 +1515,7 @@ if data.raw.item["copper-tungsten-alloy"] then
         max_sounds_per_type = 3,
       },
       horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.40625 }, { 0.03125, 0.125 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
     },
 
     {
