@@ -1,97 +1,87 @@
-data:extend(
-{
+data:extend({
   {
     type = "assembling-machine",
     name = "air-pump",
     icon = "__bobplates__/graphics/icons/air-pump-1.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "air-pump"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "air-pump" },
     max_health = 150,
-    crafting_categories = {"air-pump"},
+    crafting_categories = { "air-pump" },
     crafting_speed = 1,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 1,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
     next_upgrade = "air-pump-2",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "50kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
 
   {
@@ -99,93 +89,84 @@ data:extend(
     name = "air-pump-2",
     icon = "__bobplates__/graphics/icons/air-pump-2.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "air-pump-2"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "air-pump-2" },
     max_health = 180,
-    crafting_categories = {"air-pump"},
+    crafting_categories = { "air-pump" },
     crafting_speed = 2,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 2,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
     next_upgrade = "air-pump-3",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "90kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
 
   {
@@ -193,93 +174,84 @@ data:extend(
     name = "air-pump-3",
     icon = "__bobplates__/graphics/icons/air-pump-3.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "air-pump-3"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "air-pump-3" },
     max_health = 230,
-    crafting_categories = {"air-pump"},
+    crafting_categories = { "air-pump" },
     crafting_speed = 3.5,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 4,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
     next_upgrade = "air-pump-4",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "140kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
 
   {
@@ -287,151 +259,136 @@ data:extend(
     name = "air-pump-4",
     icon = "__bobplates__/graphics/icons/air-pump-4.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "air-pump-4"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "air-pump-4" },
     max_health = 300,
-    crafting_categories = {"air-pump"},
+    crafting_categories = { "air-pump" },
     crafting_speed = 5,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 6,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "175kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
-
-
 
   {
     type = "assembling-machine",
     name = "water-pump",
     icon = "__bobplates__/graphics/icons/water-pump-1.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "water-pump"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "water-pump" },
     max_health = 120,
-    crafting_categories = {"water-pump", "barrelling"},
+    crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 1,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 1,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
     next_upgrade = "water-pump-2",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "50kW",
---[[
+    --[[
     animation =
     {
       north =
@@ -750,44 +707,40 @@ data:extend(
         },
       },
     },
-]]--
-    animation =
-    {
-      north =
-      {
+]]
+    --
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
+        animation_speed = 0.5,
+      },
     },
   },
 
@@ -796,93 +749,84 @@ data:extend(
     name = "water-pump-2",
     icon = "__bobplates__/graphics/icons/water-pump-2.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "water-pump-2"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "water-pump-2" },
     max_health = 180,
-    crafting_categories = {"water-pump", "barrelling"},
+    crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 2,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 2,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
     next_upgrade = "water-pump-3",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "90kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
 
   {
@@ -890,93 +834,84 @@ data:extend(
     name = "water-pump-3",
     icon = "__bobplates__/graphics/icons/water-pump-3.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "water-pump-3"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "water-pump-3" },
     max_health = 230,
-    crafting_categories = {"water-pump", "barrelling"},
+    crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 3.5,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 4,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
     next_upgrade = "water-pump-4",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "140kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
 
   {
@@ -984,94 +919,82 @@ data:extend(
     name = "water-pump-4",
     icon = "__bobplates__/graphics/icons/water-pump-4.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "water-pump-4"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 1, result = "water-pump-4" },
     max_health = 300,
-    crafting_categories = {"water-pump", "barrelling"},
+    crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 5,
-    module_specification =
-    {
+    module_specification = {
       module_slots = 6,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
+      module_info_icon_shift = { 0, 0.5 },
+      module_info_multi_row_initial_height_modifier = -0.3,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
     corpse = "small-remnants",
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 70
-      }
+        percent = 70,
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}}
+        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "output", position = {0.5, -1.5}}}
+        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
       },
-      off_when_no_fluid_recipe = false
+      off_when_no_fluid_recipe = false,
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    energy_source =
-    {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4
+      emissions_per_minute = 0.4,
     },
     energy_usage = "175kW",
-    animation =
-    {
-      north =
-      {
+    animation = {
+      north = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      east =
-      {
+      east = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 80,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      south =
-      {
+      south = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 160,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
+        animation_speed = 0.5,
       },
-      west =
-      {
+      west = {
         filename = "__bobplates__/graphics/entity/pump/pump.png",
         y = 240,
         width = 80,
         height = 80,
         frame_count = 8,
-        animation_speed = 0.5
-      }
-    }
+        animation_speed = 0.5,
+      },
+    },
   },
-}
-)
-
-
+})

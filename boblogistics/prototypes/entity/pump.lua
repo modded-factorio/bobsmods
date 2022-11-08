@@ -7,117 +7,107 @@ function bobmods.logistics.pump_pumping_speed(level) --Pumping speed should matc
 end
 
 function bobmods.logistics.set_pump_height(pump, level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
-  if (data.raw["pump"][pump]) then
+  if data.raw["pump"][pump] then
     data.raw["pump"][pump].fluid_box.height = bobmods.logistics.pump_height(level)
   end
-end 
+end
 
-function bobmods.logistics.set_pumping_speed(pump , level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
-  if (data.raw["pump"][pump]) then
+function bobmods.logistics.set_pumping_speed(pump, level) --Regular Pumps are Height 4 which is 4x of a normal pipe => Higher tier pipes should have a height 4x higher then the pipe of the same tier
+  if data.raw["pump"][pump] then
     data.raw["pump"][pump].pumping_speed = bobmods.logistics.pump_pumping_speed(level)
   end
-end 
+end
 
 function bobmods.logistics.pump_animations(tint)
   return {
-      north =
-      {
-        filename = "__base__/graphics/entity/pump/pump-north.png",
-        width = 53,
-        height = 79,
-        line_length =8,
-        frame_count =32,
+    north = {
+      filename = "__base__/graphics/entity/pump/pump-north.png",
+      width = 53,
+      height = 79,
+      line_length = 8,
+      frame_count = 32,
+      animation_speed = 0.5,
+      shift = util.by_pixel(8.000, 7.500),
+      hr_version = {
+        filename = "__base__/graphics/entity/pump/hr-pump-north.png",
+        width = 103,
+        height = 164,
+        scale = 0.5,
+        line_length = 8,
+        frame_count = 32,
         animation_speed = 0.5,
-        shift = util.by_pixel(8.000, 7.500),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-north.png",
-          width = 103,
-          height = 164,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          animation_speed = 0.5,
-          shift = util.by_pixel(8, 3.5) -- {0.515625, 0.21875}
-        },
+        shift = util.by_pixel(8, 3.5), -- {0.515625, 0.21875}
       },
-      east =
-      {
-        filename = "__base__/graphics/entity/pump/pump-east.png",
-        width = 66,
-        height = 60,
-        line_length =8,
-        frame_count =32,
+    },
+    east = {
+      filename = "__base__/graphics/entity/pump/pump-east.png",
+      width = 66,
+      height = 60,
+      line_length = 8,
+      frame_count = 32,
+      animation_speed = 0.5,
+      shift = util.by_pixel(0, 4),
+      hr_version = {
+        filename = "__base__/graphics/entity/pump/hr-pump-east.png",
+        width = 130,
+        height = 109,
+        scale = 0.5,
+        line_length = 8,
+        frame_count = 32,
         animation_speed = 0.5,
-        shift = util.by_pixel(0, 4),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-east.png",
-          width = 130,
-          height = 109,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          animation_speed = 0.5,
-          shift = util.by_pixel(-0.5, 1.75) --{-0.03125, 0.109375}
-        },
+        shift = util.by_pixel(-0.5, 1.75), --{-0.03125, 0.109375}
       },
+    },
 
-      south =
-      {
-        filename = "__base__/graphics/entity/pump/pump-south.png",
-        width = 62,
-        height = 87,
-        line_length =8,
-        frame_count =32,
+    south = {
+      filename = "__base__/graphics/entity/pump/pump-south.png",
+      width = 62,
+      height = 87,
+      line_length = 8,
+      frame_count = 32,
+      animation_speed = 0.5,
+      shift = util.by_pixel(13.5, 0.5),
+      hr_version = {
+        filename = "__base__/graphics/entity/pump/hr-pump-south.png",
+        width = 114,
+        height = 160,
+        scale = 0.5,
+        line_length = 8,
+        frame_count = 32,
         animation_speed = 0.5,
-        shift = util.by_pixel(13.5, 0.5),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-south.png",
-          width = 114,
-          height = 160,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          animation_speed = 0.5,
-          shift = util.by_pixel(12.5, -8) -- {0.75, -0.5}
-        },
+        shift = util.by_pixel(12.5, -8), -- {0.75, -0.5}
       },
-      west =
-      {
-        filename = "__base__/graphics/entity/pump/pump-west.png",
-        width = 69,
-        height = 51,
-        line_length =8,
-        frame_count =32,
+    },
+    west = {
+      filename = "__base__/graphics/entity/pump/pump-west.png",
+      width = 69,
+      height = 51,
+      line_length = 8,
+      frame_count = 32,
+      animation_speed = 0.5,
+      shift = util.by_pixel(0.5, -0.5),
+      hr_version = {
+        filename = "__base__/graphics/entity/pump/hr-pump-west.png",
+        width = 131,
+        height = 111,
+        scale = 0.5,
+        line_length = 8,
+        frame_count = 32,
         animation_speed = 0.5,
-        shift = util.by_pixel(0.5, -0.5),
-        hr_version = {
-          filename = "__base__/graphics/entity/pump/hr-pump-west.png",
-          width = 131,
-          height = 111,
-          scale = 0.5,
-          line_length =8,
-          frame_count =32,
-          animation_speed = 0.5,
-          shift = util.by_pixel(-0.25, 1.25) -- {-0.015625, 0.078125}
-        }
-      }
-    }
-
+        shift = util.by_pixel(-0.25, 1.25), -- {-0.015625, 0.078125}
+      },
+    },
+  }
 end
 
-
-
-
-local pump_fluid_animation =
-{
-  north =
-  {
+local pump_fluid_animation = {
+  north = {
     filename = "__base__/graphics/entity/pump/pump-north-liquid.png",
     apply_runtime_tint = true,
     width = 20,
     height = 13,
-    line_length =8,
-    frame_count =32,
+    line_length = 8,
+    frame_count = 32,
     shift = util.by_pixel(-0.500, -14.500),
     hr_version = {
       filename = "__base__/graphics/entity/pump/hr-pump-north-liquid.png",
@@ -125,71 +115,67 @@ local pump_fluid_animation =
       width = 38,
       height = 22,
       scale = 0.5,
-      line_length =8,
-      frame_count =32,
-      shift = util.by_pixel(-0.250, -16.750)
-    }
+      line_length = 8,
+      frame_count = 32,
+      shift = util.by_pixel(-0.250, -16.750),
+    },
   },
 
-  east =
-  {
+  east = {
     filename = "__base__/graphics/entity/pump/pump-east-liquid.png",
     width = 18,
     height = 24,
-    line_length =8,
-    frame_count =32,
+    line_length = 8,
+    frame_count = 32,
     shift = util.by_pixel(6.000, -8.000),
     hr_version = {
       filename = "__base__/graphics/entity/pump/hr-pump-east-liquid.png",
       width = 35,
       height = 46,
       scale = 0.5,
-      line_length =8,
-      frame_count =32,
-      shift = util.by_pixel(6.250, -8.500)
+      line_length = 8,
+      frame_count = 32,
+      shift = util.by_pixel(6.250, -8.500),
     },
   },
 
-  south =
-  {
+  south = {
     filename = "__base__/graphics/entity/pump/pump-south-liquid.png",
     width = 26,
     height = 55,
-    line_length =8,
-    frame_count =32,
+    line_length = 8,
+    frame_count = 32,
     shift = util.by_pixel(3.500, 6.500),
     hr_version = {
       filename = "__base__/graphics/entity/pump/hr-pump-south-liquid.png",
       width = 38,
       height = 45,
       scale = 0.5,
-      line_length =8,
-      frame_count =32,
-      shift = util.by_pixel(0.500, -9.250)
+      line_length = 8,
+      frame_count = 32,
+      shift = util.by_pixel(0.500, -9.250),
     },
   },
-  west =
-  {
+  west = {
     filename = "__base__/graphics/entity/pump/pump-west-liquid.png",
     width = 18,
     height = 24,
-    line_length =8,
-    frame_count =32,
+    line_length = 8,
+    frame_count = 32,
     shift = util.by_pixel(-6.000, -9.000),
     hr_version = {
       filename = "__base__/graphics/entity/pump/hr-pump-west-liquid.png",
       width = 35,
       height = 47,
       scale = 0.5,
-      line_length =8,
-      frame_count =32,
-      shift = util.by_pixel(-6.500, -9.500)
+      line_length = 8,
+      frame_count = 32,
+      shift = util.by_pixel(-6.500, -9.500),
     },
-  }
+  },
 }
 
-local pump_glass_pictures = 
-{
+local pump_glass_pictures = {
   north = {
     filename = "__base__/graphics/entity/pump/pump-north-glass.png",
     width = 32,
@@ -234,11 +220,10 @@ local pump_glass_pictures =
       width = 192,
       height = 192,
       scale = 0.5,
-      shift = util.by_pixel(-16.000, 0.000)
+      shift = util.by_pixel(-16.000, 0.000),
     },
-  }
+  },
 }
-
 
 data.raw.pump.pump.energy_usage = "15kW"
 data.raw.pump.pump.pumping_speed = 80
@@ -246,62 +231,55 @@ data.raw.pump.pump.pumping_speed = 80
 local pump_collision_box = table.deepcopy(data.raw.pump.pump.collision_box)
 local fluid_wagon_connector_graphics = table.deepcopy(data.raw.pump.pump.fluid_wagon_connector_graphics)
 
-
-
-data:extend(
-{
+data:extend({
   {
     type = "pump",
     name = "bob-pump-2",
     icon = "__base__/graphics/icons/pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.2, result = "bob-pump-2"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.2, result = "bob-pump-2" },
     max_health = 220,
     fast_replaceable_group = "pipe",
     next_upgrade = "bob-pump-3",
     corpse = "small-remnants",
     collision_box = pump_collision_box,
-    selection_box = {{-0.5, -1}, {0.5, 1}},
-    resistances =
-    {
+    selection_box = { { -0.5, -1 }, { 0.5, 1 } },
+    resistances = {
       {
         type = "fire",
-        percent = 80
+        percent = 80,
       },
       {
         type = "impact",
-        percent = 30
-      }
+        percent = 30,
+      },
     },
-    fluid_box =
-    {
+    fluid_box = {
       base_area = 1,
       height = 4,
       pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
-        { position = {0, -1.5}, type = "output"},
-        { position = {0, 1.5}, type = "input"}
+      pipe_connections = {
+        { position = { 0, -1.5 }, type = "output" },
+        { position = { 0, 1.5 }, type = "input" },
       },
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
     },
     energy_usage = "20kW",
     pumping_speed = 120,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    animations = bobmods.logistics.pump_animations({r = 0.8, g = 0.8, b = 0.2, a = 1}),
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    animations = bobmods.logistics.pump_animations({ r = 0.8, g = 0.8, b = 0.2, a = 1 }),
     fluid_wagon_connector_frame_count = 35,
     fluid_wagon_connector_graphics = fluid_wagon_connector_graphics,
     fluid_animation = pump_fluid_animation,
     glass_pictures = pump_glass_pictures,
     circuit_wire_connection_points = circuit_connector_definitions["pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["pump"].sprites,
-    circuit_wire_max_distance = 10
+    circuit_wire_max_distance = 10,
   },
   {
     type = "pump",
@@ -309,52 +287,48 @@ data:extend(
     icon = "__base__/graphics/icons/pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.2, result = "bob-pump-3"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.2, result = "bob-pump-3" },
     max_health = 260,
     fast_replaceable_group = "pipe",
     next_upgrade = "bob-pump-4",
     corpse = "small-remnants",
     collision_box = pump_collision_box,
-    selection_box = {{-0.5, -1}, {0.5, 1}},
-    resistances =
-    {
+    selection_box = { { -0.5, -1 }, { 0.5, 1 } },
+    resistances = {
       {
         type = "fire",
-        percent = 80
+        percent = 80,
       },
       {
         type = "impact",
-        percent = 30
-      }
+        percent = 30,
+      },
     },
-    fluid_box =
-    {
+    fluid_box = {
       base_area = 1,
       height = 4,
       pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
-        { position = {0, -1.5}, type = "output"},
-        { position = {0, 1.5}, type = "input"}
+      pipe_connections = {
+        { position = { 0, -1.5 }, type = "output" },
+        { position = { 0, 1.5 }, type = "input" },
       },
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
     },
     energy_usage = "25kW",
     pumping_speed = 160,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    animations = bobmods.logistics.pump_animations({r = 0.6, g = 0.2, b = 0.8, a = 1}),
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    animations = bobmods.logistics.pump_animations({ r = 0.6, g = 0.2, b = 0.8, a = 1 }),
     fluid_wagon_connector_frame_count = 35,
     fluid_wagon_connector_graphics = fluid_wagon_connector_graphics,
     fluid_animation = pump_fluid_animation,
     glass_pictures = pump_glass_pictures,
     circuit_wire_connection_points = circuit_connector_definitions["pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["pump"].sprites,
-    circuit_wire_max_distance = 12.5
+    circuit_wire_max_distance = 12.5,
   },
   {
     type = "pump",
@@ -362,67 +336,57 @@ data:extend(
     icon = "__base__/graphics/icons/pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.2, result = "bob-pump-4"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.2, result = "bob-pump-4" },
     max_health = 300,
     fast_replaceable_group = "pipe",
     corpse = "small-remnants",
     collision_box = pump_collision_box,
-    selection_box = {{-0.5, -1}, {0.5, 1}},
-    resistances =
-    {
+    selection_box = { { -0.5, -1 }, { 0.5, 1 } },
+    resistances = {
       {
         type = "fire",
-        percent = 80
+        percent = 80,
       },
       {
         type = "impact",
-        percent = 30
-      }
+        percent = 30,
+      },
     },
-    fluid_box =
-    {
+    fluid_box = {
       base_area = 1,
       height = 4,
       pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
-        { position = {0, -1.5}, type = "output"},
-        { position = {0, 1.5}, type = "input"}
+      pipe_connections = {
+        { position = { 0, -1.5 }, type = "output" },
+        { position = { 0, 1.5 }, type = "input" },
       },
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
     },
     energy_usage = "30kW",
     pumping_speed = 200,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    animations = bobmods.logistics.pump_animations({r = 0.2, g = 0.8, b = 0.3, a = 1}),
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    animations = bobmods.logistics.pump_animations({ r = 0.2, g = 0.8, b = 0.3, a = 1 }),
     fluid_wagon_connector_frame_count = 35,
     fluid_wagon_connector_graphics = fluid_wagon_connector_graphics,
     fluid_animation = pump_fluid_animation,
     glass_pictures = pump_glass_pictures,
     circuit_wire_connection_points = circuit_connector_definitions["pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["pump"].sprites,
-    circuit_wire_max_distance = 15
+    circuit_wire_max_distance = 15,
   },
-}
-)
-
+})
 
 if settings.startup["bobmods-logistics-highpipes"].value == true then
-
-
   bobmods.logistics.set_pump_height("bob-pump-2", 1)
   bobmods.logistics.set_pump_height("bob-pump-3", 2)
   bobmods.logistics.set_pump_height("bob-pump-4", 4) --level 3 is skipped because there are only 4 pump levels and level 4 takes T5 pipes as ingredient
-
 
   --Send Pump Speed for Pump
   bobmods.logistics.set_pumping_speed("bob-pump-2", 1)
   bobmods.logistics.set_pumping_speed("bob-pump-3", 2)
   bobmods.logistics.set_pumping_speed("bob-pump-4", 4)
-
 end

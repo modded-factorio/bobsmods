@@ -7,7 +7,7 @@ local alloys = {
   "gunmetal-alloy",
   "invar-alloy",
   "nitinol-alloy",
-  "cobalt-steel-alloy"
+  "cobalt-steel-alloy",
 }
 
 local chemicals = {
@@ -26,7 +26,7 @@ local chemicals = {
   "sulfur-dioxide",
   "petroleum-gas-cracking",
   "bob-oil-processing",
-  "coal-cracking"
+  "coal-cracking",
 }
 
 local compounds = {
@@ -42,10 +42,10 @@ local compounds = {
   "cobalt-oxide",
   "cobalt-oxide-from-copper",
   "silver-from-lead",
-  "silicon-carbide"
+  "silicon-carbide",
 }
 
-local electronics = {"advanced-processing-unit"}
+local electronics = { "advanced-processing-unit" }
 
 local gems = {
   "bob-ruby-3",
@@ -98,7 +98,7 @@ local plates = {
   "bob-aluminium-plate",
   "bob-titanium-plate",
   "bob-silicon-plate",
-  "lithium"
+  "lithium",
 }
 
 local resources = {
@@ -117,7 +117,7 @@ local resources = {
   "gas-canister",
   "empty-canister",
   "polishing-compound",
-  "solid-fuel-from-hydrogen"
+  "solid-fuel-from-hydrogen",
 }
 
 bobmods.lib.module.add_productivity_limitations(parts)
@@ -130,38 +130,38 @@ bobmods.lib.module.add_productivity_limitations(plates)
 bobmods.lib.module.add_productivity_limitations(resources)
 
 if data.raw.item["thorium-ore"] then
-  bobmods.lib.module.add_productivity_limitations{
+  bobmods.lib.module.add_productivity_limitations({
     "thorium-processing",
-    "thorium-fuel-reprocessing"
-  }
-  
+    "thorium-fuel-reprocessing",
+  })
+
   if settings.startup["bobmods-plates-nuclearupdate"].value ~= true then
-    bobmods.lib.module.add_productivity_limitations{
+    bobmods.lib.module.add_productivity_limitations({
       "thorium-fuel-cell",
-      "thorium-plutonium-fuel-cell"
-    }
+      "thorium-plutonium-fuel-cell",
+    })
   end
 end
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-  bobmods.lib.module.add_productivity_limitations{
+  bobmods.lib.module.add_productivity_limitations({
     "empty-nuclear-fuel-cell",
-    "plutonium-nucleosynthesis"
-  }
-  bobmods.lib.module.remove_productivity_limitations{
-    "uranium-fuel-cell"
-  }
+    "plutonium-nucleosynthesis",
+  })
+  bobmods.lib.module.remove_productivity_limitations({
+    "uranium-fuel-cell",
+  })
 else
-  bobmods.lib.module.add_productivity_limitations{
-    "deuterium-fuel-cell"
-  }
+  bobmods.lib.module.add_productivity_limitations({
+    "deuterium-fuel-cell",
+  })
 end
 
-bobmods.lib.module.add_productivity_limitations{
+bobmods.lib.module.add_productivity_limitations({
   "lead-oxide-2",
   "hydrogen-sulfide",
   "sulfur-3",
   "heavy-water-electrolysis",
   "deuterium-fuel-reprocessing",
-  "bobingabout-enrichment-process"
-}
+  "bobingabout-enrichment-process",
+})

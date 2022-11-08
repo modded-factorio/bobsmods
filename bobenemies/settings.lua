@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-enemies-enableartifacts",
@@ -51,6 +50,4 @@ data:extend(
     setting_type = "startup",
     default_value = false,
   },
-}
-)
-
+})

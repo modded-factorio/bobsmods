@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "electrolyser",
@@ -8,7 +7,7 @@ data:extend(
     subgroup = "production-machine",
     order = "e[electrolyser-1]",
     place_result = "electrolyser",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -19,7 +18,7 @@ data:extend(
     subgroup = "bob-smelting-machine",
     order = "b[mixing-furnace-1]",
     place_result = "stone-mixing-furnace",
-    stack_size = 50
+    stack_size = 50,
   },
   {
     type = "item",
@@ -30,7 +29,7 @@ data:extend(
     subgroup = "bob-smelting-machine",
     order = "b[mixing-furnace-2]",
     place_result = "steel-mixing-furnace",
-    stack_size = 50
+    stack_size = 50,
   },
   {
     type = "item",
@@ -40,7 +39,7 @@ data:extend(
     subgroup = "bob-smelting-machine",
     order = "c[electric-mixing-furnace]",
     place_result = "electric-mixing-furnace",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -51,7 +50,7 @@ data:extend(
     subgroup = "bob-smelting-machine",
     order = "b[chemical-boiler-1]",
     place_result = "stone-chemical-furnace",
-    stack_size = 50
+    stack_size = 50,
   },
   {
     type = "item",
@@ -62,7 +61,7 @@ data:extend(
     subgroup = "bob-smelting-machine",
     order = "b[chemical-boiler-2]",
     place_result = "steel-chemical-furnace",
-    stack_size = 50
+    stack_size = 50,
   },
   {
     type = "item",
@@ -72,9 +71,8 @@ data:extend(
     subgroup = "bob-smelting-machine",
     order = "c[chemical-furnace]",
     place_result = "electric-chemical-furnace",
-    stack_size = 50
+    stack_size = 50,
   },
-
 
   {
     type = "item",
@@ -84,7 +82,7 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[air-pump-1]",
     place_result = "air-pump",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -95,7 +93,7 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[air-pump-2]",
     place_result = "air-pump-2",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -106,7 +104,7 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[air-pump-3]",
     place_result = "air-pump-3",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -117,9 +115,8 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[air-pump-4]",
     place_result = "air-pump-4",
-    stack_size = 50
+    stack_size = 50,
   },
-
 
   {
     type = "item",
@@ -129,7 +126,7 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[water-pump-1]",
     place_result = "water-pump",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -140,7 +137,7 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[water-pump-2]",
     place_result = "water-pump-2",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -151,7 +148,7 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[water-pump-3]",
     place_result = "water-pump-3",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -162,9 +159,8 @@ data:extend(
     subgroup = "bob-pump",
     order = "e[water-pump-4]",
     place_result = "water-pump-4",
-    stack_size = 50
+    stack_size = 50,
   },
-
 
   {
     type = "item",
@@ -174,7 +170,7 @@ data:extend(
     subgroup = "bob-storage",
     order = "b[fluid]-a[storage-tank-0a]",
     place_result = "bob-small-inline-storage-tank",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -185,7 +181,7 @@ data:extend(
     subgroup = "bob-storage",
     order = "b[fluid]-a[storage-tank-0b]",
     place_result = "bob-small-storage-tank",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -196,8 +192,6 @@ data:extend(
     subgroup = "bob-pump",
     order = "void-pump",
     place_result = "void-pump",
-    stack_size = 50
+    stack_size = 50,
   },
-}
-)
-
+})

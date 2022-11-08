@@ -7,81 +7,116 @@ bobmods.lib.tech.add_prerequisite("artillery", "concrete")
 bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "military-4")
 bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-2", "military-4")
 
-
-if data.raw.tool["science-pack-gold"] and
-  data.raw.tool["alien-science-pack-blue"] and
-  data.raw.tool["alien-science-pack-orange"] and
-  data.raw.tool["alien-science-pack-purple"] and
-  data.raw.tool["alien-science-pack-yellow"] and
-  data.raw.tool["alien-science-pack-green"] and
-  data.raw.tool["alien-science-pack-red"]
+if
+  data.raw.tool["science-pack-gold"]
+  and data.raw.tool["alien-science-pack-blue"]
+  and data.raw.tool["alien-science-pack-orange"]
+  and data.raw.tool["alien-science-pack-purple"]
+  and data.raw.tool["alien-science-pack-yellow"]
+  and data.raw.tool["alien-science-pack-green"]
+  and data.raw.tool["alien-science-pack-red"]
 then
-  data.raw.technology["bob-ap-bullets"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-blue", 1}}
-  data.raw.technology["bob-shotgun-ap-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-blue", 1}}
-  data.raw.technology["bob-piercing-rocket"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-blue", 1}}
+  data.raw.technology["bob-ap-bullets"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-blue", 1 } }
+  data.raw.technology["bob-shotgun-ap-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-blue", 1 } }
+  data.raw.technology["bob-piercing-rocket"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-blue", 1 } }
 
-  data.raw.technology["bob-electric-bullets"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-orange", 1}}
-  data.raw.technology["bob-shotgun-electric-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-orange", 1}}
-  data.raw.technology["bob-electric-rocket"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-orange", 1}}
+  data.raw.technology["bob-electric-bullets"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-orange", 1 } }
+  data.raw.technology["bob-shotgun-electric-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-orange", 1 } }
+  data.raw.technology["bob-electric-rocket"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-orange", 1 } }
 
-  data.raw.technology["bob-acid-bullets"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-purple", 1}}
-  data.raw.technology["bob-shotgun-acid-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-purple", 1}}
-  data.raw.technology["bob-acid-rocket"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-purple", 1}}
+  data.raw.technology["bob-acid-bullets"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-purple", 1 } }
+  data.raw.technology["bob-shotgun-acid-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-purple", 1 } }
+  data.raw.technology["bob-acid-rocket"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-purple", 1 } }
 
-  data.raw.technology["bob-he-bullets"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-yellow", 1}}
-  data.raw.technology["bob-shotgun-explosive-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-yellow", 1}}
-  data.raw.technology["bob-explosive-rocket"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-yellow", 1}}
+  data.raw.technology["bob-he-bullets"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-yellow", 1 } }
+  data.raw.technology["bob-shotgun-explosive-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-yellow", 1 } }
+  data.raw.technology["bob-explosive-rocket"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-yellow", 1 } }
 
-  data.raw.technology["bob-poison-bullets"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-green", 1}}
-  data.raw.technology["bob-shotgun-poison-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-green", 1}}
-  data.raw.technology["bob-poison-rocket"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-green", 1}}
+  data.raw.technology["bob-poison-bullets"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-green", 1 } }
+  data.raw.technology["bob-shotgun-poison-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-green", 1 } }
+  data.raw.technology["bob-poison-rocket"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-green", 1 } }
 
-  data.raw.technology["bob-flame-bullets"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-red", 1}}
-  data.raw.technology["bob-shotgun-flame-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-red", 1}}
-  data.raw.technology["bob-flame-rocket"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-red", 1}}
+  data.raw.technology["bob-flame-bullets"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-red", 1 } }
+  data.raw.technology["bob-shotgun-flame-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-red", 1 } }
+  data.raw.technology["bob-flame-rocket"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-red", 1 } }
 
-  data.raw.technology["bob-power-armor-3"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack", 1},{"alien-science-pack-blue", 1},{"alien-science-pack-orange", 1}}
-  data.raw.technology["bob-power-armor-4"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack", 1},{"alien-science-pack-purple", 1},{"alien-science-pack-yellow", 1}}
-  data.raw.technology["bob-power-armor-5"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack", 1},{"alien-science-pack-green", 1},{"alien-science-pack-red", 1}}
-
-  data.raw.technology["bob-plasma-bullets"].unit.ingredients =
-  {
-    {"science-pack-gold", 1},
-    {"alien-science-pack", 1},
-    {"alien-science-pack-blue", 1},
-    {"alien-science-pack-orange", 1},
-    {"alien-science-pack-purple", 1},
-    {"alien-science-pack-yellow", 1},
-    {"alien-science-pack-green", 1},
-    {"alien-science-pack-red", 1},
+  data.raw.technology["bob-power-armor-3"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-blue", 1 },
+    { "alien-science-pack-orange", 1 },
   }
-  data.raw.technology["bob-shotgun-plasma-shells"].unit.ingredients =
-  {
-    {"science-pack-gold", 1},
-    {"alien-science-pack", 1},
-    {"alien-science-pack-blue", 1},
-    {"alien-science-pack-orange", 1},
-    {"alien-science-pack-purple", 1},
-    {"alien-science-pack-yellow", 1},
-    {"alien-science-pack-green", 1},
-    {"alien-science-pack-red", 1},
+  data.raw.technology["bob-power-armor-4"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-purple", 1 },
+    { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["bob-plasma-rocket"].unit.ingredients =
-  {
-    {"science-pack-gold", 1},
-    {"alien-science-pack", 1},
-    {"alien-science-pack-blue", 1},
-    {"alien-science-pack-orange", 1},
-    {"alien-science-pack-purple", 1},
-    {"alien-science-pack-yellow", 1},
-    {"alien-science-pack-green", 1},
-    {"alien-science-pack-red", 1},
+  data.raw.technology["bob-power-armor-5"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
+      "alien-science-pack-red",
+      1,
+    },
   }
-  data.raw.technology["bob-poison-artillery-shells"].unit.ingredients = {{"science-pack-gold", 1}, {"alien-science-pack-green", 1}}
-  data.raw.technology["bob-fire-artillery-shells"].unit.ingredients = {{"science-pack-gold", 1}, {"alien-science-pack-red", 1}}
-  data.raw.technology["bob-explosive-artillery-shells"].unit.ingredients = {{"science-pack-gold", 1},{"alien-science-pack-yellow", 1}}
+
+  data.raw.technology["bob-plasma-bullets"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-blue", 1 },
+    { "alien-science-pack-orange", 1 },
+    { "alien-science-pack-purple", 1 },
+    { "alien-science-pack-yellow", 1 },
+    { "alien-science-pack-green", 1 },
+    { "alien-science-pack-red", 1 },
+  }
+  data.raw.technology["bob-shotgun-plasma-shells"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-blue", 1 },
+    { "alien-science-pack-orange", 1 },
+    { "alien-science-pack-purple", 1 },
+    { "alien-science-pack-yellow", 1 },
+    { "alien-science-pack-green", 1 },
+    { "alien-science-pack-red", 1 },
+  }
+  data.raw.technology["bob-plasma-rocket"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-blue", 1 },
+    { "alien-science-pack-orange", 1 },
+    { "alien-science-pack-purple", 1 },
+    { "alien-science-pack-yellow", 1 },
+    { "alien-science-pack-green", 1 },
+    { "alien-science-pack-red", 1 },
+  }
+  data.raw.technology["bob-poison-artillery-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-green", 1 } }
+  data.raw.technology["bob-fire-artillery-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-red", 1 } }
+  data.raw.technology["bob-explosive-artillery-shells"].unit.ingredients =
+    { { "science-pack-gold", 1 }, { "alien-science-pack-yellow", 1 } }
 end
-
 
 if data.raw.technology["alien-research"] then
   bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "bob-bullets")
@@ -120,7 +155,6 @@ else
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "bob-poison-rocket")
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "bob-flame-rocket")
 end
-
 
 if data.raw.technology["alien-blue-research"] then
   bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "alien-blue-research")
@@ -201,7 +235,6 @@ else
   end
 end
 
-
 bobmods.lib.tech.add_recipe_unlock("military-3", "rifle")
 bobmods.lib.tech.add_recipe_unlock("military-3", "sniper-rifle")
 bobmods.lib.tech.add_recipe_unlock("military-3", "fire-capsule")
@@ -212,82 +245,271 @@ bobmods.lib.tech.add_prerequisite("uranium-ammo", "bob-bullets")
 bobmods.lib.tech.add_prerequisite("uranium-ammo", "bob-shotgun-shells")
 bobmods.lib.tech.add_recipe_unlock("uranium-ammo", "shotgun-uranium-shell")
 
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-1"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1})
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-2"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1})
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-3"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2})
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-4"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2})
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2})
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.4 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.4})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.4})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.4})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.4})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.4})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.4})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.4})
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.7 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.7})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.7})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.7})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.7})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.7})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.7})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.7})
+table.insert(
+  data.raw.technology["physical-projectile-damage-5"].effects,
+  { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 0.9 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-6"].effects,
+  { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1.3 }
+)
+table.insert(
+  data.raw.technology["physical-projectile-damage-7"].effects,
+  { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1 }
+)
 
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects,{type = "ammo-damage", ammo_category = "artillery-shell", modifier = 0.9})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects,{type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1.3})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects,{type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1})
+table.insert(
+  data.raw.technology["energy-weapons-damage-1"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["energy-weapons-damage-2"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.2 }
+)
+table.insert(
+  data.raw.technology["energy-weapons-damage-3"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.3 }
+)
+table.insert(
+  data.raw.technology["energy-weapons-damage-4"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["energy-weapons-damage-5"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.5 }
+)
+table.insert(
+  data.raw.technology["energy-weapons-damage-6"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.7 }
+)
+table.insert(
+  data.raw.technology["energy-weapons-damage-7"].effects,
+  { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.7 }
+)
 
-
-table.insert(data.raw.technology["energy-weapons-damage-1"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.2})
-table.insert(data.raw.technology["energy-weapons-damage-2"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.2})
-table.insert(data.raw.technology["energy-weapons-damage-3"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.3})
-table.insert(data.raw.technology["energy-weapons-damage-4"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.4})
-table.insert(data.raw.technology["energy-weapons-damage-5"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.5})
-table.insert(data.raw.technology["energy-weapons-damage-6"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.7})
-table.insert(data.raw.technology["energy-weapons-damage-7"].effects,{type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.7})
-
-
-table.insert(data.raw.technology["laser-shooting-speed-3"].effects,{type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.3})
-table.insert(data.raw.technology["laser-shooting-speed-4"].effects,{type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.4})
-table.insert(data.raw.technology["laser-shooting-speed-5"].effects,{type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.4})
-table.insert(data.raw.technology["laser-shooting-speed-6"].effects,{type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.5})
-table.insert(data.raw.technology["laser-shooting-speed-7"].effects,{type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.5})
+table.insert(
+  data.raw.technology["laser-shooting-speed-3"].effects,
+  { type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.3 }
+)
+table.insert(
+  data.raw.technology["laser-shooting-speed-4"].effects,
+  { type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["laser-shooting-speed-5"].effects,
+  { type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.4 }
+)
+table.insert(
+  data.raw.technology["laser-shooting-speed-6"].effects,
+  { type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.5 }
+)
+table.insert(
+  data.raw.technology["laser-shooting-speed-7"].effects,
+  { type = "gun-speed", ammo_category = "laser-rifle", modifier = 0.5 }
+)
 
 --0.17.60
 bobmods.lib.tech.remove_science_pack("energy-weapons-damage-1", "chemical-science-pack")
@@ -304,7 +526,6 @@ if data.raw.recipe["gun-cotton-synthetic"] then
   bobmods.lib.tech.add_recipe_unlock("cordite-processing", "gun-cotton-synthetic")
 end
 
-
 if data.raw.technology["speed-module-4"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-4")
 end
@@ -312,7 +533,6 @@ end
 if data.raw.technology["effectivity-module-4"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "effectivity-module-4")
 end
-
 
 if data.raw.technology["speed-module-6"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "speed-module-6")
@@ -322,7 +542,6 @@ if data.raw.technology["effectivity-module-6"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "effectivity-module-6")
 end
 
-
 if data.raw.technology["speed-module-8"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "speed-module-8")
 end
@@ -331,9 +550,12 @@ if data.raw.technology["effectivity-module-8"] then
   bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "effectivity-module-8")
 end
 
-if mods['boblogistics'] then
+if mods["boblogistics"] then
   bobmods.lib.tech.remove_science_pack("bob-robot-gun-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-laser-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-flamethrower-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
 end
+
+bobmods.lib.tech.add_prerequisite("artillery", "radars-1")
+bobmods.lib.tech.add_prerequisite("spidertron", "radars-1")

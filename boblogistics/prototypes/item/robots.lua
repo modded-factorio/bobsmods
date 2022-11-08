@@ -10,8 +10,7 @@ data.raw.item["construction-robot"].icon = "__boblogistics__/graphics/icons/robo
 data.raw.item["construction-robot"].icon_size = 32
 data.raw.item["construction-robot"].icon_mipmaps = nil
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bob-logistic-robot-2",
@@ -20,7 +19,7 @@ data:extend(
     subgroup = "bob-logistic-robots",
     order = "a[robot]-a[logistic-robot-2]",
     place_result = "bob-logistic-robot-2",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -31,7 +30,7 @@ data:extend(
     subgroup = "bob-logistic-robots",
     order = "a[robot]-a[logistic-robot-3]",
     place_result = "bob-logistic-robot-3",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -42,7 +41,7 @@ data:extend(
     subgroup = "bob-logistic-robots",
     order = "a[robot]-a[logistic-robot-4]",
     place_result = "bob-logistic-robot-4",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -53,9 +52,8 @@ data:extend(
     subgroup = "bob-logistic-robots",
     order = "a[robot]-a[logistic-robot-5]",
     place_result = "bob-logistic-robot-5",
-    stack_size = 50
+    stack_size = 50,
   },
-
 
   {
     type = "item",
@@ -65,7 +63,7 @@ data:extend(
     subgroup = "bob-construction-robots",
     order = "a[robot]-b[construction-robot-2]",
     place_result = "bob-construction-robot-2",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -76,7 +74,7 @@ data:extend(
     subgroup = "bob-construction-robots",
     order = "a[robot]-b[construction-robot-3]",
     place_result = "bob-construction-robot-3",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -87,7 +85,7 @@ data:extend(
     subgroup = "bob-construction-robots",
     order = "a[robot]-b[construction-robot-4]",
     place_result = "bob-construction-robot-4",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {
@@ -98,12 +96,6 @@ data:extend(
     subgroup = "bob-construction-robots",
     order = "a[robot]-b[construction-robot-5]",
     place_result = "bob-construction-robot-5",
-    stack_size = 50
+    stack_size = 50,
   },
-}
-)
-
-
-
-
-
+})

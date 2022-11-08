@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-warfare-robotupdate",
@@ -36,7 +35,6 @@ data:extend(
     name = "bobmods-warfare-spidertron-needsfuel",
     setting_type = "startup",
     default_value = "default",
-    allowed_values = {"default", "all", "none", "nothighest"}
+    allowed_values = { "default", "all", "none", "nothighest" },
   },
-}
-)
+})

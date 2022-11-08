@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-fusion-reactor-1",
@@ -9,7 +8,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fusion-reactor]-1",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -17,77 +16,66 @@ data:extend(
     name = "vehicle-fusion-reactor-1",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"processing-unit", 250},
+    ingredients = {
+      { "processing-unit", 250 },
     },
-    result = "vehicle-fusion-reactor-1"
+    result = "vehicle-fusion-reactor-1",
   },
 
   {
     type = "generator-equipment",
     name = "vehicle-fusion-reactor-1",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-1.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "500kW",
-    categories = {"vehicle"}
+    categories = { "vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fusion-reactor-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-l-a",
-    prerequisites =
-    {
+    prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "advanced-electronics-2",
     },
-    unit =
-    {
+    unit = {
       count = 200,
       time = 30,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-1"
-      }
+        recipe = "vehicle-fusion-reactor-1",
+      },
     },
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-fusion-reactor-2",
@@ -97,7 +85,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fusion-reactor]-2",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -105,82 +93,71 @@ data:extend(
     name = "vehicle-fusion-reactor-2",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"vehicle-fusion-reactor-1", 1},
-      {"processing-unit", 50},
-      {"effectivity-module-2", 2},
-      {"speed-module-2", 2},
-      {"productivity-module-2", 2},
+    ingredients = {
+      { "vehicle-fusion-reactor-1", 1 },
+      { "processing-unit", 50 },
+      { "effectivity-module-2", 2 },
+      { "speed-module-2", 2 },
+      { "productivity-module-2", 2 },
     },
-    result = "vehicle-fusion-reactor-2"
+    result = "vehicle-fusion-reactor-2",
   },
 
   {
     type = "generator-equipment",
     name = "vehicle-fusion-reactor-2",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-2.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "750kW",
-    categories = {"vehicle"}
+    categories = { "vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fusion-reactor-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-l-b",
-    prerequisites =
-    {
+    prerequisites = {
       "vehicle-fusion-reactor-equipment-1",
       "utility-science-pack",
     },
-    unit =
-    {
+    unit = {
       count = 150,
       time = 30,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-2"
-      }
+        recipe = "vehicle-fusion-reactor-2",
+      },
     },
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-fusion-reactor-3",
@@ -190,7 +167,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fusion-reactor]-3",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -198,83 +175,72 @@ data:extend(
     name = "vehicle-fusion-reactor-3",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"vehicle-fusion-reactor-2", 1},
-      {"processing-unit", 50},
-      {"effectivity-module-3", 2},
-      {"speed-module-3", 2},
-      {"productivity-module-3", 2},
+    ingredients = {
+      { "vehicle-fusion-reactor-2", 1 },
+      { "processing-unit", 50 },
+      { "effectivity-module-3", 2 },
+      { "speed-module-3", 2 },
+      { "productivity-module-3", 2 },
     },
-    result = "vehicle-fusion-reactor-3"
+    result = "vehicle-fusion-reactor-3",
   },
 
   {
     type = "generator-equipment",
     name = "vehicle-fusion-reactor-3",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-3.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "1250kW",
-    categories = {"vehicle"}
+    categories = { "vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fusion-reactor-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-l-c",
-    prerequisites =
-    {
+    prerequisites = {
       "vehicle-fusion-reactor-equipment-2",
       "production-science-pack",
     },
-    unit =
-    {
+    unit = {
       count = 300,
       time = 45,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-3"
-      }
+        recipe = "vehicle-fusion-reactor-3",
+      },
     },
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-fusion-reactor-4",
@@ -284,7 +250,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fusion-reactor]-4",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -292,82 +258,71 @@ data:extend(
     name = "vehicle-fusion-reactor-4",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"vehicle-fusion-reactor-3", 1},
-      {"processing-unit", 50},
-      {"effectivity-module-3", 2},
-      {"speed-module-3", 2},
-      {"productivity-module-3", 2},
+    ingredients = {
+      { "vehicle-fusion-reactor-3", 1 },
+      { "processing-unit", 50 },
+      { "effectivity-module-3", 2 },
+      { "speed-module-3", 2 },
+      { "productivity-module-3", 2 },
     },
-    result = "vehicle-fusion-reactor-4"
+    result = "vehicle-fusion-reactor-4",
   },
 
   {
     type = "generator-equipment",
     name = "vehicle-fusion-reactor-4",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-4.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "2000kW",
-    categories = {"vehicle"}
+    categories = { "vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fusion-reactor-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-l-d",
-    prerequisites =
-    {
-      "vehicle-fusion-reactor-equipment-3"
+    prerequisites = {
+      "vehicle-fusion-reactor-equipment-3",
     },
-    unit =
-    {
+    unit = {
       count = 350,
       time = 45,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-4"
-      }
+        recipe = "vehicle-fusion-reactor-4",
+      },
     },
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-fusion-reactor-5",
@@ -377,7 +332,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fusion-reactor]-5",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -385,82 +340,71 @@ data:extend(
     name = "vehicle-fusion-reactor-5",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"vehicle-fusion-reactor-4", 1},
-      {"processing-unit", 50},
-      {"effectivity-module-3", 2},
-      {"speed-module-3", 2},
-      {"productivity-module-3", 2},
+    ingredients = {
+      { "vehicle-fusion-reactor-4", 1 },
+      { "processing-unit", 50 },
+      { "effectivity-module-3", 2 },
+      { "speed-module-3", 2 },
+      { "productivity-module-3", 2 },
     },
-    result = "vehicle-fusion-reactor-5"
+    result = "vehicle-fusion-reactor-5",
   },
 
   {
     type = "generator-equipment",
     name = "vehicle-fusion-reactor-5",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-5.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "3000kW",
-    categories = {"vehicle"}
+    categories = { "vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fusion-reactor-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-l-e",
-    prerequisites =
-    {
-      "vehicle-fusion-reactor-equipment-4"
+    prerequisites = {
+      "vehicle-fusion-reactor-equipment-4",
     },
-    unit =
-    {
+    unit = {
       count = 400,
       time = 45,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-5"
-      }
+        recipe = "vehicle-fusion-reactor-5",
+      },
     },
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-fusion-reactor-6",
@@ -470,7 +414,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fusion-reactor]-6",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -478,78 +422,66 @@ data:extend(
     name = "vehicle-fusion-reactor-6",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"vehicle-fusion-reactor-5", 1},
-      {"processing-unit", 50},
-      {"effectivity-module-3", 2},
-      {"speed-module-3", 2},
-      {"productivity-module-3", 2},
+    ingredients = {
+      { "vehicle-fusion-reactor-5", 1 },
+      { "processing-unit", 50 },
+      { "effectivity-module-3", 2 },
+      { "speed-module-3", 2 },
+      { "productivity-module-3", 2 },
     },
-    result = "vehicle-fusion-reactor-6"
+    result = "vehicle-fusion-reactor-6",
   },
 
   {
     type = "generator-equipment",
     name = "vehicle-fusion-reactor-6",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-6.png",
       width = 64,
       height = 128,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 4,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
-      usage_priority = "primary-output"
+      usage_priority = "primary-output",
     },
     power = "4250kW",
-    categories = {"vehicle"}
+    categories = { "vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fusion-reactor-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-l-f",
-    prerequisites =
-    {
-      "vehicle-fusion-reactor-equipment-5"
+    prerequisites = {
+      "vehicle-fusion-reactor-equipment-5",
     },
-    unit =
-    {
+    unit = {
       count = 450,
       time = 45,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-6"
-      }
+        recipe = "vehicle-fusion-reactor-6",
+      },
     },
   },
-}
-)
-
-
+})

@@ -1,5 +1,9 @@
-if not bobmods then bobmods = {} end
-if not bobmods.plates then bobmods.plates = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.plates then
+  bobmods.plates = {}
+end
 
 if bobmods.ores and settings.startup["bobmods-plates-oreoverride"].value == true then
   if bobmods.ores.bauxite.create_autoplace then -- Checks to see if the 0.17.2 of bobores function exists.
@@ -47,7 +51,6 @@ if bobmods.ores and settings.startup["bobmods-plates-oreoverride"].value == true
   end
 end
 
-
 require("prototypes.category")
 
 require("prototypes.distillery")
@@ -85,5 +88,3 @@ require("prototypes.technology-nuclear")
 require("prototypes.item.alien")
 require("prototypes.recipe.alien-recipe")
 require("prototypes.technology-alien")
-
-

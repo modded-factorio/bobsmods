@@ -1,12 +1,10 @@
-data:extend(
-{
+data:extend({
   {
     type = "damage-type",
-    name = "bob-pierce"
+    name = "bob-pierce",
   },
   {
     type = "damage-type",
-    name = "plasma"
+    name = "plasma",
   },
-}
-)
+})
