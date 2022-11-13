@@ -270,7 +270,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
   end
 
   if
-    data.raw["assembling-machine"]["chemical-steel-furnace"] or data.raw["assembling-machine"]["steel-chemical-furnace"]
+    data.raw["assembling-machine"]["chemical-steel-furnace"]
+    or data.raw["assembling-machine"]["steel-chemical-furnace"]
   then
     data:extend({
       {
