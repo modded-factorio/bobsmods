@@ -5,6 +5,7 @@ Date: ???
     - Fixed destroying root GUI element error #34
   Changes:
     - Moved Long inserters 2 to blue science #51
+    - Add Long lnserters 1 setting #25
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
