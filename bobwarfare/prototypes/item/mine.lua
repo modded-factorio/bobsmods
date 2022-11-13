@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "poison-mine",
@@ -11,7 +10,7 @@ data:extend(
     order = "f[poison-mine]",
     place_result = "poison-mine",
     stack_size = 20,
-    trigger_radius = 1
+    trigger_radius = 1,
   },
 
   {
@@ -25,7 +24,7 @@ data:extend(
     order = "f[distractor-mine]",
     place_result = "distractor-mine",
     stack_size = 20,
-    trigger_radius = 1
+    trigger_radius = 1,
   },
 
   {
@@ -39,9 +38,6 @@ data:extend(
     order = "f[slowdown-mine]",
     place_result = "slowdown-mine",
     stack_size = 20,
-    trigger_radius = 1
+    trigger_radius = 1,
   },
-}
-)
-
-
+})

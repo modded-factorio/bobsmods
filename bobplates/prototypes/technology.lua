@@ -1,42 +1,36 @@
-data:extend(
-{
+data:extend({
   {
     type = "technology",
     name = "electrolysis-1",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
-    prerequisites =
-    {
-    },
-    effects =
-    {
+    prerequisites = {},
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "electrolyser"
+        recipe = "electrolyser",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-electrolysis"
+        recipe = "water-electrolysis",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-small-storage-tank"
+        recipe = "bob-small-storage-tank",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-small-inline-storage-tank"
+        recipe = "bob-small-inline-storage-tank",
       },
     },
-    unit =
-    {
+    unit = {
       count = 20,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 15
+      time = 15,
     },
-    order = "d-b-a1"
+    order = "d-b-a1",
   },
 
   {
@@ -44,69 +38,59 @@ data:extend(
     name = "electrolysis-2",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "steel-processing",
-      "logistic-science-pack"
+      "logistic-science-pack",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "salt-water-electrolysis"
+        recipe = "salt-water-electrolysis",
       },
       {
         type = "unlock-recipe",
-        recipe = "storage-tank"
+        recipe = "storage-tank",
       },
     },
-    unit =
-    {
+    unit = {
       count = 30,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 20
+      time = 20,
     },
-    order = "d-b-a2"
+    order = "d-b-a2",
   },
-
 
   {
     type = "technology",
     name = "chemical-processing-1",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
-    prerequisites =
-    {
-    },
-    effects =
-    {
+    prerequisites = {},
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "stone-chemical-furnace"
+        recipe = "stone-chemical-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "salt"
+        recipe = "salt",
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon"
+        recipe = "carbon",
       },
     },
-    unit =
-    {
+    unit = {
       count = 25,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 15
+      time = 15,
     },
-    order = "d-b-b1"
+    order = "d-b-b1",
   },
 
   {
@@ -114,52 +98,47 @@ data:extend(
     name = "chemical-processing-2",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "electrolysis-2",
-      "chemical-processing-1"
+      "chemical-processing-1",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "chemical-plant"
+        recipe = "chemical-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "hydrogen-chloride"
+        recipe = "hydrogen-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "calcium-chloride"
+        recipe = "calcium-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "ferric-chloride-solution"
+        recipe = "ferric-chloride-solution",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-from-hydrogen"
+        recipe = "solid-fuel-from-hydrogen",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b2"
+    order = "d-b-b2",
   },
 
   {
     type = "technology",
     name = "steel-chemical-furnace",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
@@ -169,39 +148,34 @@ data:extend(
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
         icon_size = 64,
         scale = 2,
-        shift = {-64, -64}
-      }
+        shift = { -64, -64 },
+      },
     },
-    prerequisites =
-    {
+    prerequisites = {
       "chemical-processing-1",
-      "advanced-material-processing"
+      "advanced-material-processing",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "steel-chemical-furnace"
+        recipe = "steel-chemical-furnace",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b3"
+    order = "d-b-b3",
   },
 
   {
     type = "technology",
     name = "electric-chemical-furnace",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
@@ -211,72 +185,61 @@ data:extend(
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
         icon_size = 64,
         scale = 2,
-        shift = {-64, -64}
-      }
+        shift = { -64, -64 },
+      },
     },
-    prerequisites =
-    {
+    prerequisites = {
       "chemical-processing-1",
-      "advanced-material-processing-2"
+      "advanced-material-processing-2",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-chemical-furnace"
+        recipe = "electric-chemical-furnace",
       },
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b4"
+    order = "d-b-b4",
   },
-
 
   {
     type = "technology",
     name = "alloy-processing",
     icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
     icon_size = 128,
-    prerequisites =
-    {
-    },
-    effects =
-    {
+    prerequisites = {},
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "stone-mixing-furnace"
+        recipe = "stone-mixing-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "bronze-alloy"
+        recipe = "bronze-alloy",
       },
     },
-    unit =
-    {
+    unit = {
       count = 25,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "c-c-a-a"
+    order = "c-c-a-a",
   },
 
   {
     type = "technology",
     name = "steel-mixing-furnace",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
@@ -285,39 +248,34 @@ data:extend(
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
         icon_size = 128,
-        shift = {-64, -64}
-      }
+        shift = { -64, -64 },
+      },
     },
-    prerequisites =
-    {
+    prerequisites = {
       "alloy-processing",
-      "advanced-material-processing"
+      "advanced-material-processing",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "steel-mixing-furnace"
+        recipe = "steel-mixing-furnace",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "c-c-a-b"
+    order = "c-c-a-b",
   },
 
   {
     type = "technology",
     name = "electric-mixing-furnace",
-    icons =
-    {
+    icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
@@ -326,72 +284,63 @@ data:extend(
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
         icon_size = 128,
-        shift = {-64, -64}
-      }
+        shift = { -64, -64 },
+      },
     },
-    prerequisites =
-    {
+    prerequisites = {
       "alloy-processing",
-      "advanced-material-processing-2"
+      "advanced-material-processing-2",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-mixing-furnace"
+        recipe = "electric-mixing-furnace",
       },
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "c-c-a-c"
+    order = "c-c-a-c",
   },
-
 
   {
     type = "technology",
     name = "nitrogen-processing",
     icon = "__bobplates__/graphics/icons/technology/nitrogen-processing.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "chemical-processing-2",
-      "air-compressor-1"
+      "air-compressor-1",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "nitrogen"
+        recipe = "nitrogen",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitrogen-dioxide"
+        recipe = "nitrogen-dioxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitric-acid"
+        recipe = "nitric-acid",
       },
     },
-    unit =
-    {
+    unit = {
       count = 35,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b5"
+    order = "d-b-b5",
   },
 
   {
@@ -399,72 +348,62 @@ data:extend(
     name = "ceramics",
     icon = "__bobplates__/graphics/icons/technology/ceramics.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "nitrogen-processing",
       "silicon-processing",
       "chemical-science-pack",
-      "lubricant"
+      "lubricant",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-nitride"
+        recipe = "silicon-nitride",
       },
       {
         type = "unlock-recipe",
-        recipe = "ceramic-bearing-ball"
+        recipe = "ceramic-bearing-ball",
       },
       {
         type = "unlock-recipe",
-        recipe = "ceramic-bearing"
+        recipe = "ceramic-bearing",
       },
     },
-    unit =
-    {
+    unit = {
       count = 60,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b6"
+    order = "d-b-b6",
   },
-
 
   {
     type = "technology",
     name = "air-compressor-1",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites =
-    {
-    },
-    effects =
-    {
+    prerequisites = {},
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump"
+        recipe = "air-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-liquid-air"
+        recipe = "bob-liquid-air",
       },
     },
-    unit =
-    {
+    unit = {
       count = 30,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 20
+      time = 20,
     },
-    order = "d-c-a1"
+    order = "d-c-a1",
   },
 
   {
@@ -472,31 +411,27 @@ data:extend(
     name = "air-compressor-2",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites =
-    {
+    prerequisites = {
       "air-compressor-1",
       "steel-processing",
       "alloy-processing",
       "advanced-electronics",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-2"
+        recipe = "air-pump-2",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-c-a2"
+    order = "d-c-a2",
   },
 
   {
@@ -504,32 +439,28 @@ data:extend(
     name = "air-compressor-3",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites =
-    {
+    prerequisites = {
       "air-compressor-2",
       "zinc-processing",
       "titanium-processing",
       "advanced-electronics-2",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-3"
+        recipe = "air-pump-3",
       },
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 45
+      time = 45,
     },
-    order = "d-c-a3"
+    order = "d-c-a3",
   },
 
   {
@@ -537,35 +468,30 @@ data:extend(
     name = "air-compressor-4",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites =
-    {
+    prerequisites = {
       "air-compressor-3",
       "nitinol-processing",
       "electric-engine",
       "advanced-electronics-3",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-4"
+        recipe = "air-pump-4",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
-      time = 60
+      time = 60,
     },
-    order = "d-c-a4"
+    order = "d-c-a4",
   },
-
 
   {
     type = "technology",
@@ -573,26 +499,21 @@ data:extend(
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    prerequisites =
-    {
-    },
-    effects =
-    {
+    prerequisites = {},
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump"
+        recipe = "water-pump",
       },
     },
-    unit =
-    {
+    unit = {
       count = 30,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 20
+      time = 20,
     },
-    order = "d-c-b1"
+    order = "d-c-b1",
   },
 
   {
@@ -601,31 +522,27 @@ data:extend(
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "water-bore-1",
       "steel-processing",
       "alloy-processing",
       "advanced-electronics",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-2"
+        recipe = "water-pump-2",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-c-b2"
+    order = "d-c-b2",
   },
 
   {
@@ -634,32 +551,28 @@ data:extend(
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "water-bore-2",
       "zinc-processing",
       "titanium-processing",
       "advanced-electronics-2",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-3"
+        recipe = "water-pump-3",
       },
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 45
+      time = 45,
     },
-    order = "d-c-b3"
+    order = "d-c-b3",
   },
 
   {
@@ -668,65 +581,56 @@ data:extend(
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "water-bore-3",
       "nitinol-processing",
       "electric-engine",
       "advanced-electronics-3",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-4"
+        recipe = "water-pump-4",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
-      time = 60
+      time = 60,
     },
-    order = "d-c-b4"
+    order = "d-c-b4",
   },
-
 
   {
     type = "technology",
     name = "gas-canisters",
     icon = "__bobplates__/graphics/icons/technology/gas-canister.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "air-compressor-1",
       "logistic-science-pack",
-      "steel-processing"
+      "steel-processing",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-canister"
+        recipe = "gas-canister",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-a1"
+    order = "d-b-a1",
   },
 
   {
@@ -734,30 +638,26 @@ data:extend(
     name = "fluid-barrel-processing",
     icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "water-bore-1",
       "logistic-science-pack",
-      "steel-processing"
+      "steel-processing",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "empty-barrel"
+        recipe = "empty-barrel",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-a1"
+    order = "d-b-a1",
   },
 
   {
@@ -765,29 +665,25 @@ data:extend(
     name = "fluid-canister-processing",
     icon = "__bobplates__/graphics/icons/technology/fluid-canister.png",
     icon_size = 720,
-    prerequisites =
-    {
+    prerequisites = {
       "water-bore-1",
-      "plastics"
+      "plastics",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "empty-canister"
+        recipe = "empty-canister",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-a1"
+    order = "d-b-a1",
   },
 
   {
@@ -795,33 +691,29 @@ data:extend(
     name = "grinding",
     icon = "__bobplates__/graphics/icons/technology/grinding.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "chemical-processing-1",
       "silicon-processing",
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-carbide"
+        recipe = "silicon-carbide",
       },
       {
         type = "unlock-recipe",
-        recipe = "grinding-wheel"
+        recipe = "grinding-wheel",
       },
     },
-    order = "b-c-b"
+    order = "b-c-b",
   },
 
   {
@@ -829,84 +721,75 @@ data:extend(
     name = "polishing",
     icon = "__bobplates__/graphics/icons/technology/polishing.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "oil-processing",
       "aluminium-processing",
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "polishing-compound"
+        recipe = "polishing-compound",
       },
       {
         type = "unlock-recipe",
-        recipe = "polishing-wheel"
+        recipe = "polishing-wheel",
       },
     },
-    order = "b-c-c"
+    order = "b-c-c",
   },
-
 
   {
     type = "technology",
     name = "gem-processing-1",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "grinding",
-      "automation-2"
+      "automation-2",
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-ruby-4"
+        recipe = "bob-ruby-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-sapphire-4"
+        recipe = "bob-sapphire-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-emerald-4"
+        recipe = "bob-emerald-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-amethyst-4"
+        recipe = "bob-amethyst-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-topaz-4"
+        recipe = "bob-topaz-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-diamond-4"
+        recipe = "bob-diamond-4",
       },
     },
-    order = "c-b-i1"
+    order = "c-b-i1",
   },
 
   {
@@ -914,51 +797,47 @@ data:extend(
     name = "gem-processing-2",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
-    prerequisites =
-    {
+    prerequisites = {
       "gem-processing-1",
       "polishing",
---      "chemical-science-pack", --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
+      --      "chemical-science-pack", --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
---        {"chemical-science-pack", 1}, --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        --        {"chemical-science-pack", 1}, --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
       },
-      time = 30
+      time = 30,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-ruby-5"
+        recipe = "bob-ruby-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-sapphire-5"
+        recipe = "bob-sapphire-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-emerald-5"
+        recipe = "bob-emerald-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-amethyst-5"
+        recipe = "bob-amethyst-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-topaz-5"
+        recipe = "bob-topaz-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-diamond-5"
+        recipe = "bob-diamond-5",
       },
     },
-    order = "c-b-i2"
+    order = "c-b-i2",
   },
 
   {
@@ -966,27 +845,23 @@ data:extend(
     name = "void-fluid",
     icon = "__bobplates__/graphics/icons/technology/void.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "air-compressor-1",
     },
-    unit =
-    {
+    unit = {
       count = 30,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 10
+      time = 10,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "void-pump"
+        recipe = "void-pump",
       },
     },
-    order = "void-fluid"
+    order = "void-fluid",
   },
 
   {
@@ -994,29 +869,25 @@ data:extend(
     name = "advanced-electronics-3",
     icon = "__bobplates__/graphics/icons/technology/advanced-electronics-3.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "advanced-electronics-2",
       "production-science-pack",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "advanced-processing-unit"
+        recipe = "advanced-processing-unit",
       },
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
     order = "a-d-d",
   },
@@ -1027,36 +898,32 @@ data:extend(
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "battery",
       "lithium-processing",
       "cobalt-processing",
-      "chemical-science-pack"
+      "chemical-science-pack",
     },
-    unit =
-    {
+    unit = {
       count = 75,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "lithium-cobalt-oxide"
+        recipe = "lithium-cobalt-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "lithium-ion-battery"
+        recipe = "lithium-ion-battery",
       },
     },
-    order = "b-c-a"
+    order = "b-c-a",
   },
 
   {
@@ -1065,43 +932,37 @@ data:extend(
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites =
-    {
+    prerequisites = {
       "battery-2",
       "nitrogen-processing",
       "electrolysis-2",
       "zinc-processing",
-      "production-science-pack"
+      "production-science-pack",
     },
-    unit =
-    {
+    unit = {
       count = 100,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-oxide"
+        recipe = "silver-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "silver-nitrate"
+        recipe = "silver-nitrate",
       },
       {
         type = "unlock-recipe",
-        recipe = "silver-zinc-battery"
+        recipe = "silver-zinc-battery",
       },
     },
     order = "b-c-b",
   },
-}
-)
-
+})

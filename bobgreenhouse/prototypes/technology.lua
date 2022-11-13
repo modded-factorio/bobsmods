@@ -1,72 +1,60 @@
-data:extend(
-{
+data:extend({
   {
     type = "technology",
     name = "bob-greenhouse",
     icon = "__bobgreenhouse__/graphics/icons/technology/greenhouse.png",
     icon_size = 128,
-    prerequisites =
-    {
-    },
-    effects =
-    {
+    prerequisites = {},
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-greenhouse"
+        recipe = "bob-greenhouse",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-basic-greenhouse-cycle"
+        recipe = "bob-basic-greenhouse-cycle",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-seedling"
+        recipe = "bob-seedling",
       },
     },
-    unit =
-    {
+    unit = {
       count = 20,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      time = 15
+      time = 15,
     },
-    order = "f-a-a"
+    order = "f-a-a",
   },
   {
     type = "technology",
     name = "bob-fertiliser",
     icon = "__bobgreenhouse__/graphics/icons/technology/fertiliser.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "bob-greenhouse",
       "oil-processing",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-fertiliser"
+        recipe = "bob-fertiliser",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-advanced-greenhouse-cycle"
+        recipe = "bob-advanced-greenhouse-cycle",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "f-a-b"
+    order = "f-a-b",
   },
-}
-)
-
+})

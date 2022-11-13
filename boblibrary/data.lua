@@ -1,6 +1,9 @@
-if not bobmods then bobmods = {} end
-if not bobmods.lib then bobmods.lib = {} end
-
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.lib then
+  bobmods.lib = {}
+end
 
 require("functions")
 require("error-functions")

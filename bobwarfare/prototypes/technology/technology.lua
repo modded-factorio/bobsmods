@@ -1,39 +1,34 @@
-data:extend(
-{
+data:extend({
   {
     type = "technology",
     name = "nitroglycerin-processing",
     icon = "__bobwarfare__/graphics/icons/technology/nitroglycerin.png",
     icon_size = 128,
-    prerequisites =
-    {
+    prerequisites = {
       "oil-processing",
       "sulfur-processing",
       "military-science-pack",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "glycerol"
+        recipe = "glycerol",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitroglycerin"
+        recipe = "nitroglycerin",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b5-a"
+    order = "d-b-b5-a",
   },
 
   {
@@ -41,38 +36,32 @@ data:extend(
     name = "cordite-processing",
     icon = "__bobwarfare__/graphics/icons/technology/cordite.png",
     icon_size = 64,
-    prerequisites =
-    {
-      "nitroglycerin-processing"
+    prerequisites = {
+      "nitroglycerin-processing",
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "petroleum-jelly"
+        recipe = "petroleum-jelly",
       },
       {
         type = "unlock-recipe",
-        recipe = "gun-cotton"
+        recipe = "gun-cotton",
       },
       {
         type = "unlock-recipe",
-        recipe = "cordite"
+        recipe = "cordite",
       },
     },
-    unit =
-    {
+    unit = {
       count = 50,
-      ingredients = 
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"military-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
       },
-      time = 30
+      time = 30,
     },
-    order = "d-b-b5-b"
+    order = "d-b-b5-b",
   },
-}
-)
-
+})

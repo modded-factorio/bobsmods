@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "tool",
     name = "module-case",
@@ -18,7 +17,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-1[module-contact]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -31,14 +30,9 @@ data:extend(
     stack_size = 200,
     durability = 1,
   },
-}
-)
+})
 
-
-
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "module-processor-board",
@@ -46,7 +40,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-b5[module-processor-board-1]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -56,7 +50,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-b6[module-processor-board-2]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   {
@@ -66,14 +60,11 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-b7[module-processor-board-3]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "tool",
     name = "speed-processor",
@@ -92,7 +83,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c4[speed-processor-2]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -102,13 +93,11 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c4[speed-processor-3]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "tool",
     name = "effectivity-processor",
@@ -127,7 +116,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c5[effectivity-processor-2]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -137,13 +126,11 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c5[effectivity-processor-3]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "tool",
     name = "productivity-processor",
@@ -162,7 +149,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c6[productivity-processor-2]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -172,13 +159,11 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c6[productivity-processor-3]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "tool",
     name = "pollution-clean-processor",
@@ -197,7 +182,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c7[pollution-clean-processor-2]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -207,13 +192,11 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c7[pollution-clean-processor-3]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "tool",
     name = "pollution-create-processor",
@@ -232,7 +215,7 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c8[pollution-create-processor-2]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -242,8 +225,6 @@ data:extend(
     icon_size = 32,
     subgroup = "module-intermediates",
     order = "c-c8[pollution-create-processor-3]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
-
+})

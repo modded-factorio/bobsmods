@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "robot-drone-frame",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 64,
     subgroup = "intermediate-product",
     order = "l[robot-drone-frame-a-1]",
-    stack_size = 10
+    stack_size = 10,
   },
   {
     type = "item",
@@ -16,13 +15,11 @@ data:extend(
     icon_size = 64,
     subgroup = "intermediate-product",
     order = "l[robot-drone-frame-b-1]",
-    stack_size = 10
+    stack_size = 10,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bob-robot-gun-drone",
@@ -31,13 +28,11 @@ data:extend(
     subgroup = "bob-combat-robots",
     order = "b[drone]-a[gun-1]",
     place_result = "bob-robot-gun-drone",
-    stack_size = 10
+    stack_size = 10,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bob-robot-laser-drone",
@@ -46,13 +41,11 @@ data:extend(
     subgroup = "bob-combat-robots",
     order = "b[drone]-b[laser-1]",
     place_result = "bob-robot-laser-drone",
-    stack_size = 10
+    stack_size = 10,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bob-robot-flamethrower-drone",
@@ -61,13 +54,11 @@ data:extend(
     subgroup = "bob-combat-robots",
     order = "b[drone]-c[flamethrower-1]",
     place_result = "bob-robot-flamethrower-drone",
-    stack_size = 10
+    stack_size = 10,
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "bob-robot-plasma-drone",
@@ -76,8 +67,6 @@ data:extend(
     subgroup = "bob-combat-robots",
     order = "b[drone]-d[plasma-1]",
     place_result = "bob-robot-plasma-drone",
-    stack_size = 10
+    stack_size = 10,
   },
-}
-)
-
+})

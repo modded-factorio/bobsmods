@@ -3,9 +3,13 @@ Version: 1.1.6
 Date: ???
   Bugfixes:
     - Fixing accidental global variables #50
+    - Fixing Infinite worker robot cargo size tech icon and level #52
+    - Machines Showing In/Out Fluidbox arrows #66
   Changes:
     - Added Bigger pipes setting that increases capacity and throughput of higher tier pipes #35
     - Moved Long inserters 2 to blue science #51
+    - Made Basic logistics tech ignore tech cost modifier #62
+    - Updated belt and splitter icons to match new base game icons #70 #86
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022

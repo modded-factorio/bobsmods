@@ -7,6 +7,7 @@ Date: ???
       - Pumpjacks can now be placed on oil
   Bugfixes:
     - Fixing accidental global variables #50
+    - Machines Showing In/Out Fluidbox arrows #66
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 09. 04. 2021

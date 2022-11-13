@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.0",
-    "? bobplates >= 1.1.0"
+    "boblibrary >= 1.1.6",
+    "? bobplates >= 1.1.6"
   ],
   "description": "Requires Bob's functions library mod.\n\nAdds a wide range of power objects, including, but not limited to:\n3 sizes and 3 tiers of solar panel.\nA full steam power rework so tier 1 of nuclear steam matches tier 3 of regular steam.\n5 tiers of steam power.\nOil (burning) boilers added which start at tier 2, and will power 3 steam engines.\nnuclear steam power starts at tier 3.\nAll boiler:steam engine ratios are 2:1 (1 boiler will power 2 steam engines, 1 heat exchanger will power 2 steam turbines)\nNuclear:regular ratios are 2:1. (1 hear exchanger will power 4 steam engines, or 1 boiler will power 1 steam turbine)\n4 tiers of medium and large power poles, and substations.\n3 tiers, and different types (fast, high capacity, and slow) of Accumulator.\nNew fluid burning generators that turn oils directly into Electricity.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
 }
