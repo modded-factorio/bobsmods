@@ -20,12 +20,15 @@ sounds.laser = {
   },
 }
 
-sounds.plasmaTurret = {
-  {
-    filename = "__bobwarfare__/sound/plasma-turret-01.ogg",
-    volume = 0.7,
-  },
-}
+sounds.plasmaTurret = function(volume)
+  return {
+    {
+      filename = "__bobwarfare__/sound/plasma-turret-01.ogg",
+      volume = volume,
+      max_sounds_per_type = 2,
+    },
+  }
+end
 
 sounds.turretFire = {
   {
