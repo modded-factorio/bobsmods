@@ -1,8 +1,7 @@
 local warefareSounds = require("prototypes.entity.sounds")
 
 local function boblaserbubbleanimation(scale, tint)
-  return
-{
+  return {
     {
       filename = "__bobwarfare__/graphics/entities/laser-bubble.png",
       scale = scale,
