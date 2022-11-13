@@ -11,6 +11,12 @@ data:extend({
     setting_type = "startup",
     default_value = true,
   },
+  {
+    type = "bool-setting",
+    name = "bobmods-inserters-long1",
+    setting_type = "startup",
+    default_value = true,
+  },
 
   {
     type = "string-setting",
