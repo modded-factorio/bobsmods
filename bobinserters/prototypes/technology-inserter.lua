@@ -1,4 +1,10 @@
-if (settings.startup["bobmods-inserters-long1"].value == true) or (settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true) then
+if
+  (settings.startup["bobmods-inserters-long1"].value == true)
+  or (
+    settings.startup["bobmods-logistics-inserteroverhaul"]
+    and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
+  )
+then
   if not data.raw.technology["long-inserters-1"] then
     data:extend({
       {
