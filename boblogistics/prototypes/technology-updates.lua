@@ -100,7 +100,7 @@ if bobmods.tech and bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.replace_science_pack("toolbelt-4", "production-science-pack", "advanced-logistic-science-pack")
   bobmods.lib.tech.replace_science_pack("toolbelt-5", "production-science-pack", "advanced-logistic-science-pack")
 
-  bobmods.lib.tech.add_science_pack("bob-infinite-worker-robots-storage-1", "advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_science_pack("bob-infinite-worker-robots-storage-4", "advanced-logistic-science-pack", 1)
   bobmods.lib.tech.add_science_pack(
     "bob-infinite-character-logistic-trash-slots-1",
     "advanced-logistic-science-pack",
