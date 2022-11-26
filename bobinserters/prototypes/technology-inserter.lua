@@ -1,68 +1,70 @@
-if settings.startup["bobmods-inserters-long1"].value == true and not data.raw.technology["long-inserters-1"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "long-inserters-1",
-      icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
-      icon_size = 128,
-      effects = {},
-      prerequisites = {
-        "logistics",
-      },
-      unit = {
-        count = 20,
-        ingredients = {
-          { "automation-science-pack", 1 },
+if (settings.startup["bobmods-inserters-long1"].value == true) or (settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true) then
+  if not data.raw.technology["long-inserters-1"] then
+    data:extend({
+      {
+        type = "technology",
+        name = "long-inserters-1",
+        icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
+        icon_size = 128,
+        effects = {},
+        prerequisites = {
+          "logistics",
         },
-        time = 15,
+        unit = {
+          count = 20,
+          ingredients = {
+            { "automation-science-pack", 1 },
+          },
+          time = 15,
+        },
+        order = "a-f-a-1",
       },
-      order = "a-f-a-1",
-    },
-  })
-end
+    })
+  end
 
-if settings.startup["bobmods-inserters-long2"].value == true and not data.raw.technology["long-inserters-2"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "long-inserters-1",
-      icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
-      icon_size = 128,
-      effects = {},
-      prerequisites = {
-        "logistics",
-      },
-      unit = {
-        count = 20,
-        ingredients = {
-          { "automation-science-pack", 1 },
+  if settings.startup["bobmods-inserters-long2"].value == true and not data.raw.technology["long-inserters-2"] then
+    data:extend({
+      {
+        type = "technology",
+        name = "long-inserters-1",
+        icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
+        icon_size = 128,
+        effects = {},
+        prerequisites = {
+          "logistics",
         },
-        time = 15,
-      },
-      order = "a-f-a-1",
-    },
-    {
-      type = "technology",
-      name = "long-inserters-2",
-      icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
-      icon_size = 128,
-      effects = {},
-      prerequisites = {
-        "long-inserters-1",
-        "chemical-science-pack",
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
+        unit = {
+          count = 20,
+          ingredients = {
+            { "automation-science-pack", 1 },
+          },
+          time = 15,
         },
-        time = 15,
+        order = "a-f-a-1",
       },
-      order = "a-f-a-2",
-    },
-  })
+      {
+        type = "technology",
+        name = "long-inserters-2",
+        icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
+        icon_size = 128,
+        effects = {},
+        prerequisites = {
+          "long-inserters-1",
+          "chemical-science-pack",
+        },
+        unit = {
+          count = 50,
+          ingredients = {
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 },
+            { "chemical-science-pack", 1 },
+          },
+          time = 15,
+        },
+        order = "a-f-a-2",
+      },
+    })
+  end
 end
 
 if not data.raw.technology["near-inserters"] then
