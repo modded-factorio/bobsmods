@@ -11,6 +11,7 @@ Date: ???
     - Moved Long inserters 2 to blue science #51
     - Made Basic logistics tech ignore tech cost modifier #62
     - Updated belt and splitter icons to match new base game icons #70 #86
+    - Made robochests and robo-charge-ports upgradable
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
