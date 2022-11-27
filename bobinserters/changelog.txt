@@ -3,6 +3,7 @@ Version: 1.1.6
 Date: ???
   Bugfixes:
     - Fixed destroying root GUI element error #34
+    - Fixed mod compatibility issue with upgradable Long handed inserters #41
   Changes:
     - Moved Long inserters 2 to blue science #51
     - Add Long inserters 1 setting #25

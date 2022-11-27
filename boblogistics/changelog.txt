@@ -2,6 +2,7 @@
 Version: 1.1.6
 Date: ???
   Bugfixes:
+    - Fixed mod compatibility issue with upgradable Long handed inserters #41
     - Fixing accidental global variables #50
     - Fixing Infinite worker robot cargo size tech icon and level #52
     - Machines Showing In/Out Fluidbox arrows #66
