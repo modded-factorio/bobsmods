@@ -6,6 +6,7 @@ Date: ???
     - Machines Showing In/Out Fluidbox arrows #66
   Changes:
     - Added missing prerequisites #38
+    - Removed setting "Ore enable override" #45
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
