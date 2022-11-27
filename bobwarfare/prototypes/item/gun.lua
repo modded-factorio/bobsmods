@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local warefareSounds = require("prototypes.entity.sounds")
 
 data:extend({
   {
@@ -17,7 +18,7 @@ data:extend({
       projectile_creation_distance = 0.6,
       range = 20,
       damage_modifier = 7, --7.5
-      sound = sounds.heavy_gunshot,
+      sound = warefareSounds.rifle,
       shell_particle = {
         name = "shell-particle",
         direction_deviation = 0.1,
@@ -47,7 +48,7 @@ data:extend({
       projectile_creation_distance = 0.6,
       range = 30, --60
       damage_modifier = 25, --30
-      sound = sounds.heavy_gunshot,
+      sound = warefareSounds.sniperRifle,
       shell_particle = {
         name = "shell-particle",
         direction_deviation = 0.1,
@@ -102,7 +103,7 @@ data:extend({
       projectile_creation_distance = 1,
       range = 20,
       damage_modifier = 1.5,
-      sound = sounds.heavy_gunshot,
+      sound = warefareSounds.gunTurret,
       shell_particle = {
         name = "shell-particle",
         direction_deviation = 0.1,
@@ -135,12 +136,7 @@ data:extend({
       projectile_center = { -0.15625, -0.07812 },
       range = 25,
       damage_modifier = 1.5,
-      sound = {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7,
-        },
-      },
+      sound = warefareSounds.tankTurret,
     },
   },
 
@@ -163,12 +159,7 @@ data:extend({
       projectile_center = { -0.15625, -0.07812 },
       range = 25,
       damage_modifier = 2,
-      sound = {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7,
-        },
-      },
+      sound = warefareSounds.tankTurret,
     },
   },
 
@@ -190,12 +181,7 @@ data:extend({
       projectile_center = { -0.15625, -0.07812 },
       range = 96,
       min_range = 15,
-      sound = {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7,
-        },
-      },
+      sound = warefareSounds.tankTurret,
     },
   },
 
@@ -218,12 +204,7 @@ data:extend({
       range = 128,
       min_range = 15,
       damage_modifier = 1.5,
-      sound = {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 0.7,
-        },
-      },
+      sound = warefareSounds.tankTurret,
     },
   },
 

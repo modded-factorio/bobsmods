@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixing accidental global variables #50
   Changes:
+    - Added edited sounds for multiple entities #31
     - Added missing prerequisites #38
     - Added technology Radars 1 #72
     - Plasma turrets now have eight possible directions, up from four #77
