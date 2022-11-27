@@ -189,7 +189,7 @@ end
 
 if settings.startup["bobmods-burnerphase"].value == true then
   if mods["bobpower"] then
-     bobmods.lib.tech.replace_science_pack("steam-power", "automation-science-pack", "steam-science-pack")
+    bobmods.lib.tech.replace_science_pack("steam-power", "automation-science-pack", "steam-science-pack")
   end
 
   if data.raw.technology["logistics-0"] then

@@ -80,7 +80,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
       order = "c-a",
     },
 
-
     {
       type = "technology",
       name = "electricity",
