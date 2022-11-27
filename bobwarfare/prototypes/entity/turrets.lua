@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local warefareSounds = require("prototypes.entity.sounds")
 
 data.raw["ammo-turret"]["gun-turret"].fast_replaceable_group = "turret"
 data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "turret"
@@ -1041,7 +1042,7 @@ data:extend({
     damage_modifier = 12 * 1,
     cooldown = 200,
     range = 60,
-    sound = { { filename = "__base__/sound/fight/electric-beam.ogg", volume = 0.7 } },
+    sound = warefareSounds.plasmaTurret(0.7),
     min_range = 30,
     direction_deviation = 0,
     range_deviation = 0,
@@ -1072,7 +1073,7 @@ data:extend({
     damage_modifier = 12 * 1.5,
     cooldown = 150,
     range = 65,
-    sound = { { filename = "__base__/sound/fight/electric-beam.ogg", volume = 0.7 } },
+    sound = warefareSounds.plasmaTurret(0.75),
     min_range = 30,
     direction_deviation = 0,
     range_deviation = 0,
@@ -1103,7 +1104,7 @@ data:extend({
     damage_modifier = 12 * 2.1,
     cooldown = 120,
     range = 70,
-    sound = { { filename = "__base__/sound/fight/electric-beam.ogg", volume = 0.7 } },
+    sound = warefareSounds.plasmaTurret(0.8),
     min_range = 30,
     direction_deviation = 0,
     range_deviation = 0,
@@ -1134,7 +1135,7 @@ data:extend({
     damage_modifier = 12 * 2.8,
     cooldown = 100,
     range = 75,
-    sound = { { filename = "__base__/sound/fight/electric-beam.ogg", volume = 0.7 } },
+    sound = warefareSounds.plasmaTurret(0.9),
     min_range = 30,
     direction_deviation = 0,
     range_deviation = 0,
@@ -1165,7 +1166,7 @@ data:extend({
     damage_modifier = 12 * 3.6,
     cooldown = 85,
     range = 80,
-    sound = { { filename = "__base__/sound/fight/electric-beam.ogg", volume = 0.7 } },
+    sound = warefareSounds.plasmaTurret(1),
     min_range = 30,
     direction_deviation = 0,
     range_deviation = 0,

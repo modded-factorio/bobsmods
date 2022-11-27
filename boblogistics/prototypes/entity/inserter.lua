@@ -251,7 +251,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["yellow-filter-inserter"].platform_picture = inserter.graphics.filter.platform_picture()
 
   data.raw.inserter["long-handed-inserter"].order = "[inserter]-c[fast]"
-  data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
   data.raw.inserter["long-handed-inserter"].max_health = inserter.stats.red.health
   data.raw.inserter["long-handed-inserter"].extension_speed = inserter.stats.red.extension_speed
   data.raw.inserter["long-handed-inserter"].rotation_speed = inserter.stats.red.rotation_speed
@@ -270,6 +269,11 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     }),
   })
   data.raw.inserter["long-handed-inserter"].placeable_by = { item = "long-handed-inserter", count = 1 }
+  for _, inserter in pairs(data.raw.inserter) do
+    if inserter.fast_replaceable_group == "long-handed-inserter" then
+      inserter.fast_replaceable_group = "inserter"
+    end
+  end
 
   data:extend({
     util.merge({

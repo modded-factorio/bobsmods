@@ -1,3 +1,5 @@
+local warefareSounds = require("prototypes.entity.sounds")
+
 local function boblaserbubbleanimation(scale, tint)
   return {
     {
@@ -316,16 +318,7 @@ data:extend({
         max_count = 1,
         remove = true,
       },
-      variations = {
-        {
-          filename = "__base__/sound/fight/large-explosion-1.ogg",
-          volume = 1.0,
-        },
-        {
-          filename = "__base__/sound/fight/large-explosion-2.ogg",
-          volume = 1.0,
-        },
-      },
+      variations = warefareSounds.plasmaExplosion,
     },
     created_effect = {
       type = "direct",
@@ -372,16 +365,7 @@ data:extend({
         max_count = 1,
         remove = true,
       },
-      variations = {
-        {
-          filename = "__base__/sound/fight/large-explosion-1.ogg",
-          volume = 1.0,
-        },
-        {
-          filename = "__base__/sound/fight/large-explosion-2.ogg",
-          volume = 1.0,
-        },
-      },
+      variations = warefareSounds.plasmaExplosion,
     },
     created_effect = {
       type = "direct",

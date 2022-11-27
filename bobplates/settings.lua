@@ -20,13 +20,6 @@ data:extend({
   },
 
   {
-    type = "bool-setting",
-    name = "bobmods-plates-oreoverride",
-    setting_type = "startup",
-    default_value = true,
-  },
-
-  {
     type = "int-setting",
     name = "bobmods-plates-inventorysize",
     setting_type = "startup",

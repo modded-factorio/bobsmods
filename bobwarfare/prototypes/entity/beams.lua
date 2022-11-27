@@ -1,3 +1,4 @@
+local warefareSounds = require("prototypes.entity.sounds")
 local laser_beam_blend_mode = "additive"
 
 data:extend({
@@ -58,12 +59,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -119,12 +115,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -180,12 +171,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -241,12 +227,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -302,12 +283,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -363,12 +339,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
 })
 
@@ -430,12 +401,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -491,12 +457,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -552,12 +513,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -613,12 +569,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -674,12 +625,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -735,12 +681,7 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -796,11 +737,6 @@ data:extend({
         blend_mode = laser_beam_blend_mode,
       },
     },
-    working_sound = {
-      {
-        filename = "__base__/sound/fight/electric-beam.ogg",
-        volume = 0.7,
-      },
-    },
+    cyclic_sound = warefareSounds.laserBeam,
   },
 })

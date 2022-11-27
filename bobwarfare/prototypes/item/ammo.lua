@@ -1055,7 +1055,6 @@ data:extend({
     },
     icon_size = 32,
     ammo_type = {
-      range_modifier = 3,
       cooldown_modifier = 3,
       category = "artillery-shell",
       target_type = "position",
