@@ -4,6 +4,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       type = "technology",
       name = "bob-boiler-2",
       prerequisites = {
+        "steam-power",
         "steel-processing",
       },
       icon = "__bobpower__/graphics/icons/technology/boiler.png",
