@@ -1,7 +1,6 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data.raw.roboport["roboport"].fast_replaceable_group = "roboport"
-data.raw.roboport["roboport"].next_upgrade = "bob-roboport-2"
 
 data.raw.roboport["roboport"].base = {
   layers = {
@@ -62,7 +61,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       flags = { "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-roboport-2" },
       fast_replaceable_group = "roboport",
-      next_upgrade = "bob-roboport-3",
       max_health = 750,
       corpse = "roboport-remnants",
       collision_box = { { -1.7, -1.7 }, { 1.7, 1.7 } },
@@ -250,7 +248,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       flags = { "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-roboport-3" },
       fast_replaceable_group = "roboport",
-      next_upgrade = "bob-roboport-4",
       max_health = 1000,
       corpse = "roboport-remnants",
       collision_box = { { -1.7, -1.7 }, { 1.7, 1.7 } },
@@ -1087,7 +1084,6 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-logistic-zone-expander" },
     fast_replaceable_group = "roboport",
-    next_upgrade = "bob-logistic-zone-expander-2",
     max_health = 500,
     corpse = "small-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -1191,7 +1187,6 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-logistic-zone-expander-2" },
     fast_replaceable_group = "roboport",
-    next_upgrade = "bob-logistic-zone-expander-3",
     max_health = 500,
     corpse = "small-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -1295,7 +1290,6 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-logistic-zone-expander-3" },
     fast_replaceable_group = "roboport",
-    next_upgrade = "bob-logistic-zone-expander-4",
     max_health = 500,
     corpse = "small-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -1631,7 +1625,7 @@ data:extend({
     icon = "__boblogistics__/graphics/icons/robo-charge-port-2.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "bob-robo-charge-port-3" },
+    minable = { mining_time = 0.5, result = "bob-robo-charge-port-2" },
     fast_replaceable_group = "roboport",
     next_upgrade = "bob-robo-charge-port-3",
     max_health = 750,
