@@ -188,6 +188,10 @@ else
 end
 
 if settings.startup["bobmods-burnerphase"].value == true then
+  if mods["bobpower"] then
+    bobmods.lib.tech.replace_science_pack("steam-power", "automation-science-pack", "steam-science-pack")
+  end
+
   if data.raw.technology["logistics-0"] then
     bobmods.lib.tech.replace_science_pack("logistics-0", "automation-science-pack", "steam-science-pack")
   end
@@ -237,9 +241,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["water-miner-1"] then
     bobmods.lib.tech.add_prerequisite("water-miner-1", "automation-science-pack")
     bobmods.lib.tech.add_prerequisite("water-miner-1", "electricity")
-  end
-  if data.raw.technology["bob-boiler-2"] then
-    bobmods.lib.tech.add_prerequisite("bob-boiler-2", "steam-power")
   end
 
   bobmods.lib.tech.add_recipe_unlock("steam-power", "boiler")
@@ -321,6 +322,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         order = "[steam-engine]-1",
       },
     })
+    bobmods.lib.tech.remove_prerequisite("bob-steam-engine-2", "steam-power")
     bobmods.lib.tech.remove_prerequisite("electricity", "steam-power")
     bobmods.lib.tech.remove_recipe_unlock("steam-power", "steam-engine")
     bobmods.lib.tech.remove_recipe_unlock("electricity", "steam-engine")

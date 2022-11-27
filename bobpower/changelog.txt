@@ -6,6 +6,7 @@ Date: ???
     - Added dying explosions to accumulators #44
     - Stopped adding fuel value to fluid descriptions. This has been added as a base game feature #47
     - Updated reactor pipe graphics #80
+    - Added Tech Steam power #94
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
