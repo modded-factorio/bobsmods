@@ -4,7 +4,7 @@ if
   and data.raw["recipe-category"]["chemical-furnace"]
   and data.raw["recipe-category"]["mixing-furnace"]
   and (data.raw.technology["alloy-processing-2"] or data.raw.technology["electric-mixing-furnace"])
-  and (data.raw.technology["chemical-processing-3"] or data.raw.technology["electric-chemical-furnace"])
+  and data.raw.technology["electric-chemical-furnace"]
 then
   --older plates mod
   if not data.raw.item["electric-chemical-furnace"] and data.raw.item["chemical-furnace"] then

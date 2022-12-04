@@ -171,11 +171,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
   end
 
   if data.raw.technology["solid-fuel"] and data.raw.recipe["enriched-fuel-from-liquid-fuel"] then
-    if data.raw.technology["chemical-processing-3"] then
-      bobmods.lib.tech.remove_recipe_unlock("chemical-processing-3", "enriched-fuel-from-liquid-fuel")
-    else
-      bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "enriched-fuel-from-liquid-fuel")
-    end
+    bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "enriched-fuel-from-liquid-fuel")
     bobmods.lib.tech.add_recipe_unlock("solid-fuel", "enriched-fuel-from-liquid-fuel")
   end
 end
