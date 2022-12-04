@@ -34,7 +34,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   bobmods.lib.tech.add_recipe_unlock("electric-energy-accumulators", "slow-accumulator")
 end
 
-if (not settings.startup["bobmods-burnerphase"]) or (settings.startup["bobmods-burnerphase"].value == true) then
+if (not settings.startup["bobmods-burnerphase"]) or (settings.startup["bobmods-burnerphase"].value == false) then
   bobmods.lib.tech.add_prerequisite("automation", "steam-power")
   bobmods.lib.tech.add_prerequisite("optics", "steam-power")
 
