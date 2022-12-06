@@ -34,7 +34,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       icon_size = 128,
       prerequisites = {
         "bob-heat-exchanger-1",
-        "bob-heat-pipe-2",
+        "bob-heat-pipe-3",
       },
       effects = {
         {
@@ -60,7 +60,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       icon_size = 128,
       prerequisites = {
         "bob-heat-exchanger-2",
-        "bob-heat-pipe-3",
+        "bob-heat-pipe-4",
       },
       effects = {
         {
