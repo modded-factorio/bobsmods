@@ -183,36 +183,11 @@ then
 
     {
       type = "technology",
-      name = "bob-heat-pipe-2",
-      icon = "__bobpower__/graphics/icons/technology/heat-pipe.png",
-      icon_size = 256,
-      prerequisites = {
-        "logistic-science-pack",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "heat-pipe-2",
-        },
-      },
-      unit = {
-        time = 30,
-        count = 50,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-        },
-      },
-      order = "[heat-pipe]-0",
-    },
-    {
-      type = "technology",
       name = "bob-heat-pipe-1",
       icon = "__bobpower__/graphics/icons/technology/heat-pipe.png",
       icon_size = 256,
       prerequisites = {
-        "bob-heat-pipe-2",
-        "chemical-science-pack",
+        "logistic-science-pack",
       },
       effects = {
         {
@@ -226,10 +201,35 @@ then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
         },
       },
       order = "[heat-pipe]-1",
+    },
+    {
+      type = "technology",
+      name = "bob-heat-pipe-2",
+      icon = "__bobpower__/graphics/icons/technology/heat-pipe.png",
+      icon_size = 256,
+      prerequisites = {
+        "bob-heat-pipe-1",
+        "chemical-science-pack",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "heat-pipe-2",
+        },
+      },
+      unit = {
+        time = 30,
+        count = 50,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+        },
+      },
+      order = "[heat-pipe]-0",
     },
     {
       type = "technology",
@@ -237,7 +237,7 @@ then
       icon = "__bobpower__/graphics/icons/technology/heat-pipe.png",
       icon_size = 256,
       prerequisites = {
-        "bob-heat-pipe-1",
+        "bob-heat-pipe-2",
         "production-science-pack",
       },
       effects = {

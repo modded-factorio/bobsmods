@@ -1,5 +1,4 @@
 if settings.startup["bobmods-power-steam"].value == true then
-
   if data.raw.item["bronze-alloy"] then
     bobmods.lib.recipe.replace_ingredient("heat-exchanger-2", "steel-plate", "bronze-alloy")
     bobmods.lib.recipe.add_ingredient("heat-exchanger-2", { "bronze-pipe", 4 })
