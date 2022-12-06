@@ -26,5 +26,17 @@ if settings.startup["bobmods-power-steam"].value == true then
       place_result = "heat-exchanger-3",
       stack_size = 50,
     },
+
+    {
+      type = "item",
+      name = "heat-exchanger-4",
+      icon = "__base__/graphics/icons/heat-boiler.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      subgroup = "bob-energy-heat-exchanger",
+      order = "f[nuclear-energy]-b[heat-exchanger-4]",
+      place_result = "heat-exchanger-4",
+      stack_size = 50,
+    },
   })
 end
