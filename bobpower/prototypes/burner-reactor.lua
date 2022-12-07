@@ -81,7 +81,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       name = "burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
-      localised_description = { "entity-description.burner-reactor" },
       max_health = 300,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.3, result = "burner-reactor" },
@@ -373,7 +372,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         name = "fluid-reactor",
         minable = { result = "fluid-reactor" },
         next_upgrade = "fluid-reactor-2",
-        localised_description = { "entity-description.fluid-reactor" },
       },
     }),
     {
@@ -433,7 +431,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         name = "fluid-reactor-2",
         minable = { result = "fluid-reactor-2" },
         next_upgrade = "fluid-reactor-3",
-        localised_description = { "entity-description.fluid-reactor" },
       },
     }),
     {
@@ -493,7 +490,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       {
         name = "fluid-reactor-3",
         minable = { result = "fluid-reactor-3" },
-        localised_description = { "entity-description.fluid-reactor" },
       },
     }),
     {
