@@ -51,9 +51,9 @@ if settings.startup["bobmods-power-steam"].value == true then
       bobmods.lib.recipe.remove_result("boiler-4-from-heat-exchanger-3", "heat-pipe")
       bobmods.lib.recipe.add_result("boiler-4-from-heat-exchanger-3", { "heat-pipe-4", 4 })
     end
-    bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-1", "heat-exchanger-2-from-boiler-3")
-    bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-2", "heat-exchanger-3-from-boiler-4")
-    bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-3", "heat-exchanger-4-from-boiler-5")
+    bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-2", "heat-exchanger-2-from-boiler-3")
+    bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-3", "heat-exchanger-3-from-boiler-4")
+    bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-4", "heat-exchanger-4-from-boiler-5")
     bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-1", "boiler-2-from-heat-exchanger")
     bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-2", "boiler-3-from-heat-exchanger-2")
     bobmods.lib.tech.add_recipe_unlock("bob-heat-exchanger-3", "boiler-4-from-heat-exchanger-3")
