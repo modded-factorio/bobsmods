@@ -116,6 +116,22 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "heat-exchanger-2", 1 },
         },
         results = {
+          { "boiler-3", 1 },
+          { "heat-pipe", 4 },
+        },
+        main_product = "boiler-3",
+        allow_as_intermediate = false,
+      },
+
+      {
+        type = "recipe",
+        name = "boiler-4-from-heat-exchanger-3",
+        subgroup = "bob-energy-boiler-convert",
+        enabled = false,
+        ingredients = {
+          { "heat-exchanger-4", 1 },
+        },
+        results = {
           { "boiler-4", 1 },
           { "heat-pipe", 4 },
         },
@@ -125,7 +141,7 @@ if settings.startup["bobmods-power-steam"].value == true then
 
       {
         type = "recipe",
-        name = "boiler-4-from-heat-exchanger-3",
+        name = "boiler-5-from-heat-exchanger-4",
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {

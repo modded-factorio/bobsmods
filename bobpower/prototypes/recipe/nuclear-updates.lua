@@ -1,6 +1,6 @@
 if settings.startup["bobmods-power-nuclear"].value == true then
   bobmods.lib.recipe.remove_ingredient("nuclear-reactor", "copper-plate")
-  bobmods.lib.recipe.add_ingredient("nuclear-reactor", { "heat-pipe", 25 })
+  bobmods.lib.recipe.add_ingredient("nuclear-reactor", { "heat-pipe-2", 25 })
   bobmods.lib.recipe.set_ingredient("nuclear-reactor", { "steel-plate", 250 })
 
   if data.raw.item["heat-pipe-3"] then
