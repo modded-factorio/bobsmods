@@ -129,7 +129,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {
-          { "heat-exchanger-4", 1 },
+          { "heat-exchanger-3", 1 },
         },
         results = {
           { "boiler-4", 1 },
@@ -145,7 +145,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {
-          { "heat-exchanger-3", 1 },
+          { "heat-exchanger-4", 1 },
         },
         results = {
           { "boiler-5", 1 },
