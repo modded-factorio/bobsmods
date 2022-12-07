@@ -71,7 +71,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "steel-furnace", 1 },
-        { "heat-pipe", 8 },
+        { "heat-pipe", 4 },
         { "steel-plate", 6 },
       },
       result = "burner-reactor",
@@ -223,7 +223,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "burner-reactor", 1 },
-        { "heat-pipe-3", 8 },
         { "steel-plate", 6 },
         { "concrete", 10 },
       },
@@ -256,8 +255,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       prerequisites = {
         "burner-reactor-1",
         "concrete",
-        "chemical-science-pack",
-        "bob-heat-pipe-3",
       },
       effects = {
         {
@@ -271,7 +268,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
         },
       },
       order = "[burner-reactor]-2",
@@ -296,7 +292,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "burner-reactor-2", 1 },
-        { "heat-pipe-4", 8 },
+        { "heat-pipe-2", 4 },
         { "steel-plate", 6 },
         { "concrete", 10 },
       },
@@ -327,8 +323,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       icon_size = 128,
       prerequisites = {
         "burner-reactor-2",
-        "production-science-pack",
-        "bob-heat-pipe-4",
+        "bob-heat-pipe-2",
       },
       effects = {
         {
@@ -343,7 +338,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
-          { "production-science-pack", 1 },
         },
       },
       order = "[burner-reactor]-3",
@@ -427,7 +421,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "fluid-reactor", 1 },
-        { "heat-pipe-3", 8 },
         { "steel-plate", 6 },
         { "concrete", 10 },
         { "pipe", 5 },
@@ -451,8 +444,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       prerequisites = {
         "fluid-reactor-1",
         "concrete",
-        "chemical-science-pack",
-        "bob-heat-pipe-3",
       },
       effects = {
         {
@@ -466,7 +457,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
         },
       },
       order = "[fluid-reactor]-2",
@@ -491,7 +481,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "fluid-reactor-2", 1 },
-        { "heat-pipe-4", 8 },
+        { "heat-pipe-2", 4 },
         { "steel-plate", 6 },
         { "concrete", 10 },
         { "pipe", 5 },
@@ -513,8 +503,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       icon_size = 128,
       prerequisites = {
         "fluid-reactor-2",
-        "production-science-pack",
-        "bob-heat-pipe-4",
+        "bob-heat-pipe-2",
       },
       effects = {
         {
@@ -529,7 +518,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
-          { "production-science-pack", 1 },
         },
       },
       order = "[fluid-reactor]-3",
