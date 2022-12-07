@@ -90,6 +90,7 @@ then
           max_transfer = "1.666GW",
           max_temperature = 1000,
         },
+        fast_replaceable_group = "heat-pipe",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-2/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
@@ -125,6 +126,7 @@ then
           max_transfer = "3GW",
           max_temperature = 1250,
         },
+        fast_replaceable_group = "heat-pipe",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-3/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
@@ -160,6 +162,7 @@ then
           max_transfer = "5GW",
           max_temperature = 1500,
         },
+        fast_replaceable_group = "heat-pipe",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-4/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
