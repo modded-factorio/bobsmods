@@ -10,7 +10,7 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["brass-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("heat-exchanger-2", "pipe", "brass-pipe")
+    bobmods.lib.recipe.add_ingredient("heat-exchanger-2", "brass-pipe")
   end
   if data.raw.item["tungsten-plate"] then
     bobmods.lib.recipe.replace_ingredient("heat-exchanger-3", "steel-plate", "tungsten-plate")
