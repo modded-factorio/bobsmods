@@ -153,17 +153,17 @@ if settings.startup["bobmods-logistics-disableroboports"].value == true then
   bobmods.lib.recipe.hide("roboport")
 end
 
-data.raw.item["transport-belt"].subgroup = "bob-logistic-tier-1"
-data.raw.item["underground-belt"].subgroup = "bob-logistic-tier-1"
-data.raw.item["splitter"].subgroup = "bob-logistic-tier-1"
+bobmods.lib.item.set_subgroup("transport-belt", "bob-logistic-tier-1")
+bobmods.lib.item.set_subgroup("underground-belt", "bob-logistic-tier-1")
+bobmods.lib.item.set_subgroup("splitter", "bob-logistic-tier-1")
 
-data.raw.item["fast-transport-belt"].subgroup = "bob-logistic-tier-2"
-data.raw.item["fast-underground-belt"].subgroup = "bob-logistic-tier-2"
-data.raw.item["fast-splitter"].subgroup = "bob-logistic-tier-2"
+bobmods.lib.item.set_subgroup("fast-transport-belt", "bob-logistic-tier-2")
+bobmods.lib.item.set_subgroup("fast-underground-belt", "bob-logistic-tier-2")
+bobmods.lib.item.set_subgroup("fast-splitter", "bob-logistic-tier-2")
 
-data.raw.item["express-transport-belt"].subgroup = "bob-logistic-tier-3"
-data.raw.item["express-underground-belt"].subgroup = "bob-logistic-tier-3"
-data.raw.item["express-splitter"].subgroup = "bob-logistic-tier-3"
+bobmods.lib.item.set_subgroup("express-transport-belt", "bob-logistic-tier-3")
+bobmods.lib.item.set_subgroup("express-underground-belt", "bob-logistic-tier-3")
+bobmods.lib.item.set_subgroup("express-splitter", "bob-logistic-tier-3")
 
 -- because there's no specific section for it.
 data.raw["pump"]["pump"].next_upgrade = "bob-pump-2"
