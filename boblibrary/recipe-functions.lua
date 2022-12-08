@@ -642,3 +642,15 @@ function bobmods.lib.recipe.ingredients_cleanup()
     duplicate_ingredient_check_full(recipe_name)
   end
 end
+
+function bobmods.lib.recipe.set_subgroup(recipe_name, subgroup)
+  if type(recipe_name) == "string" and type(subgroup) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      recipe.subgroup = subgroup
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe_name)
+  end
+end

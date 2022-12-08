@@ -370,6 +370,18 @@ data:extend({
     group = "bob-intermediate-products",
     order = "e-d",
   },
+  {
+    type = "item-subgroup",
+    name = "bob-nuclear",
+    group = "intermediate-products",
+    order = "f-a",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-fuel-cells",
+    group = "intermediate-products",
+    order = "f-b",
+  },  
 
   {
     type = "item-group",

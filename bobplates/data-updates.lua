@@ -157,6 +157,13 @@ end
 
 --Nuclear fuel update.
 data.raw.item["uranium-fuel-cell"].fuel_glow_color = { r = 0, g = 1, b = 0 }
+bobmods.lib.item.set_subgroup("uranium-fuel-cell", "bob-fuel-cells")
+bobmods.lib.item.set_subgroup("used-up-uranium-fuel-cell", "bob-fuel-cells")
+bobmods.lib.recipe.set_subgroup("nuclear-fuel-reprocessing", "bob-fuel-cells")
+bobmods.lib.item.set_subgroup("uranium-235", "bob-nuclear")
+bobmods.lib.item.set_subgroup("uranium-238", "bob-nuclear")
+bobmods.lib.recipe.set_subgroup("uranium-processing", "bob-nuclear")
+bobmods.lib.recipe.set_subgroup("kovarex-enrichment-process", "bob-nuclear")
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "empty-nuclear-fuel-cell")

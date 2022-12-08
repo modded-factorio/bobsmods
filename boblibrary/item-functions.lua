@@ -382,3 +382,20 @@ function bobmods.lib.item.hide_entity(type_name, entity_name)
     bobmods.lib.error.item(entity_name)
   end
 end
+
+function bobmods.lib.item.set_subgroup(item_name, subgroup)
+  if type(item_name) == "string" and type(subgroup) == "string" then
+    local item = data.raw.item[item_name]
+    if item then
+      item.subgroup = subgroup
+    else
+      item = data.raw.fluid[item_name]
+      if item then
+        item.subgroup = subgroup
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.item(item_name)
+  end
+end
