@@ -8,9 +8,9 @@ data.raw.technology["automation-3"].unit.ingredients =
   { { "automation-science-pack", 2 }, { "logistic-science-pack", 1 } }
 data.raw.technology["automation-3"].unit.time = 30
 
-data.raw.item["assembling-machine-1"].subgroup = "bob-assembly-machine"
-data.raw.item["assembling-machine-2"].subgroup = "bob-assembly-machine"
-data.raw.item["assembling-machine-3"].subgroup = "bob-assembly-machine"
+bobmods.lib.item.set_subgroup("assembling-machine-1", "bob-assembly-machine")
+bobmods.lib.item.set_subgroup("assembling-machine-2", "bob-assembly-machine")
+bobmods.lib.item.set_subgroup("assembling-machine-3", "bob-assembly-machine")
 
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "100kW"
 data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "135kW"

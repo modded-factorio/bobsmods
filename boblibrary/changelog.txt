@@ -10,6 +10,8 @@ Date: ???
     - Added function bobmods.lib.tech.hide(technology_name) #60
     - Renamed function recipe.hide_recipe to recipe.hide #60
     - Added function bobmods.lib.tech.ignore_tech_cost_multiplier(technology_name, ignore) #62
+    - Added function bobmods.lib.item.set_subgroup(item_name, subgroup) #96
+    - Added function bobmods.lib.recipe.set_subgroup(item_name, subgroup) #96
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022

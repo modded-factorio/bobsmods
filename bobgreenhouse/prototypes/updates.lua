@@ -1,7 +1,7 @@
 data.raw.item["wood"].stack_size = 200
 
 if data.raw["item-subgroup"]["bob-resource-chemical"] then
-  data.raw.item.fertiliser.subgroup = "bob-resource-chemical"
+  bobmods.lib.item.set_subgroup("fertiliser", "bob-resource-chemical")
 end
 
 if data.raw["item-group"]["bob-intermediate-products"] then
