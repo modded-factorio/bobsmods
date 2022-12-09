@@ -20,6 +20,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "heat-exchanger-2",
         icon = "__base__/graphics/icons/heat-boiler.png",
+        localised_description = { "entity-description.heat-exchanger" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 0.5, result = "heat-exchanger-2" },
@@ -35,6 +36,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "heat-exchanger-3",
         icon = "__base__/graphics/icons/heat-boiler.png",
+        localised_description = { "entity-description.heat-exchanger" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 0.5, result = "heat-exchanger-3" },
@@ -51,6 +53,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "heat-exchanger-4",
         icon = "__base__/graphics/icons/heat-boiler.png",
+        localised_description = { "entity-description.heat-exchanger" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 0.5, result = "heat-exchanger-4" },

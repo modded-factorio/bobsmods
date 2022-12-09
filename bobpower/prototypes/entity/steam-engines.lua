@@ -20,6 +20,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-engine-2",
         icon = "__base__/graphics/icons/steam-engine.png",
+        localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 1, result = "steam-engine-2" },
@@ -34,6 +35,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-engine-3",
         icon = "__base__/graphics/icons/steam-engine.png",
+        localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 1, result = "steam-engine-3" },
@@ -48,6 +50,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-engine-4",
         icon = "__base__/graphics/icons/steam-engine.png",
+        localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 1, result = "steam-engine-4" },
@@ -62,6 +65,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-engine-5",
         icon = "__base__/graphics/icons/steam-engine.png",
+        localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 1, result = "steam-engine-5" },
