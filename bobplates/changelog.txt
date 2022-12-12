@@ -8,6 +8,7 @@ Date: ???
     - Added missing prerequisites #38
     - Removed setting "Ore enable override" #45
     - Added subgroups for nuclear items and recipes #96
+    - Removed setting New Steel. Now always true #98
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022

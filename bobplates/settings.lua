@@ -5,12 +5,6 @@ data:extend({
     setting_type = "startup",
     default_value = true,
   },
-  {
-    type = "bool-setting",
-    name = "bobmods-plates-newsteel",
-    setting_type = "startup",
-    default_value = true,
-  },
 
   {
     type = "bool-setting",

@@ -224,11 +224,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
   end
   if data.raw.technology["chemical-processing-1"] then
     bobmods.lib.tech.add_prerequisite("chemical-processing-1", "automation-science-pack")
-    if
-      not (settings.startup["bobmods-plates-newsteel"] and settings.startup["bobmods-plates-newsteel"].value == true)
-    then
-      bobmods.lib.tech.add_prerequisite("steel-processing", "automation-science-pack")
-    end
     bobmods.lib.tech.add_prerequisite("chemical-processing-1", "steam-power")
   end
   if data.raw.technology["air-compressor-1"] then
