@@ -381,7 +381,7 @@ data:extend({
     name = "bob-fuel-cells",
     group = "intermediate-products",
     order = "f-b",
-  },  
+  },
 
   {
     type = "item-group",
