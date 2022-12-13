@@ -12,8 +12,10 @@ function hide_setting(setting_type, setting_name, forced_setting_value)
 end
 
 hide_setting("bool-setting", "bobmods-ores-enablebauxite")
+hide_setting("bool-setting", "bobmods-ores-enablegemsore")
 hide_setting("bool-setting", "bobmods-ores-enablegoldore")
 hide_setting("bool-setting", "bobmods-ores-enableleadore")
+hide_setting("bool-setting", "bobmods-ores-enablenickelore")
 hide_setting("bool-setting", "bobmods-ores-enablequartz")
 hide_setting("bool-setting", "bobmods-ores-enablerutile")
 hide_setting("bool-setting", "bobmods-ores-enablesilverore")
@@ -21,13 +23,3 @@ hide_setting("bool-setting", "bobmods-ores-enabletinore")
 hide_setting("bool-setting", "bobmods-ores-enabletungstenore")
 hide_setting("bool-setting", "bobmods-ores-enablezincore")
 hide_setting("bool-setting", "bobmods-ores-enablethoriumore")
-if bobmods.ores.settings and bobmods.ores.settings.LeadGivesNickel == false then
-  hide_setting("bool-setting", "bobmods-ores-enablenickelore")
-end
-if bobmods.ores.settings and bobmods.ores.settings.GemsFromOtherOres == false then
-  hide_setting("bool-setting", "bobmods-ores-enablegemsore")
-  bobmods.ores.gems.create_autoplace()
-end
-if settings.startup["bobmods-plates-groundwater"].value == false then
-  hide_setting("bool-setting", "bobmods-ores-enablewaterores")
-end
