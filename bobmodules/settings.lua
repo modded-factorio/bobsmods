@@ -179,4 +179,10 @@ data:extend({
     maximum_value = 1,
     minimum_value = 0,
   },
+  {
+    type = "bool-setting",
+    name = "bobmods-modules-enable-modules-lab",
+    setting_type = "startup",
+    default_value = true,
+  },
 })
