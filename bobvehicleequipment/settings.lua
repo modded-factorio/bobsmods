@@ -4,6 +4,5 @@ data:extend({
     name = "bobmods-vehicleequipment-enablevehiclegrids",
     setting_type = "startup",
     default_value = true,
-    per_user = false,
   },
 })
