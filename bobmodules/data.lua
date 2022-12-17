@@ -6,6 +6,9 @@ if not bobmods.modules then
 end
 
 bobmods.modules.ModulesLab = settings.startup["bobmods-modules-enable-modules-lab"].value
+if mods["IndustrialRevolution"] then
+  bobmods.modules.ModulesLab = false
+end
 
 bobmods.modules.SpeedPerLevel = settings.startup["bobmods-modules-perlevel-bonus-speed"].value
 bobmods.modules.PollutionPerLevel = settings.startup["bobmods-modules-perlevel-bonus-pollution"].value
