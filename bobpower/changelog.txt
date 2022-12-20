@@ -14,6 +14,9 @@ Date: ???
     - Changed Burner heat source ingredients #22
     - Updated Heat-Pipe icons #22
     - Added descriptions for power entities #22
+    - Removed one (Fluid )Burner heat source tier #22
+    - Merged burner heat source and fluid burner heat source tech #22
+    - Increased steam-turbine tech requirements by 1 tier #22
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
