@@ -14,9 +14,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     end
   end
 
-  if data.raw.item["steel-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("fluid-reactor-3", "pipe", "steel-pipe")
-  end
   if data.raw.item["tin-plate"] then
     bobmods.lib.recipe.replace_ingredient("burner-reactor", "steel-plate", "tin-plate")
     bobmods.lib.recipe.replace_ingredient("fluid-reactor", "steel-plate", "tin-plate")
@@ -24,8 +21,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
 
   if data.raw.item["bronze-alloy"] then
     bobmods.lib.recipe.replace_ingredient("fluid-reactor-2", "pipe", "bronze-pipe")
-    bobmods.lib.recipe.replace_ingredient("burner-reactor-2", "steel-plate", "bronze-alloy")
-    bobmods.lib.recipe.replace_ingredient("fluid-reactor-2", "steel-plate", "bronze-alloy")
     bobmods.lib.tech.add_prerequisite("burner-reactor-2", "alloy-processing")
   end
 end
