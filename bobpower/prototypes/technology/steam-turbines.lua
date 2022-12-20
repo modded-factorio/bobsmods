@@ -21,6 +21,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 30,
       },
@@ -47,6 +48,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       order = "[steam-turbine]-2",
@@ -74,6 +76,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
       },
       order = "[steam-turbine]-3",
