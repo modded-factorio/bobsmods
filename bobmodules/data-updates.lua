@@ -2,6 +2,7 @@ require("prototypes.recipe.beacon-updates")
 require("prototypes.recipe.electronics-updates")
 require("prototypes.recipe.module-updates")
 require("prototypes.recipe.module-merged-updates")
+require("prototypes.technology.module-updates")
 
 if settings.startup["bobmods-modules-transmitproductivity"].value == true then
   for i, beacon in pairs(data.raw.beacon) do

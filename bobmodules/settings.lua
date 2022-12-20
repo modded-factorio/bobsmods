@@ -4,7 +4,6 @@ data:extend({
     name = "bobmods-modules-enablegreenmodules",
     setting_type = "startup",
     default_value = true,
-    per_user = false,
   },
 
   {
@@ -12,7 +11,6 @@ data:extend({
     name = "bobmods-modules-enablerawspeedmodules",
     setting_type = "startup",
     default_value = true,
-    per_user = false,
   },
 
   {
@@ -20,7 +18,6 @@ data:extend({
     name = "bobmods-modules-enablerawproductivitymodules",
     setting_type = "startup",
     default_value = true,
-    per_user = false,
   },
 
   {
@@ -28,7 +25,6 @@ data:extend({
     name = "bobmods-modules-enablegodmodules",
     setting_type = "startup",
     default_value = false,
-    per_user = false,
   },
 
   {
@@ -36,7 +32,6 @@ data:extend({
     name = "bobmods-modules-enableproductivitylimitation",
     setting_type = "startup",
     default_value = true,
-    per_user = false,
   },
 
   {
@@ -44,7 +39,6 @@ data:extend({
     name = "bobmods-modules-productivityhasspeed",
     setting_type = "startup",
     default_value = false,
-    per_user = false,
   },
 
   {
@@ -52,7 +46,6 @@ data:extend({
     name = "bobmods-modules-transmitproductivity",
     setting_type = "startup",
     default_value = false,
-    per_user = false,
   },
 
   {
@@ -62,7 +55,6 @@ data:extend({
     default_value = 0.2,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -71,7 +63,6 @@ data:extend({
     default_value = 0.15,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -80,7 +71,6 @@ data:extend({
     default_value = 0.1,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -89,7 +79,6 @@ data:extend({
     default_value = 0.05,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -98,7 +87,6 @@ data:extend({
     default_value = 0.5,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
 
   {
@@ -108,7 +96,6 @@ data:extend({
     default_value = 0.05,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -117,7 +104,6 @@ data:extend({
     default_value = 0.15,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -126,7 +112,6 @@ data:extend({
     default_value = 0.1,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
 
   {
@@ -136,7 +121,6 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -145,7 +129,6 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -154,7 +137,6 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -163,7 +145,6 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -172,7 +153,6 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
 
   {
@@ -182,7 +162,6 @@ data:extend({
     default_value = 0.2,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -191,7 +170,6 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
   },
   {
     type = "double-setting",
@@ -200,6 +178,11 @@ data:extend({
     default_value = 0,
     maximum_value = 1,
     minimum_value = 0,
-    per_user = false,
+  },
+  {
+    type = "bool-setting",
+    name = "bobmods-modules-enable-modules-lab",
+    setting_type = "startup",
+    default_value = true,
   },
 })

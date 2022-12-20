@@ -46,59 +46,32 @@ bobmods.lib.machine.type_if_add_category("assembling-machine", "chemistry", "dis
 
 -- Reduce cost of Steel and new Steel
 if settings.startup["bobmods-plates-cheapersteel"].value == true then
-  if settings.startup["bobmods-plates-newsteel"].value == true then
-    data:extend({
-      {
-        type = "recipe",
-        name = "steel-plate",
-        category = "chemical-furnace",
-        normal = {
-          enabled = false,
-          energy_required = 3.2,
-          ingredients = {
-            { "iron-plate", 1 },
-            { type = "fluid", name = "oxygen", amount = 10 },
-          },
-          result = "steel-plate",
+  data:extend({
+    {
+      type = "recipe",
+      name = "steel-plate",
+      category = "chemical-furnace",
+      normal = {
+        enabled = false,
+        energy_required = 3.2,
+        ingredients = {
+          { "iron-plate", 2 },
+          { type = "fluid", name = "oxygen", amount = 10 },
         },
-        expensive = {
-          enabled = false,
-          energy_required = 6.4,
-          ingredients = {
-            { "iron-plate", 2 },
-            { type = "fluid", name = "oxygen", amount = 12.5 },
-          },
-          result = "steel-plate",
-        },
-        allow_decomposition = false,
+        result = "steel-plate",
       },
-    })
-  else
-    data:extend({
-      {
-        type = "recipe",
-        name = "steel-plate",
-        category = "smelting",
-        normal = {
-          enabled = false,
-          energy_required = 6.4,
-          ingredients = {
-            { "iron-plate", 2 },
-          },
-          result = "steel-plate",
+      expensive = {
+        enabled = false,
+        energy_required = 6.4,
+        ingredients = {
+          { "iron-plate", 4 },
+          { type = "fluid", name = "oxygen", amount = 12.5 },
         },
-        expensive = {
-          enabled = false,
-          energy_required = 12.8,
-          ingredients = {
-            { "iron-plate", 4 },
-          },
-          result = "steel-plate",
-        },
-        allow_decomposition = false,
+        result = "steel-plate",
       },
-    })
-  end
+      allow_decomposition = false,
+    },
+  })
 
   if data.raw.recipe["metallurgy-steel-plate"] then
     if data.raw.fluid["molten-carbonated-iron"] then
@@ -110,35 +83,33 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
     end
   end
 else
-  if settings.startup["bobmods-plates-newsteel"].value == true then
-    data:extend({
-      {
-        type = "recipe",
-        name = "steel-plate",
-        category = "chemical-furnace",
-        normal = {
-          enabled = false,
-          energy_required = 16,
-          ingredients = {
-            { "iron-plate", 5 },
-            { type = "fluid", name = "oxygen", amount = 50 },
-          },
-          result = "steel-plate",
-          result_count = 2,
+  data:extend({
+    {
+      type = "recipe",
+      name = "steel-plate",
+      category = "chemical-furnace",
+      normal = {
+        enabled = false,
+        energy_required = 16,
+        ingredients = {
+          { "iron-plate", 5 },
+          { type = "fluid", name = "oxygen", amount = 50 },
         },
-        expensive = {
-          enabled = false,
-          energy_required = 16,
-          ingredients = {
-            { "iron-plate", 5 },
-            { type = "fluid", name = "oxygen", amount = 50 },
-          },
-          result = "steel-plate",
-        },
-        allow_decomposition = false,
+        result = "steel-plate",
+        result_count = 2,
       },
-    })
-  end
+      expensive = {
+        enabled = false,
+        energy_required = 16,
+        ingredients = {
+          { "iron-plate", 5 },
+          { type = "fluid", name = "oxygen", amount = 50 },
+        },
+        result = "steel-plate",
+      },
+      allow_decomposition = false,
+    },
+  })
 end
 
 if settings.startup["bobmods-plates-batteryupdate"].value == true then
@@ -149,11 +120,9 @@ if settings.startup["bobmods-plates-batteryupdate"].value == true then
     { { "lead-plate", 2 }, { type = "fluid", name = "sulfuric-acid", amount = 40 }, { "plastic-bar", 2 } }
 end
 
-if settings.startup["bobmods-plates-newsteel"].value == true then
-  data.raw.recipe["steel-plate"].category = "chemical-furnace"
-  bobmods.lib.tech.add_prerequisite("steel-processing", "electrolysis-1")
-  bobmods.lib.tech.add_prerequisite("steel-processing", "chemical-processing-1")
-end
+data.raw.recipe["steel-plate"].category = "chemical-furnace"
+bobmods.lib.tech.add_prerequisite("steel-processing", "electrolysis-1")
+bobmods.lib.tech.add_prerequisite("steel-processing", "chemical-processing-1")
 
 --Nuclear fuel update.
 data.raw.item["uranium-fuel-cell"].fuel_glow_color = { r = 0, g = 1, b = 0 }
