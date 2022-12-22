@@ -50,15 +50,4 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       end
     end
   end
-
-  if mods["space-exploration"] then
-    for _, furnace in pairs({
-      "fluid-furnace",
-    }) do
-      local prototype = data.raw["furnace"][furnace]
-      if prototype and prototype.crafting_categories then
-        table.insert(prototype.crafting_categories, "kiln")
-      end
-    end
-  end
 end
