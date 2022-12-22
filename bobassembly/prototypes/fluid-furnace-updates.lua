@@ -7,6 +7,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       data.raw["assembling-machine"]["fluid-chemical-furnace"].ingredient_count = 4
     end
   end
+
   if mods["space-exploration"] then
     for _, furnace in pairs({
       "fluid-furnace",

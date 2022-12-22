@@ -115,3 +115,14 @@ function bobmods.lib.machine.type_if_add_resource_category(machine_type, categor
     end
   end
 end
+
+function bobmods.lib.machine.copy_categories_from(machine_type, from_name, to_name)
+  local from_machine = data.raw[machine_type][from_name]
+  local to_machine = data.raw[machine_type][to_name]
+
+  if from_machine and to_machine then
+    for _, category in pairs(from_machine.crafting_categories) do
+      bobmods.lib.machine.add_category(to_machine, category)
+    end
+  end
+end

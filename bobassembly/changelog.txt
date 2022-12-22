@@ -5,6 +5,9 @@ Date: ???
     - Fixing accidental global variables #50
     - Machines Showing In/Out Fluidbox arrows #66
   Changes:
+    - Added missing crafting categories to assembling machines, chemical plants, and furnaces #53
+  Bugfixes:
+    - Machines Showing In/Out Fluidbox arrows #66
     - Space Exploration / Krastorio 2 support #53
       - Added crafting category "basic-crafting" to assembling machines
       - Added crafting category "kiln" to furnaces
