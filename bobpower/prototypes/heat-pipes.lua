@@ -7,11 +7,13 @@ then
   data.raw["heat-pipe"]["heat-pipe"].fast_replaceable_group = "heat-pipe"
   data.raw["heat-pipe"]["heat-pipe"].minimum_glow_temperature = 300
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "1GW"
-  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 875
+  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
+  data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", 750 }
 
   data:extend({
     {
       type = "item",
+      localised_description = { "entity-description.heat-pipe", 1000 },
       name = "heat-pipe-2",
       icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
       icon_size = 32,
@@ -22,6 +24,7 @@ then
     },
     {
       type = "item",
+      localised_description = { "entity-description.fluid-reactor", 1250 },
       name = "heat-pipe-3",
       icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
       icon_size = 32,
@@ -32,6 +35,7 @@ then
     },
     {
       type = "item",
+      localised_description = { "entity-description.fluid-reactor", 1500 },
       name = "heat-pipe-4",
       icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
       icon_size = 32,

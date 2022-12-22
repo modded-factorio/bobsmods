@@ -1,6 +1,6 @@
 if settings.startup["bobmods-power-nuclear"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("nuclear-power", "heat-pipe")
-  bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-1")
+  bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-2")
 
   data:extend({
     {

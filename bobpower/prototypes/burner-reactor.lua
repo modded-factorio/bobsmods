@@ -73,12 +73,14 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "steel-furnace", 1 },
         { "heat-pipe", 4 },
         { "steel-plate", 6 },
+        { "bricks", 10 },
       },
       result = "burner-reactor",
     },
     {
       type = "reactor",
       name = "burner-reactor",
+      localised_description = { "entity-description.burner-reactor", 750 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       max_health = 300,
@@ -182,6 +184,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "item",
       name = "burner-reactor-2",
+      localised_description = { "entity-description.burner-reactor", 1000 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       subgroup = "energy",
@@ -226,6 +229,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "item",
       name = "fluid-reactor",
+      localised_description = { "entity-description.fluid-reactor", 750 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       subgroup = "energy",
@@ -242,6 +246,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "burner-reactor", 1 },
         { "steel-plate", 6 },
         { "pipe", 5 },
+        { "bricks", 10 },
       },
       result = "fluid-reactor",
     },
@@ -259,6 +264,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "item",
       name = "fluid-reactor-2",
+      localised_description = { "entity-description.fluid-reactor", 1000 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       subgroup = "energy",
@@ -402,14 +408,14 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         enabled = false,
         ingredients = {
           { "fluid-furnace", 1 },
-          { "heat-pipe", 8 },
-          { "steel-plate", 6 },
+          { "heat-pipe", 4 },
+          { "steel-plate", 11 },
           { "pipe", 3 },
         },
         result = "fluid-reactor",
       },
     })
-    bobmods.lib.tech.add_recipe_unlock("fluid-reactor-1", "fluid-reactor-from-fluid-furnace")
-    bobmods.lib.tech.add_prerequisite("fluid-reactor-1", "fluid-furnace")
+    bobmods.lib.tech.add_recipe_unlock("burner-reactor-1", "fluid-reactor-from-fluid-furnace")
+    bobmods.lib.tech.add_prerequisite("burner-reactor-1", "fluid-furnace")
   end
 end
