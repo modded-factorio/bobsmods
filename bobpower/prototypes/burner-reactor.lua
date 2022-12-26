@@ -242,7 +242,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "burner-reactor", 1 },
-        { "steel-plate", 6 },
         { "pipe", 5 },
       },
       result = "fluid-reactor",
@@ -408,7 +407,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         ingredients = {
           { "fluid-furnace", 1 },
           { "heat-pipe", 8 },
-          { "steel-plate", 12 },
+          { "steel-plate", 6 },
           { "pipe", 3 },
         },
         result = "fluid-reactor",
