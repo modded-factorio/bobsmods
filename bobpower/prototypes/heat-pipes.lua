@@ -9,7 +9,7 @@ then
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "1GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
   data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", 750 }
-  bobmods.lib.recipe.set_ingredients("heat-pipe", { { "steel-plate", 5 }, { "copper-plate", 10 }, })
+  bobmods.lib.recipe.set_ingredients("heat-pipe", { { "steel-plate", 5 }, { "copper-plate", 10 } })
 
   data:extend({
     {
