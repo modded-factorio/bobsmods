@@ -33,6 +33,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     if data.raw.recipe["fluid-mixing-furnace"] then
       if data.raw.item["steel-pipe"] then
         bobmods.lib.recipe.replace_ingredient("fluid-mixing-furnace-from-fluid-furnace", "pipe", "steel-pipe")
+
         bobmods.lib.recipe.remove_result("steel-mixing-furnace-from-fluid-mixing-furnace", "pipe")
         bobmods.lib.recipe.add_result("steel-mixing-furnace-from-fluid-mixing-furnace", { "steel-pipe", 2 })
       end
@@ -40,8 +41,10 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     if data.raw.recipe["fluid-chemical-furnace"] then
       if data.raw.item["steel-pipe"] then
         bobmods.lib.recipe.replace_ingredient("fluid-chemical-furnace-from-fluid-furnace", "pipe", "steel-pipe")
+
         bobmods.lib.recipe.remove_result("steel-chemical-furnace-from-fluid-chemical-furnace", "pipe")
         bobmods.lib.recipe.add_result("steel-chemical-furnace-from-fluid-chemical-furnace", { "steel-pipe", 2 })
+
         bobmods.lib.recipe.remove_result("fluid-furnace-from-fluid-chemical-furnace", "pipe")
         bobmods.lib.recipe.add_result("fluid-furnace-from-fluid-chemical-furnace", { "steel-pipe", 5 })
       end

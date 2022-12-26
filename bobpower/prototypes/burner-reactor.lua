@@ -71,9 +71,8 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "steel-furnace", 1 },
-        { "heat-pipe", 4 },
+        { "heat-pipe", 8 },
         { "steel-plate", 6 },
-        { "stone-brick", 10 },
       },
       result = "burner-reactor",
     },
@@ -199,7 +198,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "burner-reactor", 1 },
-        { "heat-pipe-2", 4 },
+        { "heat-pipe-2", 8 },
         { "steel-plate", 6 },
         { "concrete", 10 },
       },
@@ -246,7 +245,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "burner-reactor", 1 },
         { "steel-plate", 6 },
         { "pipe", 5 },
-        { "stone-brick", 10 },
       },
       result = "fluid-reactor",
     },
@@ -279,7 +277,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       enabled = false,
       ingredients = {
         { "fluid-reactor", 1 },
-        { "heat-pipe-2", 4 },
+        { "heat-pipe-2", 8 },
         { "steel-plate", 6 },
         { "concrete", 10 },
         { "pipe", 5 },
@@ -408,14 +406,14 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         enabled = false,
         ingredients = {
           { "fluid-furnace", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe", 8 },
           { "steel-plate", 12 },
           { "pipe", 3 },
-          { "stone-bricks", 10 },
         },
         result = "fluid-reactor",
       },
     })
+
     bobmods.lib.tech.add_recipe_unlock("burner-reactor-1", "fluid-reactor-from-fluid-furnace")
     bobmods.lib.tech.add_prerequisite("burner-reactor-1", "fluid-furnace")
   end
