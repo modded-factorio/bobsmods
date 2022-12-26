@@ -2,21 +2,19 @@
 Version: 1.1.6
 Date: ???
   Changes:
+    - Tidied up heat entities #22
+      - Added additional tier of Heat Pipe and Heat Exchanger
+      - Made Heat Pipes upgradable
+      - Adjusted recipes for Heat Pipes and Heat Sources
+      - Added max temperature to item and entity descriptions
+      - Removed a tier of Burner Heat Source and Fluid Burning Heat Source
+      - Merged technologies for Burner Heat Source and Fluid Burning Heat Source
+      - Increased tech tier of Steam Turbines
     - Added missing prerequisites #38
     - Added dying explosions to accumulators #44
     - Stopped adding fuel value to fluid descriptions. This has been added as a base game feature #47
     - Updated reactor pipe graphics #80
     - Added Tech Steam power #94
-    - Added (T0) Heat-Pipe #22
-    - Added Heat-Pipe tech and adjusted other Heat-Pipe techs #22
-    - Heat-Pipes are upgradable with planner #22
-    - Added (T0) Heat-Exchanger #22
-    - Changed Burner heat source ingredients #22
-    - Updated Heat-Pipe icons #22
-    - Added descriptions for power entities #22
-    - Removed one (Fluid )Burner heat source tier #22
-    - Merged burner heat source and fluid burner heat source tech #22
-    - Increased steam-turbine tech requirements by 1 tier #22
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
