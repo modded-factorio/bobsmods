@@ -9,7 +9,6 @@ Date: ???
     - Machines Showing In/Out Fluidbox arrows #66
   Changes:
     - Added missing crafting categories to assembling machines, chemical plants, and furnaces #53
-    - set fluid-furnace recipes to use pipes instead of steel-pipes
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
