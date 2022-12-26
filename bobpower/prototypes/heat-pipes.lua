@@ -9,6 +9,7 @@ then
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "1GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
   data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", 750 }
+  bobmods.lib.recipe.set_ingredients("heat-pipe", { { "steel-plate", 5 }, { "copper-plate", 10 }, })
 
   data:extend({
     {
@@ -48,8 +49,8 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "steel-plate", 10 },
-        { "copper-plate", 20 },
+        { "steel-plate", 5 },
+        { "copper-plate", 10 },
       },
       result = "heat-pipe-2",
     },
@@ -59,8 +60,8 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "steel-plate", 10 },
-        { "copper-plate", 20 },
+        { "steel-plate", 5 },
+        { "copper-plate", 10 },
       },
       result = "heat-pipe-3",
     },
@@ -70,8 +71,8 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "steel-plate", 10 },
-        { "copper-plate", 20 },
+        { "steel-plate", 5 },
+        { "copper-plate", 10 },
       },
       result = "heat-pipe-4",
     },
