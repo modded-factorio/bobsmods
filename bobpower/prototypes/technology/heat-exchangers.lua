@@ -35,6 +35,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       prerequisites = {
         "bob-boiler-3",
         "bob-heat-pipe-2",
+        "bob-heat-exchanger-1",
       },
       effects = {
         {

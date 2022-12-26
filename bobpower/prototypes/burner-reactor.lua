@@ -331,6 +331,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       prerequisites = {
         "burner-reactor-1",
         "bob-heat-pipe-2",
+        "concrete",
       },
       effects = {
         {

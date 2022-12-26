@@ -7,6 +7,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-steam-turbine-1",
       prerequisites = {
         "bob-steam-engine-3",
+        "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-turbine.png",
       icon_size = 128,
@@ -34,6 +35,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       icon_size = 128,
       prerequisites = {
         "bob-steam-turbine-1",
+        "production-science-pack",
       },
       effects = {
         {
@@ -61,6 +63,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       icon_size = 128,
       prerequisites = {
         "bob-steam-turbine-2",
+        "utility-science-pack",
       },
       effects = {
         {
