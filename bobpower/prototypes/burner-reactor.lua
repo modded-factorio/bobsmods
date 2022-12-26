@@ -79,9 +79,9 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "reactor",
       name = "burner-reactor",
-      localised_description = { "entity-description.burner-reactor", 750 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
+      localised_description = { "entity-description.burner-reactor", 750 },
       max_health = 300,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.3, result = "burner-reactor" },
@@ -183,7 +183,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "item",
       name = "burner-reactor-2",
-      localised_description = { "entity-description.burner-reactor", 1000 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       subgroup = "energy",
@@ -208,6 +207,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       data.raw.reactor["burner-reactor"],
       {
         name = "burner-reactor-2",
+        localised_description = { "entity-description.burner-reactor", 1000 },
         minable = { result = "burner-reactor-2" },
         max_health = 500,
         consumption = "9MW",
@@ -228,7 +228,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "item",
       name = "fluid-reactor",
-      localised_description = { "entity-description.fluid-reactor", 750 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       subgroup = "energy",
@@ -254,6 +253,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         name = "fluid-reactor",
         minable = { result = "fluid-reactor" },
         next_upgrade = "fluid-reactor-2",
+        localised_description = { "entity-description.fluid-reactor", 750 },
       },
     }),
   })
@@ -262,7 +262,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     {
       type = "item",
       name = "fluid-reactor-2",
-      localised_description = { "entity-description.fluid-reactor", 1000 },
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
       subgroup = "energy",
@@ -289,6 +288,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       {
         name = "fluid-reactor-2",
         minable = { result = "fluid-reactor-2" },
+        localised_description = { "entity-description.fluid-reactor", 1000 },
       },
     }),
   })

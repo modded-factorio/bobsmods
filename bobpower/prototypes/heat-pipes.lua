@@ -13,7 +13,6 @@ then
   data:extend({
     {
       type = "item",
-      localised_description = { "entity-description.heat-pipe", 1000 },
       name = "heat-pipe-2",
       icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
       icon_size = 32,
@@ -24,7 +23,6 @@ then
     },
     {
       type = "item",
-      localised_description = { "entity-description.fluid-reactor", 1250 },
       name = "heat-pipe-3",
       icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
       icon_size = 32,
@@ -35,7 +33,6 @@ then
     },
     {
       type = "item",
-      localised_description = { "entity-description.fluid-reactor", 1500 },
       name = "heat-pipe-4",
       icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
       icon_size = 32,
@@ -83,6 +80,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-2",
+        localised_description = { "entity-description.heat-pipe", 1000 },
         icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
         icon_size = 32,
         icon_mipmaps = 1,
@@ -119,6 +117,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-3",
+        localised_description = { "entity-description.fluid-reactor", 1250 },
         icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
         icon_size = 32,
         icon_mipmaps = 1,
@@ -155,6 +154,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-4",
+        localised_description = { "entity-description.fluid-reactor", 1500 },
         icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
         icon_size = 32,
         icon_mipmaps = 1,
