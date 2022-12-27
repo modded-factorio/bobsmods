@@ -21,6 +21,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-turbine-2",
         icon = "__base__/graphics/icons/steam-turbine.png",
+        localised_description = { "entity-description.steam-turbine" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 1, result = "steam-turbine-2" },
@@ -35,6 +36,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-turbine-3",
         icon = "__base__/graphics/icons/steam-turbine.png",
+        localised_description = { "entity-description.steam-turbine" },
         icon_size = 64,
         icon_mipmaps = 4,
         minable = { mining_time = 1, result = "steam-turbine-3" },

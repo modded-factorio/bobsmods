@@ -6,7 +6,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       energy_required = 3,
       enabled = false,
       ingredients = {
-        { "boiler-3", 1 },
+        { "boiler-2", 1 },
         { "heat-pipe", 4 },
       },
       result = "heat-exchanger",
@@ -33,6 +33,16 @@ if settings.startup["bobmods-power-steam"].value == true then
       },
       result = "heat-exchanger-3",
     },
+    {
+      type = "recipe",
+      name = "heat-exchanger-4",
+      enabled = false,
+      ingredients = {
+        { "heat-exchanger-3", 1 },
+        { "steel-plate", 10 },
+      },
+      result = "heat-exchanger-4",
+    },
   })
 
   if
@@ -42,27 +52,39 @@ if settings.startup["bobmods-power-steam"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "heat-exchanger-2-from-boiler-4",
+        name = "heat-exchanger-2-from-boiler-3",
+        subgroup = "bob-energy-heat-exchanger-convert",
+        enabled = false,
+        ingredients = {
+          { "boiler-3", 1 },
+          { "heat-pipe", 4 },
+        },
+        result = "heat-exchanger-2",
+        allow_as_intermediate = false,
+      },
+      {
+        type = "recipe",
+        name = "heat-exchanger-3-from-boiler-4",
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
         ingredients = {
           { "boiler-4", 1 },
           { "heat-pipe", 4 },
         },
-        result = "heat-exchanger-2",
+        result = "heat-exchanger-3",
         allow_as_intermediate = false,
       },
 
       {
         type = "recipe",
-        name = "heat-exchanger-3-from-boiler-5",
+        name = "heat-exchanger-4-from-boiler-5",
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
         ingredients = {
           { "boiler-5", 1 },
           { "heat-pipe", 4 },
         },
-        result = "heat-exchanger-3",
+        result = "heat-exchanger-4",
         allow_as_intermediate = false,
       },
     })
@@ -70,12 +92,28 @@ if settings.startup["bobmods-power-steam"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "boiler-3-from-heat-exchanger",
+        name = "boiler-2-from-heat-exchanger",
         subgroup = "bob-energy-boiler-convert",
         energy_required = 3,
         enabled = false,
         ingredients = {
           { "heat-exchanger", 1 },
+        },
+        results = {
+          { "boiler-2", 1 },
+          { "heat-pipe", 4 },
+        },
+        main_product = "boiler-2",
+        allow_as_intermediate = false,
+      },
+
+      {
+        type = "recipe",
+        name = "boiler-3-from-heat-exchanger-2",
+        subgroup = "bob-energy-boiler-convert",
+        enabled = false,
+        ingredients = {
+          { "heat-exchanger-2", 1 },
         },
         results = {
           { "boiler-3", 1 },
@@ -87,11 +125,11 @@ if settings.startup["bobmods-power-steam"].value == true then
 
       {
         type = "recipe",
-        name = "boiler-4-from-heat-exchanger-2",
+        name = "boiler-4-from-heat-exchanger-3",
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {
-          { "heat-exchanger-2", 1 },
+          { "heat-exchanger-3", 1 },
         },
         results = {
           { "boiler-4", 1 },
@@ -103,11 +141,11 @@ if settings.startup["bobmods-power-steam"].value == true then
 
       {
         type = "recipe",
-        name = "boiler-5-from-heat-exchanger-3",
+        name = "boiler-5-from-heat-exchanger-4",
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {
-          { "heat-exchanger-3", 1 },
+          { "heat-exchanger-4", 1 },
         },
         results = {
           { "boiler-5", 1 },

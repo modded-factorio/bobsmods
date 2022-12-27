@@ -6,6 +6,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       prerequisites = {
         "steam-power",
         "steel-processing",
+        "logistic-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/boiler.png",
       icon_size = 128,
@@ -19,6 +20,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         count = 50,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 30,
       },
@@ -30,7 +32,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-boiler-3",
       prerequisites = {
         "bob-boiler-2",
-        "logistic-science-pack",
+        "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/boiler.png",
       icon_size = 128,
@@ -45,6 +47,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 30,
       },
@@ -56,7 +59,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-boiler-4",
       prerequisites = {
         "bob-boiler-3",
-        "chemical-science-pack",
+        "production-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/boiler.png",
       icon_size = 128,
@@ -72,6 +75,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
         time = 30,
       },
@@ -83,7 +87,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-boiler-5",
       prerequisites = {
         "bob-boiler-4",
-        "production-science-pack",
+        "utility-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/boiler.png",
       icon_size = 128,
@@ -100,6 +104,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 30,
       },

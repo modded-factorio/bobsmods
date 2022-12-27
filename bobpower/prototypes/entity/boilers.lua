@@ -16,6 +16,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "boiler-2",
         icon = "__base__/graphics/icons/boiler.png",
+        localised_description = { "entity-description.boiler" },
         icon_size = 64,
         minable = { mining_time = 0.5, result = "boiler-2" },
         next_upgrade = "boiler-3",
@@ -33,6 +34,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "boiler-3",
         icon = "__base__/graphics/icons/boiler.png",
+        localised_description = { "entity-description.boiler" },
         icon_size = 64,
         minable = { mining_time = 0.5, result = "boiler-3" },
         next_upgrade = "boiler-4",
@@ -50,6 +52,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "boiler-4",
         icon = "__base__/graphics/icons/boiler.png",
+        localised_description = { "entity-description.boiler" },
         icon_size = 64,
         minable = { mining_time = 0.5, result = "boiler-4" },
         next_upgrade = "boiler-5",
@@ -67,6 +70,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "boiler-5",
         icon = "__base__/graphics/icons/boiler.png",
+        localised_description = { "entity-description.boiler" },
         icon_size = 64,
         minable = { mining_time = 0.5, result = "boiler-5" },
         max_health = 400,

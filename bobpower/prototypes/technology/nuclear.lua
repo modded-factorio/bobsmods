@@ -1,6 +1,6 @@
 if settings.startup["bobmods-power-nuclear"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("nuclear-power", "heat-pipe")
-  bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-1")
+  bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-2")
 
   data:extend({
     {
@@ -19,7 +19,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         "nuclear-power",
         "advanced-electronics-2",
         "production-science-pack",
-        "bob-heat-pipe-2",
+        "bob-heat-pipe-3",
       },
       unit = {
         ingredients = {
@@ -48,7 +48,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       prerequisites = {
         "bob-nuclear-power-2",
         "utility-science-pack",
-        "bob-heat-pipe-3",
+        "bob-heat-pipe-4",
       },
       unit = {
         ingredients = {

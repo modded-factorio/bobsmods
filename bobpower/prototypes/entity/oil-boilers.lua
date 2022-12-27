@@ -52,6 +52,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "oil-boiler-2",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
+        localised_description = { "entity-description.oil-boiler" },
         icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler-2" },
         max_health = 375,
@@ -69,6 +70,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "oil-boiler-3",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
+        localised_description = { "entity-description.oil-boiler" },
         icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler-3" },
         max_health = 450,
@@ -86,6 +88,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "oil-boiler-4",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
+        localised_description = { "entity-description.oil-boiler" },
         icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler-4" },
         max_health = 525,

@@ -7,6 +7,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-steam-turbine-1",
       prerequisites = {
         "bob-steam-engine-3",
+        "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-turbine.png",
       icon_size = 128,
@@ -21,6 +22,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 30,
       },
@@ -33,6 +35,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       icon_size = 128,
       prerequisites = {
         "bob-steam-turbine-1",
+        "production-science-pack",
       },
       effects = {
         {
@@ -47,6 +50,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       order = "[steam-turbine]-2",
@@ -59,6 +63,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       icon_size = 128,
       prerequisites = {
         "bob-steam-turbine-2",
+        "utility-science-pack",
       },
       effects = {
         {
@@ -74,6 +79,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
       },
       order = "[steam-turbine]-3",

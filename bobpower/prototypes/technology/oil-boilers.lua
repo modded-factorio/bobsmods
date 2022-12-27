@@ -18,6 +18,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         count = 100,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 30,
       },
@@ -29,7 +30,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-oil-boiler-2",
       prerequisites = {
         "bob-oil-boiler-1",
-        "logistic-science-pack",
+        "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
       icon_size = 128,
@@ -44,6 +45,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 30,
       },
@@ -55,7 +57,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-oil-boiler-3",
       prerequisites = {
         "bob-oil-boiler-2",
-        "chemical-science-pack",
+        "production-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
       icon_size = 128,
@@ -71,6 +73,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
         time = 30,
       },
@@ -82,7 +85,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       name = "bob-oil-boiler-4",
       prerequisites = {
         "bob-oil-boiler-3",
-        "production-science-pack",
+        "utility-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/oil-boiler.png",
       icon_size = 128,
@@ -99,6 +102,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 30,
       },
