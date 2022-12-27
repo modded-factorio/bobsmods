@@ -6,6 +6,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       prerequisites = {
         "steel-processing",
         "electronics",
+        "logistic-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
       icon_size = 128,
@@ -19,6 +20,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         count = 150,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 30,
       },
@@ -30,6 +32,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       name = "fluid-generator-2",
       prerequisites = {
         "fluid-generator-1",
+        "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
       icon_size = 128,
@@ -44,6 +47,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 30,
       },
@@ -55,6 +59,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       name = "fluid-generator-3",
       prerequisites = {
         "fluid-generator-2",
+        "production-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
       icon_size = 128,
@@ -70,6 +75,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
         time = 30,
       },
@@ -86,6 +92,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           "fluid-generator-3",
           "hydrazine",
           "advanced-electronics-2",
+          "utility-science-pack",
         },
         icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
         icon_size = 128,
@@ -102,6 +109,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             { "logistic-science-pack", 1 },
             { "chemical-science-pack", 1 },
             { "production-science-pack", 1 },
+            { "utility-science-pack", 1 },
           },
           time = 30,
         },
