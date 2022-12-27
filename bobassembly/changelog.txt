@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixing accidental global variables #50
     - Machines Showing In/Out Fluidbox arrows #66
+    - Standardized the number of module slots in each tier of furnace #103
   Changes:
     - Added missing crafting categories to assembling machines, chemical plants, and furnaces #53
 ---------------------------------------------------------------------------------------------------

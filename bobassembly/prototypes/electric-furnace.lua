@@ -228,7 +228,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       icon = "__bobassembly__/graphics/icons/electric-furnace-2.png",
       tint = { r = 0.6, g = 0.2, b = 0.8 },
       max_health = 450,
-      module_slots = 5,
+      module_slots = 4,
       crafting_speed = 3,
       energy_usage = "250kW",
     }),

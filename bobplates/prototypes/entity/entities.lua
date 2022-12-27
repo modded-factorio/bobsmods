@@ -372,7 +372,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
     module_specification = {
-      module_slots = 3,
+      module_slots = 2,
       module_info_icon_shift = { 0, 0.5 },
       module_info_multi_row_initial_height_modifier = -0.3,
     },
@@ -579,7 +579,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
     module_specification = {
-      module_slots = 3,
+      module_slots = 2,
       module_info_icon_shift = { 0, 0.5 },
       module_info_multi_row_initial_height_modifier = -0.3,
     },
