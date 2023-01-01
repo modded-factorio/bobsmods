@@ -6,9 +6,11 @@ if settings.startup["bobmods-inserters-long1"].value == true then
   end
 end
 
-for i, inserter in pairs(data.raw.inserter) do
-  inserter.allow_custom_vectors = true
-  if not inserter.hand_size then
-    inserter.hand_size = 1.5
+for _, inserter in pairs(data.raw.inserter) do
+  if not inserter.bobinserter_non_adjustable then
+    inserter.allow_custom_vectors = true
+    if not inserter.hand_size then
+      inserter.hand_size = 1.5
+    end
   end
 end

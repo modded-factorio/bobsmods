@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed destroying root GUI element error #34
     - Fixed mod compatibility issue with upgradable Long handed inserters #41
+    - Fixed compatibility with non adjustable inserters #101
   Changes:
     - Moved Long inserters 2 to blue science #51
     - Add Long inserters 1 setting #25
