@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-revamp-nuclear",
@@ -30,6 +29,4 @@ data:extend(
     setting_type = "startup",
     default_value = true,
   },
-}
-)
-
+})

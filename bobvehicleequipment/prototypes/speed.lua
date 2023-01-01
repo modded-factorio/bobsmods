@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-motor",
@@ -9,7 +8,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-e[vehicle-motor]",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -17,33 +16,29 @@ data:extend(
     name = "vehicle-motor",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"processing-unit", 10},
-      {"electric-engine-unit", 30},
-      {"steel-plate", 20},
+    ingredients = {
+      { "processing-unit", 10 },
+      { "electric-engine-unit", 30 },
+      { "steel-plate", 20 },
     },
-    result = "vehicle-motor"
+    result = "vehicle-motor",
   },
 
   {
     type = "movement-bonus-equipment",
     name = "vehicle-motor",
-    sprite =
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-motor.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
       buffer_capacity = "1MJ",
@@ -51,51 +46,42 @@ data:extend(
     },
     energy_consumption = "200kW",
     movement_bonus = 0.3,
-    categories = {"car", "tank", "spidertron", "locomotive"}
+    categories = { "car", "tank", "spidertron", "locomotive" },
   },
 
   {
     type = "technology",
     name = "vehicle-motor-equipment",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-motor.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-h-a",
-    prerequisites =
-    {
+    prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "electric-engine",
-      "advanced-electronics-2"
+      "advanced-electronics-2",
     },
-    unit =
-    {
+    unit = {
       count = 50,
       time = 30,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-motor"
-      }
+        recipe = "vehicle-motor",
+      },
     },
   },
-}
-)
+})
 
-
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "vehicle-engine",
@@ -105,7 +91,7 @@ data:extend(
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-e[vehicle-engine]",
     stack_size = 50,
-    default_request_amount = 10
+    default_request_amount = 10,
   },
 
   {
@@ -113,35 +99,31 @@ data:extend(
     name = "vehicle-engine",
     enabled = false,
     energy_required = 10,
-    ingredients =
-    {
-      {"vehicle-motor", 1},
---      {"electric-engine-unit", 30},
-      {"processing-unit", 10},
-      {"iron-gear-wheel", 30},
-      {"steel-plate", 20},
+    ingredients = {
+      { "vehicle-motor", 1 },
+      --      {"electric-engine-unit", 30},
+      { "processing-unit", 10 },
+      { "iron-gear-wheel", 30 },
+      { "steel-plate", 20 },
     },
-    result = "vehicle-engine"
+    result = "vehicle-engine",
   },
 
   {
     type = "movement-bonus-equipment",
     name = "vehicle-engine",
-    sprite = 
-    {
+    sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-engine.png",
       width = 64,
       height = 64,
-      priority = "medium"
+      priority = "medium",
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
-      type = "full"
+      type = "full",
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
       buffer_capacity = "2MJ",
@@ -149,43 +131,36 @@ data:extend(
     },
     energy_consumption = "400kW",
     movement_bonus = 0.6,
-    categories = {"car", "tank", "spidertron", "locomotive"}
+    categories = { "car", "tank", "spidertron", "locomotive" },
   },
 
   {
     type = "technology",
     name = "vehicle-engine-equipment",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment
-    {
+    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-engine.png",
       icon_size = 128,
-      icon_mipmaps = 3
-    },
+      icon_mipmaps = 3,
+    }),
     order = "v-g-h-b",
-    prerequisites =
-    {
+    prerequisites = {
       "vehicle-motor-equipment",
     },
-    unit =
-    {
+    unit = {
       count = 100,
       time = 30,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
     },
-    effects =
-    {
+    effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-engine"
-      }
+        recipe = "vehicle-engine",
+      },
     },
   },
-}
-)
-
+})

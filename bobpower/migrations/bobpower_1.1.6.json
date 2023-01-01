@@ -1,0 +1,20 @@
+{
+  "recipe":
+  [
+    ["large-accumulator", "accumulator"],
+    ["burner-reactor-3", "burner-reactor-2"],
+    ["fluid-reactor-3", "fluid-reactor-2"]
+  ],
+  "entity":
+  [
+    ["large-accumulator", "accumulator"],
+    ["burner-reactor-3", "burner-reactor-2"],
+    ["fluid-reactor-3", "fluid-reactor-2"]
+  ],
+  "item":
+  [
+    ["large-accumulator", "accumulator"],
+    ["burner-reactor-3", "burner-reactor-2"],
+    ["fluid-reactor-3", "fluid-reactor-2"]
+  ]
+}

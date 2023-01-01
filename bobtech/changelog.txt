@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: ???
+  Changes:
+    - Added prerequisites for techs that require water when burner power phase is enabled #38
+    - Science pack productivity changes: #68
+      - Allowed for Alien science pack
+      - Disallowed for Gold science pack
+---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
   Changes:

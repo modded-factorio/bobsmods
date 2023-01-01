@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "carbon",
@@ -10,7 +9,7 @@ data:extend(
     fuel_category = "chemical",
     fuel_value = "2MJ", --"4MJ",
     fuel_emissions_multiplier = 0.9,
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -20,7 +19,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-resource",
     order = "f[resin]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -30,7 +29,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-resource",
     order = "f[rubber]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -40,8 +39,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-resource",
     order = "f[glass]",
-    stack_size = 100
-  }, 
+    stack_size = 100,
+  },
 
   {
     type = "item",
@@ -50,7 +49,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-resource",
     order = "f[silicon-wafer]",
-    stack_size = 500
+    stack_size = 500,
   },
 
   {
@@ -60,7 +59,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-resource",
     order = "c-b[lithium-cobalt-oxide]",
-    stack_size = 100
+    stack_size = 100,
   },
 
   {
@@ -70,9 +69,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-resource",
     order = "f[polishing-compound]",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -81,7 +79,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-intermediates",
     order = "f-b[gas-canister]",
-    stack_size = 10
+    stack_size = 10,
   },
 
   {
@@ -91,21 +89,19 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-intermediates",
     order = "f-c[empty-canister]",
-    stack_size = 10
+    stack_size = 10,
   },
-
 
   {
     type = "item",
     name = "void",
     icon = "__bobplates__/graphics/icons/void.png",
     icon_size = 64,
-    flags = {"hidden"},
+    flags = { "hidden" },
     subgroup = "void",
     order = "void",
-    stack_size = 100
+    stack_size = 100,
   },
-
 
   {
     type = "item",
@@ -119,8 +115,6 @@ data:extend(
     fuel_emissions_multiplier = 0.7,
     subgroup = "bob-resource",
     order = "d[enriched-fuel]",
-    stack_size = 20
+    stack_size = 20,
   },
-}
-)
-
+})

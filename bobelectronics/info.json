@@ -1,6 +1,6 @@
 {
   "name": "bobelectronics",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "factorio_version": "1.1",
   "title": "Bob's Electronics mod",
   "author": "Bobingabout",
@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.0",
-    "? bobplates >= 1.1.0"
+    "boblibrary >= 1.1.6",
+    "? bobplates >= 1.1.6"
   ],
   "description": "Requires Bob's functions library mod.\n\nThis mod changes the way you build electronics, making the process more realistic.\nFirst you have to assemble electronic components, then combine them into circuit boards.\nUnlike in the base game, each tier of circuit board does NOT require the previous tier.\nIt also adds a 4th tier of electronics used for high end machinery.\n\nAlthough it can work by itself, it is designed to function best with my entire set of mods installed."
 }

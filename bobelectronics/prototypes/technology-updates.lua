@@ -1,7 +1,10 @@
-bobmods.lib.tech.add_prerequisite("oil-processing", "electronics")
-bobmods.lib.tech.add_prerequisite("gate", "electronics")
-bobmods.lib.tech.add_prerequisite("advanced-electronics", "plastics")
+bobmods.lib.tech.add_prerequisite("logistic-science-pack", "electronics")
+bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
+bobmods.lib.tech.remove_prerequisite("circuit-network", "electronics")
+bobmods.lib.tech.remove_prerequisite("solar-energy", "electronics")
+bobmods.lib.tech.remove_prerequisite("electric-energy-distribution-1", "electronics")
 
+bobmods.lib.tech.add_prerequisite("advanced-electronics", "plastics")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 
@@ -10,13 +13,12 @@ bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 
 bobmods.lib.tech.add_recipe_unlock("plastics", "synthetic-wood")
 
-
 if data.raw.technology["chemical-processing-2"] then
   bobmods.lib.tech.add_recipe_unlock("chemical-processing-2", "ferric-chloride-solution")
-  bobmods.lib.tech.add_prerequisite ("advanced-electronics", "chemical-processing-2")
+  bobmods.lib.tech.add_prerequisite("advanced-electronics", "chemical-processing-2")
 else
   bobmods.lib.tech.add_recipe_unlock("oil-processing", "ferric-chloride-solution")
-  bobmods.lib.tech.add_prerequisite ("advanced-electronics", "oil-processing")
+  bobmods.lib.tech.add_prerequisite("advanced-electronics", "oil-processing")
 end
 
 if data.raw.recipe["silicon-wafer"] then
@@ -26,7 +28,6 @@ if data.raw.recipe["silicon-wafer"] then
     data.raw.recipe["silicon-wafer"].enabled = true
   end
 end
-
 
 if data.raw.recipe["solder"] then
   bobmods.lib.tech.add_recipe_unlock("electronics", "solder")
@@ -66,7 +67,6 @@ if data.raw.technology["gold-processing"] then
   bobmods.lib.tech.add_prerequisite("advanced-electronics-2", "gold-processing")
 end
 
-
 if data.raw.recipe["gilded-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("advanced-electronics-3", "gilded-copper-cable")
 end
@@ -78,10 +78,11 @@ if data.raw.technology["ceramics"] then
   bobmods.lib.tech.add_prerequisite("advanced-electronics-3", "ceramics")
 end
 
-
 data.raw.technology["electronics"].icon = "__bobelectronics__/graphics/icons/technology/electronics.png"
-data.raw.technology["advanced-electronics"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
-data.raw.technology["advanced-electronics-2"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
+data.raw.technology["advanced-electronics"].icon =
+  "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
+data.raw.technology["advanced-electronics-2"].icon =
+  "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
 
 data.raw.technology["electronics"].icon_size = 128
 data.raw.technology["advanced-electronics"].icon_size = 128

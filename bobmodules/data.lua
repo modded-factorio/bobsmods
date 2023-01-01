@@ -1,6 +1,14 @@
-if not bobmods then bobmods = {} end
-if not bobmods.modules then bobmods.modules = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.modules then
+  bobmods.modules = {}
+end
 
+bobmods.modules.ModulesLab = settings.startup["bobmods-modules-enable-modules-lab"].value
+if mods["IndustrialRevolution"] then
+  bobmods.modules.ModulesLab = false
+end
 
 bobmods.modules.SpeedPerLevel = settings.startup["bobmods-modules-perlevel-bonus-speed"].value
 bobmods.modules.PollutionPerLevel = settings.startup["bobmods-modules-perlevel-bonus-pollution"].value
@@ -11,7 +19,6 @@ bobmods.modules.SpeedPenaltyPerLevel = settings.startup["bobmods-modules-perleve
 bobmods.modules.PollutionPenaltyPerLevel = settings.startup["bobmods-modules-perlevel-penalty-pollution"].value
 bobmods.modules.ConsumptionPenaltyPerLevel = settings.startup["bobmods-modules-perlevel-penalty-consumption"].value
 
-
 bobmods.modules.SpeedBonus = settings.startup["bobmods-modules-start-bonus-speed"].value
 bobmods.modules.PollutionBonus = settings.startup["bobmods-modules-start-bonus-pollution"].value
 bobmods.modules.ConsumptionBonus = settings.startup["bobmods-modules-start-bonus-consumption"].value
@@ -20,8 +27,6 @@ bobmods.modules.PollutionCreateBonus = settings.startup["bobmods-modules-start-b
 bobmods.modules.SpeedPenalty = settings.startup["bobmods-modules-start-penalty-speed"].value
 bobmods.modules.PollutionPenalty = settings.startup["bobmods-modules-start-penalty-pollution"].value
 bobmods.modules.ConsumptionPenalty = settings.startup["bobmods-modules-start-penalty-consumption"].value
-
-
 
 require("prototypes.category")
 require("prototypes.lab")
@@ -38,8 +43,6 @@ require("prototypes.recipe.electronics")
 require("prototypes.technology.module")
 require("prototypes.technology.module-merged")
 
-
-
 if settings.startup["bobmods-modules-enableproductivitylimitation"].value == true then
   for i, module in pairs(data.raw.module) do
     if module.effect.productivity then
@@ -50,5 +53,3 @@ if settings.startup["bobmods-modules-enableproductivitylimitation"].value == tru
     end
   end
 end
-
-

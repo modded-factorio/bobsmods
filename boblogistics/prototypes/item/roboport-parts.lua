@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "roboport-antenna-1",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
     order = "b[roboport-antenna-1]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -16,7 +15,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
     order = "b[roboport-antenna-2]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -25,7 +24,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
     order = "b[roboport-antenna-3]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -34,14 +33,11 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
     order = "b[roboport-antenna-4]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "roboport-chargepad-1",
@@ -49,7 +45,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
     order = "b[roboport-chargepad-1]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -58,7 +54,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
     order = "b[roboport-chargepad-2]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -67,7 +63,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
     order = "b[roboport-chargepad-3]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -76,14 +72,11 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
     order = "b[roboport-chargepad-4]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
+})
 
-
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "roboport-door-1",
@@ -91,7 +84,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
     order = "b[roboport-door-1]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -100,7 +93,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
     order = "b[roboport-door-2]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -109,7 +102,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
     order = "b[roboport-door-3]",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -118,9 +111,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
     order = "b[roboport-door-4]",
-    stack_size = 100
+    stack_size = 100,
   },
-}
-)
-
-
+})

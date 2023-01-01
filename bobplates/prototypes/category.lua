@@ -1,46 +1,44 @@
-data:extend(
-{
+data:extend({
   {
     type = "recipe-category",
-    name = "electrolysis"
+    name = "electrolysis",
   },
   {
     type = "recipe-category",
-    name = "chemical-furnace"
+    name = "chemical-furnace",
   },
   {
     type = "recipe-category",
-    name = "mixing-furnace"
+    name = "mixing-furnace",
   },
   {
     type = "recipe-category",
-    name = "air-pump"
+    name = "air-pump",
   },
   {
     type = "recipe-category",
-    name = "water-pump"
+    name = "water-pump",
   },
   {
     type = "recipe-category",
-    name = "barrelling"
+    name = "barrelling",
   },
   {
     type = "recipe-category",
-    name = "void"
+    name = "void",
   },
   {
     type = "recipe-category",
-    name = "void-fluid"
+    name = "void-fluid",
   },
   {
     type = "recipe-category",
-    name = "crafting-machine"
+    name = "crafting-machine",
   },
   {
     type = "recipe-category",
-    name = "distillery"
+    name = "distillery",
   },
-
 
   {
     type = "item-group",
@@ -78,13 +76,13 @@ data:extend(
     type = "item-subgroup",
     name = "pipe",
     group = "bob-logistics",
-    order = "d-a-1"
+    order = "d-a-1",
   },
   {
     type = "item-subgroup",
     name = "pipe-to-ground",
     group = "bob-logistics",
-    order = "d-a-2"
+    order = "d-a-2",
   },
   {
     type = "item-subgroup",
@@ -105,7 +103,6 @@ data:extend(
     order = "f-b",
   },
 
-
   {
     type = "item-subgroup",
     name = "bob-tool",
@@ -116,25 +113,25 @@ data:extend(
     type = "item-subgroup",
     name = "bob-energy-boiler",
     group = "production",
-    order = "b-a"
+    order = "b-a",
   },
   {
     type = "item-subgroup",
     name = "bob-energy-steam-engine",
     group = "production",
-    order = "b-b"
+    order = "b-b",
   },
   {
     type = "item-subgroup",
     name = "bob-energy-solar-panel",
     group = "production",
-    order = "b-c"
+    order = "b-c",
   },
   {
     type = "item-subgroup",
     name = "bob-energy-accumulator",
     group = "production",
-    order = "b-d"
+    order = "b-d",
   },
   {
     type = "item-subgroup",
@@ -197,7 +194,6 @@ data:extend(
     order = "e-e",
   },
 
-
   {
     type = "item-group",
     name = "bob-fluid-products",
@@ -210,55 +206,55 @@ data:extend(
     type = "item-subgroup",
     name = "bob-fluid",
     group = "bob-fluid-products",
-    order = "a-a"
+    order = "a-a",
   },
   {
     type = "item-subgroup",
     name = "bob-fluid-electrolysis",
     group = "bob-fluid-products",
-    order = "a-b"
+    order = "a-b",
   },
   {
     type = "item-subgroup",
     name = "bob-fluid-pump",
     group = "bob-fluid-products",
-    order = "a-c"
+    order = "a-c",
   },
   {
     type = "item-subgroup",
     name = "bob-gas-bottle",
     group = "bob-fluid-products",
-    order = "a-d"
+    order = "a-d",
   },
   {
     type = "item-subgroup",
     name = "bob-empty-gas-bottle",
     group = "bob-fluid-products",
-    order = "a-d2"
+    order = "a-d2",
   },
   {
     type = "item-subgroup",
     name = "bob-barrel",
     group = "bob-fluid-products",
-    order = "a-e"
+    order = "a-e",
   },
   {
     type = "item-subgroup",
     name = "bob-empty-barrel",
     group = "bob-fluid-products",
-    order = "a-e2"
+    order = "a-e2",
   },
   {
     type = "item-subgroup",
     name = "bob-canister",
     group = "bob-fluid-products",
-    order = "a-f"
+    order = "a-f",
   },
   {
     type = "item-subgroup",
     name = "bob-empty-canister",
     group = "bob-fluid-products",
-    order = "a-f2"
+    order = "a-f2",
   },
 
   {
@@ -273,55 +269,55 @@ data:extend(
     type = "item-subgroup",
     name = "bob-ores",
     group = "bob-resource-products",
-    order = "b-a"
+    order = "b-a",
   },
   {
     type = "item-subgroup",
     name = "bob-resource",
     group = "bob-resource-products",
-    order = "b-b"
+    order = "b-b",
   },
   {
     type = "item-subgroup",
     name = "bob-resource-chemical",
     group = "bob-resource-products",
-    order = "b-b-a"
+    order = "b-b-a",
   },
   {
     type = "item-subgroup",
     name = "bob-material",
     group = "bob-resource-products",
-    order = "c-a"
+    order = "c-a",
   },
   {
     type = "item-subgroup",
     name = "bob-material-smelting",
     group = "bob-resource-products",
-    order = "c-a-a"
+    order = "c-a-a",
   },
   {
     type = "item-subgroup",
     name = "bob-material-chemical",
     group = "bob-resource-products",
-    order = "c-a-b"
+    order = "c-a-b",
   },
   {
     type = "item-subgroup",
     name = "bob-material-electrolysis",
     group = "bob-resource-products",
-    order = "c-a-c"
+    order = "c-a-c",
   },
   {
     type = "item-subgroup",
     name = "bob-alloy",
     group = "bob-resource-products",
-    order = "c-b"
+    order = "c-b",
   },
   {
     type = "item-subgroup",
     name = "bob-alien-resource",
     group = "bob-resource-products",
-    order = "c-c"
+    order = "c-c",
   },
 
   {
@@ -336,45 +332,56 @@ data:extend(
     type = "item-subgroup",
     name = "bob-intermediates",
     group = "bob-intermediate-products",
-    order = "e-1"
+    order = "e-1",
   },
   {
     type = "item-subgroup",
     name = "bob-electronic-components",
     group = "bob-intermediate-products",
-    order = "e-a1"
+    order = "e-a1",
   },
   {
     type = "item-subgroup",
     name = "bob-boards",
     group = "bob-intermediate-products",
-    order = "e-a2"
+    order = "e-a2",
   },
   {
     type = "item-subgroup",
     name = "bob-electronic-boards",
     group = "bob-intermediate-products",
-    order = "e-a3"
+    order = "e-a3",
   },
   {
     type = "item-subgroup",
     name = "bob-gears",
     group = "bob-intermediate-products",
-    order = "e-b"
+    order = "e-b",
   },
   {
     type = "item-subgroup",
     name = "bob-bearings",
     group = "bob-intermediate-products",
-    order = "e-c"
+    order = "e-c",
   },
   {
     type = "item-subgroup",
     name = "bob-roboport-parts",
     group = "bob-intermediate-products",
-    order = "e-d"
+    order = "e-d",
   },
-
+  {
+    type = "item-subgroup",
+    name = "bob-nuclear",
+    group = "intermediate-products",
+    order = "f-a",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-fuel-cells",
+    group = "intermediate-products",
+    order = "f-b",
+  },
 
   {
     type = "item-group",
@@ -389,11 +396,9 @@ data:extend(
     group = "void",
     order = "a-a",
   },
-}
-)
+})
 
-data:extend(
-{
+data:extend({
   {
     type = "item-group",
     name = "bob-gems",
@@ -405,33 +410,32 @@ data:extend(
     type = "item-subgroup",
     name = "bob-gems-ore",
     group = "bob-gems",
-    order = "2"
+    order = "2",
   },
   {
     type = "item-subgroup",
     name = "bob-gems-raw",
     group = "bob-gems",
-    order = "4"
+    order = "4",
   },
   {
     type = "item-subgroup",
     name = "bob-gems-cut",
     group = "bob-gems",
-    order = "5"
+    order = "5",
   },
   {
     type = "item-subgroup",
     name = "bob-gems-polished",
     group = "dytechgem",
     group = "bob-gems",
-    order = "6"
+    order = "6",
   },
-}
-)
+})
 
 if data.raw["item-group"]["dytechgem"] then
   data.raw["item-subgroup"]["bob-gems-ore"].group = "dytechgem"
   data.raw["item-subgroup"]["bob-gems-raw"].group = "dytechgem"
   data.raw["item-subgroup"]["bob-gems-cut"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-polished"].group= "dytechgem"
+  data.raw["item-subgroup"]["bob-gems-polished"].group = "dytechgem"
 end

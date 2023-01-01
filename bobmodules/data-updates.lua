@@ -2,7 +2,7 @@ require("prototypes.recipe.beacon-updates")
 require("prototypes.recipe.electronics-updates")
 require("prototypes.recipe.module-updates")
 require("prototypes.recipe.module-merged-updates")
-
+require("prototypes.technology.module-updates")
 
 if settings.startup["bobmods-modules-transmitproductivity"].value == true then
   for i, beacon in pairs(data.raw.beacon) do
@@ -17,14 +17,12 @@ bobmods.lib.tech.remove_prerequisite("effect-transmission", "production-science-
 bobmods.lib.tech.add_prerequisite("effect-transmission", "modules")
 bobmods.lib.tech.add_prerequisite("effect-transmission", "chemical-science-pack")
 
-
 bobmods.lib.tech.remove_prerequisite("speed-module-2", "advanced-electronics-2")
 bobmods.lib.tech.remove_prerequisite("productivity-module-2", "advanced-electronics-2")
 bobmods.lib.tech.remove_prerequisite("effectivity-module-2", "advanced-electronics-2")
 bobmods.lib.tech.remove_prerequisite("speed-module-3", "production-science-pack")
 bobmods.lib.tech.remove_prerequisite("productivity-module-3", "production-science-pack")
 bobmods.lib.tech.remove_prerequisite("effectivity-module-3", "production-science-pack")
-
 
 if data.raw["recipe-category"]["electronics-with-fluid"] then
   data.raw.recipe["module-circuit-board"].category = "electronics-with-fluid"
@@ -75,5 +73,3 @@ bobmods.lib.module.add_productivity_limitation("effectivity-processor-3")
 bobmods.lib.module.add_productivity_limitation("productivity-processor-3")
 bobmods.lib.module.add_productivity_limitation("pollution-clean-processor-3")
 bobmods.lib.module.add_productivity_limitation("pollution-create-processor-3")
-
-

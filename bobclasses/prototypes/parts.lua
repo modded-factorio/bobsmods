@@ -1,5 +1,4 @@
-data:extend
-{
+data:extend({
   {
     type = "item",
     name = "player-brain",
@@ -7,7 +6,7 @@ data:extend
     icon_size = 32,
     subgroup = "body-parts",
     order = "a[player]-brain",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -16,7 +15,7 @@ data:extend
     icon_size = 32,
     subgroup = "body-parts",
     order = "a[player]-head",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -25,7 +24,7 @@ data:extend
     icon_size = 45,
     subgroup = "body-parts",
     order = "a[player]-boots",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -34,7 +33,7 @@ data:extend
     icon_size = 45,
     subgroup = "body-parts",
     order = "a[player]-gloves",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -43,7 +42,7 @@ data:extend
     icon_size = 128,
     subgroup = "body-parts",
     order = "a[player]-power-core",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -52,7 +51,7 @@ data:extend
     icon_size = 128,
     subgroup = "body-parts",
     order = "a[player]-power-core",
-    stack_size = 20
+    stack_size = 20,
   },
 
   {
@@ -60,9 +59,8 @@ data:extend
     name = "player-brain",
     energy_required = 3.5,
     enabled = false,
-    ingredients =
-    {
-      {"iron-plate", 5},
+    ingredients = {
+      { "iron-plate", 5 },
     },
     result = "player-brain",
   },
@@ -71,72 +69,65 @@ data:extend
     name = "player-head",
     energy_required = 3.5,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
-      {"player-brain", 1},
+    ingredients = {
+      { "steel-plate", 5 },
+      { "player-brain", 1 },
     },
-    result = "player-head"
+    result = "player-head",
   },
   {
     type = "recipe",
     name = "player-boots",
     energy_required = 3.5,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
-      {"plastic-bar", 15},
+    ingredients = {
+      { "steel-plate", 5 },
+      { "plastic-bar", 15 },
     },
-    result = "player-boots"
+    result = "player-boots",
   },
   {
     type = "recipe",
     name = "player-gloves",
     energy_required = 3.5,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
-      {"iron-gear-wheel", 15},
+    ingredients = {
+      { "steel-plate", 5 },
+      { "iron-gear-wheel", 15 },
     },
-    result = "player-gloves"
+    result = "player-gloves",
   },
   {
     type = "recipe",
     name = "player-power-core",
     energy_required = 3.5,
     enabled = false,
-    ingredients =
-    {
-      {"battery", 15},
-      {"processing-unit", 50},
+    ingredients = {
+      { "battery", 15 },
+      { "processing-unit", 50 },
     },
-    result = "player-power-core"
+    result = "player-power-core",
   },
   {
     type = "recipe",
     name = "player-frame",
     energy_required = 1,
     enabled = false,
-    ingredients =
-    {
-      {"player-head", 1},
-      {"player-boots", 1},
-      {"player-gloves", 1},
-      {"player-power-core", 1},
-      {"electric-engine-unit", 8},
-      {"steel-chest", 1},
-      {"steel-plate", 5},
-      {"advanced-circuit", 15},
+    ingredients = {
+      { "player-head", 1 },
+      { "player-boots", 1 },
+      { "player-gloves", 1 },
+      { "player-power-core", 1 },
+      { "electric-engine-unit", 8 },
+      { "steel-chest", 1 },
+      { "steel-plate", 5 },
+      { "advanced-circuit", 15 },
     },
-    result = "player-frame"
+    result = "player-frame",
   },
-}
+})
 
-
-data:extend
-{
+data:extend({
   {
     type = "item",
     name = "player-brain-2",
@@ -144,7 +135,7 @@ data:extend
     icon_size = 32,
     subgroup = "body-parts",
     order = "a[player]-brain",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -153,7 +144,7 @@ data:extend
     icon_size = 32,
     subgroup = "body-parts",
     order = "a[player]-head",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -162,7 +153,7 @@ data:extend
     icon_size = 45,
     subgroup = "body-parts",
     order = "a[player]-boots",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -171,7 +162,7 @@ data:extend
     icon_size = 45,
     subgroup = "body-parts",
     order = "a[player]-gloves",
-    stack_size = 20
+    stack_size = 20,
   },
   {
     type = "item",
@@ -180,7 +171,7 @@ data:extend
     icon_size = 128,
     subgroup = "body-parts",
     order = "a[player]-power-core",
-    stack_size = 20
+    stack_size = 20,
   },
 
   {
@@ -188,9 +179,8 @@ data:extend
     name = "player-brain-2",
     energy_required = 4,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
+    ingredients = {
+      { "steel-plate", 5 },
     },
     result = "player-brain-2",
   },
@@ -199,54 +189,49 @@ data:extend
     name = "player-head-2",
     energy_required = 4,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
-      {"player-brain-2", 1},
+    ingredients = {
+      { "steel-plate", 5 },
+      { "player-brain-2", 1 },
     },
-    result = "player-head-2"
+    result = "player-head-2",
   },
   {
     type = "recipe",
     name = "player-boots-2",
     energy_required = 4,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
-      {"plastic-bar", 15},
+    ingredients = {
+      { "steel-plate", 5 },
+      { "plastic-bar", 15 },
     },
-    result = "player-boots-2"
+    result = "player-boots-2",
   },
   {
     type = "recipe",
     name = "player-gloves-2",
     energy_required = 4,
     enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 5},
-      {"iron-gear-wheel", 15},
+    ingredients = {
+      { "steel-plate", 5 },
+      { "iron-gear-wheel", 15 },
     },
-    result = "player-gloves-2"
+    result = "player-gloves-2",
   },
   {
     type = "recipe",
     name = "player-frame-2",
     energy_required = 1,
     enabled = false,
-    ingredients =
-    {
-      {"player-head-2", 1},
-      {"player-boots-2", 1},
-      {"player-gloves-2", 1},
-      {"player-power-core", 1},
-      {"electric-engine-unit", 12},
-      {"steel-plate", 5},
-      {"steel-chest", 1},
-      {"processing-unit", 15},
+    ingredients = {
+      { "player-head-2", 1 },
+      { "player-boots-2", 1 },
+      { "player-gloves-2", 1 },
+      { "player-power-core", 1 },
+      { "electric-engine-unit", 12 },
+      { "steel-plate", 5 },
+      { "steel-chest", 1 },
+      { "processing-unit", 15 },
     },
-    result = "player-frame-2"
+    result = "player-frame-2",
   },
-}
-
+})

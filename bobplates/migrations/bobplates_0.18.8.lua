@@ -1,6 +1,5 @@
 game.reload_script()
 
-
 for index, force in pairs(game.forces) do
   force.reset_recipes()
   force.reset_technologies()
@@ -9,6 +8,3 @@ for index, force in pairs(game.forces) do
     force.technologies["steel-chemical-furnace"].researched = true --automatically unlock it
   end
 end
-
-
-

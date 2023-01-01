@@ -1,14 +1,7 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-plates-cheapersteel",
-    setting_type = "startup",
-    default_value = true,
-  },
-  {
-    type = "bool-setting",
-    name = "bobmods-plates-newsteel",
     setting_type = "startup",
     default_value = true,
   },
@@ -16,13 +9,6 @@ data:extend(
   {
     type = "bool-setting",
     name = "bobmods-plates-batteryupdate",
-    setting_type = "startup",
-    default_value = true,
-  },
-
-  {
-    type = "bool-setting",
-    name = "bobmods-plates-oreoverride",
     setting_type = "startup",
     default_value = true,
   },
@@ -88,6 +74,4 @@ data:extend(
     setting_type = "startup",
     default_value = false,
   },
-}
-)
-
+})

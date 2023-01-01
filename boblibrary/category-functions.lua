@@ -1,5 +1,6 @@
-if not bobmods.lib.machine then bobmods.lib.machine = {} end
-
+if not bobmods.lib.machine then
+  bobmods.lib.machine = {}
+end
 
 function bobmods.lib.machine.has_category(machine, category_in)
   local hasit = false
@@ -16,7 +17,7 @@ end
 function bobmods.lib.machine.add_category(machine, category)
   if machine and data.raw["recipe-category"][category] then
     if not machine.crafting_categories then
-      machine.crafting_categories = {category}
+      machine.crafting_categories = { category }
     elseif not bobmods.lib.machine.has_category(machine, category) then
       table.insert(machine.crafting_categories, category)
     end
@@ -57,7 +58,6 @@ function bobmods.lib.machine.type_if_add_category(machine_type, category, catego
   end
 end
 
-
 function bobmods.lib.machine.has_resource_category(machine, category_in)
   local hasit = false
   if machine and machine.resource_categories then
@@ -73,7 +73,7 @@ end
 function bobmods.lib.machine.add_resource_category(machine, category)
   if machine and data.raw["resource-category"][category] then
     if not machine.resource_categories then
-      machine.resource_categories = {category}
+      machine.resource_categories = { category }
     elseif not bobmods.lib.machine.has_resource_category(machine, category) then
       table.insert(machine.resource_categories, category)
     end
@@ -116,4 +116,13 @@ function bobmods.lib.machine.type_if_add_resource_category(machine_type, categor
   end
 end
 
+function bobmods.lib.machine.copy_categories_from(machine_type, from_name, to_name)
+  local from_machine = data.raw[machine_type][from_name]
+  local to_machine = data.raw[machine_type][to_name]
 
+  if from_machine and to_machine then
+    for _, category in pairs(from_machine.crafting_categories) do
+      bobmods.lib.machine.add_category(to_machine, category)
+    end
+  end
+end

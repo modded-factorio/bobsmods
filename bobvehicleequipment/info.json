@@ -1,6 +1,6 @@
 {
   "name": "bobvehicleequipment",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "factorio_version": "1.1",
   "title": "Bob's Vehicle Equipment mod",
   "author": "Bobingabout",
@@ -8,9 +8,9 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.0",
-    "? boblogistics >= 1.1.0",
-    "? bobwarfare >= 1.1.0"
+    "boblibrary >= 1.1.6",
+    "? boblogistics >= 1.1.6",
+    "? bobwarfare >= 1.1.6"
   ],
   "description": "Requires Bob's functions library mod.\n\nA range of equipment based on all the modular armor equipment available in base mod.\nUp to 6 tiers on most items.\nEquipment can be used on the Tank, Locomotive, Cargo and Fluid wagons, and the Artillery wagon.\nIf Bob's Logistics mod is installed, the equipment can be used on all train vehicles added by it.\nIf Bob's Warfare mod is installed, the equipment can be used on all tanks and Artillery wagons added by it.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
 }

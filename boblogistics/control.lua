@@ -1,9 +1,17 @@
 local mod_gui = require("mod-gui")
 
-if not bobmods then bobmods = {} end
-if not bobmods.logistics then bobmods.logistics = {} end
-if not bobmods.logistics.inserters then bobmods.logistics.inserters = {} end
-if not bobmods.math then bobmods.math = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.logistics then
+  bobmods.logistics = {}
+end
+if not bobmods.logistics.inserters then
+  bobmods.logistics.inserters = {}
+end
+if not bobmods.math then
+  bobmods.math = {}
+end
 
 function bobmods.math.mod(number, div)
   if number < 0 then
@@ -22,7 +30,7 @@ function bobmods.math.floor(number)
   else
     num = number + 0.1
   end
-  return math.floor (num - bobmods.math.mod(num, 1))
+  return math.floor(num - bobmods.math.mod(num, 1))
 end
 
 function bobmods.math.round(number)
@@ -32,7 +40,7 @@ function bobmods.math.round(number)
   else
     num = number + 0.5
   end
-  return math.floor (num - bobmods.math.mod(num, 1))
+  return math.floor(num - bobmods.math.mod(num, 1))
 end
 
 function bobmods.math.offset(number)
@@ -52,7 +60,6 @@ function bobmods.math.offset(number)
   end
 end
 
-
 bobmods.logistics.long_technology = "long-inserters-1"
 changed_position_event = script.generate_event_name()
 
@@ -60,64 +67,68 @@ bobmods.logistics.offset = 0.2
 
 bobmods.logistics.inserters.range1 = {
   pickup = {
-    {x = 0, y = -1},
-    {x = 1, y = 0},
-    {x = 0, y = 1},
-    {x = -1, y = 0}
+    { x = 0, y = -1 },
+    { x = 1, y = 0 },
+    { x = 0, y = 1 },
+    { x = -1, y = 0 },
   },
   drop = {
-    {x = 0, y = 1},
-    {x = -1, y = 0},
-    {x = 0, y = -1},
-    {x = 1, y = 0}
-  }
+    { x = 0, y = 1 },
+    { x = -1, y = 0 },
+    { x = 0, y = -1 },
+    { x = 1, y = 0 },
+  },
 }
 
 bobmods.logistics.inserters.range2 = {
   pickup = {
-    {x = 0, y = -2},
-    {x = 2, y = 0},
-    {x = 0, y = 2},
-    {x = -2, y = 0}
+    { x = 0, y = -2 },
+    { x = 2, y = 0 },
+    { x = 0, y = 2 },
+    { x = -2, y = 0 },
   },
   drop = {
-    {x = 0, y = 2},
-    {x = -2, y = 0},
-    {x = 0, y = -2},
-    {x = 2, y = 0}
+    { x = 0, y = 2 },
+    { x = -2, y = 0 },
+    { x = 0, y = -2 },
+    { x = 2, y = 0 },
   },
 }
-
 
 bobmods.logistics.inserters.offset_positions = {
   near = {
-    {x = 0, y = -bobmods.logistics.offset},
-    {x = bobmods.logistics.offset, y = 0},
-    {x = 0, y = bobmods.logistics.offset},
-    {x = -bobmods.logistics.offset, y = 0}
+    { x = 0, y = -bobmods.logistics.offset },
+    { x = bobmods.logistics.offset, y = 0 },
+    { x = 0, y = bobmods.logistics.offset },
+    { x = -bobmods.logistics.offset, y = 0 },
   },
   far = {
-    {x = 0, y = bobmods.logistics.offset},
-    {x = -bobmods.logistics.offset, y = 0},
-    {x = 0, y = -bobmods.logistics.offset},
-    {x = bobmods.logistics.offset, y = 0}
-  }
+    { x = 0, y = bobmods.logistics.offset },
+    { x = -bobmods.logistics.offset, y = 0 },
+    { x = 0, y = -bobmods.logistics.offset },
+    { x = bobmods.logistics.offset, y = 0 },
+  },
 }
 
-
-
-
 function bobmods.logistics.normalise_tile_offset(tile_offset)
-  local new_offset = {x = 0, y = 0}
-  if tile_offset.x > 0 then new_offset.x = bobmods.logistics.offset end
-  if tile_offset.x < 0 then new_offset.x = -bobmods.logistics.offset end
-  if tile_offset.y > 0 then new_offset.y = bobmods.logistics.offset end
-  if tile_offset.y < 0 then new_offset.y = -bobmods.logistics.offset end
+  local new_offset = { x = 0, y = 0 }
+  if tile_offset.x > 0 then
+    new_offset.x = bobmods.logistics.offset
+  end
+  if tile_offset.x < 0 then
+    new_offset.x = -bobmods.logistics.offset
+  end
+  if tile_offset.y > 0 then
+    new_offset.y = bobmods.logistics.offset
+  end
+  if tile_offset.y < 0 then
+    new_offset.y = -bobmods.logistics.offset
+  end
   return new_offset
 end
 
 function bobmods.logistics.set_range(position_in, range)
-  local position = {x = 0, y = 0}
+  local position = { x = 0, y = 0 }
   if position_in.x > 0.1 then
     position.x = range
   elseif position_in.x < -0.1 then
@@ -135,21 +146,36 @@ function bobmods.logistics.set_range(position_in, range)
   return position
 end
 
-
 function bobmods.logistics.create_global_table_basic()
-  if not global then global = {} end
-  if not global.bobmods then global.bobmods = {} end
-  if not global.bobmods.logistics then global.bobmods.logistics = {} end
-  if not global.bobmods.logistics.blacklist then global.bobmods.logistics.blacklist = {} end
+  if not global then
+    global = {}
+  end
+  if not global.bobmods then
+    global.bobmods = {}
+  end
+  if not global.bobmods.logistics then
+    global.bobmods.logistics = {}
+  end
+  if not global.bobmods.logistics.blacklist then
+    global.bobmods.logistics.blacklist = {}
+  end
 end
 
 function bobmods.logistics.create_global_table(player_index)
   bobmods.logistics.create_global_table_basic()
 
-  if not global.bobmods.logistics[player_index] then global.bobmods.logistics[player_index] = {} end
-  if not global.bobmods.logistics[player_index].enabled then global.bobmods.logistics[player_index].enabled = false end
-  if not global.bobmods.logistics[player_index].long_in then global.bobmods.logistics[player_index].long_in = false end
-  if not global.bobmods.logistics[player_index].show then global.bobmods.logistics[player_index].show = false end
+  if not global.bobmods.logistics[player_index] then
+    global.bobmods.logistics[player_index] = {}
+  end
+  if not global.bobmods.logistics[player_index].enabled then
+    global.bobmods.logistics[player_index].enabled = false
+  end
+  if not global.bobmods.logistics[player_index].long_in then
+    global.bobmods.logistics[player_index].long_in = false
+  end
+  if not global.bobmods.logistics[player_index].show then
+    global.bobmods.logistics[player_index].show = false
+  end
 end
 
 function bobmods.logistics.player_setup(player_index)
@@ -162,7 +188,6 @@ function tech_unlocked(force, tech)
     return force.technologies[tech].researched
   end
 end
-
 
 function bobmods.logistics.create_gui_button(player_index)
   if not game.active_mods["bobinserters"] then
@@ -184,11 +209,16 @@ function bobmods.logistics.create_gui_button(player_index)
 
     local long_unlocked = tech_unlocked(player.force, bobmods.logistics.long_technology)
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and long_unlocked then
-      mod_gui.get_button_flow(player).add{type = "sprite-button", name = "bob_logistics_inserter_button", tooltip = {"gui.bob-inserter-open-gui"}, sprite = "item/fast-inserter", style = "mod_gui_button"}
+      mod_gui.get_button_flow(player).add({
+        type = "sprite-button",
+        name = "bob_logistics_inserter_button",
+        tooltip = { "gui.bob-inserter-open-gui" },
+        sprite = "item/fast-inserter",
+        style = "mod_gui_button",
+      })
     end
   end
 end
-
 
 function bobmods.logistics.create_gui(player_index)
   local player = game.players[player_index]
@@ -198,27 +228,36 @@ function bobmods.logistics.create_gui(player_index)
     player.gui.left.bob_logistics_inserter_gui.destroy()
   end
 
-  local gui = player.gui.left.add({type = "frame", name = "bob_logistics_inserter_gui", direction = "vertical"})
+  local gui = player.gui.left.add({ type = "frame", name = "bob_logistics_inserter_gui", direction = "vertical" })
   gui.style.bottom_padding = 8
   gui.style.vertically_stretchable = false
   gui.style.horizontally_stretchable = false
-  
-  gui.add({type = "table", name = "table", column_count = 1})
+
+  gui.add({ type = "table", name = "table", column_count = 1 })
 
   if long_unlocked then
-    gui.table.add({type = "checkbox", name = "bob_logistics_inserter_enabled", state = global.bobmods.logistics[player_index].enabled, caption = {"gui.bob-logistics-enabled"}})
+    gui.table.add({
+      type = "checkbox",
+      name = "bob_logistics_inserter_enabled",
+      state = global.bobmods.logistics[player_index].enabled,
+      caption = { "gui.bob-logistics-enabled" },
+    })
   end
   if global.bobmods.logistics[player_index].enabled then
     if long_unlocked then
-      gui.table.add({type = "checkbox", name = "bob_logistics_inserter_long_in", state = global.bobmods.logistics[player_index].long_in, caption = {"gui.bob-logistics-long"}})
+      gui.table.add({
+        type = "checkbox",
+        name = "bob_logistics_inserter_long_in",
+        state = global.bobmods.logistics[player_index].long_in,
+        caption = { "gui.bob-logistics-long" },
+      })
     end
   end
 end
 
-
 function bobmods.logistics.show_gui_options(player_index)
   local player = game.players[player_index]
-  
+
   if not global.bobmods then
     bobmods.logistics.player_setup(player_index)
   end
@@ -232,8 +271,6 @@ function bobmods.logistics.show_gui_options(player_index)
   end
 end
 
-
-
 function bobmods.logistics.set_positions(entity, player_index)
   local enabled = global.bobmods.logistics[player_index].enabled
   if enabled then
@@ -244,10 +281,15 @@ function bobmods.logistics.set_positions(entity, player_index)
 
     local long_in = global.bobmods.logistics[player_index].long_in
 
-    local pickup_position = {x = entity.pickup_position.x - entity.position.x, y = entity.pickup_position.y - entity.position.y}
-    local drop_full_position = {x = entity.drop_position.x - entity.position.x, y = entity.drop_position.y - entity.position.y}
-    local drop_position = {x = bobmods.math.round(drop_full_position.x), y = bobmods.math.round(drop_full_position.y)}
-    local drop_offset = bobmods.logistics.normalise_tile_offset({x = bobmods.math.offset(drop_full_position.x), y = bobmods.math.offset(drop_full_position.y)})
+    local pickup_position =
+      { x = entity.pickup_position.x - entity.position.x, y = entity.pickup_position.y - entity.position.y }
+    local drop_full_position =
+      { x = entity.drop_position.x - entity.position.x, y = entity.drop_position.y - entity.position.y }
+    local drop_position = { x = bobmods.math.round(drop_full_position.x), y = bobmods.math.round(drop_full_position.y) }
+    local drop_offset = bobmods.logistics.normalise_tile_offset({
+      x = bobmods.math.offset(drop_full_position.x),
+      y = bobmods.math.offset(drop_full_position.y),
+    })
 
     if long_unlocked then
       if long_in then
@@ -259,25 +301,35 @@ function bobmods.logistics.set_positions(entity, player_index)
       end
     end
 
-    local original_positions = {drop_position = entity.drop_position, pickup_position = entity.pickup_position}
+    local original_positions = { drop_position = entity.drop_position, pickup_position = entity.pickup_position }
     local new_positions = {
-      drop_position = {x = entity.position.x + drop_position.x + drop_offset.x, y = entity.position.y + drop_position.y + drop_offset.y},
-      pickup_position = {x = entity.position.x + pickup_position.x, y = entity.position.y + pickup_position.y}
+      drop_position = {
+        x = entity.position.x + drop_position.x + drop_offset.x,
+        y = entity.position.y + drop_position.y + drop_offset.y,
+      },
+      pickup_position = { x = entity.position.x + pickup_position.x, y = entity.position.y + pickup_position.y },
     }
     entity.drop_position = new_positions.drop_position
     entity.pickup_position = new_positions.pickup_position
-    script.raise_event(changed_position_event, {entity = entity, new_positions = new_positions, original_positions = original_positions}) -- Raise positions changed event.
+    script.raise_event(
+      changed_position_event,
+      { entity = entity, new_positions = new_positions, original_positions = original_positions }
+    ) -- Raise positions changed event.
   end
 end
-
 
 function bobmods.logistics.long_range(entity, player)
   local long_unlocked = tech_unlocked(player.force, bobmods.logistics.long_technology)
   if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and long_unlocked then
-    local pickup_position = {x = entity.pickup_position.x - entity.position.x, y = entity.pickup_position.y - entity.position.y}
-    local drop_full_position = {x = entity.drop_position.x - entity.position.x, y = entity.drop_position.y - entity.position.y}
-    local drop_position = {x = bobmods.math.round(drop_full_position.x), y = bobmods.math.round(drop_full_position.y)}
-    local drop_offset = bobmods.logistics.normalise_tile_offset({x = bobmods.math.offset(drop_full_position.x), y = bobmods.math.offset(drop_full_position.y)})
+    local pickup_position =
+      { x = entity.pickup_position.x - entity.position.x, y = entity.pickup_position.y - entity.position.y }
+    local drop_full_position =
+      { x = entity.drop_position.x - entity.position.x, y = entity.drop_position.y - entity.position.y }
+    local drop_position = { x = bobmods.math.round(drop_full_position.x), y = bobmods.math.round(drop_full_position.y) }
+    local drop_offset = bobmods.logistics.normalise_tile_offset({
+      x = bobmods.math.offset(drop_full_position.x),
+      y = bobmods.math.offset(drop_full_position.y),
+    })
 
     if pickup_position.x > 1.1 or pickup_position.x < -1.1 or pickup_position.y > 1.1 or pickup_position.y < -1.1 then
       pickup_position = bobmods.logistics.set_range(pickup_position, 1)
@@ -286,20 +338,24 @@ function bobmods.logistics.long_range(entity, player)
       pickup_position = bobmods.logistics.set_range(pickup_position, 2)
       drop_position = bobmods.logistics.set_range(drop_position, 2)
     end
-    
-    local original_positions = {drop_position = entity.drop_position, pickup_position = entity.pickup_position}
+
+    local original_positions = { drop_position = entity.drop_position, pickup_position = entity.pickup_position }
     local new_positions = {
-      drop_position = {x = entity.position.x + drop_position.x + drop_offset.x, y = entity.position.y + drop_position.y + drop_offset.y},
-      pickup_position = {x = entity.position.x + pickup_position.x, y = entity.position.y + pickup_position.y}
+      drop_position = {
+        x = entity.position.x + drop_position.x + drop_offset.x,
+        y = entity.position.y + drop_position.y + drop_offset.y,
+      },
+      pickup_position = { x = entity.position.x + pickup_position.x, y = entity.position.y + pickup_position.y },
     }
     entity.drop_position = new_positions.drop_position
     entity.pickup_position = new_positions.pickup_position
     entity.direction = entity.direction -- set direction to force update
-    script.raise_event(changed_position_event, {entity = entity, new_positions = new_positions, original_positions = original_positions}) -- Raise positions changed event.
+    script.raise_event(
+      changed_position_event,
+      { entity = entity, new_positions = new_positions, original_positions = original_positions }
+    ) -- Raise positions changed event.
   end
 end
-
-
 
 script.on_event("bob-inserter-long", function(event)
   local player = game.players[event.player_index]
@@ -381,8 +437,10 @@ script.on_event(defines.events.on_built_entity, function(event)
   end
 
   if
-    not game.active_mods["bobinserters"] and
-    event.item and event.item.place_result and event.item.place_result.type == "inserter"
+    not game.active_mods["bobinserters"]
+    and event.item
+    and event.item.place_result
+    and event.item.place_result.type == "inserter"
     and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and event.item.place_result.name == entity_name --probably don't even need this line anymore.
     and not global.bobmods.logistics.blacklist[entity_name]
@@ -390,46 +448,67 @@ script.on_event(defines.events.on_built_entity, function(event)
     bobmods.logistics.set_positions(entity, event.player_index)
   end
 
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and entity.type == "inserter" and entity.name == "long-handed-inserter" then
-    entity.surface.create_entity{name = "red-inserter", position = entity.position, force = entity.force, direction = entity.direction, fast_replace = true, spill = false}
+  if
+    settings.startup["bobmods-logistics-inserteroverhaul"].value == true
+    and entity.type == "inserter"
+    and entity.name == "long-handed-inserter"
+  then
+    entity.surface.create_entity({
+      name = "red-inserter",
+      position = entity.position,
+      force = entity.force,
+      direction = entity.direction,
+      fast_replace = true,
+      spill = false,
+    })
   end
 end)
 
 script.on_event(defines.events.on_robot_built_entity, function(event)
   local entity = event.created_entity
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and entity.type == "inserter" and entity.name == "long-handed-inserter" then
-    entity.surface.create_entity{name = "red-inserter", position = entity.position, force = entity.force, direction = entity.direction, fast_replace = true, spill = false}
+  if
+    settings.startup["bobmods-logistics-inserteroverhaul"].value == true
+    and entity.type == "inserter"
+    and entity.name == "long-handed-inserter"
+  then
+    entity.surface.create_entity({
+      name = "red-inserter",
+      position = entity.position,
+      force = entity.force,
+      direction = entity.direction,
+      fast_replace = true,
+      spill = false,
+    })
   end
 end)
 
-
-
 remote.add_interface("boblogistics", {
---[[
+  --[[
 Pass this function the name of an inserter, and it will be ignored.
 EG: remote.call("boblogistics", "blacklist_inserter", "burner-inserter") will blacklist the burner inserter.
-]]--
+]]
+  --
   blacklist_inserter = function(data)
     bobmods.logistics.create_global_table_basic()
     global.bobmods.logistics.blacklist[data] = true
   end,
---[[
+  --[[
 Pass this function a table of names of inserters, and they will be ignored.
 EG: remote.call("boblogistics", "blacklist_inserters", {"burner-inserter"}) will blacklist the burner inserter.
-]]--
+]]
+  --
   blacklist_inserters = function(data)
     bobmods.logistics.create_global_table_basic()
     for i, inserter in pairs(data) do
       global.bobmods.logistics.blacklist[inserter] = true
     end
   end,
---[[
+  --[[
 Returns the ID number of the custom event
 Triggered event returns the following table: {entity = entity, new_positions = {drop_position = {x,y}, pickup_position = {x,y}}, original_positions = {drop_position = {x,y}, pickup_position = {x,y}}}
-]]--
+]]
+  --
   get_changed_position_event_id = function()
     return changed_position_event
-  end
-}
-)
-
+  end,
+})

@@ -8,7 +8,6 @@ if data.raw.item["steel-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-2", "pipe", "steel-pipe")
 end
 
-
 if data.raw.item["titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("storage-tank-3", "steel-plate", "titanium-plate")
   bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-3", "steel-plate", "titanium-plate")
@@ -19,7 +18,6 @@ if data.raw.item["titanium-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-3", "pipe", "titanium-pipe")
 end
 
-
 if data.raw.item["nitinol-alloy"] then
   bobmods.lib.recipe.replace_ingredient("storage-tank-4", "steel-plate", "nitinol-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-4", "steel-plate", "nitinol-alloy")
@@ -29,4 +27,3 @@ end
 if data.raw.item["nitinol-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-4", "pipe", "nitinol-pipe")
 end
-

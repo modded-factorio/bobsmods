@@ -1,6 +1,6 @@
 {
   "name": "bobmining",
-  "version": "1.1.3",
+  "version": "1.1.6",
   "factorio_version": "1.1",
   "title": "Bob's Mining mod",
   "author": "Bobingabout",
@@ -8,9 +8,9 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.0",
-    "? bobores >= 1.1.0",
-    "? bobplates >= 1.1.0"
+    "boblibrary >= 1.1.6",
+    "? bobores >= 1.1.6",
+    "? bobplates >= 1.1.6"
   ],
   "description": "Requires Bob's functions library mod.\n\nAdds higher tiers of electric mining drill that increase mining speed.\nAdds an additional branch of electric mining drills that increase the mining area.\nAdds higher tiers of Pumpjacks\nAdds a full set of water mining drills, for use with the water patches added by Bob's Ores mod.\nAdds several tiers of steel-axe technology to further increase personal mining speed.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
 }

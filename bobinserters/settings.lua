@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "bobmods-inserters-long2",
@@ -12,26 +11,31 @@ data:extend(
     setting_type = "startup",
     default_value = true,
   },
+  {
+    type = "bool-setting",
+    name = "bobmods-inserters-long1",
+    setting_type = "startup",
+    default_value = true,
+  },
 
   {
     type = "string-setting",
     name = "bobmods-inserters-show-window",
     setting_type = "runtime-per-user",
     default_value = "off",
-    allowed_values = {"off", "left", "top"}
+    allowed_values = { "off", "left", "top" },
   },
   {
     type = "string-setting",
     name = "bobmods-inserters-gui-position",
     setting_type = "runtime-per-user",
     default_value = "right",
-    allowed_values = {"off", "left", "right", "top", "bottom"}
+    allowed_values = { "off", "left", "right", "top", "bottom" },
   },
   {
     type = "bool-setting",
     name = "bobmods-inserters-button-enable",
     setting_type = "runtime-per-user",
-    default_value = true
+    default_value = true,
   },
-}
-)
+})

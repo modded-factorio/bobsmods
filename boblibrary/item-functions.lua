@@ -1,5 +1,6 @@
-if not bobmods.lib.item then bobmods.lib.item = {} end
-
+if not bobmods.lib.item then
+  bobmods.lib.item = {}
+end
 
 function bobmods.lib.item.get_type(name) --returns actual item type
   local item_type = nil
@@ -26,21 +27,18 @@ function bobmods.lib.item.get_type(name) --returns actual item type
       "copy-paste-tool",
       "deconstruction-item",
       "upgrade-item",
-      "spidertron-remote"
+      "spidertron-remote",
     }
     for i, type_name in pairs(item_types) do
-      if data.raw[type_name][name] then item_type = type_name end
+      if data.raw[type_name][name] then
+        item_type = type_name
+      end
     end
   else
     log("Item name is not a string")
   end
   return item_type
 end
-
-
-
-
-
 
 function bobmods.lib.item.get_basic_type(name) --returns fluid for fluid, item for all other types.
   local item_type = bobmods.lib.item.get_type(name)
@@ -57,7 +55,6 @@ function bobmods.lib.item.get_basic_type_simple(name) --assumes type is item, ev
   end
   return item_type
 end
-
 
 function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item actually exists or not, returns if a valid ingredient structure can be determined.
   local item = {}
@@ -106,9 +103,9 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
     item.amount = 1
   end
   if
-    type(item.name) == "string" and
-    type(item.amount) == "number" and
-    (item.type == "item" or item.type == "fluid")
+    type(item.name) == "string"
+    and type(item.amount) == "number"
+    and (item.type == "item" or item.type == "fluid")
   then
     return item
   else
@@ -118,13 +115,10 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
   end
 end
 
-
 function bobmods.lib.item.ingredient(inputs) --returns a valid ingredient only if the item exists.
   local item = bobmods.lib.item.ingredient_simple(inputs)
   if item then
-    if
-      bobmods.lib.item.get_type(item.name)
-    then
+    if bobmods.lib.item.get_type(item.name) then
       return item
     else
       log(debug.traceback())
@@ -140,8 +134,8 @@ function bobmods.lib.item.basic_item(inputs) --old name
   return bobmods.lib.item.ingredient(inputs)
 end
 
- --Same as ingredient, but has support for amount_min, amount_max and probability
- function bobmods.lib.item.result_simple(inputs)
+--Same as ingredient, but has support for amount_min, amount_max and probability
+function bobmods.lib.item.result_simple(inputs)
   local item = {}
 
   if type(inputs) == "table" then
@@ -166,7 +160,9 @@ end
       item.amount = 1
     end
 
-    if inputs.probability then item.probability = inputs.probability end
+    if inputs.probability then
+      item.probability = inputs.probability
+    end
 
     if inputs.type then
       item.type = inputs.type
@@ -203,7 +199,6 @@ end
     if inputs.catalyst_amount then
       item.catalyst_amount = inputs.catalyst_amount
     end
-
   elseif type(inputs) == "string" then
     item.name = inputs
     item.type = bobmods.lib.item.get_basic_type_simple(item.name)
@@ -211,10 +206,10 @@ end
   end
 
   if
-    type(item.name) == "string" and
-    (type(item.amount) == "number" or (type(item.amount_min) == "number" and type(item.amount_max) == "number")) and
-    (item.probability == nil or type(item.probability) == "number") and
-    (item.type == "item" or item.type == "fluid")
+    type(item.name) == "string"
+    and (type(item.amount) == "number" or (type(item.amount_min) == "number" and type(item.amount_max) == "number"))
+    and (item.probability == nil or type(item.probability) == "number")
+    and (item.type == "item" or item.type == "fluid")
   then
     return item
   else
@@ -227,9 +222,7 @@ end
 function bobmods.lib.item.result(inputs) --returns a valid result only if the item exists.
   local item = bobmods.lib.item.result_simple(inputs)
   if item then
-    if
-      bobmods.lib.item.get_type(item.name)
-    then
+    if bobmods.lib.item.get_type(item.name) then
       return item
     else
       log(debug.traceback())
@@ -244,7 +237,6 @@ end
 function bobmods.lib.item.item(inputs) -- old name
   return bobmods.lib.item.result(inputs)
 end
-
 
 function bobmods.lib.item.combine(item1_in, item2_in)
   local item = {}
@@ -292,7 +284,6 @@ function bobmods.lib.item.combine(item1_in, item2_in)
   end
 end
 
-
 function bobmods.lib.item.add(list, item_in) --increments amount if exists
   local item = bobmods.lib.item.result(item_in)
   if type(list) == "table" and item then
@@ -303,7 +294,9 @@ function bobmods.lib.item.add(list, item_in) --increments amount if exists
         list[i] = bobmods.lib.item.combine(object, item)
       end
     end
-    if addit then table.insert(list, item) end
+    if addit then
+      table.insert(list, item)
+    end
   end
 end
 
@@ -313,9 +306,13 @@ function bobmods.lib.item.add_new(list, item_in) --ignores if exists
     local addit = true
     for i, object in pairs(list) do
       local basic_object = bobmods.lib.item.result(object)
-      if basic_object and item.name == basic_object.name then addit = false end
+      if basic_object and item.name == basic_object.name then
+        addit = false
+      end
     end
-    if addit then table.insert(list, item) end
+    if addit then
+      table.insert(list, item)
+    end
   end
 end
 
@@ -342,8 +339,63 @@ function bobmods.lib.item.set(list, item_in)
         addit = false
       end
     end
-    if addit then table.insert(list, item) end
+    if addit then
+      table.insert(list, item)
+    end
   end
 end
 
+function bobmods.lib.item.hide(item_name)
+  if type(item_name) == "string" then
+    local item = data.raw.item[item_name]
+    if item then
+      if not item.flags then
+        item.flags = {}
+      end
+      bobmods.lib.safe_insert(item.flags, "hidden")
+    else
+      item = data.raw.fluid[item_name]
+      if item then
+        item.hidden = true
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.item(item_name)
+  end
+end
 
+function bobmods.lib.item.hide_entity(type_name, entity_name)
+  if type(type_name) == "string" and type(entity_name) == "string" then
+    local entities = data.raw[type_name]
+    if entities then
+      local entity = entities[entity_name]
+      if entity then
+        if not entity.flags then
+          entity.flags = {}
+        end
+        bobmods.lib.safe_insert(entity.flags, "hidden")
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.item(entity_name)
+  end
+end
+
+function bobmods.lib.item.set_subgroup(item_name, subgroup)
+  if type(item_name) == "string" and type(subgroup) == "string" then
+    local item = data.raw.item[item_name]
+    if item then
+      item.subgroup = subgroup
+    else
+      item = data.raw.fluid[item_name]
+      if item then
+        item.subgroup = subgroup
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.item(item_name)
+  end
+end

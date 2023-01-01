@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: ???
+  Bugfixes:
+    - Fixing accidental global variables #50
+    - Fixed extra gas bottles being added to unbarreling recipes by repeated calls to bobmods.lib.create_gas_bottle #75
+  Changes:
+    - Added function bobmods.lib.item.hide(item_name) #38
+    - Added function bobmods.lib.item.hide_entity(type_name, entity_name) #38
+    - Added function bobmods.lib.tech.hide(technology_name) #60
+    - Renamed function recipe.hide_recipe to recipe.hide #60
+    - Added function bobmods.lib.tech.ignore_tech_cost_multiplier(technology_name, ignore) #62
+    - Added function bobmods.lib.item.set_subgroup(item_name, subgroup) #96
+    - Added function bobmods.lib.recipe.set_subgroup(item_name, subgroup) #96
+---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
   Bugfixes:

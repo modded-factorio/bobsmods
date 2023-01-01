@@ -1,5 +1,9 @@
-if not bobmods then bobmods = {} end
-if not bobmods.power then bobmods.power = {} end
+if not bobmods then
+  bobmods = {}
+end
+if not bobmods.power then
+  bobmods.power = {}
+end
 
 require("prototypes.category")
 
@@ -46,8 +50,8 @@ require("prototypes.technology.oil-boilers")
 require("prototypes.technology.poles")
 require("prototypes.technology.solar-panels")
 require("prototypes.technology.steam-engines")
+require("prototypes.technology.steam-power")
 require("prototypes.technology.heat-exchangers")
 require("prototypes.technology.steam-turbines")
 require("prototypes.technology.fluid-generator")
 require("prototypes.technology.nuclear")
-

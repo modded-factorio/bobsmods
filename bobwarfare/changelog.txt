@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: ???
+  Bugfixes:
+    - Fixing accidental global variables #50
+  Changes:
+    - Added edited sounds for multiple entities #31
+    - Added missing prerequisites #38
+    - Added technology Radars 1 #72
+    - Plasma turrets now have eight possible directions, up from four #77
+    - Changed Artillery Wagon recipes to use higher tier ingredients #99
+---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06.06.2022
   Changes:
