@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Bugfixes:
     - Fixed mod compatibility issue with upgradable Long handed inserters #41
     - Fixing accidental global variables #50
@@ -14,7 +14,7 @@ Date: ???
     - Made robochests and robo-charge-ports upgradable
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Changes:
     - Tidied up technology prerequisites #12
   Bugfixes:

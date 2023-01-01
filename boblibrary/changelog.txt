@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Bugfixes:
     - Fixing accidental global variables #50
     - Fixed extra gas bottles being added to unbarreling recipes by repeated calls to bobmods.lib.create_gas_bottle #75
@@ -14,7 +14,7 @@ Date: ???
     - Added function bobmods.lib.recipe.set_subgroup(item_name, subgroup) #96
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Bugfixes:
     - Fixed error in bobmods.lib.tech.add_science_packs
   Changes:

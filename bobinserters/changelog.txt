@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Bugfixes:
     - Fixed destroying root GUI element error #34
     - Fixed mod compatibility issue with upgradable Long handed inserters #41
@@ -10,7 +10,7 @@ Date: ???
     - Add Long inserters 1 setting #25
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Bugfixes:
     - Fixed error that could occur when opening inserter gui #6
     - Fixed error that could occur with Editor Extensions #21

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Changes:
     - Removed obsolete hardness property #54
   Bugfixes:

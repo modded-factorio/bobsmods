@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Changes:
     - Tidied up power and heat entities #22
       - Added additional tier of Heat Pipe and Heat Exchanger
@@ -17,7 +17,7 @@ Date: ???
     - Added Tech Steam power #94
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Changes:
     - Tidied up technology prerequisites #12
     - Added fuel value to the tooltip of burnable fluids #13

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Changes:
     - Added function get_classes() to remote interface.
     - Added handler for custom event from the Minime mod.

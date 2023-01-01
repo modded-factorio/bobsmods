@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Changes:
     - Compatibility changes for Krastorio 2 mod #42
       - Fixed upgrading mining drills

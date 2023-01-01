@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Changes:
     - Added electronics as a prerequisite for Logistic science pack #38
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Changes:
     - Prevent machines with no fluid input from showing electronics recipes with a fluid ingredient #5
 ---------------------------------------------------------------------------------------------------

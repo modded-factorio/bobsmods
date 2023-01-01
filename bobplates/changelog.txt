@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ???
+Date: 01. 01. 2023
   Bugfixes:
     - Fixing accidental global variables #50
     - Machines Showing In/Out Fluidbox arrows #66
@@ -12,7 +12,7 @@ Date: ???
     - Removed setting New Steel. Now always true #98
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 06.06.2022
+Date: 06. 06. 2022
   Changes:
     - Prevent productivity modules from being used on fuel cell recipes that take Empty nuclear fuel cells #2
     - Fluid void recipes are now marked as hide_from_player_crafting instead of hidden #3
