@@ -502,12 +502,6 @@ script.on_event(defines.events.on_gui_opened, function(event)
     else
         bobmods.inserters.delete_gui(event.player_index);
     end
-    --[[
-  else
-    if not (event.gui_type == defines.gui_type.custom and event.element.name == "bob_inserter_gui") then
-      bobmods.inserters.delete_gui(event.player_index)
-    end
-    ]]
   end
 end)
 
