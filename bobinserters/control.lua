@@ -493,14 +493,11 @@ script.on_event(defines.events.on_gui_opened, function(event)
     and event.entity.type == "inserter"
     and settings.get_player_settings(player)["bobmods-inserters-gui-position"].value ~= "off"
   then
-    if
-        event.entity.prototype.allow_custom_vectors
-        and not(global.bobmods.inserters.blacklist[event.entity.name])
-    then
-        global.bobmods.inserters[event.player_index].position = "left";
-        bobmods.inserters.open_gui(event.entity, player);
+    if event.entity.prototype.allow_custom_vectors and not global.bobmods.inserters.blacklist[event.entity.name] then
+      global.bobmods.inserters[event.player_index].position = "left"
+      bobmods.inserters.open_gui(event.entity, player)
     else
-        bobmods.inserters.delete_gui(event.player_index);
+      bobmods.inserters.delete_gui(event.player_index)
     end
   end
 end)
