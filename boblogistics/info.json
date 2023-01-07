@@ -1,6 +1,6 @@
 {
   "name": "boblogistics",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "factorio_version": "1.1",
   "title": "Bob's Logistics mod",
   "author": "Bobingabout",
@@ -10,7 +10,8 @@
     "base >= 1.1.0",
     "boblibrary >= 1.1.6",
     "? bobplates >= 1.1.6",
-    "? bobinserters >= 1.1.6"
+    "? bobinserters >= 1.1.6",
+    "(?) aai-loaders"
   ],
   "description": "Requires Bob's functions library mod.\n\nAdds lots logistic related things in all areas.\nAdds 2 higher tiers of belt and related entities.\nBelt overhaul will change all recipes to make better use of Bob mod resources, and add a Tier 0.\nAdds a higher tier of inserters.\nInserter overhaul will add more tiers of inserter, replace long handed inserter with a menu to make other inserters long handed, and change all recipes to make better use of Bob mod resources.\nIf suitable materials are available, it will add 2 higher tiers of chest, and logistic chests\nAdds 2 higher tiers of train set (Locomotive, Cargo wagon and Fluid wagon) that will have higher speed and storage. Also adds an armored train set, and Tier 2 version of it.\nAdds tier 2 to 4 pumps, and reduces the flow to make the progression work\nAdds tier 2 to 4 of Logistic and Construction robots.\nAdds tier 2 to 4 roboports, roboport parts (intermediates), and smaller specialised entities, such as the Logistic Zone Expander and Robochest.\nAdds tier 2 to 4 of storage tank.\nAdds many new pipes made from many different materials, spanning 5 tiers.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
 }
