@@ -231,12 +231,16 @@ end
 
 if data.raw.technology["bob-robotics-4"] then
   bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-robotics-4")
-  bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-electronics-3")
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-electronics-3")
+  end
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-4", "ceramics")
   end
 else
-  bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-electronics-3")
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-electronics-3")
+  end
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.tech.add_prerequisite("bob-robots-3", "ceramics")
   end
