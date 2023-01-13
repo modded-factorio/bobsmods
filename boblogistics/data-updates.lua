@@ -171,5 +171,5 @@ bobmods.lib.item.set_subgroup("express-splitter", "bob-logistic-tier-3")
 data.raw["pump"]["pump"].next_upgrade = "bob-pump-2"
 
 if settings.startup["bobmods-logistics-highpipes"].value == true then
-  bobmods.logistics.scale_machine_output_height()
+  bobmods.logistics.scale_machine_output_base_level()
 end

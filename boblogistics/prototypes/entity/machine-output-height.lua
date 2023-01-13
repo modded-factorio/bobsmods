@@ -1,5 +1,5 @@
 --check if height if set if not use assume height is default => 1 and just set to max pipe height
-local function GetNewHeight(originalHeight)
+local function GetNewLevel(originalHeight)
 
     if not (originalHeight) then originalHeight = 1 end
 
@@ -7,8 +7,10 @@ local function GetNewHeight(originalHeight)
 end
 
 
---Multiplies the height of fluid boxes/output fluid boxes on all crafting machines, miners/pumpjacks and offshore pumps by the height of the highest tier pipe.
-function bobmods.logistics.scale_machine_output_height()
+--Multiplies the base level of fluid boxes for machine outputs by the height of the highest tier pipe.
+--Scales area instead of height so output can always empty itself regardless of how full the output is.
+--Only scale machine outputs not in/outputs as scaling up base_level for those woudn't work.
+function bobmods.logistics.scale_machine_output_base_level()
 
     local entity_table = {}
     for type in pairs(defines.prototypes.entity) do
@@ -22,14 +24,14 @@ function bobmods.logistics.scale_machine_output_height()
             for key, fluidBox in pairs(entity.fluid_boxes) do
                 if key == "off_when_no_fluid_recipe" then goto next end
                 if fluidBox.production_type == "output" then
-                    fluidBox.height = GetNewHeight(fluidBox.height)
+                    fluidBox.base_level = GetNewLevel(fluidBox.height)
                 end
                 ::next::
             end
         elseif entity.output_fluid_box then
-            entity.output_fluid_box.height = GetNewHeight(entity.output_fluid_box.height)
+            entity.output_fluid_box.base_level = GetNewLevel(entity.output_fluid_box.height)
         elseif entity.type == "offshore-pump" then
-            entity.fluid_box.height = GetNewHeight(entity.fluid_box.height)
+            entity.fluid_box.base_level = GetNewLevel(entity.fluid_box.height)
         end      
     end
 end
