@@ -3,6 +3,7 @@ Version: 1.2.0
 Date: ???
   Changes:
     - Added support for AAI Loaders #109
+    - Most Machines can now fill higher tier pipes when Bigger pipes is enabled
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
