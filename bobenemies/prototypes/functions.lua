@@ -161,171 +161,169 @@ bobmods.enemies.spit_target_sound = {
 }
 
 function bobmods.enemies.spitter_attack_parameters(data)
-  return
-    {
-      type = "stream",
-      ammo_category = "biological",
-      cooldown = data.cooldown,
-      cooldown_deviation = data.cooldown_deviation,
-      range = data.range,
-      range_mode = "bounding-box-to-bounding-box",
-      min_attack_distance = data.min_attack_distance,
-      damage_modifier = data.damage_modifier,
-      warmup = 30,
-      projectile_creation_parameters = spitter_shoot_shiftings(data.scale, data.scale * scale_spitter_stream),
-      use_shooter_direction = true,
-      lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-      ammo_type = {
-        category = "biological",
-        action = {
-          type = "direct",
-          action_delivery = {
-            type = "stream",
-            stream = data.acid_stream_name,
-          },
+  return {
+    type = "stream",
+    ammo_category = "biological",
+    cooldown = data.cooldown,
+    cooldown_deviation = data.cooldown_deviation,
+    range = data.range,
+    range_mode = "bounding-box-to-bounding-box",
+    min_attack_distance = data.min_attack_distance,
+    damage_modifier = data.damage_modifier,
+    warmup = 30,
+    projectile_creation_parameters = spitter_shoot_shiftings(data.scale, data.scale * scale_spitter_stream),
+    use_shooter_direction = true,
+    lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
+    ammo_type = {
+      category = "biological",
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "stream",
+          stream = data.acid_stream_name,
         },
       },
-      cyclic_sound = {
-        begin_sound = data.begin_sound,
-        middle_sound = {
-          {
-            filename = "__base__/sound/fight/flamethrower-mid.ogg",
-            volume = 0,
-          },
-        },
-        end_sound = {
-          {
-            filename = "__base__/sound/creatures/spitter-spit-end-big-1.ogg",
-            volume = 0.43,
-          },
-          {
-            filename = "__base__/sound/creatures/spitter-spit-end-big-2.ogg",
-            volume = 0.43,
-          },
-          {
-            filename = "__base__/sound/creatures/spitter-spit-end-big-3.ogg",
-            volume = 0.43,
-          },
-          {
-            filename = "__base__/sound/creatures/spitter-spit-end-big-4.ogg",
-            volume = 0.43,
-          },
-          {
-            filename = "__base__/sound/creatures/spitter-spit-end-big-5.ogg",
-            volume = 0.43,
-          },
+    },
+    cyclic_sound = {
+      begin_sound = data.begin_sound,
+      middle_sound = {
+        {
+          filename = "__base__/sound/fight/flamethrower-mid.ogg",
+          volume = 0,
         },
       },
-      animation = spitterattackanimation(data.scale, data.tint1, data.tint2),
-    }
+      end_sound = {
+        {
+          filename = "__base__/sound/creatures/spitter-spit-end-big-1.ogg",
+          volume = 0.43,
+        },
+        {
+          filename = "__base__/sound/creatures/spitter-spit-end-big-2.ogg",
+          volume = 0.43,
+        },
+        {
+          filename = "__base__/sound/creatures/spitter-spit-end-big-3.ogg",
+          volume = 0.43,
+        },
+        {
+          filename = "__base__/sound/creatures/spitter-spit-end-big-4.ogg",
+          volume = 0.43,
+        },
+        {
+          filename = "__base__/sound/creatures/spitter-spit-end-big-5.ogg",
+          volume = 0.43,
+        },
+      },
+    },
+    animation = spitterattackanimation(data.scale, data.tint1, data.tint2),
+  }
 end
 
 function bobmods.enemies.acid_stream(data)
-  return
-    {
-      type = "stream",
-      name = data.name,
-      flags = { "not-on-map" },
-      particle_buffer_size = 90,
-      particle_spawn_interval = data.particle_spawn_interval,
-      particle_spawn_timeout = data.particle_spawn_timeout,
-      particle_vertical_acceleration = 0.005 * 0.60 * 1.5, --x
-      particle_horizontal_speed = 0.2 * 0.75 * 1.5 * 1.5, --x
-      particle_horizontal_speed_deviation = 0.005 * 0.70,
-      particle_start_alpha = 0.5,
-      particle_end_alpha = 1,
-      particle_alpha_per_part = 0.8,
-      particle_scale_per_part = 0.8,
-      particle_loop_frame_count = 15,
-      particle_fade_out_duration = 2,
-      particle_loop_exit_threshold = 0.25,
-      --    special_neutral_target_damage = {amount = 1, type = "acid"},
-      working_sound = {
-        sound = {
-          {
-            filename = "__base__/sound/fight/projectile-acid-burn-loop.ogg",
-            volume = 0.4,
-          },
+  return {
+    type = "stream",
+    name = data.name,
+    flags = { "not-on-map" },
+    particle_buffer_size = 90,
+    particle_spawn_interval = data.particle_spawn_interval,
+    particle_spawn_timeout = data.particle_spawn_timeout,
+    particle_vertical_acceleration = 0.005 * 0.60 * 1.5, --x
+    particle_horizontal_speed = 0.2 * 0.75 * 1.5 * 1.5, --x
+    particle_horizontal_speed_deviation = 0.005 * 0.70,
+    particle_start_alpha = 0.5,
+    particle_end_alpha = 1,
+    particle_alpha_per_part = 0.8,
+    particle_scale_per_part = 0.8,
+    particle_loop_frame_count = 15,
+    particle_fade_out_duration = 2,
+    particle_loop_exit_threshold = 0.25,
+    --    special_neutral_target_damage = {amount = 1, type = "acid"},
+    working_sound = {
+      sound = {
+        {
+          filename = "__base__/sound/fight/projectile-acid-burn-loop.ogg",
+          volume = 0.4,
         },
       },
-      initial_action = data.action,
-      particle = {
-        filename = "__base__/graphics/entity/acid-projectile/acid-projectile-head.png",
+    },
+    initial_action = data.action,
+    particle = {
+      filename = "__base__/graphics/entity/acid-projectile/acid-projectile-head.png",
+      draw_as_glow = true,
+      line_length = 5,
+      width = 22,
+      height = 84,
+      frame_count = 15,
+      shift = util.mul_shift(util.by_pixel(-2, 30), data.scale),
+      tint = data.tint,
+      priority = "high",
+      scale = data.scale,
+      animation_speed = 1,
+      hr_version = {
+        filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-head.png",
         draw_as_glow = true,
         line_length = 5,
-        width = 22,
-        height = 84,
+        width = 42,
+        height = 164,
         frame_count = 15,
-        shift = util.mul_shift(util.by_pixel(-2, 30), data.scale),
+        shift = util.mul_shift(util.by_pixel(-2, 31), data.scale),
         tint = data.tint,
         priority = "high",
-        scale = data.scale,
+        scale = 0.5 * data.scale,
         animation_speed = 1,
-        hr_version = {
-          filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-head.png",
-          draw_as_glow = true,
-          line_length = 5,
-          width = 42,
-          height = 164,
-          frame_count = 15,
-          shift = util.mul_shift(util.by_pixel(-2, 31), data.scale),
-          tint = data.tint,
-          priority = "high",
-          scale = 0.5 * data.scale,
-          animation_speed = 1,
-        },
       },
-      spine_animation = {
-        filename = "__base__/graphics/entity/acid-projectile/acid-projectile-tail.png",
+    },
+    spine_animation = {
+      filename = "__base__/graphics/entity/acid-projectile/acid-projectile-tail.png",
+      draw_as_glow = true,
+      line_length = 5,
+      width = 66,
+      height = 12,
+      frame_count = 15,
+      shift = util.mul_shift(util.by_pixel(0, -2), data.scale),
+      tint = data.tint,
+      priority = "high",
+      scale = data.scale,
+      animation_speed = 1,
+      hr_version = {
+        filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-tail.png",
         draw_as_glow = true,
         line_length = 5,
-        width = 66,
-        height = 12,
+        width = 132,
+        height = 20,
         frame_count = 15,
-        shift = util.mul_shift(util.by_pixel(0, -2), data.scale),
+        shift = util.mul_shift(util.by_pixel(0, -1), data.scale),
         tint = data.tint,
         priority = "high",
-        scale = data.scale,
+        scale = 0.5 * data.scale,
         animation_speed = 1,
-        hr_version = {
-          filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-tail.png",
-          draw_as_glow = true,
-          line_length = 5,
-          width = 132,
-          height = 20,
-          frame_count = 15,
-          shift = util.mul_shift(util.by_pixel(0, -1), data.scale),
-          tint = data.tint,
-          priority = "high",
-          scale = 0.5 * data.scale,
-          animation_speed = 1,
-        },
       },
-      shadow = {
-        filename = "__base__/graphics/entity/acid-projectile/acid-projectile-shadow.png",
+    },
+    shadow = {
+      filename = "__base__/graphics/entity/acid-projectile/acid-projectile-shadow.png",
+      line_length = 15,
+      width = 22,
+      height = 84,
+      frame_count = 15,
+      priority = "high",
+      shift = util.mul_shift(util.by_pixel(-2, 30), data.scale),
+      draw_as_shadow = true,
+      scale = data.scale,
+      animation_speed = 1,
+      hr_version = {
+        filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-shadow.png",
         line_length = 15,
-        width = 22,
-        height = 84,
+        width = 42,
+        height = 164,
         frame_count = 15,
-        priority = "high",
-        shift = util.mul_shift(util.by_pixel(-2, 30), data.scale),
+        shift = util.mul_shift(util.by_pixel(-2, 31), data.scale),
         draw_as_shadow = true,
-        scale = data.scale,
+        priority = "high",
+        scale = 0.5 * data.scale,
         animation_speed = 1,
-        hr_version = {
-          filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-shadow.png",
-          line_length = 15,
-          width = 42,
-          height = 164,
-          frame_count = 15,
-          shift = util.mul_shift(util.by_pixel(-2, 31), data.scale),
-          draw_as_shadow = true,
-          priority = "high",
-          scale = 0.5 * data.scale,
-          animation_speed = 1,
-        },
       },
-      oriented_particle = true,
-      shadow_scale_enabled = true,
-    }
+    },
+    oriented_particle = true,
+    shadow_scale_enabled = true,
+  }
 end

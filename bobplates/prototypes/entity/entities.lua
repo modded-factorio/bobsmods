@@ -1,87 +1,86 @@
 local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
-  return
-    {
-      layers = {
-        -- Base
-        {
-          filename = directory .. "/electrolyser-" .. tier .. "-base.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+  return {
+    layers = {
+      -- Base
+      {
+        filename = directory .. "/electrolyser-" .. tier .. "-base.png",
+        x = 136 * facing,
+        width = 136,
+        height = 130,
+        frame_count = 1,
+        shift = util.by_pixel(17, 0),
+        hr_version = {
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
-        -- Mask
-        {
-          filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+      },
+      -- Mask
+      {
+        filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
+        x = 136 * facing,
+        width = 136,
+        height = 130,
+        frame_count = 1,
+        shift = util.by_pixel(17, 0),
+        tint = tint,
+        hr_version = {
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
           tint = tint,
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            tint = tint,
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
-        -- Highlights
-        {
-          filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+      },
+      -- Highlights
+      {
+        filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
+        x = 136 * facing,
+        width = 136,
+        height = 130,
+        frame_count = 1,
+        shift = util.by_pixel(17, 0),
+        blend_mode = "additive",
+        hr_version = {
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
           blend_mode = "additive",
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            blend_mode = "additive",
-            scale = 0.5,
-          },
-        },
-        -- Shadow
-        {
-          filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
-          frame_count = 1,
-          shift = util.by_pixel(17, 0),
-          draw_as_shadow = true,
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            draw_as_shadow = true,
-            shift = util.by_pixel(17, 0),
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
       },
-    }
+      -- Shadow
+      {
+        filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
+        x = 136 * facing,
+        width = 136,
+        height = 130,
+        frame_count = 1,
+        shift = util.by_pixel(17, 0),
+        draw_as_shadow = true,
+        hr_version = {
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
+          frame_count = 1,
+          draw_as_shadow = true,
+          shift = util.by_pixel(17, 0),
+          scale = 0.5,
+        },
+      },
+    },
+  }
 end
 
 local function bob_electrolyser_animation(directory, tier, tint)

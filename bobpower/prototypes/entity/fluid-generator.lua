@@ -1,58 +1,57 @@
 if settings.startup["bobmods-power-fluidgenerator"].value == true then
   function bobmods.power.fluid_generator_structure()
-    return
-      {
-        layers = {
-          { --bodge layer
-            filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan-spin.png",
-            priority = "extra-high",
-            width = 1,
-            height = 1,
-            frame_count = 120,
-          },
-          {
-            filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator.png",
-            priority = "extra-high",
-            width = 264,
-            height = 284,
-            frame_count = 1,
-            repeat_count = 120,
-            shift = util.by_pixel(0, 5.25),
-            scale = 0.5,
-          },
-          {
-            filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan.png",
-            priority = "extra-high",
-            width = 78,
-            height = 70,
-            frame_count = 1,
-            repeat_count = 120,
-            shift = util.by_pixel(1, -13.5),
-            scale = 0.5,
-          },
-          {
-            filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan-spin.png",
-            priority = "extra-high",
-            width = 60,
-            height = 46,
-            frame_count = 8,
-            repeat_count = 15,
-            shift = util.by_pixel(0, -26),
-            scale = 0.5,
-          },
-          {
-            filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-shadow.png",
-            priority = "extra-high",
-            width = 311,
-            height = 194,
-            frame_count = 1,
-            repeat_count = 120,
-            draw_as_shadow = true,
-            shift = util.by_pixel(20, 0),
-            scale = 0.5,
-          },
+    return {
+      layers = {
+        { --bodge layer
+          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan-spin.png",
+          priority = "extra-high",
+          width = 1,
+          height = 1,
+          frame_count = 120,
         },
-      }
+        {
+          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator.png",
+          priority = "extra-high",
+          width = 264,
+          height = 284,
+          frame_count = 1,
+          repeat_count = 120,
+          shift = util.by_pixel(0, 5.25),
+          scale = 0.5,
+        },
+        {
+          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan.png",
+          priority = "extra-high",
+          width = 78,
+          height = 70,
+          frame_count = 1,
+          repeat_count = 120,
+          shift = util.by_pixel(1, -13.5),
+          scale = 0.5,
+        },
+        {
+          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan-spin.png",
+          priority = "extra-high",
+          width = 60,
+          height = 46,
+          frame_count = 8,
+          repeat_count = 15,
+          shift = util.by_pixel(0, -26),
+          scale = 0.5,
+        },
+        {
+          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-shadow.png",
+          priority = "extra-high",
+          width = 311,
+          height = 194,
+          frame_count = 1,
+          repeat_count = 120,
+          draw_as_shadow = true,
+          shift = util.by_pixel(20, 0),
+          scale = 0.5,
+        },
+      },
+    }
   end
 
   function bobmods.power.fluid_generator_working_visualisations()
