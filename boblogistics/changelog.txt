@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: ???
+  Bugfixes:
+    - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117
   Changes:
     - Added support for AAI Loaders #109
 ---------------------------------------------------------------------------------------------------
