@@ -5,6 +5,7 @@ Date: ???
     - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117
   Changes:
     - Added support for AAI Loaders #109
+    - Added missing prerequisites #120
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
