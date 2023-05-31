@@ -242,7 +242,7 @@ end
 if data.raw.item["ruby-5"] then
   bobmods.lib.recipe.add_ingredient("laser-rifle-battery-ruby", { "ruby-5", 1 })
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-ruby", "laser-rifle-battery", "laser-rifle-battery-case")
-  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-1", "gem-processing-2")
+  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-1", "gem-processing-3")
 end
 
 if data.raw.item["sapphire-5"] then
@@ -253,7 +253,7 @@ if data.raw.item["sapphire-5"] then
     "laser-rifle-battery-case"
   )
   bobmods.lib.recipe.add_ingredient("bob-laser-turret-2", { "sapphire-5", 1 })
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-2", "gem-processing-2")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-2", "gem-processing-3")
 end
 
 if data.raw.item["emerald-5"] then
