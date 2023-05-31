@@ -129,3 +129,5 @@ end
 
 bobmods.lib.tech.remove_science_pack("nuclear-fuel-reprocessing", "production-science-pack")
 bobmods.lib.tech.remove_prerequisite("nuclear-fuel-reprocessing", "production-science-pack")
+
+bobmods.lib.tech.add_prerequisite("engine", "automation")

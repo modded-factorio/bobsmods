@@ -131,6 +131,7 @@ if not data.raw.technology["silicon-processing"] then
       type = "technology",
       name = "silicon-processing",
       prerequisites = {
+        "automation",
         "chemical-processing-2",
       },
       effects = {},
