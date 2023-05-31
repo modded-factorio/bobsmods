@@ -45,6 +45,8 @@ end
 bobmods.lib.tech.add_recipe_unlock("electronics", "insulated-cable")
 bobmods.lib.tech.add_recipe_unlock("electronics", "basic-electronic-components")
 bobmods.lib.tech.add_recipe_unlock("electronics", "electronic-circuit")
+bobmods.lib.tech.remove_prerequisite("electronics", "automation")
+bobmods.lib.tech.add_prerequisite("electronics", "bob-wood-processing")
 
 if data.raw.technology["chemical-processing-1"] and data.raw.technology["alloy-processing"] then
   bobmods.lib.tech.add_prerequisite("electronics", "chemical-processing-1")

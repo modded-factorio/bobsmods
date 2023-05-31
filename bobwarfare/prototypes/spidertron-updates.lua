@@ -193,6 +193,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
 
   if data.raw.item.rubber then
     bobmods.lib.recipe.add_ingredient("mech-foot", { "rubber", 1 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "bob-wood-processing")
   end
 
   if data.raw.item["titanium-pipe"] then

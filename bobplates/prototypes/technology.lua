@@ -1010,4 +1010,33 @@ data:extend({
     },
     order = "b-c-b",
   },
+
+  {
+    type = "technology",
+    name = "bob-wood-processing",
+    icon = "__base__/graphics/icons/wood.png",
+    icon_size = 64,
+    prerequisites = {
+      "automation",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-resin-wood",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-rubber",
+      },
+    },
+    unit = {
+      count = 30,
+      ingredients = {
+        { "automation-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "e-a-a",
+  },
+
 })
