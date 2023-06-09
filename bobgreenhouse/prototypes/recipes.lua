@@ -53,8 +53,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-basic-greenhouse-cycle",
-    icon = "__bobgreenhouse__/graphics/icons/seedling.png",
-    icon_size = 32,
     subgroup = "bob-greenhouse-items",
     order = "g[greenhouse-cycle-1]",
     category = "bob-greenhouse",
@@ -88,8 +86,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-advanced-greenhouse-cycle",
-    icon = "__bobgreenhouse__/graphics/icons/seedling.png",
-    icon_size = 32,
     subgroup = "bob-greenhouse-items",
     order = "g[greenhouse-cycle-2]",
     category = "bob-greenhouse",
