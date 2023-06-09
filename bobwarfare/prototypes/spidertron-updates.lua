@@ -265,12 +265,12 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     end
     add_case()
   else
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "rocket-control-unit", 16 })
     if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 10 })
+      bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 16 })
+      bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
       add_case()
     else
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 2 })
+      bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 6 })
       bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
     end
   end
@@ -295,18 +295,16 @@ else
 
   bobmods.lib.recipe.add_ingredient("antron", { "exoskeleton-equipment", 3 })
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "exoskeleton-equipment")
-  bobmods.lib.recipe.add_ingredient("antron", { "rocket-control-unit", 10 })
-  bobmods.lib.tech.add_prerequisite("walking-vehicle", "rocket-control-unit")
   bobmods.lib.recipe.add_ingredient("antron", { "low-density-structure", 100 })
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "low-density-structure")
 
   bobmods.lib.recipe.add_ingredient("tankotron", { "exoskeleton-equipment", 3 })
-  bobmods.lib.recipe.add_ingredient("tankotron", { "rocket-control-unit", 10 })
   bobmods.lib.recipe.add_ingredient("tankotron", { "low-density-structure", 120 })
 
   bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "exoskeleton-equipment", 4 })
   bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "rocket-control-unit", 18 })
   bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "low-density-structure", 100 })
+  bobmods.lib.tech.add_prerequisite("logistic-spidertron", "rocket-control-unit")
 
   bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "exoskeleton-equipment", 4 })
   bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "rocket-control-unit", 20 })
