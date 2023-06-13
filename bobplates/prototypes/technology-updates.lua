@@ -131,3 +131,7 @@ bobmods.lib.tech.remove_science_pack("nuclear-fuel-reprocessing", "production-sc
 bobmods.lib.tech.remove_prerequisite("nuclear-fuel-reprocessing", "production-science-pack")
 
 bobmods.lib.tech.add_prerequisite("engine", "automation")
+
+if mods["Nuclear Fuel"] then
+  bobmods.lib.tech.replace_prerequisite("bobingabout-enrichment-process", "kovarex-enrichment-process", "production-science-pack")
+end

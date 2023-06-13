@@ -3,6 +3,7 @@ Version: 1.2.0
 Date: ???
   Bugfixes:
     - Fixed Small tank pipe draw issue #107
+    - Fixed tech Plutonium Synthesis being unresearchable with Nuclear Fuel mod #119
   Changes:
     - Added missing prerequisites #120
 ---------------------------------------------------------------------------------------------------
