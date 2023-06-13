@@ -118,7 +118,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-3",
-        localised_description = { "entity-description.fluid-reactor", 1250 },
+        localised_description = { "entity-description.heat-pipe", 1250 },
         icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
         icon_size = 32,
         icon_mipmaps = 1,
@@ -155,7 +155,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-4",
-        localised_description = { "entity-description.fluid-reactor", 1500 },
+        localised_description = { "entity-description.heat-pipe", 1500 },
         icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
         icon_size = 32,
         icon_mipmaps = 1,
