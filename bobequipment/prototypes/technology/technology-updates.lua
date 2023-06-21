@@ -38,7 +38,7 @@ then
     { "alien-science-pack-blue", 1 },
     { "alien-science-pack-orange", 1 },
   }
-  data.raw.technology["fusion-reactor-equipment-3"].unit.ingredients = {
+  data.raw.technology["fusion-reactor-equipment-2"].unit.ingredients = {
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-blue", 1 },
@@ -57,7 +57,7 @@ then
     { "alien-science-pack-purple", 1 },
     { "alien-science-pack-yellow", 1 },
   }
-  data.raw.technology["fusion-reactor-equipment-4"].unit.ingredients = {
+  data.raw.technology["fusion-reactor-equipment-3"].unit.ingredients = {
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-purple", 1 },
@@ -82,11 +82,20 @@ then
       1,
     },
   }
+  data.raw.technology["fusion-reactor-equipment-4"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
+      "alien-science-pack-red",
+      1,
+    },
+  }
 
   if data.raw.technology["alien-research"] then
     bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "alien-research")
     bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "alien-research")
-    bobmods.lib.tech.add_prerequisite("fusion-reactor-equipment-3", "alien-research")
+    bobmods.lib.tech.add_prerequisite("fusion-reactor-equipment-2", "alien-research")
   end
 end
 
