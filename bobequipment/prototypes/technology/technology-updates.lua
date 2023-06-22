@@ -91,11 +91,21 @@ then
       1,
     },
   }
+  data.raw.technology["personal-laser-defense-equipment-6"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-green", 1 },
+    {
+      "alien-science-pack-red",
+      1,
+    },
+  }
 
   if data.raw.technology["alien-research"] then
     bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "alien-research")
     bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "alien-research")
     bobmods.lib.tech.add_prerequisite("fusion-reactor-equipment-2", "alien-research")
+    bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-6", "alien-research")
   end
 end
 

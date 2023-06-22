@@ -4,7 +4,7 @@ Date: ???
   Changes:
     - Added missing prerequisites #120
   Bugfixes:
-    - Fixed Portable fusion reactor science packs #124
+    - Fixed Portable fusion reactor and Personal laser defence science packs #124
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
