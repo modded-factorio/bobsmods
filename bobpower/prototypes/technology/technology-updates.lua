@@ -57,4 +57,7 @@ else
   if data.raw.technology["water-miner-1"] then
     bobmods.lib.tech.add_prerequisite("water-miner-1", "steam-power")
   end
+  if data.raw.technology["radars-1"] then
+    bobmods.lib.tech.add_prerequisite("radars-1", "steam-power")
+  end
 end

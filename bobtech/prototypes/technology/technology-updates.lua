@@ -212,7 +212,9 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["radars-1"] then
     bobmods.lib.tech.add_prerequisite("radars-1", "electricity")
   end
-
+  if mods["bobwarfare"] then
+    bobmods.lib.tech.remove_recipe_unlock("electricity", "radar")
+  end
   bobmods.lib.tech.add_prerequisite("logistic-science-pack", "lab")
   if data.raw.technology["electrolysis-1"] then
     bobmods.lib.tech.add_prerequisite("electrolysis-1", "automation-science-pack")

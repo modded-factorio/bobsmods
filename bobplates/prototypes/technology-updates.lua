@@ -4,10 +4,12 @@ bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("electric-engine", "chemical-science-pack")
 bobmods.lib.tech.add_prerequisite("robotics", "chemical-science-pack")
 
+bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
 bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")
 bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
-bobmods.lib.tech.add_recipe_unlock("oil-processing", "solid-fuel-from-light-oil")
-bobmods.lib.tech.add_recipe_unlock("oil-processing", "solid-fuel-from-heavy-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
 if bobmods.electronics then
   bobmods.lib.tech.add_prerequisite("air-compressor-1", "electronics")
