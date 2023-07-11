@@ -93,3 +93,10 @@ data.raw.technology["advanced-electronics-2"].icon_size = 128
 data.raw.technology["electronics"].icon_mipmaps = 0
 data.raw.technology["advanced-electronics"].icon_mipmaps = 0
 data.raw.technology["advanced-electronics-2"].icon_mipmaps = 0
+
+bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")
+bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
