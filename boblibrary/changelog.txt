@@ -3,6 +3,7 @@ Version: 1.2.0
 Date: ??. ??. ????
   Changes:
     - Added function bobmods.migration.ensure_unlocked(tech_name, recipe_name) #120
+    - Added function bobmods.lib.recipe.set_category(recipe_name, category)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
@@ -16,7 +17,7 @@ Date: 01. 01. 2023
     - Renamed function recipe.hide_recipe to recipe.hide #60
     - Added function bobmods.lib.tech.ignore_tech_cost_multiplier(technology_name, ignore) #62
     - Added function bobmods.lib.item.set_subgroup(item_name, subgroup) #96
-    - Added function bobmods.lib.recipe.set_subgroup(item_name, subgroup) #96
+    - Added function bobmods.lib.recipe.set_subgroup(recipe_name, subgroup) #96
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 06. 06. 2022
