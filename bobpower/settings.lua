@@ -37,12 +37,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "bobmods-power-burnergenerator",
-    setting_type = "startup",
-    default_value = true,
-  },
-  {
-    type = "bool-setting",
     name = "bobmods-power-heatsources",
     setting_type = "startup",
     default_value = true,

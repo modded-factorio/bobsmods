@@ -2,6 +2,7 @@
 Version: 1.2.0
 Date: ???
   Bugfixes:
+    - Fixed no power source available at start of game #108
     - Fixed Heat exchanger conversion recipes #115
     - Fixed Heat pipe 3 & 4 descriptions #123
 ---------------------------------------------------------------------------------------------------
