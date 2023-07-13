@@ -37,21 +37,6 @@ local function spidertron_burner_energy_source()
   }
 end
 
-local function spidertron_nuclear_energy_source()
-  return {
-    type = "burner",
-    fuel_category = "nuclear",
-    effectivity = 1,
-    fuel_inventory_size = 1,
-    burnt_inventory_size = 1,
-    light_flicker = {
-      color = { 0, 0, 0 },
-      minimum_intensity = 0.7,
-      maximum_intensity = 0.95,
-    },
-  }
-end
-
 local function add_antron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("antron", { "rtg", 1 })
@@ -126,14 +111,14 @@ if settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "all" then
   data.raw["spider-vehicle"]["antron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["tankotron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["logistic-spidertron"].energy_source = spidertron_burner_energy_source()
-  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_nuclear_energy_source()
+  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_burner_energy_source()
   remove_spidertron_power_supply()
-  data.raw["spider-vehicle"]["heavy-spidertron"].energy_source = spidertron_nuclear_energy_source()
+  data.raw["spider-vehicle"]["heavy-spidertron"].energy_source = spidertron_burner_energy_source()
 elseif settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "nothighest" then
   data.raw["spider-vehicle"]["antron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["tankotron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["logistic-spidertron"].energy_source = spidertron_burner_energy_source()
-  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_nuclear_energy_source()
+  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_burner_energy_source()
   remove_spidertron_power_supply()
   add_heavy_spidertron_power_supply()
 elseif settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "default" then
