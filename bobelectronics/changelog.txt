@@ -3,6 +3,7 @@ Version: 1.2.0
 Date: ???
   Changes:
     - Added missing prerequisites #120
+    - Renamed Copper cable to Copper wire #128
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
