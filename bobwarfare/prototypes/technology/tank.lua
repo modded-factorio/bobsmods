@@ -9,6 +9,7 @@ data:extend({
       "tank",
       "artillery",
       "advanced-electronics-2",
+      "production-science-pack",
     },
     effects = {
       {
