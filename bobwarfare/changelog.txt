@@ -4,6 +4,8 @@ Date: ???
   Bugfixes:
     - Fixed Artillery Wagon Item Subgroup #110
     - Added missing prerequisites #120
+  Changes:
+    - Adjust tank recipe #129
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
