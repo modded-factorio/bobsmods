@@ -436,7 +436,7 @@ end
 
 if data.raw.item["ruby-5"] then
   bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-1", { "ruby-5", 1 })
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-1", "gem-processing-2")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-1", "gem-processing-3")
 end
 
 if data.raw.item["sapphire-5"] then
@@ -459,7 +459,7 @@ end
 
 if data.raw.item["diamond-5"] then
   bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-6", { "diamond-5", 1 })
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-6", "gem-processing-2")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-6", "gem-processing-3")
   bobmods.lib.recipe.add_ingredient("vehicle-solar-panel-6", { "diamond-5", 1 })
 end
 

@@ -76,3 +76,5 @@ end
 if data.raw.recipe["robot-tool-construction-4"] then
   bobmods.lib.module.add_productivity_limitation("robot-tool-construction-4")
 end
+
+bobmods.lib.module.add_productivity_limitation("bob-oil-processing")

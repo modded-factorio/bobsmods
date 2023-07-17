@@ -752,6 +752,51 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
+      "automation",
+    },
+    unit = {
+      count = 30,
+      ingredients = {
+        { "automation-science-pack", 1 },
+      },
+      time = 15,
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-ruby-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-sapphire-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-emerald-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-amethyst-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-topaz-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-diamond-3",
+      },
+    },
+    order = "c-b-i1",
+  },
+
+  {
+    type = "technology",
+    name = "gem-processing-2",
+    icon = "__bobplates__/graphics/icons/technology/gems.png",
+    icon_size = 64,
+    prerequisites = {
+      "gem-processing-1",
       "grinding",
       "automation-2",
     },
@@ -789,16 +834,16 @@ data:extend({
         recipe = "bob-diamond-4",
       },
     },
-    order = "c-b-i1",
+    order = "c-b-i2",
   },
 
   {
     type = "technology",
-    name = "gem-processing-2",
+    name = "gem-processing-3",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
-      "gem-processing-1",
+      "gem-processing-2",
       "polishing",
       --      "chemical-science-pack", --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
     },
@@ -837,7 +882,7 @@ data:extend({
         recipe = "bob-diamond-5",
       },
     },
-    order = "c-b-i2",
+    order = "c-b-i3",
   },
 
   {
@@ -964,5 +1009,33 @@ data:extend({
       },
     },
     order = "b-c-b",
+  },
+
+  {
+    type = "technology",
+    name = "bob-wood-processing",
+    icon = "__base__/graphics/icons/wood.png",
+    icon_size = 64,
+    prerequisites = {
+      "automation",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-resin-wood",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-rubber",
+      },
+    },
+    unit = {
+      count = 30,
+      ingredients = {
+        { "automation-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "e-a-a",
   },
 })

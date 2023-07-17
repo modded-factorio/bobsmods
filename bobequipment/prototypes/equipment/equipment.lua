@@ -450,60 +450,6 @@ data:extend({
   },
 })
 
-data:extend({
-  {
-    type = "active-defense-equipment",
-    name = "combat-robot-dispenser-equipment",
-    sprite = {
-      filename = "__bobequipment__/graphics/icons/distractor.png",
-      width = 32,
-      height = 32,
-      priority = "medium",
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      buffer_capacity = "6MJ",
-    },
-    attack_parameters = {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 60 * 15,
-      damage_modifier = 1,
-      projectile_center = { 0, 0 },
-      projectile_creation_distance = 0.6,
-      range = 10,
-      ammo_type = {
-        type = "projectile",
-        category = "electric",
-        energy_consumption = "5MJ",
-        action = {
-          {
-            type = "direct",
-            action_delivery = {
-              type = "instant",
-              source_effects = {
-                {
-                  type = "create-entity",
-                  show_in_tooltip = true,
-                  entity_name = "distractor",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    automatic = true,
-    categories = { "armor" },
-  },
-})
-
 local function bob_personal_laser_defense_equipment(
   name,
   sprite,

@@ -166,20 +166,19 @@ end
 
 graphics.yellow = {}
 function graphics.yellow.hand_base_picture()
-  return
-    {
-      filename = "__base__/graphics/entity/inserter/inserter-hand-base.png",
+  return {
+    filename = "__base__/graphics/entity/inserter/inserter-hand-base.png",
+    priority = "extra-high",
+    width = 8,
+    height = 33, --for some reason, yellow has a different size here.
+    hr_version = {
+      filename = "__base__/graphics/entity/inserter/hr-inserter-hand-base.png",
       priority = "extra-high",
-      width = 8,
-      height = 33, --for some reason, yellow has a different size here.
-      hr_version = {
-        filename = "__base__/graphics/entity/inserter/hr-inserter-hand-base.png",
-        priority = "extra-high",
-        width = 32,
-        height = 136,
-        scale = 0.25,
-      },
-    }
+      width = 32,
+      height = 136,
+      scale = 0.25,
+    },
+  }
 end
 function graphics.yellow.hand_closed_picture()
   return {

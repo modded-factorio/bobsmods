@@ -140,12 +140,12 @@ if data.raw.item["ruby-5"] then
   bobmods.lib.recipe.add_ingredient("productivity-module-5", { "ruby-5", 1 })
   bobmods.lib.recipe.add_ingredient("pollution-clean-module-5", { "ruby-5", 1 })
   bobmods.lib.recipe.add_ingredient("pollution-create-module-5", { "ruby-5", 1 })
-  if data.raw.technology["gem-processing-2"] then
-    bobmods.lib.tech.add_prerequisite("speed-module-5", "gem-processing-2")
-    bobmods.lib.tech.add_prerequisite("productivity-module-5", "gem-processing-2")
-    bobmods.lib.tech.add_prerequisite("effectivity-module-5", "gem-processing-2")
-    bobmods.lib.tech.add_prerequisite("pollution-clean-module-5", "gem-processing-2")
-    bobmods.lib.tech.add_prerequisite("pollution-create-module-5", "gem-processing-2")
+  if data.raw.technology["gem-processing-3"] then
+    bobmods.lib.tech.add_prerequisite("speed-module-5", "gem-processing-3")
+    bobmods.lib.tech.add_prerequisite("productivity-module-5", "gem-processing-3")
+    bobmods.lib.tech.add_prerequisite("effectivity-module-5", "gem-processing-3")
+    bobmods.lib.tech.add_prerequisite("pollution-clean-module-5", "gem-processing-3")
+    bobmods.lib.tech.add_prerequisite("pollution-create-module-5", "gem-processing-3")
   end
 else
   if data.raw.item["alien-artifact"] then

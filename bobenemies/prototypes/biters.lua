@@ -366,18 +366,23 @@ data:extend({
     water_reflection = biter_water_reflection(bobmods.enemies.huge_scale),
   },
 
-  add_biter_die_animation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2, {
-    type = "corpse",
-    name = "bob-huge-explosive-biter-corpse",
-    icon = "__base__/graphics/icons/medium-biter-corpse.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    selectable_in_game = false,
-    selection_box = { { -1, -1 }, { 1, 1 } },
-    subgroup = "corpses",
-    order = "c[corpse]-a[biter]-d[bigger]",
-    flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
-  }),
+  add_biter_die_animation(
+    bobmods.enemies.huge_scale,
+    bobmods.enemies.explosive_tint,
+    bobmods.enemies.explosive_tint2,
+    {
+      type = "corpse",
+      name = "bob-huge-explosive-biter-corpse",
+      icon = "__base__/graphics/icons/medium-biter-corpse.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      selectable_in_game = false,
+      selection_box = { { -1, -1 }, { 1, 1 } },
+      subgroup = "corpses",
+      order = "c[corpse]-a[biter]-d[bigger]",
+      flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
+    }
+  ),
 
   {
     type = "unit",
@@ -920,18 +925,23 @@ data:extend({
     water_reflection = biter_water_reflection(bobmods.enemies.behemoth_scale),
   },
 
-  add_biter_die_animation(bobmods.enemies.behemoth_scale, bobmods.enemies.behemoth_tint, bobmods.enemies.behemoth_tint2, {
-    type = "corpse",
-    name = "bob-behemoth-biter-corpse",
-    icon = "__base__/graphics/icons/big-biter-corpse.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    selectable_in_game = false,
-    selection_box = { { -1, -1 }, { 1, 1 } },
-    subgroup = "corpses",
-    order = "c[corpse]-a[biter]-e[behemoth]",
-    flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
-  }),
+  add_biter_die_animation(
+    bobmods.enemies.behemoth_scale,
+    bobmods.enemies.behemoth_tint,
+    bobmods.enemies.behemoth_tint2,
+    {
+      type = "corpse",
+      name = "bob-behemoth-biter-corpse",
+      icon = "__base__/graphics/icons/big-biter-corpse.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      selectable_in_game = false,
+      selection_box = { { -1, -1 }, { 1, 1 } },
+      subgroup = "corpses",
+      order = "c[corpse]-a[biter]-e[behemoth]",
+      flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
+    }
+  ),
 
   {
     type = "unit",

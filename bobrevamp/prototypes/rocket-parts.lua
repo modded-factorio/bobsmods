@@ -40,6 +40,7 @@ data:extend({
     prerequisites = {
       "steel-processing",
       "plastics",
+      "production-science-pack",
     },
     unit = {
       count = 200,

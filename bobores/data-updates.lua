@@ -4,7 +4,9 @@ for i, ore in pairs(bobmods.ores) do
   end
 end
 
-if bobmods.ores.settings.UnsortedGemOre == true then
+if not bobmods.ores.gems.enabled then
+  -- Do nothing
+elseif bobmods.ores.settings.UnsortedGemOre == true then
   bobmods.lib.resource.add_result("gem-ore", { name = "gem-ore" })
 else
   bobmods.lib.resource.add_result("gem-ore", { name = "diamond-ore", probability = bobmods.gems.DiamondRatio })

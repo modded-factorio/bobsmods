@@ -258,7 +258,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
 
     if data.raw.item["emerald-5"] then
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-3", { "emerald-5", 1 })
-      bobmods.lib.tech.add_prerequisite("destroyer", "gem-processing-2")
+      bobmods.lib.tech.add_prerequisite("destroyer", "gem-processing-3")
     end
   end
 

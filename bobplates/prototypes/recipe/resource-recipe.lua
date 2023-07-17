@@ -20,6 +20,7 @@ data:extend({
     name = "bob-resin-wood",
     category = "crafting-machine",
     energy_required = 1,
+    enabled = false,
     ingredients = {
       { "wood", 1 },
     },
@@ -53,6 +54,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
+    enabled = false,
     ingredients = {
       { "resin", 1 },
     },

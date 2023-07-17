@@ -654,3 +654,15 @@ function bobmods.lib.recipe.set_subgroup(recipe_name, subgroup)
     bobmods.lib.error.recipe(recipe_name)
   end
 end
+
+function bobmods.lib.recipe.set_category(recipe_name, category)
+  if type(recipe_name) == "string" and type(category) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      recipe.category = category
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe_name)
+  end
+end
