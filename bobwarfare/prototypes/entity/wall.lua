@@ -1,4 +1,4 @@
-local hit_effects = require ("__base__/prototypes/entity/hit-effects")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
 local reinforced_wall_resistances = {
   {
@@ -380,25 +380,22 @@ data:extend({
           },
         },
       },
-      gate_connection_patch =
-      {
-        sheets =
-        {
+      gate_connection_patch = {
+        sheets = {
           {
             filename = "__base__/graphics/entity/wall/wall-gate.png",
             priority = "extra-high",
             width = 42,
             height = 56,
             shift = util.by_pixel(0, -8),
-            hr_version =
-            {
+            hr_version = {
               filename = "__base__/graphics/entity/wall/hr-wall-gate.png",
               priority = "extra-high",
               width = 82,
               height = 108,
               shift = util.by_pixel(0, -7),
-              scale = 0.5
-            }
+              scale = 0.5,
+            },
           },
           {
             filename = "__base__/graphics/entity/wall/wall-gate-shadow.png",
@@ -407,19 +404,18 @@ data:extend({
             height = 40,
             shift = util.by_pixel(14, 18),
             draw_as_shadow = true,
-            hr_version =
-            {
+            hr_version = {
               filename = "__base__/graphics/entity/wall/hr-wall-gate-shadow.png",
               priority = "extra-high",
               width = 130,
               height = 78,
               shift = util.by_pixel(14, 18),
               draw_as_shadow = true,
-              scale = 0.5
-            }
-          }
-        }
-      }
+              scale = 0.5,
+            },
+          },
+        },
+      },
     },
     wall_diode_green = {
       sheet = {
