@@ -1,3 +1,5 @@
+local hit_effects = require ("__base__/prototypes/entity/hit-effects")
+
 local reinforced_wall_resistances = {
   {
     type = "physical",
@@ -56,13 +58,17 @@ data:extend({
     flags = { "placeable-neutral", "player-creation" },
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-    minable = { mining_time = 1, result = "reinforced-wall" },
+    damaged_trigger_effect = hit_effects.wall(),
+    minable = { mining_time = 0.2, result = "reinforced-wall" },
     fast_replaceable_group = "wall",
     max_health = 750,
     repair_speed_modifier = 2,
     corpse = "wall-remnants",
+    dying_explosion = "wall-explosion",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+    open_sound = { filename = "__base__/sound/machine-open.ogg" },
+    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.5 },
     vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
     -- this kind of code can be used for having walls mirror the effect
     -- there can be multiple reaction items
@@ -100,6 +106,7 @@ data:extend({
       scale = 0.5,
     },
     resistances = reinforced_wall_resistances,
+    visual_merge_group = 0, -- different walls will visually connect to each other if their merge group is same (defaults to 0)
     pictures = {
       single = {
         layers = {
@@ -373,13 +380,54 @@ data:extend({
           },
         },
       },
+      gate_connection_patch =
+      {
+        sheets =
+        {
+          {
+            filename = "__base__/graphics/entity/wall/wall-gate.png",
+            priority = "extra-high",
+            width = 42,
+            height = 56,
+            shift = util.by_pixel(0, -8),
+            hr_version =
+            {
+              filename = "__base__/graphics/entity/wall/hr-wall-gate.png",
+              priority = "extra-high",
+              width = 82,
+              height = 108,
+              shift = util.by_pixel(0, -7),
+              scale = 0.5
+            }
+          },
+          {
+            filename = "__base__/graphics/entity/wall/wall-gate-shadow.png",
+            priority = "extra-high",
+            width = 66,
+            height = 40,
+            shift = util.by_pixel(14, 18),
+            draw_as_shadow = true,
+            hr_version =
+            {
+              filename = "__base__/graphics/entity/wall/hr-wall-gate-shadow.png",
+              priority = "extra-high",
+              width = 130,
+              height = 78,
+              shift = util.by_pixel(14, 18),
+              draw_as_shadow = true,
+              scale = 0.5
+            }
+          }
+        }
+      }
     },
-    wall_diode_green = util.conditional_return(not data.is_demo, {
+    wall_diode_green = {
       sheet = {
         filename = "__base__/graphics/entity/wall/wall-diode-green.png",
         priority = "extra-high",
         width = 38,
         height = 24,
+        draw_as_glow = true,
         --frames = 4, -- this is optional, it will default to 4 for Sprite4Way
         line_length = 4,
         shift = util.by_pixel(-2, -24),
@@ -388,48 +436,50 @@ data:extend({
           priority = "extra-high",
           width = 72,
           height = 44,
+          draw_as_glow = true,
           --frames = 4,
           line_length = 4,
           shift = util.by_pixel(-1, -23),
           scale = 0.5,
         },
       },
-    }),
-    wall_diode_green_light_top = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_green_light_top = {
       minimum_darkness = 0.3,
       color = { g = 1 },
       shift = util.by_pixel(0, -30),
       size = 1,
       intensity = 0.3,
-    }),
-    wall_diode_green_light_right = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_green_light_right = {
       minimum_darkness = 0.3,
       color = { g = 1 },
       shift = util.by_pixel(12, -23),
       size = 1,
       intensity = 0.3,
-    }),
-    wall_diode_green_light_bottom = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_green_light_bottom = {
       minimum_darkness = 0.3,
       color = { g = 1 },
       shift = util.by_pixel(0, -17),
       size = 1,
       intensity = 0.3,
-    }),
-    wall_diode_green_light_left = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_green_light_left = {
       minimum_darkness = 0.3,
       color = { g = 1 },
       shift = util.by_pixel(-12, -23),
       size = 1,
       intensity = 0.3,
-    }),
+    },
 
-    wall_diode_red = util.conditional_return(not data.is_demo, {
+    wall_diode_red = {
       sheet = {
         filename = "__base__/graphics/entity/wall/wall-diode-red.png",
         priority = "extra-high",
         width = 38,
         height = 24,
+        draw_as_glow = true,
         --frames = 4, -- this is optional, it will default to 4 for Sprite4Way
         line_length = 4,
         shift = util.by_pixel(-2, -24),
@@ -438,45 +488,46 @@ data:extend({
           priority = "extra-high",
           width = 72,
           height = 44,
+          draw_as_glow = true,
           --frames = 4,
           line_length = 4,
           shift = util.by_pixel(-1, -23),
           scale = 0.5,
         },
       },
-    }),
-    wall_diode_red_light_top = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_red_light_top = {
       minimum_darkness = 0.3,
       color = { r = 1 },
       shift = util.by_pixel(0, -30),
       size = 1,
       intensity = 0.3,
-    }),
-    wall_diode_red_light_right = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_red_light_right = {
       minimum_darkness = 0.3,
       color = { r = 1 },
       shift = util.by_pixel(12, -23),
       size = 1,
       intensity = 0.3,
-    }),
-    wall_diode_red_light_bottom = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_red_light_bottom = {
       minimum_darkness = 0.3,
       color = { r = 1 },
       shift = util.by_pixel(0, -17),
       size = 1,
       intensity = 0.3,
-    }),
-    wall_diode_red_light_left = util.conditional_return(not data.is_demo, {
+    },
+    wall_diode_red_light_left = {
       minimum_darkness = 0.3,
       color = { r = 1 },
       shift = util.by_pixel(-12, -23),
       size = 1,
       intensity = 0.3,
-    }),
+    },
 
     circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
     circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
-    circuit_wire_max_distance = 7.5,
+    circuit_wire_max_distance = 9,
     default_output_signal = { type = "virtual", name = "signal-G" },
   },
 
@@ -484,7 +535,7 @@ data:extend({
     data.raw.gate.gate,
     {
       name = "reinforced-gate",
-      minable = { mining_time = 1, result = "reinforced-gate" },
+      minable = { mining_time = 0.1, result = "reinforced-gate" },
       max_health = 750,
       opening_speed = 0.1,
     },
