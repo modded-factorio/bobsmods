@@ -152,18 +152,6 @@ data:extend({
 
   {
     type = "item",
-    name = "combat-robot-dispenser-equipment",
-    icon = "__bobequipment__/graphics/icons/distractor.png",
-    icon_size = 32,
-    placed_as_equipment_result = "combat-robot-dispenser-equipment",
-    subgroup = "military-equipment",
-    order = "d[active-defense]-c[combat-robot-dispenser-equipment-2]",
-    stack_size = 20,
-    flags = { "hidden" },
-  },
-
-  {
-    type = "item",
     name = "night-vision-equipment-2",
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,

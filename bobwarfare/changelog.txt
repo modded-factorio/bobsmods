@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: ???
+  Bugfixes:
+    - Fixed Artillery Wagon Item Subgroup #110
+    - Fixed graphical gap between gates and reinforced walls #130
+  Changes:
+    - Added missing prerequisites #120
+    - Adjust tank recipe #129
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
   Bugfixes:

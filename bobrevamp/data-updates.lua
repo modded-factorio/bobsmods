@@ -31,10 +31,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.remove_recipe_unlock("oil-processing", "chemical-plant")
   bobmods.lib.tech.remove_recipe_unlock("oil-processing", "pumpjack")
   bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
-  bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-light-oil")
-  bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-heavy-oil")
-  bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")
-  bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
+  bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
   bobmods.lib.tech.remove_prerequisite("oil-processing", "steel-processing")
   bobmods.lib.tech.add_prerequisite("oil-processing", "pumpjack")
   data.raw.technology["oil-processing"].icon = "__base__/graphics/technology/oil-processing.png"
@@ -57,34 +54,18 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.replace_prerequisite("fluid-handling", "oil-processing", "steel-processing")
   bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)
 
-  if data.raw.technology["chemical-processing-2"] then --chemical plant before oil processing
-    bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
-    bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "chemical-plant")
-    bobmods.lib.tech.add_prerequisite("chemical-processing-2", "chemical-plant")
-    bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
-    bobmods.lib.tech.add_recipe_unlock("solid-fuel", "solid-fuel-from-hydrogen")
+  --chemical plant before oil processing
+  bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
+  bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "chemical-plant")
+  bobmods.lib.tech.add_prerequisite("chemical-processing-2", "chemical-plant")
+  bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
+  bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-hydrogen")
 
-    bobmods.lib.tech.add_prerequisite("lubricant", "chemical-plant")
-    bobmods.lib.tech.add_prerequisite("plastics", "chemical-plant")
-    bobmods.lib.tech.add_prerequisite("chemical-plant", "steel-processing")
-    bobmods.lib.tech.add_prerequisite("chemical-plant", "electronics")
-    bobmods.lib.tech.replace_prerequisite("nitrogen-processing", "chemical-processing-2", "chemical-plant")
-  else --chemical plant after oil processing
-    bobmods.lib.tech.replace_prerequisite("sulfur-processing", "oil-processing", "chemical-plant")
-    bobmods.lib.tech.add_prerequisite("chemical-plant", "oil-processing")
-    bobmods.lib.tech.replace_prerequisite("lubricant", "oil-processing", "chemical-plant")
-    bobmods.lib.tech.replace_prerequisite("plastics", "oil-processing", "chemical-plant")
-
-    -- in the electronics mod
-    if data.raw.recipe["bob-resin-oil"] then
-      bobmods.lib.tech.remove_recipe_unlock("oil-processing", "bob-resin-oil")
-      bobmods.lib.tech.add_recipe_unlock("chemical-plant", "bob-resin-oil")
-    end
-    if data.raw.recipe["ferric-chloride-solution"] then
-      bobmods.lib.tech.remove_recipe_unlock("oil-processing", "ferric-chloride-solution")
-      bobmods.lib.tech.add_recipe_unlock("chemical-plant", "ferric-chloride-solution")
-    end
-  end
+  bobmods.lib.tech.add_prerequisite("lubricant", "chemical-plant")
+  bobmods.lib.tech.add_prerequisite("plastics", "chemical-plant")
+  bobmods.lib.tech.add_prerequisite("chemical-plant", "steel-processing")
+  bobmods.lib.tech.add_prerequisite("chemical-plant", "electronics")
+  bobmods.lib.tech.replace_prerequisite("nitrogen-processing", "chemical-processing-2", "chemical-plant")
 
   if data.raw.technology["electrolysis-2"] then
     bobmods.lib.tech.remove_recipe_unlock("electrolysis-2", "storage-tank")
@@ -129,7 +110,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
     bobmods.lib.recipe.hide("sulfur")
   end
-  bobmods.lib.tech.add_recipe_unlock("solid-fuel", "solid-fuel-from-sour-gas")
+  bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-sour-gas")
   bobmods.lib.module.add_productivity_limitation("solid-fuel-from-sour-gas")
   bobmods.lib.tech.add_recipe_unlock("oil-processing", "petroleum-gas-sweetening")
   bobmods.lib.create_gas_bottle(data.raw.fluid["sour-gas"])

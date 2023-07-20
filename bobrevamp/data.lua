@@ -63,39 +63,6 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
         },
       },
     },
-    {
-      type = "technology",
-      name = "solid-fuel",
-      icon = "__base__/graphics/icons/solid-fuel.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      order = "d-a-d",
-      prerequisites = {
-        "oil-processing",
-      },
-      unit = {
-        count = 30,
-        time = 30,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-        },
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-from-light-oil",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-from-petroleum-gas",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-from-heavy-oil",
-        },
-      },
-    },
   })
 end
 

@@ -3,6 +3,7 @@ bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-topup-valve")
 bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-storage-tank-all-corners")
 
 -- 0.17.60 balancing
+bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.remove_science_pack("robotics", "chemical-science-pack")
 bobmods.lib.tech.remove_prerequisite("robotics", "advanced-oil-processing")
 bobmods.lib.tech.remove_prerequisite("robotics", "chemical-science-pack")
@@ -20,6 +21,13 @@ bobmods.lib.tech.add_prerequisite("logistic-robotics", "advanced-electronics")
 bobmods.lib.tech.replace_prerequisite("lubricant", "advanced-oil-processing", "oil-processing")
 bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("electric-engine", "chemical-science-pack")
+
+bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")
+bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
 if bobmods.tech and bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.replace_science_pack("logistics-4", "production-science-pack", "advanced-logistic-science-pack")
@@ -231,12 +239,16 @@ end
 
 if data.raw.technology["bob-robotics-4"] then
   bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-robotics-4")
-  bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-electronics-3")
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-electronics-3")
+  end
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-4", "ceramics")
   end
 else
-  bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-electronics-3")
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-electronics-3")
+  end
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.tech.add_prerequisite("bob-robots-3", "ceramics")
   end
@@ -356,6 +368,7 @@ bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "logistic-chest-p
 bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "logistic-chest-requester")
 bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "logistic-chest-storage")
 bobmods.lib.tech.remove_recipe_unlock("logistic-system", "logistic-chest-requester")
+bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 -- Old DyTech compatibillity bullshit
 if data.raw.technology["lava-smelting-05"] then

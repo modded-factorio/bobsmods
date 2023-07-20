@@ -1,6 +1,6 @@
 {
   "name": "bobwarfare",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "factorio_version": "1.1",
   "title": "Bob's Warfare mod",
   "author": "Bobingabout",
@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.6",
-    "? bobplates >= 1.1.6",
+    "boblibrary >= 1.2.0",
+    "? bobplates >= 1.2.0",
     "? bobenemies >= 1.1.6"
   ],
   "description": "Requires Bob's functions library mod.\n\nThis mod adds a lot of things for warfare.\nAdds Nitroglycerine production chain, which is used to make intermediates for new ammo.\nAdds 7 new gun ammos, shotgun ammos, and rockets based on an improved normal, and 6 elemental ammos.\nAdds a laser rifle and 7 tiers of laser ammo using glass and the 6 gems.\nAdds Tanks to tier 3, and artillery wagons to tier 3.\nChanges the way you make combat robots, and adds a 4th combat robot capsule.\nAdds a Robot laser drone.\nAdds a higher tier wall and gate\nAdds a couple new mines.\nAdds Scatter tank ammo\nAdds a few new types of artillery ammo.\nAdds more tiers of Radar.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."}

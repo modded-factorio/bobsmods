@@ -1,6 +1,6 @@
 {
   "name": "bobplates",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "factorio_version": "1.1",
   "title": "Bob's Metals, Chemicals and Intermediates mod",
   "author": "Bobingabout",
@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.6",
+    "boblibrary >= 1.2.0",
     "bobores >= 1.1.6",
     "? bobenemies >= 1.1.6"
   ],

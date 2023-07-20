@@ -12,6 +12,8 @@ require("prototypes.productivity-limitations")
 
 require("prototypes.repair-pack-updates")
 
+require("prototypes.entity.machine-output-height")
+
 -- Allow burner inserters to fuel themselves from the burner inventory of a machine they're pulling items out of.
 data.raw.inserter["burner-inserter"].allow_burner_leech = true
 
@@ -167,3 +169,7 @@ bobmods.lib.item.set_subgroup("express-splitter", "bob-logistic-tier-3")
 
 -- because there's no specific section for it.
 data.raw["pump"]["pump"].next_upgrade = "bob-pump-2"
+
+if settings.startup["bobmods-logistics-highpipes"].value == true then
+  bobmods.logistics.scale_machine_output_base_level()
+end

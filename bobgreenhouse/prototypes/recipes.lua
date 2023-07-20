@@ -19,6 +19,7 @@ data:extend({
     main_product = "seedling",
     normal = {
       enabled = false,
+      always_show_products = true,
       ingredients = {
         { type = "item", name = "wood", amount = 1 },
       },
@@ -28,6 +29,7 @@ data:extend({
     },
     expensive = {
       enabled = false,
+      always_show_products = true,
       ingredients = {
         { type = "item", name = "wood", amount = 1 },
       },
@@ -53,8 +55,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-basic-greenhouse-cycle",
-    icon = "__bobgreenhouse__/graphics/icons/seedling.png",
-    icon_size = 32,
     subgroup = "bob-greenhouse-items",
     order = "g[greenhouse-cycle-1]",
     category = "bob-greenhouse",
@@ -62,6 +62,7 @@ data:extend({
     normal = {
       energy_required = 60,
       enabled = false,
+      always_show_products = true,
       ingredients = {
         { type = "item", name = "seedling", amount = 10 },
         { type = "fluid", name = "water", amount = 20 },
@@ -88,8 +89,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-advanced-greenhouse-cycle",
-    icon = "__bobgreenhouse__/graphics/icons/seedling.png",
-    icon_size = 32,
     subgroup = "bob-greenhouse-items",
     order = "g[greenhouse-cycle-2]",
     category = "bob-greenhouse",
@@ -97,6 +96,7 @@ data:extend({
     normal = {
       energy_required = 45,
       enabled = false,
+      always_show_products = true,
       ingredients = {
         { type = "item", name = "seedling", amount = 10 },
         { type = "fluid", name = "water", amount = 20 },
@@ -110,6 +110,7 @@ data:extend({
     expensive = {
       energy_required = 60,
       enabled = false,
+      always_show_products = true,
       ingredients = {
         { type = "item", name = "seedling", amount = 10 },
         { type = "fluid", name = "water", amount = 20 },

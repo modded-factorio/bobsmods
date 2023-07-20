@@ -37,21 +37,6 @@ local function spidertron_burner_energy_source()
   }
 end
 
-local function spidertron_nuclear_energy_source()
-  return {
-    type = "burner",
-    fuel_category = "nuclear",
-    effectivity = 1,
-    fuel_inventory_size = 1,
-    burnt_inventory_size = 1,
-    light_flicker = {
-      color = { 0, 0, 0 },
-      minimum_intensity = 0.7,
-      maximum_intensity = 0.95,
-    },
-  }
-end
-
 local function add_antron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("antron", { "rtg", 1 })
@@ -126,14 +111,14 @@ if settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "all" then
   data.raw["spider-vehicle"]["antron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["tankotron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["logistic-spidertron"].energy_source = spidertron_burner_energy_source()
-  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_nuclear_energy_source()
+  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_burner_energy_source()
   remove_spidertron_power_supply()
-  data.raw["spider-vehicle"]["heavy-spidertron"].energy_source = spidertron_nuclear_energy_source()
+  data.raw["spider-vehicle"]["heavy-spidertron"].energy_source = spidertron_burner_energy_source()
 elseif settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "nothighest" then
   data.raw["spider-vehicle"]["antron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["tankotron"].energy_source = spidertron_burner_energy_source()
   data.raw["spider-vehicle"]["logistic-spidertron"].energy_source = spidertron_burner_energy_source()
-  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_nuclear_energy_source()
+  data.raw["spider-vehicle"]["spidertron"].energy_source = spidertron_burner_energy_source()
   remove_spidertron_power_supply()
   add_heavy_spidertron_power_supply()
 elseif settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "default" then
@@ -193,6 +178,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
 
   if data.raw.item.rubber then
     bobmods.lib.recipe.add_ingredient("mech-foot", { "rubber", 1 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "bob-wood-processing")
   end
 
   if data.raw.item["titanium-pipe"] then
@@ -264,12 +250,12 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     end
     add_case()
   else
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "rocket-control-unit", 16 })
     if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 10 })
+      bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 16 })
+      bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
       add_case()
     else
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 2 })
+      bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 6 })
       bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
     end
   end
@@ -294,18 +280,16 @@ else
 
   bobmods.lib.recipe.add_ingredient("antron", { "exoskeleton-equipment", 3 })
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "exoskeleton-equipment")
-  bobmods.lib.recipe.add_ingredient("antron", { "rocket-control-unit", 10 })
-  bobmods.lib.tech.add_prerequisite("walking-vehicle", "rocket-control-unit")
   bobmods.lib.recipe.add_ingredient("antron", { "low-density-structure", 100 })
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "low-density-structure")
 
   bobmods.lib.recipe.add_ingredient("tankotron", { "exoskeleton-equipment", 3 })
-  bobmods.lib.recipe.add_ingredient("tankotron", { "rocket-control-unit", 10 })
   bobmods.lib.recipe.add_ingredient("tankotron", { "low-density-structure", 120 })
 
   bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "exoskeleton-equipment", 4 })
   bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "rocket-control-unit", 18 })
   bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "low-density-structure", 100 })
+  bobmods.lib.tech.add_prerequisite("logistic-spidertron", "rocket-control-unit")
 
   bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "exoskeleton-equipment", 4 })
   bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "rocket-control-unit", 20 })

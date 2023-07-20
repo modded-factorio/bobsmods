@@ -9,6 +9,7 @@ data:extend({
       "tank",
       "artillery",
       "advanced-electronics-2",
+      "production-science-pack",
     },
     effects = {
       {
@@ -17,12 +18,13 @@ data:extend({
       },
     },
     unit = {
-      count = 100,
+      count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -46,7 +48,7 @@ data:extend({
       },
     },
     unit = {
-      count = 150,
+      count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },

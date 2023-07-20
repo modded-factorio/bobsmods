@@ -45,6 +45,8 @@ end
 bobmods.lib.tech.add_recipe_unlock("electronics", "insulated-cable")
 bobmods.lib.tech.add_recipe_unlock("electronics", "basic-electronic-components")
 bobmods.lib.tech.add_recipe_unlock("electronics", "electronic-circuit")
+bobmods.lib.tech.remove_prerequisite("electronics", "automation")
+bobmods.lib.tech.add_prerequisite("electronics", "bob-wood-processing")
 
 if data.raw.technology["chemical-processing-1"] and data.raw.technology["alloy-processing"] then
   bobmods.lib.tech.add_prerequisite("electronics", "chemical-processing-1")
@@ -91,3 +93,10 @@ data.raw.technology["advanced-electronics-2"].icon_size = 128
 data.raw.technology["electronics"].icon_mipmaps = 0
 data.raw.technology["advanced-electronics"].icon_mipmaps = 0
 data.raw.technology["advanced-electronics-2"].icon_mipmaps = 0
+
+bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")
+bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-heavy-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
+bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")

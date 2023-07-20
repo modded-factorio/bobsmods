@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: ???
+  Bugfixes:
+    - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117
+  Changes:
+    - Added support for AAI Loaders #109
+    - Most Machines can now fill higher tier pipes when Bigger pipes is enabled #111
+    - Added missing prerequisites #120
+    - Added recipe Crude oil processing when other Bob's mods are not enabled #120
+    - Moved solid fuel recipes to tech "Flammables" #120
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
   Bugfixes:

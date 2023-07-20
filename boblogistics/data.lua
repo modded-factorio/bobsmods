@@ -49,6 +49,7 @@ require("prototypes.recipe.pipes-recipe")
 require("prototypes.recipe.storage-tank-recipe")
 require("prototypes.recipe.logistic-container-recipe")
 require("prototypes.recipe.pump-recipe")
+require("prototypes.recipe.chemicals")
 
 require("prototypes.technology")
 require("prototypes.technology-logistics")
@@ -57,3 +58,5 @@ require("prototypes.technology-inserter")
 require("prototypes.valves")
 require("prototypes.chests")
 require("prototypes.repair-pack")
+
+require("prototypes.aai-loaders")
