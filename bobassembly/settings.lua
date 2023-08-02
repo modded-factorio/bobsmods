@@ -68,6 +68,7 @@ data:extend({
     name = "bobmods-assembly-burner",
     setting_type = "startup",
     default_value = true,
+    hidden = mods["aai-industry"] and true or false,
   },
   {
     type = "bool-setting",
