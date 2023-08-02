@@ -77,6 +77,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
         time = 5,
       },
+      ignore_tech_cost_multiplier = true,
       order = "c-a",
     },
 
@@ -110,6 +111,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
         time = 10,
       },
+      ignore_tech_cost_multiplier = true,
       order = "c-a",
     },
 
@@ -131,6 +133,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
           { "automation-science-pack", 1 },
         },
       },
+      ignore_tech_cost_multiplier = true,
     },
   })
 
@@ -150,6 +153,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
         time = 10,
       },
+      ignore_tech_cost_multiplier = true,
       order = "c-a",
     },
   })
