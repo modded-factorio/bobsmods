@@ -222,16 +222,16 @@ function minime_exchanged_characters(event)
 
   -- Switch to another character
   if new_character and not (editor or god) then
-    wlog("Calling refresh_avatar_gui(" .. player_index .. ")!")
+    wlog("Calling refresh_avatar_gui(" .. player_index .. ")")
     refresh_avatar_gui(player_index)
 
   -- Enter editor mode
   elseif editor then
-    wlog("Calling switch_to_editor(" .. player_index .. ", " .. tostring(old_character and old_character.name) .. ")!")
+    wlog("Calling switch_to_editor(" .. player_index .. ", " .. tostring(old_character and old_character.name) .. ")")
     switch_to_editor(player_index, old_character)
   -- Enter god mode
   elseif god then
-    wlog("Calling switch_to_god(" .. player_index .. ", " .. tostring(old_character and old_character.name) .. ")!")
+    wlog("Calling switch_to_god(" .. player_index .. ", " .. tostring(old_character and old_character.name) .. ")")
     switch_to_god(player_index, old_character)
   end
 end
@@ -1219,7 +1219,7 @@ function delete_minimap_gui(player_index)
 end
 
 function set_character_icon(player_index, entity)
-  wlog("Entered function set_character_icon(" .. player_index .. ", " .. entity.name(")!"))
+  wlog("Entered function set_character_icon(" .. player_index .. ", " .. entity.name .. ")")
 
   local player = game.players[player_index]
   local hand_item = nil
@@ -1252,7 +1252,7 @@ function reset_character_icon(entity)
 end
 
 function create_character(player_index, class)
-  wlog("Entered function create_character(" .. player_index .. ", " .. serpent.line(class) .. ")!")
+  wlog("Entered function create_character(" .. player_index .. ", " .. serpent.line(class) .. ")")
   local player = game.players[player_index]
 
   if player.controller_type == defines.controllers.character and player.character ~= nil and player.character.valid then
@@ -1342,7 +1342,7 @@ function create_character(player_index, class)
       -- It seems that creating a character with fast_replace would destroy the old entity.
       -- But there are situations where the old character may still be around and block the
       -- new one. Make sure the old character is really removed!
-      --~ wlog("Removing old character \""..old.name.."\" ("..old.unit_number..")!")
+      --~ wlog("Removing old character \"" .. old.name .. "\" (" .. old.unit_number .. ")")
       if old and old.valid then
         wlog("Removing old character!")
         old.destroy()
@@ -1419,7 +1419,7 @@ function switch_character(player_index, new_character)
       .. player_index
       .. ", "
       .. tostring(new_character and new_character.name)
-      .. ")!"
+      .. ")"
   )
 
   local player = game.players[player_index]
