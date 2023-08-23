@@ -1,3 +1,5 @@
+if not mods["space-exploration"] then
+
 data.raw.recipe["energy-shield-mk2-equipment"].ingredients =
   { { "energy-shield-equipment", 2 }, { "processing-unit", 5 } }
 
@@ -54,6 +56,8 @@ data:extend({
     result = "energy-shield-mk6-equipment",
   },
 })
+
+end
 
 data.raw.recipe["battery-mk2-equipment"].ingredients = { { "battery-equipment", 2 }, { "processing-unit", 5 } }
 
