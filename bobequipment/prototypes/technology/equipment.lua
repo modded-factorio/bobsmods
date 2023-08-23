@@ -1,3 +1,5 @@
+if not mods["space-exploration"] then
+
 data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
   icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk2-equipment.png",
   icon_size = 128,
@@ -130,6 +132,8 @@ data:extend({
     },
   },
 })
+
+end
 
 data.raw["technology"]["battery-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
   icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png",
