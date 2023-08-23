@@ -4,6 +4,8 @@ data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a[solar-panel-1
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[personal-laser-defense-equipment-1]"
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equipment-1]"
 
+if not mods["space-exploration"] then
+
 data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
 data.raw.item["energy-shield-equipment"].icon_size = 64
 data.raw.item["energy-shield-equipment"].icon_mipmaps = nil
@@ -58,6 +60,8 @@ data:extend({
     default_request_amount = 10,
   },
 })
+
+end
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
 data.raw.item["battery-equipment"].icon_size = 64
