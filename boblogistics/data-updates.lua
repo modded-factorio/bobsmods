@@ -173,3 +173,7 @@ data.raw["pump"]["pump"].next_upgrade = "bob-pump-2"
 if settings.startup["bobmods-logistics-highpipes"].value == true then
   bobmods.logistics.scale_machine_output_base_level()
 end
+
+if mods["space-exploration"] then
+  require("prototypes.se-updates")
+end
