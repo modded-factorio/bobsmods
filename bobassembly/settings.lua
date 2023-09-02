@@ -43,6 +43,7 @@ data:extend({
     name = "bobmods-assembly-distilleries",
     setting_type = "startup",
     default_value = true,
+    hidden = (not mods["bobplates"]) and true or false,
   },
   {
     type = "bool-setting",
