@@ -432,194 +432,194 @@ data.raw.technology["bob-fluid-handling-4"].unit.ingredients = {
 --Trains
 if settings.startup["bobmods-logistics-trains"].value == true then
 
-data.raw.recipe["bob-locomotive-2"].ingredients = {
-    {type = "item", name = "locomotive", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 6},
-    {type = "item", name = "electric-engine-unit", amount = 10},
-    {type = "item", name = "advanced-circuit", amount = 10}
-}
+  data.raw.recipe["bob-locomotive-2"].ingredients = {
+      {type = "item", name = "locomotive", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 6},
+      {type = "item", name = "electric-engine-unit", amount = 10},
+      {type = "item", name = "advanced-circuit", amount = 10}
+  }
 
-data.raw.recipe["bob-locomotive-3"].ingredients = {
-    {type = "item", name = "bob-locomotive-2", amount = 1},
-    {type = "item", name = "se-aeroframe-bulkhead", amount = 2},
-    {type = "item", name = "se-heavy-assembly", amount = 4},
-    {type = "item", name = "processing-unit", amount = 10}
-}
+  data.raw.recipe["bob-locomotive-3"].ingredients = {
+      {type = "item", name = "bob-locomotive-2", amount = 1},
+      {type = "item", name = "se-aeroframe-bulkhead", amount = 2},
+      {type = "item", name = "se-heavy-assembly", amount = 4},
+      {type = "item", name = "processing-unit", amount = 10}
+  }
 
-data.raw.recipe["bob-armoured-locomotive"].ingredients = {
-    {type = "item", name = "locomotive", amount = 1},
-    {type = "item", name = "steel-plate", amount = 40},
-    {type = "item", name = "low-density-structure", amount = 2}
-}
+  data.raw.recipe["bob-armoured-locomotive"].ingredients = {
+      {type = "item", name = "locomotive", amount = 1},
+      {type = "item", name = "steel-plate", amount = 40},
+      {type = "item", name = "low-density-structure", amount = 2}
+  }
 
-data.raw.recipe["bob-armoured-locomotive-2"].ingredients = {
-    {type = "item", name = "bob-armoured-locomotive", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 6},
-    {type = "item", name = "se-heavy-composite", amount = 10},
-    {type = "item", name = "electric-engine-unit", amount = 12},
-    {type = "item", name = "advanced-circuit", amount = 10}
-}
+  data.raw.recipe["bob-armoured-locomotive-2"].ingredients = {
+      {type = "item", name = "bob-armoured-locomotive", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 6},
+      {type = "item", name = "se-heavy-composite", amount = 10},
+      {type = "item", name = "electric-engine-unit", amount = 12},
+      {type = "item", name = "advanced-circuit", amount = 10}
+  }
 
-data.raw.recipe["bob-cargo-wagon-2"].ingredients = {
-    {type = "item", name = "cargo-wagon", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 6},
-    {type = "item", name = "se-heavy-girder", amount = 8}
-}
+  data.raw.recipe["bob-cargo-wagon-2"].ingredients = {
+      {type = "item", name = "cargo-wagon", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 6},
+      {type = "item", name = "se-heavy-girder", amount = 8}
+  }
 
-data.raw.recipe["bob-cargo-wagon-3"].ingredients = {
-    {type = "item", name = "bob-cargo-wagon-2", amount = 1},
-    {type = "item", name = "se-heavy-composite", amount = 4},
-    {type = "item", name = "se-aeroframe-bulkhead", amount = 2}
-}
+  data.raw.recipe["bob-cargo-wagon-3"].ingredients = {
+      {type = "item", name = "bob-cargo-wagon-2", amount = 1},
+      {type = "item", name = "se-heavy-composite", amount = 4},
+      {type = "item", name = "se-aeroframe-bulkhead", amount = 2}
+  }
 
-data.raw.recipe["bob-armoured-cargo-wagon"].ingredients = {
-    {type = "item", name = "cargo-wagon", amount = 1},
-    {type = "item", name = "steel-plate", amount = 30},
-    {type = "item", name = "low-density-structure", amount = 2}
-}
+  data.raw.recipe["bob-armoured-cargo-wagon"].ingredients = {
+      {type = "item", name = "cargo-wagon", amount = 1},
+      {type = "item", name = "steel-plate", amount = 30},
+      {type = "item", name = "low-density-structure", amount = 2}
+  }
 
-data.raw.recipe["bob-armoured-cargo-wagon-2"].ingredients = {
-    {type = "item", name = "bob-armoured-cargo-wagon", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 4},
-    {type = "item", name = "se-heavy-composite", amount = 8},
-}
+  data.raw.recipe["bob-armoured-cargo-wagon-2"].ingredients = {
+      {type = "item", name = "bob-armoured-cargo-wagon", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 4},
+      {type = "item", name = "se-heavy-composite", amount = 8},
+  }
 
-data.raw.recipe["bob-fluid-wagon-2"].ingredients = {
-    {type = "item", name = "fluid-wagon", amount = 1},
-    {type = "item", name = "storage-tank-2", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 4},
-    {type = "item", name = "se-heavy-girder", amount = 2}
-}
+  data.raw.recipe["bob-fluid-wagon-2"].ingredients = {
+      {type = "item", name = "fluid-wagon", amount = 1},
+      {type = "item", name = "storage-tank-2", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 4},
+      {type = "item", name = "se-heavy-girder", amount = 2}
+  }
 
-data.raw.recipe["bob-fluid-wagon-3"].ingredients = {
-    {type = "item", name = "bob-fluid-wagon-2", amount = 1},
-    {type = "item", name = "storage-tank-3", amount = 1},
-    {type = "item", name = "se-heavy-composite", amount = 2},
-    {type = "item", name = "se-aeroframe-bulkhead", amount = 2}
-}
+  data.raw.recipe["bob-fluid-wagon-3"].ingredients = {
+      {type = "item", name = "bob-fluid-wagon-2", amount = 1},
+      {type = "item", name = "storage-tank-3", amount = 1},
+      {type = "item", name = "se-heavy-composite", amount = 2},
+      {type = "item", name = "se-aeroframe-bulkhead", amount = 2}
+  }
 
-data.raw.recipe["bob-armoured-fluid-wagon"].ingredients = {
-    {type = "item", name = "fluid-wagon", amount = 1},
-    {type = "item", name = "steel-plate", amount = 30},
-    {type = "item", name = "low-density-structure", amount = 2}
-}
+  data.raw.recipe["bob-armoured-fluid-wagon"].ingredients = {
+      {type = "item", name = "fluid-wagon", amount = 1},
+      {type = "item", name = "steel-plate", amount = 30},
+      {type = "item", name = "low-density-structure", amount = 2}
+  }
 
-data.raw.recipe["bob-armoured-fluid-wagon-2"].ingredients = {
-    {type = "item", name = "bob-armoured-fluid-wagon", amount = 1},
-    {type = "item", name = "storage-tank-2", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 4},
-    {type = "item", name = "se-heavy-composite", amount = 8},
-}
+  data.raw.recipe["bob-armoured-fluid-wagon-2"].ingredients = {
+      {type = "item", name = "bob-armoured-fluid-wagon", amount = 1},
+      {type = "item", name = "storage-tank-2", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 4},
+      {type = "item", name = "se-heavy-composite", amount = 8},
+  }
 
-bobmods.lib.tech.add_prerequisite("se-space-catalogue-material-2", "railway")
+  bobmods.lib.tech.add_prerequisite("se-space-catalogue-material-2", "railway")
 
-data.raw.technology["bob-railway-2"].prerequisites = {
-    "se-heavy-bearing",
-}
-data.raw.technology["bob-railway-2"].unit.count = 400
-data.raw.technology["bob-railway-2"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-material-science-pack-2", 1}
-}
+  data.raw.technology["bob-railway-2"].prerequisites = {
+      "se-heavy-bearing",
+  }
+  data.raw.technology["bob-railway-2"].unit.count = 400
+  data.raw.technology["bob-railway-2"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-material-science-pack-2", 1}
+  }
 
-data.raw.technology["bob-railway-3"].prerequisites = {
-    "se-heavy-assembly",
-    "se-aeroframe-bulkhead"
-}
-data.raw.technology["bob-railway-3"].unit.count = 1000
-data.raw.technology["bob-railway-3"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-material-science-pack-4", 1}
-}
+  data.raw.technology["bob-railway-3"].prerequisites = {
+      "se-heavy-assembly",
+      "se-aeroframe-bulkhead"
+  }
+  data.raw.technology["bob-railway-3"].unit.count = 1000
+  data.raw.technology["bob-railway-3"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-material-science-pack-4", 1}
+  }
 
-data.raw.technology["bob-armoured-railway"].prerequisites = {
-    "automated-rail-transportation",
-    "low-density-structure"
-}
-data.raw.technology["bob-armoured-railway"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"military-science-pack", 1},
-    {"chemical-science-pack", 1}
-}
+  data.raw.technology["bob-armoured-railway"].prerequisites = {
+      "automated-rail-transportation",
+      "low-density-structure"
+  }
+  data.raw.technology["bob-armoured-railway"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1}
+  }
 
-data.raw.technology["bob-armoured-railway-2"].prerequisites = {
-    "bob-armoured-railway",
-    "se-heavy-composite"
-}
-data.raw.technology["bob-armoured-railway-2"].unit.count = 500
-data.raw.technology["bob-armoured-railway-2"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"military-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-material-science-pack-3", 1}
-}
+  data.raw.technology["bob-armoured-railway-2"].prerequisites = {
+      "bob-armoured-railway",
+      "se-heavy-composite"
+  }
+  data.raw.technology["bob-armoured-railway-2"].unit.count = 500
+  data.raw.technology["bob-armoured-railway-2"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-material-science-pack-3", 1}
+  }
 
-data.raw.technology["bob-fluid-wagon-2"].unit.count = 200
-data.raw.technology["bob-fluid-wagon-2"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-material-science-pack-2", 1}
-}
+  data.raw.technology["bob-fluid-wagon-2"].unit.count = 200
+  data.raw.technology["bob-fluid-wagon-2"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-material-science-pack-2", 1}
+  }
 
-data.raw.technology["bob-fluid-wagon-3"].unit.count = 500
-data.raw.technology["bob-fluid-wagon-3"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-material-science-pack-4", 1}
-}
+  data.raw.technology["bob-fluid-wagon-3"].unit.count = 500
+  data.raw.technology["bob-fluid-wagon-3"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-material-science-pack-4", 1}
+  }
 
-data.raw.technology["bob-armoured-fluid-wagon"].prerequisites = {
-    "chemical-science-pack",
-    "automated-rail-transportation",
-    "low-density-structure"
-}
-data.raw.technology["bob-armoured-fluid-wagon"].unit.count = 50
-data.raw.technology["bob-armoured-fluid-wagon"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"military-science-pack", 1},
-    {"chemical-science-pack", 1}
-}
+  data.raw.technology["bob-armoured-fluid-wagon"].prerequisites = {
+      "chemical-science-pack",
+      "automated-rail-transportation",
+      "low-density-structure"
+  }
+  data.raw.technology["bob-armoured-fluid-wagon"].unit.count = 50
+  data.raw.technology["bob-armoured-fluid-wagon"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1}
+  }
 
-data.raw.technology["bob-armoured-fluid-wagon-2"].prerequisites = {
-    "bob-armoured-fluid-wagon",
-    "bob-fluid-handling-2",
-    "se-heavy-composite"
-}
-data.raw.technology["bob-armoured-fluid-wagon-2"].unit.count = 250
-data.raw.technology["bob-armoured-fluid-wagon-2"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"military-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-material-science-pack-3", 1}
-}
+  data.raw.technology["bob-armoured-fluid-wagon-2"].prerequisites = {
+      "bob-armoured-fluid-wagon",
+      "bob-fluid-handling-2",
+      "se-heavy-composite"
+  }
+  data.raw.technology["bob-armoured-fluid-wagon-2"].unit.count = 250
+  data.raw.technology["bob-armoured-fluid-wagon-2"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-material-science-pack-3", 1}
+  }
 
 end
 
@@ -627,184 +627,182 @@ end
 --Robots and intermediates
 if data.raw.item["flying-robot-frame-4"] then
 
-data.raw.recipe["flying-robot-frame-2"].normal = {
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "electric-engine-unit", amount = 4},
-        {type = "item", name = "battery", amount = 4},
-        {type = "item", name = "advanced-circuit", amount = 4},
-        {type = "item", name = "se-beryllium-plate", amount = 4},
-    },
-    result = "flying-robot-frame-2",
-}
-data.raw.recipe["flying-robot-frame-2"].expensive = {
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "electric-engine-unit", amount = 16},
-        {type = "item", name = "battery", amount = 16},
-        {type = "item", name = "advanced-circuit", amount = 16},
-        {type = "item", name = "se-beryllium-plate", amount = 16},
-    },
-    result = "flying-robot-frame-2",
-}
+  data.raw.recipe["flying-robot-frame-2"].normal = {
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+          {type = "item", name = "electric-engine-unit", amount = 4},
+          {type = "item", name = "battery", amount = 4},
+          {type = "item", name = "advanced-circuit", amount = 4},
+          {type = "item", name = "se-beryllium-plate", amount = 4},
+      },
+      result = "flying-robot-frame-2",
+  }
+  data.raw.recipe["flying-robot-frame-2"].expensive = {
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+          {type = "item", name = "electric-engine-unit", amount = 16},
+          {type = "item", name = "battery", amount = 16},
+          {type = "item", name = "advanced-circuit", amount = 16},
+          {type = "item", name = "se-beryllium-plate", amount = 16},
+      },
+      result = "flying-robot-frame-2",
+  }
 
-data.raw.recipe["flying-robot-frame-3"].normal = {
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "electric-engine-unit", amount = 4},
-        {type = "item", name = "battery", amount = 6},
-        {type = "item", name = "processing-unit", amount = 4},
-        {type = "item", name = "se-aeroframe-scaffold", amount = 2},
-    },
-    result = "flying-robot-frame-3",
-}
-data.raw.recipe["flying-robot-frame-3"].expensive = {
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "electric-engine-unit", amount = 16},
-        {type = "item", name = "battery", amount = 24},
-        {type = "item", name = "processing-unit", amount = 16},
-        {type = "item", name = "se-aeroframe-scaffold", amount = 8},
-    },
-    result = "flying-robot-frame-3",
-}
+  data.raw.recipe["flying-robot-frame-3"].normal = {
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+          {type = "item", name = "electric-engine-unit", amount = 4},
+          {type = "item", name = "battery", amount = 6},
+          {type = "item", name = "processing-unit", amount = 4},
+          {type = "item", name = "se-aeroframe-scaffold", amount = 2},
+      },
+      result = "flying-robot-frame-3",
+  }
+  data.raw.recipe["flying-robot-frame-3"].expensive = {
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+          {type = "item", name = "electric-engine-unit", amount = 16},
+          {type = "item", name = "battery", amount = 24},
+          {type = "item", name = "processing-unit", amount = 16},
+          {type = "item", name = "se-aeroframe-scaffold", amount = 8},
+      },
+      result = "flying-robot-frame-3",
+  }
 
-data.raw.recipe["flying-robot-frame-4"].normal = {
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "se-holmium-solenoid", amount = 4},
-        {type = "item", name = "battery", amount = 8},
-        {type = "item", name = "processing-unit", amount = 4},
-        {type = "item", name = "se-aeroframe-scaffold", amount = 2},
-    },
-    result = "flying-robot-frame-4",
-}
-data.raw.recipe["flying-robot-frame-4"].expensive = {
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-        {type = "item", name = "se-holmium-solenoid", amount = 16},
-        {type = "item", name = "battery", amount = 32},
-        {type = "item", name = "processing-unit", amount = 16},
-        {type = "item", name = "se-aeroframe-scaffold", amount = 8},
-    },
-    result = "flying-robot-frame-4",
-}
+  data.raw.recipe["flying-robot-frame-4"].normal = {
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+          {type = "item", name = "se-holmium-solenoid", amount = 4},
+          {type = "item", name = "battery", amount = 8},
+          {type = "item", name = "processing-unit", amount = 4},
+          {type = "item", name = "se-aeroframe-scaffold", amount = 2},
+      },
+      result = "flying-robot-frame-4",
+  }
+  data.raw.recipe["flying-robot-frame-4"].expensive = {
+      enabled = false,
+      energy_required = 20,
+      ingredients = {
+          {type = "item", name = "se-holmium-solenoid", amount = 16},
+          {type = "item", name = "battery", amount = 32},
+          {type = "item", name = "processing-unit", amount = 16},
+          {type = "item", name = "se-aeroframe-scaffold", amount = 8},
+      },
+      result = "flying-robot-frame-4",
+  }
 
-data.raw.technology["bob-robotics-2"].prerequisites = {
-    "robotics",
-    "se-processing-beryllium",
-}
-data.raw.technology["bob-robotics-2"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1}
-}
+  data.raw.technology["bob-robotics-2"].prerequisites = {
+      "robotics",
+      "se-processing-beryllium",
+  }
+  data.raw.technology["bob-robotics-2"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1}
+  }
 
-data.raw.technology["bob-robotics-3"].prerequisites = {
-    "bob-robotics-2",
-    "se-aeroframe-scaffold",
-    "production-science-pack",
-}
-data.raw.technology["bob-robotics-3"].unit.count = 400
-data.raw.technology["bob-robotics-3"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"utility-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-astronomic-science-pack-2", 1}
-}
+  data.raw.technology["bob-robotics-3"].prerequisites = {
+      "bob-robotics-2",
+      "se-aeroframe-scaffold",
+      "production-science-pack",
+  }
+  data.raw.technology["bob-robotics-3"].unit.count = 400
+  data.raw.technology["bob-robotics-3"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-astronomic-science-pack-2", 1}
+  }
 
-data.raw.technology["bob-robotics-4"].prerequisites = {
-    "bob-robotics-3",
-    "se-holmium-solenoid"
-}
-data.raw.technology["bob-robotics-4"].unit.count = 600
-data.raw.technology["bob-robotics-4"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"utility-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-astronomic-science-pack-2", 1},
-    {"se-energy-science-pack-2", 1}
-}
+  data.raw.technology["bob-robotics-4"].prerequisites = {
+      "bob-robotics-3",
+      "se-holmium-solenoid"
+  }
+  data.raw.technology["bob-robotics-4"].unit.count = 600
+  data.raw.technology["bob-robotics-4"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-astronomic-science-pack-2", 1},
+      {"se-energy-science-pack-2", 1}
+  }
 
---data.raw.technology["bob-robots-1"].prerequisites = {
---}
-data.raw.technology["bob-robots-1"].unit.count = 100
-data.raw.technology["bob-robots-1"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1}
-}
+  data.raw.technology["bob-robots-1"].unit.count = 100
+  data.raw.technology["bob-robots-1"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1}
+  }
 
-data.raw.technology["bob-robots-2"].unit.count = 100
+  data.raw.technology["bob-robots-2"].unit.count = 100
 
-data.raw.technology["bob-robots-3"].prerequisites = {
-    "bob-robots-2",
-    "bob-robotics-4"
-}
-data.raw.technology["bob-robots-3"].unit.count = 100
+  data.raw.technology["bob-robots-3"].prerequisites = {
+      "bob-robots-2",
+      "bob-robotics-4"
+  }
+  data.raw.technology["bob-robots-3"].unit.count = 100
 
-bobmods.lib.tech.add_science_pack("bob-robots-4", "se-astronomic-science-pack-2", 1)
-bobmods.lib.tech.add_science_pack("worker-robots-storage-1", "space-science-pack", 1)
-data.raw.technology["worker-robots-speed-2"].prerequisites = {
-    "worker-robots-speed-1",
-    "chemical-science-pack"
-}
-data.raw.technology["worker-robots-speed-3"].prerequisites = {
-    "worker-robots-speed-2",
-    "bob-robots-1"
-}
+  bobmods.lib.tech.add_science_pack("bob-robots-4", "se-astronomic-science-pack-2", 1)
+  bobmods.lib.tech.add_science_pack("worker-robots-storage-1", "space-science-pack", 1)
+  data.raw.technology["worker-robots-speed-2"].prerequisites = {
+      "worker-robots-speed-1",
+      "chemical-science-pack"
+  }
+  data.raw.technology["worker-robots-speed-3"].prerequisites = {
+      "worker-robots-speed-2",
+      "bob-robots-1"
+  }
 
 
 end
 
 if data.raw.item["robot-tool-logistic-4"] then
 
-data.raw.recipe["robot-tool-construction"].ingredients = {
-    {"iron-gear-wheel", 3},
-    {"steel-plate", 1}
-}
-data.raw.recipe["robot-tool-construction-2"].ingredients = {
-    {"iron-gear-wheel", 3},
-    {"se-beryllium-plate", 1}
-}
-data.raw.recipe["robot-tool-construction-3"].ingredients = {
-    {"iron-gear-wheel", 3},
-    {"se-aeroframe-scaffold", 1}
-}
-data.raw.recipe["robot-tool-construction-4"].ingredients = {
-    {"se-holmium-solenoid", 2},
-    {"se-aeroframe-scaffold", 1}
-}
-data.raw.recipe["robot-tool-logistic-2"].ingredients = {
-    {"iron-gear-wheel", 2},
-    {"se-beryllium-plate", 1}
-}
-data.raw.recipe["robot-tool-logistic-3"].ingredients = {
-    {"iron-gear-wheel", 2},
-    {"se-aeroframe-scaffold", 1}
-}
-data.raw.recipe["robot-tool-logistic-4"].ingredients = {
-    {"se-holmium-solenoid", 1},
-    {"se-aeroframe-scaffold", 1}
-}
+  data.raw.recipe["robot-tool-construction"].ingredients = {
+      {"iron-gear-wheel", 3},
+      {"steel-plate", 1}
+  }
+  data.raw.recipe["robot-tool-construction-2"].ingredients = {
+      {"iron-gear-wheel", 3},
+      {"se-beryllium-plate", 1}
+  }
+  data.raw.recipe["robot-tool-construction-3"].ingredients = {
+      {"iron-gear-wheel", 3},
+      {"se-aeroframe-scaffold", 1}
+  }
+  data.raw.recipe["robot-tool-construction-4"].ingredients = {
+      {"se-holmium-solenoid", 2},
+      {"se-aeroframe-scaffold", 1}
+  }
+  data.raw.recipe["robot-tool-logistic-2"].ingredients = {
+      {"iron-gear-wheel", 2},
+      {"se-beryllium-plate", 1}
+  }
+  data.raw.recipe["robot-tool-logistic-3"].ingredients = {
+      {"iron-gear-wheel", 2},
+      {"se-aeroframe-scaffold", 1}
+  }
+  data.raw.recipe["robot-tool-logistic-4"].ingredients = {
+      {"se-holmium-solenoid", 1},
+      {"se-aeroframe-scaffold", 1}
+  }
 
 end
 
@@ -981,31 +979,31 @@ data.raw["item-subgroup"].splitter.order = "b-9"
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
-data.raw.recipe["transport-belt"].normal.ingredients = {
-    {type = "item", name = "basic-transport-belt", amount = 2},
-    {type = "item", name = "electric-motor", amount = 1},
-    {type = "item", name = "iron-plate", amount = 2},
-}
-data.raw.recipe["transport-belt"].normal.results[1].amount = 2
-data.raw.recipe["transport-belt"].expensive.ingredients = {
-    {type = "item", name = "basic-transport-belt", amount = 2},
-    {type = "item", name = "electric-motor", amount = 1},
-    {type = "item", name = "iron-plate", amount = 2},
-}
-data.raw.recipe["transport-belt"].expensive.results[1].amount = 2
+  data.raw.recipe["transport-belt"].normal.ingredients = {
+      {type = "item", name = "basic-transport-belt", amount = 2},
+      {type = "item", name = "electric-motor", amount = 1},
+      {type = "item", name = "iron-plate", amount = 2},
+  }
+  data.raw.recipe["transport-belt"].normal.results[1].amount = 2
+  data.raw.recipe["transport-belt"].expensive.ingredients = {
+      {type = "item", name = "basic-transport-belt", amount = 2},
+      {type = "item", name = "electric-motor", amount = 1},
+      {type = "item", name = "iron-plate", amount = 2},
+  }
+  data.raw.recipe["transport-belt"].expensive.results[1].amount = 2
 
 else
 
-data.raw.recipe["transport-belt"].normal.ingredients = {
-    {type = "item", name = "electric-motor", amount = 1},
-    {type = "item", name = "iron-plate", amount = 2},
-}
-data.raw.recipe["transport-belt"].normal.results[1].amount = 2
-data.raw.recipe["transport-belt"].expensive.ingredients = {
-    {type = "item", name = "electric-motor", amount = 1},
-    {type = "item", name = "iron-plate", amount = 2},
-}
-data.raw.recipe["transport-belt"].expensive.results[1].amount = 2
+  data.raw.recipe["transport-belt"].normal.ingredients = {
+      {type = "item", name = "electric-motor", amount = 1},
+      {type = "item", name = "iron-plate", amount = 2},
+  }
+  data.raw.recipe["transport-belt"].normal.results[1].amount = 2
+  data.raw.recipe["transport-belt"].expensive.ingredients = {
+      {type = "item", name = "electric-motor", amount = 1},
+      {type = "item", name = "iron-plate", amount = 2},
+  }
+  data.raw.recipe["transport-belt"].expensive.results[1].amount = 2
 
 end
 
@@ -1191,93 +1189,93 @@ data.raw.recipe.inserter.expensive.ingredients = {
 
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
-data.raw.recipe["turbo-inserter"].ingredients = {
-    {type = "item", name = "fast-inserter", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 1},
-    {type = "item", name = "processing-unit", amount = 1},
-    {type = "item", name = "electric-engine-unit", amount = 1},
-}
+  data.raw.recipe["turbo-inserter"].ingredients = {
+      {type = "item", name = "fast-inserter", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 1},
+      {type = "item", name = "processing-unit", amount = 1},
+      {type = "item", name = "electric-engine-unit", amount = 1},
+  }
 
-data.raw.recipe["turbo-filter-inserter"].ingredients = {
-    {type = "item", name = "filter-inserter", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 1},
-    {type = "item", name = "processing-unit", amount = 5},
-    {type = "item", name = "electric-engine-unit", amount = 1},
-}
+  data.raw.recipe["turbo-filter-inserter"].ingredients = {
+      {type = "item", name = "filter-inserter", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 1},
+      {type = "item", name = "processing-unit", amount = 5},
+      {type = "item", name = "electric-engine-unit", amount = 1},
+  }
 
-data.raw.recipe["turbo-stack-inserter"].ingredients = {
-    {type = "item", name = "stack-inserter", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 2},
-    {type = "item", name = "processing-unit", amount = 1},
-    {type = "item", name = "electric-engine-unit", amount = 2},
-}
+  data.raw.recipe["turbo-stack-inserter"].ingredients = {
+      {type = "item", name = "stack-inserter", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 2},
+      {type = "item", name = "processing-unit", amount = 1},
+      {type = "item", name = "electric-engine-unit", amount = 2},
+  }
 
-data.raw.recipe["turbo-stack-filter-inserter"].ingredients = {
-    {type = "item", name = "stack-filter-inserter", amount = 1},
-    {type = "item", name = "se-heavy-bearing", amount = 2},
-    {type = "item", name = "processing-unit", amount = 6},
-    {type = "item", name = "electric-engine-unit", amount = 2},
-}
+  data.raw.recipe["turbo-stack-filter-inserter"].ingredients = {
+      {type = "item", name = "stack-filter-inserter", amount = 1},
+      {type = "item", name = "se-heavy-bearing", amount = 2},
+      {type = "item", name = "processing-unit", amount = 6},
+      {type = "item", name = "electric-engine-unit", amount = 2},
+  }
 
-data.raw.recipe["express-inserter"].ingredients = {
-    {type = "item", name = "turbo-inserter", amount = 1},
-    {type = "item", name = "se-aeroframe-scaffold", amount = 1},
-    {type = "item", name = "processing-unit", amount = 1},
-    {type = "item", name = "se-holmium-solenoid", amount = 1},
-}
+  data.raw.recipe["express-inserter"].ingredients = {
+      {type = "item", name = "turbo-inserter", amount = 1},
+      {type = "item", name = "se-aeroframe-scaffold", amount = 1},
+      {type = "item", name = "processing-unit", amount = 1},
+      {type = "item", name = "se-holmium-solenoid", amount = 1},
+  }
 
-data.raw.recipe["express-filter-inserter"].ingredients = {
-    {type = "item", name = "turbo-filter-inserter", amount = 1},
-    {type = "item", name = "se-aeroframe-scaffold", amount = 2},
-    {type = "item", name = "processing-unit", amount = 5},
-    {type = "item", name = "se-holmium-solenoid", amount = 1},
-}
+  data.raw.recipe["express-filter-inserter"].ingredients = {
+      {type = "item", name = "turbo-filter-inserter", amount = 1},
+      {type = "item", name = "se-aeroframe-scaffold", amount = 2},
+      {type = "item", name = "processing-unit", amount = 5},
+      {type = "item", name = "se-holmium-solenoid", amount = 1},
+  }
 
-data.raw.recipe["express-stack-inserter"].ingredients = {
-    {type = "item", name = "turbo-stack-inserter", amount = 1},
-    {type = "item", name = "se-aeroframe-scaffold", amount = 1},
-    {type = "item", name = "processing-unit", amount = 1},
-    {type = "item", name = "se-holmium-solenoid", amount = 2},
-}
+  data.raw.recipe["express-stack-inserter"].ingredients = {
+      {type = "item", name = "turbo-stack-inserter", amount = 1},
+      {type = "item", name = "se-aeroframe-scaffold", amount = 1},
+      {type = "item", name = "processing-unit", amount = 1},
+      {type = "item", name = "se-holmium-solenoid", amount = 2},
+  }
 
-data.raw.recipe["express-stack-filter-inserter"].ingredients = {
-    {type = "item", name = "turbo-stack-filter-inserter", amount = 1},
-    {type = "item", name = "se-aeroframe-scaffold", amount = 2},
-    {type = "item", name = "processing-unit", amount = 6},
-    {type = "item", name = "se-holmium-solenoid", amount = 2},
-}
+  data.raw.recipe["express-stack-filter-inserter"].ingredients = {
+      {type = "item", name = "turbo-stack-filter-inserter", amount = 1},
+      {type = "item", name = "se-aeroframe-scaffold", amount = 2},
+      {type = "item", name = "processing-unit", amount = 6},
+      {type = "item", name = "se-holmium-solenoid", amount = 2},
+  }
 
-bobmods.lib.tech.add_science_pack("turbo-inserter", "se-material-science-pack-2", 1)
-bobmods.lib.tech.add_science_pack("stack-inserter-3", "se-material-science-pack-2", 1)
+  bobmods.lib.tech.add_science_pack("turbo-inserter", "se-material-science-pack-2", 1)
+  bobmods.lib.tech.add_science_pack("stack-inserter-3", "se-material-science-pack-2", 1)
 
-data.raw.technology["ultimate-inserter"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"utility-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-astronomic-science-pack-2", 1},
-    {"se-energy-science-pack-2", 1},
-    {"se-material-science-pack-3", 1}
-}
-data.raw.technology["stack-inserter-4"].unit.ingredients = {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"se-rocket-science-pack", 1},
-    {"space-science-pack", 1},
-    {"utility-science-pack", 1},
-    {"production-science-pack", 1},
-    {"se-astronomic-science-pack-2", 1},
-    {"se-energy-science-pack-2", 1},
-    {"se-material-science-pack-3", 1}
-}
+  data.raw.technology["ultimate-inserter"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-astronomic-science-pack-2", 1},
+      {"se-energy-science-pack-2", 1},
+      {"se-material-science-pack-3", 1}
+  }
+  data.raw.technology["stack-inserter-4"].unit.ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"se-rocket-science-pack", 1},
+      {"space-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"production-science-pack", 1},
+      {"se-astronomic-science-pack-2", 1},
+      {"se-energy-science-pack-2", 1},
+      {"se-material-science-pack-3", 1}
+  }
 
-data.raw.technology["stack-inserter-3"].unit.count = 200
-data.raw.technology["ultimate-inserter"].unit.count = 150
-data.raw.technology["stack-inserter-4"].unit.count = 500
+  data.raw.technology["stack-inserter-3"].unit.count = 200
+  data.raw.technology["ultimate-inserter"].unit.count = 150
+  data.raw.technology["stack-inserter-4"].unit.count = 500
 
 end
 
