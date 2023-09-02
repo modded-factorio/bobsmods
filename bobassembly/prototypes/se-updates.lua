@@ -139,11 +139,6 @@ if data.raw.item["assembling-machine-6"] then
 
 end
 
---Steam Assembling machine
-if data.raw.item["steam-assembling-machine"] then
-  data.raw.item["steam-assembling-machine"].subgroup = "assembling"
-end
-
 --Electronics assembling machines
 if data.raw.item["electronics-machine-1"] then
 
