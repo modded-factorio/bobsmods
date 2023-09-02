@@ -2,6 +2,7 @@
 Version: 1.2.0
 Date: ???
   Changes:
+    - Added support for Space Exploration mod #88
     - Added missing prerequisites #120
   Bugfixes:
     - Fixed error when changing character icon #135
