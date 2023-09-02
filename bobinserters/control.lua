@@ -699,41 +699,49 @@ function tech_unlocked(force, tech)
 end
 
 ---private function, used by slimDropOffset andslimPickupOffset
-function _slimOffset(entity,l)
-	-- inserters have tile_height=1, tile_width=1 this normal form is assumed by bobinserters
-	-- for "slim" insertes we transform the position into this normal form and back.
-	-- this saves us from having to adjust all the calculations of bobinserters
+function _slimOffset(entity, l)
+  -- inserters have tile_height=1, tile_width=1 this normal form is assumed by bobinserters
+  -- for "slim" insertes we transform the position into this normal form and back.
+  -- this saves us from having to adjust all the calculations of bobinserters
 
-	local o={x=0,y=0}
-	if(entity.prototype.tile_height == 0 and entity.prototype.tile_width == 1) then
-		-- this calculation is tested with mod arrow-inserter and slim-inserters
-		if     entity.direction == defines.direction.north then o.y = -0.5+l
-		elseif entity.direction == defines.direction.south then o.y =  0.5-l
-		elseif entity.direction == defines.direction.east  then o.x =  0.5-l
-		elseif entity.direction == defines.direction.west  then o.x = -0.5+l
-		end
-  elseif(entity.prototype.tile_height == 1 and entity.prototype.tile_width == 0) then
-	  --   not implemented because no mod found to test
-	end
-	return o
+  local o = { x = 0, y = 0 }
+  if (entity.prototype.tile_height == 0 and entity.prototype.tile_width == 1) then
+    -- this calculation is tested with mod arrow-inserter and slim-inserters
+    if     entity.direction == defines.direction.north then
+      o.y = -0.5 + l
+    elseif entity.direction == defines.direction.south then
+      o.y =  0.5 - l
+    elseif entity.direction == defines.direction.east  then
+      o.x =  0.5 - l
+    elseif entity.direction == defines.direction.west  then
+      o.x = -0.5 + l
+    end
+  end
+  return o
 end
-function slimDropOffset(entity) return _slimOffset(entity,1) end
-function slimPickupOffset(entity) return _slimOffset(entity,0) end
+
+function slimDropOffset(entity)
+  return _slimOffset(entity, 1)
+end
+
+function slimPickupOffset(entity)
+  return _slimOffset(entity, 0)
+end
 
 function get_pickup_position(entity)
   local o = slimPickupOffset(entity)
-	return {
-		x = entity.pickup_position.x - entity.position.x + o.x,
-		y = entity.pickup_position.y - entity.position.y + o.y
-	}
+  return {
+    x = entity.pickup_position.x - entity.position.x + o.x,
+    y = entity.pickup_position.y - entity.position.y + o.y
+  }
 end
 
 function get_drop_position(entity)
   local o = slimDropOffset(entity)
-	return {
-		x = entity.drop_position.x - entity.position.x + o.x,
-		y = entity.drop_position.y - entity.position.y + o.y,
-	}
+  return {
+    x = entity.drop_position.x - entity.position.x + o.x,
+    y = entity.drop_position.y - entity.position.y + o.y,
+  }
 end
 
 function split_drop_position(full_drop_position)
@@ -769,8 +777,8 @@ function set_pickup_position(entity, newpos)
   local new_positions = {
     drop_position = entity.drop_position,
     pickup_position = {
-			x = entity.position.x + newpos.x -o.x,
-			y = entity.position.y + newpos.y -o.y},
+      x = entity.position.x + newpos.x -o.x,
+      y = entity.position.y + newpos.y -o.y},
   }
   entity.pickup_position = new_positions.pickup_position
   entity.direction = entity.direction -- set direction to force update
@@ -785,8 +793,8 @@ function set_drop_position(entity, newpos)
   local original_positions = { drop_position = entity.drop_position, pickup_position = entity.pickup_position }
   local new_positions = {
     drop_position = {
-			x = entity.position.x + newpos.x - o.x,
-			y = entity.position.y + newpos.y - o.y},
+      x = entity.position.x + newpos.x - o.x,
+      y = entity.position.y + newpos.y - o.y},
     pickup_position = entity.pickup_position,
   }
   entity.drop_position = new_positions.drop_position
@@ -803,16 +811,16 @@ end
 
 function set_both_positions(entity, newpickup, newdrop)
   local od = slimDropOffset(entity)
-	local op = slimPickupOffset(entity)
+  local op = slimPickupOffset(entity)
   local original_positions = { drop_position = entity.drop_position, pickup_position = entity.pickup_position }
   local new_positions = {
-		drop_position = {
-			x = entity.position.x + newdrop.x -od.x,
-			y = entity.position.y + newdrop.y -od.y},
-		pickup_position = {
-			x = entity.position.x + newpickup.x -op.x,
-			y = entity.position.y + newpickup.y -op.y},
-	}
+    drop_position = {
+      x = entity.position.x + newdrop.x -od.x,
+      y = entity.position.y + newdrop.y -od.y},
+    pickup_position = {
+      x = entity.position.x + newpickup.x -op.x,
+      y = entity.position.y + newpickup.y -op.y},
+  }
   entity.drop_position = new_positions.drop_position
   entity.pickup_position = new_positions.pickup_position
   entity.direction = entity.direction -- set direction to force update
