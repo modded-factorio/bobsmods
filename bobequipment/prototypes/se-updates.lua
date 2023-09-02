@@ -492,98 +492,98 @@ data.raw.technology["personal-roboport-modular-equipment-4"].unit.ingredients = 
 
 if not bobmods.logistics then
 
-data.raw.recipe["personal-roboport-antenna-equipment"].ingredients = {
-    {"iron-gear-wheel", 20},
-    {"advanced-circuit", 20},
-    {"copper-cable", 20},
-    {"steel-plate", 8}
-}
-data.raw.recipe["personal-roboport-antenna-equipment-2"].ingredients = {
-    {"personal-roboport-antenna-equipment", 1},
-    {"iron-gear-wheel", 20},
-    {"processing-unit", 8},
-    {"copper-cable", 40},
-    {"se-aeroframe-pole", 8}
-}
-data.raw.recipe["personal-roboport-antenna-equipment-3"].ingredients = {
-    {"personal-roboport-antenna-equipment-2", 1},
-    {"iron-gear-wheel", 20},
-    {"processing-unit", 16},
-    {"se-holmium-cable", 12},
-    {"se-aeroframe-pole", 8}
-}
-data.raw.recipe["personal-roboport-antenna-equipment-4"].ingredients = {
-    {"personal-roboport-antenna-equipment-3", 1},
-    {"iron-gear-wheel", 20},
-    {"se-quantum-processor", 2},
-    {"se-superconductive-cable", 4},
-    {"se-aeroframe-scaffold", 2}
-}
+  data.raw.recipe["personal-roboport-antenna-equipment"].ingredients = {
+      {"iron-gear-wheel", 20},
+      {"advanced-circuit", 20},
+      {"copper-cable", 20},
+      {"steel-plate", 8}
+  }
+  data.raw.recipe["personal-roboport-antenna-equipment-2"].ingredients = {
+      {"personal-roboport-antenna-equipment", 1},
+      {"iron-gear-wheel", 20},
+      {"processing-unit", 8},
+      {"copper-cable", 40},
+      {"se-aeroframe-pole", 8}
+  }
+  data.raw.recipe["personal-roboport-antenna-equipment-3"].ingredients = {
+      {"personal-roboport-antenna-equipment-2", 1},
+      {"iron-gear-wheel", 20},
+      {"processing-unit", 16},
+      {"se-holmium-cable", 12},
+      {"se-aeroframe-pole", 8}
+  }
+  data.raw.recipe["personal-roboport-antenna-equipment-4"].ingredients = {
+      {"personal-roboport-antenna-equipment-3", 1},
+      {"iron-gear-wheel", 20},
+      {"se-quantum-processor", 2},
+      {"se-superconductive-cable", 4},
+      {"se-aeroframe-scaffold", 2}
+  }
 
-data.raw.recipe["personal-roboport-chargepad-equipment"].ingredients = {
-    {"battery", 4},
-    {"copper-cable", 8},
-    {"advanced-circuit", 8},
-    {"steel-plate", 20}
-}
-data.raw.recipe["personal-roboport-chargepad-equipment-2"].ingredients = {
-    {"personal-roboport-chargepad-equipment", 1},
-    {"battery", 8},
-    {"copper-cable", 16},
-    {"processing-unit", 4},
-    {"se-beryllium-plate", 20}
-}
-data.raw.recipe["personal-roboport-chargepad-equipment-3"].ingredients = {
-    {"personal-roboport-chargepad-equipment-2", 1},
-    {"battery", 12},
-    {"se-holmium-cable", 8},
-    {"processing-unit", 8},
-    {"se-aeroframe-scaffold", 8}
-}
-data.raw.recipe["personal-roboport-chargepad-equipment-4"].ingredients = {
-    {"personal-roboport-chargepad-equipment-3", 1},
-    {"battery", 16},
-    {"se-superconductive-cable", 4},
-    {"se-quantum-processor", 2},
-    {"se-aeroframe-bulkhead", 2}
-}
+  data.raw.recipe["personal-roboport-chargepad-equipment"].ingredients = {
+      {"battery", 4},
+      {"copper-cable", 8},
+      {"advanced-circuit", 8},
+      {"steel-plate", 20}
+  }
+  data.raw.recipe["personal-roboport-chargepad-equipment-2"].ingredients = {
+      {"personal-roboport-chargepad-equipment", 1},
+      {"battery", 8},
+      {"copper-cable", 16},
+      {"processing-unit", 4},
+      {"se-beryllium-plate", 20}
+  }
+  data.raw.recipe["personal-roboport-chargepad-equipment-3"].ingredients = {
+      {"personal-roboport-chargepad-equipment-2", 1},
+      {"battery", 12},
+      {"se-holmium-cable", 8},
+      {"processing-unit", 8},
+      {"se-aeroframe-scaffold", 8}
+  }
+  data.raw.recipe["personal-roboport-chargepad-equipment-4"].ingredients = {
+      {"personal-roboport-chargepad-equipment-3", 1},
+      {"battery", 16},
+      {"se-superconductive-cable", 4},
+      {"se-quantum-processor", 2},
+      {"se-aeroframe-bulkhead", 2}
+  }
 
-data.raw.recipe["personal-roboport-equipment"].ingredients = {
-    {"iron-gear-wheel", 20},
-    {"battery", 20},
-    {"advanced-circuit", 25},
-    {"copper-cable", 30},
-    {"steel-plate", 30}
-}
-data.raw.recipe["personal-roboport-mk2-equipment"].ingredients = {
-    {"personal-roboport-equipment", 1},
-    {"battery", 40},
-    {"processing-unit", 10},
-    {"copper-cable", 60},
-    {"se-beryllium-plate", 30}
-}
-data.raw.recipe["personal-roboport-mk3-equipment"].ingredients = {
-    {"personal-roboport-mk2-equipment", 1},
-    {"battery", 60},
-    {"processing-unit", 20},
-    {"se-holmium-cable", 18},
-    {"se-aeroframe-scaffold", 20}
-}
-data.raw.recipe["personal-roboport-mk4-equipment"].ingredients = {
-    {"personal-roboport-mk3-equipment", 1},
-    {"battery", 80},
-    {"se-quantum-processor", 3},
-    {"se-superconductive-cable", 6},
-    {"se-aeroframe-bulkhead", 5}
-}
+  data.raw.recipe["personal-roboport-equipment"].ingredients = {
+      {"iron-gear-wheel", 20},
+      {"battery", 20},
+      {"advanced-circuit", 25},
+      {"copper-cable", 30},
+      {"steel-plate", 30}
+  }
+  data.raw.recipe["personal-roboport-mk2-equipment"].ingredients = {
+      {"personal-roboport-equipment", 1},
+      {"battery", 40},
+      {"processing-unit", 10},
+      {"copper-cable", 60},
+      {"se-beryllium-plate", 30}
+  }
+  data.raw.recipe["personal-roboport-mk3-equipment"].ingredients = {
+      {"personal-roboport-mk2-equipment", 1},
+      {"battery", 60},
+      {"processing-unit", 20},
+      {"se-holmium-cable", 18},
+      {"se-aeroframe-scaffold", 20}
+  }
+  data.raw.recipe["personal-roboport-mk4-equipment"].ingredients = {
+      {"personal-roboport-mk3-equipment", 1},
+      {"battery", 80},
+      {"se-quantum-processor", 3},
+      {"se-superconductive-cable", 6},
+      {"se-aeroframe-bulkhead", 5}
+  }
 
 else
 
-bobmods.lib.recipe.replace_ingredient("personal-roboport-mk2-equipment", "steel-plate", "se-beryllium-plate")
-bobmods.lib.recipe.remove_ingredient("personal-roboport-mk3-equipment", "steel-plate")
-bobmods.lib.recipe.add_ingredient("personal-roboport-mk3-equipment", {type = "item", name = "se-aeroframe-scaffold", amount = 5})
-bobmods.lib.recipe.remove_ingredient("personal-roboport-mk4-equipment", "steel-plate")
-bobmods.lib.recipe.add_ingredient("personal-roboport-mk4-equipment", {type = "item", name = "se-aeroframe-bulkhead", amount = 2})
+  bobmods.lib.recipe.replace_ingredient("personal-roboport-mk2-equipment", "steel-plate", "se-beryllium-plate")
+  bobmods.lib.recipe.remove_ingredient("personal-roboport-mk3-equipment", "steel-plate")
+  bobmods.lib.recipe.add_ingredient("personal-roboport-mk3-equipment", {type = "item", name = "se-aeroframe-scaffold", amount = 5})
+  bobmods.lib.recipe.remove_ingredient("personal-roboport-mk4-equipment", "steel-plate")
+  bobmods.lib.recipe.add_ingredient("personal-roboport-mk4-equipment", {type = "item", name = "se-aeroframe-bulkhead", amount = 2})
 
 end
 
