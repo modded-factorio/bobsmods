@@ -78,7 +78,6 @@ data:extend({
 })
 
 if not mods["space-exploration"] then
-
   -- energy_per_shield MK1 is 20J per shield unit, MK2 is 30J.
   -- max_shield_value MK1 is 50, MK2 is 150
   -- buffer_capacity MK1 is "120J", MK2 is 180J
@@ -201,7 +200,6 @@ if not mods["space-exploration"] then
       categories = { "armor" },
     },
   })
-
 end
 
 data.raw["battery-equipment"]["battery-equipment"].sprite.filename =

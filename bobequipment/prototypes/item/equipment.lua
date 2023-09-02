@@ -5,7 +5,6 @@ data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[p
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equipment-1]"
 
 if not mods["space-exploration"] then
-
   data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
   data.raw.item["energy-shield-equipment"].icon_size = 64
   data.raw.item["energy-shield-equipment"].icon_mipmaps = nil
@@ -60,7 +59,6 @@ if not mods["space-exploration"] then
       default_request_amount = 10,
     },
   })
-
 end
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
