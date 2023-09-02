@@ -1,135 +1,139 @@
-data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
-  icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk2-equipment.png",
-  icon_size = 128,
-})
-bobmods.lib.tech.remove_prerequisite("energy-shield-mk2-equipment", "low-density-structure")
+if not mods["space-exploration"] then
 
-data:extend({
-  {
-    type = "technology",
-    name = "bob-energy-shield-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk3-equipment.png",
-      icon_size = 128,
-    }),
-    order = "g-e-c",
-    prerequisites = {
-      "energy-shield-mk2-equipment",
-      "productivity-module-2",
-      "production-science-pack",
-    },
-    unit = {
-      count = 250,
-      time = 30,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
-      },
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "energy-shield-mk3-equipment",
-      },
-    },
-  },
+  data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+    icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk2-equipment.png",
+    icon_size = 128,
+  })
+  bobmods.lib.tech.remove_prerequisite("energy-shield-mk2-equipment", "low-density-structure")
 
-  {
-    type = "technology",
-    name = "bob-energy-shield-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk4-equipment.png",
-      icon_size = 128,
-    }),
-    order = "g-e-d",
-    prerequisites = {
-      "bob-energy-shield-equipment-3",
-    },
-    unit = {
-      count = 300,
-      time = 45,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
+  data:extend({
+    {
+      type = "technology",
+      name = "bob-energy-shield-equipment-3",
+      icons = bobmods.equipment.technology_icon_constant_equipment({
+        icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk3-equipment.png",
+        icon_size = 128,
+      }),
+      order = "g-e-c",
+      prerequisites = {
+        "energy-shield-mk2-equipment",
+        "productivity-module-2",
+        "production-science-pack",
+      },
+      unit = {
+        count = 250,
+        time = 30,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "military-science-pack", 1 },
+          { "production-science-pack", 1 },
+        },
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "energy-shield-mk3-equipment",
+        },
       },
     },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "energy-shield-mk4-equipment",
-      },
-    },
-  },
 
-  {
-    type = "technology",
-    name = "bob-energy-shield-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk5-equipment.png",
-      icon_size = 128,
-    }),
-    order = "g-e-e",
-    prerequisites = {
-      "bob-energy-shield-equipment-4",
-      "utility-science-pack",
-    },
-    unit = {
-      count = 350,
-      time = 45,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
+    {
+      type = "technology",
+      name = "bob-energy-shield-equipment-4",
+      icons = bobmods.equipment.technology_icon_constant_equipment({
+        icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk4-equipment.png",
+        icon_size = 128,
+      }),
+      order = "g-e-d",
+      prerequisites = {
+        "bob-energy-shield-equipment-3",
+      },
+      unit = {
+        count = 300,
+        time = 45,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "military-science-pack", 1 },
+          { "production-science-pack", 1 },
+        },
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "energy-shield-mk4-equipment",
+        },
       },
     },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "energy-shield-mk5-equipment",
-      },
-    },
-  },
 
-  {
-    type = "technology",
-    name = "bob-energy-shield-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk6-equipment.png",
-      icon_size = 128,
-    }),
-    order = "g-e-f",
-    prerequisites = {
-      "bob-energy-shield-equipment-5",
-    },
-    unit = {
-      count = 400,
-      time = 45,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
+    {
+      type = "technology",
+      name = "bob-energy-shield-equipment-5",
+      icons = bobmods.equipment.technology_icon_constant_equipment({
+        icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk5-equipment.png",
+        icon_size = 128,
+      }),
+      order = "g-e-e",
+      prerequisites = {
+        "bob-energy-shield-equipment-4",
+        "utility-science-pack",
+      },
+      unit = {
+        count = 350,
+        time = 45,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "military-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+        },
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "energy-shield-mk5-equipment",
+        },
       },
     },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "energy-shield-mk6-equipment",
+
+    {
+      type = "technology",
+      name = "bob-energy-shield-equipment-6",
+      icons = bobmods.equipment.technology_icon_constant_equipment({
+        icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk6-equipment.png",
+        icon_size = 128,
+      }),
+      order = "g-e-f",
+      prerequisites = {
+        "bob-energy-shield-equipment-5",
+      },
+      unit = {
+        count = 400,
+        time = 45,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "military-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+        },
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "energy-shield-mk6-equipment",
+        },
       },
     },
-  },
-})
+  })
+
+end
 
 data.raw["technology"]["battery-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
   icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png",

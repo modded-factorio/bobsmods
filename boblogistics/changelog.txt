@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117
   Changes:
+    - Added support for Space Exploration mod #88
     - Added support for AAI Loaders #109
     - Most Machines can now fill higher tier pipes when Bigger pipes is enabled #111
     - Added missing prerequisites #120

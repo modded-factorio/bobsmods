@@ -1570,6 +1570,152 @@ if data.raw.item["copper-tungsten-alloy"] then
   })
 end
 
+if data.raw.item["se-iridium-plate"] then
+  data:extend({
+    {
+      type = "pipe",
+      name = "iridium-pipe",
+      icon = "__boblogistics__/graphics/icons/pipe/brass-pipe.png",
+      icon_size = 32,
+      flags = { "placeable-neutral", "player-creation" },
+      minable = { mining_time = 0.1, result = "iridium-pipe" },
+      max_health = 200,
+      corpse = "small-remnants",
+      resistances = {
+        {
+          type = "fire",
+          percent = 90,
+        },
+      },
+      fast_replaceable_group = "pipe",
+      collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
+      selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      fluid_box = {
+        height = 1,
+        base_area = 1, --0.5,
+        pipe_connections = {
+          { position = { 0, -1 } },
+          { position = { 1, 0 } },
+          { position = { 0, 1 } },
+          { position = { -1, 0 } },
+        },
+      },
+      pictures = bob_pipepictures("brass"),
+      working_sound = {
+        sound = {
+          {
+            filename = "__base__/sound/pipe.ogg",
+            volume = 0.65,
+          },
+        },
+        match_volume_to_activity = true,
+        max_sounds_per_type = 3,
+      },
+      horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
+      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
+    },
+
+    {
+      type = "pipe-to-ground",
+      name = "iridium-pipe-to-ground",
+      icon = "__boblogistics__/graphics/icons/pipe/brass-pipe-to-ground.png",
+      icon_size = 32,
+      flags = { "placeable-neutral", "player-creation" },
+      minable = { mining_time = 0.1, result = "iridium-pipe-to-ground" },
+      max_health = 250,
+      corpse = "small-remnants",
+      resistances = {
+        {
+          type = "fire",
+          percent = 80,
+        },
+      },
+      fast_replaceable_group = "pipe",
+      collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
+      selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      fluid_box = {
+        height = 1,
+        base_area = 1, --0.5,
+        pipe_covers = bob_pipecoverspictures("brass"),
+        pipe_connections = {
+          { position = { 0, -1 } },
+          {
+            position = { 0, 1 },
+            max_underground_distance = 20,
+          },
+        },
+      },
+      underground_sprite = {
+        filename = "__core__/graphics/arrows/underground-lines.png",
+        priority = "extra-high-no-scale",
+        width = 64,
+        height = 64,
+        scale = 0.5,
+      },
+      underground_remove_pipes_sprite = {
+        filename = "__core__/graphics/arrows/underground-lines-remove.png",
+        priority = "high",
+        width = 64,
+        height = 64,
+        x = 0,
+        scale = 0.5,
+      },
+      pictures = bob_pipetogroundpictures("brass"),
+    },
+    {
+      type = "item",
+      name = "iridium-pipe",
+      icon = "__boblogistics__/graphics/icons/pipe/brass-pipe.png",
+      icon_size = 32,
+      subgroup = "pipe",
+      order = "a[pipe]-a[pipe]-3-1",
+      place_result = "iridium-pipe",
+      stack_size = 100,
+    },
+
+    {
+      type = "item",
+      name = "iridium-pipe-to-ground",
+      icon = "__boblogistics__/graphics/icons/pipe/brass-pipe-to-ground.png",
+      icon_size = 32,
+      subgroup = "pipe",
+      order = "a[pipe]-b[pipe-to-ground]-3-1",
+      place_result = "iridium-pipe-to-ground",
+      stack_size = 50,
+    },
+    {
+      type = "recipe",
+      name = "iridium-pipe",
+      normal = {
+        enabled = false,
+        ingredients = {
+          { "se-iridium-plate", 1 },
+        },
+        result = "iridium-pipe",
+      },
+      expensive = {
+        enabled = false,
+        ingredients = {
+          { "se-iridium-plate", 2 },
+        },
+        result = "iridium-pipe",
+      },
+    },
+
+    {
+      type = "recipe",
+      name = "iridium-pipe-to-ground",
+      enabled = false,
+      ingredients = {
+        { "iridium-pipe", 16 },
+        { "se-iridium-plate", 5 },
+      },
+      result_count = 2,
+      result = "iridium-pipe-to-ground",
+    },
+  })
+end
+
 if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("pipe-to-ground", 1)
   bobmods.logistics.set_pipe_distance("stone-pipe-to-ground", 1)
@@ -1583,6 +1729,8 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("tungsten-pipe-to-ground", 4)
   bobmods.logistics.set_pipe_distance("nitinol-pipe-to-ground", 5)
   bobmods.logistics.set_pipe_distance("copper-tungsten-pipe-to-ground", 5)
+
+  bobmods.logistics.set_pipe_distance("iridium-pipe-to-ground", 4)
 end
 
 if settings.startup["bobmods-logistics-highpipes"].value == true then
@@ -1596,6 +1744,8 @@ if settings.startup["bobmods-logistics-highpipes"].value == true then
   bobmods.logistics.set_pipe_height("nitinol-pipe-to-ground", 4)
   bobmods.logistics.set_pipe_height("copper-tungsten-pipe-to-ground", 4)
 
+  bobmods.logistics.set_pipe_height("iridium-pipe-to-ground", 3)
+
   --Also call set_pipe_height for non pipe-to-ground pipes
   bobmods.logistics.set_pipe_height("steel-pipe", 1)
   bobmods.logistics.set_pipe_height("bronze-pipe", 1)
@@ -1606,4 +1756,6 @@ if settings.startup["bobmods-logistics-highpipes"].value == true then
   bobmods.logistics.set_pipe_height("tungsten-pipe", 3)
   bobmods.logistics.set_pipe_height("nitinol-pipe", 4)
   bobmods.logistics.set_pipe_height("copper-tungsten-pipe", 4)
+
+  bobmods.logistics.set_pipe_height("iridium-pipe", 3)
 end

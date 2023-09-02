@@ -77,128 +77,132 @@ data:extend({
   },
 })
 
--- energy_per_shield MK1 is 20J per shield unit, MK2 is 30J.
--- max_shield_value MK1 is 50, MK2 is 150
--- buffer_capacity MK1 is "120J", MK2 is 180J
--- input_flow_limit MK1 is "240W", MK2 is 360W
+if not mods["space-exploration"] then
 
-data.raw["energy-shield-equipment"]["energy-shield-equipment"].max_shield_value = 75
-data.raw["energy-shield-equipment"]["energy-shield-equipment"].sprite = {
-  filename = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png",
-  width = 64,
-  height = 64,
-  priority = "medium",
-}
+  -- energy_per_shield MK1 is 20J per shield unit, MK2 is 30J.
+  -- max_shield_value MK1 is 50, MK2 is 150
+  -- buffer_capacity MK1 is "120J", MK2 is 180J
+  -- input_flow_limit MK1 is "240W", MK2 is 360W
 
-data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].energy_per_shield = "20kJ"
-data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].sprite = {
-  filename = "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png",
-  width = 64,
-  height = 64,
-  priority = "medium",
-}
+  data.raw["energy-shield-equipment"]["energy-shield-equipment"].max_shield_value = 75
+  data.raw["energy-shield-equipment"]["energy-shield-equipment"].sprite = {
+    filename = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png",
+    width = 64,
+    height = 64,
+    priority = "medium",
+  }
 
-data:extend({
-  {
-    type = "energy-shield-equipment",
-    name = "energy-shield-mk3-equipment",
-    max_shield_value = 300,
-    energy_per_shield = "20kJ",
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "240kJ",
-      input_flow_limit = "480kW",
-      usage_priority = "primary-input",
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    sprite = {
-      filename = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-    },
-    categories = { "armor" },
-  },
+  data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].energy_per_shield = "20kJ"
+  data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].sprite = {
+    filename = "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png",
+    width = 64,
+    height = 64,
+    priority = "medium",
+  }
 
-  {
-    type = "energy-shield-equipment",
-    name = "energy-shield-mk4-equipment",
-    max_shield_value = 600,
-    energy_per_shield = "20kJ",
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "300kJ",
-      input_flow_limit = "600kW",
-      usage_priority = "primary-input",
+  data:extend({
+    {
+      type = "energy-shield-equipment",
+      name = "energy-shield-mk3-equipment",
+      max_shield_value = 300,
+      energy_per_shield = "20kJ",
+      energy_source = {
+        type = "electric",
+        buffer_capacity = "240kJ",
+        input_flow_limit = "480kW",
+        usage_priority = "primary-input",
+      },
+      shape = {
+        width = 2,
+        height = 2,
+        type = "full",
+      },
+      sprite = {
+        filename = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
+        width = 64,
+        height = 64,
+        priority = "medium",
+      },
+      categories = { "armor" },
     },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    sprite = {
-      filename = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-    },
-    categories = { "armor" },
-  },
 
-  {
-    type = "energy-shield-equipment",
-    name = "energy-shield-mk5-equipment",
-    max_shield_value = 1200,
-    energy_per_shield = "20kJ",
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "360kJ",
-      input_flow_limit = "720kW",
-      usage_priority = "primary-input",
+    {
+      type = "energy-shield-equipment",
+      name = "energy-shield-mk4-equipment",
+      max_shield_value = 600,
+      energy_per_shield = "20kJ",
+      energy_source = {
+        type = "electric",
+        buffer_capacity = "300kJ",
+        input_flow_limit = "600kW",
+        usage_priority = "primary-input",
+      },
+      shape = {
+        width = 2,
+        height = 2,
+        type = "full",
+      },
+      sprite = {
+        filename = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
+        width = 64,
+        height = 64,
+        priority = "medium",
+      },
+      categories = { "armor" },
     },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    sprite = {
-      filename = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-    },
-    categories = { "armor" },
-  },
 
-  {
-    type = "energy-shield-equipment",
-    name = "energy-shield-mk6-equipment",
-    max_shield_value = 2400,
-    energy_per_shield = "20kJ",
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "420kJ",
-      input_flow_limit = "840kW",
-      usage_priority = "primary-input",
+    {
+      type = "energy-shield-equipment",
+      name = "energy-shield-mk5-equipment",
+      max_shield_value = 1200,
+      energy_per_shield = "20kJ",
+      energy_source = {
+        type = "electric",
+        buffer_capacity = "360kJ",
+        input_flow_limit = "720kW",
+        usage_priority = "primary-input",
+      },
+      shape = {
+        width = 2,
+        height = 2,
+        type = "full",
+      },
+      sprite = {
+        filename = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
+        width = 64,
+        height = 64,
+        priority = "medium",
+      },
+      categories = { "armor" },
     },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
+
+    {
+      type = "energy-shield-equipment",
+      name = "energy-shield-mk6-equipment",
+      max_shield_value = 2400,
+      energy_per_shield = "20kJ",
+      energy_source = {
+        type = "electric",
+        buffer_capacity = "420kJ",
+        input_flow_limit = "840kW",
+        usage_priority = "primary-input",
+      },
+      shape = {
+        width = 2,
+        height = 2,
+        type = "full",
+      },
+      sprite = {
+        filename = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
+        width = 64,
+        height = 64,
+        priority = "medium",
+      },
+      categories = { "armor" },
     },
-    sprite = {
-      filename = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-    },
-    categories = { "armor" },
-  },
-})
+  })
+
+end
 
 data.raw["battery-equipment"]["battery-equipment"].sprite.filename =
   "__bobequipment__/graphics/equipment/battery-equipment.png"
