@@ -33,7 +33,6 @@ else
   radar_tech_name = "radars-1"
 end
 
-log(radar_tech_name)
 data:extend({
   {
     type = "technology",
