@@ -4,6 +4,8 @@ Date: ??. ??. ????
   Changes:
     - Added function bobmods.migration.ensure_unlocked(tech_name, recipe_name) #120
     - Added function bobmods.lib.recipe.set_category(recipe_name, category)
+    - Added function bobmods.lib.module.exclude_productivity_module(module_name)
+      - Modules supplied to this function will not be altered by function add_productivity_limitation #139
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
