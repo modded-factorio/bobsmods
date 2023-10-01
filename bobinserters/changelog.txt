@@ -3,6 +3,8 @@ Version: 1.1.8
 Date: ???
   Bugfixes:
     - Fixed inserter configuration still showing when disabled #55
+  Changes:
+    - Added support for "slim" inserters (arrow-inserter, Kux-SlimInserters and similar) #126
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 02. 01. 2023
