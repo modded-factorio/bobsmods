@@ -29,17 +29,11 @@ bobmods.lib.recipe.add_ingredient("rocket-silo", { "heat-shield-tile", 100 })
 -- oil overhaul
 if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup["bobmods-revamp-oil"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("oil-processing", "chemical-plant")
-  bobmods.lib.tech.remove_recipe_unlock("oil-processing", "pumpjack")
   bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
   bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
   bobmods.lib.tech.remove_prerequisite("oil-processing", "steel-processing")
-  bobmods.lib.tech.add_prerequisite("oil-processing", "pumpjack")
   data.raw.technology["oil-processing"].icon = "__base__/graphics/technology/oil-processing.png"
   bobmods.lib.tech.set_science_pack_count("oil-processing", 30)
-
-  if bobmods.electronics then
-    bobmods.lib.tech.add_prerequisite("pumpjack", "electronics")
-  end
 
   if
     data.raw.recipe["basic-oil-processing"]

@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Removed technology Solid Fuel #120
     - Moved solid fuel recipes to tech "Flammables" #120
+    - Removed technology "Pumpjack" #120
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023

@@ -15,32 +15,6 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   data:extend({
     {
       type = "technology",
-      name = "pumpjack",
-      icon = "__base__/graphics/technology/oil-gathering.png",
-      icon_size = 256,
-      icon_mipmaps = 4,
-      order = "d-a-c",
-      prerequisites = {
-        "steel-processing",
-        "logistic-science-pack",
-      },
-      unit = {
-        count = 30,
-        time = 30,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-        },
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "pumpjack",
-        },
-      },
-    },
-    {
-      type = "technology",
       name = "chemical-plant",
       icon = "__bobrevamp__/graphics/icons/technology/chemical-plant.png",
       icon_size = 128,
