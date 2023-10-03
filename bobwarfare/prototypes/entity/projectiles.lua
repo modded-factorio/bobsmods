@@ -1432,9 +1432,9 @@ data:extend({
             initial_height = 0,
             speed_from_center = 0.05,
             speed_from_center_deviation = 0.005,
-            offset_deviation = {{-4, -4}, {4, 4}},
+            offset_deviation = { { -4, -4 }, { 4, 4 } },
             max_radius = 3.5,
-            repeat_count = 4 * 4 * 15
+            repeat_count = 4 * 4 * 15,
           },
         },
       },

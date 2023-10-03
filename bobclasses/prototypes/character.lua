@@ -8,7 +8,7 @@ data.raw.character.character.icons = {
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
     icon_mipmaps = 4,
-  }
+  },
 }
 
 bobmods.classes.characters["bob-character-miner"] = util.merge({

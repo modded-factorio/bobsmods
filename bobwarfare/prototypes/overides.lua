@@ -9,10 +9,7 @@ then
   if delivery.target_effects.damage then
     delivery.target_effects = { delivery.target_effects }
   end
-  table.insert(
-    delivery.target_effects,
-    { type = "damage", damage = { amount = 2, type = "bob-pierce" } }
-  )
+  table.insert(delivery.target_effects, { type = "damage", damage = { amount = 2, type = "bob-pierce" } })
 end
 
 if
@@ -25,10 +22,7 @@ then
   if delivery.target_effects.damage then
     delivery.target_effects = { delivery.target_effects }
   end
-  table.insert(
-    delivery.target_effects,
-    { type = "damage", damage = { amount = 2, type = "bob-pierce" } }
-  )
+  table.insert(delivery.target_effects, { type = "damage", damage = { amount = 2, type = "bob-pierce" } })
 end
 
 data.raw.ammo["uranium-rounds-magazine"].magazine_size = 25
