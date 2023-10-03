@@ -474,7 +474,6 @@ function bobmods.lib.resource.create_particle(inputs)
     {
       type = "optimized-particle",
       name = inputs.name,
-      flags = { "not-on-map" },
       life_time = 180,
       pictures = {
         {

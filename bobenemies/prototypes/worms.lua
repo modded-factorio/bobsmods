@@ -435,7 +435,6 @@ data:extend({
           action_delivery = {
             type = "stream",
             stream = "bob-titan-stream",
-            duration = 160,
             source_offset = { 0.15, -0.5 },
           },
         },

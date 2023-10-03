@@ -815,7 +815,6 @@ local function bob_laser_turret(inputs)
         category = "laser",
         target_type = inputs.target_type or nil,
         energy_consumption = inputs.energy_consumption or "800kJ",
-        speed = 1,
         clamp_position = inputs.clamp_position or nil,
         action = {
           {

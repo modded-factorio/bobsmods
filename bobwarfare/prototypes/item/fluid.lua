@@ -10,8 +10,6 @@ if data.raw.fluid["nitric-acid"] then
       max_temperature = 100,
       icon = "__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png",
       icon_size = 32,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
       order = "a[fluid]-g[sulfuric-nitric-acid]",
     },
   })
@@ -28,8 +26,6 @@ data:extend({
     max_temperature = 100,
     icon = "__bobwarfare__/graphics/icons/nitroglycerin.png",
     icon_size = 64,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[nitroglycerin]",
   },
 
@@ -43,8 +39,6 @@ data:extend({
     max_temperature = 100,
     icon = "__bobwarfare__/graphics/icons/glycerol.png",
     icon_size = 64,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
     order = "a[fluid]-g[glycerol]",
     fuel_value = "730kJ", --"1.46MJ"
   },

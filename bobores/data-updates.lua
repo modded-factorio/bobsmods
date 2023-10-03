@@ -70,12 +70,6 @@ if bobmods.ores.settings.NickelGivesCobalt == true then
   bobmods.ores.cobalt.enabled = true
 end
 
-for i, drill in pairs(data.raw["mining-drill"]) do
-  if not drill.storage_slots then
-    drill.storage_slots = 6
-  end
-end
-
 if data.raw.item["obsidian"] then
   bobmods.lib.resource.add_result(
     "cobalt-ore",

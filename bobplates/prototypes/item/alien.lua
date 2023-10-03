@@ -39,8 +39,6 @@ then
       heat_capacity = "1KJ",
       base_color = { r = 0.4, g = 0.0, b = 0.8 },
       flow_color = { r = 0.6, g = 0.5, b = 1.0 },
-      pressure_to_speed_ratio = 0.2,
-      flow_to_energy_ratio = 0.3,
     },
 
     {
@@ -55,8 +53,6 @@ then
       heat_capacity = "1KJ",
       base_color = { r = 0.8, g = 0.8, b = 0.0 },
       flow_color = { r = 1.0, g = 1.0, b = 0.5 },
-      pressure_to_speed_ratio = 0.2,
-      flow_to_energy_ratio = 0.3,
     },
 
     {
@@ -71,8 +67,6 @@ then
       base_color = { r = 0.0, g = 0.8, b = 0.0 },
       flow_color = { r = 0.5, g = 1.0, b = 0.5 },
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.2,
-      flow_to_energy_ratio = 0.3,
     },
 
     {
@@ -87,8 +81,6 @@ then
       base_color = { r = 0.8, g = 0, b = 0 },
       flow_color = { r = 1.0, g = 0.5, b = 0.5 },
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.2,
-      flow_to_energy_ratio = 0.3,
       fuel_value = "2.6MJ",
     },
   })

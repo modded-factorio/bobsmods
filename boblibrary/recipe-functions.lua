@@ -309,6 +309,7 @@ local function split_line(recipe, tag)
     if not data.raw.recipe[recipe].expensive[tag] then
       data.raw.recipe[recipe].expensive[tag] = table.deepcopy(data.raw.recipe[recipe][tag])
     end
+    data.raw.recipe[recipe][tag] = nil
   end
 end
 
@@ -321,6 +322,7 @@ local function split_line_bool(recipe, tag)
     data.raw.recipe[recipe].normal[tag] = false
     data.raw.recipe[recipe].expensive[tag] = false
   end
+  data.raw.recipe[recipe][tag] = nil
 end
 
 function bobmods.lib.recipe.difficulty_split(recipe)

@@ -15,7 +15,6 @@ local glow_blue = glow_function({ 90, 200, 250, 128 })
 
 data.raw["gui-style"].default.bob_table = {
   type = "table_style",
-  cell_spacing = 0,
   horizontal_spacing = 2,
   vertical_spacing = 2,
 }

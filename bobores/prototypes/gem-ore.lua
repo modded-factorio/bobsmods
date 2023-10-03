@@ -42,7 +42,6 @@ data:extend({
   {
     type = "optimized-particle",
     name = "gem-ore-particle",
-    flags = { "not-on-map" },
     life_time = 180,
     pictures = {
       {

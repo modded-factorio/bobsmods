@@ -30,7 +30,6 @@ function bobmods.mining.electric_mining_drill(inputs)
   mining_drill.circuit_wire_max_distance = inputs.circuit_wire_max_distance or default_circuit_wire_max_distance
 
   mining_drill.energy_source.emissions_per_minute = inputs.emissions_per_minute or 10
-  mining_drill.storage_slots = 6
 
   set_electric_mining_drill_animation_speed(mining_drill, inputs.animation_speed * 0.8)
 

@@ -79,6 +79,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     },
   })
 
+  data.raw.capsule["defender-capsule"].icon = nil
   data.raw.capsule["defender-capsule"].icons = {
     {
       icon = "__bobwarfare__/graphics/icons/defender-capsule.png",
@@ -90,6 +91,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       scale = 0.75 * 0.5,
     },
   }
+  data.raw.capsule["distractor-capsule"].icon = nil
   data.raw.capsule["distractor-capsule"].icons = {
     {
       icon = "__bobwarfare__/graphics/icons/distractor-capsule.png",
@@ -101,6 +103,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       scale = 0.75 * 0.5,
     },
   }
+  data.raw.capsule["destroyer-capsule"].icon = nil
   data.raw.capsule["destroyer-capsule"].icons = {
     {
       icon = "__bobwarfare__/graphics/icons/destroyer-capsule.png",
@@ -239,7 +242,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       follows_player = true,
       friction = 0.01,
       range_from_player = 6.0,
-      distance_per_frame = 0.13,
 
       --    time_to_live = 60 * 60 * 60 * 24, -- 1 day
       time_to_live = 60 * 60 * 10, -- 10 mins

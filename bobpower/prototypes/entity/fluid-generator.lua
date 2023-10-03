@@ -54,65 +54,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     }
   end
 
-  function bobmods.power.fluid_generator_working_visualisations()
-    return {
-      {
-        north_position = { 0.0, 0.0 },
-        east_position = { 0.0, 0.0 },
-        south_position = { 0.0, 0.0 },
-        west_position = { 0.0, 0.0 },
-        animation = {
-          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-light.png",
-          priority = "extra-high",
-          frame_count = 1,
-          width = 200,
-          height = 257,
-          shift = util.by_pixel(-1.25, 5.25 - 6),
-          blend_mode = "additive",
-          scale = 0.5,
-        },
-      },
-      {
-        north_position = { 0.0, 0.0 },
-        east_position = { 0.0, 0.0 },
-        south_position = { 0.0, 0.0 },
-        west_position = { 0.0, 0.0 },
-        animation = {
-          filename = "__bobpower__/graphics/fluid-generator/hr-boiler-N-fire.png",
-          priority = "extra-high",
-          frame_count = 64,
-          line_length = 8,
-          width = 26,
-          height = 26,
-          animation_speed = 0.5,
-          shift = util.by_pixel(0, -8.5 - 16 - 1),
-          scale = 0.5,
-        },
-      },
-      {
-        north_position = { 0.0, 0.0 },
-        east_position = { 0.0, 0.0 },
-        south_position = { 0.0, 0.0 },
-        west_position = { 0.0, 0.0 },
-        animation = {
-          filename = "__bobpower__/graphics/fluid-generator/hr-boiler-S-fire.png",
-          priority = "extra-high",
-          frame_count = 64,
-          line_length = 8,
-          width = 26,
-          height = 16,
-          animation_speed = 0.5,
-          shift = util.by_pixel(-1, -26.5 + 16 - 1),
-          scale = 0.5,
-        },
-      },
-      {
-        effect = "flicker",
-        light = { intensity = 0.6, size = 9.9, shift = { 0.0, 0.0 }, color = { r = 1.0, g = 0.9, b = 0.7 } },
-      },
-    }
-  end
-
   data:extend({
     {
       type = "generator",
@@ -164,7 +105,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       },
       horizontal_animation = bobmods.power.fluid_generator_structure(),
       vertical_animation = bobmods.power.fluid_generator_structure(),
-      working_visualisations = bobmods.power.fluid_generator_working_visualisations(),
       smoke = {
         {
           name = "smoke",
@@ -247,7 +187,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       },
       horizontal_animation = bobmods.power.fluid_generator_structure(),
       vertical_animation = bobmods.power.fluid_generator_structure(),
-      working_visualisations = bobmods.power.fluid_generator_working_visualisations(),
       smoke = {
         {
           name = "smoke",
@@ -329,7 +268,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       },
       horizontal_animation = bobmods.power.fluid_generator_structure(),
       vertical_animation = bobmods.power.fluid_generator_structure(),
-      working_visualisations = bobmods.power.fluid_generator_working_visualisations(),
       smoke = {
         {
           name = "smoke",

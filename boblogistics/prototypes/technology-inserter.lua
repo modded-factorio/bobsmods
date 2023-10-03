@@ -205,7 +205,7 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-1",
-    icon = "__base__/graphics/technology/inserter-capacity.png",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -232,7 +232,7 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-2",
-    icon = "__base__/graphics/technology/inserter-capacity.png",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -257,7 +257,7 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-3",
-    icon = "__base__/graphics/technology/inserter-capacity.png",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -283,7 +283,7 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-4",
-    icon = "__base__/graphics/technology/inserter-capacity.png",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -313,7 +313,19 @@ data:extend({
   {
     type = "technology",
     name = "inserter-capacity-bonus-8",
-    icon = "__boblogistics__/graphics/icons/technology/stack-inserter-capacity.png",
+    icons = {
+      {
+        icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
+        icon_size = 128,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {50, 50},
+        scale = 0.5,
+      },
+    },
     icon_size = 128,
     effects = {
       {

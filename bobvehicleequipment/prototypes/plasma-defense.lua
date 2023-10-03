@@ -34,8 +34,6 @@ local function bob_active_weapon_equipment(data)
         category = "laser",
         target_type = data.target_type,
         energy_consumption = data.energy_consumption,
-        projectile = data.projectile,
-        speed = 1,
         action = {
           {
             type = "direct",

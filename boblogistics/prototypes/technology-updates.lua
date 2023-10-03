@@ -348,8 +348,19 @@ remove_inserter_stack_size_bonus("inserter-capacity-bonus-7")
 
 for i = 1, 7 do
   if data.raw.technology["inserter-capacity-bonus-" .. i] then
-    data.raw.technology["inserter-capacity-bonus-" .. i].icon =
-      "__boblogistics__/graphics/icons/technology/stack-inserter-capacity.png"
+    data.raw.technology["inserter-capacity-bonus-" .. i].icons = {
+      {
+        icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
+        icon_size = 128,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {50, 50},
+        scale = 0.5,
+      }
+    }
     data.raw.technology["inserter-capacity-bonus-" .. i].icon_size = 128
   end
 end

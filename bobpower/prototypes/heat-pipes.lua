@@ -5,7 +5,7 @@ if
 then
   data.raw.item["heat-pipe"].order = "f[nuclear-energy]-c[heat-pipe-1]"
   data.raw["heat-pipe"]["heat-pipe"].fast_replaceable_group = "heat-pipe"
-  data.raw["heat-pipe"]["heat-pipe"].minimum_glow_temperature = 300
+  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.minimum_glow_temperature = 300
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "1GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
   data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", 750 }
@@ -87,11 +87,10 @@ then
         icon_mipmaps = 1,
         minable = { mining_time = 0.1, result = "heat-pipe-2" },
         max_health = 300,
-        minimum_glow_temperature = 400,
-        glow_alpha_modifier = 0.5,
         heat_buffer = {
           max_transfer = "1.666GW",
           max_temperature = 1000,
+          minimum_glow_temperature = 400,
         },
         fast_replaceable_group = "heat-pipe",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-2/", "heat-pipe", {
@@ -124,11 +123,10 @@ then
         icon_mipmaps = 1,
         minable = { mining_time = 0.1, result = "heat-pipe-3" },
         max_health = 300,
-        minimum_glow_temperature = 400,
-        glow_alpha_modifier = 0.5,
         heat_buffer = {
           max_transfer = "3GW",
           max_temperature = 1250,
+          minimum_glow_temperature = 400,
         },
         fast_replaceable_group = "heat-pipe",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-3/", "heat-pipe", {
@@ -161,11 +159,10 @@ then
         icon_mipmaps = 1,
         minable = { mining_time = 0.1, result = "heat-pipe-4" },
         max_health = 400,
-        minimum_glow_temperature = 450,
-        glow_alpha_modifier = 0.4,
         heat_buffer = {
           max_transfer = "5GW",
           max_temperature = 1500,
+          minimum_glow_temperature = 450,
         },
         fast_replaceable_group = "heat-pipe",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-4/", "heat-pipe", {

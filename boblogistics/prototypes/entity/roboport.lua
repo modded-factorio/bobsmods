@@ -219,16 +219,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       recharging_light = { intensity = 0.4, size = 5 },
       request_to_open_door_timeout = 15,
       spawn_and_station_height = -0.1,
-      radius_visualisation_picture = {
-        filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-        width = 12,
-        height = 12,
-      },
-      construction_radius_visualisation_picture = {
-        filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-        width = 12,
-        height = 12,
-      },
       open_door_trigger_effect = sounds.roboport_door_open,
       close_door_trigger_effect = sounds.roboport_door_close,
       circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
@@ -406,16 +396,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       recharging_light = { intensity = 0.4, size = 5 },
       request_to_open_door_timeout = 15,
       spawn_and_station_height = -0.1,
-      radius_visualisation_picture = {
-        filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-        width = 12,
-        height = 12,
-      },
-      construction_radius_visualisation_picture = {
-        filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-        width = 12,
-        height = 12,
-      },
       open_door_trigger_effect = sounds.roboport_door_open,
       close_door_trigger_effect = sounds.roboport_door_close,
       circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
@@ -593,16 +573,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       recharging_light = { intensity = 0.4, size = 5 },
       request_to_open_door_timeout = 15,
       spawn_and_station_height = -0.1,
-      radius_visualisation_picture = {
-        filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-        width = 12,
-        height = 12,
-      },
-      construction_radius_visualisation_picture = {
-        filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-        width = 12,
-        height = 12,
-      },
       open_door_trigger_effect = sounds.roboport_door_open,
       close_door_trigger_effect = sounds.roboport_door_close,
       circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
@@ -715,16 +685,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.25,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -830,16 +790,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.25,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -944,16 +894,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.25,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -1057,16 +997,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.25,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -1161,16 +1091,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 1.75,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1264,16 +1184,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 1.75,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1367,16 +1277,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 1.75,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1470,16 +1370,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 1.75,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1601,16 +1491,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1730,16 +1610,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1859,16 +1729,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -1987,16 +1847,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -2166,16 +2016,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -2345,16 +2185,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -2524,16 +2354,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -2702,16 +2522,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
@@ -2815,16 +2625,6 @@ data:extend({
     recharging_light = { intensity = 0.4, size = 5 },
     request_to_open_door_timeout = 15,
     spawn_and_station_height = 0.33,
-    radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
-    construction_radius_visualisation_picture = {
-      filename = "__boblogistics__/graphics/entity/roboport/blank.png",
-      width = 12,
-      height = 12,
-    },
     open_door_trigger_effect = {
       {
         type = "play-sound",

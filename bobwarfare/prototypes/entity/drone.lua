@@ -430,7 +430,6 @@ data:extend({
       range = 30,
       min_range = 6,
       animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_flamethrower, tint_drone_1),
-      source_offset = { 0, -0.5 },
       damage_modifier = 2.5,
       lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
 
