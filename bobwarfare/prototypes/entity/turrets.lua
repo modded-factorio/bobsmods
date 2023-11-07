@@ -700,6 +700,8 @@ local function bob_turret_extension(inputs)
 end
 
 local function bob_gun_turret(inputs)
+  local preparerange = inputs.range or 17
+  preparerange = preparerange + 1
   return {
     type = "ammo-turret",
     name = inputs.name,
@@ -712,7 +714,7 @@ local function bob_gun_turret(inputs)
     corpse = "gun-turret-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    rotation_speed = 0.015,
+    rotation_speed = inputs.rotation_speed or 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
     dying_explosion = "medium-explosion",
@@ -753,11 +755,14 @@ local function bob_gun_turret(inputs)
       sound = sounds.heavy_gunshot,
     },
     call_for_help_radius = 40,
+    prepare_range = inputs.prepare_range or preparerange,
   }
 end
 
 local function bob_laser_turret(inputs)
   local size = inputs.size or 1
+  local preparerange = inputs.range or 25
+  preparerange = preparerange + 1
   local turret = {
     type = "electric-turret",
     name = inputs.name,
@@ -770,7 +775,7 @@ local function bob_laser_turret(inputs)
     collision_box = { { -0.7 * size, -0.7 * size }, { 0.7 * size, 0.7 * size } },
     selection_box = { { -1 * size, -1 * size }, { 1 * size, 1 * size } },
     dying_explosion = "medium-explosion",
-    rotation_speed = 0.01,
+    rotation_speed = inputs.rotation_speed or 0.01,
     preparing_speed = 0.05,
     folding_speed = 0.05,
     fast_replaceable_group = "turret",
@@ -835,6 +840,7 @@ local function bob_laser_turret(inputs)
         },
       },
     }
+    turret.prepare_range = inputs.prepare_range or preparerange
   else
     turret.attack_parameters = {
       type = "beam",
@@ -859,6 +865,7 @@ local function bob_laser_turret(inputs)
         },
       },
     }
+    turret.prepare_range = inputs.prepare_range or preparerange
   end
   return turret
 end
@@ -867,52 +874,60 @@ data:extend({
   --  bob_gun_turret{name = "gun-turret", health = 400, inventory_size = 1, automated_ammo_count = 10, ammo_category = "bullet", damage_modifier = 1, cooldown = 6, range = 18, tint = white, , base_tint = white},
   bob_gun_turret({
     name = "bob-gun-turret-2",
-    health = 500,
+    health = 800,
     inventory_size = 1,
     automated_ammo_count = 10,
     ammo_category = "bullet",
     damage_modifier = 1.25,
     cooldown = 6,
     range = 19,
+    prepare_range = 19.5,
+    rotation_speed = 0.017,
     tint = red,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
   }),
   bob_gun_turret({
     name = "bob-gun-turret-3",
-    health = 600,
+    health = 1200,
     inventory_size = 2,
     automated_ammo_count = 20,
     ammo_category = "bullet",
     damage_modifier = 1.5,
     cooldown = 6,
     range = 20,
+    prepare_range = 21,
+    rotation_speed = 0.019,
     tint = blue,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
   }),
   bob_gun_turret({
     name = "bob-gun-turret-4",
-    health = 700,
+    health = 1600,
     inventory_size = 2,
     automated_ammo_count = 20,
     ammo_category = "bullet",
     damage_modifier = 1.75,
     cooldown = 6,
     range = 21,
+    prepare_range = 22.5,
+    rotation_speed = 0.021,
     tint = purple,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
   }),
   bob_gun_turret({
     name = "bob-gun-turret-5",
-    health = 800,
+    health = 2000,
     inventory_size = 3,
     automated_ammo_count = 30,
     ammo_category = "bullet",
     damage_modifier = 2,
     cooldown = 6,
     range = 22,
+    prepare_range = 24,
+    rotation_speed = 0.023,
     tint = green,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
@@ -927,6 +942,7 @@ data:extend({
     damage_modifier = 15,
     cooldown = 150,
     range = 30,
+    prepare_range = 32,
     tint = yellow,
     gun_type = "gun",
     base = bob_turret_base({ type = "laser", tint = red }),
@@ -940,6 +956,7 @@ data:extend({
     damage_modifier = 20,
     cooldown = 120,
     range = 35,
+    prepare_range = 37,
     tint = blue,
     gun_type = "gun",
     base = bob_turret_base({ type = "laser", tint = red }),
@@ -953,6 +970,7 @@ data:extend({
     damage_modifier = 25,
     cooldown = 105,
     range = 40,
+    prepare_range = 42,
     tint = green,
     gun_type = "gun",
     base = bob_turret_base({ type = "laser", tint = red }),
@@ -971,6 +989,8 @@ data:extend({
     damage_modifier = 3,
     cooldown = 35,
     range = 26,
+    prepare_range = 26.5,
+    rotation_speed = 0.011,
     tint = red,
     base = bob_turret_base({ type = "laser", tint = yellow }),
   }),
@@ -986,6 +1006,8 @@ data:extend({
     damage_modifier = 4.2,
     cooldown = 30,
     range = 28,
+    prepare_range = 29,
+    rotation_speed = 0.012,
     tint = blue,
     base = bob_turret_base({ type = "laser", tint = yellow }),
   }),
@@ -1001,6 +1023,8 @@ data:extend({
     damage_modifier = 5.6,
     cooldown = 25,
     range = 30,
+    prepare_range = 31.5,
+    rotation_speed = 0.013,
     tint = purple,
     base = bob_turret_base({ type = "laser", tint = yellow }),
   }),
@@ -1016,6 +1040,8 @@ data:extend({
     damage_modifier = 7.2,
     cooldown = 20,
     range = 32,
+    prepare_range = 34,
+    rotation_speed = 0.014,
     tint = green,
     base = bob_turret_base({ type = "laser", tint = yellow }),
   }),
@@ -1040,6 +1066,7 @@ data:extend({
     damage_modifier = 12 * 1,
     cooldown = 200,
     range = 60,
+    prepare_range = 62,
     sound = warefareSounds.plasmaTurret(0.7),
     min_range = 30,
     direction_deviation = 0,
@@ -1071,6 +1098,7 @@ data:extend({
     damage_modifier = 12 * 1.5,
     cooldown = 150,
     range = 65,
+    prepare_range = 67,
     sound = warefareSounds.plasmaTurret(0.75),
     min_range = 30,
     direction_deviation = 0,
@@ -1102,6 +1130,7 @@ data:extend({
     damage_modifier = 12 * 2.1,
     cooldown = 120,
     range = 70,
+    prepare_range = 72,
     sound = warefareSounds.plasmaTurret(0.8),
     min_range = 30,
     direction_deviation = 0,
@@ -1133,6 +1162,7 @@ data:extend({
     damage_modifier = 12 * 2.8,
     cooldown = 100,
     range = 75,
+    prepare_range = 77,
     sound = warefareSounds.plasmaTurret(0.9),
     min_range = 30,
     direction_deviation = 0,
@@ -1164,6 +1194,7 @@ data:extend({
     damage_modifier = 12 * 3.6,
     cooldown = 85,
     range = 80,
+    prepare_range = 82,
     sound = warefareSounds.plasmaTurret(1),
     min_range = 30,
     direction_deviation = 0,
