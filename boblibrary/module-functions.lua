@@ -4,8 +4,10 @@ if not bobmods.lib.module then
 end
 
 function bobmods.lib.module.exclude_productivity_module(module_name)
-  if type(module_name) == "string" and data.raw.module[module_name] then
-    bobmods.lib.module.excluded_prod_modules[module_name] = true
+  if type(module_name) == "string" then
+    if data.raw.module[module_name] then
+      bobmods.lib.module.excluded_prod_modules[module_name] = true
+    end
   else
     log(debug.traceback())
   end
