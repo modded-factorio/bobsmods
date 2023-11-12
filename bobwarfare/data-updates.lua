@@ -27,9 +27,9 @@ if settings.startup["bobmods-warfare-vehicleflamethrowerstartsfires"].value == t
         type = "direct",
         action_delivery = {
           type = "stream",
-          stream = "handheld-flamethrower-fire-stream"
-        }
-      }
+          stream = "handheld-flamethrower-fire-stream",
+        },
+      },
     },
     {
       category = "flamethrower",
@@ -41,9 +41,9 @@ if settings.startup["bobmods-warfare-vehicleflamethrowerstartsfires"].value == t
         type = "direct",
         action_delivery = {
           type = "stream",
-          stream = "flamethrower-fire-stream"
-        }
-      }
-    }
+          stream = "flamethrower-fire-stream",
+        },
+      },
+    },
   }
 end
