@@ -527,10 +527,12 @@ if data.raw.recipe["gun-cotton-synthetic"] then
 end
 
 if data.raw.technology["speed-module-4"] then
+  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-3")
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-4")
 end
 
 if data.raw.technology["effectivity-module-4"] then
+  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "effectivity-module-3")
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "effectivity-module-4")
 end
 
