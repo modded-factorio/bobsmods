@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed Artillery Wagon Item Subgroup #110
     - Fixed graphical gap between gates and reinforced walls #130
+    - Fixed crash related to setting Vehicle flamethrower starts fires #141
   Changes:
     - Added missing prerequisites #120
     - Adjust tank recipe #129
