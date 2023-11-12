@@ -60,7 +60,7 @@ data:extend({
     prerequisites = {
       "effectivity-module-3",
       "power-armor-mk2",
-      "speed-module-3"
+      "speed-module-3",
     },
     effects = {
       {
