@@ -360,9 +360,7 @@ data:extend({
   },
 })
 
-if
-  settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not data.raw.technology["long-inserters-1"]
-then
+if not data.raw.technology["long-inserters-1"] then
   data:extend({
     {
       type = "technology",

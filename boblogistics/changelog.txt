@@ -2,6 +2,7 @@
 Version: 1.2.0
 Date: ???
   Bugfixes:
+    - Fixed that Long-handed inserters were uncraftable when Inserter overhaul was disabled #113
     - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117
   Changes:
     - Added support for Space Exploration mod #88
