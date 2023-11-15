@@ -152,7 +152,7 @@ if mods["aai-loaders"] then
         data.raw.item["advanced-processing-unit"] and "advanced-electronics-3" or nil,
       },
       unit = {
-        count = 450,
+        count = 400,
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
