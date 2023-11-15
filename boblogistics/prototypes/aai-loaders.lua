@@ -225,8 +225,9 @@ if mods["aai-loaders"] then
     end
   end
 
+  -- Clear entity.order so they use item.order
   -- Set subgroup
-  for index, item_name in pairs({
+  for index, loader_name in pairs({
     "aai-basic-loader",
     "aai-loader",
     "aai-fast-loader",
@@ -234,9 +235,13 @@ if mods["aai-loaders"] then
     "aai-turbo-loader",
     "aai-ultimate-loader",
   }) do
-    local item = data.raw.item[item_name]
+    local item = data.raw.item[loader_name]
     if item then
       item.subgroup = "bob-logistic-tier-" .. (index - 1)
+    end
+    local entity = data.raw["loader-1x1"][loader_name]
+    if entity then
+      entity.order = nil
     end
   end
 
