@@ -157,9 +157,8 @@ if mods["aai-loaders"] then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
-          bobmods.tech and bobmods.tech.advanced_logistic_science and
-          { "advanced-logistic-science-pack", 1 } or
-          { "production-science-pack", 1 },
+          bobmods.tech and bobmods.tech.advanced_logistic_science and { "advanced-logistic-science-pack", 1 }
+            or { "production-science-pack", 1 },
           { "utility-science-pack", 1 },
         },
         time = 30,
@@ -252,10 +251,14 @@ if mods["aai-loaders"] then
   end
 
   -- Add prerequisites
-  
+
   if bobmods.tech and bobmods.tech.advanced_logistic_science then
     bobmods.lib.tech.add_prerequisite("aai-express-loader", "advanced-logistic-science-pack")
-    bobmods.lib.tech.replace_science_pack("aai-express-loader", "production-science-pack", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack(
+      "aai-express-loader",
+      "production-science-pack",
+      "advanced-logistic-science-pack"
+    )
   else
     bobmods.lib.tech.add_prerequisite("aai-express-loader", "production-science-pack")
   end
