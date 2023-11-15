@@ -157,6 +157,8 @@ if mods["aai-loaders"] then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          bobmods.tech and bobmods.tech.advanced_logistic_science and
+          { "advanced-logistic-science-pack", 1 } or
           { "production-science-pack", 1 },
           { "utility-science-pack", 1 },
         },
@@ -176,6 +178,17 @@ if mods["aai-loaders"] then
     upgrade = "aai-ultimate-loader",
     localise = false,
   })
+  local ultimate_ingredients = {
+    { "automation-science-pack", 1 },
+    { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
+    { "production-science-pack", 1 },
+    { "utility-science-pack", 1 },
+    { "space-science-pack", 1 },
+  }
+  if bobmods.tech and bobmods.tech.advanced_logistic_science then
+    table.insert(ultimate_ingredients, { "advanced-logistic-science-pack", 1 })
+  end
   AAILoaders.make_tier({
     name = "ultimate",
     transport_belt = "ultimate-transport-belt",
@@ -186,14 +199,7 @@ if mods["aai-loaders"] then
       prerequisites = { "logistics-5", "aai-turbo-loader", "space-science-pack" },
       unit = {
         count = 450,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
-          { "production-science-pack", 1 },
-          { "utility-science-pack", 1 },
-          { "space-science-pack", 1 },
-        },
+        ingredients = ultimate_ingredients,
         time = 60,
       },
     },
@@ -246,8 +252,14 @@ if mods["aai-loaders"] then
   end
 
   -- Add prerequisites
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
+  
+  if bobmods.tech and bobmods.tech.advanced_logistic_science then
+    bobmods.lib.tech.add_prerequisite("aai-express-loader", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack("aai-express-loader", "production-science-pack", "advanced-logistic-science-pack")
+  else
     bobmods.lib.tech.add_prerequisite("aai-express-loader", "production-science-pack")
+  end
+  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     bobmods.lib.tech.add_prerequisite("aai-fast-loader", "stack-inserter")
     bobmods.lib.tech.add_prerequisite("aai-express-loader", "stack-inserter-2")
     bobmods.lib.tech.add_prerequisite("aai-turbo-loader", "stack-inserter-3")
