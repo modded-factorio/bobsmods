@@ -250,7 +250,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["yellow-filter-inserter"].hand_open_picture = inserter.graphics.yellow.hand_open_picture()
   data.raw.inserter["yellow-filter-inserter"].platform_picture = inserter.graphics.filter.platform_picture()
 
-  data.raw.inserter["long-handed-inserter"].order = "[inserter]-c[fast]"
   data.raw.inserter["long-handed-inserter"].max_health = inserter.stats.red.health
   data.raw.inserter["long-handed-inserter"].extension_speed = inserter.stats.red.extension_speed
   data.raw.inserter["long-handed-inserter"].rotation_speed = inserter.stats.red.rotation_speed
@@ -356,7 +355,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["fast-inserter"].icon = "__boblogistics__/graphics/icons/inserter/blue-inserter.png"
   data.raw.inserter["fast-inserter"].icon_size = 32
   data.raw.inserter["fast-inserter"].icon_mipmaps = nil
-  data.raw.inserter["fast-inserter"].order = "[inserter]-d[express]"
   data.raw.inserter["fast-inserter"].next_upgrade = "turbo-inserter"
   data.raw.inserter["fast-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["fast-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -368,7 +366,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["filter-inserter"].icon = "__boblogistics__/graphics/icons/inserter/blue-filter-inserter.png"
   data.raw.inserter["filter-inserter"].icon_size = 32
   data.raw.inserter["filter-inserter"].icon_mipmaps = nil
-  data.raw.inserter["filter-inserter"].order = "[inserter]-d[express]-b[filter]"
   data.raw.inserter["filter-inserter"].next_upgrade = "turbo-filter-inserter"
   data.raw.inserter["filter-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["filter-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -384,7 +381,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["stack-inserter"].icon = "__boblogistics__/graphics/icons/inserter/blue-stack-inserter.png"
   data.raw.inserter["stack-inserter"].icon_size = 32
   data.raw.inserter["stack-inserter"].icon_mipmaps = nil
-  data.raw.inserter["stack-inserter"].order = "[inserter]-d[express]-c[stack]"
   data.raw.inserter["stack-inserter"].next_upgrade = "turbo-stack-inserter"
   data.raw.inserter["stack-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["stack-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -401,7 +397,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     "__boblogistics__/graphics/icons/inserter/blue-stack-filter-inserter.png"
   data.raw.inserter["stack-filter-inserter"].icon_size = 32
   data.raw.inserter["stack-filter-inserter"].icon_mipmaps = nil
-  data.raw.inserter["stack-filter-inserter"].order = "[inserter]-d[express]-d[stack-filter]"
   data.raw.inserter["stack-filter-inserter"].next_upgrade = "turbo-stack-filter-inserter"
   data.raw.inserter["stack-filter-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["stack-filter-inserter"].extension_speed = inserter.stats.blue.extension_speed
