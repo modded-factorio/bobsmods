@@ -327,6 +327,7 @@ else
 end
 
 if settings.startup["bobmods-plates-bluedeuterium"].value == true then
+  data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint = data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint or {}
   data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint.primary = { r = 0, g = 0.7, b = 1 }
   data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint.tertiary = { r = 0, g = 0.7, b = 1 }
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
