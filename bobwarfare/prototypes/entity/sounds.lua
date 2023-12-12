@@ -25,7 +25,6 @@ sounds.plasmaTurret = function(volume)
     {
       filename = "__bobwarfare__/sound/plasma-turret-01.ogg",
       volume = volume,
-      max_sounds_per_type = 2,
     },
   }
 end

@@ -191,10 +191,6 @@ else
 end
 
 if settings.startup["bobmods-burnerphase"].value == true then
-  if mods["bobpower"] then
-    bobmods.lib.tech.replace_science_pack("steam-power", "automation-science-pack", "steam-science-pack")
-  end
-
   if data.raw.technology["logistics-0"] then
     bobmods.lib.tech.replace_science_pack("logistics-0", "automation-science-pack", "steam-science-pack")
   end
@@ -212,7 +208,9 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["radars-1"] then
     bobmods.lib.tech.add_prerequisite("radars-1", "electricity")
   end
-
+  if mods["bobwarfare"] then
+    bobmods.lib.tech.remove_recipe_unlock("electricity", "radar")
+  end
   bobmods.lib.tech.add_prerequisite("logistic-science-pack", "lab")
   if data.raw.technology["electrolysis-1"] then
     bobmods.lib.tech.add_prerequisite("electrolysis-1", "automation-science-pack")

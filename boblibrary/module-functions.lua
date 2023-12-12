@@ -1,11 +1,26 @@
 if not bobmods.lib.module then
   bobmods.lib.module = {}
+  bobmods.lib.module.excluded_prod_modules = {}
+end
+
+function bobmods.lib.module.exclude_productivity_module(module_name)
+  if type(module_name) == "string" then
+    if data.raw.module[module_name] then
+      bobmods.lib.module.excluded_prod_modules[module_name] = true
+    end
+  else
+    log(debug.traceback())
+  end
 end
 
 function bobmods.lib.module.add_productivity_limitation(recipe)
   if type(recipe) == "string" and data.raw.recipe[recipe] then
     for i, module in pairs(data.raw.module) do
-      if module.limitation and module.effect.productivity then
+      if
+        not bobmods.lib.module.excluded_prod_modules[module.name]
+        and module.limitation
+        and module.effect.productivity
+      then
         table.insert(module.limitation, recipe)
       end
     end

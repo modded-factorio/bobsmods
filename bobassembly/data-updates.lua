@@ -8,6 +8,9 @@ require("prototypes.chemical-mixing-furnace-updates")
 require("prototypes.distillery-updates")
 require("prototypes.fluid-furnace-updates")
 require("prototypes.centrifuge-updates")
+if mods["space-exploration"] then
+  require("prototypes.se-updates")
+end
 
 data.raw.fluid["crude-oil"].fuel_value = "1.9MJ"
 data.raw.fluid["crude-oil"].emissions_multiplier = 10

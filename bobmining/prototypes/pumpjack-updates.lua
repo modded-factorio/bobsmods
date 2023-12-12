@@ -1,8 +1,4 @@
 if settings.startup["bobmods-mining-pumpjacks"].value == true then
-  if data.raw.technology["pumpjack"] then
-    bobmods.lib.tech.replace_prerequisite("bob-pumpjacks-1", "oil-processing", "pumpjack")
-  end
-
   if data.raw.item["steel-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-pumpjack-1", "iron-gear-wheel", "steel-gear-wheel")
   end

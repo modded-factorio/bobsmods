@@ -15,7 +15,6 @@ data:extend({
       filename = "__base__/graphics/entity/smoke/smoke.png",
       flags = { "smoke" },
     },
-    slow_down_factor = 0,
     affected_by_wind = false,
     cyclic = true,
     duration = 60 * 10,
@@ -68,7 +67,7 @@ data:extend({
         },
       },
     },
-    action_frequency = 5,
+    action_cooldown = 30,
   },
 })
 

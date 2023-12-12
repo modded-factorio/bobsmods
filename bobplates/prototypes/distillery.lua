@@ -244,7 +244,6 @@ if settings.startup["bobmods-plates-purewater"].value == true then
           base_level = 1,
           pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
         },
-        off_when_no_fluid_recipe = false,
       },
       animation = bobmods.plates.distillery_animation({ r = 0.7, g = 0.7, b = 0.1 }),
       working_visualisations = bobmods.plates.distillery_working_visualisations(1),

@@ -77,6 +77,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
         time = 5,
       },
+      ignore_tech_cost_multiplier = true,
       order = "c-a",
     },
 
@@ -110,6 +111,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
         time = 10,
       },
+      ignore_tech_cost_multiplier = true,
       order = "c-a",
     },
 
@@ -131,30 +133,30 @@ if settings.startup["bobmods-burnerphase"].value == true then
           { "automation-science-pack", 1 },
         },
       },
+      ignore_tech_cost_multiplier = true,
     },
   })
 
-  if not mods["bobpower"] then
-    data:extend({
-      {
-        type = "technology",
-        name = "steam-power",
-        icon = "__base__/graphics/icons/fluid/steam.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-        prerequisites = {},
-        effects = {},
-        unit = {
-          count = 10,
-          ingredients = {
-            { "steam-science-pack", 1 },
-          },
-          time = 10,
+  data:extend({
+    {
+      type = "technology",
+      name = "steam-power",
+      icon = "__base__/graphics/icons/fluid/steam.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      prerequisites = {},
+      effects = {},
+      unit = {
+        count = 10,
+        ingredients = {
+          { "steam-science-pack", 1 },
         },
-        order = "c-a",
+        time = 10,
       },
-    })
-  end
+      ignore_tech_cost_multiplier = true,
+      order = "c-a",
+    },
+  })
 
   bobmods.lib.recipe.enabled("automation-science-pack", false)
   bobmods.lib.recipe.enabled("boiler", false)

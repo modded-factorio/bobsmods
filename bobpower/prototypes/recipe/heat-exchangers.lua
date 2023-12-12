@@ -19,6 +19,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       ingredients = {
         { "heat-exchanger", 1 },
         { "steel-plate", 10 },
+        { "heat-pipe-2", 4 },
       },
       result = "heat-exchanger-2",
     },
@@ -30,6 +31,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       ingredients = {
         { "heat-exchanger-2", 1 },
         { "steel-plate", 10 },
+        { "heat-pipe-3", 4 },
       },
       result = "heat-exchanger-3",
     },
@@ -40,6 +42,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       ingredients = {
         { "heat-exchanger-3", 1 },
         { "steel-plate", 10 },
+        { "heat-pipe-4", 4 },
       },
       result = "heat-exchanger-4",
     },
@@ -57,7 +60,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         enabled = false,
         ingredients = {
           { "boiler-3", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe-2", 4 },
         },
         result = "heat-exchanger-2",
         allow_as_intermediate = false,
@@ -69,7 +72,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         enabled = false,
         ingredients = {
           { "boiler-4", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe-3", 4 },
         },
         result = "heat-exchanger-3",
         allow_as_intermediate = false,
@@ -82,7 +85,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         enabled = false,
         ingredients = {
           { "boiler-5", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe-4", 4 },
         },
         result = "heat-exchanger-4",
         allow_as_intermediate = false,
@@ -117,7 +120,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         results = {
           { "boiler-3", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe-2", 4 },
         },
         main_product = "boiler-3",
         allow_as_intermediate = false,
@@ -133,7 +136,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         results = {
           { "boiler-4", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe-3", 4 },
         },
         main_product = "boiler-4",
         allow_as_intermediate = false,
@@ -149,7 +152,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         results = {
           { "boiler-5", 1 },
-          { "heat-pipe", 4 },
+          { "heat-pipe-4", 4 },
         },
         main_product = "boiler-5",
         allow_as_intermediate = false,

@@ -26,7 +26,7 @@ data:extend({
     fuel_value = "100J",
     fuel_category = "chemical",
     subgroup = "bob-greenhouse-items",
-    order = "g[seedling]",
+    order = "a[seedling]",
     stack_size = 200,
   },
   {

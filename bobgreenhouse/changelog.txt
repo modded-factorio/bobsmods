@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: ???
+  Changes:
+    - Recipes with variable output now show range in tooltip #125
+    - Added a small polution absorption effect to greenhouses #134
+  Bugfixes:
+    - Fixed wood recipe icons and order #122
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
   Changes:

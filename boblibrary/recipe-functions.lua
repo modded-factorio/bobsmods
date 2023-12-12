@@ -309,6 +309,7 @@ local function split_line(recipe, tag)
     if not data.raw.recipe[recipe].expensive[tag] then
       data.raw.recipe[recipe].expensive[tag] = table.deepcopy(data.raw.recipe[recipe][tag])
     end
+    data.raw.recipe[recipe][tag] = nil
   end
 end
 
@@ -648,6 +649,18 @@ function bobmods.lib.recipe.set_subgroup(recipe_name, subgroup)
     local recipe = data.raw.recipe[recipe_name]
     if recipe then
       recipe.subgroup = subgroup
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe_name)
+  end
+end
+
+function bobmods.lib.recipe.set_category(recipe_name, category)
+  if type(recipe_name) == "string" and type(category) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      recipe.category = category
     end
   else
     log(debug.traceback())

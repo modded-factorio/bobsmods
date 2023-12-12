@@ -18,14 +18,19 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery-red.png"
   data.raw.item["battery"].icon_size = 64
   data.raw.item["battery"].icon_mipmaps = nil
+  data.raw.recipe["battery"].crafting_machine_tint = data.raw.recipe["battery"].crafting_machine_tint or {}
   data.raw.recipe["battery"].crafting_machine_tint.primary = { r = 1.0, g = 0.2, b = 0.1, a = 1.000 }
 
   data.raw.item["lithium-ion-battery"].icon = "__bobplates__/graphics/icons/battery-blue.png"
   data.raw.item["lithium-ion-battery"].icon_size = 64
+  data.raw.recipe["lithium-ion-battery"].crafting_machine_tint = data.raw.recipe["lithium-ion-battery"].crafting_machine_tint
+    or {}
   data.raw.recipe["lithium-ion-battery"].crafting_machine_tint.primary = { r = 0.1, g = 0.5, b = 1.0, a = 1.000 }
 
   data.raw.item["silver-zinc-battery"].icon = "__bobplates__/graphics/icons/battery-purple.png"
   data.raw.item["silver-zinc-battery"].icon_size = 64
+  data.raw.recipe["silver-zinc-battery"].crafting_machine_tint = data.raw.recipe["silver-zinc-battery"].crafting_machine_tint
+    or {}
   data.raw.recipe["silver-zinc-battery"].crafting_machine_tint.primary = { r = 0.7, g = 0.9, b = 1.0, a = 1.000 }
 else
   data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
@@ -114,10 +119,23 @@ end
 
 if settings.startup["bobmods-plates-batteryupdate"].value == true then
   data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics" }
-  data.raw.recipe["battery"].normal.ingredients =
-    { { "lead-plate", 2 }, { type = "fluid", name = "sulfuric-acid", amount = 20 }, { "plastic-bar", 1 } }
-  data.raw.recipe["battery"].expensive.ingredients =
-    { { "lead-plate", 2 }, { type = "fluid", name = "sulfuric-acid", amount = 40 }, { "plastic-bar", 2 } }
+  bobmods.lib.recipe.clear_ingredients("battery")
+
+  bobmods.lib.recipe.add_difficulty_ingredient("battery", "normal", { "lead-plate", 2 })
+  bobmods.lib.recipe.add_difficulty_ingredient(
+    "battery",
+    "normal",
+    { type = "fluid", name = "sulfuric-acid", amount = 20 }
+  )
+  bobmods.lib.recipe.add_difficulty_ingredient("battery", "normal", { "plastic-bar", 1 })
+
+  bobmods.lib.recipe.add_difficulty_ingredient("battery", "expensive", { "lead-plate", 2 })
+  bobmods.lib.recipe.add_difficulty_ingredient(
+    "battery",
+    "expensive",
+    { type = "fluid", name = "sulfuric-acid", amount = 40 }
+  )
+  bobmods.lib.recipe.add_difficulty_ingredient("battery", "expensive", { "plastic-bar", 2 })
 end
 
 data.raw.recipe["steel-plate"].category = "chemical-furnace"

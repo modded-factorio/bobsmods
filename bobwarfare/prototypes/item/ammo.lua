@@ -361,10 +361,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 20,
@@ -375,6 +371,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -392,10 +392,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 20,
@@ -406,6 +402,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -423,10 +423,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 20,
@@ -437,6 +433,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -454,10 +454,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 10,
@@ -468,6 +464,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -485,10 +485,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 10,
@@ -499,6 +495,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -516,10 +516,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 10,
@@ -530,6 +526,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -547,10 +547,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 10,
@@ -561,6 +557,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -578,10 +578,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 20,
@@ -592,6 +588,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -817,10 +817,6 @@ data:extend({
     ammo_type = {
       category = "cannon-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-explosion",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 20,
@@ -831,6 +827,10 @@ data:extend({
           direction_deviation = 0.5,
           range_deviation = 0.3,
           max_range = 20,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },
@@ -1142,10 +1142,6 @@ data:extend({
     ammo_type = {
       category = "shotgun-shell",
       target_type = "direction",
-      source_effects = {
-        type = "create-entity",
-        entity_name = "explosion-gunshot",
-      },
       action = {
         type = "direct",
         repeat_count = 10,
@@ -1156,6 +1152,10 @@ data:extend({
           direction_deviation = 0.4,
           range_deviation = 0.4,
           max_range = 15,
+          source_effects = {
+            type = "create-entity",
+            entity_name = "explosion-gunshot",
+          },
         },
       },
     },

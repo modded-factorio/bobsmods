@@ -146,7 +146,6 @@ data:extend({
       result_count = 3,
       allow_decomposition = false,
     },
-    allow_decomposition = false,
   },
 })
 
@@ -273,7 +272,6 @@ data:extend({
       result_count = 3,
       allow_decomposition = false,
     },
-    allow_decomposition = false,
   },
 })
 
@@ -371,6 +369,7 @@ data:extend({
     },
     result = "basic-circuit-board",
     allow_decomposition = false,
+    allow_as_intermediate = false,
   },
 })
 
@@ -490,7 +489,6 @@ data:extend({
       result = "electronic-circuit",
       allow_decomposition = false,
     },
-    allow_decomposition = false,
   },
 })
 
@@ -531,7 +529,6 @@ data:extend({
       result = "advanced-circuit",
       allow_decomposition = false,
     },
-    allow_decomposition = false,
   },
 })
 
@@ -574,7 +571,6 @@ data:extend({
       result = "processing-unit",
       allow_decomposition = false,
     },
-    allow_decomposition = false,
   },
 })
 
@@ -619,6 +615,5 @@ data:extend({
       result = "advanced-processing-unit",
       allow_decomposition = false,
     },
-    allow_decomposition = false,
   },
 })

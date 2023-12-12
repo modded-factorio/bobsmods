@@ -33,28 +33,3 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   bobmods.lib.tech.add_recipe_unlock("electric-energy-accumulators", "fast-accumulator")
   bobmods.lib.tech.add_recipe_unlock("electric-energy-accumulators", "slow-accumulator")
 end
-
-if settings.startup["bobmods-burnerphase"] and settings.startup["bobmods-burnerphase"].value == true then
-  -- Skip as this will be handled by bobtech mod
-elseif mods["aai-industry"] then
-  -- Skip as this will be handle by AAI Industry
-else
-  bobmods.lib.tech.add_prerequisite("automation", "steam-power")
-  bobmods.lib.tech.add_prerequisite("optics", "steam-power")
-
-  if data.raw.technology["electrolysis-1"] then
-    bobmods.lib.tech.add_prerequisite("electrolysis-1", "steam-power")
-  end
-  if data.raw.technology["air-compressor-1"] then
-    bobmods.lib.tech.add_prerequisite("air-compressor-1", "steam-power")
-  end
-  if data.raw.technology["water-bore-1"] then
-    bobmods.lib.tech.add_prerequisite("water-bore-1", "steam-power")
-  end
-  if data.raw.technology["bob-greenhouse"] then
-    bobmods.lib.tech.add_prerequisite("bob-greenhouse", "steam-power")
-  end
-  if data.raw.technology["water-miner-1"] then
-    bobmods.lib.tech.add_prerequisite("water-miner-1", "steam-power")
-  end
-end

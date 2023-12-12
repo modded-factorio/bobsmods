@@ -949,8 +949,6 @@ data:extend({
     type = "artillery-projectile",
     name = "poison-artillery-projectile",
     flags = { "not-on-map" },
-    acceleration = 0,
-    direction_only = true,
     reveal_map = true,
     map_color = { r = 0, g = 1, b = 0 },
     action = {
@@ -988,7 +986,6 @@ data:extend({
         },
       },
     },
-    light = { intensity = 0.5, size = 4 },
     picture = {
       filename = "__base__/graphics/entity/poison-capsule/poison-capsule.png",
       width = 32,
@@ -1017,8 +1014,6 @@ data:extend({
     type = "artillery-projectile",
     name = "fire-artillery-projectile",
     flags = { "not-on-map" },
-    acceleration = 0,
-    direction_only = true,
     reveal_map = true,
     map_color = { r = 1, g = 0, b = 0 },
     action = {
@@ -1063,7 +1058,6 @@ data:extend({
         },
       },
     },
-    light = { intensity = 0.5, size = 4 },
     picture = {
       filename = "__bobwarfare__/graphics/icons/fire-capsule.png",
       width = 32,
@@ -1092,8 +1086,6 @@ data:extend({
     type = "artillery-projectile",
     name = "explosive-artillery-projectile",
     flags = { "not-on-map" },
-    acceleration = 0,
-    direction_only = true,
     reveal_map = true,
     map_color = { r = 0.2, g = 0.2, b = 0.2 },
     action = {
@@ -1146,7 +1138,6 @@ data:extend({
         },
       },
     },
-    light = { intensity = 0.5, size = 4 },
     picture = {
       filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
       width = 64,
@@ -1169,8 +1160,6 @@ data:extend({
     type = "artillery-projectile",
     name = "distractor-artillery-projectile",
     flags = { "not-on-map" },
-    acceleration = 0,
-    direction_only = true,
     reveal_map = true,
     map_color = { r = 0, g = 0.5, b = 1 },
     action = {
@@ -1202,21 +1191,7 @@ data:extend({
           },
         },
       },
-      {
-        type = "area",
-        radius = 11,
-        action_delivery = {
-          type = "instant",
-          target_effects = {
-            {
-              type = "damage",
-              damage = { amount = 50, type = "explosion" },
-            },
-          },
-        },
-      },
     },
-    light = { intensity = 0.5, size = 4 },
     picture = {
       filename = "__base__/graphics/entity/combat-robot-capsule/distractor-capsule.png",
       frame_count = 1,
@@ -1246,8 +1221,6 @@ data:extend({
     type = "artillery-projectile",
     name = "atomic-artillery-projectile",
     flags = { "not-on-map" },
-    acceleration = 0,
-    direction_only = true,
     reveal_map = true,
     map_color = { r = 0, g = 1, b = 0 },
     action = {
@@ -1453,6 +1426,16 @@ data:extend({
               },
             },
           },
+          {
+            type = "create-trivial-smoke",
+            smoke_name = "artillery-smoke",
+            initial_height = 0,
+            speed_from_center = 0.05,
+            speed_from_center_deviation = 0.005,
+            offset_deviation = { { -4, -4 }, { 4, 4 } },
+            max_radius = 3.5,
+            repeat_count = 4 * 4 * 15,
+          },
         },
       },
     },
@@ -1471,19 +1454,6 @@ data:extend({
       height = 24,
       priority = "high",
       shift = { 0, 0 },
-    },
-    smoke = {
-      {
-        name = "smoke-fast",
-        deviation = { 0.15, 0.15 },
-        frequency = 1,
-        position = { 0, 1 },
-        slow_down_factor = 1,
-        starting_frame = 3,
-        starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
-      },
     },
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",

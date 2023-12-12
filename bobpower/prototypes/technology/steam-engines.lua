@@ -4,7 +4,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       type = "technology",
       name = "bob-steam-engine-2",
       prerequisites = {
-        "steam-power",
         "steel-processing",
         "logistic-science-pack",
       },

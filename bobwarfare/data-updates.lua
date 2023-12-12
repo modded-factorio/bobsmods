@@ -17,5 +17,33 @@ end
 table.insert(data.raw.car.tank.resistances, { type = "plasma", decrease = 15, percent = 50 })
 
 if settings.startup["bobmods-warfare-vehicleflamethrowerstartsfires"].value == true then
-  data.raw.ammo["flamethrower-ammo"].ammo_type[2].action.action_delivery.stream = "flamethrower-fire-stream"
+  data.raw.ammo["flamethrower-ammo"].ammo_type = {
+    {
+      category = "flamethrower",
+      clamp_position = true,
+      source_type = "default",
+      target_type = "position",
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "stream",
+          stream = "handheld-flamethrower-fire-stream",
+        },
+      },
+    },
+    {
+      category = "flamethrower",
+      clamp_position = true,
+      source_type = "vehicle",
+      target_type = "position",
+      consumption_modifier = 1.125,
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "stream",
+          stream = "flamethrower-fire-stream",
+        },
+      },
+    },
+  }
 end

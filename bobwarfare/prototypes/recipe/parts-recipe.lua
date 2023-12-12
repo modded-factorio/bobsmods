@@ -1,22 +1,3 @@
-if data.raw.item["synthetic-wood"] then
-  data:extend({
-    {
-      type = "recipe",
-      name = "gun-cotton-synthetic",
-      category = "crafting-with-fluid",
-      subgroup = "bob-resource",
-      energy_required = 1,
-      enabled = false,
-      ingredients = {
-        { type = "fluid", name = "sulfuric-acid", amount = 10 },
-        { "synthetic-wood", 1 },
-      },
-      result = "gun-cotton",
-      result_count = 1,
-    },
-  })
-end
-
 data:extend({
   {
     type = "recipe",

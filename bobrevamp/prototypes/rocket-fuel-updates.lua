@@ -38,6 +38,7 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
 
   if data.raw.recipe["enriched-fuel-from-hydrazine"] then
     bobmods.lib.tech.add_recipe_unlock("hydrazine", "enriched-fuel-from-hydrazine")
+    bobmods.lib.tech.add_prerequisite("hydrazine", "flammables")
   end
 
   bobmods.lib.create_gas_bottle(data.raw.fluid["ammonia"])
@@ -66,13 +67,5 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
 
     bobmods.lib.create_gas_bottle(data.raw.fluid["nitric-oxide"])
     bobmods.lib.module.add_productivity_limitation("nitric-oxide")
-  end
-end
-
-if data.raw.item["enriched-fuel"] then
-  if data.raw.technology["solid-fuel"] then
-    bobmods.lib.tech.add_prerequisite("hydrazine", "solid-fuel")
-  else
-    bobmods.lib.tech.add_prerequisite("hydrazine", "oil-processing")
   end
 end

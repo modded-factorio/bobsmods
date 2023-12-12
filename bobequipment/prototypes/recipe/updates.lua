@@ -412,7 +412,7 @@ end
 if data.raw.item["sapphire-5"] then
   bobmods.lib.recipe.add_ingredient("personal-laser-defense-equipment-2", { "sapphire-5", 1 })
   bobmods.lib.recipe.remove_ingredient("personal-laser-defense-equipment-2", "battery")
-  bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-2", "gem-processing-2")
+  bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-2", "gem-processing-3")
 end
 
 if data.raw.item["emerald-5"] then
@@ -430,7 +430,7 @@ end
 
 if data.raw.item["diamond-5"] then
   bobmods.lib.recipe.replace_ingredient("night-vision-equipment-3", "plastic-bar", "diamond-5")
-  bobmods.lib.tech.add_prerequisite("night-vision-equipment-3", "gem-processing-2")
+  bobmods.lib.tech.add_prerequisite("night-vision-equipment-3", "gem-processing-3")
   bobmods.lib.recipe.add_ingredient("personal-laser-defense-equipment-6", { "diamond-5", 1 })
 end
 

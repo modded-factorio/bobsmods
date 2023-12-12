@@ -4,10 +4,12 @@ if
   and data.raw.ammo["piercing-rounds-magazine"].ammo_type.action.action_delivery
   and data.raw.ammo["piercing-rounds-magazine"].ammo_type.action.action_delivery.target_effects
 then
-  table.insert(
-    data.raw.ammo["piercing-rounds-magazine"].ammo_type.action.action_delivery.target_effects,
-    { type = "damage", damage = { amount = 2, type = "bob-pierce" } }
-  )
+  local delivery = data.raw.ammo["piercing-rounds-magazine"].ammo_type.action.action_delivery
+  -- If we have a single target, convert to array
+  if delivery.target_effects.damage then
+    delivery.target_effects = { delivery.target_effects }
+  end
+  table.insert(delivery.target_effects, { type = "damage", damage = { amount = 2, type = "bob-pierce" } })
 end
 
 if
@@ -15,10 +17,12 @@ if
   and data.raw.projectile["piercing-shotgun-pellet"].action.action_delivery
   and data.raw.projectile["piercing-shotgun-pellet"].action.action_delivery.target_effects
 then
-  table.insert(
-    data.raw.projectile["piercing-shotgun-pellet"].action.action_delivery.target_effects,
-    { type = "damage", damage = { amount = 2, type = "bob-pierce" } }
-  )
+  local delivery = data.raw.projectile["piercing-shotgun-pellet"].action.action_delivery
+  -- If we have a single target, convert to array
+  if delivery.target_effects.damage then
+    delivery.target_effects = { delivery.target_effects }
+  end
+  table.insert(delivery.target_effects, { type = "damage", damage = { amount = 2, type = "bob-pierce" } })
 end
 
 data.raw.ammo["uranium-rounds-magazine"].magazine_size = 25

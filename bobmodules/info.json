@@ -1,6 +1,6 @@
 {
   "name": "bobmodules",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "factorio_version": "1.1",
   "title": "Bob's Modules mod",
   "author": "Bobingabout",
@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 1.1.0",
     "boblibrary >= 1.1.6",
-    "? bobplates >= 1.1.6",
+    "? bobplates >= 1.2.0",
     "? bobelectronics >= 1.1.6",
     "? DiscoScience"
   ],

@@ -2,9 +2,14 @@ bobmods.classes.characters = {}
 
 data.raw.character.character.fast_replaceable_group = "character"
 
-data.raw.character.character.icon = "__bobclasses__/icons/character.png"
-data.raw.character.character.icon_size = 128
-data.raw.character.character.icon_mipmaps = 4
+data.raw.character.character.icon = nil
+data.raw.character.character.icons = {
+  {
+    icon = "__bobclasses__/icons/character.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+  },
+}
 
 bobmods.classes.characters["bob-character-miner"] = util.merge({
   data.raw.character.character,

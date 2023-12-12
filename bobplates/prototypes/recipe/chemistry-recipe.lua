@@ -586,7 +586,7 @@ data:extend({
       { type = "fluid", name = "sulfur-dioxide", amount = 10 },
     },
     main_product = "lead-oxide",
-    {
+    crafting_machine_tint = {
       primary = { r = 0.1, g = 0.1, b = 0.1, a = 0.000 },
       secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
       tertiary = { r = 0.1, g = 0.01, b = 0.1, a = 0.000 },
@@ -606,7 +606,7 @@ data:extend({
       { type = "fluid", name = "nitrogen-dioxide", amount = 10 },
     },
     result = "silver-nitrate",
-    {
+    crafting_machine_tint = {
       primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
       tertiary = { r = 0.3, g = 0.03, b = 0.3, a = 0.000 },
@@ -626,7 +626,7 @@ data:extend({
       { "sodium-hydroxide", 1 },
     },
     result = "silver-oxide",
-    {
+    crafting_machine_tint = {
       primary = { r = 0.3, g = 0.3, b = 0.3, a = 0.000 },
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
       tertiary = { r = 0.3, g = 0.03, b = 0.3, a = 0.000 },
@@ -757,7 +757,7 @@ data:extend({
       { type = "fluid", name = "hydrogen-sulfide", amount = 10 },
     },
     main_product = "lead-oxide",
-    {
+    crafting_machine_tint = {
       primary = { r = 0.1, g = 0.1, b = 0.1, a = 0.000 },
       secondary = { r = 0, g = 0.3, b = 0.7, a = 0.000 },
       tertiary = { r = 0.5, g = 0.5, b = 0, a = 0.000 },
@@ -782,7 +782,7 @@ data:extend({
     results = {
       { type = "fluid", name = "hydrogen-sulfide", amount = 50 },
     },
-    {
+    crafting_machine_tint = {
       primary = { r = 0.7, g = 0.7, b = 0.0, a = 0.000 },
       secondary = { r = 1.0, g = 1.0, b = 1.0, a = 0.000 },
       tertiary = { r = 0.9, g = 0.9, b = 0.45, a = 0.000 },

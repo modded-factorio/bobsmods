@@ -201,18 +201,23 @@ data:extend({
     water_reflection = spitter_water_reflection(bobmods.enemies.huge_scale),
   },
 
-  add_spitter_die_animation(bobmods.enemies.huge_scale, bobmods.enemies.explosive_tint, bobmods.enemies.explosive_tint2, {
-    type = "corpse",
-    name = "bob-huge-explosive-spitter-corpse",
-    icon = "__base__/graphics/icons/big-biter-corpse.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    selectable_in_game = false,
-    selection_box = { { -1, -1 }, { 1, 1 } },
-    subgroup = "corpses",
-    order = "c[corpse]-b[spitter]-d[bigger]",
-    flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
-  }),
+  add_spitter_die_animation(
+    bobmods.enemies.huge_scale,
+    bobmods.enemies.explosive_tint,
+    bobmods.enemies.explosive_tint2,
+    {
+      type = "corpse",
+      name = "bob-huge-explosive-spitter-corpse",
+      icon = "__base__/graphics/icons/big-biter-corpse.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      selectable_in_game = false,
+      selection_box = { { -1, -1 }, { 1, 1 } },
+      subgroup = "corpses",
+      order = "c[corpse]-b[spitter]-d[bigger]",
+      flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
+    }
+  ),
 
   {
     type = "unit",
@@ -389,8 +394,8 @@ data:extend({
       cooldown_deviation = 0.15,
       damage_modifier = 5,
       scale = bobmods.enemies.giant_scale,
-      tint1 = bobmods.enemies.acid_tint,
-      tint2 = bobmods.enemies.acid_tint2,
+      tint1 = bobmods.enemies.fire_tint,
+      tint2 = bobmods.enemies.fire_tint2,
       begin_sound = bobmods.enemies.spit_begin_sound_big,
     }),
     vision_distance = 30,

@@ -30,6 +30,7 @@ if not data.raw.technology["zinc-processing"] then
       prerequisites = {
         "electrolysis-1",
         "sulfur-processing",
+        "alloy-processing",
       },
       effects = {},
     },
@@ -130,6 +131,7 @@ if not data.raw.technology["silicon-processing"] then
       type = "technology",
       name = "silicon-processing",
       prerequisites = {
+        "automation",
         "chemical-processing-2",
       },
       effects = {},
@@ -185,6 +187,7 @@ if not data.raw.technology["tungsten-processing"] then
         "chemical-processing-2",
         "chemical-science-pack",
         "nickel-processing",
+        "alloy-processing",
       },
       effects = {},
     },
@@ -299,6 +302,7 @@ if not data.raw.technology["cobalt-processing"] then
         "chemical-processing-1",
         "electrolysis-1",
         "sulfur-processing",
+        "alloy-processing",
       },
       effects = {},
     },

@@ -5,6 +5,7 @@ Date: 01. 01. 2023
     - Compatibility changes for Krastorio 2 mod #42
       - Fixed upgrading mining drills
       - Pumpjacks can now be placed on oil
+    - Added support for Space Exploration mod #88
   Bugfixes:
     - Fixing accidental global variables #50
     - Machines Showing In/Out Fluidbox arrows #66

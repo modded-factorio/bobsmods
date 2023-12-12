@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: ???
+  Bugfixes:
+    - Fixed Artillery Wagon Item Subgroup #110
+    - Fixed graphical gap between gates and reinforced walls #130
+    - Fixed crash related to setting Vehicle flamethrower starts fires #141
+  Changes:
+    - Increased the health, prepare range, and rotation speed of some higher tier turrets #84
+    - Added missing prerequisites #120
+    - Adjusted tank recipe #129
+    - Don't add tech radars-1 when AAI Industry mod is enabled #133
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023
   Bugfixes:

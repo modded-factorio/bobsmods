@@ -1,6 +1,6 @@
 {
   "name": "bobclasses",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "factorio_version": "1.1",
   "title": "Bob's Classes and Multiple characters mod",
   "author": "Bobingabout",
@@ -8,8 +8,9 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.0",
-    "? bobplates >= 1.1.0"
+    "boblibrary >= 1.1.6",
+    "? bobplates >= 1.2.0",
+    "(?) space-exploration >= 0.6.0"
   ],
   "description": "Requires Bob's functions library mod.\n\nCurrently, this adds 3 new classes to the game. These have various bonuses and disadvantages added, including a change in starting and respawn equipment.\n\nFighter: 125% health + healing rate, 75% inventory (-20 slots), 83% reach, 133% run speed.\nMiner: 80% health + healing rate, 83% reach and 130% mining reach, 80% run speed, +mining speed, Can hand smelt.\nBuilder: 80% health and healing rate, 133% inventory space (+26 slots), 133% reach, 80% run speed, 200% build speed.\n\nThis mod also adds the Avatar switcher GUI and when you get far enough into the game, you can build new bodies.\nThe avatar switcher GUI will list all bodies you've build. You can switch to one by clicking on the class picture button. When you press a button, that body is removed from the list, and your previous body added to the end.\nWhen dying, if you own multiple bodies, instead of respawning you will automatically switch to the first body in the list."
 }

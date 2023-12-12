@@ -1,4 +1,4 @@
-if settings.startup["bobmods-assembly-burner"].value == true then
+if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].value == true then
   data:extend({
     {
       type = "item",

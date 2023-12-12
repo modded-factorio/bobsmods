@@ -1,59 +1,61 @@
-data.raw.recipe["energy-shield-mk2-equipment"].ingredients =
-  { { "energy-shield-equipment", 2 }, { "processing-unit", 5 } }
+if not mods["space-exploration"] then
+  data.raw.recipe["energy-shield-mk2-equipment"].ingredients =
+    { { "energy-shield-equipment", 2 }, { "processing-unit", 5 } }
 
-data:extend({
-  {
-    type = "recipe",
-    name = "energy-shield-mk3-equipment",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { "energy-shield-mk2-equipment", 2 },
-      { "processing-unit", 5 },
-      { "productivity-module-2", 1 },
+  data:extend({
+    {
+      type = "recipe",
+      name = "energy-shield-mk3-equipment",
+      enabled = false,
+      energy_required = 10,
+      ingredients = {
+        { "energy-shield-mk2-equipment", 2 },
+        { "processing-unit", 5 },
+        { "productivity-module-2", 1 },
+      },
+      result = "energy-shield-mk3-equipment",
     },
-    result = "energy-shield-mk3-equipment",
-  },
-  {
-    type = "recipe",
-    name = "energy-shield-mk4-equipment",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { "energy-shield-mk3-equipment", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+    {
+      type = "recipe",
+      name = "energy-shield-mk4-equipment",
+      enabled = false,
+      energy_required = 10,
+      ingredients = {
+        { "energy-shield-mk3-equipment", 2 },
+        { "processing-unit", 5 },
+        { "effectivity-module-3", 1 },
+        { "productivity-module-3", 1 },
+      },
+      result = "energy-shield-mk4-equipment",
     },
-    result = "energy-shield-mk4-equipment",
-  },
-  {
-    type = "recipe",
-    name = "energy-shield-mk5-equipment",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { "energy-shield-mk4-equipment", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+    {
+      type = "recipe",
+      name = "energy-shield-mk5-equipment",
+      enabled = false,
+      energy_required = 10,
+      ingredients = {
+        { "energy-shield-mk4-equipment", 2 },
+        { "processing-unit", 5 },
+        { "effectivity-module-3", 1 },
+        { "productivity-module-3", 1 },
+      },
+      result = "energy-shield-mk5-equipment",
     },
-    result = "energy-shield-mk5-equipment",
-  },
-  {
-    type = "recipe",
-    name = "energy-shield-mk6-equipment",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { "energy-shield-mk5-equipment", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+    {
+      type = "recipe",
+      name = "energy-shield-mk6-equipment",
+      enabled = false,
+      energy_required = 10,
+      ingredients = {
+        { "energy-shield-mk5-equipment", 2 },
+        { "processing-unit", 5 },
+        { "effectivity-module-3", 1 },
+        { "productivity-module-3", 1 },
+      },
+      result = "energy-shield-mk6-equipment",
     },
-    result = "energy-shield-mk6-equipment",
-  },
-})
+  })
+end
 
 data.raw.recipe["battery-mk2-equipment"].ingredients = { { "battery-equipment", 2 }, { "processing-unit", 5 } }
 
