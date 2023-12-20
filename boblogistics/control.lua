@@ -360,7 +360,8 @@ end
 function bobmods.logistics.check_range(event)
   local player = game.players[event.player_index]
   local entity = player.selected
-  if entity
+  if
+    entity
     and entity.type == "inserter"
     and player.can_reach_entity(entity)
     and not global.bobmods.logistics.blacklist[entity.name]
@@ -377,9 +378,7 @@ script.on_configuration_changed(function(event)
     force.reset_technology_effects()
   end
 
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and
-    not game.active_mods["bobinserters"] then
-
+  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not game.active_mods["bobinserters"] then
     script.on_event("bob-inserter-long", bobmods.logistics.check_range)
   end
 end)
@@ -389,9 +388,7 @@ script.on_init(function(event)
     bobmods.logistics.player_setup(player.index)
   end
 
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and
-    not game.active_mods["bobinserters"] then
-
+  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not game.active_mods["bobinserters"] then
     script.on_event("bob-inserter-long", bobmods.logistics.check_range)
   end
 end)
