@@ -357,19 +357,17 @@ function bobmods.logistics.long_range(entity, player)
   end
 end
 
-script.on_event("bob-inserter-long", function(event)
+function bobmods.logistics.check_range(event)
   local player = game.players[event.player_index]
   local entity = player.selected
-  if
-    not game.active_mods["bobinserters"]
-    and entity
+  if entity
     and entity.type == "inserter"
     and player.can_reach_entity(entity)
     and not global.bobmods.logistics.blacklist[entity.name]
   then
     bobmods.logistics.long_range(entity, player)
   end
-end)
+end
 
 script.on_configuration_changed(function(event)
   for i, player in pairs(game.players) do
@@ -378,11 +376,23 @@ script.on_configuration_changed(function(event)
   for index, force in pairs(game.forces) do
     force.reset_technology_effects()
   end
+
+  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and
+    not game.active_mods["bobinserters"] then
+
+    script.on_event("bob-inserter-long", bobmods.logistics.check_range)
+  end
 end)
 
 script.on_init(function(event)
   for i, player in pairs(game.players) do
     bobmods.logistics.player_setup(player.index)
+  end
+
+  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and
+    not game.active_mods["bobinserters"] then
+
+    script.on_event("bob-inserter-long", bobmods.logistics.check_range)
   end
 end)
 

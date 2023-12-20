@@ -5,14 +5,16 @@ if not bobmods.logistics then
   bobmods.logistics = {}
 end
 
-data:extend({
-  {
-    type = "custom-input",
-    name = "bob-inserter-long",
-    key_sequence = "SHIFT + L",
-    consuming = "none",
-  },
-})
+if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
+  data:extend({
+    {
+      type = "custom-input",
+      name = "bob-inserter-long",
+      key_sequence = "SHIFT + L",
+      consuming = "none",
+    },
+  })
+end
 
 require("prototypes.category")
 
