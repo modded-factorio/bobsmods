@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed that Long-handed inserters were uncraftable when Inserter overhaul was disabled #113
     - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117
+    - Hid custom input "Change inserter long range" if setting "Inserter Overhaul" is disabled #143
     - Fixed Inserter Entity Order #144
   Changes:
     - Added support for Space Exploration mod #88
