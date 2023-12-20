@@ -9,8 +9,8 @@
   "dependencies": [
     "base >= 1.1.0",
     "boblibrary >= 1.2.0",
-    "? bobplates >= 1.1.6",
-    "? bobinserters >= 1.1.6",
+    "? bobplates >= 1.2.0",
+    "? bobinserters >= 1.2.0",
     "(?) space-exploration >= 0.6.0",
     "(?) aai-loaders"
   ],

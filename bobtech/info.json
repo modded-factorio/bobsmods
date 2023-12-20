@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 1.1.0",
     "boblibrary >= 1.2.0",
-    "? bobenemies >= 1.1.6",
+    "? bobenemies >= 1.2.0",
     "? DiscoScience"
   ],
   "description": "Requires Bob's functions library mod.\n\nAdds a Lab MK2\nAdds Logistic science pack, and changes logistic based technologies to cost this new science pack.\nIf Alien artifacts are enabled from Bob's Enemies mod, an Alien lab and alien science packs are added, plus Science pack Gold made from Science packs 1, 2, 3 and Military.\nScience pack ingredients are also changed around, to include some more Bob's Mods resources.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."

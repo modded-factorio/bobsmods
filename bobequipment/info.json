@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.6",
+    "boblibrary >= 1.2.0",
     "(?) space-exploration >= 0.6.0"
   ],
   "description": "Requires Bob's functions library mod.\n\nExpands the range of equipment available in base mod for the modular armor.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
