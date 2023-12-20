@@ -10,6 +10,7 @@ Date: ???
     - Added missing prerequisites #120
     - Adjusted tank recipe #129
     - Don't add tech radars-1 when AAI Industry mod is enabled #133
+    - Added Russian locale (thanks Eldrinn-Elantey!) #149
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023

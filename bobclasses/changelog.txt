@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Added support for Space Exploration mod #88
     - Added missing prerequisites #120
+    - Added Russian locale (thanks Eldrinn-Elantey!) #149
   Bugfixes:
     - Fixed error when changing character icon #135
 ---------------------------------------------------------------------------------------------------

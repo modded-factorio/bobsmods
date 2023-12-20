@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Added support for Space Exploration mod #88
     - Hid setting "Burner and steam assembling machines" when AAI Industry mod is enabled #133
+    - Added Russian locale (thanks Eldrinn-Elantey!) #149
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023

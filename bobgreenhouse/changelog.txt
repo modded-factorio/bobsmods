@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Recipes with variable output now show range in tooltip #125
     - Added a small polution absorption effect to greenhouses #134
+    - Added Russian locale (thanks Eldrinn-Elantey!) #149
   Bugfixes:
     - Fixed wood recipe icons and order #122
 ---------------------------------------------------------------------------------------------------
