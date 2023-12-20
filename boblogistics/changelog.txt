@@ -13,6 +13,7 @@ Date: ???
     - Added missing prerequisites #120
     - Added recipe Crude oil processing when other Bob's mods are not enabled #120
     - Moved solid fuel recipes to tech "Flammables" #120
+    - Added Russian locale (thanks Eldrinn-Elantey!) #149
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 01. 01. 2023

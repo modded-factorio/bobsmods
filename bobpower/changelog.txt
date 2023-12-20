@@ -6,6 +6,7 @@ Date: ???
     - Fixed Heat pipe 3 & 4 descriptions #123
   Changes:
     - Reverted addition of Tech Steam power #108
+    - Added Russian locale (thanks Eldrinn-Elantey!) #149
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 02. 01. 2023

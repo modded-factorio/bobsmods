@@ -8,9 +8,9 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 1.1.0",
-    "boblibrary >= 1.1.6",
+    "boblibrary >= 1.2.0",
     "? bobplates >= 1.2.0",
-    "? bobelectronics >= 1.1.6",
+    "? bobelectronics >= 1.2.0",
     "? DiscoScience"
   ],
   "description": "Requires Bob's functions library mod.\n\nExpansion to the Modules system.\nExpands the 3 types of base game module to be 8 tiers, not just 3\nAdjusts the bonuses each module gives, and allows you to customise them in mod settings.\nAdds Pollution creating and Pollution cleaning modules, 8 tiers.\nAdds Merged modules as follows:\n  - Green modules offer combined Efficiency and Pollution cleaning bonuses, 8 tiers\n  - Raw Speed module offers speed bonus with no negative effects, 8 tiers\n  - Raw Productivity modules offer productivity bonus with no negative effects, 8 tiers\n  - God modules offer all the bonuses with no negative effects, only 5 tiers.\nAll recipes are completely reworked, Makes use of electronic components from Bob's Electronics mod.\nResearch uses a unique Modules lab, and costs module parts to unlock module technology.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
