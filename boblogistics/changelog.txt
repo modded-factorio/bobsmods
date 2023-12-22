@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Bugfixes:
     - Fixed that Long-handed inserters were uncraftable when Inserter overhaul was disabled #113
     - Fixed that techs Railway 2 and Armoured Railway could not be researched when Pyanodons Industry mod was enabled #117

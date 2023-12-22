@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Changes:
     - Made Burner power phase techs ignore tech cost multiplier #132
     - Hid setting "Burner power phase" when AAI Industry mod is enabled #133

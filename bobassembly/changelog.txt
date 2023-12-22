@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Changes:
     - Added support for Space Exploration mod #88
     - Hid setting "Burner and steam assembling machines" when AAI Industry mod is enabled #133

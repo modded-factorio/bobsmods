@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Bugfixes:
     - Fixed inserter configuration still showing when disabled #55
   Changes:

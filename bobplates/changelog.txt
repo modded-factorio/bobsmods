@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Bugfixes:
     - Fixed Small tank pipe draw issue #107
     - Fixed tech Plutonium Synthesis being unresearchable with Nuclear Fuel mod #119

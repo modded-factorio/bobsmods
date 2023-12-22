@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Bugfixes:
     - Fixed giant fire spitter changing colour when attacking #137
     - Added Russian locale (thanks Eldrinn-Elantey!) #149

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ???
+Date: 22. 12. 2023
   Bugfixes:
     - Fixed Artillery Wagon Item Subgroup #110
     - Fixed graphical gap between gates and reinforced walls #130
