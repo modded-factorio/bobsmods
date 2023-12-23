@@ -863,7 +863,11 @@ if data.raw.item["electric-furnace-3"] then
     result = "electric-furnace-3",
   }
 
-  data.raw.furnace["electric-furnace-2"].energy_usage = "225kW"
+  if not mods.Krastorio2 then
+    data.raw.furnace["electric-furnace-2"].energy_usage = "225kW"
+  else
+    data.raw["assembling-machine"]["electric-furnace-2"].energy_usage = "225kW"
+  end
 
   data.raw.technology["advanced-material-processing-3"].prerequisites = {
     "advanced-material-processing-2",
