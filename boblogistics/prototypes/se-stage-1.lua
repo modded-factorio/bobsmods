@@ -1,3 +1,5 @@
+if mods["space-exploration"] then
+
 data:extend({
 
   {
@@ -138,4 +140,7 @@ data:extend({
     },
     result = "titanium-chest",
   },
+
 })
+
+end
