@@ -63,6 +63,4 @@ require("prototypes.repair-pack")
 
 require("prototypes.aai-loaders")
 
-if mods["space-exploration"] then
-  require("prototypes.se-stage-1")
-end
+require("prototypes.se-stage-1")
