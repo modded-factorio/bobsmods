@@ -62,5 +62,5 @@ require("prototypes.chests")
 require("prototypes.repair-pack")
 
 require("prototypes.aai-loaders")
-
+require("prototypes.krastorio")
 require("prototypes.se-stage-1")

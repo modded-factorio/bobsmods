@@ -1163,3 +1163,19 @@ data.raw.technology["inserter-capacity-bonus-8"].unit.ingredients = {
   { "se-material-science-pack-4", 1 },
   { "se-deep-space-science-pack-1", 1 },
 }
+
+if mods["Krastorio2"] and settings.startup["kr-loaders"].value == true then
+  bobmods.lib.recipe.set_ingredients("kr-turbo-loader", {
+    { "electric-engine-unit", 2 },
+    { "se-heavy-bearing", 4 },
+    { "kr-express-loader", 2 },
+    { "turbo-transport-belt", 1 },
+  })
+  bobmods.lib.recipe.set_ingredients("kr-ultimate-loader", {
+    { "se-holmium-solenoid", 4 },
+    { "se-aeroframe-scaffold", 2 },
+    { "se-heavy-composite", 2 },
+    { "kr-turbo-loader", 2 },
+    { "ultimate-transport-belt", 1 },
+  })
+end
