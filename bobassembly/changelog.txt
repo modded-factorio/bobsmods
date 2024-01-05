@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: ???
+  Bugfixes:
+    - Fixed crash relating to Electric Furnace 2 when using Krastorio 2 and Space Exploration #151
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023
   Changes:
