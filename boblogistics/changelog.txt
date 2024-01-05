@@ -5,6 +5,7 @@ Date: ???
     - Fixed crash with Space Exploration and Squeak through #152
     - Fixed crash with Space Exploration and Krastorio 2 #154
     - Fixed log file warnings with AAI Loaders when Transport Belt Overhaul setting is disabled #158
+    - Fixed Insert Drop Range Shortcut not working after loading a save game. This was also causing desyncs if the host had never saved #159
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023
