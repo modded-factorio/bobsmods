@@ -369,7 +369,6 @@ data:extend({
     },
     result = "basic-circuit-board",
     allow_decomposition = false,
-    allow_as_intermediate = false,
   },
 })
 

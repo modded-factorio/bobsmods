@@ -3,6 +3,7 @@ Version: 1.2.1
 Date: ???
   Bugfixes:
     - Fixed crash with Space Exploration and Squeak through #152
+    - Fixed log file warnings with AAI Loaders when Transport Belt Overhaul setting is disabled #158
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023
