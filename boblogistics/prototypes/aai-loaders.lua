@@ -89,7 +89,9 @@ if mods["aai-loaders"] then
   table.insert(ingredients.ultimate, { type = "fluid", name = "lubricant", amount = 200 })
   -- Loader
   if settings.startup["bobmods-logistics-beltrequireprevious"].value == true then
-    table.insert(ingredients.regular, { type = "item", name = "aai-basic-loader", amount = 1 })
+    if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+      table.insert(ingredients.regular, { type = "item", name = "aai-basic-loader", amount = 1 })
+    end
     table.insert(ingredients.fast, { type = "item", name = "aai-loader", amount = 1 })
     table.insert(ingredients.express, { type = "item", name = "aai-fast-loader", amount = 1 })
     table.insert(ingredients.turbo, { type = "item", name = "aai-express-loader", amount = 1 })
