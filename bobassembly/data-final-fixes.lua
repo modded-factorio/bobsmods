@@ -15,7 +15,8 @@ if mods["space-exploration"] then
   bobmods.lib.tech.remove_science_pack("chemical-plant-3", "se-material-science-pack-1")
   bobmods.lib.tech.remove_science_pack("chemical-plant-4", "se-material-science-pack-4")
 
-  local new_subgroup = data.raw["item-subgroup"]["bob-chemical-machine"] and "bob-chemical-machine" or "bob-refinery-machine"
+  local new_subgroup = data.raw["item-subgroup"]["bob-chemical-machine"] and "bob-chemical-machine"
+    or "bob-refinery-machine"
 
   if data.raw.item["chemical-plant-4"] then
     bobmods.lib.item.set_subgroup("chemical-plant", new_subgroup)
