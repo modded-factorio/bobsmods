@@ -371,7 +371,9 @@ function bobmods.logistics.check_range(event)
 end
 
 script.on_load(function()
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not script.active_mods["bobinserters"] then
+  if
+    settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not script.active_mods["bobinserters"]
+  then
     script.on_event("bob-inserter-long", bobmods.logistics.check_range)
   end
 end)
@@ -390,7 +392,9 @@ script.on_init(function(event)
     bobmods.logistics.player_setup(player.index)
   end
 
-  if settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not script.active_mods["bobinserters"] then
+  if
+    settings.startup["bobmods-logistics-inserteroverhaul"].value == true and not script.active_mods["bobinserters"]
+  then
     script.on_event("bob-inserter-long", bobmods.logistics.check_range)
   end
 end)
