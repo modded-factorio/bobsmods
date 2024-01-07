@@ -1,9 +1,16 @@
 if settings.startup["bobmods-power-nuclear"].value == true then
+  -- Localized destriptions get convoluted with nuclear revamp.  Centralize logic here.
+  local reactor1string, reactor2string, reactor3string = "entity-description.nuclear-default"
+  if settings.startup["bobmods-revamp-nuclear"].value == true then
+    reactor1string = "entity-description.nuclear-reactor"
+    reactor2string = "entity-description.thorium-reactor"
+    reactor3string = "entity-description.deuterium-reactor"
+  end
   data.raw.reactor["nuclear-reactor"].consumption = "54MW"
   data.raw.reactor["nuclear-reactor"].fast_replaceable_group = "nuclear-reactor"
   data.raw.reactor["nuclear-reactor"].use_fuel_glow_color = true
   data.raw.reactor["nuclear-reactor"].default_fuel_glow_color = { 0, 1, 0, 1 } -- color used as working_light_picture tint for fuels that don't have glow color defined
-  data.raw.reactor["nuclear-reactor"].localised_description = { "entity-description.nuclear-reactor", 1000 }
+  data.raw.reactor["nuclear-reactor"].localised_description = { reactor1string, 1000 }
   data.raw.reactor["nuclear-reactor"].working_light_picture = {
     filename = "__bobpower__/graphics/nuclear-reactor/reactor-lights.png",
     width = 160,
@@ -27,7 +34,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       data.raw.reactor["nuclear-reactor"],
       {
         name = "nuclear-reactor-2",
-        localised_description = { "entity-description.nuclear-reactor", 1250 },
+        localised_description = { reactor2string, 1250 },
         icon = "__base__/graphics/icons/nuclear-reactor.png",
         icon_size = 64,
         icon_mipmaps = 4,
@@ -92,7 +99,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       data.raw.reactor["nuclear-reactor"],
       {
         name = "nuclear-reactor-3",
-        localised_description = { "entity-description.nuclear-reactor", 1500 },
+        localised_description = { reactor3string, 1500 },
         icon = "__base__/graphics/icons/nuclear-reactor.png",
         icon_size = 64,
         icon_mipmaps = 4,
