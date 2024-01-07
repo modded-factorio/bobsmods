@@ -1,3 +1,5 @@
+if mods["space-exploration"] then
+
 --Portable solar panels
 data.raw.recipe["solar-panel-equipment-2"].ingredients = {
   { type = "item", name = "solar-panel-equipment", amount = 1 },
@@ -841,4 +843,6 @@ if data.raw.item["alien-artifact"] then
       { type = "item", name = "alien-artifact", amount = 20 }
     )
   end
+end
+
 end
