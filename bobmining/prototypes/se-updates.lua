@@ -1,3 +1,5 @@
+if mods["space-exploration"] then
+
 --Mining drills
 if data.raw.item["bob-mining-drill-4"] then
   data.raw.recipe["bob-mining-drill-1"].ingredients = {
@@ -305,4 +307,6 @@ if data.raw.item["bob-pumpjack-4"] then
     { "se-material-science-pack-4", 1 },
     { "se-biological-science-pack-4", 1 },
   }
+end
+
 end

@@ -1,3 +1,5 @@
+if mods["space-exploration"] then
+
 --Body parts
 bobmods.lib.recipe.replace_ingredient("player-boots-2", "steel-plate", "se-beryllium-plate")
 bobmods.lib.recipe.replace_ingredient("player-head-2", "steel-plate", "se-beryllium-plate")
@@ -189,3 +191,5 @@ data.raw.character["bob-character-fighter-2"].healing_per_tick = 0.02
 data.raw.character["bob-character-miner"].healing_per_tick = 0.0005
 data.raw.character["bob-character-miner-2"].healing_per_tick = 0.001
 data.raw.character["bob-character-prospector"].healing_per_tick = 0.01
+
+end

@@ -1,3 +1,5 @@
+if mods["space-exploration"] then
+
 --Assembling machines
 if data.raw.item["assembling-machine-6"] then
   data.raw.recipe["assembling-machine-4"].normal = {
@@ -898,4 +900,6 @@ if data.raw.item["electric-furnace-3"] then
     { "production-science-pack", 1 },
     { "se-material-science-pack-4", 1 },
   }
+end
+
 end

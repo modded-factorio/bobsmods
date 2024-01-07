@@ -1,3 +1,5 @@
+if mods["space-exploration"] then
+
 --Pipes
 
 data.raw.item["copper-pipe-to-ground"].subgroup = "pipe"
@@ -1163,3 +1165,5 @@ data.raw.technology["inserter-capacity-bonus-8"].unit.ingredients = {
   { "se-material-science-pack-4", 1 },
   { "se-deep-space-science-pack-1", 1 },
 }
+
+end

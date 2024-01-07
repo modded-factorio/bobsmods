@@ -23,6 +23,4 @@ end
 
 require("prototypes.recipe-updates")
 
-if mods["space-exploration"] then
-  require("prototypes.se-updates")
-end
+require("prototypes.se-updates")
