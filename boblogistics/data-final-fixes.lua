@@ -60,6 +60,39 @@ if mods["space-exploration"] then
       { "se-energy-science-pack-2", 1 },
     }
   end
+
+  -- K2+SE Fixes
+  if mods["Krastorio2"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
+    -- When both Krastorio and Space Exploration are installed,
+    -- then Space Exploration resets the `long-handed-inserter`
+    -- and `fast-inserter` recipes in a way which includes items
+    -- from both mods and making the Express Inserter ingredients
+    -- match what Bob's Logistics does with the Fast Inserter,
+    -- so just copy the ingredients over.
+
+    -- Fast Inserter:
+    if data.raw.recipe["long-handed-inserter"] then
+      -- 2 x Electronic Circuit
+      -- 1 x Inserter / Inserter Parts
+      -- 1 x Steel Plate
+      if data.raw.recipe["fast-inserter"] then
+        bobmods.lib.recipe.set_ingredients("long-handed-inserter", data.raw.recipe["fast-inserter"].ingredients)
+      else
+        bobmods.lib.recipe.replace_ingredient("long-handed-inserter", "iron-stick", "electornic-circuit")
+        bobmods.lib.recipe.add_ingredient("long-handed-inserter", "steel-plate")
+      end
+    end
+
+    -- Express Inserter:
+    if data.raw.recipe["fast-inserter"] then
+      -- 2 x Adv. Circuit
+      -- 1 x Fast Inserter / Inserter Parts
+      -- 1 x Small Electric Motor
+      bobmods.lib.recipe.replace_ingredient("fast-inserter", "inserter", "long-handed-inserter")
+      bobmods.lib.recipe.replace_ingredient("fast-inserter", "electornic-circuit", "advanced-circuit")
+      bobmods.lib.recipe.replace_ingredient("fast-inserter", "steel-plate", "electric-motor")
+    end
+  end
 end
 
 -- Krastorio2 fixes
