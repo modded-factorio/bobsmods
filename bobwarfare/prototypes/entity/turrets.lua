@@ -393,7 +393,7 @@ local function bob_laser_turret_extension(inputs)
   }
 end
 
-function bob_laser_turret_extension_eight(inputs)
+local function bob_laser_turret_extension_eight(inputs)
   local size = inputs.size or 1
   return {
     layers = {

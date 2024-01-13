@@ -170,7 +170,7 @@ then
     },
   })
 
-  if DiscoScience and DiscoScience.prepareLab then
+  if mods["DiscoScience"] and DiscoScience and DiscoScience.prepareLab then
     DiscoScience.prepareLab(data.raw["lab"]["lab-alien"])
   end
 end
