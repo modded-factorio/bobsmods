@@ -9,8 +9,6 @@ require("prototypes.distillery-updates")
 require("prototypes.fluid-furnace-updates")
 require("prototypes.centrifuge-updates")
 
-require("prototypes.se-updates")
-
 data.raw.fluid["crude-oil"].fuel_value = "1.9MJ"
 data.raw.fluid["crude-oil"].emissions_multiplier = 10
 data.raw.fluid["heavy-oil"].fuel_value = "1MJ"
