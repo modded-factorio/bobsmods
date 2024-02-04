@@ -1,4 +1,4 @@
-if mods["space-exploration"] then
+if mods["space-exploration"] and mods["b-se-k2-integration"] then
   data:extend({
 
     {
