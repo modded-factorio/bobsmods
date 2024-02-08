@@ -175,7 +175,8 @@ then
   data.raw.item["nuclear-reactor"].localised_name = { "entity-name.uranium-reactor" }
   data.raw.reactor["nuclear-reactor"].localised_name = { "entity-name.uranium-reactor" }
   data.raw["fuel-category"]["nuclear"].localised_name = { "fuel-category-name.uranium" }
-
+  data.raw.reactor["nuclear-reactor"].localised_description = { "", { "entity-description.uranium-reactor" }, { "entity-description.reactor-max-temperature", 1000 } }
+  
   data:extend({
     {
       type = "fuel-category",
@@ -184,6 +185,7 @@ then
   })
   data.raw.reactor["nuclear-reactor-2"].energy_source.fuel_category = "thorium"
   data.raw.reactor["nuclear-reactor-2"].localised_name = { "entity-name.thorium-reactor" }
+  data.raw.reactor["nuclear-reactor-2"].localised_description = { "", { "entity-description.thorium-reactor" }, { "entity-description.reactor-max-temperature", 1250 } }
   data.raw.reactor["nuclear-reactor-2"].default_fuel_glow_color = { r = 1.0, g = 1.0, b = 0.0 }
   data.raw.reactor["nuclear-reactor-2"].icon = "__bobrevamp__/graphics/icons/thorium-reactor.png"
   data.raw.reactor["nuclear-reactor-2"].icon_size = 32
@@ -232,6 +234,7 @@ then
   })
   data.raw.reactor["nuclear-reactor-3"].energy_source.fuel_category = "deuterium"
   data.raw.reactor["nuclear-reactor-3"].localised_name = { "entity-name.deuterium-reactor" }
+  data.raw.reactor["nuclear-reactor-3"].localised_description = { "", { "entity-description.deuterium-reactor" }, { "entity-description.reactor-max-temperature", 1500 } }
   data.raw.reactor["nuclear-reactor-3"].icon_size = 32
   data.raw.reactor["nuclear-reactor-3"].icon_mipmaps = nil
 

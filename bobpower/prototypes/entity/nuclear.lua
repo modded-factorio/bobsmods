@@ -3,7 +3,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
   data.raw.reactor["nuclear-reactor"].fast_replaceable_group = "nuclear-reactor"
   data.raw.reactor["nuclear-reactor"].use_fuel_glow_color = true
   data.raw.reactor["nuclear-reactor"].default_fuel_glow_color = { 0, 1, 0, 1 } -- color used as working_light_picture tint for fuels that don't have glow color defined
-  data.raw.reactor["nuclear-reactor"].localised_description = { "entity-description.nuclear-reactor", 1000 }
+  data.raw.reactor["nuclear-reactor"].localised_description = { "", { "entity-description.nuclear-reactor" }, { "entity-description.reactor-max-temperature", 1000 } }
   data.raw.reactor["nuclear-reactor"].working_light_picture = {
     filename = "__bobpower__/graphics/nuclear-reactor/reactor-lights.png",
     width = 160,
@@ -27,7 +27,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       data.raw.reactor["nuclear-reactor"],
       {
         name = "nuclear-reactor-2",
-        localised_description = { "entity-description.nuclear-reactor", 1250 },
+        localised_description = { "", { "entity-description.nuclear-reactor" }, { "entity-description.reactor-max-temperature", 1250 } },
         icon = "__base__/graphics/icons/nuclear-reactor.png",
         icon_size = 64,
         icon_mipmaps = 4,
@@ -92,7 +92,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       data.raw.reactor["nuclear-reactor"],
       {
         name = "nuclear-reactor-3",
-        localised_description = { "entity-description.nuclear-reactor", 1500 },
+        localised_description = { "", { "entity-description.nuclear-reactor" }, { "entity-description.reactor-max-temperature", 1500 } },
         icon = "__base__/graphics/icons/nuclear-reactor.png",
         icon_size = 64,
         icon_mipmaps = 4,

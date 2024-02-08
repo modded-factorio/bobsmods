@@ -4,6 +4,7 @@ data:extend({
     name = "bobmods-revamp-nuclear",
     setting_type = "startup",
     default_value = true,
+    hidden = not (mods["bobplates"] and mods["bobpower"]),
   },
   {
     type = "bool-setting",
