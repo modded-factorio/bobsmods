@@ -62,5 +62,3 @@ require("prototypes.chests")
 require("prototypes.repair-pack")
 
 require("prototypes.aai-loaders")
-
-require("prototypes.se-stage-1")
