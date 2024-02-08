@@ -559,7 +559,9 @@ if mods["boblogistics"] then
   bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
 end
 
-if data.raw.technology["radars-1"] then
+if mods["aai-industry"] then
+  bobmods.lib.tech.add_prerequisite("radars-2", "radar")
+else
   bobmods.lib.tech.add_prerequisite("artillery", "radars-1")
   bobmods.lib.tech.add_prerequisite("spidertron", "radars-1")
 end
