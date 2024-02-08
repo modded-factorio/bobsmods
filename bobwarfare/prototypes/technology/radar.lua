@@ -1,10 +1,4 @@
-local radar_tech_name = nil
-
-if mods["aai-industry"] then
-  if data.raw.technology["radar"] then
-    radar_tech_name = "radar"
-  end
-else
+if not mods["aai-industry"] then
   data:extend({
     {
       type = "technology",
@@ -30,7 +24,6 @@ else
       order = "e-b-a",
     },
   })
-  radar_tech_name = "radars-1"
 end
 
 data:extend({
@@ -40,7 +33,6 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/technology/radars.png",
     icon_size = 128,
     prerequisites = {
-      radar_tech_name,
       "military-2",
       "steel-processing",
       "electronics",
@@ -148,3 +140,7 @@ data:extend({
     order = "e-b-e",
   },
 })
+
+if not mods["aai-industry"] then
+  bobmods.lib.tech.add_prerequisite("radars-2", "radars-1")
+end

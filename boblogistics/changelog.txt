@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: ???
+  Changes:
+    - Removed Space Exploration compatibility changes. These have been moved to a separate compatibility mod #170
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
-Date: 01. 12. 2024
+Date: 12. 01. 2024
   Bugfixes:
     - Fixed crash with Space Exploration and Squeak through #152
     - Fixed crash with Space Exploration and Krastorio 2 #154

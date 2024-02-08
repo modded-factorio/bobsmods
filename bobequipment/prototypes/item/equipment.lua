@@ -4,62 +4,60 @@ data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a[solar-panel-1
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[personal-laser-defense-equipment-1]"
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equipment-1]"
 
-if not mods["space-exploration"] then
-  data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
-  data.raw.item["energy-shield-equipment"].icon_size = 64
-  data.raw.item["energy-shield-equipment"].icon_mipmaps = nil
-  data.raw.item["energy-shield-mk2-equipment"].icon =
-    "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png"
-  data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
-  data.raw.item["energy-shield-mk2-equipment"].icon_mipmaps = nil
+data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
+data.raw.item["energy-shield-equipment"].icon_size = 64
+data.raw.item["energy-shield-equipment"].icon_mipmaps = nil
+data.raw.item["energy-shield-mk2-equipment"].icon =
+  "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png"
+data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
+data.raw.item["energy-shield-mk2-equipment"].icon_mipmaps = nil
 
-  data:extend({
-    {
-      type = "item",
-      name = "energy-shield-mk3-equipment",
-      icon = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
-      icon_size = 64,
-      placed_as_equipment_result = "energy-shield-mk3-equipment",
-      subgroup = "military-equipment",
-      order = "b[shield]-c[energy-shield-equipment-mk3]",
-      stack_size = 50,
-      default_request_amount = 10,
-    },
-    {
-      type = "item",
-      name = "energy-shield-mk4-equipment",
-      icon = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
-      icon_size = 64,
-      placed_as_equipment_result = "energy-shield-mk4-equipment",
-      subgroup = "military-equipment",
-      order = "b[shield]-d[energy-shield-equipment-mk4]",
-      stack_size = 50,
-      default_request_amount = 10,
-    },
-    {
-      type = "item",
-      name = "energy-shield-mk5-equipment",
-      icon = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
-      icon_size = 64,
-      placed_as_equipment_result = "energy-shield-mk5-equipment",
-      subgroup = "military-equipment",
-      order = "b[shield]-e[energy-shield-equipment-mk5]",
-      stack_size = 50,
-      default_request_amount = 10,
-    },
-    {
-      type = "item",
-      name = "energy-shield-mk6-equipment",
-      icon = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
-      icon_size = 64,
-      placed_as_equipment_result = "energy-shield-mk6-equipment",
-      subgroup = "military-equipment",
-      order = "b[shield]-f[energy-shield-equipment-mk6]",
-      stack_size = 50,
-      default_request_amount = 10,
-    },
-  })
-end
+data:extend({
+  {
+    type = "item",
+    name = "energy-shield-mk3-equipment",
+    icon = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
+    icon_size = 64,
+    placed_as_equipment_result = "energy-shield-mk3-equipment",
+    subgroup = "military-equipment",
+    order = "b[shield]-c[energy-shield-equipment-mk3]",
+    stack_size = 50,
+    default_request_amount = 10,
+  },
+  {
+    type = "item",
+    name = "energy-shield-mk4-equipment",
+    icon = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
+    icon_size = 64,
+    placed_as_equipment_result = "energy-shield-mk4-equipment",
+    subgroup = "military-equipment",
+    order = "b[shield]-d[energy-shield-equipment-mk4]",
+    stack_size = 50,
+    default_request_amount = 10,
+  },
+  {
+    type = "item",
+    name = "energy-shield-mk5-equipment",
+    icon = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
+    icon_size = 64,
+    placed_as_equipment_result = "energy-shield-mk5-equipment",
+    subgroup = "military-equipment",
+    order = "b[shield]-e[energy-shield-equipment-mk5]",
+    stack_size = 50,
+    default_request_amount = 10,
+  },
+  {
+    type = "item",
+    name = "energy-shield-mk6-equipment",
+    icon = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
+    icon_size = 64,
+    placed_as_equipment_result = "energy-shield-mk6-equipment",
+    subgroup = "military-equipment",
+    order = "b[shield]-f[energy-shield-equipment-mk6]",
+    stack_size = 50,
+    default_request_amount = 10,
+  },
+})
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
 data.raw.item["battery-equipment"].icon_size = 64
