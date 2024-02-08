@@ -22,5 +22,3 @@ if data.raw["item-group"]["bob-intermediate-products"] then
 end
 
 require("prototypes.recipe-updates")
-
-require("prototypes.se-updates")

@@ -1405,7 +1405,7 @@ if data.raw.item["copper-tungsten-alloy"] then
   })
 end
 
-if data.raw.item["se-iridium-plate"] then
+if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
   data:extend({
     {
       type = "pipe",

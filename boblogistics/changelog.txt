@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: ???
+  Changes:
+    - Removed Space Exploration compatibility changes. These have been moved to a separate compatibility mod #170
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 01. 12. 2024
   Bugfixes:
