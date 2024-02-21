@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
-Date: ???
+Date: 21. 02. 2024
   Bugfixes:
     - Fixed Artillery Turret order #165
     - Removed optional dependency on AAI Industry to fix circular reference issue #171
