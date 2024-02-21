@@ -1,5 +1,6 @@
 bobmods.classes.characters = {}
 
+table.insert(data.raw.character.character.flags, "not-in-made-in")
 data.raw.character.character.fast_replaceable_group = "character"
 
 data.raw.character.character.icon = nil

@@ -8,8 +8,6 @@ if not bobmods.avatars then
   bobmods.avatars = {}
 end
 
-table.insert(data.raw.character.character.flags, "not-in-made-in")
-
 require("prototypes.category")
 require("prototypes.style")
 require("prototypes.character")
