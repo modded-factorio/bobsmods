@@ -2,6 +2,7 @@
 Version: 1.2.1
 Date: ???
   Changes:
+    - Prevented Characters from showing in "Made in" tooltips #169
     - Removed Space Exploration compatibility changes. These have been moved to a separate compatibility mod #170
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
