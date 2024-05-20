@@ -55,7 +55,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data.raw.recipe["electronic-circuit"].category = "electronics"
   data.raw.recipe["advanced-circuit"].category = "electronics"
   data.raw.recipe["processing-unit"].category = "electronics-machine"
-  
+
   if data.raw.recipe["advanced-processing-unit"] then
     data.raw.recipe["advanced-processing-unit"].category = "electronics-machine"
   end
