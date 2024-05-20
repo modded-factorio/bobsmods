@@ -16,7 +16,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   data.raw.item["chemical-plant"].subgroup = "bob-chemical-machine"
   data.raw.item["chemical-plant"].order = "e[chemical-plant-1]"
 
-  function bob_chemical_plant_old_facing(tint, x)
+  local function bob_chemical_plant_old_facing(tint, x)
     return {
       layers = {
         {
@@ -70,7 +70,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     }
   end
 
-  function bob_chemical_plant_old_animation(tint)
+  local function bob_chemical_plant_old_animation(tint)
     return {
       north = bob_chemical_plant_old_facing(tint, 0),
       east = bob_chemical_plant_old_facing(tint, 1),
@@ -79,7 +79,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     }
   end
 
-  function bob_chemical_plant_old_working_visualisations()
+  local function bob_chemical_plant_old_working_visualisations()
     return {
       {
         north_position = util.by_pixel(30, -24),
@@ -186,7 +186,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     }
   end
 
-  function bob_chemical_plant_fluid_boxes()
+  local function bob_chemical_plant_fluid_boxes()
     return {
       {
         production_type = "input",
@@ -217,7 +217,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     }
   end
 
-  function bob_chemical_plant_facing(tint, offset)
+  local function bob_chemical_plant_facing(tint, offset)
     return {
       layers = {
         {
@@ -306,7 +306,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     }
   end
 
-  function bob_chemical_plant_animation(tint)
+  function bobmods.bob_chemical_plant_animation(tint)
     return {
       north = bob_chemical_plant_facing(tint, 0),
       east = bob_chemical_plant_facing(tint, 1),
@@ -417,7 +417,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
-      animation = bob_chemical_plant_animation({ r = 0.5, g = 0.1, b = 0.7 }),
+      animation = bobmods.bob_chemical_plant_animation({ r = 0.5, g = 0.1, b = 0.7 }),
       working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -451,7 +451,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
-      animation = bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 }),
+      animation = bobmods.bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 }),
       working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -485,7 +485,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
-      animation = bob_chemical_plant_animation({ r = 0.1, g = 0.7, b = 0.1 }),
+      animation = bobmods.bob_chemical_plant_animation({ r = 0.1, g = 0.7, b = 0.1 }),
       working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
