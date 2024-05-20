@@ -16,11 +16,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   if data.raw.item["titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "steel-plate", "titanium-plate")
     bobmods.lib.tech.add_prerequisite("electronics-machine-3", "titanium-processing")
-  else
-    if data.raw.item["tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "steel-plate", "tungsten-plate")
-      bobmods.lib.tech.add_prerequisite("electronics-machine-3", "tungsten-processing")
-    end
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "steel-plate", "tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "tungsten-processing")
   end
 
   if data.raw.item["titanium-bearing"] then
@@ -32,11 +30,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   if data.raw.item["titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-gear-wheel", "titanium-gear-wheel")
     bobmods.lib.tech.add_prerequisite("electronics-machine-3", "titanium-processing")
-  else
-    if data.raw.item["tungsten-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-gear-wheel", "tungsten-gear-wheel")
-      bobmods.lib.tech.add_prerequisite("electronics-machine-3", "tungsten-processing")
-    end
+  elseif data.raw.item["tungsten-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-gear-wheel", "tungsten-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "tungsten-processing")
   end
 
   -- add new electronics crafting categories
@@ -59,8 +55,13 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data.raw.recipe["electronic-circuit"].category = "electronics"
   data.raw.recipe["advanced-circuit"].category = "electronics"
   data.raw.recipe["processing-unit"].category = "electronics-machine"
+  
   if data.raw.recipe["advanced-processing-unit"] then
     data.raw.recipe["advanced-processing-unit"].category = "electronics-machine"
+  end
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "processing-unit", "advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "advanced-electronics-3")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then

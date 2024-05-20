@@ -112,7 +112,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { "assembling-machine-3", 1 },
-      { "advanced-circuit", 3 },
+      { "processing-unit", 3 },
       { "steel-plate", 9 },
       { "iron-gear-wheel", 5 },
     },
@@ -133,14 +133,16 @@ data:extend({
     },
     prerequisites = {
       "automation-3",
-      "chemical-science-pack",
+      "advanced-electronics-2",
+      "production-science-pack",
     },
     unit = {
-      count = 80,
+      count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 45,
     },
@@ -311,8 +313,7 @@ data:extend({
     },
     prerequisites = {
       "automation-4",
-      "advanced-electronics-2",
-      "production-science-pack",
+      "utility-science-pack",
     },
     unit = {
       count = 120,
@@ -321,6 +322,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 60,
     },
@@ -469,7 +471,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { "assembling-machine-5", 1 },
-      { "processing-unit", 3 },
+      { "rocket-control-unit", 3 },
       { "steel-plate", 5 },
       { "iron-plate", 5 },
       { "iron-gear-wheel", 5 },
@@ -491,7 +493,7 @@ data:extend({
     },
     prerequisites = {
       "automation-5",
-      "utility-science-pack",
+      "space-science-pack",
     },
     unit = {
       count = 150,
@@ -501,6 +503,7 @@ data:extend({
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 75,
     },
