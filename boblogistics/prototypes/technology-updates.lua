@@ -260,10 +260,8 @@ if data.raw.item["silver-zinc-battery"] and data.raw.technology["battery-3"] the
   end
 end
 
-if settings.startup["bobmods-logistics-roboportrecipeupdate"].value == true then
-  bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "roboport")
-  bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "roboport")
-end
+bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "roboport")
+bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "roboport")
 
 if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "robot-brain-logistic")

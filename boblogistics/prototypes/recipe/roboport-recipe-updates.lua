@@ -1,14 +1,12 @@
-if settings.startup["bobmods-logistics-roboportrecipeupdate"].value == true then
-  if bobmods.lib.recipe.set_ingredients then
-    bobmods.lib.recipe.set_ingredients(
-      "roboport",
-      { { "steel-plate", 15 }, { "roboport-antenna-1", 5 }, { "roboport-chargepad-1", 4 }, { "roboport-door-1", 1 } }
-    )
-  else
-    data.raw.recipe["roboport"].ingredients =
-      { { "steel-plate", 15 }, { "roboport-antenna-1", 5 }, { "roboport-chargepad-1", 4 }, { "roboport-door-1", 1 } }
-  end
-end
+bobmods.lib.recipe.set_ingredients(
+  "roboport",
+  {
+    { "steel-plate", 15 }, 
+    { "roboport-antenna-1", 5 }, 
+    { "roboport-chargepad-1", 4 }, 
+    { "roboport-door-1", 1 },
+  }
+)
 
 if data.raw.item["aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("roboport-antenna-2", "steel-plate", "aluminium-plate")
