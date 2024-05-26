@@ -6,7 +6,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
       { "copper-cable", 2 },
-      { "advanced-circuit", 5 },
+      { "electronic-circuit", 5 },
     },
     result = "roboport-antenna-1",
     energy_required = 0.2,
@@ -57,7 +57,8 @@ data:extend({
     enabled = false,
     ingredients = {
       { "steel-plate", 2 },
-      { "advanced-circuit", 5 },
+      { "electronic-circuit", 5 },
+      { "battery", 2 },
     },
     result = "roboport-chargepad-1",
     energy_required = 1,
