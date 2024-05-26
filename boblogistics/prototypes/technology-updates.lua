@@ -374,9 +374,7 @@ end
 
 -- Chest ballancing.
 bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "logistic-chest-passive-provider")
-bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "logistic-chest-requester")
 bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "logistic-chest-storage")
-bobmods.lib.tech.remove_recipe_unlock("logistic-system", "logistic-chest-requester")
 bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 -- Old DyTech compatibillity bullshit

@@ -1,3 +1,6 @@
+bobmods.lib.recipe.remove_ingredient("logistic-chest-passive-provider", "advanced-circuit")
+bobmods.lib.recipe.remove_ingredient("logistic-chest-storage", "advanced-circuit")
+
 if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
   bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { "logistic-robot", 1 })
   bobmods.lib.recipe.add_ingredient("bob-construction-robot-2", { "construction-robot", 1 })
@@ -21,8 +24,7 @@ if data.raw.recipe["robot-brain-logistic"] then
       bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "solder", 5 })
     end
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "electronic-circuit", 2 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "advanced-circuit", 2 })
+    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "electronic-circuit", 4 })
   end
 end
 
@@ -40,8 +42,7 @@ if data.raw.recipe["robot-brain-construction"] then
       bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "solder", 5 })
     end
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "electronic-circuit", 3 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "advanced-circuit", 1 })
+    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "electronic-circuit", 4 })
   end
 end
 
