@@ -565,3 +565,18 @@ else
   bobmods.lib.tech.add_prerequisite("artillery", "radars-1")
   bobmods.lib.tech.add_prerequisite("spidertron", "radars-1")
 end
+
+-- Armor
+
+bobmods.lib.tech.remove_prerequisite("modular-armor", "advanced-electronics")
+bobmods.lib.tech.add_prerequisite("modular-armor", "logistic-science-pack")
+
+bobmods.lib.tech.remove_science_pack("power-armor", "chemical-science-pack")
+bobmods.lib.tech.add_science_pack("power-armor", "military-science-pack", 1)
+bobmods.lib.tech.remove_prerequisite("power-armor", "advanced-electronics-2")
+bobmods.lib.tech.add_prerequisite("power-armor", "military-science-pack")
+bobmods.lib.tech.add_prerequisite("power-armor", "advanced-electronics")
+
+bobmods.lib.tech.remove_science_pack("power-armor-mk2", "utility-science-pack")
+bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "military-4")
+bobmods.lib.tech.add_prerequisite("power-armor-mk2", "military-3")

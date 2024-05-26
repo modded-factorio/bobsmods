@@ -61,6 +61,7 @@ data:extend({
       "effectivity-module-3",
       "power-armor-mk2",
       "speed-module-3",
+      "production-science-pack",
     },
     effects = {
       {
@@ -73,9 +74,9 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
-        { "utility-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -89,6 +90,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-power-armor-3",
+      "utility-science-pack",
     },
     effects = {
       {
@@ -101,8 +103,9 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
       },
       time = 30,
@@ -116,6 +119,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-power-armor-4",
+      "space-science-pack",
     },
     effects = {
       {
@@ -128,9 +132,11 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 30,
     },

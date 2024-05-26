@@ -527,3 +527,12 @@ if data.raw.fluid.deuterium then
 end
 
 bobmods.lib.recipe.enabled("radar", false)
+
+-- Armor
+bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
+
+bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
+bobmods.lib.recipe.add_ingredient("power-armor", {"modular-armor", 1})
+
+bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
+bobmods.lib.recipe.add_ingredient("power-armor-mk2", {"power-armor", 1})
