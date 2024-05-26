@@ -104,7 +104,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { "battery", 15 },
-      { "processing-unit", 50 },
+      { "advanced-circuit", 50 },
     },
     result = "player-power-core",
   },

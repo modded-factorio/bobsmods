@@ -15,8 +15,6 @@ bobmods.lib.tech.add_prerequisite("worker-robots-storage-1", "bob-robots-1")
 if not mods["bobequipment"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-equipment", "chemical-science-pack")
 end
-bobmods.lib.tech.add_prerequisite("construction-robotics", "advanced-electronics")
-bobmods.lib.tech.add_prerequisite("logistic-robotics", "advanced-electronics")
 
 bobmods.lib.tech.replace_prerequisite("lubricant", "advanced-oil-processing", "oil-processing")
 bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
