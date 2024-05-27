@@ -1,12 +1,9 @@
-bobmods.lib.recipe.set_ingredients(
-  "roboport",
-  {
-    { "steel-plate", 15 }, 
-    { "roboport-antenna-1", 5 }, 
-    { "roboport-chargepad-1", 4 }, 
-    { "roboport-door-1", 1 },
-  }
-)
+bobmods.lib.recipe.set_ingredients("roboport", {
+  { "steel-plate", 15 },
+  { "roboport-antenna-1", 5 },
+  { "roboport-chargepad-1", 4 },
+  { "roboport-door-1", 1 },
+})
 
 if data.raw.item["aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("roboport-antenna-2", "steel-plate", "aluminium-plate")

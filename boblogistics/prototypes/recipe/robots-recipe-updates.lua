@@ -14,10 +14,7 @@ if data.raw.recipe["robot-brain-logistic"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["robot-brain-logistic"].category = "electronics"
   end
-  if
-    data.raw.item["basic-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-  then
+  if data.raw.item["basic-circuit-board"] and data.raw.item["basic-electronic-components"] then
     bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "basic-circuit-board", 1 })
     bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "basic-electronic-components", 8 })
     if data.raw.item["solder"] then
@@ -32,10 +29,7 @@ if data.raw.recipe["robot-brain-construction"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["robot-brain-construction"].category = "electronics"
   end
-  if
-    data.raw.item["basic-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-  then
+  if data.raw.item["basic-circuit-board"] and data.raw.item["basic-electronic-components"] then
     bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "basic-circuit-board", 1 })
     bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "basic-electronic-components", 8 })
     if data.raw.item["solder"] then

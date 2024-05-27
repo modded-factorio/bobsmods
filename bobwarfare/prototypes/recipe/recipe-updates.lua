@@ -533,7 +533,7 @@ bobmods.lib.recipe.enabled("radar", false)
 bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
 
 bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
-bobmods.lib.recipe.add_ingredient("power-armor", {"modular-armor", 1})
+bobmods.lib.recipe.add_ingredient("power-armor", { "modular-armor", 1 })
 
 bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
-bobmods.lib.recipe.add_ingredient("power-armor-mk2", {"power-armor", 1})
+bobmods.lib.recipe.add_ingredient("power-armor-mk2", { "power-armor", 1 })
