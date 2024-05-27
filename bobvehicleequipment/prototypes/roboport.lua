@@ -1247,7 +1247,7 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { "advanced-circuit", 5 },
+      { "electronic-circuit", 10 },
     },
     result = "vehicle-roboport-robot-equipment",
   },
