@@ -406,6 +406,7 @@ data:extend({
     order = "g-g-c",
     prerequisites = {
       "night-vision-equipment-2",
+      "production-science-pack",
     },
     effects = {
       {
@@ -496,6 +497,7 @@ data:extend({
     order = "g-k-d",
     prerequisites = {
       "solar-panel-equipment-3",
+      "production-science-pack",
     },
     effects = {
       {
@@ -719,6 +721,7 @@ data:extend({
     order = "g-h-c",
     prerequisites = {
       "exoskeleton-equipment-2",
+      "production-science-pack",
     },
     effects = {
       {

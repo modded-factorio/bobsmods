@@ -15,8 +15,6 @@ bobmods.lib.tech.add_prerequisite("worker-robots-storage-1", "bob-robots-1")
 if not mods["bobequipment"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-equipment", "chemical-science-pack")
 end
-bobmods.lib.tech.add_prerequisite("construction-robotics", "advanced-electronics")
-bobmods.lib.tech.add_prerequisite("logistic-robotics", "advanced-electronics")
 
 bobmods.lib.tech.replace_prerequisite("lubricant", "advanced-oil-processing", "oil-processing")
 bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
@@ -262,10 +260,8 @@ if data.raw.item["silver-zinc-battery"] and data.raw.technology["battery-3"] the
   end
 end
 
-if settings.startup["bobmods-logistics-roboportrecipeupdate"].value == true then
-  bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "roboport")
-  bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "roboport")
-end
+bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "roboport")
+bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "roboport")
 
 if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "robot-brain-logistic")
@@ -376,9 +372,7 @@ end
 
 -- Chest ballancing.
 bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "logistic-chest-passive-provider")
-bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "logistic-chest-requester")
 bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "logistic-chest-storage")
-bobmods.lib.tech.remove_recipe_unlock("logistic-system", "logistic-chest-requester")
 bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 -- Old DyTech compatibillity bullshit

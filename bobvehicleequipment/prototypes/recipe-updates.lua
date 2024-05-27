@@ -242,14 +242,14 @@ if
   and data.raw.item["electronic-components"]
   and data.raw.item["intergrated-electronics"]
   and data.raw.item["processing-electronics"]
+  and data.raw.item["basic-circuit-board"]
   and data.raw.item["circuit-board"]
   and data.raw.item["superior-circuit-board"]
   and data.raw.item["multi-layer-circuit-board"]
 then
   data.raw.recipe["vehicle-roboport-robot-equipment"].ingredients = {
-    { "circuit-board", 1 },
+    { "basic-circuit-board", 1 },
     { "basic-electronic-components", 30 },
-    { "electronic-components", 15 },
   }
 
   data.raw.recipe["vehicle-roboport-robot-equipment-2"].ingredients = {

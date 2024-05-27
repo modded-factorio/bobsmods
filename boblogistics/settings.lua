@@ -1,13 +1,6 @@
 data:extend({
   {
     type = "bool-setting",
-    name = "bobmods-logistics-roboportrecipeupdate",
-    setting_type = "startup",
-    default_value = true,
-  },
-
-  {
-    type = "bool-setting",
     name = "bobmods-logistics-flyingrobotframes",
     setting_type = "startup",
     default_value = true,

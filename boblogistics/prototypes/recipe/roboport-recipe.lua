@@ -272,7 +272,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 5 },
       { "roboport-antenna-1", 1 },
-      { "advanced-circuit", 2 },
+      { "electronic-circuit", 2 },
     },
     result = "bob-logistic-zone-interface",
     energy_required = 2,

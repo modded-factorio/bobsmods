@@ -534,7 +534,6 @@ data:extend({
     },
     prerequisites = {
       "robotics",
-      "advanced-electronics",
     },
     unit = {
       count = 50,

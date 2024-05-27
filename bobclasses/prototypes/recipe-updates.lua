@@ -37,33 +37,25 @@ if data.raw["recipe-category"]["electronics"] then
 end
 
 if
-  data.raw.item["superior-circuit-board"]
+  data.raw.item["circuit-board"]
   and data.raw.item["basic-electronic-components"]
   and data.raw.item["electronic-components"]
   and data.raw.item["intergrated-electronics"]
-  and data.raw.item["processing-electronics"]
 then
-  bobmods.lib.recipe.add_ingredient("player-brain", { "superior-circuit-board", 5 })
+  bobmods.lib.recipe.add_ingredient("player-brain", { "circuit-board", 5 })
   bobmods.lib.recipe.add_ingredient("player-brain", { "basic-electronic-components", 10 })
   bobmods.lib.recipe.add_ingredient("player-brain", { "electronic-components", 25 })
-  bobmods.lib.recipe.add_ingredient("player-brain", { "intergrated-electronics", 10 })
 
   bobmods.lib.recipe.add_ingredient("player-brain-2", { "superior-circuit-board", 8 })
   bobmods.lib.recipe.add_ingredient("player-brain-2", { "basic-electronic-components", 8 })
   bobmods.lib.recipe.add_ingredient("player-brain-2", { "electronic-components", 30 })
   bobmods.lib.recipe.add_ingredient("player-brain-2", { "intergrated-electronics", 20 })
-  bobmods.lib.recipe.add_ingredient("player-brain-2", { "processing-electronics", 2 })
-  if data.raw.technology["advanced-electronics-3"] then
-    bobmods.lib.tech.add_prerequisite("bodies-2", "advanced-electronics-3")
-  end
   if data.raw.item["solder"] then
     bobmods.lib.recipe.add_ingredient("player-brain", { "solder", 5 })
-
     bobmods.lib.recipe.add_ingredient("player-brain-2", { "solder", 10 })
   end
 else
-  bobmods.lib.recipe.add_ingredient("player-brain", { "advanced-circuit", 10 })
-  bobmods.lib.recipe.add_ingredient("player-brain", { "processing-unit", 5 })
+  bobmods.lib.recipe.add_ingredient("player-brain", { "advanced-circuit", 20 })
 
   bobmods.lib.recipe.add_ingredient("player-brain-2", { "advanced-circuit", 10 })
   bobmods.lib.recipe.add_ingredient("player-brain-2", { "processing-unit", 10 })
