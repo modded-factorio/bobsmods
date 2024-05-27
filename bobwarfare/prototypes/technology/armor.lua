@@ -7,6 +7,7 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       "heavy-armor",
+      "logistic-science-pack",
     },
     effects = {
       {
@@ -33,6 +34,8 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       "bob-armor-making-3",
+      "chemical-science-pack",
+      "plastics",
     },
     effects = {
       {
