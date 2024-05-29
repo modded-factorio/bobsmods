@@ -692,6 +692,7 @@ data:extend({
 })
 
 bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "advanced-electronics-2")
+bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-electronics")
 
 data:extend({
   {
