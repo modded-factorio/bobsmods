@@ -579,10 +579,12 @@ bobmods.lib.tech.add_prerequisite("power-armor", "advanced-electronics")
 -- By default, electric engines are Blue Science
 if (not mods["bobplates"]) and (not mods["boblogistics"]) then
   bobmods.lib.tech.remove_prerequisite("power-armor", "electric-engine")
+  bobmods.lib.tech.add_prerequisite("power-armor-mk2", "electric-engine")
 end
 
 bobmods.lib.tech.remove_science_pack("power-armor-mk2", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "military-4")
 bobmods.lib.tech.add_prerequisite("power-armor-mk2", "military-3")
+bobmods.lib.tech.add_prerequisite("power-armor-mk2", "low-density-structure")
 
 bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
