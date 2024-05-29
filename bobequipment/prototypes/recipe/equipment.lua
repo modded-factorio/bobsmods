@@ -231,8 +231,11 @@ data:extend({
   },
 })
 
-data.raw.recipe["personal-laser-defense-equipment"].ingredients =
-  { { "steel-plate", 5 }, { "electronic-circuit", 5 }, { "battery", 3 } }
+data.raw.recipe["personal-laser-defense-equipment"].ingredients = {
+  { "steel-plate", 5 },
+  { "advanced-circuit", 5 },
+  { "battery", 3 }
+}
 
 data:extend({
   {
@@ -256,7 +259,7 @@ data:extend({
     ingredients = {
       { "personal-laser-defense-equipment-2", 1 },
       { "steel-plate", 5 },
-      { "advanced-circuit", 5 },
+      { "processing-unit", 5 },
       { "battery", 3 },
     },
     result = "personal-laser-defense-equipment-3",

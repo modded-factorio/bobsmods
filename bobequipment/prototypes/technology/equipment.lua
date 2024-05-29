@@ -531,6 +531,8 @@ data.raw["technology"]["personal-laser-defense-equipment"].icons =
     icon_size = 128,
   })
 bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "low-density-structure")
+bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "military-3")
+bobmods.lib.tech.remove_science_pack("personal-laser-defense-equipment", "chemical-science-pack")
 
 data:extend({
   {
@@ -542,6 +544,7 @@ data:extend({
     }),
     order = "g-m-b",
     prerequisites = {
+      "chemical-science-pack",
       "personal-laser-defense-equipment",
     },
     effects = {
@@ -571,6 +574,7 @@ data:extend({
     }),
     order = "g-m-c",
     prerequisites = {
+      "advanced-electronics-2",
       "personal-laser-defense-equipment-2",
       "production-science-pack",
     },
