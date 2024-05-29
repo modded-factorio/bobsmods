@@ -152,6 +152,7 @@ data:extend({
   },
 })
 
+bobmods.lib.recipe.replace_ingredient("night-vision-equipment", "advanced-circuit", "electronic-circuit")
 data:extend({
   {
     type = "recipe",
@@ -160,7 +161,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { "night-vision-equipment", 1 },
-      { "processing-unit", 5 },
+      { "advanced-circuit", 5 },
       { "plastic-bar", 2 },
     },
     result = "night-vision-equipment-2",

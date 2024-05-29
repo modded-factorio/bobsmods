@@ -374,8 +374,8 @@ data:extend({
     }),
     order = "g-g-b",
     prerequisites = {
+      "chemical-science-pack",
       "night-vision-equipment",
-      "advanced-electronics-2",
     },
     effects = {
       {
@@ -405,6 +405,7 @@ data:extend({
     icon_mipmaps = 4,
     order = "g-g-c",
     prerequisites = {
+      "advanced-electronics-2",
       "night-vision-equipment-2",
       "production-science-pack",
     },
