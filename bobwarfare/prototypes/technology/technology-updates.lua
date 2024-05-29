@@ -526,30 +526,35 @@ if data.raw.recipe["gun-cotton-synthetic"] then
   bobmods.lib.tech.add_recipe_unlock("cordite-processing", "gun-cotton-synthetic")
 end
 
-if data.raw.technology["speed-module-4"] then
-  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-3")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-4")
-end
+if mods["bobmodules"] then
+  if data.raw.technology["speed-module-4"] then
+    bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-2")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-4")
+  end
 
-if data.raw.technology["effectivity-module-4"] then
-  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "effectivity-module-3")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "effectivity-module-4")
-end
+  if data.raw.technology["effectivity-module-4"] then
+    bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "effectivity-module-2")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "effectivity-module-4")
+  end
 
-if data.raw.technology["speed-module-6"] then
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "speed-module-6")
-end
+  if data.raw.technology["speed-module-6"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "speed-module-6")
+  end
 
-if data.raw.technology["effectivity-module-6"] then
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "effectivity-module-6")
-end
+  if data.raw.technology["effectivity-module-6"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "effectivity-module-6")
+  end
 
-if data.raw.technology["speed-module-8"] then
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "speed-module-8")
-end
+  if data.raw.technology["speed-module-8"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "speed-module-8")
+  end
 
-if data.raw.technology["effectivity-module-8"] then
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "effectivity-module-8")
+  if data.raw.technology["effectivity-module-8"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "effectivity-module-8")
+  end
+else
+  bobmods.lib.tech.replace_prerequisite("power-armor-mk2", "speed-module-2", "speed-module")
+  bobmods.lib.tech.replace_prerequisite("power-armor-mk2", "effectivity-module-2", "effectivity-module")
 end
 
 if mods["boblogistics"] then
