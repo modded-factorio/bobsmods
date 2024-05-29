@@ -438,6 +438,7 @@ data:extend({
     }),
     order = "g-k-b",
     prerequisites = {
+      "chemical-science-pack",
       "solar-panel-equipment",
     },
     effects = {
@@ -452,6 +453,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
   },
@@ -468,6 +470,7 @@ data:extend({
     prerequisites = {
       "solar-panel-equipment-2",
       "advanced-electronics-2",
+      "production-science-pack",
     },
     effects = {
       {
@@ -482,6 +485,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
+        { "production-science-pack", 1}
       },
     },
   },
@@ -497,7 +501,7 @@ data:extend({
     order = "g-k-d",
     prerequisites = {
       "solar-panel-equipment-3",
-      "production-science-pack",
+      "utility-science-pack",
     },
     effects = {
       {
@@ -513,6 +517,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
   },
