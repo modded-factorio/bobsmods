@@ -588,3 +588,4 @@ bobmods.lib.tech.add_prerequisite("power-armor-mk2", "military-3")
 bobmods.lib.tech.add_prerequisite("power-armor-mk2", "low-density-structure")
 
 bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
+bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "advanced-electronics-2")
