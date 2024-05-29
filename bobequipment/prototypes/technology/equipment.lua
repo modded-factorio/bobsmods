@@ -179,6 +179,7 @@ data:extend({
     }),
     order = "g-i-d",
     prerequisites = {
+      "advanced-electronics-2",
       "bob-battery-equipment-3",
       "production-science-pack",
     },
