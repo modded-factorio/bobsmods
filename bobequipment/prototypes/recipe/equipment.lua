@@ -1,7 +1,7 @@
 bobmods.lib.recipe.replace_ingredient("energy-shield-equipment", "advanced-circuit", "electronic-circuit")
 data.raw.recipe["energy-shield-mk2-equipment"].ingredients = {
   { "energy-shield-equipment", 2 },
-  { "advanced-circuit", 5 }
+  { "advanced-circuit", 5 },
 }
 
 data:extend({
