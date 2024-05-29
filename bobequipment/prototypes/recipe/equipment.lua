@@ -302,6 +302,7 @@ data:extend({
   },
 })
 
+bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment", "processing-unit", "advanced-circuit")
 data:extend({
   {
     type = "recipe",

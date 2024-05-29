@@ -347,8 +347,6 @@ if data.raw.item["silicon-wafer"] then
   bobmods.lib.recipe.add_ingredient("solar-panel-equipment-3", { "silicon-wafer", 8 })
 end
 
-bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment", "processing-unit", "advanced-circuit")
-
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("energy-shield-mk3-equipment", "processing-unit", "advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-3", "advanced-electronics-3")

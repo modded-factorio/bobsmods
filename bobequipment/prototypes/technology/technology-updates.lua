@@ -1,8 +1,12 @@
-if mods["boblogistics"] then
-  -- Bob's Logistics mod removes blue science from Electric engine and Robotics
+if mods["boblogistics"] or mods["bobplates"] then
+  -- Bob's Logistics mod and Bob's MCI mod remove blue science from Electric engine and Robotics
 
   bobmods.lib.tech.remove_science_pack("exoskeleton-equipment", "chemical-science-pack")
   bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "advanced-electronics-2")
+end
+
+if mods["boblogistics"] then
+  -- Bob's Logistics mod removes blue science from Electric engine
 
   bobmods.lib.tech.remove_prerequisite("personal-roboport-equipment", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("personal-roboport-equipment", "chemical-science-pack")
