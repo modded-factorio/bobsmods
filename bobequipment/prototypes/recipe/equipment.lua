@@ -58,7 +58,13 @@ data:extend({
   },
 })
 
-data.raw.recipe["battery-mk2-equipment"].ingredients = { { "battery-equipment", 2 }, { "processing-unit", 5 } }
+bobmods.lib.recipe.remove_ingredient("battery-equipment", "steel-plate")
+bobmods.lib.recipe.add_ingredient("battery-equipment", { "electronic-circuit", 5 } )
+
+data.raw.recipe["battery-mk2-equipment"].ingredients = {
+  { "battery-equipment", 2 },
+  { "advanced-circuit", 5 },
+}
 
 data:extend({
   {
