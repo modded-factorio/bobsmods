@@ -534,6 +534,10 @@ bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "elec
 
 bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
 bobmods.lib.recipe.add_ingredient("power-armor", { "modular-armor", 1 })
+-- By default, electric engines are Blue Science
+if (not mods["bobplates"]) and (not mods["boblogistics"]) then
+  bobmods.lib.recipe.remove_ingredient("power-armor", "electric-engine-unit")
+end
 
 bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
 bobmods.lib.recipe.add_ingredient("power-armor-mk2", { "power-armor", 1 })
