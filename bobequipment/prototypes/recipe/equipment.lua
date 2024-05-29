@@ -330,3 +330,5 @@ data:extend({
     result = "exoskeleton-equipment-3",
   },
 })
+
+bobmods.lib.recipe.replace_ingredient("belt-immunity-equipment", "advanced-circuit", "electronic-circuit")
