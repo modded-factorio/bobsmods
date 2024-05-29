@@ -3,6 +3,7 @@ data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.
   icon_size = 128,
 })
 bobmods.lib.tech.remove_prerequisite("energy-shield-mk2-equipment", "low-density-structure")
+bobmods.lib.tech.add_prerequisite("energy-shield-mk2-equipment", "productivity-module")
 
 data:extend({
   {
@@ -14,6 +15,7 @@ data:extend({
     }),
     order = "g-e-c",
     prerequisites = {
+      "advanced-electronics-2",
       "energy-shield-mk2-equipment",
       "productivity-module-2",
       "production-science-pack",
