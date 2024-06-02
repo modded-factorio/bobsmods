@@ -60,7 +60,7 @@ data:extend({
 })
 
 bobmods.lib.recipe.remove_ingredient("battery-equipment", "steel-plate")
-bobmods.lib.recipe.add_ingredient("battery-equipment", { "electronic-circuit", 5 } )
+bobmods.lib.recipe.add_ingredient("battery-equipment", { "electronic-circuit", 5 })
 
 data.raw.recipe["battery-mk2-equipment"].ingredients = {
   { "battery-equipment", 2 },
@@ -235,7 +235,7 @@ data:extend({
 data.raw.recipe["personal-laser-defense-equipment"].ingredients = {
   { "steel-plate", 5 },
   { "advanced-circuit", 5 },
-  { "battery", 3 }
+  { "battery", 3 },
 }
 
 data:extend({
