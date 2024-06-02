@@ -2,6 +2,7 @@ bobmods.lib.recipe.replace_ingredient("energy-shield-equipment", "advanced-circu
 data.raw.recipe["energy-shield-mk2-equipment"].ingredients = {
   { "energy-shield-equipment", 2 },
   { "advanced-circuit", 5 },
+  { "productivity-module", 1 },
 }
 
 data:extend({
@@ -58,7 +59,13 @@ data:extend({
   },
 })
 
-data.raw.recipe["battery-mk2-equipment"].ingredients = { { "battery-equipment", 2 }, { "processing-unit", 5 } }
+bobmods.lib.recipe.remove_ingredient("battery-equipment", "steel-plate")
+bobmods.lib.recipe.add_ingredient("battery-equipment", { "electronic-circuit", 5 })
+
+data.raw.recipe["battery-mk2-equipment"].ingredients = {
+  { "battery-equipment", 2 },
+  { "advanced-circuit", 5 },
+}
 
 data:extend({
   {
@@ -152,6 +159,7 @@ data:extend({
   },
 })
 
+bobmods.lib.recipe.replace_ingredient("night-vision-equipment", "advanced-circuit", "electronic-circuit")
 data:extend({
   {
     type = "recipe",
@@ -160,7 +168,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { "night-vision-equipment", 1 },
-      { "processing-unit", 5 },
+      { "advanced-circuit", 5 },
       { "plastic-bar", 2 },
     },
     result = "night-vision-equipment-2",
@@ -224,8 +232,11 @@ data:extend({
   },
 })
 
-data.raw.recipe["personal-laser-defense-equipment"].ingredients =
-  { { "steel-plate", 5 }, { "electronic-circuit", 5 }, { "battery", 3 } }
+data.raw.recipe["personal-laser-defense-equipment"].ingredients = {
+  { "steel-plate", 5 },
+  { "advanced-circuit", 5 },
+  { "battery", 3 },
+}
 
 data:extend({
   {
@@ -249,7 +260,7 @@ data:extend({
     ingredients = {
       { "personal-laser-defense-equipment-2", 1 },
       { "steel-plate", 5 },
-      { "advanced-circuit", 5 },
+      { "processing-unit", 5 },
       { "battery", 3 },
     },
     result = "personal-laser-defense-equipment-3",
@@ -295,6 +306,7 @@ data:extend({
   },
 })
 
+bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment", "processing-unit", "advanced-circuit")
 data:extend({
   {
     type = "recipe",
@@ -323,3 +335,5 @@ data:extend({
     result = "exoskeleton-equipment-3",
   },
 })
+
+bobmods.lib.recipe.replace_ingredient("belt-immunity-equipment", "advanced-circuit", "electronic-circuit")

@@ -300,28 +300,33 @@ if data.raw.item["diamond-5"] then
   bobmods.lib.recipe.add_ingredient("bob-laser-turret-5", { "diamond-5", 1 })
 end
 
-if data.raw.module["effectivity-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "effectivity-module-3", "effectivity-module-4")
-end
+if mods["bobmodules"] then
+  if data.raw.module["effectivity-module-4"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "effectivity-module-2", "effectivity-module-4")
+  end
 
-if data.raw.module["speed-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "speed-module-3", "speed-module-4")
-end
+  if data.raw.module["speed-module-4"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "speed-module-2", "speed-module-4")
+  end
 
-if data.raw.module["effectivity-module-6"] then
-  bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "effectivity-module-3", "effectivity-module-6")
-end
+  if data.raw.module["effectivity-module-6"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "effectivity-module-3", "effectivity-module-6")
+  end
 
-if data.raw.module["speed-module-6"] then
-  bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "speed-module-3", "speed-module-6")
-end
+  if data.raw.module["speed-module-6"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "speed-module-3", "speed-module-6")
+  end
 
-if data.raw.module["effectivity-module-8"] then
-  bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "effectivity-module-3", "effectivity-module-8")
-end
+  if data.raw.module["effectivity-module-8"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "effectivity-module-3", "effectivity-module-8")
+  end
 
-if data.raw.module["speed-module-8"] then
-  bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "speed-module-3", "speed-module-8")
+  if data.raw.module["speed-module-8"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "speed-module-3", "speed-module-8")
+  end
+else
+  bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "speed-module-2", "speed-module")
+  bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "effectivity-module-2", "effectivity-module")
 end
 
 if data.raw.item["alien-artifact"] then

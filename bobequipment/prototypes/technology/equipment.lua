@@ -3,6 +3,7 @@ data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.
   icon_size = 128,
 })
 bobmods.lib.tech.remove_prerequisite("energy-shield-mk2-equipment", "low-density-structure")
+bobmods.lib.tech.add_prerequisite("energy-shield-mk2-equipment", "productivity-module")
 
 data:extend({
   {
@@ -14,6 +15,7 @@ data:extend({
     }),
     order = "g-e-c",
     prerequisites = {
+      "advanced-electronics-2",
       "energy-shield-mk2-equipment",
       "productivity-module-2",
       "production-science-pack",
@@ -179,6 +181,7 @@ data:extend({
     }),
     order = "g-i-d",
     prerequisites = {
+      "advanced-electronics-2",
       "bob-battery-equipment-3",
       "production-science-pack",
     },
@@ -374,8 +377,8 @@ data:extend({
     }),
     order = "g-g-b",
     prerequisites = {
+      "chemical-science-pack",
       "night-vision-equipment",
-      "advanced-electronics-2",
     },
     effects = {
       {
@@ -405,6 +408,7 @@ data:extend({
     icon_mipmaps = 4,
     order = "g-g-c",
     prerequisites = {
+      "advanced-electronics-2",
       "night-vision-equipment-2",
       "production-science-pack",
     },
@@ -529,6 +533,8 @@ data.raw["technology"]["personal-laser-defense-equipment"].icons =
     icon_size = 128,
   })
 bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "low-density-structure")
+bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "military-3")
+bobmods.lib.tech.remove_science_pack("personal-laser-defense-equipment", "chemical-science-pack")
 
 data:extend({
   {
@@ -540,6 +546,7 @@ data:extend({
     }),
     order = "g-m-b",
     prerequisites = {
+      "chemical-science-pack",
       "personal-laser-defense-equipment",
     },
     effects = {
@@ -569,6 +576,7 @@ data:extend({
     }),
     order = "g-m-c",
     prerequisites = {
+      "advanced-electronics-2",
       "personal-laser-defense-equipment-2",
       "production-science-pack",
     },
@@ -684,6 +692,9 @@ data:extend({
     },
   },
 })
+
+bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "advanced-electronics-2")
+bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-electronics")
 
 data:extend({
   {

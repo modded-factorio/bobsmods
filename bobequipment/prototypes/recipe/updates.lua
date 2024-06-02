@@ -347,12 +347,9 @@ if data.raw.item["silicon-wafer"] then
   bobmods.lib.recipe.add_ingredient("solar-panel-equipment-3", { "silicon-wafer", 8 })
 end
 
-bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment", "processing-unit", "advanced-circuit")
-
 if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk3-equipment", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-3", "advanced-electronics-3")
   bobmods.lib.recipe.replace_ingredient("energy-shield-mk4-equipment", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "advanced-electronics-3")
   bobmods.lib.recipe.replace_ingredient("energy-shield-mk5-equipment", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("energy-shield-mk6-equipment", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("battery-mk4-equipment", "processing-unit", "advanced-processing-unit")
@@ -367,11 +364,16 @@ if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-4", "processing-unit", "advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("solar-panel-equipment-4", "advanced-electronics-3")
   bobmods.lib.recipe.replace_ingredient(
+    "personal-laser-defense-equipment-5",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
+  bobmods.lib.recipe.replace_ingredient(
     "personal-laser-defense-equipment-6",
     "processing-unit",
     "advanced-processing-unit"
   )
-  bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-6", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-5", "advanced-electronics-3")
   bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment-3", "processing-unit", "advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("exoskeleton-equipment-3", "advanced-electronics-3")
 end
