@@ -452,7 +452,7 @@ data:extend({
       },
     },
     unit = {
-      count = 75,
+      count = 100,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
