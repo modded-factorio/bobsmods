@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "player-brain",
-    icon = "__bobclasses__/icons/bodies/brain.png",
+    icon = "__bobclasses__/icons/bodies/brain-2.png",
     icon_size = 32,
     subgroup = "body-parts",
     order = "a[player]-brain",
@@ -131,10 +131,10 @@ data:extend({
   {
     type = "item",
     name = "player-brain-2",
-    icon = "__bobclasses__/icons/bodies/brain.png",
+    icon = "__bobclasses__/icons/bodies/brain-3.png",
     icon_size = 32,
     subgroup = "body-parts",
-    order = "a[player]-brain",
+    order = "a[player]-brain-2",
     stack_size = 100,
   },
   {
@@ -143,7 +143,7 @@ data:extend({
     icon = "__bobclasses__/icons/bodies/head.png",
     icon_size = 32,
     subgroup = "body-parts",
-    order = "a[player]-head",
+    order = "a[player]-head-2",
     stack_size = 20,
   },
   {
@@ -152,7 +152,7 @@ data:extend({
     icon = "__bobclasses__/icons/bodies/boots.png",
     icon_size = 45,
     subgroup = "body-parts",
-    order = "a[player]-boots",
+    order = "a[player]-boots-2",
     stack_size = 20,
   },
   {
@@ -161,7 +161,7 @@ data:extend({
     icon = "__bobclasses__/icons/bodies/gloves.png",
     icon_size = 45,
     subgroup = "body-parts",
-    order = "a[player]-gloves",
+    order = "a[player]-gloves-2",
     stack_size = 20,
   },
   {
@@ -170,7 +170,7 @@ data:extend({
     icon = "__bobclasses__/icons/bodies/shell.png",
     icon_size = 128,
     subgroup = "body-parts",
-    order = "a[player]-power-core",
+    order = "a[player]-power-core-2",
     stack_size = 20,
   },
 
