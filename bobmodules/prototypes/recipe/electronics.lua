@@ -7,7 +7,7 @@ data:extend({
       enabled = false,
       ingredients = {
         { "plastic-bar", 2 },
-        { "iron-plate", 5 },
+        { "steel-plate", 1 },
       },
       result = "module-case",
     },
@@ -16,7 +16,7 @@ data:extend({
       enabled = false,
       ingredients = {
         { "plastic-bar", 5 },
-        { "iron-plate", 10 },
+        { "steel-plate", 2 },
       },
       result = "module-case",
     },

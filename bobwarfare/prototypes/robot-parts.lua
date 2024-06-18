@@ -87,7 +87,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       name = "robot-brain-combat",
       energy_required = 5,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "electronic-circuit", 2 },
+      },
       result = "robot-brain-combat",
     },
 
@@ -96,7 +98,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       name = "robot-brain-combat-2",
       energy_required = 10,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "electronic-circuit", 1 },
+        { "advanced-circuit", 1 },
+      },
       result = "robot-brain-combat-2",
     },
 
@@ -105,7 +110,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       name = "robot-brain-combat-3",
       energy_required = 15,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "advanced-circuit", 1 },
+        { "processing-unit", 1 },
+      },
       result = "robot-brain-combat-3",
     },
 
@@ -114,7 +122,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       name = "robot-brain-combat-4",
       energy_required = 20,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "processing-unit", 2 },
+      },
       result = "robot-brain-combat-4",
     },
 

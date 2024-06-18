@@ -252,7 +252,10 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       name = "bob-robot-brain",
       energy_required = 5,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "basic-circuit-board", 2 },
+        { "electronic-circuit", 2 },
+      },
       result = "bob-robot-brain",
     },
 
@@ -261,7 +264,10 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       name = "bob-robot-brain-2",
       energy_required = 10,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "electronic-circuit", 2 },
+        { "advanced-circuit", 2 },
+      },
       result = "bob-robot-brain-2",
     },
 
@@ -270,7 +276,10 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       name = "bob-robot-brain-3",
       energy_required = 15,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "advanced-circuit", 2 },
+        { "processing-unit", 2 },      
+      },
       result = "bob-robot-brain-3",
     },
 
@@ -279,7 +288,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       name = "bob-robot-brain-4",
       energy_required = 20,
       enabled = false,
-      ingredients = {},
+      ingredients = {
+        { "processing-unit", 4 },
+      },
       result = "bob-robot-brain-4",
     },
 

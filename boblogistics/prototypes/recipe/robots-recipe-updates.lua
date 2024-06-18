@@ -10,18 +10,22 @@ if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
   bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "bob-construction-robot-3", 1 })
 end
 
+if data.raw.tool["module-case"] or data.raw.item["module-case"] then
+  if data.raw.recipe["bob-robot-brain"] then
+    bobmods.lib.tech.add_recipe_unlock("robotics", "module-case")
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { "module-case", 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "module-case", 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "module-case", 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "module-case", 1 })
+  end
+end
+
 if data.raw.recipe["bob-robot-brain"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["bob-robot-brain"].category = "electronics"
   end
-  if data.raw.item["basic-circuit-board"] and data.raw.item["basic-electronic-components"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { "basic-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { "basic-electronic-components", 8 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain", { "solder", 5 })
-    end
-  else
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { "electronic-circuit", 4 })
+  if data.raw.item["solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { "solder", 5 })
   end
 end
 
@@ -29,20 +33,8 @@ if data.raw.recipe["bob-robot-brain-2"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["bob-robot-brain-2"].category = "electronics"
   end
-  if
-    data.raw.item["circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-  then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "basic-electronic-components", 10 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "electronic-components", 6 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "solder", 5 })
-    end
-  else
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "electronic-circuit", 2 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "advanced-circuit", 2 })
+  if data.raw.item["solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { "solder", 5 })
   end
 end
 
@@ -50,22 +42,8 @@ if data.raw.recipe["bob-robot-brain-3"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["bob-robot-brain-3"].category = "electronics"
   end
-  if
-    data.raw.item["superior-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-  then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "superior-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "basic-electronic-components", 8 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "electronic-components", 6 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "intergrated-electronics", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "solder", 5 })
-    end
-  else
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "advanced-circuit", 2 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "processing-unit", 2 })
+  if data.raw.item["solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { "solder", 5 })
   end
 end
 
@@ -73,28 +51,12 @@ if data.raw.recipe["bob-robot-brain-4"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["bob-robot-brain-4"].category = "electronics"
   end
-  if
-    data.raw.item["multi-layer-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-    and data.raw.item["processing-electronics"]
-  then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "multi-layer-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "basic-electronic-components", 12 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "electronic-components", 8 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "intergrated-electronics", 6 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "processing-electronics", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "solder", 5 })
-    end
-  else
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "processing-unit", 2 })
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "advanced-processing-unit", 2 })
-    else
-      bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "processing-unit", 4 })
-    end
+  if data.raw.item["solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "solder", 5 })
+  end
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.recipe.set_ingredient("bob-robot-brain-4", { "processing-unit", 2 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { "advanced-processing-unit", 2 })
   end
 end
 
