@@ -1,6 +1,7 @@
 if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
   data.raw.item["flying-robot-frame"].order = "j[flying-robot-frame-1]"
   data.raw.item["flying-robot-frame"].subgroup = "bob-robot-parts"
+  bobmods.lib.recipe.remove_ingredient("flying-robot-frame", "electronic-circuit")
 
   data:extend({
     {
@@ -40,7 +41,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { "electric-engine-unit", 1 },
         { "battery", 2 },
         { "steel-plate", 1 },
-        { "advanced-circuit", 3 },
       },
       result = "flying-robot-frame-2",
     },
@@ -53,7 +53,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { "electric-engine-unit", 1 },
         { "battery", 2 },
         { "steel-plate", 1 },
-        { "processing-unit", 3 },
       },
       result = "flying-robot-frame-3",
     },
@@ -66,7 +65,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { "electric-engine-unit", 1 },
         { "battery", 2 },
         { "steel-plate", 1 },
-        { "processing-unit", 3 },
       },
       result = "flying-robot-frame-4",
     },
