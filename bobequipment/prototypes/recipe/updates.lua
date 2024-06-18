@@ -301,7 +301,7 @@ if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-4", { "solder", 6 })
 end
 
-if data.raw.tool["module-case"] then
+if data.raw.tool["module-case"] or data.raw.item["module-case"] then
   bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment", { "module-case", 1 })
   bobmods.lib.tech.add_prerequisite("personal-roboport-modular-equipment-1", "modules")
 end

@@ -19,7 +19,7 @@ elseif data.raw.item["alien-artifact"] then
   bobmods.lib.recipe.add_ingredient("player-power-core", { "alien-artifact", 50 })
 end
 
-if data.raw.tool["module-case"] then
+if data.raw.tool["module-case"] or data.raw.item["module-case"] then
   bobmods.lib.recipe.remove_ingredient("player-brain", "iron-plate")
   bobmods.lib.recipe.add_ingredient("player-brain", { "module-case", 1 })
   bobmods.lib.recipe.remove_ingredient("player-brain-2", "steel-plate")

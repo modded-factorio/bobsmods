@@ -210,7 +210,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   end
 
   local function add_case()
-    if data.raw.tool["module-case"] then
+    if data.raw.tool["module-case"] or data.raw.item["module-case"] then
       bobmods.lib.recipe.add_ingredient("mech-brain", { "module-case", 2 })
       bobmods.lib.tech.add_prerequisite("walking-vehicle", "modules")
     elseif data.raw.item["aluminium-plate"] then
