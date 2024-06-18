@@ -3,6 +3,7 @@ Version: 1.3.0
 Date: ???
   Changes:
     - Reduced the tier of electronics required for T1 robots #180
+    - Combined Construction and Logistics Brains and Tools #184
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 21. 02. 2024
