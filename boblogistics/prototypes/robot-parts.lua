@@ -241,7 +241,6 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       order = "r[bob-robot-tool-4]",
       stack_size = 100,
     },
-
   })
 
   data:extend({
@@ -276,7 +275,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       enabled = false,
       ingredients = {
         { "advanced-circuit", 2 },
-        { "processing-unit", 2 },      
+        { "processing-unit", 2 },
       },
       result = "bob-robot-brain-3",
     },

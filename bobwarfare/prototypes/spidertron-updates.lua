@@ -209,7 +209,6 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.tech.add_prerequisite("tankotron", "tungsten-alloy-processing")
   end
 
-
   if data.raw.item["solder"] then
     bobmods.lib.recipe.add_ingredient("mech-brain", { "solder", 120 })
   end
@@ -221,7 +220,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 6 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
   end
-  
+
   if data.raw.tool["module-case"] or data.raw.item["module-case"] then
     bobmods.lib.recipe.add_ingredient("mech-brain", { "module-case", 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "modules")
@@ -231,7 +230,6 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   else
     bobmods.lib.recipe.add_ingredient("mech-brain", { "steel-plate", 10 })
   end
-
 else
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.remove_ingredient("spidertron", "effectivity-module-3")
