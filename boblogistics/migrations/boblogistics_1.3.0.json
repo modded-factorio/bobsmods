@@ -1,0 +1,40 @@
+{
+  "item":
+  [
+    ["robot-brain-logistic", "bob-robot-brain"],
+    ["robot-brain-logistic-2", "bob-robot-brain-2"],
+    ["robot-brain-logistic-3", "bob-robot-brain-3"],
+    ["robot-brain-logistic-4", "bob-robot-brain-4"],
+    ["robot-brain-construction", "bob-robot-brain"],
+    ["robot-brain-construction-2", "bob-robot-brain-2"],
+    ["robot-brain-construction-3", "bob-robot-brain-3"],
+    ["robot-brain-construction-4", "bob-robot-brain-4"],
+    ["robot-tool-logistic", "bob-robot-tool"],
+    ["robot-tool-logistic-2", "bob-robot-tool-2"],
+    ["robot-tool-logistic-3", "bob-robot-tool-3"],
+    ["robot-tool-logistic-4", "bob-robot-tool-4"],
+    ["robot-tool-construction", "bob-robot-tool"],
+    ["robot-tool-construction-2", "bob-robot-tool-2"],
+    ["robot-tool-construction-3", "bob-robot-tool-3"],
+    ["robot-tool-construction-4", "bob-robot-tool-4"]
+  ],
+  "recipe":
+  [
+    ["robot-brain-logistic", "bob-robot-brain"],
+    ["robot-brain-logistic-2", "bob-robot-brain-2"],
+    ["robot-brain-logistic-3", "bob-robot-brain-3"],
+    ["robot-brain-logistic-4", "bob-robot-brain-4"],
+    ["robot-brain-construction", "bob-robot-brain"],
+    ["robot-brain-construction-2", "bob-robot-brain-2"],
+    ["robot-brain-construction-3", "bob-robot-brain-3"],
+    ["robot-brain-construction-4", "bob-robot-brain-4"],
+    ["robot-tool-logistic", "bob-robot-tool"],
+    ["robot-tool-logistic-2", "bob-robot-tool-2"],
+    ["robot-tool-logistic-3", "bob-robot-tool-3"],
+    ["robot-tool-logistic-4", "bob-robot-tool-4"],
+    ["robot-tool-construction", "bob-robot-tool"],
+    ["robot-tool-construction-2", "bob-robot-tool-2"],
+    ["robot-tool-construction-3", "bob-robot-tool-3"],
+    ["robot-tool-construction-4", "bob-robot-tool-4"]
+  ]
+}

@@ -3,6 +3,7 @@ Version: 1.3.0
 Date: ???
   Changes:
     - Spread out the armor techs more evenly between tech tiers #180
+    - Changed combat robot and mech brains to use circuits rather than circuit components #184
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024

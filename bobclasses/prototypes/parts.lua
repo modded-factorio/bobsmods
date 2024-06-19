@@ -61,6 +61,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { "iron-plate", 5 },
+      { "advanced-circuit", 20 },
     },
     result = "player-brain",
   },
@@ -181,6 +182,8 @@ data:extend({
     enabled = false,
     ingredients = {
       { "steel-plate", 5 },
+      { "advanced-circuit", 10 },
+      { "processing-unit", 10 },
     },
     result = "player-brain-2",
   },

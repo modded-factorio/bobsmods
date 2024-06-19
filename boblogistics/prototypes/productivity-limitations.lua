@@ -25,56 +25,30 @@ if data.raw.recipe["flying-robot-frame-4"] then
   bobmods.lib.module.add_productivity_limitation("flying-robot-frame-4")
 end
 
-if data.raw.recipe["robot-brain-logistic"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-logistic")
+if data.raw.recipe["bob-robot-brain"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-brain")
 end
-if data.raw.recipe["robot-brain-logistic-2"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-logistic-2")
+if data.raw.recipe["bob-robot-brain-2"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-brain-2")
 end
-if data.raw.recipe["robot-brain-logistic-3"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-logistic-3")
+if data.raw.recipe["bob-robot-brain-3"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-brain-3")
 end
-if data.raw.recipe["robot-brain-logistic-4"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-logistic-4")
-end
-
-if data.raw.recipe["robot-brain-construction"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-construction")
-end
-if data.raw.recipe["robot-brain-construction-2"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-construction-2")
-end
-if data.raw.recipe["robot-brain-construction-3"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-construction-3")
-end
-if data.raw.recipe["robot-brain-construction-4"] then
-  bobmods.lib.module.add_productivity_limitation("robot-brain-construction-4")
+if data.raw.recipe["bob-robot-brain-4"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-brain-4")
 end
 
-if data.raw.recipe["robot-tool-logistic"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-logistic")
+if data.raw.recipe["bob-robot-tool"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-tool")
 end
-if data.raw.recipe["robot-tool-logistic-2"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-logistic-2")
+if data.raw.recipe["bob-robot-tool-2"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-toolbob--2")
 end
-if data.raw.recipe["robot-tool-logistic-3"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-logistic-3")
+if data.raw.recipe["bob-robot-tool-3"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-tool-3")
 end
-if data.raw.recipe["robot-tool-logistic-4"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-logistic-4")
-end
-
-if data.raw.recipe["robot-tool-construction"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-construction")
-end
-if data.raw.recipe["robot-tool-construction-2"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-construction-2")
-end
-if data.raw.recipe["robot-tool-construction-3"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-construction-3")
-end
-if data.raw.recipe["robot-tool-construction-4"] then
-  bobmods.lib.module.add_productivity_limitation("robot-tool-construction-4")
+if data.raw.recipe["bob-robot-tool-4"] then
+  bobmods.lib.module.add_productivity_limitation("bob-robot-tool-4")
 end
 
 bobmods.lib.module.add_productivity_limitation("bob-oil-processing")

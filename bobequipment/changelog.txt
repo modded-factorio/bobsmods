@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Reduced the tier of electronics required for Personal roboport robot control #180
     - Reduced the tier of electronics required for some personal equipment #181
+    - Changed personal roboport robot controls to use circuits rather than circuit components #184
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024

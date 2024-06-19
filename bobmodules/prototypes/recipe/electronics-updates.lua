@@ -1,8 +1,3 @@
-if data.raw.item["aluminium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("module-case", "iron-plate", "aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("modules", "aluminium-processing")
-end
-
 if data.raw.item["tin-plate"] then
   bobmods.lib.recipe.add_ingredient("module-circuit-board", { "tin-plate", 1 })
   bobmods.lib.recipe.add_ingredient("module-processor-board", { "tin-plate", 1 })

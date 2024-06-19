@@ -209,55 +209,26 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.tech.add_prerequisite("tankotron", "tungsten-alloy-processing")
   end
 
-  local function add_case()
-    if data.raw.tool["module-case"] then
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "module-case", 2 })
-      bobmods.lib.tech.add_prerequisite("walking-vehicle", "modules")
-    elseif data.raw.item["aluminium-plate"] then
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "aluminium-plate", 10 })
-      bobmods.lib.tech.add_prerequisite("walking-vehicle", "aluminium-processing")
-    else
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "steel-plate", 10 })
-    end
+  if data.raw.item["solder"] then
+    bobmods.lib.recipe.add_ingredient("mech-brain", { "solder", 120 })
   end
 
-  if
-    data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-    and data.raw.item["processing-electronics"]
-  then
+  if data.raw.item["advanced-processing-unit"] then
+    bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 20 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
-
-    bobmods.lib.recipe.difficulty_split("mech-brain")
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", { "basic-electronic-components", 80 })
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", { "electronic-components", 100 })
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", { "intergrated-electronics", 100 })
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", { "processing-electronics", 120 })
-
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "expensive", { "basic-electronic-components", 120 })
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "expensive", { "electronic-components", 150 })
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "expensive", { "intergrated-electronics", 150 })
-    bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "expensive", { "processing-electronics", 200 })
-
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", { "solder", 120 })
-      bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "expensive", { "solder", 200 })
-    end
-    if data.raw.item["multi-layer-circuit-board"] then
-      bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "normal", { "multi-layer-circuit-board", 40 })
-      bobmods.lib.recipe.add_difficulty_ingredient("mech-brain", "expensive", { "multi-layer-circuit-board", 60 })
-    end
-    add_case()
   else
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 16 })
-      bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
-      add_case()
-    else
-      bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 6 })
-      bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
-    end
+    bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 6 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
+  end
+
+  if data.raw.tool["module-case"] or data.raw.item["module-case"] then
+    bobmods.lib.recipe.add_ingredient("mech-brain", { "module-case", 1 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "modules")
+  elseif data.raw.item["aluminium-plate"] then
+    bobmods.lib.recipe.add_ingredient("mech-brain", { "aluminium-plate", 10 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "aluminium-processing")
+  else
+    bobmods.lib.recipe.add_ingredient("mech-brain", { "steel-plate", 10 })
   end
 else
   if data.raw.item["advanced-processing-unit"] then

@@ -245,53 +245,13 @@ if data.raw.item["nitinol-alloy"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-mk4-equipment", "nitinol-processing")
 end
 
-if
-  data.raw.item["basic-electronic-components"]
-  and data.raw.item["electronic-components"]
-  and data.raw.item["intergrated-electronics"]
-  and data.raw.item["processing-electronics"]
-  and data.raw.item["basic-circuit-board"]
-  and data.raw.item["circuit-board"]
-  and data.raw.item["superior-circuit-board"]
-  and data.raw.item["multi-layer-circuit-board"]
-then
-  data.raw.recipe["personal-roboport-robot-equipment"].ingredients = {
-    { "basic-circuit-board", 1 },
-    { "basic-electronic-components", 30 },
-  }
-
-  data.raw.recipe["personal-roboport-robot-equipment-2"].ingredients = {
-    { "personal-roboport-robot-equipment", 1 },
-    { "circuit-board", 1 },
-    { "basic-electronic-components", 15 },
-    { "electronic-components", 30 },
-  }
-
-  data.raw.recipe["personal-roboport-robot-equipment-3"].ingredients = {
-    { "personal-roboport-robot-equipment-2", 1 },
-    { "superior-circuit-board", 1 },
-    { "basic-electronic-components", 10 },
-    { "electronic-components", 20 },
-    { "intergrated-electronics", 10 },
-  }
-
-  data.raw.recipe["personal-roboport-robot-equipment-4"].ingredients = {
-    { "personal-roboport-robot-equipment-3", 1 },
-    { "multi-layer-circuit-board", 1 },
-    { "basic-electronic-components", 5 },
-    { "electronic-components", 10 },
-    { "intergrated-electronics", 20 },
-    { "processing-electronics", 8 },
-  }
-else
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("personal-roboport-mk4-equipment", "advanced-electronics-3")
-    bobmods.lib.recipe.replace_ingredient(
-      "personal-roboport-robot-equipment-4",
-      "processing-unit",
-      "advanced-processing-unit"
-    )
-  end
+if data.raw.item["advanced-processing-unit"] then
+  bobmods.lib.tech.add_prerequisite("personal-roboport-mk4-equipment", "advanced-electronics-3")
+  bobmods.lib.recipe.replace_ingredient(
+    "personal-roboport-robot-equipment-4",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
 end
 
 if data.raw.item["solder"] then
@@ -301,9 +261,12 @@ if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-4", { "solder", 6 })
 end
 
-if data.raw.tool["module-case"] then
+if data.raw.tool["module-case"] or data.raw.item["module-case"] then
+  bobmods.lib.tech.add_recipe_unlock("robotics", "module-case")
   bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment", { "module-case", 1 })
-  bobmods.lib.tech.add_prerequisite("personal-roboport-modular-equipment-1", "modules")
+  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-2", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-3", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-4", { "module-case", 1 })
 end
 
 if data.raw.item["glass"] then
