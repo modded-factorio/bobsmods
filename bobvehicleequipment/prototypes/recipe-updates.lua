@@ -255,10 +255,10 @@ end
 
 if data.raw.tool["module-case"] or data.raw.item["module-case"] then
   bobmods.lib.tech.add_recipe_unlock("robotics", "module-case")
-  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment", { "module-case", 1 })
-  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-2", { "module-case", 1 })
-  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-3", { "module-case", 1 })
-  bobmods.lib.recipe.add_ingredient("personal-roboport-robot-equipment-4", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-2", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-3", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-4", { "module-case", 1 })
 end
 
 if data.raw.item["glass"] then
