@@ -42,7 +42,7 @@ if data.raw.recipe["bob-robot-tool"] then
   bobmods.lib.module.add_productivity_limitation("bob-robot-tool")
 end
 if data.raw.recipe["bob-robot-tool-2"] then
-  bobmods.lib.module.add_productivity_limitation("bob-robot-toolbob--2")
+  bobmods.lib.module.add_productivity_limitation("bob-robot-tool-2")
 end
 if data.raw.recipe["bob-robot-tool-3"] then
   bobmods.lib.module.add_productivity_limitation("bob-robot-tool-3")
