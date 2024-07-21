@@ -247,7 +247,6 @@ function bobmods.lib.tech.add_recipe_unlock(technology, recipe)
     and data.raw.recipe[recipe]
   then
     add_recipe_unlock(data.raw.technology[technology], recipe)
-
   else
     log(debug.traceback())
     bobmods.lib.error.technology(technology)
@@ -263,7 +262,6 @@ function bobmods.lib.tech.remove_recipe_unlock(technology, recipe)
     --    data.raw.recipe[recipe] --don't check to see if something we're removing exists.
   then
     remove_recipe_unlock(data.raw.technology[technology], recipe)
-
   else
     log(debug.traceback())
     bobmods.lib.error.technology(technology)
