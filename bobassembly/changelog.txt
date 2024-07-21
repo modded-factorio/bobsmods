@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Code tidy: Remove unnecessary global variables #178
     - Improved Assembling Machine tier progression #179
+    - Update for Factorio 2.0 #189
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 21. 02. 2024

@@ -6,6 +6,7 @@ Date: ???
     - Combined Construction and Logistics Brains and Tools #184
     - Changed robot brains to use circuits rather than circuit components #184
     - Removed circuits from flying robot frame recipes #184
+    - Update for Factorio 2.0 #189
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 21. 02. 2024
