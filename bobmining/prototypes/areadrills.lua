@@ -58,7 +58,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "bob-area-mining-drill-1", amount = 1 }},
+      results = { { type = "item", name = "bob-area-mining-drill-1", amount = 1 } },
     },
     {
       type = "recipe",
@@ -71,7 +71,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "bob-area-mining-drill-2", amount = 1 }},
+      results = { { type = "item", name = "bob-area-mining-drill-2", amount = 1 } },
     },
     {
       type = "recipe",
@@ -84,7 +84,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "bob-area-mining-drill-3", amount = 1 }},
+      results = { { type = "item", name = "bob-area-mining-drill-3", amount = 1 } },
     },
     {
       type = "recipe",
@@ -97,7 +97,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "bob-area-mining-drill-4", amount = 1 }},
+      results = { { type = "item", name = "bob-area-mining-drill-4", amount = 1 } },
     },
   })
 

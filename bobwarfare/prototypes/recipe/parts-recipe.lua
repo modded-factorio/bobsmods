@@ -9,7 +9,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
-    results = {{ type = "item", name = "petroleum-jelly", amount = 1 }},
+    results = { { type = "item", name = "petroleum-jelly", amount = 1 } },
   },
 
   {
@@ -23,7 +23,7 @@ data:extend({
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
       { "wood", 1 },
     },
-    results = {{ type = "item", name = "gun-cotton", amount = 1 }},
+    results = { { type = "item", name = "gun-cotton", amount = 1 } },
   },
 
   {
@@ -38,7 +38,7 @@ data:extend({
       { "gun-cotton", 13 },
       { "petroleum-jelly", 1 },
     },
-    results = {{ type = "item", name = "cordite", amount = 5 }},
+    results = { { type = "item", name = "cordite", amount = 5 } },
   },
 
   {
@@ -50,7 +50,7 @@ data:extend({
     ingredients = {
       { "copper-plate", 1 },
     },
-    results = {{ type = "item", name = "bullet-casing", amount = 1 }},
+    results = { { type = "item", name = "bullet-casing", amount = 1 } },
   },
 
   {
@@ -62,7 +62,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
     },
-    results = {{ type = "item", name = "magazine", amount = 2 }},
+    results = { { type = "item", name = "magazine", amount = 2 } },
   },
 
   {
@@ -75,7 +75,7 @@ data:extend({
       { "copper-plate", 1 },
       { "iron-plate", 1 },
     },
-    results = {{ type = "item", name = "bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "bullet-projectile", amount = 2 } },
   },
 
   {
@@ -89,7 +89,7 @@ data:extend({
       { "bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "bullet", amount = 1 }},
+    results = { { type = "item", name = "bullet", amount = 1 } },
   },
 
   {
@@ -102,7 +102,7 @@ data:extend({
       { "copper-plate", 1 },
       { "steel-plate", 1 },
     },
-    results = {{ type = "item", name = "ap-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "ap-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -116,7 +116,7 @@ data:extend({
       { "ap-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "ap-bullet", amount = 1 }},
+    results = { { type = "item", name = "ap-bullet", amount = 1 } },
   },
 
   {
@@ -129,7 +129,7 @@ data:extend({
       { "copper-plate", 1 },
       { "explosives", 1 },
     },
-    results = {{ type = "item", name = "he-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "he-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -143,7 +143,7 @@ data:extend({
       { "he-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "he-bullet", amount = 1 }},
+    results = { { type = "item", name = "he-bullet", amount = 1 } },
   },
 
   {
@@ -158,7 +158,7 @@ data:extend({
       { type = "fluid", name = "light-oil", amount = 5 },
       { type = "fluid", name = "heavy-oil", amount = 5 },
     },
-    results = {{ type = "item", name = "flame-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "flame-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -172,7 +172,7 @@ data:extend({
       { "flame-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "flame-bullet", amount = 1 }},
+    results = { { type = "item", name = "flame-bullet", amount = 1 } },
   },
 
   {
@@ -186,7 +186,7 @@ data:extend({
       { "copper-plate", 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
-    results = {{ type = "item", name = "acid-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "acid-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -200,7 +200,7 @@ data:extend({
       { "acid-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "acid-bullet", amount = 1 }},
+    results = { { type = "item", name = "acid-bullet", amount = 1 } },
   },
 
   {
@@ -213,7 +213,7 @@ data:extend({
       { "copper-plate", 1 },
       { "coal", 1 },
     },
-    results = {{ type = "item", name = "poison-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "poison-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -227,7 +227,7 @@ data:extend({
       { "poison-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "poison-bullet", amount = 1 }},
+    results = { { type = "item", name = "poison-bullet", amount = 1 } },
   },
 
   {
@@ -240,7 +240,7 @@ data:extend({
       { "copper-plate", 1 },
       { "steel-plate", 1 },
     },
-    results = {{ type = "item", name = "electric-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "electric-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -254,7 +254,7 @@ data:extend({
       { "electric-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "electric-bullet", amount = 1 }},
+    results = { { type = "item", name = "electric-bullet", amount = 1 } },
   },
 
   {
@@ -267,7 +267,7 @@ data:extend({
       { "copper-plate", 1 },
       { "uranium-238", 1 },
     },
-    results = {{ type = "item", name = "uranium-bullet-projectile", amount = 2 }},
+    results = { { type = "item", name = "uranium-bullet-projectile", amount = 2 } },
   },
 
   {
@@ -281,7 +281,7 @@ data:extend({
       { "uranium-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "uranium-bullet", amount = 1 }},
+    results = { { type = "item", name = "uranium-bullet", amount = 1 } },
   },
 
   {
@@ -293,7 +293,7 @@ data:extend({
     ingredients = {
       { "copper-plate", 1 },
     },
-    results = {{ type = "item", name = "shotgun-shell-casing", amount = 1 }},
+    results = { { type = "item", name = "shotgun-shell-casing", amount = 1 } },
   },
 
   {
@@ -305,7 +305,7 @@ data:extend({
     ingredients = {
       { "iron-plate", 1 },
     },
-    results = {{ type = "item", name = "shot", amount = 1 }},
+    results = { { type = "item", name = "shot", amount = 1 } },
   },
 
   {
@@ -317,7 +317,7 @@ data:extend({
     ingredients = {
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-case", amount = 2 }},
+    results = { { type = "item", name = "laser-rifle-battery-case", amount = 2 } },
   },
 
   {
@@ -328,7 +328,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
     },
-    results = {{ type = "item", name = "rocket-engine", amount = 1 }},
+    results = { { type = "item", name = "rocket-engine", amount = 1 } },
   },
 
   {
@@ -342,7 +342,7 @@ data:extend({
       { "processing-unit", 1 },
       { "steel-plate", 1 },
     },
-    results = {{ type = "item", name = "rocket-body", amount = 1 }},
+    results = { { type = "item", name = "rocket-body", amount = 1 } },
   },
 
   {
@@ -354,7 +354,7 @@ data:extend({
       { "steel-plate", 1 },
       { "explosives", 1 },
     },
-    results = {{ type = "item", name = "rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "rocket-warhead", amount = 1 } },
   },
 
   {
@@ -366,7 +366,7 @@ data:extend({
       { "steel-plate", 1 },
       { "iron-plate", 2 },
     },
-    results = {{ type = "item", name = "piercing-rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "piercing-rocket-warhead", amount = 1 } },
   },
 
   {
@@ -378,7 +378,7 @@ data:extend({
       { "steel-plate", 1 },
       { "copper-plate", 2 },
     },
-    results = {{ type = "item", name = "electric-rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "electric-rocket-warhead", amount = 1 } },
   },
 
   {
@@ -390,7 +390,7 @@ data:extend({
       { "steel-plate", 1 },
       { "explosives", 2 },
     },
-    results = {{ type = "item", name = "explosive-rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "explosive-rocket-warhead", amount = 1 } },
   },
 
   {
@@ -403,7 +403,7 @@ data:extend({
       { "steel-plate", 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
-    results = {{ type = "item", name = "acid-rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "acid-rocket-warhead", amount = 1 } },
   },
 
   {
@@ -417,7 +417,7 @@ data:extend({
       { type = "fluid", name = "light-oil", amount = 10 },
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
-    results = {{ type = "item", name = "flame-rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "flame-rocket-warhead", amount = 1 } },
   },
 
   {
@@ -430,7 +430,7 @@ data:extend({
       { "steel-plate", 1 },
       { "coal", 2 },
     },
-    results = {{ type = "item", name = "poison-rocket-warhead", amount = 1 }},
+    results = { { type = "item", name = "poison-rocket-warhead", amount = 1 } },
   },
 })
 
@@ -446,7 +446,7 @@ data:extend({
     energy_required = 6,
     enabled = false,
     ingredients = {},
-    results = {{ type = "item", name = "plasma-bullet-projectile", amount = 12 }},
+    results = { { type = "item", name = "plasma-bullet-projectile", amount = 12 } },
   },
 
   {
@@ -460,7 +460,7 @@ data:extend({
       { "plasma-bullet-projectile", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "plasma-bullet", amount = 1 }},
+    results = { { type = "item", name = "plasma-bullet", amount = 1 } },
   },
 
   {
@@ -469,6 +469,6 @@ data:extend({
     energy_required = 6,
     enabled = false,
     ingredients = {},
-    results = {{ type = "item", name = "plasma-rocket-warhead", amount = 6 }},
+    results = { { type = "item", name = "plasma-rocket-warhead", amount = 6 } },
   },
 })

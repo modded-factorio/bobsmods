@@ -8,7 +8,7 @@ data:extend({
       { "steel-plate", 1 },
       { "poison-capsule", 4 },
     },
-    results = {{ type = "item", name = "poison-mine", amount = 4 }},
+    results = { { type = "item", name = "poison-mine", amount = 4 } },
   },
 
   {
@@ -20,7 +20,7 @@ data:extend({
       { "steel-plate", 1 },
       { "slowdown-capsule", 4 },
     },
-    results = {{ type = "item", name = "slowdown-mine", amount = 4 }},
+    results = { { type = "item", name = "slowdown-mine", amount = 4 } },
   },
 
   {
@@ -32,6 +32,6 @@ data:extend({
       { "steel-plate", 1 },
       { "distractor-capsule", 1 },
     },
-    results = {{ type = "item", name = "distractor-mine", amount = 3 }},
+    results = { { type = "item", name = "distractor-mine", amount = 3 } },
   },
 })

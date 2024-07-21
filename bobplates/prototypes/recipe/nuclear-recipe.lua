@@ -62,7 +62,7 @@ if data.raw.item["thorium-ore"] then
       ingredients = {
         { "thorium-ore", 10 },
       },
-      results = {{ type = "item", name = "thorium-232", amount = 1 }},
+      results = { { type = "item", name = "thorium-232", amount = 1 } },
       crafting_machine_tint = {
         primary = { r = 1, g = 1, b = 0 },
         secondary = { r = 1, g = 1, b = 0 },
@@ -79,7 +79,7 @@ if data.raw.item["thorium-ore"] then
         { "uranium-235", 1 },
         { "thorium-232", 19 },
       },
-      results = {{ type = "item", name = "thorium-fuel-cell", amount = 10 }},
+      results = { { type = "item", name = "thorium-fuel-cell", amount = 10 } },
     },
   })
 
@@ -96,7 +96,7 @@ if data.raw.item["thorium-ore"] then
           { type = "item", name = "plutonium-239", amount = 1 },
           { type = "item", name = "thorium-232", amount = 19 },
         },
-        results = {{ type = "item", name = "thorium-plutonium-fuel-cell", amount = 10 }},
+        results = { { type = "item", name = "thorium-plutonium-fuel-cell", amount = 10 } },
       },
       {
         type = "recipe",
@@ -137,7 +137,7 @@ if data.raw.item["thorium-ore"] then
           { type = "item", name = "plutonium-239", amount = 2 },
           { type = "item", name = "thorium-232", amount = 2 },
         },
-        results = {{ type = "item", name = "thorium-plutonium-fuel-cell", amount = 2 }},
+        results = { { type = "item", name = "thorium-plutonium-fuel-cell", amount = 2 } },
       },
       {
         type = "recipe",
@@ -180,7 +180,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         { type = "item", name = "steel-plate", amount = 2 },
         { type = "item", name = "lead-plate", amount = 5 },
       },
-      results = {{ type = "item", name = "empty-nuclear-fuel-cell", amount = 10 }},
+      results = { { type = "item", name = "empty-nuclear-fuel-cell", amount = 10 } },
     },
 
     {
@@ -193,7 +193,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         { type = "item", name = "plutonium-239", amount = 1 },
         { type = "item", name = "uranium-238", amount = 19 },
       },
-      results = {{ type = "item", name = "plutonium-fuel-cell", amount = 10 }},
+      results = { { type = "item", name = "plutonium-fuel-cell", amount = 10 } },
     },
     {
       type = "recipe",
@@ -235,7 +235,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         { type = "item", name = "fusion-catalyst", amount = 1 },
         { type = "fluid", name = "deuterium", amount = 190 },
       },
-      results = {{ type = "item", name = "deuterium-fuel-cell", amount = 10 }},
+      results = { { type = "item", name = "deuterium-fuel-cell", amount = 10 } },
     },
     {
       type = "recipe",
@@ -248,7 +248,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         { type = "item", name = "fusion-catalyst", amount = 5 },
         { type = "fluid", name = "deuterium", amount = 250 },
       },
-      results = {{ type = "item", name = "deuterium-fuel-cell-2", amount = 10 }},
+      results = { { type = "item", name = "deuterium-fuel-cell-2", amount = 10 } },
     },
     {
       type = "recipe",
@@ -288,7 +288,7 @@ else
         { "lead-plate", 10 },
         { type = "fluid", name = "deuterium", amount = 200 },
       },
-      results = {{ type = "item", name = "deuterium-fuel-cell", amount = 10 }},
+      results = { { type = "item", name = "deuterium-fuel-cell", amount = 10 } },
     },
     {
       type = "recipe",

@@ -65,7 +65,7 @@ data:extend({
       { "steel-plate", 10 },
       { "copper-cable", 10 },
     },
-    results = {{ type = "item", name = "beacon-2", amount = 1 }},
+    results = { { type = "item", name = "beacon-2", amount = 1 } },
   },
 
   {
@@ -82,7 +82,7 @@ data:extend({
       { "copper-plate", 10 },
       { "copper-cable", 10 },
     },
-    results = {{ type = "item", name = "beacon-3", amount = 1 }},
+    results = { { type = "item", name = "beacon-3", amount = 1 } },
   },
 
   {

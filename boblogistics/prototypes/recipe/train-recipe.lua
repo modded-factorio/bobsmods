@@ -10,7 +10,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 20 },
       },
-      results = {{ type = "item", name = "bob-locomotive-2", amount = 1 }},
+      results = { { type = "item", name = "bob-locomotive-2", amount = 1 } },
     },
 
     {
@@ -23,7 +23,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 20 },
       },
-      results = {{ type = "item", name = "bob-locomotive-3", amount = 1 }},
+      results = { { type = "item", name = "bob-locomotive-3", amount = 1 } },
     },
 
     {
@@ -34,7 +34,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "locomotive", 1 },
         { "steel-plate", 25 },
       },
-      results = {{ type = "item", name = "bob-armoured-locomotive", amount = 1 }},
+      results = { { type = "item", name = "bob-armoured-locomotive", amount = 1 } },
     },
 
     {
@@ -47,7 +47,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "processing-unit", 5 },
         { "iron-gear-wheel", 20 },
       },
-      results = {{ type = "item", name = "bob-armoured-locomotive-2", amount = 1 }},
+      results = { { type = "item", name = "bob-armoured-locomotive-2", amount = 1 } },
     },
 
     {
@@ -59,7 +59,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 20 },
         { "iron-gear-wheel", 12 },
       },
-      results = {{ type = "item", name = "bob-cargo-wagon-2", amount = 1 }},
+      results = { { type = "item", name = "bob-cargo-wagon-2", amount = 1 } },
     },
 
     {
@@ -71,7 +71,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 20 },
         { "iron-gear-wheel", 12 },
       },
-      results = {{ type = "item", name = "bob-cargo-wagon-3", amount = 1 }},
+      results = { { type = "item", name = "bob-cargo-wagon-3", amount = 1 } },
     },
 
     {
@@ -82,7 +82,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "cargo-wagon", 1 },
         { "steel-plate", 25 },
       },
-      results = {{ type = "item", name = "bob-armoured-cargo-wagon", amount = 1 }},
+      results = { { type = "item", name = "bob-armoured-cargo-wagon", amount = 1 } },
     },
 
     {
@@ -94,7 +94,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 25 },
         { "iron-gear-wheel", 12 },
       },
-      results = {{ type = "item", name = "bob-armoured-cargo-wagon-2", amount = 1 }},
+      results = { { type = "item", name = "bob-armoured-cargo-wagon-2", amount = 1 } },
     },
 
     {
@@ -108,7 +108,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 16 },
         { "storage-tank-2", 1 },
       },
-      results = {{ type = "item", name = "bob-fluid-wagon-2", amount = 1 }},
+      results = { { type = "item", name = "bob-fluid-wagon-2", amount = 1 } },
     },
 
     {
@@ -122,7 +122,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 16 },
         { "storage-tank-3", 1 },
       },
-      results = {{ type = "item", name = "bob-fluid-wagon-3", amount = 1 }},
+      results = { { type = "item", name = "bob-fluid-wagon-3", amount = 1 } },
     },
 
     {
@@ -134,7 +134,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "fluid-wagon", 1 },
         { "steel-plate", 25 },
       },
-      results = {{ type = "item", name = "bob-armoured-fluid-wagon", amount = 1 }},
+      results = { { type = "item", name = "bob-armoured-fluid-wagon", amount = 1 } },
     },
 
     {
@@ -148,7 +148,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { "steel-plate", 25 },
         { "storage-tank-3", 1 },
       },
-      results = {{ type = "item", name = "bob-armoured-fluid-wagon-2", amount = 1 }},
+      results = { { type = "item", name = "bob-armoured-fluid-wagon-2", amount = 1 } },
     },
   })
 end

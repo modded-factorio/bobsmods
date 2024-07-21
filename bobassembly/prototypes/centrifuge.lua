@@ -38,7 +38,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         { "processing-unit", 100 },
         { "iron-gear-wheel", 100 },
       },
-      results = {{ type = "item", name = "centrifuge-2", amount = 1 }},
+      results = { { type = "item", name = "centrifuge-2", amount = 1 } },
       requester_paste_multiplier = 10,
     },
     {
@@ -53,7 +53,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         { "processing-unit", 100 },
         { "iron-gear-wheel", 100 },
       },
-      results = {{ type = "item", name = "centrifuge-3", amount = 1 }},
+      results = { { type = "item", name = "centrifuge-3", amount = 1 } },
       requester_paste_multiplier = 10,
     },
 

@@ -19,7 +19,7 @@ data:extend({
     ingredients = {
       { "wood", 1 },
     },
-    results = {{ type = "item", name = "resin", amount = 1 }},
+    results = { { type = "item", name = "resin", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -33,7 +33,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
-    results = {{ type = "item", name = "resin", amount = 1 }},
+    results = { { type = "item", name = "resin", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.5, g = 0.04, b = 0.0, a = 0.000 },
       secondary = { r = 0.85, g = 0.6, b = 0.3, a = 0.000 },
@@ -64,7 +64,7 @@ data:extend({
     ingredients = {
       { "resin", 1 },
     },
-    results = {{ type = "item", name = "rubber", amount = 1 }},
+    results = { { type = "item", name = "rubber", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -83,7 +83,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
-    results = {{ type = "item", name = "wood", amount = 2 }},
+    results = { { type = "item", name = "wood", amount = 2 } },
     crafting_machine_tint = {
       primary = { r = 0.5, g = 0.04, b = 0.0, a = 0.000 },
       secondary = { r = 0.85, g = 0.6, b = 0.3, a = 0.000 },
@@ -113,7 +113,7 @@ if not data.raw.item["silicon-wafer"] then
         enabled = false,
         energy_required = 5,
         ingredients = {},
-        results = {{ type = "item", name = "silicon-wafer", amount = 8 }},
+        results = { { type = "item", name = "silicon-wafer", amount = 8 } },
       },
     })
 
@@ -147,7 +147,7 @@ if data.raw.item["tin-plate"] then
         { "tin-plate", 9 },
         { "copper-plate", 1 },
       },
-      results = {{ type = "item", name = "solder-alloy", amount = 11 }},
+      results = { { type = "item", name = "solder-alloy", amount = 11 } },
       allow_decomposition = false,
     },
   })
@@ -167,7 +167,7 @@ if data.raw.item["tin-plate"] then
           { "tin-plate", 4 },
           { "lead-plate", 7 },
         },
-        results = {{ type = "item", name = "solder-alloy", amount = 11 }},
+        results = { { type = "item", name = "solder-alloy", amount = 11 } },
         allow_decomposition = false,
       },
     })

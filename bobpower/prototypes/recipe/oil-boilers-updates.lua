@@ -61,7 +61,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       bobmods.lib.recipe.replace_ingredient("oil-boiler-4-from-boiler-5", "pipe", "copper-tungsten-pipe")
 
       bobmods.lib.recipe.remove_result("boiler-5-from-oil-boiler-4", "pipe")
-      bobmods.lib.recipe.add_result("boiler-5-from-oil-boiler-4", { type = "item", name = "copper-tungsten-pipe", amount = 2 })
+      bobmods.lib.recipe.add_result(
+        "boiler-5-from-oil-boiler-4",
+        { type = "item", name = "copper-tungsten-pipe", amount = 2 }
+      )
     elseif data.raw.item["tungsten-pipe"] then
       bobmods.lib.recipe.replace_ingredient("oil-boiler-4-from-boiler-5", "pipe", "tungsten-pipe")
 

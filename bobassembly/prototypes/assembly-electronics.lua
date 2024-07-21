@@ -143,7 +143,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         { "iron-plate", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "electronics-machine-1", amount = 1 }},
+      results = { { type = "item", name = "electronics-machine-1", amount = 1 } },
     },
 
     {
@@ -311,7 +311,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         { "steel-plate", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "electronics-machine-2", amount = 1 }},
+      results = { { type = "item", name = "electronics-machine-2", amount = 1 } },
     },
 
     {
@@ -483,7 +483,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         { "steel-plate", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "electronics-machine-3", amount = 1 }},
+      results = { { type = "item", name = "electronics-machine-3", amount = 1 } },
     },
 
     {

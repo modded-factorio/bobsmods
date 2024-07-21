@@ -359,7 +359,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         { "advanced-circuit", 5 },
         { "pipe", 5 },
       },
-      results = {{ type = "item", name = "chemical-plant-2", amount = 1 }},
+      results = { { type = "item", name = "chemical-plant-2", amount = 1 } },
     },
 
     {
@@ -374,7 +374,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         { "processing-unit", 10 },
         { "pipe", 5 },
       },
-      results = {{ type = "item", name = "chemical-plant-3", amount = 1 }},
+      results = { { type = "item", name = "chemical-plant-3", amount = 1 } },
     },
 
     {
@@ -389,7 +389,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         { "processing-unit", 10 },
         { "pipe", 5 },
       },
-      results = {{ type = "item", name = "chemical-plant-4", amount = 1 }},
+      results = { { type = "item", name = "chemical-plant-4", amount = 1 } },
     },
 
     {

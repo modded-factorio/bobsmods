@@ -63,7 +63,7 @@ data:extend({
       { "iron-plate", 5 },
       { "advanced-circuit", 20 },
     },
-    results = {{ type = "item", name = "player-brain", amount = 1 }},
+    results = { { type = "item", name = "player-brain", amount = 1 } },
   },
   {
     type = "recipe",
@@ -74,7 +74,7 @@ data:extend({
       { "steel-plate", 5 },
       { "player-brain", 1 },
     },
-    results = {{ type = "item", name = "player-head", amount = 1 }},
+    results = { { type = "item", name = "player-head", amount = 1 } },
   },
   {
     type = "recipe",
@@ -85,7 +85,7 @@ data:extend({
       { "steel-plate", 5 },
       { "plastic-bar", 15 },
     },
-    results = {{ type = "item", name = "player-boots", amount = 1 }},
+    results = { { type = "item", name = "player-boots", amount = 1 } },
   },
   {
     type = "recipe",
@@ -96,7 +96,7 @@ data:extend({
       { "steel-plate", 5 },
       { "iron-gear-wheel", 15 },
     },
-    results = {{ type = "item", name = "player-gloves", amount = 1 }},
+    results = { { type = "item", name = "player-gloves", amount = 1 } },
   },
   {
     type = "recipe",
@@ -107,7 +107,7 @@ data:extend({
       { "battery", 15 },
       { "advanced-circuit", 50 },
     },
-    results = {{ type = "item", name = "player-power-core", amount = 1 }},
+    results = { { type = "item", name = "player-power-core", amount = 1 } },
   },
   {
     type = "recipe",
@@ -124,7 +124,7 @@ data:extend({
       { "steel-plate", 5 },
       { "advanced-circuit", 15 },
     },
-    results = {{ type = "item", name = "player-frame", amount = 1 }},
+    results = { { type = "item", name = "player-frame", amount = 1 } },
   },
 })
 
@@ -185,7 +185,7 @@ data:extend({
       { "advanced-circuit", 10 },
       { "processing-unit", 10 },
     },
-    results = {{ type = "item", name = "player-brain-2", amount = 1 }},
+    results = { { type = "item", name = "player-brain-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -196,7 +196,7 @@ data:extend({
       { "steel-plate", 5 },
       { "player-brain-2", 1 },
     },
-    results = {{ type = "item", name = "player-head-2", amount = 1 }},
+    results = { { type = "item", name = "player-head-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -207,7 +207,7 @@ data:extend({
       { "steel-plate", 5 },
       { "plastic-bar", 15 },
     },
-    results = {{ type = "item", name = "player-boots-2", amount = 1 }},
+    results = { { type = "item", name = "player-boots-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -218,7 +218,7 @@ data:extend({
       { "steel-plate", 5 },
       { "iron-gear-wheel", 15 },
     },
-    results = {{ type = "item", name = "player-gloves-2", amount = 1 }},
+    results = { { type = "item", name = "player-gloves-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -235,6 +235,6 @@ data:extend({
       { "steel-chest", 1 },
       { "processing-unit", 15 },
     },
-    results = {{ type = "item", name = "player-frame-2", amount = 1 }},
+    results = { { type = "item", name = "player-frame-2", amount = 1 } },
   },
 })

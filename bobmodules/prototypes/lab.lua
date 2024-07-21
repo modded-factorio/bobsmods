@@ -186,7 +186,7 @@ if bobmods.modules.ModulesLab then
         { "effectivity-processor", 5 },
         { "productivity-processor", 5 },
       },
-      results = {{ type = "item", name = "lab-module", amount = 1 }},
+      results = { { type = "item", name = "lab-module", amount = 1 } },
     },
   })
 

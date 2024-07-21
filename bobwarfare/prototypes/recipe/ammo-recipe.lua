@@ -9,7 +9,7 @@ data:extend({
       { "bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "bullet-magazine", amount = 1 } },
   },
 
   {
@@ -22,7 +22,7 @@ data:extend({
       { "ap-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "ap-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "ap-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -35,7 +35,7 @@ data:extend({
       { "he-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "he-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "he-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -48,7 +48,7 @@ data:extend({
       { "flame-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "flame-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "flame-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -61,7 +61,7 @@ data:extend({
       { "acid-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "acid-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "acid-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -74,7 +74,7 @@ data:extend({
       { "poison-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "poison-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "poison-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -87,7 +87,7 @@ data:extend({
       { "electric-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "electric-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "electric-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -99,7 +99,7 @@ data:extend({
       { "uranium-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "uranium-rounds-magazine", amount = 1 }},
+    results = { { type = "item", name = "uranium-rounds-magazine", amount = 1 } },
   },
 
   {
@@ -113,7 +113,7 @@ data:extend({
       { "shot", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "better-shotgun-shell", amount = 1 }},
+    results = { { type = "item", name = "better-shotgun-shell", amount = 1 } },
   },
 
   {
@@ -127,7 +127,7 @@ data:extend({
       { "steel-plate", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-ap-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-ap-shell", amount = 1 } },
   },
 
   {
@@ -141,7 +141,7 @@ data:extend({
       { "copper-plate", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-electric-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-electric-shell", amount = 1 } },
   },
 
   {
@@ -155,7 +155,7 @@ data:extend({
       { "explosives", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-explosive-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-explosive-shell", amount = 1 } },
   },
 
   {
@@ -171,7 +171,7 @@ data:extend({
       { type = "fluid", name = "heavy-oil", amount = 5 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-flame-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-flame-shell", amount = 1 } },
   },
 
   {
@@ -186,7 +186,7 @@ data:extend({
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-acid-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-acid-shell", amount = 1 } },
   },
 
   {
@@ -200,7 +200,7 @@ data:extend({
       { "coal", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-poison-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-poison-shell", amount = 1 } },
   },
 
   {
@@ -214,7 +214,7 @@ data:extend({
       { "uranium-238", 1 },
       { "cordite", 1 },
     },
-    results = {{ type = "item", name = "shotgun-uranium-shell", amount = 1 }},
+    results = { { type = "item", name = "shotgun-uranium-shell", amount = 1 } },
   },
 
   {
@@ -227,7 +227,7 @@ data:extend({
       { "laser-rifle-battery-case", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery", amount = 1 } },
   },
 
   {
@@ -240,7 +240,7 @@ data:extend({
       { "laser-rifle-battery", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-ruby", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery-ruby", amount = 1 } },
   },
 
   {
@@ -253,7 +253,7 @@ data:extend({
       { "laser-rifle-battery-ruby", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-sapphire", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery-sapphire", amount = 1 } },
   },
 
   {
@@ -266,7 +266,7 @@ data:extend({
       { "laser-rifle-battery-sapphire", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-emerald", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery-emerald", amount = 1 } },
   },
 
   {
@@ -279,7 +279,7 @@ data:extend({
       { "laser-rifle-battery-emerald", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-amethyst", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery-amethyst", amount = 1 } },
   },
 
   {
@@ -292,7 +292,7 @@ data:extend({
       { "laser-rifle-battery-amethyst", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-topaz", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery-topaz", amount = 1 } },
   },
 
   {
@@ -305,7 +305,7 @@ data:extend({
       { "laser-rifle-battery-topaz", 1 },
       { "battery", 4 },
     },
-    results = {{ type = "item", name = "laser-rifle-battery-diamond", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle-battery-diamond", amount = 1 } },
   },
 
   {
@@ -317,7 +317,7 @@ data:extend({
       { "rocket-body", 1 },
       { "rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-rocket", amount = 1 } },
   },
 
   {
@@ -329,7 +329,7 @@ data:extend({
       { "rocket-body", 1 },
       { "piercing-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-piercing-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-piercing-rocket", amount = 1 } },
   },
 
   {
@@ -341,7 +341,7 @@ data:extend({
       { "rocket-body", 1 },
       { "electric-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-electric-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-electric-rocket", amount = 1 } },
   },
 
   {
@@ -353,7 +353,7 @@ data:extend({
       { "rocket-body", 1 },
       { "explosive-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-explosive-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-explosive-rocket", amount = 1 } },
   },
 
   {
@@ -365,7 +365,7 @@ data:extend({
       { "rocket-body", 1 },
       { "acid-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-acid-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-acid-rocket", amount = 1 } },
   },
 
   {
@@ -377,7 +377,7 @@ data:extend({
       { "rocket-body", 1 },
       { "flame-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-flame-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-flame-rocket", amount = 1 } },
   },
 
   {
@@ -389,7 +389,7 @@ data:extend({
       { "rocket-body", 1 },
       { "poison-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-poison-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-poison-rocket", amount = 1 } },
   },
 })
 
@@ -405,7 +405,7 @@ data:extend({
       { "explosives", 1 },
       { "shot", 5 },
     },
-    results = {{ type = "item", name = "scatter-cannon-shell", amount = 1 }},
+    results = { { type = "item", name = "scatter-cannon-shell", amount = 1 } },
   },
 })
 
@@ -421,7 +421,7 @@ data:extend({
       { "electronic-circuit", 3 },
       { type = "fluid", name = "light-oil", amount = 100 },
     },
-    results = {{ type = "item", name = "fire-capsule", amount = 1 }},
+    results = { { type = "item", name = "fire-capsule", amount = 1 } },
   },
 })
 
@@ -437,7 +437,7 @@ data:extend({
       { "coal", 15 },
       { "explosives", 3 },
     },
-    results = {{ type = "item", name = "poison-artillery-shell", amount = 1 }},
+    results = { { type = "item", name = "poison-artillery-shell", amount = 1 } },
   },
 
   {
@@ -452,7 +452,7 @@ data:extend({
       { "explosives", 3 },
       { type = "fluid", name = "light-oil", amount = 150 },
     },
-    results = {{ type = "item", name = "fire-artillery-shell", amount = 1 }},
+    results = { { type = "item", name = "fire-artillery-shell", amount = 1 } },
   },
 
   {
@@ -465,7 +465,7 @@ data:extend({
       { "plastic-bar", 6 },
       { "explosives", 18 },
     },
-    results = {{ type = "item", name = "explosive-artillery-shell", amount = 1 }},
+    results = { { type = "item", name = "explosive-artillery-shell", amount = 1 } },
   },
 
   {
@@ -479,7 +479,7 @@ data:extend({
       { "explosives", 3 },
       { "distractor-capsule", 5 },
     },
-    results = {{ type = "item", name = "distractor-artillery-shell", amount = 1 }},
+    results = { { type = "item", name = "distractor-artillery-shell", amount = 1 } },
   },
 
   {
@@ -493,7 +493,7 @@ data:extend({
       { "explosives", 15 },
       { "uranium-235", 30 },
     },
-    results = {{ type = "item", name = "atomic-artillery-shell", amount = 1 }},
+    results = { { type = "item", name = "atomic-artillery-shell", amount = 1 } },
   },
 })
 
@@ -508,7 +508,7 @@ data:extend({
       { "plasma-bullet", 5 },
       { "magazine", 1 },
     },
-    results = {{ type = "item", name = "plasma-bullet-magazine", amount = 1 }},
+    results = { { type = "item", name = "plasma-bullet-magazine", amount = 1 } },
   },
   {
     type = "recipe",
@@ -517,7 +517,7 @@ data:extend({
     energy_required = 0.6,
     enabled = false,
     ingredients = {},
-    results = {{ type = "item", name = "shotgun-plasma-shell", amount = 6 }},
+    results = { { type = "item", name = "shotgun-plasma-shell", amount = 6 } },
   },
 
   {
@@ -529,6 +529,6 @@ data:extend({
       { "rocket-body", 1 },
       { "plasma-rocket-warhead", 1 },
     },
-    results = {{ type = "item", name = "bob-plasma-rocket", amount = 1 }},
+    results = { { type = "item", name = "bob-plasma-rocket", amount = 1 } },
   },
 })

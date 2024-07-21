@@ -60,7 +60,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         { "steel-furnace", 1 },
         { "pipe", 2 },
       },
-      results = {{ type = "item", name = "fluid-furnace", amount = 1 }},
+      results = { { type = "item", name = "fluid-furnace", amount = 1 } },
     },
     {
       type = "technology",
@@ -141,7 +141,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           { "pipe", 2 },
           { "steel-mixing-furnace", 1 },
         },
-        results = {{ type = "item", name = "fluid-mixing-furnace", amount = 1 }},
+        results = { { type = "item", name = "fluid-mixing-furnace", amount = 1 } },
       },
       {
         type = "technology",
@@ -223,7 +223,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           ingredients = {
             { "fluid-furnace", 1 },
           },
-          results = {{ type = "item", name = "fluid-mixing-furnace", amount = 1 }},
+          results = { { type = "item", name = "fluid-mixing-furnace", amount = 1 } },
           allow_as_intermediate = false,
         },
         {
@@ -235,13 +235,16 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           ingredients = {
             { "fluid-mixing-furnace", 1 },
           },
-          results = {{ type = "item", name = "fluid-furnace", amount = 1 }},
+          results = { { type = "item", name = "fluid-furnace", amount = 1 } },
           allow_as_intermediate = false,
         },
       })
 
       if data.raw["assembling-machine"]["steel-mixing-furnace"] then
-        bobmods.lib.recipe.add_result("steel-mixing-furnace-from-fluid-mixing-furnace", { type = "item", name = "steel-mixing-furnace", amount = 1 })
+        bobmods.lib.recipe.add_result(
+          "steel-mixing-furnace-from-fluid-mixing-furnace",
+          { type = "item", name = "steel-mixing-furnace", amount = 1 }
+        )
       end
 
       bobmods.lib.tech.add_recipe_unlock("fluid-mixing-furnace", "steel-mixing-furnace-from-fluid-mixing-furnace")
@@ -272,7 +275,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           { "pipe", 2 },
           { "steel-chemical-furnace", 1 },
         },
-        results = {{ type = "item", name = "fluid-chemical-furnace", amount = 1 }},
+        results = { { type = "item", name = "fluid-chemical-furnace", amount = 1 } },
       },
       {
         type = "technology",
@@ -361,7 +364,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
             { "fluid-furnace", 1 },
             { "pipe", 5 },
           },
-          results = {{ type = "item", name = "fluid-chemical-furnace", amount = 1 }},
+          results = { { type = "item", name = "fluid-chemical-furnace", amount = 1 } },
           allow_as_intermediate = false,
         },
         {

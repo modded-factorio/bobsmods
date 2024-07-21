@@ -12,7 +12,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         { "processing-unit", 500 },
         { "copper-plate", 500 },
       },
-      results = {{ type = "item", name = "nuclear-reactor-2", amount = 1 }},
+      results = { { type = "item", name = "nuclear-reactor-2", amount = 1 } },
       requester_paste_multiplier = 1,
     },
     {
@@ -27,7 +27,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         { "processing-unit", 500 },
         { "copper-plate", 500 },
       },
-      results = {{ type = "item", name = "nuclear-reactor-3", amount = 1 }},
+      results = { { type = "item", name = "nuclear-reactor-3", amount = 1 } },
       requester_paste_multiplier = 1,
     },
   })

@@ -119,7 +119,7 @@ data:extend({
       { "pipe", 16 },
       { "processing-unit", 20 },
     },
-    results = {{ type = "item", name = "bob-artillery-wagon-2", amount = 1 }},
+    results = { { type = "item", name = "bob-artillery-wagon-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -133,7 +133,7 @@ data:extend({
       { "pipe", 16 },
       { "processing-unit", 20 },
     },
-    results = {{ type = "item", name = "bob-artillery-wagon-3", amount = 1 }},
+    results = { { type = "item", name = "bob-artillery-wagon-3", amount = 1 } },
   },
 })
 

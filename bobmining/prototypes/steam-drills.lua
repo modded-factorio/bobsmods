@@ -20,7 +20,7 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
         { "burner-mining-drill", 1 },
         { "pipe", 2 },
       },
-      results = {{ type = "item", name = "steam-mining-drill", amount = 1 }},
+      results = { { type = "item", name = "steam-mining-drill", amount = 1 } },
     },
 
     util.merge({

@@ -244,7 +244,7 @@ data:extend({
       { "player-frame", 1 },
       { "assembling-machine-2", 1 },
     },
-    results = {{ type = "item", name = "character", amount = 1 }},
+    results = { { type = "item", name = "character", amount = 1 } },
   },
   {
     type = "recipe",
@@ -256,7 +256,7 @@ data:extend({
       { "assembling-machine-2", 1 },
       { "electric-furnace", 1 },
     },
-    results = {{ type = "item", name = "bob-character-miner", amount = 1 }},
+    results = { { type = "item", name = "bob-character-miner", amount = 1 } },
   },
   {
     type = "recipe",
@@ -268,7 +268,7 @@ data:extend({
       { "assembling-machine-2", 1 },
       { "exoskeleton-equipment", 1 },
     },
-    results = {{ type = "item", name = "bob-character-fighter", amount = 1 }},
+    results = { { type = "item", name = "bob-character-fighter", amount = 1 } },
   },
   {
     type = "recipe",
@@ -279,7 +279,7 @@ data:extend({
       { "player-frame", 1 },
       { "assembling-machine-3", 1 },
     },
-    results = {{ type = "item", name = "bob-character-builder", amount = 1 }},
+    results = { { type = "item", name = "bob-character-builder", amount = 1 } },
   },
 
   {
@@ -291,7 +291,7 @@ data:extend({
       { "player-frame-2", 1 },
       { "assembling-machine-2", 1 },
     },
-    results = {{ type = "item", name = "bob-character-balanced-2", amount = 1 }},
+    results = { { type = "item", name = "bob-character-balanced-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -303,7 +303,7 @@ data:extend({
       { "assembling-machine-2", 1 },
       { "electric-furnace", 1 },
     },
-    results = {{ type = "item", name = "bob-character-miner-2", amount = 1 }},
+    results = { { type = "item", name = "bob-character-miner-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -315,7 +315,7 @@ data:extend({
       { "assembling-machine-2", 1 },
       { "exoskeleton-equipment", 1 },
     },
-    results = {{ type = "item", name = "bob-character-fighter-2", amount = 1 }},
+    results = { { type = "item", name = "bob-character-fighter-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -326,7 +326,7 @@ data:extend({
       { "player-frame-2", 1 },
       { "assembling-machine-3", 1 },
     },
-    results = {{ type = "item", name = "bob-character-builder-2", amount = 1 }},
+    results = { { type = "item", name = "bob-character-builder-2", amount = 1 } },
   },
 
   {
@@ -339,7 +339,7 @@ data:extend({
       { "assembling-machine-3", 1 },
       { "electric-furnace", 1 },
     },
-    results = {{ type = "item", name = "bob-character-engineer", amount = 1 }},
+    results = { { type = "item", name = "bob-character-engineer", amount = 1 } },
   },
   {
     type = "recipe",
@@ -352,7 +352,7 @@ data:extend({
       { "electric-furnace", 1 },
       { "exoskeleton-equipment", 1 },
     },
-    results = {{ type = "item", name = "bob-character-prospector", amount = 1 }},
+    results = { { type = "item", name = "bob-character-prospector", amount = 1 } },
   },
 })
 

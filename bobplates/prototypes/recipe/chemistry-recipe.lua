@@ -492,7 +492,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "water", amount = 25 },
     },
-    results = {{ type = "item", name = "salt", amount = 1 }},
+    results = { { type = "item", name = "salt", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -506,7 +506,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "lithia-water", amount = 25 },
     },
-    results = {{ type = "item", name = "lithium-chloride", amount = 1 }},
+    results = { { type = "item", name = "lithium-chloride", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -522,7 +522,7 @@ data:extend({
       { type = "fluid", name = "sulfur-dioxide", amount = 50 },
       { type = "fluid", name = "hydrogen", amount = 80 },
     },
-    results = {{ type = "item", name = "sulfur", amount = 5 }},
+    results = { { type = "item", name = "sulfur", amount = 5 } },
     crafting_machine_tint = {
       primary = { r = 1.000, g = 0.659, b = 0.000, a = 0.000 }, -- #ffa70000
       secondary = { r = 0.812, g = 1.000, b = 0.000, a = 0.000 }, -- #cfff0000
@@ -543,7 +543,7 @@ data:extend({
       { type = "item", name = "stone", amount = 1 },
       { type = "fluid", name = "hydrogen-chloride", amount = 10 },
     },
-    results = {{ type = "item", name = "calcium-chloride", amount = 1 }},
+    results = { { type = "item", name = "calcium-chloride", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.5, g = 0.5, b = 0.4, a = 0.000 },
       secondary = { r = 0.7, g = 0.5, b = 0.0, a = 0.000 },
@@ -562,7 +562,7 @@ data:extend({
       { type = "item", name = "sodium-hydroxide", amount = 1 },
       { type = "item", name = "bauxite-ore", amount = 1 },
     },
-    results = {{ type = "item", name = "alumina", amount = 1 }},
+    results = { { type = "item", name = "alumina", amount = 1 } },
     order = "f[alumina]",
   },
 
@@ -604,7 +604,7 @@ data:extend({
       { "silver-plate", 1 },
       { type = "fluid", name = "nitrogen-dioxide", amount = 10 },
     },
-    results = {{ type = "item", name = "silver-nitrate", amount = 1 }},
+    results = { { type = "item", name = "silver-nitrate", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -624,7 +624,7 @@ data:extend({
       { "silver-nitrate", 1 },
       { "sodium-hydroxide", 1 },
     },
-    results = {{ type = "item", name = "silver-oxide", amount = 1 }},
+    results = { { type = "item", name = "silver-oxide", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.3, g = 0.3, b = 0.3, a = 0.000 },
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -642,7 +642,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "tungstic-acid", amount = 10 },
     },
-    results = {{ type = "item", name = "tungsten-oxide", amount = 1 }},
+    results = { { type = "item", name = "tungsten-oxide", amount = 1 } },
   },
 
   {
@@ -656,7 +656,7 @@ data:extend({
       { type = "item", name = "tungsten-oxide", amount = 1 },
       { type = "fluid", name = "hydrogen", amount = 15 },
     },
-    results = {{ type = "item", name = "powdered-tungsten", amount = 1 }},
+    results = { { type = "item", name = "powdered-tungsten", amount = 1 } },
   },
 
   {
@@ -670,7 +670,7 @@ data:extend({
       { type = "item", name = "cobalt-ore", amount = 2 },
       { type = "item", name = "stone", amount = 1 },
     },
-    results = {{ type = "item", name = "cobalt-oxide", amount = 2 }},
+    results = { { type = "item", name = "cobalt-oxide", amount = 2 } },
   },
 
   {
@@ -730,7 +730,7 @@ data:extend({
       { type = "item", name = "silicon-powder", amount = 1 },
       { type = "item", name = "carbon", amount = 1 },
     },
-    results = {{ type = "item", name = "silicon-carbide", amount = 2 }},
+    results = { { type = "item", name = "silicon-carbide", amount = 2 } },
   },
 })
 
@@ -798,7 +798,7 @@ data:extend({
       { type = "fluid", name = "hydrogen-sulfide", amount = 50 },
       { type = "fluid", name = "oxygen", amount = 25 },
     },
-    results = {{ type = "item", name = "sulfur", amount = 5 }},
+    results = { { type = "item", name = "sulfur", amount = 5 } },
     crafting_machine_tint = {
       primary = { r = 1.000, g = 0.659, b = 0.000 },
       secondary = { r = 1.0, g = 0.000, b = 0.000 },

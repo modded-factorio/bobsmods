@@ -296,7 +296,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         { type = "item", name = "aluminium-plate", amount = 5 },
         { type = "item", name = "sodium-cobaltate", amount = 2 },
       },
-      results = {{ type = "item", name = "rtg", amount = 1 }},
+      results = { { type = "item", name = "rtg", amount = 1 } },
     },
   })
 

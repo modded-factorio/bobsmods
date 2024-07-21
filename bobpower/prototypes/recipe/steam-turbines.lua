@@ -11,7 +11,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "copper-plate", 25 },
         { "iron-gear-wheel", 20 },
       },
-      results = {{ type = "item", name = "steam-turbine", amount = 1 }},
+      results = { { type = "item", name = "steam-turbine", amount = 1 } },
     },
 
     {
@@ -25,7 +25,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "steel-plate", 25 },
         { "iron-gear-wheel", 25 },
       },
-      results = {{ type = "item", name = "steam-turbine-2", amount = 1 }},
+      results = { { type = "item", name = "steam-turbine-2", amount = 1 } },
     },
     {
       type = "recipe",
@@ -38,7 +38,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "steel-plate", 25 },
         { "iron-gear-wheel", 25 },
       },
-      results = {{ type = "item", name = "steam-turbine-3", amount = 1 }},
+      results = { { type = "item", name = "steam-turbine-3", amount = 1 } },
     },
   })
 end

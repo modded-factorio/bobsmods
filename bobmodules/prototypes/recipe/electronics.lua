@@ -8,7 +8,7 @@ data:extend({
       { "plastic-bar", 2 },
       { "steel-plate", 1 },
     },
-    results = {{ type = "item", name = "module-case", amount = 1 }},
+    results = { { type = "item", name = "module-case", amount = 1 } },
   },
 
   {
@@ -19,7 +19,7 @@ data:extend({
     ingredients = {
       { "copper-plate", 1 },
     },
-    results = {{ type = "item", name = "module-contact", amount = 5 }},
+    results = { { type = "item", name = "module-contact", amount = 5 } },
   },
 
   {
@@ -32,7 +32,7 @@ data:extend({
       { "copper-plate", 1 },
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "module-circuit-board", amount = 1 }},
+    results = { { type = "item", name = "module-circuit-board", amount = 1 } },
   },
 })
 
@@ -47,7 +47,7 @@ data:extend({
       { "copper-plate", 1 },
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "module-processor-board", amount = 4 }}
+    results = { { type = "item", name = "module-processor-board", amount = 4 } },
   },
 
   {
@@ -60,7 +60,7 @@ data:extend({
       { "copper-plate", 1 },
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "module-processor-board-2", amount = 4 }},
+    results = { { type = "item", name = "module-processor-board-2", amount = 4 } },
   },
 
   {
@@ -73,7 +73,7 @@ data:extend({
       { "copper-plate", 2 },
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "module-processor-board-3", amount = 4 }},
+    results = { { type = "item", name = "module-processor-board-3", amount = 4 } },
   },
 })
 
@@ -88,7 +88,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "advanced-circuit", 2 },
     },
-    results = {{ type = "item", name = "speed-processor", amount = 1 }},
+    results = { { type = "item", name = "speed-processor", amount = 1 } },
   },
 
   {
@@ -101,7 +101,7 @@ data:extend({
       { "advanced-circuit", 2 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "speed-processor-2", amount = 1 }},
+    results = { { type = "item", name = "speed-processor-2", amount = 1 } },
   },
 
   {
@@ -113,7 +113,7 @@ data:extend({
       { "module-processor-board-3", 1 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "speed-processor-3", amount = 1 }},
+    results = { { type = "item", name = "speed-processor-3", amount = 1 } },
   },
 })
 
@@ -128,7 +128,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "advanced-circuit", 2 },
     },
-    results = {{ type = "item", name = "effectivity-processor", amount = 1 }},
+    results = { { type = "item", name = "effectivity-processor", amount = 1 } },
   },
 
   {
@@ -141,7 +141,7 @@ data:extend({
       { "advanced-circuit", 2 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "effectivity-processor-2", amount = 1 }},
+    results = { { type = "item", name = "effectivity-processor-2", amount = 1 } },
   },
 
   {
@@ -153,7 +153,7 @@ data:extend({
       { "module-processor-board-3", 1 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "effectivity-processor-3", amount = 1 }},
+    results = { { type = "item", name = "effectivity-processor-3", amount = 1 } },
   },
 })
 
@@ -168,7 +168,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "advanced-circuit", 2 },
     },
-    results = {{ type = "item", name = "productivity-processor", amount = 1 }},
+    results = { { type = "item", name = "productivity-processor", amount = 1 } },
   },
 
   {
@@ -181,7 +181,7 @@ data:extend({
       { "advanced-circuit", 2 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "productivity-processor-2", amount = 1 }},
+    results = { { type = "item", name = "productivity-processor-2", amount = 1 } },
   },
 
   {
@@ -193,7 +193,7 @@ data:extend({
       { "module-processor-board-3", 1 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "productivity-processor-3", amount = 1 }},
+    results = { { type = "item", name = "productivity-processor-3", amount = 1 } },
   },
 })
 
@@ -208,7 +208,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "advanced-circuit", 2 },
     },
-    results = {{ type = "item", name = "pollution-clean-processor", amount = 1 }},
+    results = { { type = "item", name = "pollution-clean-processor", amount = 1 } },
   },
 
   {
@@ -221,7 +221,7 @@ data:extend({
       { "advanced-circuit", 2 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "pollution-clean-processor-2", amount = 1 }},
+    results = { { type = "item", name = "pollution-clean-processor-2", amount = 1 } },
   },
 
   {
@@ -233,7 +233,7 @@ data:extend({
       { "module-processor-board-3", 1 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "pollution-clean-processor-3", amount = 1 }},
+    results = { { type = "item", name = "pollution-clean-processor-3", amount = 1 } },
   },
 })
 
@@ -248,7 +248,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "advanced-circuit", 2 },
     },
-    results = {{ type = "item", name = "pollution-create-processor", amount = 1 }},
+    results = { { type = "item", name = "pollution-create-processor", amount = 1 } },
   },
 
   {
@@ -261,7 +261,7 @@ data:extend({
       { "advanced-circuit", 2 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "pollution-create-processor-2", amount = 1 }},
+    results = { { type = "item", name = "pollution-create-processor-2", amount = 1 } },
   },
 
   {
@@ -273,6 +273,6 @@ data:extend({
       { "module-processor-board-3", 1 },
       { "processing-unit", 2 },
     },
-    results = {{ type = "item", name = "pollution-create-processor-3", amount = 1 }},
+    results = { { type = "item", name = "pollution-create-processor-3", amount = 1 } },
   },
 })

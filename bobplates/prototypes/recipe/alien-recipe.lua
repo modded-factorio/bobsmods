@@ -17,7 +17,7 @@ then
         { type = "item", name = "alien-artifact-blue", amount = 1 },
         { type = "item", name = "tungsten-plate", amount = 10 },
       },
-      results = {{ type = "item", name = "alien-blue-alloy", amount = 10 }},
+      results = { { type = "item", name = "alien-blue-alloy", amount = 10 } },
       crafting_machine_tint = {
         primary = { r = 0.0, g = 0.8, b = 0.0, a = 0.000 },
         secondary = { r = 0.5, g = 1.0, b = 0.5, a = 0.000 },
@@ -35,7 +35,7 @@ then
         { type = "item", name = "alien-artifact-orange", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
       },
-      results = {{ type = "item", name = "alien-orange-alloy", amount = 10 }},
+      results = { { type = "item", name = "alien-orange-alloy", amount = 10 } },
       crafting_machine_tint = {
         primary = { r = 0.8, g = 0.4, b = 0.0, a = 0.000 },
         secondary = { r = 1.0, g = 0.6, b = 0.5, a = 0.000 },

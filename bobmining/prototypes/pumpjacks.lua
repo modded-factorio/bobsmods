@@ -61,7 +61,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { "electronic-circuit", 5 },
         { "pipe", 10 },
       },
-      results = {{ type = "item", name = "bob-pumpjack-1", amount = 1 }},
+      results = { { type = "item", name = "bob-pumpjack-1", amount = 1 } },
       enabled = false,
     },
     {
@@ -75,7 +75,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { "advanced-circuit", 5 },
         { "pipe", 10 },
       },
-      results = {{ type = "item", name = "bob-pumpjack-2", amount = 1 }},
+      results = { { type = "item", name = "bob-pumpjack-2", amount = 1 } },
       enabled = false,
     },
     {
@@ -89,7 +89,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { "processing-unit", 5 },
         { "pipe", 10 },
       },
-      results = {{ type = "item", name = "bob-pumpjack-3", amount = 1 }},
+      results = { { type = "item", name = "bob-pumpjack-3", amount = 1 } },
       enabled = false,
     },
     {
@@ -103,7 +103,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { "processing-unit", 5 },
         { "pipe", 10 },
       },
-      results = {{ type = "item", name = "bob-pumpjack-4", amount = 1 }},
+      results = { { type = "item", name = "bob-pumpjack-4", amount = 1 } },
       enabled = false,
     },
   })

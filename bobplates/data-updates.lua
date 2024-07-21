@@ -62,7 +62,7 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
         { "iron-plate", 2 },
         { type = "fluid", name = "oxygen", amount = 10 },
       },
-      results = {{ type = "item", name = "steel-plate", amount = 1 }},
+      results = { { type = "item", name = "steel-plate", amount = 1 } },
       allow_decomposition = false,
     },
   })
@@ -88,7 +88,7 @@ else
         { "iron-plate", 5 },
         { type = "fluid", name = "oxygen", amount = 50 },
       },
-      results = {{ type = "item", name = "steel-plate", amount = 2 }},
+      results = { { type = "item", name = "steel-plate", amount = 2 } },
       allow_decomposition = false,
     },
   })

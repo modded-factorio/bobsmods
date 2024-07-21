@@ -19,7 +19,7 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         { "iron-plate", 8 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "bob-burner-generator", amount = 1 }},
+      results = { { type = "item", name = "bob-burner-generator", amount = 1 } },
     },
 
     {

@@ -28,7 +28,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "steel-plate", 10 },
     },
-    results = {{ type = "item", name = "vehicle-belt-immunity-equipment", amount = 1 }},
+    results = { { type = "item", name = "vehicle-belt-immunity-equipment", amount = 1 } },
   },
   {
     type = "belt-immunity-equipment",

@@ -10,7 +10,7 @@ data:extend({
       { type = "item", name = "sulfur", amount = 1 },
       { type = "item", name = "stone", amount = 1 },
     },
-    results = {{ type = "item", name = "fertiliser", amount = 1 }},
+    results = { { type = "item", name = "fertiliser", amount = 1 } },
   },
 
   {
@@ -37,7 +37,7 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 4 },
       { type = "item", name = "stone", amount = 2 },
     },
-    results = {{ type = "item", name = "bob-greenhouse", amount = 1 }},
+    results = { { type = "item", name = "bob-greenhouse", amount = 1 } },
   },
 
   {
@@ -85,6 +85,6 @@ data:extend({
     ingredients = {
       { "wood", 5 },
     },
-    results = {{ type = "item", name = "wood-pellets", amount = 1 }},
+    results = { { type = "item", name = "wood-pellets", amount = 1 } },
   },
 })

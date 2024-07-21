@@ -59,7 +59,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "iron-gear-wheel", 2 },
     },
-    results = {{ type = "item", name = "repair-pack-2", amount = 1 }},
+    results = { { type = "item", name = "repair-pack-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -70,7 +70,7 @@ data:extend({
       { "iron-gear-wheel", 2 },
       { "steel-plate", 2 },
     },
-    results = {{ type = "item", name = "repair-pack-3", amount = 1 }},
+    results = { { type = "item", name = "repair-pack-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -81,7 +81,7 @@ data:extend({
       { "iron-gear-wheel", 2 },
       { "steel-plate", 2 },
     },
-    results = {{ type = "item", name = "repair-pack-4", amount = 1 }},
+    results = { { type = "item", name = "repair-pack-4", amount = 1 } },
   },
   {
     type = "recipe",
@@ -92,7 +92,7 @@ data:extend({
       { "iron-gear-wheel", 2 },
       { "steel-plate", 2 },
     },
-    results = {{ type = "item", name = "repair-pack-5", amount = 1 }},
+    results = { { type = "item", name = "repair-pack-5", amount = 1 } },
   },
 })
 

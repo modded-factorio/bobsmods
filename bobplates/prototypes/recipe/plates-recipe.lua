@@ -6,7 +6,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = { { "lead-ore", 1 } },
-    results = {{ type = "item", name = "lead-plate", amount = 1 }},
+    results = { { type = "item", name = "lead-plate", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -17,7 +17,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = { { "silver-ore", 1 } },
-    results = {{ type = "item", name = "silver-plate", amount = 1 }},
+    results = { { type = "item", name = "silver-plate", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -28,7 +28,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = { { "tin-ore", 1 } },
-    results = {{ type = "item", name = "tin-plate", amount = 1 }},
+    results = { { type = "item", name = "tin-plate", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -43,7 +43,7 @@ data:extend({
       { "lead-oxide", 2 },
       { "carbon", 1 },
     },
-    results = {{ type = "item", name = "lead-plate", amount = 2 }},
+    results = { { type = "item", name = "lead-plate", amount = 2 } },
     allow_decomposition = false,
   },
 
@@ -58,7 +58,7 @@ data:extend({
       { type = "item", name = "gold-ore", amount = 1 },
       { type = "fluid", name = "chlorine", amount = 3 },
     },
-    results = {{ type = "item", name = "gold-plate", amount = 1 }},
+    results = { { type = "item", name = "gold-plate", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -73,7 +73,7 @@ data:extend({
       { type = "item", name = "cobalt-oxide", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
-    results = {{ type = "item", name = "cobalt-plate", amount = 1 }},
+    results = { { type = "item", name = "cobalt-plate", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -88,7 +88,7 @@ data:extend({
       { type = "item", name = "nickel-plate", amount = 1 },
       { type = "item", name = "powdered-tungsten", amount = 4 },
     },
-    results = {{ type = "item", name = "tungsten-plate", amount = 5 }},
+    results = { { type = "item", name = "tungsten-plate", amount = 5 } },
     allow_decomposition = false,
   },
 
@@ -103,7 +103,7 @@ data:extend({
       { type = "item", name = "zinc-ore", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
-    results = {{ type = "item", name = "zinc-plate", amount = 1 }},
+    results = { { type = "item", name = "zinc-plate", amount = 1 } },
     allow_decomposition = false,
   },
 
@@ -140,7 +140,7 @@ data:extend({
       { "alumina", 2 },
       { "carbon", 1 },
     },
-    results = {{ type = "item", name = "aluminium-plate", amount = 2 }},
+    results = { { type = "item", name = "aluminium-plate", amount = 2 } },
     allow_decomposition = false,
   },
 
@@ -156,7 +156,7 @@ data:extend({
       { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "rutile-ore", amount = 2 },
     },
-    results = {{ type = "item", name = "titanium-plate", amount = 2 }},
+    results = { { type = "item", name = "titanium-plate", amount = 2 } },
     allow_decomposition = false,
   },
 
@@ -172,7 +172,7 @@ data:extend({
       { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "quartz", amount = 2 },
     },
-    results = {{ type = "item", name = "silicon", amount = 2 }},
+    results = { { type = "item", name = "silicon", amount = 2 } },
     allow_decomposition = false,
   },
 
@@ -186,7 +186,7 @@ data:extend({
     ingredients = {
       { "lithium-chloride", 1 },
     },
-    results = {{ type = "item", name = "lithium", amount = 1 }},
+    results = { { type = "item", name = "lithium", amount = 1 } },
     allow_decomposition = false,
   },
 })

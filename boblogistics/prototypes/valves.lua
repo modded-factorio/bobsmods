@@ -24,7 +24,7 @@ data:extend({
       { "iron-plate", 1 },
       { "pipe", 1 },
     },
-    results = {{ type = "item", name = "bob-valve", amount = 1 }},
+    results = { { type = "item", name = "bob-valve", amount = 1 } },
   },
   {
     type = "storage-tank",
@@ -209,7 +209,7 @@ data:extend({
       { "iron-plate", 1 },
       { "pipe", 1 },
     },
-    results = {{ type = "item", name = "bob-overflow-valve", amount = 1 }},
+    results = { { type = "item", name = "bob-overflow-valve", amount = 1 } },
   },
   {
     type = "storage-tank",
@@ -396,7 +396,7 @@ data:extend({
       { "iron-plate", 1 },
       { "pipe", 1 },
     },
-    results = {{ type = "item", name = "bob-topup-valve", amount = 1 }},
+    results = { { type = "item", name = "bob-topup-valve", amount = 1 } },
   },
   {
     type = "storage-tank",

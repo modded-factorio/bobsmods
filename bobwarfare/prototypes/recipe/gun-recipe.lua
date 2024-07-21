@@ -9,7 +9,7 @@ data:extend({
       { "copper-plate", 5 },
       { "iron-gear-wheel", 10 },
     },
-    results = {{ type = "item", name = "rifle", amount = 1 }},
+    results = { { type = "item", name = "rifle", amount = 1 } },
   },
 
   {
@@ -22,7 +22,7 @@ data:extend({
       { "wood", 10 },
       { "iron-gear-wheel", 10 },
     },
-    results = {{ type = "item", name = "sniper-rifle", amount = 1 }},
+    results = { { type = "item", name = "sniper-rifle", amount = 1 } },
   },
 
   {
@@ -36,6 +36,6 @@ data:extend({
       { "iron-gear-wheel", 5 },
       { "plastic-bar", 3 },
     },
-    results = {{ type = "item", name = "laser-rifle", amount = 1 }},
+    results = { { type = "item", name = "laser-rifle", amount = 1 } },
   },
 })

@@ -8,7 +8,7 @@ data:extend({
       { "copper-cable", 2 },
       { "electronic-circuit", 5 },
     },
-    results = {{ type = "item", name = "roboport-antenna-1", amount = 1 }},
+    results = { { type = "item", name = "roboport-antenna-1", amount = 1 } },
     energy_required = 0.2,
   },
   {
@@ -20,7 +20,7 @@ data:extend({
       { "copper-cable", 2 },
       { "advanced-circuit", 5 },
     },
-    results = {{ type = "item", name = "roboport-antenna-2", amount = 1 }},
+    results = { { type = "item", name = "roboport-antenna-2", amount = 1 } },
     energy_required = 0.2,
   },
   {
@@ -32,7 +32,7 @@ data:extend({
       { "copper-cable", 2 },
       { "processing-unit", 5 },
     },
-    results = {{ type = "item", name = "roboport-antenna-3", amount = 1 }},
+    results = { { type = "item", name = "roboport-antenna-3", amount = 1 } },
     energy_required = 0.2,
   },
   {
@@ -45,7 +45,7 @@ data:extend({
       { "copper-cable", 2 },
       { "processing-unit", 5 },
     },
-    results = {{ type = "item", name = "roboport-antenna-4", amount = 1 }},
+    results = { { type = "item", name = "roboport-antenna-4", amount = 1 } },
     energy_required = 0.2,
   },
 })
@@ -60,7 +60,7 @@ data:extend({
       { "electronic-circuit", 5 },
       { "battery", 2 },
     },
-    results = {{ type = "item", name = "roboport-chargepad-1", amount = 1 }},
+    results = { { type = "item", name = "roboport-chargepad-1", amount = 1 } },
     energy_required = 1,
   },
   {
@@ -72,7 +72,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "battery", 2 },
     },
-    results = {{ type = "item", name = "roboport-chargepad-2", amount = 1 }},
+    results = { { type = "item", name = "roboport-chargepad-2", amount = 1 } },
     energy_required = 1,
   },
   {
@@ -84,7 +84,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 2 },
     },
-    results = {{ type = "item", name = "roboport-chargepad-3", amount = 1 }},
+    results = { { type = "item", name = "roboport-chargepad-3", amount = 1 } },
     energy_required = 1,
   },
   {
@@ -96,7 +96,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 2 },
     },
-    results = {{ type = "item", name = "roboport-chargepad-4", amount = 1 }},
+    results = { { type = "item", name = "roboport-chargepad-4", amount = 1 } },
     energy_required = 1,
   },
 })
@@ -110,7 +110,7 @@ data:extend({
       { "steel-plate", 15 },
       { "iron-gear-wheel", 20 },
     },
-    results = {{ type = "item", name = "roboport-door-1", amount = 1 }},
+    results = { { type = "item", name = "roboport-door-1", amount = 1 } },
     energy_required = 1,
   },
   {
@@ -121,7 +121,7 @@ data:extend({
       { "steel-plate", 15 },
       { "iron-gear-wheel", 20 },
     },
-    results = {{ type = "item", name = "roboport-door-2", amount = 1 }},
+    results = { { type = "item", name = "roboport-door-2", amount = 1 } },
     energy_required = 1,
   },
   {
@@ -132,7 +132,7 @@ data:extend({
       { "steel-plate", 15 },
       { "iron-gear-wheel", 20 },
     },
-    results = {{ type = "item", name = "roboport-door-3", amount = 1 }},
+    results = { { type = "item", name = "roboport-door-3", amount = 1 } },
     energy_required = 1,
   },
   {
@@ -143,7 +143,7 @@ data:extend({
       { "steel-plate", 15 },
       { "iron-gear-wheel", 20 },
     },
-    results = {{ type = "item", name = "roboport-door-4", amount = 1 }},
+    results = { { type = "item", name = "roboport-door-4", amount = 1 } },
     energy_required = 1,
   },
 })

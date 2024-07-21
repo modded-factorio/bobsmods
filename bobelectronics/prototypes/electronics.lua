@@ -19,7 +19,7 @@ if data.raw.item["tin-plate"] then
         { "copper-cable", 3 },
         { "tin-plate", 1 },
       },
-      results = {{ type = "item", name = "tinned-copper-cable", amount = 3 }},
+      results = { { type = "item", name = "tinned-copper-cable", amount = 3 } },
       allow_decomposition = false,
     },
   })
@@ -45,7 +45,7 @@ data:extend({
       { "copper-cable", 2 },
       { "rubber", 1 },
     },
-    results = {{ type = "item", name = "insulated-cable", amount = 2 }},
+    results = { { type = "item", name = "insulated-cable", amount = 2 } },
     allow_decomposition = false,
   },
 })
@@ -71,7 +71,7 @@ if data.raw.item["gold-plate"] then
         { "copper-cable", 3 },
         { "gold-plate", 1 },
       },
-      results = {{ type = "item", name = "gilded-copper-cable", amount = 3 }},
+      results = { { type = "item", name = "gilded-copper-cable", amount = 3 } },
       allow_decomposition = false,
     },
   })
@@ -99,7 +99,7 @@ if data.raw.item["solder-alloy"] then
         { "solder-alloy", 4 },
         { "resin", 1 },
       },
-      results = {{ type = "item", name = "solder", amount = 8 }},
+      results = { { type = "item", name = "solder", amount = 8 } },
       allow_decomposition = false,
     },
   })
@@ -126,7 +126,7 @@ data:extend({
       { "copper-cable", 1 },
       { "coal", 1 },
     },
-    results = {{ type = "item", name = "basic-electronic-components", amount = 5 }},
+    results = { { type = "item", name = "basic-electronic-components", amount = 5 } },
     allow_decomposition = false,
   },
 })
@@ -152,7 +152,7 @@ data:extend({
       { "copper-cable", 1 },
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "electronic-components", amount = 5 }},
+    results = { { type = "item", name = "electronic-components", amount = 5 } },
     allow_decomposition = false,
   },
 })
@@ -179,7 +179,7 @@ data:extend({
       { "plastic-bar", 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 5 },
     },
-    results = {{ type = "item", name = "intergrated-electronics", amount = 5 }},
+    results = { { type = "item", name = "intergrated-electronics", amount = 5 } },
     allow_decomposition = false,
   },
 })
@@ -206,7 +206,7 @@ data:extend({
       { "plastic-bar", 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 5 },
     },
-    results = {{ type = "item", name = "processing-electronics", amount = 5 }},
+    results = { { type = "item", name = "processing-electronics", amount = 5 } },
     allow_decomposition = false,
   },
 })
@@ -229,7 +229,7 @@ data:extend({
     ingredients = {
       { "wood", 1 },
     },
-    results = {{ type = "item", name = "wooden-board", amount = 2 }},
+    results = { { type = "item", name = "wooden-board", amount = 2 } },
   },
 })
 
@@ -253,7 +253,7 @@ data:extend({
       { "wood", 1 },
       { "resin", 1 },
     },
-    results = {{ type = "item", name = "phenolic-board", amount = 2 }},
+    results = { { type = "item", name = "phenolic-board", amount = 2 } },
   },
 })
 
@@ -276,7 +276,7 @@ data:extend({
     ingredients = {
       { "plastic-bar", 1 },
     },
-    results = {{ type = "item", name = "fibreglass-board", amount = 2 }},
+    results = { { type = "item", name = "fibreglass-board", amount = 2 } },
   },
 })
 
@@ -300,7 +300,7 @@ data:extend({
       { "wooden-board", 1 },
       { "copper-cable", 3 },
     },
-    results = {{ type = "item", name = "basic-circuit-board", amount = 1 }},
+    results = { { type = "item", name = "basic-circuit-board", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -327,7 +327,7 @@ data:extend({
       { "copper-plate", 1 },
       { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
     },
-    results = {{ type = "item", name = "circuit-board", amount = 1 }},
+    results = { { type = "item", name = "circuit-board", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -354,7 +354,7 @@ data:extend({
       { "copper-plate", 1 },
       { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
     },
-    results = {{ type = "item", name = "superior-circuit-board", amount = 1 }},
+    results = { { type = "item", name = "superior-circuit-board", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -381,7 +381,7 @@ data:extend({
       { "copper-plate", 2 },
       { type = "fluid", name = "ferric-chloride-solution", amount = 10 },
     },
-    results = {{ type = "item", name = "multi-layer-circuit-board", amount = 1 }},
+    results = { { type = "item", name = "multi-layer-circuit-board", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -407,7 +407,7 @@ data:extend({
       { "basic-circuit-board", 1 },
       { "basic-electronic-components", 5 },
     },
-    results = {{ type = "item", name = "electronic-circuit", amount = 1 }},
+    results = { { type = "item", name = "electronic-circuit", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -434,7 +434,7 @@ data:extend({
       { "basic-electronic-components", 4 },
       { "electronic-components", 4 },
     },
-    results = {{ type = "item", name = "advanced-circuit", amount = 1 }},
+    results = { { type = "item", name = "advanced-circuit", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -462,7 +462,7 @@ data:extend({
       { "electronic-components", 4 },
       { "intergrated-electronics", 2 },
     },
-    results = {{ type = "item", name = "processing-unit", amount = 1 }},
+    results = { { type = "item", name = "processing-unit", amount = 1 } },
     allow_decomposition = false,
   },
 })
@@ -491,7 +491,7 @@ data:extend({
       { "intergrated-electronics", 4 },
       { "processing-electronics", 1 },
     },
-    results = {{ type = "item", name = "advanced-processing-unit", amount = 1 }},
+    results = { { type = "item", name = "advanced-processing-unit", amount = 1 } },
     allow_decomposition = false,
   },
 })

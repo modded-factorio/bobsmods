@@ -16,7 +16,7 @@ data:extend({
       { "processing-unit", 5 },
       { "productivity-module-2", 1 },
     },
-    results = {{ type = "item", name = "energy-shield-mk3-equipment", amount = 1 }},
+    results = { { type = "item", name = "energy-shield-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -29,7 +29,7 @@ data:extend({
       { "effectivity-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    results = {{ type = "item", name = "energy-shield-mk4-equipment", amount = 1 }},
+    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -42,7 +42,7 @@ data:extend({
       { "effectivity-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    results = {{ type = "item", name = "energy-shield-mk5-equipment", amount = 1 }},
+    results = { { type = "item", name = "energy-shield-mk5-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -55,7 +55,7 @@ data:extend({
       { "effectivity-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    results = {{ type = "item", name = "energy-shield-mk6-equipment", amount = 1 }},
+    results = { { type = "item", name = "energy-shield-mk6-equipment", amount = 1 } },
   },
 })
 
@@ -77,7 +77,7 @@ data:extend({
       { "battery-mk2-equipment", 2 },
       { "battery", 5 },
     },
-    results = {{ type = "item", name = "battery-mk3-equipment", amount = 1 }},
+    results = { { type = "item", name = "battery-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -88,7 +88,7 @@ data:extend({
       { "battery-mk3-equipment", 2 },
       { "processing-unit", 5 },
     },
-    results = {{ type = "item", name = "battery-mk4-equipment", amount = 1 }},
+    results = { { type = "item", name = "battery-mk4-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -99,7 +99,7 @@ data:extend({
       { "battery-mk4-equipment", 2 },
       { "battery", 5 },
     },
-    results = {{ type = "item", name = "battery-mk5-equipment", amount = 1 }},
+    results = { { type = "item", name = "battery-mk5-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -110,7 +110,7 @@ data:extend({
       { "battery-mk5-equipment", 2 },
       { "processing-unit", 5 },
     },
-    results = {{ type = "item", name = "battery-mk6-equipment", amount = 1 }},
+    results = { { type = "item", name = "battery-mk6-equipment", amount = 1 } },
   },
 })
 
@@ -127,7 +127,7 @@ data:extend({
       { "speed-module-3", 2 },
       { "productivity-module-3", 2 },
     },
-    results = {{ type = "item", name = "fusion-reactor-equipment-2", amount = 1 }},
+    results = { { type = "item", name = "fusion-reactor-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -141,7 +141,7 @@ data:extend({
       { "speed-module-3", 2 },
       { "productivity-module-3", 2 },
     },
-    results = {{ type = "item", name = "fusion-reactor-equipment-3", amount = 1 }},
+    results = { { type = "item", name = "fusion-reactor-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -155,7 +155,7 @@ data:extend({
       { "speed-module-3", 2 },
       { "productivity-module-3", 2 },
     },
-    results = {{ type = "item", name = "fusion-reactor-equipment-4", amount = 1 }},
+    results = { { type = "item", name = "fusion-reactor-equipment-4", amount = 1 } },
   },
 })
 
@@ -171,7 +171,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "plastic-bar", 2 },
     },
-    results = {{ type = "item", name = "night-vision-equipment-2", amount = 1 }},
+    results = { { type = "item", name = "night-vision-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -183,7 +183,7 @@ data:extend({
       { "processing-unit", 5 },
       { "plastic-bar", 2 },
     },
-    results = {{ type = "item", name = "night-vision-equipment-3", amount = 1 }},
+    results = { { type = "item", name = "night-vision-equipment-3", amount = 1 } },
   },
 })
 
@@ -202,7 +202,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "copper-plate", 2 },
     },
-    results = {{ type = "item", name = "solar-panel-equipment-2", amount = 1 }},
+    results = { { type = "item", name = "solar-panel-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -215,7 +215,7 @@ data:extend({
       { "processing-unit", 5 },
       { "copper-plate", 2 },
     },
-    results = {{ type = "item", name = "solar-panel-equipment-3", amount = 1 }},
+    results = { { type = "item", name = "solar-panel-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -228,7 +228,7 @@ data:extend({
       { "processing-unit", 5 },
       { "copper-cable", 5 },
     },
-    results = {{ type = "item", name = "solar-panel-equipment-4", amount = 1 }},
+    results = { { type = "item", name = "solar-panel-equipment-4", amount = 1 } },
   },
 })
 
@@ -250,7 +250,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "battery", 3 },
     },
-    results = {{ type = "item", name = "personal-laser-defense-equipment-2", amount = 1 }},
+    results = { { type = "item", name = "personal-laser-defense-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -263,7 +263,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    results = {{ type = "item", name = "personal-laser-defense-equipment-3", amount = 1 }},
+    results = { { type = "item", name = "personal-laser-defense-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -276,7 +276,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    results = {{ type = "item", name = "personal-laser-defense-equipment-4", amount = 1 }},
+    results = { { type = "item", name = "personal-laser-defense-equipment-4", amount = 1 } },
   },
   {
     type = "recipe",
@@ -289,7 +289,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    results = {{ type = "item", name = "personal-laser-defense-equipment-5", amount = 1 }},
+    results = { { type = "item", name = "personal-laser-defense-equipment-5", amount = 1 } },
   },
   {
     type = "recipe",
@@ -302,7 +302,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    results = {{ type = "item", name = "personal-laser-defense-equipment-6", amount = 1 }},
+    results = { { type = "item", name = "personal-laser-defense-equipment-6", amount = 1 } },
   },
 })
 
@@ -319,7 +319,7 @@ data:extend({
       { "iron-gear-wheel", 30 },
       { "steel-plate", 20 },
     },
-    results = {{ type = "item", name = "exoskeleton-equipment-2", amount = 1 }},
+    results = { { type = "item", name = "exoskeleton-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -332,7 +332,7 @@ data:extend({
       { "iron-gear-wheel", 30 },
       { "steel-plate", 20 },
     },
-    results = {{ type = "item", name = "exoskeleton-equipment-3", amount = 1 }},
+    results = { { type = "item", name = "exoskeleton-equipment-3", amount = 1 } },
   },
 })
 

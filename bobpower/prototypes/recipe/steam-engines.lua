@@ -10,7 +10,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "pipe", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "steam-engine-2", amount = 1 }},
+      results = { { type = "item", name = "steam-engine-2", amount = 1 } },
     },
     {
       type = "recipe",
@@ -22,7 +22,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "steel-plate", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "steam-engine-3", amount = 1 }},
+      results = { { type = "item", name = "steam-engine-3", amount = 1 } },
     },
     {
       type = "recipe",
@@ -34,7 +34,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "steel-plate", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "steam-engine-4", amount = 1 }},
+      results = { { type = "item", name = "steam-engine-4", amount = 1 } },
     },
     {
       type = "recipe",
@@ -46,7 +46,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "steel-plate", 5 },
         { "iron-gear-wheel", 5 },
       },
-      results = {{ type = "item", name = "steam-engine-5", amount = 1 }},
+      results = { { type = "item", name = "steam-engine-5", amount = 1 } },
     },
   })
 end

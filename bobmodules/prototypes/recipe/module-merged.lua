@@ -14,7 +14,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "module-contact", 4 },
       },
       energy_required = 15,
-      results = {{ type = "item", name = "raw-speed-module-1", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-1", amount = 1 } },
     },
 
     {
@@ -28,7 +28,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "module-contact", 5 },
       },
       energy_required = 30,
-      results = {{ type = "item", name = "raw-speed-module-2", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-2", amount = 1 } },
     },
 
     {
@@ -42,7 +42,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "advanced-circuit", 7 },
       },
       energy_required = 45,
-      results = {{ type = "item", name = "raw-speed-module-3", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-3", amount = 1 } },
     },
 
     {
@@ -57,7 +57,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 60,
-      results = {{ type = "item", name = "raw-speed-module-4", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-4", amount = 1 } },
     },
 
     {
@@ -72,7 +72,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 75,
-      results = {{ type = "item", name = "raw-speed-module-5", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-5", amount = 1 } },
     },
 
     {
@@ -87,7 +87,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 90,
-      results = {{ type = "item", name = "raw-speed-module-6", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-6", amount = 1 } },
     },
 
     {
@@ -102,7 +102,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "processing-unit", 8 },
       },
       energy_required = 105,
-      results = {{ type = "item", name = "raw-speed-module-7", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-7", amount = 1 } },
     },
 
     {
@@ -118,7 +118,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         { "processing-unit", 8 },
       },
       energy_required = 120,
-      results = {{ type = "item", name = "raw-speed-module-8", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-8", amount = 1 } },
     },
   })
 
@@ -136,7 +136,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 15,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-1", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-1", amount = 1 } },
     },
 
     {
@@ -150,7 +150,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 30,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-2", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-2", amount = 1 } },
     },
 
     {
@@ -164,7 +164,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 45,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-3", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-3", amount = 1 } },
     },
 
     {
@@ -178,7 +178,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 60,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-4", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-4", amount = 1 } },
     },
 
     {
@@ -192,7 +192,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 75,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-5", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-5", amount = 1 } },
     },
 
     {
@@ -206,7 +206,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 90,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-6", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-6", amount = 1 } },
     },
 
     {
@@ -220,7 +220,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 105,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-7", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-7", amount = 1 } },
     },
 
     {
@@ -234,7 +234,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       },
       energy_required = 120,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-speed-module-8", amount = 1 }},
+      results = { { type = "item", name = "raw-speed-module-8", amount = 1 } },
     },
   })
 end
@@ -255,7 +255,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "module-contact", 4 },
       },
       energy_required = 15,
-      results = {{ type = "item", name = "green-module-1", amount = 1 }},
+      results = { { type = "item", name = "green-module-1", amount = 1 } },
     },
 
     {
@@ -269,7 +269,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "module-contact", 5 },
       },
       energy_required = 30,
-      results = {{ type = "item", name = "green-module-2", amount = 1 }},
+      results = { { type = "item", name = "green-module-2", amount = 1 } },
     },
 
     {
@@ -283,7 +283,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "advanced-circuit", 7 },
       },
       energy_required = 45,
-      results = {{ type = "item", name = "green-module-3", amount = 1 }},
+      results = { { type = "item", name = "green-module-3", amount = 1 } },
     },
 
     {
@@ -298,7 +298,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 60,
-      results = {{ type = "item", name = "green-module-4", amount = 1 }},
+      results = { { type = "item", name = "green-module-4", amount = 1 } },
     },
 
     {
@@ -313,7 +313,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 75,
-      results = {{ type = "item", name = "green-module-5", amount = 1 }},
+      results = { { type = "item", name = "green-module-5", amount = 1 } },
     },
 
     {
@@ -328,7 +328,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 90,
-      results = {{ type = "item", name = "green-module-6", amount = 1 }},
+      results = { { type = "item", name = "green-module-6", amount = 1 } },
     },
 
     {
@@ -343,7 +343,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "processing-unit", 8 },
       },
       energy_required = 105,
-      results = {{ type = "item", name = "green-module-7", amount = 1 }},
+      results = { { type = "item", name = "green-module-7", amount = 1 } },
     },
 
     {
@@ -359,7 +359,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         { "processing-unit", 8 },
       },
       energy_required = 120,
-      results = {{ type = "item", name = "green-module-8", amount = 1 }},
+      results = { { type = "item", name = "green-module-8", amount = 1 } },
     },
   })
 
@@ -377,7 +377,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 15,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-1", amount = 1 }},
+      results = { { type = "item", name = "green-module-1", amount = 1 } },
     },
 
     {
@@ -391,7 +391,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 30,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-2", amount = 1 }},
+      results = { { type = "item", name = "green-module-2", amount = 1 } },
     },
 
     {
@@ -405,7 +405,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 45,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-3", amount = 1 }},
+      results = { { type = "item", name = "green-module-3", amount = 1 } },
     },
 
     {
@@ -419,7 +419,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 60,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-4", amount = 1 }},
+      results = { { type = "item", name = "green-module-4", amount = 1 } },
     },
 
     {
@@ -433,7 +433,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 75,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-5", amount = 1 }},
+      results = { { type = "item", name = "green-module-5", amount = 1 } },
     },
 
     {
@@ -447,7 +447,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 90,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-6", amount = 1 }},
+      results = { { type = "item", name = "green-module-6", amount = 1 } },
     },
 
     {
@@ -461,7 +461,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 105,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-7", amount = 1 }},
+      results = { { type = "item", name = "green-module-7", amount = 1 } },
     },
 
     {
@@ -475,7 +475,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       energy_required = 120,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "green-module-8", amount = 1 }},
+      results = { { type = "item", name = "green-module-8", amount = 1 } },
     },
   })
 end
@@ -497,7 +497,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "module-contact", 4 },
       },
       energy_required = 15,
-      results = {{ type = "item", name = "raw-productivity-module-1", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-1", amount = 1 } },
     },
 
     {
@@ -512,7 +512,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "module-contact", 5 },
       },
       energy_required = 30,
-      results = {{ type = "item", name = "raw-productivity-module-2", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-2", amount = 1 } },
     },
 
     {
@@ -527,7 +527,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "advanced-circuit", 7 },
       },
       energy_required = 45,
-      results = {{ type = "item", name = "raw-productivity-module-3", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-3", amount = 1 } },
     },
 
     {
@@ -543,7 +543,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "processing-unit", 7 },
       },
       energy_required = 60,
-      results = {{ type = "item", name = "raw-productivity-module-4", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-4", amount = 1 } },
     },
 
     {
@@ -559,7 +559,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "processing-unit", 7 },
       },
       energy_required = 75,
-      results = {{ type = "item", name = "raw-productivity-module-5", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-5", amount = 1 } },
     },
 
     {
@@ -575,7 +575,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "processing-unit", 7 },
       },
       energy_required = 90,
-      results = {{ type = "item", name = "raw-productivity-module-6", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-6", amount = 1 } },
     },
 
     {
@@ -591,7 +591,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "processing-unit", 8 },
       },
       energy_required = 105,
-      results = {{ type = "item", name = "raw-productivity-module-7", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-7", amount = 1 } },
     },
 
     {
@@ -608,7 +608,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         { "processing-unit", 8 },
       },
       energy_required = 120,
-      results = {{ type = "item", name = "raw-productivity-module-8", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-8", amount = 1 } },
     },
   })
 
@@ -627,7 +627,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 15,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-1", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-1", amount = 1 } },
     },
 
     {
@@ -642,7 +642,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 30,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-2", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-2", amount = 1 } },
     },
 
     {
@@ -657,7 +657,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 45,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-3", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-3", amount = 1 } },
     },
 
     {
@@ -672,7 +672,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 60,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-4", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-4", amount = 1 } },
     },
 
     {
@@ -687,7 +687,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 75,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-5", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-5", amount = 1 } },
     },
 
     {
@@ -702,7 +702,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 90,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-6", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-6", amount = 1 } },
     },
 
     {
@@ -717,7 +717,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 105,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-7", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-7", amount = 1 } },
     },
 
     {
@@ -732,7 +732,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       },
       energy_required = 120,
       allow_as_intermediate = false,
-      results = {{ type = "item", name = "raw-productivity-module-8", amount = 1 }},
+      results = { { type = "item", name = "raw-productivity-module-8", amount = 1 } },
     },
   })
 end
@@ -753,7 +753,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         { "module-contact", 5 },
       },
       energy_required = 30,
-      results = {{ type = "item", name = "god-module-1", amount = 1 }},
+      results = { { type = "item", name = "god-module-1", amount = 1 } },
     },
 
     {
@@ -771,7 +771,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 60,
-      results = {{ type = "item", name = "god-module-2", amount = 1 }},
+      results = { { type = "item", name = "god-module-2", amount = 1 } },
     },
 
     {
@@ -788,7 +788,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         { "processing-unit", 7 },
       },
       energy_required = 90,
-      results = {{ type = "item", name = "god-module-3", amount = 1 }},
+      results = { { type = "item", name = "god-module-3", amount = 1 } },
     },
 
     {
@@ -806,7 +806,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         { "processing-unit", 8 },
       },
       energy_required = 120,
-      results = {{ type = "item", name = "god-module-4", amount = 1 }},
+      results = { { type = "item", name = "god-module-4", amount = 1 } },
     },
 
     {
@@ -824,7 +824,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         { "processing-unit", 10 },
       },
       energy_required = 150,
-      results = {{ type = "item", name = "god-module-5", amount = 1 }},
+      results = { { type = "item", name = "god-module-5", amount = 1 } },
     },
   })
 end

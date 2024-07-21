@@ -36,10 +36,16 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     bobmods.lib.recipe.replace_ingredient("electric-chemical-furnace-from-electric-furnace", "pipe", "steel-pipe")
 
     bobmods.lib.recipe.remove_result("steel-furnace-from-steel-chemical-furnace", "pipe")
-    bobmods.lib.recipe.add_result("steel-furnace-from-steel-chemical-furnace", { type = "item", name = "steel-pipe", amount = 5 })
+    bobmods.lib.recipe.add_result(
+      "steel-furnace-from-steel-chemical-furnace",
+      { type = "item", name = "steel-pipe", amount = 5 }
+    )
 
     bobmods.lib.recipe.remove_result("electric-furnace-from-electric-chemical-furnace", "pipe")
-    bobmods.lib.recipe.add_result("electric-furnace-from-electric-chemical-furnace", { type = "item", name = "steel-pipe", amount = 5 })
+    bobmods.lib.recipe.add_result(
+      "electric-furnace-from-electric-chemical-furnace",
+      { type = "item", name = "steel-pipe", amount = 5 }
+    )
   end
 
   bobmods.lib.tech.add_recipe_unlock("chemical-processing-1", "stone-chemical-furnace-from-stone-furnace")

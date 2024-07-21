@@ -7,7 +7,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "iron-plate", 1 },
         { "iron-gear-wheel", 1 },
       },
-      results = {{ type = "item", name = "basic-transport-belt", amount = 2 }},
+      results = { { type = "item", name = "basic-transport-belt", amount = 2 } },
     },
     {
       type = "recipe",
@@ -17,7 +17,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "iron-plate", 2 },
         { "iron-gear-wheel", 2 },
       },
-      results = {{ type = "item", name = "transport-belt", amount = 1 }},
+      results = { { type = "item", name = "transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
@@ -27,7 +27,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "steel-plate", 2 },
         { "iron-gear-wheel", 4 },
       },
-      results = {{ type = "item", name = "fast-transport-belt", amount = 1 }},
+      results = { { type = "item", name = "fast-transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
@@ -37,7 +37,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "steel-plate", 2 },
         { "iron-gear-wheel", 4 },
       },
-      results = {{ type = "item", name = "express-transport-belt", amount = 1 }},
+      results = { { type = "item", name = "express-transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
@@ -47,7 +47,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "steel-plate", 2 },
         { "iron-gear-wheel", 4 },
       },
-      results = {{ type = "item", name = "turbo-transport-belt", amount = 1 }},
+      results = { { type = "item", name = "turbo-transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
@@ -57,7 +57,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "steel-plate", 2 },
         { "iron-gear-wheel", 4 },
       },
-      results = {{ type = "item", name = "ultimate-transport-belt", amount = 1 }},
+      results = { { type = "item", name = "ultimate-transport-belt", amount = 1 } },
     },
   })
 
@@ -72,7 +72,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "stone", 2 },
         { "wood", 2 },
       },
-      results = {{ type = "item", name = "basic-underground-belt", amount = 2 }},
+      results = { { type = "item", name = "basic-underground-belt", amount = 2 } },
     },
     {
       type = "recipe",
@@ -85,7 +85,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         { "iron-gear-wheel", 2 },
         { "copper-cable", 4 },
       },
-      results = {{ type = "item", name = "basic-splitter", amount = 1 }},
+      results = { { type = "item", name = "basic-splitter", amount = 1 } },
     },
   })
 
@@ -107,7 +107,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-plate", 14 },
           { "iron-gear-wheel", 20 },
         },
-        results = {{ type = "item", name = "underground-belt", amount = 2 }},
+        results = { { type = "item", name = "underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -119,7 +119,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "steel-plate", 14 },
           { "iron-gear-wheel", 20 },
         },
-        results = {{ type = "item", name = "fast-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "fast-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -131,7 +131,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "steel-plate", 14 },
           { "iron-gear-wheel", 20 },
         },
-        results = {{ type = "item", name = "express-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "express-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -142,7 +142,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "steel-plate", 14 },
           { "iron-gear-wheel", 20 },
         },
-        results = {{ type = "item", name = "turbo-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "turbo-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -153,7 +153,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "steel-plate", 14 },
           { "iron-gear-wheel", 20 },
         },
-        results = {{ type = "item", name = "ultimate-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "ultimate-underground-belt", amount = 2 } },
       },
 
       {
@@ -167,7 +167,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 14 },
           { "electronic-circuit", 5 },
         },
-        results = {{ type = "item", name = "splitter", amount = 1 }},
+        results = { { type = "item", name = "splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -180,7 +180,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 14 },
           { "electronic-circuit", 5 },
         },
-        results = {{ type = "item", name = "fast-splitter", amount = 1 }},
+        results = { { type = "item", name = "fast-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -193,7 +193,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 14 },
           { "advanced-circuit", 5 },
         },
-        results = {{ type = "item", name = "express-splitter", amount = 1 }},
+        results = { { type = "item", name = "express-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -206,7 +206,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 14 },
           { "processing-unit", 5 },
         },
-        results = {{ type = "item", name = "turbo-splitter", amount = 1 }},
+        results = { { type = "item", name = "turbo-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -219,7 +219,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 14 },
           { "processing-unit", 5 },
         },
-        results = {{ type = "item", name = "ultimate-splitter", amount = 1 }},
+        results = { { type = "item", name = "ultimate-splitter", amount = 1 } },
       },
     })
   else
@@ -233,7 +233,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "transport-belt", 5 },
           { "iron-plate", 4 },
         },
-        results = {{ type = "item", name = "underground-belt", amount = 2 }},
+        results = { { type = "item", name = "underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -244,7 +244,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "fast-transport-belt", 5 },
           { "steel-plate", 4 },
         },
-        results = {{ type = "item", name = "fast-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "fast-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -255,7 +255,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "express-transport-belt", 5 },
           { "steel-plate", 4 },
         },
-        results = {{ type = "item", name = "express-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "express-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -265,7 +265,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "turbo-transport-belt", 5 },
           { "steel-plate", 4 },
         },
-        results = {{ type = "item", name = "turbo-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "turbo-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -275,7 +275,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "ultimate-transport-belt", 5 },
           { "steel-plate", 4 },
         },
-        results = {{ type = "item", name = "ultimate-underground-belt", amount = 2 }},
+        results = { { type = "item", name = "ultimate-underground-belt", amount = 2 } },
       },
 
       {
@@ -289,7 +289,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 4 },
           { "electronic-circuit", 5 },
         },
-        results = {{ type = "item", name = "splitter", amount = 1 }},
+        results = { { type = "item", name = "splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -302,7 +302,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 4 },
           { "electronic-circuit", 5 },
         },
-        results = {{ type = "item", name = "fast-splitter", amount = 1 }},
+        results = { { type = "item", name = "fast-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -315,7 +315,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 4 },
           { "advanced-circuit", 5 },
         },
-        results = {{ type = "item", name = "express-splitter", amount = 1 }},
+        results = { { type = "item", name = "express-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -328,7 +328,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 4 },
           { "processing-unit", 5 },
         },
-        results = {{ type = "item", name = "turbo-splitter", amount = 1 }},
+        results = { { type = "item", name = "turbo-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -341,7 +341,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { "iron-gear-wheel", 4 },
           { "processing-unit", 5 },
         },
-        results = {{ type = "item", name = "ultimate-splitter", amount = 1 }},
+        results = { { type = "item", name = "ultimate-splitter", amount = 1 } },
       },
     })
   end
@@ -355,7 +355,7 @@ else
         { "express-transport-belt", 1 },
         { "iron-gear-wheel", 20 },
       },
-      results = {{ type = "item", name = "turbo-transport-belt", amount = 1 }},
+      results = { { type = "item", name = "turbo-transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
@@ -365,7 +365,7 @@ else
         { "express-underground-belt", 2 },
         { "iron-gear-wheel", 100 },
       },
-      results = {{ type = "item", name = "turbo-underground-belt", amount = 2 }},
+      results = { { type = "item", name = "turbo-underground-belt", amount = 2 } },
     },
     {
       type = "recipe",
@@ -377,7 +377,7 @@ else
         { "processing-unit", 10 },
         { "iron-gear-wheel", 10 },
       },
-      results = {{ type = "item", name = "turbo-splitter", amount = 2 }},
+      results = { { type = "item", name = "turbo-splitter", amount = 2 } },
     },
 
     {
@@ -388,7 +388,7 @@ else
         { "turbo-transport-belt", 1 },
         { "iron-gear-wheel", 20 },
       },
-      results = {{ type = "item", name = "ultimate-transport-belt", amount = 2 }},
+      results = { { type = "item", name = "ultimate-transport-belt", amount = 2 } },
     },
     {
       type = "recipe",
@@ -398,7 +398,7 @@ else
         { "turbo-underground-belt", 2 },
         { "iron-gear-wheel", 120 },
       },
-      results = {{ type = "item", name = "ultimate-underground-belt", amount = 2 }},
+      results = { { type = "item", name = "ultimate-underground-belt", amount = 2 } },
     },
     {
       type = "recipe",
@@ -410,7 +410,7 @@ else
         { "processing-unit", 10 },
         { "iron-gear-wheel", 10 },
       },
-      results = {{ type = "item", name = "ultimate-splitter", amount = 1 }},
+      results = { { type = "item", name = "ultimate-splitter", amount = 1 } },
     },
   })
 end
