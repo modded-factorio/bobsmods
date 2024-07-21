@@ -1,7 +1,6 @@
 if settings.startup["bobmods-power-steam"].value == true then
   if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-2", "normal", { "steel-bearing", 5 })
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-2", "expensive", { "steel-bearing", 10 })
+    bobmods.lib.recipe.add_ingredient("steam-engine-2", { "steel-bearing", 5 })
   else
     bobmods.lib.recipe.add_ingredient("steam-engine-2", { "iron-gear-wheel", 5 })
   end
@@ -15,13 +14,11 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-3", "normal", { "cobalt-steel-bearing", 5 })
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-3", "expensive", { "cobalt-steel-bearing", 10 })
+    bobmods.lib.recipe.add_ingredient("steam-engine-3", { "cobalt-steel-bearing", 5 })
     bobmods.lib.tech.add_prerequisite("bob-steam-engine-3", "cobalt-processing")
   else
     if data.raw.item["steel-bearing"] then
-      bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-3", "normal", { "steel-bearing", 5 })
-      bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-3", "expensive", { "steel-bearing", 10 })
+      bobmods.lib.recipe.add_ingredient("steam-engine-3", { "steel-bearing", 5 })
     else
       bobmods.lib.recipe.add_ingredient("steam-engine-3", { "iron-gear-wheel", 5 })
     end
@@ -56,12 +53,10 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-4", "normal", { "titanium-bearing", 5 })
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-4", "expensive", { "titanium-bearing", 10 })
+    bobmods.lib.recipe.add_ingredient("steam-engine-4", { "titanium-bearing", 5 })
   else
     if data.raw.item["steel-bearing"] then
-      bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-4", "normal", { "steel-bearing", 5 })
-      bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-4", "expensive", { "steel-bearing", 10 })
+      bobmods.lib.recipe.add_ingredient("steam-engine-4", { "steel-bearing", 5 })
     else
       bobmods.lib.recipe.add_ingredient("steam-engine-4", { "iron-gear-wheel", 5 })
     end
@@ -96,12 +91,10 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-5", "normal", { "nitinol-bearing", 5 })
-    bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-5", "expensive", { "nitinol-bearing", 10 })
+    bobmods.lib.recipe.add_ingredient("steam-engine-5", { "nitinol-bearing", 5 })
   else
     if data.raw.item["titanium-bearing"] then
-      bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-5", "normal", { "titanium-bearing", 5 })
-      bobmods.lib.recipe.add_difficulty_ingredient("steam-engine-5", "expensive", { "titanium-bearing", 10 })
+      bobmods.lib.recipe.add_ingredient("steam-engine-5", { "titanium-bearing", 5 })
     else
       bobmods.lib.recipe.add_ingredient("steam-engine-5", { "iron-gear-wheel", 5 })
     end

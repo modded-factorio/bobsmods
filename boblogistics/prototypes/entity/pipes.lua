@@ -1506,20 +1506,11 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
     {
       type = "recipe",
       name = "iridium-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "se-iridium-plate", 1 },
-        },
-        result = "iridium-pipe",
+      enabled = false,
+      ingredients = {
+        { "se-iridium-plate", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "se-iridium-plate", 2 },
-        },
-        result = "iridium-pipe",
-      },
+      result = "iridium-pipe",
     },
 
     {

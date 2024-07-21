@@ -56,24 +56,13 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
       type = "recipe",
       name = "steel-plate",
       category = "chemical-furnace",
-      normal = {
-        enabled = false,
-        energy_required = 3.2,
-        ingredients = {
-          { "iron-plate", 2 },
-          { type = "fluid", name = "oxygen", amount = 10 },
-        },
-        result = "steel-plate",
+      enabled = false,
+      energy_required = 3.2,
+      ingredients = {
+        { "iron-plate", 2 },
+        { type = "fluid", name = "oxygen", amount = 10 },
       },
-      expensive = {
-        enabled = false,
-        energy_required = 6.4,
-        ingredients = {
-          { "iron-plate", 4 },
-          { type = "fluid", name = "oxygen", amount = 12.5 },
-        },
-        result = "steel-plate",
-      },
+      result = "steel-plate",
       allow_decomposition = false,
     },
   })
@@ -93,25 +82,14 @@ else
       type = "recipe",
       name = "steel-plate",
       category = "chemical-furnace",
-      normal = {
-        enabled = false,
-        energy_required = 16,
-        ingredients = {
-          { "iron-plate", 5 },
-          { type = "fluid", name = "oxygen", amount = 50 },
-        },
-        result = "steel-plate",
-        result_count = 2,
+      enabled = false,
+      energy_required = 16,
+      ingredients = {
+        { "iron-plate", 5 },
+        { type = "fluid", name = "oxygen", amount = 50 },
       },
-      expensive = {
-        enabled = false,
-        energy_required = 16,
-        ingredients = {
-          { "iron-plate", 5 },
-          { type = "fluid", name = "oxygen", amount = 50 },
-        },
-        result = "steel-plate",
-      },
+      result = "steel-plate",
+      result_count = 2,
       allow_decomposition = false,
     },
   })
@@ -121,21 +99,9 @@ if settings.startup["bobmods-plates-batteryupdate"].value == true then
   data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
-  bobmods.lib.recipe.add_difficulty_ingredient("battery", "normal", { "lead-plate", 2 })
-  bobmods.lib.recipe.add_difficulty_ingredient(
-    "battery",
-    "normal",
-    { type = "fluid", name = "sulfuric-acid", amount = 20 }
-  )
-  bobmods.lib.recipe.add_difficulty_ingredient("battery", "normal", { "plastic-bar", 1 })
-
-  bobmods.lib.recipe.add_difficulty_ingredient("battery", "expensive", { "lead-plate", 2 })
-  bobmods.lib.recipe.add_difficulty_ingredient(
-    "battery",
-    "expensive",
-    { type = "fluid", name = "sulfuric-acid", amount = 40 }
-  )
-  bobmods.lib.recipe.add_difficulty_ingredient("battery", "expensive", { "plastic-bar", 2 })
+  bobmods.lib.recipe.add_ingredient("battery", { "lead-plate", 2 })
+  bobmods.lib.recipe.add_ingredient("battery", { type = "fluid", name = "sulfuric-acid", amount = 20 })
+  bobmods.lib.recipe.add_ingredient("battery", { "plastic-bar", 1 })
 end
 
 data.raw.recipe["steel-plate"].category = "chemical-furnace"
@@ -167,12 +133,6 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
-  if data.raw.recipe["nuclear-fuel-reprocessing"].normal then -- just in case someone split it to multiple difficulties.
-    data.raw.recipe["nuclear-fuel-reprocessing"].normal.energy_required = 120
-  end
-  if data.raw.recipe["nuclear-fuel-reprocessing"].expensive then
-    data.raw.recipe["nuclear-fuel-reprocessing"].expensive.energy_required = 120
-  end
 
   bobmods.lib.recipe.add_ingredient("nuclear-fuel-reprocessing", { "used-up-uranium-fuel-cell", 5 }) -- +5 from base
   bobmods.lib.recipe.set_result(

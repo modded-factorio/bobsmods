@@ -4,13 +4,7 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
     bobmods.lib.recipe.add_result("hydrazine", { type = "fluid", name = "pure-water", amount = 4, catalyst_amount = 4 })
   end
 
-  bobmods.lib.recipe.difficulty_split("rocket-fuel")
-
-  data.raw.recipe["rocket-fuel"].expensive.ingredients = {
-    { type = "fluid", name = "hydrazine", amount = 240 },
-    { type = "fluid", name = "dinitrogen-tetroxide", amount = 120 },
-  }
-  data.raw.recipe["rocket-fuel"].normal.ingredients = {
+  data.raw.recipe["rocket-fuel"].ingredients = {
     { type = "fluid", name = "hydrazine", amount = 160 },
     { type = "fluid", name = "dinitrogen-tetroxide", amount = 80 },
   }

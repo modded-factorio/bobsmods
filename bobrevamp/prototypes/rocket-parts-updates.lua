@@ -38,26 +38,17 @@ if
   and data.raw.item["intergrated-electronics"]
   and data.raw.item["processing-electronics"]
 then
-  bobmods.lib.recipe.difficulty_split("rocket-control-unit")
-  data.raw.recipe["rocket-control-unit"].normal.ingredients = {
+  data.raw.recipe["rocket-control-unit"].ingredients = {
     { "basic-electronic-components", 4 },
     { "electronic-components", 6 },
     { "intergrated-electronics", 4 },
     { "processing-electronics", 8 },
   }
-  data.raw.recipe["rocket-control-unit"].expensive.ingredients = {
-    { "basic-electronic-components", 6 },
-    { "electronic-components", 9 },
-    { "intergrated-electronics", 6 },
-    { "processing-electronics", 12 },
-  }
   if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("rocket-control-unit", "normal", { "solder", 5 })
-    bobmods.lib.recipe.add_difficulty_ingredient("rocket-control-unit", "expensive", { "solder", 10 })
+    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { "solder", 5 })
   end
   if data.raw.item["multi-layer-circuit-board"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("rocket-control-unit", "normal", { "multi-layer-circuit-board", 2 })
-    bobmods.lib.recipe.add_difficulty_ingredient("rocket-control-unit", "expensive", { "multi-layer-circuit-board", 3 })
+    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { "multi-layer-circuit-board", 2 })
   end
   bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
 elseif data.raw.item["advanced-processing-unit"] then

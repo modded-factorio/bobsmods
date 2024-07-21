@@ -129,12 +129,6 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       if recipe.results then
         change_pg_to_sg(recipe.results)
       end
-      if recipe.normal and recipe.normal.results then
-        change_pg_to_sg(recipe.normal.results)
-      end
-      if recipe.expensive and recipe.expensive.results then
-        change_pg_to_sg(recipe.expensive.results)
-      end
     end
   end
 

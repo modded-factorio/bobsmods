@@ -12,24 +12,13 @@ data:extend({
     type = "recipe",
     name = "heat-shield-tile",
     category = "crafting-with-fluid",
-    normal = {
-      energy_required = 30,
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 10 },
-        { "plastic-bar", 5 },
-      },
-      result = "heat-shield-tile",
+    energy_required = 30,
+    enabled = false,
+    ingredients = {
+      { "steel-plate", 10 },
+      { "plastic-bar", 5 },
     },
-    expensive = {
-      energy_required = 30,
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 10 },
-        { "plastic-bar", 10 },
-      },
-      result = "heat-shield-tile",
-    },
+    result = "heat-shield-tile",
   },
   {
     type = "technology",

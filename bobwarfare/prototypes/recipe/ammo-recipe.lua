@@ -412,28 +412,15 @@ data:extend({
   {
     type = "recipe",
     name = "scatter-cannon-shell",
-    normal = {
-      enabled = false,
-      energy_required = 8,
-      ingredients = {
-        { "steel-plate", 2 },
-        { "plastic-bar", 2 },
-        { "explosives", 1 },
-        { "shot", 5 },
-      },
-      result = "scatter-cannon-shell",
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+      { "steel-plate", 2 },
+      { "plastic-bar", 2 },
+      { "explosives", 1 },
+      { "shot", 5 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 8,
-      ingredients = {
-        { "steel-plate", 4 },
-        { "plastic-bar", 4 },
-        { "explosives", 1 },
-        { "shot", 5 },
-      },
-      result = "scatter-cannon-shell",
-    },
+    result = "scatter-cannon-shell",
   },
 })
 
@@ -457,135 +444,71 @@ data:extend({
   {
     type = "recipe",
     name = "poison-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "coal", 15 },
-        { "explosives", 3 },
-      },
-      result = "poison-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { "steel-plate", 6 },
+      { "plastic-bar", 6 },
+      { "coal", 15 },
+      { "explosives", 3 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "coal", 15 },
-        { "explosives", 3 },
-      },
-      result = "poison-artillery-shell",
-    },
+    result = "poison-artillery-shell",
   },
 
   {
     type = "recipe",
     name = "fire-artillery-shell",
     category = "crafting-with-fluid",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 3 },
-        { type = "fluid", name = "light-oil", amount = 150 },
-      },
-      result = "fire-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { "steel-plate", 6 },
+      { "plastic-bar", 6 },
+      { "explosives", 3 },
+      { type = "fluid", name = "light-oil", amount = 150 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 3 },
-        { type = "fluid", name = "light-oil", amount = 150 },
-      },
-      result = "fire-artillery-shell",
-    },
+    result = "fire-artillery-shell",
   },
 
   {
     type = "recipe",
     name = "explosive-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 18 },
-      },
-      result = "explosive-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { "steel-plate", 6 },
+      { "plastic-bar", 6 },
+      { "explosives", 18 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 18 },
-      },
-      result = "explosive-artillery-shell",
-    },
+    result = "explosive-artillery-shell",
   },
 
   {
     type = "recipe",
     name = "distractor-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 3 },
-        { "distractor-capsule", 5 },
-      },
-      result = "distractor-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { "steel-plate", 6 },
+      { "plastic-bar", 6 },
+      { "explosives", 3 },
+      { "distractor-capsule", 5 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 3 },
-        { "distractor-capsule", 5 },
-      },
-      result = "distractor-artillery-shell",
-    },
+    result = "distractor-artillery-shell",
   },
 
   {
     type = "recipe",
     name = "atomic-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 50,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 15 },
-        { "uranium-235", 30 },
-      },
-      result = "atomic-artillery-shell",
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+      { "steel-plate", 6 },
+      { "plastic-bar", 6 },
+      { "explosives", 15 },
+      { "uranium-235", 30 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 50,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 15 },
-        { "uranium-235", 30 },
-      },
-      result = "atomic-artillery-shell",
-    },
+    result = "atomic-artillery-shell",
   },
 })
 

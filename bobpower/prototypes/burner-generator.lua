@@ -14,22 +14,12 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
     {
       type = "recipe",
       name = "bob-burner-generator",
-      normal = {
-        ingredients = {
-          { "stone-furnace", 1 },
-          { "iron-plate", 8 },
-          { "iron-gear-wheel", 5 },
-        },
-        result = "bob-burner-generator",
+      ingredients = {
+        { "stone-furnace", 1 },
+        { "iron-plate", 8 },
+        { "iron-gear-wheel", 5 },
       },
-      expensive = {
-        ingredients = {
-          { "stone-furnace", 1 },
-          { "iron-plate", 15 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "bob-burner-generator",
-      },
+      result = "bob-burner-generator",
     },
 
     {

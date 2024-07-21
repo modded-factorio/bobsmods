@@ -10,12 +10,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     { type = "fluid", name = "hydrogen", amount = 20, catalyst_amount = 20 }
   )
   data.raw.recipe["calcium-chloride"].main_product = "calcium-chloride"
-  if data.raw.recipe["calcium-chloride"].normal then
-    data.raw.recipe["calcium-chloride"].normal.main_product = "calcium-chloride"
-  end
-  if data.raw.recipe["calcium-chloride"].expensive then
-    data.raw.recipe["calcium-chloride"].expensive.main_product = "calcium-chloride"
-  end
 
   bobmods.lib.recipe.set_ingredient("petroleum-gas-cracking", { type = "fluid", name = "water", amount = 20 })
   --  bobmods.lib.recipe.add_result("petroleum-gas-cracking", {type = "fluid", name = "carbon-dioxide", amount = 25, catalyst_amount = 25})

@@ -72,85 +72,24 @@ if data.raw.item["intergrated-electronics"] then
 end
 
 if data.raw.item["processing-electronics"] then
-  bobmods.lib.recipe.add_difficulty_ingredient("speed-processor-3", "normal", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_difficulty_ingredient("speed-processor-3", "expensive", { "processing-electronics", 3 })
-
-  bobmods.lib.recipe.add_difficulty_ingredient("effectivity-processor-3", "normal", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_difficulty_ingredient("effectivity-processor-3", "expensive", { "processing-electronics", 3 })
-
-  bobmods.lib.recipe.add_difficulty_ingredient("productivity-processor-3", "normal", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_difficulty_ingredient("productivity-processor-3", "expensive", { "processing-electronics", 3 })
-
-  bobmods.lib.recipe.add_difficulty_ingredient("pollution-clean-processor-3", "normal", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_difficulty_ingredient(
-    "pollution-clean-processor-3",
-    "expensive",
-    { "processing-electronics", 3 }
-  )
-
-  bobmods.lib.recipe.add_difficulty_ingredient(
-    "pollution-create-processor-3",
-    "normal",
-    { "processing-electronics", 1 }
-  )
-  bobmods.lib.recipe.add_difficulty_ingredient(
-    "pollution-create-processor-3",
-    "expensive",
-    { "processing-electronics", 3 }
-  )
+  bobmods.lib.recipe.add_ingredient("speed-processor-3", { "processing-electronics", 1 })
+  bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "processing-electronics", 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "processing-electronics", 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "processing-electronics", 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "processing-electronics", 1 })
 else
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_difficulty_ingredient("speed-processor-3", "normal", { "advanced-processing-unit", 1 })
-    bobmods.lib.recipe.add_difficulty_ingredient("effectivity-processor-3", "normal", { "advanced-processing-unit", 1 })
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "productivity-processor-3",
-      "normal",
-      { "advanced-processing-unit", 1 }
-    )
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "pollution-clean-processor-3",
-      "normal",
-      { "advanced-processing-unit", 1 }
-    )
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "pollution-create-processor-3",
-      "normal",
-      { "advanced-processing-unit", 1 }
-    )
-
-    bobmods.lib.recipe.add_difficulty_ingredient("speed-processor-3", "expensive", { "advanced-processing-unit", 3 })
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "effectivity-processor-3",
-      "expensive",
-      { "advanced-processing-unit", 3 }
-    )
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "productivity-processor-3",
-      "expensive",
-      { "advanced-processing-unit", 3 }
-    )
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "pollution-clean-processor-3",
-      "expensive",
-      { "advanced-processing-unit", 3 }
-    )
-    bobmods.lib.recipe.add_difficulty_ingredient(
-      "pollution-create-processor-3",
-      "expensive",
-      { "advanced-processing-unit", 3 }
-    )
+    bobmods.lib.recipe.add_ingredient("speed-processor-3", { "advanced-processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "advanced-processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "advanced-processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "advanced-processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "advanced-processing-unit", 1 })
   else
-    bobmods.lib.recipe.add_difficulty_ingredient("speed-processor-3", "normal", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_difficulty_ingredient("effectivity-processor-3", "normal", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_difficulty_ingredient("productivity-processor-3", "normal", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_difficulty_ingredient("pollution-clean-processor-3", "normal", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_difficulty_ingredient("pollution-create-processor-3", "normal", { "processing-unit", 1 })
-
-    bobmods.lib.recipe.add_difficulty_ingredient("speed-processor-3", "expensive", { "processing-unit", 2 })
-    bobmods.lib.recipe.add_difficulty_ingredient("effectivity-processor-3", "expensive", { "processing-unit", 2 })
-    bobmods.lib.recipe.add_difficulty_ingredient("productivity-processor-3", "expensive", { "processing-unit", 2 })
-    bobmods.lib.recipe.add_difficulty_ingredient("pollution-clean-processor-3", "expensive", { "processing-unit", 2 })
-    bobmods.lib.recipe.add_difficulty_ingredient("pollution-create-processor-3", "expensive", { "processing-unit", 2 })
+    bobmods.lib.recipe.add_ingredient("speed-processor-3", { "processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "processing-unit", 1 })
   end
 end
 

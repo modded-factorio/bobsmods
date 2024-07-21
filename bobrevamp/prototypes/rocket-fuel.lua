@@ -283,24 +283,13 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         type = "recipe",
         name = "enriched-fuel-from-hydrazine",
         category = "chemistry",
-        normal = {
-          enabled = false,
-          energy_required = 12,
-          ingredients = {
-            { type = "fluid", name = "hydrazine", amount = 100 },
-            { "solid-fuel", 1 },
-          },
-          result = "enriched-fuel",
+        enabled = false,
+        energy_required = 12,
+        ingredients = {
+          { type = "fluid", name = "hydrazine", amount = 100 },
+          { "solid-fuel", 1 },
         },
-        expensive = {
-          enabled = false,
-          energy_required = 12,
-          ingredients = {
-            { type = "fluid", name = "hydrazine", amount = 150 },
-            { "solid-fuel", 1 },
-          },
-          result = "enriched-fuel",
-        },
+        result = "enriched-fuel",
         subgroup = "bob-resource-chemical",
         order = "d[enriched-fuel]",
         crafting_machine_tint = {

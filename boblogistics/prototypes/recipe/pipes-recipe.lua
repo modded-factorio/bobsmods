@@ -2,18 +2,10 @@ data:extend({
   {
     type = "recipe",
     name = "stone-pipe",
-    normal = {
-      ingredients = {
-        { "stone-brick", 1 },
-      },
-      result = "stone-pipe",
+    ingredients = {
+      { "stone-brick", 1 },
     },
-    expensive = {
-      ingredients = {
-        { "stone-brick", 2 },
-      },
-      result = "stone-pipe",
-    },
+    result = "stone-pipe",
   },
 
   {
@@ -30,18 +22,10 @@ data:extend({
   {
     type = "recipe",
     name = "copper-pipe",
-    normal = {
-      ingredients = {
-        { "copper-plate", 1 },
-      },
-      result = "copper-pipe",
+    ingredients = {
+      { "copper-plate", 1 },
     },
-    expensive = {
-      ingredients = {
-        { "copper-plate", 2 },
-      },
-      result = "copper-pipe",
-    },
+    result = "copper-pipe",
   },
 
   {
@@ -58,20 +42,11 @@ data:extend({
   {
     type = "recipe",
     name = "steel-pipe",
-    normal = {
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 1 },
-      },
-      result = "steel-pipe",
+    enabled = false,
+    ingredients = {
+      { "steel-plate", 1 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 2 },
-      },
-      result = "steel-pipe",
-    },
+    result = "steel-pipe",
   },
 
   {
@@ -89,20 +64,11 @@ data:extend({
   {
     type = "recipe",
     name = "plastic-pipe",
-    normal = {
-      enabled = false,
-      ingredients = {
-        { "plastic-bar", 1 },
-      },
-      result = "plastic-pipe",
+    enabled = false,
+    ingredients = {
+      { "plastic-bar", 1 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { "plastic-bar", 2 },
-      },
-      result = "plastic-pipe",
-    },
+    result = "plastic-pipe",
   },
 
   {
@@ -123,20 +89,11 @@ if data.raw.item["bronze-alloy"] then
     {
       type = "recipe",
       name = "bronze-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "bronze-alloy", 1 },
-        },
-        result = "bronze-pipe",
+      enabled = false,
+      ingredients = {
+        { "bronze-alloy", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "bronze-alloy", 2 },
-        },
-        result = "bronze-pipe",
-      },
+      result = "bronze-pipe",
     },
 
     {
@@ -158,20 +115,11 @@ if data.raw.item["brass-alloy"] then
     {
       type = "recipe",
       name = "brass-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "brass-alloy", 1 },
-        },
-        result = "brass-pipe",
+      enabled = false,
+      ingredients = {
+        { "brass-alloy", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "brass-alloy", 2 },
-        },
-        result = "brass-pipe",
-      },
+      result = "brass-pipe",
     },
 
     {
@@ -193,20 +141,11 @@ if data.raw.item["silicon-nitride"] then
     {
       type = "recipe",
       name = "ceramic-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "silicon-nitride", 1 },
-        },
-        result = "ceramic-pipe",
+      enabled = false,
+      ingredients = {
+        { "silicon-nitride", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "silicon-nitride", 2 },
-        },
-        result = "ceramic-pipe",
-      },
+      result = "ceramic-pipe",
     },
 
     {
@@ -228,20 +167,11 @@ if data.raw.item["titanium-plate"] then
     {
       type = "recipe",
       name = "titanium-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "titanium-plate", 1 },
-        },
-        result = "titanium-pipe",
+      enabled = false,
+      ingredients = {
+        { "titanium-plate", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "titanium-plate", 2 },
-        },
-        result = "titanium-pipe",
-      },
+      result = "titanium-pipe",
     },
 
     {
@@ -263,20 +193,11 @@ if data.raw.item["tungsten-plate"] then
     {
       type = "recipe",
       name = "tungsten-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "tungsten-plate", 1 },
-        },
-        result = "tungsten-pipe",
+      enabled = false,
+      ingredients = {
+        { "tungsten-plate", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "tungsten-plate", 2 },
-        },
-        result = "tungsten-pipe",
-      },
+      result = "tungsten-pipe",
     },
 
     {
@@ -298,20 +219,11 @@ if data.raw.item["nitinol-alloy"] then
     {
       type = "recipe",
       name = "nitinol-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "nitinol-alloy", 1 },
-        },
-        result = "nitinol-pipe",
+      enabled = false,
+      ingredients = {
+        { "nitinol-alloy", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "nitinol-alloy", 2 },
-        },
-        result = "nitinol-pipe",
-      },
+      result = "nitinol-pipe",
     },
 
     {
@@ -333,20 +245,11 @@ if data.raw.item["copper-tungsten-alloy"] then
     {
       type = "recipe",
       name = "copper-tungsten-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "copper-tungsten-alloy", 1 },
-        },
-        result = "copper-tungsten-pipe",
+      enabled = false,
+      ingredients = {
+        { "copper-tungsten-alloy", 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "copper-tungsten-alloy", 2 },
-        },
-        result = "copper-tungsten-pipe",
-      },
+      result = "copper-tungsten-pipe",
     },
 
     {

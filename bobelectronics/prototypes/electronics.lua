@@ -124,28 +124,15 @@ data:extend({
     type = "recipe",
     name = "basic-electronic-components",
     category = "electronics-machine",
-    normal = {
-      energy_required = 2,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "coal", 1 },
-      },
-      result = "basic-electronic-components",
-      result_count = 5,
-      allow_decomposition = false,
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { "copper-cable", 1 },
+      { "coal", 1 },
     },
-    expensive = {
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "coal", 1 },
-      },
-      result = "basic-electronic-components",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    result = "basic-electronic-components",
+    result_count = 5,
+    allow_decomposition = false,
   },
 })
 
@@ -164,28 +151,14 @@ data:extend({
     type = "recipe",
     name = "electronic-components",
     category = "electronics-machine",
-    normal = {
-      energy_required = 3.5,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "electronic-components",
-      result_count = 5,
-      allow_decomposition = false,
+    energy_required = 3.5,
+    enabled = false,
+    ingredients = {
+      { "copper-cable", 1 },
+      { "plastic-bar", 1 },
     },
-    expensive = {
-      energy_required = 6,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "electronic-components",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    result = "electronic-components",
+    result_count = 5,
     allow_decomposition = false,
   },
 })
@@ -205,30 +178,15 @@ data:extend({
     type = "recipe",
     name = "intergrated-electronics",
     category = "electronics-with-fluid",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 5 },
-      },
-      result = "intergrated-electronics",
-      result_count = 5,
-      allow_decomposition = false,
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { "copper-cable", 1 },
+      { "plastic-bar", 1 },
+      { type = "fluid", name = "sulfuric-acid", amount = 5 },
     },
-    expensive = {
-      energy_required = 9,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 5 },
-      },
-      result = "intergrated-electronics",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    result = "intergrated-electronics",
+    result_count = 5,
     allow_decomposition = false,
   },
 })
@@ -248,30 +206,16 @@ data:extend({
     type = "recipe",
     name = "processing-electronics",
     category = "electronics-with-fluid",
-    normal = {
-      energy_required = 7,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 2 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 5 },
-      },
-      result = "processing-electronics",
-      result_count = 5,
-      allow_decomposition = false,
+    energy_required = 7,
+    enabled = false,
+    ingredients = {
+      { "copper-cable", 2 },
+      { "plastic-bar", 1 },
+      { type = "fluid", name = "sulfuric-acid", amount = 5 },
     },
-    expensive = {
-      energy_required = 12,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 2 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 10 },
-      },
-      result = "processing-electronics",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    result = "processing-electronics",
+    result_count = 5,
+    allow_decomposition = false,
   },
 })
 
@@ -468,26 +412,14 @@ data:extend({
     type = "recipe",
     name = "electronic-circuit",
     category = "electronics",
-    normal = {
-      energy_required = 1,
-      enabled = false,
-      ingredients = {
-        { "basic-circuit-board", 1 },
-        { "basic-electronic-components", 5 },
-      },
-      result = "electronic-circuit",
-      allow_decomposition = false,
+    energy_required = 1,
+    enabled = false,
+    ingredients = {
+      { "basic-circuit-board", 1 },
+      { "basic-electronic-components", 5 },
     },
-    expensive = {
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        { "basic-circuit-board", 1 },
-        { "basic-electronic-components", 6 },
-      },
-      result = "electronic-circuit",
-      allow_decomposition = false,
-    },
+    result = "electronic-circuit",
+    allow_decomposition = false,
   },
 })
 
@@ -506,28 +438,15 @@ data:extend({
     type = "recipe",
     name = "advanced-circuit",
     category = "electronics",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "circuit-board", 1 },
-        { "basic-electronic-components", 4 },
-        { "electronic-components", 4 },
-      },
-      result = "advanced-circuit",
-      allow_decomposition = false,
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { "circuit-board", 1 },
+      { "basic-electronic-components", 4 },
+      { "electronic-components", 4 },
     },
-    expensive = {
-      energy_required = 8,
-      enabled = false,
-      ingredients = {
-        { "circuit-board", 1 },
-        { "basic-electronic-components", 6 },
-        { "electronic-components", 6 },
-      },
-      result = "advanced-circuit",
-      allow_decomposition = false,
-    },
+    result = "advanced-circuit",
+    allow_decomposition = false,
   },
 })
 
@@ -546,30 +465,16 @@ data:extend({
     type = "recipe",
     name = "processing-unit",
     category = "electronics",
-    normal = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "superior-circuit-board", 1 },
-        { "basic-electronic-components", 2 },
-        { "electronic-components", 4 },
-        { "intergrated-electronics", 2 },
-      },
-      result = "processing-unit",
-      allow_decomposition = false,
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { "superior-circuit-board", 1 },
+      { "basic-electronic-components", 2 },
+      { "electronic-components", 4 },
+      { "intergrated-electronics", 2 },
     },
-    expensive = {
-      energy_required = 16,
-      enabled = false,
-      ingredients = {
-        { "superior-circuit-board", 1 },
-        { "basic-electronic-components", 3 },
-        { "electronic-components", 6 },
-        { "intergrated-electronics", 3 },
-      },
-      result = "processing-unit",
-      allow_decomposition = false,
-    },
+    result = "processing-unit",
+    allow_decomposition = false,
   },
 })
 
@@ -588,31 +493,16 @@ data:extend({
     type = "recipe",
     name = "advanced-processing-unit",
     category = "electronics",
-    normal = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "multi-layer-circuit-board", 1 },
-        { "basic-electronic-components", 1 },
-        { "electronic-components", 2 },
-        { "intergrated-electronics", 4 },
-        { "processing-electronics", 1 },
-      },
-      result = "advanced-processing-unit",
-      allow_decomposition = false,
+    energy_required = 15,
+    enabled = false,
+    ingredients = {
+      { "multi-layer-circuit-board", 1 },
+      { "basic-electronic-components", 1 },
+      { "electronic-components", 2 },
+      { "intergrated-electronics", 4 },
+      { "processing-electronics", 1 },
     },
-    expensive = {
-      energy_required = 24,
-      enabled = false,
-      ingredients = {
-        { "multi-layer-circuit-board", 1 },
-        { "basic-electronic-components", 3 },
-        { "electronic-components", 3 },
-        { "intergrated-electronics", 6 },
-        { "processing-electronics", 3 },
-      },
-      result = "advanced-processing-unit",
-      allow_decomposition = false,
-    },
+    result = "advanced-processing-unit",
+    allow_decomposition = false,
   },
 })
