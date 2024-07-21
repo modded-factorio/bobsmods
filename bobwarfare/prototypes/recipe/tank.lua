@@ -25,6 +25,6 @@ data:extend({
       { "iron-gear-wheel", 15 },
       { "processing-unit", 5 },
     },
-    results = {{ type = "item", name = "bob-tank-3", amount = 1 }},
+    results = {{ type = "item", name = "bob-tank-3", amount = 1 }},
   },
 })
