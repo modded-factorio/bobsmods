@@ -10,8 +10,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 5 },
       { type = "item", name = "coal", amount = 1 },
     },
-    result = "carbon",
-    result_count = 2,
+    results = {{ type = "item", name = "carbon", amount = 2 }},
     allow_decomposition = false,
   },
 
@@ -24,7 +23,7 @@ data:extend({
     ingredients = {
       { "wood", 1 },
     },
-    result = "resin",
+    results = {{ type = "item", name = "resin", amount = 1 }},
     allow_decomposition = false,
   },
 
@@ -38,8 +37,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
-    result = "resin",
-    result_count = 2,
+    results = {{ type = "item", name = "resin", amount = 2 }},
     crafting_machine_tint = {
       primary = { r = 0.5, g = 0.04, b = 0.0, a = 0.000 },
       secondary = { r = 0.85, g = 0.6, b = 0.3, a = 0.000 },
@@ -58,7 +56,7 @@ data:extend({
     ingredients = {
       { "resin", 1 },
     },
-    result = "rubber",
+    results = {{ type = "item", name = "rubber", amount = 1 }},
     allow_decomposition = false,
   },
 
@@ -71,7 +69,7 @@ data:extend({
     ingredients = {
       { "quartz", 1 },
     },
-    result = "glass",
+    results = {{ type = "item", name = "glass", amount = 1 }},
     allow_decomposition = false,
   },
 
@@ -84,8 +82,7 @@ data:extend({
     ingredients = {
       { "silicon", 1 },
     },
-    result = "silicon-wafer",
-    result_count = 8,
+    results = {{ type = "item", name = "silicon-wafer", amount = 8 }},
   },
 
   {
@@ -98,7 +95,7 @@ data:extend({
     ingredients = {
       { "silicon", 1 },
     },
-    result = "silicon-powder",
+    results = {{ type = "item", name = "silicon-powder", amount = 1 }},
   },
 
   {
@@ -112,7 +109,7 @@ data:extend({
       { "silicon-powder", 1 },
       { type = "fluid", name = "nitrogen", amount = 12.5 },
     },
-    result = "silicon-nitride",
+    results = {{ type = "item", name = "silicon-nitride", amount = 1 }},
     allow_decomposition = false,
   },
 
@@ -127,8 +124,7 @@ data:extend({
       { "lithium", 1 },
       { "cobalt-oxide", 1 },
     },
-    result = "lithium-cobalt-oxide",
-    result_count = 2,
+    results = {{ type = "item", name = "lithium-cobalt-oxide", amount = 2 }},
   },
 
   {
@@ -144,8 +140,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
-    result = "wood",
-    result_count = 2,
+    results = {{ type = "item", name = "wood", amount = 2 }},
     crafting_machine_tint = {
       primary = { r = 0.5, g = 0.04, b = 0.0, a = 0.000 },
       secondary = { r = 0.85, g = 0.6, b = 0.3, a = 0.000 },
@@ -164,8 +159,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
     },
-    result = "gas-canister",
-    result_count = 5,
+    results = {{ type = "item", name = "gas-canister", amount = 5 }},
   },
 
   {
@@ -179,8 +173,7 @@ data:extend({
       { "iron-plate", 1 },
       { "plastic-bar", 1 },
     },
-    result = "empty-canister",
-    result_count = 5,
+    results = {{ type = "item", name = "empty-canister", amount = 5 }},
   },
 
   {
@@ -194,8 +187,7 @@ data:extend({
       { type = "item", name = "alumina", amount = 1 },
       { type = "fluid", name = "light-oil", amount = 15 },
     },
-    result = "polishing-compound",
-    result_count = 2,
+    results = {{ type = "item", name = "polishing-compound", amount = 2 }},
     crafting_machine_tint = {
       primary = { r = 0.57, g = 0.33, b = 0.0, a = 0.000 },
       secondary = { r = 1, g = 0.73, b = 0.07, a = 0.000 },
@@ -211,7 +203,7 @@ data:extend({
     ingredients = {
       { "wood", 2 },
     },
-    result = "coal",
+    results = {{ type = "item", name = "coal", amount = 1 }},
     allow_decomposition = false,
   },
 
@@ -250,7 +242,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "liquid-fuel", amount = 20 },
     },
-    result = "enriched-fuel",
+    results = {{ type = "item", name = "enriched-fuel", amount = 1 }},
     subgroup = "bob-resource-chemical",
     order = "d[enriched-fuel]",
     crafting_machine_tint = {

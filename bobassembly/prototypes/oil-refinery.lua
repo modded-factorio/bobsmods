@@ -37,7 +37,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         { "advanced-circuit", 10 },
         { "pipe", 10 },
       },
-      result = "oil-refinery-2",
+      results = {{ type = "item", name = "oil-refinery-2", amount = 1 }},
       enabled = false,
     },
 
@@ -113,7 +113,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         { "processing-unit", 10 },
         { "pipe", 10 },
       },
-      result = "oil-refinery-3",
+      results = {{ type = "item", name = "oil-refinery-3", amount = 1 }},
       enabled = false,
     },
 
@@ -190,7 +190,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         { "processing-unit", 10 },
         { "pipe", 10 },
       },
-      result = "oil-refinery-4",
+      results = {{ type = "item", name = "oil-refinery-4", amount = 1 }},
       enabled = false,
     },
 

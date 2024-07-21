@@ -9,7 +9,7 @@ data:extend({
       { "iron-gear-wheel", 10 },
       { "steel-plate", 20 },
     },
-    result = "bob-gun-turret-2",
+    results = {{ type = "item", name = "bob-gun-turret-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -21,7 +21,7 @@ data:extend({
       { "iron-gear-wheel", 10 },
       { "steel-plate", 20 },
     },
-    result = "bob-gun-turret-3",
+    results = {{ type = "item", name = "bob-gun-turret-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -33,7 +33,7 @@ data:extend({
       { "iron-gear-wheel", 10 },
       { "steel-plate", 20 },
     },
-    result = "bob-gun-turret-4",
+    results = {{ type = "item", name = "bob-gun-turret-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -45,7 +45,7 @@ data:extend({
       { "iron-gear-wheel", 10 },
       { "steel-plate", 20 },
     },
-    result = "bob-gun-turret-5",
+    results = {{ type = "item", name = "bob-gun-turret-5", amount = 1 }},
   },
 
   {
@@ -58,7 +58,7 @@ data:extend({
       { "copper-plate", 20 },
       { "iron-plate", 20 },
     },
-    result = "bob-sniper-turret-1",
+    results = {{ type = "item", name = "bob-sniper-turret-1", amount = 1 }},
   },
   {
     type = "recipe",
@@ -71,7 +71,7 @@ data:extend({
       { "steel-plate", 20 },
       { "iron-plate", 20 },
     },
-    result = "bob-sniper-turret-2",
+    results = {{ type = "item", name = "bob-sniper-turret-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -84,7 +84,7 @@ data:extend({
       { "steel-plate", 20 },
       { "plastic-bar", 20 },
     },
-    result = "bob-sniper-turret-3",
+    results = {{ type = "item", name = "bob-sniper-turret-3", amount = 1 }},
   },
 
   {
@@ -97,7 +97,7 @@ data:extend({
       { "steel-plate", 20 },
       { "advanced-circuit", 20 },
     },
-    result = "bob-laser-turret-2",
+    results = {{ type = "item", name = "bob-laser-turret-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -109,7 +109,7 @@ data:extend({
       { "steel-plate", 20 },
       { "battery", 12 },
     },
-    result = "bob-laser-turret-3",
+    results = {{ type = "item", name = "bob-laser-turret-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -122,7 +122,7 @@ data:extend({
       { "processing-unit", 20 },
       { "battery", 12 },
     },
-    result = "bob-laser-turret-4",
+    results = {{ type = "item", name = "bob-laser-turret-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -135,7 +135,7 @@ data:extend({
       { "processing-unit", 20 },
       { "battery", 12 },
     },
-    result = "bob-laser-turret-5",
+    results = {{ type = "item", name = "bob-laser-turret-5", amount = 1 }},
   },
 
   {
@@ -148,7 +148,7 @@ data:extend({
       { "electronic-circuit", 80 },
       { "battery", 48 },
     },
-    result = "bob-plasma-turret-1",
+    results = {{ type = "item", name = "bob-plasma-turret-1", amount = 1 }},
   },
   {
     type = "recipe",
@@ -161,7 +161,7 @@ data:extend({
       { "advanced-circuit", 80 },
       { "battery", 48 },
     },
-    result = "bob-plasma-turret-2",
+    results = {{ type = "item", name = "bob-plasma-turret-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -174,7 +174,7 @@ data:extend({
       { "advanced-circuit", 80 },
       { "battery", 48 },
     },
-    result = "bob-plasma-turret-3",
+    results = {{ type = "item", name = "bob-plasma-turret-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -187,7 +187,7 @@ data:extend({
       { "processing-unit", 80 },
       { "battery", 48 },
     },
-    result = "bob-plasma-turret-4",
+    results = {{ type = "item", name = "bob-plasma-turret-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -200,7 +200,7 @@ data:extend({
       { "processing-unit", 80 },
       { "battery", 48 },
     },
-    result = "bob-plasma-turret-5",
+    results = {{ type = "item", name = "bob-plasma-turret-5", amount = 1 }},
   },
 
   {
@@ -215,7 +215,7 @@ data:extend({
       { "iron-gear-wheel", 40 }, --titanium gear wheel
       { "processing-unit", 20 },
     },
-    result = "bob-artillery-turret-2",
+    results = {{ type = "item", name = "bob-artillery-turret-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -229,6 +229,6 @@ data:extend({
       { "iron-gear-wheel", 40 }, --nitinol gear wheel
       { "processing-unit", 20 }, --advanced processing unit
     },
-    result = "bob-artillery-turret-3",
+    results = {{ type = "item", name = "bob-artillery-turret-3", amount = 1 }},
   },
 })

@@ -65,7 +65,7 @@ then
         { "copper-plate", 3 },
         { "pipe", 2 },
       },
-      result = "bob-distillery-2",
+      results = {{ type = "item", name = "bob-distillery-2", amount = 1 }},
     },
     {
       type = "recipe",
@@ -78,7 +78,7 @@ then
         { "copper-plate", 3 },
         { "pipe", 2 },
       },
-      result = "bob-distillery-3",
+      results = {{ type = "item", name = "bob-distillery-3", amount = 1 }},
     },
 
     {
@@ -92,7 +92,7 @@ then
         { "copper-plate", 3 },
         { "pipe", 2 },
       },
-      result = "bob-distillery-4",
+      results = {{ type = "item", name = "bob-distillery-4", amount = 1 }},
     },
 
     {
@@ -106,7 +106,7 @@ then
         { "copper-plate", 3 },
         { "pipe", 2 },
       },
-      result = "bob-distillery-5",
+      results = {{ type = "item", name = "bob-distillery-5", amount = 1 }},
     },
 
     util.merge({

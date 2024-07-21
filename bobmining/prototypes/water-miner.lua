@@ -63,7 +63,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         { "electronic-circuit", 5 },
         { "pipe", 10 },
       },
-      result = "water-miner-1",
+      results = {{ type = "item", name = "water-miner-1", amount = 1 }},
       enabled = false,
     },
     {
@@ -77,7 +77,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         { "electronic-circuit", 5 },
         { "pipe", 10 },
       },
-      result = "water-miner-2",
+      results = {{ type = "item", name = "water-miner-2", amount = 1 }},
       enabled = false,
     },
     {
@@ -91,7 +91,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         { "advanced-circuit", 5 },
         { "pipe", 10 },
       },
-      result = "water-miner-3",
+      results = {{ type = "item", name = "water-miner-3", amount = 1 }},
       enabled = false,
     },
     {
@@ -105,7 +105,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         { "processing-unit", 5 },
         { "pipe", 10 },
       },
-      result = "water-miner-4",
+      results = {{ type = "item", name = "water-miner-4", amount = 1 }},
       enabled = false,
     },
     {
@@ -119,7 +119,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         { "processing-unit", 5 },
         { "pipe", 10 },
       },
-      result = "water-miner-5",
+      results = {{ type = "item", name = "water-miner-5", amount = 1 }},
       enabled = false,
     },
   })

@@ -74,7 +74,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "heat-pipe", 8 },
         { "steel-plate", 6 },
       },
-      result = "burner-reactor",
+      results = {{ type = "item", name = "burner-reactor", amount = 1 }},
     },
     {
       type = "reactor",
@@ -201,7 +201,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "steel-plate", 6 },
         { "concrete", 10 },
       },
-      result = "burner-reactor-2",
+      results = {{ type = "item", name = "burner-reactor-2", amount = 1 }},
     },
     util.merge({
       data.raw.reactor["burner-reactor"],
@@ -244,7 +244,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "burner-reactor", 1 },
         { "pipe", 5 },
       },
-      result = "fluid-reactor",
+      results = {{ type = "item", name = "fluid-reactor", amount = 1 }},
     },
     util.merge({
       data.raw.reactor["burner-reactor"],
@@ -280,7 +280,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { "concrete", 10 },
         { "pipe", 5 },
       },
-      result = "fluid-reactor-2",
+      results = {{ type = "item", name = "fluid-reactor-2", amount = 1 }},
     },
     util.merge({
       data.raw.reactor["burner-reactor-2"],
@@ -410,7 +410,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
           { "steel-plate", 6 },
           { "pipe", 3 },
         },
-        result = "fluid-reactor",
+        results = {{ type = "item", name = "fluid-reactor", amount = 1 }},
       },
     })
 

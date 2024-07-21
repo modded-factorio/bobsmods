@@ -1510,7 +1510,7 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       ingredients = {
         { "se-iridium-plate", 1 },
       },
-      result = "iridium-pipe",
+      results = {{ type = "item", name = "iridium-pipe", amount = 1 }},
     },
 
     {
@@ -1521,8 +1521,7 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
         { "iridium-pipe", 16 },
         { "se-iridium-plate", 5 },
       },
-      result_count = 2,
-      result = "iridium-pipe-to-ground",
+      results = {{ type = "item", name = "iridium-pipe-to-ground", amount = 2 }},
     },
   })
 end

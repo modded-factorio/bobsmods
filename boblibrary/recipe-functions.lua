@@ -189,8 +189,7 @@ function bobmods.lib.recipe.add_result(recipe, item_in)
     and type(item) == "table"
     and bobmods.lib.item.get_type(item.name)
   then
-    if data.raw.recipe[recipe].result or data.raw.recipe[recipe].results then
-      bobmods.lib.result_check(data.raw.recipe[recipe])
+    if data.raw.recipe[recipe].results then
       bobmods.lib.item.add(data.raw.recipe[recipe].results, item)
     end
   else
@@ -210,8 +209,7 @@ function bobmods.lib.recipe.set_result(recipe, item_in)
     and type(item) == "table"
     and bobmods.lib.item.get_type(item.name)
   then
-    if data.raw.recipe[recipe].result or data.raw.recipe[recipe].results then
-      bobmods.lib.result_check(data.raw.recipe[recipe])
+    if data.raw.recipe[recipe].results then
       bobmods.lib.item.set(data.raw.recipe[recipe].results, item)
     end
   else
@@ -224,8 +222,7 @@ end
 
 function bobmods.lib.recipe.remove_result(recipe, item)
   if type(recipe) == "string" and type(item) == "string" and data.raw.recipe[recipe] then
-    if data.raw.recipe[recipe].result or data.raw.recipe[recipe].results then
-      bobmods.lib.result_check(data.raw.recipe[recipe])
+    if data.raw.recipe[recipe].results then
       bobmods.lib.item.remove(data.raw.recipe[recipe].results, item)
     end
   else

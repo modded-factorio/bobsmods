@@ -8,7 +8,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "boiler", 1 },
         { "steel-plate", 5 },
       },
-      result = "boiler-2",
+      results = {{ type = "item", name = "boiler-2", amount = 1 }},
     },
 
     {
@@ -19,7 +19,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "boiler-2", 1 },
         { "steel-plate", 5 },
       },
-      result = "boiler-3",
+      results = {{ type = "item", name = "boiler-3", amount = 1 }},
     },
 
     {
@@ -30,7 +30,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "boiler-3", 1 },
         { "steel-plate", 5 },
       },
-      result = "boiler-4",
+      results = {{ type = "item", name = "boiler-4", amount = 1 }},
     },
 
     {
@@ -41,7 +41,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "boiler-4", 1 },
         { "steel-plate", 5 },
       },
-      result = "boiler-5",
+      results = {{ type = "item", name = "boiler-5", amount = 1 }},
     },
   })
 end

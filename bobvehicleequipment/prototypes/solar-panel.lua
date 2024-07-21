@@ -21,7 +21,7 @@ data:extend({
       { "electronic-circuit", 5 },
       { "copper-cable", 4 },
     },
-    result = "vehicle-solar-panel-1",
+    results = {{ type = "item", name = "vehicle-solar-panel-1", amount = 1 }},
   },
 
   {
@@ -102,7 +102,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "copper-plate", 2 },
     },
-    result = "vehicle-solar-panel-2",
+    results = {{ type = "item", name = "vehicle-solar-panel-2", amount = 1 }},
   },
 
   {
@@ -181,7 +181,7 @@ data:extend({
       { "processing-unit", 5 },
       { "copper-plate", 2 },
     },
-    result = "vehicle-solar-panel-3",
+    results = {{ type = "item", name = "vehicle-solar-panel-3", amount = 1 }},
   },
 
   {
@@ -261,7 +261,7 @@ data:extend({
       { "processing-unit", 5 },
       { "copper-cable", 5 },
     },
-    result = "vehicle-solar-panel-4",
+    results = {{ type = "item", name = "vehicle-solar-panel-4", amount = 1 }},
   },
 
   {
@@ -341,7 +341,7 @@ data:extend({
       { "processing-unit", 5 },
       { "copper-cable", 5 },
     },
-    result = "vehicle-solar-panel-5",
+    results = {{ type = "item", name = "vehicle-solar-panel-5", amount = 1 }},
   },
 
   {
@@ -423,7 +423,7 @@ data:extend({
       { "processing-unit", 5 },
       { "copper-cable", 5 },
     },
-    result = "vehicle-solar-panel-6",
+    results = {{ type = "item", name = "vehicle-solar-panel-6", amount = 1 }},
   },
 
   {

@@ -10,8 +10,7 @@ data:extend({
       { "flying-robot-frame", 1 },
       { "steel-chest", 2 },
     },
-    result_count = 3,
-    result = "advanced-logistic-science-pack",
+    results = {{ type = "item", name = "advanced-logistic-science-pack", amount = 3 }},
   },
 
   {
@@ -25,7 +24,7 @@ data:extend({
       { "filter-inserter", 4 },
       { "express-transport-belt", 4 },
     },
-    result = "lab-2",
+    results = {{ type = "item", name = "lab-2", amount = 1 }},
   },
 })
 
@@ -39,8 +38,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         { "coal", 1 },
         { "stone", 1 },
       },
-      result_count = 1,
-      result = "steam-science-pack",
+      results = {{ type = "item", name = "steam-science-pack", amount = 1 }},
     },
 
     {
@@ -52,7 +50,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         { "iron-plate", 2 },
         { "stone", 4 },
       },
-      result = "burner-lab",
+      results = {{ type = "item", name = "burner-lab", amount = 1 }},
     },
   })
 end

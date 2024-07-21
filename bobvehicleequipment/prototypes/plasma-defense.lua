@@ -88,7 +88,7 @@ data:extend({
       { "electronic-circuit", 20 },
       { "battery", 12 },
     },
-    result = "vehicle-big-turret-1",
+    results = {{ type = "item", name = "vehicle-big-turret-1", amount = 1 }},
   },
 
   bob_active_weapon_equipment({
@@ -170,7 +170,7 @@ data:extend({
       { "advanced-circuit", 20 },
       { "battery", 12 },
     },
-    result = "vehicle-big-turret-2",
+    results = {{ type = "item", name = "vehicle-big-turret-2", amount = 1 }},
   },
 
   bob_active_weapon_equipment({
@@ -250,7 +250,7 @@ data:extend({
       { "advanced-circuit", 20 },
       { "battery", 12 },
     },
-    result = "vehicle-big-turret-3",
+    results = {{ type = "item", name = "vehicle-big-turret-3", amount = 1 }},
   },
 
   bob_active_weapon_equipment({
@@ -332,7 +332,7 @@ data:extend({
       { "processing-unit", 20 },
       { "battery", 12 },
     },
-    result = "vehicle-big-turret-4",
+    results = {{ type = "item", name = "vehicle-big-turret-4", amount = 1 }},
   },
 
   bob_active_weapon_equipment({
@@ -413,7 +413,7 @@ data:extend({
       { "processing-unit", 20 },
       { "battery", 12 },
     },
-    result = "vehicle-big-turret-5",
+    results = {{ type = "item", name = "vehicle-big-turret-5", amount = 1 }},
   },
 
   bob_active_weapon_equipment({
@@ -494,7 +494,7 @@ data:extend({
       { "processing-unit", 20 },
       { "battery", 12 },
     },
-    result = "vehicle-big-turret-6",
+    results = {{ type = "item", name = "vehicle-big-turret-6", amount = 1 }},
   },
 
   bob_active_weapon_equipment({

@@ -84,7 +84,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { "pipe", 3 },
         { "steel-plate", 2 },
       },
-      result = "mech-leg-segment",
+      results = {{ type = "item", name = "mech-leg-segment", amount = 1 }},
     },
     {
       type = "recipe",
@@ -94,7 +94,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       ingredients = {
         { "low-density-structure", 1 },
       },
-      result = "mech-foot",
+      results = {{ type = "item", name = "mech-foot", amount = 1 }},
     },
     {
       type = "recipe",
@@ -106,7 +106,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { "electric-engine-unit", 5 },
         { "iron-gear-wheel", 4 },
       },
-      result = "mech-hip",
+      results = {{ type = "item", name = "mech-hip", amount = 1 }},
     },
     {
       type = "recipe",
@@ -118,7 +118,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { "electric-engine-unit", 10 },
         { "iron-gear-wheel", 8 },
       },
-      result = "mech-knee",
+      results = {{ type = "item", name = "mech-knee", amount = 1 }},
     },
     {
       type = "recipe",
@@ -132,7 +132,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { "mech-knee", 1 },
         { "copper-cable", 4 },
       },
-      result = "mech-leg",
+      results = {{ type = "item", name = "mech-leg", amount = 1 }},
     },
 
     {
@@ -141,7 +141,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       enabled = false,
       energy_required = 2,
       ingredients = {},
-      result = "mech-brain",
+      results = {{ type = "item", name = "mech-brain", amount = 1 }},
     },
     {
       type = "recipe",
@@ -152,7 +152,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { "low-density-structure", 50 },
         { "mech-brain", 1 },
       },
-      result = "mech-frame",
+      results = {{ type = "item", name = "mech-frame", amount = 1 }},
     },
     {
       type = "recipe",
@@ -163,7 +163,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { "low-density-structure", 5 },
         { "steel-plate", 2 },
       },
-      result = "mech-armor-plate",
+      results = {{ type = "item", name = "mech-armor-plate", amount = 1 }},
     },
   })
 end
@@ -490,7 +490,7 @@ data:extend({
       { "steel-plate", 15 },
       { "iron-gear-wheel", 5 },
     },
-    result = "spidertron-cannon",
+    results = {{ type = "item", name = "spidertron-cannon", amount = 1 }},
   },
   {
     type = "recipe",
@@ -500,7 +500,7 @@ data:extend({
     ingredients = {
       { "gun-turret", 2 },
     },
-    result = "antron",
+    results = {{ type = "item", name = "antron", amount = 1 }},
   },
   {
     type = "recipe",
@@ -510,7 +510,7 @@ data:extend({
     ingredients = {
       { "spidertron-cannon", 2 },
     },
-    result = "tankotron",
+    results = {{ type = "item", name = "tankotron", amount = 1 }},
   },
   {
     type = "recipe",
@@ -521,7 +521,7 @@ data:extend({
       { "gun-turret", 2 },
       { "steel-chest", 1 },
     },
-    result = "logistic-spidertron",
+    results = {{ type = "item", name = "logistic-spidertron", amount = 1 }},
   },
   {
     type = "recipe",
@@ -531,7 +531,7 @@ data:extend({
     ingredients = {
       { "rocket-launcher", 8 },
     },
-    result = "heavy-spidertron",
+    results = {{ type = "item", name = "heavy-spidertron", amount = 1 }},
   },
 })
 

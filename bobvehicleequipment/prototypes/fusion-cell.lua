@@ -19,7 +19,7 @@ data:extend({
     ingredients = {
       { "processing-unit", 125 },
     },
-    result = "vehicle-fusion-cell-1",
+    results = {{ type = "item", name = "vehicle-fusion-cell-1", amount = 1 }},
   },
 
   {
@@ -99,7 +99,7 @@ data:extend({
       { "speed-module-2", 1 },
       { "productivity-module-2", 1 },
     },
-    result = "vehicle-fusion-cell-2",
+    results = {{ type = "item", name = "vehicle-fusion-cell-2", amount = 1 }},
   },
 
   {
@@ -180,7 +180,7 @@ data:extend({
       { "speed-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-fusion-cell-3",
+    results = {{ type = "item", name = "vehicle-fusion-cell-3", amount = 1 }},
   },
 
   {
@@ -262,7 +262,7 @@ data:extend({
       { "speed-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-fusion-cell-4",
+    results = {{ type = "item", name = "vehicle-fusion-cell-4", amount = 1 }},
   },
 
   {
@@ -343,7 +343,7 @@ data:extend({
       { "speed-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-fusion-cell-5",
+    results = {{ type = "item", name = "vehicle-fusion-cell-5", amount = 1 }},
   },
 
   {
@@ -424,7 +424,7 @@ data:extend({
       { "speed-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-fusion-cell-6",
+    results = {{ type = "item", name = "vehicle-fusion-cell-6", amount = 1 }},
   },
 
   {

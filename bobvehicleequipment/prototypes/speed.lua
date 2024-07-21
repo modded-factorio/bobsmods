@@ -21,7 +21,7 @@ data:extend({
       { "electric-engine-unit", 30 },
       { "steel-plate", 20 },
     },
-    result = "vehicle-motor",
+    results = {{ type = "item", name = "vehicle-motor", amount = 1 }},
   },
 
   {
@@ -106,7 +106,7 @@ data:extend({
       { "iron-gear-wheel", 30 },
       { "steel-plate", 20 },
     },
-    result = "vehicle-engine",
+    results = {{ type = "item", name = "vehicle-engine", amount = 1 }},
   },
 
   {

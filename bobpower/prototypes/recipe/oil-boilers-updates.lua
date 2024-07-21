@@ -40,33 +40,33 @@ if settings.startup["bobmods-power-steam"].value == true then
   then
     if data.raw.item["steel-pipe"] then
       bobmods.lib.recipe.remove_result("boiler-2-from-oil-boiler", "pipe")
-      bobmods.lib.recipe.add_result("boiler-2-from-oil-boiler", { "steel-pipe", 2 })
+      bobmods.lib.recipe.add_result("boiler-2-from-oil-boiler", { type = "item", name = "steel-pipe", amount = 2 })
     end
 
     if data.raw.item["brass-pipe"] then
       bobmods.lib.recipe.replace_ingredient("oil-boiler-2-from-boiler-3", "pipe", "brass-pipe")
 
       bobmods.lib.recipe.remove_result("boiler-3-from-oil-boiler-2", "pipe")
-      bobmods.lib.recipe.add_result("boiler-3-from-oil-boiler-2", { "brass-pipe", 2 })
+      bobmods.lib.recipe.add_result("boiler-3-from-oil-boiler-2", { type = "item", name = "brass-pipe", amount = 2 })
     end
 
     if data.raw.item["ceramic-pipe"] then
       bobmods.lib.recipe.replace_ingredient("oil-boiler-3-from-boiler-4", "pipe", "ceramic-pipe")
 
       bobmods.lib.recipe.remove_result("boiler-4-from-oil-boiler-3", "pipe")
-      bobmods.lib.recipe.add_result("boiler-4-from-oil-boiler-3", { "ceramic-pipe", 2 })
+      bobmods.lib.recipe.add_result("boiler-4-from-oil-boiler-3", { type = "item", name = "ceramic-pipe", amount = 2 })
     end
 
     if data.raw.item["copper-tungsten-pipe"] then
       bobmods.lib.recipe.replace_ingredient("oil-boiler-4-from-boiler-5", "pipe", "copper-tungsten-pipe")
 
       bobmods.lib.recipe.remove_result("boiler-5-from-oil-boiler-4", "pipe")
-      bobmods.lib.recipe.add_result("boiler-5-from-oil-boiler-4", { "copper-tungsten-pipe", 2 })
+      bobmods.lib.recipe.add_result("boiler-5-from-oil-boiler-4", { type = "item", name = "copper-tungsten-pipe", amount = 2 })
     elseif data.raw.item["tungsten-pipe"] then
       bobmods.lib.recipe.replace_ingredient("oil-boiler-4-from-boiler-5", "pipe", "tungsten-pipe")
 
       bobmods.lib.recipe.remove_result("boiler-5-from-oil-boiler-4", "pipe")
-      bobmods.lib.recipe.add_result("boiler-5-from-oil-boiler-4", { "tungsten-pipe", 2 })
+      bobmods.lib.recipe.add_result("boiler-5-from-oil-boiler-4", { type = "item", name = "tungsten-pipe", amount = 2 })
     end
     bobmods.lib.tech.add_recipe_unlock("bob-oil-boiler-2", "oil-boiler-2-from-boiler-3")
     bobmods.lib.tech.add_recipe_unlock("bob-oil-boiler-3", "oil-boiler-3-from-boiler-4")

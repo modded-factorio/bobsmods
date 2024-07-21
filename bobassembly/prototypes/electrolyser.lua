@@ -213,7 +213,7 @@ then
         { "electronic-circuit", 5 },
         { "pipe", 5 },
       },
-      result = "electrolyser-2",
+      results = {{ type = "item", name = "electrolyser-2", amount = 1 }},
     },
 
     {
@@ -229,7 +229,7 @@ then
         { "advanced-circuit", 10 },
         { "pipe", 5 },
       },
-      result = "electrolyser-3",
+      results = {{ type = "item", name = "electrolyser-3", amount = 1 }},
     },
 
     {
@@ -245,7 +245,7 @@ then
         { "processing-unit", 10 },
         { "pipe", 5 },
       },
-      result = "electrolyser-4",
+      results = {{ type = "item", name = "electrolyser-4", amount = 1 }},
     },
 
     {
@@ -261,7 +261,7 @@ then
         { "processing-unit", 10 },
         { "pipe", 5 },
       },
-      result = "electrolyser-5",
+      results = {{ type = "item", name = "electrolyser-5", amount = 1 }},
     },
 
     {

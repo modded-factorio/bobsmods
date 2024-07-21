@@ -6,7 +6,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
     },
-    result = "steel-gear-wheel",
+    results = {{ type = "item", name = "steel-gear-wheel", amount = 1 }},
   },
 
   {
@@ -16,8 +16,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
     },
-    result = "steel-bearing-ball",
-    result_count = 12,
+    results = {{ type = "item", name = "steel-bearing-ball", amount = 12 }},
   },
 
   {
@@ -28,8 +27,7 @@ data:extend({
       { "steel-plate", 1 },
       { "steel-bearing-ball", 16 },
     },
-    result = "steel-bearing",
-    result_count = 2,
+    results = {{ type = "item", name = "steel-bearing", amount = 2 }},
   },
 
   {
@@ -39,7 +37,7 @@ data:extend({
     ingredients = {
       { "brass-alloy", 1 },
     },
-    result = "brass-gear-wheel",
+    results = {{ type = "item", name = "brass-gear-wheel", amount = 1 }},
   },
 
   {
@@ -49,7 +47,7 @@ data:extend({
     ingredients = {
       { "cobalt-steel-alloy", 1 },
     },
-    result = "cobalt-steel-gear-wheel",
+    results = {{ type = "item", name = "cobalt-steel-gear-wheel", amount = 1 }},
   },
 
   {
@@ -59,8 +57,7 @@ data:extend({
     ingredients = {
       { "cobalt-steel-alloy", 1 },
     },
-    result = "cobalt-steel-bearing-ball",
-    result_count = 12,
+    results = {{ type = "item", name = "cobalt-steel-bearing-ball", amount = 12 }},
   },
 
   {
@@ -71,8 +68,7 @@ data:extend({
       { "cobalt-steel-alloy", 1 },
       { "cobalt-steel-bearing-ball", 16 },
     },
-    result = "cobalt-steel-bearing",
-    result_count = 2,
+    results = {{ type = "item", name = "cobalt-steel-bearing", amount = 2 }},
   },
 
   {
@@ -82,7 +78,7 @@ data:extend({
     ingredients = {
       { "titanium-plate", 1 },
     },
-    result = "titanium-gear-wheel",
+    results = {{ type = "item", name = "titanium-gear-wheel", amount = 1 }},
   },
 
   {
@@ -92,8 +88,7 @@ data:extend({
     ingredients = {
       { "titanium-plate", 1 },
     },
-    result = "titanium-bearing-ball",
-    result_count = 12,
+    results = {{ type = "item", name = "titanium-bearing-ball", amount = 12 }},
   },
 
   {
@@ -106,8 +101,7 @@ data:extend({
       { "titanium-bearing-ball", 16 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },
-    result = "titanium-bearing",
-    result_count = 2,
+    results = {{ type = "item", name = "titanium-bearing", amount = 2 }},
   },
 
   {
@@ -117,7 +111,7 @@ data:extend({
     ingredients = {
       { "tungsten-plate", 1 },
     },
-    result = "tungsten-gear-wheel",
+    results = {{ type = "item", name = "tungsten-gear-wheel", amount = 1 }},
   },
 
   {
@@ -127,7 +121,7 @@ data:extend({
     ingredients = {
       { "nitinol-alloy", 1 },
     },
-    result = "nitinol-gear-wheel",
+    results = {{ type = "item", name = "nitinol-gear-wheel", amount = 1 }},
   },
 
   {
@@ -137,8 +131,7 @@ data:extend({
     ingredients = {
       { "nitinol-alloy", 1 },
     },
-    result = "nitinol-bearing-ball",
-    result_count = 12,
+    results = {{ type = "item", name = "nitinol-bearing-ball", amount = 12 }},
   },
 
   {
@@ -151,8 +144,7 @@ data:extend({
       { "nitinol-bearing-ball", 16 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },
-    result = "nitinol-bearing",
-    result_count = 2,
+    results = {{ type = "item", name = "nitinol-bearing", amount = 2 }},
   },
 
   {
@@ -162,8 +154,7 @@ data:extend({
     ingredients = {
       { "silicon-nitride", 1 },
     },
-    result = "ceramic-bearing-ball",
-    result_count = 12,
+    results = {{ type = "item", name = "ceramic-bearing-ball", amount = 12 }},
   },
 
   {
@@ -176,8 +167,7 @@ data:extend({
       { "ceramic-bearing-ball", 16 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },
-    result = "ceramic-bearing",
-    result_count = 2,
+    results = {{ type = "item", name = "ceramic-bearing", amount = 2 }},
   },
 
   {
@@ -192,7 +182,7 @@ data:extend({
       { "carbon", 1 },
       { "plastic-bar", 1 },
     },
-    result = "lithium-ion-battery",
+    results = {{ type = "item", name = "lithium-ion-battery", amount = 1 }},
     crafting_machine_tint = {
       primary = { r = 0.1, g = 1.0, b = 0.8, a = 1.000 },
       secondary = { r = 0.2, g = 0.6, b = 0.9, a = 1.000 },
@@ -213,7 +203,7 @@ data:extend({
       { "zinc-plate", 1 },
       { "plastic-bar", 1 },
     },
-    result = "silver-zinc-battery",
+    results = {{ type = "item", name = "silver-zinc-battery", amount = 1 }},
     crafting_machine_tint = {
       primary = { r = 0.1, g = 1.0, b = 0.1, a = 1.000 },
       secondary = { r = 0.8, g = 0.8, b = 0.8, a = 1.000 },
@@ -232,8 +222,7 @@ data:extend({
       { "steel-plate", 1 },
       { "silicon-carbide", 5 },
     },
-    result = "grinding-wheel",
-    result_count = 2,
+    results = {{ type = "item", name = "grinding-wheel", amount = 2 }},
   },
 
   {
@@ -246,7 +235,6 @@ data:extend({
       { "steel-plate", 1 },
       { "wood", 5 },
     },
-    result = "polishing-wheel",
-    result_count = 2,
+    results = {{ type = "item", name = "polishing-wheel", amount = 2 }},
   },
 })

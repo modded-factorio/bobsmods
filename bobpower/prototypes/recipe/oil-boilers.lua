@@ -8,7 +8,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "boiler-2", 1 },
         { "pipe", 2 },
       },
-      result = "oil-boiler",
+      results = {{ type = "item", name = "oil-boiler", amount = 1 }},
     },
 
     {
@@ -19,7 +19,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "oil-boiler", 1 },
         { "steel-plate", 5 },
       },
-      result = "oil-boiler-2",
+      results = {{ type = "item", name = "oil-boiler-2", amount = 1 }},
     },
 
     {
@@ -30,7 +30,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "oil-boiler-2", 1 },
         { "steel-plate", 5 },
       },
-      result = "oil-boiler-3",
+      results = {{ type = "item", name = "oil-boiler-3", amount = 1 }},
     },
 
     {
@@ -41,7 +41,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         { "oil-boiler-3", 1 },
         { "steel-plate", 5 },
       },
-      result = "oil-boiler-4",
+      results = {{ type = "item", name = "oil-boiler-4", amount = 1 }},
     },
   })
 
@@ -59,7 +59,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "boiler-3", 1 },
           { "pipe", 2 },
         },
-        result = "oil-boiler-2",
+        results = {{ type = "item", name = "oil-boiler-2", amount = 1 }},
         allow_as_intermediate = false,
       },
 
@@ -72,7 +72,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "boiler-4", 1 },
           { "pipe", 2 },
         },
-        result = "oil-boiler-3",
+        results = {{ type = "item", name = "oil-boiler-3", amount = 1 }},
         allow_as_intermediate = false,
       },
 
@@ -85,7 +85,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "boiler-5", 1 },
           { "pipe", 2 },
         },
-        result = "oil-boiler-4",
+        results = {{ type = "item", name = "oil-boiler-4", amount = 1 }},
         allow_as_intermediate = false,
       },
     })

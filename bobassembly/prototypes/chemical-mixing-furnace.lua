@@ -88,7 +88,7 @@ then
         { "processing-unit", 5 },
         { "pipe", 5 },
       },
-      result = "electric-chemical-mixing-furnace",
+      results = {{ type = "item", name = "electric-chemical-mixing-furnace", amount = 1 }},
     },
 
     {
@@ -103,7 +103,7 @@ then
         { "processing-unit", 5 },
         { "pipe", 5 },
       },
-      result = "electric-chemical-mixing-furnace-2",
+      results = {{ type = "item", name = "electric-chemical-mixing-furnace-2", amount = 1 }},
     },
 
     {

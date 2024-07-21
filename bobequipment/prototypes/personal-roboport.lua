@@ -65,7 +65,7 @@ data:extend({
       { "steel-plate", 20 },
       { "battery", 20 },
     },
-    result = "personal-roboport-mk3-equipment",
+    results = {{ type = "item", name = "personal-roboport-mk3-equipment", amount = 1 }},
   },
   {
     type = "recipe",
@@ -79,7 +79,7 @@ data:extend({
       { "steel-plate", 20 },
       { "battery", 20 },
     },
-    result = "personal-roboport-mk4-equipment",
+    results = {{ type = "item", name = "personal-roboport-mk4-equipment", amount = 1 }},
   },
 
   {
@@ -984,7 +984,7 @@ data:extend({
       { "iron-gear-wheel", 20 },
       { "steel-plate", 10 },
     },
-    result = "personal-roboport-antenna-equipment",
+    results = {{ type = "item", name = "personal-roboport-antenna-equipment", amount = 1 }},
   },
   {
     type = "recipe",
@@ -997,7 +997,7 @@ data:extend({
       { "iron-gear-wheel", 20 },
       { "steel-plate", 10 },
     },
-    result = "personal-roboport-antenna-equipment-2",
+    results = {{ type = "item", name = "personal-roboport-antenna-equipment-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1010,7 +1010,7 @@ data:extend({
       { "iron-gear-wheel", 20 },
       { "steel-plate", 10 },
     },
-    result = "personal-roboport-antenna-equipment-3",
+    results = {{ type = "item", name = "personal-roboport-antenna-equipment-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1023,7 +1023,7 @@ data:extend({
       { "iron-gear-wheel", 20 },
       { "steel-plate", 10 },
     },
-    result = "personal-roboport-antenna-equipment-4",
+    results = {{ type = "item", name = "personal-roboport-antenna-equipment-4", amount = 1 }},
   },
 
   {
@@ -1036,7 +1036,7 @@ data:extend({
       { "steel-plate", 5 },
       { "battery", 20 },
     },
-    result = "personal-roboport-chargepad-equipment",
+    results = {{ type = "item", name = "personal-roboport-chargepad-equipment", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1049,7 +1049,7 @@ data:extend({
       { "steel-plate", 5 },
       { "battery", 20 },
     },
-    result = "personal-roboport-chargepad-equipment-2",
+    results = {{ type = "item", name = "personal-roboport-chargepad-equipment-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1062,7 +1062,7 @@ data:extend({
       { "steel-plate", 5 },
       { "battery", 20 },
     },
-    result = "personal-roboport-chargepad-equipment-3",
+    results = {{ type = "item", name = "personal-roboport-chargepad-equipment-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1075,7 +1075,7 @@ data:extend({
       { "steel-plate", 5 },
       { "battery", 20 },
     },
-    result = "personal-roboport-chargepad-equipment-4",
+    results = {{ type = "item", name = "personal-roboport-chargepad-equipment-4", amount = 1 }},
   },
 
   {
@@ -1086,7 +1086,7 @@ data:extend({
     ingredients = {
       { "electronic-circuit", 10 },
     },
-    result = "personal-roboport-robot-equipment",
+    results = {{ type = "item", name = "personal-roboport-robot-equipment", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1097,7 +1097,7 @@ data:extend({
       { "personal-roboport-robot-equipment", 1 },
       { "advanced-circuit", 10 },
     },
-    result = "personal-roboport-robot-equipment-2",
+    results = {{ type = "item", name = "personal-roboport-robot-equipment-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1108,7 +1108,7 @@ data:extend({
       { "personal-roboport-robot-equipment-2", 1 },
       { "processing-unit", 10 },
     },
-    result = "personal-roboport-robot-equipment-3",
+    results = {{ type = "item", name = "personal-roboport-robot-equipment-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -1119,7 +1119,7 @@ data:extend({
       { "personal-roboport-robot-equipment-3", 1 },
       { "processing-unit", 10 },
     },
-    result = "personal-roboport-robot-equipment-4",
+    results = {{ type = "item", name = "personal-roboport-robot-equipment-4", amount = 1 }},
   },
 
   {

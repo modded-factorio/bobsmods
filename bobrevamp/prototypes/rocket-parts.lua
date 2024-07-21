@@ -18,7 +18,7 @@ data:extend({
       { "steel-plate", 10 },
       { "plastic-bar", 5 },
     },
-    result = "heat-shield-tile",
+    results = {{ type = "item", name = "heat-shield-tile", amount = 1 }},
   },
   {
     type = "technology",

@@ -116,7 +116,7 @@ data:extend({
       { "steel-plate", 9 },
       { "iron-gear-wheel", 5 },
     },
-    result = "assembling-machine-4",
+    results = {{ type = "item", name = "assembling-machine-4", amount = 1 }},
   },
 
   {
@@ -296,7 +296,7 @@ data:extend({
       { "steel-plate", 9 },
       { "iron-gear-wheel", 5 },
     },
-    result = "assembling-machine-5",
+    results = {{ type = "item", name = "assembling-machine-5", amount = 1 }},
   },
 
   {
@@ -476,7 +476,7 @@ data:extend({
       { "iron-plate", 5 },
       { "iron-gear-wheel", 5 },
     },
-    result = "assembling-machine-6",
+    results = {{ type = "item", name = "assembling-machine-6", amount = 1 }},
   },
 
   {

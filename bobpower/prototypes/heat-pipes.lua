@@ -52,7 +52,7 @@ then
         { "steel-plate", 5 },
         { "copper-plate", 10 },
       },
-      result = "heat-pipe-2",
+      results = {{ type = "item", name = "heat-pipe-2", amount = 1 }},
     },
     {
       type = "recipe",
@@ -63,7 +63,7 @@ then
         { "steel-plate", 5 },
         { "copper-plate", 10 },
       },
-      result = "heat-pipe-3",
+      results = {{ type = "item", name = "heat-pipe-3", amount = 1 }},
     },
     {
       type = "recipe",
@@ -74,7 +74,7 @@ then
         { "steel-plate", 5 },
         { "copper-plate", 10 },
       },
-      result = "heat-pipe-4",
+      results = {{ type = "item", name = "heat-pipe-4", amount = 1 }},
     },
 
     util.merge({

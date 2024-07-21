@@ -261,7 +261,7 @@ function bobmods.lib.create_gas_bottle(fluid)
       empty_recipe.icons = generate_empty_gas_bottle_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "empty-barrel")
-      bobmods.lib.recipe.set_result(empty_recipe.name, "gas-canister")
+      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "gas-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
     else
@@ -315,7 +315,7 @@ function bobmods.lib.create_fluid_canister(fluid)
       empty_recipe.icons = generate_empty_fluid_canister_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "empty-barrel")
-      bobmods.lib.recipe.add_result(empty_recipe.name, "empty-canister")
+      bobmods.lib.recipe.add_result(empty_recipe.name, { type = "item", name = "empty-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
     else

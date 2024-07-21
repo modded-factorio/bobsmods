@@ -21,30 +21,12 @@ function bobmods.lib.result_check(object)
 
     if object.result then
       local item = bobmods.lib.item.basic_item({ name = object.result })
-      if object.result_count then
-        item.amount = object.result_count
-        object.result_count = nil
+      if object.count then
+        item.amount = object.count
+        object.count = nil
       end
       bobmods.lib.item.add_new(object.results, item)
 
-      if object.ingredients then -- It's a recipe
-        if not object.main_product then
-          if object.icon or object.subgroup or object.order or item.type ~= "item" then -- if we already have one, add the rest
-            if not object.icon and data.raw[item.type][object.result].icon then
-              object.icon = data.raw[item.type][object.result].icon
-              object.icon_size = data.raw[item.type][object.result].icon_size
-            end
-            if not object.subgroup and data.raw[item.type][object.result].subgroup then
-              object.subgroup = data.raw[item.type][object.result].subgroup
-            end
-            if not object.order and data.raw[item.type][object.result].order then
-              object.order = data.raw[item.type][object.result].order
-            end
-          else -- otherwise just use main_product as a cheap way to set them all.
-            object.main_product = object.result
-          end
-        end
-      end
       object.result = nil
     end
   else

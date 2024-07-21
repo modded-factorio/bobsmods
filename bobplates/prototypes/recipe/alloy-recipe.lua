@@ -132,8 +132,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 14 },
       { type = "item", name = "cobalt-plate", amount = 1 },
     },
-    result = "cobalt-steel-alloy",
-    result_count = 10,
+    results = {{ type = "item", name = "cobalt-steel-alloy", amount = 10 }},
     allow_decomposition = false,
   },
 })

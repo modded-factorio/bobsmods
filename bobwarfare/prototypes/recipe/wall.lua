@@ -7,7 +7,7 @@ data:extend({
       { "stone-brick", 3 },
       { "steel-plate", 3 },
     },
-    result = "reinforced-wall",
+    results = {{ type = "item", name = "reinforced-wall", amount = 1 }},
   },
   {
     type = "recipe",
@@ -18,6 +18,6 @@ data:extend({
       { "steel-plate", 2 },
       { "electronic-circuit", 2 },
     },
-    result = "reinforced-gate",
+    results = {{ type = "item", name = "reinforced-gate", amount = 1 }},
   },
 })

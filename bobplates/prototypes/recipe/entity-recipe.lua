@@ -10,7 +10,7 @@ data:extend({
       { "electronic-circuit", 5 },
       { "pipe", 2 },
     },
-    result = "electrolyser",
+    results = {{ type = "item", name = "electrolyser", amount = 1 }},
   },
 
   {
@@ -21,7 +21,7 @@ data:extend({
     ingredients = {
       { "stone", 5 },
     },
-    result = "stone-mixing-furnace",
+    results = {{ type = "item", name = "stone-mixing-furnace", amount = 1 }},
   },
 
   {
@@ -33,7 +33,7 @@ data:extend({
       { "stone", 5 },
       { "pipe", 2 },
     },
-    result = "stone-chemical-furnace",
+    results = {{ type = "item", name = "stone-chemical-furnace", amount = 1 }},
   },
 
   {
@@ -45,7 +45,7 @@ data:extend({
       { "steel-plate", 6 },
       { "stone-brick", 10 },
     },
-    result = "steel-mixing-furnace",
+    results = {{ type = "item", name = "steel-mixing-furnace", amount = 1 }},
   },
 
   {
@@ -58,7 +58,7 @@ data:extend({
       { "stone-brick", 10 },
       { "pipe", 5 },
     },
-    result = "steel-chemical-furnace",
+    results = {{ type = "item", name = "steel-chemical-furnace", amount = 1 }},
   },
 
   {
@@ -71,7 +71,7 @@ data:extend({
       { "stone-brick", 10 },
       { "advanced-circuit", 5 },
     },
-    result = "electric-mixing-furnace",
+    results = {{ type = "item", name = "electric-mixing-furnace", amount = 1 }},
   },
 
   {
@@ -85,7 +85,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "pipe", 5 },
     },
-    result = "electric-chemical-furnace",
+    results = {{ type = "item", name = "electric-chemical-furnace", amount = 1 }},
   },
 
   {
@@ -99,7 +99,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "pipe", 2 },
     },
-    result = "air-pump",
+    results = {{ type = "item", name = "air-pump", amount = 1 }},
   },
 
   {
@@ -114,7 +114,7 @@ data:extend({
       { "advanced-circuit", 3 },
       { "pipe", 2 },
     },
-    result = "air-pump-2",
+    results = {{ type = "item", name = "air-pump-2", amount = 1 }},
   },
 
   {
@@ -130,7 +130,7 @@ data:extend({
       { "processing-unit", 3 },
       { "pipe", 2 },
     },
-    result = "air-pump-3",
+    results = {{ type = "item", name = "air-pump-3", amount = 1 }},
   },
 
   {
@@ -146,7 +146,7 @@ data:extend({
       { "electric-engine-unit", 1 },
       { "advanced-processing-unit", 3 },
     },
-    result = "air-pump-4",
+    results = {{ type = "item", name = "air-pump-4", amount = 1 }},
   },
 
   {
@@ -160,7 +160,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "pipe", 2 },
     },
-    result = "water-pump",
+    results = {{ type = "item", name = "water-pump", amount = 1 }},
   },
 
   {
@@ -175,7 +175,7 @@ data:extend({
       { "advanced-circuit", 3 },
       { "pipe", 2 },
     },
-    result = "water-pump-2",
+    results = {{ type = "item", name = "water-pump-2", amount = 1 }},
   },
 
   {
@@ -191,7 +191,7 @@ data:extend({
       { "processing-unit", 3 },
       { "pipe", 2 },
     },
-    result = "water-pump-3",
+    results = {{ type = "item", name = "water-pump-3", amount = 1 }},
   },
 
   {
@@ -207,7 +207,7 @@ data:extend({
       { "electric-engine-unit", 1 },
       { "advanced-processing-unit", 3 },
     },
-    result = "water-pump-4",
+    results = {{ type = "item", name = "water-pump-4", amount = 1 }},
   },
 
   {
@@ -219,7 +219,7 @@ data:extend({
       { "iron-plate", 3 },
       { "pipe", 1 },
     },
-    result = "bob-small-inline-storage-tank",
+    results = {{ type = "item", name = "bob-small-inline-storage-tank", amount = 1 }},
   },
 
   {
@@ -231,7 +231,7 @@ data:extend({
       { "iron-plate", 3 },
       { "pipe", 2 },
     },
-    result = "bob-small-storage-tank",
+    results = {{ type = "item", name = "bob-small-storage-tank", amount = 1 }},
   },
 
   {
@@ -245,7 +245,7 @@ data:extend({
       { "electronic-circuit", 2 },
       { "pipe", 2 },
     },
-    result = "void-pump",
+    results = {{ type = "item", name = "void-pump", amount = 1 }},
   },
 })
 
@@ -261,7 +261,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "stone-furnace", 1 },
       },
       allow_as_intermediate = false,
-      result = "stone-mixing-furnace",
+      results = {{ type = "item", name = "stone-mixing-furnace", amount = 1 }},
     },
 
     {
@@ -275,7 +275,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "pipe", 2 },
       },
       allow_as_intermediate = false,
-      result = "stone-chemical-furnace",
+      results = {{ type = "item", name = "stone-chemical-furnace", amount = 1 }},
     },
 
     {
@@ -288,7 +288,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "steel-furnace", 1 },
       },
       allow_as_intermediate = false,
-      result = "steel-mixing-furnace",
+      results = {{ type = "item", name = "steel-mixing-furnace", amount = 1 }},
     },
 
     {
@@ -302,7 +302,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "pipe", 5 },
       },
       allow_as_intermediate = false,
-      result = "steel-chemical-furnace",
+      results = {{ type = "item", name = "steel-chemical-furnace", amount = 1 }},
     },
 
     {
@@ -315,7 +315,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "electric-furnace", 1 },
       },
       allow_as_intermediate = false,
-      result = "electric-mixing-furnace",
+      results = {{ type = "item", name = "electric-mixing-furnace", amount = 1 }},
     },
 
     {
@@ -329,7 +329,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "pipe", 5 },
       },
       allow_as_intermediate = false,
-      result = "electric-chemical-furnace",
+      results = {{ type = "item", name = "electric-chemical-furnace", amount = 1 }},
     },
 
     {
@@ -342,7 +342,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "stone-mixing-furnace", 1 },
       },
       allow_as_intermediate = false,
-      result = "stone-furnace",
+      results = {{ type = "item", name = "stone-furnace", amount = 1 }},
     },
 
     {
@@ -372,7 +372,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "steel-mixing-furnace", 1 },
       },
       allow_as_intermediate = false,
-      result = "steel-furnace",
+      results = {{ type = "item", name = "steel-furnace", amount = 1 }},
     },
 
     {
@@ -402,7 +402,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { "electric-mixing-furnace", 1 },
       },
       allow_as_intermediate = false,
-      result = "electric-furnace",
+      results = {{ type = "item", name = "electric-furnace", amount = 1 }},
     },
 
     {

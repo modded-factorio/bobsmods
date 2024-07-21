@@ -20,7 +20,7 @@ data:extend({
       { "battery", 5 },
       { "steel-plate", 10 },
     },
-    result = "vehicle-battery-1",
+    results = {{ type = "item", name = "vehicle-battery-1", amount = 1 }},
   },
 
   {
@@ -99,7 +99,7 @@ data:extend({
       { "vehicle-battery-1", 2 },
       { "processing-unit", 5 },
     },
-    result = "vehicle-battery-2",
+    results = {{ type = "item", name = "vehicle-battery-2", amount = 1 }},
   },
 
   {
@@ -179,7 +179,7 @@ data:extend({
       { "vehicle-battery-2", 2 },
       { "battery", 5 },
     },
-    result = "vehicle-battery-3",
+    results = {{ type = "item", name = "vehicle-battery-3", amount = 1 }},
   },
 
   {
@@ -258,7 +258,7 @@ data:extend({
       { "vehicle-battery-3", 2 },
       { "processing-unit", 5 },
     },
-    result = "vehicle-battery-4",
+    results = {{ type = "item", name = "vehicle-battery-4", amount = 1 }},
   },
 
   {
@@ -339,7 +339,7 @@ data:extend({
       { "vehicle-battery-4", 2 },
       { "battery", 5 },
     },
-    result = "vehicle-battery-5",
+    results = {{ type = "item", name = "vehicle-battery-5", amount = 1 }},
   },
 
   {
@@ -419,7 +419,7 @@ data:extend({
       { "vehicle-battery-5", 2 },
       { "processing-unit", 5 },
     },
-    result = "vehicle-battery-6",
+    results = {{ type = "item", name = "vehicle-battery-6", amount = 1 }},
   },
 
   {

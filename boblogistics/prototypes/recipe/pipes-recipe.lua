@@ -5,7 +5,7 @@ data:extend({
     ingredients = {
       { "stone-brick", 1 },
     },
-    result = "stone-pipe",
+    results = {{ type = "item", name = "stone-pipe", amount = 1 }},
   },
 
   {
@@ -15,8 +15,7 @@ data:extend({
       { "stone-pipe", 10 },
       { "stone-brick", 5 },
     },
-    result_count = 2,
-    result = "stone-pipe-to-ground",
+    results = {{ type = "item", name = "stone-pipe-to-ground", amount = 2 }},
   },
 
   {
@@ -25,7 +24,7 @@ data:extend({
     ingredients = {
       { "copper-plate", 1 },
     },
-    result = "copper-pipe",
+    results = {{ type = "item", name = "copper-pipe", amount = 1 }},
   },
 
   {
@@ -35,8 +34,7 @@ data:extend({
       { "copper-pipe", 10 },
       { "copper-plate", 5 },
     },
-    result_count = 2,
-    result = "copper-pipe-to-ground",
+    results = {{ type = "item", name = "copper-pipe-to-ground", amount = 2 }},
   },
 
   {
@@ -46,7 +44,7 @@ data:extend({
     ingredients = {
       { "steel-plate", 1 },
     },
-    result = "steel-pipe",
+    results = {{ type = "item", name = "steel-pipe", amount = 1 }},
   },
 
   {
@@ -57,8 +55,7 @@ data:extend({
       { "steel-pipe", 12 },
       { "steel-plate", 5 },
     },
-    result_count = 2,
-    result = "steel-pipe-to-ground",
+    results = {{ type = "item", name = "steel-pipe-to-ground", amount = 2 }},
   },
 
   {
@@ -68,7 +65,7 @@ data:extend({
     ingredients = {
       { "plastic-bar", 1 },
     },
-    result = "plastic-pipe",
+    results = {{ type = "item", name = "plastic-pipe", amount = 1 }},
   },
 
   {
@@ -79,8 +76,7 @@ data:extend({
       { "plastic-pipe", 14 },
       { "plastic-bar", 5 },
     },
-    result_count = 2,
-    result = "plastic-pipe-to-ground",
+    results = {{ type = "item", name = "plastic-pipe-to-ground", amount = 2 }},
   },
 })
 
@@ -93,7 +89,7 @@ if data.raw.item["bronze-alloy"] then
       ingredients = {
         { "bronze-alloy", 1 },
       },
-      result = "bronze-pipe",
+      results = {{ type = "item", name = "bronze-pipe", amount = 1 }},
     },
 
     {
@@ -104,8 +100,7 @@ if data.raw.item["bronze-alloy"] then
         { "bronze-pipe", 12 },
         { "bronze-alloy", 5 },
       },
-      result_count = 2,
-      result = "bronze-pipe-to-ground",
+      results = {{ type = "item", name = "bronze-pipe-to-ground", amount = 2 }},
     },
   })
 end
@@ -119,7 +114,7 @@ if data.raw.item["brass-alloy"] then
       ingredients = {
         { "brass-alloy", 1 },
       },
-      result = "brass-pipe",
+      results = {{ type = "item", name = "brass-pipe", amount = 1 }},
     },
 
     {
@@ -130,8 +125,7 @@ if data.raw.item["brass-alloy"] then
         { "brass-pipe", 14 },
         { "brass-alloy", 5 },
       },
-      result_count = 2,
-      result = "brass-pipe-to-ground",
+      results = {{ type = "item", name = "brass-pipe-to-ground", amount = 2 }},
     },
   })
 end
@@ -145,7 +139,7 @@ if data.raw.item["silicon-nitride"] then
       ingredients = {
         { "silicon-nitride", 1 },
       },
-      result = "ceramic-pipe",
+      results = {{ type = "item", name = "ceramic-pipe", amount = 1 }},
     },
 
     {
@@ -156,8 +150,7 @@ if data.raw.item["silicon-nitride"] then
         { "ceramic-pipe", 16 },
         { "silicon-nitride", 5 },
       },
-      result_count = 2,
-      result = "ceramic-pipe-to-ground",
+      results = {{ type = "item", name = "ceramic-pipe-to-ground", amount = 2 }},
     },
   })
 end
@@ -171,7 +164,7 @@ if data.raw.item["titanium-plate"] then
       ingredients = {
         { "titanium-plate", 1 },
       },
-      result = "titanium-pipe",
+      results = {{ type = "item", name = "titanium-pipe", amount = 1 }},
     },
 
     {
@@ -182,8 +175,7 @@ if data.raw.item["titanium-plate"] then
         { "titanium-pipe", 16 },
         { "titanium-plate", 5 },
       },
-      result_count = 2,
-      result = "titanium-pipe-to-ground",
+      results = {{ type = "item", name = "titanium-pipe-to-ground", amount = 2 }},
     },
   })
 end
@@ -197,7 +189,7 @@ if data.raw.item["tungsten-plate"] then
       ingredients = {
         { "tungsten-plate", 1 },
       },
-      result = "tungsten-pipe",
+      results = {{ type = "item", name = "tungsten-pipe", amount = 1 }},
     },
 
     {
@@ -208,8 +200,7 @@ if data.raw.item["tungsten-plate"] then
         { "tungsten-pipe", 16 },
         { "tungsten-plate", 5 },
       },
-      result_count = 2,
-      result = "tungsten-pipe-to-ground",
+      results = {{ type = "item", name = "tungsten-pipe-to-ground", amount = 2 }},
     },
   })
 end
@@ -223,7 +214,7 @@ if data.raw.item["nitinol-alloy"] then
       ingredients = {
         { "nitinol-alloy", 1 },
       },
-      result = "nitinol-pipe",
+      results = {{ type = "item", name = "nitinol-pipe", amount = 1 }},
     },
 
     {
@@ -234,8 +225,7 @@ if data.raw.item["nitinol-alloy"] then
         { "nitinol-pipe", 18 },
         { "nitinol-alloy", 5 },
       },
-      result_count = 2,
-      result = "nitinol-pipe-to-ground",
+      results = {{ type = "item", name = "nitinol-pipe-to-ground", amount = 2 }},
     },
   })
 end
@@ -249,7 +239,7 @@ if data.raw.item["copper-tungsten-alloy"] then
       ingredients = {
         { "copper-tungsten-alloy", 1 },
       },
-      result = "copper-tungsten-pipe",
+      results = {{ type = "item", name = "copper-tungsten-pipe", amount = 1 }},
     },
 
     {
@@ -260,8 +250,7 @@ if data.raw.item["copper-tungsten-alloy"] then
         { "copper-tungsten-pipe", 18 },
         { "copper-tungsten-alloy", 5 },
       },
-      result_count = 2,
-      result = "copper-tungsten-pipe-to-ground",
+      results = {{ type = "item", name = "copper-tungsten-pipe-to-ground", amount = 2 }},
     },
   })
 end

@@ -39,7 +39,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "defender-robot",
+      results = {{ type = "item", name = "defender-robot", amount = 1 }},
     },
 
     {
@@ -57,7 +57,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "distractor-robot",
+      results = {{ type = "item", name = "distractor-robot", amount = 1 }},
     },
 
     {
@@ -75,7 +75,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "destroyer-robot",
+      results = {{ type = "item", name = "destroyer-robot", amount = 1 }},
     },
   })
 
@@ -134,7 +134,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "bob-laser-robot",
+      results = {{ type = "item", name = "bob-laser-robot", amount = 1 }},
     },
 
     {
@@ -145,7 +145,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       ingredients = {
         { "bob-laser-robot", 5 },
       },
-      result = "bob-laser-robot-capsule",
+      results = {{ type = "item", name = "bob-laser-robot-capsule", amount = 1 }},
     },
 
     {

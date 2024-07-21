@@ -9,7 +9,7 @@ if data.raw.item["brass-alloy"] then
       name = "brass-chest",
       enabled = false,
       ingredients = { { "brass-alloy", 8 } },
-      result = "brass-chest",
+      results = {{ type = "item", name = "brass-chest", amount = 1 }},
     },
     {
       type = "item",
@@ -69,7 +69,7 @@ if data.raw.item["titanium-plate"] then
       name = "titanium-chest",
       enabled = false,
       ingredients = { { "titanium-plate", 8 } },
-      result = "titanium-chest",
+      results = {{ type = "item", name = "titanium-chest", amount = 1 }},
     },
     {
       type = "item",

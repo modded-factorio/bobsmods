@@ -10,7 +10,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "electronic-circuit", 4 },
         { "battery", 4 },
       },
-      result = "fast-accumulator",
+      results = {{ type = "item", name = "fast-accumulator", amount = 1 }},
     },
 
     {
@@ -23,7 +23,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "electronic-circuit", 4 },
         { "battery", 4 },
       },
-      result = "slow-accumulator",
+      results = {{ type = "item", name = "slow-accumulator", amount = 1 }},
     },
 
     {
@@ -37,7 +37,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "advanced-circuit", 2 },
         { "battery", 10 },
       },
-      result = "large-accumulator-2",
+      results = {{ type = "item", name = "large-accumulator-2", amount = 1 }},
     },
 
     {
@@ -51,7 +51,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "advanced-circuit", 4 },
         { "battery", 4 },
       },
-      result = "fast-accumulator-2",
+      results = {{ type = "item", name = "fast-accumulator-2", amount = 1 }},
     },
 
     {
@@ -65,7 +65,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "advanced-circuit", 4 },
         { "battery", 4 },
       },
-      result = "slow-accumulator-2",
+      results = {{ type = "item", name = "slow-accumulator-2", amount = 1 }},
     },
 
     {
@@ -79,7 +79,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "processing-unit", 2 },
         { "battery", 10 },
       },
-      result = "large-accumulator-3",
+      results = {{ type = "item", name = "large-accumulator-3", amount = 1 }},
     },
 
     {
@@ -93,7 +93,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "processing-unit", 4 },
         { "battery", 4 },
       },
-      result = "fast-accumulator-3",
+      results = {{ type = "item", name = "fast-accumulator-3", amount = 1 }},
     },
 
     {
@@ -107,7 +107,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         { "processing-unit", 4 },
         { "battery", 4 },
       },
-      result = "slow-accumulator-3",
+      results = {{ type = "item", name = "slow-accumulator-3", amount = 1 }},
     },
   })
 end

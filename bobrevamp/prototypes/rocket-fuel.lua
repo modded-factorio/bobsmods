@@ -289,7 +289,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           { type = "fluid", name = "hydrazine", amount = 100 },
           { "solid-fuel", 1 },
         },
-        result = "enriched-fuel",
+        results = {{ type = "item", name = "enriched-fuel", amount = 1 }},
         subgroup = "bob-resource-chemical",
         order = "d[enriched-fuel]",
         crafting_machine_tint = {

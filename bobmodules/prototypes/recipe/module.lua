@@ -24,7 +24,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 40,
-    result = "speed-module-4",
+    results = {{ type = "item", name = "speed-module-4", amount = 1 }},
   },
 
   {
@@ -38,7 +38,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 50,
-    result = "speed-module-5",
+    results = {{ type = "item", name = "speed-module-5", amount = 1 }},
   },
 
   {
@@ -52,7 +52,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 60,
-    result = "speed-module-6",
+    results = {{ type = "item", name = "speed-module-6", amount = 1 }},
   },
 
   {
@@ -66,7 +66,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 70,
-    result = "speed-module-7",
+    results = {{ type = "item", name = "speed-module-7", amount = 1 }},
   },
 
   {
@@ -81,7 +81,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 80,
-    result = "speed-module-8",
+    results = {{ type = "item", name = "speed-module-8", amount = 1 }},
   },
 })
 
@@ -111,7 +111,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 40,
-    result = "effectivity-module-4",
+    results = {{ type = "item", name = "effectivity-module-4", amount = 1 }},
   },
 
   {
@@ -125,7 +125,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 50,
-    result = "effectivity-module-5",
+    results = {{ type = "item", name = "effectivity-module-5", amount = 1 }},
   },
 
   {
@@ -139,7 +139,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 60,
-    result = "effectivity-module-6",
+    results = {{ type = "item", name = "effectivity-module-6", amount = 1 }},
   },
 
   {
@@ -153,7 +153,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 70,
-    result = "effectivity-module-7",
+    results = {{ type = "item", name = "effectivity-module-7", amount = 1 }},
   },
 
   {
@@ -168,7 +168,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 80,
-    result = "effectivity-module-8",
+    results = {{ type = "item", name = "effectivity-module-8", amount = 1 }},
   },
 })
 
@@ -198,7 +198,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 40,
-    result = "productivity-module-4",
+    results = {{ type = "item", name = "productivity-module-4", amount = 1 }},
   },
 
   {
@@ -212,7 +212,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 50,
-    result = "productivity-module-5",
+    results = {{ type = "item", name = "productivity-module-5", amount = 1 }},
   },
 
   {
@@ -226,7 +226,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 60,
-    result = "productivity-module-6",
+    results = {{ type = "item", name = "productivity-module-6", amount = 1 }},
   },
 
   {
@@ -240,7 +240,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 70,
-    result = "productivity-module-7",
+    results = {{ type = "item", name = "productivity-module-7", amount = 1 }},
   },
 
   {
@@ -255,7 +255,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 80,
-    result = "productivity-module-8",
+    results = {{ type = "item", name = "productivity-module-8", amount = 1 }},
   },
 })
 
@@ -272,7 +272,7 @@ data:extend({
       { "module-contact", 4 },
     },
     energy_required = 10,
-    result = "pollution-clean-module-1",
+    results = {{ type = "item", name = "pollution-clean-module-1", amount = 1 }},
   },
 
   {
@@ -285,7 +285,7 @@ data:extend({
       { "module-contact", 5 },
     },
     energy_required = 20,
-    result = "pollution-clean-module-2",
+    results = {{ type = "item", name = "pollution-clean-module-2", amount = 1 }},
   },
 
   {
@@ -298,7 +298,7 @@ data:extend({
       { "advanced-circuit", 5 },
     },
     energy_required = 30,
-    result = "pollution-clean-module-3",
+    results = {{ type = "item", name = "pollution-clean-module-3", amount = 1 }},
   },
 
   {
@@ -312,7 +312,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 40,
-    result = "pollution-clean-module-4",
+    results = {{ type = "item", name = "pollution-clean-module-4", amount = 1 }},
   },
 
   {
@@ -326,7 +326,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 50,
-    result = "pollution-clean-module-5",
+    results = {{ type = "item", name = "pollution-clean-module-5", amount = 1 }},
   },
 
   {
@@ -340,7 +340,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 60,
-    result = "pollution-clean-module-6",
+    results = {{ type = "item", name = "pollution-clean-module-6", amount = 1 }},
   },
 
   {
@@ -354,7 +354,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 70,
-    result = "pollution-clean-module-7",
+    results = {{ type = "item", name = "pollution-clean-module-7", amount = 1 }},
   },
 
   {
@@ -369,7 +369,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 80,
-    result = "pollution-clean-module-8",
+    results = {{ type = "item", name = "pollution-clean-module-8", amount = 1 }},
   },
 })
 
@@ -387,7 +387,7 @@ data:extend({
       { "module-contact", 4 },
     },
     energy_required = 10,
-    result = "pollution-create-module-1",
+    results = {{ type = "item", name = "pollution-create-module-1", amount = 1 }},
   },
 
   {
@@ -400,7 +400,7 @@ data:extend({
       { "module-contact", 5 },
     },
     energy_required = 20,
-    result = "pollution-create-module-2",
+    results = {{ type = "item", name = "pollution-create-module-2", amount = 1 }},
   },
 
   {
@@ -413,7 +413,7 @@ data:extend({
       { "advanced-circuit", 5 },
     },
     energy_required = 30,
-    result = "pollution-create-module-3",
+    results = {{ type = "item", name = "pollution-create-module-3", amount = 1 }},
   },
 
   {
@@ -427,7 +427,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 40,
-    result = "pollution-create-module-4",
+    results = {{ type = "item", name = "pollution-create-module-4", amount = 1 }},
   },
 
   {
@@ -441,7 +441,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 50,
-    result = "pollution-create-module-5",
+    results = {{ type = "item", name = "pollution-create-module-5", amount = 1 }},
   },
 
   {
@@ -455,7 +455,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 60,
-    result = "pollution-create-module-6",
+    results = {{ type = "item", name = "pollution-create-module-6", amount = 1 }},
   },
 
   {
@@ -469,7 +469,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 70,
-    result = "pollution-create-module-7",
+    results = {{ type = "item", name = "pollution-create-module-7", amount = 1 }},
   },
 
   {
@@ -484,6 +484,6 @@ data:extend({
       { "processing-unit", 5 },
     },
     energy_required = 80,
-    result = "pollution-create-module-8",
+    results = {{ type = "item", name = "pollution-create-module-8", amount = 1 }},
   },
 })

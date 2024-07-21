@@ -8,8 +8,7 @@ data:extend({
     ingredients = {
       { "ruby-ore", 1 },
     },
-    result = "ruby-3",
-    result_count = 4,
+    results = {{ type = "item", name = "ruby-3", amount = 4 }},
   },
   {
     type = "recipe",
@@ -20,8 +19,7 @@ data:extend({
     ingredients = {
       { "sapphire-ore", 1 },
     },
-    result = "sapphire-3",
-    result_count = 4,
+    results = {{ type = "item", name = "sapphire-3", amount = 4 }},
   },
   {
     type = "recipe",
@@ -32,8 +30,7 @@ data:extend({
     ingredients = {
       { "emerald-ore", 1 },
     },
-    result = "emerald-3",
-    result_count = 4,
+    results = {{ type = "item", name = "emerald-3", amount = 4 }},
   },
   {
     type = "recipe",
@@ -44,8 +41,7 @@ data:extend({
     ingredients = {
       { "amethyst-ore", 1 },
     },
-    result = "amethyst-3",
-    result_count = 4,
+    results = {{ type = "item", name = "amethyst-3", amount = 4 }},
   },
   {
     type = "recipe",
@@ -56,8 +52,7 @@ data:extend({
     ingredients = {
       { "topaz-ore", 1 },
     },
-    result = "topaz-3",
-    result_count = 4,
+    results = {{ type = "item", name = "topaz-3", amount = 4 }},
   },
   {
     type = "recipe",
@@ -68,8 +63,7 @@ data:extend({
     ingredients = {
       { "diamond-ore", 1 },
     },
-    result = "diamond-3",
-    result_count = 4,
+    results = {{ type = "item", name = "diamond-3", amount = 4 }},
   },
 
   {
@@ -83,7 +77,7 @@ data:extend({
       { "grinding-wheel", 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    result = "ruby-4",
+    results = {{ type = "item", name = "ruby-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -96,7 +90,7 @@ data:extend({
       { "grinding-wheel", 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    result = "sapphire-4",
+    results = {{ type = "item", name = "sapphire-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -109,7 +103,7 @@ data:extend({
       { "grinding-wheel", 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    result = "emerald-4",
+    results = {{ type = "item", name = "emerald-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -122,7 +116,7 @@ data:extend({
       { "grinding-wheel", 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    result = "amethyst-4",
+    results = {{ type = "item", name = "amethyst-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -135,7 +129,7 @@ data:extend({
       { "grinding-wheel", 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    result = "topaz-4",
+    results = {{ type = "item", name = "topaz-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -148,7 +142,7 @@ data:extend({
       { "grinding-wheel", 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    result = "diamond-4",
+    results = {{ type = "item", name = "diamond-4", amount = 1 }},
   },
 
   {
@@ -162,7 +156,7 @@ data:extend({
       { "polishing-wheel", 1 },
       { "polishing-compound", 1 },
     },
-    result = "ruby-5",
+    results = {{ type = "item", name = "ruby-5", amount = 1 }},
   },
   {
     type = "recipe",
@@ -175,7 +169,7 @@ data:extend({
       { "polishing-wheel", 1 },
       { "polishing-compound", 1 },
     },
-    result = "sapphire-5",
+    results = {{ type = "item", name = "sapphire-5", amount = 1 }},
   },
   {
     type = "recipe",
@@ -188,7 +182,7 @@ data:extend({
       { "polishing-wheel", 1 },
       { "polishing-compound", 1 },
     },
-    result = "emerald-5",
+    results = {{ type = "item", name = "emerald-5", amount = 1 }},
   },
   {
     type = "recipe",
@@ -201,7 +195,7 @@ data:extend({
       { "polishing-wheel", 1 },
       { "polishing-compound", 1 },
     },
-    result = "amethyst-5",
+    results = {{ type = "item", name = "amethyst-5", amount = 1 }},
   },
   {
     type = "recipe",
@@ -214,7 +208,7 @@ data:extend({
       { "polishing-wheel", 1 },
       { "polishing-compound", 1 },
     },
-    result = "topaz-5",
+    results = {{ type = "item", name = "topaz-5", amount = 1 }},
   },
   {
     type = "recipe",
@@ -227,6 +221,6 @@ data:extend({
       { "polishing-wheel", 1 },
       { "polishing-compound", 1 },
     },
-    result = "diamond-5",
+    results = {{ type = "item", name = "diamond-5", amount = 1 }},
   },
 })

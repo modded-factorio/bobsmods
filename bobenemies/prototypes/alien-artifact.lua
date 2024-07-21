@@ -29,7 +29,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-from-small",
-        result = "alien-artifact",
+        results = {{ type = "item", name = "alien-artifact", amount = 1 }},
         ingredients = {
           { "small-alien-artifact", 25 },
         },
@@ -55,8 +55,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-red-from-basic",
-        result = "alien-artifact-red",
-        result_count = 5,
+        results = {{ type = "item", name = "alien-artifact-red", amount = 5 }},
         ingredients = {
           { "alien-artifact-red", 1 },
           { "alien-artifact", 5 },
@@ -79,8 +78,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-orange-from-basic",
-        result = "alien-artifact-orange",
-        result_count = 5,
+        results = {{ type = "item", name = "alien-artifact-orange", amount = 5 }},
         ingredients = {
           { "alien-artifact-orange", 1 },
           { "alien-artifact", 5 },
@@ -103,8 +101,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-yellow-from-basic",
-        result = "alien-artifact-yellow",
-        result_count = 5,
+        results = {{ type = "item", name = "alien-artifact-yellow", amount = 5 }},
         ingredients = {
           { "alien-artifact-yellow", 1 },
           { "alien-artifact", 5 },
@@ -127,8 +124,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-green-from-basic",
-        result = "alien-artifact-green",
-        result_count = 5,
+        results = {{ type = "item", name = "alien-artifact-green", amount = 5 }},
         ingredients = {
           { "alien-artifact-green", 1 },
           { "alien-artifact", 5 },
@@ -151,8 +147,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-blue-from-basic",
-        result = "alien-artifact-blue",
-        result_count = 5,
+        results = {{ type = "item", name = "alien-artifact-blue", amount = 5 }},
         ingredients = {
           { "alien-artifact-blue", 1 },
           { "alien-artifact", 5 },
@@ -175,8 +170,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-purple-from-basic",
-        result = "alien-artifact-purple",
-        result_count = 5,
+        results = {{ type = "item", name = "alien-artifact-purple", amount = 5 }},
         ingredients = {
           { "alien-artifact-purple", 1 },
           { "alien-artifact", 5 },
@@ -202,7 +196,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         {
           type = "recipe",
           name = "alien-artifact-red-from-small",
-          result = "alien-artifact-red",
+          results = {{ type = "item", name = "alien-artifact-red", amount = 1 }},
           ingredients = {
             { "small-alien-artifact-red", 25 },
           },
@@ -226,7 +220,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         {
           type = "recipe",
           name = "alien-artifact-orange-from-small",
-          result = "alien-artifact-orange",
+          results = {{ type = "item", name = "alien-artifact-orange", amount = 1 }},
           ingredients = {
             { "small-alien-artifact-orange", 25 },
           },
@@ -250,7 +244,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         {
           type = "recipe",
           name = "alien-artifact-yellow-from-small",
-          result = "alien-artifact-yellow",
+          results = {{ type = "item", name = "alien-artifact-yellow", amount = 1 }},
           ingredients = {
             { "small-alien-artifact-yellow", 25 },
           },
@@ -274,7 +268,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         {
           type = "recipe",
           name = "alien-artifact-green-from-small",
-          result = "alien-artifact-green",
+          results = {{ type = "item", name = "alien-artifact-green", amount = 1 }},
           ingredients = {
             { "small-alien-artifact-green", 25 },
           },
@@ -298,7 +292,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         {
           type = "recipe",
           name = "alien-artifact-blue-from-small",
-          result = "alien-artifact-blue",
+          results = {{ type = "item", name = "alien-artifact-blue", amount = 1 }},
           ingredients = {
             { "small-alien-artifact-blue", 25 },
           },
@@ -322,7 +316,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         {
           type = "recipe",
           name = "alien-artifact-purple-from-small",
-          result = "alien-artifact-purple",
+          results = {{ type = "item", name = "alien-artifact-purple", amount = 1 }},
           ingredients = {
             { "small-alien-artifact-purple", 25 },
           },

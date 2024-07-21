@@ -68,7 +68,7 @@ data:extend({
       { "electronic-circuit", 5 },
       { "battery", 3 },
     },
-    result = "vehicle-laser-defense-1",
+    results = {{ type = "item", name = "vehicle-laser-defense-1", amount = 1 }},
   },
 
   bob_active_beam_weapon_equipment({
@@ -142,7 +142,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "battery", 3 },
     },
-    result = "vehicle-laser-defense-2",
+    results = {{ type = "item", name = "vehicle-laser-defense-2", amount = 1 }},
   },
 
   bob_active_beam_weapon_equipment({
@@ -215,7 +215,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "battery", 3 },
     },
-    result = "vehicle-laser-defense-3",
+    results = {{ type = "item", name = "vehicle-laser-defense-3", amount = 1 }},
   },
 
   bob_active_beam_weapon_equipment({
@@ -289,7 +289,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    result = "vehicle-laser-defense-4",
+    results = {{ type = "item", name = "vehicle-laser-defense-4", amount = 1 }},
   },
 
   bob_active_beam_weapon_equipment({
@@ -363,7 +363,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    result = "vehicle-laser-defense-5",
+    results = {{ type = "item", name = "vehicle-laser-defense-5", amount = 1 }},
   },
 
   bob_active_beam_weapon_equipment({
@@ -438,7 +438,7 @@ data:extend({
       { "processing-unit", 5 },
       { "battery", 3 },
     },
-    result = "vehicle-laser-defense-6",
+    results = {{ type = "item", name = "vehicle-laser-defense-6", amount = 1 }},
   },
 
   bob_active_beam_weapon_equipment({

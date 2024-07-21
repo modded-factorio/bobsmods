@@ -32,7 +32,7 @@ if data.raw.item["titanium-bearing"] then
 end
 
 data.raw.recipe["utility-science-pack"].energy_required = 28
-data.raw.recipe["utility-science-pack"].result_count = 4
+bobmods.lib.recipe.set_result("utility-science-pack", { type = "item", name = "utility-science-pack", amount = 4 })
 
 if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.recipe.add_new_ingredient("lab", { "burner-lab", 1 })

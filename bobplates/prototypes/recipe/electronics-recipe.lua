@@ -10,6 +10,6 @@ data:extend({
       { "processing-unit", 2 },
       { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
-    result = "advanced-processing-unit",
+    results = {{ type = "item", name = "advanced-processing-unit", amount = 1 }},
   },
 })

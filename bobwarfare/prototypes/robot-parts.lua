@@ -90,7 +90,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       ingredients = {
         { "electronic-circuit", 2 },
       },
-      result = "robot-brain-combat",
+      results = {{ type = "item", name = "robot-brain-combat", amount = 1 }},
     },
 
     {
@@ -102,7 +102,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
         { "electronic-circuit", 1 },
         { "advanced-circuit", 1 },
       },
-      result = "robot-brain-combat-2",
+      results = {{ type = "item", name = "robot-brain-combat-2", amount = 1 }},
     },
 
     {
@@ -114,7 +114,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
         { "advanced-circuit", 1 },
         { "processing-unit", 1 },
       },
-      result = "robot-brain-combat-3",
+      results = {{ type = "item", name = "robot-brain-combat-3", amount = 1 }},
     },
 
     {
@@ -125,7 +125,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       ingredients = {
         { "processing-unit", 2 },
       },
-      result = "robot-brain-combat-4",
+      results = {{ type = "item", name = "robot-brain-combat-4", amount = 1 }},
     },
 
     {
@@ -134,7 +134,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 1,
       enabled = false,
       ingredients = {},
-      result = "robot-tool-combat",
+      results = {{ type = "item", name = "robot-tool-combat", amount = 1 }},
     },
 
     {
@@ -143,7 +143,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 2,
       enabled = false,
       ingredients = {},
-      result = "robot-tool-combat-2",
+      results = {{ type = "item", name = "robot-tool-combat-2", amount = 1 }},
     },
 
     {
@@ -152,7 +152,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 3,
       enabled = false,
       ingredients = {},
-      result = "robot-tool-combat-3",
+      results = {{ type = "item", name = "robot-tool-combat-3", amount = 1 }},
     },
 
     {
@@ -161,7 +161,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 4,
       enabled = false,
       ingredients = {},
-      result = "robot-tool-combat-4",
+      results = {{ type = "item", name = "robot-tool-combat-4", amount = 1 }},
     },
   })
 end

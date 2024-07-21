@@ -11,7 +11,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         { "steel-plate", 10 },
         { "pipe", 5 },
       },
-      result = "fluid-generator",
+      results = {{ type = "item", name = "fluid-generator", amount = 1 }},
     },
 
     {
@@ -26,7 +26,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         { "iron-gear-wheel", 10 },
         { "electronic-circuit", 5 },
       },
-      result = "fluid-generator-2",
+      results = {{ type = "item", name = "fluid-generator-2", amount = 1 }},
     },
 
     {
@@ -41,7 +41,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         { "steel-plate", 10 },
         { "iron-gear-wheel", 10 },
       },
-      result = "fluid-generator-3",
+      results = {{ type = "item", name = "fluid-generator-3", amount = 1 }},
     },
   })
 
@@ -59,7 +59,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           { "steel-plate", 10 },
           { "iron-gear-wheel", 10 },
         },
-        result = "hydrazine-generator",
+        results = {{ type = "item", name = "hydrazine-generator", amount = 1 }},
       },
     })
   end

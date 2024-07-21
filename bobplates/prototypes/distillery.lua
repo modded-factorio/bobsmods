@@ -205,7 +205,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         { "copper-plate", 3 },
         { "pipe", 2 },
       },
-      result = "bob-distillery",
+      results = {{ type = "item", name = "bob-distillery", amount = 1 }},
     },
 
     {

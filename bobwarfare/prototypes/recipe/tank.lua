@@ -10,7 +10,7 @@ data:extend({
       { "iron-gear-wheel", 15 },
       { "processing-unit", 5 },
     },
-    result = "bob-tank-2",
+    results = {{ type = "item", name = "bob-tank-2", amount = 1 }},
   },
 
   {
@@ -25,6 +25,6 @@ data:extend({
       { "iron-gear-wheel", 15 },
       { "processing-unit", 5 },
     },
-    result = "bob-tank-3",
+    results = {{ type = "item", name = "bob-tank-3", amount = 1 }},
   },
 })

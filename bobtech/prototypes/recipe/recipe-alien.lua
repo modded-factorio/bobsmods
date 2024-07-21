@@ -19,7 +19,7 @@ then
         { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
       },
-      result = "science-pack-gold",
+      results = {{ type = "item", name = "science-pack-gold", amount = 1 }},
     },
     {
       type = "recipe",
@@ -29,8 +29,7 @@ then
       ingredients = {
         { "alien-artifact", 1 },
       },
-      result = "alien-science-pack",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack", amount = 10 }},
     },
     {
       type = "recipe",
@@ -40,8 +39,7 @@ then
       ingredients = {
         { "alien-artifact-blue", 1 },
       },
-      result = "alien-science-pack-blue",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack-blue", amount = 10 }},
     },
     {
       type = "recipe",
@@ -51,8 +49,7 @@ then
       ingredients = {
         { "alien-artifact-orange", 1 },
       },
-      result = "alien-science-pack-orange",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack-orange", amount = 10 }},
     },
     {
       type = "recipe",
@@ -62,8 +59,7 @@ then
       ingredients = {
         { "alien-artifact-purple", 1 },
       },
-      result = "alien-science-pack-purple",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack-purple", amount = 10 }},
     },
     {
       type = "recipe",
@@ -73,8 +69,7 @@ then
       ingredients = {
         { "alien-artifact-yellow", 1 },
       },
-      result = "alien-science-pack-yellow",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack-yellow", amount = 10 }},
     },
     {
       type = "recipe",
@@ -84,8 +79,7 @@ then
       ingredients = {
         { "alien-artifact-green", 1 },
       },
-      result = "alien-science-pack-green",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack-green", amount = 10 }},
     },
     {
       type = "recipe",
@@ -95,8 +89,7 @@ then
       ingredients = {
         { "alien-artifact-red", 1 },
       },
-      result = "alien-science-pack-red",
-      result_count = 10,
+      results = {{ type = "item", name = "alien-science-pack-red", amount = 10 }},
     },
 
     {
@@ -110,7 +103,7 @@ then
         { "alien-artifact-blue", 5 },
         { "alien-artifact-orange", 5 },
       },
-      result = "lab-alien",
+      results = {{ type = "item", name = "lab-alien", amount = 1 }},
     },
   })
 end

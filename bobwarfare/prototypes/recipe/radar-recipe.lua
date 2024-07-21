@@ -9,7 +9,7 @@ data:extend({
       { "iron-gear-wheel", 5 },
       { "steel-plate", 10 },
     },
-    result = "radar-2",
+    results = {{ type = "item", name = "radar-2", amount = 1 }},
   },
 
   {
@@ -22,7 +22,7 @@ data:extend({
       { "iron-gear-wheel", 5 },
       { "steel-plate", 10 },
     },
-    result = "radar-3",
+    results = {{ type = "item", name = "radar-3", amount = 1 }},
   },
 
   {
@@ -35,7 +35,7 @@ data:extend({
       { "iron-gear-wheel", 5 },
       { "steel-plate", 10 },
     },
-    result = "radar-4",
+    results = {{ type = "item", name = "radar-4", amount = 1 }},
   },
 
   {
@@ -48,6 +48,6 @@ data:extend({
       { "iron-gear-wheel", 5 },
       { "steel-plate", 10 },
     },
-    result = "radar-5",
+    results = {{ type = "item", name = "radar-5", amount = 1 }},
   },
 })

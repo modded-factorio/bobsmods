@@ -8,7 +8,7 @@ data:extend({
       { "iron-plate", 100 },
       { "steel-plate", 50 },
     },
-    result = "heavy-armor-2",
+    results = {{ type = "item", name = "heavy-armor-2", amount = 1 }},
   },
 
   {
@@ -20,7 +20,7 @@ data:extend({
       { "steel-plate", 100 },
       { "plastic-bar", 50 },
     },
-    result = "heavy-armor-3",
+    results = {{ type = "item", name = "heavy-armor-3", amount = 1 }},
   },
 
   {
@@ -36,7 +36,7 @@ data:extend({
       { "effectivity-module-2", 5 },
       { "speed-module-2", 5 },
     },
-    result = "bob-power-armor-mk3",
+    results = {{ type = "item", name = "bob-power-armor-mk3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -52,7 +52,7 @@ data:extend({
       { "effectivity-module-3", 5 },
       { "speed-module-3", 5 },
     },
-    result = "bob-power-armor-mk4",
+    results = {{ type = "item", name = "bob-power-armor-mk4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -68,6 +68,6 @@ data:extend({
       { "effectivity-module-3", 5 },
       { "speed-module-3", 5 },
     },
-    result = "bob-power-armor-mk5",
+    results = {{ type = "item", name = "bob-power-armor-mk5", amount = 1 }},
   },
 })

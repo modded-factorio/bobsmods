@@ -7,7 +7,7 @@ data:extend({
       { "logistic-chest-passive-provider", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-passive-provider-2",
+    results = {{ type = "item", name = "logistic-chest-passive-provider-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -17,7 +17,7 @@ data:extend({
       { "logistic-chest-active-provider", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-active-provider-2",
+    results = {{ type = "item", name = "logistic-chest-active-provider-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -27,7 +27,7 @@ data:extend({
       { "logistic-chest-storage", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-storage-2",
+    results = {{ type = "item", name = "logistic-chest-storage-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -37,7 +37,7 @@ data:extend({
       { "logistic-chest-buffer", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-buffer-2",
+    results = {{ type = "item", name = "logistic-chest-buffer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -47,7 +47,7 @@ data:extend({
       { "logistic-chest-requester", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-requester-2",
+    results = {{ type = "item", name = "logistic-chest-requester-2", amount = 1 }},
   },
 
   {
@@ -58,7 +58,7 @@ data:extend({
       { "logistic-chest-passive-provider-2", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-passive-provider-3",
+    results = {{ type = "item", name = "logistic-chest-passive-provider-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -68,7 +68,7 @@ data:extend({
       { "logistic-chest-active-provider-2", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-active-provider-3",
+    results = {{ type = "item", name = "logistic-chest-active-provider-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -78,7 +78,7 @@ data:extend({
       { "logistic-chest-storage-2", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-storage-3",
+    results = {{ type = "item", name = "logistic-chest-storage-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -88,7 +88,7 @@ data:extend({
       { "logistic-chest-buffer-2", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-buffer-3",
+    results = {{ type = "item", name = "logistic-chest-buffer-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -98,6 +98,6 @@ data:extend({
       { "logistic-chest-requester-2", 1 },
       { "processing-unit", 1 },
     },
-    result = "logistic-chest-requester-3",
+    results = {{ type = "item", name = "logistic-chest-requester-3", amount = 1 }},
   },
 })

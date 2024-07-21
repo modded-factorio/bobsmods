@@ -8,7 +8,7 @@ data:extend({
       { "storage-tank", 1 },
       { "steel-plate", 20 },
     },
-    result = "storage-tank-2",
+    results = {{ type = "item", name = "storage-tank-2", amount = 1 }},
   },
 
   {
@@ -20,7 +20,7 @@ data:extend({
       { "storage-tank-2", 1 },
       { "steel-plate", 20 },
     },
-    result = "storage-tank-3",
+    results = {{ type = "item", name = "storage-tank-3", amount = 1 }},
   },
 
   {
@@ -32,7 +32,7 @@ data:extend({
       { "storage-tank-3", 1 },
       { "steel-plate", 20 },
     },
-    result = "storage-tank-4",
+    results = {{ type = "item", name = "storage-tank-4", amount = 1 }},
   },
 })
 
@@ -47,7 +47,7 @@ data:extend({
       { "steel-plate", 5 },
       { "pipe", 4 },
     },
-    result = "bob-storage-tank-all-corners",
+    results = {{ type = "item", name = "bob-storage-tank-all-corners", amount = 1 }},
   },
   {
     type = "recipe",
@@ -59,7 +59,7 @@ data:extend({
       { "steel-plate", 20 },
       { "pipe", 4 },
     },
-    result = "bob-storage-tank-all-corners-2",
+    results = {{ type = "item", name = "bob-storage-tank-all-corners-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -71,7 +71,7 @@ data:extend({
       { "steel-plate", 20 },
       { "pipe", 4 },
     },
-    result = "bob-storage-tank-all-corners-3",
+    results = {{ type = "item", name = "bob-storage-tank-all-corners-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -83,6 +83,6 @@ data:extend({
       { "steel-plate", 20 },
       { "pipe", 4 },
     },
-    result = "bob-storage-tank-all-corners-4",
+    results = {{ type = "item", name = "bob-storage-tank-all-corners-4", amount = 1 }},
   },
 })

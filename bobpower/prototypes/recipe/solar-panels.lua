@@ -16,7 +16,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "electronic-circuit", 6 },
         { "copper-plate", 2 },
       },
-      result = "solar-panel-small",
+      results = {{ type = "item", name = "solar-panel-small", amount = 1 }},
     },
 
     {
@@ -29,7 +29,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "electronic-circuit", 24 },
         { "copper-plate", 8 },
       },
-      result = "solar-panel-large",
+      results = {{ type = "item", name = "solar-panel-large", amount = 1 }},
     },
 
     {
@@ -43,7 +43,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "advanced-circuit", 4 },
         { "copper-plate", 2 },
       },
-      result = "solar-panel-small-2",
+      results = {{ type = "item", name = "solar-panel-small-2", amount = 1 }},
     },
 
     {
@@ -57,7 +57,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "advanced-circuit", 9 },
         { "copper-plate", 4 },
       },
-      result = "solar-panel-2",
+      results = {{ type = "item", name = "solar-panel-2", amount = 1 }},
     },
 
     {
@@ -71,7 +71,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "advanced-circuit", 16 },
         { "copper-plate", 8 },
       },
-      result = "solar-panel-large-2",
+      results = {{ type = "item", name = "solar-panel-large-2", amount = 1 }},
     },
 
     {
@@ -85,7 +85,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "processing-unit", 4 },
         { "copper-plate", 2 },
       },
-      result = "solar-panel-small-3",
+      results = {{ type = "item", name = "solar-panel-small-3", amount = 1 }},
     },
 
     {
@@ -99,7 +99,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "processing-unit", 9 },
         { "copper-plate", 4 },
       },
-      result = "solar-panel-3",
+      results = {{ type = "item", name = "solar-panel-3", amount = 1 }},
     },
 
     {
@@ -113,7 +113,7 @@ if settings.startup["bobmods-power-solar"].value == true then
         { "processing-unit", 16 },
         { "copper-plate", 8 },
       },
-      result = "solar-panel-large-3",
+      results = {{ type = "item", name = "solar-panel-large-3", amount = 1 }},
     },
   })
 end

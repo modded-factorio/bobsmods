@@ -20,7 +20,7 @@ data:extend({
       { "advanced-circuit", 5 },
       { "steel-plate", 10 },
     },
-    result = "vehicle-shield-1",
+    results = {{ type = "item", name = "vehicle-shield-1", amount = 1 }},
   },
 
   {
@@ -101,7 +101,7 @@ data:extend({
       { "vehicle-shield-1", 2 },
       { "processing-unit", 5 },
     },
-    result = "vehicle-shield-2",
+    results = {{ type = "item", name = "vehicle-shield-2", amount = 1 }},
   },
 
   {
@@ -184,7 +184,7 @@ data:extend({
       { "processing-unit", 5 },
       { "productivity-module-2", 1 },
     },
-    result = "vehicle-shield-3",
+    results = {{ type = "item", name = "vehicle-shield-3", amount = 1 }},
   },
 
   {
@@ -269,7 +269,7 @@ data:extend({
       { "effectivity-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-shield-4",
+    results = {{ type = "item", name = "vehicle-shield-4", amount = 1 }},
   },
 
   {
@@ -352,7 +352,7 @@ data:extend({
       { "effectivity-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-shield-5",
+    results = {{ type = "item", name = "vehicle-shield-5", amount = 1 }},
   },
 
   {
@@ -437,7 +437,7 @@ data:extend({
       { "effectivity-module-3", 1 },
       { "productivity-module-3", 1 },
     },
-    result = "vehicle-shield-6",
+    results = {{ type = "item", name = "vehicle-shield-6", amount = 1 }},
   },
 
   {
