@@ -41,12 +41,12 @@ local function add_mining_drill_color_masks(object, root1, root2, direction, mas
       basegraphics.hr_version.tint = mask_color
       if root1 == "wet_mining_graphics_set" then
         if object.graphics_set.working_visualisations[7][direction2].layers then
-          basegraphics.height = object.graphics_set.working_visualisations[7][direction2].layers[1].height or object.graphics_set.working_visualisations[7][direction2].height
-          basegraphics.width = object.graphics_set.working_visualisations[7][direction2].layers[1].width or object.graphics_set.working_visualisations[7][direction2].width
-          basegraphics.shift = object.graphics_set.working_visualisations[7][direction2].layers[1].shift or object.graphics_set.working_visualisations[7][direction2].shift
-          basegraphics.hr_version.height = object.graphics_set.working_visualisations[7][direction2].layers[1].hr_version.height or object.graphics_set.working_visualisations[7][direction2].hr_version.height
-          basegraphics.hr_version.width = object.graphics_set.working_visualisations[7][direction2].layers[1].hr_version.width or object.graphics_set.working_visualisations[7][direction2].hr_version.width
-          basegraphics.hr_version.shift = object.graphics_set.working_visualisations[7][direction2].layers[1].hr_version.shift or object.graphics_set.working_visualisations[7][direction2].hr_version.shift
+          basegraphics.height = object.graphics_set.working_visualisations[7][direction2].layers[1].height
+          basegraphics.width = object.graphics_set.working_visualisations[7][direction2].layers[1].width
+          basegraphics.shift = object.graphics_set.working_visualisations[7][direction2].layers[1].shift
+          basegraphics.hr_version.height = object.graphics_set.working_visualisations[7][direction2].layers[1].hr_version.height
+          basegraphics.hr_version.width = object.graphics_set.working_visualisations[7][direction2].layers[1].hr_version.width
+          basegraphics.hr_version.shift = object.graphics_set.working_visualisations[7][direction2].layers[1].hr_version.shift
         else
           basegraphics.height = object.graphics_set.working_visualisations[7][direction2].height
           basegraphics.width = object.graphics_set.working_visualisations[7][direction2].width
