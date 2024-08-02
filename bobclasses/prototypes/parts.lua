@@ -94,7 +94,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "iron-gear-wheel", amount =15 },
+      { type = "item", name = "iron-gear-wheel", amount = 15 },
     },
     results = { { type = "item", name = "player-gloves", amount = 1 } },
   },

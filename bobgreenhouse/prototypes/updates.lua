@@ -14,13 +14,13 @@ end
 
 if data.raw.fluid.ammonia and data.raw.fluid["nitric-acid"] then
   data.raw.recipe["bob-fertiliser"].ingredients = {
-    { type = "fluid", name = "nitric-acid", amount = 10 }, 
-    { type = "fluid", name = "ammonia", amount = 10 }
+    { type = "fluid", name = "nitric-acid", amount = 10 },
+    { type = "fluid", name = "ammonia", amount = 10 },
   }
 elseif data.raw.fluid.nitrogen then
   data.raw.recipe["bob-fertiliser"].ingredients = {
     { type = "fluid", name = "petroleum-gas", amount = 10 },
-    { type = "fluid", name = "nitrogen", amount = 10 }
+    { type = "fluid", name = "nitrogen", amount = 10 },
   }
 end
 
