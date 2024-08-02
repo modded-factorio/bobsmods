@@ -17,8 +17,8 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       name = "steam-mining-drill",
       energy_required = 1,
       ingredients = {
-        { "burner-mining-drill", 1 },
-        { "pipe", 2 },
+        { type = "item", name = "burner-mining-drill", amount = 1 },
+        { type = "item", name = "pipe", amount = 2 },
       },
       results = { { type = "item", name = "steam-mining-drill", amount = 1 } },
     },
