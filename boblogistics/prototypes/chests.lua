@@ -8,7 +8,7 @@ if data.raw.item["brass-alloy"] then
       type = "recipe",
       name = "brass-chest",
       enabled = false,
-      ingredients = { { "brass-alloy", 8 } },
+      ingredients = { { type = "item", name = "brass-alloy", amount = 8 } },
       results = { { type = "item", name = "brass-chest", amount = 1 } },
     },
     {
@@ -68,7 +68,7 @@ if data.raw.item["titanium-plate"] then
       type = "recipe",
       name = "titanium-chest",
       enabled = false,
-      ingredients = { { "titanium-plate", 8 } },
+      ingredients = { { type = "item", name = "titanium-plate", amount = 8 } },
       results = { { type = "item", name = "titanium-chest", amount = 1 } },
     },
     {

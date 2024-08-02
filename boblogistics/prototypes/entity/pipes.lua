@@ -1508,7 +1508,7 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       name = "iridium-pipe",
       enabled = false,
       ingredients = {
-        { "se-iridium-plate", 1 },
+        { type = "item", name = "se-iridium-plate", amount = 1 },
       },
       results = { { type = "item", name = "iridium-pipe", amount = 1 } },
     },
@@ -1518,8 +1518,8 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       name = "iridium-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "iridium-pipe", 16 },
-        { "se-iridium-plate", 5 },
+        { type = "item", name = "iridium-pipe", amount = 16 },
+        { type = "item", name = "se-iridium-plate", amount = 5 },
       },
       results = { { type = "item", name = "iridium-pipe-to-ground", amount = 2 } },
     },

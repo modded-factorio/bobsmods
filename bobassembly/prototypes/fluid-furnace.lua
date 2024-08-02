@@ -57,8 +57,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       energy_required = 2,
       enabled = false,
       ingredients = {
-        { "steel-furnace", 1 },
-        { "pipe", 2 },
+        { type = "item", name = "steel-furnace", amount = 1 },
+        { type = "item", name = "pipe", amount = 2 },
       },
       results = { { type = "item", name = "fluid-furnace", amount = 1 } },
     },
@@ -102,7 +102,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         energy_required = 0.1,
         enabled = false,
         ingredients = {
-          { "fluid-furnace", 1 },
+          { type = "item", name = "fluid-furnace", amount = 1 },
         },
         results = {
           { type = "item", name = "steel-furnace", amount = 1 },
@@ -138,8 +138,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         energy_required = 2,
         enabled = false,
         ingredients = {
-          { "pipe", 2 },
-          { "steel-mixing-furnace", 1 },
+          { type = "item", name = "pipe", amount = 2 },
+          { type = "item", name = "steel-mixing-furnace", amount = 1 },
         },
         results = { { type = "item", name = "fluid-mixing-furnace", amount = 1 } },
       },
@@ -205,7 +205,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           energy_required = 0.1,
           enabled = false,
           ingredients = {
-            { "fluid-mixing-furnace", 1 },
+            { type = "item", name = "fluid-mixing-furnace", amount = 1 },
           },
           results = {
             { type = "item", name = "pipe", amount = 2 },
@@ -221,7 +221,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           energy_required = 0.1,
           enabled = false,
           ingredients = {
-            { "fluid-furnace", 1 },
+            { type = "item", name = "fluid-furnace", amount = 1 },
           },
           results = { { type = "item", name = "fluid-mixing-furnace", amount = 1 } },
           allow_as_intermediate = false,
@@ -233,7 +233,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           energy_required = 0.1,
           enabled = false,
           ingredients = {
-            { "fluid-mixing-furnace", 1 },
+            { type = "item", name = "fluid-mixing-furnace", amount = 1 },
           },
           results = { { type = "item", name = "fluid-furnace", amount = 1 } },
           allow_as_intermediate = false,
@@ -272,8 +272,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         energy_required = 2,
         enabled = false,
         ingredients = {
-          { "pipe", 2 },
-          { "steel-chemical-furnace", 1 },
+          { type = "item", name = "pipe", amount = 2 },
+          { type = "item", name = "steel-chemical-furnace", amount = 1 },
         },
         results = { { type = "item", name = "fluid-chemical-furnace", amount = 1 } },
       },
@@ -345,7 +345,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           energy_required = 0.1,
           enabled = false,
           ingredients = {
-            { "fluid-chemical-furnace", 1 },
+            { type = "item", name = "fluid-chemical-furnace", amount = 1 },
           },
           results = {
             { type = "item", name = "pipe", amount = 2 },
@@ -361,8 +361,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           energy_required = 2,
           enabled = false,
           ingredients = {
-            { "fluid-furnace", 1 },
-            { "pipe", 5 },
+            { type = "item", name = "fluid-furnace", amount = 1 },
+            { type = "item", name = "pipe", amount = 5 },
           },
           results = { { type = "item", name = "fluid-chemical-furnace", amount = 1 } },
           allow_as_intermediate = false,
@@ -374,7 +374,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           energy_required = 0.1,
           enabled = false,
           ingredients = {
-            { "fluid-chemical-furnace", 1 },
+            { type = "item", name = "fluid-chemical-furnace", amount = 1 },
           },
           results = {
             { type = "item", name = "fluid-furnace", amount = 1 },

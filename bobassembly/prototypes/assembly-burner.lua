@@ -16,8 +16,8 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       name = "burner-assembling-machine",
       enabled = false,
       ingredients = {
-        { "iron-gear-wheel", 5 },
-        { "iron-plate", 9 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 9 },
       },
       results = { { type = "item", name = "burner-assembling-machine", amount = 1 } },
     },
@@ -154,9 +154,9 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       name = "steam-assembling-machine",
       enabled = false,
       ingredients = {
-        { "iron-gear-wheel", 10 },
-        { "iron-plate", 10 },
-        { "pipe", 5 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "iron-plate", amount = 10 },
+        { type = "item", name = "pipe", amount = 5 },
       },
       results = { { type = "item", name = "steam-assembling-machine", amount = 1 } },
     },

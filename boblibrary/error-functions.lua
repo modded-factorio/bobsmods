@@ -146,6 +146,6 @@ function bobmods.lib.error.result(result, name)
     end
   end
   if not (result.type == "item" or result.type == "fluid") then
-    log(name .. ".type not a valid ingredient item type")
+    log(name .. ".type not a valid result item type")
   end
 end

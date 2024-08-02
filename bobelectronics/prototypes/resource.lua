@@ -17,7 +17,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { "wood", 1 },
+      { type = "item", name = "wood", amount = 1 },
     },
     results = { { type = "item", name = "resin", amount = 1 } },
     allow_decomposition = false,
@@ -62,7 +62,7 @@ data:extend({
     energy_required = 3.5,
     enabled = false,
     ingredients = {
-      { "resin", 1 },
+      { type = "item", name = "resin", amount = 1 },
     },
     results = { { type = "item", name = "rubber", amount = 1 } },
     allow_decomposition = false,
@@ -118,9 +118,9 @@ if not data.raw.item["silicon-wafer"] then
     })
 
     if data.raw.item["silicon"] then
-      table.insert(data.raw.recipe["silicon-wafer"].ingredients, { "silicon", 1 })
+      table.insert(data.raw.recipe["silicon-wafer"].ingredients, { "silicon", amount = 1 })
     else
-      table.insert(data.raw.recipe["silicon-wafer"].ingredients, { "silicon-plate", 1 })
+      table.insert(data.raw.recipe["silicon-wafer"].ingredients, { "silicon-plate", amount = 1 })
     end
   end
 end
@@ -144,15 +144,15 @@ if data.raw.item["tin-plate"] then
       enabled = false,
       category = "crafting-machine",
       ingredients = {
-        { "tin-plate", 9 },
-        { "copper-plate", 1 },
+        { type = "item", name = "tin-plate", amount = 9 },
+        { type = "item", name = "copper-plate", amount = 1 },
       },
       results = { { type = "item", name = "solder-alloy", amount = 11 } },
       allow_decomposition = false,
     },
   })
   if data.raw.item["silver-plate"] then
-    table.insert(data.raw.recipe["solder-alloy"].ingredients, { "silver-plate", 1 })
+    table.insert(data.raw.recipe["solder-alloy"].ingredients, { type = "item", name = "silver-plate", amount = 1 })
   end
 
   if data.raw.item["lead-plate"] then
@@ -164,8 +164,8 @@ if data.raw.item["tin-plate"] then
         enabled = false,
         category = "crafting-machine",
         ingredients = {
-          { "tin-plate", 4 },
-          { "lead-plate", 7 },
+          { type = "item", name = "tin-plate", amount = 4 },
+          { type = "item", name = "lead-plate", amount = 7 },
         },
         results = { { type = "item", name = "solder-alloy", amount = 11 } },
         allow_decomposition = false,

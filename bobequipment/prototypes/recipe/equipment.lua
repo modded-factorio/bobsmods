@@ -1,8 +1,8 @@
 bobmods.lib.recipe.replace_ingredient("energy-shield-equipment", "advanced-circuit", "electronic-circuit")
 data.raw.recipe["energy-shield-mk2-equipment"].ingredients = {
-  { "energy-shield-equipment", 2 },
-  { "advanced-circuit", 5 },
-  { "productivity-module", 1 },
+  { type = "item", name = "energy-shield-equipment", amount = 2 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "productivity-module", amount = 1 },
 }
 
 data:extend({
@@ -12,9 +12,9 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "energy-shield-mk2-equipment", 2 },
-      { "processing-unit", 5 },
-      { "productivity-module-2", 1 },
+      { type = "item", name = "energy-shield-mk2-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "productivity-module-2", amount = 1 },
     },
     results = { { type = "item", name = "energy-shield-mk3-equipment", amount = 1 } },
   },
@@ -24,12 +24,12 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "energy-shield-mk3-equipment", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+      { type = "item", name = "energy-shield-mk3-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = 1 } },
+    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = amount = 1 } },
   },
   {
     type = "recipe",
@@ -37,10 +37,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "energy-shield-mk4-equipment", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+      { type = "item", name = "energy-shield-mk4-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "energy-shield-mk5-equipment", amount = 1 } },
   },
@@ -50,21 +50,21 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "energy-shield-mk5-equipment", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+      { type = "item", name = "energy-shield-mk5-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "energy-shield-mk6-equipment", amount = 1 } },
   },
 })
 
 bobmods.lib.recipe.remove_ingredient("battery-equipment", "steel-plate")
-bobmods.lib.recipe.add_ingredient("battery-equipment", { "electronic-circuit", 5 })
+bobmods.lib.recipe.add_ingredient("battery-equipment", { type = "item", name = "electronic-circuit", amount = 5 })
 
 data.raw.recipe["battery-mk2-equipment"].ingredients = {
-  { "battery-equipment", 2 },
-  { "advanced-circuit", 5 },
+  { type = "item", name = "battery-equipment",amount =  2 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
 }
 
 data:extend({
@@ -74,8 +74,8 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "battery-mk2-equipment", 2 },
-      { "battery", 5 },
+      { type = "item", name = "battery-mk2-equipment", amount = 2 },
+      { type = "item", name = "battery", amount = 5 },
     },
     results = { { type = "item", name = "battery-mk3-equipment", amount = 1 } },
   },
@@ -85,8 +85,8 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "battery-mk3-equipment", 2 },
-      { "processing-unit", 5 },
+      { type = "item", name = "battery-mk3-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
     },
     results = { { type = "item", name = "battery-mk4-equipment", amount = 1 } },
   },
@@ -96,8 +96,8 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "battery-mk4-equipment", 2 },
-      { "battery", 5 },
+      { type = "item", name = "battery-mk4-equipment", amount = 2 },
+      { type = "item", name = "battery", amount = 5 },
     },
     results = { { type = "item", name = "battery-mk5-equipment", amount = 1 } },
   },
@@ -107,8 +107,8 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "battery-mk5-equipment", 2 },
-      { "processing-unit", 5 },
+      { type = "item", name = "battery-mk5-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
     },
     results = { { type = "item", name = "battery-mk6-equipment", amount = 1 } },
   },
@@ -121,11 +121,11 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "fusion-reactor-equipment", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
+      { type = "item", name = "fusion-reactor-equipment", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "speed-module-3", amount = 2 },
+      { type = "item", name = "productivity-module-3", amount = 2 },
     },
     results = { { type = "item", name = "fusion-reactor-equipment-2", amount = 1 } },
   },
@@ -135,11 +135,11 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "fusion-reactor-equipment-2", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
+      { type = "item", name = "fusion-reactor-equipment-2", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "speed-module-3", amount = 2 },
+      { type = "item", name = "productivity-module-3", amount = 2 },
     },
     results = { { type = "item", name = "fusion-reactor-equipment-3", amount = 1 } },
   },
@@ -149,11 +149,11 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "fusion-reactor-equipment-3", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
+      { type = "item", name = "fusion-reactor-equipment-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "speed-module-3", amount = 2 },
+      { type = "item", name = "productivity-module-3", amount = 2 },
     },
     results = { { type = "item", name = "fusion-reactor-equipment-4", amount = 1 } },
   },
@@ -167,9 +167,9 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "night-vision-equipment", 1 },
-      { "advanced-circuit", 5 },
-      { "plastic-bar", 2 },
+      { type = "item", name = "night-vision-equipment", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "plastic-bar", amount = 2 },
     },
     results = { { type = "item", name = "night-vision-equipment-2", amount = 1 } },
   },
@@ -179,16 +179,19 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "night-vision-equipment-2", 1 },
-      { "processing-unit", 5 },
-      { "plastic-bar", 2 },
+      { type = "item", name = "night-vision-equipment-2", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "plastic-bar", amount = 2 },
     },
     results = { { type = "item", name = "night-vision-equipment-3", amount = 1 } },
   },
 })
 
-data.raw.recipe["solar-panel-equipment"].ingredients =
-  { { "steel-plate", 2 }, { "electronic-circuit", 5 }, { "copper-cable", 4 } }
+data.raw.recipe["solar-panel-equipment"].ingredients = {
+  { type = "item", name = "steel-plate", amount = 2 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "copper-cable", amount = 4 }
+}
 
 data:extend({
   {
@@ -197,10 +200,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "solar-panel-equipment", 1 },
-      { "steel-plate", 2 },
-      { "advanced-circuit", 5 },
-      { "copper-plate", 2 },
+      { type = "item", name = "solar-panel-equipment", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "copper-plate", amount = 2 },
     },
     results = { { type = "item", name = "solar-panel-equipment-2", amount = 1 } },
   },
@@ -210,10 +213,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "solar-panel-equipment-2", 1 },
-      { "steel-plate", 2 },
-      { "processing-unit", 5 },
-      { "copper-plate", 2 },
+      { type = "item", name = "solar-panel-equipment-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "copper-plate", amount = 2 },
     },
     results = { { type = "item", name = "solar-panel-equipment-3", amount = 1 } },
   },
@@ -223,19 +226,19 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "solar-panel-equipment-3", 1 },
-      { "steel-plate", 2 },
-      { "processing-unit", 5 },
-      { "copper-cable", 5 },
+      { type = "item", name = "solar-panel-equipment-3", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "copper-cable", amount = 5 },
     },
     results = { { type = "item", name = "solar-panel-equipment-4", amount = 1 } },
   },
 })
 
 data.raw.recipe["personal-laser-defense-equipment"].ingredients = {
-  { "steel-plate", 5 },
-  { "advanced-circuit", 5 },
-  { "battery", 3 },
+  { type = "item", name = "steel-plate", amount = 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "battery", amount = 3 },
 }
 
 data:extend({
@@ -245,10 +248,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-equipment", 1 },
-      { "steel-plate", 5 },
-      { "advanced-circuit", 5 },
-      { "battery", 3 },
+      { type = "item", name = "personal-laser-defense-equipment", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "battery", amount = 3 },
     },
     results = { { type = "item", name = "personal-laser-defense-equipment-2", amount = 1 } },
   },
@@ -258,10 +261,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-equipment-2", 1 },
-      { "steel-plate", 5 },
-      { "processing-unit", 5 },
-      { "battery", 3 },
+      { type = "item", name = "personal-laser-defense-equipment-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "battery", amount = 3 },
     },
     results = { { type = "item", name = "personal-laser-defense-equipment-3", amount = 1 } },
   },
@@ -271,10 +274,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-equipment-3", 1 },
-      { "steel-plate", 5 },
-      { "processing-unit", 5 },
-      { "battery", 3 },
+      { type = "item", name = "personal-laser-defense-equipment-3", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "battery", amount = 3 },
     },
     results = { { type = "item", name = "personal-laser-defense-equipment-4", amount = 1 } },
   },
@@ -284,10 +287,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-equipment-4", 1 },
-      { "steel-plate", 5 },
-      { "processing-unit", 5 },
-      { "battery", 3 },
+      { type = "item", name = "personal-laser-defense-equipment-4", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "battery", amount = 3 },
     },
     results = { { type = "item", name = "personal-laser-defense-equipment-5", amount = 1 } },
   },
@@ -297,10 +300,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-equipment-5", 1 },
-      { "steel-plate", 5 },
-      { "processing-unit", 5 },
-      { "battery", 3 },
+      { type = "item", name = "personal-laser-defense-equipment-5", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "battery", amount = 3 },
     },
     results = { { type = "item", name = "personal-laser-defense-equipment-6", amount = 1 } },
   },
@@ -314,10 +317,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "exoskeleton-equipment", 1 },
-      { "processing-unit", 10 },
-      { "iron-gear-wheel", 30 },
-      { "steel-plate", 20 },
+      { type = "item", name = "exoskeleton-equipment", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "iron-gear-wheel", amount = 30 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
     results = { { type = "item", name = "exoskeleton-equipment-2", amount = 1 } },
   },
@@ -327,10 +330,10 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "exoskeleton-equipment-2", 1 },
-      { "processing-unit", 10 },
-      { "iron-gear-wheel", 30 },
-      { "steel-plate", 20 },
+      { type = "item", name = "exoskeleton-equipment-2", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "iron-gear-wheel", amount = 30 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
     results = { { type = "item", name = "exoskeleton-equipment-3", amount = 1 } },
   },

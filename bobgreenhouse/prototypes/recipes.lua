@@ -83,7 +83,7 @@ data:extend({
     type = "recipe",
     name = "wood-pellets",
     ingredients = {
-      { "wood", 5 },
+      { type = "item", name = "wood", amount = 5 },
     },
     results = { { type = "item", name = "wood-pellets", amount = 1 } },
   },

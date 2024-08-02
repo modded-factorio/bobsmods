@@ -6,7 +6,7 @@ local function add_new_science_pack(technology, pack, amount)
   if technology.unit and technology.unit.ingredients then
     local addit = true
     for i, ingredient in pairs(technology.unit.ingredients) do
-      if ingredient[1] == pack or ingredient.name == pack then
+      if ingredient[1] == pack then
         addit = false
       end
     end
@@ -24,10 +24,6 @@ local function add_science_pack(technology, pack, amount)
         addit = false
         ingredient[2] = ingredient[2] + amount
       end
-      if ingredient.name == pack then
-        addit = false
-        ingredient.amount = ingredient.amount + amount
-      end
     end
     if addit then
       table.insert(technology.unit.ingredients, { pack, amount })
@@ -38,7 +34,7 @@ end
 local function remove_science_pack(technology, pack)
   if technology.unit and technology.unit.ingredients then
     for i, ingredient in pairs(technology.unit.ingredients) do
-      if ingredient[1] == pack or ingredient.name == pack then
+      if ingredient[1] == pack then
         table.remove(technology.unit.ingredients, i)
       end
     end
@@ -53,10 +49,6 @@ local function replace_science_pack(technology, old, new)
       if ingredient[1] == old then
         doit = true
         amount = ingredient[2] + amount
-      end
-      if ingredient.name == old then
-        doit = true
-        amount = ingredient.amount + amount
       end
     end
     if doit then

@@ -60,20 +60,16 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
   local item = {}
 
   if type(inputs) == "table" then
-    if inputs.name then
+    if inputs.name and type(inputs.name) == "string" then
       item.name = inputs.name
-    elseif inputs[1] and type(inputs[1]) == "string" then
-      item.name = inputs[1]
     else
       log(debug.traceback())
       log("Unable to determine an ingredient name")
       return nil
     end
 
-    if inputs.amount then
+    if inputs.amount and type(inputs.amount) == "number" then
       item.amount = inputs.amount
-    elseif inputs[2] and type(inputs[2]) == "number" then
-      item.amount = inputs[2]
     else
       item.amount = 1
     end
@@ -139,20 +135,16 @@ function bobmods.lib.item.result_simple(inputs)
   local item = {}
 
   if type(inputs) == "table" then
-    if inputs.name then
+    if inputs.name and type(inputs.name) == "string" then
       item.name = inputs.name
-    elseif inputs[1] and type(inputs[1]) == "string" then
-      item.name = inputs[1]
     else
       log(debug.traceback())
       log("Unable to determine a result name")
       return nil
     end
 
-    if inputs.amount then
+    if inputs.amount and type(inputs.amount) == "number" then
       item.amount = inputs.amount
-    elseif inputs[2] and type(inputs[2]) == "number" then
-      item.amount = inputs[2]
     elseif inputs.amount_min and inputs.amount_max then
       item.amount_min = inputs.amount_min
       item.amount_max = inputs.amount_max
@@ -289,7 +281,7 @@ function bobmods.lib.item.add(list, item_in) --increments amount if exists
   if type(list) == "table" and item then
     local addit = true
     for i, object in pairs(list) do
-      if object[1] == item.name or object.name == item.name then
+      if object.name == item.name then
         addit = false
         list[i] = bobmods.lib.item.combine(object, item)
       end
@@ -319,7 +311,7 @@ end
 function bobmods.lib.item.remove(list, item)
   if type(list) == "table" and type(item) == "string" then
     for i, object in ipairs(list) do
-      if object[1] == item or object.name == item then
+      if object.name == item then
         table.remove(list, i)
       end
     end
@@ -334,7 +326,7 @@ function bobmods.lib.item.set(list, item_in)
   if type(list) == "table" and item then
     local addit = true
     for i, object in pairs(list) do
-      if object[1] == item.name or object.name == item.name then
+      if object.name == item.name then
         list[i] = item
         addit = false
       end
