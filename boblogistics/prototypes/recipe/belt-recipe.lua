@@ -91,9 +91,18 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
   if settings.startup["bobmods-logistics-beltrequireprevious"].value == true then
     bobmods.lib.recipe.add_ingredient("fast-transport-belt", { type = "item", name = "transport-belt", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("express-transport-belt", { type = "item", name = "fast-transport-belt", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("turbo-transport-belt", { type = "item", name = "express-transport-belt", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("ultimate-transport-belt", { type = "item", name = "turbo-transport-belt", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "express-transport-belt",
+      { type = "item", name = "fast-transport-belt", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "turbo-transport-belt",
+      { type = "item", name = "express-transport-belt", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "ultimate-transport-belt",
+      { type = "item", name = "turbo-transport-belt", amount = 1 }
+    )
     bobmods.lib.recipe.add_ingredient("transport-belt", { type = "item", name = "basic-transport-belt", amount = 1 })
 
     data:extend({

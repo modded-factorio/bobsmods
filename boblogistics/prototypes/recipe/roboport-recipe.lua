@@ -203,7 +203,7 @@ data:extend({
     name = "bob-robo-charge-port-4",
     enabled = false,
     ingredients = {
-      { type = "item", name = "bob-robo-charge-port-3",amount =  1 },
+      { type = "item", name = "bob-robo-charge-port-3", amount = 1 },
       { type = "item", name = "steel-plate", amount = 10 },
       { type = "item", name = "roboport-chargepad-4", amount = 4 },
     },

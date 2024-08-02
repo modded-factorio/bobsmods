@@ -36,62 +36,44 @@ else
 end
 
 if bobmods.ores.settings.GemsFromOtherOres == true then
-  bobmods.lib.resource.add_result(
-    "coal",
-    {
-      type = "item",
-      name = "diamond-ore",
-      amount = 1,
-      probability = bobmods.ores.settings.GemProbability * bobmods.gems.DiamondRatio,
-    }
-  )
+  bobmods.lib.resource.add_result("coal", {
+    type = "item",
+    name = "diamond-ore",
+    amount = 1,
+    probability = bobmods.ores.settings.GemProbability * bobmods.gems.DiamondRatio,
+  })
 
-  bobmods.lib.resource.add_result(
-    "quartz",
-    {
-      type = "item",
-      name = "emerald-ore",
-      amount = 1,
-      probability = bobmods.ores.settings.GemProbability * bobmods.gems.EmeraldRatio,
-    }
-  )
-  bobmods.lib.resource.add_result(
-    "quartz",
-    {
-      type = "item",
-      name = "amethyst-ore",
-      amount = 1,
-      probability = bobmods.ores.settings.GemProbability * bobmods.gems.AmethystRatio,
-    }
-  )
+  bobmods.lib.resource.add_result("quartz", {
+    type = "item",
+    name = "emerald-ore",
+    amount = 1,
+    probability = bobmods.ores.settings.GemProbability * bobmods.gems.EmeraldRatio,
+  })
+  bobmods.lib.resource.add_result("quartz", {
+    type = "item",
+    name = "amethyst-ore",
+    amount = 1,
+    probability = bobmods.ores.settings.GemProbability * bobmods.gems.AmethystRatio,
+  })
 
-  bobmods.lib.resource.add_result(
-    "bauxite-ore",
-    {
-      type = "item",
-      name = "ruby-ore",
-      amount = 1,
-      probability = bobmods.ores.settings.GemProbability * bobmods.gems.RubyRatio,
-    }
-  )
-  bobmods.lib.resource.add_result(
-    "bauxite-ore",
-    {
-      type = "item",
-      name = "sapphire-ore",
-      amount = 1,
-      probability = bobmods.ores.settings.GemProbability * bobmods.gems.SapphireRatio,
-    }
-  )
-  bobmods.lib.resource.add_result(
-    "bauxite-ore",
-    {
-      type = "item",
-      name = "topaz-ore",
-      amount = 1,
-      probability = bobmods.ores.settings.GemProbability * bobmods.gems.TopazRatio,
-    }
-  )
+  bobmods.lib.resource.add_result("bauxite-ore", {
+    type = "item",
+    name = "ruby-ore",
+    amount = 1,
+    probability = bobmods.ores.settings.GemProbability * bobmods.gems.RubyRatio,
+  })
+  bobmods.lib.resource.add_result("bauxite-ore", {
+    type = "item",
+    name = "sapphire-ore",
+    amount = 1,
+    probability = bobmods.ores.settings.GemProbability * bobmods.gems.SapphireRatio,
+  })
+  bobmods.lib.resource.add_result("bauxite-ore", {
+    type = "item",
+    name = "topaz-ore",
+    amount = 1,
+    probability = bobmods.ores.settings.GemProbability * bobmods.gems.TopazRatio,
+  })
 end
 
 if bobmods.ores.settings.LeadGivesNickel == true then
