@@ -29,7 +29,7 @@ data:extend({
       { type = "item", name = "effectivity-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = amount = 1 } },
+    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = 1 } },
   },
   {
     type = "recipe",
