@@ -96,41 +96,107 @@ end
 
 if data.raw.item["processing-electronics"] then
   bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "processing-electronics", amount = 3 })
-  bobmods.lib.recipe.add_ingredient("effectivity-module-7", { type = "item", name = "processing-electronics", amount = 3 })
-  bobmods.lib.recipe.add_ingredient("productivity-module-7", { type = "item", name = "processing-electronics", amount = 3 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-module-7", { type = "item", name = "processing-electronics", amount = 3 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-module-7", { type = "item", name = "processing-electronics", amount = 3 })
+  bobmods.lib.recipe.add_ingredient(
+    "effectivity-module-7",
+    { type = "item", name = "processing-electronics", amount = 3 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "productivity-module-7",
+    { type = "item", name = "processing-electronics", amount = 3 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "pollution-clean-module-7",
+    { type = "item", name = "processing-electronics", amount = 3 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "pollution-create-module-7",
+    { type = "item", name = "processing-electronics", amount = 3 }
+  )
 
   bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "processing-electronics", amount = 5 })
-  bobmods.lib.recipe.add_ingredient("effectivity-module-8", { type = "item", name = "processing-electronics", amount = 5 })
-  bobmods.lib.recipe.add_ingredient("productivity-module-8", { type = "item", name = "processing-electronics", amount = 5 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-module-8", { type = "item", name = "processing-electronics", amount = 5 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-module-8", { type = "item", name = "processing-electronics", amount = 5 })
+  bobmods.lib.recipe.add_ingredient(
+    "effectivity-module-8",
+    { type = "item", name = "processing-electronics", amount = 5 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "productivity-module-8",
+    { type = "item", name = "processing-electronics", amount = 5 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "pollution-clean-module-8",
+    { type = "item", name = "processing-electronics", amount = 5 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "pollution-create-module-8",
+    { type = "item", name = "processing-electronics", amount = 5 }
+  )
 else
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "advanced-processing-unit", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("effectivity-module-7", { type = "item", name = "advanced-processing-unit", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("productivity-module-7", { type = "item", name = "advanced-processing-unit", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-7", { type = "item", name = "advanced-processing-unit", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-7", { type = "item", name = "advanced-processing-unit", amount = 3 })
+    bobmods.lib.recipe.add_ingredient(
+      "speed-module-7",
+      { type = "item", name = "advanced-processing-unit", amount = 3 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "effectivity-module-7",
+      { type = "item", name = "advanced-processing-unit", amount = 3 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "productivity-module-7",
+      { type = "item", name = "advanced-processing-unit", amount = 3 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-7",
+      { type = "item", name = "advanced-processing-unit", amount = 3 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-7",
+      { type = "item", name = "advanced-processing-unit", amount = 3 }
+    )
 
-    bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "advanced-processing-unit", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("effectivity-module-8", { type = "item", name = "advanced-processing-unit", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("productivity-module-8", { type = "item", name = "advanced-processing-unit", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-8", { type = "item", name = "advanced-processing-unit", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-8", { type = "item", name = "advanced-processing-unit", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "speed-module-8",
+      { type = "item", name = "advanced-processing-unit", amount = 5 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "effectivity-module-8",
+      { type = "item", name = "advanced-processing-unit", amount = 5 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "productivity-module-8",
+      { type = "item", name = "advanced-processing-unit", amount = 5 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-8",
+      { type = "item", name = "advanced-processing-unit", amount = 5 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-8",
+      { type = "item", name = "advanced-processing-unit", amount = 5 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "processing-unit", amount = 3 })
     bobmods.lib.recipe.add_ingredient("effectivity-module-7", { type = "item", name = "processing-unit", amount = 3 })
     bobmods.lib.recipe.add_ingredient("productivity-module-7", { type = "item", name = "processing-unit", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-7", { type = "item", name = "processing-unit", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-7", { type = "item", name = "processing-unit", amount = 3 })
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-7",
+      { type = "item", name = "processing-unit", amount = 3 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-7",
+      { type = "item", name = "processing-unit", amount = 3 }
+    )
 
     bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "processing-unit", amount = 5 })
     bobmods.lib.recipe.add_ingredient("effectivity-module-8", { type = "item", name = "processing-unit", amount = 5 })
     bobmods.lib.recipe.add_ingredient("productivity-module-8", { type = "item", name = "processing-unit", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-8", { type = "item", name = "processing-unit", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-8", { type = "item", name = "processing-unit", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-8",
+      { type = "item", name = "processing-unit", amount = 5 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-8",
+      { type = "item", name = "processing-unit", amount = 5 }
+    )
   end
 end
 
@@ -152,8 +218,14 @@ else
     bobmods.lib.recipe.add_ingredient("speed-module-5", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("effectivity-module-5", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("productivity-module-5", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-5", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-5", { type = "item", name = "alien-artifact", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-5",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-5",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
   end
 end
 
@@ -168,8 +240,14 @@ else
     bobmods.lib.recipe.add_ingredient("speed-module-6", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("effectivity-module-6", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("productivity-module-6", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-6", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-6", { type = "item", name = "alien-artifact", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-6",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-6",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
   end
 end
 
@@ -184,8 +262,14 @@ else
     bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("effectivity-module-7", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("productivity-module-7", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-7", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-7", { type = "item", name = "alien-artifact", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-7",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-7",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
   end
 end
 
@@ -200,7 +284,13 @@ else
     bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("effectivity-module-8", { type = "item", name = "alien-artifact", amount = 1 })
     bobmods.lib.recipe.add_ingredient("productivity-module-8", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-module-8", { type = "item", name = "alien-artifact", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-module-8", { type = "item", name = "alien-artifact", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-clean-module-8",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "pollution-create-module-8",
+      { type = "item", name = "alien-artifact", amount = 1 }
+    )
   end
 end

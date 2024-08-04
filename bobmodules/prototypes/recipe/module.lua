@@ -4,21 +4,21 @@ data.raw["recipe"]["speed-module"].ingredients = {
   { type = "item", name = "speed-processor", amount = 1 },
   { type = "item", name = "module-case", amount = 1 },
   { type = "item", name = "module-circuit-board", amount = 1 },
-  { type = "item", name = "module-contact", amount = 4 }
+  { type = "item", name = "module-contact", amount = 4 },
 }
 data.raw["recipe"]["speed-module"].energy_required = 10
 
 data.raw["recipe"]["speed-module-2"].ingredients = {
   { type = "item", name = "speed-module", amount = 1 },
   { type = "item", name = "speed-processor", amount = 2 },
-  { type = "item", name = "module-contact", amount = 5 }
+  { type = "item", name = "module-contact", amount = 5 },
 }
 data.raw["recipe"]["speed-module-2"].energy_required = 20
 
 data.raw["recipe"]["speed-module-3"].ingredients = {
   { type = "item", name = "speed-module-2", amount = 1 },
   { type = "item", name = "speed-processor-2", amount = 3 },
-  { type = "item", name = "advanced-circuit", amount = 5 }
+  { type = "item", name = "advanced-circuit", amount = 5 },
 }
 data.raw["recipe"]["speed-module-3"].energy_required = 30
 
@@ -101,21 +101,21 @@ data.raw["recipe"]["effectivity-module"].ingredients = {
   { type = "item", name = "effectivity-processor", amount = 1 },
   { type = "item", name = "module-case", amount = 1 },
   { type = "item", name = "module-circuit-board", amount = 1 },
-  { type = "item", name = "module-contact", amount = 4 }
+  { type = "item", name = "module-contact", amount = 4 },
 }
 data.raw["recipe"]["effectivity-module"].energy_required = 10
 
 data.raw["recipe"]["effectivity-module-2"].ingredients = {
   { type = "item", name = "effectivity-module", amount = 1 },
   { type = "item", name = "effectivity-processor", amount = 2 },
-  { type = "item", name = "module-contact", amount = 5 }
+  { type = "item", name = "module-contact", amount = 5 },
 }
 data.raw["recipe"]["effectivity-module-2"].energy_required = 20
 
 data.raw["recipe"]["effectivity-module-3"].ingredients = {
   { type = "item", name = "effectivity-module-2", amount = 1 },
   { type = "item", name = "effectivity-processor-2", amount = 3 },
-  { type = "item", name = "advanced-circuit", amount = 5 }
+  { type = "item", name = "advanced-circuit", amount = 5 },
 }
 data.raw["recipe"]["effectivity-module-3"].energy_required = 30
 
@@ -198,21 +198,21 @@ data.raw["recipe"]["productivity-module"].ingredients = {
   { type = "item", name = "productivity-processor", amount = 1 },
   { type = "item", name = "module-case", amount = 1 },
   { type = "item", name = "module-circuit-board", amount = 1 },
-  { type = "item", name = "module-contact", amount = 4 }
+  { type = "item", name = "module-contact", amount = 4 },
 }
 data.raw["recipe"]["productivity-module"].energy_required = 10
 
 data.raw["recipe"]["productivity-module-2"].ingredients = {
   { type = "item", name = "productivity-module", amount = 1 },
   { type = "item", name = "productivity-processor", amount = 2 },
-  { type = "item", name = "module-contact", amount = 5 }
+  { type = "item", name = "module-contact", amount = 5 },
 }
 data.raw["recipe"]["productivity-module-2"].energy_required = 20
 
 data.raw["recipe"]["productivity-module-3"].ingredients = {
   { type = "item", name = "productivity-module-2", amount = 1 },
   { type = "item", name = "productivity-processor-2", amount = 3 },
-  { type = "item", name = "advanced-circuit", amount = 5 }
+  { type = "item", name = "advanced-circuit", amount = 5 },
 }
 data.raw["recipe"]["productivity-module-3"].energy_required = 30
 
