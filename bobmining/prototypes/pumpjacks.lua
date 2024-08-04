@@ -86,7 +86,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { type = "item", name = "bob-pumpjack-2", amount = 1 },
         { type = "item", name = "steel-plate", amount = 20 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "processing-unit",amount = 5 },
+        { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "pipe", amount = 10 },
       },
       results = { { type = "item", name = "bob-pumpjack-3", amount = 1 } },
