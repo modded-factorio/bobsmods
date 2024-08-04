@@ -201,9 +201,9 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       energy_required = 3,
       enabled = false,
       ingredients = {
-        { "iron-plate", 3 },
-        { "copper-plate", 3 },
-        { "pipe", 2 },
+        { type = "item", name = "iron-plate", amount = 3 },
+        { type = "item", name = "copper-plate", amount = 3 },
+        { type = "item", name = "pipe", amount = 2 },
       },
       results = { { type = "item", name = "bob-distillery", amount = 1 } },
     },

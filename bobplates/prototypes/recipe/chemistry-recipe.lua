@@ -601,7 +601,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "silver-plate", 1 },
+      { type = "item", name = "silver-plate", amount = 1 },
       { type = "fluid", name = "nitrogen-dioxide", amount = 10 },
     },
     results = { { type = "item", name = "silver-nitrate", amount = 1 } },
@@ -621,8 +621,8 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "silver-nitrate", 1 },
-      { "sodium-hydroxide", 1 },
+      { type = "item", name = "silver-nitrate", amount = 1 },
+      { type = "item", name = "sodium-hydroxide", amount = 1 },
     },
     results = { { type = "item", name = "silver-oxide", amount = 1 } },
     crafting_machine_tint = {

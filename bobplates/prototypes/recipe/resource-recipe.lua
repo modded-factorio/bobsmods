@@ -21,7 +21,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { "wood", 1 },
+      { type = "item", name = "wood", amount = 1 },
     },
     results = { { type = "item", name = "resin", amount = 1 } },
     allow_decomposition = false,
@@ -54,7 +54,7 @@ data:extend({
     energy_required = 3.2,
     enabled = false,
     ingredients = {
-      { "resin", 1 },
+      { type = "item", name = "resin", amount = 1 },
     },
     results = { { type = "item", name = "rubber", amount = 1 } },
     allow_decomposition = false,
@@ -67,7 +67,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = {
-      { "quartz", 1 },
+      { type = "item", name = "quartz", amount = 1 },
     },
     results = { { type = "item", name = "glass", amount = 1 } },
     allow_decomposition = false,
@@ -80,7 +80,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "silicon", 1 },
+      { type = "item", name = "silicon", amount = 1 },
     },
     results = { { type = "item", name = "silicon-wafer", amount = 8 } },
   },
@@ -93,7 +93,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "silicon", 1 },
+      { type = "item", name = "silicon", amount = 1 },
     },
     results = { { type = "item", name = "silicon-powder", amount = 1 } },
   },
@@ -106,7 +106,7 @@ data:extend({
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { "silicon-powder", 1 },
+      { type = "item", name = "silicon-powder", amount = 1 },
       { type = "fluid", name = "nitrogen", amount = 12.5 },
     },
     results = { { type = "item", name = "silicon-nitride", amount = 1 } },
@@ -121,8 +121,8 @@ data:extend({
     energy_required = 7,
     enabled = false,
     ingredients = {
-      { "lithium", 1 },
-      { "cobalt-oxide", 1 },
+      { type = "item", name = "lithium", amount = 1 },
+      { type = "item", name = "cobalt-oxide", amount = 1 },
     },
     results = { { type = "item", name = "lithium-cobalt-oxide", amount = 2 } },
   },
@@ -157,7 +157,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { "steel-plate", 1 },
+      { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "gas-canister", amount = 5 } },
   },
@@ -170,8 +170,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { "iron-plate", 1 },
-      { "plastic-bar", 1 },
+      { type = "item", name = "iron-plate", amount = 1 },
+      { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "empty-canister", amount = 5 } },
   },
@@ -201,7 +201,7 @@ data:extend({
     category = "smelting",
     energy_required = 1.6,
     ingredients = {
-      { "wood", 2 },
+      { type = "item", name = "wood", amount = 2 },
     },
     results = { { type = "item", name = "coal", amount = 1 } },
     allow_decomposition = false,

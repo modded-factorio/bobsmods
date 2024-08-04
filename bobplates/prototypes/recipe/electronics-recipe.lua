@@ -6,8 +6,8 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { "advanced-circuit", 20 },
-      { "processing-unit", 2 },
+      { type = "item", name = "advanced-circuit", amount = 20 },
+      { type = "item", name = "processing-unit", amount = 2 },
       { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
     results = { { type = "item", name = "advanced-processing-unit", amount = 1 } },
