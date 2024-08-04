@@ -1,12 +1,12 @@
 if data.raw.item["tin-plate"] then
-  bobmods.lib.recipe.add_ingredient("module-circuit-board", { "tin-plate", 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board", { "tin-plate", 1 })
+  bobmods.lib.recipe.add_ingredient("module-circuit-board", { type = "item", name = "tin-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board", { type = "item", name = "tin-plate", amount = 1 })
 end
 
 if data.raw.item["gold-plate"] then
-  bobmods.lib.recipe.add_ingredient("module-contact", { "gold-plate", 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { "gold-plate", 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { "gold-plate", 2 })
+  bobmods.lib.recipe.add_ingredient("module-contact", { type = "item", name = "gold-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { type = "item", name = "gold-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { type = "item", name = "gold-plate", amount = 2 })
   bobmods.lib.tech.add_prerequisite("modules", "gold-processing")
 end
 
@@ -21,10 +21,10 @@ if data.raw.item["fibreglass-board"] then
 end
 
 if data.raw.fluid["ferric-chloride-solution"] then
-  bobmods.lib.recipe.add_ingredient("module-circuit-board", { "ferric-chloride-solution", 5 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board", { "ferric-chloride-solution", 5 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { "ferric-chloride-solution", 5 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { "ferric-chloride-solution", 10 })
+  bobmods.lib.recipe.add_ingredient("module-circuit-board", { type = "item", name = "ferric-chloride-solution", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board", { type = "item", name = "ferric-chloride-solution", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { type = "item", name = "ferric-chloride-solution", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { type = "item", name = "ferric-chloride-solution", amount = 10 })
 end
 
 if data.raw.item["basic-electronic-components"] then
@@ -72,45 +72,45 @@ if data.raw.item["intergrated-electronics"] then
 end
 
 if data.raw.item["processing-electronics"] then
-  bobmods.lib.recipe.add_ingredient("speed-processor-3", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "processing-electronics", 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "processing-electronics", 1 })
+  bobmods.lib.recipe.add_ingredient("speed-processor-3", { type = "item", name = "processing-electronics", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { type = "item", name = "processing-electronics", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-processor-3", { type = "item", name = "processing-electronics", 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { type = "item", name = "processing-electronics", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { type = "item", name = "processing-electronics", amount = 1 })
 else
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_ingredient("speed-processor-3", { "advanced-processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "advanced-processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "advanced-processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "advanced-processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "advanced-processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("speed-processor-3", { type = "item", name = "advanced-processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { type = "item", name = "advanced-processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("productivity-processor-3", { type = "item", name = "advanced-processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { type = "item", name = "advanced-processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { type = "item", name = "advanced-processing-unit", amount = 1 })
   else
-    bobmods.lib.recipe.add_ingredient("speed-processor-3", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "processing-unit", 1 })
-    bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient("speed-processor-3", { type = "item", name = "processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { type = "item", name = "processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("productivity-processor-3", { type = "item", name = "processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { type = "item", name = "processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { type = "item", name = "processing-unit", amount = 1 })
   end
 end
 
 if data.raw.item["solder"] then
-  bobmods.lib.recipe.add_ingredient("speed-processor", { "solder", 1 })
-  bobmods.lib.recipe.add_ingredient("effectivity-processor", { "solder", 1 })
-  bobmods.lib.recipe.add_ingredient("productivity-processor", { "solder", 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-processor", { "solder", 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-processor", { "solder", 1 })
+  bobmods.lib.recipe.add_ingredient("speed-processor", { type = "item", name = "solder", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("effectivity-processor", { type = "item", name = "solder", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-processor", { type = "item", name = "solder", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-processor", { type = "item", name = "solder", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-processor", { type = "item", name = "solder", amount = 1 })
 
-  bobmods.lib.recipe.add_ingredient("speed-processor-2", { "solder", 2 })
-  bobmods.lib.recipe.add_ingredient("effectivity-processor-2", { "solder", 2 })
-  bobmods.lib.recipe.add_ingredient("productivity-processor-2", { "solder", 2 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-2", { "solder", 2 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-processor-2", { "solder", 2 })
+  bobmods.lib.recipe.add_ingredient("speed-processor-2", { type = "item", name = "solder", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("effectivity-processor-2", { type = "item", name = "solder", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("productivity-processor-2", { type = "item", name = "solder", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-2", { type = "item", name = "solder", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-processor-2", { type = "item", name = "solder", amount = 2 })
 
-  bobmods.lib.recipe.add_ingredient("speed-processor-3", { "solder", 3 })
-  bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { "solder", 3 })
-  bobmods.lib.recipe.add_ingredient("productivity-processor-3", { "solder", 3 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { "solder", 3 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { "solder", 3 })
+  bobmods.lib.recipe.add_ingredient("speed-processor-3", { type = "item", name = "solder", amount = 3 })
+  bobmods.lib.recipe.add_ingredient("effectivity-processor-3", { type = "item", name = "solder", amount = 3 })
+  bobmods.lib.recipe.add_ingredient("productivity-processor-3", { type = "item", name = "solder", amount = 3 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-processor-3", { type = "item", name = "solder", amount = 3 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-processor-3", { type = "item", name = "solder", amount = 3 })
 end
 
 bobmods.lib.tech.add_recipe_unlock("modules", "module-case")

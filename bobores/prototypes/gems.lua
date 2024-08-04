@@ -15,7 +15,7 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
       name = "sort-gem-ore",
       energy_required = 1,
       ingredients = {
-        { "gem-ore", 1 },
+        { type = "item", name = "gem-ore", amount = 1 },
       },
       results = {
         { type = "item", name = "ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio },
