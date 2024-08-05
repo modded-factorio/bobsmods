@@ -77,7 +77,10 @@ else
 
   if data.raw.item["steel-bearing"] then
     bobmods.lib.recipe.add_ingredient("vehicle-roboport-2", { type = "item", name = "steel-bearing", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("vehicle-roboport-antenna-equipment-2", { type = "item", name = "steel-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "vehicle-roboport-antenna-equipment-2",
+      { type = "item", name = "steel-bearing", amount = 5 }
+    )
   end
 
   if data.raw.item["steel-gear-wheel"] then
@@ -135,7 +138,10 @@ else
 
   if data.raw.item["titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient("vehicle-roboport-3", { type = "item", name = "titanium-bearing", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("vehicle-roboport-antenna-equipment-3", { type = "item", name = "titanium-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "vehicle-roboport-antenna-equipment-3",
+      { type = "item", name = "titanium-bearing", amount = 5 }
+    )
   end
 
   if data.raw.item["titanium-gear-wheel"] then
@@ -211,7 +217,10 @@ else
 
   if data.raw.item["nitinol-bearing"] then
     bobmods.lib.recipe.add_ingredient("vehicle-roboport-4", { type = "item", name = "nitinol-bearing", amount = 5 })
-    bobmods.lib.recipe.add_ingredient("vehicle-roboport-antenna-equipment-4", { type = "item", name = "nitinol-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "vehicle-roboport-antenna-equipment-4",
+      { type = "item", name = "nitinol-bearing", amount = 5 }
+    )
   end
 
   if data.raw.item["nitinol-gear-wheel"] then
@@ -248,17 +257,38 @@ end
 
 if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment", { type = "item", name = "solder", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-2", { type = "item", name = "solder", amount = 3 })
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-3", { type = "item", name = "solder", amount = 4 })
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-4", { type = "item", name = "solder", amount = 6 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment-2",
+    { type = "item", name = "solder", amount = 3 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment-3",
+    { type = "item", name = "solder", amount = 4 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment-4",
+    { type = "item", name = "solder", amount = 6 }
+  )
 end
 
 if data.raw.tool["module-case"] or data.raw.item["module-case"] then
   bobmods.lib.tech.add_recipe_unlock("robotics", "module-case")
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment", { type = "item", name = "module-case", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-2", { type = "item", name = "module-case", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-3", { type = "item", name = "module-case", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("vehicle-roboport-robot-equipment-4", { type = "item", name = "module-case", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment",
+    { type = "item", name = "module-case", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment-2",
+    { type = "item", name = "module-case", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment-3",
+    { type = "item", name = "module-case", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-roboport-robot-equipment-4",
+    { type = "item", name = "module-case", amount = 1 }
+  )
 end
 
 if data.raw.item["glass"] then
@@ -489,17 +519,41 @@ if data.raw.item["alien-artifact"] then
   bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-2", { type = "item", name = "alien-artifact", amount = 30 })
   bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-3", { type = "item", name = "alien-artifact", amount = 30 })
 
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-2", { type = "item", name = "alien-artifact", amount = 30 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-3", { type = "item", name = "alien-artifact", amount = 30 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-2",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-3",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
 
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-2", { type = "item", name = "alien-artifact", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-3", { type = "item", name = "alien-artifact", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-2",
+    { type = "item", name = "alien-artifact", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-3",
+    { type = "item", name = "alien-artifact", amount = 15 }
+  )
 
-  bobmods.lib.recipe.add_new_ingredient("vehicle-solar-panel-5", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-solar-panel-6", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-solar-panel-5",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-solar-panel-6",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
 else
-  bobmods.lib.recipe.add_ingredient("vehicle-fusion-reactor-2", { type = "item", name = "processing-unit", amount = 50 })
-  bobmods.lib.recipe.add_ingredient("vehicle-fusion-reactor-3", { type = "item", name = "processing-unit", amount = 50 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fusion-reactor-2",
+    { type = "item", name = "processing-unit", amount = 50 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fusion-reactor-3",
+    { type = "item", name = "processing-unit", amount = 50 }
+  )
 
   bobmods.lib.recipe.add_ingredient("vehicle-fusion-cell-2", { type = "item", name = "processing-unit", amount = 25 })
   bobmods.lib.recipe.add_ingredient("vehicle-fusion-cell-3", { type = "item", name = "processing-unit", amount = 25 })
@@ -509,70 +563,178 @@ else
 end
 
 if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-4", { type = "item", name = "alien-artifact-orange", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-4", { type = "item", name = "alien-artifact-orange", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-4", { type = "item", name = "alien-artifact-orange", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-4", { type = "item", name = "alien-artifact-orange", amount = 8 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-4", { type = "item", name = "alien-artifact-orange", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-4",
+    { type = "item", name = "alien-artifact-orange", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-4",
+    { type = "item", name = "alien-artifact-orange", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-4",
+    { type = "item", name = "alien-artifact-orange", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-4",
+    { type = "item", name = "alien-artifact-orange", amount = 8 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-4",
+    { type = "item", name = "alien-artifact-orange", amount = 15 }
+  )
 
   bobmods.lib.recipe.add_new_ingredient("vehicle-shield-4", { type = "item", name = "alien-artifact-blue", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-4", { type = "item", name = "alien-artifact-blue", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-4", { type = "item", name = "alien-artifact-blue", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-4", { type = "item", name = "alien-artifact-blue", amount = 8 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-4", { type = "item", name = "alien-artifact-blue", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-4",
+    { type = "item", name = "alien-artifact-blue", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-4",
+    { type = "item", name = "alien-artifact-blue", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-4",
+    { type = "item", name = "alien-artifact-blue", amount = 8 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-4",
+    { type = "item", name = "alien-artifact-blue", amount = 15 }
+  )
 elseif data.raw.item["alien-artifact"] then
   bobmods.lib.recipe.add_new_ingredient("vehicle-shield-4", { type = "item", name = "alien-artifact", amount = 10 })
   bobmods.lib.recipe.add_new_ingredient("vehicle-battery-4", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-4", { type = "item", name = "alien-artifact", amount = 30 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-4", { type = "item", name = "alien-artifact", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-4",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-4",
+    { type = "item", name = "alien-artifact", amount = 15 }
+  )
   bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-4", { type = "item", name = "alien-artifact", amount = 30 })
 else
-  bobmods.lib.recipe.add_ingredient("vehicle-fusion-reactor-4", { type = "item", name = "processing-unit", amount = 50 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fusion-reactor-4",
+    { type = "item", name = "processing-unit", amount = 50 }
+  )
   bobmods.lib.recipe.add_ingredient("vehicle-fusion-cell-4", { type = "item", name = "processing-unit", amount = 25 })
 end
 
 if data.raw.item["alien-artifact-yellow"] and data.raw.item["alien-artifact-purple"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-5", { type = "item", name = "alien-artifact-yellow", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-5", { type = "item", name = "alien-artifact-yellow", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-5", { type = "item", name = "alien-artifact-yellow", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-5", { type = "item", name = "alien-artifact-yellow", amount = 8 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-5", { type = "item", name = "alien-artifact-yellow", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-5",
+    { type = "item", name = "alien-artifact-yellow", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-5",
+    { type = "item", name = "alien-artifact-yellow", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-5",
+    { type = "item", name = "alien-artifact-yellow", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-5",
+    { type = "item", name = "alien-artifact-yellow", amount = 8 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-5",
+    { type = "item", name = "alien-artifact-yellow", amount = 15 }
+  )
 
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-5", { type = "item", name = "alien-artifact-purple", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-5", { type = "item", name = "alien-artifact-purple", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-5", { type = "item", name = "alien-artifact-purple", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-5", { type = "item", name = "alien-artifact-purple", amount = 8 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-5", { type = "item", name = "alien-artifact-purple", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-5",
+    { type = "item", name = "alien-artifact-purple", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-5",
+    { type = "item", name = "alien-artifact-purple", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-5",
+    { type = "item", name = "alien-artifact-purple", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-5",
+    { type = "item", name = "alien-artifact-purple", amount = 8 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-5",
+    { type = "item", name = "alien-artifact-purple", amount = 15 }
+  )
 elseif data.raw.item["alien-artifact"] then
   bobmods.lib.recipe.add_new_ingredient("vehicle-shield-5", { type = "item", name = "alien-artifact", amount = 10 })
   bobmods.lib.recipe.add_new_ingredient("vehicle-battery-5", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-5", { type = "item", name = "alien-artifact", amount = 30 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-5", { type = "item", name = "alien-artifact", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-5",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-5",
+    { type = "item", name = "alien-artifact", amount = 15 }
+  )
   bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-5", { type = "item", name = "alien-artifact", amount = 30 })
 else
-  bobmods.lib.recipe.add_ingredient("vehicle-fusion-reactor-5", { type = "item", name = "processing-unit", amount = 50 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fusion-reactor-5",
+    { type = "item", name = "processing-unit", amount = 50 }
+  )
   bobmods.lib.recipe.add_ingredient("vehicle-fusion-cell-5", { type = "item", name = "processing-unit", amount = 25 })
 end
 
 if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"] then
   bobmods.lib.recipe.add_new_ingredient("vehicle-shield-6", { type = "item", name = "alien-artifact-red", amount = 5 })
   bobmods.lib.recipe.add_new_ingredient("vehicle-battery-6", { type = "item", name = "alien-artifact-red", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-6", { type = "item", name = "alien-artifact-red", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-6", { type = "item", name = "alien-artifact-red", amount = 8 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-6", { type = "item", name = "alien-artifact-red", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-6",
+    { type = "item", name = "alien-artifact-red", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-6",
+    { type = "item", name = "alien-artifact-red", amount = 8 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-6",
+    { type = "item", name = "alien-artifact-red", amount = 15 }
+  )
 
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-6", { type = "item", name = "alien-artifact-green", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-6", { type = "item", name = "alien-artifact-green", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-6", { type = "item", name = "alien-artifact-green", amount = 15 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-6", { type = "item", name = "alien-artifact-green", amount = 8 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-6", { type = "item", name = "alien-artifact-green", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-6",
+    { type = "item", name = "alien-artifact-green", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-6",
+    { type = "item", name = "alien-artifact-green", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-6",
+    { type = "item", name = "alien-artifact-green", amount = 15 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-6",
+    { type = "item", name = "alien-artifact-green", amount = 8 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-6",
+    { type = "item", name = "alien-artifact-green", amount = 15 }
+  )
 elseif data.raw.item["alien-artifact"] then
   bobmods.lib.recipe.add_new_ingredient("vehicle-shield-6", { type = "item", name = "alien-artifact", amount = 10 })
   bobmods.lib.recipe.add_new_ingredient("vehicle-battery-6", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-reactor-6", { type = "item", name = "alien-artifact", amount = 30 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-fusion-cell-6", { type = "item", name = "alien-artifact", amount = 15 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-reactor-6",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-fusion-cell-6",
+    { type = "item", name = "alien-artifact", amount = 15 }
+  )
   bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-6", { type = "item", name = "alien-artifact", amount = 30 })
 else
-  bobmods.lib.recipe.add_ingredient("vehicle-fusion-reactor-6", { type = "item", name = "processing-unit", amount = 50 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fusion-reactor-6",
+    { type = "item", name = "processing-unit", amount = 50 }
+  )
   bobmods.lib.recipe.add_ingredient("vehicle-fusion-cell-6", { type = "item", name = "processing-unit", amount = 25 })
 end
