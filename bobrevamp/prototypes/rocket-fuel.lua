@@ -287,7 +287,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         energy_required = 12,
         ingredients = {
           { type = "fluid", name = "hydrazine", amount = 100 },
-          { "solid-fuel", 1 },
+          { type = "item", name = "solid-fuel", amount = 1 },
         },
         results = { { type = "item", name = "enriched-fuel", amount = 1 } },
         subgroup = "bob-resource-chemical",

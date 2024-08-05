@@ -5,11 +5,11 @@ require("prototypes.rtg-updates")
 
 -- Rocket silo overhaul
 
-bobmods.lib.recipe.set_ingredient("rocket-silo", { "steel-plate", 500 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { "concrete", 200 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { "pipe", 50 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { "processing-unit", 50 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { "electric-engine-unit", 100 })
+bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "steel-plate", amount = 500 })
+bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "concrete", amount = 200 })
+bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "pipe", amount = 50 })
+bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "processing-unit", amount = 50 })
+bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "electric-engine-unit", amount = 100 })
 
 if data.raw.item["titanium-pipe"] then
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "pipe", "titanium-pipe")
@@ -22,9 +22,9 @@ if data.raw.item["nitinol-alloy"] then
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "steel-plate", "nitinol-alloy")
 end
 
-bobmods.lib.recipe.add_ingredient("rocket-silo", { "low-density-structure", 50 })
-bobmods.lib.recipe.add_ingredient("rocket-silo", { "rocket-control-unit", 25 })
-bobmods.lib.recipe.add_ingredient("rocket-silo", { "heat-shield-tile", 100 })
+bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "low-density-structure", amount = 50 })
+bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "rocket-control-unit", amount = 25 })
+bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "heat-shield-tile", amount = 100 })
 
 -- oil overhaul
 if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup["bobmods-revamp-oil"].value == true then
@@ -43,7 +43,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   then
     data.raw.recipe["basic-oil-processing"].results[1].amount = 70 --increase PG count for 0.17.60.
   end
-  bobmods.lib.recipe.set_ingredient("coal-liquefaction", { "heavy-oil", 10 })
+  bobmods.lib.recipe.set_ingredient("coal-liquefaction", { type = "item", name = "heavy-oil", amount = 10 })
 
   bobmods.lib.tech.replace_prerequisite("fluid-handling", "oil-processing", "steel-processing")
   bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)

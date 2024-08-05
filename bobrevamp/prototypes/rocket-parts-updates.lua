@@ -1,10 +1,10 @@
 if data.raw.item["rocket-engine"] then
-  bobmods.lib.recipe.add_ingredient("rocket-part", { "rocket-engine", 10 })
+  bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "rocket-engine", amount = 10 })
   bobmods.lib.tech.add_recipe_unlock("rocket-silo", "rocket-engine")
 end
 
 bobmods.lib.tech.add_prerequisite("rocket-silo", "heat-shield")
-bobmods.lib.recipe.add_ingredient("rocket-part", { "heat-shield-tile", 10 })
+bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "heat-shield-tile", amount = 10 })
 if data.raw.item["silicon-nitride"] then
   bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "steel-plate", "silicon-nitride")
   bobmods.lib.tech.replace_prerequisite("heat-shield", "steel-processing", "ceramics")
@@ -39,16 +39,16 @@ if
   and data.raw.item["processing-electronics"]
 then
   data.raw.recipe["rocket-control-unit"].ingredients = {
-    { "basic-electronic-components", 4 },
-    { "electronic-components", 6 },
-    { "intergrated-electronics", 4 },
-    { "processing-electronics", 8 },
+    { type = "item", name = "basic-electronic-components", amount = 4 },
+    { type = "item", name = "electronic-components", amount = 6 },
+    { type = "item", name = "intergrated-electronics", amount = 4 },
+    { type = "item", name = "processing-electronics", amount = 8 },
   }
   if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { "solder", 5 })
+    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { type = "item", name = "solder", amount = 5 })
   end
   if data.raw.item["multi-layer-circuit-board"] then
-    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { "multi-layer-circuit-board", 2 })
+    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { type = "item", name = "multi-layer-circuit-board", amount = 2 })
   end
   bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
 elseif data.raw.item["advanced-processing-unit"] then
@@ -60,10 +60,10 @@ bobmods.lib.tech.add_science_pack("rocket-control-unit", "production-science-pac
 bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "rocket-control-unit")
 
 if data.raw.item.rtg then
-  bobmods.lib.recipe.set_ingredient("satellite", { "accumulator", 50 })
+  bobmods.lib.recipe.set_ingredient("satellite", { type = "item", name = "accumulator", amount = 50 })
   bobmods.lib.recipe.remove_ingredient("satellite", "solar-panel")
   bobmods.lib.tech.remove_prerequisite("space-science-pack", "solar-energy")
-  bobmods.lib.recipe.add_ingredient("satellite", { "rtg", 10 })
+  bobmods.lib.recipe.add_ingredient("satellite", { type = "item", name = "rtg", amount = 10 })
   bobmods.lib.tech.add_prerequisite("space-science-pack", "rtg")
 elseif data.raw.item["solar-panel-3"] then
   bobmods.lib.recipe.replace_ingredient("satellite", "solar-panel", "solar-panel-3")

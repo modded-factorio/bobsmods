@@ -15,8 +15,8 @@ data:extend({
     energy_required = 30,
     enabled = false,
     ingredients = {
-      { "steel-plate", 10 },
-      { "plastic-bar", 5 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "plastic-bar", amount = 5 },
     },
     results = { { type = "item", name = "heat-shield-tile", amount = 1 } },
   },
