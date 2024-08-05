@@ -48,7 +48,10 @@ then
     bobmods.lib.recipe.add_ingredient("rocket-control-unit", { type = "item", name = "solder", amount = 5 })
   end
   if data.raw.item["multi-layer-circuit-board"] then
-    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { type = "item", name = "multi-layer-circuit-board", amount = 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "rocket-control-unit",
+      { type = "item", name = "multi-layer-circuit-board", amount = 2 }
+    )
   end
   bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
 elseif data.raw.item["advanced-processing-unit"] then
