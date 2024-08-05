@@ -25,8 +25,8 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "advanced-circuit", 5 },
-      { "steel-plate", 10 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 10 },
     },
     results = { { type = "item", name = "vehicle-belt-immunity-equipment", amount = 1 } },
   },
