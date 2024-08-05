@@ -207,7 +207,7 @@ data:extend({
       { type = "item", name = "electric-engine-unit", amount = 1 },
       { type = "item", name = "advanced-processing-unit", amount = 3 },
     },
-    results = { { type = "item", name = "water-pump-4", amount = amount = 1 } },
+    results = { { type = "item", name = "water-pump-4", amount = 1 } },
   },
 
   {

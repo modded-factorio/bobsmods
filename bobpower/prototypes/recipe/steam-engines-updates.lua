@@ -6,7 +6,7 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("steam-engine-2", type = "item", name = "iron-gear-wheel", "steel-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("steam-engine-2", "iron-gear-wheel", "steel-gear-wheel")
   end
 
   if data.raw.item["steel-pipe"] then
