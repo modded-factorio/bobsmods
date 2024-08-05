@@ -33,6 +33,6 @@ if settings.startup["bobmods-power-accumulators"].value == true then
     end
   end
 
-  bobmods.lib.recipe.add_ingredient("accumulator", { "electronic-circuit", 2 })
-  bobmods.lib.recipe.set_ingredient("accumulator", { "battery", 10 })
+  bobmods.lib.recipe.add_ingredient("accumulator", { type = "item", name = "electronic-circuit", amount = 2 })
+  bobmods.lib.recipe.set_ingredient("accumulator", { type = "item", name = "battery", amount = 10 })
 end

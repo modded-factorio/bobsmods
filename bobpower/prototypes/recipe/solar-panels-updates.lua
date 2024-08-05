@@ -26,21 +26,21 @@ if settings.startup["bobmods-power-solar"].value == true then
   end
 
   if data.raw.item["silicon-wafer"] then
-    bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { "silicon-wafer", 16 })
-    bobmods.lib.recipe.add_ingredient("solar-panel-3", { "silicon-wafer", 36 })
-    bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { "silicon-wafer", 64 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "silicon-wafer", amount = 16 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "silicon-wafer", amount = 36 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "silicon-wafer", amount = 64 })
     bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "silicon-processing")
   else
     if data.raw.item["silicon"] then
-      bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { "silicon", 2 })
-      bobmods.lib.recipe.add_ingredient("solar-panel-3", { "silicon", 4 })
-      bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { "silicon", 8 })
+      bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "silicon", amount = 2 })
+      bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "silicon", amount = 4 })
+      bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "silicon", amount = 8 })
       bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "silicon-processing")
     else
       if data.raw.item["silicon-plate"] then
-        bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { "silicon-plate", 2 })
-        bobmods.lib.recipe.add_ingredient("solar-panel-3", { "silicon-plate", 4 })
-        bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { "silicon-plate", 8 })
+        bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "silicon-plate", amount = 2 })
+        bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "silicon-plate", amount = 4 })
+        bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "silicon-plate", amount = 8 })
         bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "silicon-processing")
       end
     end

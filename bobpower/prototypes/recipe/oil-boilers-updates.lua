@@ -9,7 +9,7 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["brass-pipe"] then
-    bobmods.lib.recipe.add_ingredient("oil-boiler-2", { "brass-pipe", 6 })
+    bobmods.lib.recipe.add_ingredient("oil-boiler-2", { type = "item", name = "brass-pipe", amount = 6 })
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "zinc-processing")
   end
 
@@ -19,7 +19,7 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["ceramic-pipe"] then
-    bobmods.lib.recipe.add_ingredient("oil-boiler-3", { "ceramic-pipe", 6 })
+    bobmods.lib.recipe.add_ingredient("oil-boiler-3", { type = "item", name = "ceramic-pipe", amount = 6 })
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "ceramics")
   end
 
@@ -29,9 +29,9 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["copper-tungsten-pipe"] then
-    bobmods.lib.recipe.add_ingredient("oil-boiler-4", { "copper-tungsten-pipe", 6 })
+    bobmods.lib.recipe.add_ingredient("oil-boiler-4", { type = "item", name = "copper-tungsten-pipe", amount = 6 })
   elseif data.raw.item["tungsten-pipe"] then
-    bobmods.lib.recipe.add_ingredient("oil-boiler-4", { "tungsten-pipe", 6 })
+    bobmods.lib.recipe.add_ingredient("oil-boiler-4", { type = "item", name = "tungsten-pipe", amount = 6 })
   end
 
   if
