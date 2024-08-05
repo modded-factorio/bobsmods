@@ -120,7 +120,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     end
 
     if data.raw.item["copper-tungsten-pipe"] then
-      bobmods.lib.recipe.add_ingredient("hydrazine-generator", { type = "item", name = "copper-tungsten-pipe", amount = 5 })
+      bobmods.lib.recipe.add_ingredient(
+        "hydrazine-generator",
+        { type = "item", name = "copper-tungsten-pipe", amount = 5 }
+      )
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "tungsten-alloy-processing")
     elseif data.raw.item["tungsten-pipe"] then
       bobmods.lib.recipe.add_ingredient("hydrazine-generator", { type = "item", name = "tungsten-pipe", amount = 5 })
