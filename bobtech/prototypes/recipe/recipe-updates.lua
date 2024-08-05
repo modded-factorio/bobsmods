@@ -5,7 +5,10 @@ data.raw.recipe["chemical-science-pack"].energy_required = 14
 
 bobmods.lib.recipe.remove_ingredient("production-science-pack", "productivity-module")
 bobmods.lib.recipe.remove_ingredient("production-science-pack", "rail")
-bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "assembling-machine-2", amount = 1 })
+bobmods.lib.recipe.add_ingredient(
+  "production-science-pack",
+  { type = "item", name = "assembling-machine-2", amount = 1 }
+)
 bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "chemical-plant", amount = 1 })
 
 if bobmods.tech.advanced_logistic_science then
