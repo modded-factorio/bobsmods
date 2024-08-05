@@ -14,10 +14,10 @@ then
       enabled = false,
       energy_required = 30,
       ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "military-science-pack", 1 },
+        { type = "item", name = "automation-science-pack", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "military-science-pack", amount = 1 },
       },
       results = { { type = "item", name = "science-pack-gold", amount = 1 } },
     },
@@ -27,7 +27,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact", 1 },
+        { type = "item", name = "alien-artifact", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack", amount = 10 } },
     },
@@ -37,7 +37,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact-blue", 1 },
+        { type = "item", name = "alien-artifact-blue", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-blue", amount = 10 } },
     },
@@ -47,7 +47,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact-orange", 1 },
+        { type = "item", name = "alien-artifact-orange", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-orange", amount = 10 } },
     },
@@ -57,7 +57,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact-purple", 1 },
+        { type = "item", name = "alien-artifact-purple", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-purple", amount = 10 } },
     },
@@ -67,7 +67,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact-yellow", 1 },
+        { type = "item", name = "alien-artifact-yellow", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-yellow", amount = 10 } },
     },
@@ -77,7 +77,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact-green", 1 },
+        { type = "item", name = "alien-artifact-green", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-green", amount = 10 } },
     },
@@ -87,7 +87,7 @@ then
       enabled = false,
       energy_required = 12,
       ingredients = {
-        { "alien-artifact-red", 1 },
+        { type = "item", name = "alien-artifact-red", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-red", amount = 10 } },
     },
@@ -98,10 +98,10 @@ then
       enabled = false,
       energy_required = 15,
       ingredients = {
-        { "lab", 1 },
-        { "alien-artifact", 10 },
-        { "alien-artifact-blue", 5 },
-        { "alien-artifact-orange", 5 },
+        { type = "item", name = "lab", amount = 1 },
+        { type = "item", name = "alien-artifact", amount = 10 },
+        { type = "item", name = "alien-artifact-blue", amount = 5 },
+        { type = "item", name = "alien-artifact-orange", amount = 5 },
       },
       results = { { type = "item", name = "lab-alien", amount = 1 } },
     },
