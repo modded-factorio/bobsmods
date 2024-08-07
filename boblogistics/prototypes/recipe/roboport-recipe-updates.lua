@@ -1,8 +1,8 @@
 bobmods.lib.recipe.set_ingredients("roboport", {
-  { "steel-plate", 15 },
-  { "roboport-antenna-1", 5 },
-  { "roboport-chargepad-1", 4 },
-  { "roboport-door-1", 1 },
+  { type = "item", name = "steel-plate", amount = 15 },
+  { type = "item", name = "roboport-antenna-1", amount = 5 },
+  { type = "item", name = "roboport-chargepad-1", amount = 4 },
+  { type = "item", name = "roboport-door-1", amount = 1 },
 })
 
 if data.raw.item["aluminium-plate"] then
@@ -28,9 +28,9 @@ if data.raw.item["tinned-copper-cable"] then
 end
 
 if data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("roboport-door-2", { "steel-bearing", 20 })
+  bobmods.lib.recipe.add_ingredient("roboport-door-2", { type = "item", name = "steel-bearing", amount = 20 })
 else
-  bobmods.lib.recipe.add_ingredient("roboport-door-2", { "iron-gear-wheel", 20 })
+  bobmods.lib.recipe.add_ingredient("roboport-door-2", { type = "item", name = "iron-gear-wheel", amount = 20 })
 end
 
 if data.raw.item["brass-gear-wheel"] then
@@ -68,9 +68,9 @@ if data.raw.item["titanium-plate"] then
 end
 
 if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("roboport-door-3", { "titanium-bearing", 20 })
+  bobmods.lib.recipe.add_ingredient("roboport-door-3", { type = "item", name = "titanium-bearing", amount = 20 })
 else
-  bobmods.lib.recipe.add_ingredient("roboport-door-3", { "iron-gear-wheel", 20 })
+  bobmods.lib.recipe.add_ingredient("roboport-door-3", { type = "item", name = "iron-gear-wheel", amount = 20 })
   bobmods.lib.recipe.add_ingredient("roboport-door-3", { type = "fluid", name = "lubricant", amount = 10 })
   data.raw.recipe["roboport-door-3"].category = "crafting-with-fluid"
 end
@@ -121,9 +121,9 @@ if data.raw.item["nitinol-alloy"] then
 end
 
 if data.raw.item["nitinol-bearing"] then
-  bobmods.lib.recipe.add_ingredient("roboport-door-4", { "nitinol-bearing", 20 })
+  bobmods.lib.recipe.add_ingredient("roboport-door-4", { type = "item", name = "nitinol-bearing", amount = 20 })
 else
-  bobmods.lib.recipe.add_ingredient("roboport-door-4", { "iron-gear-wheel", 30 })
+  bobmods.lib.recipe.add_ingredient("roboport-door-4", { type = "item", name = "iron-gear-wheel", amount = 30 })
   bobmods.lib.recipe.add_ingredient("roboport-door-4", { type = "fluid", name = "lubricant", amount = 15 })
   data.raw.recipe["roboport-door-4"].category = "crafting-with-fluid"
 end

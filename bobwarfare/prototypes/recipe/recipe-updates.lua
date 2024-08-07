@@ -27,7 +27,7 @@ end
 
 if data.raw.item["tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("rocket-engine", "steel-plate", "tungsten-plate")
-  bobmods.lib.recipe.add_ingredient("rocket-engine", "tungsten-gear-wheel")
+  bobmods.lib.recipe.add_ingredient("rocket-engine", { type = "item", name = "tungsten-gear-wheel", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bob-rocket", "tungsten-processing")
 end
 
@@ -38,8 +38,8 @@ if data.raw.fluid["liquid-fuel"] then
 end
 
 if data.raw.item["glass"] then
-  bobmods.lib.recipe.add_ingredient("sniper-rifle", { "glass", 2 })
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery", { "glass", 1 })
+  bobmods.lib.recipe.add_ingredient("sniper-rifle", { type = "item", name = "glass", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery", { type = "item", name = "glass", amount = 1 })
 end
 
 if data.raw.item["steel-gear-wheel"] then
@@ -58,14 +58,14 @@ elseif data.raw.item["steel-gear-wheel"] then
 end
 
 if data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("radar-3", { "steel-bearing", 5 })
-  bobmods.lib.recipe.add_ingredient("bob-gun-turret-3", { "steel-bearing", 10 })
+  bobmods.lib.recipe.add_ingredient("radar-3", { type = "item", name = "steel-bearing", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("bob-gun-turret-3", { type = "item", name = "steel-bearing", amount = 10 })
 end
 
 if data.raw.item["cobalt-steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("bob-sniper-turret-2", { "cobalt-steel-bearing", 20 })
+  bobmods.lib.recipe.add_ingredient("bob-sniper-turret-2", { type = "item", name = "cobalt-steel-bearing", amount = 20 })
 elseif data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("bob-sniper-turret-2", { "steel-bearing", 20 })
+  bobmods.lib.recipe.add_ingredient("bob-sniper-turret-2", { type = "item", name = "steel-bearing", amount = 20 })
 end
 
 if data.raw.item["invar-alloy"] then
@@ -171,9 +171,9 @@ if data.raw.item["titanium-gear-wheel"] then
 end
 
 if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("radar-4", { "titanium-bearing", 5 })
-  bobmods.lib.recipe.add_ingredient("bob-gun-turret-4", { "titanium-bearing", 10 })
-  bobmods.lib.recipe.add_ingredient("bob-tank-2", { "titanium-bearing", 15 })
+  bobmods.lib.recipe.add_ingredient("radar-4", { type = "item", name = "titanium-bearing", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("bob-gun-turret-4", { type = "item", name = "titanium-bearing", amount = 10 })
+  bobmods.lib.recipe.add_ingredient("bob-tank-2", { type = "item", name = "titanium-bearing", amount = 15 })
 end
 
 if data.raw.item["silicon-nitride"] then
@@ -238,41 +238,41 @@ if data.raw.item["nitinol-gear-wheel"] then
 end
 
 if data.raw.item["nitinol-bearing"] then
-  bobmods.lib.recipe.add_ingredient("radar-5", { "nitinol-bearing", 5 })
-  bobmods.lib.recipe.add_ingredient("bob-gun-turret-5", { "nitinol-bearing", 10 })
-  bobmods.lib.recipe.add_ingredient("bob-sniper-turret-3", { "nitinol-bearing", 20 })
-  bobmods.lib.recipe.add_ingredient("bob-tank-3", { "nitinol-bearing", 15 })
+  bobmods.lib.recipe.add_ingredient("radar-5", { type = "item", name = "nitinol-bearing", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("bob-gun-turret-5", { type = "item", name = "nitinol-bearing", amount = 10 })
+  bobmods.lib.recipe.add_ingredient("bob-sniper-turret-3", { type = "item", name = "nitinol-bearing", amount = 20 })
+  bobmods.lib.recipe.add_ingredient("bob-tank-3", { type = "item", name = "nitinol-bearing", amount = 15 })
 end
 
 if data.raw.item["ruby-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-ruby", { "ruby-5", 1 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-ruby", { type = "item", name = "ruby-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-ruby", "laser-rifle-battery", "laser-rifle-battery-case")
   bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-1", "gem-processing-3")
 end
 
 if data.raw.item["sapphire-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-sapphire", { "sapphire-5", 1 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-sapphire", { type = "item", name = "sapphire-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-sapphire",
     "laser-rifle-battery-ruby",
     "laser-rifle-battery-case"
   )
-  bobmods.lib.recipe.add_ingredient("bob-laser-turret-2", { "sapphire-5", 1 })
+  bobmods.lib.recipe.add_ingredient("bob-laser-turret-2", { type = "item", name = "sapphire-5", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bob-laser-turrets-2", "gem-processing-3")
 end
 
 if data.raw.item["emerald-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-emerald", { "emerald-5", 1 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-emerald", { type = "item", name = "emerald-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-emerald",
     "laser-rifle-battery-sapphire",
     "laser-rifle-battery-case"
   )
-  bobmods.lib.recipe.add_ingredient("bob-laser-turret-3", { "emerald-5", 1 })
+  bobmods.lib.recipe.add_ingredient("bob-laser-turret-3", { type = "item", name = "emerald-5", amount = 1 })
 end
 
 if data.raw.item["amethyst-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-amethyst", { "amethyst-5", 1 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-amethyst", { type = "item", name = "amethyst-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-amethyst",
     "laser-rifle-battery-emerald",
@@ -281,23 +281,23 @@ if data.raw.item["amethyst-5"] then
 end
 
 if data.raw.item["topaz-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-topaz", { "topaz-5", 1 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-topaz", { type = "item", name = "topaz-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-topaz",
     "laser-rifle-battery-amethyst",
     "laser-rifle-battery-case"
   )
-  bobmods.lib.recipe.add_ingredient("bob-laser-turret-4", { "topaz-5", 1 })
+  bobmods.lib.recipe.add_ingredient("bob-laser-turret-4", { type = "item", name = "topaz-5", amount = 1 })
 end
 
 if data.raw.item["diamond-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-diamond", { "diamond-5", 1 })
+  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-diamond", { type = "item", name = "diamond-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-diamond",
     "laser-rifle-battery-topaz",
     "laser-rifle-battery-case"
   )
-  bobmods.lib.recipe.add_ingredient("bob-laser-turret-5", { "diamond-5", 1 })
+  bobmods.lib.recipe.add_ingredient("bob-laser-turret-5", { type = "item", name = "diamond-5", amount = 1 })
 end
 
 if mods["bobmodules"] then
@@ -330,44 +330,44 @@ else
 end
 
 if data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-1", { "alien-artifact", 20 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-2", { "alien-artifact", 30 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-1", { type = "item", name = "alien-artifact", amount = 20 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-2", { type = "item", name = "alien-artifact", amount = 30 })
 end
 
 if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { "alien-artifact-orange", 25 })
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { "alien-artifact-blue", 25 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-3", { "alien-artifact-orange", 10 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-3", { "alien-artifact-blue", 10 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { type = "item", name = "alien-artifact-orange", amount = 25 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { type = "item", name = "alien-artifact-blue", amount = 25 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-3", { type = "item", name = "alien-artifact-orange", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-3", { type = "item", name = "alien-artifact-blue", amount = 10 })
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { "alien-artifact", 70 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-3", { "alien-artifact", 40 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { type = "item", name = "alien-artifact", amount = 70 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-3", { type = "item", name = "alien-artifact", amount = 40 })
 else
-  bobmods.lib.recipe.add_ingredient("bob-power-armor-mk3", { "processing-unit", 70 })
+  bobmods.lib.recipe.add_ingredient("bob-power-armor-mk3", { type = "item", name = "processing-unit", amount = 70 })
 end
 
 if data.raw.item["alien-artifact-yellow"] and data.raw.item["alien-artifact-purple"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { "alien-artifact-yellow", 25 })
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { "alien-artifact-purple", 25 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { "alien-artifact-yellow", 10 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { "alien-artifact-purple", 10 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { type = "item", name = "alien-artifact-yellow", amount = 25 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { type = "item", name = "alien-artifact-purple", amount = 25 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { type = "item", name = "alien-artifact-yellow", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { type = "item", name = "alien-artifact-purple", amount = 10 })
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { "alien-artifact", 90 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { "alien-artifact", 50 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { type = "item", name = "alien-artifact", amount = 90 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { type = "item", name = "alien-artifact", amount = 50 })
 else
-  bobmods.lib.recipe.add_ingredient("bob-power-armor-mk4", { "processing-unit", 90 })
+  bobmods.lib.recipe.add_ingredient("bob-power-armor-mk4", { type = "item", name = "processing-unit", amount = 90 })
 end
 
 if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { "alien-artifact-red", 25 })
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { "alien-artifact-green", 25 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-5", { "alien-artifact-red", 10 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-5", { "alien-artifact-green", 10 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { type = "item", name = "alien-artifact-red", amount = 25 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { type = "item", name = "alien-artifact-green", amount = 25 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-5", { type = "item", name = "alien-artifact-red", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-5", { type = "item", name = "alien-artifact-green", amount = 10 })
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { "alien-artifact", 120 })
-  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-5", { "alien-artifact", 60 })
+  bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { type = "item", name = "alien-artifact", amount = 120 })
+  bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-5", { type = "item", name = "alien-artifact", amount = 60 })
 else
-  bobmods.lib.recipe.add_ingredient("bob-power-armor-mk5", { "processing-unit", 120 })
+  bobmods.lib.recipe.add_ingredient("bob-power-armor-mk5", { type = "item", name = "processing-unit", amount = 120 })
 end
 
 if data.raw.item["alien-blue-alloy"] then
@@ -403,7 +403,7 @@ if data.raw.fluid["alien-explosive"] then
   data.raw.recipe["explosive-rocket-warhead"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.replace_ingredient("explosive-artillery-shell", "explosives", "alien-explosive")
-  bobmods.lib.recipe.add_new_ingredient("explosive-artillery-shell", { "explosives", 3 })
+  bobmods.lib.recipe.add_new_ingredient("explosive-artillery-shell", { type = "item", name = "explosives", amount = 3 })
   data.raw.recipe["explosive-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "alien-yellow-research")
 end
@@ -426,17 +426,17 @@ end
 if data.raw.fluid["alien-fire"] then
   bobmods.lib.recipe.remove_ingredient("flame-bullet-projectile", "light-oil")
   bobmods.lib.recipe.remove_ingredient("flame-bullet-projectile", "heavy-oil")
-  bobmods.lib.recipe.add_new_ingredient("flame-bullet-projectile", { "alien-fire", 10 })
+  bobmods.lib.recipe.add_new_ingredient("flame-bullet-projectile", { type = "item", name = "alien-fire", amount = 10 })
   data.raw.recipe["flame-bullet-projectile"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.remove_ingredient("shotgun-flame-shell", "light-oil")
   bobmods.lib.recipe.remove_ingredient("shotgun-flame-shell", "heavy-oil")
-  bobmods.lib.recipe.add_new_ingredient("shotgun-flame-shell", { "alien-fire", 10 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-flame-shell", { type = "item", name = "alien-fire", amount = 10 })
   data.raw.recipe["shotgun-flame-shell"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.remove_ingredient("flame-rocket-warhead", "light-oil")
   bobmods.lib.recipe.remove_ingredient("flame-rocket-warhead", "heavy-oil")
-  bobmods.lib.recipe.add_new_ingredient("flame-rocket-warhead", { "alien-fire", 20 })
+  bobmods.lib.recipe.add_new_ingredient("flame-rocket-warhead", { type = "item", name = "alien-fire", amount = 20 })
   data.raw.recipe["flame-rocket-warhead"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.replace_ingredient("fire-artillery-shell", "light-oil", "alien-fire")
@@ -447,7 +447,7 @@ end
 
 if data.raw.item["distractor-robot"] then
   bobmods.lib.recipe.remove_ingredient("distractor-artillery-shell", "distractor-capsule")
-  bobmods.lib.recipe.add_ingredient("distractor-artillery-shell", { "distractor-robot", 15 })
+  bobmods.lib.recipe.add_ingredient("distractor-artillery-shell", { type = "item", name = "distractor-robot", amount = 15 })
 end
 
 if
@@ -458,76 +458,76 @@ if
   and data.raw.item["alien-artifact-red"]
   and data.raw.item["alien-artifact-green"]
 then
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact-orange", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact-blue", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact-yellow", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact-purple", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact-red", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact-green", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "copper-plate", 6 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact-orange", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact-blue", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact-yellow", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact-purple", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact-red", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact-green", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "copper-plate", amount = 6 })
 
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact-orange", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact-blue", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact-yellow", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact-purple", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact-red", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact-green", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-shell-casing", 6 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "cordite", 6 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact-orange", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact-blue", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact-yellow", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact-purple", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact-red", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact-green", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-shell-casing", amount = 6 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "cordite", amount = 6 })
 
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact-orange", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact-blue", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact-yellow", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact-purple", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact-red", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact-green", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "steel-plate", 6 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact-orange", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact-blue", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact-yellow", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact-purple", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact-red", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact-green", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "steel-plate", amount = 6 })
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "alien-artifact", 10 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "copper-plate", 6 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "copper-plate", amount = 6 })
 
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "alien-artifact", 10 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-shell-casing", 6 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "cordite", 6 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-shell-casing", amount = 6 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "cordite", amount = 6 })
 
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "alien-artifact", 10 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "steel-plate", 6 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "steel-plate", amount = 6 })
 else
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "electric-bullet-projectile", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "ap-bullet-projectile", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "he-bullet-projectile", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "acid-bullet-projectile", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "flame-bullet-projectile", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "poison-bullet-projectile", 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "electric-bullet-projectile", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "ap-bullet-projectile", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "he-bullet-projectile", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "acid-bullet-projectile", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "flame-bullet-projectile", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "poison-bullet-projectile", amount = 1 })
 
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-electric-shell", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-ap-shell", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-explosive-shell", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-acid-shell", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-flame-shell", 1 })
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "shotgun-poison-shell", 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-electric-shell", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-ap-shell", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-explosive-shell", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-acid-shell", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-flame-shell", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "shotgun-poison-shell", amount = 1 })
 
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "electric-rocket-warhead", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "piercing-rocket-warhead", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "explosive-rocket-warhead", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "acid-rocket-warhead", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "flame-rocket-warhead", 1 })
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "poison-rocket-warhead", 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "electric-rocket-warhead", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "piercing-rocket-warhead", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "explosive-rocket-warhead", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "acid-rocket-warhead", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "flame-rocket-warhead", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "poison-rocket-warhead", amount = 1 })
 end
 
 bobmods.lib.recipe.remove_ingredient("artillery-shell", "radar")
-bobmods.lib.recipe.set_ingredient("artillery-shell", { "explosive-cannon-shell", 3 })
+bobmods.lib.recipe.set_ingredient("artillery-shell", { type = "item", name = "explosive-cannon-shell", amount = 3 })
 
 if data.raw.fluid.deuterium then
-  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { "deuterium", 10 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "item", name = "deuterium", amount = 10 })
   data.raw.recipe["plasma-bullet-projectile"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "deuterium-processing")
 
-  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { "deuterium", 10 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "item", name = "deuterium", amount = 10 })
   data.raw.recipe["shotgun-plasma-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-shotgun-plasma-shells", "deuterium-processing")
 
-  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { "deuterium", 10 })
+  bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "item", name = "deuterium", amount = 10 })
   data.raw.recipe["plasma-rocket-warhead"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "deuterium-processing")
 end
@@ -538,11 +538,11 @@ bobmods.lib.recipe.enabled("radar", false)
 bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
 
 bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
-bobmods.lib.recipe.add_ingredient("power-armor", { "modular-armor", 1 })
+bobmods.lib.recipe.add_ingredient("power-armor", { type = "item", name = "modular-armor", amount = 1 })
 -- By default, electric engines are Blue Science
 if (not mods["bobplates"]) and not mods["boblogistics"] then
   bobmods.lib.recipe.remove_ingredient("power-armor", "electric-engine-unit")
 end
 
 bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
-bobmods.lib.recipe.add_ingredient("power-armor-mk2", { "power-armor", 1 })
+bobmods.lib.recipe.add_ingredient("power-armor-mk2", { type = "item", name = "power-armor", amount = 1 })

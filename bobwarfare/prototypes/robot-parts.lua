@@ -88,7 +88,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { "electronic-circuit", 2 },
+        { type = "item", name = "electronic-circuit", amount = 2 },
       },
       results = { { type = "item", name = "robot-brain-combat", amount = 1 } },
     },
@@ -99,8 +99,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 10,
       enabled = false,
       ingredients = {
-        { "electronic-circuit", 1 },
-        { "advanced-circuit", 1 },
+        { type = "item", name = "electronic-circuit", amount = 1 },
+        { type = "item", name = "advanced-circuit", amount = 1 },
       },
       results = { { type = "item", name = "robot-brain-combat-2", amount = 1 } },
     },
@@ -111,8 +111,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 15,
       enabled = false,
       ingredients = {
-        { "advanced-circuit", 1 },
-        { "processing-unit", 1 },
+        { type = "item", name = "advanced-circuit", amount = 1 },
+        { type = "item", name = "processing-unit", amount = 1 },
       },
       results = { { type = "item", name = "robot-brain-combat-3", amount = 1 } },
     },
@@ -123,7 +123,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       energy_required = 20,
       enabled = false,
       ingredients = {
-        { "processing-unit", 2 },
+        { type = "item", name = "processing-unit", amount = 2 },
       },
       results = { { type = "item", name = "robot-brain-combat-4", amount = 1 } },
     },

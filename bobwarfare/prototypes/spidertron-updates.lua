@@ -39,24 +39,24 @@ end
 
 local function add_antron_power_supply()
   if data.raw.item.rtg then
-    bobmods.lib.recipe.add_ingredient("antron", { "rtg", 1 })
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "rtg", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "rtg")
   elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.add_ingredient("antron", { "vehicle-fusion-reactor-1", 1 })
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "vehicle-fusion-reactor-1", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "vehicle-fusion-reactor-equipment-1")
   else
-    bobmods.lib.recipe.add_ingredient("antron", { "fusion-reactor-equipment", 1 })
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "fusion-reactor-equipment", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "fusion-reactor-equipment")
   end
 end
 
 local function add_tankotron_power_supply()
   if data.raw.item.rtg then
-    bobmods.lib.recipe.add_ingredient("tankotron", { "rtg", 2 })
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "rtg", amount = 2 })
   elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.add_ingredient("tankotron", { "vehicle-fusion-reactor-1", 2 })
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "vehicle-fusion-reactor-1", amount = 2 })
   else
-    bobmods.lib.recipe.add_ingredient("tankotron", { "fusion-reactor-equipment", 2 })
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "fusion-reactor-equipment", amount = 2 })
   end
 end
 
@@ -86,23 +86,23 @@ end
 
 local function add_logistic_spidertron_power_supply()
   if data.raw.item.rtg then
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "rtg", 2 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "rtg", amount = 2 })
   elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "vehicle-fusion-reactor-1", 2 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "vehicle-fusion-reactor-1", amount = 2 })
   else
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "fusion-reactor-equipment", 2 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "fusion-reactor-equipment", amount = 2 })
   end
 end
 
 local function add_heavy_spidertron_power_supply()
   if data.raw.item.rtg then
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "rtg", 3 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "rtg", amount = 3 })
     bobmods.lib.tech.add_prerequisite("heavy-spidertron", "rtg")
   elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "vehicle-fusion-reactor-1", 3 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "vehicle-fusion-reactor-1", amount = 3 })
     bobmods.lib.tech.add_prerequisite("heavy-spidertron", "vehicle-fusion-reactor-equipment-1")
   else
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "fusion-reactor-equipment", 3 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "fusion-reactor-equipment", amount = 3 })
     bobmods.lib.tech.add_prerequisite("heavy-spidertron", "fusion-reactor-equipment")
   end
 end
@@ -146,38 +146,38 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   bobmods.lib.tech.add_recipe_unlock("tankotron", "mech-armor-plate")
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "low-density-structure")
 
-  bobmods.lib.recipe.add_ingredient("antron", { "mech-leg", 6 })
-  bobmods.lib.recipe.add_ingredient("antron", { "mech-frame", 1 })
+  bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "mech-leg", amount = 6 })
+  bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "mech-frame", amount = 1 })
   bobmods.lib.recipe.set_energy_required("antron", 4)
 
-  bobmods.lib.recipe.add_ingredient("tankotron", { "mech-leg", 6 })
-  bobmods.lib.recipe.add_ingredient("tankotron", { "mech-frame", 1 })
-  bobmods.lib.recipe.add_ingredient("tankotron", { "mech-armor-plate", 5 })
+  bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "mech-leg", amount = 6 })
+  bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "mech-frame", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "mech-armor-plate", amount = 5 })
   bobmods.lib.recipe.set_energy_required("tankotron", 5)
 
   bobmods.lib.recipe.remove_ingredient("spidertron", "exoskeleton-equipment")
-  bobmods.lib.recipe.add_ingredient("spidertron", { "mech-leg", 8 })
+  bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "mech-leg", amount = 8 })
   bobmods.lib.recipe.remove_ingredient("spidertron", "low-density-structure")
   bobmods.lib.recipe.remove_ingredient("spidertron", "rocket-control-unit")
   bobmods.lib.recipe.remove_ingredient("spidertron", "effectivity-module-3")
-  bobmods.lib.recipe.add_ingredient("spidertron", { "mech-frame", 1 })
-  bobmods.lib.recipe.add_ingredient("spidertron", { "mech-armor-plate", 10 })
+  bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "mech-frame", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "mech-armor-plate", amount = 10 })
   bobmods.lib.recipe.set_energy_required("spidertron", 5)
   bobmods.lib.tech.replace_prerequisite("spidertron", "walking-vehicle", "tankotron")
 
-  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "mech-leg", 8 })
-  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "mech-frame", 1 })
-  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "mech-armor-plate", 5 })
+  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "mech-leg", amount = 8 })
+  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "mech-frame", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "mech-armor-plate", amount = 5 })
   bobmods.lib.recipe.set_energy_required("logistic-spidertron", 5)
   bobmods.lib.tech.replace_prerequisite("logistic-spidertron", "walking-vehicle", "tankotron")
 
-  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "mech-leg", 8 })
-  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "mech-frame", 1 })
-  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "mech-armor-plate", 20 })
+  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "mech-leg", amount = 8 })
+  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "mech-frame", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "mech-armor-plate", amount = 20 })
   bobmods.lib.recipe.set_energy_required("heavy-spidertron", 6)
 
   if data.raw.item.rubber then
-    bobmods.lib.recipe.add_ingredient("mech-foot", { "rubber", 1 })
+    bobmods.lib.recipe.add_ingredient("mech-foot", { type = "item", name = "rubber", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "bob-wood-processing")
   end
 
@@ -191,8 +191,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("mech-hip", { "titanium-bearing", 4 })
-    bobmods.lib.recipe.add_ingredient("mech-knee", { "titanium-bearing", 2 })
+    bobmods.lib.recipe.add_ingredient("mech-hip", { type = "item", name = "titanium-bearing", amount = 4 })
+    bobmods.lib.recipe.add_ingredient("mech-knee", { type = "item", name = "titanium-bearing", amount = 2 })
   end
 
   if data.raw.item["nitinol-alloy"] then
@@ -210,61 +210,61 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   end
 
   if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "solder", 120 })
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "solder", amount = 120 })
   end
 
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "advanced-processing-unit", 20 })
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "advanced-processing-unit", amount = 20 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
   else
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "effectivity-module-3", 6 })
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "effectivity-module-3", amount = 6 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
   end
 
   if data.raw.tool["module-case"] or data.raw.item["module-case"] then
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "module-case", 1 })
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "module-case", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "modules")
   elseif data.raw.item["aluminium-plate"] then
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "aluminium-plate", 10 })
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "aluminium-plate", amount = 10 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "aluminium-processing")
   else
-    bobmods.lib.recipe.add_ingredient("mech-brain", { "steel-plate", 10 })
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "steel-plate", amount = 10 })
   end
 else
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.remove_ingredient("spidertron", "effectivity-module-3")
     bobmods.lib.tech.remove_prerequisite("spidertron", "effectivity-module-3")
-    bobmods.lib.recipe.add_ingredient("spidertron", { "advanced-processing-unit", 10 })
+    bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "advanced-processing-unit", amount = 10 })
 
-    bobmods.lib.recipe.add_ingredient("antron", { "advanced-processing-unit", 8 })
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "advanced-processing-unit", amount = 8 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
-    bobmods.lib.recipe.add_ingredient("tankotron", { "advanced-processing-unit", 8 })
-    bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "advanced-processing-unit", 10 })
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "advanced-processing-unit", 16 })
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "advanced-processing-unit", amount = 8 })
+    bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "advanced-processing-unit", amount = 10 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "advanced-processing-unit", amount = 16 })
   else
-    bobmods.lib.recipe.add_ingredient("antron", { "effectivity-module-3", 2 })
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "effectivity-module-3", amount = 2 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
-    bobmods.lib.recipe.add_ingredient("tankotron", { "effectivity-module-3", 2 })
-    bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "effectivity-module-3", 3 })
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "effectivity-module-3", 4 })
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "effectivity-module-3", amount = 2 })
+    bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "effectivity-module-3", amount = 3 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "effectivity-module-3", amount = 4 })
   end
 
-  bobmods.lib.recipe.add_ingredient("antron", { "exoskeleton-equipment", 3 })
+  bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "exoskeleton-equipment", amount = 3 })
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "exoskeleton-equipment")
-  bobmods.lib.recipe.add_ingredient("antron", { "low-density-structure", 100 })
+  bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "low-density-structure", amount = 100 })
   bobmods.lib.tech.add_prerequisite("walking-vehicle", "low-density-structure")
 
-  bobmods.lib.recipe.add_ingredient("tankotron", { "exoskeleton-equipment", 3 })
-  bobmods.lib.recipe.add_ingredient("tankotron", { "low-density-structure", 120 })
+  bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "exoskeleton-equipment", amount = 3 })
+  bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "low-density-structure", amount = 120 })
 
-  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "exoskeleton-equipment", 4 })
-  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "rocket-control-unit", 18 })
-  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { "low-density-structure", 100 })
+  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "exoskeleton-equipment", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "rocket-control-unit", amount = 18 })
+  bobmods.lib.recipe.add_ingredient("logistic-spidertron", { type = "item", name = "low-density-structure", amount = 100 })
   bobmods.lib.tech.add_prerequisite("logistic-spidertron", "rocket-control-unit")
 
-  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "exoskeleton-equipment", 4 })
-  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "rocket-control-unit", 20 })
-  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { "low-density-structure", 200 })
+  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "exoskeleton-equipment", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "rocket-control-unit", amount = 20 })
+  bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "low-density-structure", amount = 200 })
 end
 
 if data.raw.item["titanium-chest"] then

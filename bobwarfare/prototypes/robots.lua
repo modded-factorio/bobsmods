@@ -143,7 +143,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 1,
       ingredients = {
-        { "bob-laser-robot", 5 },
+        { type = "item", name = "bob-laser-robot", amount = 5 },
       },
       results = { { type = "item", name = "bob-laser-robot-capsule", amount = 1 } },
     },
