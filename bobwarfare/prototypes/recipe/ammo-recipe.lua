@@ -419,7 +419,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "steel-plate", amount = 3 },
       { type = "item", name = "electronic-circuit", amount = 3 },
-      { type = "fluid", name = "light-oil", amount = amount = 100 },
+      { type = "fluid", name = "light-oil", amount = 100 },
     },
     results = { { type = "item", name = "fire-capsule", amount = 1 } },
   },
