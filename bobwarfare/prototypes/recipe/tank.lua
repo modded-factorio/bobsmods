@@ -8,7 +8,7 @@ data:extend({
       --      { type = "item", name = "engine-unit", amount = 16 },
       { type = "item", name = "steel-plate", amount = 50 },
       { type = "item", name = "iron-gear-wheel", amount = 15 },
-      { type = "item", name = "processing-unit",amount =  5 },
+      { type = "item", name = "processing-unit", amount = 5 },
     },
     results = { { type = "item", name = "bob-tank-2", amount = 1 } },
   },

@@ -33,7 +33,7 @@ data:extend({
       { type = "item", name = "processing-unit", amount = 50 },
       { type = "item", name = "steel-plate", amount = 25 },
       { type = "item", name = "iron-plate", amount = 25 },
-      { type = "item", name = "effectivity-module-2",amount =  5 },
+      { type = "item", name = "effectivity-module-2", amount = 5 },
       { type = "item", name = "speed-module-2", amount = 5 },
     },
     results = { { type = "item", name = "bob-power-armor-mk3", amount = 1 } },
