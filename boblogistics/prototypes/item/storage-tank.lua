@@ -1,3 +1,4 @@
+data.raw.item["storage-tank"].icon = "__boblogistics__/graphics/icons/storage-tank-1.png"
 data.raw.item["storage-tank"].order = "b[fluid]-a[storage-tank-1a]"
 data.raw.item["storage-tank"].subgroup = "bob-storage-tank"
 
@@ -5,7 +6,7 @@ data:extend({
   {
     type = "item",
     name = "storage-tank-2",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
@@ -17,7 +18,7 @@ data:extend({
   {
     type = "item",
     name = "storage-tank-3",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-3.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
@@ -29,7 +30,7 @@ data:extend({
   {
     type = "item",
     name = "storage-tank-4",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-4.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
@@ -43,7 +44,7 @@ data:extend({
   {
     type = "item",
     name = "bob-storage-tank-all-corners",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-1.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
@@ -55,7 +56,7 @@ data:extend({
   {
     type = "item",
     name = "bob-storage-tank-all-corners-2",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
@@ -67,7 +68,7 @@ data:extend({
   {
     type = "item",
     name = "bob-storage-tank-all-corners-3",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-3.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
@@ -79,7 +80,7 @@ data:extend({
   {
     type = "item",
     name = "bob-storage-tank-all-corners-4",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-4.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "bob-storage-tank",
