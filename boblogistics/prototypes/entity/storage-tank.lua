@@ -4,11 +4,33 @@ data.raw["storage-tank"]["storage-tank"].next_upgrade = "storage-tank-2"
 local storagetankbase = settings.startup["bobmods-logistics-storagetankbase"].value * 10
 data.raw["storage-tank"]["storage-tank"].fluid_box.base_area = storagetankbase
 
+data.raw["storage-tank"]["storage-tank"].icon = "__boblogistics__/graphics/icons/storage-tank-1.png",
+table.insert(data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets, 2, {
+  filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-mask.png",
+  priority = "extra-high",
+  frames = 2,
+  width = 110,
+  height = 108,
+  shift = util.by_pixel(0, 4),
+  tint = {r = 0.8, g = 0.25, b = 0.15, a = 1},
+  hr_version = {
+    filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-mask.png",
+    priority = "extra-high",
+    frames = 2,
+    width = 219,
+    height = 215,
+    shift = util.by_pixel(-0.25, 3.75),
+    scale = 0.5,
+    tint = {r = 0.8, g = 0.25, b = 0.15, a = 1},
+  }
+}
+)
+
 data:extend({
   {
     type = "storage-tank",
     name = "storage-tank-2",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -51,6 +73,25 @@ data:extend({
               shift = util.by_pixel(-0.25, 3.75),
               scale = 0.5,
             },
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-mask.png",
+            priority = "extra-high",
+            frames = 2,
+            width = 110,
+            height = 108,
+            shift = util.by_pixel(0, 4),
+            tint = {r = 0.25, g = 0.5, b = 0.8, a = 1},
+            hr_version = {
+              filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-mask.png",
+              priority = "extra-high",
+              frames = 2,
+              width = 219,
+              height = 215,
+              shift = util.by_pixel(-0.25, 3.75),
+              scale = 0.5,
+              tint = {r = 0.25, g = 0.5, b = 0.8, a = 1},
+            }
           },
           {
             filename = "__base__/graphics/entity/storage-tank/storage-tank-shadow.png",
@@ -140,7 +181,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "storage-tank-3",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-3.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -183,6 +224,25 @@ data:extend({
               shift = util.by_pixel(-0.25, 3.75),
               scale = 0.5,
             },
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-mask.png",
+            priority = "extra-high",
+            frames = 2,
+            width = 110,
+            height = 108,
+            shift = util.by_pixel(0, 4),
+            tint = {r = 0.8, g = 0.25, b = 0.8, a = 1},
+            hr_version = {
+              filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-mask.png",
+              priority = "extra-high",
+              frames = 2,
+              width = 219,
+              height = 215,
+              shift = util.by_pixel(-0.25, 3.75),
+              scale = 0.5,
+              tint = {r = 0.8, g = 0.25, b = 0.8, a = 1},
+            }
           },
           {
             filename = "__base__/graphics/entity/storage-tank/storage-tank-shadow.png",
@@ -272,7 +332,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "storage-tank-4",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-4.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -314,6 +374,25 @@ data:extend({
               shift = util.by_pixel(-0.25, 3.75),
               scale = 0.5,
             },
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-mask.png",
+            priority = "extra-high",
+            frames = 2,
+            width = 110,
+            height = 108,
+            shift = util.by_pixel(0, 4),
+            tint = {r = 0.3, g = 0.7, b = 0.3, a = 1},
+            hr_version = {
+              filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-mask.png",
+              priority = "extra-high",
+              frames = 2,
+              width = 219,
+              height = 215,
+              shift = util.by_pixel(-0.25, 3.75),
+              scale = 0.5,
+              tint = {r = 0.3, g = 0.7, b = 0.3, a = 1},
+            }
           },
           {
             filename = "__base__/graphics/entity/storage-tank/storage-tank-shadow.png",
@@ -405,7 +484,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-1.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -443,6 +522,16 @@ data:extend({
             height = 215,
             shift = util.by_pixel(-0.25, 3.75),
             scale = 0.5,
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-all-mask.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 219,
+            height = 215,
+            shift = util.by_pixel(-0.25, 3.75),
+            scale = 0.5,
+            tint = {r = 0.80, g = 0.25, b = 0.15, a = 1}
           },
           {
             filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
@@ -523,7 +612,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners-2",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -561,6 +650,16 @@ data:extend({
             height = 215,
             shift = util.by_pixel(-0.25, 3.75),
             scale = 0.5,
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-all-mask.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 219,
+            height = 215,
+            shift = util.by_pixel(-0.25, 3.75),
+            scale = 0.5,
+            tint = {r = 0.25, g = 0.5, b = 0.8, a = 1}
           },
           {
             filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
@@ -641,7 +740,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners-3",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-3.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -679,6 +778,16 @@ data:extend({
             height = 215,
             shift = util.by_pixel(-0.25, 3.75),
             scale = 0.5,
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-all-mask.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 219,
+            height = 215,
+            shift = util.by_pixel(-0.25, 3.75),
+            scale = 0.5,
+            tint = {r = 0.8, g = 0.25, b = 0.8, a = 1}
           },
           {
             filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
@@ -759,7 +868,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners-4",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-4.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -796,6 +905,16 @@ data:extend({
             height = 215,
             shift = util.by_pixel(-0.25, 3.75),
             scale = 0.5,
+          },
+          {
+            filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-all-mask.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 219,
+            height = 215,
+            shift = util.by_pixel(-0.25, 3.75),
+            scale = 0.5,
+            tint = {r = 0.3, g = 0.7, b = 0.3, a = 1}
           },
           {
             filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
