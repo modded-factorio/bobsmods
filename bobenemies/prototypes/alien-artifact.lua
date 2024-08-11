@@ -55,9 +55,9 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-red-from-basic",
-        results = { { type = "item", name = "alien-artifact-red", amount = 5 } },
+        results = { { type = "item", name = "alien-artifact-red", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 } },
         ingredients = {
-          { type = "item", name = "alien-artifact-red", amount = 1 },
+          { type = "item", name = "alien-artifact-red", amount = 1, ignored_by_stats = 1 },
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
@@ -78,9 +78,9 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-orange-from-basic",
-        results = { { type = "item", name = "alien-artifact-orange", amount = 5 } },
+        results = { { type = "item", name = "alien-artifact-orange", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 } },
         ingredients = {
-          { type = "item", name = "alien-artifact-orange", amount = 1 },
+          { type = "item", name = "alien-artifact-orange", amount = 1, ignored_by_stats = 1 },
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
@@ -101,9 +101,9 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-yellow-from-basic",
-        results = { { type = "item", name = "alien-artifact-yellow", amount = 5 } },
+        results = { { type = "item", name = "alien-artifact-yellow", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 } },
         ingredients = {
-          { type = "item", name = "alien-artifact-yellow", amount = 1 },
+          { type = "item", name = "alien-artifact-yellow", amount = 1, ignored_by_stats = 1 },
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
@@ -124,9 +124,9 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-green-from-basic",
-        results = { { type = "item", name = "alien-artifact-green", amount = 5 } },
+        results = { { type = "item", name = "alien-artifact-green", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 } },
         ingredients = {
-          { type = "item", name = "alien-artifact-green", amount = 1 },
+          { type = "item", name = "alien-artifact-green", amount = 1, ignored_by_stats = 1 },
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
@@ -147,9 +147,9 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-blue-from-basic",
-        results = { { type = "item", name = "alien-artifact-blue", amount = 5 } },
+        results = { { type = "item", name = "alien-artifact-blue", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 } },
         ingredients = {
-          { type = "item", name = "alien-artifact-blue", amount = 1 },
+          { type = "item", name = "alien-artifact-blue", amount = 1, ignored_by_stats = 1 },
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
@@ -170,9 +170,9 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-purple-from-basic",
-        results = { { type = "item", name = "alien-artifact-purple", amount = 5 } },
+        results = { { type = "item", name = "alien-artifact-purple", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 } },
         ingredients = {
-          { type = "item", name = "alien-artifact-purple", amount = 1 },
+          { type = "item", name = "alien-artifact-purple", amount = 1, ignored_by_stats = 1 },
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,

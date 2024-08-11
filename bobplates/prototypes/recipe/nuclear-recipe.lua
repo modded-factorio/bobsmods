@@ -31,12 +31,12 @@ data:extend({
     enabled = false,
     category = "centrifuging",
     ingredients = {
-      { type = "item", name = "plutonium-239", amount = 40 },
-      { type = "item", name = "uranium-238", amount = 5 },
+      { type = "item", name = "plutonium-239", amount = 40, ignored_by_stats = 40 },
+      { type = "item", name = "uranium-238", amount = 5, ignored_by_stats = 2 },
     },
     results = {
-      { type = "item", name = "plutonium-239", amount = 41 },
-      { type = "item", name = "uranium-238", amount = 2 },
+      { type = "item", name = "plutonium-239", amount = 41, ignored_by_productivity = 40, ignored_by_stats = 40 },
+      { type = "item", name = "uranium-238", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
     },
     crafting_machine_tint = {
       primary = { r = 1, g = 0.7, b = 0 },
@@ -206,12 +206,12 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       enabled = false,
       category = "centrifuging",
       ingredients = {
-        { type = "item", name = "uranium-235", amount = 5 },
-        { type = "item", name = "uranium-238", amount = 15 },
+        { type = "item", name = "uranium-235", amount = 5, ignored_by_stats = 3 },
+        { type = "item", name = "uranium-238", amount = 15, ignored_by_stats = 10 },
       },
       results = {
-        { type = "item", name = "uranium-235", amount = 3 },
-        { type = "item", name = "uranium-238", amount = 10 },
+        { type = "item", name = "uranium-235", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
+        { type = "item", name = "uranium-238", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10 },
         { type = "item", name = "plutonium-239", amount = 1 },
       },
       crafting_machine_tint = {
