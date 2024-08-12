@@ -174,7 +174,13 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         type = "recipe",
         name = "alien-artifact-blue-from-basic",
         results = {
-          { type = "item", name = "alien-artifact-blue", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 },
+          {
+            type = "item",
+            name = "alien-artifact-blue",
+            amount = 5,
+            ignored_by_productivity = 1,
+            ignored_by_stats = 1,
+          },
         },
         ingredients = {
           { type = "item", name = "alien-artifact-blue", amount = 1, ignored_by_stats = 1 },
