@@ -21,18 +21,18 @@ local function get_old_quantity(ingredients, old)
         amount = item.amount + amount
       end
     else
-      log("recipe " .. recipe .. " contains an invalid ingredient")
+      log("recipe contains an invalid ingredient")
     end
   end
   return amount
 end
 
-local function replace_ingredient(ingredients, old, new)
+local function replace_ingredient(ingredients, old, new, new_type)
   local amount = get_old_quantity(ingredients, old)
   if amount > 0 then
     amount = quantity_convertion(amount, old, new)
     bobmods.lib.item.remove(ingredients, old)
-    bobmods.lib.item.add(ingredients, { new, amount })
+    bobmods.lib.item.add(ingredients, { type = new_type, name = new, amount = amount })
     return true
   end
   return false
@@ -44,12 +44,13 @@ function bobmods.lib.recipe.replace_ingredient(recipe, old, new)
     and type(old) == "string"
     and type(new) == "string"
     and data.raw.recipe[recipe]
-    and bobmods.lib.item.get_type(new)
   then
     local retval = false
+    local new_type = bobmods.lib.item.get_type(new)
 
-    if data.raw.recipe[recipe].ingredients then
-      if replace_ingredient(data.raw.recipe[recipe].ingredients, old, new) then
+    if new_type and data.raw.recipe[recipe].ingredients then
+      new_type = new_type == "fluid" and "fluid" or "item"
+      if replace_ingredient(data.raw.recipe[recipe].ingredients, old, new, new_type) then
         retval = true
       end
     end

@@ -21,8 +21,8 @@ data:extend({
     name = "bob-valve",
     energy_required = 2,
     ingredients = {
-      { "iron-plate", 1 },
-      { "pipe", 1 },
+      { type = "item", name = "iron-plate", amount = 1 },
+      { type = "item", name = "pipe", amount = 1 },
     },
     results = { { type = "item", name = "bob-valve", amount = 1 } },
   },
@@ -206,8 +206,8 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { "iron-plate", 1 },
-      { "pipe", 1 },
+      { type = "item", name = "iron-plate", amount = 1 },
+      { type = "item", name = "pipe", amount = 1 },
     },
     results = { { type = "item", name = "bob-overflow-valve", amount = 1 } },
   },
@@ -393,8 +393,8 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { "iron-plate", 1 },
-      { "pipe", 1 },
+      { type = "item", name = "iron-plate", amount = 1 },
+      { type = "item", name = "pipe", amount = 1 },
     },
     results = { { type = "item", name = "bob-topup-valve", amount = 1 } },
   },

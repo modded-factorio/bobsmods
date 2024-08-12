@@ -22,7 +22,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   end
 
   if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("chemical-plant-2", { "steel-bearing", 5 })
+    bobmods.lib.recipe.add_ingredient("chemical-plant-2", { type = "item", name = "steel-bearing", amount = 5 })
   end
 
   if data.raw.item["titanium-plate"] then
@@ -39,7 +39,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("chemical-plant-3", { "titanium-bearing", 5 })
+    bobmods.lib.recipe.add_ingredient("chemical-plant-3", { type = "item", name = "titanium-bearing", amount = 5 })
   end
 
   if data.raw.item["nitinol-alloy"] then
@@ -63,7 +63,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   end
 
   if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("chemical-plant-4", { "nitinol-bearing", 5 })
+    bobmods.lib.recipe.add_ingredient("chemical-plant-4", { type = "item", name = "nitinol-bearing", amount = 5 })
   end
 
   if data.raw.item["advanced-processing-unit"] then

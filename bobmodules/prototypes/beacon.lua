@@ -74,7 +74,7 @@ data:extend({
     enabled = false,
     energy_required = 45,
     ingredients = {
-      { type = "item", name = "beacon-2", 1 },
+      { type = "item", name = "beacon-2", amount = 1 },
       { type = "item", name = "electronic-circuit", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
       { type = "item", name = "processing-unit", amount = 20 },

@@ -28,31 +28,31 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   end
 
   if data.raw.item["cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("fast-inserter", { "cobalt-steel-bearing", 1 })
+    bobmods.lib.recipe.add_ingredient("fast-inserter", { type = "item", name = "cobalt-steel-bearing", amount = 1 })
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.add_ingredient("filter-inserter", { "cobalt-steel-bearing", 1 })
-      bobmods.lib.recipe.add_ingredient("stack-inserter", { "cobalt-steel-bearing", 5 })
-      bobmods.lib.recipe.add_ingredient("stack-filter-inserter", { "cobalt-steel-bearing", 6 })
+      bobmods.lib.recipe.add_ingredient("filter-inserter", { type = "item", name = "cobalt-steel-bearing", amount = 1 })
+      bobmods.lib.recipe.add_ingredient("stack-inserter", { type = "item", name = "cobalt-steel-bearing", amount = 5 })
+      bobmods.lib.recipe.add_ingredient("stack-filter-inserter", { type = "item", name = "cobalt-steel-bearing", amount = 6 })
     else
-      bobmods.lib.recipe.add_ingredient("stack-inserter", { "cobalt-steel-bearing", 5 })
+      bobmods.lib.recipe.add_ingredient("stack-inserter", { type = "item", name = "cobalt-steel-bearing", amount = 5 })
     end
   elseif data.raw.item["brass-bearing"] then
-    bobmods.lib.recipe.add_ingredient("fast-inserter", { "brass-bearing", 1 })
+    bobmods.lib.recipe.add_ingredient("fast-inserter", { type = "item", name = "brass-bearing", amount = 1 })
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.add_ingredient("filter-inserter", { "brass-bearing", 1 })
-      bobmods.lib.recipe.add_ingredient("stack-inserter", { "brass-bearing", 5 })
-      bobmods.lib.recipe.add_ingredient("stack-filter-inserter", { "brass-bearing", 6 })
+      bobmods.lib.recipe.add_ingredient("filter-inserter", { type = "item", name = "brass-bearing", amount = 1 })
+      bobmods.lib.recipe.add_ingredient("stack-inserter", { type = "item", name = "brass-bearing", amount = 5 })
+      bobmods.lib.recipe.add_ingredient("stack-filter-inserter", { type = "item", name = "brass-bearing", amount = 6 })
     else
-      bobmods.lib.recipe.add_ingredient("stack-inserter", { "brass-bearing", 5 })
+      bobmods.lib.recipe.add_ingredient("stack-inserter", { type = "item", name = "brass-bearing", amount = 5 })
     end
   elseif data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("fast-inserter", { "steel-bearing", 1 })
+    bobmods.lib.recipe.add_ingredient("fast-inserter", { type = "item", name = "steel-bearing", amount = 1 })
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.add_ingredient("filter-inserter", { "steel-bearing", 1 })
-      bobmods.lib.recipe.add_ingredient("stack-inserter", { "steel-bearing", 6 })
-      bobmods.lib.recipe.add_ingredient("stack-filter-inserter", { "steel-bearing", 6 })
+      bobmods.lib.recipe.add_ingredient("filter-inserter", { type = "item", name = "steel-bearing", amount = 1 })
+      bobmods.lib.recipe.add_ingredient("stack-inserter", { type = "item", name = "steel-bearing", amount = 6 })
+      bobmods.lib.recipe.add_ingredient("stack-filter-inserter", { type = "item", name = "steel-bearing", amount = 6 })
     else
-      bobmods.lib.recipe.add_ingredient("stack-inserter", { "steel-bearing", 5 })
+      bobmods.lib.recipe.add_ingredient("stack-inserter", { type = "item", name = "steel-bearing", amount = 5 })
     end
   end
 
@@ -84,13 +84,13 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("turbo-inserter", { "titanium-bearing", 1 })
+    bobmods.lib.recipe.add_ingredient("turbo-inserter", { type = "item", name = "titanium-bearing", amount = 1 })
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.add_ingredient("turbo-filter-inserter", { "titanium-bearing", 1 })
-      bobmods.lib.recipe.add_ingredient("turbo-stack-inserter", { "titanium-bearing", 6 })
-      bobmods.lib.recipe.add_ingredient("turbo-stack-filter-inserter", { "titanium-bearing", 6 })
+      bobmods.lib.recipe.add_ingredient("turbo-filter-inserter", { type = "item", name = "titanium-bearing", amount = 1 })
+      bobmods.lib.recipe.add_ingredient("turbo-stack-inserter", { type = "item", name = "titanium-bearing", amount = 6 })
+      bobmods.lib.recipe.add_ingredient("turbo-stack-filter-inserter", { type = "item", name = "titanium-bearing", amount = 6 })
     else
-      bobmods.lib.recipe.add_ingredient("turbo-stack-inserter", { "titanium-bearing", 5 })
+      bobmods.lib.recipe.add_ingredient("turbo-stack-inserter", { type = "item", name = "titanium-bearing", amount = 5 })
     end
   end
 
@@ -114,13 +114,13 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   end
 
   if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("express-inserter", { "nitinol-bearing", 1 })
+    bobmods.lib.recipe.add_ingredient("express-inserter", { type = "item", name = "nitinol-bearing", amount = 1 })
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.add_ingredient("express-filter-inserter", { "nitinol-bearing", 1 })
-      bobmods.lib.recipe.add_ingredient("express-stack-inserter", { "nitinol-bearing", 6 })
-      bobmods.lib.recipe.add_ingredient("express-stack-filter-inserter", { "nitinol-bearing", 6 })
+      bobmods.lib.recipe.add_ingredient("express-filter-inserter", { type = "item", name = "nitinol-bearing", amount = 1 })
+      bobmods.lib.recipe.add_ingredient("express-stack-inserter", { type = "item", name = "nitinol-bearing", amount = 6 })
+      bobmods.lib.recipe.add_ingredient("express-stack-filter-inserter", { type = "item", name = "nitinol-bearing", amount = 6 })
     else
-      bobmods.lib.recipe.add_ingredient("express-stack-inserter", { "nitinol-bearing", 5 })
+      bobmods.lib.recipe.add_ingredient("express-stack-inserter", { type = "item", name = "nitinol-bearing", amount = 5 })
     end
   end
 
@@ -147,10 +147,10 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   end
 else
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("express-inserter", { "titanium-bearing", 1 })
-    bobmods.lib.recipe.add_ingredient("express-filter-inserter", { "titanium-bearing", 1 })
-    bobmods.lib.recipe.add_ingredient("express-stack-inserter", { "titanium-bearing", 6 })
-    bobmods.lib.recipe.add_ingredient("express-stack-filter-inserter", { "titanium-bearing", 6 })
+    bobmods.lib.recipe.add_ingredient("express-inserter", { type = "item", name = "titanium-bearing", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("express-filter-inserter", { type = "item", name = "titanium-bearing", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("express-stack-inserter", { type = "item", name = "titanium-bearing", amount = 6 })
+    bobmods.lib.recipe.add_ingredient("express-stack-filter-inserter", { type = "item", name = "titanium-bearing", amount = 6 })
   end
 
   if data.raw.item["titanium-gear-wheel"] then

@@ -59,7 +59,7 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
       enabled = false,
       energy_required = 3.2,
       ingredients = {
-        { "iron-plate", 2 },
+        { type = "item", name = "iron-plate", amount = 2 },
         { type = "fluid", name = "oxygen", amount = 10 },
       },
       results = { { type = "item", name = "steel-plate", amount = 1 } },
@@ -85,7 +85,7 @@ else
       enabled = false,
       energy_required = 16,
       ingredients = {
-        { "iron-plate", 5 },
+        { type = "item", name = "iron-plate", amount = 5 },
         { type = "fluid", name = "oxygen", amount = 50 },
       },
       results = { { type = "item", name = "steel-plate", amount = 2 } },
@@ -98,9 +98,9 @@ if settings.startup["bobmods-plates-batteryupdate"].value == true then
   data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
-  bobmods.lib.recipe.add_ingredient("battery", { "lead-plate", 2 })
+  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "lead-plate", amount = 2 })
   bobmods.lib.recipe.add_ingredient("battery", { type = "fluid", name = "sulfuric-acid", amount = 20 })
-  bobmods.lib.recipe.add_ingredient("battery", { "plastic-bar", 1 })
+  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "plastic-bar", amount = 1 })
 end
 
 data.raw.recipe["steel-plate"].category = "chemical-furnace"
@@ -133,7 +133,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
 
-  bobmods.lib.recipe.add_ingredient("nuclear-fuel-reprocessing", { "used-up-uranium-fuel-cell", 5 }) -- +5 from base
+  bobmods.lib.recipe.add_ingredient("nuclear-fuel-reprocessing", { type = "item", name = "used-up-uranium-fuel-cell", amount = 5 }) -- +5 from base
   bobmods.lib.recipe.set_result(
     "nuclear-fuel-reprocessing",
     { type = "item", name = "uranium-238", amount = 6, catalyst_amount = 5 }

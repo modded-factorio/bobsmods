@@ -365,14 +365,14 @@ if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
     "bob-logistic-robot-5",
     { type = "item", name = "bob-logistic-robot-4", amount = 1 }
   )
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "bob-construction-robot-4", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { type = "item", name = "bob-construction-robot-4", amount = 1 })
 else
   if data.raw.item["flying-robot-frame-4"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-logistic-robot-5",
       { type = "item", name = "flying-robot-frame-4", amount = 1 }
     )
-    bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "flying-robot-frame-4", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { type = "item", name = "flying-robot-frame-4", amount = 1 })
   else
     for i, robot in ipairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
       data.raw.recipe[robot].energy_required = 20

@@ -4,9 +4,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-2", { "steel-bearing", 5 })
+    bobmods.lib.recipe.add_ingredient("electronics-machine-2", { type = "item", name = "steel-bearing", amount = 5 })
   else
-    bobmods.lib.recipe.add_ingredient("electronics-machine-2", { "iron-gear-wheel", 3 })
+    bobmods.lib.recipe.add_ingredient("electronics-machine-2", { type = "item", name = "iron-gear-wheel", amount = 3 })
   end
 
   if data.raw.item["steel-gear-wheel"] then
@@ -22,9 +22,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { "titanium-bearing", 5 })
+    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "titanium-bearing", amount = 5 })
   else
-    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { "iron-gear-wheel", 3 })
+    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "iron-gear-wheel", amount = 3 })
   end
 
   if data.raw.item["titanium-gear-wheel"] then

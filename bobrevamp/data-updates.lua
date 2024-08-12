@@ -43,7 +43,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   then
     data.raw.recipe["basic-oil-processing"].results[1].amount = 70 --increase PG count for 0.17.60.
   end
-  bobmods.lib.recipe.set_ingredient("coal-liquefaction", { type = "item", name = "heavy-oil", amount = 10 })
+  bobmods.lib.recipe.set_ingredient("coal-liquefaction", { type = "fluid", name = "heavy-oil", amount = 10 })
 
   bobmods.lib.tech.replace_prerequisite("fluid-handling", "oil-processing", "steel-processing")
   bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)

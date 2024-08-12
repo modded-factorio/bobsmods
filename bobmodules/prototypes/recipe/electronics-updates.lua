@@ -23,19 +23,19 @@ end
 if data.raw.fluid["ferric-chloride-solution"] then
   bobmods.lib.recipe.add_ingredient(
     "module-circuit-board",
-    { type = "item", name = "ferric-chloride-solution", amount = 5 }
+    { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
   )
   bobmods.lib.recipe.add_ingredient(
     "module-processor-board",
-    { type = "item", name = "ferric-chloride-solution", amount = 5 }
+    { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
   )
   bobmods.lib.recipe.add_ingredient(
     "module-processor-board-2",
-    { type = "item", name = "ferric-chloride-solution", amount = 5 }
+    { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
   )
   bobmods.lib.recipe.add_ingredient(
     "module-processor-board-3",
-    { type = "item", name = "ferric-chloride-solution", amount = 10 }
+    { type = "fluid", name = "ferric-chloride-solution", amount = 10 }
   )
 end
 

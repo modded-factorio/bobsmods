@@ -14,7 +14,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("centrifuge-2", { "titanium-bearing", 50 })
+    bobmods.lib.recipe.add_ingredient("centrifuge-2", { type = "item", name = "titanium-bearing", amount = 50 })
   end
 
   if data.raw.item["nitinol-alloy"] then
@@ -37,6 +37,6 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
   end
 
   if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("centrifuge-3", { "nitinol-bearing", 50 })
+    bobmods.lib.recipe.add_ingredient("centrifuge-3", { type = "item", name = "nitinol-bearing", amount = 50 })
   end
 end

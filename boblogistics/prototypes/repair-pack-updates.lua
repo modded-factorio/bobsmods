@@ -16,7 +16,7 @@ if data.raw.item["titanium-gear-wheel"] then
 end
 
 if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("repair-pack-4", { "titanium-bearing", 1 })
+  bobmods.lib.recipe.add_ingredient("repair-pack-4", { type = "item", name = "titanium-bearing", amount = 1 })
 end
 
 if data.raw.item["titanium-plate"] then
@@ -30,7 +30,7 @@ if data.raw.item["nitinol-gear-wheel"] then
 end
 
 if data.raw.item["nitinol-bearing"] then
-  bobmods.lib.recipe.add_ingredient("repair-pack-5", { "nitinol-bearing", 1 })
+  bobmods.lib.recipe.add_ingredient("repair-pack-5", { type = "item", name = "nitinol-bearing", amount = 1 })
 end
 
 if data.raw.item["advanced-processing-unit"] then
