@@ -124,8 +124,8 @@ local function create_fill_gas_bottle_recipe(fluid)
     enabled = false,
     icons = generate_fill_gas_bottle_icons(fluid),
     ingredients = {
-      { type = "fluid", name = fluid.name, amount = 50 },
-      { type = "item", name = "gas-canister", amount = 1 },
+      { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
+      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -150,8 +150,8 @@ local function create_fill_fluid_canister_recipe(fluid)
     enabled = false,
     icons = generate_fill_fluid_canister_icons(fluid),
     ingredients = {
-      { type = "fluid", name = fluid.name, amount = 50 },
-      { type = "item", name = "gas-canister", amount = 1 },
+      { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
+      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -182,8 +182,8 @@ local function create_empty_gas_bottle_recipe(fluid)
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
     },
     results = {
-      { type = "fluid", name = fluid.name, amount = 50 },
-      { type = "item", name = "gas-canister", amount = 1 },
+      { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
+      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     allow_decomposition = false,
   }
@@ -208,8 +208,8 @@ local function create_empty_fluid_canister_recipe(fluid)
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
     },
     results = {
-      { type = "fluid", name = fluid.name, amount = 50 },
-      { type = "item", name = "gas-canister", amount = 1 },
+      { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
+      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     allow_decomposition = false,
   }
