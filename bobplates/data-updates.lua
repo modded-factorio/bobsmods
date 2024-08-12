@@ -133,7 +133,10 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
 
-  bobmods.lib.recipe.add_ingredient("nuclear-fuel-reprocessing", { type = "item", name = "used-up-uranium-fuel-cell", amount = 5 }) -- +5 from base
+  bobmods.lib.recipe.add_ingredient(
+    "nuclear-fuel-reprocessing",
+    { type = "item", name = "used-up-uranium-fuel-cell", amount = 5 }
+  ) -- +5 from base
   bobmods.lib.recipe.set_result(
     "nuclear-fuel-reprocessing",
     { type = "item", name = "uranium-238", amount = 6, catalyst_amount = 5 }

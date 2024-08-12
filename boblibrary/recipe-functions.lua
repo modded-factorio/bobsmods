@@ -39,12 +39,7 @@ local function replace_ingredient(ingredients, old, new, new_type)
 end
 
 function bobmods.lib.recipe.replace_ingredient(recipe, old, new)
-  if
-    type(recipe) == "string"
-    and type(old) == "string"
-    and type(new) == "string"
-    and data.raw.recipe[recipe]
-  then
+  if type(recipe) == "string" and type(old) == "string" and type(new) == "string" and data.raw.recipe[recipe] then
     local retval = false
     local new_type = bobmods.lib.item.get_type(new)
 
