@@ -191,7 +191,7 @@ if bobmods.modules.ModulesLab then
   })
 
   bobmods.lib.tech.add_recipe_unlock("modules", "lab-module")
-  if DiscoScience and DiscoScience.prepareLab then
+  if mods["DiscoScience"] and DiscoScience and DiscoScience.prepareLab then
     DiscoScience.prepareLab(data.raw["lab"]["lab-module"])
   end
 end
