@@ -465,17 +465,17 @@ end
 if data.raw.fluid["alien-fire"] then
   bobmods.lib.recipe.remove_ingredient("flame-bullet-projectile", "light-oil")
   bobmods.lib.recipe.remove_ingredient("flame-bullet-projectile", "heavy-oil")
-  bobmods.lib.recipe.add_new_ingredient("flame-bullet-projectile", { type = "item", name = "alien-fire", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("flame-bullet-projectile", { type = "fluid", name = "alien-fire", amount = 10 })
   data.raw.recipe["flame-bullet-projectile"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.remove_ingredient("shotgun-flame-shell", "light-oil")
   bobmods.lib.recipe.remove_ingredient("shotgun-flame-shell", "heavy-oil")
-  bobmods.lib.recipe.add_new_ingredient("shotgun-flame-shell", { type = "item", name = "alien-fire", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient("shotgun-flame-shell", { type = "fluid", name = "alien-fire", amount = 10 })
   data.raw.recipe["shotgun-flame-shell"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.remove_ingredient("flame-rocket-warhead", "light-oil")
   bobmods.lib.recipe.remove_ingredient("flame-rocket-warhead", "heavy-oil")
-  bobmods.lib.recipe.add_new_ingredient("flame-rocket-warhead", { type = "item", name = "alien-fire", amount = 20 })
+  bobmods.lib.recipe.add_new_ingredient("flame-rocket-warhead", { type = "fluid", name = "alien-fire", amount = 20 })
   data.raw.recipe["flame-rocket-warhead"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.replace_ingredient("fire-artillery-shell", "light-oil", "alien-fire")

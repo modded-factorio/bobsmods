@@ -9,21 +9,21 @@ if data.raw.item["steel-gear-wheel"] then
 end
 
 if data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("player-gloves", { "steel-bearing", 8 })
+  bobmods.lib.recipe.add_ingredient("player-gloves", { type = "item", name = "steel-bearing", amount = 8 })
 end
 
 if data.raw.item["rtg"] then
-  bobmods.lib.recipe.add_ingredient("player-power-core", { "rtg", 1 })
+  bobmods.lib.recipe.add_ingredient("player-power-core", { type = "item", name = "rtg", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bodies", "rtg")
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_ingredient("player-power-core", { "alien-artifact", 50 })
+  bobmods.lib.recipe.add_ingredient("player-power-core", { type = "item", name = "alien-artifact", amount = 50 })
 end
 
 if data.raw.tool["module-case"] or data.raw.item["module-case"] then
   bobmods.lib.recipe.remove_ingredient("player-brain", "iron-plate")
-  bobmods.lib.recipe.add_ingredient("player-brain", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("player-brain", { type = "item", name = "module-case", amount = 1 })
   bobmods.lib.recipe.remove_ingredient("player-brain-2", "steel-plate")
-  bobmods.lib.recipe.add_ingredient("player-brain-2", { "module-case", 1 })
+  bobmods.lib.recipe.add_ingredient("player-brain-2", { type = "item", name = "module-case", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bodies", "modules")
 elseif data.raw.item["aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("player-brain", "iron-plate", "aluminium-plate")
@@ -37,8 +37,8 @@ if data.raw["recipe-category"]["electronics"] then
 end
 
 if data.raw.item["solder"] then
-  bobmods.lib.recipe.add_ingredient("player-brain", { "solder", 5 })
-  bobmods.lib.recipe.add_ingredient("player-brain-2", { "solder", 10 })
+  bobmods.lib.recipe.add_ingredient("player-brain", { type = "item", name = "solder", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("player-brain-2", { type = "item", name = "solder", amount = 10 })
 end
 
 if data.raw.item["titanium-plate"] then
@@ -56,9 +56,9 @@ elseif data.raw.item["steel-gear-wheel"] then
 end
 
 if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("player-gloves-2", { "titanium-bearing", 8 })
+  bobmods.lib.recipe.add_ingredient("player-gloves-2", { type = "item", name = "titanium-bearing", amount = 8 })
 elseif data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("player-gloves-2", { "steel-bearing", 8 })
+  bobmods.lib.recipe.add_ingredient("player-gloves-2", { type = "item", name = "steel-bearing", amount = 8 })
 end
 
 if data.raw.item["titanium-chest"] then
