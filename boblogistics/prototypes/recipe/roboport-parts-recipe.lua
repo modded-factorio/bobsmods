@@ -9,7 +9,7 @@ data:extend({
       { "electronic-circuit", 5 },
     },
     result = "roboport-antenna-1",
-    energy_required = 0.2,
+    energy_required = 2,
   },
   {
     type = "recipe",
@@ -21,7 +21,7 @@ data:extend({
       { "advanced-circuit", 5 },
     },
     result = "roboport-antenna-2",
-    energy_required = 0.2,
+    energy_required = 2,
   },
   {
     type = "recipe",
@@ -33,7 +33,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     result = "roboport-antenna-3",
-    energy_required = 0.2,
+    energy_required = 2,
   },
   {
     type = "recipe",
@@ -46,7 +46,7 @@ data:extend({
       { "processing-unit", 5 },
     },
     result = "roboport-antenna-4",
-    energy_required = 0.2,
+    energy_required = 2,
   },
 })
 
