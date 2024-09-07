@@ -5,11 +5,6 @@ if not bobmods.modules then
   bobmods.modules = {}
 end
 
-bobmods.modules.ModulesLab = settings.startup["bobmods-modules-enable-modules-lab"].value
-if mods["IndustrialRevolution"] then
-  bobmods.modules.ModulesLab = false
-end
-
 bobmods.modules.SpeedPerLevel = settings.startup["bobmods-modules-perlevel-bonus-speed"].value
 bobmods.modules.PollutionPerLevel = settings.startup["bobmods-modules-perlevel-bonus-pollution"].value
 bobmods.modules.ConsumptionPerLevel = settings.startup["bobmods-modules-perlevel-bonus-consumption"].value
@@ -29,7 +24,6 @@ bobmods.modules.PollutionPenalty = settings.startup["bobmods-modules-start-penal
 bobmods.modules.ConsumptionPenalty = settings.startup["bobmods-modules-start-penalty-consumption"].value
 
 require("prototypes.category")
-require("prototypes.lab")
 require("prototypes.beacon")
 
 require("prototypes.item.module")
