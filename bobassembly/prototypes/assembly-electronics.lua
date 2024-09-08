@@ -297,6 +297,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       energy_usage = "213.75kW",
       module_specification = {
         module_slots = 4,
+        module_info_max_icons_per_row = 3,
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
@@ -469,6 +470,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       energy_usage = "360kW",
       module_specification = {
         module_slots = 6,
+        module_info_max_icons_per_row = 3,
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
