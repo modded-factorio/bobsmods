@@ -95,7 +95,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-reactor-1", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-2", amount = 2 },
+      { type = "item", name = "efficiency-module-2", amount = 2 },
       { type = "item", name = "speed-module-2", amount = 2 },
       { type = "item", name = "productivity-module-2", amount = 2 },
     },
@@ -176,7 +176,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-reactor-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },
@@ -258,7 +258,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-reactor-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },
@@ -339,7 +339,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-reactor-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },
@@ -420,7 +420,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-reactor-5", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },

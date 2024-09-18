@@ -48,7 +48,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "effectivity-module",
+    name = "efficiency-module",
     group = "bobmodules",
     order = "f-2",
   },

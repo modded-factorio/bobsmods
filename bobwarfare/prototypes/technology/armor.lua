@@ -59,7 +59,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/technology/power-armor-mk3.png",
     icon_size = 64,
     prerequisites = {
-      "effectivity-module-2",
+      "efficiency-module-2",
       "power-armor-mk2",
       "speed-module-2",
       "production-science-pack",
@@ -91,7 +91,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-power-armor-3",
-      "effectivity-module-3",
+      "efficiency-module-3",
       "speed-module-3",
       "utility-science-pack",
     },

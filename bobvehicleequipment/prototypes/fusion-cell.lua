@@ -95,7 +95,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-cell-1", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "effectivity-module-2", amount = 1 },
+      { type = "item", name = "efficiency-module-2", amount = 1 },
       { type = "item", name = "speed-module-2", amount = 1 },
       { type = "item", name = "productivity-module-2", amount = 1 },
     },
@@ -176,7 +176,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-cell-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
@@ -258,7 +258,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-cell-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
@@ -339,7 +339,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-cell-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
@@ -420,7 +420,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fusion-cell-5", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },

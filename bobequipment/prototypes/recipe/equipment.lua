@@ -26,7 +26,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "energy-shield-mk3-equipment", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "energy-shield-mk4-equipment", amount = 1 } },
@@ -39,7 +39,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "energy-shield-mk4-equipment", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "energy-shield-mk5-equipment", amount = 1 } },
@@ -52,7 +52,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "energy-shield-mk5-equipment", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "energy-shield-mk6-equipment", amount = 1 } },
@@ -123,7 +123,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fusion-reactor-equipment", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },
@@ -137,7 +137,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fusion-reactor-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },
@@ -151,7 +151,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fusion-reactor-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "effectivity-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
       { type = "item", name = "speed-module-3", amount = 2 },
       { type = "item", name = "productivity-module-3", amount = 2 },
     },

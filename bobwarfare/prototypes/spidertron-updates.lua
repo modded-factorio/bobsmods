@@ -4,7 +4,7 @@ table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "bob
 
 bobmods.lib.recipe.remove_ingredient("spidertron", "raw-fish")
 bobmods.lib.recipe.remove_ingredient("spidertron", "radar")
-bobmods.lib.tech.remove_prerequisite("spidertron", "effectivity-module-3")
+bobmods.lib.tech.remove_prerequisite("spidertron", "efficiency-module-3")
 bobmods.lib.tech.remove_prerequisite("spidertron", "exoskeleton-equipment")
 
 bobmods.lib.tech.add_prerequisite("spidertron", "walking-vehicle")
@@ -171,7 +171,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "mech-leg", amount = 8 })
   bobmods.lib.recipe.remove_ingredient("spidertron", "low-density-structure")
   bobmods.lib.recipe.remove_ingredient("spidertron", "rocket-control-unit")
-  bobmods.lib.recipe.remove_ingredient("spidertron", "effectivity-module-3")
+  bobmods.lib.recipe.remove_ingredient("spidertron", "efficiency-module-3")
   bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "mech-frame", amount = 1 })
   bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "mech-armor-plate", amount = 10 })
   bobmods.lib.recipe.set_energy_required("spidertron", 5)
@@ -229,8 +229,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "advanced-processing-unit", amount = 20 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
   else
-    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "effectivity-module-3", amount = 6 })
-    bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "efficiency-module-3", amount = 6 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "efficiency-module-3")
   end
 
   if data.raw.tool["module-case"] or data.raw.item["module-case"] then
@@ -244,8 +244,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   end
 else
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.remove_ingredient("spidertron", "effectivity-module-3")
-    bobmods.lib.tech.remove_prerequisite("spidertron", "effectivity-module-3")
+    bobmods.lib.recipe.remove_ingredient("spidertron", "efficiency-module-3")
+    bobmods.lib.tech.remove_prerequisite("spidertron", "efficiency-module-3")
     bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "advanced-processing-unit", amount = 10 })
 
     bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "advanced-processing-unit", amount = 8 })
@@ -260,14 +260,14 @@ else
       { type = "item", name = "advanced-processing-unit", amount = 16 }
     )
   else
-    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "effectivity-module-3", amount = 2 })
-    bobmods.lib.tech.add_prerequisite("walking-vehicle", "effectivity-module-3")
-    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "effectivity-module-3", amount = 2 })
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "efficiency-module-3", amount = 2 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "efficiency-module-3")
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "efficiency-module-3", amount = 2 })
     bobmods.lib.recipe.add_ingredient(
       "logistic-spidertron",
-      { type = "item", name = "effectivity-module-3", amount = 3 }
+      { type = "item", name = "efficiency-module-3", amount = 3 }
     )
-    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "effectivity-module-3", amount = 4 })
+    bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "efficiency-module-3", amount = 4 })
   end
 
   bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "exoskeleton-equipment", amount = 3 })

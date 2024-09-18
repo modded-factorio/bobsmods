@@ -822,7 +822,7 @@ data:extend({
       "fusion-reactor-equipment",
       "rocketry",
       "rocket-control-unit",
-      "effectivity-module-3"
+      "efficiency-module-3"
     },
     unit =
     {

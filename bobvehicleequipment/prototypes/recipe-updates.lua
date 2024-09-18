@@ -456,17 +456,17 @@ if data.raw.item["diamond-5"] then
   bobmods.lib.recipe.add_ingredient("vehicle-solar-panel-6", { type = "item", name = "diamond-5", amount = 1 })
 end
 
-if data.raw.module["effectivity-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-4", "effectivity-module-3", "effectivity-module-4")
+if data.raw.module["efficiency-module-4"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-4", "efficiency-module-3", "efficiency-module-4")
 end
 
 if data.raw.module["productivity-module-4"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-shield-4", "productivity-module-3", "productivity-module-4")
 end
 
-if data.raw.module["effectivity-module-5"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-reactor-4", "effectivity-module-3", "effectivity-module-5")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-4", "effectivity-module-3", "effectivity-module-5")
+if data.raw.module["efficiency-module-5"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-reactor-4", "efficiency-module-3", "efficiency-module-5")
+  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-4", "efficiency-module-3", "efficiency-module-5")
 end
 
 if data.raw.module["speed-module-5"] then
@@ -479,10 +479,10 @@ if data.raw.module["productivity-module-5"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-4", "productivity-module-3", "productivity-module-5")
 end
 
-if data.raw.module["effectivity-module-6"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-5", "effectivity-module-3", "effectivity-module-6")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-reactor-5", "effectivity-module-3", "effectivity-module-6")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-5", "effectivity-module-3", "effectivity-module-6")
+if data.raw.module["efficiency-module-6"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-5", "efficiency-module-3", "efficiency-module-6")
+  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-reactor-5", "efficiency-module-3", "efficiency-module-6")
+  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-5", "efficiency-module-3", "efficiency-module-6")
 end
 
 if data.raw.module["speed-module-6"] then
@@ -496,10 +496,10 @@ if data.raw.module["productivity-module-6"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-5", "productivity-module-3", "productivity-module-6")
 end
 
-if data.raw.module["effectivity-module-8"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-6", "effectivity-module-3", "effectivity-module-8")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-reactor-6", "effectivity-module-3", "effectivity-module-8")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-6", "effectivity-module-3", "effectivity-module-8")
+if data.raw.module["efficiency-module-8"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-6", "efficiency-module-3", "efficiency-module-8")
+  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-reactor-6", "efficiency-module-3", "efficiency-module-8")
+  bobmods.lib.recipe.replace_ingredient("vehicle-fusion-cell-6", "efficiency-module-3", "efficiency-module-8")
 end
 
 if data.raw.module["speed-module-8"] then

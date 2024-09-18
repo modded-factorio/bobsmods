@@ -42,7 +42,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-1-combine",
         },
       },
-      prerequisites = { "module-merging", "speed-module", "effectivity-module" },
+      prerequisites = { "module-merging", "speed-module", "efficiency-module" },
       unit = {
         count = 50,
         ingredients = {
@@ -68,7 +68,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-2-combine",
         },
       },
-      prerequisites = { "raw-speed-module-1", "speed-module-2", "effectivity-module-2" },
+      prerequisites = { "raw-speed-module-1", "speed-module-2", "efficiency-module-2" },
       unit = {
         count = 100,
         ingredients = {
@@ -94,7 +94,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-3-combine",
         },
       },
-      prerequisites = { "raw-speed-module-2", "speed-module-3", "effectivity-module-3" },
+      prerequisites = { "raw-speed-module-2", "speed-module-3", "efficiency-module-3" },
       unit = {
         count = 150,
         ingredients = {
@@ -121,7 +121,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-4-combine",
         },
       },
-      prerequisites = { "raw-speed-module-3", "speed-module-4", "effectivity-module-4" },
+      prerequisites = { "raw-speed-module-3", "speed-module-4", "efficiency-module-4" },
       unit = {
         count = 200,
         ingredients = {
@@ -148,7 +148,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-5-combine",
         },
       },
-      prerequisites = { "raw-speed-module-4", "speed-module-5", "effectivity-module-5" },
+      prerequisites = { "raw-speed-module-4", "speed-module-5", "efficiency-module-5" },
       unit = {
         count = 250,
         ingredients = {
@@ -175,7 +175,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-6-combine",
         },
       },
-      prerequisites = { "raw-speed-module-5", "speed-module-6", "effectivity-module-6" },
+      prerequisites = { "raw-speed-module-5", "speed-module-6", "efficiency-module-6" },
       unit = {
         count = 300,
         ingredients = {
@@ -203,7 +203,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-7-combine",
         },
       },
-      prerequisites = { "raw-speed-module-6", "speed-module-7", "effectivity-module-7" },
+      prerequisites = { "raw-speed-module-6", "speed-module-7", "efficiency-module-7" },
       unit = {
         count = 350,
         ingredients = {
@@ -231,7 +231,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
           recipe = "raw-speed-module-8-combine",
         },
       },
-      prerequisites = { "raw-speed-module-7", "speed-module-8", "effectivity-module-8" },
+      prerequisites = { "raw-speed-module-7", "speed-module-8", "efficiency-module-8" },
       unit = {
         count = 400,
         ingredients = {
@@ -263,7 +263,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-1-combine",
         },
       },
-      prerequisites = { "module-merging", "effectivity-module", "pollution-clean-module-1" },
+      prerequisites = { "module-merging", "efficiency-module", "pollution-clean-module-1" },
       unit = {
         count = 50,
         ingredients = {
@@ -289,7 +289,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-2-combine",
         },
       },
-      prerequisites = { "green-module-1", "effectivity-module-2", "pollution-clean-module-2" },
+      prerequisites = { "green-module-1", "efficiency-module-2", "pollution-clean-module-2" },
       unit = {
         count = 100,
         ingredients = {
@@ -315,7 +315,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-3-combine",
         },
       },
-      prerequisites = { "green-module-2", "effectivity-module-3", "pollution-clean-module-3" },
+      prerequisites = { "green-module-2", "efficiency-module-3", "pollution-clean-module-3" },
       unit = {
         count = 150,
         ingredients = {
@@ -342,7 +342,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-4-combine",
         },
       },
-      prerequisites = { "green-module-3", "effectivity-module-4", "pollution-clean-module-4" },
+      prerequisites = { "green-module-3", "efficiency-module-4", "pollution-clean-module-4" },
       unit = {
         count = 200,
         ingredients = {
@@ -369,7 +369,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-5-combine",
         },
       },
-      prerequisites = { "green-module-4", "effectivity-module-5", "pollution-clean-module-5" },
+      prerequisites = { "green-module-4", "efficiency-module-5", "pollution-clean-module-5" },
       unit = {
         count = 250,
         ingredients = {
@@ -396,7 +396,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-6-combine",
         },
       },
-      prerequisites = { "green-module-5", "effectivity-module-6", "pollution-clean-module-6" },
+      prerequisites = { "green-module-5", "efficiency-module-6", "pollution-clean-module-6" },
       unit = {
         count = 300,
         ingredients = {
@@ -424,7 +424,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-7-combine",
         },
       },
-      prerequisites = { "green-module-6", "effectivity-module-7", "pollution-clean-module-7" },
+      prerequisites = { "green-module-6", "efficiency-module-7", "pollution-clean-module-7" },
       unit = {
         count = 350,
         ingredients = {
@@ -452,7 +452,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
           recipe = "green-module-8-combine",
         },
       },
-      prerequisites = { "green-module-7", "effectivity-module-8", "pollution-clean-module-8" },
+      prerequisites = { "green-module-7", "efficiency-module-8", "pollution-clean-module-8" },
       unit = {
         count = 400,
         ingredients = {
@@ -485,7 +485,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
           recipe = "raw-productivity-module-1-combine",
         },
       },
-      prerequisites = { "module-merging", "productivity-module", "effectivity-module", "pollution-clean-module-1" },
+      prerequisites = { "module-merging", "productivity-module", "efficiency-module", "pollution-clean-module-1" },
       unit = {
         count = 50,
         ingredients = {
@@ -514,7 +514,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-1",
         "productivity-module-2",
-        "effectivity-module-2",
+        "efficiency-module-2",
         "pollution-clean-module-2",
       },
       unit = {
@@ -545,7 +545,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-2",
         "productivity-module-3",
-        "effectivity-module-3",
+        "efficiency-module-3",
         "pollution-clean-module-3",
       },
       unit = {
@@ -577,7 +577,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-3",
         "productivity-module-4",
-        "effectivity-module-4",
+        "efficiency-module-4",
         "pollution-clean-module-4",
       },
       unit = {
@@ -609,7 +609,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-4",
         "productivity-module-5",
-        "effectivity-module-5",
+        "efficiency-module-5",
         "pollution-clean-module-5",
       },
       unit = {
@@ -641,7 +641,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-5",
         "productivity-module-6",
-        "effectivity-module-6",
+        "efficiency-module-6",
         "pollution-clean-module-6",
       },
       unit = {
@@ -674,7 +674,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-6",
         "productivity-module-7",
-        "effectivity-module-7",
+        "efficiency-module-7",
         "pollution-clean-module-7",
       },
       unit = {
@@ -707,7 +707,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       prerequisites = {
         "raw-productivity-module-7",
         "productivity-module-8",
-        "effectivity-module-8",
+        "efficiency-module-8",
         "pollution-clean-module-8",
       },
       unit = {
@@ -753,7 +753,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "module-merging",
         "speed-module-2",
         "productivity-module-2",
-        "effectivity-module-2",
+        "efficiency-module-2",
         "pollution-clean-module-2",
       },
       unit = {
@@ -781,7 +781,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "god-module-1",
         "speed-module-4",
         "productivity-module-4",
-        "effectivity-module-4",
+        "efficiency-module-4",
         "pollution-clean-module-4",
       },
       unit = {
@@ -810,7 +810,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "god-module-2",
         "speed-module-6",
         "productivity-module-6",
-        "effectivity-module-6",
+        "efficiency-module-6",
         "pollution-clean-module-6",
       },
       unit = {
@@ -840,7 +840,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "god-module-3",
         "speed-module-8",
         "productivity-module-8",
-        "effectivity-module-8",
+        "efficiency-module-8",
         "pollution-clean-module-8",
       },
       unit = {

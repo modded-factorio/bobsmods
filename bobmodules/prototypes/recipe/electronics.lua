@@ -120,7 +120,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "effectivity-processor",
+    name = "efficiency-processor",
     energy_required = 2.5,
     enabled = false,
     ingredients = {
@@ -128,12 +128,12 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 2 },
       { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    results = { { type = "item", name = "effectivity-processor", amount = 1 } },
+    results = { { type = "item", name = "efficiency-processor", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "effectivity-processor-2",
+    name = "efficiency-processor-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -141,19 +141,19 @@ data:extend({
       { type = "item", name = "advanced-circuit", amount = 2 },
       { type = "item", name = "processing-unit", amount = 2 },
     },
-    results = { { type = "item", name = "effectivity-processor-2", amount = 1 } },
+    results = { { type = "item", name = "efficiency-processor-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "effectivity-processor-3",
+    name = "efficiency-processor-3",
     energy_required = 7.5,
     enabled = false,
     ingredients = {
       { type = "item", name = "module-processor-board-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 2 },
     },
-    results = { { type = "item", name = "effectivity-processor-3", amount = 1 } },
+    results = { { type = "item", name = "efficiency-processor-3", amount = 1 } },
   },
 })
 

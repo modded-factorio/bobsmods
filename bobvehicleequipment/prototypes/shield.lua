@@ -266,7 +266,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-3", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-4", amount = 1 } },
@@ -349,7 +349,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-4", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-5", amount = 1 } },
@@ -434,7 +434,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-5", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "effectivity-module-3", amount = 1 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-6", amount = 1 } },

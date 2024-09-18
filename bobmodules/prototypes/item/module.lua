@@ -167,50 +167,50 @@ data:extend({
   },
 })
 
---[[Effectivity Modules]]
+--[[Efficiency Modules]]
 --
 
-data.raw["module"]["effectivity-module"].stack_size = 100
-data.raw["module"]["effectivity-module"].icon = "__bobmodules__/graphics/icons/yellow-module-1.png"
-data.raw["module"]["effectivity-module"].icon_size = 32
-data.raw["module"]["effectivity-module"].subgroup = "effectivity-module"
-data.raw["module"]["effectivity-module"].order = "m-e-1"
-data.raw["module"]["effectivity-module"].default_request_amount = 10
-data.raw["module"]["effectivity-module"].beacon_tint =
+data.raw["module"]["efficiency-module"].stack_size = 100
+data.raw["module"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/yellow-module-1.png"
+data.raw["module"]["efficiency-module"].icon_size = 32
+data.raw["module"]["efficiency-module"].subgroup = "efficiency-module"
+data.raw["module"]["efficiency-module"].order = "m-e-1"
+data.raw["module"]["efficiency-module"].default_request_amount = 10
+data.raw["module"]["efficiency-module"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
-data.raw["module"]["effectivity-module"].effect =
+data.raw["module"]["efficiency-module"].effect =
   { consumption = { bonus = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 } }
 
-data.raw["module"]["effectivity-module-2"].stack_size = 100
-data.raw["module"]["effectivity-module-2"].icon = "__bobmodules__/graphics/icons/yellow-module-2.png"
-data.raw["module"]["effectivity-module-2"].icon_size = 32
-data.raw["module"]["effectivity-module-2"].subgroup = "effectivity-module"
-data.raw["module"]["effectivity-module-2"].order = "m-e-2"
-data.raw["module"]["effectivity-module-2"].default_request_amount = 10
-data.raw["module"]["effectivity-module-2"].beacon_tint =
+data.raw["module"]["efficiency-module-2"].stack_size = 100
+data.raw["module"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/yellow-module-2.png"
+data.raw["module"]["efficiency-module-2"].icon_size = 32
+data.raw["module"]["efficiency-module-2"].subgroup = "efficiency-module"
+data.raw["module"]["efficiency-module-2"].order = "m-e-2"
+data.raw["module"]["efficiency-module-2"].default_request_amount = 10
+data.raw["module"]["efficiency-module-2"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
-data.raw["module"]["effectivity-module-2"].effect =
+data.raw["module"]["efficiency-module-2"].effect =
   { consumption = { bonus = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 } }
 
-data.raw["module"]["effectivity-module-3"].stack_size = 100
-data.raw["module"]["effectivity-module-3"].icon = "__bobmodules__/graphics/icons/yellow-module-3.png"
-data.raw["module"]["effectivity-module-3"].icon_size = 32
-data.raw["module"]["effectivity-module-3"].subgroup = "effectivity-module"
-data.raw["module"]["effectivity-module-3"].order = "m-e-3"
-data.raw["module"]["effectivity-module-3"].default_request_amount = 10
-data.raw["module"]["effectivity-module-3"].beacon_tint =
+data.raw["module"]["efficiency-module-3"].stack_size = 100
+data.raw["module"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/yellow-module-3.png"
+data.raw["module"]["efficiency-module-3"].icon_size = 32
+data.raw["module"]["efficiency-module-3"].subgroup = "efficiency-module"
+data.raw["module"]["efficiency-module-3"].order = "m-e-3"
+data.raw["module"]["efficiency-module-3"].default_request_amount = 10
+data.raw["module"]["efficiency-module-3"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
-data.raw["module"]["effectivity-module-3"].effect =
+data.raw["module"]["efficiency-module-3"].effect =
   { consumption = { bonus = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 } }
 
 data:extend({
   {
     type = "module",
-    name = "effectivity-module-4",
+    name = "efficiency-module-4",
     icon = "__bobmodules__/graphics/icons/yellow-module-4.png",
     icon_size = 32,
-    subgroup = "effectivity-module",
-    category = "effectivity",
+    subgroup = "efficiency-module",
+    category = "efficiency",
     tier = 4,
     order = "m-e-4",
     stack_size = 100,
@@ -228,11 +228,11 @@ data:extend({
 
   {
     type = "module",
-    name = "effectivity-module-5",
+    name = "efficiency-module-5",
     icon = "__bobmodules__/graphics/icons/yellow-module-5.png",
     icon_size = 32,
-    subgroup = "effectivity-module",
-    category = "effectivity",
+    subgroup = "efficiency-module",
+    category = "efficiency",
     tier = 5,
     order = "m-e-5",
     stack_size = 100,
@@ -250,11 +250,11 @@ data:extend({
 
   {
     type = "module",
-    name = "effectivity-module-6",
+    name = "efficiency-module-6",
     icon = "__bobmodules__/graphics/icons/yellow-module-6.png",
     icon_size = 32,
-    subgroup = "effectivity-module",
-    category = "effectivity",
+    subgroup = "efficiency-module",
+    category = "efficiency",
     tier = 6,
     order = "m-e-6",
     stack_size = 100,
@@ -272,11 +272,11 @@ data:extend({
 
   {
     type = "module",
-    name = "effectivity-module-7",
+    name = "efficiency-module-7",
     icon = "__bobmodules__/graphics/icons/yellow-module-7.png",
     icon_size = 32,
-    subgroup = "effectivity-module",
-    category = "effectivity",
+    subgroup = "efficiency-module",
+    category = "efficiency",
     tier = 7,
     order = "m-e-7",
     stack_size = 100,
@@ -294,11 +294,11 @@ data:extend({
 
   {
     type = "module",
-    name = "effectivity-module-8",
+    name = "efficiency-module-8",
     icon = "__bobmodules__/graphics/icons/yellow-module-8.png",
     icon_size = 32,
-    subgroup = "effectivity-module",
-    category = "effectivity",
+    subgroup = "efficiency-module",
+    category = "efficiency",
     tier = 8,
     order = "m-e-8",
     stack_size = 100,

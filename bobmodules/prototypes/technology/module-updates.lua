@@ -5,7 +5,7 @@ if mods["IndustrialRevolution"] then
     "module-contact",
     "module-processor-board",
     "speed-processor",
-    "effectivity-processor",
+    "efficiency-processor",
     "productivity-processor",
     "pollution-clean-processor",
     "pollution-create-processor",
@@ -17,7 +17,7 @@ if mods["IndustrialRevolution"] then
     "module-processor-board-3",
     "speed-processor-2",
     "productivity-processor-2",
-    "effectivity-processor-2",
+    "efficiency-processor-2",
   }) do
     bobmods.lib.tech.add_recipe_unlock("ir2-modules-3", recipe_name)
   end
