@@ -5,33 +5,13 @@ end
 function bobmods.lib.item.get_type(name) --returns actual item type
   local item_type = nil
   if type(name) == "string" then
-    local item_types = {
-      "ammo",
-      "armor",
-      "blueprint",
-      "blueprint-book",
-      "capsule",
-      "copy-paste-tool",
-      "deconstruction-item",
-      "fluid",
-      "gun",
-      "item",
-      "item-with-entity-data",
-      "item-with-inventory",
-      "item-with-label",
-      "item-with-tags",
-      "module",
-      "rail-planner",
-      "repair-tool",
-      "rts-tool",
-      "selection-tool",
-      "tool",
-      "upgrade-item",
-    }
-    for i, type_name in pairs(item_types) do
-      if data.raw[type_name][name] then
+    for type_name, _ in pairs(defines.prototypes["item"]) do
+      if data.raw[type_name] and data.raw[type_name][name] then
         item_type = type_name
       end
+    end
+    if data.raw.fluid and data.raw.fluid[name] then
+      item_type = type_name
     end
   else
     log("Item name is not a string")
@@ -70,13 +50,17 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
     if inputs.amount and type(inputs.amount) == "number" then
       item.amount = inputs.amount
     else
-      item.amount = 1
+      log(debug.traceback())
+      log("Unable to determine an ingredient amount")
+      return nil
     end
 
     if inputs.type then
       item.type = inputs.type
     else
-      item.type = bobmods.lib.item.get_basic_type_simple(item.name)
+      log(debug.traceback())
+      log("Unable to determine an ingredient type")
+      return nil
     end
 
     if item.type == "item" then
@@ -87,21 +71,15 @@ function bobmods.lib.item.ingredient_simple(inputs) --doesn't care if the item a
       end
     end
     if item.type == "fluid" then
+      item.temperature = inputs.temperature
+      item.minimum_temperature = inputs.minimum_temperature
+      item.maximum_temperature = inputs.maximum_temperature
       item.fluidbox_index = inputs.fluidbox_index
+      item.fluidbox_multiplier = inputs.fluidbox_multiplier
     end
-    if inputs.catalyst_amount then
-      item.catalyst_amount = inputs.catalyst_amount
-    end
-  elseif type(inputs) == "string" then
-    item.name = inputs
-    item.type = bobmods.lib.item.get_basic_type_simple(item.name)
-    item.amount = 1
-  end
-  if
-    type(item.name) == "string"
-    and type(item.amount) == "number"
-    and (item.type == "item" or item.type == "fluid")
-  then
+
+    item.ignored_by_stats = inputs.ignored_by_stats
+
     return item
   else
     log(debug.traceback())
@@ -113,20 +91,13 @@ end
 function bobmods.lib.item.ingredient(inputs) --returns a valid ingredient only if the item exists.
   local item = bobmods.lib.item.ingredient_simple(inputs)
   if item then
-    if bobmods.lib.item.get_type(item.name) then
-      return item
-    else
-      log(debug.traceback())
-      bobmods.lib.error.ingredient(item)
-      return nil
-    end
+    return item
   else
+    log(item.name)
+    log(debug.traceback())
+    bobmods.lib.error.ingredient(item)
     return nil
   end
-end
-
-function bobmods.lib.item.basic_item(inputs) --old name
-  return bobmods.lib.item.ingredient(inputs)
 end
 
 --Same as ingredient, but has support for amount_min, amount_max and probability
@@ -148,7 +119,9 @@ function bobmods.lib.item.result_simple(inputs)
       item.amount_min = inputs.amount_min
       item.amount_max = inputs.amount_max
     else
-      item.amount = 1
+      log(debug.traceback())
+      log("Unable to determine a result amount")
+      return nil
     end
 
     if inputs.probability then
@@ -186,14 +159,15 @@ function bobmods.lib.item.result_simple(inputs)
     end
     if item.type == "fluid" then
       item.fluidbox_index = inputs.fluidbox_index
+      item.temperature = inputs.temperature
+    else
+      item.extra_count_fraction = inputs.extra_count_fraction
+      item.percent_spoiled = inputs.percent_spoiled
     end
-    if inputs.catalyst_amount then
-      item.catalyst_amount = inputs.catalyst_amount
-    end
-  elseif type(inputs) == "string" then
-    item.name = inputs
-    item.type = bobmods.lib.item.get_basic_type_simple(item.name)
-    item.amount = 1
+
+    item.ignored_by_stats = inputs.ignored_by_stats
+    item.ignored_by_productivity = inputs.ignored_by_productivity
+    item.show_details_in_recipe_tooltip = inputs.show_details_in_recipe_tooltip
   end
 
   if
@@ -213,20 +187,12 @@ end
 function bobmods.lib.item.result(inputs) --returns a valid result only if the item exists.
   local item = bobmods.lib.item.result_simple(inputs)
   if item then
-    if bobmods.lib.item.get_type(item.name) then
-      return item
-    else
-      log(debug.traceback())
-      bobmods.lib.error.result(item)
-      return nil
-    end
+    return item
   else
+    log(debug.traceback())
+    bobmods.lib.error.result(item)
     return nil
   end
-end
-
-function bobmods.lib.item.item(inputs) -- old name
-  return bobmods.lib.item.result(inputs)
 end
 
 function bobmods.lib.item.combine(item1_in, item2_in)

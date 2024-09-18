@@ -20,7 +20,7 @@ function bobmods.lib.result_check(object)
     end
 
     if object.result then
-      local item = bobmods.lib.item.basic_item({ name = object.result })
+      local item = bobmods.lib.item.ingredient({ name = object.result })
       if object.count then
         item.amount = object.count
         object.count = nil
