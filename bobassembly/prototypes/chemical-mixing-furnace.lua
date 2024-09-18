@@ -142,9 +142,9 @@ then
       icons_positioning = {
         {
           inventory_index = defines.inventory.assembling_machine_modules,
-          shift = {0, 0.5 },
-          multi_row_initial_height_modifier = -0.3
-        }
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3,
+        },
       },
       crafting_speed = 3,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
@@ -211,9 +211,9 @@ then
       icons_positioning = {
         {
           inventory_index = defines.inventory.assembling_machine_modules,
-          shift = {0, 0.5 },
-          multi_row_initial_height_modifier = -0.3
-        }
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3,
+        },
       },
       crafting_speed = 4,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },

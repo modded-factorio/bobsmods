@@ -372,8 +372,8 @@ data:extend({
       {
         inventory_index = defines.inventory.assembling_machine_modules,
         shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3
-      }
+        multi_row_initial_height_modifier = -0.3,
+      },
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "chemical-furnace" },
@@ -581,8 +581,8 @@ data:extend({
       {
         inventory_index = defines.inventory.assembling_machine_modules,
         shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3
-      }
+        multi_row_initial_height_modifier = -0.3,
+      },
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "mixing-furnace" },

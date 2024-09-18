@@ -143,9 +143,9 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       icons_positioning = {
         {
           inventory_index = defines.inventory.mining_drill_modules,
-          shift = {0, 0.5 },
-          multi_row_initial_height_modifier = -0.3
-        }
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3,
+        },
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {
@@ -287,8 +287,8 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         {
           inventory_index = defines.inventory.mining_drill_modules,
           shift = { 0, 0.5 },
-          multi_row_initial_height_modifier = -0.3
-        }
+          multi_row_initial_height_modifier = -0.3,
+        },
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {
@@ -430,8 +430,8 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         {
           inventory_index = defines.inventory.mining_drill_modules,
           shift = { 0, 0.5 },
-          multi_row_initial_height_modifier = -0.3
-        }
+          multi_row_initial_height_modifier = -0.3,
+        },
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {
@@ -573,8 +573,8 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         {
           inventory_index = defines.inventory.mining_drill_modules,
           shift = { 0, 0.5 },
-          multi_row_initial_height_modifier = -0.3
-        }
+          multi_row_initial_height_modifier = -0.3,
+        },
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {

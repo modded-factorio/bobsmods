@@ -297,7 +297,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         {
           inventory_index = defines.inventory.assembling_machine_modules,
           max_icons_per_row = 3,
-        }
+        },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
@@ -472,7 +472,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         {
           inventory_index = defines.inventory.assembling_machine_modules,
           max_icons_per_row = 3,
-        }
+        },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },

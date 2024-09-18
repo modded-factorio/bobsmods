@@ -167,7 +167,7 @@ then
         {
           inventory_index = defines.inventory.lab_modules,
           shift = { 0, 0.9 },
-        }
+        },
       },
       fast_replaceable_group = "lab",
     },
