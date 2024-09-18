@@ -810,10 +810,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "spidertron"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "spidertron-remote"
-      }
     },
     prerequisites =
     {
