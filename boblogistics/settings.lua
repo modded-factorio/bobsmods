@@ -122,7 +122,7 @@ data:extend({
     type = "int-setting",
     name = "bobmods-logistics-fluidwagonbase",
     setting_type = "startup",
-    default_value = 25,
+    default_value = 50,
     minimum_value = 10,
     maximum_value = 1000,
   },
