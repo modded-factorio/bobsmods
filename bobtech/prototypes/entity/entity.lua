@@ -154,9 +154,12 @@ data:extend({
       "utility-science-pack",
       "space-science-pack",
     },
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_shift = { 0, 0.9 },
+    module_slots = 4,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.lab_modules,
+        shift = { 0, 0.9 },
+      }
     },
     fast_replaceable_group = "lab",
   },

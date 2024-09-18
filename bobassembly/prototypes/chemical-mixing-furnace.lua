@@ -138,10 +138,13 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
-      module_specification = {
-        module_slots = 4,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 4,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = {0, 0.5 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       crafting_speed = 3,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
@@ -204,10 +207,13 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
-      module_specification = {
-        module_slots = 6,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 6,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = {0, 0.5 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       crafting_speed = 4,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },

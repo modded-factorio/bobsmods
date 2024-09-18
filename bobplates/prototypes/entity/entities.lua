@@ -107,9 +107,7 @@ data:extend({
     max_health = 150,
     crafting_categories = { "electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     crafting_speed = 0.75,
     energy_usage = "420kW",
     energy_source = {
@@ -369,10 +367,13 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 2,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "chemical-furnace" },
@@ -575,10 +576,13 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 2,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "mixing-furnace" },

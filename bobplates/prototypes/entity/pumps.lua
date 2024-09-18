@@ -9,10 +9,13 @@ data:extend({
     max_health = 150,
     crafting_categories = { "air-pump" },
     crafting_speed = 1,
-    module_specification = {
-      module_slots = 1,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 1,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -94,10 +97,13 @@ data:extend({
     max_health = 180,
     crafting_categories = { "air-pump" },
     crafting_speed = 2,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 2,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -179,10 +185,13 @@ data:extend({
     max_health = 230,
     crafting_categories = { "air-pump" },
     crafting_speed = 3.5,
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 4,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -264,10 +273,13 @@ data:extend({
     max_health = 300,
     crafting_categories = { "air-pump" },
     crafting_speed = 5,
-    module_specification = {
-      module_slots = 6,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 6,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -348,10 +360,13 @@ data:extend({
     max_health = 120,
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 1,
-    module_specification = {
-      module_slots = 1,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 1,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -754,10 +769,13 @@ data:extend({
     max_health = 180,
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 2,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 2,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -839,10 +857,13 @@ data:extend({
     max_health = 230,
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 3.5,
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 4,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -924,10 +945,13 @@ data:extend({
     max_health = 300,
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 5,
-    module_specification = {
-      module_slots = 6,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
+    module_slots = 6,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.5 },
+        multi_row_initial_height_modifier = -0.3
+      }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",

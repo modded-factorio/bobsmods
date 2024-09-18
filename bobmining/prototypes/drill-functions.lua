@@ -25,7 +25,7 @@ function bobmods.mining.electric_mining_drill(inputs)
 
   mining_drill.energy_usage = inputs.energy_usage or "100kW"
   mining_drill.mining_speed = inputs.mining_speed or 0.5
-  mining_drill.module_specification = { module_slots = inputs.module_slots or 3 }
+  mining_drill.module_slots = inputs.module_slots or 3
   mining_drill.resource_searching_radius = inputs.resource_searching_radius or 2.49
   mining_drill.circuit_wire_max_distance = inputs.circuit_wire_max_distance or default_circuit_wire_max_distance
 

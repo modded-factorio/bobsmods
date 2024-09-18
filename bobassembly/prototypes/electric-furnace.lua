@@ -139,10 +139,13 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       },
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      module_specification = {
-        module_slots = input.module_slots or 2,
-        module_info_icon_shift = { 0, 0.8 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = input.module_slots or 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = {0, 0.8 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       crafting_categories = { "smelting" },

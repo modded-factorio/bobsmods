@@ -159,9 +159,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       mining_speed = 1,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
-      module_specification = {
-        module_slots = 1,
-      },
+      module_slots = 1,
       radius_visualisation_picture = {
         filename = "__bobmining__/graphics/entity/water-miner/water-miner-radius-visualization.png",
         width = 12,
@@ -226,10 +224,13 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       mining_speed = 2,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
-      module_specification = {
-        module_slots = 2,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.mining_drill_modules,
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {
@@ -295,10 +296,13 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       mining_speed = 3,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
-      module_specification = {
-        module_slots = 3,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 3,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.mining_drill_modules,
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {
@@ -364,10 +368,13 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       mining_speed = 4,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
-      module_specification = {
-        module_slots = 4,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 4,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.mining_drill_modules,
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {
@@ -433,10 +440,13 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       mining_speed = 5,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
-      module_specification = {
-        module_slots = 5,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 5,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.mining_drill_modules,
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3
+        }
       },
       fast_replaceable_group = "pumpjack",
       radius_visualisation_picture = {

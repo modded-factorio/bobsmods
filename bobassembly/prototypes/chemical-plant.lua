@@ -405,9 +405,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 4,
-      },
+      module_slots = 4,
       crafting_speed = 1.75,
       energy_usage = "260kW",
       energy_source = {
@@ -439,9 +437,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 5,
-      },
+      module_slots = 5,
       crafting_speed = 2.75,
       energy_usage = "390kW",
       energy_source = {
@@ -473,9 +469,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 6,
-      },
+      module_slots = 6,
       crafting_speed = 3.5,
       energy_usage = "480kW",
       energy_source = {

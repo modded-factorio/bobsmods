@@ -35,7 +35,7 @@ else
   bobmods.lib.recipe.add_ingredient("assembling-machine-3", { type = "item", name = "iron-gear-wheel", amount = 5 })
 end
 
-data.raw["assembling-machine"]["assembling-machine-3"].module_specification.module_slots = 3
+data.raw["assembling-machine"]["assembling-machine-3"].module_slots = 3
 data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
 
 if data.raw.item["aluminium-plate"] then

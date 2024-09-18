@@ -279,9 +279,7 @@ then
       max_health = 275,
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 3,
-      },
+      module_slots = 3,
       crafting_speed = 1.25,
       energy_usage = "650kW",
       energy_source = {
@@ -313,9 +311,7 @@ then
       max_health = 375,
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 4,
-      },
+      module_slots = 4,
       crafting_speed = 2,
       energy_usage = "960kW",
       energy_source = {
@@ -347,9 +343,7 @@ then
       max_health = 500,
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 5,
-      },
+      module_slots = 5,
       crafting_speed = 2.75,
       energy_usage = "1210kW",
       energy_source = {
@@ -380,9 +374,7 @@ then
       max_health = 600,
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-      module_specification = {
-        module_slots = 6,
-      },
+      module_slots = 6,
       crafting_speed = 3.5,
       energy_usage = "1400kW",
       energy_source = {

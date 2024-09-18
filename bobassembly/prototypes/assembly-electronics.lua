@@ -128,9 +128,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         emissions_per_minute = 2,
       },
       energy_usage = "100kW",
-      module_specification = {
-        module_slots = 2,
-      },
+      module_slots = 2,
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
 
@@ -294,9 +292,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         emissions_per_minute = 1,
       },
       energy_usage = "213.75kW",
-      module_specification = {
-        module_slots = 4,
-        module_info_max_icons_per_row = 3,
+      module_slots = 4,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          max_icons_per_row = 3,
+        }
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
@@ -466,9 +467,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         emissions_per_minute = 0.5,
       },
       energy_usage = "360kW",
-      module_specification = {
-        module_slots = 6,
-        module_info_max_icons_per_row = 3,
+      module_slots = 6,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          max_icons_per_row = 3,
+        }
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },

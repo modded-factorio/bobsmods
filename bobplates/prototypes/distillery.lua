@@ -248,9 +248,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       animation = bobmods.plates.distillery_animation({ r = 0.7, g = 0.7, b = 0.1 }),
       working_visualisations = bobmods.plates.distillery_working_visualisations(1),
       allowed_effects = { "consumption", "speed", "pollution" },
-      module_specification = {
-        module_slots = 1,
-      },
+      module_slots = 1,
       working_sound = {
         sound = {
           filename = "__base__/sound/boiler.ogg",

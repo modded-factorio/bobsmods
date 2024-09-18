@@ -34,7 +34,7 @@ data:extend({
       next_upgrade = "beacon-3",
       supply_area_distance = 6,
       distribution_effectivity = 0.75,
-      module_specification = { module_slots = 4 },
+      module_slots = 4,
     },
   }),
 
@@ -46,7 +46,7 @@ data:extend({
       max_health = 400,
       supply_area_distance = 9,
       distribution_effectivity = 1,
-      module_specification = { module_slots = 6 },
+      module_slots = 6,
     },
   }),
 
@@ -143,5 +143,3 @@ data:extend({
 })
 
 data.raw.beacon["beacon"].next_upgrade = "beacon-2"
-data.raw.beacon["beacon-2"].module_specification.module_info_max_icons_per_row = nil
-data.raw.beacon["beacon-3"].module_specification.module_info_max_icons_per_row = nil

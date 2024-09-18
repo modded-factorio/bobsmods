@@ -66,7 +66,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         crafting_speed = 2.25,
         energy_usage = "750kW",
         energy_source = { emissions_per_minute = 3 },
-        module_specification = { module_slots = 4 },
+        module_slots = 4,
         next_upgrade = "centrifuge-3",
       },
     }),
@@ -81,7 +81,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         crafting_speed = 3.5,
         energy_usage = "1050kW",
         energy_source = { emissions_per_minute = 2 },
-        module_specification = { module_slots = 6 },
+        module_slots = 6,
       },
     }),
 

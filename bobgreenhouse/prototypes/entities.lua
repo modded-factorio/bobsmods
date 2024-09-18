@@ -36,9 +36,6 @@ data:extend({
         pipe_connections = { { type = "input", position = { 0, -2 } } },
       },
     },
-    module_specification = {
-      module_slots = 0,
-    },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
       filename = "__bobgreenhouse__/graphics/entity/greenhouse.png",
