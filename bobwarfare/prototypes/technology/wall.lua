@@ -4,7 +4,6 @@ data:extend({
     name = "reinforced-wall",
     icon = "__base__/graphics/technology/stone-wall.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "gate",
     },

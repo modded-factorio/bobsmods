@@ -7,7 +7,6 @@ if settings.startup["bobmods-power-solar"].value == true then
       localised_description = { "technology-description.solar-energy" },
       icon = "__base__/graphics/technology/solar-energy.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -46,7 +45,6 @@ if settings.startup["bobmods-power-solar"].value == true then
       localised_description = { "technology-description.solar-energy" },
       icon = "__base__/graphics/technology/solar-energy.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",

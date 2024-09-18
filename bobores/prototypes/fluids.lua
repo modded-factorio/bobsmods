@@ -2,7 +2,6 @@ bobmods.ores.water = {
   name = "ground-water",
   icon = "__base__/graphics/icons/fluid/water.png",
   icon_size = 64,
-  icon_mipmaps = 4,
   category = "water",
   infinite = true,
   minimum = 1000,

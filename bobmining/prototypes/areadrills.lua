@@ -5,7 +5,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-mining-drill-1",
       icon = "__base__/graphics/icons/electric-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "extraction-machine",
       order = "a[items]-b-b[mining-drill-1]",
       place_result = "bob-area-mining-drill-1",
@@ -16,7 +15,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-mining-drill-2",
       icon = "__base__/graphics/icons/electric-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "extraction-machine",
       order = "a[items]-b-b[mining-drill-2]",
       place_result = "bob-area-mining-drill-2",
@@ -27,7 +25,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-mining-drill-3",
       icon = "__base__/graphics/icons/electric-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "extraction-machine",
       order = "a[items]-b-b[mining-drill-3]",
       place_result = "bob-area-mining-drill-3",
@@ -38,7 +35,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-mining-drill-4",
       icon = "__base__/graphics/icons/electric-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "extraction-machine",
       order = "a[items]-b-b[mining-drill-4]",
       place_result = "bob-area-mining-drill-4",
@@ -165,7 +161,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-drills-1",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       order = "d-a-b-1",
       prerequisites = {
         "steel-processing",
@@ -190,7 +185,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-drills-2",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       order = "d-a-b-2",
       prerequisites = {
         "bob-area-drills-1",
@@ -216,7 +210,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-drills-3",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       order = "d-a-b-3",
       prerequisites = {
         "bob-area-drills-2",
@@ -243,7 +236,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       name = "bob-area-drills-4",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       order = "d-a-b-4",
       prerequisites = {
         "bob-area-drills-3",

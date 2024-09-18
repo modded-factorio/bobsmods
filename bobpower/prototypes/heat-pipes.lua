@@ -87,7 +87,6 @@ then
         localised_description = { "entity-description.heat-pipe", 1000 },
         icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
         icon_size = 32,
-        icon_mipmaps = 1,
         minable = { mining_time = 0.1, result = "heat-pipe-2" },
         max_health = 300,
         heat_buffer = {
@@ -123,7 +122,6 @@ then
         localised_description = { "entity-description.heat-pipe", 1250 },
         icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
         icon_size = 32,
-        icon_mipmaps = 1,
         minable = { mining_time = 0.1, result = "heat-pipe-3" },
         max_health = 300,
         heat_buffer = {
@@ -159,7 +157,6 @@ then
         localised_description = { "entity-description.heat-pipe", 1500 },
         icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
         icon_size = 32,
-        icon_mipmaps = 1,
         minable = { mining_time = 0.1, result = "heat-pipe-4" },
         max_health = 400,
         heat_buffer = {

@@ -6,7 +6,6 @@ if settings.startup["bobmods-power-steam"].value == true then
         name = "oil-boiler",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
         icon_size = 32,
-        icon_mipmaps = 1,
         minable = { mining_time = 0.5, result = "oil-boiler" },
         max_health = 300,
         target_temperature = 315,

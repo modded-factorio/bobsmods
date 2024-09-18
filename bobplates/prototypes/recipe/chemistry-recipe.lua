@@ -21,7 +21,6 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
       name = "ground-water",
       icon = "__base__/graphics/icons/fluid/water.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "bob-fluid-pump",
       order = "b[fluid-chemistry]-b[water]",
       category = "water-pump",
@@ -376,7 +375,6 @@ data:extend({
     subgroup = "bob-fluid",
     icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     order = "b[fluid-chemistry]-f[sulfuric-acid]",
     crafting_machine_tint = {
       primary = { r = 0.875, g = 0.735, b = 0.000, a = 0.000 }, -- #dfbb0000
@@ -812,7 +810,6 @@ data:extend({
     name = "sulfuric-acid-3",
     icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     category = "chemistry",
     subgroup = "bob-fluid",
     order = "b[fluid-chemistry]-f[sulfuric-acid]",

@@ -4,7 +4,6 @@ data:extend({
     name = "poison-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {
       "placeable-player",
       "placeable-enemy",
@@ -69,7 +68,6 @@ data:extend({
     name = "distractor-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {
       "placeable-player",
       "placeable-enemy",
@@ -120,7 +118,6 @@ data:extend({
     name = "slowdown-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {
       "placeable-player",
       "placeable-enemy",

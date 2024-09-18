@@ -55,7 +55,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-motor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-h-a",
     prerequisites = {
@@ -140,7 +139,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-engine.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-h-b",
     prerequisites = {

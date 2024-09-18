@@ -151,7 +151,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       name = "electronics-machine-1",
       icon = "__base__/graphics/technology/automation-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -319,7 +318,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       name = "electronics-machine-2",
       icon = "__base__/graphics/technology/automation-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -491,7 +489,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       name = "electronics-machine-3",
       icon = "__base__/graphics/technology/automation-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",

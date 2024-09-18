@@ -861,12 +861,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/icons/shotgun-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
         shift = { -16, -16 },
       },
@@ -902,12 +900,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/icons/poison-capsule.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
         shift = { -16, -16 },
       },
@@ -941,7 +937,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
@@ -978,12 +973,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/icons/grenade.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
         shift = { -16, -16 },
       },
@@ -1017,7 +1010,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobwarfare__/graphics/icons/distractor.png",
@@ -1056,12 +1048,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/technology/atomic-bomb.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         scale = 0.125,
         shift = { -16, -16 },
       },

@@ -87,7 +87,6 @@ data:extend({
     name = "bob-artillery-wagon-2",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "train-transport",
     order = "a[train-system]-i[artillery-wagon]-2",
     place_result = "bob-artillery-wagon-2",
@@ -98,7 +97,6 @@ data:extend({
     name = "bob-artillery-wagon-3",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "train-transport",
     order = "a[train-system]-i[artillery-wagon]-3",
     place_result = "bob-artillery-wagon-3",
@@ -143,7 +141,6 @@ data:extend({
     name = "bob-artillery-wagon-2",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -172,7 +169,6 @@ data:extend({
     name = "bob-artillery-wagon-3",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",

@@ -12,7 +12,6 @@ function bobmods.equipment.technology_icon_constant_equipment(technology_icon)
     {
       icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
       scale = scale,
       shift = { 100 * scale, 100 * scale },
     },

@@ -4,7 +4,6 @@ data:extend({
     name = "bob-fluid-handling-2",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "fluid-handling",
     },
@@ -38,7 +37,6 @@ data:extend({
     name = "bob-fluid-handling-3",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "bob-fluid-handling-2",
       "chemical-science-pack",
@@ -74,7 +72,6 @@ data:extend({
     name = "bob-fluid-handling-4",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "bob-fluid-handling-3",
       "production-science-pack",
@@ -114,7 +111,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-railway-2",
       icon = "__base__/graphics/technology/railway.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -145,7 +141,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-railway-3",
       icon = "__base__/graphics/technology/railway.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -177,7 +172,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-railway",
       icon = "__base__/graphics/technology/railway.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -209,7 +203,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-railway-2",
       icon = "__base__/graphics/technology/railway.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -245,7 +238,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-fluid-wagon-2",
       icon = "__base__/graphics/technology/fluid-wagon.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -273,7 +265,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-fluid-wagon-3",
       icon = "__base__/graphics/technology/fluid-wagon.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -302,7 +293,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-fluid-wagon",
       icon = "__base__/graphics/technology/fluid-wagon.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -331,7 +321,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-fluid-wagon-2",
       icon = "__base__/graphics/technology/fluid-wagon.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -719,7 +708,6 @@ data:extend({
     name = "logistic-system-2",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -764,7 +752,6 @@ data:extend({
     name = "logistic-system-3",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",

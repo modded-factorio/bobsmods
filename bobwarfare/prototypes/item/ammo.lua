@@ -603,7 +603,6 @@ data:extend({
     name = "flame-thrower-acid",
     icon = "__base__/graphics/icons/flame-thrower-ammo.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "ammo",
     order = "f[flame-thrower-acid]",
     stack_size = 50,
@@ -804,12 +803,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/icons/shotgun-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { -8, -8 },
       },
@@ -883,7 +880,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/icons/poison-capsule.png",
@@ -923,7 +919,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
@@ -963,7 +958,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/icons/grenade.png",
@@ -1003,7 +997,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobwarfare__/graphics/icons/distractor.png",
@@ -1043,12 +1036,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__base__/graphics/technology/atomic-bomb.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         scale = 0.0625,
         shift = { -8, -8 },
       },

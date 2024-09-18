@@ -1,6 +1,5 @@
 data.raw["repair-tool"]["repair-pack"].icon = "__boblogistics__/graphics/icons/repair-pack.png"
 data.raw["repair-tool"]["repair-pack"].icon_size = 32
-data.raw["repair-tool"]["repair-pack"].icon_mipmaps = nil
 data.raw["repair-tool"]["repair-pack"].order = "b[repair]-a[repair-pack-1]"
 
 data:extend({

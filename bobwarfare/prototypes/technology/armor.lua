@@ -4,7 +4,6 @@ data:extend({
     name = "bob-armor-making-3",
     icon = "__base__/graphics/technology/armor-making.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "heavy-armor",
       "logistic-science-pack",
@@ -31,7 +30,6 @@ data:extend({
     name = "bob-armor-making-4",
     icon = "__base__/graphics/technology/armor-making.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "bob-armor-making-3",
       "chemical-science-pack",

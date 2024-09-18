@@ -1,12 +1,9 @@
 data.raw["technology"]["speed-module"].icon = "__bobmodules__/graphics/icons/speed-module-1.png"
 data.raw["technology"]["speed-module"].icon_size = 32
-data.raw["technology"]["speed-module"].icon_mipmaps = 0
 data.raw["technology"]["speed-module-2"].icon = "__bobmodules__/graphics/icons/speed-module-2.png"
 data.raw["technology"]["speed-module-2"].icon_size = 32
-data.raw["technology"]["speed-module-2"].icon_mipmaps = 0
 data.raw["technology"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/speed-module-3.png"
 data.raw["technology"]["speed-module-3"].icon_size = 32
-data.raw["technology"]["speed-module-3"].icon_mipmaps = 0
 
 if bobmods.modules.ModulesLab then
   data.raw["technology"]["speed-module"].unit = { count = 25, ingredients = { { "speed-processor", 1 } }, time = 30 }
@@ -191,10 +188,6 @@ data.raw["technology"]["effectivity-module-3"].icon = "__bobmodules__/graphics/i
 data.raw["technology"]["effectivity-module"].icon_size = 32
 data.raw["technology"]["effectivity-module-2"].icon_size = 32
 data.raw["technology"]["effectivity-module-3"].icon_size = 32
-
-data.raw["technology"]["effectivity-module"].icon_mipmaps = 0
-data.raw["technology"]["effectivity-module-2"].icon_mipmaps = 0
-data.raw["technology"]["effectivity-module-3"].icon_mipmaps = 0
 
 if bobmods.modules.ModulesLab then
   data.raw["technology"]["effectivity-module"].unit =
@@ -381,10 +374,6 @@ data.raw["technology"]["productivity-module-3"].icon = "__bobmodules__/graphics/
 data.raw["technology"]["productivity-module"].icon_size = 32
 data.raw["technology"]["productivity-module-2"].icon_size = 32
 data.raw["technology"]["productivity-module-3"].icon_size = 32
-
-data.raw["technology"]["productivity-module"].icon_mipmaps = 0
-data.raw["technology"]["productivity-module-2"].icon_mipmaps = 0
-data.raw["technology"]["productivity-module-3"].icon_mipmaps = 0
 
 if bobmods.modules.ModulesLab then
   data.raw["technology"]["productivity-module"].unit =

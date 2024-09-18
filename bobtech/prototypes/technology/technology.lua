@@ -86,7 +86,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
       name = "electricity",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "steam-power",
       },
@@ -143,7 +142,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
       name = "steam-power",
       icon = "__base__/graphics/icons/fluid/steam.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       prerequisites = {},
       effects = {},
       unit = {

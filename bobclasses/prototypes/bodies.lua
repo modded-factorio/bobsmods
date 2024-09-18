@@ -4,7 +4,6 @@ data:extend({
     name = "character",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     subgroup = "bodies",
     order = "a[character]-1",
     place_result = "character",
@@ -17,7 +16,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -39,7 +37,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -61,7 +58,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -84,13 +80,11 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -107,7 +101,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -119,7 +112,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -136,7 +128,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -148,7 +139,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -165,7 +155,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -177,7 +166,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -195,7 +183,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -217,7 +204,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -362,7 +348,6 @@ data:extend({
     name = "bodies",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -416,7 +401,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -454,7 +438,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -492,7 +475,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -529,7 +511,6 @@ data:extend({
     name = "bodies-2",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -580,7 +561,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -619,7 +599,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -658,7 +637,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -698,7 +676,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
@@ -738,7 +715,6 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {

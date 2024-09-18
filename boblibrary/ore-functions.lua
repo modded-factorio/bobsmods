@@ -339,7 +339,6 @@ function bobmods.lib.resource.create_item(inputs)
   if inputs.icon then
     data.raw.item[inputs.name].icon = inputs.icon
     data.raw.item[inputs.name].icon_size = inputs.icon_size or 32
-    data.raw.item[inputs.name].icon_mipmaps = inputs.icon_mipmaps
   elseif inputs.icons then
     data.raw.item[inputs.name].icon = inputs.icons
   else
@@ -425,7 +424,6 @@ function bobmods.lib.resource.create(inputs)
   if inputs.icon then
     data.raw.resource[inputs.name].icon = inputs.icon
     data.raw.resource[inputs.name].icon_size = inputs.icon_size or 32
-    data.raw.resource[inputs.name].icon_mipmaps = inputs.icon_mipmaps
   else
     data.raw.resource[inputs.name].icons = bobmods.lib.resource.create_icon(inputs)
   end

@@ -333,7 +333,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       name = "rocket-fuel",
       icon = "__base__/graphics/technology/rocket-fuel.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "flammables",
         "hydrazine",

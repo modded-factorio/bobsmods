@@ -8,7 +8,6 @@ data:extend({
     name = "beacon-2",
     icon = "__base__/graphics/icons/beacon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "module-beacon",
     order = "a[beacon]-2",
     place_result = "beacon-2",
@@ -20,7 +19,6 @@ data:extend({
     name = "beacon-3",
     icon = "__base__/graphics/icons/beacon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "module-beacon",
     order = "a[beacon]-3",
     place_result = "beacon-3",
@@ -90,7 +88,6 @@ data:extend({
     name = "effect-transmission-2",
     icon = "__base__/graphics/technology/effect-transmission.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -120,7 +117,6 @@ data:extend({
     name = "effect-transmission-3",
     icon = "__base__/graphics/technology/effect-transmission.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",

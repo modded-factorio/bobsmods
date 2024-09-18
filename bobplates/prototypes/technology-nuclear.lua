@@ -42,7 +42,6 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       name = "plutonium-fuel-cell",
       icon = "__bobplates__/graphics/icons/nuclear/plutonium-fuel-cell.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -133,7 +132,6 @@ if data.raw.item["thorium-ore"] then
         name = "thorium-plutonium-fuel-cell",
         icon = "__bobplates__/graphics/icons/nuclear/thorium-plutonium-fuel-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         effects = {
           {
             type = "unlock-recipe",
@@ -266,7 +264,6 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       name = "deuterium-fuel-cell-2",
       icon = "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-2.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",

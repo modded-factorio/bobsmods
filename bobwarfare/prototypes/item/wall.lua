@@ -17,7 +17,6 @@ data:extend({
     name = "reinforced-gate",
     icon = "__base__/graphics/icons/gate.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "defensive-structure",
     order = "a[wall]-d[reinforced]",
     place_result = "reinforced-gate",

@@ -124,7 +124,6 @@ data:extend({
     name = "automation-4",
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -304,7 +303,6 @@ data:extend({
     name = "automation-5",
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -484,7 +482,6 @@ data:extend({
     name = "automation-6",
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",

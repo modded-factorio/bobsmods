@@ -2,13 +2,11 @@ data.raw.item["logistic-robot"].order = "a[robot]-a[logistic-robot-1]"
 data.raw.item["logistic-robot"].subgroup = "bob-logistic-robots"
 data.raw.item["logistic-robot"].icon = "__boblogistics__/graphics/icons/robots/logistic-robot-1.png"
 data.raw.item["logistic-robot"].icon_size = 32
-data.raw.item["logistic-robot"].icon_mipmaps = nil
 
 data.raw.item["construction-robot"].order = "a[robot]-b[construction-robot-1]"
 data.raw.item["construction-robot"].subgroup = "bob-construction-robots"
 data.raw.item["construction-robot"].icon = "__boblogistics__/graphics/icons/robots/construction-robot-1.png"
 data.raw.item["construction-robot"].icon_size = 32
-data.raw.item["construction-robot"].icon_mipmaps = nil
 
 data:extend({
   {

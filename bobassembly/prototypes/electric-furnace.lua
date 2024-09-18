@@ -247,7 +247,6 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       name = "advanced-material-processing-3",
       icon = "__base__/graphics/technology/advanced-material-processing.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       order = "c-c-c",
       prerequisites = {
         "advanced-material-processing-2",
@@ -277,7 +276,6 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       name = "advanced-material-processing-4",
       icon = "__base__/graphics/technology/advanced-material-processing.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       order = "c-c-d",
       prerequisites = {
         "advanced-material-processing-3",

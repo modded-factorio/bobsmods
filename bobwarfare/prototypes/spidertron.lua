@@ -184,7 +184,6 @@ function bobmods.warfare.create_spidertron(arguments)
       icon_tintable = "__base__/graphics/icons/spidertron-tintable.png",
       icon_tintable_mask = "__base__/graphics/icons/spidertron-tintable-mask.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "transport",
       order = "b[personal-transport]-c[spidertron]-" .. arguments.order_letter .. "[" .. arguments.name .. "]",
       place_result = arguments.name,
@@ -195,7 +194,6 @@ function bobmods.warfare.create_spidertron(arguments)
       name = arguments.name,
       icon = "__base__/graphics/icons/spidertron.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       collision_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       drawing_box = { { -3 * scale, -4 * scale }, { 3 * scale, 2 * scale } },
@@ -420,7 +418,6 @@ data:extend({
     localised_name = { "item-name.spidertron-cannon" },
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "hidden" },
     subgroup = "gun",
     order = "z[tank]-a[spidertron-cannon-1]",
@@ -448,7 +445,6 @@ data:extend({
     localised_name = { "item-name.spidertron-cannon" },
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "hidden" },
     subgroup = "gun",
     order = "z[tank]-a[spidertron-cannon-2]",
@@ -475,7 +471,6 @@ data:extend({
     name = "spidertron-cannon",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "gun",
     order = "g[spidertron-cannon]",
     stack_size = 10,
@@ -686,7 +681,6 @@ data:extend({
     name = "walking-vehicle",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -717,7 +711,6 @@ data:extend({
     name = "tankotron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -750,7 +743,6 @@ data:extend({
     name = "logistic-spidertron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -781,7 +773,6 @@ data:extend({
     name = "heavy-spidertron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -813,7 +804,6 @@ data:extend({
     name = "spidertron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects =
     {
       {

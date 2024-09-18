@@ -265,7 +265,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
         name = "steam-automation",
         icon = "__base__/graphics/technology/automation-1.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "basic-automation",
           "steam-power",

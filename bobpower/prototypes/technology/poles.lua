@@ -5,7 +5,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       name = "electric-pole-2",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -35,7 +34,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       name = "electric-pole-3",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -67,7 +65,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       name = "electric-pole-4",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -100,7 +97,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       name = "electric-substation-2",
       icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -128,7 +124,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       name = "electric-substation-3",
       icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -156,7 +151,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       name = "electric-substation-4",
       icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",

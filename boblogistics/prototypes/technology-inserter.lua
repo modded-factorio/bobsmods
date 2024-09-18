@@ -25,7 +25,6 @@ data:extend({
     name = "stack-inserter-2",
     icon = "__base__/graphics/technology/stack-inserter.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {},
     prerequisites = {
       "stack-inserter",
@@ -47,11 +46,9 @@ data:extend({
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.technology["fast-inserter"].icon = "__boblogistics__/graphics/icons/technology/long-inserters.png"
   data.raw.technology["fast-inserter"].icon_size = 128
-  data.raw.technology["fast-inserter"].icon_mipmaps = nil
 
   data.raw.technology["express-inserters"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
   data.raw.technology["express-inserters"].icon_size = 128
-  data.raw.technology["express-inserters"].icon_mipmaps = nil
 
   bobmods.lib.tech.remove_prerequisite("fast-inserter", "electronics")
   bobmods.lib.tech.add_prerequisite("fast-inserter", "logistics-2")
@@ -130,7 +127,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       name = "stack-inserter-3",
       icon = "__base__/graphics/technology/stack-inserter.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -163,7 +159,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       name = "stack-inserter-4",
       icon = "__base__/graphics/technology/stack-inserter.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -207,7 +202,6 @@ data:extend({
     name = "inserter-stack-size-bonus-1",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -234,7 +228,6 @@ data:extend({
     name = "inserter-stack-size-bonus-2",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -259,7 +252,6 @@ data:extend({
     name = "inserter-stack-size-bonus-3",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -285,7 +277,6 @@ data:extend({
     name = "inserter-stack-size-bonus-4",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -321,7 +312,6 @@ data:extend({
       {
         icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
         icon_size = 128,
-        icon_mipmaps = 3,
         shift = { 50, 50 },
         scale = 0.5,
       },

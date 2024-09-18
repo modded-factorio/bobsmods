@@ -343,7 +343,6 @@ for i = 1, 7 do
       {
         icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
         icon_size = 128,
-        icon_mipmaps = 3,
         shift = { 50, 50 },
         scale = 0.5,
       },

@@ -50,7 +50,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-l-a",
     prerequisites = {
@@ -131,7 +130,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-l-b",
     prerequisites = {
@@ -213,7 +211,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-l-c",
     prerequisites = {
@@ -296,7 +293,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-l-d",
     prerequisites = {
@@ -378,7 +374,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-l-e",
     prerequisites = {
@@ -460,7 +455,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-l-f",
     prerequisites = {

@@ -142,7 +142,6 @@ data:extend({
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
@@ -179,7 +178,6 @@ data:extend({
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
@@ -243,7 +241,6 @@ data:extend({
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
@@ -279,7 +276,6 @@ data:extend({
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
@@ -498,7 +494,6 @@ data:extend({
     name = "water-bore-1",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {},
     effects = {
       {
@@ -521,7 +516,6 @@ data:extend({
     name = "water-bore-2",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {
       "water-bore-1",
       "steel-processing",
@@ -550,7 +544,6 @@ data:extend({
     name = "water-bore-3",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {
       "water-bore-2",
       "zinc-processing",
@@ -580,7 +573,6 @@ data:extend({
     name = "water-bore-4",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {
       "water-bore-3",
       "nitinol-processing",
@@ -942,7 +934,6 @@ data:extend({
     name = "battery-2",
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "battery",
       "lithium-processing",
@@ -976,7 +967,6 @@ data:extend({
     name = "battery-3",
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "battery-2",
       "nitrogen-processing",

@@ -53,7 +53,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-i-a",
     prerequisites = {
@@ -132,7 +131,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-i-b",
     prerequisites = {
@@ -212,7 +210,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-i-c",
     prerequisites = {
@@ -291,7 +288,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-i-d",
     prerequisites = {
@@ -372,7 +368,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-i-e",
     prerequisites = {
@@ -452,7 +447,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-i-f",
     prerequisites = {

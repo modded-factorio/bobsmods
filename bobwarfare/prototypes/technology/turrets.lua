@@ -4,7 +4,6 @@ data:extend({
     name = "bob-turrets-2",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-a-2",
     prerequisites = {
       "gun-turret",
@@ -31,7 +30,6 @@ data:extend({
     name = "bob-turrets-3",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-a-3",
     prerequisites = {
       "bob-turrets-2",
@@ -59,7 +57,6 @@ data:extend({
     name = "bob-turrets-4",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-a-4",
     prerequisites = {
       "bob-turrets-3",
@@ -88,7 +85,6 @@ data:extend({
     name = "bob-turrets-5",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-a-5",
     prerequisites = {
       "bob-turrets-4",
@@ -118,7 +114,6 @@ data:extend({
     name = "bob-laser-turrets-2",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-b-2",
     prerequisites = {
       "laser-turret",
@@ -146,7 +141,6 @@ data:extend({
     name = "bob-laser-turrets-3",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-b-3",
     prerequisites = {
       "bob-laser-turrets-2",
@@ -175,7 +169,6 @@ data:extend({
     name = "bob-laser-turrets-4",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-b-4",
     prerequisites = {
       "bob-laser-turrets-3",
@@ -206,7 +199,6 @@ data:extend({
     name = "bob-laser-turrets-5",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-b-5",
     prerequisites = {
       "bob-laser-turrets-4",
@@ -237,7 +229,6 @@ data:extend({
     name = "bob-sniper-turrets-1",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-c-1",
     prerequisites = {
       "gun-turret",
@@ -265,7 +256,6 @@ data:extend({
     name = "bob-sniper-turrets-2",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-c-2",
     prerequisites = {
       "bob-sniper-turrets-1",
@@ -293,7 +283,6 @@ data:extend({
     name = "bob-sniper-turrets-3",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     order = "a-j-c-3",
     prerequisites = {
       "bob-sniper-turrets-2",
@@ -468,7 +457,6 @@ data:extend({
     type = "technology",
     name = "bob-artillery-turret-2",
     icon_size = 256,
-    icon_mipmaps = 4,
     icon = "__base__/graphics/technology/artillery.png",
     effects = {
       {
@@ -498,7 +486,6 @@ data:extend({
     type = "technology",
     name = "bob-artillery-turret-3",
     icon_size = 256,
-    icon_mipmaps = 4,
     icon = "__base__/graphics/technology/artillery.png",
     effects = {
       {

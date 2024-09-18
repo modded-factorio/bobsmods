@@ -245,7 +245,6 @@ then
       icons = {
         {
           icon_size = 256,
-          icon_mipmaps = 4,
           scale = 0.25,
           icon = "__base__/graphics/technology/advanced-material-processing.png",
         },
@@ -293,7 +292,6 @@ then
       icons = {
         {
           icon_size = 256,
-          icon_mipmaps = 4,
           icon = "__base__/graphics/technology/advanced-material-processing.png",
         },
         {

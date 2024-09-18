@@ -185,7 +185,6 @@ then
   data.raw.reactor["nuclear-reactor-2"].default_fuel_glow_color = { r = 1.0, g = 1.0, b = 0.0 }
   data.raw.reactor["nuclear-reactor-2"].icon = "__bobrevamp__/graphics/icons/thorium-reactor.png"
   data.raw.reactor["nuclear-reactor-2"].icon_size = 32
-  data.raw.reactor["nuclear-reactor-2"].icon_mipmaps = nil
 
   data.raw.item["thorium-fuel-cell"].fuel_category = "thorium"
   if data.raw.item["thorium-plutonium-fuel-cell"] then
@@ -198,7 +197,6 @@ then
   data.raw.item["nuclear-reactor-2"].localised_name = { "entity-name.thorium-reactor" }
   data.raw.item["nuclear-reactor-2"].icon = "__bobrevamp__/graphics/icons/thorium-reactor.png"
   data.raw.item["nuclear-reactor-2"].icon_size = 32
-  data.raw.item["nuclear-reactor-2"].icon_mipmaps = nil
 
   bobmods.lib.recipe.remove_ingredient("nuclear-reactor-2", "nuclear-reactor")
 
@@ -233,7 +231,6 @@ then
   data.raw.reactor["nuclear-reactor-3"].localised_description =
     { "", { "entity-description.deuterium-reactor" }, { "entity-description.reactor-max-temperature", 1500 } }
   data.raw.reactor["nuclear-reactor-3"].icon_size = 32
-  data.raw.reactor["nuclear-reactor-3"].icon_mipmaps = nil
 
   data.raw.item["deuterium-fuel-cell"].fuel_category = "deuterium"
   if data.raw.item["deuterium-fuel-cell-2"] then
@@ -245,7 +242,6 @@ then
 
   data.raw.item["nuclear-reactor-3"].localised_name = { "entity-name.deuterium-reactor" }
   data.raw.item["nuclear-reactor-3"].icon_size = 32
-  data.raw.item["nuclear-reactor-3"].icon_mipmaps = nil
 
   bobmods.lib.recipe.remove_ingredient("nuclear-reactor-3", "nuclear-reactor-2")
 

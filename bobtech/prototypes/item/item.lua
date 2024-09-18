@@ -5,7 +5,6 @@ data:extend({
     localised_name = { "item-name.logistic-science-pack" },
     icon = "__bobtech__/graphics/icons/logistic-science-pack.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "science-pack",
     order = "e[advanced-logistic-science-pack]",
     stack_size = 200,

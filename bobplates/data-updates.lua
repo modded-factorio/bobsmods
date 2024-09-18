@@ -17,7 +17,6 @@ end
 if settings.startup["bobmods-colorupdate"].value == true then
   data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery-red.png"
   data.raw.item["battery"].icon_size = 64
-  data.raw.item["battery"].icon_mipmaps = nil
   data.raw.recipe["battery"].crafting_machine_tint = data.raw.recipe["battery"].crafting_machine_tint or {}
   data.raw.recipe["battery"].crafting_machine_tint.primary = { r = 1.0, g = 0.2, b = 0.1, a = 1.000 }
 
@@ -35,7 +34,6 @@ if settings.startup["bobmods-colorupdate"].value == true then
 else
   data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
   data.raw.item["battery"].icon_size = 64
-  data.raw.item["battery"].icon_mipmaps = nil
 end
 
 -- small storage tank recipe move.
@@ -123,12 +121,10 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data.raw.technology["nuclear-fuel-reprocessing"].icon =
     "__bobplates__/graphics/icons/technology/uranium-nuclear-fuel-reprocessing-new.png"
   data.raw.technology["nuclear-fuel-reprocessing"].icon_size = 128
-  data.raw.technology["nuclear-fuel-reprocessing"].icon_mipmaps = nil
 
   data.raw.recipe["nuclear-fuel-reprocessing"].icon =
     "__bobplates__/graphics/icons/nuclear/nuclear-fuel-reprocessing.png"
   data.raw.recipe["nuclear-fuel-reprocessing"].icon_size = 32
-  data.raw.recipe["nuclear-fuel-reprocessing"].icon_mipmaps = nil
   data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60

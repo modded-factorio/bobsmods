@@ -4,7 +4,6 @@ data:extend({
     name = "poison-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "land-mine",
       "military-3",
@@ -33,7 +32,6 @@ data:extend({
     name = "slowdown-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "land-mine",
       "military-3",
@@ -62,7 +60,6 @@ data:extend({
     name = "distractor-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "land-mine",
       "distractor",

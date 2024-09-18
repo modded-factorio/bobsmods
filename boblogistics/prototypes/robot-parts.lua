@@ -76,7 +76,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       name = "bob-robotics-2",
       icon = "__base__/graphics/technology/robotics.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -104,7 +103,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       name = "bob-robotics-3",
       icon = "__base__/graphics/technology/robotics.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -133,7 +131,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       name = "bob-robotics-4",
       icon = "__base__/graphics/technology/robotics.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",

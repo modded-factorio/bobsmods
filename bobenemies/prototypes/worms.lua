@@ -342,7 +342,6 @@ data:extend({
     name = "bob-giant-worm-turret",
     icon = "__base__/graphics/icons/big-worm.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-player", "placeable-enemy", "not-repairable", "breaths-air" },
     max_health = 1000,
     order = "b-b-i",

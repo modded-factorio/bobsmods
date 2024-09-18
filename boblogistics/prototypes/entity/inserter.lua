@@ -80,7 +80,6 @@ data:extend({
     },
   }),
 })
-data.raw.inserter["steam-inserter"].icon_mipmaps = nil
 data.raw.inserter["steam-inserter"].hand_base_picture = inserter.graphics.white.hand_base_picture()
 data.raw.inserter["steam-inserter"].hand_closed_picture = inserter.graphics.white.hand_closed_picture()
 data.raw.inserter["steam-inserter"].hand_open_picture = inserter.graphics.white.hand_open_picture()
@@ -133,7 +132,6 @@ data:extend({
     },
   }),
 })
-data.raw.inserter["express-inserter"].icon_mipmaps = nil
 data.raw.inserter["express-inserter"].hand_base_picture = inserter.graphics.cyan.hand_base_picture()
 data.raw.inserter["express-inserter"].hand_closed_picture = inserter.graphics.cyan.hand_closed_picture()
 data.raw.inserter["express-inserter"].hand_open_picture = inserter.graphics.cyan.hand_open_picture()
@@ -156,7 +154,6 @@ data:extend({
     },
   }),
 })
-data.raw.inserter["express-filter-inserter"].icon_mipmaps = nil
 data.raw.inserter["express-filter-inserter"].hand_base_picture = inserter.graphics.magenta.hand_base_picture()
 data.raw.inserter["express-filter-inserter"].hand_closed_picture = inserter.graphics.magenta.hand_closed_picture()
 data.raw.inserter["express-filter-inserter"].hand_open_picture = inserter.graphics.magenta.hand_open_picture()
@@ -179,7 +176,6 @@ data:extend({
     },
   }),
 })
-data.raw.inserter["express-stack-inserter"].icon_mipmaps = nil
 data.raw.inserter["express-stack-inserter"].hand_base_picture = inserter.graphics.dark_green.hand_base_picture()
 data.raw.inserter["express-stack-inserter"].hand_closed_picture =
   inserter.graphics.dark_green.stack.hand_closed_picture()
@@ -204,7 +200,6 @@ data:extend({
     },
   }),
 })
-data.raw.inserter["express-stack-filter-inserter"].icon_mipmaps = nil
 data.raw.inserter["express-stack-filter-inserter"].hand_base_picture = inserter.graphics.stripe.hand_base_picture()
 data.raw.inserter["express-stack-filter-inserter"].hand_closed_picture =
   inserter.graphics.stripe.stack.hand_closed_picture()
@@ -244,7 +239,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["yellow-filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["yellow-filter-inserter"].hand_base_picture = inserter.graphics.yellow.hand_base_picture()
   data.raw.inserter["yellow-filter-inserter"].hand_closed_picture = inserter.graphics.yellow.hand_closed_picture()
   data.raw.inserter["yellow-filter-inserter"].hand_open_picture = inserter.graphics.yellow.hand_open_picture()
@@ -292,7 +286,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["red-filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["red-filter-inserter"].working_sound =
     util.table.deepcopy(data.raw.inserter["long-handed-inserter"].working_sound)
   data.raw.inserter["red-filter-inserter"].hand_base_picture = inserter.graphics.red.hand_base_picture()
@@ -318,7 +311,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["red-stack-inserter"].icon_mipmaps = nil
   data.raw.inserter["red-stack-inserter"].working_sound =
     util.table.deepcopy(data.raw.inserter["long-handed-inserter"].working_sound)
   data.raw.inserter["red-stack-inserter"].hand_base_picture = inserter.graphics.red.hand_base_picture()
@@ -344,7 +336,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["red-stack-filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["red-stack-filter-inserter"].working_sound =
     util.table.deepcopy(data.raw.inserter["long-handed-inserter"].working_sound)
   data.raw.inserter["red-stack-filter-inserter"].hand_base_picture = inserter.graphics.red.hand_base_picture()
@@ -354,7 +345,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   data.raw.inserter["fast-inserter"].icon = "__boblogistics__/graphics/icons/inserter/blue-inserter.png"
   data.raw.inserter["fast-inserter"].icon_size = 32
-  data.raw.inserter["fast-inserter"].icon_mipmaps = nil
   data.raw.inserter["fast-inserter"].next_upgrade = "turbo-inserter"
   data.raw.inserter["fast-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["fast-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -365,7 +355,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   data.raw.inserter["filter-inserter"].icon = "__boblogistics__/graphics/icons/inserter/blue-filter-inserter.png"
   data.raw.inserter["filter-inserter"].icon_size = 32
-  data.raw.inserter["filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["filter-inserter"].next_upgrade = "turbo-filter-inserter"
   data.raw.inserter["filter-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["filter-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -380,7 +369,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   data.raw.inserter["stack-inserter"].icon = "__boblogistics__/graphics/icons/inserter/blue-stack-inserter.png"
   data.raw.inserter["stack-inserter"].icon_size = 32
-  data.raw.inserter["stack-inserter"].icon_mipmaps = nil
   data.raw.inserter["stack-inserter"].next_upgrade = "turbo-stack-inserter"
   data.raw.inserter["stack-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["stack-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -396,7 +384,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["stack-filter-inserter"].icon =
     "__boblogistics__/graphics/icons/inserter/blue-stack-filter-inserter.png"
   data.raw.inserter["stack-filter-inserter"].icon_size = 32
-  data.raw.inserter["stack-filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["stack-filter-inserter"].next_upgrade = "turbo-stack-filter-inserter"
   data.raw.inserter["stack-filter-inserter"].max_health = inserter.stats.blue.health
   data.raw.inserter["stack-filter-inserter"].extension_speed = inserter.stats.blue.extension_speed
@@ -427,7 +414,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["turbo-inserter"].icon_mipmaps = nil
   data.raw.inserter["turbo-inserter"].hand_base_picture = inserter.graphics.purple.hand_base_picture()
   data.raw.inserter["turbo-inserter"].hand_closed_picture = inserter.graphics.purple.hand_closed_picture()
   data.raw.inserter["turbo-inserter"].hand_open_picture = inserter.graphics.purple.hand_open_picture()
@@ -451,7 +437,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["turbo-filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["turbo-filter-inserter"].hand_base_picture = inserter.graphics.purple.hand_base_picture()
   data.raw.inserter["turbo-filter-inserter"].hand_closed_picture = inserter.graphics.purple.hand_closed_picture()
   data.raw.inserter["turbo-filter-inserter"].hand_open_picture = inserter.graphics.purple.hand_open_picture()
@@ -475,7 +460,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["turbo-stack-inserter"].icon_mipmaps = nil
   data.raw.inserter["turbo-stack-inserter"].hand_base_picture = inserter.graphics.purple.hand_base_picture()
   data.raw.inserter["turbo-stack-inserter"].hand_closed_picture = inserter.graphics.purple.stack.hand_closed_picture()
   data.raw.inserter["turbo-stack-inserter"].hand_open_picture = inserter.graphics.purple.stack.hand_open_picture()
@@ -500,7 +484,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
     }),
   })
-  data.raw.inserter["turbo-stack-filter-inserter"].icon_mipmaps = nil
   data.raw.inserter["turbo-stack-filter-inserter"].hand_base_picture = inserter.graphics.purple.hand_base_picture()
   data.raw.inserter["turbo-stack-filter-inserter"].hand_closed_picture =
     inserter.graphics.purple.stack.hand_closed_picture()

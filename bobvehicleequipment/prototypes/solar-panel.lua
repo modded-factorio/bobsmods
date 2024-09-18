@@ -52,7 +52,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-k-a",
     prerequisites = {
@@ -133,7 +132,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-k-b",
     prerequisites = {
@@ -212,7 +210,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-k-c",
     prerequisites = {
@@ -292,7 +289,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-k-d",
     prerequisites = {
@@ -372,7 +368,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-k-e",
     prerequisites = {
@@ -454,7 +449,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
       icon_size = 128,
-      icon_mipmaps = 3,
     }),
     order = "v-g-k-f",
     prerequisites = {

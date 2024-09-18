@@ -373,7 +373,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
     order = "g-g-b",
     prerequisites = {
@@ -403,9 +402,7 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
-    icon_mipmaps = 4,
     order = "g-g-c",
     prerequisites = {
       "advanced-electronics-2",
@@ -438,7 +435,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
     order = "g-k-b",
     prerequisites = {
@@ -468,7 +464,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
     order = "g-k-c",
     prerequisites = {
@@ -500,7 +495,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
     order = "g-k-d",
     prerequisites = {
@@ -703,7 +697,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
     order = "g-h-b",
     prerequisites = {
@@ -732,7 +725,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
-      icon_mipmaps = 4,
     }),
     order = "g-h-c",
     prerequisites = {

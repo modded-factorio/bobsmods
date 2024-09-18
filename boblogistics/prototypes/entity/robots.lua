@@ -150,7 +150,6 @@ bobmods.logistics.logistic_robot_shadow_with_cargo = {
 
 data.raw["logistic-robot"]["logistic-robot"].icon = "__boblogistics__/graphics/icons/robots/logistic-robot-1.png"
 data.raw["logistic-robot"]["logistic-robot"].icon_size = 32
-data.raw["logistic-robot"]["logistic-robot"].icon_mipmaps = nil
 data.raw["logistic-robot"]["logistic-robot"].idle = bobmods.logistics.logistic_robot_idle(1)
 data.raw["logistic-robot"]["logistic-robot"].idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(1)
 data.raw["logistic-robot"]["logistic-robot"].in_motion = bobmods.logistics.logistic_robot_in_motion(1)
@@ -496,7 +495,6 @@ bobmods.logistics.robot_sparks = {
 data.raw["construction-robot"]["construction-robot"].icon =
   "__boblogistics__/graphics/icons/robots/construction-robot-1.png"
 data.raw["construction-robot"]["construction-robot"].icon_size = 32
-data.raw["construction-robot"]["construction-robot"].icon_mipmaps = nil
 data.raw["construction-robot"]["construction-robot"].idle = bobmods.logistics.construction_robot_idle(1)
 data.raw["construction-robot"]["construction-robot"].in_motion = bobmods.logistics.construction_robot_in_motion(1)
 data.raw["construction-robot"]["construction-robot"].working = bobmods.logistics.construction_robot_working(1)

@@ -6,7 +6,6 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       type = "technology",
       name = "steel-axe-2",
       icon_size = 64,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/icons/steel-axe.png",
       effects = {
         {
@@ -30,7 +29,6 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       type = "technology",
       name = "steel-axe-3",
       icon_size = 64,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/icons/steel-axe.png",
       effects = {
         {
@@ -54,7 +52,6 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       type = "technology",
       name = "steel-axe-4",
       icon_size = 64,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/icons/steel-axe.png",
       effects = {
         {
@@ -79,7 +76,6 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       type = "technology",
       name = "steel-axe-5",
       icon_size = 64,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/icons/steel-axe.png",
       effects = {
         {
@@ -105,7 +101,6 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       type = "technology",
       name = "steel-axe-6",
       icon_size = 64,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/icons/steel-axe.png",
       effects = {
         {

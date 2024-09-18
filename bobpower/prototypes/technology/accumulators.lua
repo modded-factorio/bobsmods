@@ -7,7 +7,6 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       localised_description = { "technology-description.electric-energy-accumulators" },
       icon = "__base__/graphics/technology/electric-energy-acumulators.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
@@ -46,7 +45,6 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       localised_description = { "technology-description.electric-energy-accumulators" },
       icon = "__base__/graphics/technology/electric-energy-acumulators.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",

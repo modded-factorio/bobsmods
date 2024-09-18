@@ -9,7 +9,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/belt-immunity-equipment.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     },
     icon_size = 32,
@@ -60,7 +59,6 @@ data:extend({
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
       icon = "__base__/graphics/icons/belt-immunity-equipment.png",
       icon_size = 64,
-      icon_mipmaps = 4,
     }),
     order = "g-g-g",
     prerequisites = {

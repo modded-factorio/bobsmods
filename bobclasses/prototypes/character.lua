@@ -8,7 +8,6 @@ data.raw.character.character.icons = {
   {
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    icon_mipmaps = 4,
   },
 }
 
@@ -20,7 +19,6 @@ bobmods.classes.characters["bob-character-miner"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -51,7 +49,6 @@ bobmods.classes.characters["bob-character-fighter"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -78,7 +75,6 @@ bobmods.classes.characters["bob-character-builder"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -105,13 +101,11 @@ bobmods.classes.characters["bob-character-balanced-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -141,7 +135,6 @@ bobmods.classes.characters["bob-character-miner-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -153,7 +146,6 @@ bobmods.classes.characters["bob-character-miner-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -179,7 +171,6 @@ bobmods.classes.characters["bob-character-fighter-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -191,7 +182,6 @@ bobmods.classes.characters["bob-character-fighter-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -215,7 +205,6 @@ bobmods.classes.characters["bob-character-builder-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -227,7 +216,6 @@ bobmods.classes.characters["bob-character-builder-2"] = util.merge({
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
@@ -251,7 +239,6 @@ bobmods.classes.characters["bob-character-engineer"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
@@ -282,7 +269,6 @@ bobmods.classes.characters["bob-character-prospector"] = util.merge({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {

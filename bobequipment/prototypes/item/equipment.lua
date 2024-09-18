@@ -6,11 +6,9 @@ data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equ
 
 data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
 data.raw.item["energy-shield-equipment"].icon_size = 64
-data.raw.item["energy-shield-equipment"].icon_mipmaps = nil
 data.raw.item["energy-shield-mk2-equipment"].icon =
   "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png"
 data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
-data.raw.item["energy-shield-mk2-equipment"].icon_mipmaps = nil
 
 data:extend({
   {
@@ -61,10 +59,8 @@ data:extend({
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
 data.raw.item["battery-equipment"].icon_size = 64
-data.raw.item["battery-equipment"].icon_mipmaps = nil
 data.raw.item["battery-mk2-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-mk2-equipment.png"
 data.raw.item["battery-mk2-equipment"].icon_size = 64
-data.raw.item["battery-mk2-equipment"].icon_mipmaps = nil
 
 data:extend({
   {
@@ -116,7 +112,6 @@ data:extend({
 data.raw.item["fusion-reactor-equipment"].icon =
   "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-1.png"
 data.raw.item["fusion-reactor-equipment"].icon_size = 128
-data.raw.item["fusion-reactor-equipment"].icon_mipmaps = nil
 
 data:extend({
   {
@@ -155,7 +150,6 @@ data:extend({
     name = "night-vision-equipment-2",
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     placed_as_equipment_result = "night-vision-equipment-2",
     subgroup = "equipment",
     order = "f[night-vision]-b[night-vision-equipment-2]",
@@ -166,7 +160,6 @@ data:extend({
     name = "night-vision-equipment-3",
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     placed_as_equipment_result = "night-vision-equipment-3",
     subgroup = "equipment",
     order = "f[night-vision]-c[night-vision-equipment-3]",
@@ -176,7 +169,6 @@ data:extend({
 
 data.raw.item["solar-panel-equipment"].icon = "__bobequipment__/graphics/icons/solar-panel-equipment-1.png"
 data.raw.item["solar-panel-equipment"].icon_size = 32
-data.raw.item["solar-panel-equipment"].icon_mipmaps = nil
 
 data:extend({
   {
@@ -214,7 +206,6 @@ data:extend({
 data.raw.item["personal-laser-defense-equipment"].icon =
   "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png"
 data.raw.item["personal-laser-defense-equipment"].icon_size = 128
-data.raw.item["personal-laser-defense-equipment"].icon_mipmaps = nil
 
 data:extend({
   {
@@ -273,7 +264,6 @@ data:extend({
     name = "exoskeleton-equipment-2",
     icon = "__base__/graphics/icons/exoskeleton-equipment.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     placed_as_equipment_result = "exoskeleton-equipment-2",
     subgroup = "equipment",
     order = "e[exoskeleton]-a[exoskeleton-equipment-2]",
@@ -284,7 +274,6 @@ data:extend({
     name = "exoskeleton-equipment-3",
     icon = "__base__/graphics/icons/exoskeleton-equipment.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     placed_as_equipment_result = "exoskeleton-equipment-3",
     subgroup = "equipment",
     order = "e[exoskeleton]-a[exoskeleton-equipment-3]",

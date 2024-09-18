@@ -38,7 +38,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       name = "fluid-furnace",
       icon = "__base__/graphics/icons/steel-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "smelting-machine",
       order = "b[steela-furnace]",
       place_result = "fluid-furnace",
@@ -66,7 +65,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       type = "technology",
       name = "fluid-furnace",
       icon_size = 256,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/technology/advanced-material-processing.png",
       prerequisites = {
         "advanced-material-processing",
@@ -126,7 +124,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         name = "fluid-mixing-furnace",
         icon = "__base__/graphics/icons/steel-furnace.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         subgroup = "bob-smelting-machine",
         order = "b[mixing-furnace-3]",
         place_result = "fluid-mixing-furnace",
@@ -151,7 +148,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           {
             icon = "__base__/graphics/technology/advanced-material-processing.png",
             icon_size = 256,
-            icon_mipmaps = 4,
           },
           {
             icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
@@ -260,7 +256,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         name = "fluid-chemical-furnace",
         icon = "__base__/graphics/icons/steel-furnace.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         subgroup = "bob-smelting-machine",
         order = "b[chemical-boiler-3]",
         place_result = "fluid-chemical-furnace",
@@ -285,7 +280,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           {
             icon = "__base__/graphics/technology/advanced-material-processing.png",
             icon_size = 256,
-            icon_mipmaps = 4,
           },
           {
             icon = "__bobassembly__/graphics/icons/technology/chemistry.png",

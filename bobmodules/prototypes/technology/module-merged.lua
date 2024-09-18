@@ -10,7 +10,6 @@ then
       name = "module-merging",
       icon = "__base__/graphics/technology/module.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {},
       prerequisites = { "modules" },
       unit = bobmods.modules.ModulesLab and {

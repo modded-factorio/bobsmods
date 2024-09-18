@@ -6,7 +6,6 @@ data:extend({
     name = "toolbelt-2",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -34,7 +33,6 @@ data:extend({
     name = "toolbelt-3",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -62,7 +60,6 @@ data:extend({
     name = "toolbelt-4",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -91,7 +88,6 @@ data:extend({
     name = "toolbelt-5",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -162,7 +158,6 @@ data:extend({
     localised_description = { "technology-description.worker-robots-storage" },
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "worker-robot-storage",

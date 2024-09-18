@@ -4,7 +4,6 @@ data:extend({
     name = "bob-tanks-2",
     icon = "__base__/graphics/technology/tank.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "tank",
       "artillery",
@@ -36,7 +35,6 @@ data:extend({
     name = "bob-tanks-3",
     icon = "__base__/graphics/technology/tank.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "bob-tanks-2",
       "military-4",

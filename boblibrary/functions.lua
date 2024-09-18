@@ -52,7 +52,7 @@ function bobmods.lib.safe_insert(array, new_item)
 end
 
 --takes an item/fluid/entity(maybe even recipe) and returns a complete icons array.
---if it has no icons= tag, it builds one from icon, icon_size and icon_mipmaps.
+--if it has no icons= tag, it builds one from icon and icon_size.
 --Example use bobmods.lib.icons_from_item(data.raw.item.wood)
 function bobmods.lib.icons_from_item(item)
   if item and type(item) == "table" then
@@ -60,7 +60,7 @@ function bobmods.lib.icons_from_item(item)
     if item.icons then
       icons = item.icons
     elseif item.icon then
-      icons = { { icon = item.icon, icon_size = item.icon_size, icon_mipmaps = item.icon_mipmaps } }
+      icons = { { icon = item.icon, icon_size = item.icon_size } }
     else
       icons = nil
       log(debug.traceback())
