@@ -5,17 +5,10 @@ data.raw["technology"]["speed-module-2"].icon_size = 32
 data.raw["technology"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/speed-module-3.png"
 data.raw["technology"]["speed-module-3"].icon_size = 32
 
-if bobmods.modules.ModulesLab then
-  data.raw["technology"]["speed-module"].unit = { count = 25, ingredients = { { "speed-processor", 1 } }, time = 30 }
-  data.raw["technology"]["speed-module-2"].unit = { count = 50, ingredients = { { "speed-processor", 1 } }, time = 30 }
-  data.raw["technology"]["speed-module-3"].unit =
-    { count = 50, ingredients = { { "speed-processor", 2 }, { "module-circuit-board", 1 } }, time = 60 }
-else
-  bobmods.lib.tech.remove_science_pack("speed-module-2", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("speed-module-3", "production-science-pack")
-  bobmods.lib.tech.set_science_pack_count("speed-module-2", 100)
-  bobmods.lib.tech.set_science_pack_count("speed-module-3", 150)
-end
+bobmods.lib.tech.remove_science_pack("speed-module-2", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("speed-module-3", "production-science-pack")
+bobmods.lib.tech.set_science_pack_count("speed-module-2", 100)
+bobmods.lib.tech.set_science_pack_count("speed-module-3", 150)
 
 data.raw["technology"]["speed-module"].upgrade = false
 data.raw["technology"]["speed-module-2"].upgrade = false
@@ -34,14 +27,7 @@ data:extend({
       },
     },
     prerequisites = { "speed-module-3" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "speed-processor", 4 },
-        { "module-circuit-board", 2 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 200,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -64,15 +50,7 @@ data:extend({
       },
     },
     prerequisites = { "speed-module-4" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 75,
-      ingredients = {
-        { "speed-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -95,15 +73,7 @@ data:extend({
       },
     },
     prerequisites = { "speed-module-5" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 100,
-      ingredients = {
-        { "speed-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 300,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -127,15 +97,7 @@ data:extend({
       },
     },
     prerequisites = { "speed-module-6" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 150,
-      ingredients = {
-        { "speed-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 350,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -159,15 +121,7 @@ data:extend({
       },
     },
     prerequisites = { "speed-module-7" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 250,
-      ingredients = {
-        { "speed-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 400,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -189,19 +143,10 @@ data.raw["technology"]["effectivity-module"].icon_size = 32
 data.raw["technology"]["effectivity-module-2"].icon_size = 32
 data.raw["technology"]["effectivity-module-3"].icon_size = 32
 
-if bobmods.modules.ModulesLab then
-  data.raw["technology"]["effectivity-module"].unit =
-    { count = 25, ingredients = { { "effectivity-processor", 1 } }, time = 30 }
-  data.raw["technology"]["effectivity-module-2"].unit =
-    { count = 50, ingredients = { { "effectivity-processor", 1 } }, time = 30 }
-  data.raw["technology"]["effectivity-module-3"].unit =
-    { count = 50, ingredients = { { "effectivity-processor", 2 }, { "module-circuit-board", 1 } }, time = 60 }
-else
-  bobmods.lib.tech.remove_science_pack("effectivity-module-2", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("effectivity-module-3", "production-science-pack")
-  bobmods.lib.tech.set_science_pack_count("effectivity-module-2", 100)
-  bobmods.lib.tech.set_science_pack_count("effectivity-module-3", 150)
-end
+bobmods.lib.tech.remove_science_pack("effectivity-module-2", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("effectivity-module-3", "production-science-pack")
+bobmods.lib.tech.set_science_pack_count("effectivity-module-2", 100)
+bobmods.lib.tech.set_science_pack_count("effectivity-module-3", 150)
 
 data.raw["technology"]["effectivity-module"].upgrade = false
 data.raw["technology"]["effectivity-module-2"].upgrade = false
@@ -220,14 +165,7 @@ data:extend({
       },
     },
     prerequisites = { "effectivity-module-3" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "effectivity-processor", 4 },
-        { "module-circuit-board", 2 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 200,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -250,15 +188,7 @@ data:extend({
       },
     },
     prerequisites = { "effectivity-module-4" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 75,
-      ingredients = {
-        { "effectivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -281,15 +211,7 @@ data:extend({
       },
     },
     prerequisites = { "effectivity-module-5" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 100,
-      ingredients = {
-        { "effectivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 300,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -313,15 +235,7 @@ data:extend({
       },
     },
     prerequisites = { "effectivity-module-6" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 150,
-      ingredients = {
-        { "effectivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 350,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -345,15 +259,7 @@ data:extend({
       },
     },
     prerequisites = { "effectivity-module-7" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 250,
-      ingredients = {
-        { "effectivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 400,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -375,19 +281,10 @@ data.raw["technology"]["productivity-module"].icon_size = 32
 data.raw["technology"]["productivity-module-2"].icon_size = 32
 data.raw["technology"]["productivity-module-3"].icon_size = 32
 
-if bobmods.modules.ModulesLab then
-  data.raw["technology"]["productivity-module"].unit =
-    { count = 25, ingredients = { { "productivity-processor", 1 } }, time = 30 }
-  data.raw["technology"]["productivity-module-2"].unit =
-    { count = 50, ingredients = { { "productivity-processor", 1 } }, time = 30 }
-  data.raw["technology"]["productivity-module-3"].unit =
-    { count = 50, ingredients = { { "productivity-processor", 2 }, { "module-circuit-board", 1 } }, time = 60 }
-else
-  bobmods.lib.tech.remove_science_pack("productivity-module-2", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("productivity-module-3", "production-science-pack")
-  bobmods.lib.tech.set_science_pack_count("productivity-module-2", 100)
-  bobmods.lib.tech.set_science_pack_count("productivity-module-3", 150)
-end
+bobmods.lib.tech.remove_science_pack("productivity-module-2", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("productivity-module-3", "production-science-pack")
+bobmods.lib.tech.set_science_pack_count("productivity-module-2", 100)
+bobmods.lib.tech.set_science_pack_count("productivity-module-3", 150)
 
 data.raw["technology"]["productivity-module"].upgrade = false
 data.raw["technology"]["productivity-module-2"].upgrade = false
@@ -406,14 +303,7 @@ data:extend({
       },
     },
     prerequisites = { "productivity-module-3" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "productivity-processor", 4 },
-        { "module-circuit-board", 2 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 200,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -436,15 +326,7 @@ data:extend({
       },
     },
     prerequisites = { "productivity-module-4" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 75,
-      ingredients = {
-        { "productivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -467,15 +349,7 @@ data:extend({
       },
     },
     prerequisites = { "productivity-module-5" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 100,
-      ingredients = {
-        { "productivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 300,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -499,15 +373,7 @@ data:extend({
       },
     },
     prerequisites = { "productivity-module-6" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 150,
-      ingredients = {
-        { "productivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 350,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -531,15 +397,7 @@ data:extend({
       },
     },
     prerequisites = { "productivity-module-7" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 250,
-      ingredients = {
-        { "productivity-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 400,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -566,13 +424,7 @@ data:extend({
       },
     },
     prerequisites = { "modules" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 25,
-      ingredients = {
-        { "pollution-clean-processor", 1 },
-      },
-      time = 30,
-    } or {
+    unit = {
       count = 50,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -594,13 +446,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-1" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "pollution-clean-processor", 1 },
-      },
-      time = 30,
-    } or {
+    unit = {
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -622,14 +468,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-2" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "pollution-clean-processor", 2 },
-        { "module-circuit-board", 1 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 150,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -652,14 +491,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-3" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "pollution-clean-processor", 4 },
-        { "module-circuit-board", 2 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 200,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -682,15 +514,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-4" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 75,
-      ingredients = {
-        { "pollution-clean-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -713,15 +537,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-5" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 100,
-      ingredients = {
-        { "pollution-clean-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 300,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -745,15 +561,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-6" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 150,
-      ingredients = {
-        { "pollution-clean-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 350,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -777,15 +585,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-clean-module-7" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 250,
-      ingredients = {
-        { "pollution-clean-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 400,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -812,13 +612,7 @@ data:extend({
       },
     },
     prerequisites = { "modules" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 25,
-      ingredients = {
-        { "pollution-create-processor", 1 },
-      },
-      time = 30,
-    } or {
+    unit = {
       count = 50,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -840,13 +634,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-1" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "pollution-create-processor", 1 },
-      },
-      time = 30,
-    } or {
+    unit = {
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -868,14 +656,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-2" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "pollution-create-processor", 2 },
-        { "module-circuit-board", 1 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 150,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -898,14 +679,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-3" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 50,
-      ingredients = {
-        { "pollution-create-processor", 4 },
-        { "module-circuit-board", 2 },
-      },
-      time = 60,
-    } or {
+    unit = {
       count = 200,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -928,15 +702,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-4" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 75,
-      ingredients = {
-        { "pollution-create-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 250,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -959,15 +725,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-5" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 100,
-      ingredients = {
-        { "pollution-create-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 300,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -991,15 +749,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-6" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 150,
-      ingredients = {
-        { "pollution-create-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 350,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -1023,15 +773,7 @@ data:extend({
       },
     },
     prerequisites = { "pollution-create-module-7" },
-    unit = bobmods.modules.ModulesLab and {
-      count = 250,
-      ingredients = {
-        { "pollution-create-processor", 4 },
-        { "module-circuit-board", 2 },
-        { "module-case", 1 },
-      },
-      time = 120,
-    } or {
+    unit = {
       count = 400,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -1093,7 +835,7 @@ if data.raw.technology["advanced-electronics-3"] then
   table.insert(data.raw.technology["productivity-module-6"].prerequisites, "advanced-electronics-3")
   table.insert(data.raw.technology["pollution-clean-module-6"].prerequisites, "advanced-electronics-3")
   table.insert(data.raw.technology["pollution-create-module-6"].prerequisites, "advanced-electronics-3")
-elseif not bobmods.modules.ModulesLab then
+else
   bobmods.lib.tech.add_prerequisite("speed-module-6", "production-science-pack")
   bobmods.lib.tech.add_prerequisite("effectivity-module-6", "production-science-pack")
   bobmods.lib.tech.add_prerequisite("productivity-module-6", "production-science-pack")

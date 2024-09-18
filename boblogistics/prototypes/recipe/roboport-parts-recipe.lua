@@ -9,7 +9,7 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 5 },
     },
     results = { { type = "item", name = "roboport-antenna-1", amount = 1 } },
-    energy_required = 0.2,
+    energy_required = 2,
   },
   {
     type = "recipe",
@@ -21,7 +21,7 @@ data:extend({
       { type = "item", name = "advanced-circuit", amount = 5 },
     },
     results = { { type = "item", name = "roboport-antenna-2", amount = 1 } },
-    energy_required = 0.2,
+    energy_required = 2,
   },
   {
     type = "recipe",
@@ -33,7 +33,7 @@ data:extend({
       { type = "item", name = "processing-unit", amount = 5 },
     },
     results = { { type = "item", name = "roboport-antenna-3", amount = 1 } },
-    energy_required = 0.2,
+    energy_required = 2,
   },
   {
     type = "recipe",
@@ -46,7 +46,7 @@ data:extend({
       { type = "item", name = "processing-unit", amount = 5 },
     },
     results = { { type = "item", name = "roboport-antenna-4", amount = 1 } },
-    energy_required = 0.2,
+    energy_required = 2,
   },
 })
 

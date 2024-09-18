@@ -12,18 +12,7 @@ then
       icon_size = 256,
       effects = {},
       prerequisites = { "modules" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 100,
-        ingredients = {
-          { "speed-processor", 1 },
-          { "effectivity-processor", 1 },
-          { "productivity-processor", 1 },
-          { "pollution-clean-processor", 1 },
-          { "module-circuit-board", 1 },
-          { "module-case", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 100,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -54,14 +43,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "module-merging", "speed-module", "effectivity-module" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 25,
-        ingredients = {
-          { "speed-processor", 1 },
-          { "effectivity-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 50,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -87,14 +69,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-1", "speed-module-2", "effectivity-module-2" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "speed-processor", 1 },
-          { "effectivity-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 100,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -120,15 +95,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-2", "speed-module-3", "effectivity-module-3" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "speed-processor", 2 },
-          { "effectivity-processor", 2 },
-          { "module-circuit-board", 1 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 150,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -155,15 +122,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-3", "speed-module-4", "effectivity-module-4" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "module-circuit-board", 2 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 200,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -190,16 +149,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-4", "speed-module-5", "effectivity-module-5" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 75,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 250,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -226,16 +176,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-5", "speed-module-6", "effectivity-module-6" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 100,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 300,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -263,16 +204,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-6", "speed-module-7", "effectivity-module-7" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 150,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 350,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -300,16 +232,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
         },
       },
       prerequisites = { "raw-speed-module-7", "speed-module-8", "effectivity-module-8" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 250,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 400,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -341,14 +264,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "module-merging", "effectivity-module", "pollution-clean-module-1" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 25,
-        ingredients = {
-          { "effectivity-processor", 1 },
-          { "pollution-clean-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 50,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -374,14 +290,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-1", "effectivity-module-2", "pollution-clean-module-2" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "effectivity-processor", 1 },
-          { "pollution-clean-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 100,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -407,15 +316,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-2", "effectivity-module-3", "pollution-clean-module-3" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "effectivity-processor", 2 },
-          { "pollution-clean-processor", 2 },
-          { "module-circuit-board", 1 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 150,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -442,15 +343,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-3", "effectivity-module-4", "pollution-clean-module-4" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 200,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -477,16 +370,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-4", "effectivity-module-5", "pollution-clean-module-5" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 75,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 250,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -513,16 +397,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-5", "effectivity-module-6", "pollution-clean-module-6" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 100,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 300,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -550,16 +425,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-6", "effectivity-module-7", "pollution-clean-module-7" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 150,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 350,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -587,16 +453,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         },
       },
       prerequisites = { "green-module-7", "effectivity-module-8", "pollution-clean-module-8" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 250,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 400,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -629,15 +486,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         },
       },
       prerequisites = { "module-merging", "productivity-module", "effectivity-module", "pollution-clean-module-1" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 25,
-        ingredients = {
-          { "effectivity-processor", 1 },
-          { "productivity-processor", 1 },
-          { "pollution-clean-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 50,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -668,15 +517,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-2",
         "pollution-clean-module-2",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "effectivity-processor", 1 },
-          { "productivity-processor", 1 },
-          { "pollution-clean-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 100,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -707,16 +548,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-3",
         "pollution-clean-module-3",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "effectivity-processor", 2 },
-          { "productivity-processor", 2 },
-          { "pollution-clean-processor", 2 },
-          { "module-circuit-board", 1 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 150,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -748,16 +580,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-4",
         "pollution-clean-module-4",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 200,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -789,17 +612,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-5",
         "pollution-clean-module-5",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 75,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 250,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -831,17 +644,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-6",
         "pollution-clean-module-6",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 100,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 300,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -874,17 +677,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-7",
         "pollution-clean-module-7",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 150,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 350,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -917,17 +710,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
         "effectivity-module-8",
         "pollution-clean-module-8",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 250,
-        ingredients = {
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 400,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -973,16 +756,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "effectivity-module-2",
         "pollution-clean-module-2",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 50,
-        ingredients = {
-          { "speed-processor", 1 },
-          { "effectivity-processor", 1 },
-          { "productivity-processor", 1 },
-          { "pollution-clean-processor", 1 },
-        },
-        time = 30,
-      } or {
+      unit = {
         count = 200,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -1010,17 +784,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "effectivity-module-4",
         "pollution-clean-module-4",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 100,
-        ingredients = {
-          { "speed-processor", 2 },
-          { "effectivity-processor", 2 },
-          { "productivity-processor", 2 },
-          { "pollution-clean-processor", 2 },
-          { "module-circuit-board", 1 },
-        },
-        time = 60,
-      } or {
+      unit = {
         count = 300,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -1049,18 +813,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "effectivity-module-6",
         "pollution-clean-module-6",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 100,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 400,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -1090,18 +843,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         "effectivity-module-8",
         "pollution-clean-module-8",
       },
-      unit = bobmods.modules.ModulesLab and {
-        count = 250,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 500,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -1125,18 +867,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         },
       },
       prerequisites = { "god-module-4" },
-      unit = bobmods.modules.ModulesLab and {
-        count = 500,
-        ingredients = {
-          { "speed-processor", 4 },
-          { "effectivity-processor", 4 },
-          { "productivity-processor", 4 },
-          { "pollution-clean-processor", 4 },
-          { "module-circuit-board", 2 },
-          { "module-case", 1 },
-        },
-        time = 120,
-      } or {
+      unit = {
         count = 600,
         ingredients = {
           { "automation-science-pack", 1 },

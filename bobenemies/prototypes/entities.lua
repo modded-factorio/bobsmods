@@ -2,6 +2,7 @@ data:extend({
   {
     type = "smoke-with-trigger",
     name = "small-poison-cloud",
+    localised_name = { "entity-name.poison-cloud" },
     flags = { "not-on-map" },
     show_when_smoke_off = true,
     animation = {
