@@ -122,10 +122,7 @@ else
     )
   else
     bobmods.lib.recipe.add_ingredient("speed-processor-3", { type = "item", name = "processing-unit", amount = 1 })
-    bobmods.lib.recipe.add_ingredient(
-      "efficiency-processor-3",
-      { type = "item", name = "processing-unit", amount = 1 }
-    )
+    bobmods.lib.recipe.add_ingredient("efficiency-processor-3", { type = "item", name = "processing-unit", amount = 1 })
     bobmods.lib.recipe.add_ingredient(
       "productivity-processor-3",
       { type = "item", name = "processing-unit", amount = 1 }
