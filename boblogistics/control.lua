@@ -147,34 +147,31 @@ function bobmods.logistics.set_range(position_in, range)
 end
 
 function bobmods.logistics.create_global_table_basic()
-  if not global then
-    global = {}
+  if not storage.bobmods then
+    storage.bobmods = {}
   end
-  if not global.bobmods then
-    global.bobmods = {}
+  if not storage.bobmods.logistics then
+    storage.bobmods.logistics = {}
   end
-  if not global.bobmods.logistics then
-    global.bobmods.logistics = {}
-  end
-  if not global.bobmods.logistics.blacklist then
-    global.bobmods.logistics.blacklist = {}
+  if not storage.bobmods.logistics.blacklist then
+    storage.bobmods.logistics.blacklist = {}
   end
 end
 
 function bobmods.logistics.create_global_table(player_index)
   bobmods.logistics.create_global_table_basic()
 
-  if not global.bobmods.logistics[player_index] then
-    global.bobmods.logistics[player_index] = {}
+  if not storage.bobmods.logistics[player_index] then
+    storage.bobmods.logistics[player_index] = {}
   end
-  if not global.bobmods.logistics[player_index].enabled then
-    global.bobmods.logistics[player_index].enabled = false
+  if not storage.bobmods.logistics[player_index].enabled then
+    storage.bobmods.logistics[player_index].enabled = false
   end
-  if not global.bobmods.logistics[player_index].long_in then
-    global.bobmods.logistics[player_index].long_in = false
+  if not storage.bobmods.logistics[player_index].long_in then
+    storage.bobmods.logistics[player_index].long_in = false
   end
-  if not global.bobmods.logistics[player_index].show then
-    global.bobmods.logistics[player_index].show = false
+  if not storage.bobmods.logistics[player_index].show then
+    storage.bobmods.logistics[player_index].show = false
   end
 end
 
@@ -239,16 +236,16 @@ function bobmods.logistics.create_gui(player_index)
     gui.table.add({
       type = "checkbox",
       name = "bob_logistics_inserter_enabled",
-      state = global.bobmods.logistics[player_index].enabled,
+      state = storage.bobmods.logistics[player_index].enabled,
       caption = { "gui.bob-logistics-enabled" },
     })
   end
-  if global.bobmods.logistics[player_index].enabled then
+  if storage.bobmods.logistics[player_index].enabled then
     if long_unlocked then
       gui.table.add({
         type = "checkbox",
         name = "bob_logistics_inserter_long_in",
-        state = global.bobmods.logistics[player_index].long_in,
+        state = storage.bobmods.logistics[player_index].long_in,
         caption = { "gui.bob-logistics-long" },
       })
     end
@@ -258,7 +255,7 @@ end
 function bobmods.logistics.show_gui_options(player_index)
   local player = game.players[player_index]
 
-  if not global.bobmods then
+  if not storage.bobmods then
     bobmods.logistics.player_setup(player_index)
   end
 
@@ -266,20 +263,20 @@ function bobmods.logistics.show_gui_options(player_index)
     player.gui.left.bob_logistics_inserter_gui.destroy()
   end
 
-  if global.bobmods.logistics[player_index].show then
+  if storage.bobmods.logistics[player_index].show then
     bobmods.logistics.create_gui(player_index)
   end
 end
 
 function bobmods.logistics.set_positions(entity, player_index)
-  local enabled = global.bobmods.logistics[player_index].enabled
+  local enabled = storage.bobmods.logistics[player_index].enabled
   if enabled then
     local force = game.players[player_index].force
     local direction = (entity.direction / 2) + 1
 
     local long_unlocked = tech_unlocked(force, bobmods.logistics.long_technology)
 
-    local long_in = global.bobmods.logistics[player_index].long_in
+    local long_in = storage.bobmods.logistics[player_index].long_in
 
     local pickup_position =
       { x = entity.pickup_position.x - entity.position.x, y = entity.pickup_position.y - entity.position.y }
@@ -364,7 +361,7 @@ function bobmods.logistics.check_range(event)
     entity
     and entity.type == "inserter"
     and player.can_reach_entity(entity)
-    and not global.bobmods.logistics.blacklist[entity.name]
+    and not storage.bobmods.logistics.blacklist[entity.name]
   then
     bobmods.logistics.long_range(entity, player)
   end
@@ -410,10 +407,10 @@ end)
 script.on_event(defines.events.on_gui_checked_state_changed, function(event)
   if not game.active_mods["bobinserters"] then
     if event.element.name == "bob_logistics_inserter_enabled" then
-      global.bobmods.logistics[event.player_index].enabled = event.element.state
+      storage.bobmods.logistics[event.player_index].enabled = event.element.state
       bobmods.logistics.create_gui(event.player_index)
     elseif event.element.name == "bob_logistics_inserter_long_in" then
-      global.bobmods.logistics[event.player_index].long_in = event.element.state
+      storage.bobmods.logistics[event.player_index].long_in = event.element.state
     end
   end
 end)
@@ -421,10 +418,10 @@ end)
 script.on_event(defines.events.on_gui_click, function(event)
   if not game.active_mods["bobinserters"] then
     if event.element.valid and event.element.name == "bob_logistics_inserter_button" then
-      if global.bobmods.logistics[event.player_index].show then
-        global.bobmods.logistics[event.player_index].show = false
+      if storage.bobmods.logistics[event.player_index].show then
+        storage.bobmods.logistics[event.player_index].show = false
       else
-        global.bobmods.logistics[event.player_index].show = true
+        storage.bobmods.logistics[event.player_index].show = true
       end
       bobmods.logistics.show_gui_options(event.player_index)
     end
@@ -456,7 +453,7 @@ script.on_event(defines.events.on_built_entity, function(event)
     and event.item.place_result.type == "inserter"
     and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and event.item.place_result.name == entity_name --probably don't even need this line anymore.
-    and not global.bobmods.logistics.blacklist[entity_name]
+    and not storage.bobmods.logistics.blacklist[entity_name]
   then
     bobmods.logistics.set_positions(entity, event.player_index)
   end
@@ -503,7 +500,7 @@ EG: remote.call("boblogistics", "blacklist_inserter", "burner-inserter") will bl
   --
   blacklist_inserter = function(data)
     bobmods.logistics.create_global_table_basic()
-    global.bobmods.logistics.blacklist[data] = true
+    storage.bobmods.logistics.blacklist[data] = true
   end,
   --[[
 Pass this function a table of names of inserters, and they will be ignored.
@@ -513,7 +510,7 @@ EG: remote.call("boblogistics", "blacklist_inserters", {"burner-inserter"}) will
   blacklist_inserters = function(data)
     bobmods.logistics.create_global_table_basic()
     for i, inserter in pairs(data) do
-      global.bobmods.logistics.blacklist[inserter] = true
+      storage.bobmods.logistics.blacklist[inserter] = true
     end
   end,
   --[[
