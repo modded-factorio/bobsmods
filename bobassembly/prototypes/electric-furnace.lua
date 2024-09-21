@@ -166,8 +166,10 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         },
         apparent_volume = 1.5,
       },
-      animation = bob_electric_furnace_animation(input.tint),
-      working_visualisations = bob_electric_furnace_working_visualisations(),
+      graphics_set = {
+        animation = bob_electric_furnace_animation(input.tint),
+        working_visualisations = bob_electric_furnace_working_visualisations(),
+      },
       fast_replaceable_group = "furnace",
     }
   end

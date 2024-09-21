@@ -143,11 +143,13 @@ data:extend({
         pipe_connections = { { type = "output", position = { 1, 2 } } },
       },
     },
-    animation = bob_electrolyser_animation(
-      "__bobplates__/graphics/entity/electrolyser",
-      1,
-      { r = 0.5, g = 0.5, b = 0 }
-    ),
+    graphics_set = {
+      animation = bob_electrolyser_animation(
+        "__bobplates__/graphics/entity/electrolyser",
+        1,
+        { r = 0.5, g = 0.5, b = 0 }
+      ),
+    },
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
   },
 
@@ -209,66 +211,68 @@ data:extend({
         },
       },
     },
-    animation = {
-      north = {
-        filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
-        priority = "extra-high",
-        width = 94,
-        height = 80,
-        frame_count = 1,
-        shift = { 0.25, 0 },
-      },
-      west = {
-        filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
-        x = 94,
-        priority = "extra-high",
-        width = 94,
-        height = 80,
-        frame_count = 1,
-        shift = { 0.25, 0 },
-      },
-      south = {
-        x = 188,
-        filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
-        priority = "extra-high",
-        width = 94,
-        height = 80,
-        frame_count = 1,
-        shift = { 0.25, 0 },
-      },
-      east = {
-        x = 282,
-        filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
-        priority = "extra-high",
-        width = 94,
-        height = 80,
-        frame_count = 1,
-        shift = { 0.25, 0 },
-      },
-    },
-    working_visualisations = {
-      {
-        north_position = { 0.96875, -0.53125 },
-        west_position = { 0, 0 },
-        south_position = { -0.9375, 0.40625 },
-        east_position = { 0.53125, 0.78125 },
-        east_animation = {
-          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/boiler-fire-down.png",
-          width = 9,
-          height = 8,
-          frame_count = 14,
+    graphics_set = {
+      animation = {
+        north = {
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
         },
-        south_animation = {
-          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/boiler-fire-left.png",
-          width = 5,
-          height = 7,
-          frame_count = 14,
+        west = {
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          x = 94,
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
         },
-        north_animation = {
-          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/boiler-fire-right.png",
-          width = 6,
-          height = 9,
-          frame_count = 14,
+        south = {
+          x = 188,
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        east = {
+          x = 282,
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+      },
+      working_visualisations = {
+        {
+          north_position = { 0.96875, -0.53125 },
+          west_position = { 0, 0 },
+          south_position = { -0.9375, 0.40625 },
+          east_position = { 0.53125, 0.78125 },
+          east_animation = {
+            filename = "__bobplates__/graphics/entity/stone-chemical-furnace/boiler-fire-down.png",
+            width = 9,
+            height = 8,
+            frame_count = 14,
+          },
+          south_animation = {
+            filename = "__bobplates__/graphics/entity/stone-chemical-furnace/boiler-fire-left.png",
+            width = 5,
+            height = 7,
+            frame_count = 14,
+          },
+          north_animation = {
+            filename = "__bobplates__/graphics/entity/stone-chemical-furnace/boiler-fire-right.png",
+            width = 6,
+            height = 9,
+            frame_count = 14,
+          },
         },
       },
     },
@@ -333,8 +337,10 @@ data:extend({
         },
       },
     },
-    animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
-    working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
+    graphics_set = {
+      animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
+      working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
+    },
     fast_replaceable_group = "furnace",
   },
 
@@ -390,55 +396,57 @@ data:extend({
       },
       apparent_volume = 1.5,
     },
-    animation = {
-      filename = "__bobplates__/graphics/entity/electric-furnace/electric-chemical-furnace.png",
-      priority = "high",
-      width = 129,
-      height = 100,
-      frame_count = 1,
-      shift = { 0.46875, 0 },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-          priority = "high",
-          width = 25,
-          height = 15,
-          frame_count = 12,
-          animation_speed = 0.5,
-          shift = { 0.015625, 0.890625 },
-          hr_version = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+    graphics_set = {
+      animation = {
+        filename = "__bobplates__/graphics/entity/electric-furnace/electric-chemical-furnace.png",
+        priority = "high",
+        width = 129,
+        height = 100,
+        frame_count = 1,
+        shift = { 0.46875, 0 },
+      },
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
             priority = "high",
-            width = 60,
-            height = 56,
+            width = 25,
+            height = 15,
             frame_count = 12,
             animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
+            shift = { 0.015625, 0.890625 },
+            hr_version = {
+              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+              priority = "high",
+              width = 60,
+              height = 56,
+              frame_count = 12,
+              animation_speed = 0.5,
+              shift = util.by_pixel(1.75, 32.75),
+              scale = 0.5,
+            },
           },
+          light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
         },
-        light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      },
-      {
-        animation = {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-          priority = "high",
-          width = 19,
-          height = 13,
-          frame_count = 4,
-          animation_speed = 0.5,
-          shift = { -0.671875, -0.640625 },
-          hr_version = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+        {
+          animation = {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
             priority = "high",
-            width = 37,
-            height = 25,
+            width = 19,
+            height = 13,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
-            scale = 0.5,
+            shift = { -0.671875, -0.640625 },
+            hr_version = {
+              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+              priority = "high",
+              width = 37,
+              height = 25,
+              frame_count = 4,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-20.5, -18.5),
+              scale = 0.5,
+            },
           },
         },
       },
@@ -487,26 +495,27 @@ data:extend({
         },
       },
     },
-
-    animation = {
-      filename = "__bobplates__/graphics/entity/stone-mixing-furnace/stone-mixing-furnace.png",
-      priority = "extra-high",
-      width = 81,
-      height = 64,
-      frame_count = 1,
-      shift = { 0.5, 0.05 },
-    },
-    working_visualisations = {
-      {
-        north_position = { 0.078125, 0.5234375 },
-        west_position = { 0.078125, 0.5234375 },
-        south_position = { 0.078125, 0.5234375 },
-        east_position = { 0.078125, 0.5234375 },
-        animation = {
-          filename = "__bobplates__/graphics/entity/stone-mixing-furnace/stone-mixing-furnace-fire.png",
-          width = 23,
-          height = 27,
-          frame_count = 12,
+    graphics_set = {
+      animation = {
+        filename = "__bobplates__/graphics/entity/stone-mixing-furnace/stone-mixing-furnace.png",
+        priority = "extra-high",
+        width = 81,
+        height = 64,
+        frame_count = 1,
+        shift = { 0.5, 0.05 },
+      },
+      working_visualisations = {
+        {
+          north_position = { 0.078125, 0.5234375 },
+          west_position = { 0.078125, 0.5234375 },
+          south_position = { 0.078125, 0.5234375 },
+          east_position = { 0.078125, 0.5234375 },
+          animation = {
+            filename = "__bobplates__/graphics/entity/stone-mixing-furnace/stone-mixing-furnace-fire.png",
+            width = 23,
+            height = 27,
+            frame_count = 12,
+          },
         },
       },
     },
@@ -553,8 +562,10 @@ data:extend({
         },
       },
     },
-    animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
-    working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
+    graphics_set = {
+      animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
+      working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
+    },
     fast_replaceable_group = "furnace",
   },
 
@@ -600,90 +611,91 @@ data:extend({
       },
       apparent_volume = 1.5,
     },
-
-    animation = {
-      layers = {
-        {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-mixing-furnace.png",
-          priority = "high",
-          width = 129,
-          height = 100,
-          frame_count = 1,
-          shift = { 0.46875, 0 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-mask.png",
-          tint = { r = 0.2, g = 0.6, b = 0.8 },
-          priority = "high",
-          width = 69,
-          height = 68,
-          frame_count = 1,
-          shift = util.by_pixel(7.5, 12),
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-mixing-furnace.png",
+            priority = "high",
+            width = 129,
+            height = 100,
+            frame_count = 1,
+            shift = { 0.46875, 0 },
+          },
+          {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-mask.png",
+            tint = { r = 0.2, g = 0.6, b = 0.8 },
+            priority = "high",
+            width = 69,
+            height = 68,
+            frame_count = 1,
+            shift = util.by_pixel(7.5, 12),
+          },
         },
       },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-          priority = "high",
-          width = 25,
-          height = 15,
-          frame_count = 12,
-          animation_speed = 0.5,
-          shift = { 0.015625, 0.890625 },
-          hr_version = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
             priority = "high",
-            width = 60,
-            height = 56,
+            width = 25,
+            height = 15,
             frame_count = 12,
             animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
+            shift = { 0.015625, 0.890625 },
+            hr_version = {
+              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+              priority = "high",
+              width = 60,
+              height = 56,
+              frame_count = 12,
+              animation_speed = 0.5,
+              shift = util.by_pixel(1.75, 32.75),
+              scale = 0.5,
+            },
           },
+          light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
         },
-        light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      },
-      {
-        animation = {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-          priority = "high",
-          width = 19,
-          height = 13,
-          frame_count = 4,
-          animation_speed = 0.5,
-          shift = { -0.671875, -0.640625 },
-          hr_version = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+        {
+          animation = {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
             priority = "high",
-            width = 37,
-            height = 25,
+            width = 19,
+            height = 13,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
-            scale = 0.5,
+            shift = { -0.671875, -0.640625 },
+            hr_version = {
+              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+              priority = "high",
+              width = 37,
+              height = 25,
+              frame_count = 4,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-20.5, -18.5),
+              scale = 0.5,
+            },
           },
         },
-      },
-      {
-        animation = {
-          filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
-          priority = "high",
-          width = 12,
-          height = 9,
-          frame_count = 4,
-          animation_speed = 0.5,
-          shift = { 0.0625, -1.234375 },
-          hr_version = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
+        {
+          animation = {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
             priority = "high",
-            width = 23,
-            height = 15,
+            width = 12,
+            height = 9,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = util.by_pixel(3.5, -38),
-            scale = 0.5,
+            shift = { 0.0625, -1.234375 },
+            hr_version = {
+              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
+              priority = "high",
+              width = 23,
+              height = 15,
+              frame_count = 4,
+              animation_speed = 0.5,
+              shift = util.by_pixel(3.5, -38),
+              scale = 0.5,
+            },
           },
         },
       },
@@ -693,7 +705,7 @@ data:extend({
   },
 })
 
-table.insert(data.raw.furnace["electric-furnace"].animation.layers, 2, {
+table.insert(data.raw.furnace["electric-furnace"].graphics_set.animation.layers, 2, {
   filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-mask.png",
   tint = { r = 0.8, g = 0.8, b = 0.2 },
   priority = "high",
@@ -982,38 +994,40 @@ data:extend({
     crafting_speed = 5,
     result_inventory_size = 0,
     source_inventory_size = 0,
-    animation = {
-      north = {
-        filename = "__bobplates__/graphics/entity/small-pump/small-pump-up.png",
-        width = 46,
-        height = 52,
-        frame_count = 8,
-        shift = { 0.09375, 0.03125 + 0.0625 },
-        animation_speed = 0.5,
-      },
-      east = {
-        filename = "__bobplates__/graphics/entity/small-pump/small-pump-right.png",
-        width = 51,
-        height = 56,
-        frame_count = 8,
-        shift = { 0.265625, -0.21875 },
-        animation_speed = 0.5,
-      },
-      south = {
-        filename = "__bobplates__/graphics/entity/small-pump/small-pump-down.png",
-        width = 61,
-        height = 58,
-        frame_count = 8,
-        shift = { 0.421875, -0.125 },
-        animation_speed = 0.5,
-      },
-      west = {
-        filename = "__bobplates__/graphics/entity/small-pump/small-pump-left.png",
-        width = 56,
-        height = 44,
-        frame_count = 8,
-        shift = { 0.3125, 0.0625 },
-        animation_speed = 0.5,
+    graphics_set = {
+      animation = {
+        north = {
+          filename = "__bobplates__/graphics/entity/small-pump/small-pump-up.png",
+          width = 46,
+          height = 52,
+          frame_count = 8,
+          shift = { 0.09375, 0.03125 + 0.0625 },
+          animation_speed = 0.5,
+        },
+        east = {
+          filename = "__bobplates__/graphics/entity/small-pump/small-pump-right.png",
+          width = 51,
+          height = 56,
+          frame_count = 8,
+          shift = { 0.265625, -0.21875 },
+          animation_speed = 0.5,
+        },
+        south = {
+          filename = "__bobplates__/graphics/entity/small-pump/small-pump-down.png",
+          width = 61,
+          height = 58,
+          frame_count = 8,
+          shift = { 0.421875, -0.125 },
+          animation_speed = 0.5,
+        },
+        west = {
+          filename = "__bobplates__/graphics/entity/small-pump/small-pump-left.png",
+          width = 56,
+          height = 44,
+          frame_count = 8,
+          shift = { 0.3125, 0.0625 },
+          animation_speed = 0.5,
+        },
       },
     },
   },

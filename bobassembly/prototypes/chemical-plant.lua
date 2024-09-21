@@ -16,176 +16,6 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   data.raw.item["chemical-plant"].subgroup = "bob-chemical-machine"
   data.raw.item["chemical-plant"].order = "e[chemical-plant-1]"
 
-  local function bob_chemical_plant_old_facing(tint, x)
-    return {
-      layers = {
-        {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/chemical-plant.png",
-          width = 122,
-          x = x * 122,
-          height = 134,
-          frame_count = 1,
-          shift = util.by_pixel(-5, -4.5),
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-chemical-plant.png",
-            x = x * 244,
-            width = 244,
-            height = 268,
-            frame_count = 1,
-            shift = util.by_pixel(-5, -4.5),
-            scale = 0.5,
-          },
-        },
-
-        {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/chemical-plant-mask.png",
-          x = x * 156,
-          width = 156,
-          height = 141,
-          frame_count = 1,
-          tint = tint,
-          shift = { 0.5, -0.078125 },
-        },
-
-        {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/chemical-plant-shadow.png",
-          x = x * 175,
-          width = 175,
-          height = 110,
-          frame_count = 1,
-          shift = util.by_pixel(31.5, 11),
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-chemical-plant-shadow.png",
-            x = x * 350,
-            width = 350,
-            height = 219,
-            frame_count = 1,
-            shift = util.by_pixel(31.5, 10.75),
-            draw_as_shadow = true,
-            scale = 0.5,
-          },
-        },
-      },
-    }
-  end
-
-  local function bob_chemical_plant_old_animation(tint)
-    return {
-      north = bob_chemical_plant_old_facing(tint, 0),
-      east = bob_chemical_plant_old_facing(tint, 1),
-      south = bob_chemical_plant_old_facing(tint, 2),
-      west = bob_chemical_plant_old_facing(tint, 3),
-    }
-  end
-
-  local function bob_chemical_plant_old_working_visualisations()
-    return {
-      {
-        north_position = util.by_pixel(30, -24),
-        east_position = util.by_pixel(-11, -1),
-        south_position = util.by_pixel(-30, -48),
-        west_position = util.by_pixel(1, -49.5),
-        apply_recipe_tint = "primary",
-        animation = {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/boiling-green-patch.png",
-          frame_count = 32,
-          width = 15,
-          height = 10,
-          animation_speed = 0.5,
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-boiling-green-patch.png",
-            frame_count = 32,
-            width = 30,
-            height = 20,
-            animation_speed = 0.5,
-            scale = 0.5,
-          },
-        },
-      },
-      {
-        north_position = util.by_pixel(30, -24),
-        east_position = util.by_pixel(-11, -1),
-        south_position = util.by_pixel(-30, -48),
-        west_position = util.by_pixel(1, -49.5),
-        apply_recipe_tint = "secondary",
-        animation = {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/boiling-green-patch-mask.png",
-          frame_count = 32,
-          width = 15,
-          height = 10,
-          animation_speed = 0.5,
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-boiling-green-patch-mask.png",
-            frame_count = 32,
-            width = 30,
-            height = 20,
-            animation_speed = 0.5,
-            scale = 0.5,
-          },
-        },
-      },
-
-      {
-        apply_recipe_tint = "tertiary",
-        north_position = { 0, 0 },
-        west_position = { 0, 0 },
-        south_position = { 0, 0 },
-        east_position = { 0, 0 },
-        north_animation = {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/boiling-window-green-patch.png",
-          frame_count = 1,
-          width = 87,
-          height = 60,
-          shift = util.by_pixel(0, -5),
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-boiling-window-green-patch.png",
-            x = 0,
-            frame_count = 1,
-            width = 174,
-            height = 119,
-            shift = util.by_pixel(0, -5.25),
-            scale = 0.5,
-          },
-        },
-        east_animation = {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/boiling-window-green-patch.png",
-          x = 87,
-          frame_count = 1,
-          width = 87,
-          height = 60,
-          shift = util.by_pixel(0, -5),
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-boiling-window-green-patch.png",
-            x = 174,
-            frame_count = 1,
-            width = 174,
-            height = 119,
-            shift = util.by_pixel(0, -5.25),
-            scale = 0.5,
-          },
-        },
-        south_animation = {
-          filename = "__bobassembly__/graphics/entity/chemical-plant-old/boiling-window-green-patch.png",
-          x = 174,
-          frame_count = 1,
-          width = 87,
-          height = 60,
-          shift = util.by_pixel(0, -5),
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/chemical-plant-old/hr-boiling-window-green-patch.png",
-            x = 348,
-            frame_count = 1,
-            width = 174,
-            height = 119,
-            shift = util.by_pixel(0, -5.25),
-            scale = 0.5,
-          },
-        },
-      },
-    }
-  end
-
   local function bob_chemical_plant_fluid_boxes()
     return {
       {
@@ -415,8 +245,10 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
-      animation = bobmods.bob_chemical_plant_animation({ r = 0.5, g = 0.1, b = 0.7 }),
-      working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
+      graphics_set = {
+        animation = bobmods.bob_chemical_plant_animation({ r = 0.5, g = 0.1, b = 0.7 }),
+        working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       fast_replaceable_group = "chemical-plant",
@@ -447,8 +279,10 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
-      animation = bobmods.bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 }),
-      working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
+      graphics_set = {
+        animation = bobmods.bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 }),
+        working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       fast_replaceable_group = "chemical-plant",
@@ -479,8 +313,10 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
-      animation = bobmods.bob_chemical_plant_animation({ r = 0.1, g = 0.7, b = 0.1 }),
-      working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
+      graphics_set = {
+        animation = bobmods.bob_chemical_plant_animation({ r = 0.1, g = 0.7, b = 0.1 }),
+        working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       fast_replaceable_group = "chemical-plant",

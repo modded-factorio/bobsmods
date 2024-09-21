@@ -142,7 +142,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-2"].icon =
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-2.png"
   data.raw["assembling-machine"]["assembling-machine-2"].icon_size = 32
-  table.insert(data.raw["assembling-machine"]["assembling-machine-2"].animation.layers, {
+  table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
     filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
     priority = "high",
     width = 142,
@@ -156,7 +156,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-3"].icon =
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-3.png"
   data.raw["assembling-machine"]["assembling-machine-3"].icon_size = 32
-  table.insert(data.raw["assembling-machine"]["assembling-machine-3"].animation.layers, {
+  table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
     filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
     priority = "high",
     width = 142,
@@ -171,7 +171,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-4"].icon =
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-4.png"
   data.raw["assembling-machine"]["assembling-machine-4"].icon_size = 32
-  data.raw["assembling-machine"]["assembling-machine-4"].animation = {
+  data.raw["assembling-machine"]["assembling-machine-4"].graphics_set.animation = {
     layers = {
       {
         filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2.png",
@@ -230,5 +230,5 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-5"].icon =
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-5.png"
   data.raw["assembling-machine"]["assembling-machine-5"].icon_size = 32
-  data.raw["assembling-machine"]["assembling-machine-5"].animation.layers[2].tint = { r = 0.7, g = 0.1, b = 0.7 }
+  data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[2].tint = { r = 0.7, g = 0.1, b = 0.7 }
 end

@@ -288,11 +288,13 @@ then
         emissions_per_minute = 3.25,
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
-      animation = bob_electrolyser_animation(
-        "__bobassembly__/graphics/entity/electrolyser",
-        2,
-        { r = 0.5, g = 0.1, b = 0 }
-      ),
+      graphics_set = {
+        animation = bob_electrolyser_animation(
+          "__bobassembly__/graphics/entity/electrolyser",
+          2,
+          { r = 0.5, g = 0.1, b = 0 }
+        ),
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -320,11 +322,13 @@ then
         emissions_per_minute = 2.5,
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
-      animation = bob_electrolyser_animation(
-        "__bobassembly__/graphics/entity/electrolyser",
-        3,
-        { r = 0, g = 0.3, b = 0.5 }
-      ),
+      graphics_set = {
+        animation = bob_electrolyser_animation(
+          "__bobassembly__/graphics/entity/electrolyser",
+          3,
+          { r = 0, g = 0.3, b = 0.5 }
+        ),
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -352,11 +356,13 @@ then
         emissions_per_minute = 1.75,
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
-      animation = bob_electrolyser_animation(
-        "__bobassembly__/graphics/entity/electrolyser",
-        4,
-        { r = 0.5, g = 0, b = 0.5 }
-      ),
+      graphics_set = {
+        animation = bob_electrolyser_animation(
+          "__bobassembly__/graphics/entity/electrolyser",
+          4,
+          { r = 0.5, g = 0, b = 0.5 }
+        ),
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -383,11 +389,13 @@ then
         emissions_per_minute = 1,
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
-      animation = bob_electrolyser_animation(
-        "__bobassembly__/graphics/entity/electrolyser",
-        5,
-        { r = 0, g = 0.5, b = 0 }
-      ),
+      graphics_set = {
+        animation = bob_electrolyser_animation(
+          "__bobassembly__/graphics/entity/electrolyser",
+          5,
+          { r = 0, g = 0.5, b = 0 }
+        ),
+      },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 

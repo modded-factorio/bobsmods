@@ -1,5 +1,5 @@
-data.raw["assembling-machine"]["centrifuge"].animation = nil
-data.raw["assembling-machine"]["centrifuge"].working_visualisations = {
+data.raw["assembling-machine"]["centrifuge"].graphics_set.animation = nil
+data.raw["assembling-machine"]["centrifuge"].graphics_set.working_visualisations = {
   {
     -- Centrifuge C, Top.
     apply_recipe_tint = "tertiary",

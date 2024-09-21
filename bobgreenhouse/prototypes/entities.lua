@@ -37,22 +37,24 @@ data:extend({
       },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    animation = {
-      filename = "__bobgreenhouse__/graphics/entity/greenhouse.png",
-      width = 113,
-      height = 91,
-      frame_count = 1,
-      shift = { 0.2, 0.15 },
-    },
-    working_visualisations = {
-      {
-        light = { intensity = 1, size = 6 },
-        animation = {
-          filename = "__bobgreenhouse__/graphics/entity/greenhouse-light.png",
-          width = 113,
-          height = 91,
-          frame_count = 1,
-          shift = { 0.2, 0.15 },
+    graphics_set = {
+      animation = {
+        filename = "__bobgreenhouse__/graphics/entity/greenhouse.png",
+        width = 113,
+        height = 91,
+        frame_count = 1,
+        shift = { 0.2, 0.15 },
+      },
+      working_visualisations = {
+        {
+          light = { intensity = 1, size = 6 },
+          animation = {
+            filename = "__bobgreenhouse__/graphics/entity/greenhouse-light.png",
+            width = 113,
+            height = 91,
+            frame_count = 1,
+            shift = { 0.2, 0.15 },
+          },
         },
       },
     },
