@@ -21,7 +21,7 @@ end
 local function spidertron_burner_energy_source()
   return {
     type = "burner",
-    fuel_category = "chemical",
+    fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
     smoke = {

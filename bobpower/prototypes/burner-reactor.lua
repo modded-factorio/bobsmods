@@ -101,7 +101,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       scale_energy_usage = true,
       energy_source = {
         type = "burner",
-        fuel_category = "chemical",
+        fuel_categories = { "chemical" },
         effectivity = 1,
         emissions_per_minute = 15,
         fuel_inventory_size = 1,

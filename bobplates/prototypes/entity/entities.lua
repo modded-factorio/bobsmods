@@ -193,7 +193,7 @@ data:extend({
     energy_usage = "90kW",
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
       emissions_per_minute = 2,
@@ -320,7 +320,7 @@ data:extend({
     energy_usage = "90kW",
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
       emissions_per_minute = 4,
@@ -480,7 +480,7 @@ data:extend({
     crafting_speed = 1,
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
       emissions_per_minute = 2,
@@ -548,7 +548,7 @@ data:extend({
     crafting_speed = 2,
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
       emissions_per_minute = 4,

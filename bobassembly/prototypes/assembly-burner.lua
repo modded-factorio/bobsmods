@@ -121,7 +121,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       crafting_speed = 0.25,
       energy_source = {
         type = "burner",
-        fuel_category = "chemical",
+        fuel_categories = { "chemical" },
         effectivity = 1,
         fuel_inventory_size = 1,
         emissions_per_minute = 4,
