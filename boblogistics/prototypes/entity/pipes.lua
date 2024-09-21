@@ -351,7 +351,7 @@ end
 
 local function bob_pipetogroundpictures(pipe_type)
   return {
-    up = {
+    north = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-up.png",
       priority = "high",
       width = 64,
@@ -364,7 +364,7 @@ local function bob_pipetogroundpictures(pipe_type)
         scale = 0.5,
       },
     },
-    down = {
+    south = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-down.png",
       priority = "high",
       width = 64,
@@ -377,7 +377,7 @@ local function bob_pipetogroundpictures(pipe_type)
         scale = 0.5,
       },
     },
-    left = {
+    east = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-left.png",
       priority = "high",
       width = 64,
@@ -390,7 +390,7 @@ local function bob_pipetogroundpictures(pipe_type)
         scale = 0.5,
       },
     },
-    right = {
+    west = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-right.png",
       priority = "high",
       width = 64,
