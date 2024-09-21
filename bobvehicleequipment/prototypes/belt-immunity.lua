@@ -12,7 +12,7 @@ data:extend({
       },
     },
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-belt-immunity-equipment",
+    place_as_equipment_result = "vehicle-belt-immunity-equipment",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[belt-immunity]",
     default_request_amount = 1,
