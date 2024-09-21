@@ -59,28 +59,3 @@ elseif data.raw.item["advanced-processing-unit"] then
   bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
 end
 bobmods.lib.tech.add_science_pack("rocket-control-unit", "production-science-pack", 1)
-
-bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "rocket-control-unit")
-
-if data.raw.item.rtg then
-  bobmods.lib.recipe.set_ingredient("satellite", { type = "item", name = "accumulator", amount = 50 })
-  bobmods.lib.recipe.remove_ingredient("satellite", "solar-panel")
-  bobmods.lib.tech.remove_prerequisite("space-science-pack", "solar-energy")
-  bobmods.lib.recipe.add_ingredient("satellite", { type = "item", name = "rtg", amount = 10 })
-  bobmods.lib.tech.add_prerequisite("space-science-pack", "rtg")
-elseif data.raw.item["solar-panel-3"] then
-  bobmods.lib.recipe.replace_ingredient("satellite", "solar-panel", "solar-panel-3")
-  bobmods.lib.tech.add_prerequisite("space-science-pack", "bob-solar-energy-3")
-  bobmods.lib.tech.remove_prerequisite("space-science-pack", "solar-energy")
-end
-
-if data.raw.item["silver-zinc-battery"] then
-  bobmods.lib.recipe.replace_ingredient("satellite", "accumulator", "silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("space-science-pack", "battery-3")
-  bobmods.lib.tech.remove_prerequisite("space-science-pack", "electric-energy-accumulators")
-end
-
-if data.raw.item["radar-5"] then
-  bobmods.lib.recipe.replace_ingredient("satellite", "radar", "radar-5")
-  bobmods.lib.tech.add_prerequisite("space-science-pack", "radars-5")
-end
