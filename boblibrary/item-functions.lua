@@ -304,17 +304,9 @@ end
 
 function bobmods.lib.item.hide(item_name)
   if type(item_name) == "string" then
-    local item = data.raw.item[item_name]
+    local item = data.raw.item[item_name] or data.raw.fluid[item_name]
     if item then
-      if not item.flags then
-        item.flags = {}
-      end
-      bobmods.lib.safe_insert(item.flags, "hidden")
-    else
-      item = data.raw.fluid[item_name]
-      if item then
-        item.hidden = true
-      end
+      item.hidden = true
     end
   else
     log(debug.traceback())
@@ -328,10 +320,7 @@ function bobmods.lib.item.hide_entity(type_name, entity_name)
     if entities then
       local entity = entities[entity_name]
       if entity then
-        if not entity.flags then
-          entity.flags = {}
-        end
-        bobmods.lib.safe_insert(entity.flags, "hidden")
+        entity.hidden = true
       end
     end
   else

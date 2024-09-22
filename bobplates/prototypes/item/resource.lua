@@ -97,7 +97,7 @@ data:extend({
     name = "void",
     icon = "__bobplates__/graphics/icons/void.png",
     icon_size = 64,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "void",
     order = "void",
     stack_size = 100,

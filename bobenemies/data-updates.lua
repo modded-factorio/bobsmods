@@ -895,7 +895,7 @@ if bobmods.enemies.small_alien_artifacts ~= true then
     "small-alien-artifact-purple",
   }) do
     if data.raw.item[item_name] then
-      data.raw.item[item_name].flags = { "hidden" }
+      data.raw.item[item_name].hidden = true
     end
   end
   -- hide recipies
