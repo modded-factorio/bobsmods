@@ -1290,13 +1290,13 @@ function create_character(player_index, class)
       end
       wlog("Old entity still exists after call to minime: " .. tostring(old and old.valid))
       -- For some reason, "minime" could have returned nil!
-      if not (skin and game.entity_prototypes[skin]) then
+      if not (skin and prototypes.entity[skin]) then
         -- Basic compatibility with "jetpack". This assumes that "jetpack" will be the
         -- last mod creating new character versions, so that the names of flying
         -- characters will always end with "-jetpack". This may or may not be true.
         local flying = old.name:match("^(.+)%-jetpack")
         local new = class.entity_name .. "-jetpack"
-        if flying and game.entity_prototypes[new] then
+        if flying and prototypes.entity[new] then
           wlog(new .. " is a flying prototype!")
           skin = new
         else

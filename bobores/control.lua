@@ -1,12 +1,12 @@
 local function regenerate_entity(ore)
-  if game.entity_prototypes[ore] and game.entity_prototypes[ore].autoplace_specification then
+  if prototypes.entity[ore] and prototypes.entity[ore].autoplace_specification then
     game.regenerate_entity(ore)
   end
 end
 
 remote.add_interface("bobores", {
   Regenerate = function()
-    --    for i, player in ipairs(game.players) do
+    --    for _, player in pairs(game.players) do
     --      player.print("Regenerating all ores now, this may take some time...")
     --    end
     regenerate_entity("tin-ore")
