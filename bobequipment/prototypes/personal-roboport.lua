@@ -462,7 +462,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "100KJ",
+      buffer_capacity = "100kJ",
       input_flow_limit = "20KW",
       drain = "10kW",
       usage_priority = "secondary-input",
@@ -550,7 +550,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "200KJ",
+      buffer_capacity = "200kJ",
       input_flow_limit = "40KW",
       drain = "20kW",
       usage_priority = "secondary-input",
@@ -594,7 +594,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "250KJ",
+      buffer_capacity = "250kJ",
       input_flow_limit = "50KW",
       drain = "25kW",
       usage_priority = "secondary-input",
@@ -812,7 +812,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "50KJ",
+      buffer_capacity = "50kJ",
       input_flow_limit = "10KW",
       drain = "5kW",
       usage_priority = "secondary-input",
@@ -856,7 +856,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "100KJ",
+      buffer_capacity = "100kJ",
       input_flow_limit = "20KW",
       drain = "10kW",
       usage_priority = "secondary-input",
@@ -900,7 +900,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "150KJ",
+      buffer_capacity = "150kJ",
       input_flow_limit = "30KW",
       drain = "15kW",
       usage_priority = "secondary-input",
@@ -944,7 +944,7 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "200KJ",
+      buffer_capacity = "200kJ",
       input_flow_limit = "40KW",
       drain = "20kW",
       usage_priority = "secondary-input",

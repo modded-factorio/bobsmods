@@ -75,8 +75,8 @@ data:extend({
       max_health = 100,
       extension_speed = 0.125,
       rotation_speed = 0.05,
-      energy_per_movement = "10KJ",
-      energy_per_rotation = "10KJ",
+      energy_per_movement = "10kJ",
+      energy_per_rotation = "10kJ",
     },
   }),
 })
