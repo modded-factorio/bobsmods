@@ -2532,7 +2532,7 @@ data:extend({
 })
 
 circuit_connector_definitions["bob-logistic-zone-interface"] =
-  circuit_connector_definitions.create(universal_connector_template, {
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     {
       variation = 26,
       main_offset = util.by_pixel(18.5 - 19, 41 - 47),

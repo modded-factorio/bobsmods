@@ -1,4 +1,4 @@
-circuit_connector_definitions["bob-valve"] = circuit_connector_definitions.create(universal_connector_template, {
+circuit_connector_definitions["bob-valve"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 2, main_offset = util.by_pixel(0, -12), shadow_offset = util.by_pixel(0, -12), show_shadow = true },
   { variation = 0, main_offset = util.by_pixel(0, -12), shadow_offset = util.by_pixel(0, -12), show_shadow = true },
   { variation = 6, main_offset = util.by_pixel(0, -12), shadow_offset = util.by_pixel(0, -12), show_shadow = true },
