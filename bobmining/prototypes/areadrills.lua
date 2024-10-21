@@ -3,7 +3,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     {
       type = "item",
       name = "bob-area-mining-drill-1",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-2a.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "extraction-machine",
@@ -14,7 +14,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     {
       type = "item",
       name = "bob-area-mining-drill-2",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-3a.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "extraction-machine",
@@ -25,7 +25,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     {
       type = "item",
       name = "bob-area-mining-drill-3",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-4a.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "extraction-machine",
@@ -36,7 +36,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     {
       type = "item",
       name = "bob-area-mining-drill-4",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-5a.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "extraction-machine",
@@ -104,58 +104,62 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
   data:extend({
     bobmods.mining.electric_mining_drill({
       name = "bob-area-mining-drill-1",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-2a.png",
       max_health = 450,
       animation_speed = 0.75,
       energy_usage = "170kW",
       mining_speed = 0.75,
       resource_searching_radius = 3.49,
       module_slots = 3,
-      tint = { r = 0.1, g = 0.5, b = 0.7 },
+      tint = { r = 0.7, g = 0.2, b = 0.1, a = 1 },
       circuit_wire_max_distance = 10,
-      emissions_per_minute = 10,
+      emissions_per_minute = 8,
+      large_area = true
     }),
 
     bobmods.mining.electric_mining_drill({
       name = "bob-area-mining-drill-2",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-3a.png",
       max_health = 600,
       animation_speed = 1.25,
       energy_usage = "270kW",
       mining_speed = 1.25,
       resource_searching_radius = 5.49,
       module_slots = 4,
-      tint = { r = 0.5, g = 0.1, b = 0.7 },
+      tint = { r = 0.2, g = 0.35, b = 0.5, a = 1 },
       circuit_wire_max_distance = 12.5,
-      emissions_per_minute = 10,
+      emissions_per_minute = 6,
+      large_area = true
     }),
 
     bobmods.mining.electric_mining_drill({
       name = "bob-area-mining-drill-3",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-4a.png",
       max_health = 750,
       animation_speed = 2,
       energy_usage = "380kW",
       mining_speed = 2,
       resource_searching_radius = 6.49,
       module_slots = 4,
-      tint = { r = 0.7, g = 0.2, b = 0.1 },
+      tint = { r = 0.7, g = 0.25, b = 0.7, a = 1 },
       circuit_wire_max_distance = 15,
-      emissions_per_minute = 10,
+      emissions_per_minute = 4,
+      large_area = true
     }),
 
     bobmods.mining.electric_mining_drill({
       name = "bob-area-mining-drill-4",
-      icon = "__base__/graphics/icons/electric-mining-drill.png",
+      icon = "__bobmining__/graphics/icons/electric-mining-drill-5a.png",
       max_health = 900,
       animation_speed = 3.25,
       energy_usage = "500kW",
       mining_speed = 3.25,
       resource_searching_radius = 8.49,
       module_slots = 5,
-      tint = { r = 0.1, g = 0.7, b = 0.1 },
+      tint = { r = 0.25, g = 0.5, b = 0.25, a = 1 },
       circuit_wire_max_distance = 17.5,
-      emissions_per_minute = 10,
+      emissions_per_minute = 2,
+      large_area = true
     }),
   })
 
