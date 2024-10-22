@@ -146,7 +146,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       icon_size = 64,
       default_temperature = 25,
       base_flow_rate = 100,
-    heat_capacity = "0.1kJ",
+      heat_capacity = "0.1kJ",
       base_color = { r = 0.4, g = 0.1, b = 0.3 },
       flow_color = { r = 0.8, g = 0.2, b = 0.6 },
       max_temperature = 100,

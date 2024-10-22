@@ -230,5 +230,6 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-5"].icon =
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-5.png"
   data.raw["assembling-machine"]["assembling-machine-5"].icon_size = 32
-  data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[2].tint = { r = 0.7, g = 0.1, b = 0.7 }
+  data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[2].tint =
+    { r = 0.7, g = 0.1, b = 0.7 }
 end

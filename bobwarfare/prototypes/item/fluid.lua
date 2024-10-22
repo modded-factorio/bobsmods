@@ -5,7 +5,7 @@ if data.raw.fluid["nitric-acid"] then
       name = "sulfuric-nitric-acid",
       default_temperature = 25,
       base_flow_rate = 100,
-    heat_capacity = "1kJ",
+      heat_capacity = "1kJ",
       base_color = { r = 0.0, g = 0.0, b = 1.0 },
       flow_color = { r = 1.0, g = 1.0, b = 0.0 },
       max_temperature = 100,

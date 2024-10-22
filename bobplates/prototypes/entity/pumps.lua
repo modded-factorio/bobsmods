@@ -412,7 +412,7 @@ data:extend({
     },
     energy_usage = "50kW",
     graphics_set = {
-    --[[
+      --[[
       animation =
       {
         north =
@@ -732,7 +732,7 @@ data:extend({
         },
       },
 ]]
-    --
+      --
       animation = {
         north = {
           filename = "__bobplates__/graphics/entity/pump/pump.png",

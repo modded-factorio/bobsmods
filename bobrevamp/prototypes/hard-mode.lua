@@ -10,7 +10,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       max_temperature = 100,
       gas_temperature = -56.6,
       base_flow_rate = 100,
-    heat_capacity = "1kJ",
+      heat_capacity = "1kJ",
       base_color = { r = 0.5, g = 0.0, b = 0.0 },
       flow_color = { r = 0.0, g = 0.0, b = 0.0 },
     },
