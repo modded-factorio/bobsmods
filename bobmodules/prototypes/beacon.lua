@@ -96,7 +96,7 @@ data:extend({
     },
     prerequisites = {
       "effect-transmission",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     unit = {

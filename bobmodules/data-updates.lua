@@ -9,6 +9,11 @@ if settings.startup["bobmods-modules-transmitproductivity"].value == true then
     table.insert(beacon.allowed_effects, "productivity")
   end
 end
+if settings.startup["bobmods-modules-transmitquality"].value == true then
+  for i, beacon in pairs(data.raw.beacon) do
+    table.insert(beacon.allowed_effects, "quality")
+  end
+end
 
 bobmods.lib.tech.remove_science_pack("effect-transmission", "utility-science-pack")
 bobmods.lib.tech.remove_science_pack("effect-transmission", "production-science-pack")
@@ -17,9 +22,9 @@ bobmods.lib.tech.remove_prerequisite("effect-transmission", "production-science-
 bobmods.lib.tech.add_prerequisite("effect-transmission", "modules")
 bobmods.lib.tech.add_prerequisite("effect-transmission", "chemical-science-pack")
 
-bobmods.lib.tech.remove_prerequisite("speed-module-2", "advanced-electronics-2")
-bobmods.lib.tech.remove_prerequisite("productivity-module-2", "advanced-electronics-2")
-bobmods.lib.tech.remove_prerequisite("efficiency-module-2", "advanced-electronics-2")
+bobmods.lib.tech.remove_prerequisite("speed-module-2", "processing-unit")
+bobmods.lib.tech.remove_prerequisite("productivity-module-2", "processing-unit")
+bobmods.lib.tech.remove_prerequisite("efficiency-module-2", "processing-unit")
 bobmods.lib.tech.remove_prerequisite("speed-module-3", "production-science-pack")
 bobmods.lib.tech.remove_prerequisite("productivity-module-3", "production-science-pack")
 bobmods.lib.tech.remove_prerequisite("efficiency-module-3", "production-science-pack")

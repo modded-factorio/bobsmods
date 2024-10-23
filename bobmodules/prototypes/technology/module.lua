@@ -823,11 +823,11 @@ table.insert(
   { type = "unlock-recipe", recipe = "pollution-create-processor-3" }
 )
 
-table.insert(data.raw.technology["speed-module-3"].prerequisites, "advanced-electronics-2")
-table.insert(data.raw.technology["efficiency-module-3"].prerequisites, "advanced-electronics-2")
-table.insert(data.raw.technology["productivity-module-3"].prerequisites, "advanced-electronics-2")
-table.insert(data.raw.technology["pollution-clean-module-3"].prerequisites, "advanced-electronics-2")
-table.insert(data.raw.technology["pollution-create-module-3"].prerequisites, "advanced-electronics-2")
+table.insert(data.raw.technology["speed-module-3"].prerequisites, "processing-unit")
+table.insert(data.raw.technology["efficiency-module-3"].prerequisites, "processing-unit")
+table.insert(data.raw.technology["productivity-module-3"].prerequisites, "processing-unit")
+table.insert(data.raw.technology["pollution-clean-module-3"].prerequisites, "processing-unit")
+table.insert(data.raw.technology["pollution-create-module-3"].prerequisites, "processing-unit")
 
 if data.raw.technology["advanced-electronics-3"] then
   table.insert(data.raw.technology["speed-module-6"].prerequisites, "advanced-electronics-3")
