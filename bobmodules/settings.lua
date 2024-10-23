@@ -113,6 +113,14 @@ data:extend({
     maximum_value = 1,
     minimum_value = 0,
   },
+  {
+    type = "double-setting",
+    name = "bobmods-modules-perlevel-bonus-quality",
+    setting_type = "startup",
+    default_value = 0.5,
+    maximum_value = 1,
+    minimum_value = 0,
+  },
 
   {
     type = "double-setting",
@@ -174,6 +182,14 @@ data:extend({
   {
     type = "double-setting",
     name = "bobmods-modules-start-penalty-consumption",
+    setting_type = "startup",
+    default_value = 0,
+    maximum_value = 1,
+    minimum_value = 0,
+  },
+  {
+    type = "double-setting",
+    name = "bobmods-modules-start-bonus-quality",
     setting_type = "startup",
     default_value = 0,
     maximum_value = 1,
