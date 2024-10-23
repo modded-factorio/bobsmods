@@ -585,23 +585,23 @@ end)
 
 script.on_event(defines.events.on_built_entity, function(event)
   wlog("Entered event handler on_built_entity(" .. serpent.line(event) .. ")")
-  if event.created_entity.type == "character" then
+  if event.entity.type == "character" then
     -- when a player builds a character entity, it gets associated to them.
-    game.players[event.player_index].associate_character(event.created_entity)
-    --    event.created_entity.associated_player = game.players[event.player_index] -- an alternate that should do the same thing as above.
+    game.players[event.player_index].associate_character(event.entity)
+    --    event.entity.associated_player = game.players[event.player_index] -- an alternate that should do the same thing as above.
     refresh_avatar_gui(event.player_index)
 
     for i, class in pairs(storage.classes) do
-      if event.created_entity.name == class.entity_name then
+      if event.entity.name == class.entity_name then
         for i, bonus in pairs(class.bonuses) do
-          event.created_entity[i] = bonus
+          event.entity[i] = bonus
         end
       end
     end
   end
   -- due to how I want this to work, character entities can't have ghosts.
-  if event.created_entity.type == "entity-ghost" and event.created_entity.ghost_type == "character" then
-    event.created_entity.destroy()
+  if event.entity.type == "entity-ghost" and event.entity.ghost_type == "character" then
+    event.entity.destroy()
   end
 end)
 
