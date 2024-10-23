@@ -14,7 +14,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-1",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -34,7 +34,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-2",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -54,7 +54,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-3",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -74,7 +74,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-4",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -94,7 +94,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-5",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -114,7 +114,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-6",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -134,7 +134,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-7",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -154,7 +154,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       order = "m-rs-8",
       stack_size = 100,
       default_request_amount = 10,
-      effect = { speed = { bonus = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -179,8 +179,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -202,8 +202,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -225,8 +225,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -248,8 +248,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -271,8 +271,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -294,8 +294,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -317,8 +317,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -7 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -7 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -340,8 +340,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+        pollution = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001
       },
       beacon_tint = {
         primary = { r = 0.8, g = 0.8, b = 0 },
@@ -367,7 +367,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -390,7 +390,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -413,7 +413,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -436,7 +436,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -459,7 +459,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -482,7 +482,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -505,7 +505,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -528,7 +528,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
+        productivity = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -555,10 +555,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-        pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
-        speed = { bonus = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
+        productivity = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+        pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
+        speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -581,10 +581,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-        pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
-        speed = { bonus = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
+        productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+        pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
+        speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -607,10 +607,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-        pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
-        speed = { bonus = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
+        productivity = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+        pollution = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
+        speed = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -633,10 +633,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-        pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
-        speed = { bonus = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
+        productivity = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+        pollution = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
+        speed = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
@@ -659,10 +659,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       stack_size = 100,
       default_request_amount = 10,
       effect = {
-        productivity = { bonus = 10 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-        pollution = { bonus = -10 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
-        consumption = { bonus = -10 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
-        speed = { bonus = 10 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
+        productivity = 10 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+        pollution = -10 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+        consumption = -10 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
+        speed = 10 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
       limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
