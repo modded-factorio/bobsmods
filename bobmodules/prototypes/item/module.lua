@@ -10,8 +10,8 @@ data.raw["module"]["speed-module"].default_request_amount = 10
 data.raw["module"]["speed-module"].beacon_tint =
   { primary = { r = 0, g = 0.34, b = 1, a = 1 }, secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 } }
 data.raw["module"]["speed-module"].effect = {
-  speed = { bonus = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-  consumption = { bonus = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 },
+  speed = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+  consumption = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
 }
 
 data.raw["module"]["speed-module-2"].stack_size = 100
@@ -23,8 +23,8 @@ data.raw["module"]["speed-module-2"].default_request_amount = 10
 data.raw["module"]["speed-module-2"].beacon_tint =
   { primary = { r = 0, g = 0.34, b = 1, a = 1 }, secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 } }
 data.raw["module"]["speed-module-2"].effect = {
-  speed = { bonus = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-  consumption = { bonus = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 },
+  speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+  consumption = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
 }
 
 data.raw["module"]["speed-module-3"].stack_size = 100
@@ -36,8 +36,8 @@ data.raw["module"]["speed-module-3"].default_request_amount = 10
 data.raw["module"]["speed-module-3"].beacon_tint =
   { primary = { r = 0, g = 0.34, b = 1, a = 1 }, secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 } }
 data.raw["module"]["speed-module-3"].effect = {
-  speed = { bonus = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-  consumption = { bonus = 3 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 },
+  speed = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 ,
+  consumption = 3 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
 }
 
 data:extend({
@@ -53,10 +53,8 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      speed = { bonus = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-      consumption = {
-        bonus = 4 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
+      speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+      consumption = 4 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
     },
     beacon_tint = {
       primary = { r = 0, g = 0.34, b = 1, a = 1 },
@@ -78,10 +76,8 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      speed = { bonus = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-      consumption = {
-        bonus = 5 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
+      speed = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+      consumption = 5 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
     },
     beacon_tint = {
       primary = { r = 0, g = 0.34, b = 1, a = 1 },
@@ -103,10 +99,8 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      speed = { bonus = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-      consumption = {
-        bonus = 6 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
+      speed = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+      consumption = 6 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
     },
     beacon_tint = {
       primary = { r = 0, g = 0.34, b = 1, a = 1 },
@@ -128,10 +122,8 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      speed = { bonus = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-      consumption = {
-        bonus = 7 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
+      speed = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+      consumption = 7 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
     },
     beacon_tint = {
       primary = { r = 0, g = 0.34, b = 1, a = 1 },
@@ -153,10 +145,8 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      speed = { bonus = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
-      consumption = {
-        bonus = 8 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
+      speed = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
+      consumption = 8 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001
     },
     beacon_tint = {
       primary = { r = 0, g = 0.34, b = 1, a = 1 },
@@ -179,7 +169,7 @@ data.raw["module"]["efficiency-module"].default_request_amount = 10
 data.raw["module"]["efficiency-module"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
 data.raw["module"]["efficiency-module"].effect =
-  { consumption = { bonus = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 } }
+  { consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 }
 
 data.raw["module"]["efficiency-module-2"].stack_size = 100
 data.raw["module"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/yellow-module-2.png"
@@ -190,7 +180,7 @@ data.raw["module"]["efficiency-module-2"].default_request_amount = 10
 data.raw["module"]["efficiency-module-2"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
 data.raw["module"]["efficiency-module-2"].effect =
-  { consumption = { bonus = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 } }
+  { consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 }
 
 data.raw["module"]["efficiency-module-3"].stack_size = 100
 data.raw["module"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/yellow-module-3.png"
@@ -201,7 +191,7 @@ data.raw["module"]["efficiency-module-3"].default_request_amount = 10
 data.raw["module"]["efficiency-module-3"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
 data.raw["module"]["efficiency-module-3"].effect =
-  { consumption = { bonus = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 } }
+  { consumption = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 }
 
 data:extend({
   {
@@ -216,7 +206,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      consumption = { bonus = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+      consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
     },
     beacon_tint = {
       primary = { r = 0.3, g = 0.6, b = 0.1 },
@@ -238,7 +228,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      consumption = { bonus = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+      consumption = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
     },
     beacon_tint = {
       primary = { r = 0.3, g = 0.6, b = 0.1 },
@@ -260,7 +250,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      consumption = { bonus = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+      consumption = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
     },
     beacon_tint = {
       primary = { r = 0.3, g = 0.6, b = 0.1 },
@@ -282,7 +272,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      consumption = { bonus = -7 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+      consumption = -7 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
     },
     beacon_tint = {
       primary = { r = 0.3, g = 0.6, b = 0.1 },
@@ -304,7 +294,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      consumption = { bonus = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
+      consumption = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
     },
     beacon_tint = {
       primary = { r = 0.3, g = 0.6, b = 0.1 },
@@ -331,9 +321,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = { bonus = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 },
-      pollution = { bonus = bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 ,
+      consumption = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 ,
+      pollution = bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -356,11 +346,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 2 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 ,
+      consumption = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 ,
+      pollution = 2 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -383,11 +371,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 3 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 3 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+      consumption = 3 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
+      pollution = 3 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -410,11 +396,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 4 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 4 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+      consumption = 4 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
+      pollution = 4 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -437,11 +421,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 5 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 5 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+      consumption = 5 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
+      pollution = 5 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -464,11 +446,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 6 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 6 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+      consumption = 6 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
+      pollution = 6 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -491,11 +471,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 7 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 7 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+      consumption = 7 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
+      pollution = 7 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -518,11 +496,9 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      productivity = { bonus = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
-      consumption = {
-        bonus = 8 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
-      },
-      pollution = { bonus = 8 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 },
+      productivity = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
+      consumption = 8 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
+      pollution = 8 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
     limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
@@ -535,22 +511,14 @@ data:extend({
 })
 
 if settings.startup["bobmods-modules-productivityhasspeed"].value == true then
-  data.raw.module["productivity-module"].effect.speed =
-    { bonus = -1 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty }
-  data.raw.module["productivity-module-2"].effect.speed =
-    { bonus = -2 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
-  data.raw.module["productivity-module-3"].effect.speed =
-    { bonus = -3 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
-  data.raw.module["productivity-module-4"].effect.speed =
-    { bonus = -4 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
-  data.raw.module["productivity-module-5"].effect.speed =
-    { bonus = -5 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
-  data.raw.module["productivity-module-6"].effect.speed =
-    { bonus = -6 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
-  data.raw.module["productivity-module-7"].effect.speed =
-    { bonus = -7 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
-  data.raw.module["productivity-module-8"].effect.speed =
-    { bonus = -8 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 }
+  data.raw.module["productivity-module"].effect.speed = -1 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty
+  data.raw.module["productivity-module-2"].effect.speed = -2 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
+  data.raw.module["productivity-module-3"].effect.speed = -3 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
+  data.raw.module["productivity-module-4"].effect.speed = -4 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
+  data.raw.module["productivity-module-5"].effect.speed = -5 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
+  data.raw.module["productivity-module-6"].effect.speed = -6 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
+  data.raw.module["productivity-module-7"].effect.speed = -7 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
+  data.raw.module["productivity-module-8"].effect.speed = -8 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty - 0.001 
 end
 
 --[[Pollution Cleaning Modules]]
@@ -568,7 +536,9 @@ data:extend({
     order = "m-p-cl-1",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -588,7 +558,9 @@ data:extend({
     order = "m-p-cl-2",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -608,7 +580,9 @@ data:extend({
     order = "m-p-cl-3",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -628,7 +602,9 @@ data:extend({
     order = "m-p-cl-4",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -648,7 +624,9 @@ data:extend({
     order = "m-p-cl-5",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -668,7 +646,9 @@ data:extend({
     order = "m-p-cl-6",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -688,7 +668,9 @@ data:extend({
     order = "m-p-cl-7",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -708,7 +690,9 @@ data:extend({
     order = "m-p-cl-8",
     stack_size = 100,
     default_request_amount = 10,
-    effect = { pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = {
+      pollution = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
+    },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -734,8 +718,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -756,8 +739,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 2 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 2 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -778,8 +760,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 3 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 3 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -800,8 +781,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 4 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 4 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -822,8 +802,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 5 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 5 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -844,8 +823,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 6 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 6 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -866,8 +844,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 7 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 7 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
@@ -888,8 +865,7 @@ data:extend({
     stack_size = 100,
     default_request_amount = 10,
     effect = {
-      pollution = { bonus = 8 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
-    },
+      pollution = 8 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     beacon_tint = {
       primary = { r = 0.4, g = 0.3, b = 0.2 },
       secondary = { r = 1, g = 0.5, b = 0 },
