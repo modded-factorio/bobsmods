@@ -47,6 +47,13 @@ data:extend({
     setting_type = "startup",
     default_value = false,
   },
+  
+  {
+    type = "bool-setting",
+    name = "bobmods-modules-transmitquality",
+    setting_type = "startup",
+    default_value = false,
+  },
 
   {
     type = "double-setting",
