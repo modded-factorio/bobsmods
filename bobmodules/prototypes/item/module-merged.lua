@@ -673,40 +673,36 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       requires_beacon_alt_mode = false,
     },
   })
-  if game.active_mods["quality"] then
+ end
+  if data.raw.technology["quality-module"] then
 	data.raw["module"]["god-module-1"].effect = {
         productivity = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
         pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
         consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
-        quality = 2 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001
-      }
+        quality = 2 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001 }
 	data.raw["module"]["god-module-2"].effect = {
         productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
         pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
         consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
-        quality = 4 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001
-      }
+        quality = 4 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001 }
 	data.raw["module"]["god-module-3"].effect = {
         productivity = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
         pollution = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
         consumption = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
-        quality = 6 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001
-      }
+        quality = 6 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001 }
 	data.raw["module"]["god-module-4"].effect = {
         productivity = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
         pollution = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
         consumption = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
-        quality = 8à * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001
-      }
+        quality = 8 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001 }
 	data.raw["module"]["god-module-5"].effect = {
         productivity = 10 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001,
         pollution = -10 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001,
         consumption = -10 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 10 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
-        quality = 10 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001
-      }
+        quality = 10 * bobmods.modules.QualityPerLevel + bobmods.modules.SpeedBonus + 0.001 }
 end
