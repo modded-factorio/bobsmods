@@ -439,20 +439,15 @@ end)
 
 script.on_event(defines.events.on_built_entity, function(event)
   local player = game.players[event.player_index]
-  local entity = event.created_entity
+  local entity = event.entity
 
   local entity_name = entity.name
   if entity.type == "entity-ghost" then
     entity_name = entity.ghost_name
   end
 
-  if
-    not game.active_mods["bobinserters"]
-    and event.item
-    and event.item.place_result
-    and event.item.place_result.type == "inserter"
+  if not game.active_mods["bobinserters"] 
     and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
-    and event.item.place_result.name == entity_name --probably don't even need this line anymore.
     and not storage.bobmods.logistics.blacklist[entity_name]
   then
     bobmods.logistics.set_positions(entity, event.player_index)
@@ -475,7 +470,7 @@ script.on_event(defines.events.on_built_entity, function(event)
 end)
 
 script.on_event(defines.events.on_robot_built_entity, function(event)
-  local entity = event.created_entity
+  local entity = event.entity
   if
     settings.startup["bobmods-logistics-inserteroverhaul"].value == true
     and entity.type == "inserter"

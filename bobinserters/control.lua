@@ -8,7 +8,7 @@ function gui_add_title(gui, title, button_name, drag_target)
     type = "sprite-button",
     name = button_name,
     style = "frame_action_button",
-    sprite = "utility/close_white",
+    sprite = "utility/close",
   })
   if drag_target then
     gui.title_flow.title.drag_target = gui
@@ -393,7 +393,7 @@ script.on_event("bob-inserter-pickup-rotate", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -406,7 +406,7 @@ script.on_event("bob-inserter-drop-rotate", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -419,7 +419,7 @@ script.on_event("bob-inserter-pickup-range", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -432,7 +432,7 @@ script.on_event("bob-inserter-drop-range", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -445,7 +445,7 @@ script.on_event("bob-inserter-long", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -458,7 +458,7 @@ script.on_event("bob-inserter-near", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -471,7 +471,7 @@ script.on_event("bob-inserter-open-gui", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
     and not storage.bobmods.inserters.blacklist[entity.name]
   then
@@ -484,9 +484,17 @@ end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
   local player = game.players[event.player_index]
-  if event.gui_type == defines.gui_type.entity and event.entity and event.entity.type == "inserter" then
+  if event.gui_type == defines.gui_type.entity and event.entity then
+    local prototype
+    if event.entity.type == "inserter" then
+      prototype = event.entity.prototype
+    elseif event.entity.type == "entity-ghost" and event.entity.ghost_type == "inserter" then
+      prototype = event.entity.ghost_prototype
+    end
+
     if
-      event.entity.prototype.allow_custom_vectors
+      prototype
+      and prototype.allow_custom_vectors
       and not storage.bobmods.inserters.blacklist[event.entity.name]
       and settings.get_player_settings(player)["bobmods-inserters-gui-position"].value ~= "off"
     then
@@ -664,19 +672,14 @@ end)
 
 script.on_event(defines.events.on_built_entity, function(event)
   local player = game.players[event.player_index]
-  local entity = event.created_entity
+  local entity = event.entity
 
   local entity_name = entity.name
   if entity.type == "entity-ghost" then
     entity_name = entity.ghost_name
   end
 
-  if
-    event.item
-    and event.item.place_result
-    and event.item.place_result.type == "inserter"
-    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
-    and event.item.place_result.name == entity_name --probably don't even need this line anymore.
+  if (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and not storage.bobmods.inserters.blacklist[entity_name]
   then
     bobmods.logistics.set_positions(entity, event.player_index)
