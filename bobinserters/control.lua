@@ -679,7 +679,8 @@ script.on_event(defines.events.on_built_entity, function(event)
     entity_name = entity.ghost_name
   end
 
-  if (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
+  if
+    (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and not storage.bobmods.inserters.blacklist[entity_name]
   then
     bobmods.logistics.set_positions(entity, event.player_index)

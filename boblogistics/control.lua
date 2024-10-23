@@ -446,7 +446,8 @@ script.on_event(defines.events.on_built_entity, function(event)
     entity_name = entity.ghost_name
   end
 
-  if not game.active_mods["bobinserters"] 
+  if
+    not game.active_mods["bobinserters"]
     and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and not storage.bobmods.logistics.blacklist[entity_name]
   then
