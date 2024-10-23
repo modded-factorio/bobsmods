@@ -7,7 +7,6 @@ require("prototypes.technology.module-updates")
 if settings.startup["bobmods-modules-transmitproductivity"].value == true then
   for i, beacon in pairs(data.raw.beacon) do
     table.insert(beacon.allowed_effects, "productivity")
-    table.insert(beacon.allowed_effects, "quality")
   end
 end
 if settings.startup["bobmods-modules-transmitquality"].value == true then
