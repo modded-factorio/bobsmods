@@ -47,13 +47,6 @@ data:extend({
     setting_type = "startup",
     default_value = false,
   },
-  
-  {
-    type = "bool-setting",
-    name = "bobmods-modules-transmitquality",
-    setting_type = "startup",
-    default_value = false,
-  },
 
   {
     type = "double-setting",
@@ -203,3 +196,14 @@ data:extend({
     minimum_value = 0,
   },
 })
+
+if mods["quality"] then
+	data:extend({
+	  {
+		type = "bool-setting",
+		name = "bobmods-modules-transmitquality",
+		setting_type = "startup",
+		default_value = false,
+	  },
+	})
+end
