@@ -7,12 +7,15 @@ require("prototypes.technology.module-updates")
 if settings.startup["bobmods-modules-transmitproductivity"].value == true then
   for i, beacon in pairs(data.raw.beacon) do
     table.insert(beacon.allowed_effects, "productivity")
-  end
-end
-if settings.startup["bobmods-modules-transmitquality"].value == true then
-  for i, beacon in pairs(data.raw.beacon) do
     table.insert(beacon.allowed_effects, "quality")
   end
+end
+if mods["quality"] then
+	if settings.startup["bobmods-modules-transmitquality"].value == true then
+	  for i, beacon in pairs(data.raw.beacon) do
+		table.insert(beacon.allowed_effects, "quality")
+	  end
+	end
 end
 
 bobmods.lib.tech.remove_science_pack("effect-transmission", "utility-science-pack")
