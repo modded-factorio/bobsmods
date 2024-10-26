@@ -213,14 +213,14 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = 0, position = { 0, -1 } } },
         volume = 1000
       },
       {
         production_type = "output",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = 8, position = { 0, 1 } } },
         volume = 1000
@@ -379,14 +379,14 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = 0, position = { 0, -1 } } },
         volume = 1000
       },
       {
         production_type = "output",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = 8, position = { 0, 1 } } },
         volume = 1000
