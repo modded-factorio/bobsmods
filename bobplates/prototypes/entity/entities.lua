@@ -3,81 +3,46 @@ local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
     layers = {
       -- Base
       {
-        filename = directory .. "/electrolyser-" .. tier .. "-base.png",
-        x = 136 * facing,
-        width = 136,
-        height = 130,
+        filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
+        x = 272 * facing,
+        width = 272,
+        height = 260,
         frame_count = 1,
         shift = util.by_pixel(17, 0),
-        hr_version = {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
-          x = 272 * facing,
-          width = 272,
-          height = 260,
-          frame_count = 1,
-          shift = util.by_pixel(17, 0),
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
       -- Mask
       {
-        filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
-        x = 136 * facing,
-        width = 136,
-        height = 130,
+        filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
+        x = 272 * facing,
+        width = 272,
+        height = 260,
         frame_count = 1,
         shift = util.by_pixel(17, 0),
         tint = tint,
-        hr_version = {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
-          x = 272 * facing,
-          width = 272,
-          height = 260,
-          frame_count = 1,
-          shift = util.by_pixel(17, 0),
-          tint = tint,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
       -- Highlights
       {
-        filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
-        x = 136 * facing,
-        width = 136,
-        height = 130,
+        filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
+        x = 272 * facing,
+        width = 272,
+        height = 260,
         frame_count = 1,
         shift = util.by_pixel(17, 0),
         blend_mode = "additive",
-        hr_version = {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
-          x = 272 * facing,
-          width = 272,
-          height = 260,
-          frame_count = 1,
-          shift = util.by_pixel(17, 0),
-          blend_mode = "additive",
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
       -- Shadow
       {
-        filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
-        x = 136 * facing,
-        width = 136,
-        height = 130,
+        filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
+        x = 272 * facing,
+        width = 272,
+        height = 260,
         frame_count = 1,
-        shift = util.by_pixel(17, 0),
         draw_as_shadow = true,
-        hr_version = {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
-          x = 272 * facing,
-          width = 272,
-          height = 260,
-          frame_count = 1,
-          draw_as_shadow = true,
-          shift = util.by_pixel(17, 0),
-          scale = 0.5,
-        },
+        shift = util.by_pixel(17, 0),
+        scale = 0.5,
       },
     },
   }
@@ -92,6 +57,24 @@ local function bob_electrolyser_animation(directory, tier, tint)
   }
 end
 
+circuit_connector_definitions["electrolyser"] = circuit_connector_definitions.create_vector(universal_connector_template,
+  {
+    { variation = 8, main_offset = util.by_pixel(-12, -34), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(0, -19), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+    { variation = 8, main_offset = util.by_pixel(-12, -41), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+    { variation = 2, main_offset = util.by_pixel(0, -25), shadow_offset = util.by_pixel(39, 31), show_shadow = false }
+  }
+)
+
+circuit_connector_definitions["electric-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template,
+  {
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true }
+  }
+)
+
 data:extend({
   {
     type = "assembling-machine",
@@ -105,6 +88,8 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     max_health = 150,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electrolyser"],
     crafting_categories = { "electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     module_slots = 1,
@@ -113,34 +98,32 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 4,
+      emissions_per_minute = { pollution = 4 },
     },
     fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { -1, -1 } } },
+        volume = 1000
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { 1, -1 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        pipe_connections = { { flow_direction = "output", direction = 8, position = { -1, 1 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        pipe_connections = { { flow_direction = "output", direction = 8, position = { 1, 1 } } },
+        volume = 1000
       },
     },
     graphics_set = {
@@ -181,10 +164,16 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { 0.5, -0.5 } } },
+        secondary_draw_orders = { north = -1, east = -1, west = -1 },
+        volume = 1000
+      },
+      {
+        production_type = "output",
+        pipe_connections = { { flow_direction = "output", direction = 8, position = { 0.5, 0.5 } } },
+        volume = 1
       },
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -196,7 +185,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = { pollution = 2 },
       smoke = {
         {
           name = "smoke",
@@ -276,6 +265,45 @@ data:extend({
         },
       },
     },
+    graphics_set_flipped = {
+      animation = {
+        north = {
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          x = 94,
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        west = {
+          x = 188,
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        south = {
+          x = 282,
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        east = {
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+      },
+    },
     fast_replaceable_group = "furnace",
     next_upgrade = "steel-chemical-furnace",
   },
@@ -308,12 +336,19 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { 0.5, -0.5 } } },
+        secondary_draw_orders = { north = -1, east = -1, west = -1 },
+        volume = 1000
+      },
+      {
+        production_type = "output",
+        pipe_connections = { { flow_direction = "output", direction = 8, position = { 0.5, 0.5 } } },
+        volume = 1
       },
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     crafting_categories = { "chemical-furnace" },
@@ -323,7 +358,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = { pollution = 4 },
       smoke = {
         {
           name = "smoke",
@@ -337,10 +372,7 @@ data:extend({
         },
       },
     },
-    graphics_set = {
-      animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
-      working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
-    },
+    graphics_set = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set),
     fast_replaceable_group = "furnace",
   },
 
@@ -352,6 +384,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "electric-chemical-furnace" },
     max_health = 350,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electric-furnace"],
     corpse = "big-remnants",
     resistances = {
       {
@@ -364,12 +398,11 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { 0, -1 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
@@ -387,7 +420,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = { pollution = 1 },
     },
     working_sound = {
       sound = {
@@ -408,45 +441,27 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
             priority = "high",
-            width = 25,
-            height = 15,
+            width = 60,
+            height = 56,
             frame_count = 12,
             animation_speed = 0.5,
-            shift = { 0.015625, 0.890625 },
-            hr_version = {
-              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-              priority = "high",
-              width = 60,
-              height = 56,
-              frame_count = 12,
-              animation_speed = 0.5,
-              shift = util.by_pixel(1.75, 32.75),
-              scale = 0.5,
-            },
+            shift = util.by_pixel(1.75, 32.75),
+            scale = 0.5,
           },
           light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
             priority = "high",
-            width = 19,
-            height = 13,
+            width = 37,
+            height = 25,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = { -0.671875, -0.640625 },
-            hr_version = {
-              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-              priority = "high",
-              width = 37,
-              height = 25,
-              frame_count = 4,
-              animation_speed = 0.5,
-              shift = util.by_pixel(-20.5, -18.5),
-              scale = 0.5,
-            },
+            shift = util.by_pixel(-20.5, -18.5),
+            scale = 0.5,
           },
         },
       },
@@ -483,7 +498,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = { pollution = 2 },
       smoke = {
         {
           name = "smoke",
@@ -551,7 +566,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = { pollution = 4 },
       smoke = {
         {
           name = "smoke",
@@ -562,10 +577,7 @@ data:extend({
         },
       },
     },
-    graphics_set = {
-      animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
-      working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
-    },
+    graphics_set = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set)
     fast_replaceable_group = "furnace",
   },
 
@@ -577,6 +589,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "electric-mixing-furnace" },
     max_health = 350,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electric-furnace"],
     corpse = "big-remnants",
     resistances = {
       {
@@ -602,7 +616,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = { pollution = 1 },
     },
     working_sound = {
       sound = {
@@ -636,66 +650,39 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
             priority = "high",
-            width = 25,
-            height = 15,
+            width = 60,
+            height = 56,
             frame_count = 12,
             animation_speed = 0.5,
-            shift = { 0.015625, 0.890625 },
-            hr_version = {
-              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-              priority = "high",
-              width = 60,
-              height = 56,
-              frame_count = 12,
-              animation_speed = 0.5,
-              shift = util.by_pixel(1.75, 32.75),
-              scale = 0.5,
-            },
+            shift = util.by_pixel(1.75, 32.75),
+            scale = 0.5,
           },
           light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
             priority = "high",
-            width = 19,
-            height = 13,
+            width = 37,
+            height = 25,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = { -0.671875, -0.640625 },
-            hr_version = {
-              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-              priority = "high",
-              width = 37,
-              height = 25,
-              frame_count = 4,
-              animation_speed = 0.5,
-              shift = util.by_pixel(-20.5, -18.5),
-              scale = 0.5,
-            },
+            shift = util.by_pixel(-20.5, -18.5),
+            scale = 0.5,
           },
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
             priority = "high",
-            width = 12,
-            height = 9,
+            width = 23,
+            height = 15,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = { 0.0625, -1.234375 },
-            hr_version = {
-              filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
-              priority = "high",
-              width = 23,
-              height = 15,
-              frame_count = 4,
-              animation_speed = 0.5,
-              shift = util.by_pixel(3.5, -38),
-              scale = 0.5,
-            },
+            shift = util.by_pixel(3.5, -38),
+            scale = 0.5,
           },
         },
       },
@@ -756,13 +743,13 @@ data:extend({
     collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 25,
       pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 0, 1 } },
+        { direction = 0, position = { 0, -0.25 } },
+        { direction = 8, position = { 0, 0.25 } },
       },
+      volume = 2500,
       secondary_draw_orders = { north = -1, east = -1, south = 1, west = -1 },
     },
     two_direction_only = true,
@@ -797,17 +784,11 @@ data:extend({
         height = 15,
       },
       window_background = {
-        filename = "__base__/graphics/entity/storage-tank/window-background.png",
+        filename = "__base__/graphics/entity/storage-tank/hr-window-background.png",
         priority = "extra-high",
-        width = 17,
-        height = 24,
-        hr_version = {
-          filename = "__base__/graphics/entity/storage-tank/hr-window-background.png",
-          priority = "extra-high",
-          width = 34,
-          height = 48,
-          scale = 0.5,
-        },
+        width = 34,
+        height = 48,
+        scale = 0.5,
       },
       flow_sprite = {
         filename = "__base__/graphics/entity/pipe/fluid-flow-low-temperature.png",
@@ -816,27 +797,16 @@ data:extend({
         height = 20,
       },
       gas_flow = {
-        filename = "__base__/graphics/entity/pipe/steam.png",
+        filename = "__base__/graphics/entity/pipe/hr-steam.png",
         priority = "extra-high",
         line_length = 10,
-        width = 24,
-        height = 15,
+        width = 48,
+        height = 30,
         frame_count = 60,
         axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.25,
-        hr_version = {
-          filename = "__base__/graphics/entity/pipe/hr-steam.png",
-          priority = "extra-high",
-          line_length = 10,
-          width = 48,
-          height = 30,
-          frame_count = 60,
-          axially_symmetrical = false,
-          animation_speed = 0.25,
-          direction_count = 1,
-          scale = 0.5,
-        },
+        direction_count = 1,
+        scale = 0.5,
       },
     },
     flow_length_in_ticks = 360,
@@ -850,8 +820,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["bob-small-storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["bob-small-storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["bob-small-storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 
@@ -867,15 +836,15 @@ data:extend({
     collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 25,
       pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
-        { position = { 1, 0 } },
+        { direction = 0, position = { 0, -0.25 } },
+        { direction = 8, position = { 0, 0.25 } },
+        { direction = 4, position = { -0.25, 0 } },
+        { direction = 12, position = { 0.25, 0 } },
       },
+      volume = 2500,
       secondary_draw_orders = { north = -1, east = -1, south = 1, west = -1 },
     },
     fast_replaceable_group = "pipe",
@@ -943,8 +912,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["bob-small-storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["bob-small-storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["bob-small-storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 
@@ -973,15 +941,14 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 1,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, 1 } } },
+        pipe_connections = { { flow_direction = "input", direction = 8, position = { 0, 0.25 } } },
+        volume = 200
       },
     },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.15,
+      emissions_per_minute = { pollution = 0.15 },
     },
     energy_usage = "30kW",
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
