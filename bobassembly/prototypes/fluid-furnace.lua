@@ -2,20 +2,23 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
   local function fluid_energy_source()
     return {
       type = "fluid",
-      emissions_per_minute = 3,
+      emissions_per_minute = { pollution = 3 },
       burns_fluid = true,
       scale_fluid_usage = true,
       fluid_box = {
-        base_area = 1,
-        height = 2,
-        base_level = -1,
         pipe_connections = {
-          { type = "input-output", position = { 1.5, 0.5 } },
-          { type = "input-output", position = { -1.5, 0.5 } },
+          { flow_direction = "input-output", direction = 4, position = { 0.5, 0.5 } },
+          { flow_direction = "input-output", direction = 12, position = { -0.5, 0.5 } },
         },
-        pipe_covers = pipecoverspictures(),
         pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
         production_type = "input-output",
+        secondary_draw_orders = {
+          north = -1,
+          east = -1,
+          west = -1,
+        },
+        volume = 100
       },
       smoke = {
         {
