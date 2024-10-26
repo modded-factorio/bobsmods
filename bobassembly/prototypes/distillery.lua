@@ -122,8 +122,8 @@ then
           working_visualisations = bobmods.plates.distillery_working_visualisations(1.5),
         },
         graphics_set_flipped = {
-          animation = bobmods.assembly.distillery_animation_flipped({ r = 0.7, g = 0.2, b = 0.1 }),
-          working_visualisations = bobmods.assembly.distillery_working_visualisations_flipped(1.5),
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.7, g = 0.2, b = 0.1 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(1.5),
         },
         crafting_speed = 1.5,
         energy_usage = "163kW",
@@ -144,8 +144,8 @@ then
           working_visualisations = bobmods.plates.distillery_working_visualisations(2.1),
         },
         graphics_set_flipped = {
-          animation = bobmods.assembly.distillery_animation_flipped({ r = 0.1, g = 0.5, b = 0.7 }),
-          working_visualisations = bobmods.assembly.distillery_working_visualisations_flipped(2.1),
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.1, g = 0.5, b = 0.7 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(2.1),
         },
         crafting_speed = 2.1,
         energy_usage = "205kW",
@@ -166,8 +166,8 @@ then
           working_visualisations = bobmods.plates.distillery_working_visualisations(2.8),
         },
         graphics_set_flipped = {
-          animation = bobmods.assembly.distillery_animation_flipped({ r = 0.7, g = 0.1, b = 0.7 }),
-          working_visualisations = bobmods.assembly.distillery_working_visualisations_flipped(2.8),
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.7, g = 0.1, b = 0.7 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(2.8),
         },
         crafting_speed = 2.8,
         energy_usage = "242kW",
@@ -188,8 +188,8 @@ then
           working_visualisations = bobmods.plates.distillery_working_visualisations(3.5),
         },
         graphics_set_flipped = {
-          animation = bobmods.assembly.distillery_animation_flipped({ r = 0.1, g = 0.7, b = 0.1 }),
-          working_visualisations = bobmods.assembly.distillery_working_visualisations_flipped(3.5),
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.1, g = 0.7, b = 0.1 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(3.5),
         },
         crafting_speed = 3.5,
         energy_usage = "270kW",
