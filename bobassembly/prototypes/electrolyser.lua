@@ -14,52 +14,32 @@ then
   })
 
   data.raw.item["electrolyser"].subgroup = "bob-electrolyser-machine"
-
+  
   local function bob_electrolyser_fluid_boxes()
     return {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { -1, -1 } } },
+        volume = 1000
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
-      },
-      --[[
-    {
-      production_type = "input",
-      pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      height = 2,
-      base_level = -1,
-      pipe_connections =
-      {
-        {type = "input", position = {-1, -2}},
-        {type = "input", position = {1, -2}},
-
-        {type = "input", position = {-2, -1}},
-        {type = "input", position = {2, -1}}
-      }
-    },
-]]
-      --
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        pipe_connections = { { flow_direction = "input", direction = 0, position = { 1, -1 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        pipe_connections = { { flow_direction = "output", direction = 8, position = { -1, 1 } } },
+        volume = 1000
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        pipe_connections = { { flow_direction = "output", direction = 8, position = { 1, 1 } } },
+        volume = 1000
       },
     }
   end
@@ -69,81 +49,46 @@ then
       layers = {
         -- Base
         {
-          filename = directory .. "/electrolyser-" .. tier .. "-base.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
         -- Mask
         {
-          filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
           tint = tint,
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            tint = tint,
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
         -- Highlights
         {
-          filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
           blend_mode = "additive",
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            blend_mode = "additive",
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
         -- Shadow
         {
-          filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
-          shift = util.by_pixel(17, 0),
           draw_as_shadow = true,
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            draw_as_shadow = true,
-            shift = util.by_pixel(17, 0),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(17, 0),
+          scale = 0.5,
         },
       },
     }
@@ -157,6 +102,15 @@ then
       west = bob_electrolyser_animation_facing(directory, tier, tint, 3),
     }
   end
+
+  circuit_connector_definitions["electrolyser"] = circuit_connector_definitions.create_vector(universal_connector_template,
+    {
+      { variation = 8, main_offset = util.by_pixel(-12, -34), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+      { variation = 6, main_offset = util.by_pixel(0, -19), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+      { variation = 8, main_offset = util.by_pixel(-12, -41), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+      { variation = 2, main_offset = util.by_pixel(0, -25), shadow_offset = util.by_pixel(39, 31), show_shadow = false }
+    }
+  )
 
   data:extend({
     {
@@ -277,6 +231,8 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 275,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 3,
@@ -285,7 +241,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 3.25,
+        emissions_per_minute = { pollution = 3.25 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -311,6 +267,8 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 375,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
@@ -319,7 +277,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 2.5,
+        emissions_per_minute = { pollution = 2.5 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -345,6 +303,8 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 500,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
@@ -353,7 +313,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1.75,
+        emissions_per_minute = { pollution = 1.75 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -378,6 +338,8 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 600,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
@@ -386,7 +348,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = { pollution = 1 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -461,7 +423,7 @@ then
       icon_size = 128,
       prerequisites = {
         "electrolyser-3",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       effects = {
