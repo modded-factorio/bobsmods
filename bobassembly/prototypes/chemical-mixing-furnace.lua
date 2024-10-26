@@ -10,49 +10,40 @@ then
     return {
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+          filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
           priority = "high",
-          width = 25,
-          height = 15,
+          width = 60,
+          height = 56,
           frame_count = 12,
           animation_speed = 0.5,
-          shift = { 0.015625, 0.890625 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-            priority = "high",
-            width = 60,
-            height = 56,
-            frame_count = 12,
-            animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(1.75, 32.75),
+          scale = 0.5,
         },
         light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
       },
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
           priority = "high",
-          width = 19,
-          height = 13,
+          width = 37,
+          height = 25,
           frame_count = 4,
           animation_speed = 0.5,
-          shift = { -0.671875, -0.640625 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-            priority = "high",
-            width = 37,
-            height = 25,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(-20.5, -18.5),
+          scale = 0.5,
         },
       },
     }
   end
+
+  circuit_connector_definitions["electric-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template,
+    {
+      { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+      { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+      { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+      { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true }
+    }
+  )
 
   data:extend({
     {
@@ -114,6 +105,8 @@ then
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 1, result = "electric-chemical-mixing-furnace" },
       max_health = 450,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electric-furnace"],
       corpse = "big-remnants",
       resistances = {
         {
@@ -126,15 +119,11 @@ then
           production_type = "input",
           pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {
-            { type = "input", position = { 0, -2 } },
-            --          { type="input", position = {0, 2} },
-          },
+          pipe_connections = { { flow_direction = "input", direction = 0, position = { 0, -1 } } },
+          volume = 1000
         },
-        off_when_no_fluid_recipe = true,
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
@@ -152,7 +141,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = { pollution = 1 },
       },
       working_sound = {
         sound = {
@@ -185,6 +174,8 @@ then
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 1, result = "electric-chemical-mixing-furnace-2" },
       max_health = 550,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electric-furnace"],
       corpse = "big-remnants",
       resistances = {
         {
@@ -197,15 +188,11 @@ then
           production_type = "input",
           pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {
-            { type = "input", position = { 0, -2 } },
-            --          { type="input", position = {0, 2} },
-          },
+          pipe_connections = { { flow_direction = "input", direction = 0, position = { 0, -1 } } },
+          volume = 1000
         },
-        off_when_no_fluid_recipe = true,
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
@@ -223,7 +210,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = { pollution = 1 },
       },
       working_sound = {
         sound = {
@@ -273,7 +260,7 @@ then
       },
       order = "c-c-b-1",
       prerequisites = {
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {
