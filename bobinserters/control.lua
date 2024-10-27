@@ -1482,7 +1482,7 @@ function bobmods.inserters.open_gui(entity, player)
       entity_flow.add({ type = "frame", name = "entity_frame", style = "inside_shallow_frame" })
       entity_flow.entity_frame.style.width = frame_width
       entity_flow.entity_frame.style.height = 148
-      entity_flow.entity_frame.style.horizontally_stretchable = "off"
+      entity_flow.entity_frame.style.horizontally_stretchable = false
       entity_flow.entity_frame.add({ type = "entity-preview", name = "entity_preview", style = "entity_button_base" })
       entity_flow.entity_frame.entity_preview.style.width = frame_width
       entity_flow.entity_frame.entity_preview.style.height = 148
