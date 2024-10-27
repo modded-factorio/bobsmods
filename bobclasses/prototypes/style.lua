@@ -23,7 +23,7 @@ data.raw["gui-style"].default.bob_button_flow = {
   type = "horizontal_flow_style",
   parent = "horizontal_flow",
   vertical_align = "center",
-  horizontally_stretchable = true,
+  horizontally_stretchable = "on",
 }
 
 data.raw["gui-style"].default.bob_draggable_header = {
@@ -32,8 +32,8 @@ data.raw["gui-style"].default.bob_draggable_header = {
   minimal_width = 0,
   padding = -8,
   height = 24,
-  horizontally_stretchable = true,
-  vertically_stretchable = true,
+  horizontally_stretchable = "on",
+  vertically_stretchable = "on",
 }
 
 data.raw["gui-style"].default.bob_draggable_footer = {
@@ -42,8 +42,8 @@ data.raw["gui-style"].default.bob_draggable_footer = {
   minimal_width = 0,
   padding = -8,
   height = 32,
-  horizontally_stretchable = true,
-  vertically_stretchable = true,
+  horizontally_stretchable = "on",
+  vertically_stretchable = "on",
 }
 
 data.raw["gui-style"].default.green_button = {
