@@ -76,7 +76,10 @@ else
   end
 
   if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("vehicle-roboport-equipment-2", { type = "item", name = "steel-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "vehicle-roboport-equipment-2",
+      { type = "item", name = "steel-bearing", amount = 5 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-antenna-equipment-2",
       { type = "item", name = "steel-bearing", amount = 5 }
@@ -137,7 +140,10 @@ else
   end
 
   if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("vehicle-roboport-equipment-3", { type = "item", name = "titanium-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "vehicle-roboport-equipment-3",
+      { type = "item", name = "titanium-bearing", amount = 5 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-antenna-equipment-3",
       { type = "item", name = "titanium-bearing", amount = 5 }
@@ -216,7 +222,10 @@ else
   end
 
   if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("vehicle-roboport-equipment-4", { type = "item", name = "nitinol-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "vehicle-roboport-equipment-4",
+      { type = "item", name = "nitinol-bearing", amount = 5 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-antenna-equipment-4",
       { type = "item", name = "nitinol-bearing", amount = 5 }
@@ -330,10 +339,19 @@ if data.raw.item["lithium-ion-battery"] then
 end
 
 if data.raw.item["silicon-wafer"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-solar-panel-equipment-4", { type = "item", name = "silicon-wafer", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-solar-panel-equipment-4",
+    { type = "item", name = "silicon-wafer", amount = 10 }
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "silicon-processing")
-  bobmods.lib.recipe.add_new_ingredient("vehicle-solar-panel-equipment-5", { type = "item", name = "silicon-wafer", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-solar-panel-equipment-6", { type = "item", name = "silicon-wafer", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-solar-panel-equipment-5",
+    { type = "item", name = "silicon-wafer", amount = 10 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-solar-panel-equipment-6",
+    { type = "item", name = "silicon-wafer", amount = 10 }
+  )
 end
 
 if data.raw.item["advanced-processing-unit"] then
@@ -347,22 +365,62 @@ if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-4", "advanced-electronics-3")
   bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-6", "processing-unit", "advanced-processing-unit")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-4", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-4",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-fission-reactor-equipment-4", "advanced-electronics-3")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-6", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-5",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-6",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-4", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-4",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-4", "advanced-electronics-3")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-6", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-5",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-6",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-4", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-solar-panel-equipment-4",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "advanced-electronics-3")
-  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-6", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-solar-panel-equipment-5",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-solar-panel-equipment-6",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-6", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-laser-defense-equipment-6",
+    "processing-unit",
+    "advanced-processing-unit"
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-6", "advanced-electronics-3")
 
   bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "processing-unit", "advanced-processing-unit")
@@ -418,7 +476,10 @@ if data.raw.item["nitinol-gear-wheel"] then
 end
 
 if data.raw.item["nitinol-bearing"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-engine-equipment", { type = "item", name = "nitinol-bearing", amount = 30 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-engine-equipment",
+    { type = "item", name = "nitinol-bearing", amount = 30 }
+  )
 end
 
 if data.raw.item["gilded-copper-cable"] then
@@ -433,27 +494,45 @@ if data.raw.item["ruby-5"] then
 end
 
 if data.raw.item["sapphire-5"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-equipment-2", { type = "item", name = "sapphire-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-laser-defense-equipment-2",
+    { type = "item", name = "sapphire-5", amount = 1 }
+  )
   bobmods.lib.recipe.remove_ingredient("vehicle-laser-defense-equipment-2", "battery")
 end
 
 if data.raw.item["emerald-5"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-equipment-3", { type = "item", name = "emerald-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-laser-defense-equipment-3",
+    { type = "item", name = "emerald-5", amount = 1 }
+  )
   bobmods.lib.recipe.remove_ingredient("vehicle-laser-defense-equipment-3", "advanced-circuit")
 end
 
 if data.raw.item["amethyst-5"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-equipment-4", { type = "item", name = "amethyst-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-laser-defense-equipment-4",
+    { type = "item", name = "amethyst-5", amount = 1 }
+  )
 end
 
 if data.raw.item["topaz-5"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-equipment-5", { type = "item", name = "topaz-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-laser-defense-equipment-5",
+    { type = "item", name = "topaz-5", amount = 1 }
+  )
 end
 
 if data.raw.item["diamond-5"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-equipment-6", { type = "item", name = "diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-laser-defense-equipment-6",
+    { type = "item", name = "diamond-5", amount = 1 }
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-6", "gem-processing-3")
-  bobmods.lib.recipe.add_ingredient("vehicle-solar-panel-equipment-6", { type = "item", name = "diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-solar-panel-equipment-6",
+    { type = "item", name = "diamond-5", amount = 1 }
+  )
 end
 
 if data.raw.module["efficiency-module-4"] then
@@ -465,8 +544,16 @@ if data.raw.module["productivity-module-4"] then
 end
 
 if data.raw.module["efficiency-module-5"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-4", "efficiency-module-3", "efficiency-module-5")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-4", "efficiency-module-3", "efficiency-module-5")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-4",
+    "efficiency-module-3",
+    "efficiency-module-5"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-4",
+    "efficiency-module-3",
+    "efficiency-module-5"
+  )
 end
 
 if data.raw.module["speed-module-5"] then
@@ -475,14 +562,30 @@ if data.raw.module["speed-module-5"] then
 end
 
 if data.raw.module["productivity-module-5"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-4", "productivity-module-3", "productivity-module-5")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-4", "productivity-module-3", "productivity-module-5")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-4",
+    "productivity-module-3",
+    "productivity-module-5"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-4",
+    "productivity-module-3",
+    "productivity-module-5"
+  )
 end
 
 if data.raw.module["efficiency-module-6"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-5", "efficiency-module-3", "efficiency-module-6")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-5", "efficiency-module-3", "efficiency-module-6")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-5", "efficiency-module-3", "efficiency-module-6")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-5",
+    "efficiency-module-3",
+    "efficiency-module-6"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-5",
+    "efficiency-module-3",
+    "efficiency-module-6"
+  )
 end
 
 if data.raw.module["speed-module-6"] then
@@ -492,14 +595,30 @@ end
 
 if data.raw.module["productivity-module-6"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-5", "productivity-module-3", "productivity-module-6")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-5", "productivity-module-3", "productivity-module-6")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-5", "productivity-module-3", "productivity-module-6")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-5",
+    "productivity-module-3",
+    "productivity-module-6"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-5",
+    "productivity-module-3",
+    "productivity-module-6"
+  )
 end
 
 if data.raw.module["efficiency-module-8"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-6", "efficiency-module-3", "efficiency-module-8")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-6", "efficiency-module-3", "efficiency-module-8")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-6", "efficiency-module-3", "efficiency-module-8")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-6",
+    "efficiency-module-3",
+    "efficiency-module-8"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-6",
+    "efficiency-module-3",
+    "efficiency-module-8"
+  )
 end
 
 if data.raw.module["speed-module-8"] then
@@ -509,15 +628,35 @@ end
 
 if data.raw.module["productivity-module-8"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-6", "productivity-module-3", "productivity-module-8")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-reactor-equipment-6", "productivity-module-3", "productivity-module-8")
-  bobmods.lib.recipe.replace_ingredient("vehicle-fission-cell-equipment-6", "productivity-module-3", "productivity-module-8")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-reactor-equipment-6",
+    "productivity-module-3",
+    "productivity-module-8"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-fission-cell-equipment-6",
+    "productivity-module-3",
+    "productivity-module-8"
+  )
 end
 
 if data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-equipment-3", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-equipment-1", { type = "item", name = "alien-artifact", amount = 30 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-equipment-2", { type = "item", name = "alien-artifact", amount = 30 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-equipment-3", { type = "item", name = "alien-artifact", amount = 30 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-equipment-3",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-equipment-1",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-equipment-2",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-equipment-3",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
 
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-fission-reactor-equipment-2",
@@ -555,11 +694,23 @@ else
     { type = "item", name = "processing-unit", amount = 50 }
   )
 
-  bobmods.lib.recipe.add_ingredient("vehicle-fission-cell-equipment-2", { type = "item", name = "processing-unit", amount = 25 })
-  bobmods.lib.recipe.add_ingredient("vehicle-fission-cell-equipment-3", { type = "item", name = "processing-unit", amount = 25 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fission-cell-equipment-2",
+    { type = "item", name = "processing-unit", amount = 25 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fission-cell-equipment-3",
+    { type = "item", name = "processing-unit", amount = 25 }
+  )
 
-  bobmods.lib.recipe.add_ingredient("vehicle-solar-panel-equipment-5", { type = "item", name = "processing-unit", amount = 10 })
-  bobmods.lib.recipe.add_ingredient("vehicle-solar-panel-equipment-6", { type = "item", name = "processing-unit", amount = 10 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-solar-panel-equipment-5",
+    { type = "item", name = "processing-unit", amount = 10 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-solar-panel-equipment-6",
+    { type = "item", name = "processing-unit", amount = 10 }
+  )
 end
 
 if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue"] then
@@ -584,7 +735,10 @@ if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue
     { type = "item", name = "alien-artifact-orange", amount = 15 }
   )
 
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-equipment-4", { type = "item", name = "alien-artifact-blue", amount = 5 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-equipment-4",
+    { type = "item", name = "alien-artifact-blue", amount = 5 }
+  )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-battery-equipment-4",
     { type = "item", name = "alien-artifact-blue", amount = 5 }
@@ -602,8 +756,14 @@ if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue
     { type = "item", name = "alien-artifact-blue", amount = 15 }
   )
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-equipment-4", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-equipment-4", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-equipment-4",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-equipment-4",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-fission-reactor-equipment-4",
     { type = "item", name = "alien-artifact", amount = 30 }
@@ -612,13 +772,19 @@ elseif data.raw.item["alien-artifact"] then
     "vehicle-fission-cell-4",
     { type = "item", name = "alien-artifact", amount = 15 }
   )
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-equipment-4", { type = "item", name = "alien-artifact", amount = 30 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-equipment-4",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
 else
   bobmods.lib.recipe.add_ingredient(
     "vehicle-fission-reactor-equipment-4",
     { type = "item", name = "processing-unit", amount = 50 }
   )
-  bobmods.lib.recipe.add_ingredient("vehicle-fission-cell-equipment-4", { type = "item", name = "processing-unit", amount = 25 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fission-cell-equipment-4",
+    { type = "item", name = "processing-unit", amount = 25 }
+  )
 end
 
 if data.raw.item["alien-artifact-yellow"] and data.raw.item["alien-artifact-purple"] then
@@ -664,8 +830,14 @@ if data.raw.item["alien-artifact-yellow"] and data.raw.item["alien-artifact-purp
     { type = "item", name = "alien-artifact-purple", amount = 15 }
   )
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-equipment-5", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-equipment-5", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-equipment-5",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-equipment-5",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-fission-reactor-equipment-5",
     { type = "item", name = "alien-artifact", amount = 30 }
@@ -674,18 +846,30 @@ elseif data.raw.item["alien-artifact"] then
     "vehicle-fission-cell-equipment-5",
     { type = "item", name = "alien-artifact", amount = 15 }
   )
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-equipment-5", { type = "item", name = "alien-artifact", amount = 30 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-equipment-5",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
 else
   bobmods.lib.recipe.add_ingredient(
     "vehicle-fission-reactor-equipment-5",
     { type = "item", name = "processing-unit", amount = 50 }
   )
-  bobmods.lib.recipe.add_ingredient("vehicle-fission-cell-equipment-5", { type = "item", name = "processing-unit", amount = 25 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fission-cell-equipment-5",
+    { type = "item", name = "processing-unit", amount = 25 }
+  )
 end
 
 if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-equipment-6", { type = "item", name = "alien-artifact-red", amount = 5 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-equipment-6", { type = "item", name = "alien-artifact-red", amount = 5 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-equipment-6",
+    { type = "item", name = "alien-artifact-red", amount = 5 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-equipment-6",
+    { type = "item", name = "alien-artifact-red", amount = 5 }
+  )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-fission-reactor-equipment-6",
     { type = "item", name = "alien-artifact-red", amount = 15 }
@@ -720,8 +904,14 @@ if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"]
     { type = "item", name = "alien-artifact-green", amount = 15 }
   )
 elseif data.raw.item["alien-artifact"] then
-  bobmods.lib.recipe.add_new_ingredient("vehicle-shield-equipment-6", { type = "item", name = "alien-artifact", amount = 10 })
-  bobmods.lib.recipe.add_new_ingredient("vehicle-battery-equipment-6", { type = "item", name = "alien-artifact", amount = 10 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-shield-equipment-6",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-battery-equipment-6",
+    { type = "item", name = "alien-artifact", amount = 10 }
+  )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-fission-reactor-equipment-6",
     { type = "item", name = "alien-artifact", amount = 30 }
@@ -730,11 +920,17 @@ elseif data.raw.item["alien-artifact"] then
     "vehicle-fission-cell-equipment-6",
     { type = "item", name = "alien-artifact", amount = 15 }
   )
-  bobmods.lib.recipe.add_new_ingredient("vehicle-big-turret-equipment-6", { type = "item", name = "alien-artifact", amount = 30 })
+  bobmods.lib.recipe.add_new_ingredient(
+    "vehicle-big-turret-equipment-6",
+    { type = "item", name = "alien-artifact", amount = 30 }
+  )
 else
   bobmods.lib.recipe.add_ingredient(
     "vehicle-fission-reactor-equipment-6",
     { type = "item", name = "processing-unit", amount = 50 }
   )
-  bobmods.lib.recipe.add_ingredient("vehicle-fission-cell-equipment-6", { type = "item", name = "processing-unit", amount = 25 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-fission-cell-equipment-6",
+    { type = "item", name = "processing-unit", amount = 25 }
+  )
 end

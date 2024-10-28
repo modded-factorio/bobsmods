@@ -42,7 +42,10 @@ local function add_antron_power_supply()
     bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "rtg", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "rtg")
   elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
-    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "antron",
+      { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 1 }
+    )
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "vehicle-fission-reactor-equipment-1")
   else
     bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "fission-reactor-equipment", amount = 1 })
@@ -54,7 +57,10 @@ local function add_tankotron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "rtg", amount = 2 })
   elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
-    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "tankotron",
+      { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 2 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "fission-reactor-equipment", amount = 2 })
   end
@@ -75,7 +81,11 @@ local function replace_spidertron_power_supply()
     bobmods.lib.recipe.replace_ingredient("spidertron", "fission-reactor-equipment", "rtg")
     bobmods.lib.tech.replace_prerequisite("spidertron", "fission-reactor-equipment", "rtg")
   elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
-    bobmods.lib.recipe.replace_ingredient("spidertron", "fission-reactor-equipment", "vehicle-fission-reactor-equipment-1")
+    bobmods.lib.recipe.replace_ingredient(
+      "spidertron",
+      "fission-reactor-equipment",
+      "vehicle-fission-reactor-equipment-1"
+    )
     bobmods.lib.tech.replace_prerequisite(
       "spidertron",
       "fission-reactor-equipment",
