@@ -1,0 +1,207 @@
+{
+  "item":
+  [
+    ["vehicle-battery-1", "vehicle-battery-equipment-1"],
+    ["vehicle-battery-2", "vehicle-battery-equipment-2"],
+    ["vehicle-battery-3", "vehicle-battery-equipment-3"],
+    ["vehicle-battery-4", "vehicle-battery-equipment-4"],
+    ["vehicle-battery-5", "vehicle-battery-equipment-5"],
+    ["vehicle-battery-6", "vehicle-battery-equipment-6"],
+
+    ["vehicle-big-turret-1", "vehicle-big-turret-equipment-1"],
+    ["vehicle-big-turret-2", "vehicle-big-turret-equipment-2"],
+    ["vehicle-big-turret-3", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-4"],
+    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-5"],
+    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-6"],
+
+    ["vehicle-engine", "vehicle-engine-equipment"],
+
+    ["vehicle-fusion-cell-1", "vehicle-fission-cell-equipment-1"],
+    ["vehicle-fusion-cell-2", "vehicle-fission-cell-equipment-2"],
+    ["vehicle-fusion-cell-3", "vehicle-fission-cell-equipment-3"],
+    ["vehicle-fusion-cell-4", "vehicle-fission-cell-equipment-4"],
+    ["vehicle-fusion-cell-5", "vehicle-fission-cell-equipment-5"],
+    ["vehicle-fusion-cell-6", "vehicle-fission-cell-equipment-6"],
+
+    ["vehicle-fusion-reactor-1", "vehicle-fission-reactor-equipment-1"],
+    ["vehicle-fusion-reactor-2", "vehicle-fission-reactor-equipment-2"],
+    ["vehicle-fusion-reactor-3", "vehicle-fission-reactor-equipment-3"],
+    ["vehicle-fusion-reactor-4", "vehicle-fission-reactor-equipment-4"],
+    ["vehicle-fusion-reactor-5", "vehicle-fission-reactor-equipment-5"],
+    ["vehicle-fusion-reactor-6", "vehicle-fission-reactor-equipment-6"],
+
+    ["vehicle-laser-defense-1", "vehicle-laser-defense-equipment-1"],
+    ["vehicle-laser-defense-2", "vehicle-laser-defense-equipment-2"],
+    ["vehicle-laser-defense-3", "vehicle-laser-defense-equipment-3"],
+    ["vehicle-laser-defense-4", "vehicle-laser-defense-equipment-4"],
+    ["vehicle-laser-defense-5", "vehicle-laser-defense-equipment-5"],
+    ["vehicle-laser-defense-6", "vehicle-laser-defense-equipment-6"],
+
+    ["vehicle-motor", "vehicle-motor-equipment"],
+
+    ["vehicle-roboport", "vehicle-roboport-equipment-1"],
+    ["vehicle-roboport-2", "vehicle-roboport-equipment-2"],
+    ["vehicle-roboport-3", "vehicle-roboport-equipment-3"],
+    ["vehicle-roboport-4", "vehicle-roboport-equipment-4"],
+
+    ["vehicle-shield-1", "vehicle-shield-equipment-1"],
+    ["vehicle-shield-2", "vehicle-shield-equipment-2"],
+    ["vehicle-shield-3", "vehicle-shield-equipment-3"],
+    ["vehicle-shield-4", "vehicle-shield-equipment-4"],
+    ["vehicle-shield-5", "vehicle-shield-equipment-5"],
+    ["vehicle-shield-6", "vehicle-shield-equipment-6"],
+
+    ["vehicle-solar-panel-1", "vehicle-solar-panel-equipment-1"],
+    ["vehicle-solar-panel-2", "vehicle-solar-panel-equipment-2"],
+    ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
+    ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
+    ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+  ],
+  "equipment":
+  [
+    ["vehicle-battery-1", "vehicle-battery-equipment-1"],
+    ["vehicle-battery-2", "vehicle-battery-equipment-2"],
+    ["vehicle-battery-3", "vehicle-battery-equipment-3"],
+    ["vehicle-battery-4", "vehicle-battery-equipment-4"],
+    ["vehicle-battery-5", "vehicle-battery-equipment-5"],
+    ["vehicle-battery-6", "vehicle-battery-equipment-6"],
+
+    ["vehicle-big-turret-1", "vehicle-big-turret-equipment-1"],
+    ["vehicle-big-turret-2", "vehicle-big-turret-equipment-2"],
+    ["vehicle-big-turret-3", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-4"],
+    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-5"],
+    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-6"],
+
+    ["vehicle-engine", "vehicle-engine-equipment"],
+
+    ["vehicle-fusion-cell-1", "vehicle-fission-cell-equipment-1"],
+    ["vehicle-fusion-cell-2", "vehicle-fission-cell-equipment-2"],
+    ["vehicle-fusion-cell-3", "vehicle-fission-cell-equipment-3"],
+    ["vehicle-fusion-cell-4", "vehicle-fission-cell-equipment-4"],
+    ["vehicle-fusion-cell-5", "vehicle-fission-cell-equipment-5"],
+    ["vehicle-fusion-cell-6", "vehicle-fission-cell-equipment-6"],
+
+    ["vehicle-fusion-reactor-1", "vehicle-fission-reactor-equipment-1"],
+    ["vehicle-fusion-reactor-2", "vehicle-fission-reactor-equipment-2"],
+    ["vehicle-fusion-reactor-3", "vehicle-fission-reactor-equipment-3"],
+    ["vehicle-fusion-reactor-4", "vehicle-fission-reactor-equipment-4"],
+    ["vehicle-fusion-reactor-5", "vehicle-fission-reactor-equipment-5"],
+    ["vehicle-fusion-reactor-6", "vehicle-fission-reactor-equipment-6"],
+
+    ["vehicle-laser-defense-1", "vehicle-laser-defense-equipment-1"],
+    ["vehicle-laser-defense-2", "vehicle-laser-defense-equipment-2"],
+    ["vehicle-laser-defense-3", "vehicle-laser-defense-equipment-3"],
+    ["vehicle-laser-defense-4", "vehicle-laser-defense-equipment-4"],
+    ["vehicle-laser-defense-5", "vehicle-laser-defense-equipment-5"],
+    ["vehicle-laser-defense-6", "vehicle-laser-defense-equipment-6"],
+
+    ["vehicle-motor", "vehicle-motor-equipment"],
+
+    ["vehicle-roboport", "vehicle-roboport-equipment-1"],
+    ["vehicle-roboport-2", "vehicle-roboport-equipment-2"],
+    ["vehicle-roboport-3", "vehicle-roboport-equipment-3"],
+    ["vehicle-roboport-4", "vehicle-roboport-equipment-4"],
+
+    ["vehicle-shield-1", "vehicle-shield-equipment-1"],
+    ["vehicle-shield-2", "vehicle-shield-equipment-2"],
+    ["vehicle-shield-3", "vehicle-shield-equipment-3"],
+    ["vehicle-shield-4", "vehicle-shield-equipment-4"],
+    ["vehicle-shield-5", "vehicle-shield-equipment-5"],
+    ["vehicle-shield-6", "vehicle-shield-equipment-6"],
+
+    ["vehicle-solar-panel-1", "vehicle-solar-panel-equipment-1"],
+    ["vehicle-solar-panel-2", "vehicle-solar-panel-equipment-2"],
+    ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
+    ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
+    ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+  ],
+  "recipe":
+  [
+    ["vehicle-battery-1", "vehicle-battery-equipment-1"],
+    ["vehicle-battery-2", "vehicle-battery-equipment-2"],
+    ["vehicle-battery-3", "vehicle-battery-equipment-3"],
+    ["vehicle-battery-4", "vehicle-battery-equipment-4"],
+    ["vehicle-battery-5", "vehicle-battery-equipment-5"],
+    ["vehicle-battery-6", "vehicle-battery-equipment-6"],
+
+    ["vehicle-big-turret-1", "vehicle-big-turret-equipment-1"],
+    ["vehicle-big-turret-2", "vehicle-big-turret-equipment-2"],
+    ["vehicle-big-turret-3", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-4"],
+    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-5"],
+    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-6"],
+
+    ["vehicle-engine", "vehicle-engine-equipment"],
+
+    ["vehicle-fusion-cell-1", "vehicle-fission-cell-equipment-1"],
+    ["vehicle-fusion-cell-2", "vehicle-fission-cell-equipment-2"],
+    ["vehicle-fusion-cell-3", "vehicle-fission-cell-equipment-3"],
+    ["vehicle-fusion-cell-4", "vehicle-fission-cell-equipment-4"],
+    ["vehicle-fusion-cell-5", "vehicle-fission-cell-equipment-5"],
+    ["vehicle-fusion-cell-6", "vehicle-fission-cell-equipment-6"],
+
+    ["vehicle-fusion-reactor-1", "vehicle-fission-reactor-equipment-1"],
+    ["vehicle-fusion-reactor-2", "vehicle-fission-reactor-equipment-2"],
+    ["vehicle-fusion-reactor-3", "vehicle-fission-reactor-equipment-3"],
+    ["vehicle-fusion-reactor-4", "vehicle-fission-reactor-equipment-4"],
+    ["vehicle-fusion-reactor-5", "vehicle-fission-reactor-equipment-5"],
+    ["vehicle-fusion-reactor-6", "vehicle-fission-reactor-equipment-6"],
+
+    ["vehicle-laser-defense-1", "vehicle-laser-defense-equipment-1"],
+    ["vehicle-laser-defense-2", "vehicle-laser-defense-equipment-2"],
+    ["vehicle-laser-defense-3", "vehicle-laser-defense-equipment-3"],
+    ["vehicle-laser-defense-4", "vehicle-laser-defense-equipment-4"],
+    ["vehicle-laser-defense-5", "vehicle-laser-defense-equipment-5"],
+    ["vehicle-laser-defense-6", "vehicle-laser-defense-equipment-6"],
+
+    ["vehicle-motor", "vehicle-motor-equipment"],
+
+    ["vehicle-roboport", "vehicle-roboport-equipment-1"],
+    ["vehicle-roboport-2", "vehicle-roboport-equipment-2"],
+    ["vehicle-roboport-3", "vehicle-roboport-equipment-3"],
+    ["vehicle-roboport-4", "vehicle-roboport-equipment-4"],
+
+    ["vehicle-shield-1", "vehicle-shield-equipment-1"],
+    ["vehicle-shield-2", "vehicle-shield-equipment-2"],
+    ["vehicle-shield-3", "vehicle-shield-equipment-3"],
+    ["vehicle-shield-4", "vehicle-shield-equipment-4"],
+    ["vehicle-shield-5", "vehicle-shield-equipment-5"],
+    ["vehicle-shield-6", "vehicle-shield-equipment-6"],
+
+    ["vehicle-solar-panel-1", "vehicle-solar-panel-equipment-1"],
+    ["vehicle-solar-panel-2", "vehicle-solar-panel-equipment-2"],
+    ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
+    ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
+    ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+  ],
+  "technology":
+  [
+    ["vehicle-fusion-cell-equipment-1", "vehicle-fission-cell-equipment-1"],
+    ["vehicle-fusion-cell-equipment-2", "vehicle-fission-cell-equipment-2"],
+    ["vehicle-fusion-cell-equipment-3", "vehicle-fission-cell-equipment-3"],
+    ["vehicle-fusion-cell-equipment-4", "vehicle-fission-cell-equipment-4"],
+    ["vehicle-fusion-cell-equipment-5", "vehicle-fission-cell-equipment-5"],
+    ["vehicle-fusion-cell-equipment-6", "vehicle-fission-cell-equipment-6"],
+
+    ["vehicle-fusion-reactor-equipment-1", "vehicle-fission-reactor-equipment-1"],
+    ["vehicle-fusion-reactor-equipment-2", "vehicle-fission-reactor-equipment-2"],
+    ["vehicle-fusion-reactor-equipment-3", "vehicle-fission-reactor-equipment-3"],
+    ["vehicle-fusion-reactor-equipment-4", "vehicle-fission-reactor-equipment-4"],
+    ["vehicle-fusion-reactor-equipment-5", "vehicle-fission-reactor-equipment-5"],
+    ["vehicle-fusion-reactor-equipment-6", "vehicle-fission-reactor-equipment-6"],
+
+    ["vehicle-roboport-equipment", "vehicle-roboport-equipment-1"],
+
+    ["vehicle-energy-shield-equipment-1", "vehicle-shield-equipment-1"],
+    ["vehicle-energy-shield-equipment-2", "vehicle-shield-equipment-2"],
+    ["vehicle-energy-shield-equipment-3", "vehicle-shield-equipment-3"],
+    ["vehicle-energy-shield-equipment-4", "vehicle-shield-equipment-4"],
+    ["vehicle-energy-shield-equipment-5", "vehicle-shield-equipment-5"],
+    ["vehicle-energy-shield-equipment-6", "vehicle-shield-equipment-6"]
+  ]
+}

@@ -48,10 +48,10 @@ end
 data:extend({
   {
     type = "item",
-    name = "vehicle-laser-defense-1",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-1.png",
+    name = "vehicle-laser-defense-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-1.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-laser-defense-1",
+    place_as_equipment_result = "vehicle-laser-defense-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-1",
     stack_size = 50,
@@ -60,7 +60,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-laser-defense-1",
+    name = "vehicle-laser-defense-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -68,12 +68,12 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 5 },
       { type = "item", name = "battery", amount = 3 },
     },
-    results = { { type = "item", name = "vehicle-laser-defense-1", amount = 1 } },
+    results = { { type = "item", name = "vehicle-laser-defense-equipment-1", amount = 1 } },
   },
 
   bob_active_beam_weapon_equipment({
-    name = "vehicle-laser-defense-1",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-1.png",
+    name = "vehicle-laser-defense-equipment-1",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-1.png",
     width = 2,
     height = 2,
     buffer_capacity = "220kJ",
@@ -112,7 +112,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-laser-defense-1",
+        recipe = "vehicle-laser-defense-equipment-1",
       },
     },
   },
@@ -121,10 +121,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-laser-defense-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-2.png",
+    name = "vehicle-laser-defense-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-2.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-laser-defense-2",
+    place_as_equipment_result = "vehicle-laser-defense-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-2",
     stack_size = 50,
@@ -133,21 +133,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-laser-defense-2",
+    name = "vehicle-laser-defense-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-laser-defense-1", amount = 1 },
+      { type = "item", name = "vehicle-laser-defense-equipment-1", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "battery", amount = 3 },
     },
-    results = { { type = "item", name = "vehicle-laser-defense-2", amount = 1 } },
+    results = { { type = "item", name = "vehicle-laser-defense-equipment-2", amount = 1 } },
   },
 
   bob_active_beam_weapon_equipment({
-    name = "vehicle-laser-defense-2",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-2.png",
+    name = "vehicle-laser-defense-equipment-2",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-2.png",
     width = 2,
     height = 2,
     buffer_capacity = "5200kJ",
@@ -185,7 +185,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-laser-defense-2",
+        recipe = "vehicle-laser-defense-equipment-2",
       },
     },
   },
@@ -194,10 +194,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-laser-defense-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-3.png",
+    name = "vehicle-laser-defense-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-3.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-laser-defense-3",
+    place_as_equipment_result = "vehicle-laser-defense-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-3",
     stack_size = 50,
@@ -206,21 +206,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-laser-defense-3",
+    name = "vehicle-laser-defense-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-laser-defense-2", amount = 1 },
+      { type = "item", name = "vehicle-laser-defense-equipment-2", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "battery", amount = 3 },
     },
-    results = { { type = "item", name = "vehicle-laser-defense-3", amount = 1 } },
+    results = { { type = "item", name = "vehicle-laser-defense-equipment-3", amount = 1 } },
   },
 
   bob_active_beam_weapon_equipment({
-    name = "vehicle-laser-defense-3",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-3.png",
+    name = "vehicle-laser-defense-equipment-3",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-3.png",
     width = 2,
     height = 2,
     buffer_capacity = "920kJ",
@@ -259,7 +259,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-laser-defense-3",
+        recipe = "vehicle-laser-defense-equipment-3",
       },
     },
   },
@@ -268,10 +268,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-laser-defense-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-4.png",
+    name = "vehicle-laser-defense-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-4.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-laser-defense-4",
+    place_as_equipment_result = "vehicle-laser-defense-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-4",
     stack_size = 50,
@@ -280,21 +280,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-laser-defense-4",
+    name = "vehicle-laser-defense-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-laser-defense-3", amount = 1 },
+      { type = "item", name = "vehicle-laser-defense-equipment-3", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "battery", amount = 3 },
     },
-    results = { { type = "item", name = "vehicle-laser-defense-4", amount = 1 } },
+    results = { { type = "item", name = "vehicle-laser-defense-equipment-4", amount = 1 } },
   },
 
   bob_active_beam_weapon_equipment({
-    name = "vehicle-laser-defense-4",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-4.png",
+    name = "vehicle-laser-defense-equipment-4",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-4.png",
     width = 2,
     height = 2,
     buffer_capacity = "1420kJ",
@@ -333,7 +333,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-laser-defense-4",
+        recipe = "vehicle-laser-defense-equipment-4",
       },
     },
   },
@@ -342,10 +342,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-laser-defense-5",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-5.png",
+    name = "vehicle-laser-defense-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-5.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-laser-defense-5",
+    place_as_equipment_result = "vehicle-laser-defense-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-5",
     stack_size = 50,
@@ -354,21 +354,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-laser-defense-5",
+    name = "vehicle-laser-defense-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-laser-defense-4", amount = 1 },
+      { type = "item", name = "vehicle-laser-defense-equipment-4", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "battery", amount = 3 },
     },
-    results = { { type = "item", name = "vehicle-laser-defense-5", amount = 1 } },
+    results = { { type = "item", name = "vehicle-laser-defense-equipment-5", amount = 1 } },
   },
 
   bob_active_beam_weapon_equipment({
-    name = "vehicle-laser-defense-5",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-5.png",
+    name = "vehicle-laser-defense-equipment-5",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-5.png",
     width = 2,
     height = 2,
     buffer_capacity = "2020kJ",
@@ -408,7 +408,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-laser-defense-5",
+        recipe = "vehicle-laser-defense-equipment-5",
       },
     },
   },
@@ -417,10 +417,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-laser-defense-6",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-6.png",
+    name = "vehicle-laser-defense-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-6.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-laser-defense-6",
+    place_as_equipment_result = "vehicle-laser-defense-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-6",
     stack_size = 50,
@@ -429,21 +429,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-laser-defense-6",
+    name = "vehicle-laser-defense-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-laser-defense-5", amount = 1 },
+      { type = "item", name = "vehicle-laser-defense-equipment-5", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "battery", amount = 3 },
     },
-    results = { { type = "item", name = "vehicle-laser-defense-6", amount = 1 } },
+    results = { { type = "item", name = "vehicle-laser-defense-equipment-6", amount = 1 } },
   },
 
   bob_active_beam_weapon_equipment({
-    name = "vehicle-laser-defense-6",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-6.png",
+    name = "vehicle-laser-defense-equipment-6",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-laser-defense-equipment-6.png",
     width = 2,
     height = 2,
     buffer_capacity = "2720kJ",
@@ -482,7 +482,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-laser-defense-6",
+        recipe = "vehicle-laser-defense-equipment-6",
       },
     },
   },

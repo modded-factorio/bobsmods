@@ -1,10 +1,10 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-solar-panel-1",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-1.png",
+    name = "vehicle-solar-panel-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-equipment-1.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-solar-panel-1",
+    place_as_equipment_result = "vehicle-solar-panel-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-1",
     stack_size = 50,
@@ -13,7 +13,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-solar-panel-1",
+    name = "vehicle-solar-panel-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -21,14 +21,14 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 5 },
       { type = "item", name = "copper-cable", amount = 4 },
     },
-    results = { { type = "item", name = "vehicle-solar-panel-1", amount = 1 } },
+    results = { { type = "item", name = "vehicle-solar-panel-equipment-1", amount = 1 } },
   },
 
   {
     type = "solar-panel-equipment",
-    name = "vehicle-solar-panel-1",
+    name = "vehicle-solar-panel-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-1.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-equipment-1.png",
       width = 64,
       height = 32,
       priority = "medium",
@@ -50,7 +50,7 @@ data:extend({
     type = "technology",
     name = "vehicle-solar-panel-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-k-a",
@@ -71,7 +71,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-solar-panel-1",
+        recipe = "vehicle-solar-panel-equipment-1",
       },
     },
   },
@@ -80,10 +80,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-solar-panel-2",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-2.png",
+    name = "vehicle-solar-panel-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-equipment-2.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-solar-panel-2",
+    place_as_equipment_result = "vehicle-solar-panel-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-2",
     stack_size = 50,
@@ -92,23 +92,23 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-solar-panel-2",
+    name = "vehicle-solar-panel-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-solar-panel-1", amount = 1 },
+      { type = "item", name = "vehicle-solar-panel-equipment-1", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "copper-plate", amount = 2 },
     },
-    results = { { type = "item", name = "vehicle-solar-panel-2", amount = 1 } },
+    results = { { type = "item", name = "vehicle-solar-panel-equipment-2", amount = 1 } },
   },
 
   {
     type = "solar-panel-equipment",
-    name = "vehicle-solar-panel-2",
+    name = "vehicle-solar-panel-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-2.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-equipment-2.png",
       width = 64,
       height = 32,
       priority = "medium",
@@ -130,7 +130,7 @@ data:extend({
     type = "technology",
     name = "vehicle-solar-panel-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-k-b",
@@ -149,7 +149,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-solar-panel-2",
+        recipe = "vehicle-solar-panel-equipment-2",
       },
     },
   },
@@ -158,10 +158,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-solar-panel-3",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-3.png",
+    name = "vehicle-solar-panel-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-equipment-3.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-solar-panel-3",
+    place_as_equipment_result = "vehicle-solar-panel-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-3",
     stack_size = 50,
@@ -170,23 +170,23 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-solar-panel-3",
+    name = "vehicle-solar-panel-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-solar-panel-2", amount = 1 },
+      { type = "item", name = "vehicle-solar-panel-equipment-2", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "copper-plate", amount = 2 },
     },
-    results = { { type = "item", name = "vehicle-solar-panel-3", amount = 1 } },
+    results = { { type = "item", name = "vehicle-solar-panel-equipment-3", amount = 1 } },
   },
 
   {
     type = "solar-panel-equipment",
-    name = "vehicle-solar-panel-3",
+    name = "vehicle-solar-panel-equipment-3",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-3.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-equipment-3.png",
       width = 64,
       height = 32,
       priority = "medium",
@@ -208,7 +208,7 @@ data:extend({
     type = "technology",
     name = "vehicle-solar-panel-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-k-c",
@@ -228,7 +228,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-solar-panel-3",
+        recipe = "vehicle-solar-panel-equipment-3",
       },
     },
   },
@@ -237,10 +237,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-solar-panel-4",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-4.png",
+    name = "vehicle-solar-panel-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-equipment-4.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-solar-panel-4",
+    place_as_equipment_result = "vehicle-solar-panel-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-4",
     stack_size = 50,
@@ -249,23 +249,23 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-solar-panel-4",
+    name = "vehicle-solar-panel-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-solar-panel-3", amount = 1 },
+      { type = "item", name = "vehicle-solar-panel-equipment-3", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "copper-cable", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-solar-panel-4", amount = 1 } },
+    results = { { type = "item", name = "vehicle-solar-panel-equipment-4", amount = 1 } },
   },
 
   {
     type = "solar-panel-equipment",
-    name = "vehicle-solar-panel-4",
+    name = "vehicle-solar-panel-equipment-4",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-4.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-equipment-4.png",
       width = 64,
       height = 32,
       priority = "medium",
@@ -287,7 +287,7 @@ data:extend({
     type = "technology",
     name = "vehicle-solar-panel-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-k-d",
@@ -307,7 +307,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-solar-panel-4",
+        recipe = "vehicle-solar-panel-equipment-4",
       },
     },
   },
@@ -316,10 +316,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-solar-panel-5",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-5.png",
+    name = "vehicle-solar-panel-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-equipment-5.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-solar-panel-5",
+    place_as_equipment_result = "vehicle-solar-panel-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-5",
     stack_size = 50,
@@ -328,23 +328,23 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-solar-panel-5",
+    name = "vehicle-solar-panel-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-solar-panel-4", amount = 1 },
+      { type = "item", name = "vehicle-solar-panel-equipment-4", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "copper-cable", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-solar-panel-5", amount = 1 } },
+    results = { { type = "item", name = "vehicle-solar-panel-equipment-5", amount = 1 } },
   },
 
   {
     type = "solar-panel-equipment",
-    name = "vehicle-solar-panel-5",
+    name = "vehicle-solar-panel-equipment-5",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-5.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-equipment-5.png",
       width = 64,
       height = 32,
       priority = "medium",
@@ -366,7 +366,7 @@ data:extend({
     type = "technology",
     name = "vehicle-solar-panel-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-k-e",
@@ -388,7 +388,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-solar-panel-5",
+        recipe = "vehicle-solar-panel-equipment-5",
       },
     },
   },
@@ -397,10 +397,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-solar-panel-6",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-6.png",
+    name = "vehicle-solar-panel-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-solar-panel-equipment-6.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-solar-panel-6",
+    place_as_equipment_result = "vehicle-solar-panel-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-6",
     stack_size = 50,
@@ -409,23 +409,23 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-solar-panel-6",
+    name = "vehicle-solar-panel-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-solar-panel-5", amount = 1 },
+      { type = "item", name = "vehicle-solar-panel-equipment-5", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "copper-cable", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-solar-panel-6", amount = 1 } },
+    results = { { type = "item", name = "vehicle-solar-panel-equipment-6", amount = 1 } },
   },
 
   {
     type = "solar-panel-equipment",
-    name = "vehicle-solar-panel-6",
+    name = "vehicle-solar-panel-equipment-6",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-6.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-solar-panel-equipment-6.png",
       width = 64,
       height = 32,
       priority = "medium",
@@ -447,7 +447,7 @@ data:extend({
     type = "technology",
     name = "vehicle-solar-panel-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-k-f",
@@ -468,7 +468,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-solar-panel-6",
+        recipe = "vehicle-solar-panel-equipment-6",
       },
     },
   },

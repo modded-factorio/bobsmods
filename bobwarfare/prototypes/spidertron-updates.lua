@@ -41,28 +41,28 @@ local function add_antron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "rtg", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "rtg")
-  elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "vehicle-fusion-reactor-1", amount = 1 })
-    bobmods.lib.tech.add_prerequisite("walking-vehicle", "vehicle-fusion-reactor-equipment-1")
+  elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "vehicle-fission-reactor-equipment-1")
   else
-    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "fusion-reactor-equipment", amount = 1 })
-    bobmods.lib.tech.add_prerequisite("walking-vehicle", "fusion-reactor-equipment")
+    bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "fission-reactor-equipment", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "fission-reactor-equipment")
   end
 end
 
 local function add_tankotron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "rtg", amount = 2 })
-  elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "vehicle-fusion-reactor-1", amount = 2 })
+  elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 2 })
   else
-    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "fusion-reactor-equipment", amount = 2 })
+    bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "fission-reactor-equipment", amount = 2 })
   end
 end
 
 local function remove_spidertron_power_supply()
-  bobmods.lib.recipe.remove_ingredient("spidertron", "fusion-reactor-equipment")
-  bobmods.lib.tech.remove_prerequisite("spidertron", "fusion-reactor-equipment")
+  bobmods.lib.recipe.remove_ingredient("spidertron", "fission-reactor-equipment")
+  bobmods.lib.tech.remove_prerequisite("spidertron", "fission-reactor-equipment")
   if bobmods.lib.tech.has_recipe_unlock("nuclear-power", "uranium-fuel-cell") then
     bobmods.lib.tech.add_prerequisite("spidertron", "nuclear-power")
   else
@@ -72,14 +72,14 @@ end
 
 local function replace_spidertron_power_supply()
   if data.raw.item.rtg then
-    bobmods.lib.recipe.replace_ingredient("spidertron", "fusion-reactor-equipment", "rtg")
-    bobmods.lib.tech.replace_prerequisite("spidertron", "fusion-reactor-equipment", "rtg")
-  elseif data.raw.item["vehicle-fusion-reactor-1"] then
-    bobmods.lib.recipe.replace_ingredient("spidertron", "fusion-reactor-equipment", "vehicle-fusion-reactor-1")
+    bobmods.lib.recipe.replace_ingredient("spidertron", "fission-reactor-equipment", "rtg")
+    bobmods.lib.tech.replace_prerequisite("spidertron", "fission-reactor-equipment", "rtg")
+  elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
+    bobmods.lib.recipe.replace_ingredient("spidertron", "fission-reactor-equipment", "vehicle-fission-reactor-equipment-1")
     bobmods.lib.tech.replace_prerequisite(
       "spidertron",
-      "fusion-reactor-equipment",
-      "vehicle-fusion-reactor-equipment-1"
+      "fission-reactor-equipment",
+      "vehicle-fission-reactor-equipment-1"
     )
   end
 end
@@ -87,15 +87,15 @@ end
 local function add_logistic_spidertron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "rtg", amount = 2 })
-  elseif data.raw.item["vehicle-fusion-reactor-1"] then
+  elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
     bobmods.lib.recipe.add_ingredient(
       "heavy-spidertron",
-      { type = "item", name = "vehicle-fusion-reactor-1", amount = 2 }
+      { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 2 }
     )
   else
     bobmods.lib.recipe.add_ingredient(
       "heavy-spidertron",
-      { type = "item", name = "fusion-reactor-equipment", amount = 2 }
+      { type = "item", name = "fission-reactor-equipment", amount = 2 }
     )
   end
 end
@@ -104,18 +104,18 @@ local function add_heavy_spidertron_power_supply()
   if data.raw.item.rtg then
     bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "rtg", amount = 3 })
     bobmods.lib.tech.add_prerequisite("heavy-spidertron", "rtg")
-  elseif data.raw.item["vehicle-fusion-reactor-1"] then
+  elseif data.raw.item["vehicle-fission-reactor-equipment-1"] then
     bobmods.lib.recipe.add_ingredient(
       "heavy-spidertron",
-      { type = "item", name = "vehicle-fusion-reactor-1", amount = 3 }
+      { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 3 }
     )
-    bobmods.lib.tech.add_prerequisite("heavy-spidertron", "vehicle-fusion-reactor-equipment-1")
+    bobmods.lib.tech.add_prerequisite("heavy-spidertron", "vehicle-fission-reactor-equipment-1")
   else
     bobmods.lib.recipe.add_ingredient(
       "heavy-spidertron",
-      { type = "item", name = "fusion-reactor-equipment", amount = 3 }
+      { type = "item", name = "fission-reactor-equipment", amount = 3 }
     )
-    bobmods.lib.tech.add_prerequisite("heavy-spidertron", "fusion-reactor-equipment")
+    bobmods.lib.tech.add_prerequisite("heavy-spidertron", "fission-reactor-equipment")
   end
 end
 

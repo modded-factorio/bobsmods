@@ -1,32 +1,32 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-cell-1",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-1.png",
+    name = "vehicle-fission-cell-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-1.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-fusion-cell-1",
+    place_as_equipment_result = "vehicle-fission-cell-equipment-1",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-cell]-1",
+    order = "v[vehicle-equipment]-b[fission-cell]-1",
     stack_size = 50,
     default_request_amount = 10,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-cell-1",
+    name = "vehicle-fission-cell-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "processing-unit", amount = 125 },
     },
-    results = { { type = "item", name = "vehicle-fusion-cell-1", amount = 1 } },
+    results = { { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-cell-1",
+    name = "vehicle-fission-cell-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-1.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-1.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -46,9 +46,9 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-fusion-cell-equipment-1",
+    name = "vehicle-fission-cell-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-cell.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-l-a",
@@ -68,7 +68,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-cell-1",
+        recipe = "vehicle-fission-cell-equipment-1",
       },
     },
   },
@@ -77,36 +77,36 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-cell-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-2.png",
+    name = "vehicle-fission-cell-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-2.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-fusion-cell-2",
+    place_as_equipment_result = "vehicle-fission-cell-equipment-2",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-cell]-2",
+    order = "v[vehicle-equipment]-b[fission-cell]-2",
     stack_size = 50,
     default_request_amount = 10,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-cell-2",
+    name = "vehicle-fission-cell-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-fusion-cell-1", amount = 1 },
+      { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
       { type = "item", name = "efficiency-module-2", amount = 1 },
       { type = "item", name = "speed-module-2", amount = 1 },
       { type = "item", name = "productivity-module-2", amount = 1 },
     },
-    results = { { type = "item", name = "vehicle-fusion-cell-2", amount = 1 } },
+    results = { { type = "item", name = "vehicle-fission-cell-equipment-2", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-cell-2",
+    name = "vehicle-fission-cell-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-2.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-2.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -126,14 +126,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-fusion-cell-equipment-2",
+    name = "vehicle-fission-cell-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-cell.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-l-b",
     prerequisites = {
-      "vehicle-fusion-cell-equipment-1",
+      "vehicle-fission-cell-equipment-1",
       "production-science-pack",
     },
     unit = {
@@ -149,7 +149,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-cell-2",
+        recipe = "vehicle-fission-cell-equipment-2",
       },
     },
   },
@@ -158,36 +158,36 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-cell-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-3.png",
+    name = "vehicle-fission-cell-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-3.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-fusion-cell-3",
+    place_as_equipment_result = "vehicle-fission-cell-equipment-3",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-cell]-3",
+    order = "v[vehicle-equipment]-b[fission-cell]-3",
     stack_size = 50,
     default_request_amount = 10,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-cell-3",
+    name = "vehicle-fission-cell-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-fusion-cell-2", amount = 1 },
+      { type = "item", name = "vehicle-fission-cell-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
       { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "vehicle-fusion-cell-3", amount = 1 } },
+    results = { { type = "item", name = "vehicle-fission-cell-equipment-3", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-cell-3",
+    name = "vehicle-fission-cell-equipment-3",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-3.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-3.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -207,14 +207,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-fusion-cell-equipment-3",
+    name = "vehicle-fission-cell-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-cell.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-l-c",
     prerequisites = {
-      "vehicle-fusion-cell-equipment-2",
+      "vehicle-fission-cell-equipment-2",
       "utility-science-pack",
     },
     unit = {
@@ -231,7 +231,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-cell-3",
+        recipe = "vehicle-fission-cell-equipment-3",
       },
     },
   },
@@ -240,36 +240,36 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-cell-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-4.png",
+    name = "vehicle-fission-cell-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-4.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-fusion-cell-4",
+    place_as_equipment_result = "vehicle-fission-cell-equipment-4",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-cell]-4",
+    order = "v[vehicle-equipment]-b[fission-cell]-4",
     stack_size = 50,
     default_request_amount = 10,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-cell-4",
+    name = "vehicle-fission-cell-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-fusion-cell-3", amount = 1 },
+      { type = "item", name = "vehicle-fission-cell-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
       { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "vehicle-fusion-cell-4", amount = 1 } },
+    results = { { type = "item", name = "vehicle-fission-cell-equipment-4", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-cell-4",
+    name = "vehicle-fission-cell-equipment-4",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-4.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-4.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -289,14 +289,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-fusion-cell-equipment-4",
+    name = "vehicle-fission-cell-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-cell.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-l-d",
     prerequisites = {
-      "vehicle-fusion-cell-equipment-3",
+      "vehicle-fission-cell-equipment-3",
     },
     unit = {
       count = 200,
@@ -312,7 +312,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-cell-4",
+        recipe = "vehicle-fission-cell-equipment-4",
       },
     },
   },
@@ -321,36 +321,36 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-cell-5",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-5.png",
+    name = "vehicle-fission-cell-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-5.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-fusion-cell-5",
+    place_as_equipment_result = "vehicle-fission-cell-equipment-5",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-cell]-5",
+    order = "v[vehicle-equipment]-b[fission-cell]-5",
     stack_size = 50,
     default_request_amount = 10,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-cell-5",
+    name = "vehicle-fission-cell-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-fusion-cell-4", amount = 1 },
+      { type = "item", name = "vehicle-fission-cell-equipment-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
       { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "vehicle-fusion-cell-5", amount = 1 } },
+    results = { { type = "item", name = "vehicle-fission-cell-equipment-5", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-cell-5",
+    name = "vehicle-fission-cell-equipment-5",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-5.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-5.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -370,14 +370,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-fusion-cell-equipment-5",
+    name = "vehicle-fission-cell-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-cell.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-l-e",
     prerequisites = {
-      "vehicle-fusion-cell-equipment-4",
+      "vehicle-fission-cell-equipment-4",
     },
     unit = {
       count = 250,
@@ -393,7 +393,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-cell-5",
+        recipe = "vehicle-fission-cell-equipment-5",
       },
     },
   },
@@ -402,36 +402,36 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-cell-6",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-6.png",
+    name = "vehicle-fission-cell-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-6.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-fusion-cell-6",
+    place_as_equipment_result = "vehicle-fission-cell-equipment-6",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-cell]-6",
+    order = "v[vehicle-equipment]-b[fission-cell]-6",
     stack_size = 50,
     default_request_amount = 10,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-cell-6",
+    name = "vehicle-fission-cell-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-fusion-cell-5", amount = 1 },
+      { type = "item", name = "vehicle-fission-cell-equipment-5", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
       { type = "item", name = "efficiency-module-3", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "vehicle-fusion-cell-6", amount = 1 } },
+    results = { { type = "item", name = "vehicle-fission-cell-equipment-6", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-cell-6",
+    name = "vehicle-fission-cell-equipment-6",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-cell-6.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-6.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -451,14 +451,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-fusion-cell-equipment-6",
+    name = "vehicle-fission-cell-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-cell.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-l-f",
     prerequisites = {
-      "vehicle-fusion-cell-equipment-5",
+      "vehicle-fission-cell-equipment-5",
     },
     unit = {
       count = 300,
@@ -474,7 +474,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-cell-6",
+        recipe = "vehicle-fission-cell-equipment-6",
       },
     },
   },

@@ -815,7 +815,7 @@ data:extend({
     {
       "military-4",
       "exoskeleton-equipment",
-      "fusion-reactor-equipment",
+      "fission-reactor-equipment",
       "rocketry",
       "rocket-control-unit",
       "efficiency-module-3"

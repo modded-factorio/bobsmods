@@ -1,10 +1,10 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-1",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-1.png",
+    name = "vehicle-battery-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-1.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-battery-1",
+    place_as_equipment_result = "vehicle-battery-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-1",
     stack_size = 50,
@@ -13,21 +13,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-battery-1",
+    name = "vehicle-battery-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "battery", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "vehicle-battery-1", amount = 1 } },
+    results = { { type = "item", name = "vehicle-battery-equipment-1", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-1",
+    name = "vehicle-battery-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-1.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-1.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -51,7 +51,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment-1.png",
       icon_size = 128,
     }),
     order = "v-g-i-a",
@@ -70,7 +70,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-1",
+        recipe = "vehicle-battery-equipment-1",
       },
     },
   },
@@ -79,10 +79,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-2.png",
+    name = "vehicle-battery-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-2.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-battery-2",
+    place_as_equipment_result = "vehicle-battery-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-2",
     stack_size = 50,
@@ -91,21 +91,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-battery-2",
+    name = "vehicle-battery-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-battery-1", amount = 2 },
+      { type = "item", name = "vehicle-battery-equipment-1", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-battery-2", amount = 1 } },
+    results = { { type = "item", name = "vehicle-battery-equipment-2", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-2",
+    name = "vehicle-battery-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-2.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-2.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -129,7 +129,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-b",
@@ -149,7 +149,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-2",
+        recipe = "vehicle-battery-equipment-2",
       },
     },
   },
@@ -158,10 +158,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-3.png",
+    name = "vehicle-battery-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-3.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-battery-3",
+    place_as_equipment_result = "vehicle-battery-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-3",
     stack_size = 50,
@@ -170,21 +170,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-battery-3",
+    name = "vehicle-battery-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-battery-2", amount = 2 },
+      { type = "item", name = "vehicle-battery-equipment-2", amount = 2 },
       { type = "item", name = "battery", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-battery-3", amount = 1 } },
+    results = { { type = "item", name = "vehicle-battery-equipment-3", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-3",
+    name = "vehicle-battery-equipment-3",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-3.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-3.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -208,7 +208,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-c",
@@ -227,7 +227,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-3",
+        recipe = "vehicle-battery-equipment-3",
       },
     },
   },
@@ -236,10 +236,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-4.png",
+    name = "vehicle-battery-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-4.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-battery-4",
+    place_as_equipment_result = "vehicle-battery-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-4",
     stack_size = 50,
@@ -248,21 +248,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-battery-4",
+    name = "vehicle-battery-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-battery-3", amount = 2 },
+      { type = "item", name = "vehicle-battery-equipment-3", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-battery-4", amount = 1 } },
+    results = { { type = "item", name = "vehicle-battery-equipment-4", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-4",
+    name = "vehicle-battery-equipment-4",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-4.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-4.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -286,7 +286,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-d",
@@ -307,7 +307,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-4",
+        recipe = "vehicle-battery-equipment-4",
       },
     },
   },
@@ -316,10 +316,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-5",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-5.png",
+    name = "vehicle-battery-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-5.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-battery-5",
+    place_as_equipment_result = "vehicle-battery-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-5",
     stack_size = 50,
@@ -328,21 +328,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-battery-5",
+    name = "vehicle-battery-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-battery-4", amount = 2 },
+      { type = "item", name = "vehicle-battery-equipment-4", amount = 2 },
       { type = "item", name = "battery", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-battery-5", amount = 1 } },
+    results = { { type = "item", name = "vehicle-battery-equipment-5", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-5",
+    name = "vehicle-battery-equipment-5",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-5.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-5.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -366,7 +366,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-e",
@@ -386,7 +386,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-5",
+        recipe = "vehicle-battery-equipment-5",
       },
     },
   },
@@ -395,10 +395,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-6",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-6.png",
+    name = "vehicle-battery-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-6.png",
     icon_size = 32,
-    place_as_equipment_result = "vehicle-battery-6",
+    place_as_equipment_result = "vehicle-battery-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-6",
     stack_size = 50,
@@ -407,21 +407,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-battery-6",
+    name = "vehicle-battery-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-battery-5", amount = 2 },
+      { type = "item", name = "vehicle-battery-equipment-5", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
-    results = { { type = "item", name = "vehicle-battery-6", amount = 1 } },
+    results = { { type = "item", name = "vehicle-battery-equipment-6", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-6",
+    name = "vehicle-battery-equipment-6",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-6.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-6.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -445,7 +445,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-f",
@@ -467,7 +467,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-6",
+        recipe = "vehicle-battery-equipment-6",
       },
     },
   },

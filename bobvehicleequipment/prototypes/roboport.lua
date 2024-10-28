@@ -1,10 +1,10 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-roboport",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport.png",
+    name = "vehicle-roboport-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-roboport",
+    place_as_equipment_result = "vehicle-roboport-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-f[roboport-1]",
     stack_size = 50,
@@ -13,10 +13,10 @@ data:extend({
 
   {
     type = "item",
-    name = "vehicle-roboport-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-2.png",
+    name = "vehicle-roboport-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment-2.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-roboport-2",
+    place_as_equipment_result = "vehicle-roboport-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-f[roboport-2]",
     stack_size = 50,
@@ -25,10 +25,10 @@ data:extend({
 
   {
     type = "item",
-    name = "vehicle-roboport-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-3.png",
+    name = "vehicle-roboport-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment-3.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-roboport-3",
+    place_as_equipment_result = "vehicle-roboport-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-f[roboport-3]",
     stack_size = 50,
@@ -37,10 +37,10 @@ data:extend({
 
   {
     type = "item",
-    name = "vehicle-roboport-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-4.png",
+    name = "vehicle-roboport-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment-4.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-roboport-4",
+    place_as_equipment_result = "vehicle-roboport-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-f[roboport-4]",
     stack_size = 50,
@@ -49,7 +49,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-roboport",
+    name = "vehicle-roboport-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -58,60 +58,60 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "vehicle-roboport", amount = 1 } },
+    results = { { type = "item", name = "vehicle-roboport-equipment-1", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "vehicle-roboport-2",
+    name = "vehicle-roboport-equipment-2",
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { type = "item", name = "vehicle-roboport", amount = 1 },
+      { type = "item", name = "vehicle-roboport-equipment-1", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 20 },
       { type = "item", name = "iron-gear-wheel", amount = 40 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "vehicle-roboport-2", amount = 1 } },
+    results = { { type = "item", name = "vehicle-roboport-equipment-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "vehicle-roboport-3",
+    name = "vehicle-roboport-equipment-3",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "vehicle-roboport-2", amount = 1 },
+      { type = "item", name = "vehicle-roboport-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "iron-gear-wheel", amount = 40 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "vehicle-roboport-3", amount = 1 } },
+    results = { { type = "item", name = "vehicle-roboport-equipment-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "vehicle-roboport-4",
+    name = "vehicle-roboport-equipment-4",
     enabled = false,
     energy_required = 40,
     ingredients = {
-      { type = "item", name = "vehicle-roboport-3", amount = 1 },
+      { type = "item", name = "vehicle-roboport-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "iron-gear-wheel", amount = 40 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "vehicle-roboport-4", amount = 1 } },
+    results = { { type = "item", name = "vehicle-roboport-equipment-4", amount = 1 } },
   },
 
   {
     type = "roboport-equipment",
-    name = "vehicle-roboport",
-    take_result = "vehicle-roboport",
+    name = "vehicle-roboport-equipment-1",
+    take_result = "vehicle-roboport-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -152,10 +152,10 @@ data:extend({
 
   {
     type = "roboport-equipment",
-    name = "vehicle-roboport-2",
-    take_result = "vehicle-roboport-2",
+    name = "vehicle-roboport-equipment-2",
+    take_result = "vehicle-roboport-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-2.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment-2.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -196,10 +196,10 @@ data:extend({
 
   {
     type = "roboport-equipment",
-    name = "vehicle-roboport-3",
-    take_result = "vehicle-roboport-3",
+    name = "vehicle-roboport-equipment-3",
+    take_result = "vehicle-roboport-equipment-3",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-3.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment-3.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -239,10 +239,10 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "vehicle-roboport-4",
-    take_result = "vehicle-roboport-4",
+    name = "vehicle-roboport-equipment-4",
+    take_result = "vehicle-roboport-equipment-4",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-4.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-roboport-equipment-4.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -283,9 +283,9 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-roboport-equipment",
+    name = "vehicle-roboport-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     order = "v-c-k-zx-1",
@@ -305,7 +305,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-roboport",
+        recipe = "vehicle-roboport-equipment-1",
       },
     },
   },
@@ -314,12 +314,12 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     order = "v-c-k-zx-2",
     prerequisites = {
-      "vehicle-roboport-equipment",
+      "vehicle-roboport-equipment-1",
       "chemical-science-pack",
     },
     unit = {
@@ -334,7 +334,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-roboport-2",
+        recipe = "vehicle-roboport-equipment-2",
       },
     },
   },
@@ -343,14 +343,14 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     order = "v-c-k-zx-3",
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-roboport-3",
+        recipe = "vehicle-roboport-equipment-3",
       },
     },
     prerequisites = {
@@ -374,14 +374,14 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     order = "v-c-k-zx-4",
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-roboport-4",
+        recipe = "vehicle-roboport-equipment-4",
       },
     },
     prerequisites = {
@@ -1307,7 +1307,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "vehicle-roboport-equipment",
+      "vehicle-roboport-equipment-1",
     },
     unit = {
       count = 50,
