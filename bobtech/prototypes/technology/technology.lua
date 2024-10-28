@@ -6,7 +6,7 @@ data:extend({
     icon_size = 128,
     order = "c-k-m-a",
     prerequisites = {
-      "advanced-electronics",
+      "advanced-circuit",
       "logistics-3",
     },
     effects = {

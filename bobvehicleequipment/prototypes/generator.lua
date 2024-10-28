@@ -54,7 +54,7 @@ data:extend({
     order = "v-g-l-a",
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     unit = {
       count = 200,

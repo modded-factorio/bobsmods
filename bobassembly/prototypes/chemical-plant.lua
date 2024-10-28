@@ -329,7 +329,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       icon = "__bobassembly__/graphics/icons/technology/chemical-plant-2.png",
       icon_size = 128,
       prerequisites = {
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       effects = {
@@ -357,7 +357,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       icon_size = 128,
       prerequisites = {
         "chemical-plant-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       effects = {

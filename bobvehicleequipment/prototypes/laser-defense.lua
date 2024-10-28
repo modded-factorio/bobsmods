@@ -170,7 +170,7 @@ data:extend({
     order = "v-g-m-b",
     prerequisites = {
       "vehicle-laser-defense-equipment-1",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     unit = {
       count = 150,
@@ -317,7 +317,7 @@ data:extend({
     order = "v-g-m-d",
     prerequisites = {
       "vehicle-laser-defense-equipment-3",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     unit = {
       count = 300,

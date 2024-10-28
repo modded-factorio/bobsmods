@@ -535,7 +535,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "d-a-d-3",
       prerequisites = {
         "water-miner-2",
-        "advanced-electronics",
+        "advanced-circuit",
       },
       unit = {
         count = 50,
@@ -560,7 +560,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "d-a-d-4",
       prerequisites = {
         "water-miner-3",
-        "advanced-electronics-2",
+        "processing-unit",
       },
       unit = {
         count = 75,

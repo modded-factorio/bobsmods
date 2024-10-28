@@ -91,7 +91,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         prerequisites = {
           "fluid-generator-3",
           "hydrazine",
-          "advanced-electronics-2",
+          "processing-unit",
           "utility-science-pack",
         },
         icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",

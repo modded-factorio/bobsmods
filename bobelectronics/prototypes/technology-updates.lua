@@ -4,7 +4,7 @@ bobmods.lib.tech.remove_prerequisite("circuit-network", "electronics")
 bobmods.lib.tech.remove_prerequisite("solar-energy", "electronics")
 bobmods.lib.tech.remove_prerequisite("electric-energy-distribution-1", "electronics")
 
-bobmods.lib.tech.add_prerequisite("advanced-electronics", "plastics")
+bobmods.lib.tech.add_prerequisite("advanced-circuit", "plastics")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 
@@ -15,10 +15,10 @@ bobmods.lib.tech.add_recipe_unlock("plastics", "synthetic-wood")
 
 if data.raw.technology["chemical-processing-2"] then
   bobmods.lib.tech.add_recipe_unlock("chemical-processing-2", "ferric-chloride-solution")
-  bobmods.lib.tech.add_prerequisite("advanced-electronics", "chemical-processing-2")
+  bobmods.lib.tech.add_prerequisite("advanced-circuit", "chemical-processing-2")
 else
   bobmods.lib.tech.add_recipe_unlock("oil-processing", "ferric-chloride-solution")
-  bobmods.lib.tech.add_prerequisite("advanced-electronics", "oil-processing")
+  bobmods.lib.tech.add_prerequisite("advanced-circuit", "oil-processing")
 end
 
 if data.raw.recipe["silicon-wafer"] then
@@ -53,20 +53,20 @@ if data.raw.technology["chemical-processing-1"] and data.raw.technology["alloy-p
   bobmods.lib.tech.add_prerequisite("electronics", "alloy-processing")
 end
 
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "electronic-components")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "phenolic-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "circuit-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "advanced-circuit") --to re-add if it was removed in previous mod
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "electronic-components")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "phenolic-board")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "circuit-board")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "advanced-circuit") --to re-add if it was removed in previous mod
 if data.raw.technology["silicon-processing"] then
-  bobmods.lib.tech.add_prerequisite("advanced-electronics", "silicon-processing")
+  bobmods.lib.tech.add_prerequisite("advanced-circuit", "silicon-processing")
 end
 
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "intergrated-electronics")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "fibreglass-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "superior-circuit-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "processing-unit")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "intergrated-electronics")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "fibreglass-board")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "superior-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "processing-unit")
 if data.raw.technology["gold-processing"] then
-  bobmods.lib.tech.add_prerequisite("advanced-electronics-2", "gold-processing")
+  bobmods.lib.tech.add_prerequisite("processing-unit", "gold-processing")
 end
 
 if data.raw.recipe["gilded-copper-cable"] then
@@ -81,14 +81,14 @@ if data.raw.technology["ceramics"] then
 end
 
 data.raw.technology["electronics"].icon = "__bobelectronics__/graphics/icons/technology/electronics.png"
-data.raw.technology["advanced-electronics"].icon =
+data.raw.technology["advanced-circuit"].icon =
   "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
-data.raw.technology["advanced-electronics-2"].icon =
+data.raw.technology["processing-unit"].icon =
   "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
 
 data.raw.technology["electronics"].icon_size = 128
-data.raw.technology["advanced-electronics"].icon_size = 128
-data.raw.technology["advanced-electronics-2"].icon_size = 128
+data.raw.technology["advanced-circuit"].icon_size = 128
+data.raw.technology["processing-unit"].icon_size = 128
 
 bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
 bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")

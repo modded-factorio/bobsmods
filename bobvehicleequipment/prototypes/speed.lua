@@ -60,7 +60,7 @@ data:extend({
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "electric-engine",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     unit = {
       count = 50,

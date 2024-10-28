@@ -355,7 +355,7 @@ data:extend({
     },
     prerequisites = {
       "vehicle-roboport-equipment-2",
-      "advanced-electronics-2",
+      "processing-unit",
       "utility-science-pack",
     },
     unit = {

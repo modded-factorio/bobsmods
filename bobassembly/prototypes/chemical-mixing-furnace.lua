@@ -273,7 +273,7 @@ then
       },
       order = "c-c-b-1",
       prerequisites = {
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {

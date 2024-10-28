@@ -61,7 +61,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("fluid-generator-2", "electronic-circuit", "advanced-circuit")
-    bobmods.lib.tech.add_prerequisite("fluid-generator-2", "advanced-electronics")
+    bobmods.lib.tech.add_prerequisite("fluid-generator-2", "advanced-circuit")
   end
 
   if data.raw.item["titanium-bearing"] then
@@ -95,7 +95,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("fluid-generator-3", "advanced-circuit", "processing-unit")
-    bobmods.lib.tech.add_prerequisite("fluid-generator-3", "advanced-electronics-2")
+    bobmods.lib.tech.add_prerequisite("fluid-generator-3", "processing-unit")
   end
 
   if mods["bobrevamp"] and data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
@@ -134,7 +134,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "processing-unit", "advanced-processing-unit")
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-electronics-3")
     else
-      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-electronics-2")
+      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "processing-unit")
     end
   end
 end

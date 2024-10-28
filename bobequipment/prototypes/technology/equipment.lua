@@ -15,7 +15,7 @@ data:extend({
     }),
     order = "g-e-c",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "energy-shield-mk2-equipment",
       "productivity-module-2",
       "production-science-pack",
@@ -181,7 +181,7 @@ data:extend({
     }),
     order = "g-i-d",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "bob-battery-equipment-3",
       "production-science-pack",
     },
@@ -405,7 +405,7 @@ data:extend({
     }),
     order = "g-g-c",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "night-vision-equipment-2",
       "production-science-pack",
     },
@@ -468,7 +468,7 @@ data:extend({
     order = "g-k-c",
     prerequisites = {
       "solar-panel-equipment-2",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {
@@ -570,7 +570,7 @@ data:extend({
     }),
     order = "g-m-c",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "personal-laser-defense-equipment-2",
       "production-science-pack",
     },
@@ -687,8 +687,8 @@ data:extend({
   },
 })
 
-bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "advanced-electronics-2")
-bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-electronics")
+bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "processing-unit")
+bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-circuit")
 
 data:extend({
   {
@@ -701,7 +701,7 @@ data:extend({
     order = "g-h-b",
     prerequisites = {
       "exoskeleton-equipment",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     effects = {
       {

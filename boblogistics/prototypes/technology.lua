@@ -122,7 +122,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         },
       },
       prerequisites = {
-        "advanced-electronics",
+        "advanced-circuit",
         "automated-rail-transportation",
       },
       unit = {
@@ -153,7 +153,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
       prerequisites = {
         "bob-railway-2",
-        "advanced-electronics-2",
+        "processing-unit",
       },
       unit = {
         count = 100,
@@ -215,7 +215,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
       prerequisites = {
         "bob-armoured-railway",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {
@@ -732,7 +732,7 @@ data:extend({
     },
     prerequisites = {
       "logistic-system",
-      "advanced-electronics-2",
+      "processing-unit",
       "utility-science-pack",
     },
     unit = {
@@ -846,7 +846,7 @@ data:extend({
     },
     prerequisites = {
       "logistics-3",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     unit = {

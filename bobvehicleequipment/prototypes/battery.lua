@@ -135,7 +135,7 @@ data:extend({
     order = "v-g-i-b",
     prerequisites = {
       "vehicle-battery-equipment-1",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     unit = {
       count = 100,

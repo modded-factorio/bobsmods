@@ -63,7 +63,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       icon_size = 256,
       prerequisites = {
         "oil-processing",
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       order = "d-a2",
@@ -136,7 +136,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       icon_size = 256,
       prerequisites = {
         "oil-processing-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       order = "d-a3",

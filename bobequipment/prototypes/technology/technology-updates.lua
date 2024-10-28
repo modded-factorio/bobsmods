@@ -2,7 +2,7 @@ if mods["boblogistics"] or mods["bobplates"] then
   -- Bob's Logistics mod and Bob's MCI mod remove blue science from Electric engine and Robotics
 
   bobmods.lib.tech.remove_science_pack("exoskeleton-equipment", "chemical-science-pack")
-  bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "advanced-electronics-2")
+  bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "processing-unit")
 end
 
 if mods["boblogistics"] then

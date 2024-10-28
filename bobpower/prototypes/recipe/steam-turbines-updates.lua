@@ -34,7 +34,7 @@ if settings.startup["bobmods-power-steam"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("steam-turbine", "electronic-circuit", "advanced-circuit")
-    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-1", "advanced-electronics")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-1", "advanced-circuit")
   end
 
   if data.raw.item["titanium-bearing"] then
@@ -77,7 +77,7 @@ if settings.startup["bobmods-power-steam"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("steam-turbine-2", "advanced-circuit", "processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "advanced-electronics-2")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "processing-unit")
   end
 
   if data.raw.item["nitinol-bearing"] then
@@ -124,6 +124,6 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.replace_ingredient("steam-turbine-3", "processing-unit", "advanced-processing-unit")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "advanced-electronics-3")
   else
-    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "advanced-electronics-2")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "processing-unit")
   end
 end

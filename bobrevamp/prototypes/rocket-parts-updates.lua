@@ -28,7 +28,7 @@ bobmods.lib.tech.remove_prerequisite("low-density-structure", "advanced-material
 
 bobmods.lib.tech.remove_prerequisite("rocket-silo", "productivity-module-3")
 if data.raw.technology["advanced-electronics-3"] then
-  bobmods.lib.tech.replace_prerequisite("rocket-silo", "advanced-electronics-2", "advanced-electronics-3")
+  bobmods.lib.tech.replace_prerequisite("rocket-silo", "processing-unit", "advanced-electronics-3")
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "speed-module-3")
 end
 

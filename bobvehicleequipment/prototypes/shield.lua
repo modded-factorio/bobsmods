@@ -59,7 +59,7 @@ data:extend({
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "military-science-pack",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     unit = {
       count = 150,
@@ -139,7 +139,7 @@ data:extend({
     order = "v-g-e-b",
     prerequisites = {
       "vehicle-energy-shield-equipment-1",
-      "advanced-electronics-2",
+      "processing-unit",
       "military-3",
     },
     unit = {

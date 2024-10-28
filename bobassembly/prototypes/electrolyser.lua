@@ -461,7 +461,7 @@ then
       icon_size = 128,
       prerequisites = {
         "electrolyser-3",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       effects = {
