@@ -967,7 +967,11 @@ function bobmods.logistics.set_positions(entity, player_index)
     set_both_positions(entity, pickup_position, full_drop_position)
   end
 
-  if entity.type ~= "entity-ghost" and storage.bobmods.logistics[player_index].enabled2 and remote.interfaces.bobinserters then
+  if
+    entity.type ~= "entity-ghost"
+    and storage.bobmods.logistics[player_index].enabled2
+    and remote.interfaces.bobinserters
+  then
     local pickup_position =
       remote.call("bobinserters", "get_position", { position = storage.bobmods.logistics[player_index].pickup })
     local drop_position =
