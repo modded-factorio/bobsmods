@@ -81,10 +81,8 @@ if data.raw.technology["ceramics"] then
 end
 
 data.raw.technology["electronics"].icon = "__bobelectronics__/graphics/icons/technology/electronics.png"
-data.raw.technology["advanced-circuit"].icon =
-  "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
-data.raw.technology["processing-unit"].icon =
-  "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
+data.raw.technology["advanced-circuit"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
+data.raw.technology["processing-unit"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
 
 data.raw.technology["electronics"].icon_size = 128
 data.raw.technology["advanced-circuit"].icon_size = 128
