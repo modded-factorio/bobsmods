@@ -15,9 +15,6 @@ for i, recipe in pairs(data.raw.recipe) do
   end
 end
 
-data.raw.recipe["red-wire"].ingredients = { { type = "item", name = "insulated-cable", amount = 1 } }
-data.raw.recipe["green-wire"].ingredients = { { type = "item", name = "insulated-cable", amount = 1 } }
-
 if data.raw.fluid["hydrogen-chloride"] then
   bobmods.lib.recipe.replace_ingredient("ferric-chloride-solution", "water", "hydrogen-chloride")
 end
