@@ -1,5 +1,5 @@
-bobmods.lib.recipe.remove_ingredient("logistic-chest-passive-provider", "advanced-circuit")
-bobmods.lib.recipe.remove_ingredient("logistic-chest-storage", "advanced-circuit")
+bobmods.lib.recipe.remove_ingredient("passive-provider-chest", "advanced-circuit")
+bobmods.lib.recipe.remove_ingredient("storage-chest", "advanced-circuit")
 
 if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
   bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { type = "item", name = "logistic-robot", amount = 1 })

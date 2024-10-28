@@ -361,8 +361,8 @@ if settings.startup["bobmods-logistics-disableroboports"].value == true then
 end
 
 -- Chest ballancing.
-bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "logistic-chest-passive-provider")
-bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "logistic-chest-storage")
+bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "passive-provider-chest")
+bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "storage-chest")
 bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 -- Old DyTech compatibillity bullshit

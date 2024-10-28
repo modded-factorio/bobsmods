@@ -711,23 +711,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-passive-provider-2",
+        recipe = "passive-provider-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-active-provider-2",
+        recipe = "active-provider-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-storage-2",
+        recipe = "storage-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-requester-2",
+        recipe = "requester-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-buffer-2",
+        recipe = "buffer-chest-2",
       },
     },
     prerequisites = {
@@ -755,23 +755,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-passive-provider-3",
+        recipe = "passive-provider-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-active-provider-3",
+        recipe = "active-provider-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-storage-3",
+        recipe = "storage-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-requester-3",
+        recipe = "requester-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-buffer-3",
+        recipe = "buffer-chest-3",
       },
     },
     prerequisites = {
