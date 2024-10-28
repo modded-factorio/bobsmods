@@ -20,25 +20,25 @@ then
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = 0, position = { -1, -1 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
         volume = 1000
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = 0, position = { 1, -1 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
         volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "output", direction = 8, position = { -1, 1 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
         volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "output", direction = 8, position = { 1, 1 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
         volume = 1000
       },
     }

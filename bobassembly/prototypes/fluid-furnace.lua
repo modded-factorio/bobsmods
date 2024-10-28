@@ -7,8 +7,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       scale_fluid_usage = true,
       fluid_box = {
         pipe_connections = {
-          { flow_direction = "input-output", direction = 4, position = { 0.5, 0.5 } },
-          { flow_direction = "input-output", direction = 12, position = { -0.5, 0.5 } },
+          { flow_direction = "input-output", direction = defines.direction.east, position = { 0.5, 0.5 } },
+          { flow_direction = "input-output", direction = defines.direction.west, position = { -0.5, 0.5 } },
         },
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),

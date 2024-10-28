@@ -417,13 +417,13 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         {
           production_type = "input",
           pipe_covers = pipecoverspictures(),
-          pipe_connections = { { flow_direction = "input", direction = 8, position = { 0.5, 0.5 } } },
+          pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
           volume = 1000
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
-          pipe_connections = { { flow_direction = "output", direction = 0, position = { 0.5, -0.5 } } },
+          pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
           volume = 1000
         },
       },
