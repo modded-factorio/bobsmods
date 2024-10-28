@@ -921,7 +921,6 @@ end
 function bobmods.logistics.set_positions(entity, player_index)
   if storage.bobmods.logistics[player_index].enabled then
     local force = game.players[player_index].force
-    local direction = (entity.direction / 2) + 1
 
     local long_unlocked = tech_unlocked(force, bobmods.inserters.long_technology)
     local more_unlocked = tech_unlocked(force, bobmods.inserters.more_technology)
@@ -968,7 +967,7 @@ function bobmods.logistics.set_positions(entity, player_index)
     set_both_positions(entity, pickup_position, full_drop_position)
   end
 
-  if storage.bobmods.logistics[player_index].enabled2 and remote.interfaces.bobinserters then
+  if entity.type ~= "entity-ghost" and storage.bobmods.logistics[player_index].enabled2 and remote.interfaces.bobinserters then
     local pickup_position =
       remote.call("bobinserters", "get_position", { position = storage.bobmods.logistics[player_index].pickup })
     local drop_position =
@@ -976,20 +975,19 @@ function bobmods.logistics.set_positions(entity, player_index)
     local drop_offset =
       remote.call("bobinserters", "get_offset", { position = storage.bobmods.logistics[player_index].offset })
 
-    local direction = (entity.direction / 2)
-    if direction == 2 then -- 2 is up, because inserters are backwards.
+    if entity.direction == defines.direction.north then
       pickup_position = pickup_position
       drop_position = drop_position
       drop_offset = drop_offset
-    elseif direction == 3 then -- right
+    elseif entity.direction == defines.direction.east then
       pickup_position = { x = -pickup_position.y, y = pickup_position.x }
       drop_position = { x = -drop_position.y, y = drop_position.x }
       drop_offset = { x = -drop_offset.y, y = drop_offset.x }
-    elseif direction == 0 then -- down
+    elseif entity.direction == defines.direction.south then
       pickup_position = { x = -pickup_position.x, y = -pickup_position.y }
       drop_position = { x = -drop_position.x, y = -drop_position.y }
       drop_offset = { x = -drop_offset.x, y = -drop_offset.y }
-    elseif direction == 1 then -- left
+    elseif entity.direction == defines.direction.west then
       pickup_position = { x = pickup_position.y, y = -pickup_position.x }
       drop_position = { x = drop_position.y, y = -drop_position.x }
       drop_offset = { x = drop_offset.y, y = -drop_offset.x }
