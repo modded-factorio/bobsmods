@@ -121,7 +121,7 @@ if bobmods.tech.advanced_logistic_science then
       "utility-science-pack",
       "advanced-logistic-science-pack"
     )
-    bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "advanced-electronics-2")
+    bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "processing-unit")
     bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "low-density-structure")
   end
   if mods["bobvehicleequipment"] then
@@ -197,14 +197,14 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.add_recipe_unlock("lab", "lab")
   bobmods.lib.tech.add_prerequisite("logistics", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("automation", "automation-science-pack")
-  bobmods.lib.tech.add_prerequisite("optics", "automation-science-pack")
+  bobmods.lib.tech.add_prerequisite("lamp", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("gun-turret", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("stone-wall", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("military", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("steel-processing", "automation-science-pack")
 
   bobmods.lib.tech.add_prerequisite("automation", "electricity")
-  bobmods.lib.tech.add_prerequisite("optics", "electricity")
+  bobmods.lib.tech.add_prerequisite("lamp", "electricity")
   if data.raw.technology["radars-1"] then
     bobmods.lib.tech.add_prerequisite("radars-1", "electricity")
   end

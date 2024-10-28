@@ -99,7 +99,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       },
       prerequisites = {
         "production-science-pack",
-        "advanced-electronics-2",
+        "processing-unit",
         "uranium-processing",
       },
       unit = {

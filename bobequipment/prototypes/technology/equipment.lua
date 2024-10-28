@@ -15,7 +15,7 @@ data:extend({
     }),
     order = "g-e-c",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "energy-shield-mk2-equipment",
       "productivity-module-2",
       "production-science-pack",
@@ -181,7 +181,7 @@ data:extend({
     }),
     order = "g-i-d",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "bob-battery-equipment-3",
       "production-science-pack",
     },
@@ -264,30 +264,30 @@ data:extend({
   },
 })
 
-data.raw["technology"]["fusion-reactor-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
-  icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-1.png",
+data.raw["technology"]["fission-reactor-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+  icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",
   icon_size = 128,
 })
-bobmods.lib.tech.remove_science_pack("fusion-reactor-equipment", "military-science-pack")
-bobmods.lib.tech.remove_prerequisite("fusion-reactor-equipment", "military-science-pack")
+bobmods.lib.tech.remove_science_pack("fission-reactor-equipment", "military-science-pack")
+bobmods.lib.tech.remove_prerequisite("fission-reactor-equipment", "military-science-pack")
 
 data:extend({
   {
     type = "technology",
-    name = "fusion-reactor-equipment-2",
+    name = "fission-reactor-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-2.png",
+      icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
       icon_size = 128,
     }),
     order = "g-l-b",
     prerequisites = {
-      "fusion-reactor-equipment",
+      "fission-reactor-equipment",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fusion-reactor-equipment-2",
+        recipe = "fission-reactor-equipment-2",
       },
     },
     unit = {
@@ -305,19 +305,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "fusion-reactor-equipment-3",
+    name = "fission-reactor-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-3.png",
+      icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
       icon_size = 128,
     }),
     order = "g-l-c",
     prerequisites = {
-      "fusion-reactor-equipment-2",
+      "fission-reactor-equipment-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fusion-reactor-equipment-3",
+        recipe = "fission-reactor-equipment-3",
       },
     },
     unit = {
@@ -336,19 +336,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "fusion-reactor-equipment-4",
+    name = "fission-reactor-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-4.png",
+      icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
       icon_size = 128,
     }),
     order = "g-l-d",
     prerequisites = {
-      "fusion-reactor-equipment-3",
+      "fission-reactor-equipment-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fusion-reactor-equipment-4",
+        recipe = "fission-reactor-equipment-4",
       },
     },
     unit = {
@@ -405,7 +405,7 @@ data:extend({
     }),
     order = "g-g-c",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "night-vision-equipment-2",
       "production-science-pack",
     },
@@ -468,7 +468,7 @@ data:extend({
     order = "g-k-c",
     prerequisites = {
       "solar-panel-equipment-2",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {
@@ -570,7 +570,7 @@ data:extend({
     }),
     order = "g-m-c",
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "personal-laser-defense-equipment-2",
       "production-science-pack",
     },
@@ -687,8 +687,8 @@ data:extend({
   },
 })
 
-bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "advanced-electronics-2")
-bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-electronics")
+bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "processing-unit")
+bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-circuit")
 
 data:extend({
   {
@@ -701,7 +701,7 @@ data:extend({
     order = "g-h-b",
     prerequisites = {
       "exoskeleton-equipment",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     effects = {
       {

@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/technology/laser-rifle.png",
     icon_size = 64,
     prerequisites = {
-      "advanced-electronics",
+      "advanced-circuit",
       "military-science-pack",
       "laser",
       "battery",

@@ -2,7 +2,7 @@ bobmods.lib.tech.remove_science_pack("follower-robot-count-7", "production-scien
 
 bobmods.lib.tech.remove_science_pack("artillery", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("artillery", "military-4")
-bobmods.lib.tech.add_prerequisite("artillery", "advanced-electronics-2")
+bobmods.lib.tech.add_prerequisite("artillery", "processing-unit")
 bobmods.lib.tech.add_prerequisite("artillery", "concrete")
 bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "military-4")
 bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-2", "military-4")
@@ -462,31 +462,31 @@ table.insert(
 )
 
 table.insert(
-  data.raw.technology["energy-weapons-damage-1"].effects,
+  data.raw.technology["laser-weapons-damage-1"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.2 }
 )
 table.insert(
-  data.raw.technology["energy-weapons-damage-2"].effects,
+  data.raw.technology["laser-weapons-damage-2"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.2 }
 )
 table.insert(
-  data.raw.technology["energy-weapons-damage-3"].effects,
+  data.raw.technology["laser-weapons-damage-3"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.3 }
 )
 table.insert(
-  data.raw.technology["energy-weapons-damage-4"].effects,
+  data.raw.technology["laser-weapons-damage-4"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.4 }
 )
 table.insert(
-  data.raw.technology["energy-weapons-damage-5"].effects,
+  data.raw.technology["laser-weapons-damage-5"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.5 }
 )
 table.insert(
-  data.raw.technology["energy-weapons-damage-6"].effects,
+  data.raw.technology["laser-weapons-damage-6"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.7 }
 )
 table.insert(
-  data.raw.technology["energy-weapons-damage-7"].effects,
+  data.raw.technology["laser-weapons-damage-7"].effects,
   { type = "ammo-damage", ammo_category = "laser-rifle", modifier = 0.7 }
 )
 
@@ -512,9 +512,9 @@ table.insert(
 )
 
 --0.17.60
-bobmods.lib.tech.remove_science_pack("energy-weapons-damage-1", "chemical-science-pack")
-bobmods.lib.tech.remove_science_pack("energy-weapons-damage-2", "chemical-science-pack")
-bobmods.lib.tech.remove_science_pack("energy-weapons-damage-3", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("laser-weapons-damage-1", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("laser-weapons-damage-2", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("laser-weapons-damage-3", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-shooting-speed-1", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-shooting-speed-2", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser", "chemical-science-pack")
@@ -573,14 +573,14 @@ end
 
 -- Armor
 
-bobmods.lib.tech.remove_prerequisite("modular-armor", "advanced-electronics")
+bobmods.lib.tech.remove_prerequisite("modular-armor", "advanced-circuit")
 bobmods.lib.tech.add_prerequisite("modular-armor", "logistic-science-pack")
 
 bobmods.lib.tech.remove_science_pack("power-armor", "chemical-science-pack")
 bobmods.lib.tech.add_science_pack("power-armor", "military-science-pack", 1)
-bobmods.lib.tech.remove_prerequisite("power-armor", "advanced-electronics-2")
+bobmods.lib.tech.remove_prerequisite("power-armor", "processing-unit")
 bobmods.lib.tech.add_prerequisite("power-armor", "military-science-pack")
-bobmods.lib.tech.add_prerequisite("power-armor", "advanced-electronics")
+bobmods.lib.tech.add_prerequisite("power-armor", "advanced-circuit")
 -- By default, electric engines are Blue Science
 if (not mods["bobplates"]) and not mods["boblogistics"] then
   bobmods.lib.tech.remove_prerequisite("power-armor", "electric-engine")
@@ -593,4 +593,4 @@ bobmods.lib.tech.add_prerequisite("power-armor-mk2", "military-3")
 bobmods.lib.tech.add_prerequisite("power-armor-mk2", "low-density-structure")
 
 bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
-bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "advanced-electronics-2")
+bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "processing-unit")

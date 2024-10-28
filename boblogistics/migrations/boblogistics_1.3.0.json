@@ -1,6 +1,16 @@
 {
   "item":
   [
+    ["logistic-chest-active-provider-2", "active-provider-chest-2"],
+    ["logistic-chest-passive-provider-2", "passive-provider-chest-2"],
+    ["logistic-chest-storage-2", "storage-chest-2"],
+    ["logistic-chest-requester-2", "requester-chest-2"],
+    ["logistic-chest-buffer-2", "buffer-chest-2"],
+    ["logistic-chest-active-provider-3", "active-provider-chest-3"],
+    ["logistic-chest-passive-provider-3", "passive-provider-chest-3"],
+    ["logistic-chest-storage-3", "storage-chest-3"],
+    ["logistic-chest-requester-3", "requester-chest-3"],
+    ["logistic-chest-buffer-3", "buffer-chest-3"],
     ["robot-brain-logistic", "bob-robot-brain"],
     ["robot-brain-logistic-2", "bob-robot-brain-2"],
     ["robot-brain-logistic-3", "bob-robot-brain-3"],
@@ -20,6 +30,16 @@
   ],
   "recipe":
   [
+    ["logistic-chest-active-provider-2", "active-provider-chest-2"],
+    ["logistic-chest-passive-provider-2", "passive-provider-chest-2"],
+    ["logistic-chest-storage-2", "storage-chest-2"],
+    ["logistic-chest-requester-2", "requester-chest-2"],
+    ["logistic-chest-buffer-2", "buffer-chest-2"],
+    ["logistic-chest-active-provider-3", "active-provider-chest-3"],
+    ["logistic-chest-passive-provider-3", "passive-provider-chest-3"],
+    ["logistic-chest-storage-3", "storage-chest-3"],
+    ["logistic-chest-requester-3", "requester-chest-3"],
+    ["logistic-chest-buffer-3", "buffer-chest-3"],
     ["robot-brain-logistic", "bob-robot-brain"],
     ["robot-brain-logistic-2", "bob-robot-brain-2"],
     ["robot-brain-logistic-3", "bob-robot-brain-3"],
@@ -36,5 +56,18 @@
     ["robot-tool-construction-2", "bob-robot-tool-2"],
     ["robot-tool-construction-3", "bob-robot-tool-3"],
     ["robot-tool-construction-4", "bob-robot-tool-4"]
-  ]
+  ],
+  "entity":
+  [
+    ["logistic-chest-active-provider-2", "active-provider-chest-2"],
+    ["logistic-chest-passive-provider-2", "passive-provider-chest-2"],
+    ["logistic-chest-storage-2", "storage-chest-2"],
+    ["logistic-chest-requester-2", "requester-chest-2"],
+    ["logistic-chest-buffer-2", "buffer-chest-2"],
+    ["logistic-chest-active-provider-3", "active-provider-chest-3"],
+    ["logistic-chest-passive-provider-3", "passive-provider-chest-3"],
+    ["logistic-chest-storage-3", "storage-chest-3"],
+    ["logistic-chest-requester-3", "requester-chest-3"],
+    ["logistic-chest-buffer-3", "buffer-chest-3"]
+  ]  
 }

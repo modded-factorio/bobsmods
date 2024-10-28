@@ -333,7 +333,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       prerequisites = {
         "electronics-machine-1",
         "steel-processing",
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       unit = {
@@ -509,7 +509,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       },
       prerequisites = {
         "electronics-machine-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
         "utility-science-pack",
       },

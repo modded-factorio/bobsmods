@@ -35,7 +35,7 @@ require("prototypes.beams")
 
 require("prototypes.battery")
 require("prototypes.generator")
-require("prototypes.fusion-cell")
+require("prototypes.fission-cell")
 require("prototypes.laser-defense")
 require("prototypes.plasma-defense")
 require("prototypes.roboport")

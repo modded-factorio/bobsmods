@@ -105,7 +105,7 @@ if settings.startup["bobmods-power-poles"].value == true then
       },
       prerequisites = {
         "electric-energy-distribution-2",
-        "advanced-electronics",
+        "advanced-circuit",
       },
       unit = {
         count = 300,
@@ -132,7 +132,7 @@ if settings.startup["bobmods-power-poles"].value == true then
       },
       prerequisites = {
         "electric-substation-2",
-        "advanced-electronics-2",
+        "processing-unit",
       },
       unit = {
         count = 350,

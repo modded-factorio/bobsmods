@@ -631,7 +631,7 @@ data:extend({
     prerequisites = {
       "oil-processing",
       "rocketry",
-      "advanced-electronics-2",
+      "processing-unit",
       "military-3",
     },
     effects = {
