@@ -968,7 +968,7 @@ function bobmods.logistics.set_positions(entity, player_index)
   end
 
   if
-    entity.type ~= "entity-ghost"
+    not game.players[player_index].is_cursor_blueprint()
     and storage.bobmods.logistics[player_index].enabled2
     and remote.interfaces.bobinserters
   then
