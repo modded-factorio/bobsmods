@@ -746,8 +746,8 @@ data:extend({
       pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, -0.25 } },
-        { direction = defines.direction.south, position = { 0, 0.25 } },
+        { direction = defines.direction.north, position = { 0, -0.20 } },
+        { direction = defines.direction.south, position = { 0, 0.20 } },
       },
       volume = 2500,
       secondary_draw_orders = { north = -1, east = -1, south = 1, west = -1 },
@@ -784,7 +784,7 @@ data:extend({
         height = 15,
       },
       window_background = {
-        filename = "__base__/graphics/entity/storage-tank/hr-window-background.png",
+        filename = "__base__/graphics/entity/storage-tank/window-background.png",
         priority = "extra-high",
         width = 34,
         height = 48,
@@ -797,7 +797,7 @@ data:extend({
         height = 20,
       },
       gas_flow = {
-        filename = "__base__/graphics/entity/pipe/hr-steam.png",
+        filename = "__base__/graphics/entity/pipe/steam.png",
         priority = "extra-high",
         line_length = 10,
         width = 48,
@@ -839,10 +839,10 @@ data:extend({
       pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, -0.25 } },
-        { direction = defines.direction.south, position = { 0, 0.25 } },
-        { direction = defines.direction.east, position = { -0.25, 0 } },
-        { direction = defines.direction.west, position = { 0.25, 0 } },
+        { direction = defines.direction.north, position = { 0, -0.2 } },
+        { direction = defines.direction.south, position = { 0, 0.2 } },
+        { direction = defines.direction.west, position = { -0.2, 0 } },
+        { direction = defines.direction.east, position = { 0.2, 0 } },
       },
       volume = 2500,
       secondary_draw_orders = { north = -1, east = -1, south = 1, west = -1 },
