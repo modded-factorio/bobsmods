@@ -577,7 +577,7 @@ data:extend({
         },
       },
     },
-    graphics_set = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set)
+    graphics_set = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set),
     fast_replaceable_group = "furnace",
   },
 
