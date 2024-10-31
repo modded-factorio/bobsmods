@@ -1,3 +1,79 @@
+local fluid_pump_graphics_set = {
+  animation = {
+    north = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+    east = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 80,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+    south = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 160,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+    west = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 240,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+  }
+}
+
+local fluid_pump_graphics_set_flipped = {
+  animation = {
+    north = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { -1, 0 }
+    },
+    east = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 80,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { 0, -1 }
+    },
+    south = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 160,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { 1, 0 }
+    },
+    west = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 240,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { 0, 1 }
+    },
+  }
+}
+
 data:extend({
   {
     type = "assembling-machine",
@@ -31,62 +107,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "50kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 
   {
@@ -121,62 +161,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "90kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 
   {
@@ -211,62 +215,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "140kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 
   {
@@ -300,62 +268,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "175kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 
   {
@@ -390,28 +322,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "50kW",
-    graphics_set = {
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
       --[[
       animation =
       {
@@ -733,40 +663,6 @@ data:extend({
       },
 ]]
       --
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
   },
 
   {
@@ -801,62 +697,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "90kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 
   {
@@ -891,62 +751,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "140kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 
   {
@@ -980,61 +804,25 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "175kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = fluid_pump_graphics_set,
+    graphics_set_flipped = fluid_pump_graphics_set_flipped,
   },
 })
