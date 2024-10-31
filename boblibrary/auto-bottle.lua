@@ -11,7 +11,7 @@ end
 local function get_recipes_for_barrel(name)
   local recipes = data.raw["recipe"]
   if recipes then
-    return recipes["fill-" .. name], recipes["empty-" .. name]
+    return recipes[name], recipes["empty-" .. name]
   end
   return nil
 end
@@ -35,10 +35,11 @@ end
 
 -- Generates the icons definition for a fill-barrel recipe with the provided fluid definition and icon
 local function generate_fill_recipe_icons(fluid, icon)
-  if fluid.icon and fluid.icon_size then
+  if fluid.icon then
+    local iconsize = fluid.icon_size or 64
     table.insert(
       icon,
-      { icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = { 4, -8 } }
+      { icon = fluid.icon, icon_size = iconsize, scale = 16.0 / iconsize, shift = { 4, -8 } }
     )
   elseif fluid.icons and util.combine_icons then
     icon = util.combine_icons(icon, fluid.icons, { scale = 0.5, shift = { 4, -8 } })
@@ -58,10 +59,11 @@ end
 
 -- Generates the icons definition for a empty-barrel recipe with the provided fluid definition and icon
 local function generate_empty_recipe_icons(fluid, icon)
-  if fluid.icon and fluid.icon_size then
+  if fluid.icon then
+    local iconsize = fluid.icon_size or 64
     table.insert(
       icon,
-      { icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = { 7, 8 } }
+      { icon = fluid.icon, icon_size = iconsize, scale = 16.0 / iconsize, shift = { 7, 8 } }
     )
   elseif fluid.icons and util.combine_icons then
     icon = util.combine_icons(icon, fluid.icons, { scale = 0.5, shift = { 7, 8 } })
@@ -315,7 +317,7 @@ function bobmods.lib.create_fluid_canister(fluid)
       empty_recipe.icons = generate_empty_fluid_canister_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
-      bobmods.lib.recipe.add_result(empty_recipe.name, { type = "item", name = "empty-canister", amount = 1 })
+      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "empty-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
     else
