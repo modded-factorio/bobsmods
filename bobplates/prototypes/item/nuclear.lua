@@ -1,4 +1,4 @@
-eteddata:extend({
+data:extend({
   {
     type = "item",
     name = "plutonium-239",
