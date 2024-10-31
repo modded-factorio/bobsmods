@@ -432,8 +432,8 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         working_visualisations = bobmods.plates.distillery_working_visualisations(1),
       },
       graphics_set_flipped = {
-        animation = bobmods.assembly.distillery_animation_flipped({ r = 0.7, g = 0.7, b = 0.1 }),
-        working_visualisations = bobmods.assembly.distillery_working_visualisations_flipped(1),
+        animation = bobmods.plates.distillery_animation_flipped({ r = 0.7, g = 0.7, b = 0.1 }),
+        working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(1),
       },
       allowed_effects = { "consumption", "speed", "pollution" },
       module_slots = 1,
