@@ -17,7 +17,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = -10,
+      emissions_per_minute = {pollution = -10},
     },
     energy_usage = "100kW", --"25kW",
     resistances = {
@@ -31,9 +31,8 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { 0, -1.2 }, direction = defines.direction.north } },
       },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
