@@ -32,35 +32,6 @@ if data.raw.technology["advanced-electronics-3"] then
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "speed-module-3")
 end
 
-if
-  data.raw.item["basic-electronic-components"]
-  and data.raw.item["electronic-components"]
-  and data.raw.item["intergrated-electronics"]
-  and data.raw.item["processing-electronics"]
-then
-  data.raw.recipe["rocket-control-unit"].ingredients = {
-    { type = "item", name = "basic-electronic-components", amount = 4 },
-    { type = "item", name = "electronic-components", amount = 6 },
-    { type = "item", name = "intergrated-electronics", amount = 4 },
-    { type = "item", name = "processing-electronics", amount = 8 },
-  }
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("rocket-control-unit", { type = "item", name = "solder", amount = 5 })
-  end
-  if data.raw.item["multi-layer-circuit-board"] then
-    bobmods.lib.recipe.add_ingredient(
-      "rocket-control-unit",
-      { type = "item", name = "multi-layer-circuit-board", amount = 2 }
-    )
-  end
-  bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
-elseif data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("rocket-control-unit", "speed-module", "advanced-processing-unit")
-  bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
-end
-bobmods.lib.tech.add_science_pack("rocket-control-unit", "production-science-pack", 1)
-
-bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "rocket-control-unit")
 
 if data.raw.item.rtg then
   bobmods.lib.recipe.set_ingredient("satellite", { type = "item", name = "accumulator", amount = 50 })
