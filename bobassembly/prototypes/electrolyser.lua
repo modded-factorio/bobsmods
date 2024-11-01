@@ -20,16 +20,14 @@ then
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { -1, -1.2 }, direction = defines.direction.north } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { 1, -1.2 }, direction = defines.direction.north } },
       },
       --[[
     {
@@ -40,11 +38,11 @@ then
       base_level = -1,
       pipe_connections =
       {
-        {type = "input", position = {-1, -2}},
-        {type = "input", position = {1, -2}},
+        {flow_direction = "input", position = {-1, -2}},
+        {flow_direction = "input", position = {1, -2}},
 
-        {type = "input", position = {-2, -1}},
-        {type = "input", position = {2, -1}}
+        {flow_direction = "input", position = {-2, -1}},
+        {flow_direction = "input", position = {2, -1}}
       }
     },
 ]]
@@ -52,14 +50,14 @@ then
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { -1, 1.2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 1, 1.2 }, direction = defines.direction.south } },
       },
     }
   end
@@ -285,7 +283,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 3.25,
+        emissions_per_minute = {pollution = 3.25},
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -319,7 +317,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 2.5,
+        emissions_per_minute = {pollution = 2.5},
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -353,7 +351,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1.75,
+        emissions_per_minute = {pollution = 1.75},
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -386,7 +384,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {

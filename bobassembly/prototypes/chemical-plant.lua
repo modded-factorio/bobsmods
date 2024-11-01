@@ -21,28 +21,26 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { -1, -1.2 }, direction = defines.direction.north } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { 1, -1.2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { -1, 1.2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 1, 1.2 }, direction = defines.direction.south } },
       },
     }
   end
@@ -241,7 +239,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 3,
+        emissions_per_minute = {pollution = 3},
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
@@ -275,7 +273,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 2,
+        emissions_per_minute = {pollution = 2},
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
@@ -309,7 +307,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
       },
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),

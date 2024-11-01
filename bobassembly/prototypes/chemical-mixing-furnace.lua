@@ -121,19 +121,18 @@ then
           percent = 80,
         },
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
           pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
+          volume = 1000,
           pipe_connections = {
-            { type = "input", position = { 0, -2 } },
+            { type = "input", position = { 0, -1.2 }, direction = defines.direction.north },
             --          { type="input", position = {0, 2} },
           },
         },
-        off_when_no_fluid_recipe = true,
       },
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -152,7 +151,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
       },
       working_sound = {
         sound = {
@@ -192,19 +191,18 @@ then
           percent = 80,
         },
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
           pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
+          volume = 1000,
           pipe_connections = {
-            { type = "input", position = { 0, -2 } },
+            { type = "input", position = { 0, -1.2 }, direction = defines.direction.north },
             --          { type="input", position = {0, 2} },
           },
         },
-        off_when_no_fluid_recipe = true,
       },
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -223,7 +221,7 @@ then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
       },
       working_sound = {
         sound = {

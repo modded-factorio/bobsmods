@@ -124,7 +124,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         fuel_categories = { "chemical" },
         effectivity = 1,
         fuel_inventory_size = 1,
-        emissions_per_minute = 4,
+        emissions_per_minute = {pollution = 4},
         smoke = {
           {
             name = "smoke",
@@ -179,26 +179,24 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           percent = 70,
         },
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
           pipe_picture = assembler2pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = { { type = "input", position = { 0, -2 } } },
+          volume = 1000,
+          pipe_connections = { { flow_direction = "input", position = { 0, -1.2 }, direction = defines.direction.north } },
           secondary_draw_orders = { north = -1 },
         },
         {
           production_type = "output",
           pipe_picture = assembler2pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = 1,
-          pipe_connections = { { type = "output", position = { 0, 2 } } },
+          volume = 1000,
+          pipe_connections = { { flow_direction = "output", position = { 0, 1.2 }, direction = defines.direction.south } },
           secondary_draw_orders = { north = -1 },
         },
-        off_when_no_fluid_recipe = true,
       },
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -281,14 +279,12 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       energy_source = {
         type = "fluid",
         effectivity = 1,
-        emissions_per_minute = 5, --fairly sure this scales, so it would be 1 at level 1 speed.
+        emissions_per_minute = {pollution = 5}, --fairly sure this scales, so it would be 1 at level 1 speed.
         fluid_box = {
-          base_area = 1,
-          height = 2,
-          base_level = -1,
+          volume = 1000,
           pipe_connections = {
-            { type = "input-output", position = { 2, 0 } },
-            { type = "input-output", position = { -2, 0 } },
+            { flow_direction = "input-output", position = { 1.2, 0 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { -1.2, 0 }, direction = defines.direction.west },
           },
           pipe_covers = pipecoverspictures(),
           pipe_picture = assembler2pipepictures(),

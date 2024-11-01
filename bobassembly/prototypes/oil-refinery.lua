@@ -52,7 +52,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         module_slots = 4,
         crafting_speed = 1.75,
         energy_usage = "720kW",
-        energy_source = { emissions_per_minute = 5 },
+        energy_source = { emissions_per_minute = {pollution = 5} },
       },
     }),
 
@@ -125,7 +125,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         module_slots = 5,
         crafting_speed = 2.5,
         energy_usage = "1MW",
-        energy_source = { emissions_per_minute = 4 },
+        energy_source = { emissions_per_minute = {pollution = 4} },
       },
     }),
 
@@ -198,7 +198,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         module_slots = 6,
         crafting_speed = 3.5,
         energy_usage = "1.35MW",
-        energy_source = { emissions_per_minute = 3 },
+        energy_source = { emissions_per_minute = {pollution = 3} },
       },
     }),
 
