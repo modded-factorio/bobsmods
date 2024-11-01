@@ -1,5 +1,5 @@
 if settings.startup["bobmods-mining-miningaxes"].value == true then
-  data.raw.technology["steel-axe"].upgrade = "true"
+  data.raw.technology["steel-axe"].upgrade = true
 
   data:extend({
     {
@@ -22,7 +22,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         },
         time = 30,
       },
-      upgrade = "true",
+      upgrade = true,
       order = "c-c-a-b",
     },
     {
@@ -45,7 +45,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         },
         time = 30,
       },
-      upgrade = "true",
+      upgrade = true,
       order = "c-c-a-c",
     },
     {
@@ -69,7 +69,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         },
         time = 40,
       },
-      upgrade = "true",
+      upgrade = true,
       order = "c-c-a-d",
     },
     {
@@ -94,7 +94,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         },
         time = 50,
       },
-      upgrade = "true",
+      upgrade = true,
       order = "c-c-a-e",
     },
     {
@@ -120,7 +120,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         },
         time = 60,
       },
-      upgrade = "true",
+      upgrade = true,
       order = "c-c-a-f",
     },
   })

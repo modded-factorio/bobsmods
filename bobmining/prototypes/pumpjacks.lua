@@ -55,7 +55,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { type = "item", name = "steel-plate", amount = 20 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
         { type = "item", name = "electronic-circuit", amount = 5 },
-        { type = "item", name = "pipe", 10 },
+        { type = "item", name = "pipe", amount = 10 },
       },
       results = { { type = "item", name = "bob-pumpjack-1", amount = 1 } },
       enabled = false,
@@ -97,7 +97,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { type = "item", name = "steel-plate", amount = 20 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
         { type = "item", name = "processing-unit", amount = 5 },
-        { type = "item", name = "pipe", 10 },
+        { type = "item", name = "pipe", amount = 10 },
       },
       results = { { type = "item", name = "bob-pumpjack-4", amount = 1 } },
       enabled = false,
@@ -121,17 +121,17 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 10,
+        emissions_per_minute = {pollution = 10},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 2,
-        base_level = 1,
+        volume = 200,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -264,17 +264,17 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 10,
+        emissions_per_minute = {pollution = 10},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 2,
-        base_level = 1,
+        volume = 200,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -407,17 +407,17 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 10,
+        emissions_per_minute = {pollution = 10},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 2.5,
-        base_level = 1,
+        volume = 250,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -550,17 +550,17 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 10,
+        emissions_per_minute = {pollution = 10},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 3,
-        base_level = 1,
+        volume = 300,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            direction = defines.direction.north,
           },
         },
       },

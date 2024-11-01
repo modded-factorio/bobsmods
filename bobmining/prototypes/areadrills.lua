@@ -109,7 +109,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       module_slots = 3,
       tint = { r = 0.1, g = 0.5, b = 0.7 },
       circuit_wire_max_distance = 10,
-      emissions_per_minute = 10,
+      emissions_per_minute = {pollution = 10},
     }),
 
     bobmods.mining.electric_mining_drill({
@@ -123,7 +123,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       module_slots = 4,
       tint = { r = 0.5, g = 0.1, b = 0.7 },
       circuit_wire_max_distance = 12.5,
-      emissions_per_minute = 10,
+      emissions_per_minute = {pollution = 10},
     }),
 
     bobmods.mining.electric_mining_drill({
@@ -137,7 +137,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       module_slots = 4,
       tint = { r = 0.7, g = 0.2, b = 0.1 },
       circuit_wire_max_distance = 15,
-      emissions_per_minute = 10,
+      emissions_per_minute = {pollution = 10},
     }),
 
     bobmods.mining.electric_mining_drill({
@@ -151,7 +151,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       module_slots = 5,
       tint = { r = 0.1, g = 0.7, b = 0.1 },
       circuit_wire_max_distance = 17.5,
-      emissions_per_minute = 10,
+      emissions_per_minute = {pollution = 10},
     }),
   })
 
