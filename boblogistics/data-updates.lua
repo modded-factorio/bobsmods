@@ -17,12 +17,6 @@ require("prototypes.entity.machine-output-height")
 -- Allow burner inserters to fuel themselves from the burner inventory of a machine they're pulling items out of.
 data.raw.inserter["burner-inserter"].allow_burner_leech = true
 
-for i, pipe in pairs(data.raw["pipe-to-ground"]) do
-  table.insert(pipe.flags, "fast-replaceable-no-build-while-moving")
-end
-for i, pipe in pairs(data.raw["pipe"]) do
-  table.insert(pipe.flags, "fast-replaceable-no-build-while-moving")
-end
 
 if settings.startup["bobmods-logistics-trains"].value == true then
   if data.raw["damage-type"]["bob-pierce"] then

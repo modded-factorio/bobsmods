@@ -11,10 +11,10 @@ if mods["aai-loaders"] then
     -- Inserters
     table.insert(ingredients.basic, { type = "item", name = "steam-inserter", amount = 2 })
     table.insert(ingredients.regular, { type = "item", name = "inserter", amount = 2 })
-    table.insert(ingredients.fast, { type = "item", name = "red-stack-inserter", amount = 2 })
-    table.insert(ingredients.express, { type = "item", name = "stack-inserter", amount = 2 })
-    table.insert(ingredients.turbo, { type = "item", name = "turbo-stack-inserter", amount = 2 })
-    table.insert(ingredients.ultimate, { type = "item", name = "express-stack-inserter", amount = 2 })
+    table.insert(ingredients.fast, { type = "item", name = "red-bulk-inserter", amount = 2 })
+    table.insert(ingredients.express, { type = "item", name = "bulk-inserter", amount = 2 })
+    table.insert(ingredients.turbo, { type = "item", name = "turbo-bulk-inserter", amount = 2 })
+    table.insert(ingredients.ultimate, { type = "item", name = "express-bulk-inserter", amount = 2 })
     -- Plates
     if mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 2 })
@@ -265,10 +265,10 @@ if mods["aai-loaders"] then
     bobmods.lib.tech.add_prerequisite("aai-express-loader", "production-science-pack")
   end
   if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
-    bobmods.lib.tech.add_prerequisite("aai-fast-loader", "stack-inserter")
-    bobmods.lib.tech.add_prerequisite("aai-express-loader", "stack-inserter-2")
-    bobmods.lib.tech.add_prerequisite("aai-turbo-loader", "stack-inserter-3")
-    bobmods.lib.tech.add_prerequisite("aai-ultimate-loader", "stack-inserter-4")
+    bobmods.lib.tech.add_prerequisite("aai-fast-loader", "bulk-inserter")
+    bobmods.lib.tech.add_prerequisite("aai-express-loader", "bulk-inserter-2")
+    bobmods.lib.tech.add_prerequisite("aai-turbo-loader", "bulk-inserter-3")
+    bobmods.lib.tech.add_prerequisite("aai-ultimate-loader", "bulk-inserter-4")
   end
 
   -- Update recipe of vanilla tier loaders

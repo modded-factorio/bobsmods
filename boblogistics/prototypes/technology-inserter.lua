@@ -22,12 +22,12 @@ data:extend({
   },
   {
     type = "technology",
-    name = "stack-inserter-2",
-    icon = "__base__/graphics/technology/stack-inserter.png",
+    name = "bulk-inserter-2",
+    icon = "__base__/graphics/technology/bulk-inserter.png",
     icon_size = 256,
     effects = {},
     prerequisites = {
-      "stack-inserter",
+      "bulk-inserter",
       "express-inserters",
     },
     unit = {
@@ -52,10 +52,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   bobmods.lib.tech.remove_prerequisite("fast-inserter", "electronics")
   bobmods.lib.tech.add_prerequisite("fast-inserter", "logistics-2")
-  bobmods.lib.tech.remove_prerequisite("stack-inserter", "advanced-circuit")
+  bobmods.lib.tech.remove_prerequisite("bulk-inserter", "advanced-circuit")
 
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "stack-inserter")
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "stack-filter-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("express-inserters", "logistics-3")
 
   data:extend({
@@ -68,10 +67,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         {
           type = "unlock-recipe",
           recipe = "turbo-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "turbo-filter-inserter",
         },
       },
       prerequisites = {
@@ -100,10 +95,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
           type = "unlock-recipe",
           recipe = "express-inserter",
         },
-        {
-          type = "unlock-recipe",
-          recipe = "express-filter-inserter",
-        },
       },
       prerequisites = {
         "turbo-inserter",
@@ -124,22 +115,18 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
     {
       type = "technology",
-      name = "stack-inserter-3",
-      icon = "__base__/graphics/technology/stack-inserter.png",
+      name = "bulk-inserter-3",
+      icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "turbo-stack-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "turbo-stack-filter-inserter",
+          recipe = "turbo-bulk-inserter",
         },
       },
       prerequisites = {
         "turbo-inserter",
-        "stack-inserter-2",
+        "bulk-inserter-2",
       },
       unit = {
         count = 350,
@@ -156,22 +143,18 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
     {
       type = "technology",
-      name = "stack-inserter-4",
-      icon = "__base__/graphics/technology/stack-inserter.png",
+      name = "bulk-inserter-4",
+      icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "express-stack-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "express-stack-filter-inserter",
+          recipe = "express-bulk-inserter",
         },
       },
       prerequisites = {
         "ultimate-inserter",
-        "stack-inserter-3",
+        "bulk-inserter-3",
       },
       unit = {
         count = 450,
@@ -188,18 +171,16 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
   })
 else
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "express-stack-inserter")
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "express-stack-filter-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "express-bulk-inserter")
 
   bobmods.lib.tech.add_recipe_unlock("express-inserters", "express-inserter")
-  bobmods.lib.tech.add_recipe_unlock("express-inserters", "express-filter-inserter")
   bobmods.lib.tech.add_prerequisite("express-inserters", "advanced-circuit")
 end
 
 data:extend({
   {
     type = "technology",
-    name = "inserter-stack-size-bonus-1",
+    name = "inserter-bulk-size-bonus-1",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     effects = {
@@ -225,7 +206,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "inserter-stack-size-bonus-2",
+    name = "inserter-bulk-size-bonus-2",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     effects = {
@@ -234,7 +215,7 @@ data:extend({
         modifier = 1,
       },
     },
-    prerequisites = { "inserter-stack-size-bonus-1" },
+    prerequisites = { "inserter-bulk-size-bonus-1" },
     unit = {
       count = 100,
       ingredients = {
@@ -249,7 +230,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "inserter-stack-size-bonus-3",
+    name = "inserter-bulk-size-bonus-3",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     effects = {
@@ -258,7 +239,7 @@ data:extend({
         modifier = 1,
       },
     },
-    prerequisites = { "inserter-stack-size-bonus-2" },
+    prerequisites = { "inserter-bulk-size-bonus-2" },
     unit = {
       count = 200,
       ingredients = {
@@ -274,7 +255,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "inserter-stack-size-bonus-4",
+    name = "inserter-bulk-size-bonus-4",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
     icon_size = 256,
     effects = {
@@ -283,7 +264,7 @@ data:extend({
         modifier = 1,
       },
     },
-    prerequisites = { "inserter-stack-size-bonus-3" },
+    prerequisites = { "inserter-bulk-size-bonus-3" },
     unit = {
       count = 300,
       ingredients = {
@@ -323,13 +304,13 @@ data:extend({
         modifier = 1,
       },
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 3,
       },
     },
     prerequisites = {
       "inserter-capacity-bonus-7",
-      "inserter-stack-size-bonus-4",
+      "inserter-bulk-size-bonus-4",
       "space-science-pack",
     },
     unit = {

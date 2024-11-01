@@ -256,12 +256,11 @@ data:extend({
       },
     },
     fluid_box = {
-      base_area = 1,
-      height = 4,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1.5 }, type = "output" },
-        { position = { 0, 1.5 }, type = "input" },
+        { flow_direction = "input",  position = { 0,  0.9 }, direction = defines.direction.south },
+        { flow_direction = "output", position = { 0, -0.9 }, direction = defines.direction.north },
       },
     },
     energy_source = {
@@ -304,12 +303,11 @@ data:extend({
       },
     },
     fluid_box = {
-      base_area = 1,
-      height = 4,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1.5 }, type = "output" },
-        { position = { 0, 1.5 }, type = "input" },
+        { flow_direction = "input",  position = { 0,  0.9 }, direction = defines.direction.south },
+        { flow_direction = "output", position = { 0, -0.9 }, direction = defines.direction.north },
       },
     },
     energy_source = {
@@ -351,12 +349,11 @@ data:extend({
       },
     },
     fluid_box = {
-      base_area = 1,
-      height = 4,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1.5 }, type = "output" },
-        { position = { 0, 1.5 }, type = "input" },
+        { flow_direction = "input",  position = { 0,  0.9 }, direction = defines.direction.south },
+        { flow_direction = "output", position = { 0, -0.9 }, direction = defines.direction.north },
       },
     },
     energy_source = {

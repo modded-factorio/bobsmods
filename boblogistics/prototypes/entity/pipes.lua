@@ -563,12 +563,12 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1, --2,
+      volume = 100,
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 1, 0 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
     },
     pictures = bob_pipepictures("stone"),
@@ -605,12 +605,14 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1, --2,
+      volume = 100,
       pipe_covers = bob_pipecoverspictures("stone"),
       pipe_connections = {
-        { position = { 0, -1 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
         {
-          position = { 0, 1 },
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
           max_underground_distance = 10,
         },
       },
@@ -637,12 +639,12 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1, --0.5,
+      volume = 100,
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 1, 0 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
     },
     pictures = bob_pipepictures("copper"),
@@ -679,12 +681,14 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1, --0.5,
+      volume = 100,
       pipe_covers = bob_pipecoverspictures("copper"),
       pipe_connections = {
-        { position = { 0, -1 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
         {
-          position = { 0, 1 },
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
           max_underground_distance = 10,
         },
       },
@@ -711,13 +715,12 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      height = 1,
-      base_area = 1,
+      volume = 100,
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 1, 0 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
     },
     pictures = bob_pipepictures("steel"),
@@ -754,13 +757,14 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      height = 1,
-      base_area = 1,
+      volume = 100,
       pipe_covers = bob_pipecoverspictures("steel"),
       pipe_connections = {
-        { position = { 0, -1 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
         {
-          position = { 0, 1 },
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
           max_underground_distance = 15,
         },
       },
@@ -787,13 +791,12 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      height = 1,
-      base_area = 1, --2,
+      volume = 100,
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 1, 0 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
     },
     pictures = bob_pipepictures("plastic"),
@@ -830,13 +833,14 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      height = 1,
-      base_area = 1, --2,
+      volume = 100,
       pipe_covers = bob_pipecoverspictures("plastic"),
       pipe_connections = {
-        { position = { 0, -1 } },
+        { position = { 0, -0.29 }, direction = defines.direction.north },
         {
-          position = { 0, 1 },
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
           max_underground_distance = 20,
         },
       },
@@ -866,15 +870,14 @@ if data.raw.item["bronze-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --0.5,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("bronze"),
       working_sound = {
         sound = {
@@ -909,13 +912,14 @@ if data.raw.item["bronze-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --0.5,
-        pipe_covers = bob_pipecoverspictures("bronze"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("bronze"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 15,
           },
         },
@@ -946,15 +950,14 @@ if data.raw.item["brass-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --0.5,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("brass"),
       working_sound = {
         sound = {
@@ -989,13 +992,14 @@ if data.raw.item["brass-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --0.5,
-        pipe_covers = bob_pipecoverspictures("brass"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("brass"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 20,
           },
         },
@@ -1026,15 +1030,14 @@ if data.raw.item["silicon-nitride"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --2,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("ceramic"),
       working_sound = {
         sound = {
@@ -1069,13 +1072,14 @@ if data.raw.item["silicon-nitride"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --2,
-        pipe_covers = bob_pipecoverspictures("ceramic"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("ceramic"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 25,
           },
         },
@@ -1106,15 +1110,14 @@ if data.raw.item["titanium-plate"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("titanium"),
       working_sound = {
         sound = {
@@ -1149,13 +1152,14 @@ if data.raw.item["titanium-plate"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_covers = bob_pipecoverspictures("titanium"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("titanium"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 25,
           },
         },
@@ -1186,15 +1190,14 @@ if data.raw.item["tungsten-plate"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("tungsten"),
       working_sound = {
         sound = {
@@ -1229,13 +1232,14 @@ if data.raw.item["tungsten-plate"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_covers = bob_pipecoverspictures("tungsten"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("tungsten"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 25,
           },
         },
@@ -1266,15 +1270,14 @@ if data.raw.item["nitinol-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("nitinol"),
       working_sound = {
         sound = {
@@ -1309,13 +1312,14 @@ if data.raw.item["nitinol-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_covers = bob_pipecoverspictures("nitinol"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("nitinol"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 30,
           },
         },
@@ -1346,15 +1350,14 @@ if data.raw.item["copper-tungsten-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("copper-tungsten"),
       working_sound = {
         sound = {
@@ -1389,13 +1392,14 @@ if data.raw.item["copper-tungsten-alloy"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1,
-        pipe_covers = bob_pipecoverspictures("copper-tungsten"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("copper-tungsten"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
+          direction = defines.direction.south,
+          connection_type = "underground",
             max_underground_distance = 30,
           },
         },
@@ -1426,15 +1430,14 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --0.5,
-        pipe_connections = {
-          { position = { 0, -1 } },
-          { position = { 1, 0 } },
-          { position = { 0, 1 } },
-          { position = { -1, 0 } },
-        },
+      volume = 100,
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        { position = { 0.29, 0 }, direction = defines.direction.east },
+        { position = { 0, 0.29 }, direction = defines.direction.south },
+        { position = { -0.29, 0 }, direction = defines.direction.west },
       },
+    },
       pictures = bob_pipepictures("brass"),
       working_sound = {
         sound = {
@@ -1469,13 +1472,12 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
-        height = 1,
-        base_area = 1, --0.5,
-        pipe_covers = bob_pipecoverspictures("brass"),
-        pipe_connections = {
-          { position = { 0, -1 } },
-          {
-            position = { 0, 1 },
+      volume = 100,
+      pipe_covers = bob_pipecoverspictures("brass"),
+      pipe_connections = {
+        { position = { 0, -0.29 }, direction = defines.direction.north },
+        {
+          position = { 0, 0.2 },
             max_underground_distance = 20,
           },
         },
