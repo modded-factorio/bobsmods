@@ -315,7 +315,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         fuel_categories = { "chemical" },
         effectivity = 1,
         fuel_inventory_size = 1,
-        emissions_per_minute = 10,
+        emissions_per_minute = {pollution = 10},
         smoke = {
           {
             name = "smoke",
