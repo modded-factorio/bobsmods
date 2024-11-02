@@ -275,8 +275,8 @@ data:extend({
         starting_frame_speed_deviation = 0.1,
       },
       sound = sounds.heavy_gunshot,
+      ammo_category = "bullet",
       ammo_type = {
-        category = "bullet",
         action = {
           type = "direct",
           action_delivery = {
@@ -303,7 +303,7 @@ data:extend({
     vision_distance = 30,
     movement_speed = 0.16,
     distance_per_frame = 0.15,
-    pollution_to_join_attack = 10,
+    absorptions_to_join_attack = { pollution = 10 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_gun, tint_drone_1),
   },
 })
@@ -359,8 +359,8 @@ data:extend({
       damage_modifier = 5,
       animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_laser, tint_drone_1),
       sound = make_laser_sounds(),
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         action = {
           type = "direct",
           action_delivery = {
@@ -377,7 +377,7 @@ data:extend({
     vision_distance = 35,
     movement_speed = 0.16,
     distance_per_frame = 0.15,
-    pollution_to_join_attack = 15,
+    absorptions_to_join_attack = { pollution = 15 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_laser, tint_drone_1),
   },
 })
@@ -432,9 +432,8 @@ data:extend({
       animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_flamethrower, tint_drone_1),
       damage_modifier = 2.5,
       lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-
+      ammo_category = "flamethrower",
       ammo_type = {
-        category = "flamethrower",
         action = {
           type = "direct",
           action_delivery = {
@@ -468,7 +467,7 @@ data:extend({
     vision_distance = 40,
     movement_speed = 0.16,
     distance_per_frame = 0.15,
-    pollution_to_join_attack = 20,
+    absorptions_to_join_attack = { pollution = 20 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_flamethrower, tint_drone_1),
   },
 })
@@ -526,9 +525,9 @@ data:extend({
       sound = { { filename = "__base__/sound/fight/electric-beam.ogg", volume = 0.7 } },
       min_range = 30,
       animation = bobmods.warfare.tank_drone_animation(0.5 * 1.5, tint_drone_plasma, tint_drone_1),
+      ammo_category = "laser",
       ammo_type = {
         type = "projectile",
-        category = "laser",
         target_type = "position",
         clamp_position = true,
         action = {
@@ -551,7 +550,7 @@ data:extend({
     vision_distance = 70,
     movement_speed = 0.1,
     distance_per_frame = 0.1,
-    pollution_to_join_attack = 30,
+    absorptions_to_join_attack = { pollution = 30 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5 * 1.5, tint_drone_plasma, tint_drone_1),
   },
 })
