@@ -27,7 +27,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       )
       bobmods.lib.tech.add_prerequisite("distractor", "bob-robotics-2")
     else
-      bobmods.lib.recipe.add_ingredient("distractor-robot", { "flying-robot-frame", 1 })
+      bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "flying-robot-frame", amount = 1 })
     end
 
     if data.raw.item["flying-robot-frame-3"] then
@@ -41,7 +41,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "flying-robot-frame-4", amount = 1 })
       bobmods.lib.tech.add_prerequisite("bob-laser-robot", "bob-robotics-4")
     else
-      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { "flying-robot-frame", 1 })
+      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "flying-robot-frame", amount = 1 })
     end
   else
     bobmods.lib.recipe.add_ingredient("defender-robot", { type = "item", name = "steel-plate", amount = 1 })
