@@ -40,7 +40,7 @@ data:extend({
             action = {
               type = "area",
               radius = 6,
-              collision_mask = { "player-layer" },
+              collision_mask = { layers = { player = true } },
               action_delivery = {
                 type = "instant",
                 target_effects = {
