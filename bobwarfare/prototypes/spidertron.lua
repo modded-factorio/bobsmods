@@ -197,7 +197,7 @@ function bobmods.warfare.create_spidertron(arguments)
       collision_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       drawing_box = { { -3 * scale, -4 * scale }, { 3 * scale, 2 * scale } },
-      collision_mask = {},
+      collision_mask = { layers = {} },
       minable = { mining_time = 1, result = arguments.name },
 
       max_health = arguments.max_health or 3000,

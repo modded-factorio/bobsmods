@@ -1,7 +1,6 @@
-local function boblaserammo(catagory, projectile)
+local function boblaserammo(projectile)
   return {
     type = "beam",
-    category = catagory,
     action = {
       type = "direct",
       action_delivery = {
@@ -14,9 +13,8 @@ local function boblaserammo(catagory, projectile)
   }
 end
 
-local function bobmissileammo(catagory, projectile)
+local function bobmissileammo(projectile)
   return {
-    category = catagory,
     action = {
       type = "direct",
       action_delivery = {
@@ -42,8 +40,8 @@ data:extend({
     order = "a[basic-clips]-a[bullet-magazine]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         {
           type = "direct",
@@ -82,8 +80,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-ap]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -120,8 +118,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-he]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -170,8 +168,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-flame]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -220,8 +218,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-acid]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -270,8 +268,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-poison]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -320,8 +318,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-electric]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -358,8 +356,8 @@ data:extend({
     order = "f[shotgun-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -389,8 +387,8 @@ data:extend({
     order = "f[shotgun-ap-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -420,8 +418,8 @@ data:extend({
     order = "f[shotgun-electric-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -451,8 +449,8 @@ data:extend({
     order = "f[shotgun-explosive-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -482,8 +480,8 @@ data:extend({
     order = "f[shotgun-flame-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -513,8 +511,8 @@ data:extend({
     order = "f[shotgun-acid-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -544,8 +542,8 @@ data:extend({
     order = "f[shotgun-poison-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -575,8 +573,8 @@ data:extend({
     order = "f[shotgun-uranium-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -607,9 +605,9 @@ data:extend({
     order = "f[flame-thrower-acid]",
     stack_size = 50,
     magazine_size = 100,
+    ammo_category = "flame-thrower",
     ammo_type =
     {
-      category = "flame-thrower",
       target_type = "direction",
       action =
       {
@@ -642,7 +640,8 @@ data:extend({
     order = "f[laser-rifle-battery]-0",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-glass-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-glass-ammo"),
   },
 
   {
@@ -654,7 +653,8 @@ data:extend({
     order = "f[laser-rifle-battery]-1",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-ruby-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-ruby-ammo"),
   },
 
   {
@@ -666,7 +666,8 @@ data:extend({
     order = "f[laser-rifle-battery]-2",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-sapphire-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-sapphire-ammo"),
   },
 
   {
@@ -678,7 +679,8 @@ data:extend({
     order = "f[laser-rifle-battery]-3",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-emerald-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-emerald-ammo"),
   },
 
   {
@@ -690,7 +692,8 @@ data:extend({
     order = "f[laser-rifle-battery]-4",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-amethyst-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-amethyst-ammo"),
   },
 
   {
@@ -702,7 +705,8 @@ data:extend({
     order = "f[laser-rifle-battery]-5",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-topaz-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-topaz-ammo"),
   },
 
   {
@@ -714,7 +718,8 @@ data:extend({
     order = "f[laser-rifle-battery]-6",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-diamond-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-diamond-ammo"),
   },
 
   {
@@ -722,7 +727,8 @@ data:extend({
     name = "bob-rocket",
     icon = "__bobwarfare__/graphics/icons/rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-rocket"),
+    ammo_type = bobmissileammo("bob-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-0",
     stack_size = 200,
@@ -733,7 +739,8 @@ data:extend({
     name = "bob-piercing-rocket",
     icon = "__bobwarfare__/graphics/icons/piercing-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-piercing-rocket"),
+    ammo_type = bobmissileammo("bob-piercing-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-1",
     stack_size = 200,
@@ -744,7 +751,8 @@ data:extend({
     name = "bob-electric-rocket",
     icon = "__bobwarfare__/graphics/icons/electric-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-electric-rocket"),
+    ammo_type = bobmissileammo("bob-electric-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-2",
     stack_size = 200,
@@ -755,7 +763,8 @@ data:extend({
     name = "bob-explosive-rocket",
     icon = "__bobwarfare__/graphics/icons/explosive-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-explosive-rocket"),
+    ammo_type = bobmissileammo("bob-explosive-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-3",
     stack_size = 200,
@@ -766,7 +775,8 @@ data:extend({
     name = "bob-flame-rocket",
     icon = "__bobwarfare__/graphics/icons/flame-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-flame-rocket"),
+    ammo_type = bobmissileammo("bob-flame-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-4",
     stack_size = 200,
@@ -777,7 +787,8 @@ data:extend({
     name = "bob-poison-rocket",
     icon = "__bobwarfare__/graphics/icons/poison-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-poison-rocket"),
+    ammo_type = bobmissileammo("bob-poison-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-5",
     stack_size = 200,
@@ -788,7 +799,8 @@ data:extend({
     name = "bob-acid-rocket",
     icon = "__bobwarfare__/graphics/icons/acid-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-acid-rocket"),
+    ammo_type = bobmissileammo("bob-acid-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-6",
     stack_size = 200,
@@ -811,8 +823,8 @@ data:extend({
         shift = { -8, -8 },
       },
     },
+    ammo_category = "cannon-shell",
     ammo_type = {
-      category = "cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -852,8 +864,8 @@ data:extend({
         cooldown = 30,
         projectile_creation_distance = 0.6,
         range = 25,
+        ammo_category = "capsule",
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",
@@ -889,8 +901,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -928,8 +940,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -967,8 +979,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -1006,8 +1018,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -1045,9 +1057,9 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
       cooldown_modifier = 3,
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -1081,8 +1093,8 @@ data:extend({
     order = "a[basic-clips]-b[bullet-magazine-plasma]",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -1130,8 +1142,8 @@ data:extend({
     order = "f[shotgun-plasma-shell]",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -1156,7 +1168,8 @@ data:extend({
     name = "bob-plasma-rocket",
     icon = "__bobwarfare__/graphics/icons/plasma-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-plasma-rocket"),
+    ammo_type = bobmissileammo("bob-plasma-rocket"),
+    ammo_category = "rocket",
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-7",
     stack_size = 200,

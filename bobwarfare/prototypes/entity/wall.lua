@@ -521,8 +521,9 @@ data:extend({
       intensity = 0.3,
     },
 
-    circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-    circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+    -- Auto-genned circuit_connector_definitions doesn't include gate anymore, not sure why. But wall has exactly the same definitions.
+    circuit_wire_connection_point = circuit_connector_definitions["wall"].points,
+    circuit_connector_sprites = circuit_connector_definitions["wall"].sprites,
     circuit_wire_max_distance = 9,
     default_output_signal = { type = "virtual", name = "signal-G" },
   },

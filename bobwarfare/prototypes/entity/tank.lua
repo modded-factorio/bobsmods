@@ -334,7 +334,9 @@ data:extend({
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     effectivity = 0.95,
     braking_power = "1000kW",
-    burner = {
+    energy_source = {
+      type = "burner",
+      fuel_categories = {"chemical"},
       effectivity = 1.2,
       fuel_inventory_size = 3,
       smoke = {
@@ -484,7 +486,9 @@ data:extend({
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     effectivity = 1,
     braking_power = "1200kW",
-    burner = {
+    energy_source = {
+      type = "burner",
+      fuel_categories = {"chemical"},
       effectivity = 1.4,
       fuel_inventory_size = 4,
       smoke = {
