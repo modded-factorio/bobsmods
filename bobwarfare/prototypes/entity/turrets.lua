@@ -17,6 +17,20 @@ local blue = { r = 0.5, g = 0.8, b = 1, a = 1 }
 local purple = { r = 0.8, g = 0.5, b = 1, a = 1 }
 local green = { r = 0.5, g = 1, b = 0.5, a = 1 }
 
+circuit_connector_definitions["8-way-laser-turret"] = circuit_connector_definitions.create_vector(
+  universal_connector_template,
+  {
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
+  }
+)
+
 local function bob_gun_turret_extension(inputs)
   return {
     layers = {
@@ -421,6 +435,7 @@ local function bob_gun_turret(inputs)
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.health,
+    next_upgrade = inputs.next_upgrade,
     corpse = "gun-turret-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
@@ -443,6 +458,8 @@ local function bob_gun_turret(inputs)
     preparing_animation = bob_turret_extension({ type = inputs.gun_type, tint = inputs.tint }),
     folding_animation = bob_turret_extension({ run_mode = "backward", type = inputs.gun_type, tint = inputs.tint }),
     prepared_animation = bob_turret_attack({ frame_count = 1, type = inputs.gun_type, tint = inputs.tint }),
+    preparing_sound = sounds.gun_turret_activate,
+    folding_sound = sounds.gun_turret_deactivate,
     attacking_animation = bob_turret_attack({ type = inputs.gun_type, tint = inputs.tint }),
     graphics_set = { base_visualisation = { animation = inputs.base } },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -483,10 +500,10 @@ local function bob_laser_turret(inputs)
     icon_size = 64,
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.health,
+    next_upgrade = inputs.next_upgrade,
     corpse = "laser-turret-remnants",
     collision_box = { { -0.7 * size, -0.7 * size }, { 0.7 * size, 0.7 * size } },
     selection_box = { { -1 * size, -1 * size }, { 1 * size, 1 * size } },
-
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     dying_explosion = "medium-explosion",
     rotation_speed = inputs.rotation_speed or 0.01,
@@ -501,6 +518,17 @@ local function bob_laser_turret(inputs)
       drain = inputs.drain or "24kW",
       usage_priority = "primary-input",
     },
+    energy_glow_animation = {
+      filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-shooting-light.png",
+      line_length = 8,
+      width = 122,
+      height = 116,
+      direction_count = 64,
+      shift = util.by_pixel(-0.5, -35),
+      blend_mode = "additive",
+      scale = 0.5,
+      tint = inputs.tint2
+    },
     prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
     graphics_set = { base_visualisation = { animation = inputs.base } },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -510,31 +538,16 @@ local function bob_laser_turret(inputs)
     turret.flags = { "placeable-player", "placeable-enemy", "player-creation", "building-direction-8-way" }
     turret.folded_animation =
       bob_laser_turret_extension_eight({ frame_count = 1, line_length = 1, tint = inputs.tint, size = size })
-    turret.circuit_connector = circuit_connector_definitions.create_vector(
-      universal_connector_template,
-      {
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-      }
-    )
+    turret.circuit_connector = circuit_connector_definitions["8-way-laser-turret"]
   else
     turret.flags = { "placeable-player", "placeable-enemy", "player-creation" }
     turret.folded_animation =
       bob_laser_turret_extension({ frame_count = 1, line_length = 1, tint = inputs.tint, size = size })
     turret.preparing_animation = bob_laser_turret_extension({ tint = inputs.tint, size = size })
     turret.folding_animation = bob_laser_turret_extension({ run_mode = "backward", tint = inputs.tint, size = size })
-    turret.circuit_connector = circuit_connector_definitions.create_vector(
-      universal_connector_template,
-      {
-        { variation = 17, main_offset = util.by_pixel( -11 * size, -3 * size), shadow_offset = util.by_pixel( -7 * size, 10 * size), show_shadow = true },
-      }
-    )
+    turret.preparing_sound = sounds.laser_turret_activate
+    turret.folding_sound = sounds.laser_turret_deactivate
+    turret.circuit_connector = circuit_connector_definitions["laser-turret"]
   end
   if inputs.type == "projectile" then
     turret.attack_parameters = {
@@ -543,7 +556,7 @@ local function bob_laser_turret(inputs)
       cooldown = inputs.cooldown or 20,
       damage_modifier = inputs.damage_modifier or 15,
       lead_target_for_projectile_speed = inputs.lead_target_for_projectile_speed,
-      projectile_center = { 0, -0.2 * size },
+      projectile_center = { 0, -0.45 * size },
       projectile_creation_distance = 1.4 * size,
       range = inputs.range or 25,
       turn_range = inputs.turn_range,
@@ -619,6 +632,7 @@ data:extend({
     tint = red,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
+    next_upgrade = "bob-gun-turret-3",
   }),
   bob_gun_turret({
     name = "bob-gun-turret-3",
@@ -634,6 +648,7 @@ data:extend({
     tint = blue,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
+    next_upgrade = "bob-gun-turret-4",
   }),
   bob_gun_turret({
     name = "bob-gun-turret-4",
@@ -649,6 +664,7 @@ data:extend({
     tint = purple,
     gun_type = "gun",
     base = bob_turret_base({ type = "gun", tint = blue }),
+    next_upgrade = "bob-gun-turret-5",
   }),
   bob_gun_turret({
     name = "bob-gun-turret-5",
@@ -679,6 +695,7 @@ data:extend({
     tint = yellow,
     gun_type = "gun",
     base = bob_turret_base({ type = "laser", tint = red }),
+    next_upgrade = "bob-sniper-turret-2",
   }),
   bob_gun_turret({
     name = "bob-sniper-turret-2",
@@ -693,6 +710,7 @@ data:extend({
     tint = blue,
     gun_type = "gun",
     base = bob_turret_base({ type = "laser", tint = red }),
+    next_upgrade = "bob-sniper-turret-3",
   }),
   bob_gun_turret({
     name = "bob-sniper-turret-3",
@@ -719,6 +737,7 @@ data:extend({
     energy_consumption = "1000kJ",
     type = "beam",
     beam = "bob-laser-beam-sapphire",
+    tint2 = { r = 0.45, g = 0.75, b = 1 },
     damage_modifier = 3,
     cooldown = 35,
     range = 26,
@@ -726,6 +745,7 @@ data:extend({
     rotation_speed = 0.011,
     tint = red,
     base = bob_turret_base({ type = "laser", tint = yellow }),
+    next_upgrade = "bob-laser-turret-3",
   }),
   bob_laser_turret({
     name = "bob-laser-turret-3",
@@ -736,6 +756,7 @@ data:extend({
     energy_consumption = "1200kJ",
     type = "beam",
     beam = "bob-laser-beam-emerald",
+    tint2 = { r = 0.45, g = 0.92, b = 0.42 },
     damage_modifier = 4.2,
     cooldown = 30,
     range = 28,
@@ -743,6 +764,7 @@ data:extend({
     rotation_speed = 0.012,
     tint = blue,
     base = bob_turret_base({ type = "laser", tint = yellow }),
+    next_upgrade = "bob-laser-turret-4",
   }),
   bob_laser_turret({
     name = "bob-laser-turret-4",
@@ -753,6 +775,7 @@ data:extend({
     energy_consumption = "1400kJ",
     type = "beam",
     beam = "bob-laser-beam-topaz",
+    tint2 = { r = 0.95, g = 0.92, b = 0.5 },
     damage_modifier = 5.6,
     cooldown = 25,
     range = 30,
@@ -760,6 +783,7 @@ data:extend({
     rotation_speed = 0.013,
     tint = purple,
     base = bob_turret_base({ type = "laser", tint = yellow }),
+    next_upgrade = "bob-laser-turret-5",
   }),
   bob_laser_turret({
     name = "bob-laser-turret-5",
@@ -811,6 +835,7 @@ data:extend({
     size = 1.5,
     tint = yellow,
     base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    next_upgrade = "bob-plasma-turret-2",
   }),
 
   bob_laser_turret({
@@ -843,6 +868,7 @@ data:extend({
     size = 1.5,
     tint = red,
     base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    next_upgrade = "bob-plasma-turret-3",
   }),
 
   bob_laser_turret({
@@ -875,6 +901,7 @@ data:extend({
     size = 1.5,
     tint = blue,
     base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    next_upgrade = "bob-plasma-turret-4",
   }),
 
   bob_laser_turret({
@@ -907,6 +934,7 @@ data:extend({
     size = 1.5,
     tint = purple,
     base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    next_upgrade = "bob-plasma-turret-5",
   }),
 
   bob_laser_turret({
@@ -955,6 +983,7 @@ turret.gun = "bob-artillery-wagon-cannon-2"
 turret.turret_rotation_speed = 0.002
 turret.turn_after_shooting_cooldown = 40
 turret.cannon_parking_speed = 0.3
+turret.next_upgrade = "bob-artillery-turret-3"
 data:extend({ turret })
 
 local turret = util.table.deepcopy(data.raw["artillery-turret"]["artillery-turret"])
@@ -968,4 +997,9 @@ turret.gun = "bob-artillery-wagon-cannon-3"
 turret.turret_rotation_speed = 0.003
 turret.turn_after_shooting_cooldown = 20
 turret.cannon_parking_speed = 0.35
+turret.resistances = {{type = "laser", percent = 100}}
 data:extend({ turret })
+
+data.raw["ammo-turret"]["gun-turret"].next_upgrade = "bob-gun-turret-2"
+data.raw["electric-turret"]["laser-turret"].next_upgrade = "bob-laser-turret-2"
+data.raw["artillery-turret"]["artillery-turret"].next_upgrade = "bob-artillery-turret-2"
