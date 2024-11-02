@@ -143,9 +143,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-sapphire",
@@ -284,9 +283,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-emerald",
@@ -425,7 +423,7 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
   {
     type = "beam",
@@ -565,9 +563,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-topaz",
@@ -706,7 +703,7 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
 
   {
@@ -847,7 +844,7 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
 })
 
@@ -993,9 +990,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-ruby-ammo",
@@ -1134,9 +1130,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-    
   {
     type = "beam",
     name = "bob-laser-beam-sapphire-ammo",
@@ -1275,9 +1270,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-emerald-ammo",
@@ -1416,9 +1410,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-amethyst-ammo",
@@ -1557,9 +1550,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-topaz-ammo",
@@ -1698,9 +1690,8 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-diamond-ammo",
@@ -1839,6 +1830,6 @@ data:extend({
         },
       }
     },
-    cyclic_sound = warefareSounds.laserBeam,
+    working_sound = warefareSounds.laserBeam,
   },
 })
