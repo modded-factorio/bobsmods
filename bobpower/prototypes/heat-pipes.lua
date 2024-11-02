@@ -8,7 +8,7 @@ then
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.minimum_glow_temperature = 300
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "1GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
-  data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", 750 }
+  data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", tostring(750) }
   bobmods.lib.recipe.set_ingredients(
     "heat-pipe",
     { { type = "item", name = "steel-plate", amount = 5 }, { type = "item", name = "copper-plate", amount = 10 } }
@@ -84,7 +84,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-2",
-        localised_description = { "entity-description.heat-pipe", 1000 },
+        localised_description = { "entity-description.heat-pipe", tostring(1000) },
         icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
         icon_size = 32,
         minable = { mining_time = 0.1, result = "heat-pipe-2" },
@@ -119,7 +119,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-3",
-        localised_description = { "entity-description.heat-pipe", 1250 },
+        localised_description = { "entity-description.heat-pipe", tostring(1250) },
         icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
         icon_size = 32,
         minable = { mining_time = 0.1, result = "heat-pipe-3" },
@@ -154,7 +154,7 @@ then
       data.raw["heat-pipe"]["heat-pipe"],
       {
         name = "heat-pipe-4",
-        localised_description = { "entity-description.heat-pipe", 1500 },
+        localised_description = { "entity-description.heat-pipe", tostring(1500) },
         icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
         icon_size = 32,
         minable = { mining_time = 0.1, result = "heat-pipe-4" },

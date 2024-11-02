@@ -17,13 +17,11 @@ if settings.startup["bobmods-power-steam"].value == true then
 
   data.raw.boiler["oil-boiler"].energy_source = {
     type = "fluid",
-    emissions_per_minute = 22.5,
+    emissions_per_minute = {pollution = 22.5},
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_connections = {
-        { type = "input", position = { 0, 1.5 } },
+        { flow_direction = "input", position = { 0, 0.79 }, direction = defines.direction.south },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
@@ -59,7 +57,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         energy_consumption = "8.1MW",
         next_upgrade = "oil-boiler-3",
         energy_source = {
-          emissions_per_minute = 16.875,
+          emissions_per_minute = {pollution = 16.875},
         },
       },
     }),
@@ -77,7 +75,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         energy_consumption = "10.8MW",
         next_upgrade = "oil-boiler-4",
         energy_source = {
-          emissions_per_minute = 11.25,
+          emissions_per_minute = {pollution = 11.25},
         },
       },
     }),
@@ -94,7 +92,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         target_temperature = 765,
         energy_consumption = "13.5MW",
         energy_source = {
-          emissions_per_minute = 7.03125,
+          emissions_per_minute = {pollution = 7.03125},
         },
       },
     }),
