@@ -22,7 +22,7 @@ local reinforced_wall_resistances = {
   },
   {
     type = "laser",
-    percent = 100,
+    percent = 70,
   },
   {
     type = "plasma",
@@ -520,10 +520,8 @@ data:extend({
       size = 1,
       intensity = 0.3,
     },
-
-    circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-    circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
-    circuit_wire_max_distance = 9,
+    circuit_connector = circuit_connector_definitions["wall"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_output_signal = { type = "virtual", name = "signal-G" },
   },
 
