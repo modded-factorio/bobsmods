@@ -78,7 +78,7 @@ data:extend({
     name = "poison-sticker",
     flags = { "not-on-map" },
     animation = {
-      filename = "__base__/graphics/entity/fire-flame/fire-flame-13.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-03.png",
       line_length = 8,
       width = 60,
       height = 118,

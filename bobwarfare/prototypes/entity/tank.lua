@@ -334,21 +334,23 @@ data:extend({
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     effectivity = 0.95,
     braking_power = "1000kW",
-    burner = {
-      effectivity = 1.2,
-      fuel_inventory_size = 3,
-      smoke = {
+    energy_source =
+    {
+      type = "burner",
+      fuel_categories = {"chemical"},
+      effectivity = 1,
+      fuel_inventory_size = 1,
+      smoke =
+      {
         {
-          name = "smoke",
-          deviation = { 0.25, 0.25 },
-          frequency = 50,
-          position = { 0, 1.5 },
-          starting_frame = 3,
-          starting_frame_deviation = 5,
-          starting_frame_speed = 0,
-          starting_frame_speed_deviation = 5,
-        },
-      },
+          name = "car-smoke",
+          deviation = {0.25, 0.25},
+          frequency = 200,
+          position = {0, 1.5},
+          starting_frame = 0,
+          starting_frame_deviation = 60
+        }
+      }
     },
     consumption = "800kW",
     terrain_friction_modifier = 0.2,
@@ -484,21 +486,23 @@ data:extend({
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     effectivity = 1,
     braking_power = "1200kW",
-    burner = {
-      effectivity = 1.4,
-      fuel_inventory_size = 4,
-      smoke = {
+    energy_source =
+    {
+      type = "burner",
+      fuel_categories = {"chemical"},
+      effectivity = 1,
+      fuel_inventory_size = 1,
+      smoke =
+      {
         {
-          name = "smoke",
-          deviation = { 0.25, 0.25 },
-          frequency = 50,
-          position = { 0, 1.5 },
-          starting_frame = 3,
-          starting_frame_deviation = 5,
-          starting_frame_speed = 0,
-          starting_frame_speed_deviation = 5,
-        },
-      },
+          name = "car-smoke",
+          deviation = {0.25, 0.25},
+          frequency = 200,
+          position = {0, 1.5},
+          starting_frame = 0,
+          starting_frame_deviation = 60
+        }
+      }
     },
     consumption = "1000kW",
     terrain_friction_modifier = 0.2,

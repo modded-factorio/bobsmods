@@ -23,286 +23,157 @@ local function bob_gun_turret_extension(inputs)
       gun_turret_extension(inputs),
       {
         filename = "__base__/graphics/entity/gun-turret/gun-turret-raising-mask.png",
-        flags = { "mask" },
-        width = 24,
-        height = 32,
+        flags = {"mask"},
+        width = 48,
+        height = 62,
         direction_count = 4,
         frame_count = inputs.frame_count or 5,
         line_length = inputs.line_length or 0,
         run_mode = inputs.run_mode or "forward",
         shift = util.by_pixel(0, -28),
-        axially_symmetrical = false,
-        tint = inputs.tint or white,
-        hr_version = {
-          filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-raising-mask.png",
-          flags = { "mask" },
-          width = 48,
-          height = 62,
-          direction_count = 4,
-          frame_count = inputs.frame_count or 5,
-          line_length = inputs.line_length or 0,
-          run_mode = inputs.run_mode or "forward",
-          shift = util.by_pixel(0, -28),
-          axially_symmetrical = false,
-          tint = inputs.tint or white,
-          scale = 0.5,
-        },
-      },
-      gun_turret_extension_shadow(inputs),
-    },
+        apply_runtime_tint = false,
+        scale = 0.5,
+        tint = inputs.tint or white
+      }
+      ,gun_turret_extension_shadow(inputs)
+    }
   }
-end
+  end
 
 local function bob_gun_turret_attack(inputs)
-  return {
+  return
+  {
     layers = {
       {
-        width = 66,
-        height = 66,
+        width = 132,
+        height = 130,
         frame_count = inputs.frame_count or 2,
-        axially_symmetrical = false,
         direction_count = 64,
-        shift = util.by_pixel(0, -27),
+        shift = util.by_pixel(0, -27.5),
         stripes = {
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-1.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-2.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-3.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-4.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-1.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
         },
-        hr_version = {
-          width = 132,
-          height = 130,
-          frame_count = inputs.frame_count and inputs.frame_count or 2,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = util.by_pixel(0, -27.5),
-          stripes = {
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-1.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-2.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-3.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-4.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-          },
-          scale = 0.5,
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-2.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
         },
-      },
-      {
-        flags = { "mask" },
-        line_length = inputs.frame_count or 2,
-        width = 30,
-        height = 28,
-        frame_count = inputs.frame_count or 2,
-        axially_symmetrical = false,
-        direction_count = 64,
-        shift = util.by_pixel(0, -32),
-        tint = inputs.tint or white,
-        stripes = {
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-1.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-2.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-3.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-4.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-3.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
         },
-        hr_version = {
-          flags = { "mask" },
-          line_length = inputs.frame_count or 2,
-          width = 58,
-          height = 54,
-          frame_count = inputs.frame_count or 2,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = util.by_pixel(0, -32.5),
-          tint = inputs.tint or white,
-          stripes = {
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-mask-1.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-mask-2.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-mask-3.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-mask-4.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-          },
-          scale = 0.5,
-        },
-      },
-      {
-        width = 126,
-        height = 62,
-        frame_count = inputs.frame_count or 2,
-        axially_symmetrical = false,
-        direction_count = 64,
-        shift = util.by_pixel(23, 2),
-        draw_as_shadow = true,
-        stripes = {
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-1.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-2.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-3.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-          {
-            filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-4.png",
-            width_in_frames = inputs.frame_count or 2,
-            height_in_frames = 16,
-          },
-        },
-        hr_version = {
-          width = 250,
-          height = 124,
-          frame_count = inputs.frame_count or 2,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = util.by_pixel(22, 2.5),
-          draw_as_shadow = true,
-          stripes = {
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-shadow-1.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-shadow-2.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-shadow-3.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-shooting-shadow-4.png",
-              width_in_frames = inputs.frame_count or 2,
-              height_in_frames = 16,
-            },
-          },
-          scale = 0.5,
-        },
-      },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-4.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        }
     },
+        scale = 0.5
+      },
+      {
+        flags = {"mask"},
+        line_length = inputs.frame_count or 2,
+        width = 58,
+        height = 54,
+        frame_count = inputs.frame_count or 2,
+        direction_count = 64,
+        shift = util.by_pixel(0, -32.5),
+        apply_runtime_tint = false,
+       -- tint = inputs.tint or blue,
+        stripes =
+        {
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-1.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-2.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-3.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-mask-4.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        }
+        },
+        scale = 0.5
+      },
+      {
+        width = 250,
+        height = 124,
+        frame_count = inputs.frame_count or 2,
+        direction_count = 64,
+        shift = util.by_pixel(22, 2.5),
+        draw_as_shadow = true,
+        stripes =
+        {
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-1.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-2.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-3.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        },
+        {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-shooting-shadow-4.png",
+        width_in_frames = inputs.frame_count or 2,
+        height_in_frames = 16
+        }
+        },
+        scale = 0.5
+      }
+    }
   }
-end
+  end
 
 local function bob_gun_turret_base(inputs)
   local size = inputs.size or 1
   return {
-    layers = {
-      {
-        filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
-        priority = "high",
-        width = 76,
-        height = 60,
-        axially_symmetrical = false,
-        direction_count = 1,
-        frame_count = 1,
-        shift = util.by_pixel(1 * size, -1 * size),
-        hr_version = {
-          filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base.png",
-          priority = "high",
-          width = 150,
-          height = 118,
-          axially_symmetrical = false,
-          direction_count = 1,
-          frame_count = 1,
-          shift = util.by_pixel(0.5 * size, -1 * size),
-          scale = 0.5 * size,
+    base_visualisation = {
+      animation = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+            priority = "high",
+            width = 150,
+            height = 118,
+            shift = util.by_pixel(0.5, -1),
+            scale = 0.5
         },
-      },
-      {
-        filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
-        flags = { "mask" },
-        line_length = 1,
-        width = 62,
-        height = 52,
-        axially_symmetrical = false,
-        direction_count = 1,
-        frame_count = 1,
-        shift = util.by_pixel(0, -4 * size),
-        tint = inputs.tint or white,
-        hr_version = {
-          filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base-mask.png",
-          flags = { "mask" },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          flags = {"mask", "low-object"},
           line_length = 1,
           width = 122,
           height = 102,
-          axially_symmetrical = false,
-          direction_count = 1,
-          frame_count = 1,
-          shift = util.by_pixel(0, -4.5 * size),
+          shift = util.by_pixel(0, -4.5),
+          apply_runtime_tint = false,
+          scale = 0.5,
           tint = inputs.tint or white,
-          scale = 0.5 * size,
-        },
-      },
-    },
+        }
+      }
+    }
   }
+}
 end
 
 local function bob_laser_turret_extension(inputs)
@@ -729,9 +600,9 @@ local function bob_gun_turret(inputs)
     }),
     preparing_animation = bob_turret_extension({ type = inputs.gun_type, tint = inputs.tint }),
     folding_animation = bob_turret_extension({ run_mode = "backward", type = inputs.gun_type, tint = inputs.tint }),
+    graphics_set = inputs.base,
     prepared_animation = bob_turret_attack({ frame_count = 1, type = inputs.gun_type, tint = inputs.tint }),
     attacking_animation = bob_turret_attack({ type = inputs.gun_type, tint = inputs.tint }),
-    base_picture = inputs.base,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = {
       type = "projectile",
@@ -786,6 +657,35 @@ local function bob_laser_turret(inputs)
       usage_priority = "primary-input",
     },
     prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
+    graphics_set =
+    {
+      base_visualisation =
+      {
+        animation =
+        {
+          layers =
+          {
+            {
+              filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+              priority = "high",
+              width = 138,
+              height = 104,
+              shift = util.by_pixel(-0.5, 2),
+              scale = 0.5
+            },
+            {
+              filename = "__base__/graphics/entity/laser-turret/laser-turret-base-shadow.png",
+              line_length = 1,
+              width = 132,
+              height = 82,
+              draw_as_shadow = true,
+              shift = util.by_pixel(6, 3),
+              scale = 0.5
+            }
+          }
+        }
+      }
+    },
     base_picture = inputs.base,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     call_for_help_radius = 40,
@@ -813,6 +713,7 @@ local function bob_laser_turret(inputs)
       turn_range = inputs.turn_range,
       sound = inputs.sound,
       min_range = inputs.min_range or nil,
+      ammo_category = "bullet",
       ammo_type = {
         type = "projectile",
         category = "laser",
@@ -848,6 +749,7 @@ local function bob_laser_turret(inputs)
       source_offset = { 0, (-3.423489 / 4) * size },
       damage_modifier = inputs.damage_modifier or 2,
       turn_range = inputs.turn_range,
+      ammo_category = "laser",
       ammo_type = {
         category = "laser",
         energy_consumption = inputs.energy_consumption or "800kJ",

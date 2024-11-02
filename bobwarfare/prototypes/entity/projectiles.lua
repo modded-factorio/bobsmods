@@ -1139,7 +1139,7 @@ data:extend({
       },
     },
     picture = {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+      filename = "__base__/graphics/entity/artillery-projectile/shell.png",
       width = 64,
       height = 64,
       scale = 0.5,
@@ -1233,7 +1233,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { "water-tile" },
+            tile_collision_mask = {layers={  water_tile = true }},
           },
           {
             type = "destroy-cliffs",
@@ -1420,7 +1420,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { "water-tile" },
+                    tile_collision_mask = {layers={  water_tile = true }},
                   },
                 },
               },
@@ -1448,7 +1448,7 @@ data:extend({
       priority = "high",
     },
     shadow = {
-      filename = "__base__/graphics/entity/rocket/rocket-shadow.png",
+      filename = "__bobwarfare__/graphics/entities/projectiles/base-rocket-shadow.png",
       frame_count = 1,
       width = 7,
       height = 24,
