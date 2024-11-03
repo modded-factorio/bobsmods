@@ -507,36 +507,7 @@ local function bob_laser_turret(inputs)
       usage_priority = "primary-input",
     },
     prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
-    graphics_set =
-    {
-      base_visualisation =
-      {
-        animation =
-        {
-          layers =
-          {
-            {
-              filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-              priority = "high",
-              width = 138,
-              height = 104,
-              shift = util.by_pixel(-0.5, 2),
-              scale = 0.5
-            },
-            {
-              filename = "__base__/graphics/entity/laser-turret/laser-turret-base-shadow.png",
-              line_length = 1,
-              width = 132,
-              height = 82,
-              draw_as_shadow = true,
-              shift = util.by_pixel(6, 3),
-              scale = 0.5
-            }
-          }
-        }
-      }
-    },
-    base_picture = inputs.base,
+    graphics_set = inputs.base,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     call_for_help_radius = 40,
   }
