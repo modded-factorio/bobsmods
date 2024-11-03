@@ -471,6 +471,7 @@ local function bob_gun_turret(inputs)
       projectile_creation_distance = 1.39375,
       projectile_center = { 0, -0.0875 }, -- same as gun_turret_attack shift
       damage_modifier = inputs.damage_modifier or 2,
+      ammo_consumption_modifier = inputs.ammo_consumption_modifier,
       range = inputs.range or 17,
       shell_particle = {
         name = "shell-particle",
@@ -689,6 +690,7 @@ data:extend({
     automated_ammo_count = 10,
     ammo_category = "bullet",
     damage_modifier = 15,
+    ammo_consumption_modifier = 15,
     cooldown = 150,
     range = 30,
     prepare_range = 32,
@@ -704,6 +706,7 @@ data:extend({
     automated_ammo_count = 20,
     ammo_category = "bullet",
     damage_modifier = 20,
+    ammo_consumption_modifier = 14,
     cooldown = 120,
     range = 35,
     prepare_range = 37,
@@ -719,6 +722,7 @@ data:extend({
     automated_ammo_count = 30,
     ammo_category = "bullet",
     damage_modifier = 25,
+    ammo_consumption_modifier = 13,
     cooldown = 105,
     range = 40,
     prepare_range = 42,
