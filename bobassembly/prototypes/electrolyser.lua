@@ -251,6 +251,7 @@ then
           { r = 0.5, g = 0.1, b = 0 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -287,6 +288,7 @@ then
           { r = 0, g = 0.3, b = 0.5 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -323,6 +325,7 @@ then
           { r = 0.5, g = 0, b = 0.5 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -358,6 +361,7 @@ then
           { r = 0, g = 0.5, b = 0 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
