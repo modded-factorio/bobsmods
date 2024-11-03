@@ -203,6 +203,7 @@ data:extend({
         percent = 75,
       },
     },
+    impact_category = "metal-large",
     collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     effectivity = 0.95,
@@ -278,7 +279,6 @@ data:extend({
       },
     },
     sound_minimum_speed = 0.15,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
         filename = "__base__/sound/fight/tank-engine.ogg",
@@ -352,6 +352,7 @@ data:extend({
         percent = 100,
       },
     },
+    impact_category = "metal-large",
     collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     effectivity = 1,
@@ -427,7 +428,6 @@ data:extend({
       },
     },
     sound_minimum_speed = 0.15,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
         filename = "__base__/sound/fight/tank-engine.ogg",
