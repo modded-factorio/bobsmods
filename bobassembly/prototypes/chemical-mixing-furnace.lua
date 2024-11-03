@@ -143,6 +143,7 @@ then
         usage_priority = "secondary-input",
         emissions_per_minute = { pollution = 1 },
       },
+      impact_category = "metal",
       working_sound = {
         sound = {
           filename = "__base__/sound/electric-furnace.ogg",
@@ -212,6 +213,7 @@ then
         usage_priority = "secondary-input",
         emissions_per_minute = { pollution = 1 },
       },
+      impact_category = "metal",
       working_sound = {
         sound = {
           filename = "__base__/sound/electric-furnace.ogg",
