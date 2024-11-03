@@ -63,6 +63,10 @@ data:extend({
                   type = "damage",
                   damage = { amount = 16, type = "physical" },
                 },
+                {
+                  type = "activate-impact",
+                  deliver_category = "bullet"
+                }
               },
             },
           },
@@ -103,6 +107,10 @@ data:extend({
               type = "damage",
               damage = { amount = 12, type = "bob-pierce" },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
@@ -153,6 +161,10 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
@@ -253,6 +265,10 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
@@ -303,6 +319,10 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
@@ -341,6 +361,10 @@ data:extend({
               type = "damage",
               damage = { amount = 12, type = "electric" },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
@@ -1127,6 +1151,10 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
