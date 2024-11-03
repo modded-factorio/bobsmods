@@ -997,7 +997,6 @@ turret.gun = "bob-artillery-wagon-cannon-3"
 turret.turret_rotation_speed = 0.003
 turret.turn_after_shooting_cooldown = 20
 turret.cannon_parking_speed = 0.35
-turret.resistances = {{type = "laser", percent = 100}}
 data:extend({ turret })
 
 data.raw["ammo-turret"]["gun-turret"].next_upgrade = "bob-gun-turret-2"
