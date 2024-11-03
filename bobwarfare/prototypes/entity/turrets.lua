@@ -17,6 +17,8 @@ local blue = { r = 0.5, g = 0.8, b = 1, a = 1 }
 local purple = { r = 0.8, g = 0.5, b = 1, a = 1 }
 local green = { r = 0.5, g = 1, b = 0.5, a = 1 }
 
+local plasmaDamageModifier = settings.startup["bobmods-plasma-modifier"].value
+
 local function bob_gun_turret_extension(inputs)
   return {
     layers = {
@@ -811,7 +813,7 @@ data:extend({
     projectile = "bob-plasma-projectile",
     target_type = "position",
     clamp_position = true,
-    damage_modifier = 12 * 1,
+    damage_modifier = 12 * 1 * plasmaDamageModifier,
     cooldown = 200,
     range = 60,
     prepare_range = 62,
@@ -843,7 +845,7 @@ data:extend({
     projectile = "bob-plasma-projectile",
     target_type = "position",
     clamp_position = true,
-    damage_modifier = 12 * 1.5,
+    damage_modifier = 12 * 1.5 * plasmaDamageModifier,
     cooldown = 150,
     range = 65,
     prepare_range = 67,
@@ -875,7 +877,7 @@ data:extend({
     projectile = "bob-plasma-projectile",
     target_type = "position",
     clamp_position = true,
-    damage_modifier = 12 * 2.1,
+    damage_modifier = 12 * 2.1 * plasmaDamageModifier,
     cooldown = 120,
     range = 70,
     prepare_range = 72,
@@ -907,7 +909,7 @@ data:extend({
     projectile = "bob-plasma-projectile",
     target_type = "position",
     clamp_position = true,
-    damage_modifier = 12 * 2.8,
+    damage_modifier = 12 * 2.8 * plasmaDamageModifier,
     cooldown = 100,
     range = 75,
     prepare_range = 77,
@@ -939,7 +941,7 @@ data:extend({
     projectile = "bob-plasma-projectile",
     target_type = "position",
     clamp_position = true,
-    damage_modifier = 12 * 3.6,
+    damage_modifier = 12 * 3.6 * plasmaDamageModifier,
     cooldown = 85,
     range = 80,
     prepare_range = 82,

@@ -19,14 +19,16 @@ data:extend({
     picture_safe = {
       filename = "__base__/graphics/entity/land-mine/land-mine.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     picture_set = {
       filename = "__base__/graphics/entity/land-mine/land-mine-set.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     trigger_radius = 2.5,
     action = {
@@ -83,14 +85,16 @@ data:extend({
     picture_safe = {
       filename = "__base__/graphics/entity/land-mine/land-mine.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     picture_set = {
       filename = "__base__/graphics/entity/land-mine/land-mine-set.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     trigger_radius = 2.5,
     action = {
@@ -133,14 +137,16 @@ data:extend({
     picture_safe = {
       filename = "__base__/graphics/entity/land-mine/land-mine.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     picture_set = {
       filename = "__base__/graphics/entity/land-mine/land-mine-set.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     trigger_radius = 2.5,
     action = {

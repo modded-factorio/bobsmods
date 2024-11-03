@@ -37,4 +37,12 @@ data:extend({
     default_value = "default",
     allowed_values = { "default", "all", "none", "nothighest" },
   },
+  {
+    type = "double-setting",
+    name = "bobmods-plasma-modifier",
+    setting_type = "startup",
+    minimum_value = 0,
+    maximum_value = 10,
+    default_value = 1,
+  },
 })
