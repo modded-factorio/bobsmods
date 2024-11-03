@@ -74,6 +74,15 @@ local fluid_pump_graphics_set_flipped = {
   }
 }
 
+circuit_connector_definitions["fluid-pump"] = circuit_connector_definitions.create_vector(universal_connector_template,
+  {
+    { variation = 0, main_offset = util.by_pixel(3, 0), shadow_offset = util.by_pixel(9, 9), show_shadow = true },
+    { variation = 6, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(3, 0), shadow_offset = util.by_pixel(9, 9), show_shadow = true },
+    { variation = 6, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(0, 0), show_shadow = false }
+  }
+)
+
 data:extend({
   {
     type = "assembling-machine",
@@ -82,6 +91,8 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump" },
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     max_health = 150,
     crafting_categories = { "air-pump" },
     crafting_speed = 1,
@@ -127,6 +138,7 @@ data:extend({
     energy_usage = "50kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 
   {
@@ -137,6 +149,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump-2" },
     max_health = 180,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "air-pump" },
     crafting_speed = 2,
     module_slots = 2,
@@ -181,6 +195,7 @@ data:extend({
     energy_usage = "90kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 
   {
@@ -191,6 +206,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump-3" },
     max_health = 230,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "air-pump" },
     crafting_speed = 3.5,
     module_slots = 4,
@@ -235,6 +252,7 @@ data:extend({
     energy_usage = "140kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 
   {
@@ -245,6 +263,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump-4" },
     max_health = 300,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "air-pump" },
     crafting_speed = 5,
     module_slots = 6,
@@ -288,6 +308,7 @@ data:extend({
     energy_usage = "175kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 
   {
@@ -298,6 +319,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump" },
     max_health = 120,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 1,
     module_slots = 1,
@@ -663,6 +686,7 @@ data:extend({
       },
 ]]
       --
+    impact_category = "metal",
   },
 
   {
@@ -673,6 +697,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump-2" },
     max_health = 180,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 2,
     module_slots = 2,
@@ -717,6 +743,7 @@ data:extend({
     energy_usage = "90kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 
   {
@@ -727,6 +754,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump-3" },
     max_health = 230,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 3.5,
     module_slots = 4,
@@ -771,6 +800,7 @@ data:extend({
     energy_usage = "140kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 
   {
@@ -781,6 +811,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump-4" },
     max_health = 300,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 5,
     module_slots = 6,
@@ -824,5 +856,6 @@ data:extend({
     energy_usage = "175kW",
     graphics_set = fluid_pump_graphics_set,
     graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    impact_category = "metal",
   },
 })
