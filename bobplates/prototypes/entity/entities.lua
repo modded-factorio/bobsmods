@@ -133,6 +133,7 @@ data:extend({
         { r = 0.5, g = 0.5, b = 0 }
       ),
     },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
   },
 
@@ -148,6 +149,7 @@ data:extend({
     corpse = "medium-remnants",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+    impact_category = "stone",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -320,6 +322,7 @@ data:extend({
     corpse = "medium-remnants",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -422,6 +425,7 @@ data:extend({
       usage_priority = "secondary-input",
       emissions_per_minute = { pollution = 1 },
     },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/electric-furnace.ogg",
@@ -479,6 +483,7 @@ data:extend({
     minable = { mining_time = 0.2, result = "stone-mixing-furnace" },
     max_health = 200,
     corpse = "medium-remnants",
+    impact_category = "stone",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -547,6 +552,7 @@ data:extend({
     minable = { mining_time = 0.2, result = "steel-mixing-furnace" },
     max_health = 300,
     corpse = "medium-remnants",
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -618,6 +624,7 @@ data:extend({
       usage_priority = "secondary-input",
       emissions_per_minute = { pollution = 1 },
     },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/electric-furnace.ogg",
@@ -810,7 +817,7 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -902,7 +909,7 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -951,7 +958,7 @@ data:extend({
       emissions_per_minute = { pollution = 0.15 },
     },
     energy_usage = "30kW",
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
