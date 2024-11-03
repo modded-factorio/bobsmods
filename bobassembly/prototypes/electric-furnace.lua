@@ -114,7 +114,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         usage_priority = "secondary-input",
         emissions_per_minute = { pollution = 1 },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           filename = "__base__/sound/electric-furnace.ogg",
