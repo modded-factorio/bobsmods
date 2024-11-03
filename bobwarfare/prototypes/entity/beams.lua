@@ -636,7 +636,7 @@ data:extend({
 				head = {
 					layers = {
 						{
-							filename = "__base__/graphics/entity/laser-turret/hr-laser-body.png",
+							filename = "__base__/graphics/entity/laser-turret/laser-body.png",
 							flags = {
 								"mipmap"
 							},
@@ -653,7 +653,7 @@ data:extend({
 				tail = {
 					layers = {
 						{
-							filename = "__base__/graphics/entity/laser-turret/hr-laser-end.png",
+							filename = "__base__/graphics/entity/laser-turret/laser-end.png",
 							flags = {
 								"no-crop",
 								"mipmap"
@@ -671,7 +671,7 @@ data:extend({
 				body = {
 					layers = {
 						{
-							filename = "__base__/graphics/entity/laser-turret/hr-laser-body.png",
+							filename = "__base__/graphics/entity/laser-turret/laser-body.png",
 							flags = {
 								"mipmap"
 							},
