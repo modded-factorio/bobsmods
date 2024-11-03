@@ -69,7 +69,7 @@ data:extend({
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg" },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.5 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
+    impact_category = "stone",
     -- this kind of code can be used for having walls mirror the effect
     -- there can be multiple reaction items
     --attack_reaction =
