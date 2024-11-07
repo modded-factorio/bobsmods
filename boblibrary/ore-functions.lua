@@ -605,14 +605,7 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
     bobmods.lib.resource.generate_autoplace_control(control)
     data.raw["autoplace-control"][control].localised_name =
       { "", "[entity=" .. inputs.name .. "] ", { "entity-name." .. inputs.name } }
-    -- if not data.raw["noise-layer"][inputs.name] and inputs.autoplace ~= "control-only" then
-      -- data:extend({
-        -- {
-          -- type = "noise-layer",
-          -- name = inputs.name,
-        -- },
-      -- })
-    -- end
+
     if inputs.autoplace ~= "control-only" then
       data.raw.resource[inputs.name].autoplace = inputs.autoplace
     end
