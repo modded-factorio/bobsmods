@@ -39,6 +39,7 @@ bobmods.ores.thorium = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" }
 }
 
 function bobmods.ores.thorium.create_autoplace()
