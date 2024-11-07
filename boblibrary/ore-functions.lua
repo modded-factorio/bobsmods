@@ -3,6 +3,27 @@ if not bobmods.lib.resource then
 end
 
 bobmods.lib.resource_autoplace = require("resource-autoplace")
+local sounds = require("__base__.prototypes.entity.sounds")
+
+local stone_driving_sound =
+{
+  sound =
+  {
+    filename = "__base__/sound/driving/vehicle-surface-stone.ogg", volume = 0.8,
+    advanced_volume_control = {fades = {fade_in = {curve_type = "cosine", from = {control = 0.5, volume_percentage = 0.0}, to = {1.5, 100.0 }}}}
+  },
+  fade_ticks = 6
+}
+
+local oil_driving_sound =
+{
+  sound =
+  {
+    filename = "__base__/sound/driving/vehicle-surface-oil.ogg", volume = 0.8,
+    advanced_volume_control = {fades = {fade_in = {curve_type = "cosine", from = {control = 0.5, volume_percentage = 0.0}, to = {1.5, 100.0 }}}}
+  },
+  fade_ticks = 6
+}
 
 function bobmods.lib.resource.create_autoplace(inputs)
   local autoplace = { control = inputs.control or inputs.name }
@@ -414,6 +435,16 @@ function bobmods.lib.resource.create(inputs)
       },
     },
   })
+  if inputs.walking_sound == "oil" then
+    data.raw.resource[inputs.name].walking_sound = sounds.oil
+  else
+    data.raw.resource[inputs.name].walking_sound = sounds.ore
+  end
+  if inputs.driving_sound == "oil" then
+    data.raw.resource[inputs.name].driving_sound = oil_driving_sound
+  else
+    data.raw.resource[inputs.name].driving_sound = stone_driving_sound
+  end
   if inputs.disable_map_grid then
     data.raw.resource[inputs.name].map_grid = false
   end
@@ -624,7 +655,7 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         item.sprite = inputs.sprite
       end
       bobmods.lib.resource.create_item(item)
-      table.insert(inputs.items, { name = inputs.name })
+      table.insert(inputs.items, { name = inputs.name, amount = 1 })
     end
 
     if inputs.autoplace == nil then
@@ -655,6 +686,7 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         bobmods.lib.resource.add_result(inputs.name, item)
       end
     end
+
   end
 end
 
@@ -688,17 +720,29 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
     bobmods.lib.resource.generate_autoplace_control(control)
     data.raw["autoplace-control"][control].localised_name =
       { "", "[entity=" .. inputs.name .. "] ", { "entity-name." .. inputs.name } }
-    if not data.raw["noise-layer"][inputs.name] and inputs.autoplace ~= "control-only" then
-      data:extend({
-        {
-          type = "noise-layer",
-          name = inputs.name,
-        },
-      })
-    end
+
     if inputs.autoplace ~= "control-only" then
       data.raw.resource[inputs.name].autoplace = inputs.autoplace
     end
+
+    if data.raw["autoplace-control"][inputs.name] then
+      if inputs.planets and type(inputs.planets) == "table" then
+        for i, world in pairs(inputs.planets) do
+          if type(world) == "string" and data.raw.planet[world] then
+            data.raw.planet[world].map_gen_settings.autoplace_controls[inputs.name] = {}
+            data.raw.planet[world].map_gen_settings.autoplace_settings.entity.settings[inputs.name] = {}
+            log(inputs.name .. " added to planet " .. world)
+          end
+        end
+      else
+        log(inputs.name .. " default add to base planet")
+        data.raw.planet.nauvis.map_gen_settings.autoplace_controls[inputs.name] = {}
+        data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings[inputs.name] = {}
+      end
+    else
+      log(inputs.name .. " autoplace control not found")
+    end
+
   end
 end
 
