@@ -115,82 +115,6 @@ end
 
 function bobmods.lib.resource.sprite(inputs)
   local filename
-  local width = 38
-  local height = 38
-  local frame_count = 4
-  local variation_count = 8
-  local hr_version = nil
-  if inputs.width then
-    width = inputs.width
-  end
-  if inputs.height then
-    height = inputs.height
-  end
-  if inputs.frame_count then
-    frame_count = inputs.frame_count
-  end
-  if inputs.variation_count then
-    variation_count = inputs.variation_count
-  end
-  if inputs.hr_version then
-    hr_version = bobmods.lib.resource.hr_sprite(inputs.hr_version)
-  end
-  if inputs.filename then
-    filename = inputs.filename
-  else
-    filename = "__boblibrary__/graphics/entity/ores/ore-1.png"
-    width = 64
-    height = 64
-    frame_count = 8
-    variation_count = 8
-    hr_version = bobmods.lib.resource.hr_sprite({ sheet = 1, tint = inputs.tint })
-    if inputs.sheet == 2 then
-      filename = "__boblibrary__/graphics/entity/ores/ore-2.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 2, tint = inputs.tint })
-    end
-    if inputs.sheet == 3 then
-      filename = "__boblibrary__/graphics/entity/ores/ore-3.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 3, tint = inputs.tint })
-    end
-    if inputs.sheet == 4 then
-      filename = "__boblibrary__/graphics/entity/ores/ore-4.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 4, tint = inputs.tint })
-    end
-    if inputs.sheet == 5 then
-      filename = "__boblibrary__/graphics/entity/liquid.png"
-      width = 75
-      height = 61
-      frame_count = 4
-      variation_count = 1
-      hr_version = nil
-    end
-    if inputs.sheet == 6 then
-      filename = "__boblibrary__/graphics/entity/ores/ore-5.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 5, tint = inputs.tint })
-    end
-  end
-
-  local sheet = {
-    filename = filename,
-    priority = "extra-high",
-    width = width,
-    height = height,
-    frame_count = frame_count,
-    variation_count = variation_count,
-    tint = inputs.tint,
-    scale = inputs.scale or 1,
-  }
-  if hr_version then
-    sheet.hr_version = hr_version
-  end
-
-  return {
-    sheet = sheet,
-  }
-end
-
-function bobmods.lib.resource.hr_sprite(inputs)
-  local filename
   local width = 128
   local height = 128
   local frame_count = 8
@@ -230,53 +154,15 @@ function bobmods.lib.resource.hr_sprite(inputs)
       filename = "__boblibrary__/graphics/entity/ores/hr-ore-4.png"
     end
     if inputs.sheet == 5 then
+      filename = "__boblibrary__/graphics/entity/liquid.png"
+      width = 75
+      height = 61
+      frame_count = 4
+      variation_count = 1
+    end
+    if inputs.sheet == 6 then
       filename = "__boblibrary__/graphics/entity/ores/hr-ore-5.png"
     end
-  end
-
-  return {
-    filename = filename,
-    priority = "extra-high",
-    width = width,
-    height = height,
-    frame_count = frame_count,
-    variation_count = variation_count,
-    tint = inputs.tint,
-    scale = scale,
-  }
-end
-
-function bobmods.lib.resource.effect(inputs)
-  local filename
-  local width = 64
-  local height = 64
-  local frame_count = 8
-  local variation_count = 8
-  local hr_version = nil
-  if inputs.width then
-    width = inputs.width
-  end
-  if inputs.height then
-    height = inputs.height
-  end
-  if inputs.frame_count then
-    frame_count = inputs.frame_count
-  end
-  if inputs.variation_count then
-    variation_count = inputs.variation_count
-  end
-  if inputs.hr_version then
-    hr_version = bobmods.lib.resource.hr_effect(inputs.hr_version)
-  end
-  if inputs.filename then
-    filename = inputs.filename
-  else
-    filename = "__boblibrary__/graphics/entity/ores/ore-5-glow.png"
-    width = 64
-    height = 64
-    frame_count = 8
-    variation_count = 8
-    hr_version = bobmods.lib.resource.hr_effect({ sheet = 5, tint = inputs.tint })
   end
 
   local sheet = {
@@ -287,20 +173,15 @@ function bobmods.lib.resource.effect(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
-    scale = inputs.scale or 1,
-    blend_mode = "additive",
-    flags = { "light" },
+    scale = scale,
   }
-  if hr_version then
-    sheet.hr_version = hr_version
-  end
 
   return {
     sheet = sheet,
   }
 end
 
-function bobmods.lib.resource.hr_effect(inputs)
+function bobmods.lib.resource.effect(inputs)
   local filename
   local width = 128
   local height = 128
@@ -333,7 +214,7 @@ function bobmods.lib.resource.hr_effect(inputs)
     scale = 0.5
   end
 
-  return {
+  local sheet = {
     filename = filename,
     priority = "extra-high",
     width = width,
@@ -341,9 +222,13 @@ function bobmods.lib.resource.hr_effect(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
+    scale = inputs.scale,
     blend_mode = "additive",
     flags = { "light" },
-    scale = scale,
+  }
+
+  return {
+    sheet = sheet,
   }
 end
 
@@ -720,7 +605,14 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
     bobmods.lib.resource.generate_autoplace_control(control)
     data.raw["autoplace-control"][control].localised_name =
       { "", "[entity=" .. inputs.name .. "] ", { "entity-name." .. inputs.name } }
-
+    -- if not data.raw["noise-layer"][inputs.name] and inputs.autoplace ~= "control-only" then
+      -- data:extend({
+        -- {
+          -- type = "noise-layer",
+          -- name = inputs.name,
+        -- },
+      -- })
+    -- end
     if inputs.autoplace ~= "control-only" then
       data.raw.resource[inputs.name].autoplace = inputs.autoplace
     end
