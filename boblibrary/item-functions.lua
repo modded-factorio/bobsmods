@@ -11,7 +11,7 @@ function bobmods.lib.item.get_type(name) --returns actual item type
       end
     end
     if data.raw.fluid and data.raw.fluid[name] then
-      item_type = type_name
+      item_type = "fluid"
     end
   else
     log("Item name is not a string")
