@@ -45,14 +45,12 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   data.raw["mining-drill"]["steam-mining-drill"].energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = 25, --fairly sure this scales, so it would be 5 at level 1 speed.
+    emissions_per_minute = {pollution = 25}, --fairly sure this scales, so it would be 5 at level 1 speed.
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_connections = {
-        { type = "input-output", position = { 1.5, 0.5 } },
-        { type = "input-output", position = { -1.5, 0.5 } },
+        { flow_direction = "input-output", position = { 0.5, 0.5 }, direction = defines.direction.east },
+        { flow_direction = "input-output", position = { -0.5, 0.5 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
@@ -75,10 +73,9 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   }
 
   --Change all the animation speeds from 0.5 to 4 (mining speed increases from 0.25 to 2)
-  for i, direction in pairs(data.raw["mining-drill"]["steam-mining-drill"].animations) do
+  for i, direction in pairs(data.raw["mining-drill"]["steam-mining-drill"].graphics_set.animation) do
     for j, layer in pairs(direction.layers) do
       layer.animation_speed = 4
-      layer.hr_version.animation_speed = 4
     end
   end
 end
