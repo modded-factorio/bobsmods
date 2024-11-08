@@ -141,17 +141,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 1,
-        base_level = 1,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -167,28 +167,29 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
       base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      animations = {
-        north = {
-          priority = "extra-high",
-          width = 116,
-          height = 110,
-          line_length = 10,
-          shift = { 0.125, -0.71875 },
-          filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-          tint = { r = 0.2, g = 0.8, b = 1 },
-          frame_count = 40,
-          animation_speed = 0.5,
+      graphics_set = {
+        animation = {
+          north = {
+            priority = "extra-high",
+            width = 116,
+            height = 110,
+            line_length = 10,
+            shift = { 0.125, -0.71875 },
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
+            tint = { r = 0.2, g = 0.8, b = 1 },
+            frame_count = 40,
+            animation_speed = 0.5,
+          },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
       fast_replaceable_group = "pumpjack",
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 7.5,
+      next_upgrade = "water-miner-2"
     },
     {
       type = "mining-drill",
@@ -206,17 +207,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 2,
-        base_level = 1,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -240,27 +241,28 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
       base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      animations = {
-        north = {
-          priority = "extra-high",
-          width = 116,
-          height = 110,
-          line_length = 10,
-          shift = { 0.125, -0.71875 },
-          filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-          tint = { r = 0.2, g = 0.8, b = 1 },
-          frame_count = 40,
-          animation_speed = 1,
+      graphics_set = {
+        animation = {
+          north = {
+            priority = "extra-high",
+            width = 116,
+            height = 110,
+            line_length = 10,
+            shift = { 0.125, -0.71875 },
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
+            tint = { r = 0.2, g = 0.8, b = 1 },
+            frame_count = 40,
+            animation_speed = 0.5,
+          },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 10,
+      next_upgrade = "water-miner-3"
     },
     {
       type = "mining-drill",
@@ -278,17 +280,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 2,
-        base_level = 1,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -312,27 +314,28 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       base_picture = data.raw["mining-drill"].pumpjack.base_picture,
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-      animations = {
-        north = {
-          priority = "extra-high",
-          width = 116,
-          height = 110,
-          line_length = 10,
-          shift = { 0.125, -0.71875 },
-          filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-          tint = { r = 0.2, g = 0.8, b = 1 },
-          frame_count = 40,
-          animation_speed = 1.5,
+      graphics_set = {
+        animation = {
+          north = {
+            priority = "extra-high",
+            width = 116,
+            height = 110,
+            line_length = 10,
+            shift = { 0.125, -0.71875 },
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
+            tint = { r = 0.2, g = 0.8, b = 1 },
+            frame_count = 40,
+            animation_speed = 0.5,
+          },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 12.5,
+      next_upgrade = "water-miner-4"
     },
     {
       type = "mining-drill",
@@ -350,17 +353,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 2.5,
-        base_level = 1,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -384,27 +387,28 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
       base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      animations = {
-        north = {
-          priority = "extra-high",
-          width = 116,
-          height = 110,
-          line_length = 10,
-          shift = { 0.125, -0.71875 },
-          filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-          tint = { r = 0.2, g = 0.8, b = 1 },
-          frame_count = 40,
-          animation_speed = 2,
+      graphics_set = {
+        animation = {
+          north = {
+            priority = "extra-high",
+            width = 116,
+            height = 110,
+            line_length = 10,
+            shift = { 0.125, -0.71875 },
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
+            tint = { r = 0.2, g = 0.8, b = 1 },
+            frame_count = 40,
+            animation_speed = 0.5,
+          },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 15,
+      next_upgrade = "water-miner-5"
     },
     {
       type = "mining-drill",
@@ -422,17 +426,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = 1,
+        emissions_per_minute = {pollution = 1},
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        base_area = 3,
-        base_level = 1,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
-            type = "output",
-            positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+            flow_direction = "output",
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
+            direction = defines.direction.north,
           },
         },
       },
@@ -456,26 +460,26 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
       base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      animations = {
-        north = {
-          priority = "extra-high",
-          width = 116,
-          height = 110,
-          line_length = 10,
-          shift = { 0.125, -0.71875 },
-          filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-          tint = { r = 0.2, g = 0.8, b = 1 },
-          frame_count = 40,
-          animation_speed = 2.5,
+      graphics_set = {
+        animation = {
+          north = {
+            priority = "extra-high",
+            width = 116,
+            height = 110,
+            line_length = 10,
+            shift = { 0.125, -0.71875 },
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
+            tint = { r = 0.2, g = 0.8, b = 1 },
+            frame_count = 40,
+            animation_speed = 0.5,
+          },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 17.5,
     },
   })
