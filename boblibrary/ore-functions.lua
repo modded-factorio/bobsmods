@@ -306,6 +306,7 @@ function bobmods.lib.resource.create(inputs)
       order = "b-d-" .. inputs.name,
       minimum = minimum,
       normal = normal,
+      highlight = inputs.highlight,
       resource_patch_search_radius = inputs.resource_patch_search_radius,
       infinite = inputs.infinite,
       collision_box = inputs.collision_box or { { -0.1, -0.1 }, { 0.1, 0.1 } },
