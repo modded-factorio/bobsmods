@@ -1,4 +1,4 @@
-bobmods.lib.tech.remove_science_pack("follower-robot-count-7", "production-science-pack")
+bobmods.lib.tech.remove_science_pack("follower-robot-count-5", "production-science-pack")
 
 bobmods.lib.tech.remove_science_pack("artillery", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("artillery", "military-4")
