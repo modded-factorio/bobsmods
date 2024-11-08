@@ -5,7 +5,7 @@ data:extend({
     enabled = false,
     energy_required = 21,
     ingredients = {
-      { type = "item", name = "filter-inserter", amount = 1 },
+      { type = "item", name = "fast-inserter", amount = 4 },
       { type = "item", name = "express-transport-belt", amount = 1 },
       { type = "item", name = "flying-robot-frame", amount = 1 },
       { type = "item", name = "steel-chest", amount = 2 },
@@ -21,7 +21,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "lab", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 10 },
-      { type = "item", name = "filter-inserter", amount = 4 },
+      { type = "item", name = "bulk-inserter", amount = 4 },
       { type = "item", name = "express-transport-belt", amount = 4 },
     },
     results = { { type = "item", name = "lab-2", amount = 1 } },
