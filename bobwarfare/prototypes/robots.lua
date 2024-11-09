@@ -32,6 +32,18 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       subgroup = "bob-combat-robots",
       order = "e-a-a",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
     {
       type = "recipe",
@@ -50,6 +62,18 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       subgroup = "bob-combat-robots",
       order = "e-a-b",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
     {
       type = "recipe",
@@ -68,6 +92,18 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       subgroup = "bob-combat-robots",
       order = "e-a-c",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
     {
       type = "recipe",
@@ -124,8 +160,19 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       icon_size = 32,
       subgroup = "bob-combat-robots",
       order = "e-a-d",
-      --    place_result = "bob-laser-robot",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
 
     {
@@ -189,6 +236,18 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       subgroup = "capsule",
       order = "g[laser-robot-capsule]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
 
     {
