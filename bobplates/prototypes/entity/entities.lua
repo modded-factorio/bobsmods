@@ -113,34 +113,32 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 4,
+      emissions_per_minute = {pollution = 4},
     },
     fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction =  "input", position = { -1, -1 }, direction = defines.direction.north } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction =  "input", position = { 1, -1 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        volume = 100,
+        pipe_connections = { { flow_direction =  "output", position = { -1, 1 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        volume = 100,
+        pipe_connections = { { flow_direction =  "output", position = { 1, 1 }, direction = defines.direction.south } },
       },
     },
     graphics_set = {
@@ -182,9 +180,8 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, -1.5 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction =  "input", position = { 0.5, -0.5 } }, direction = defines.direction.north },
       },
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -196,7 +193,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = {pollution = 2},
       smoke = {
         {
           name = "smoke",
@@ -309,9 +306,8 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, -1.5 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction =  "input", position = { 0.5, -0.5 }, direction = defines.direction.north } },
       },
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -323,7 +319,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = {pollution = 4},
       smoke = {
         {
           name = "smoke",
@@ -364,9 +360,8 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction =  "input", position = { 0, -1 }, direction = defines.direction.north } },
       },
       off_when_no_fluid_recipe = true,
     },
@@ -387,7 +382,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = {pollution = 1},
     },
     working_sound = {
       sound = {
@@ -483,7 +478,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = {pollution = 2},
       smoke = {
         {
           name = "smoke",
@@ -551,7 +546,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = {pollution = 4},
       smoke = {
         {
           name = "smoke",
@@ -602,7 +597,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = {pollution = 1},
     },
     working_sound = {
       sound = {
@@ -975,13 +970,13 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 1,
         base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, 1 } } },
+        pipe_connections = { { flow_direction =  "input", position = { 0, 0 }, direction = defines.direction.south } },
       },
     },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.15,
+      emissions_per_minute = {pollution = 0.15},
     },
     energy_usage = "30kW",
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },

@@ -32,7 +32,7 @@ data:extend({
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, -1.2 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 0, -1 }, direction = defines.direction.north } },
       },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },

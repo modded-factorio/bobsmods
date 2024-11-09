@@ -227,7 +227,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 0.2,
+        emissions_per_minute = {pollution = 0.2},
       },
       fluid_boxes = {
         {
@@ -235,14 +235,14 @@ if settings.startup["bobmods-plates-purewater"].value == true then
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
-          pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+          pipe_connections = { { type = "input", position = { 0.5, 0.5 } } },
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = 1,
-          pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+          pipe_connections = { { type = "output", position = { 0.5, -0.5 } } },
         },
       },
       graphics_set = {
