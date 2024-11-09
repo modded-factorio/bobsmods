@@ -10,6 +10,18 @@ data:extend({
     order = "d[radar]-a[radar-2]",
     place_result = "radar-2",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 
   {
@@ -21,6 +33,18 @@ data:extend({
     order = "d[radar]-a[radar-3]",
     place_result = "radar-3",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 
   {
@@ -32,6 +56,18 @@ data:extend({
     order = "d[radar]-a[radar-4]",
     place_result = "radar-4",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 
   {
@@ -43,5 +79,17 @@ data:extend({
     order = "d[radar]-a[radar-5]",
     place_result = "radar-5",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 })
