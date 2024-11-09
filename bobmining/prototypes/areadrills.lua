@@ -9,6 +9,18 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       order = "a[items]-b-b[mining-drill-1]",
       place_result = "bob-area-mining-drill-1",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -19,6 +31,18 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       order = "a[items]-b-b[mining-drill-2]",
       place_result = "bob-area-mining-drill-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -29,6 +53,18 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       order = "a[items]-b-b[mining-drill-3]",
       place_result = "bob-area-mining-drill-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -39,6 +75,18 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       order = "a[items]-b-b[mining-drill-4]",
       place_result = "bob-area-mining-drill-4",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
   })
 
