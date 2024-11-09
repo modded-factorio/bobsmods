@@ -34,6 +34,19 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       order = "d[electronics-machine-1]",
       place_result = "electronics-machine-1",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
+      weight = 10000
     },
 
     {
@@ -171,6 +184,19 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       order = "d[electronics-machine-2]",
       place_result = "electronics-machine-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
+      weight = 10000
     },
 
     {
@@ -336,6 +362,19 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       order = "d[electronics-machine-3]",
       place_result = "electronics-machine-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
+      weight = 10000
     },
 
     {
