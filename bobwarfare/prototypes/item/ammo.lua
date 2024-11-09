@@ -30,6 +30,26 @@ local function bobmissileammo(projectile)
   }
 end
 
+local ammodropmove = {
+  filename = "__base__/sound/item/ammo-small-inventory-move.ogg",
+  volume = 0.8
+}
+
+local ammopickup = {
+  filename = "__base__/sound/item/ammo-small-inventory-pickup.ogg",
+  volume = 0.7
+}
+
+local largeammodropmove = {
+  filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+  volume = 0.6
+}
+
+local largeammopickup = {
+  filename = "__base__/sound/item/ammo-large-inventory-pickup.ogg",
+  volume = 0.7
+}
+
 data:extend({
   {
     type = "ammo",
@@ -73,6 +93,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 20000
   },
 
   {
@@ -115,6 +139,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -169,6 +197,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -219,6 +251,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -273,6 +309,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -327,6 +367,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -369,6 +413,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -400,6 +448,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 20000
   },
 
   {
@@ -431,6 +483,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -462,6 +518,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -493,6 +553,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -524,6 +588,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -555,6 +623,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -586,6 +658,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -617,6 +693,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   --[[
@@ -666,6 +746,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-glass-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -679,6 +772,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-ruby-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -692,6 +798,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-sapphire-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -705,6 +824,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-emerald-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -718,6 +850,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-amethyst-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -731,6 +876,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-topaz-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -744,6 +902,19 @@ data:extend({
     magazine_size = 50,
     ammo_category = "laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-diamond-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -756,6 +927,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-0",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -768,6 +943,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-1",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -780,6 +959,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-2",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -792,6 +975,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-3",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -804,6 +991,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-4",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -816,6 +1007,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-5",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -828,6 +1023,10 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-6",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 })
 
@@ -870,6 +1069,10 @@ data:extend({
     subgroup = "ammo",
     order = "d[cannon-shell]-c[scatter]",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 20000
   },
 })
 
@@ -904,6 +1107,19 @@ data:extend({
     subgroup = "capsule",
     order = "b[fire-capsule]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/grenade-inventory-move.ogg",
+      volume = 1
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/grenade-inventory-move.ogg",
+      volume = 1
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/grenade-inventory-pickup.ogg",
+      volume = 0.8
+    },
+    weight = 10000
   },
 })
 
@@ -946,6 +1162,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[poison]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -985,6 +1214,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[fire]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -1024,6 +1266,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[explosive]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -1063,6 +1318,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[distractor]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -1103,6 +1371,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[atomic-bomb]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/atomic-bomb-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/atomic-bomb-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/atomic-bomb-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 1500000
   },
 })
 
@@ -1159,6 +1440,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
   {
     type = "ammo",
@@ -1189,6 +1474,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
   {
     type = "ammo",
@@ -1200,5 +1489,9 @@ data:extend({
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-7",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 })
