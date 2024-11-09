@@ -122,6 +122,18 @@ then
       order = "e[electrolyser-2]",
       place_result = "electrolyser-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
     {
       type = "item",
@@ -132,6 +144,18 @@ then
       order = "e[electrolyser-3]",
       place_result = "electrolyser-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
     {
       type = "item",
@@ -142,6 +166,18 @@ then
       order = "e[electrolyser-4]",
       place_result = "electrolyser-4",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
 
     {
@@ -153,6 +189,18 @@ then
       order = "e[electrolyser-5]",
       place_result = "electrolyser-5",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
 
     {
