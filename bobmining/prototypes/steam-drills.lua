@@ -9,6 +9,18 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       order = "a[items]-a[steam-mining-drill]",
       place_result = "steam-mining-drill",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
 
     {
