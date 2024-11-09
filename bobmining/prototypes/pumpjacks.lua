@@ -15,6 +15,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-2]",
       place_result = "bob-pumpjack-1",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -25,6 +37,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-3]",
       place_result = "bob-pumpjack-2",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -35,6 +59,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-4]",
       place_result = "bob-pumpjack-3",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -45,6 +81,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-5]",
       place_result = "bob-pumpjack-4",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
   })
 
