@@ -377,6 +377,19 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       order = "e[distillery]",
       place_result = "bob-distillery",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5
+      },
+      weight = 10000
     },
 
     {
