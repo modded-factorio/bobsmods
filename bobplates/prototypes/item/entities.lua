@@ -8,6 +8,18 @@ data:extend({
     order = "e[electrolyser-1]",
     place_result = "electrolyser",
     stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5
+      },
   },
 
   {
@@ -19,6 +31,18 @@ data:extend({
     order = "b[mixing-furnace-1]",
     place_result = "stone-mixing-furnace",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
+      volume = 0.6
+    },
   },
   {
     type = "item",
@@ -29,6 +53,18 @@ data:extend({
     order = "b[mixing-furnace-2]",
     place_result = "steel-mixing-furnace",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
   {
     type = "item",
@@ -39,6 +75,19 @@ data:extend({
     order = "c[electric-mixing-furnace]",
     place_result = "electric-mixing-furnace",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -50,6 +99,18 @@ data:extend({
     order = "b[chemical-boiler-1]",
     place_result = "stone-chemical-furnace",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
+      volume = 0.6
+    },
   },
   {
     type = "item",
@@ -60,6 +121,18 @@ data:extend({
     order = "b[chemical-boiler-2]",
     place_result = "steel-chemical-furnace",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
   {
     type = "item",
@@ -70,6 +143,19 @@ data:extend({
     order = "c[chemical-furnace]",
     place_result = "electric-chemical-furnace",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -81,6 +167,19 @@ data:extend({
     order = "e[air-pump-1]",
     place_result = "air-pump",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -92,6 +191,19 @@ data:extend({
     order = "e[air-pump-2]",
     place_result = "air-pump-2",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -103,6 +215,19 @@ data:extend({
     order = "e[air-pump-3]",
     place_result = "air-pump-3",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -114,6 +239,19 @@ data:extend({
     order = "e[air-pump-4]",
     place_result = "air-pump-4",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -125,6 +263,19 @@ data:extend({
     order = "e[water-pump-1]",
     place_result = "water-pump",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -136,6 +287,19 @@ data:extend({
     order = "e[water-pump-2]",
     place_result = "water-pump-2",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -147,6 +311,19 @@ data:extend({
     order = "e[water-pump-3]",
     place_result = "water-pump-3",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -158,6 +335,19 @@ data:extend({
     order = "e[water-pump-4]",
     place_result = "water-pump-4",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 
   {
@@ -169,6 +359,18 @@ data:extend({
     order = "b[fluid]-a[storage-tank-0a]",
     place_result = "bob-small-inline-storage-tank",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 
   {
@@ -180,6 +382,18 @@ data:extend({
     order = "b[fluid]-a[storage-tank-0b]",
     place_result = "bob-small-storage-tank",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 
   {
@@ -191,5 +405,18 @@ data:extend({
     order = "void-pump",
     place_result = "void-pump",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 5000
   },
 })
