@@ -24,6 +24,19 @@ data:extend({
     order = "c[assembling-machine-4]",
     place_result = "assembling-machine-4",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8
+    },
+    weight = 40000
   },
 
   {
@@ -191,6 +204,19 @@ data:extend({
     order = "c[assembling-machine-5]",
     place_result = "assembling-machine-5",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8
+    },
+    weight = 40000
   },
 
   {
@@ -358,6 +384,19 @@ data:extend({
     order = "c[assembling-machine-6]",
     place_result = "assembling-machine-6",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8
+    },
+    weight = 40000
   },
 
   {
