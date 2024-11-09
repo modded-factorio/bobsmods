@@ -55,6 +55,19 @@ then
       order = "d[electric-chemical-mixing-furnace-1]",
       place_result = "electric-chemical-mixing-furnace",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7
+      },
+      weight = 20000
     },
     {
       type = "item",
@@ -65,6 +78,19 @@ then
       order = "d[electric-chemical-mixing-furnace-2]",
       place_result = "electric-chemical-mixing-furnace-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7
+      },
+      weight = 20000
     },
 
     {
