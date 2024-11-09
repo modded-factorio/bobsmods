@@ -12,6 +12,18 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       order = "g[centrifuge-2]",
       place_result = "centrifuge-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -22,6 +34,18 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       order = "g[centrifuge-3]",
       place_result = "centrifuge-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
 
     {
