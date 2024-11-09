@@ -8,6 +8,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-b[leg-segment]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -17,6 +29,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-b[foot]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -26,6 +50,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-b[hip]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -35,6 +71,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-b[knee]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -44,6 +92,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-a[leg]",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -53,6 +113,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-a[brain]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+        volume = 1
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+        volume = 1
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+        volume = 0.7
+      },
     },
     {
       type = "item",
@@ -62,6 +134,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-a[frame]",
       stack_size = 5,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "item",
@@ -71,6 +155,18 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       subgroup = "mech-parts",
       order = "s[mech]-a[armor-plate]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.7
+      },
     },
   })
 
@@ -188,6 +284,18 @@ function bobmods.warfare.create_spidertron(arguments)
       order = "b[personal-transport]-c[spidertron]-" .. arguments.order_letter .. "[" .. arguments.name .. "]",
       place_result = arguments.name,
       stack_size = 1,
+      drop_sound = {
+        filename = "__base__/sound/item/spidertron-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/spidertron-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/spidertron-inventory-pickup.ogg",
+        volume = 0.5
+      },
     },
     {
       type = "spider-vehicle",
