@@ -19,6 +19,19 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       order = "1[burner-assembling-machine]",
       place_result = "burner-assembling-machine",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
+      weight = 10000
     },
 
     {
@@ -139,6 +152,19 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       order = "1[steam-assembling-machine]",
       place_result = "steam-assembling-machine",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8
+      },
+      weight = 40000
     },
 
     {
