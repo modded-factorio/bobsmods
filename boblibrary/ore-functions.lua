@@ -98,7 +98,6 @@ function bobmods.lib.resource.sprite(inputs)
   local height = 38
   local frame_count = 4
   local variation_count = 8
-  local hr_version = nil
   if inputs.width then
     width = inputs.width
   end
@@ -111,9 +110,6 @@ function bobmods.lib.resource.sprite(inputs)
   if inputs.variation_count then
     variation_count = inputs.variation_count
   end
-  if inputs.hr_version then
-    hr_version = bobmods.lib.resource.hr_sprite(inputs.hr_version)
-  end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -122,18 +118,14 @@ function bobmods.lib.resource.sprite(inputs)
     height = 64
     frame_count = 8
     variation_count = 8
-    hr_version = bobmods.lib.resource.hr_sprite({ sheet = 1, tint = inputs.tint })
     if inputs.sheet == 2 then
       filename = "__boblibrary__/graphics/entity/ores/ore-2.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 2, tint = inputs.tint })
     end
     if inputs.sheet == 3 then
       filename = "__boblibrary__/graphics/entity/ores/ore-3.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 3, tint = inputs.tint })
     end
     if inputs.sheet == 4 then
       filename = "__boblibrary__/graphics/entity/ores/ore-4.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 4, tint = inputs.tint })
     end
     if inputs.sheet == 5 then
       filename = "__boblibrary__/graphics/entity/liquid.png"
@@ -141,11 +133,9 @@ function bobmods.lib.resource.sprite(inputs)
       height = 61
       frame_count = 4
       variation_count = 1
-      hr_version = nil
     end
     if inputs.sheet == 6 then
       filename = "__boblibrary__/graphics/entity/ores/ore-5.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 5, tint = inputs.tint })
     end
   end
 
@@ -159,9 +149,6 @@ function bobmods.lib.resource.sprite(inputs)
     tint = inputs.tint,
     scale = inputs.scale or 1,
   }
-  if hr_version then
-    sheet.hr_version = hr_version
-  end
 
   return {
     sheet = sheet,
@@ -231,7 +218,6 @@ function bobmods.lib.resource.effect(inputs)
   local height = 64
   local frame_count = 8
   local variation_count = 8
-  local hr_version = nil
   if inputs.width then
     width = inputs.width
   end
@@ -244,9 +230,6 @@ function bobmods.lib.resource.effect(inputs)
   if inputs.variation_count then
     variation_count = inputs.variation_count
   end
-  if inputs.hr_version then
-    hr_version = bobmods.lib.resource.hr_effect(inputs.hr_version)
-  end
   if inputs.filename then
     filename = inputs.filename
   else
@@ -255,7 +238,6 @@ function bobmods.lib.resource.effect(inputs)
     height = 64
     frame_count = 8
     variation_count = 8
-    hr_version = bobmods.lib.resource.hr_effect({ sheet = 5, tint = inputs.tint })
   end
 
   local sheet = {
@@ -270,9 +252,6 @@ function bobmods.lib.resource.effect(inputs)
     blend_mode = "additive",
     flags = { "light" },
   }
-  if hr_version then
-    sheet.hr_version = hr_version
-  end
 
   return {
     sheet = sheet,

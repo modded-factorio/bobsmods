@@ -76,7 +76,6 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   for i, direction in pairs(data.raw["mining-drill"]["steam-mining-drill"].graphics_set.animation) do
     for j, layer in pairs(direction.layers) do
       layer.animation_speed = 4
-      layer.hr_version.animation_speed = 4
     end
   end
 end

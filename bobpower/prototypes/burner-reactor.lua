@@ -2,16 +2,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   local function lower_layer_picture(suffix)
     return {
       filename = "__bobpower__/graphics/burner-reactor/reactor-pipes" .. suffix .. ".png",
-      width = 96,
-      height = 96,
+      width = 192,
+      height = 192,
+      scale = 0.5,
       shift = { -0.03125, -0.1875 },
-      hr_version = {
-        filename = "__bobpower__/graphics/burner-reactor/hr-reactor-pipes" .. suffix .. ".png",
-        width = 192,
-        height = 192,
-        scale = 0.5,
-        shift = { -0.03125, -0.1875 },
-      },
     }
   end
 
@@ -19,16 +13,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
-        width = 32,
-        height = 32,
+        width = 64,
+        height = 64,
         variation_count = 12,
-        hr_version = {
-          filename = "__bobpower__/graphics/burner-reactor/hr-reactor-connect-patches" .. suffix .. ".png",
-          width = 64,
-          height = 64,
-          variation_count = 12,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
     }
   end
@@ -37,18 +25,11 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
-        width = 32,
-        height = 32,
+        width = 64,
+        height = 64,
         variation_count = 12,
-        y = 32,
-        hr_version = {
-          filename = "__bobpower__/graphics/burner-reactor/hr-reactor-connect-patches" .. suffix .. ".png",
-          width = 64,
-          height = 64,
-          variation_count = 12,
-          y = 64,
-          scale = 0.5,
-        },
+        y = 64,
+        scale = 0.5,
       },
     }
   end
