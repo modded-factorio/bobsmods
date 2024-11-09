@@ -11,6 +11,18 @@ data:extend({
     order = "a[wall]-c[reinforced]",
     place_result = "reinforced-wall",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/concrete-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/concrete-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
   {
     type = "item",
@@ -21,5 +33,17 @@ data:extend({
     order = "a[wall]-d[reinforced]",
     place_result = "reinforced-gate",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/concrete-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/concrete-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
 })
