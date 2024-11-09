@@ -9,6 +9,18 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "b[fluids]-c[water-miner-1]",
       place_result = "water-miner-1",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -19,6 +31,18 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "b[fluids]-c[water-miner-2]",
       place_result = "water-miner-2",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -29,6 +53,18 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "b[fluids]-c[water-miner-3]",
       place_result = "water-miner-3",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -39,6 +75,18 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "b[fluids]-c[water-miner-4]",
       place_result = "water-miner-4",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
     {
       type = "item",
@@ -49,6 +97,18 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "b[fluids]-c[water-miner-5]",
       place_result = "water-miner-5",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
   })
 
