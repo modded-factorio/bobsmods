@@ -248,7 +248,6 @@ then
     {
       type = "technology",
       name = "multi-purpose-furnace-1",
-      icon_size = 128,
       --    icon = "__bobassembly__/graphics/icons/technology/multi-purpose-furnace.png",
       icons = {
         {
@@ -295,7 +294,6 @@ then
     {
       type = "technology",
       name = "multi-purpose-furnace-2",
-      icon_size = 128,
       --    icon = "__bobassembly__/graphics/icons/technology/multi-purpose-furnace.png",
       icons = {
         {

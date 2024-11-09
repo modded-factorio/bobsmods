@@ -11,16 +11,18 @@ data:extend({
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.9, g = 0.2, b = 0.1, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-2",
     order = "b[storage]-[passive-provider-chest-2]",
     place_result = "passive-provider-chest-2",
@@ -32,16 +34,18 @@ data:extend({
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.7, g = 0.1, b = 0.9, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-2",
     order = "b[storage]-[active-provider-chest-2]",
     place_result = "active-provider-chest-2",
@@ -53,16 +57,18 @@ data:extend({
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.9, g = 0.75, b = 0.1, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-2",
     order = "b[storage]-[storage-chest-2]",
     place_result = "storage-chest-2",
@@ -74,16 +80,18 @@ data:extend({
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.2, g = 0.9, b = 0.1, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-2",
     order = "b[storage]-[buffer-chest-2]",
     place_result = "buffer-chest-2",
@@ -95,16 +103,18 @@ data:extend({
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.1, g = 0.4, b = 0.9, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-2",
     order = "b[storage]-[requester-chest-2]",
     place_result = "requester-chest-2",
@@ -118,17 +128,19 @@ data:extend({
     name = "passive-provider-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
+        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.9, g = 0.2, b = 0.1, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-3",
     order = "b[storage]-[passive-provider-chest-3]",
     place_result = "passive-provider-chest-3",
@@ -139,17 +151,19 @@ data:extend({
     name = "active-provider-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
+        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.7, g = 0.1, b = 0.9, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-3",
     order = "b[storage]-[active-provider-chest-3]",
     place_result = "active-provider-chest-3",
@@ -160,17 +174,19 @@ data:extend({
     name = "storage-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
+        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.9, g = 0.75, b = 0.1, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-3",
     order = "b[storage]-[storage-chest-3]",
     place_result = "storage-chest-3",
@@ -181,17 +197,19 @@ data:extend({
     name = "buffer-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
+        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.2, g = 0.9, b = 0.1, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-3",
     order = "b[storage]-[buffer-chest-3]",
     place_result = "buffer-chest-3",
@@ -202,17 +220,19 @@ data:extend({
     name = "requester-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
+        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/icons/logistic-chest-port.png",
+        icon_size = 32,
       },
       {
         icon = "__boblogistics__/graphics/entity/logistic-chest/logistic-chest-mask.png",
+        icon_size = 32,
         tint = { r = 0.1, g = 0.4, b = 0.9, a = 1 },
       },
     },
-    icon_size = 32,
     subgroup = "logistic-chests-3",
     order = "b[storage]-[requester-chest-3]",
     place_result = "requester-chest-3",

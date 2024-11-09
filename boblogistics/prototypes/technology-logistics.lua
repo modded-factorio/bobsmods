@@ -157,7 +157,6 @@ data:extend({
     localised_name = { "technology-name.worker-robots-storage" },
     localised_description = { "technology-description.worker-robots-storage" },
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
-    icon_size = 256,
     effects = {
       {
         type = "worker-robot-storage",

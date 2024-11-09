@@ -141,7 +141,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       {
         type = "technology",
         name = "fluid-mixing-furnace",
-        icon_size = 128,
         icons = {
           {
             icon = "__base__/graphics/technology/advanced-material-processing.png",
@@ -273,7 +272,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       {
         type = "technology",
         name = "fluid-chemical-furnace",
-        icon_size = 128,
         icons = {
           {
             icon = "__base__/graphics/technology/advanced-material-processing.png",

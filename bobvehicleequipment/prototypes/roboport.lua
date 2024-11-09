@@ -409,12 +409,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-1]",
@@ -426,12 +427,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment-2",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-2]",
@@ -443,12 +445,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment-3",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-3]",
@@ -460,12 +463,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment-4",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-4]",
@@ -478,12 +482,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-1]",
@@ -495,12 +500,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment-2",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-2]",
@@ -512,12 +518,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment-3",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-3]",
@@ -529,12 +536,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment-4",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-4]",
@@ -547,12 +555,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-1.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-1]",
@@ -564,12 +573,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment-2",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-2]",
@@ -581,12 +591,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment-3",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-3]",
@@ -598,12 +609,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment-4",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-4]",
