@@ -45,6 +45,18 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       order = "b[steela-furnace]",
       place_result = "fluid-furnace",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     util.merge({
       data.raw.furnace["steel-furnace"],
@@ -131,6 +143,18 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         order = "b[mixing-furnace-3]",
         place_result = "fluid-mixing-furnace",
         stack_size = 50,
+        drop_sound = {
+          filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+          volume = 0.7
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+          volume = 0.7
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+          volume = 0.8
+        },
       },
       {
         type = "recipe",
@@ -263,6 +287,18 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         order = "b[chemical-boiler-3]",
         place_result = "fluid-chemical-furnace",
         stack_size = 50,
+        drop_sound = {
+          filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+          volume = 0.7
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+          volume = 0.7
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+          volume = 0.8
+        },
       },
       {
         type = "recipe",
