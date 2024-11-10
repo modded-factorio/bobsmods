@@ -9,6 +9,19 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
       subgroup = "bob-ores",
       order = "a-0[gem-ore]",
       stack_size = 200,
+      drop_sound = {
+        filename = "__base__/sound/item/resource-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/resource-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+        volume = 0.6
+      },
+      weight = 2000
     },
     {
       type = "recipe",
@@ -43,6 +56,19 @@ data:extend({
     subgroup = "bob-ores",
     order = "a-1",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 2000
   },
   {
     type = "item",
@@ -53,6 +79,19 @@ data:extend({
     subgroup = "bob-ores",
     order = "b-1",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 2000
   },
   {
     type = "item",
@@ -63,6 +102,19 @@ data:extend({
     subgroup = "bob-ores",
     order = "c-1",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 2000
   },
   {
     type = "item",
@@ -73,6 +125,19 @@ data:extend({
     subgroup = "bob-ores",
     order = "d-1",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 2000
   },
   {
     type = "item",
@@ -83,6 +148,19 @@ data:extend({
     subgroup = "bob-ores",
     order = "e-1",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 2000
   },
   {
     type = "item",
@@ -93,5 +171,18 @@ data:extend({
     subgroup = "bob-ores",
     order = "f-1",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 2000
   },
 })
