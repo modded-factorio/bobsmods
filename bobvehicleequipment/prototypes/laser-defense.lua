@@ -24,8 +24,8 @@ local function bob_active_beam_weapon_equipment(data)
       cooldown = data.cooldown or 20,
       range = data.range or 15,
       damage_modifier = 15 * data.damage_modifier or 15,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = data.energy_consumption,
         action = {
           type = "direct",
@@ -90,7 +90,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-a",
@@ -164,7 +164,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-b",
@@ -237,7 +237,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-c",
@@ -311,7 +311,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-d",
@@ -385,7 +385,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-e",
@@ -460,7 +460,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-f",
