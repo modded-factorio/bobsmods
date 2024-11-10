@@ -3,6 +3,7 @@ bobmods.lib.tech.add_prerequisite("logistics-2", "bob-electronics")
 bobmods.lib.tech.add_prerequisite("circuit-network", "bob-electronics")
 bobmods.lib.tech.add_prerequisite("solar-energy", "bob-electronics")
 bobmods.lib.tech.add_prerequisite("gate", "bob-electronics")
+bobmods.lib.tech.replace_prerequisite("fast-inserter", "automation-science-pack", "bob-electronics")
 if mods["bobassembly"] then
   bobmods.lib.tech.add_prerequisite("electrolyser-2", "bob-electronics")
 end
@@ -94,5 +95,3 @@ bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-fro
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
-
-bobmods.lib.tech.replace_prerequisite("fast-inserter", "automation-science-pack", "bob-electronics")
