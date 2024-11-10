@@ -9,6 +9,18 @@ data:extend({
     order = "v[vehicle-equipment]-e[vehicle-motor]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
+      volume = 0.6
+    },
   },
 
   {
@@ -91,6 +103,18 @@ data:extend({
     order = "v[vehicle-equipment]-e[vehicle-engine]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
+      volume = 0.6
+    },
   },
 
   {
