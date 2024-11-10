@@ -240,6 +240,9 @@ function bobmods.lib.resource.create_item(inputs)
       subgroup = inputs.subgroup or "raw-resource",
       order = "b-d[" .. inputs.name .. "]",
       stack_size = inputs.stack_size or 200,
+      drop_sound = inputs.drop_sound,
+      inventory_move_sound = inputs.inventory_move_sound,
+      pick_sound = inputs.pick_sound,
     },
   })
   if inputs.icon then
@@ -537,6 +540,33 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         tint = inputs.tint,
         create_variations = inputs.item.create_variations,
       }
+      if inputs.drop_sound then
+        if inputs.drop_sound.filename and inputs.drop_sound.volume then
+          item.drop_sound = inputs.drop_sound
+        else
+          log(inputs.name .. " has incorrectly formatted sound specifications")
+        end
+      else
+        item.drop_sound = { filename = "__base__/sound/item/resource-inventory-move.ogg", volume = 0.8 }
+      end
+      if inputs.inventory_move_sound then
+        if inputs.inventory_move_sound.filename and inputs.inventory_move_sound.volume then
+          item.inventory_move_sound = inputs.inventory_move_sound
+        else
+          log(inputs.name .. " has incorrectly formatted sound specifications")
+        end
+      else
+        item.inventory_move_sound = { filename = "__base__/sound/item/resource-inventory-move.ogg", volume = 0.8 }
+      end
+      if inputs.pick_sound then
+        if inputs.pick_sound.filename and inputs.pick_sound.volume then
+          item.pick_sound = inputs.pick_sound
+        else
+          log(inputs.name .. " has incorrectly formatted sound specifications")
+        end
+      else
+        item.pick_sound = { filename = "__base__/sound/item/resource-inventory-pickup.ogg", volume = 0.6 }
+      end
       if inputs.sprite then
         item.sprite = inputs.sprite
       end
