@@ -5,13 +5,14 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__base__/graphics/icons/belt-immunity-equipment.png",
         icon_size = 64,
+        scale = 0.5
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-belt-immunity-equipment",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[belt-immunity]",
@@ -34,8 +35,8 @@ data:extend({
     name = "vehicle-belt-immunity-equipment",
     sprite = {
       filename = "__base__/graphics/equipment/belt-immunity-equipment.png",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
       priority = "medium",
     },
     shape = {
