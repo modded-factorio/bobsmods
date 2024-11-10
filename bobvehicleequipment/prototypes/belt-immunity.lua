@@ -18,6 +18,18 @@ data:extend({
     order = "v[vehicle-equipment]-a[belt-immunity]",
     default_request_amount = 1,
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8
+    },
   },
   {
     type = "recipe",
