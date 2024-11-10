@@ -23,15 +23,15 @@ local function bob_active_weapon_equipment(data)
     attack_parameters = {
       type = "projectile",
       cooldown = data.cooldown or 20,
-      damage_modifier = 10 * data.damage_modifier or 1,
+      damage_modifier = 6 * data.damage_modifier or 1,
       lead_target_for_projectile_speed = data.lead_target_for_projectile_speed,
       projectile_center = { 0, 0 },
       projectile_creation_distance = 0.6,
       range = data.range or 15,
       sound = data.sound,
+      ammo_category = "laser",
       ammo_type = {
         type = "projectile",
-        category = "laser",
         target_type = data.target_type,
         energy_consumption = data.energy_consumption,
         action = {
@@ -118,7 +118,7 @@ data:extend({
     type = "technology",
     name = "vehicle-big-turret-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
       icon_size = 256,
     }),
     order = "v-g-m-a",
@@ -200,7 +200,7 @@ data:extend({
     type = "technology",
     name = "vehicle-big-turret-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
       icon_size = 256,
     }),
     order = "v-g-m-b",
@@ -280,7 +280,7 @@ data:extend({
     type = "technology",
     name = "vehicle-big-turret-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
       icon_size = 256,
     }),
     order = "v-g-m-c",
@@ -362,7 +362,7 @@ data:extend({
     type = "technology",
     name = "vehicle-big-turret-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
       icon_size = 256,
     }),
     order = "v-g-m-d",
@@ -443,7 +443,7 @@ data:extend({
     type = "technology",
     name = "vehicle-big-turret-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
       icon_size = 256,
     }),
     order = "v-g-m-e",
@@ -524,7 +524,7 @@ data:extend({
     type = "technology",
     name = "vehicle-big-turret-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
       icon_size = 256,
     }),
     order = "v-g-m-f",
