@@ -816,7 +816,7 @@ data:extend({
     type = "projectile",
     name = "cannon-projectile-pellet",
     flags = { "not-on-map" },
-    force_condition = "enemy"
+    force_condition = "enemy",
     collision_box = { { -0.05, -0.25 }, { 0.05, 0.25 } },
     acceleration = 0,
     direction_only = true,
