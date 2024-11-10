@@ -39,6 +39,9 @@ bobmods.ores.thorium = {
 ]]
   --
   autoplace = "control-only",
+  drop_sound = { filename = "__base__/sound/item/nuclear-inventory-move.ogg", volume = 0.6 },
+  inventory_move_sound = { filename = "__base__/sound/item/nuclear-inventory-move.ogg", volume = 0.6 },
+  pick_sound = { filename = "__base__/sound/item/nuclear-inventory-pickup.ogg", volume = 0.6 },
   planets = { "nauvis" }
 }
 
