@@ -295,6 +295,7 @@ data:extend({
     type = "recipe",
     name = "basic-circuit-board",
     category = "electronics",
+    enabled = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "wooden-board", amount = 1 },
