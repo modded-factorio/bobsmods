@@ -51,7 +51,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment-1.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-a",
