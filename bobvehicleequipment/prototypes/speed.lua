@@ -6,7 +6,7 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-motor-equipment",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-e[vehicle-motor]",
+    order = "v[vehicle-equipment]-e[vehicle-motor-1]",
     stack_size = 50,
     default_request_amount = 10,
     drop_sound = {
@@ -100,7 +100,7 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-engine-equipment",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-e[vehicle-engine]",
+    order = "v[vehicle-equipment]-e[vehicle-motor-2]",
     stack_size = 50,
     default_request_amount = 10,
     drop_sound = {
