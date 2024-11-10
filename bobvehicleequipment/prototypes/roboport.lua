@@ -9,6 +9,18 @@ data:extend({
     order = "e[robotics]-f[roboport-1]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -21,6 +33,18 @@ data:extend({
     order = "e[robotics]-f[roboport-2]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -33,6 +57,18 @@ data:extend({
     order = "e[robotics]-f[roboport-3]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -45,6 +81,18 @@ data:extend({
     order = "e[robotics]-f[roboport-4]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -420,6 +468,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -438,6 +498,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -456,6 +528,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -474,6 +558,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -493,6 +589,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -511,6 +619,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -529,6 +649,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -547,6 +679,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -566,6 +710,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -584,6 +740,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -602,6 +770,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -620,6 +800,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
