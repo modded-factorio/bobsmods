@@ -6,7 +6,7 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-1",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-1]",
+    order = "e[robotics]-f[roboport-1]",
     stack_size = 50,
     default_request_amount = 10,
   },
@@ -18,7 +18,7 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-2",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-2]",
+    order = "e[robotics]-f[roboport-2]",
     stack_size = 50,
     default_request_amount = 10,
   },
@@ -30,7 +30,7 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-3",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-3]",
+    order = "e[robotics]-f[roboport-3]",
     stack_size = 50,
     default_request_amount = 10,
   },
@@ -42,7 +42,7 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-4",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-4]",
+    order = "e[robotics]-f[roboport-4]",
     stack_size = 50,
     default_request_amount = 10,
   },
@@ -124,7 +124,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "35MJ",
-      input_flow_limit = "3500KW",
+      input_flow_limit = "3500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1000kW",
@@ -168,7 +168,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "75MJ",
-      input_flow_limit = "7500KW",
+      input_flow_limit = "7500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1500kW",
@@ -212,7 +212,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "135MJ",
-      input_flow_limit = "13500KW",
+      input_flow_limit = "13500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",
@@ -255,7 +255,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "215MJ",
-      input_flow_limit = "21500KW",
+      input_flow_limit = "21500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2500kW",
@@ -409,12 +409,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-1]",
@@ -426,12 +427,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment-2",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-2]",
@@ -443,12 +445,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment-3",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-3]",
@@ -460,12 +463,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-antenna-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-antenna-equipment-4",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-4]",
@@ -478,12 +482,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-1]",
@@ -495,12 +500,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment-2",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-2]",
@@ -512,12 +518,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment-3",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-3]",
@@ -529,12 +536,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/roboport-chargepad-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-chargepad-equipment-4",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-4]",
@@ -547,12 +555,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-1.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-1]",
@@ -564,12 +573,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment-2",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-2]",
@@ -581,12 +591,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment-3",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-3]",
@@ -598,12 +609,13 @@ data:extend({
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobvehicleequipment__/graphics/icons/construction-robot-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "vehicle-roboport-robot-equipment-4",
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-4]",
@@ -628,7 +640,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "100kJ",
-      input_flow_limit = "20KW",
+      input_flow_limit = "20kW",
       drain = "10kW",
       usage_priority = "secondary-input",
     },
@@ -672,7 +684,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "150kJ",
-      input_flow_limit = "30KW",
+      input_flow_limit = "30kW",
       drain = "15kW",
       usage_priority = "secondary-input",
     },
@@ -716,7 +728,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "200kJ",
-      input_flow_limit = "40KW",
+      input_flow_limit = "40kW",
       drain = "20kW",
       usage_priority = "secondary-input",
     },
@@ -760,7 +772,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "250kJ",
-      input_flow_limit = "50KW",
+      input_flow_limit = "50kW",
       drain = "25kW",
       usage_priority = "secondary-input",
     },
@@ -805,7 +817,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "35MJ",
-      input_flow_limit = "3500KW",
+      input_flow_limit = "3500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1000kW",
@@ -848,7 +860,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "75MJ",
-      input_flow_limit = "7500KW",
+      input_flow_limit = "7500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1500kW",
@@ -891,7 +903,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "135MJ",
-      input_flow_limit = "13500KW",
+      input_flow_limit = "13500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",
@@ -934,7 +946,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "215MJ",
-      input_flow_limit = "21500KW",
+      input_flow_limit = "21500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2500kW",
@@ -978,7 +990,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "50kJ",
-      input_flow_limit = "10KW",
+      input_flow_limit = "10kW",
       drain = "5kW",
       usage_priority = "secondary-input",
     },
@@ -1022,7 +1034,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "100kJ",
-      input_flow_limit = "20KW",
+      input_flow_limit = "20kW",
       drain = "10kW",
       usage_priority = "secondary-input",
     },
@@ -1066,7 +1078,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "150kJ",
-      input_flow_limit = "30KW",
+      input_flow_limit = "30kW",
       drain = "15kW",
       usage_priority = "secondary-input",
     },
@@ -1110,7 +1122,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "200kJ",
-      input_flow_limit = "40KW",
+      input_flow_limit = "40kW",
       drain = "20kW",
       usage_priority = "secondary-input",
     },
@@ -1289,7 +1301,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
@@ -1324,7 +1336,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
@@ -1360,7 +1372,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
@@ -1397,7 +1409,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
