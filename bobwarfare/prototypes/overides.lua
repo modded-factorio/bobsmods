@@ -31,3 +31,9 @@ data.raw.ammo["artillery-shell"].stack_size = 20
 data.raw.ammo["artillery-shell"].ammo_type.clamp_position = true
 
 data.raw["artillery-turret"]["artillery-turret"].ammo_stack_limit = 50
+
+--Make cannon shells only hit enemies, so tankotrons don't shoot their own legs and AAI Programmable Vehicles tanks don't hit each other
+data.raw.projectile["cannon-projectile"].force_condition = "enemy"
+data.raw.projectile["explosive-cannon-projectile"].force_condition = "enemy"
+data.raw.projectile["uranium-cannon-projectile"].force_condition = "enemy"
+data.raw.projectile["explosive-uranium-cannon-projectile"].force_condition = "enemy"
