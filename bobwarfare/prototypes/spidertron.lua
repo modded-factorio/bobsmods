@@ -272,6 +272,16 @@ data.raw["spider-vehicle"]["spidertron"].order = "b[personal-transport]-c[spider
 function bobmods.warfare.create_spidertron(arguments)
   local scale = arguments.scale
   local leg_scale = scale * arguments.leg_scale
+  local spidertron_leg_resistances = arguments.resistances or {}
+  if arguments.resistances then
+    for i, resistances in pairs(arguments.resistances) do
+      if resistances.type == "explosion" then
+        spidertron_leg_resistances[i] = { type = "explosion", percent = 100 }
+      end
+    end
+  else
+    spidertron_leg_resistances = {{ type = "explosion", percent = 100 }}
+  end
   data:extend({
     {
       type = "item-with-entity-data",
@@ -304,7 +314,7 @@ function bobmods.warfare.create_spidertron(arguments)
       icon_size = 64,
       collision_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
-      drawing_box = { { -3 * scale, -4 * scale }, { 3 * scale, 2 * scale } },
+      drawing_box_vertical_extension = 3 * scale,
       minable = { mining_time = 1, result = arguments.name },
 
       max_health = arguments.max_health or 3000,
@@ -316,13 +326,13 @@ function bobmods.warfare.create_spidertron(arguments)
       chunk_exploration_radius = arguments.chunk_exploration_radius or 3,
       energy_source = arguments.energy_source or { type = "void" },
       movement_energy_consumption = arguments.movement_energy_consumption or "250kW",
-      chain_shooting_cooldown_modifier = arguments.chain_shooting_cooldown_modifier or 1,
+      chain_shooting_cooldown_modifier = arguments.chain_shooting_cooldown_modifier or 0.5,
       automatic_weapon_cycling = arguments.automatic_weapon_cycling,
       torso_rotation_speed = arguments.torso_rotation_speed or 0.005,
 
       flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
       mined_sound = { filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8 },
-      open_sound = { filename = "__base__/sound/spidertron/spidertron-door-open.ogg", volume = 0.35 },
+      open_sound = { filename = "__base__/sound/spidertron/spidertron-door-open.ogg", volume = 0.45 },
       close_sound = { filename = "__base__/sound/spidertron/spidertron-door-close.ogg", volume = 0.4 },
       sound_minimum_speed = 0.1,
       sound_scaling_ratio = 0.6,
@@ -340,6 +350,12 @@ function bobmods.warfare.create_spidertron(arguments)
           volume = 0.5,
         },
         match_speed_to_activity = true,
+        activity_to_speed_modifiers =
+        {
+          multiplier = 6.0,
+          minimum = 1.0,
+          offset = 0.93333333333
+        }
       },
       weight = 1,
       braking_force = 1,
@@ -350,21 +366,28 @@ function bobmods.warfare.create_spidertron(arguments)
         size = { 128, 128 },
         scale = 0.5,
       },
+      selected_minimap_representation =
+      {
+        filename = "__base__/graphics/entity/spidertron/spidertron-map-selected.png",
+        flags = {"icon"},
+        size = {128, 128},
+        scale = 0.5
+      },
       corpse = "spidertron-remnants",
       dying_explosion = "spidertron-explosion",
       energy_per_hit_point = 1,
       height = 1.5 * scale * leg_scale,
-      selection_priority = 51,
+      selection_priority = 60,
       graphics_set = spidertron_torso_graphics_set(scale),
     },
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 1),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 2),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 3),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 4),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 5),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 6),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 7),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 8),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 1, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 2, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 3, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 4, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 5, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 6, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 7, spidertron_leg_resistances),
+    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 8, spidertron_leg_resistances),
     {
       type = "equipment-grid",
       name = arguments.name .. "-equipment-grid",
@@ -534,8 +557,8 @@ data:extend({
       ammo_category = "cannon-shell",
       cooldown = 90,
       movement_slow_down_factor = 0,
-      projectile_creation_distance = 0.5,
-      projectile_center = { -0.25, 0.5 },
+      projectile_creation_distance = 0,
+      projectile_center = { 0, 1.5 },
       range = 25,
       damage_modifier = 1.5,
       sound = {
@@ -561,8 +584,8 @@ data:extend({
       ammo_category = "cannon-shell",
       cooldown = 90,
       movement_slow_down_factor = 0,
-      projectile_creation_distance = 0.5,
-      projectile_center = { 0.25, 0.5 },
+      projectile_creation_distance = 0,
+      projectile_center = { 0, 1.5 },
       range = 25,
       damage_modifier = 1.5,
       sound = {
