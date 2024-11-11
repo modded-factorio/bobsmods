@@ -140,5 +140,7 @@ data:extend({
     name = "bobmods-logistics-highpipes",
     setting_type = "startup",
     default_value = false,
+    hidden = true,
+    forced_value = false
   },
 })
