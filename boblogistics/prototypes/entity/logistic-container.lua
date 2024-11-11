@@ -4,7 +4,6 @@ function bobmods.logistics.logistic_container(inputs)
     type = "logistic-container",
     name = inputs.name,
     icons = inputs.icons,
-    icon_size = inputs.icon_size or 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.max_health or 150,
