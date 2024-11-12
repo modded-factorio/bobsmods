@@ -136,8 +136,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "50kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -193,8 +193,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "90kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -250,8 +250,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "140kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -306,8 +306,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "175kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -363,329 +363,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "50kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
-      --[[
-      animation =
-      {
-        north =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-n.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-n.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-n.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-n.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-        east =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-e.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-e.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-e.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-e.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-        south =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-s.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-s.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-s.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-s.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-        west =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-w.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-w.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-w.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-w.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-      },
-
-      working_visualisations =
-      {
-        {
-          north_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-n.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-e.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-s.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-w.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-        },
-        {
-          apply_recipe_tint = "primary",
-          north_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-n.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-e.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-s.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-w.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-        },
-        {
-          north_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-n.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-e.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-s.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-w.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-        },
-      },
-]]
-      --
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -741,8 +420,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "90kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -798,8 +477,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "140kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 
@@ -854,8 +533,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "175kW",
-    graphics_set = fluid_pump_graphics_set,
-    graphics_set_flipped = fluid_pump_graphics_set_flipped,
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
     impact_category = "metal",
   },
 })
