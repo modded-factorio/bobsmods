@@ -3,7 +3,7 @@ local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
     layers = {
       -- Base
       {
-        filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
+        filename = directory .. "/electrolyser-" .. tier .. "-base.png",
         x = 272 * facing,
         width = 272,
         height = 260,
@@ -13,7 +13,7 @@ local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
       },
       -- Mask
       {
-        filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
+        filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
         x = 272 * facing,
         width = 272,
         height = 260,
@@ -24,7 +24,7 @@ local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
       },
       -- Highlights
       {
-        filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
+        filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
         x = 272 * facing,
         width = 272,
         height = 260,
@@ -35,7 +35,7 @@ local function bob_electrolyser_animation_facing(directory, tier, tint, facing)
       },
       -- Shadow
       {
-        filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
+        filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
         x = 272 * facing,
         width = 272,
         height = 260,
@@ -445,7 +445,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
             priority = "high",
             width = 60,
             height = 56,
@@ -458,7 +458,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
             priority = "high",
             width = 37,
             height = 25,
@@ -657,7 +657,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
             priority = "high",
             width = 60,
             height = 56,
@@ -670,7 +670,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
             priority = "high",
             width = 37,
             height = 25,
@@ -682,7 +682,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
             priority = "high",
             width = 23,
             height = 15,
