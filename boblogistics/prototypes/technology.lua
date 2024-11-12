@@ -122,7 +122,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         },
       },
       prerequisites = {
-        "advanced-electronics",
+        "advanced-circuit",
         "automated-rail-transportation",
       },
       unit = {
@@ -153,7 +153,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
       prerequisites = {
         "bob-railway-2",
-        "advanced-electronics-2",
+        "processing-unit",
       },
       unit = {
         count = 100,
@@ -215,7 +215,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
       prerequisites = {
         "bob-armoured-railway",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {
@@ -711,28 +711,28 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-passive-provider-2",
+        recipe = "passive-provider-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-active-provider-2",
+        recipe = "active-provider-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-storage-2",
+        recipe = "storage-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-requester-2",
+        recipe = "requester-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-buffer-2",
+        recipe = "buffer-chest-2",
       },
     },
     prerequisites = {
       "logistic-system",
-      "advanced-electronics-2",
+      "processing-unit",
       "utility-science-pack",
     },
     unit = {
@@ -755,23 +755,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-passive-provider-3",
+        recipe = "passive-provider-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-active-provider-3",
+        recipe = "active-provider-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-storage-3",
+        recipe = "storage-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-requester-3",
+        recipe = "requester-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-buffer-3",
+        recipe = "buffer-chest-3",
       },
     },
     prerequisites = {
@@ -846,7 +846,7 @@ data:extend({
     },
     prerequisites = {
       "logistics-3",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     unit = {

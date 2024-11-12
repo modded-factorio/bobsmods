@@ -1,4 +1,4 @@
-bobmods.lib.tech.remove_prerequisite("effect-transmission", "advanced-electronics-2")
+bobmods.lib.tech.remove_prerequisite("effect-transmission", "processing-unit")
 
 if data.raw.item["aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("beacon-2", "steel-plate", "aluminium-plate")

@@ -1,4 +1,4 @@
-data.raw.item["fusion-reactor-equipment"].order = "a[energy-source]-b[fusion-reactor-1]"
+data.raw.item["fission-reactor-equipment"].order = "a[energy-source]-b[fission-reactor-1]"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a[night-vision-equipment-1]"
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a[solar-panel-1]"
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[personal-laser-defense-equipment-1]"
@@ -109,39 +109,39 @@ data:extend({
   },
 })
 
-data.raw.item["fusion-reactor-equipment"].icon =
-  "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-1.png"
-data.raw.item["fusion-reactor-equipment"].icon_size = 128
+data.raw.item["fission-reactor-equipment"].icon =
+  "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png"
+data.raw.item["fission-reactor-equipment"].icon_size = 128
 
 data:extend({
   {
     type = "item",
-    name = "fusion-reactor-equipment-2",
-    icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-2.png",
+    name = "fission-reactor-equipment-2",
+    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
     icon_size = 128,
-    place_as_equipment_result = "fusion-reactor-equipment-2",
+    place_as_equipment_result = "fission-reactor-equipment-2",
     subgroup = "equipment",
-    order = "a[energy-source]-b[fusion-reactor-2]",
+    order = "a[energy-source]-b[fission-reactor-2]",
     stack_size = 20,
   },
   {
     type = "item",
-    name = "fusion-reactor-equipment-3",
-    icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-3.png",
+    name = "fission-reactor-equipment-3",
+    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
     icon_size = 128,
-    place_as_equipment_result = "fusion-reactor-equipment-3",
+    place_as_equipment_result = "fission-reactor-equipment-3",
     subgroup = "equipment",
-    order = "a[energy-source]-b[fusion-reactor-3]",
+    order = "a[energy-source]-b[fission-reactor-3]",
     stack_size = 20,
   },
   {
     type = "item",
-    name = "fusion-reactor-equipment-4",
-    icon = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-4.png",
+    name = "fission-reactor-equipment-4",
+    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
     icon_size = 128,
-    place_as_equipment_result = "fusion-reactor-equipment-4",
+    place_as_equipment_result = "fission-reactor-equipment-4",
     subgroup = "equipment",
-    order = "a[energy-source]-b[fusion-reactor-4]",
+    order = "a[energy-source]-b[fission-reactor-4]",
     stack_size = 20,
   },
 

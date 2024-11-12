@@ -351,8 +351,8 @@ data:extend({
   },
 })
 
-data.raw["generator-equipment"]["fusion-reactor-equipment"].sprite = {
-  filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-1.png",
+data.raw["generator-equipment"]["fission-reactor-equipment"].sprite = {
+  filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",
   width = 128,
   height = 128,
   priority = "medium",
@@ -361,9 +361,9 @@ data.raw["generator-equipment"]["fusion-reactor-equipment"].sprite = {
 data:extend({
   {
     type = "generator-equipment",
-    name = "fusion-reactor-equipment-2",
+    name = "fission-reactor-equipment-2",
     sprite = {
-      filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-2.png",
+      filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -382,9 +382,9 @@ data:extend({
   },
   {
     type = "generator-equipment",
-    name = "fusion-reactor-equipment-3",
+    name = "fission-reactor-equipment-3",
     sprite = {
-      filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-3.png",
+      filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -403,9 +403,9 @@ data:extend({
   },
   {
     type = "generator-equipment",
-    name = "fusion-reactor-equipment-4",
+    name = "fission-reactor-equipment-4",
     sprite = {
-      filename = "__bobequipment__/graphics/icons/technology/fusion-reactor-equipment-4.png",
+      filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
       width = 128,
       height = 128,
       priority = "medium",

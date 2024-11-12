@@ -62,7 +62,7 @@ data:extend({
     prerequisites = {
       "radars-2",
       "military-3",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     effects = {
       {
@@ -90,7 +90,7 @@ data:extend({
     prerequisites = {
       "radars-3",
       "production-science-pack",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     effects = {
       {

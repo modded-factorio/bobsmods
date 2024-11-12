@@ -1,0 +1,26 @@
+{
+  "item":
+  [
+    ["fusion-reactor-equipment-2", "fission-reactor-equipment-2"],
+    ["fusion-reactor-equipment-3", "fission-reactor-equipment-3"],
+    ["fusion-reactor-equipment-4", "fission-reactor-equipment-4"]
+ ],
+  "equipment":
+  [
+    ["fusion-reactor-equipment-2", "fission-reactor-equipment-2"],
+    ["fusion-reactor-equipment-3", "fission-reactor-equipment-3"],
+    ["fusion-reactor-equipment-4", "fission-reactor-equipment-4"]
+ ],
+  "recipe":
+  [
+    ["fusion-reactor-equipment-2", "fission-reactor-equipment-2"],
+    ["fusion-reactor-equipment-3", "fission-reactor-equipment-3"],
+    ["fusion-reactor-equipment-4", "fission-reactor-equipment-4"]
+  ],
+  "technology":
+  [
+    ["fusion-reactor-equipment-2", "fission-reactor-equipment-2"],
+    ["fusion-reactor-equipment-3", "fission-reactor-equipment-3"],
+    ["fusion-reactor-equipment-4", "fission-reactor-equipment-4"]
+  ]
+}

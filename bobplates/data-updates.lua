@@ -213,7 +213,7 @@ if settings.startup["bobmods-plates-vanillabarrelling"].value == true then
 end
 
 bobmods.lib.tech.add_prerequisite("cliff-explosives", "fluid-barrel-processing")
-bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "empty-barrel")
+bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("ground-water", "water")

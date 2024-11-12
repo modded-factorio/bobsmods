@@ -45,14 +45,14 @@ for index, force in pairs(game.forces) do
     end
   end
 
-  if force.technologies["advanced-electronics"].researched then
+  if force.technologies["advanced-circuit"].researched then
     force.recipes["electronic-components"].enabled = true
     force.recipes["phenolic-board"].enabled = true
     force.recipes["circuit-board"].enabled = true
     force.recipes["advanced-circuit"].enabled = true
   end
 
-  if force.technologies["advanced-electronics-2"].researched then
+  if force.technologies["processing-unit"].researched then
     force.recipes["intergrated-electronics"].enabled = true
     force.recipes["fibreglass-board"].enabled = true
     force.recipes["superior-circuit-board"].enabled = true

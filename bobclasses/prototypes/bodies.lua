@@ -380,7 +380,7 @@ data:extend({
     },
     prerequisites = {
       "robotics",
-      "advanced-electronics",
+      "advanced-circuit",
       "automation-2",
     },
     unit = {
@@ -540,7 +540,7 @@ data:extend({
     prerequisites = {
       "bodies",
       "production-science-pack",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     unit = {
       count = 250,

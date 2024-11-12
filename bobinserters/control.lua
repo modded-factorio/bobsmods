@@ -968,7 +968,7 @@ function bobmods.logistics.set_positions(entity, player_index)
   end
 
   if
-    entity.type ~= "entity-ghost"
+    not game.players[player_index].is_cursor_blueprint()
     and storage.bobmods.logistics[player_index].enabled2
     and remote.interfaces.bobinserters
   then
@@ -979,19 +979,20 @@ function bobmods.logistics.set_positions(entity, player_index)
     local drop_offset =
       remote.call("bobinserters", "get_offset", { position = storage.bobmods.logistics[player_index].offset })
 
-    if entity.direction == defines.direction.north then
+    -- treat south as up, because inserters are backwards.
+    if entity.direction == defines.direction.south then
       pickup_position = pickup_position
       drop_position = drop_position
       drop_offset = drop_offset
-    elseif entity.direction == defines.direction.east then
+    elseif entity.direction == defines.direction.west then
       pickup_position = { x = -pickup_position.y, y = pickup_position.x }
       drop_position = { x = -drop_position.y, y = drop_position.x }
       drop_offset = { x = -drop_offset.y, y = drop_offset.x }
-    elseif entity.direction == defines.direction.south then
+    elseif entity.direction == defines.direction.north then
       pickup_position = { x = -pickup_position.x, y = -pickup_position.y }
       drop_position = { x = -drop_position.x, y = -drop_position.y }
       drop_offset = { x = -drop_offset.x, y = -drop_offset.y }
-    elseif entity.direction == defines.direction.west then
+    elseif entity.direction == defines.direction.east then
       pickup_position = { x = pickup_position.y, y = -pickup_position.x }
       drop_position = { x = drop_position.y, y = -drop_position.x }
       drop_offset = { x = drop_offset.y, y = -drop_offset.x }

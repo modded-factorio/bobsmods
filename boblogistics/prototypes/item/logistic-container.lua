@@ -1,13 +1,13 @@
-data.raw.item["logistic-chest-passive-provider"].order = "b[storage]-[logistic-chest-passive-provider-1]"
-data.raw.item["logistic-chest-active-provider"].order = "b[storage]-[logistic-chest-active-provider-1]"
-data.raw.item["logistic-chest-storage"].order = "b[storage]-[logistic-chest-storage-1]"
-data.raw.item["logistic-chest-buffer"].order = "b[storage]-[logistic-chest-buffer-1]"
-data.raw.item["logistic-chest-requester"].order = "b[storage]-[logistic-chest-requester-1]"
+data.raw.item["passive-provider-chest"].order = "b[storage]-[passive-provider-chest-1]"
+data.raw.item["active-provider-chest"].order = "b[storage]-[active-provider-chest-1]"
+data.raw.item["storage-chest"].order = "b[storage]-[storage-chest-1]"
+data.raw.item["buffer-chest"].order = "b[storage]-[buffer-chest-1]"
+data.raw.item["requester-chest"].order = "b[storage]-[requester-chest-1]"
 
 data:extend({
   {
     type = "item",
-    name = "logistic-chest-passive-provider-2",
+    name = "passive-provider-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -22,13 +22,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-2",
-    order = "b[storage]-[logistic-chest-passive-provider-2]",
-    place_result = "logistic-chest-passive-provider-2",
+    order = "b[storage]-[passive-provider-chest-2]",
+    place_result = "passive-provider-chest-2",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-active-provider-2",
+    name = "active-provider-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -43,13 +43,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-2",
-    order = "b[storage]-[logistic-chest-active-provider-2]",
-    place_result = "logistic-chest-active-provider-2",
+    order = "b[storage]-[active-provider-chest-2]",
+    place_result = "active-provider-chest-2",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-storage-2",
+    name = "storage-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -64,13 +64,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-2",
-    order = "b[storage]-[logistic-chest-storage-2]",
-    place_result = "logistic-chest-storage-2",
+    order = "b[storage]-[storage-chest-2]",
+    place_result = "storage-chest-2",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-buffer-2",
+    name = "buffer-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -85,13 +85,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-2",
-    order = "b[storage]-[logistic-chest-buffer-2]",
-    place_result = "logistic-chest-buffer-2",
+    order = "b[storage]-[buffer-chest-2]",
+    place_result = "buffer-chest-2",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-requester-2",
+    name = "requester-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -106,8 +106,8 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-2",
-    order = "b[storage]-[logistic-chest-requester-2]",
-    place_result = "logistic-chest-requester-2",
+    order = "b[storage]-[requester-chest-2]",
+    place_result = "requester-chest-2",
     stack_size = 50,
   },
 })
@@ -115,7 +115,7 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "logistic-chest-passive-provider-3",
+    name = "passive-provider-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -130,13 +130,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-3",
-    order = "b[storage]-[logistic-chest-passive-provider-3]",
-    place_result = "logistic-chest-passive-provider-3",
+    order = "b[storage]-[passive-provider-chest-3]",
+    place_result = "passive-provider-chest-3",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-active-provider-3",
+    name = "active-provider-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -151,13 +151,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-3",
-    order = "b[storage]-[logistic-chest-active-provider-3]",
-    place_result = "logistic-chest-active-provider-3",
+    order = "b[storage]-[active-provider-chest-3]",
+    place_result = "active-provider-chest-3",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-storage-3",
+    name = "storage-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -172,13 +172,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-3",
-    order = "b[storage]-[logistic-chest-storage-3]",
-    place_result = "logistic-chest-storage-3",
+    order = "b[storage]-[storage-chest-3]",
+    place_result = "storage-chest-3",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-buffer-3",
+    name = "buffer-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -193,13 +193,13 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-3",
-    order = "b[storage]-[logistic-chest-buffer-3]",
-    place_result = "logistic-chest-buffer-3",
+    order = "b[storage]-[buffer-chest-3]",
+    place_result = "buffer-chest-3",
     stack_size = 50,
   },
   {
     type = "item",
-    name = "logistic-chest-requester-3",
+    name = "requester-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -214,8 +214,8 @@ data:extend({
     },
     icon_size = 32,
     subgroup = "logistic-chests-3",
-    order = "b[storage]-[logistic-chest-requester-3]",
-    place_result = "logistic-chest-requester-3",
+    order = "b[storage]-[requester-chest-3]",
+    place_result = "requester-chest-3",
     stack_size = 50,
   },
 })

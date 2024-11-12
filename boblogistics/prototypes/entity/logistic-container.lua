@@ -110,40 +110,40 @@ function bobmods.logistics.logistic_container_3_picture(tint)
   }
 end
 
-data.raw["logistic-container"]["logistic-chest-passive-provider"].next_upgrade = "logistic-chest-passive-provider-2"
-data.raw["logistic-container"]["logistic-chest-active-provider"].next_upgrade = "logistic-chest-active-provider-2"
-data.raw["logistic-container"]["logistic-chest-storage"].next_upgrade = "logistic-chest-storage-2"
-data.raw["logistic-container"]["logistic-chest-buffer"].next_upgrade = "logistic-chest-buffer-2"
-data.raw["logistic-container"]["logistic-chest-requester"].next_upgrade = "logistic-chest-requester-2"
+data.raw["logistic-container"]["passive-provider-chest"].next_upgrade = "passive-provider-chest-2"
+data.raw["logistic-container"]["active-provider-chest"].next_upgrade = "active-provider-chest-2"
+data.raw["logistic-container"]["storage-chest"].next_upgrade = "storage-chest-2"
+data.raw["logistic-container"]["buffer-chest"].next_upgrade = "buffer-chest-2"
+data.raw["logistic-container"]["requester-chest"].next_upgrade = "requester-chest-2"
 
 data:extend({
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-passive-provider-2",
-    icons = data.raw.item["logistic-chest-passive-provider-2"].icons,
+    name = "passive-provider-chest-2",
+    icons = data.raw.item["passive-provider-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
     logistic_mode = "passive-provider",
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.9, g = 0.2, b = 0.1, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-passive-provider-3",
+    next_upgrade = "passive-provider-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-active-provider-2",
-    icons = data.raw.item["logistic-chest-active-provider-2"].icons,
+    name = "active-provider-chest-2",
+    icons = data.raw.item["active-provider-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
     logistic_mode = "active-provider",
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.7, g = 0.1, b = 0.9, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-active-provider-3",
+    next_upgrade = "active-provider-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-storage-2",
-    icons = data.raw.item["logistic-chest-storage-2"].icons,
+    name = "storage-chest-2",
+    icons = data.raw.item["storage-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
@@ -151,12 +151,12 @@ data:extend({
     logistic_slots_count = 1,
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.9, g = 0.75, b = 0.1, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-storage-3",
+    next_upgrade = "storage-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-buffer-2",
-    icons = data.raw.item["logistic-chest-buffer-2"].icons,
+    name = "buffer-chest-2",
+    icons = data.raw.item["buffer-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
@@ -164,12 +164,12 @@ data:extend({
     logistic_slots_count = 18,
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.2, g = 0.9, b = 0.1, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-buffer-3",
+    next_upgrade = "buffer-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-requester-2",
-    icons = data.raw.item["logistic-chest-requester-2"].icons,
+    name = "requester-chest-2",
+    icons = data.raw.item["requester-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
@@ -177,14 +177,14 @@ data:extend({
     logistic_slots_count = 18,
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.1, g = 0.4, b = 0.9, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-requester-3",
+    next_upgrade = "requester-chest-3",
   }),
 })
 
 data:extend({
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-passive-provider-3",
-    icons = data.raw.item["logistic-chest-passive-provider-3"].icons,
+    name = "passive-provider-chest-3",
+    icons = data.raw.item["passive-provider-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -194,8 +194,8 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-active-provider-3",
-    icons = data.raw.item["logistic-chest-active-provider-3"].icons,
+    name = "active-provider-chest-3",
+    icons = data.raw.item["active-provider-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -205,8 +205,8 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-storage-3",
-    icons = data.raw.item["logistic-chest-storage-3"].icons,
+    name = "storage-chest-3",
+    icons = data.raw.item["storage-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -217,8 +217,8 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-buffer-3",
-    icons = data.raw.item["logistic-chest-buffer-3"].icons,
+    name = "buffer-chest-3",
+    icons = data.raw.item["buffer-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -229,8 +229,8 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-requester-3",
-    icons = data.raw.item["logistic-chest-requester-3"].icons,
+    name = "requester-chest-3",
+    icons = data.raw.item["requester-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,

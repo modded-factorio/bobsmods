@@ -1,8 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.3
+Date: ???
+  Changes:
+    - Added German locale (thanks TehFocus!) #202
+---------------------------------------------------------------------------------------------------
+Version: 1.3.2
+Date: 29. 10. 2024
+  Bugfixes:
+    - Fixed inserters being placemend backwards with configuration mode enabled #201
+---------------------------------------------------------------------------------------------------
 Version: 1.3.1
 Date: 28. 10. 2024
   Bugfixes:
-    - Fixed inserter placement with configuration mode enabled #201    
+    - Fixed inserter placement with configuration mode enabled #201
     - Fixed crash when opening inserter preview #204
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
