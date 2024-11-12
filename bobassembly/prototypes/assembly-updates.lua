@@ -1,3 +1,8 @@
+local aailoaderssize = false
+if mods["aai-loaders"] and settings.startup["aai-loaders-fit-assemblers"].value == true then
+  aailoaderssize = true
+end
+
 data.raw.technology["automation-2"].prerequisites = { "automation", "electronics" }
 bobmods.lib.tech.add_prerequisite("automation-2", "steel-processing")
 bobmods.lib.tech.add_prerequisite("automation-2", "logistic-science-pack")
@@ -119,6 +124,7 @@ end
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("assembling-machine-5", "processing-unit", "advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("automation-5", "advanced-electronics-3")
+  bobmods.lib.recipe.replace_ingredient("assembling-machine-6", "processing-unit", "advanced-processing-unit")
 end
 
 if settings.startup["bobmods-assembly-limits"].value == true then
@@ -145,10 +151,11 @@ if settings.startup["bobmods-colorupdate"].value == true then
   table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
     filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
     priority = "high",
-    width = 142,
-    height = 113,
+    width = 214,
+    height = 237,
     repeat_count = 32,
-    shift = { 0.84, -0.09 },
+    shift = util.by_pixel(0, -0.75),
+    scale = 0.5,
     tint = { r = 0.7, g = 0.7, b = 0.1 },
   })
   data.raw.item["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/new-colors/assembling-machine-3.png"
@@ -159,10 +166,11 @@ if settings.startup["bobmods-colorupdate"].value == true then
   table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
     filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
     priority = "high",
-    width = 142,
-    height = 113,
+    width = 214,
+    height = 237,
     repeat_count = 32,
-    shift = { 0.84, -0.09 },
+    shift = util.by_pixel(0, -0.75),
+    scale = 0.5,
     tint = { r = 0.7, g = 0.2, b = 0.1 },
   })
 
@@ -171,59 +179,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-4"].icon =
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-4.png"
   data.raw["assembling-machine"]["assembling-machine-4"].icon_size = 32
-  data.raw["assembling-machine"]["assembling-machine-4"].graphics_set.animation = {
-    layers = {
-      {
-        filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2.png",
-        priority = "high",
-        width = 108,
-        height = 110,
-        frame_count = 32,
-        line_length = 8,
-        shift = util.by_pixel(0, 4),
-        hr_version = {
-          filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-2.png",
-          priority = "high",
-          width = 214,
-          height = 218,
-          frame_count = 32,
-          line_length = 8,
-          shift = util.by_pixel(0, 4),
-          scale = 0.5,
-        },
-      },
-      {
-        filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-        priority = "high",
-        width = 142,
-        height = 113,
-        repeat_count = 32,
-        shift = { 0.84, -0.09 },
-        tint = { r = 0.1, g = 0.5, b = 0.7 },
-      },
-      {
-        filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-shadow.png",
-        priority = "high",
-        width = 98,
-        height = 82,
-        frame_count = 32,
-        line_length = 8,
-        draw_as_shadow = true,
-        shift = util.by_pixel(12, 5),
-        hr_version = {
-          filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-2-shadow.png",
-          priority = "high",
-          width = 196,
-          height = 163,
-          frame_count = 32,
-          line_length = 8,
-          draw_as_shadow = true,
-          shift = util.by_pixel(12, 4.75),
-          scale = 0.5,
-        },
-      },
-    },
-  }
+  data.raw["assembling-machine"]["assembling-machine-4"].graphics_set.animation.layers[2].tint = { r = 0.1, g = 0.5, b = 0.7 }
 
   data.raw.item["assembling-machine-5"].icon = "__bobassembly__/graphics/icons/new-colors/assembling-machine-5.png"
   data.raw.item["assembling-machine-5"].icon_size = 32
@@ -232,4 +188,46 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw["assembling-machine"]["assembling-machine-5"].icon_size = 32
   data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[2].tint =
     { r = 0.7, g = 0.1, b = 0.7 }
+
+  if aailoaderssize == true then
+    data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[3].scale = 0.58
+    data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[3].scale = 0.58
+  end
+end
+
+if aailoaderssize == true then
+  data.raw["assembling-machine"]["assembling-machine-1"].graphics_set.animation.layers[1].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-1"].graphics_set.animation.layers[2].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[1].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[2].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[1].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[2].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-4"].graphics_set.animation.layers[1].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-4"].graphics_set.animation.layers[2].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-4"].graphics_set.animation.layers[3].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[1].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[2].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-5"].graphics_set.animation.layers[3].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-6"].graphics_set.animation.layers[1].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-6"].graphics_set.animation.layers[2].scale = 0.58
+  data.raw["assembling-machine"]["assembling-machine-6"].graphics_set.animation.layers[3].scale = 0.58
+  if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].value == true then
+    data.raw["assembling-machine"]["burner-assembling-machine"].graphics_set.animation.layers[1].scale = 0.38
+    data.raw["assembling-machine"]["burner-assembling-machine"].graphics_set.animation.layers[2].scale = 0.38
+    data.raw["assembling-machine"]["burner-assembling-machine"].graphics_set.animation.layers[3].scale = 0.38
+    data.raw["assembling-machine"]["steam-assembling-machine"].graphics_set.animation.layers[1].scale = 0.56
+    data.raw["assembling-machine"]["steam-assembling-machine"].graphics_set.animation.layers[2].scale = 0.56
+    data.raw["assembling-machine"]["steam-assembling-machine"].graphics_set.animation.layers[3].scale = 0.56
+  end
+  if settings.startup["bobmods-assembly-electronicmachines"].value == true then
+    data.raw["assembling-machine"]["electronics-machine-1"].graphics_set.animation.layers[1].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-1"].graphics_set.animation.layers[2].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-1"].graphics_set.animation.layers[3].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-2"].graphics_set.animation.layers[1].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-2"].graphics_set.animation.layers[2].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-2"].graphics_set.animation.layers[3].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-3"].graphics_set.animation.layers[1].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-3"].graphics_set.animation.layers[2].scale = 0.38
+    data.raw["assembling-machine"]["electronics-machine-3"].graphics_set.animation.layers[3].scale = 0.38
+  end
 end

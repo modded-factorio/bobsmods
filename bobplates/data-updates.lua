@@ -37,7 +37,7 @@ else
 end
 
 -- small storage tank recipe move.
-if data.raw["item-subgroup"]["bob-storage-tank"] then
+if mods["boblogistics"] then
   bobmods.lib.item.set_subgroup("bob-small-storage-tank", "bob-storage-tank")
   bobmods.lib.item.set_subgroup("bob-small-inline-storage-tank", "bob-storage-tank")
 end

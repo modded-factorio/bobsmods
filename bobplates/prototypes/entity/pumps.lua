@@ -1,3 +1,88 @@
+local fluid_pump_graphics_set = {
+  animation = {
+    north = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+    east = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 80,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+    south = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 160,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+    west = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 240,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+    },
+  }
+}
+
+local fluid_pump_graphics_set_flipped = {
+  animation = {
+    north = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { -1, 0 }
+    },
+    east = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 80,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { 0, -1 }
+    },
+    south = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 160,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { 1, 0 }
+    },
+    west = {
+      filename = "__bobplates__/graphics/entity/pump/pump.png",
+      y = 240,
+      width = 80,
+      height = 80,
+      frame_count = 8,
+      animation_speed = 0.5,
+      shift = { 0, 1 }
+    },
+  }
+}
+
+circuit_connector_definitions["fluid-pump"] = circuit_connector_definitions.create_vector(universal_connector_template,
+  {
+    { variation = 0, main_offset = util.by_pixel(3, 0), shadow_offset = util.by_pixel(9, 9), show_shadow = true },
+    { variation = 6, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(3, 0), shadow_offset = util.by_pixel(9, 9), show_shadow = true },
+    { variation = 6, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(0, 0), show_shadow = false }
+  }
+)
+
 data:extend({
   {
     type = "assembling-machine",
@@ -6,6 +91,8 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump" },
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     max_health = 150,
     crafting_categories = { "air-pump" },
     crafting_speed = 1,
@@ -31,62 +118,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "50kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -97,6 +149,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump-2" },
     max_health = 180,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "air-pump" },
     crafting_speed = 2,
     module_slots = 2,
@@ -121,62 +175,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "90kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -187,6 +206,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump-3" },
     max_health = 230,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "air-pump" },
     crafting_speed = 3.5,
     module_slots = 4,
@@ -211,62 +232,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "140kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -277,6 +263,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "air-pump-4" },
     max_health = 300,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "air-pump" },
     crafting_speed = 5,
     module_slots = 6,
@@ -300,62 +288,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "175kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -366,6 +319,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump" },
     max_health = 120,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 1,
     module_slots = 1,
@@ -390,383 +345,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "50kW",
-    graphics_set = {
-      --[[
-      animation =
-      {
-        north =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-n.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-n.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-n.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-n.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-        east =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-e.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-e.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-e.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-e.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-        south =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-s.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-s.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-s.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-s.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-        west =
-        {
-          layers =
-          {
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-w.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-base-mask-w.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              tint = {r = 0.9, g = 0.3, b = 0.1},
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-anim-w.png",
-              frame_count = 25,
-              width = 128,
-              height = 192,
-              line_length = 5,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-            {
-              filename = "__bobplates__/graphics/entity/pump/pump-window-w.png",
-              repeat_count = 25,
-              width = 128,
-              height = 192,
-              shift = util.by_pixel(0, 0),
-              animation_speed = 0.5,
-              scale = 0.5
-            },
-          },
-        },
-      },
-
-      working_visualisations =
-      {
-        {
-          north_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-n.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-e.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-s.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-anim-w.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-        },
-        {
-          apply_recipe_tint = "primary",
-          north_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-n.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-e.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-s.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-liquid-w.png",
-            frame_count = 25,
-            width = 128,
-            height = 192,
-            line_length = 5,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-        },
-        {
-          north_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-n.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-e.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-s.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__bobplates__/graphics/entity/pump/pump-window-w.png",
-            frame_count = 1,
-            width = 128,
-            height = 192,
-            shift = util.by_pixel(0, 0),
-            animation_speed = 0.5,
-            scale = 0.5
-          },
-        },
-      },
-]]
-      --
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -777,6 +376,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump-2" },
     max_health = 180,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 2,
     module_slots = 2,
@@ -801,62 +402,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "90kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -867,6 +433,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump-3" },
     max_health = 230,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 3.5,
     module_slots = 4,
@@ -891,62 +459,27 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "140kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 
   {
@@ -957,6 +490,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "water-pump-4" },
     max_health = 300,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["fluid-pump"],
     crafting_categories = { "water-pump", "barrelling" },
     crafting_speed = 5,
     module_slots = 6,
@@ -980,61 +515,26 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
+        volume = 1000
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0.5, -1.5 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        volume = 1000
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.4,
+      emissions_per_minute = { pollution = 0.4 },
     },
     energy_usage = "175kW",
-    graphics_set = {
-      animation = {
-        north = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        east = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 80,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        south = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 160,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-        west = {
-          filename = "__bobplates__/graphics/entity/pump/pump.png",
-          y = 240,
-          width = 80,
-          height = 80,
-          frame_count = 8,
-          animation_speed = 0.5,
-        },
-      },
-    },
+    graphics_set = util.table.deepcopy(fluid_pump_graphics_set),
+    graphics_set_flipped = util.table.deepcopy(fluid_pump_graphics_set_flipped),
+    impact_category = "metal",
   },
 })
