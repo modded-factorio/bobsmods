@@ -1,5 +1,5 @@
-bobmods.lib.recipe.remove_ingredient("logistic-chest-passive-provider", "advanced-circuit")
-bobmods.lib.recipe.remove_ingredient("logistic-chest-storage", "advanced-circuit")
+bobmods.lib.recipe.remove_ingredient("passive-provider-chest", "advanced-circuit")
+bobmods.lib.recipe.remove_ingredient("storage-chest", "advanced-circuit")
 
 if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
   bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { type = "item", name = "logistic-robot", amount = 1 })
@@ -351,12 +351,14 @@ for i, robot in ipairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) d
   if data.raw.item["rtg"] and data.raw.technology["rtg"] then
     bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "rtg", amount = 1 })
     bobmods.lib.tech.add_prerequisite("bob-robots-4", "rtg")
-  elseif data.raw.item["vehicle-fusion-cell-1"] and data.raw.technology["vehicle-fusion-cell-equipment-1"] then
-    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "vehicle-fusion-cell-1", amount = 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "vehicle-fusion-cell-equipment-1")
+  elseif
+    data.raw.item["vehicle-fission-cell-equipment-1"] and data.raw.technology["vehicle-fission-cell-equipment-1"]
+  then
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "vehicle-fission-cell-equipment-1")
   else
-    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "fusion-reactor-equipment", amount = 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "fusion-reactor-equipment")
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "fission-reactor-equipment", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "fission-reactor-equipment")
   end
 end
 

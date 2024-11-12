@@ -49,8 +49,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "electronics-with-fluid")
 
   data.raw.recipe["copper-cable"].category = "electronics"
-  data.raw.recipe["green-wire"].category = "electronics"
-  data.raw.recipe["red-wire"].category = "electronics"
 
   data.raw.recipe["electronic-circuit"].category = "electronics"
   data.raw.recipe["advanced-circuit"].category = "electronics"

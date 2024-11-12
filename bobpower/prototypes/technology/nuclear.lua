@@ -16,7 +16,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       },
       prerequisites = {
         "nuclear-power",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
         "bob-heat-pipe-3",
       },

@@ -23,7 +23,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       },
       prerequisites = {
         "solar-energy",
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       unit = {
@@ -61,7 +61,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       },
       prerequisites = {
         "bob-solar-energy-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {

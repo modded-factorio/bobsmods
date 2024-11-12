@@ -68,10 +68,10 @@ end
 data:extend({
   {
     type = "item",
-    name = "vehicle-big-turret-1",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-1.png",
+    name = "vehicle-big-turret-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-equipment-1.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-big-turret-1",
+    place_as_equipment_result = "vehicle-big-turret-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[big-turret]-1",
     stack_size = 50,
@@ -80,7 +80,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-big-turret-1",
+    name = "vehicle-big-turret-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -88,12 +88,12 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 20 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "vehicle-big-turret-1", amount = 1 } },
+    results = { { type = "item", name = "vehicle-big-turret-equipment-1", amount = 1 } },
   },
 
   bob_active_weapon_equipment({
-    name = "vehicle-big-turret-1",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-1.png",
+    name = "vehicle-big-turret-equipment-1",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-equipment-1.png",
     width = 4,
     height = 4,
     buffer_capacity = "2200kJ",
@@ -140,7 +140,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-big-turret-1",
+        recipe = "vehicle-big-turret-equipment-1",
       },
     },
   },
@@ -149,10 +149,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-big-turret-2",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-2.png",
+    name = "vehicle-big-turret-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-equipment-2.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-big-turret-2",
+    place_as_equipment_result = "vehicle-big-turret-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[big-turret]-2",
     stack_size = 50,
@@ -161,21 +161,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-big-turret-2",
+    name = "vehicle-big-turret-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-big-turret-1", amount = 1 },
+      { type = "item", name = "vehicle-big-turret-equipment-1", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "vehicle-big-turret-2", amount = 1 } },
+    results = { { type = "item", name = "vehicle-big-turret-equipment-2", amount = 1 } },
   },
 
   bob_active_weapon_equipment({
-    name = "vehicle-big-turret-2",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-2.png",
+    name = "vehicle-big-turret-equipment-2",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-equipment-2.png",
     width = 4,
     height = 4,
     buffer_capacity = "5200kJ",
@@ -220,7 +220,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-big-turret-2",
+        recipe = "vehicle-big-turret-equipment-2",
       },
     },
   },
@@ -229,10 +229,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-big-turret-3",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-3.png",
+    name = "vehicle-big-turret-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-equipment-3.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-big-turret-3",
+    place_as_equipment_result = "vehicle-big-turret-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[big-turret]-3",
     stack_size = 50,
@@ -241,21 +241,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-big-turret-3",
+    name = "vehicle-big-turret-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-big-turret-2", amount = 1 },
+      { type = "item", name = "vehicle-big-turret-equipment-2", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "vehicle-big-turret-3", amount = 1 } },
+    results = { { type = "item", name = "vehicle-big-turret-equipment-3", amount = 1 } },
   },
 
   bob_active_weapon_equipment({
-    name = "vehicle-big-turret-3",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-3.png",
+    name = "vehicle-big-turret-equipment-3",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-equipment-3.png",
     width = 4,
     height = 4,
     buffer_capacity = "9200kJ",
@@ -302,7 +302,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-big-turret-3",
+        recipe = "vehicle-big-turret-equipment-3",
       },
     },
   },
@@ -311,10 +311,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-big-turret-4",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-4.png",
+    name = "vehicle-big-turret-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-equipment-4.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-big-turret-4",
+    place_as_equipment_result = "vehicle-big-turret-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[big-turret]-4",
     stack_size = 50,
@@ -323,21 +323,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-big-turret-4",
+    name = "vehicle-big-turret-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-big-turret-3", amount = 1 },
+      { type = "item", name = "vehicle-big-turret-equipment-3", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "vehicle-big-turret-4", amount = 1 } },
+    results = { { type = "item", name = "vehicle-big-turret-equipment-4", amount = 1 } },
   },
 
   bob_active_weapon_equipment({
-    name = "vehicle-big-turret-4",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-4.png",
+    name = "vehicle-big-turret-equipment-4",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-equipment-4.png",
     width = 4,
     height = 4,
     buffer_capacity = "14200kJ",
@@ -383,7 +383,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-big-turret-4",
+        recipe = "vehicle-big-turret-equipment-4",
       },
     },
   },
@@ -392,10 +392,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-big-turret-5",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-5.png",
+    name = "vehicle-big-turret-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-equipment-5.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-big-turret-5",
+    place_as_equipment_result = "vehicle-big-turret-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[big-turret]-5",
     stack_size = 50,
@@ -404,21 +404,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-big-turret-5",
+    name = "vehicle-big-turret-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-big-turret-4", amount = 1 },
+      { type = "item", name = "vehicle-big-turret-equipment-4", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "vehicle-big-turret-5", amount = 1 } },
+    results = { { type = "item", name = "vehicle-big-turret-equipment-5", amount = 1 } },
   },
 
   bob_active_weapon_equipment({
-    name = "vehicle-big-turret-5",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-5.png",
+    name = "vehicle-big-turret-equipment-5",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-equipment-5.png",
     width = 4,
     height = 4,
     buffer_capacity = "20200kJ",
@@ -464,7 +464,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-big-turret-5",
+        recipe = "vehicle-big-turret-equipment-5",
       },
     },
   },
@@ -473,10 +473,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-big-turret-6",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-6.png",
+    name = "vehicle-big-turret-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-big-turret-equipment-6.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-big-turret-6",
+    place_as_equipment_result = "vehicle-big-turret-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[big-turret]-6",
     stack_size = 50,
@@ -485,21 +485,21 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-big-turret-6",
+    name = "vehicle-big-turret-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-big-turret-5", amount = 1 },
+      { type = "item", name = "vehicle-big-turret-equipment-5", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "vehicle-big-turret-6", amount = 1 } },
+    results = { { type = "item", name = "vehicle-big-turret-equipment-6", amount = 1 } },
   },
 
   bob_active_weapon_equipment({
-    name = "vehicle-big-turret-6",
-    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-6.png",
+    name = "vehicle-big-turret-equipment-6",
+    sprite = "__bobvehicleequipment__/graphics/equipment/vehicle-big-turret-equipment-6.png",
     width = 4,
     height = 4,
     buffer_capacity = "27200kJ",
@@ -545,7 +545,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-big-turret-6",
+        recipe = "vehicle-big-turret-equipment-6",
       },
     },
   },

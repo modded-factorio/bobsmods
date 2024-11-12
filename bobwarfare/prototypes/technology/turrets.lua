@@ -117,7 +117,7 @@ data:extend({
     order = "a-j-b-2",
     prerequisites = {
       "laser-turret",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     effects = {
       {
@@ -172,7 +172,7 @@ data:extend({
     order = "a-j-b-4",
     prerequisites = {
       "bob-laser-turrets-3",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     unit = {
@@ -344,7 +344,7 @@ data:extend({
     order = "a-j-c-2",
     prerequisites = {
       "bob-plasma-turrets-1",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     effects = {
       {
@@ -399,7 +399,7 @@ data:extend({
     order = "a-j-c-4",
     prerequisites = {
       "bob-plasma-turrets-3",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     unit = {

@@ -4,7 +4,7 @@ bobmods.lib.tech.add_prerequisite("automation-2", "logistic-science-pack")
 
 data.raw.technology["automation-3"].prerequisites = {
   "automation-2",
-  "advanced-electronics",
+  "advanced-circuit",
   "chemical-science-pack",
 }
 bobmods.lib.tech.set_science_pack_count("automation-3", 60)

@@ -38,7 +38,7 @@ data:extend({
   {
     type = "item",
     name = "player-power-core",
-    icon = "__bobclasses__/icons/bodies/fusion-core.png",
+    icon = "__bobclasses__/icons/bodies/fission-core.png",
     icon_size = 128,
     subgroup = "body-parts",
     order = "a[player]-power-core",

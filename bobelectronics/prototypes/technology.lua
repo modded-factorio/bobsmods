@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics-3.png",
     icon_size = 128,
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {

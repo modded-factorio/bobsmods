@@ -63,7 +63,7 @@ data:extend({
     order = "g-g-g",
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     effects = {
       {

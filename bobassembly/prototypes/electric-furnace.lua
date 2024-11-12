@@ -255,7 +255,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       order = "c-c-c",
       prerequisites = {
         "advanced-material-processing-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {
