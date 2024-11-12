@@ -49,7 +49,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     return {
       layers = {
         {
-          filename = "__bobassembly__/graphics/entity/chemical-plant/hr-chemical-plant.png",
+          filename = "__bobassembly__/graphics/entity/chemical-plant/chemical-plant.png",
           width = 220,
           height = 292,
           y = offset * 584,
@@ -59,7 +59,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
           scale = 0.5,
         },
         {
-          filename = "__bobassembly__/graphics/entity/chemical-plant/hr-chemical-plant-mask.png",
+          filename = "__bobassembly__/graphics/entity/chemical-plant/chemical-plant-mask.png",
           width = 220,
           height = 292,
           y = offset * 584,
@@ -70,7 +70,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
           scale = 0.5,
         },
         {
-          filename = "__bobassembly__/graphics/entity/chemical-plant/hr-chemical-plant-highlights.png",
+          filename = "__bobassembly__/graphics/entity/chemical-plant/chemical-plant-highlights.png",
           width = 220,
           height = 292,
           y = offset * 584,
@@ -81,7 +81,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
           scale = 0.5,
         },
         {
-          filename = "__bobassembly__/graphics/entity/chemical-plant/hr-chemical-plant-shadow.png",
+          filename = "__bobassembly__/graphics/entity/chemical-plant/chemical-plant-shadow.png",
           width = 312,
           height = 222,
           x = offset * 312,

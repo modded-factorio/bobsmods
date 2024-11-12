@@ -70,7 +70,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         animation = {
           layers = {
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-1.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1.png",
               priority = "high",
               width = 214,
               height = 226,
@@ -80,7 +80,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
               scale = 1 / 3,
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
               priority = "high",
               width = 214,
               height = 237,
@@ -89,7 +89,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
               tint = { r = 0.2, g = 0.2, b = 0.2 },
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-1-shadow.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1-shadow.png",
               priority = "high",
               width = 190,
               height = 165,
@@ -223,7 +223,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         animation = {
           layers = {
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-1.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1.png",
               priority = "high",
               width = 214,
               height = 226,
@@ -233,7 +233,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
               scale = 0.5,
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
               priority = "high",
               width = 214,
               height = 237,
@@ -243,7 +243,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
               tint = { r = 1, g = 1, b = 1 },
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-1-shadow.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1-shadow.png",
               priority = "high",
               width = 190,
               height = 165,

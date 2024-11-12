@@ -82,7 +82,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-2.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2.png",
             priority = "high",
             width = 214,
             height = 218,
@@ -92,7 +92,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
             priority = "high",
             width = 214,
             height = 237,
@@ -102,7 +102,7 @@ data:extend({
             tint = { r = 0.65, g = 0.4, b = 0.75 },
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-2-shadow.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-shadow.png",
             priority = "high",
             width = 196,
             height = 163,
@@ -279,7 +279,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-3.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3.png",
             priority = "high",
             width = 214,
             height = 237,
@@ -289,7 +289,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
             priority = "high",
             width = 214,
             height = 237,
@@ -299,7 +299,7 @@ data:extend({
             tint = { r = 0.7, g = 0.2, b = 0.1 },
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-3-shadow.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3-shadow.png",
             priority = "high",
             width = 260,
             height = 162,
@@ -458,7 +458,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-3.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3.png",
             priority = "high",
             width = 214,
             height = 237,
@@ -468,7 +468,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
             priority = "high",
             width = 214,
             height = 237,
@@ -478,7 +478,7 @@ data:extend({
             tint = { r = 0.1, g = 0.7, b = 0.1 },
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-3-shadow.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3-shadow.png",
             priority = "high",
             width = 260,
             height = 162,

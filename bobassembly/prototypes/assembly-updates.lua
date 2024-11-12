@@ -149,7 +149,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-2.png"
   data.raw["assembling-machine"]["assembling-machine-2"].icon_size = 32
   table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
-    filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
     priority = "high",
     width = 214,
     height = 237,
@@ -164,7 +164,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
     "__bobassembly__/graphics/icons/new-colors/assembling-machine-3.png"
   data.raw["assembling-machine"]["assembling-machine-3"].icon_size = 32
   table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
-    filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
     priority = "high",
     width = 214,
     height = 237,

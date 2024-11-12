@@ -49,7 +49,7 @@ then
       layers = {
         -- Base
         {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
+          filename = directory .. "/electrolyser-" .. tier .. "-base.png",
           x = 272 * facing,
           width = 272,
           height = 260,
@@ -59,7 +59,7 @@ then
         },
         -- Mask
         {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
+          filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
           x = 272 * facing,
           width = 272,
           height = 260,
@@ -70,7 +70,7 @@ then
         },
         -- Highlights
         {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
+          filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
           x = 272 * facing,
           width = 272,
           height = 260,
@@ -81,7 +81,7 @@ then
         },
         -- Shadow
         {
-          filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
+          filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
           x = 272 * facing,
           width = 272,
           height = 260,

@@ -10,7 +10,7 @@ then
     return {
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
           priority = "high",
           width = 60,
           height = 56,
@@ -23,7 +23,7 @@ then
       },
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
           priority = "high",
           width = 37,
           height = 25,

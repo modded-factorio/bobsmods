@@ -75,7 +75,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         animation = {
           layers = {
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-1.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1.png",
               priority = "high",
               width = 214,
               height = 226,
@@ -85,7 +85,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               scale = 1 / 3,
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
               priority = "high",
               width = 214,
               height = 237,
@@ -94,7 +94,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               tint = { r = 0.1, g = 0.5, b = 0.7 },
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-1-shadow.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1-shadow.png",
               priority = "high",
               width = 190,
               height = 165,
@@ -242,7 +242,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         animation = {
           layers = {
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-2.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2.png",
               priority = "high",
               width = 214,
               height = 218,
@@ -252,7 +252,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               scale = 1 / 3,
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
               priority = "high",
               width = 214,
               height = 237,
@@ -261,7 +261,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               tint = { r = 0.7, g = 0.2, b = 0.1 },
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-2-shadow.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-shadow.png",
               priority = "high",
               width = 196,
               height = 163,
@@ -417,7 +417,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         animation = {
           layers = {
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-3.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3.png",
               priority = "high",
               width = 214,
               height = 237,
@@ -427,7 +427,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               scale = 1 / 3,
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-mask.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
               priority = "high",
               width = 214,
               height = 237,
@@ -436,7 +436,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               tint = { r = 0.1, g = 0.7, b = 0.1 },
             },
             {
-              filename = "__bobassembly__/graphics/entity/assembling-machine/hr-assembling-machine-3-shadow.png",
+              filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3-shadow.png",
               priority = "high",
               width = 260,
               height = 162,
