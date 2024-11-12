@@ -144,17 +144,17 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
-      weight = 20000
+      weight = 20000,
     },
 
     {
@@ -168,17 +168,17 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
-      weight = 20000
+      weight = 20000,
     },
 
     {

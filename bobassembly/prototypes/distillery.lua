@@ -22,17 +22,17 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
-      weight = 10000
+      weight = 10000,
     },
     {
       type = "item",
@@ -45,17 +45,17 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
-      weight = 10000
+      weight = 10000,
     },
 
     {
@@ -69,17 +69,17 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
-      weight = 10000
+      weight = 10000,
     },
 
     {
@@ -93,17 +93,17 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
-      weight = 10000
+      weight = 10000,
     },
 
     {

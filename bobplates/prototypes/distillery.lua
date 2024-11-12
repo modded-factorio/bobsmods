@@ -379,17 +379,17 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
-      weight = 10000
+      weight = 10000,
     },
 
     {
@@ -430,14 +430,18 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         {
           production_type = "input",
           pipe_covers = pipecoverspictures(),
-          pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } } },
-          volume = 1000
+          pipe_connections = {
+            { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } },
+          },
+          volume = 1000,
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
-          pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } } },
-          volume = 1000
+          pipe_connections = {
+            { flow_direction = "output", direction = defines.direction.north, position = { 0.5, -0.5 } },
+          },
+          volume = 1000,
         },
       },
       graphics_set = {

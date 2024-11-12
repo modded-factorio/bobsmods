@@ -57,23 +57,31 @@ local function bob_electrolyser_animation(directory, tier, tint)
   }
 end
 
-circuit_connector_definitions["electrolyser"] = circuit_connector_definitions.create_vector(universal_connector_template,
-  {
-    { variation = 8, main_offset = util.by_pixel(-12, -34), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+circuit_connector_definitions["electrolyser"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 8,
+      main_offset = util.by_pixel(-12, -34),
+      shadow_offset = util.by_pixel(39, 31),
+      show_shadow = false,
+    },
     { variation = 6, main_offset = util.by_pixel(0, -19), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
-    { variation = 8, main_offset = util.by_pixel(-12, -41), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
-    { variation = 2, main_offset = util.by_pixel(0, -25), shadow_offset = util.by_pixel(39, 31), show_shadow = false }
-  }
-)
+    {
+      variation = 8,
+      main_offset = util.by_pixel(-12, -41),
+      shadow_offset = util.by_pixel(39, 31),
+      show_shadow = false,
+    },
+    { variation = 2, main_offset = util.by_pixel(0, -25), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+  })
 
-circuit_connector_definitions["electric-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template,
-  {
+circuit_connector_definitions["electric-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
     { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
     { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
-    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true }
-  }
-)
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+  })
 
 data:extend({
   {
@@ -105,25 +113,25 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
     },
     graphics_set = {
@@ -168,14 +176,18 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        pipe_connections = {
+          { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
+        },
         secondary_draw_orders = { north = -1, east = -1, west = -1 },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
-        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } } },
-        volume = 1
+        pipe_connections = {
+          { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } },
+        },
+        volume = 1,
       },
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -341,14 +353,18 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } } },
+        pipe_connections = {
+          { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
+        },
         secondary_draw_orders = { north = -1, east = -1, west = -1 },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
-        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } } },
-        volume = 1
+        pipe_connections = {
+          { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } },
+        },
+        volume = 1,
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -402,7 +418,7 @@ data:extend({
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -949,7 +965,7 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.25 } } },
-        volume = 200
+        volume = 200,
       },
     },
     energy_source = {

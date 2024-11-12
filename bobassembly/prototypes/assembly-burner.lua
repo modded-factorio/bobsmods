@@ -1,14 +1,32 @@
 if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].value == true then
+  circuit_connector_definitions["small-assembling-machine"] =
+    circuit_connector_definitions.create_vector(universal_connector_template, {
+      {
+        variation = 18,
+        main_offset = util.by_pixel(8, 16.25),
+        shadow_offset = util.by_pixel(13.25, 20.75),
+        show_shadow = true,
+      },
+      {
+        variation = 18,
+        main_offset = util.by_pixel(8, 16.25),
+        shadow_offset = util.by_pixel(13.25, 20.75),
+        show_shadow = true,
+      },
+      {
+        variation = 31,
+        main_offset = util.by_pixel(22, -10),
+        shadow_offset = util.by_pixel(26, -2.5),
+        show_shadow = true,
+      },
+      {
+        variation = 18,
+        main_offset = util.by_pixel(8, 16.25),
+        shadow_offset = util.by_pixel(13.25, 20.75),
+        show_shadow = true,
+      },
+    })
 
-  circuit_connector_definitions["small-assembling-machine"] = circuit_connector_definitions.create_vector(universal_connector_template,
-    {
-      { variation = 18, main_offset = util.by_pixel(8, 16.25), shadow_offset = util.by_pixel(13.25, 20.75), show_shadow = true },
-      { variation = 18, main_offset = util.by_pixel(8, 16.25), shadow_offset = util.by_pixel(13.25, 20.75), show_shadow = true },
-      { variation = 31, main_offset = util.by_pixel(22, -10), shadow_offset = util.by_pixel(26, -2.5), show_shadow = true },
-      { variation = 18, main_offset = util.by_pixel(8, 16.25), shadow_offset = util.by_pixel(13.25, 20.75), show_shadow = true }
-    }
-  )
-  
   data:extend({
     {
       type = "item",
@@ -21,17 +39,17 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
-      weight = 10000
+      weight = 10000,
     },
 
     {
@@ -154,17 +172,17 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
-      weight = 40000
+      weight = 40000,
     },
 
     {
@@ -204,7 +222,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           pipe_covers = pipecoverspictures(),
           pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
           secondary_draw_orders = { north = -1 },
-          volume = 1000
+          volume = 1000,
         },
         {
           production_type = "output",
@@ -212,7 +230,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           pipe_covers = pipecoverspictures(),
           pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
           secondary_draw_orders = { north = -1 },
-          volume = 1000
+          volume = 1000,
         },
       },
       fluid_boxes_off_when_no_fluid_recipe = true,
@@ -289,7 +307,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           pipe_picture = assembler2pipepictures(),
           production_type = "input-output",
           filter = "steam",
-          volume = 10
+          volume = 10,
         },
         burns_fluid = false,
         scale_fluid_usage = false,

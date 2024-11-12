@@ -14,15 +14,15 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -36,15 +36,15 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
 

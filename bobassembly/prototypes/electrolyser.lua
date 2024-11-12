@@ -14,32 +14,32 @@ then
   })
 
   data.raw.item["electrolyser"].subgroup = "bob-electrolyser-machine"
-  
+
   local function bob_electrolyser_fluid_boxes()
     return {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
     }
   end
@@ -103,14 +103,33 @@ then
     }
   end
 
-  circuit_connector_definitions["electrolyser"] = circuit_connector_definitions.create_vector(universal_connector_template,
-    {
-      { variation = 8, main_offset = util.by_pixel(-12, -34), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
-      { variation = 6, main_offset = util.by_pixel(0, -19), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
-      { variation = 8, main_offset = util.by_pixel(-12, -41), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
-      { variation = 2, main_offset = util.by_pixel(0, -25), shadow_offset = util.by_pixel(39, 31), show_shadow = false }
-    }
-  )
+  circuit_connector_definitions["electrolyser"] =
+    circuit_connector_definitions.create_vector(universal_connector_template, {
+      {
+        variation = 8,
+        main_offset = util.by_pixel(-12, -34),
+        shadow_offset = util.by_pixel(39, 31),
+        show_shadow = false,
+      },
+      {
+        variation = 6,
+        main_offset = util.by_pixel(0, -19),
+        shadow_offset = util.by_pixel(39, 31),
+        show_shadow = false,
+      },
+      {
+        variation = 8,
+        main_offset = util.by_pixel(-12, -41),
+        shadow_offset = util.by_pixel(39, 31),
+        show_shadow = false,
+      },
+      {
+        variation = 2,
+        main_offset = util.by_pixel(0, -25),
+        shadow_offset = util.by_pixel(39, 31),
+        show_shadow = false,
+      },
+    })
 
   data:extend({
     {
@@ -124,15 +143,15 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
     {
@@ -146,15 +165,15 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
     {
@@ -168,15 +187,15 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
 
@@ -191,15 +210,15 @@ then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
 

@@ -18,7 +18,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           east = -1,
           west = -1,
         },
-        volume = 100
+        volume = 100,
       },
       smoke = {
         {
@@ -47,15 +47,15 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     util.merge({
@@ -145,15 +145,15 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         stack_size = 50,
         drop_sound = {
           filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-          volume = 0.7
+          volume = 0.7,
         },
         inventory_move_sound = {
           filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-          volume = 0.7
+          volume = 0.7,
         },
         pick_sound = {
           filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-          volume = 0.8
+          volume = 0.8,
         },
       },
       {
@@ -289,15 +289,15 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         stack_size = 50,
         drop_sound = {
           filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-          volume = 0.7
+          volume = 0.7,
         },
         inventory_move_sound = {
           filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-          volume = 0.7
+          volume = 0.7,
         },
         pick_sound = {
           filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-          volume = 0.8
+          volume = 0.8,
         },
       },
       {

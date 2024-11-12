@@ -26,17 +26,17 @@ data:extend({
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 40000
+    weight = 40000,
   },
 
   {
@@ -63,14 +63,14 @@ data:extend({
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -206,17 +206,17 @@ data:extend({
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 40000
+    weight = 40000,
   },
 
   {
@@ -243,14 +243,14 @@ data:extend({
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -386,17 +386,17 @@ data:extend({
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 40000
+    weight = 40000,
   },
 
   {
@@ -423,14 +423,14 @@ data:extend({
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
-        volume = 1000
+        volume = 1000,
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
