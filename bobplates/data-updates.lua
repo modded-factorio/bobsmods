@@ -195,10 +195,7 @@ bobmods.lib.create_fluid_canister(data.raw.fluid["alien-poison"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["alien-fire"])
 
 for i, recipe in pairs(data.raw.recipe) do
-  if
-    string.sub(recipe.name, -7) == "-barrel"
-    and recipe.category == "crafting-with-fluid"
-  then
+  if string.sub(recipe.name, -7) == "-barrel" and recipe.category == "crafting-with-fluid" then
     data.raw.recipe[recipe.name].category = "barrelling"
     if bobmods.lib.tech.has_recipe_unlock("fluid-handling", recipe.name) then
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", recipe.name)

@@ -37,10 +37,7 @@ end
 local function generate_fill_recipe_icons(fluid, icon)
   if fluid.icon then
     local iconsize = fluid.icon_size or 64
-    table.insert(
-      icon,
-      { icon = fluid.icon, icon_size = iconsize, scale = 16.0 / iconsize, shift = { 4, -8 } }
-    )
+    table.insert(icon, { icon = fluid.icon, icon_size = iconsize, scale = 16.0 / iconsize, shift = { 4, -8 } })
   elseif fluid.icons and util.combine_icons then
     icon = util.combine_icons(icon, fluid.icons, { scale = 0.5, shift = { 4, -8 } })
   end
@@ -61,10 +58,7 @@ end
 local function generate_empty_recipe_icons(fluid, icon)
   if fluid.icon then
     local iconsize = fluid.icon_size or 64
-    table.insert(
-      icon,
-      { icon = fluid.icon, icon_size = iconsize, scale = 16.0 / iconsize, shift = { 7, 8 } }
-    )
+    table.insert(icon, { icon = fluid.icon, icon_size = iconsize, scale = 16.0 / iconsize, shift = { 7, 8 } })
   elseif fluid.icons and util.combine_icons then
     icon = util.combine_icons(icon, fluid.icons, { scale = 0.5, shift = { 7, 8 } })
   end
