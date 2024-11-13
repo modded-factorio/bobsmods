@@ -121,6 +121,7 @@ function bobmods.lib.error.result(result, name)
   end
   if result == nil then
     log(name .. " variable not passed")
+    return
   elseif not (type(result == "table")) then
     log(name .. " variable not a table")
   elseif not (type(result.name) == "string") then

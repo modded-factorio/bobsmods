@@ -20,6 +20,19 @@ then
       order = "e[distillery]",
       place_result = "bob-distillery-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
+      weight = 10000,
     },
     {
       type = "item",
@@ -30,6 +43,19 @@ then
       order = "e[distillery]",
       place_result = "bob-distillery-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
+      weight = 10000,
     },
 
     {
@@ -41,6 +67,19 @@ then
       order = "e[distillery]",
       place_result = "bob-distillery-4",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
+      weight = 10000,
     },
 
     {
@@ -52,6 +91,19 @@ then
       order = "e[distillery]",
       place_result = "bob-distillery-5",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
+      weight = 10000,
     },
 
     {
@@ -115,14 +167,18 @@ then
         name = "bob-distillery-2",
         icon = "__bobassembly__/graphics/icons/distillery-red.png",
         icon_size = 32,
-        minable = { mining_time = 1, result = "bob-distillery-2" },
+        minable = { mining_time = 0.2, result = "bob-distillery-2" },
         max_health = 250,
         graphics_set = {
           animation = bobmods.plates.distillery_animation({ r = 0.7, g = 0.2, b = 0.1 }),
           working_visualisations = bobmods.plates.distillery_working_visualisations(1.5),
         },
+        graphics_set_flipped = {
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.7, g = 0.2, b = 0.1 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(1.5),
+        },
         crafting_speed = 1.5,
-        energy_usage = "260kW",
+        energy_usage = "163kW",
         module_slots = 2,
         next_upgrade = "bob-distillery-3",
       },
@@ -133,14 +189,18 @@ then
         name = "bob-distillery-3",
         icon = "__bobassembly__/graphics/icons/distillery-blue.png",
         icon_size = 32,
-        minable = { mining_time = 1, result = "bob-distillery-3" },
+        minable = { mining_time = 0.2, result = "bob-distillery-3" },
         max_health = 300,
         graphics_set = {
           animation = bobmods.plates.distillery_animation({ r = 0.1, g = 0.5, b = 0.7 }),
           working_visualisations = bobmods.plates.distillery_working_visualisations(2.1),
         },
+        graphics_set_flipped = {
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.1, g = 0.5, b = 0.7 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(2.1),
+        },
         crafting_speed = 2.1,
-        energy_usage = "360kW",
+        energy_usage = "205kW",
         module_slots = 3,
         next_upgrade = "bob-distillery-4",
       },
@@ -151,14 +211,18 @@ then
         name = "bob-distillery-4",
         icon = "__bobassembly__/graphics/icons/distillery-purple.png",
         icon_size = 32,
-        minable = { mining_time = 1, result = "bob-distillery-4" },
+        minable = { mining_time = 0.2, result = "bob-distillery-4" },
         max_health = 350,
         graphics_set = {
           animation = bobmods.plates.distillery_animation({ r = 0.7, g = 0.1, b = 0.7 }),
           working_visualisations = bobmods.plates.distillery_working_visualisations(2.8),
         },
+        graphics_set_flipped = {
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.7, g = 0.1, b = 0.7 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(2.8),
+        },
         crafting_speed = 2.8,
-        energy_usage = "480kW",
+        energy_usage = "242kW",
         module_slots = 4,
         next_upgrade = "bob-distillery-5",
       },
@@ -169,14 +233,18 @@ then
         name = "bob-distillery-5",
         icon = "__bobassembly__/graphics/icons/distillery-green.png",
         icon_size = 32,
-        minable = { mining_time = 1, result = "bob-distillery-5" },
+        minable = { mining_time = 0.2, result = "bob-distillery-5" },
         max_health = 400,
         graphics_set = {
           animation = bobmods.plates.distillery_animation({ r = 0.1, g = 0.7, b = 0.1 }),
           working_visualisations = bobmods.plates.distillery_working_visualisations(3.5),
         },
+        graphics_set_flipped = {
+          animation = bobmods.plates.distillery_animation_flipped({ r = 0.1, g = 0.7, b = 0.1 }),
+          working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(3.5),
+        },
         crafting_speed = 3.5,
-        energy_usage = "600kW",
+        energy_usage = "270kW",
         module_slots = 5,
       },
     }),

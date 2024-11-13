@@ -17,6 +17,7 @@ if data.raw.fluid["nitric-acid"] then
       icon = "__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png",
       icon_size = 32,
       order = "b[fluid-chemistry]-b[sulfuric-nitric-acid]",
+      allow_productivity = true,
     },
   })
 end
@@ -38,6 +39,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/glycerol.png",
     icon_size = 64,
     order = "b[fluid-chemistry]-b[glycerol]",
+    allow_productivity = true,
   },
 
   {
@@ -57,6 +59,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/nitroglycerin.png",
     icon_size = 64,
     order = "b[fluid-chemistry]-b[nitroglycerin]",
+    allow_productivity = true,
   },
 })
 

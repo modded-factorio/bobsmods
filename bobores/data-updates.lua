@@ -110,7 +110,6 @@ if bobmods.ores.settings.UnsortedGemOre == true then
   if data.raw["item-subgroup"]["bob-gems-ore"] then
     data.raw.recipe["sort-gem-ore"].subgroup = "bob-gems-ore"
   end
-  bobmods.lib.module.add_productivity_limitation("sort-gem-ore")
 end
 
 -- Water mining category, add to pumpjacks

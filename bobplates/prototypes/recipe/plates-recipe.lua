@@ -8,6 +8,7 @@ data:extend({
     ingredients = { { type = "item", name = "lead-ore", amount = 1 } },
     results = { { type = "item", name = "lead-plate", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -19,6 +20,7 @@ data:extend({
     ingredients = { { type = "item", name = "silver-ore", amount = 1 } },
     results = { { type = "item", name = "silver-plate", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -30,6 +32,7 @@ data:extend({
     ingredients = { { type = "item", name = "tin-ore", amount = 1 } },
     results = { { type = "item", name = "tin-plate", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -45,6 +48,7 @@ data:extend({
     },
     results = { { type = "item", name = "lead-plate", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -60,6 +64,7 @@ data:extend({
     },
     results = { { type = "item", name = "gold-plate", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -75,6 +80,7 @@ data:extend({
     },
     results = { { type = "item", name = "cobalt-plate", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -90,6 +96,7 @@ data:extend({
     },
     results = { { type = "item", name = "tungsten-plate", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -105,6 +112,7 @@ data:extend({
     },
     results = { { type = "item", name = "zinc-plate", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -127,6 +135,7 @@ data:extend({
     },
     main_product = "nickel-plate",
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -142,6 +151,7 @@ data:extend({
     },
     results = { { type = "item", name = "aluminium-plate", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -158,6 +168,7 @@ data:extend({
     },
     results = { { type = "item", name = "titanium-plate", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -174,6 +185,7 @@ data:extend({
     },
     results = { { type = "item", name = "silicon", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -188,5 +200,6 @@ data:extend({
     },
     results = { { type = "item", name = "lithium", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

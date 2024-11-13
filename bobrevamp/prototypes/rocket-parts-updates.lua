@@ -14,8 +14,6 @@ if data.raw.item["tungsten-carbide"] then
   bobmods.lib.tech.replace_prerequisite("heat-shield", "plastics", "tungsten-alloy-processing")
 end
 
-bobmods.lib.module.add_productivity_limitation("heat-shield-tile")
-
 if data.raw.item["titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("low-density-structure", "steel-plate", "titanium-plate")
   bobmods.lib.tech.add_prerequisite("low-density-structure", "titanium-processing")

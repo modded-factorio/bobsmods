@@ -65,6 +65,7 @@ then
         { type = "fluid", name = "petroleum-gas", amount = 30 },
         { type = "item", name = "sulfur", amount = 2 },
       },
+      allow_productivity = true,
     },
   })
 
@@ -89,6 +90,7 @@ then
           { type = "fluid", name = "light-oil", amount = 30 },
           { type = "fluid", name = "petroleum-gas", amount = 40 },
         },
+        allow_productivity = true,
       },
 
       {
@@ -110,6 +112,7 @@ then
           { type = "fluid", name = "sulfur-dioxide", amount = 40 },
           { type = "fluid", name = "petroleum-gas", amount = 40 },
         },
+        allow_productivity = true,
       },
 
       {
@@ -131,6 +134,7 @@ then
           { type = "fluid", name = "light-oil", amount = 30 },
           { type = "fluid", name = "sulfur-dioxide", amount = 50 },
         },
+        allow_productivity = true,
       },
     })
   end
@@ -198,6 +202,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
         secondary = { r = 0.789, g = 0.540, b = 0.615 },
         tertiary = { r = 0.669, g = 0.145, b = 0.695 },
       },
+      allow_productivity = true,
     },
   })
 

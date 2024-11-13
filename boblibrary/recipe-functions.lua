@@ -331,3 +331,27 @@ function bobmods.lib.recipe.set_category(recipe_name, category)
     bobmods.lib.error.recipe(recipe_name)
   end
 end
+
+function bobmods.lib.recipe.allow_productivity()
+  if type(recipe_name) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      recipe.allow_productivity = true
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe_name)
+  end
+end
+
+function bobmods.lib.recipe.disallow_productivity()
+  if type(recipe_name) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      recipe.allow_productivity = false
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe_name)
+  end
+end
