@@ -332,7 +332,7 @@ function bobmods.lib.recipe.set_category(recipe_name, category)
   end
 end
 
-function bobmods.lib.recipe.allow_productivity
+function bobmods.lib.recipe.allow_productivity()
   if type(recipe_name) == "string" then
     local recipe = data.raw.recipe[recipe_name]
     if recipe then
@@ -344,7 +344,7 @@ function bobmods.lib.recipe.allow_productivity
   end
 end
 
-function bobmods.lib.recipe.disallow_productivity
+function bobmods.lib.recipe.disallow_productivity()
   if type(recipe_name) == "string" then
     local recipe = data.raw.recipe[recipe_name]
     if recipe then
