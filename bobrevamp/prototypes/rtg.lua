@@ -90,6 +90,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.8, a = 0.000 },
         },
+        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -112,6 +113,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.8, a = 0.000 },
         },
+        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -137,6 +139,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.4, a = 0.000 },
         },
+        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -162,6 +165,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.0, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
         },
+        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -236,6 +240,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.4, a = 0.000 },
         },
+        allow_productivity = true,
       },
     })
   end
@@ -283,6 +288,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
       },
+      allow_productivity = true,
     },
     {
       type = "recipe",

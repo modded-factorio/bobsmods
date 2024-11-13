@@ -23,11 +23,5 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     bobmods.lib.tech.add_recipe_unlock("rtg", "ammoniated-brine")
     bobmods.lib.tech.add_recipe_unlock("rtg", "sodium-bicarbonate")
     bobmods.lib.tech.add_recipe_unlock("rtg", "ammonium-chloride-recycling")
-
-    bobmods.lib.module.add_productivity_limitation("brine")
-    bobmods.lib.module.add_productivity_limitation("ammoniated-brine")
-    bobmods.lib.module.add_productivity_limitation("sodium-bicarbonate")
   end
-  bobmods.lib.module.add_productivity_limitation("sodium-carbonate")
-  bobmods.lib.module.add_productivity_limitation("sodium-cobaltate")
 end

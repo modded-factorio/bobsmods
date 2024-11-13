@@ -11,5 +11,6 @@ data:extend({
       { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
     results = { { type = "item", name = "advanced-processing-unit", amount = 1 } },
+    allow_productivity = true,
   },
 })

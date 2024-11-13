@@ -36,6 +36,7 @@ data:extend({
       tertiary = { r = 0.0, g = 0.7, b = 0.7, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -64,6 +65,7 @@ data:extend({
       tertiary = { r = 0.5, g = 0.04, b = 0.0, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -87,5 +89,6 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 30 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

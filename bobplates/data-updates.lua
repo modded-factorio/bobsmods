@@ -1,6 +1,5 @@
 require("prototypes.recipe.entity-recipe-updates")
 require("prototypes.technology-updates")
-require("prototypes.productivity-limitations")
 
 data.raw.character.character.inventory_size = settings.startup["bobmods-plates-inventorysize"].value
 
@@ -116,6 +115,7 @@ bobmods.lib.recipe.set_subgroup("uranium-processing", "bob-nuclear")
 bobmods.lib.recipe.set_subgroup("kovarex-enrichment-process", "bob-nuclear")
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
+  bobmods.lib.recipe.disallow_productivity("uranium-fuel-cell")
   bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "empty-nuclear-fuel-cell")
 
   data.raw.technology["nuclear-fuel-reprocessing"].icon =
