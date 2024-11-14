@@ -29,6 +29,7 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
       icon = "__bobores__/graphics/icons/gem-ore.png",
       icon_size = 32,
       order = "a-0",
+      allow_productivity = true,
     },
   })
 end

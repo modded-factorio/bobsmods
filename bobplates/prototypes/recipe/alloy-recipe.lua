@@ -13,6 +13,7 @@ data:extend({
       { type = "item", name = "bronze-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -28,6 +29,7 @@ data:extend({
       { type = "item", name = "brass-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -43,6 +45,7 @@ data:extend({
       { type = "item", name = "copper-tungsten-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -58,6 +61,7 @@ data:extend({
       { type = "item", name = "tungsten-carbide", amount = 2 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -73,6 +77,7 @@ data:extend({
       { type = "item", name = "tungsten-carbide", amount = 2 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -89,6 +94,7 @@ data:extend({
       { type = "item", name = "gunmetal-alloy", amount = 10 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -105,6 +111,7 @@ data:extend({
       { type = "item", name = "invar-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -120,6 +127,7 @@ data:extend({
       { type = "item", name = "nitinol-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -134,5 +142,6 @@ data:extend({
     },
     results = { { type = "item", name = "cobalt-steel-alloy", amount = 10 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

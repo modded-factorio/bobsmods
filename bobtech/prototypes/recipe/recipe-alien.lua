@@ -30,6 +30,7 @@ then
         { type = "item", name = "alien-artifact", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack", amount = 10 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -40,6 +41,7 @@ then
         { type = "item", name = "alien-artifact-blue", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-blue", amount = 10 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -50,6 +52,7 @@ then
         { type = "item", name = "alien-artifact-orange", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-orange", amount = 10 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -60,6 +63,7 @@ then
         { type = "item", name = "alien-artifact-purple", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-purple", amount = 10 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -70,6 +74,7 @@ then
         { type = "item", name = "alien-artifact-yellow", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-yellow", amount = 10 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -80,6 +85,7 @@ then
         { type = "item", name = "alien-artifact-green", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-green", amount = 10 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -90,6 +96,7 @@ then
         { type = "item", name = "alien-artifact-red", amount = 1 },
       },
       results = { { type = "item", name = "alien-science-pack-red", amount = 10 } },
+      allow_productivity = true,
     },
 
     {

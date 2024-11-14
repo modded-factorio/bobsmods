@@ -85,6 +85,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "steel-plate", amount = 2 },
       },
       results = { { type = "item", name = "mech-leg-segment", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -95,6 +96,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "low-density-structure", amount = 1 },
       },
       results = { { type = "item", name = "mech-foot", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -107,6 +109,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "iron-gear-wheel", amount = 4 },
       },
       results = { { type = "item", name = "mech-hip", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -119,6 +122,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "iron-gear-wheel", amount = 8 },
       },
       results = { { type = "item", name = "mech-knee", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -142,6 +146,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       energy_required = 2,
       ingredients = {},
       results = { { type = "item", name = "mech-brain", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -164,6 +169,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "steel-plate", amount = 2 },
       },
       results = { { type = "item", name = "mech-armor-plate", amount = 1 } },
+      allow_productivity = true,
     },
   })
 end

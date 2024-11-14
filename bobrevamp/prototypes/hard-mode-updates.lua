@@ -36,10 +36,4 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "hydrogen-peroxide")
   bobmods.lib.tech.add_recipe_unlock("nitrogen-processing", "hydrogen-peroxide")
   bobmods.lib.tech.remove_recipe_unlock("hydrazine", "hydrogen-peroxide")
-
-  bobmods.lib.module.add_productivity_limitation("limestone")
-  bobmods.lib.module.add_productivity_limitation("sodium-chlorate")
-  bobmods.lib.module.add_productivity_limitation("sodium-perchlorate")
-  bobmods.lib.module.add_productivity_limitation("carbon-dioxide")
-  bobmods.lib.module.add_productivity_limitation("carbon-dioxide-oil-processing")
 end

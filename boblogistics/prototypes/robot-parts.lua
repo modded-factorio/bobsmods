@@ -43,6 +43,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { type = "item", name = "steel-plate", amount = 1 },
       },
       results = { { type = "item", name = "flying-robot-frame-2", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -55,6 +56,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { type = "item", name = "steel-plate", amount = 1 },
       },
       results = { { type = "item", name = "flying-robot-frame-3", amount = 1 } },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -67,6 +69,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { type = "item", name = "steel-plate", amount = 1 },
       },
       results = { { type = "item", name = "flying-robot-frame-4", amount = 1 } },
+      allow_productivity = true,
     },
   })
 
@@ -251,6 +254,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
         { type = "item", name = "electronic-circuit", amount = 2 },
       },
       results = { { type = "item", name = "bob-robot-brain", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -263,6 +267,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
         { type = "item", name = "advanced-circuit", amount = 2 },
       },
       results = { { type = "item", name = "bob-robot-brain-2", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -275,6 +280,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
         { type = "item", name = "processing-unit", amount = 2 },
       },
       results = { { type = "item", name = "bob-robot-brain-3", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -286,6 +292,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
         { type = "item", name = "processing-unit", amount = 4 },
       },
       results = { { type = "item", name = "bob-robot-brain-4", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -295,6 +302,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "bob-robot-tool", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -304,6 +312,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "bob-robot-tool-2", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -313,6 +322,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "bob-robot-tool-3", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -322,6 +332,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "bob-robot-tool-4", amount = 1 } },
+      allow_productivity = true,
     },
   })
 end
