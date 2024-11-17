@@ -153,6 +153,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -293,6 +294,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -433,6 +435,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -573,6 +576,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -713,8 +717,8 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-diamond",
@@ -854,5 +858,6 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
 })
