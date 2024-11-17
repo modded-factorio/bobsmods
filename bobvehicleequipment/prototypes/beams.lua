@@ -35,7 +35,7 @@ data:extend({
         head = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body.png",
               tint = { r = 0.8, g = 0.8, b = 0.8 },
               line_length = 8,
               width = 64,
@@ -61,7 +61,7 @@ data:extend({
         tail = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-end.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-end.png",
               tint = { r = 0.8, g = 0.8, b = 0.8 },
               width = 110,
               height = 62,
@@ -87,7 +87,7 @@ data:extend({
         body = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body.png",
               tint = { r = 0.8, g = 0.8, b = 0.8 },
               line_length = 8,
               width = 64,
@@ -153,6 +153,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -178,7 +179,7 @@ data:extend({
         head = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-sapphire.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-sapphire.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -203,7 +204,7 @@ data:extend({
         tail = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-end-sapphire.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-end-sapphire.png",
               width = 110,
               height = 62,
               frame_count = 8,
@@ -228,7 +229,7 @@ data:extend({
         body = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-sapphire.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-sapphire.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -293,6 +294,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -318,7 +320,7 @@ data:extend({
         head = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-emerald.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-emerald.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -343,7 +345,7 @@ data:extend({
         tail = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-end-emerald.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-end-emerald.png",
               width = 110,
               height = 62,
               frame_count = 8,
@@ -368,7 +370,7 @@ data:extend({
         body = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-emerald.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-emerald.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -433,6 +435,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -458,7 +461,7 @@ data:extend({
         head = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-amethyst.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-amethyst.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -483,7 +486,7 @@ data:extend({
         tail = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-end-amethyst.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-end-amethyst.png",
               width = 110,
               height = 62,
               frame_count = 8,
@@ -508,7 +511,7 @@ data:extend({
         body = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-amethyst.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-amethyst.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -573,6 +576,7 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
   {
     type = "beam",
@@ -598,7 +602,7 @@ data:extend({
         head = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-topaz.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-topaz.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -623,7 +627,7 @@ data:extend({
         tail = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-end-topaz.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-end-topaz.png",
               width = 110,
               height = 62,
               frame_count = 8,
@@ -648,7 +652,7 @@ data:extend({
         body = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body-topaz.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body-topaz.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -713,8 +717,8 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-diamond",
@@ -739,7 +743,7 @@ data:extend({
         head = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -764,7 +768,7 @@ data:extend({
         tail = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-end.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-end.png",
               width = 110,
               height = 62,
               frame_count = 8,
@@ -789,7 +793,7 @@ data:extend({
         body = {
           layers = {
             {
-              filename = "__bobequipment__/graphics/beam/laser-body.png",
+              filename = "__bobvehicleequipment__/graphics/beam/laser-body.png",
               line_length = 8,
               width = 64,
               height = 12,
@@ -854,5 +858,6 @@ data:extend({
       }
     },
     working_sound = laserBeamSound,
+    hidden = true
   },
 })
