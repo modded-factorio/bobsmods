@@ -56,7 +56,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__bobwarfare__/graphics/entities/particles2.png",
+          filename = "__bobvehicleequipment__/graphics/particles2.png",
           tint = { r = 0.4, g = 0.7, b = 1, a = 1 },
           frame_count = 32,
           line_length = 8,
@@ -80,5 +80,6 @@ data:extend({
         },
       }
     },
+    hidden = true
   },
 })
