@@ -182,14 +182,8 @@ data:extend({
         secondary_draw_orders = { north = -1, east = -1, west = -1 },
         volume = 1000,
       },
-      {
-        production_type = "output",
-        pipe_connections = {
-          { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } },
-        },
-        volume = 1,
-      },
     },
+    forced_symmetry = "vertical",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     crafting_categories = { "chemical-furnace" },
@@ -359,15 +353,9 @@ data:extend({
         secondary_draw_orders = { north = -1, east = -1, west = -1 },
         volume = 1000,
       },
-      {
-        production_type = "output",
-        pipe_connections = {
-          { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } },
-        },
-        volume = 1,
-      },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
+    forced_symmetry = "vertical",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     crafting_categories = { "chemical-furnace" },
