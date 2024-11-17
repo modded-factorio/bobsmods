@@ -75,7 +75,7 @@ function gui_add_title(gui, title, button_name, drag_target)
     type = "sprite-button",
     name = button_name,
     style = "frame_action_button",
-    sprite = "utility/close_white",
+    sprite = "utility/close",
   })
   if drag_target then
     gui.title_flow.title.drag_target = gui
@@ -1018,7 +1018,7 @@ function draw_buttons_row(player_index)
     gui.add({
       type = "sprite-button",
       name = "bob_avatar_rename",
-      sprite = "utility/rename_icon_normal",
+      sprite = "utility/rename_icon",
       style = "mod_gui_button_28",
     })
     gui.add({ type = "empty-widget", name = "filler", style = "bob_draggable_footer" })
