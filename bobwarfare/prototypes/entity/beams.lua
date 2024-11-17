@@ -144,6 +144,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -284,6 +285,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -424,6 +426,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -564,6 +567,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -704,8 +708,8 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
-
   {
     type = "beam",
     name = "bob-laser-beam-diamond",
@@ -845,6 +849,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
 })
 
@@ -991,6 +996,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -1131,6 +1137,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -1271,6 +1278,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -1411,6 +1419,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -1551,6 +1560,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -1691,6 +1701,7 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
   {
     type = "beam",
@@ -1831,5 +1842,6 @@ data:extend({
       }
     },
     working_sound = warefareSounds.laserBeam,
+    hidden = true
   },
 })
