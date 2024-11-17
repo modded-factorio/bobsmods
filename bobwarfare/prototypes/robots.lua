@@ -283,6 +283,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         priority = "high",
       },
       smoke = capsule_smoke,
+      hidden = true
     },
 
     {
