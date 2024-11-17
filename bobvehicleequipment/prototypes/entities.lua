@@ -54,6 +54,7 @@ data:extend({
         },
       },
     },
+    hidden = true
   },
 })
 
