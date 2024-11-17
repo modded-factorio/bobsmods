@@ -138,20 +138,20 @@ function bobmods.lib.resource.sprite(inputs)
   if inputs.filename then
     filename = inputs.filename
   else
-    filename = "__boblibrary__/graphics/entity/ores/hr-ore-1.png"
+    filename = "__boblibrary__/graphics/entity/ores/ore-1.png"
     width = 128
     height = 128
     frame_count = 8
     variation_count = 8
     scale = 0.5
     if inputs.sheet == 2 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-2.png"
+      filename = "__boblibrary__/graphics/entity/ores/ore-2.png"
     end
     if inputs.sheet == 3 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-3.png"
+      filename = "__boblibrary__/graphics/entity/ores/ore-3.png"
     end
     if inputs.sheet == 4 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-4.png"
+      filename = "__boblibrary__/graphics/entity/ores/ore-4.png"
     end
     if inputs.sheet == 5 then
       filename = "__boblibrary__/graphics/entity/liquid.png"
@@ -161,7 +161,7 @@ function bobmods.lib.resource.sprite(inputs)
       variation_count = 1
     end
     if inputs.sheet == 6 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-5.png"
+      filename = "__boblibrary__/graphics/entity/ores/ore-5.png"
     end
   end
 
@@ -206,7 +206,7 @@ function bobmods.lib.resource.effect(inputs)
   if inputs.filename then
     filename = inputs.filename
   else
-    filename = "__boblibrary__/graphics/entity/ores/hr-ore-5-glow.png"
+    filename = "__boblibrary__/graphics/entity/ores/ore-5-glow.png"
     width = 128
     height = 128
     frame_count = 8
