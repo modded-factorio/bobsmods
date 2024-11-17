@@ -243,7 +243,7 @@ local function bob_laser_turret_extension_eight(inputs)
   return {
     layers = {
       {
-        filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-8.png",
+        filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-8.png",
         priority = "medium",
         width = 126,
         height = 120,
@@ -256,7 +256,7 @@ local function bob_laser_turret_extension_eight(inputs)
         scale = 0.5 * size,
       },
       {
-        filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-mask-8.png",
+        filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-mask-8.png",
         flags = { "mask" },
         width = 92,
         height = 80,
@@ -270,7 +270,7 @@ local function bob_laser_turret_extension_eight(inputs)
         scale = 0.5 * size,
       },
       {
-        filename = "__bobwarfare__/graphics/entities/laser-turret/hr-laser-turret-folded-shadow-8.png",
+        filename = "__bobwarfare__/graphics/entities/laser-turret/laser-turret-folded-shadow-8.png",
         width = 170,
         height = 92,
         frame_count = inputs.frame_count or 15,
