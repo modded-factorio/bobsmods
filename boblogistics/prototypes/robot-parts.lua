@@ -3,6 +3,23 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
   data.raw.item["flying-robot-frame"].subgroup = "bob-robot-parts"
   bobmods.lib.recipe.remove_ingredient("flying-robot-frame", "electronic-circuit")
 
+  local part_drop_move = {
+    filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+    volume = 0.7
+  }
+  local part_pick = {
+    filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+    volume = 0.8
+  }
+  local electronic_drop_move = {
+    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+    volume = 1
+  }
+  local electronic_pick = {
+    filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+    volume = 0.7
+  }
+
   data:extend({
     {
       type = "item",
@@ -12,6 +29,9 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       subgroup = "bob-robot-parts",
       order = "j[flying-robot-frame-2]",
       stack_size = 50,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
     {
       type = "item",
@@ -21,6 +41,9 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       subgroup = "bob-robot-parts",
       order = "j[flying-robot-frame-3]",
       stack_size = 50,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
     {
       type = "item",
@@ -30,6 +53,9 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       subgroup = "bob-robot-parts",
       order = "j[flying-robot-frame-4]",
       stack_size = 50,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
 
     {
@@ -167,6 +193,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-brain-1]",
       stack_size = 100,
+      drop_sound = electronic_drop_move,
+      inventory_move_sound = electronic_drop_move,
+      pick_sound = electronic_pick,
     },
 
     {
@@ -177,6 +206,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-brain-2]",
       stack_size = 100,
+      drop_sound = electronic_drop_move,
+      inventory_move_sound = electronic_drop_move,
+      pick_sound = electronic_pick,
     },
 
     {
@@ -187,6 +219,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-brain-3]",
       stack_size = 100,
+      drop_sound = electronic_drop_move,
+      inventory_move_sound = electronic_drop_move,
+      pick_sound = electronic_pick,
     },
 
     {
@@ -197,6 +232,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-brain-4]",
       stack_size = 100,
+      drop_sound = electronic_drop_move,
+      inventory_move_sound = electronic_drop_move,
+      pick_sound = electronic_pick,
     },
 
     {
@@ -207,6 +245,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-1]",
       stack_size = 100,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
 
     {
@@ -217,6 +258,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-2]",
       stack_size = 100,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
 
     {
@@ -227,6 +271,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-3]",
       stack_size = 100,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
 
     {
@@ -237,6 +284,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-4]",
       stack_size = 100,
+      drop_sound = part_drop_move,
+      inventory_move_sound = part_drop_move,
+      pick_sound = part_pick,
     },
   })
 
