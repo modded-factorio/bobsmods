@@ -92,7 +92,7 @@ function storage_tank_all_pictures(tint)
     picture = {
       sheets = {
         {
-          filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank.png",
+          filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank.png",
           priority = "extra-high",
           frames = 1,
           width = 219,
@@ -111,7 +111,7 @@ function storage_tank_all_pictures(tint)
           tint = tint
         },
         {
-          filename = "__boblogistics__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
+          filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-shadow.png",
           priority = "extra-high",
           frames = 1,
           width = 291,
