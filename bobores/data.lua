@@ -106,6 +106,8 @@ end
 if settings.startup["bobmods-ores-enablewaterores"].value == true then
   bobmods.ores.water.create_autoplace()
   bobmods.ores.lithia_water.create_autoplace()
+  --Required due to having multiple resources that use the same autoplace_control
+  data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lithia-water"] = {}
 end
 if settings.startup["bobmods-ores-enablethoriumore"].value == true then
   bobmods.ores.thorium.create_autoplace()
