@@ -344,6 +344,7 @@ data:extend({
       },
     },
     pictures = bob_pipepictures("stone"),
+    impact_category = "stone",
     working_sound = {
       sound = {
         {
@@ -390,6 +391,7 @@ data:extend({
       },
     },
     pictures = bob_pipetogroundpictures("stone"),
+    impact_category = "stone",
   },
 
   {
@@ -420,6 +422,7 @@ data:extend({
       },
     },
     pictures = bob_pipepictures("copper"),
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -466,6 +469,7 @@ data:extend({
       },
     },
     pictures = bob_pipetogroundpictures("copper"),
+    impact_category = "metal",
   },
 
   {
@@ -496,6 +500,7 @@ data:extend({
       },
     },
     pictures = bob_pipepictures("steel"),
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -542,6 +547,7 @@ data:extend({
       },
     },
     pictures = bob_pipetogroundpictures("steel"),
+    impact_category = "metal",
   },
 
   {
@@ -572,6 +578,7 @@ data:extend({
       },
     },
     pictures = bob_pipepictures("plastic"),
+    impact_category = "stone", --Closest approximation for sound of hitting plastic
     working_sound = {
       sound = {
         {
@@ -618,6 +625,7 @@ data:extend({
       },
     },
     pictures = bob_pipetogroundpictures("plastic"),
+    impact_category = "stone",
   },
 })
 
@@ -651,6 +659,7 @@ if data.raw.item["bronze-alloy"] then
         },
       },
       pictures = bob_pipepictures("bronze"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -697,6 +706,7 @@ if data.raw.item["bronze-alloy"] then
         },
       },
       pictures = bob_pipetogroundpictures("bronze"),
+      impact_category = "metal",
     },
   })
 end
@@ -731,6 +741,7 @@ if data.raw.item["brass-alloy"] then
         },
       },
       pictures = bob_pipepictures("brass"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -777,6 +788,7 @@ if data.raw.item["brass-alloy"] then
         },
       },
       pictures = bob_pipetogroundpictures("brass"),
+      impact_category = "metal",
     },
   })
 end
@@ -811,6 +823,7 @@ if data.raw.item["silicon-nitride"] then
         },
       },
       pictures = bob_pipepictures("ceramic"),
+      impact_category = "stone",
       working_sound = {
         sound = {
           {
@@ -857,6 +870,7 @@ if data.raw.item["silicon-nitride"] then
         },
       },
       pictures = bob_pipetogroundpictures("ceramic"),
+      impact_category = "stone",
     },
   })
 end
@@ -891,6 +905,7 @@ if data.raw.item["titanium-plate"] then
         },
       },
       pictures = bob_pipepictures("titanium"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -937,6 +952,7 @@ if data.raw.item["titanium-plate"] then
         },
       },
       pictures = bob_pipetogroundpictures("titanium"),
+      impact_category = "metal",
     },
   })
 end
@@ -971,6 +987,7 @@ if data.raw.item["tungsten-plate"] then
         },
       },
       pictures = bob_pipepictures("tungsten"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -1017,6 +1034,7 @@ if data.raw.item["tungsten-plate"] then
         },
       },
       pictures = bob_pipetogroundpictures("tungsten"),
+      impact_category = "metal",
     },
   })
 end
@@ -1051,6 +1069,7 @@ if data.raw.item["nitinol-alloy"] then
         },
       },
       pictures = bob_pipepictures("nitinol"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -1097,6 +1116,7 @@ if data.raw.item["nitinol-alloy"] then
         },
       },
       pictures = bob_pipetogroundpictures("nitinol"),
+      impact_category = "metal",
     },
   })
 end
@@ -1131,6 +1151,7 @@ if data.raw.item["copper-tungsten-alloy"] then
         },
       },
       pictures = bob_pipepictures("copper-tungsten"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -1177,6 +1198,7 @@ if data.raw.item["copper-tungsten-alloy"] then
         },
       },
       pictures = bob_pipetogroundpictures("copper-tungsten"),
+      impact_category = "metal",
     },
   })
 end
@@ -1211,6 +1233,7 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
         },
       },
       pictures = bob_pipepictures("brass"),
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -1257,6 +1280,7 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
         },
       },
       pictures = bob_pipetogroundpictures("brass"),
+      impact_category = "metal",
     },
     {
       type = "item",
