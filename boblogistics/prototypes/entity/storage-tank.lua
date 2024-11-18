@@ -187,7 +187,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_pictures({ r = 0.25, g = 0.45, b = 0.6 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -196,8 +196,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 10,
   },
 
@@ -229,7 +228,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_pictures({ r = 0.7, g = 0.3, b = 0.68 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -238,8 +237,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 12.5,
   },
 
@@ -270,7 +268,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_pictures({ r = 0.2, g = 0.55, b = 0.2 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -279,8 +277,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 15,
   },
 })
@@ -317,7 +314,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_all_pictures({ r = 0.65, g = 0.2, b = 0.15 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -327,8 +324,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -362,7 +358,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_all_pictures({ r = 0.25, g = 0.45, b = 0.6 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -371,8 +367,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 10,
   },
 
@@ -407,7 +402,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_all_pictures({ r = 0.7, g = 0.3, b = 0.68 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -416,8 +411,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 12.5,
   },
 
@@ -451,7 +445,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_all_pictures({ r = 0.2, g = 0.55, b = 0.2 }),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal-large",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -460,8 +454,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 15,
   },
 })
