@@ -7,6 +7,18 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[resin]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7
+    },
   },
 
   {
@@ -52,6 +64,18 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[rubber]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7
+    },
   },
 
   {
@@ -104,6 +128,18 @@ if not data.raw.item["silicon-wafer"] then
         subgroup = "bob-resource",
         order = "f[silicon-wafer]",
         stack_size = 500,
+        drop_sound = {
+          filename = "__base__/sound/item/planner-inventory-move.ogg",
+          volume = 0.5
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/planner-inventory-move.ogg",
+          volume = 0.5
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/planner-inventory-pickup.ogg",
+          volume = 0.5
+        },
       },
 
       {
@@ -135,6 +171,18 @@ if data.raw.item["tin-plate"] then
       subgroup = "bob-alloy",
       order = "c-b-h[solder]",
       stack_size = 200,
+      drop_sound = {
+        filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
+        volume = 0.5
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
+        volume = 0.5
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
 
     {
