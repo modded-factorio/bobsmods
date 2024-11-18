@@ -156,6 +156,3 @@ data:extend({
     order = "a[fluid]-a[water-lithia]",
   },
 })
-
---Required due to having multiple resources that use the same autoplace_control
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lithia-water"] = {}
