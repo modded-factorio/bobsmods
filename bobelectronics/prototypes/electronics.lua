@@ -21,6 +21,7 @@ if data.raw.item["tin-plate"] then
       },
       results = { { type = "item", name = "tinned-copper-cable", amount = 3 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
@@ -47,6 +48,7 @@ data:extend({
     },
     results = { { type = "item", name = "insulated-cable", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -73,6 +75,7 @@ if data.raw.item["gold-plate"] then
       },
       results = { { type = "item", name = "gilded-copper-cable", amount = 3 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
@@ -101,6 +104,7 @@ if data.raw.item["solder-alloy"] then
       },
       results = { { type = "item", name = "solder", amount = 8 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
@@ -154,6 +158,7 @@ data:extend({
     },
     results = { { type = "item", name = "electronic-components", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -181,6 +186,7 @@ data:extend({
     },
     results = { { type = "item", name = "intergrated-electronics", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -208,6 +214,7 @@ data:extend({
     },
     results = { { type = "item", name = "processing-electronics", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -230,6 +237,7 @@ data:extend({
       { type = "item", name = "wood", amount = 1 },
     },
     results = { { type = "item", name = "wooden-board", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
@@ -254,6 +262,7 @@ data:extend({
       { type = "item", name = "resin", amount = 1 },
     },
     results = { { type = "item", name = "phenolic-board", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
@@ -277,6 +286,7 @@ data:extend({
       { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "fibreglass-board", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
@@ -302,6 +312,7 @@ data:extend({
     },
     results = { { type = "item", name = "basic-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -329,6 +340,7 @@ data:extend({
     },
     results = { { type = "item", name = "circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -356,6 +368,7 @@ data:extend({
     },
     results = { { type = "item", name = "superior-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -383,6 +396,7 @@ data:extend({
     },
     results = { { type = "item", name = "multi-layer-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -493,5 +507,6 @@ data:extend({
     },
     results = { { type = "item", name = "advanced-processing-unit", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

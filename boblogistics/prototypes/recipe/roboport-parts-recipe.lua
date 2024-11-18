@@ -10,6 +10,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-antenna-1", amount = 1 } },
     energy_required = 2,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -22,6 +23,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-antenna-2", amount = 1 } },
     energy_required = 2,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -34,6 +36,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-antenna-3", amount = 1 } },
     energy_required = 2,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -47,6 +50,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-antenna-4", amount = 1 } },
     energy_required = 2,
+    allow_productivity = true,
   },
 })
 
@@ -62,6 +66,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-chargepad-1", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -74,6 +79,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-chargepad-2", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -86,6 +92,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-chargepad-3", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -98,6 +105,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-chargepad-4", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
 })
 
@@ -112,6 +120,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-door-1", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -123,6 +132,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-door-2", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -134,6 +144,7 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-door-3", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -145,5 +156,6 @@ data:extend({
     },
     results = { { type = "item", name = "roboport-door-4", amount = 1 } },
     energy_required = 1,
+    allow_productivity = true,
   },
 })

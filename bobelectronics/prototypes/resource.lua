@@ -21,6 +21,7 @@ data:extend({
     },
     results = { { type = "item", name = "resin", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -40,6 +41,7 @@ data:extend({
       tertiary = { r = 1, g = 0.6, b = 0.0, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -66,6 +68,7 @@ data:extend({
     },
     results = { { type = "item", name = "rubber", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -90,6 +93,7 @@ data:extend({
       tertiary = { r = 1, g = 0.6, b = 0.4, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -114,6 +118,7 @@ if not data.raw.item["silicon-wafer"] then
         energy_required = 5,
         ingredients = {},
         results = { { type = "item", name = "silicon-wafer", amount = 8 } },
+        allow_productivity = true,
       },
     })
 
@@ -149,6 +154,7 @@ if data.raw.item["tin-plate"] then
       },
       results = { { type = "item", name = "solder-alloy", amount = 11 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
   if data.raw.item["silver-plate"] then
@@ -169,6 +175,7 @@ if data.raw.item["tin-plate"] then
         },
         results = { { type = "item", name = "solder-alloy", amount = 11 } },
         allow_decomposition = false,
+        allow_productivity = true,
       },
     })
   end

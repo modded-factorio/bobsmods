@@ -19,6 +19,7 @@ data:extend({
       { type = "item", name = "plastic-bar", amount = 5 },
     },
     results = { { type = "item", name = "heat-shield-tile", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "technology",

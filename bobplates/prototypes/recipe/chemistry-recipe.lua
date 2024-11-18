@@ -141,6 +141,7 @@ data:extend({
       { type = "fluid", name = "oxygen", amount = 12.5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -167,6 +168,7 @@ data:extend({
       tertiary = { r = 0.25, g = 0.5, b = 0.25, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -189,6 +191,7 @@ data:extend({
       { type = "fluid", name = "hydrogen", amount = 20 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -210,6 +213,7 @@ data:extend({
       { type = "fluid", name = "hydrogen", amount = 20 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -234,6 +238,7 @@ data:extend({
       secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
       tertiary = { r = 0.8, g = 0.0, b = 1.0, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -258,6 +263,7 @@ data:extend({
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
       tertiary = { r = 0.2, g = 0.7, b = 0.0, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -282,6 +288,7 @@ data:extend({
       secondary = { r = 1.0, g = 0.7, b = 0.0, a = 0.000 },
       tertiary = { r = 0.0, g = 0.0, b = 0.7, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -308,6 +315,7 @@ data:extend({
       secondary = { r = 0.0, g = 0.7, b = 0.7, a = 0.000 },
       tertiary = { r = 0.0, g = 0.0, b = 0.7, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -333,6 +341,7 @@ data:extend({
       tertiary = { r = 0.0, g = 0.7, b = 0.7, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -356,6 +365,7 @@ data:extend({
       secondary = { r = 0.8, g = 0.7, b = 0.0, a = 0.000 },
       tertiary = { r = 0.9, g = 0.8, b = 0.25, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -382,6 +392,7 @@ data:extend({
       tertiary = { r = 0.564, g = 0.795, b = 0.000, a = 0.000 }, -- #8fca0000
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -405,6 +416,7 @@ data:extend({
       tertiary = { r = 0.9, g = 0.9, b = 0.25, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -431,6 +443,7 @@ data:extend({
       tertiary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -452,6 +465,7 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 30 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -478,6 +492,7 @@ data:extend({
       tertiary = { r = 0.5, g = 0.04, b = 0.0, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -492,6 +507,7 @@ data:extend({
     },
     results = { { type = "item", name = "salt", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -506,6 +522,7 @@ data:extend({
     },
     results = { { type = "item", name = "lithium-chloride", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -527,6 +544,7 @@ data:extend({
       tertiary = { r = 0.960, g = 0.806, b = 0.000, a = 0.000 }, -- #f4cd0000
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -547,6 +565,7 @@ data:extend({
       secondary = { r = 0.7, g = 0.5, b = 0.0, a = 0.000 },
       tertiary = { r = 0.5, g = 0.05, b = 0.4, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -562,6 +581,7 @@ data:extend({
     },
     results = { { type = "item", name = "alumina", amount = 1 } },
     order = "f[alumina]",
+    allow_productivity = true,
   },
 
   {
@@ -589,6 +609,7 @@ data:extend({
       secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
       tertiary = { r = 0.1, g = 0.01, b = 0.1, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -609,6 +630,7 @@ data:extend({
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
       tertiary = { r = 0.3, g = 0.03, b = 0.3, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -629,6 +651,7 @@ data:extend({
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
       tertiary = { r = 0.3, g = 0.03, b = 0.3, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -642,6 +665,7 @@ data:extend({
       { type = "fluid", name = "tungstic-acid", amount = 10 },
     },
     results = { { type = "item", name = "tungsten-oxide", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -656,6 +680,7 @@ data:extend({
       { type = "fluid", name = "hydrogen", amount = 15 },
     },
     results = { { type = "item", name = "powdered-tungsten", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -670,6 +695,7 @@ data:extend({
       { type = "item", name = "stone", amount = 1 },
     },
     results = { { type = "item", name = "cobalt-oxide", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -694,6 +720,7 @@ data:extend({
     },
     main_product = "copper-plate",
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -716,6 +743,7 @@ data:extend({
       { type = "item", name = "silver-ore", amount_min = 1, amount_max = 3 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -730,6 +758,7 @@ data:extend({
       { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "silicon-carbide", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
@@ -760,6 +789,7 @@ data:extend({
       tertiary = { r = 0.5, g = 0.5, b = 0, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -784,6 +814,7 @@ data:extend({
       secondary = { r = 1.0, g = 1.0, b = 1.0, a = 0.000 },
       tertiary = { r = 0.9, g = 0.9, b = 0.45, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -805,6 +836,7 @@ data:extend({
       tertiary = { r = 0.960, g = 0.806, b = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -830,6 +862,7 @@ data:extend({
       tertiary = { r = 0.564, g = 0.795, b = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -876,5 +909,6 @@ data:extend({
       { type = "fluid", name = "oxygen", amount = 12.5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

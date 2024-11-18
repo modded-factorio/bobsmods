@@ -9,6 +9,7 @@ data:extend({
       { type = "item", name = "ruby-ore", amount = 1 },
     },
     results = { { type = "item", name = "ruby-3", amount = 4 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -20,6 +21,7 @@ data:extend({
       { type = "item", name = "sapphire-ore", amount = 1 },
     },
     results = { { type = "item", name = "sapphire-3", amount = 4 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -31,6 +33,7 @@ data:extend({
       { type = "item", name = "emerald-ore", amount = 1 },
     },
     results = { { type = "item", name = "emerald-3", amount = 4 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -42,6 +45,7 @@ data:extend({
       { type = "item", name = "amethyst-ore", amount = 1 },
     },
     results = { { type = "item", name = "amethyst-3", amount = 4 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -53,6 +57,7 @@ data:extend({
       { type = "item", name = "topaz-ore", amount = 1 },
     },
     results = { { type = "item", name = "topaz-3", amount = 4 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -64,6 +69,7 @@ data:extend({
       { type = "item", name = "diamond-ore", amount = 1 },
     },
     results = { { type = "item", name = "diamond-3", amount = 4 } },
+    allow_productivity = true,
   },
 
   {
@@ -78,6 +84,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = { { type = "item", name = "ruby-4", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -91,6 +98,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = { { type = "item", name = "sapphire-4", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -104,6 +112,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = { { type = "item", name = "emerald-4", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -117,6 +126,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = { { type = "item", name = "amethyst-4", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -130,6 +140,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = { { type = "item", name = "topaz-4", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -143,6 +154,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = { { type = "item", name = "diamond-4", amount = 1 } },
+    allow_productivity = true,
   },
 
   {

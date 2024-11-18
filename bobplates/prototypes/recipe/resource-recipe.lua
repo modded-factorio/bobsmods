@@ -12,6 +12,7 @@ data:extend({
     },
     results = { { type = "item", name = "carbon", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -25,6 +26,7 @@ data:extend({
     },
     results = { { type = "item", name = "resin", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -44,6 +46,7 @@ data:extend({
       tertiary = { r = 1, g = 0.6, b = 0.0, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -58,6 +61,7 @@ data:extend({
     },
     results = { { type = "item", name = "rubber", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -71,6 +75,7 @@ data:extend({
     },
     results = { { type = "item", name = "glass", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -83,6 +88,8 @@ data:extend({
       { type = "item", name = "silicon", amount = 1 },
     },
     results = { { type = "item", name = "silicon-wafer", amount = 8 } },
+    allow_productivity = true,
+    allow_productivity = true,
   },
 
   {
@@ -96,6 +103,7 @@ data:extend({
       { type = "item", name = "silicon", amount = 1 },
     },
     results = { { type = "item", name = "silicon-powder", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -111,6 +119,7 @@ data:extend({
     },
     results = { { type = "item", name = "silicon-nitride", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -125,6 +134,7 @@ data:extend({
       { type = "item", name = "cobalt-oxide", amount = 1 },
     },
     results = { { type = "item", name = "lithium-cobalt-oxide", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -147,6 +157,7 @@ data:extend({
       tertiary = { r = 1, g = 0.6, b = 0.4, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -160,6 +171,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "gas-canister", amount = 5 } },
+    allow_productivity = true,
   },
 
   {
@@ -174,6 +186,7 @@ data:extend({
       { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "empty-canister", amount = 5 } },
+    allow_productivity = true,
   },
 
   {
@@ -193,6 +206,7 @@ data:extend({
       secondary = { r = 1, g = 0.73, b = 0.07, a = 0.000 },
       tertiary = { r = 1, g = 1, b = 1, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -229,6 +243,7 @@ data:extend({
       secondary = { r = 0.589, g = 0.540, b = 0.615, a = 0.361 },
       tertiary = { r = 0.469, g = 0.145, b = 0.695, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
