@@ -56,6 +56,9 @@ data:extend({
     subgroup = "bob-electronic-components",
     order = "0-a2[insulated-cable]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
@@ -69,9 +72,6 @@ data:extend({
     },
     results = { { type = "item", name = "insulated-cable", amount = 2 } },
     allow_decomposition = false,
-    drop_sound = electronic_part_drop_move,
-    inventory_move_sound = electronic_part_drop_move,
-    pick_sound = electronic_part_pick,
   },
 })
 
