@@ -20,140 +20,140 @@ end
 local function bob_pipepictures(pipe_type)
   return {
     straight_vertical_single = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-straight-vertical-single.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-vertical-single.png",
       priority = "extra-high",
       width = 160,
       height = 160,
       scale = 0.5,
     },
     straight_vertical = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-straight-vertical.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-vertical.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     straight_vertical_window = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-straight-vertical-window.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-vertical-window.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     straight_horizontal_window = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-straight-horizontal-window.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-horizontal-window.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     straight_horizontal = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-straight-horizontal.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-horizontal.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     corner_up_right = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-corner-up-right.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-corner-up-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     corner_up_left = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-corner-up-left.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-corner-up-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     corner_down_right = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-corner-down-right.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-corner-down-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     corner_down_left = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-corner-down-left.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-corner-down-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     t_up = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-t-up.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-t-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     t_down = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-t-down.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-t-down.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     t_right = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-t-right.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-t-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     t_left = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-t-left.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-t-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     cross = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-cross.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-cross.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     ending_up = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-ending-up.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-ending-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     ending_down = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-ending-down.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-ending-down.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     ending_right = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-ending-right.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-ending-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     ending_left = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-ending-left.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-ending-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     horizontal_window_background = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-horizontal-window-background.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-horizontal-window-background.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     vertical_window_background = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-vertical-window-background.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-vertical-window-background.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -200,28 +200,28 @@ end
 local function bob_pipetogroundpictures(pipe_type)
   return {
     north = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-to-ground-up.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     south = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-to-ground-down.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-down.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     east = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-to-ground-right.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     west = {
-      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-to-ground-left.png",
+      filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -235,7 +235,7 @@ local function bob_pipecoverspictures(pipe_type)
     north = {
       layers = {
         {
-          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-cover-north.png",
+          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-cover-north.png",
           priority = "extra-high",
           width = 128,
           height = 128,
@@ -254,7 +254,7 @@ local function bob_pipecoverspictures(pipe_type)
     east = {
       layers = {
         {
-          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-cover-east.png",
+          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-cover-east.png",
           priority = "extra-high",
           width = 128,
           height = 128,
@@ -273,7 +273,7 @@ local function bob_pipecoverspictures(pipe_type)
     south = {
       layers = {
         {
-          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-cover-south.png",
+          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-cover-south.png",
           priority = "extra-high",
           width = 128,
           height = 128,
@@ -292,7 +292,7 @@ local function bob_pipecoverspictures(pipe_type)
     west = {
       layers = {
         {
-          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/hr-pipe-cover-west.png",
+          filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-cover-west.png",
           priority = "extra-high",
           width = 128,
           height = 128,
