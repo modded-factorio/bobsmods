@@ -468,7 +468,7 @@ data:extend({
       "air-compressor-3",
       "nitinol-processing",
       "electric-engine",
-      "advanced-electronics-3",
+      "advanced-processing-unit",
     },
     effects = {
       {
@@ -577,7 +577,7 @@ data:extend({
       "water-bore-3",
       "nitinol-processing",
       "electric-engine",
-      "advanced-electronics-3",
+      "advanced-processing-unit",
     },
     effects = {
       {
@@ -903,7 +903,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "advanced-electronics-3",
+    name = "advanced-processing-unit",
     icon = "__bobplates__/graphics/icons/technology/advanced-electronics-3.png",
     icon_size = 128,
     prerequisites = {
