@@ -106,6 +106,14 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         energy_usage = "1050kW",
         energy_source = { emissions_per_minute = { pollution = 2 } },
         module_slots = 6,
+        icons_positioning = {
+          {
+            inventory_index = defines.inventory.assembling_machine_modules,
+            shift = { 0, 0.8 },
+            multi_row_initial_height_modifier = -0.3,
+            max_icons_per_row = 3
+          },
+        },
       },
     }),
 
