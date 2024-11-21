@@ -202,6 +202,15 @@ then
         crafting_speed = 2.1,
         energy_usage = "205kW",
         module_slots = 3,
+        icons_positioning = {
+          {
+            inventory_index = defines.inventory.assembling_machine_modules,
+            shift = { 0, 0.7 },
+            scale = 0.4,
+            multi_row_initial_height_modifier = -0.3,
+            max_icons_per_row = 2,
+          },
+        },
         next_upgrade = "bob-distillery-4",
       },
     }),
@@ -224,6 +233,15 @@ then
         crafting_speed = 2.8,
         energy_usage = "242kW",
         module_slots = 4,
+        icons_positioning = {
+          {
+            inventory_index = defines.inventory.assembling_machine_modules,
+            shift = { 0, 0.7 },
+            scale = 0.4,
+            multi_row_initial_height_modifier = -0.3,
+            max_icons_per_row = 2,
+          },
+        },
         next_upgrade = "bob-distillery-5",
       },
     }),
@@ -246,6 +264,15 @@ then
         crafting_speed = 3.5,
         energy_usage = "270kW",
         module_slots = 5,
+        icons_positioning = {
+          {
+            inventory_index = defines.inventory.assembling_machine_modules,
+            shift = { 0, 0.7 },
+            scale = 0.4,
+            multi_row_initial_height_modifier = -0.3,
+            max_icons_per_row = 3,
+          },
+        },
       },
     }),
 
