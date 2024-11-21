@@ -170,16 +170,16 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       {
         type = "technology",
         name = "fluid-mixing-furnace",
-        icon_size = 128,
         icons = {
           {
             icon = "__base__/graphics/technology/advanced-material-processing.png",
             icon_size = 256,
           },
           {
-            icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
+            icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
             icon_size = 128,
-            shift = { -64, -64 },
+            scale = 0.5,
+            shift = { -48, -48 },
           },
         },
         prerequisites = {
@@ -314,17 +314,16 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       {
         type = "technology",
         name = "fluid-chemical-furnace",
-        icon_size = 128,
         icons = {
           {
             icon = "__base__/graphics/technology/advanced-material-processing.png",
             icon_size = 256,
           },
           {
-            icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
+            icon = "__bobplates__/graphics/icons/technology/chemistry.png",
             icon_size = 64,
-            scale = 2,
-            shift = { -64, -64 },
+            scale = 1,
+            shift = { -48, -48 },
           },
         },
         prerequisites = {
