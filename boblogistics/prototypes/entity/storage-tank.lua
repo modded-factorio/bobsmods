@@ -1,3 +1,4 @@
+data.raw["storage-tank"]["storage-tank"].icon = "__boblogistics__/graphics/icons/storage-tank-1.png"
 data.raw["storage-tank"]["storage-tank"].fast_replaceable_group = "pipe"
 data.raw["storage-tank"]["storage-tank"].next_upgrade = "storage-tank-2"
 
@@ -162,8 +163,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "storage-tank-2",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-2.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "storage-tank-2" },
     max_health = 600,
@@ -203,8 +203,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "storage-tank-3",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-3.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "storage-tank-3" },
     max_health = 700,
@@ -244,8 +243,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "storage-tank-4",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-4.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "storage-tank-4" },
     max_health = 800,
@@ -286,8 +284,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-1.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-storage-tank-all-corners" },
     max_health = 500,
@@ -330,8 +327,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners-2",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-2.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-storage-tank-all-corners-2" },
     max_health = 600,
@@ -374,8 +370,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners-3",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-3.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-storage-tank-all-corners-3" },
     max_health = 700,
@@ -418,8 +413,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "bob-storage-tank-all-corners-4",
-    icon = "__base__/graphics/icons/storage-tank.png",
-    icon_size = 64,
+    icon = "__boblogistics__/graphics/icons/storage-tank-all-corners-4.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-storage-tank-all-corners-4" },
     max_health = 800,
