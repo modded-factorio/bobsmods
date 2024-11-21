@@ -176,7 +176,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
             icon_size = 256,
           },
           {
-            icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
+            icon = "__bobassembly_/graphics/icons/technology/alloy-processing.png",
             icon_size = 128,
             scale = 0.5,
             shift = { -48, -48 },
@@ -320,7 +320,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
             icon_size = 256,
           },
           {
-            icon = "__bobplates__/graphics/icons/technology/chemistry.png",
+            icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
             icon_size = 64,
             scale = 1,
             shift = { -48, -48 },
