@@ -100,8 +100,13 @@ data:extend({
       {
         inventory_index = defines.inventory.assembling_machine_modules,
         shift = { 0, 0.5 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -161,8 +166,13 @@ data:extend({
       {
         inventory_index = defines.inventory.assembling_machine_modules,
         shift = { 0, 0.5 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -221,9 +231,15 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
+        shift = { 0, 0.7 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
+        max_icons_per_row = 2,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -282,9 +298,15 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
+        shift = { 0, 0.7 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
+        max_icons_per_row = 3,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -343,8 +365,13 @@ data:extend({
       {
         inventory_index = defines.inventory.assembling_machine_modules,
         shift = { 0, 0.5 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -404,8 +431,13 @@ data:extend({
       {
         inventory_index = defines.inventory.assembling_machine_modules,
         shift = { 0, 0.5 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -464,9 +496,15 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
+        shift = { 0, 0.7 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
+        max_icons_per_row = 2,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -525,9 +563,15 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
+        shift = { 0, 0.7 },
+        scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
+        max_icons_per_row = 3,
       },
+    },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.15 }
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
