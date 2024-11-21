@@ -48,7 +48,7 @@ then
       "processing-unit",
       "advanced-processing-unit"
     )
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then
