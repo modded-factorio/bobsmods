@@ -462,6 +462,9 @@ local function bob_gun_turret(inputs)
     folding_sound = sounds.gun_turret_deactivate,
     attacking_animation = bob_turret_attack({ type = inputs.gun_type, tint = inputs.tint }),
     graphics_set = { base_visualisation = { animation = inputs.base } },
+    icon_draw_specification = {
+      scale = 0.7
+    },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = {
       type = "projectile",
