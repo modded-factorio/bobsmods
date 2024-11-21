@@ -77,7 +77,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
   end
 
   local function bob_electric_furnace(input)
-    return {
+    local prototype = {
       type = "furnace",
       name = input.name,
       icon = input.icon,
@@ -100,8 +100,10 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         {
           inventory_index = defines.inventory.assembling_machine_modules,
           shift = { 0, 0.8 },
-          multi_row_initial_height_modifier = -0.3,
         },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.1 }
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       crafting_categories = { "smelting" },
@@ -128,6 +130,15 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       },
       fast_replaceable_group = "furnace",
     }
+
+    if input.module_slots == 5 or input.module_slots == 6 then
+      prototype.icons_positioning[1].max_icons_per_row = 3
+    end
+    if input.module_slots > 4 then
+      prototype.icons_positioning[1].multi_row_initial_height_modifier = -0.3
+    end
+
+    return prototype
   end
 
   data.raw.item["electric-furnace"].order = "c[electric-furnace-1]"
