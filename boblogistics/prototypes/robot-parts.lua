@@ -1,24 +1,24 @@
+local part_drop_move = {
+  filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+  volume = 0.7
+}
+local part_pick = {
+  filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+  volume = 0.8
+}
+local electronic_drop_move = {
+  filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+  volume = 1
+}
+local electronic_pick = {
+  filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+  volume = 0.7
+}
+
 if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
   data.raw.item["flying-robot-frame"].order = "j[flying-robot-frame-1]"
   data.raw.item["flying-robot-frame"].subgroup = "bob-robot-parts"
   bobmods.lib.recipe.remove_ingredient("flying-robot-frame", "electronic-circuit")
-
-  local part_drop_move = {
-    filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-    volume = 0.7
-  }
-  local part_pick = {
-    filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-    volume = 0.8
-  }
-  local electronic_drop_move = {
-    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-    volume = 1
-  }
-  local electronic_pick = {
-    filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-    volume = 0.7
-  }
 
   data:extend({
     {
