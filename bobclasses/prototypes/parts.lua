@@ -1,5 +1,4 @@
 local bodypart_drop_move = {
-drop_sound = {
   filename = "__base__/sound/item/armor-small-inventory-move.ogg",
   volume = 0.7
 }
