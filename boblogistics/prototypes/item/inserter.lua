@@ -4,6 +4,15 @@ data.raw.item["long-handed-inserter"].order = "e[inserter]-c[fast]"
 data.raw.item["fast-inserter"].order = "e[inserter]-d[express]"
 data.raw.item["bulk-inserter"].order = "e[inserter]-d[express]-c[bulk]"
 
+local inserter_drop_move = {
+  filename = "__base__/sound/item/inserter-inventory-move.ogg",
+  volume = 0.8
+}
+local inserter_pick = {
+  filename = "__base__/sound/item/inserter-inventory-pickup.ogg",
+  volume = 0.8
+}
+
 data:extend({
   {
     type = "item",
@@ -14,6 +23,9 @@ data:extend({
     order = "e[inserter]-a[steam]",
     place_result = "steam-inserter",
     stack_size = 50,
+    drop_sound = inserter_drop_move,
+    inventory_move_sound = inserter_drop_move,
+    pick_sound = inserter_pick,
   },
   {
     type = "item",
@@ -24,6 +36,9 @@ data:extend({
     order = "e[inserter]-f[ultimate]",
     place_result = "express-inserter",
     stack_size = 50,
+    drop_sound = inserter_drop_move,
+    inventory_move_sound = inserter_drop_move,
+    pick_sound = inserter_pick,
   },
   {
     type = "item",
@@ -34,6 +49,9 @@ data:extend({
     order = "e[inserter]-f[ultimate]-c[bulk]",
     place_result = "express-bulk-inserter",
     stack_size = 50,
+    drop_sound = inserter_drop_move,
+    inventory_move_sound = inserter_drop_move,
+    pick_sound = inserter_pick,
   },
 })
 
@@ -52,6 +70,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       order = "e[inserter]-c[fast]",
       place_result = "red-inserter",
       stack_size = 50,
+      drop_sound = inserter_drop_move,
+      inventory_move_sound = inserter_drop_move,
+      pick_sound = inserter_pick,
     },
     {
       type = "item",
@@ -62,6 +83,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       order = "e[inserter]-c[fast]-c[bulk]",
       place_result = "red-bulk-inserter",
       stack_size = 50,
+      drop_sound = inserter_drop_move,
+      inventory_move_sound = inserter_drop_move,
+      pick_sound = inserter_pick,
     },
 
     {
@@ -74,6 +98,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       order = "e[inserter]-d[express]",
       place_result = "fast-inserter",
       stack_size = 50,
+      drop_sound = inserter_drop_move,
+      inventory_move_sound = inserter_drop_move,
+      pick_sound = inserter_pick,
     },
     {
       type = "item",
@@ -85,6 +112,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       order = "e[inserter]-d[express]-c[bulk]",
       place_result = "bulk-inserter",
       stack_size = 50,
+      drop_sound = inserter_drop_move,
+      inventory_move_sound = inserter_drop_move,
+      pick_sound = inserter_pick,
     },
 
     {
@@ -96,6 +126,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       order = "e[inserter]-e[turbo]",
       place_result = "turbo-inserter",
       stack_size = 50,
+      drop_sound = inserter_drop_move,
+      inventory_move_sound = inserter_drop_move,
+      pick_sound = inserter_pick,
     },
     {
       type = "item",
@@ -106,6 +139,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       order = "e[inserter]-e[turbo]-c[bulk]",
       place_result = "turbo-bulk-inserter",
       stack_size = 50,
+      drop_sound = inserter_drop_move,
+      inventory_move_sound = inserter_drop_move,
+      pick_sound = inserter_pick,
     },
   })
 
