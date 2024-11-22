@@ -55,6 +55,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       drop_sound = mechanical_drop_move,
       inventory_move_sound = mechanical_drop_move,
       pick_sound = mechanical_pick,
+      weight = 20000,
     },
   })
 end
@@ -98,6 +99,7 @@ data:extend({
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
     pick_sound = mechanical_pick,
+    weight = 20000,
   },
 
   {
@@ -138,5 +140,6 @@ data:extend({
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
     pick_sound = mechanical_pick,
+    weight = 20000,
   },
 })
