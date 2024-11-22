@@ -52,6 +52,7 @@ data:extend({
     drop_sound = inserter_drop_move,
     inventory_move_sound = inserter_drop_move,
     pick_sound = inserter_pick,
+    weight = 20000,
   },
 })
 
@@ -86,6 +87,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
       pick_sound = inserter_pick,
+      weight = 20000,
     },
 
     {
@@ -115,6 +117,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
       pick_sound = inserter_pick,
+      weight = 20000,
     },
 
     {
@@ -142,6 +145,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
       pick_sound = inserter_pick,
+      weight = 20000,
     },
   })
 
