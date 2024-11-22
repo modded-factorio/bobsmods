@@ -1303,6 +1303,7 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
         volume = 0.8
       },
+      weight = 5000,
     },
 
     {
