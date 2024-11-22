@@ -1291,6 +1291,18 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       order = "a[pipe]-a[pipe]-3-1",
       place_result = "iridium-pipe",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
 
     {
@@ -1302,6 +1314,18 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       order = "a[pipe]-b[pipe-to-ground]-3-1",
       place_result = "iridium-pipe-to-ground",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8
+      },
     },
     {
       type = "recipe",
