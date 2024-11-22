@@ -35,6 +35,7 @@ data:extend({
       filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 5000,
   },
 
   {
@@ -72,6 +73,7 @@ data:extend({
     drop_sound = pipe_drop_move,
     inventory_move_sound = pipe_drop_move,
     pick_sound = pipe_pick,
+    weight = 5000,
   },
 
   {
@@ -100,6 +102,7 @@ data:extend({
     drop_sound = pipe_drop_move,
     inventory_move_sound = pipe_drop_move,
     pick_sound = pipe_pick,
+    weight = 5000,
   },
 
   {
@@ -137,6 +140,7 @@ data:extend({
       filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
       volume = 0.7
     },
+    weight = 5000,
   },
 
   {
@@ -177,6 +181,7 @@ if data.raw.item["bronze-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 5000,
     },
 
     {
@@ -209,6 +214,7 @@ if data.raw.item["brass-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 5000,
     },
 
     {
@@ -250,6 +256,7 @@ if data.raw.item["silicon-nitride"] then
         filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 5000,
     },
 
     {
@@ -291,6 +298,7 @@ if data.raw.item["titanium-plate"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 5000,
     },
 
     {
@@ -323,6 +331,7 @@ if data.raw.item["tungsten-plate"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 5000,
     },
 
     {
@@ -355,6 +364,7 @@ if data.raw.item["nitinol-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 5000,
     },
 
     {
@@ -387,6 +397,7 @@ if data.raw.item["copper-tungsten-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 5000,
     },
 
     {
