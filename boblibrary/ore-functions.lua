@@ -84,7 +84,7 @@ end
 function bobmods.lib.resource.add_result(resource, item_in)
   local item = bobmods.lib.item.result(item_in)
   if item and type(resource) == "string" and data.raw.resource[resource] and bobmods.lib.item.get_type(item.name) then
-    bobmods.lib.result_check(data.raw.resource[resource].minable)
+    bobmods.lib.minable_result_check(data.raw.resource[resource].minable)
     bobmods.lib.item.add_new(data.raw.resource[resource].minable.results, item)
   else
     log(debug.traceback())
@@ -94,7 +94,7 @@ end
 
 function bobmods.lib.resource.remove_result(resource, item)
   if type(resource) == "string" and type(item) == "string" and data.raw.resource[resource] then
-    bobmods.lib.result_check(data.raw.resource[resource].minable)
+    bobmods.lib.minable_result_check(data.raw.resource[resource].minable)
     bobmods.lib.item.remove(data.raw.resource[resource].minable.results, item)
   else
     log(debug.traceback())

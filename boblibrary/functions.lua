@@ -13,7 +13,7 @@ function bobmods.lib.table_merge(table1, table2)
   end
 end
 
-function bobmods.lib.result_check(object)
+function bobmods.lib.minable_result_check(object)
   if object then
     if object.results == nil then
       object.results = {}
