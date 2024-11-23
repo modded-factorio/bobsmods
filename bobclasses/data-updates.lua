@@ -12,15 +12,15 @@ end
 
 --Fix for Space Age crafting category changes
 local categories = data.raw.character.character.crafting_categories
-data.raw.character["bob-character-miner"].crafting_categories = categories
-data.raw.character["bob-character-fighter"].crafting_categories = categories
-data.raw.character["bob-character-builder"].crafting_categories = categories
-data.raw.character["bob-character-balanced-2"].crafting_categories = categories
-data.raw.character["bob-character-miner-2"].crafting_categories = categories
-data.raw.character["bob-character-fighter-2"].crafting_categories = categories
-data.raw.character["bob-character-builder-2"].crafting_categories = categories
-data.raw.character["bob-character-engineer"].crafting_categories = categories
-data.raw.character["bob-character-prospector"].crafting_categories = categories
+data.raw.character["bob-character-miner"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-fighter"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-builder"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-balanced-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-miner-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-fighter-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-builder-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-engineer"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-prospector"].crafting_categories = util.copy(categories)
 
 table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "smelting")
 table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "smelting")
