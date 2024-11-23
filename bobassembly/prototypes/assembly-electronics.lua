@@ -162,7 +162,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       },
       icon_draw_specification = {
         scale = 0.66,
-        shift = { 0, -0.15 }
+        shift = { 0, -0.15 },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
@@ -338,7 +338,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       },
       icon_draw_specification = {
         scale = 0.66,
-        shift = { 0, -0.15 }
+        shift = { 0, -0.15 },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
@@ -518,7 +518,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       },
       icon_draw_specification = {
         scale = 0.66,
-        shift = { 0, -0.15 }
+        shift = { 0, -0.15 },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },

@@ -160,7 +160,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       energy_usage = "60kW",
       icon_draw_specification = {
         scale = 0.66,
-        shift = { 0, -0.15 }
+        shift = { 0, -0.15 },
       },
       allowed_effects = {},
     },
@@ -329,7 +329,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       },
       energy_usage = "300kW",
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       allowed_effects = {},
     },

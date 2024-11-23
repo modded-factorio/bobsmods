@@ -234,7 +234,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 1.75,
       energy_usage = "260kW",
@@ -281,7 +281,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 2.75,
       energy_usage = "390kW",
@@ -328,7 +328,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 3.5,
       energy_usage = "480kW",

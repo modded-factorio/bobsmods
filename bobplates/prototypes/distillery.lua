@@ -464,7 +464,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       },
       icon_draw_specification = {
         scale = 0.66,
-        shift = { 0, -0.25 }
+        shift = { 0, -0.25 },
       },
       working_sound = {
         sound = {

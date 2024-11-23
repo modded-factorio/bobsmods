@@ -103,7 +103,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.1 }
+        shift = { 0, -0.1 },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       crafting_categories = { "smelting" },

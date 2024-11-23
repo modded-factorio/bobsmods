@@ -142,7 +142,7 @@ data:extend({
     energy_usage = "300kW",
     module_slots = 4,
     icon_draw_specification = {
-      shift = { 0, -0.3 }
+      shift = { 0, -0.3 },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
@@ -326,7 +326,7 @@ data:extend({
       },
     },
     icon_draw_specification = {
-      shift = { 0, -0.3 }
+      shift = { 0, -0.3 },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
@@ -509,7 +509,7 @@ data:extend({
       },
     },
     icon_draw_specification = {
-      shift = { 0, -0.3 }
+      shift = { 0, -0.3 },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },

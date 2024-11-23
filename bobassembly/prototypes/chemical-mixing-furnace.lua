@@ -180,7 +180,7 @@ then
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.1 }
+        shift = { 0, -0.1 },
       },
       crafting_speed = 3,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
@@ -250,11 +250,11 @@ then
           inventory_index = defines.inventory.assembling_machine_modules,
           shift = { 0, 0.8 },
           multi_row_initial_height_modifier = -0.3,
-          max_icons_per_row = 3
+          max_icons_per_row = 3,
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.1 }
+        shift = { 0, -0.1 },
       },
       crafting_speed = 4,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },

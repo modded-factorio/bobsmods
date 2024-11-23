@@ -118,7 +118,7 @@ data:extend({
       },
     },
     icon_draw_specification = {
-      shift = { 0, -0.3 }
+      shift = { 0, -0.3 },
     },
     crafting_speed = 0.75,
     energy_usage = "420kW",
@@ -207,7 +207,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.1 }
+      shift = { 0, -0.1 },
     },
     crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
@@ -383,7 +383,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.1 }
+      shift = { 0, -0.1 },
     },
     crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
@@ -447,7 +447,7 @@ data:extend({
       },
     },
     icon_draw_specification = {
-      shift = { 0, -0.1 }
+      shift = { 0, -0.1 },
     },
     crafting_speed = 2,
     crafting_categories = { "chemical-furnace" },
@@ -529,7 +529,7 @@ data:extend({
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.1 }
+      shift = { 0, -0.1 },
     },
     crafting_categories = { "smelting", "mixing-furnace" },
     energy_usage = "90kW",
@@ -602,7 +602,7 @@ data:extend({
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.1 }
+      shift = { 0, -0.1 },
     },
     crafting_categories = { "smelting", "mixing-furnace" },
     energy_usage = "90kW",
@@ -655,7 +655,7 @@ data:extend({
       },
     },
     icon_draw_specification = {
-      shift = { 0, -0.1 }
+      shift = { 0, -0.1 },
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "mixing-furnace" },

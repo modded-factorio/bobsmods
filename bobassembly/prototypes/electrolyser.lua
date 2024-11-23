@@ -103,7 +103,6 @@ then
     }
   end
 
-
   data:extend({
     {
       type = "item",
@@ -283,7 +282,7 @@ then
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 1.25,
       energy_usage = "650kW",
@@ -329,7 +328,7 @@ then
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 2,
       energy_usage = "960kW",
@@ -373,11 +372,11 @@ then
           inventory_index = defines.inventory.assembling_machine_modules,
           shift = { 0, 0.8 },
           multi_row_initial_height_modifier = -0.3,
-          max_icons_per_row = 3
+          max_icons_per_row = 3,
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 2.75,
       energy_usage = "1210kW",
@@ -420,11 +419,11 @@ then
           inventory_index = defines.inventory.assembling_machine_modules,
           shift = { 0, 0.8 },
           multi_row_initial_height_modifier = -0.3,
-          max_icons_per_row = 3
+          max_icons_per_row = 3,
         },
       },
       icon_draw_specification = {
-        shift = { 0, -0.3 }
+        shift = { 0, -0.3 },
       },
       crafting_speed = 3.5,
       energy_usage = "1400kW",

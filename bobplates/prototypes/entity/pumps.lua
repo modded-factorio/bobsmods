@@ -106,7 +106,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -172,7 +172,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -239,7 +239,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -306,7 +306,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "air-pump",
@@ -371,7 +371,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -437,7 +437,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -504,7 +504,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
@@ -571,7 +571,7 @@ data:extend({
     },
     icon_draw_specification = {
       scale = 0.66,
-      shift = { 0, -0.15 }
+      shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
     fast_replaceable_group = "water-pump",
