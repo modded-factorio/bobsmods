@@ -43,6 +43,7 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
       icon_size = 32,
       order = "a-0",
       allow_productivity = true,
+      hide_from_signal_gui = false,
     },
   })
 end
