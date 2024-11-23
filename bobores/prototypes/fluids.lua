@@ -4,10 +4,11 @@ bobmods.ores.water = {
   icon_size = 64,
   category = "water",
   infinite = true,
-  minimum = 1000,
-  normal = 1000,
+  minimum = 100000,
+  normal = 100000,
+  highlight = true,
   resource_patch_search_radius = 12,
-  mining_time = 0.1,
+  mining_time = 1,
   tint = { r = 0.2, g = 0.8, b = 1 },
   map_color = { r = 0.2, g = 0.8, b = 1 },
   collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
@@ -24,6 +25,8 @@ bobmods.ores.water = {
   sprite = {
     sheet = 5,
   },
+  walking_sound = "oil",
+  driving_sound = "oil",
   disable_map_grid = true,
   enabled = false,
   --[[
@@ -48,6 +51,7 @@ bobmods.ores.water = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" }
 }
 
 function bobmods.ores.water.create_autoplace()
@@ -71,10 +75,11 @@ bobmods.ores.lithia_water = {
   icon = "__bobores__/graphics/icons/lithia-water.png",
   category = "water",
   infinite = true,
-  minimum = 1000,
-  normal = 1000,
+  minimum = 1000000,
+  normal = 1000000,
+  highlight = true,
   resource_patch_search_radius = 12,
-  mining_time = 0.1,
+  mining_time = 1,
   tint = { r = 0.5, g = 0.7, b = 0.8 },
   map_color = { r = 0.5, g = 1, b = 0.8 },
   collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
@@ -91,6 +96,8 @@ bobmods.ores.lithia_water = {
   sprite = {
     sheet = 5,
   },
+  walking_sound = "oil",
+  driving_sound = "oil",
   disable_map_grid = true,
   enabled = false,
   --[[
