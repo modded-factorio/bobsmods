@@ -17,7 +17,7 @@ require("prototypes.distillery")
 require("prototypes.fluid-furnace")
 require("prototypes.centrifuge")
 
-if mods["quality"] then
+if feature_flags["quality"] then
   if data.raw["assembling-machine"]["assembling-machine-6"] then
     table.insert(data.raw["assembling-machine"]["assembling-machine-4"].allowed_effects, "quality")
     table.insert(data.raw["assembling-machine"]["assembling-machine-5"].allowed_effects, "quality")

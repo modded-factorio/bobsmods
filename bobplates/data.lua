@@ -87,7 +87,7 @@ require("prototypes.item.alien")
 require("prototypes.recipe.alien-recipe")
 require("prototypes.technology-alien")
 
-if mods["quality"] then
+if feature_flags["quality"] then
   table.insert(data.raw["assembling-machine"].electrolyser.allowed_effects, "quality")
   table.insert(data.raw["assembling-machine"]["electric-chemical-furnace"].allowed_effects, "quality")
   table.insert(data.raw["assembling-machine"]["electric-mixing-furnace"].allowed_effects, "quality")
