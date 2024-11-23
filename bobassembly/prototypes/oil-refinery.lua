@@ -12,6 +12,13 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
   data.raw.item["oil-refinery"].subgroup = "bob-refinery-machine"
   data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
+  data.raw["assembling-machine"]["oil-refinery"].icons_positioning = {
+    {
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = { 0, 1 },
+    },
+  }
+
   data:extend({
     {
       type = "item",

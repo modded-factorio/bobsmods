@@ -123,7 +123,7 @@ end
 
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("assembling-machine-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("automation-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("automation-5", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("assembling-machine-6", "processing-unit", "advanced-processing-unit")
 end
 

@@ -103,33 +103,6 @@ then
     }
   end
 
-  circuit_connector_definitions["electrolyser"] =
-    circuit_connector_definitions.create_vector(universal_connector_template, {
-      {
-        variation = 8,
-        main_offset = util.by_pixel(-12, -34),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = false,
-      },
-      {
-        variation = 6,
-        main_offset = util.by_pixel(0, -19),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = false,
-      },
-      {
-        variation = 8,
-        main_offset = util.by_pixel(-12, -41),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = false,
-      },
-      {
-        variation = 2,
-        main_offset = util.by_pixel(0, -25),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = false,
-      },
-    })
 
   data:extend({
     {
@@ -303,6 +276,15 @@ then
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 3,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 1.25,
       energy_usage = "650kW",
       energy_source = {
@@ -340,6 +322,15 @@ then
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 2,
       energy_usage = "960kW",
       energy_source = {
@@ -377,6 +368,17 @@ then
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 2.75,
       energy_usage = "1210kW",
       energy_source = {
@@ -413,6 +415,17 @@ then
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 3.5,
       energy_usage = "1400kW",
       energy_source = {

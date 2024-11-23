@@ -152,6 +152,18 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       },
       energy_usage = "100kW",
       module_slots = 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.5 },
+          scale = 0.4,
+          multi_row_initial_height_modifier = -0.3,
+        },
+      },
+      icon_draw_specification = {
+        scale = 0.66,
+        shift = { 0, -0.15 }
+      },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
 
@@ -318,8 +330,15 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       icons_positioning = {
         {
           inventory_index = defines.inventory.assembling_machine_modules,
-          max_icons_per_row = 3,
+          shift = { 0, 0.7 },
+          scale = 0.4,
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 2,
         },
+      },
+      icon_draw_specification = {
+        scale = 0.66,
+        shift = { 0, -0.15 }
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
@@ -491,8 +510,15 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       icons_positioning = {
         {
           inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.7 },
+          scale = 0.4,
+          multi_row_initial_height_modifier = -0.3,
           max_icons_per_row = 3,
         },
+      },
+      icon_draw_specification = {
+        scale = 0.66,
+        shift = { 0, -0.15 }
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },

@@ -233,6 +233,9 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 1.75,
       energy_usage = "260kW",
       energy_source = {
@@ -269,6 +272,17 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 2.75,
       energy_usage = "390kW",
       energy_source = {
@@ -305,6 +319,17 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 }
+      },
       crafting_speed = 3.5,
       energy_usage = "480kW",
       energy_source = {

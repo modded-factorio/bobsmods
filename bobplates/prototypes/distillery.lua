@@ -454,6 +454,18 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       },
       allowed_effects = { "consumption", "speed", "pollution" },
       module_slots = 1,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.5 },
+          scale = 0.4,
+          multi_row_initial_height_modifier = -0.3,
+        },
+      },
+      icon_draw_specification = {
+        scale = 0.66,
+        shift = { 0, -0.25 }
+      },
       working_sound = {
         sound = {
           filename = "__base__/sound/boiler.ogg",

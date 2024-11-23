@@ -104,6 +104,6 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("oil-processing-4", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "advanced-processing-unit")
   end
 end
