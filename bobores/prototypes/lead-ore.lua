@@ -26,7 +26,7 @@ bobmods.ores.lead = {
 ]]
   --
   autoplace = "control-only",
-  planets = { "nauvis" }
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.lead.create_autoplace()

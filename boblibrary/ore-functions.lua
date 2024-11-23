@@ -5,24 +5,32 @@ end
 bobmods.lib.resource_autoplace = require("resource-autoplace")
 local sounds = require("__base__.prototypes.entity.sounds")
 
-local stone_driving_sound =
-{
-  sound =
-  {
-    filename = "__base__/sound/driving/vehicle-surface-stone.ogg", volume = 0.8,
-    advanced_volume_control = {fades = {fade_in = {curve_type = "cosine", from = {control = 0.5, volume_percentage = 0.0}, to = {1.5, 100.0 }}}}
+local stone_driving_sound = {
+  sound = {
+    filename = "__base__/sound/driving/vehicle-surface-stone.ogg",
+    volume = 0.8,
+    advanced_volume_control = {
+      fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = {
+        1.5,
+        100.0,
+      } } },
+    },
   },
-  fade_ticks = 6
+  fade_ticks = 6,
 }
 
-local oil_driving_sound =
-{
-  sound =
-  {
-    filename = "__base__/sound/driving/vehicle-surface-oil.ogg", volume = 0.8,
-    advanced_volume_control = {fades = {fade_in = {curve_type = "cosine", from = {control = 0.5, volume_percentage = 0.0}, to = {1.5, 100.0 }}}}
+local oil_driving_sound = {
+  sound = {
+    filename = "__base__/sound/driving/vehicle-surface-oil.ogg",
+    volume = 0.8,
+    advanced_volume_control = {
+      fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = {
+        1.5,
+        100.0,
+      } } },
+    },
   },
-  fade_ticks = 6
+  fade_ticks = 6,
 }
 
 function bobmods.lib.resource.create_autoplace(inputs)
@@ -602,7 +610,6 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         bobmods.lib.resource.add_result(inputs.name, item)
       end
     end
-
   end
 end
 
@@ -658,7 +665,6 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
     else
       log(inputs.name .. " autoplace control not found")
     end
-
   end
 end
 

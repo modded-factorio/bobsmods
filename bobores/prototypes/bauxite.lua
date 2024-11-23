@@ -24,7 +24,7 @@ bobmods.ores.bauxite = {
 ]]
   --
   autoplace = "control-only",
-  planets = { "nauvis" }
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.bauxite.create_autoplace()

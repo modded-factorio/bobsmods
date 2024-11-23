@@ -24,7 +24,7 @@ bobmods.ores.tungsten = {
 ]]
   --
   autoplace = "control-only",
-  planets = { "nauvis" }
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.tungsten.create_autoplace()

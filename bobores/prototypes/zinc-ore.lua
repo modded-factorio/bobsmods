@@ -25,7 +25,7 @@ bobmods.ores.zinc = {
 ]]
   --
   autoplace = "control-only",
-  planets = { "nauvis" }
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.zinc.create_autoplace()
