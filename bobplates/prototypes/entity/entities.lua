@@ -209,7 +209,7 @@ data:extend({
       scale = 0.66,
       shift = { 0, -0.1 }
     },
-    crafting_categories = { "smelting", "chemical-furnace" },
+    crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
       type = "burner",
@@ -385,7 +385,7 @@ data:extend({
       scale = 0.66,
       shift = { 0, -0.1 }
     },
-    crafting_categories = { "smelting", "chemical-furnace" },
+    crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
       type = "burner",
@@ -450,7 +450,7 @@ data:extend({
       shift = { 0, -0.1 }
     },
     crafting_speed = 2,
-    crafting_categories = { "smelting", "chemical-furnace" },
+    crafting_categories = { "chemical-furnace" },
     energy_usage = "180kW",
     energy_source = {
       type = "electric",
