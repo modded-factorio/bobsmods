@@ -1,23 +1,22 @@
 local electronic_part_drop_move = {
   filename = "__base__/sound/item/wire-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local electronic_part_pick = {
   filename = "__base__/sound/item/wire-inventory-pickup.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 
 local electronic_board_drop_move = {
   filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-  volume = 1
+  volume = 1,
 }
 local electronic_board_pick = {
   filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 
 if data.raw.item["tin-plate"] then
-
   data:extend({
     {
       type = "item",
@@ -272,15 +271,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/wood-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/wood-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/wood-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 
@@ -307,15 +306,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -344,15 +343,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -380,15 +379,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/wood-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/wood-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/wood-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 
@@ -419,15 +418,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/planner-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -459,15 +458,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/planner-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -499,15 +498,15 @@ data:extend({
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/planner-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
