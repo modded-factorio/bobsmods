@@ -1,11 +1,11 @@
 local body_drop_move = {
   filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 
 local body_pick = {
   filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 
 data:extend({
@@ -20,7 +20,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -44,7 +44,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -68,7 +68,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -92,7 +92,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
 
   {
@@ -117,7 +117,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -147,7 +147,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -177,7 +177,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -207,7 +207,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
 
   {
@@ -232,7 +232,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -256,7 +256,7 @@ data:extend({
     stack_size = 1,
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
-    pick_sound = body_pick
+    pick_sound = body_pick,
   },
 })
 
