@@ -1,4 +1,5 @@
-data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = { { 0.5, "__core__/graphics/color_luts/lut-dawn.png" } }
+data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup =
+  { { 0.5, "__core__/graphics/color_luts/lut-dawn.png" } }
 
 data:extend({
   {
@@ -28,11 +29,11 @@ data:extend({
     color_lookup = { { 0.5, "__core__/graphics/color_luts/nightvision.png" } },
     activate_sound = {
       filename = "__base__/sound/nightvision-on.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     deactivate_sound = {
       filename = "__base__/sound/nightvision-off.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
   },
   {
@@ -62,11 +63,11 @@ data:extend({
     color_lookup = { { 0.5, "__core__/graphics/color_luts/identity-lut.png" } },
     activate_sound = {
       filename = "__base__/sound/nightvision-on.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     deactivate_sound = {
       filename = "__base__/sound/nightvision-off.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
   },
 })
@@ -505,7 +506,7 @@ data:extend({
     beam = "bob-laser-beam-sapphire",
     damage_modifier = 0.4,
     cooldown = 36,
-    range = 16
+    range = 16,
   }),
   bob_personal_laser_defense_equipment({
     name = "personal-laser-defense-equipment-3",
@@ -515,7 +516,7 @@ data:extend({
     beam = "bob-laser-beam-emerald",
     damage_modifier = 0.55,
     cooldown = 32,
-    range = 17
+    range = 17,
   }),
   bob_personal_laser_defense_equipment({
     name = "personal-laser-defense-equipment-4",
@@ -525,7 +526,7 @@ data:extend({
     beam = "bob-laser-beam-amethyst",
     damage_modifier = 0.7,
     cooldown = 28,
-    range = 18
+    range = 18,
   }),
   bob_personal_laser_defense_equipment({
     name = "personal-laser-defense-equipment-5",
@@ -535,7 +536,7 @@ data:extend({
     beam = "bob-laser-beam-topaz",
     damage_modifier = 0.85,
     cooldown = 24,
-    range = 19
+    range = 19,
   }),
   bob_personal_laser_defense_equipment({
     name = "personal-laser-defense-equipment-6",
@@ -545,7 +546,7 @@ data:extend({
     beam = "bob-laser-beam-diamond",
     damage_modifier = 1,
     cooldown = 20,
-    range = 20
+    range = 20,
   }),
 })
 

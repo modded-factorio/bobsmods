@@ -26,17 +26,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
   {
     type = "item",
@@ -50,17 +50,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
   {
     type = "item",
@@ -74,17 +74,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
   {
     type = "item",
@@ -98,17 +98,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 })
 
@@ -130,17 +130,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
-    weight = 100000
+    weight = 100000,
   },
   {
     type = "item",
@@ -154,17 +154,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
-    weight = 100000
+    weight = 100000,
   },
   {
     type = "item",
@@ -178,17 +178,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
-    weight = 100000
+    weight = 100000,
   },
   {
     type = "item",
@@ -202,17 +202,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
-    weight = 100000
+    weight = 100000,
   },
 })
 
@@ -232,17 +232,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 250000
+    weight = 250000,
   },
   {
     type = "item",
@@ -255,17 +255,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 250000
+    weight = 250000,
   },
   {
     type = "item",
@@ -278,17 +278,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 250000
+    weight = 250000,
   },
 
   {
@@ -302,15 +302,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
   {
@@ -324,15 +324,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 })
@@ -352,15 +352,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
   {
@@ -374,15 +374,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
   {
@@ -396,15 +396,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 })
@@ -425,17 +425,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
   {
     type = "item",
@@ -448,17 +448,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
   {
     type = "item",
@@ -471,17 +471,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
   {
     type = "item",
@@ -494,17 +494,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
   {
     type = "item",
@@ -517,17 +517,17 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {
@@ -541,15 +541,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
   },
   {
@@ -563,15 +563,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
   },
 })
