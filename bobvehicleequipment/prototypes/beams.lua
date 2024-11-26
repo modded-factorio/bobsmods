@@ -1,13 +1,12 @@
 local laser_beam_blend_mode = "additive"
 local laserBeamSound = {
-  sound =
-  {
+  sound = {
     category = "weapon",
     filename = "__base__/sound/fight/laser-beam.ogg",
     volume = 0.75,
-    modifiers = volume_multiplier("main-menu", 2.5)
+    modifiers = volume_multiplier("main-menu", 2.5),
   },
-  max_sounds_per_type = 1
+  max_sounds_per_type = 1,
 }
 
 data:extend({
@@ -56,7 +55,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -82,7 +81,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -108,7 +107,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -150,10 +149,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = laserBeamSound,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -199,7 +198,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -224,7 +223,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -249,7 +248,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -291,10 +290,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = laserBeamSound,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -340,7 +339,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -365,7 +364,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -390,7 +389,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -432,10 +431,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = laserBeamSound,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -481,7 +480,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -506,7 +505,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -531,7 +530,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -573,10 +572,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = laserBeamSound,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -622,7 +621,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -647,7 +646,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -672,7 +671,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -714,10 +713,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = laserBeamSound,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -763,7 +762,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -788,7 +787,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -813,7 +812,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -855,9 +854,9 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = laserBeamSound,
-    hidden = true
+    hidden = true,
   },
 })

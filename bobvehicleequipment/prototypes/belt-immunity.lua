@@ -10,7 +10,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/belt-immunity-equipment.png",
         icon_size = 64,
-        scale = 0.5
+        scale = 0.5,
       },
     },
     place_as_equipment_result = "vehicle-belt-immunity-equipment",
@@ -20,15 +20,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
   {

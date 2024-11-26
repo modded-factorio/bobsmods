@@ -11,17 +11,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 
   {
@@ -105,17 +105,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 
   {
@@ -200,17 +200,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 
   {
@@ -297,17 +297,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 
   {
@@ -393,17 +393,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 
   {
@@ -491,17 +491,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
-    weight = 100000
+    weight = 100000,
   },
 
   {

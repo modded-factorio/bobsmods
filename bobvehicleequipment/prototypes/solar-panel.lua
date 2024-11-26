@@ -11,15 +11,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -102,15 +102,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -192,15 +192,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -283,15 +283,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -374,15 +374,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -467,15 +467,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 

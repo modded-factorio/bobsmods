@@ -11,15 +11,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 
@@ -35,15 +35,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 
@@ -59,15 +59,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 
@@ -83,15 +83,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 
@@ -470,15 +470,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -500,15 +500,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -530,15 +530,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -560,15 +560,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 
@@ -591,15 +591,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -621,15 +621,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -651,15 +651,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -681,15 +681,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 
@@ -712,15 +712,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -742,15 +742,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -772,15 +772,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
   {
@@ -802,15 +802,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45
+      volume = 0.45,
     },
     pick_sound = {
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35
+      volume = 0.35,
     },
   },
 

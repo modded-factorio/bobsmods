@@ -78,8 +78,8 @@ data:extend({
           scale = 4,
           priority = "high",
         },
-      }
+      },
     },
-    hidden = true
+    hidden = true,
   },
 })

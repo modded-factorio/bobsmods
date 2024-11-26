@@ -11,15 +11,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
   },
 
@@ -105,15 +105,15 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
   },
 

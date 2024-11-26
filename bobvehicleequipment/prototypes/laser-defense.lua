@@ -58,17 +58,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {
@@ -144,17 +144,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {
@@ -230,17 +230,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {
@@ -317,17 +317,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {
@@ -404,17 +404,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {
@@ -492,17 +492,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
-    weight = 200000
+    weight = 200000,
   },
 
   {

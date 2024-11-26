@@ -11,17 +11,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 125000
+    weight = 125000,
   },
 
   {
@@ -100,17 +100,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 125000
+    weight = 125000,
   },
 
   {
@@ -194,17 +194,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 125000
+    weight = 125000,
   },
 
   {
@@ -289,17 +289,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 125000
+    weight = 125000,
   },
 
   {
@@ -383,17 +383,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 125000
+    weight = 125000,
   },
 
   {
@@ -477,17 +477,17 @@ data:extend({
     default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/reactor-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
-    weight = 125000
+    weight = 125000,
   },
 
   {
