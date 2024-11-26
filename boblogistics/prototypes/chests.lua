@@ -62,13 +62,13 @@ if data.raw.item["brass-alloy"] then
   })
 end
 
-if data.raw.item["titanium-plate"] then
+if data.raw.item["bob-titanium-plate"] then
   data:extend({
     {
       type = "recipe",
       name = "titanium-chest",
       enabled = false,
-      ingredients = { { type = "item", name = "titanium-plate", amount = 8 } },
+      ingredients = { { type = "item", name = "bob-titanium-plate", amount = 8 } },
       results = { { type = "item", name = "titanium-chest", amount = 1 } },
     },
     {

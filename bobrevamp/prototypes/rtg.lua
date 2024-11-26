@@ -298,8 +298,8 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       enabled = false,
       ingredients = {
         { type = "item", name = "plutonium-239", amount = 1 },
-        { type = "item", name = "lead-plate", amount = 1 },
-        { type = "item", name = "aluminium-plate", amount = 5 },
+        { type = "item", name = "bob-lead-plate", amount = 1 },
+        { type = "item", name = "bob-aluminium-plate", amount = 5 },
         { type = "item", name = "sodium-cobaltate", amount = 2 },
       },
       results = { { type = "item", name = "rtg", amount = 1 } },

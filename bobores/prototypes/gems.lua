@@ -2,12 +2,12 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
   data:extend({
     {
       type = "item",
-      name = "gem-ore",
+      name = "bob-gem-ore",
       icon = "__bobores__/graphics/icons/gem-ore.png",
       icon_size = 32,
 
       subgroup = "bob-ores",
-      order = "a-0[gem-ore]",
+      order = "a-0[bob-gem-ore]",
       stack_size = 200,
       drop_sound = {
         filename = "__base__/sound/item/resource-inventory-move.ogg",
@@ -28,15 +28,15 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
       name = "sort-gem-ore",
       energy_required = 1,
       ingredients = {
-        { type = "item", name = "gem-ore", amount = 1 },
+        { type = "item", name = "bob-gem-ore", amount = 1 },
       },
       results = {
-        { type = "item", name = "ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio },
-        { type = "item", name = "sapphire-ore", amount = 1, probability = bobmods.gems.SapphireRatio },
-        { type = "item", name = "emerald-ore", amount = 1, probability = bobmods.gems.EmeraldRatio },
-        { type = "item", name = "amethyst-ore", amount = 1, probability = bobmods.gems.AmethystRatio },
-        { type = "item", name = "topaz-ore", amount = 1, probability = bobmods.gems.TopazRatio },
-        { type = "item", name = "diamond-ore", amount = 1, probability = bobmods.gems.DiamondRatio },
+        { type = "item", name = "bob-ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio },
+        { type = "item", name = "bob-sapphire-ore", amount = 1, probability = bobmods.gems.SapphireRatio },
+        { type = "item", name = "bob-emerald-ore", amount = 1, probability = bobmods.gems.EmeraldRatio },
+        { type = "item", name = "bob-amethyst-ore", amount = 1, probability = bobmods.gems.AmethystRatio },
+        { type = "item", name = "bob-topaz-ore", amount = 1, probability = bobmods.gems.TopazRatio },
+        { type = "item", name = "bob-diamond-ore", amount = 1, probability = bobmods.gems.DiamondRatio },
       },
       subgroup = "bob-ores",
       icon = "__bobores__/graphics/icons/gem-ore.png",
@@ -51,7 +51,7 @@ end
 data:extend({
   {
     type = "item",
-    name = "ruby-ore",
+    name = "bob-ruby-ore",
     icon_size = 32,
     icon = "__bobores__/graphics/icons/ruby-ore.png",
 
@@ -74,7 +74,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sapphire-ore",
+    name = "bob-sapphire-ore",
     icon_size = 32,
     icon = "__bobores__/graphics/icons/sapphire-ore.png",
 
@@ -97,7 +97,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "emerald-ore",
+    name = "bob-emerald-ore",
     icon_size = 32,
     icon = "__bobores__/graphics/icons/emerald-ore.png",
 
@@ -120,7 +120,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "amethyst-ore",
+    name = "bob-amethyst-ore",
     icon_size = 32,
     icon = "__bobores__/graphics/icons/amethyst-ore.png",
 
@@ -143,7 +143,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "topaz-ore",
+    name = "bob-topaz-ore",
     icon_size = 32,
     icon = "__bobores__/graphics/icons/topaz-ore.png",
 
@@ -166,7 +166,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "diamond-ore",
+    name = "bob-diamond-ore",
     icon_size = 32,
     icon = "__bobores__/graphics/icons/diamond-ore.png",
 

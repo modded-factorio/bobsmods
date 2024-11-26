@@ -4,8 +4,8 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
     bobmods.lib.tech.add_prerequisite("centrifuge-2", "ceramics")
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("centrifuge-2", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("centrifuge-2", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("centrifuge-2", "titanium-processing")
   end
 

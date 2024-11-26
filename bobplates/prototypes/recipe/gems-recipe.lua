@@ -6,9 +6,9 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "ruby-ore", amount = 1 },
+      { type = "item", name = "bob-ruby-ore", amount = 1 },
     },
-    results = { { type = "item", name = "ruby-3", amount = 4 } },
+    results = { { type = "item", name = "bob-ruby-3", amount = 4 } },
     allow_productivity = true,
   },
   {
@@ -18,9 +18,9 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "sapphire-ore", amount = 1 },
+      { type = "item", name = "bob-sapphire-ore", amount = 1 },
     },
-    results = { { type = "item", name = "sapphire-3", amount = 4 } },
+    results = { { type = "item", name = "bob-sapphire-3", amount = 4 } },
     allow_productivity = true,
   },
   {
@@ -30,9 +30,9 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "emerald-ore", amount = 1 },
+      { type = "item", name = "bob-emerald-ore", amount = 1 },
     },
-    results = { { type = "item", name = "emerald-3", amount = 4 } },
+    results = { { type = "item", name = "bob-emerald-3", amount = 4 } },
     allow_productivity = true,
   },
   {
@@ -42,9 +42,9 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "amethyst-ore", amount = 1 },
+      { type = "item", name = "bob-amethyst-ore", amount = 1 },
     },
-    results = { { type = "item", name = "amethyst-3", amount = 4 } },
+    results = { { type = "item", name = "bob-amethyst-3", amount = 4 } },
     allow_productivity = true,
   },
   {
@@ -54,9 +54,9 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "topaz-ore", amount = 1 },
+      { type = "item", name = "bob-topaz-ore", amount = 1 },
     },
-    results = { { type = "item", name = "topaz-3", amount = 4 } },
+    results = { { type = "item", name = "bob-topaz-3", amount = 4 } },
     allow_productivity = true,
   },
   {
@@ -66,9 +66,9 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "diamond-ore", amount = 1 },
+      { type = "item", name = "bob-diamond-ore", amount = 1 },
     },
-    results = { { type = "item", name = "diamond-3", amount = 4 } },
+    results = { { type = "item", name = "bob-diamond-3", amount = 4 } },
     allow_productivity = true,
   },
 
@@ -79,11 +79,11 @@ data:extend({
     enabled = false,
     energy_required = 3.5,
     ingredients = {
-      { type = "item", name = "ruby-3", amount = 1 },
-      { type = "item", name = "grinding-wheel", amount = 1 },
+      { type = "item", name = "bob-ruby-3", amount = 1 },
+      { type = "item", name = "bob-grinding-wheel", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    results = { { type = "item", name = "ruby-4", amount = 1 } },
+    results = { { type = "item", name = "bob-ruby-4", amount = 1 } },
     allow_productivity = true,
   },
   {
@@ -93,11 +93,11 @@ data:extend({
     enabled = false,
     energy_required = 3.5,
     ingredients = {
-      { type = "item", name = "sapphire-3", amount = 1 },
-      { type = "item", name = "grinding-wheel", amount = 1 },
+      { type = "item", name = "bob-sapphire-3", amount = 1 },
+      { type = "item", name = "bob-grinding-wheel", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    results = { { type = "item", name = "sapphire-4", amount = 1 } },
+    results = { { type = "item", name = "bob-sapphire-4", amount = 1 } },
     allow_productivity = true,
   },
   {
@@ -107,11 +107,11 @@ data:extend({
     enabled = false,
     energy_required = 3.5,
     ingredients = {
-      { type = "item", name = "emerald-3", amount = 1 },
-      { type = "item", name = "grinding-wheel", amount = 1 },
+      { type = "item", name = "bob-emerald-3", amount = 1 },
+      { type = "item", name = "bob-grinding-wheel", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    results = { { type = "item", name = "emerald-4", amount = 1 } },
+    results = { { type = "item", name = "bob-emerald-4", amount = 1 } },
     allow_productivity = true,
   },
   {
@@ -121,11 +121,11 @@ data:extend({
     enabled = false,
     energy_required = 3.5,
     ingredients = {
-      { type = "item", name = "amethyst-3", amount = 1 },
-      { type = "item", name = "grinding-wheel", amount = 1 },
+      { type = "item", name = "bob-amethyst-3", amount = 1 },
+      { type = "item", name = "bob-grinding-wheel", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    results = { { type = "item", name = "amethyst-4", amount = 1 } },
+    results = { { type = "item", name = "bob-amethyst-4", amount = 1 } },
     allow_productivity = true,
   },
   {
@@ -135,11 +135,11 @@ data:extend({
     enabled = false,
     energy_required = 3.5,
     ingredients = {
-      { type = "item", name = "topaz-3", amount = 1 },
-      { type = "item", name = "grinding-wheel", amount = 1 },
+      { type = "item", name = "bob-topaz-3", amount = 1 },
+      { type = "item", name = "bob-grinding-wheel", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    results = { { type = "item", name = "topaz-4", amount = 1 } },
+    results = { { type = "item", name = "bob-topaz-4", amount = 1 } },
     allow_productivity = true,
   },
   {
@@ -149,11 +149,11 @@ data:extend({
     enabled = false,
     energy_required = 3.5,
     ingredients = {
-      { type = "item", name = "diamond-3", amount = 1 },
-      { type = "item", name = "grinding-wheel", amount = 1 },
+      { type = "item", name = "bob-diamond-3", amount = 1 },
+      { type = "item", name = "bob-grinding-wheel", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
-    results = { { type = "item", name = "diamond-4", amount = 1 } },
+    results = { { type = "item", name = "bob-diamond-4", amount = 1 } },
     allow_productivity = true,
   },
 
@@ -164,11 +164,11 @@ data:extend({
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { type = "item", name = "ruby-4", amount = 1 },
-      { type = "item", name = "polishing-wheel", amount = 1 },
-      { type = "item", name = "polishing-compound", amount = 1 },
+      { type = "item", name = "bob-ruby-4", amount = 1 },
+      { type = "item", name = "bob-polishing-wheel", amount = 1 },
+      { type = "item", name = "bob-polishing-compound", amount = 1 },
     },
-    results = { { type = "item", name = "ruby-5", amount = 1 } },
+    results = { { type = "item", name = "bob-ruby-5", amount = 1 } },
   },
   {
     type = "recipe",
@@ -177,11 +177,11 @@ data:extend({
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { type = "item", name = "sapphire-4", amount = 1 },
-      { type = "item", name = "polishing-wheel", amount = 1 },
-      { type = "item", name = "polishing-compound", amount = 1 },
+      { type = "item", name = "bob-sapphire-4", amount = 1 },
+      { type = "item", name = "bob-polishing-wheel", amount = 1 },
+      { type = "item", name = "bob-polishing-compound", amount = 1 },
     },
-    results = { { type = "item", name = "sapphire-5", amount = 1 } },
+    results = { { type = "item", name = "bob-sapphire-5", amount = 1 } },
   },
   {
     type = "recipe",
@@ -190,11 +190,11 @@ data:extend({
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { type = "item", name = "emerald-4", amount = 1 },
-      { type = "item", name = "polishing-wheel", amount = 1 },
-      { type = "item", name = "polishing-compound", amount = 1 },
+      { type = "item", name = "bob-emerald-4", amount = 1 },
+      { type = "item", name = "bob-polishing-wheel", amount = 1 },
+      { type = "item", name = "bob-polishing-compound", amount = 1 },
     },
-    results = { { type = "item", name = "emerald-5", amount = 1 } },
+    results = { { type = "item", name = "bob-emerald-5", amount = 1 } },
   },
   {
     type = "recipe",
@@ -203,11 +203,11 @@ data:extend({
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { type = "item", name = "amethyst-4", amount = 1 },
-      { type = "item", name = "polishing-wheel", amount = 1 },
-      { type = "item", name = "polishing-compound", amount = 1 },
+      { type = "item", name = "bob-amethyst-4", amount = 1 },
+      { type = "item", name = "bob-polishing-wheel", amount = 1 },
+      { type = "item", name = "bob-polishing-compound", amount = 1 },
     },
-    results = { { type = "item", name = "amethyst-5", amount = 1 } },
+    results = { { type = "item", name = "bob-amethyst-5", amount = 1 } },
   },
   {
     type = "recipe",
@@ -216,11 +216,11 @@ data:extend({
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { type = "item", name = "topaz-4", amount = 1 },
-      { type = "item", name = "polishing-wheel", amount = 1 },
-      { type = "item", name = "polishing-compound", amount = 1 },
+      { type = "item", name = "bob-topaz-4", amount = 1 },
+      { type = "item", name = "bob-polishing-wheel", amount = 1 },
+      { type = "item", name = "bob-polishing-compound", amount = 1 },
     },
-    results = { { type = "item", name = "topaz-5", amount = 1 } },
+    results = { { type = "item", name = "bob-topaz-5", amount = 1 } },
   },
   {
     type = "recipe",
@@ -229,10 +229,10 @@ data:extend({
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { type = "item", name = "diamond-4", amount = 1 },
-      { type = "item", name = "polishing-wheel", amount = 1 },
-      { type = "item", name = "polishing-compound", amount = 1 },
+      { type = "item", name = "bob-diamond-4", amount = 1 },
+      { type = "item", name = "bob-polishing-wheel", amount = 1 },
+      { type = "item", name = "bob-polishing-compound", amount = 1 },
     },
-    results = { { type = "item", name = "diamond-5", amount = 1 } },
+    results = { { type = "item", name = "bob-diamond-5", amount = 1 } },
   },
 })

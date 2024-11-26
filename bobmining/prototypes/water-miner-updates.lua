@@ -20,8 +20,8 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     end
   end
 
-  if data.raw.item["aluminium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-3", "steel-plate", "aluminium-plate")
+  if data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("water-miner-3", "steel-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("water-miner-3", "aluminium-processing")
   else
     if data.raw.item["brass-alloy"] then
@@ -49,12 +49,12 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     end
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-4", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("water-miner-4", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("water-miner-4", "titanium-processing")
   else
-    if data.raw.item["tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("water-miner-4", "steel-plate", "tungsten-plate")
+    if data.raw.item["bob-tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("water-miner-4", "steel-plate", "bob-tungsten-plate")
       bobmods.lib.tech.add_prerequisite("water-miner-4", "tungsten-processing")
     end
   end

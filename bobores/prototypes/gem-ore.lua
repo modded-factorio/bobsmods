@@ -1,5 +1,5 @@
 bobmods.ores.gems = {
-  name = "gem-ore",
+  name = "bob-gem-ore",
   map_color = { r = 0.25, g = 1, b = 0.25 },
   mining_time = 2.5,
   enabled = false,
@@ -30,8 +30,8 @@ bobmods.ores.gems = {
 }
 
 function bobmods.ores.gems.create_autoplace()
-  data.raw.resource["gem-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "gem-ore",
+  data.raw.resource["bob-gem-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-gem-ore",
     order = "c",
     base_density = 0.1,
     has_starting_area_placement = false,

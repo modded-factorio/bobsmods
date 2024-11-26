@@ -76,7 +76,7 @@ data:extend({
   },
 })
 
-if data.raw.item["gold-plate"] then
+if data.raw.item["bob-gold-plate"] then
   data:extend({
     {
       type = "item",
@@ -98,7 +98,7 @@ if data.raw.item["gold-plate"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
-        { type = "item", name = "gold-plate", amount = 1 },
+        { type = "item", name = "bob-gold-plate", amount = 1 },
       },
       results = { { type = "item", name = "gilded-copper-cable", amount = 3 } },
       allow_decomposition = false,

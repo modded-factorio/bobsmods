@@ -95,7 +95,7 @@ if settings.startup["bobmods-plates-batteryupdate"].value == true then
   data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
-  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "lead-plate", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "bob-lead-plate", amount = 2 })
   bobmods.lib.recipe.add_ingredient("battery", { type = "fluid", name = "sulfuric-acid", amount = 20 })
   bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "plastic-bar", amount = 1 })
 end
@@ -152,7 +152,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   )
   bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "fusion-catalyst", amount = 1 })
 else
-  bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
+  bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "bob-lead-plate")
 
   bobmods.lib.recipe.set_result(
     "nuclear-fuel-reprocessing",
@@ -160,7 +160,7 @@ else
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "lead-plate", amount = 5, catalyst_amount = 5 }
+    { type = "item", name = "bob-lead-plate", amount = 5, catalyst_amount = 5 }
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",

@@ -3,8 +3,8 @@ if data.raw.item["invar-alloy"] then
   bobmods.lib.tech.add_prerequisite("artillery", "invar-processing")
 end
 
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-2", "titanium-processing")
 end
 

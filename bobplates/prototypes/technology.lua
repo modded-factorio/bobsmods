@@ -704,7 +704,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "grinding-wheel",
+        recipe = "bob-grinding-wheel",
       },
     },
     order = "b-c-b",
@@ -730,11 +730,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "polishing-compound",
+        recipe = "bob-polishing-compound",
       },
       {
         type = "unlock-recipe",
-        recipe = "polishing-wheel",
+        recipe = "bob-polishing-wheel",
       },
     },
     order = "b-c-c",

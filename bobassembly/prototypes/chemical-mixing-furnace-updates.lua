@@ -17,8 +17,8 @@ then
     bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "invar-processing")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace", "stone-brick", "tungsten-plate")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace", "stone-brick", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "tungsten-processing")
   end
 

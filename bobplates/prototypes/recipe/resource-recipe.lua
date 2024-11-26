@@ -66,14 +66,14 @@ data:extend({
 
   {
     type = "recipe",
-    name = "quartz-glass",
+    name = "bob-glass",
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = {
       { type = "item", name = "quartz", amount = 1 },
     },
-    results = { { type = "item", name = "glass", amount = 1 } },
+    results = { { type = "item", name = "bob-glass", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -85,7 +85,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "silicon", amount = 1 },
+      { type = "item", name = "bob-silicon-plate", amount = 1 },
     },
     results = { { type = "item", name = "silicon-wafer", amount = 8 } },
     allow_productivity = true,
@@ -100,7 +100,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "silicon", amount = 1 },
+      { type = "item", name = "bob-silicon-plate", amount = 1 },
     },
     results = { { type = "item", name = "silicon-powder", amount = 1 } },
     allow_productivity = true,
@@ -191,7 +191,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "polishing-compound",
+    name = "bob-polishing-compound",
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     enabled = false,
@@ -200,7 +200,7 @@ data:extend({
       { type = "item", name = "alumina", amount = 1 },
       { type = "fluid", name = "light-oil", amount = 15 },
     },
-    results = { { type = "item", name = "polishing-compound", amount = 2 } },
+    results = { { type = "item", name = "bob-polishing-compound", amount = 2 } },
     crafting_machine_tint = {
       primary = { r = 0.57, g = 0.33, b = 0.0, a = 0.000 },
       secondary = { r = 1, g = 0.73, b = 0.07, a = 0.000 },
@@ -212,6 +212,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-coal-from-wood",
+    localised_name = { "item-name.coal" },
     category = "smelting",
     energy_required = 1.6,
     ingredients = {
@@ -248,7 +249,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "enriched-fuel-from-liquid-fuel",
+    name = "enriched-fuel",
     icon = "__bobplates__/graphics/icons/enriched-fuel.png",
     icon_size = 32,
     category = "chemistry",

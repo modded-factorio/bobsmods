@@ -82,6 +82,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
     {
       type = "recipe",
       name = "pure-water-from-lithia",
+      localised_name = { "fluid-name.pure-water" },
       icon = "__bobplates__/graphics/icons/pure-water.png",
       icon_size = 64,
       subgroup = "bob-fluid",
@@ -112,13 +113,13 @@ data:extend({
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     subgroup = "bob-fluid-pump",
-    order = "b[fluid-chemistry]-b[liquid-air]",
+    order = "b[fluid-chemistry]-b[bob-liquid-air]",
     category = "air-pump",
     enabled = false,
     energy_required = 1,
     ingredients = {},
     results = {
-      { type = "fluid", name = "liquid-air", amount = 100 },
+      { type = "fluid", name = "bob-liquid-air", amount = 100 },
     },
     allow_decomposition = false,
   },
@@ -155,7 +156,7 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "fluid", name = "liquid-air", amount = 25 },
+      { type = "fluid", name = "bob-liquid-air", amount = 25 },
     },
     results = {
       { type = "fluid", name = "nitrogen", amount = 20 },
@@ -371,6 +372,7 @@ data:extend({
   {
     type = "recipe",
     name = "sulfuric-acid-2",
+    localised_name = { "fluid-name.sulfuric-acid" },
     category = "chemistry",
     energy_required = 1,
     enabled = false,
@@ -528,6 +530,7 @@ data:extend({
   {
     type = "recipe",
     name = "sulfur-2",
+    localised_name = { "item-name.sulfur" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     order = "f[sulfur]",
@@ -736,10 +739,10 @@ data:extend({
     ingredients = {
       { type = "item", name = "lead-oxide", amount = 7 },
       { type = "item", name = "carbon", amount = 3 },
-      { type = "item", name = "nickel-plate", amount = 1 },
+      { type = "item", name = "bob-nickel-plate", amount = 1 },
     },
     results = {
-      { type = "item", name = "lead-plate", amount_min = 7, amount_max = 11 },
+      { type = "item", name = "bob-lead-plate", amount_min = 7, amount_max = 11 },
       { type = "item", name = "silver-ore", amount_min = 1, amount_max = 3 },
     },
     allow_decomposition = false,
@@ -820,6 +823,7 @@ data:extend({
   {
     type = "recipe",
     name = "sulfur-3",
+    localised_name = { "item-name.sulfur" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     order = "f[sulfur]",
@@ -842,6 +846,7 @@ data:extend({
   {
     type = "recipe",
     name = "sulfuric-acid-3",
+    localised_name = { "fluid-name.sulfuric-acid" },
     icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
     icon_size = 64,
     category = "chemistry",

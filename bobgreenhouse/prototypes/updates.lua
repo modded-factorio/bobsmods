@@ -8,8 +8,8 @@ if data.raw["item-group"]["bob-intermediate-products"] then
   data.raw["item-subgroup"]["bob-greenhouse-items"].group = "bob-intermediate-products"
 end
 
-if data.raw.item.glass then
-  bobmods.lib.recipe.replace_ingredient("bob-greenhouse", "copper-plate", "glass")
+if data.raw.item["bob-glass"] then
+  bobmods.lib.recipe.replace_ingredient("bob-greenhouse", "copper-plate", "bob-glass")
 end
 
 if data.raw.fluid.ammonia and data.raw.fluid["nitric-acid"] then

@@ -7,8 +7,8 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     bobmods.lib.tech.add_prerequisite("advanced-material-processing-3", "invar-processing")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("electric-furnace-2", "stone-brick", "tungsten-plate")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("electric-furnace-2", "stone-brick", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("advanced-material-processing-3", "tungsten-processing")
   end
 

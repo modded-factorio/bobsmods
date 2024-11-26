@@ -133,9 +133,9 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     data.raw.recipe["petroleum-gas-sweetening"].subgroup = "bob-fluid"
   end
 
-  if data.raw.technology["solid-fuel"] and data.raw.recipe["enriched-fuel-from-liquid-fuel"] then
-    bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "enriched-fuel-from-liquid-fuel")
-    bobmods.lib.tech.add_recipe_unlock("solid-fuel", "enriched-fuel-from-liquid-fuel")
+  if data.raw.technology["solid-fuel"] and data.raw.recipe["enriched-fuel"] then
+    bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "enriched-fuel")
+    bobmods.lib.tech.add_recipe_unlock("solid-fuel", "enriched-fuel")
   end
 end
 

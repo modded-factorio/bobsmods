@@ -124,7 +124,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "air-pump-2", amount = 1 },
-      { type = "item", name = "titanium-plate", amount = 2 },
+      { type = "item", name = "bob-titanium-plate", amount = 2 },
       { type = "item", name = "titanium-gear-wheel", amount = 4 },
       { type = "item", name = "titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
@@ -185,7 +185,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "water-pump-2", amount = 1 },
-      { type = "item", name = "titanium-plate", amount = 2 },
+      { type = "item", name = "bob-titanium-plate", amount = 2 },
       { type = "item", name = "titanium-gear-wheel", amount = 4 },
       { type = "item", name = "titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
@@ -254,6 +254,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "stone-mixing-furnace-from-stone-furnace",
+      localised_name = { "entity-name.stone-mixing-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -267,6 +268,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "stone-chemical-furnace-from-stone-furnace",
+      localised_name = { "entity-name.stone-chemical-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -281,6 +283,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "steel-mixing-furnace-from-steel-furnace",
+      localised_name = { "entity-name.steel-mixing-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -294,6 +297,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "steel-chemical-furnace-from-steel-furnace",
+      localised_name = { "entity-name.steel-chemical-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -308,6 +312,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "electric-mixing-furnace-from-electric-furnace",
+      localised_name = { "entity-name.electric-mixing-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -321,6 +326,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "electric-chemical-furnace-from-electric-furnace",
+      localised_name = { "entity-name.electric-chemical-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -335,6 +341,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "stone-furnace-from-stone-mixing-furnace",
+      localised_name = { "entity-name.stone-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
@@ -348,6 +355,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "stone-furnace-from-stone-chemical-furnace",
+      localised_name = { "entity-name.stone-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
@@ -365,6 +373,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "steel-furnace-from-steel-mixing-furnace",
+      localised_name = { "entity-name.steel-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
@@ -378,6 +387,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "steel-furnace-from-steel-chemical-furnace",
+      localised_name = { "entity-name.steel-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
@@ -395,6 +405,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "electric-furnace-from-electric-mixing-furnace",
+      localised_name = { "entity-name.electric-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
@@ -408,6 +419,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "electric-furnace-from-electric-chemical-furnace",
+      localised_name = { "entity-name.electric-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
