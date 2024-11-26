@@ -12,11 +12,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   if data.raw.item["bob-aluminium-plate"] then
     bobmods.lib.recipe.replace_ingredient("fast-inserter", "steel-plate", "bob-aluminium-plate")
-    bobmods.lib.recipe.replace_ingredient("stack-inserter", "steel-plate", "bob-aluminium-plate")
-    if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.replace_ingredient("filter-inserter", "steel-plate", "bob-aluminium-plate")
-      bobmods.lib.recipe.replace_ingredient("stack-filter-inserter", "steel-plate", "bob-aluminium-plate")
-    end
+    bobmods.lib.recipe.replace_ingredient("bulk-inserter", "steel-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("logistics-3", "aluminium-processing")
   end
 
@@ -56,11 +52,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   if data.raw.item["bob-titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("turbo-inserter", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.recipe.replace_ingredient("turbo-stack-inserter", "steel-plate", "bob-titanium-plate")
-    if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.replace_ingredient("turbo-filter-inserter", "steel-plate", "bob-titanium-plate")
-      bobmods.lib.recipe.replace_ingredient("turbo-stack-filter-inserter", "steel-plate", "bob-titanium-plate")
-    end
+    bobmods.lib.recipe.replace_ingredient("turbo-bulk-inserter", "steel-plate", "bob-titanium-plate")
   end
 
   if data.raw.item["titanium-bearing"] then
