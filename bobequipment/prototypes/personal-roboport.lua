@@ -23,9 +23,9 @@ data.raw.technology["personal-roboport-mk2-equipment"].icons = bobmods.equipment
 })
 
 data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.buffer_capacity = "75MJ"
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.input_flow_limit = "7500KW"
+data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.input_flow_limit = "7500kW"
 data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].charging_energy = "1500kW"
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 15
+data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 20
 
 data:extend({
   {
@@ -35,9 +35,21 @@ data:extend({
     icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
     icon_size = 128,
     place_as_equipment_result = "personal-roboport-mk3-equipment",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-b[personal-roboport-mk3-equipment]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
   {
     type = "item",
@@ -46,9 +58,21 @@ data:extend({
     icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
     icon_size = 128,
     place_as_equipment_result = "personal-roboport-mk4-equipment",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-b[personal-roboport-mk4-equipment]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
   },
 
   {
@@ -98,11 +122,11 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "135MJ",
-      input_flow_limit = "13500KW",
+      input_flow_limit = "13500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",
-    robot_limit = 20,
+    robot_limit = 30,
     construction_radius = 25,
     spawn_and_station_height = 0.4,
     charge_approach_distance = 2.6,
@@ -141,11 +165,11 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "215MJ",
-      input_flow_limit = "21500KW",
+      input_flow_limit = "21500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2500kW",
-    robot_limit = 25,
+    robot_limit = 40,
     construction_radius = 30,
     spawn_and_station_height = 0.4,
     charge_approach_distance = 2.6,
@@ -236,16 +260,30 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-antenna.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-antenna-equipment",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -253,16 +291,30 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-antenna-2.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-antenna-equipment-2",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -270,16 +322,30 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-antenna-3.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-antenna-equipment-3",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -287,16 +353,30 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-antenna-4.png",
+        icon_size = 32,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-antenna-equipment-4",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
 
   {
@@ -305,17 +385,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-chargepad.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-chargepad-equipment",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -323,17 +417,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-chargepad-2.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-chargepad-equipment-2",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -341,17 +449,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-chargepad-3.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-chargepad-equipment-3",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -359,17 +481,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/roboport-chargepad-4.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-chargepad-equipment-4",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
 
   {
@@ -378,17 +514,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/construction-robot-1.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-robot-equipment",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -396,17 +546,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/construction-robot-2.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-robot-equipment-2",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -414,17 +578,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/construction-robot-3.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-robot-equipment-3",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
   {
     type = "item",
@@ -432,17 +610,31 @@ data:extend({
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__bobequipment__/graphics/icons/construction-robot-4.png",
+        icon_size = 32,
         scale = 0.75,
       },
     },
-    icon_size = 32,
     place_as_equipment_result = "personal-roboport-robot-equipment-4",
-    subgroup = "equipment",
+    subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35
+    },
+    weight = 50000
   },
 
   {
@@ -463,7 +655,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "100kJ",
-      input_flow_limit = "20KW",
+      input_flow_limit = "20kW",
       drain = "10kW",
       usage_priority = "secondary-input",
     },
@@ -507,7 +699,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "150kJ",
-      input_flow_limit = "30KW",
+      input_flow_limit = "30kW",
       drain = "15kW",
       usage_priority = "secondary-input",
     },
@@ -551,7 +743,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "200kJ",
-      input_flow_limit = "40KW",
+      input_flow_limit = "40kW",
       drain = "20kW",
       usage_priority = "secondary-input",
     },
@@ -595,7 +787,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "250kJ",
-      input_flow_limit = "50KW",
+      input_flow_limit = "50kW",
       drain = "25kW",
       usage_priority = "secondary-input",
     },
@@ -640,7 +832,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "35MJ",
-      input_flow_limit = "3500KW",
+      input_flow_limit = "3500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1000kW",
@@ -683,7 +875,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "75MJ",
-      input_flow_limit = "7500KW",
+      input_flow_limit = "7500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1500kW",
@@ -726,7 +918,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "135MJ",
-      input_flow_limit = "13500KW",
+      input_flow_limit = "13500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",
@@ -769,7 +961,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "215MJ",
-      input_flow_limit = "21500KW",
+      input_flow_limit = "21500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2500kW",
@@ -813,7 +1005,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "50kJ",
-      input_flow_limit = "10KW",
+      input_flow_limit = "10kW",
       drain = "5kW",
       usage_priority = "secondary-input",
     },
@@ -857,7 +1049,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "100kJ",
-      input_flow_limit = "20KW",
+      input_flow_limit = "20kW",
       drain = "10kW",
       usage_priority = "secondary-input",
     },
@@ -901,7 +1093,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "150kJ",
-      input_flow_limit = "30KW",
+      input_flow_limit = "30kW",
       drain = "15kW",
       usage_priority = "secondary-input",
     },
@@ -945,7 +1137,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "200kJ",
-      input_flow_limit = "40KW",
+      input_flow_limit = "40kW",
       drain = "20kW",
       usage_priority = "secondary-input",
     },
