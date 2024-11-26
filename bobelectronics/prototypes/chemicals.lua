@@ -58,7 +58,6 @@ data:extend({
     results = {
       { type = "fluid", name = "heavy-oil", amount = 12 },
     },
-    main_product = "", -- Causes it to use the recipe name.
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.34, b = 0.5, a = 0.000 },
       secondary = { r = 0.1, g = 0.1, b = 0.1, a = 0.000 },
