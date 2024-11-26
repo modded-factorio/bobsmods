@@ -2,7 +2,6 @@ data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
 data.raw.item["pumpjack"].order = "b[fluids]-b[pumpjack-1]"
 
 if settings.startup["bobmods-mining-pumpjacks"].value == true then
-
   data.raw["mining-drill"]["pumpjack"].next_upgrade = "bob-pumpjack-1"
 
   data:extend({
@@ -17,15 +16,15 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -39,15 +38,15 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -61,15 +60,15 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -83,15 +82,15 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
   })
@@ -172,7 +171,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -262,7 +261,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 10,
-      next_upgrade = "bob-pumpjack-2"
+      next_upgrade = "bob-pumpjack-2",
     },
     {
       type = "mining-drill",
@@ -280,7 +279,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -370,7 +369,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 12.5,
-      next_upgrade = "bob-pumpjack-3"
+      next_upgrade = "bob-pumpjack-3",
     },
     {
       type = "mining-drill",
@@ -388,7 +387,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -478,7 +477,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 15,
-      next_upgrade = "bob-pumpjack-4"
+      next_upgrade = "bob-pumpjack-4",
     },
     {
       type = "mining-drill",
@@ -496,7 +495,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {

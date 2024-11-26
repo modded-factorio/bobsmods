@@ -11,15 +11,15 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -33,15 +33,15 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -55,15 +55,15 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -77,15 +77,15 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
   })
@@ -160,7 +160,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       tint = { r = 0.7, g = 0.2, b = 0.1, a = 1 },
       circuit_wire_max_distance = 10,
       emissions_per_minute = { pollution = 8 },
-      next_upgrade = "bob-mining-drill-2"
+      next_upgrade = "bob-mining-drill-2",
     }),
 
     bobmods.mining.electric_mining_drill({
@@ -175,7 +175,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       tint = { r = 0.2, g = 0.35, b = 0.5, a = 1 },
       circuit_wire_max_distance = 12.5,
       emissions_per_minute = { pollution = 6 },
-      next_upgrade = "bob-mining-drill-3"
+      next_upgrade = "bob-mining-drill-3",
     }),
 
     bobmods.mining.electric_mining_drill({
@@ -190,7 +190,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       tint = { r = 0.7, g = 0.25, b = 0.7, a = 1 },
       circuit_wire_max_distance = 15,
       emissions_per_minute = { pollution = 4 },
-      next_upgrade = "bob-mining-drill-4"
+      next_upgrade = "bob-mining-drill-4",
     }),
 
     bobmods.mining.electric_mining_drill({

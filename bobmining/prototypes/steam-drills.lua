@@ -11,15 +11,15 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/drill-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
 
@@ -57,7 +57,7 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   data.raw["mining-drill"]["steam-mining-drill"].energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = {pollution = 25}, --fairly sure this scales, so it would be 5 at level 1 speed.
+    emissions_per_minute = { pollution = 25 }, --fairly sure this scales, so it would be 5 at level 1 speed.
     fluid_box = {
       volume = 200,
       pipe_connections = {

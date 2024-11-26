@@ -1,7 +1,6 @@
 data.raw.item["electric-mining-drill"].order = "a[items]-b-0[electric-mining-drill]"
 
 local function add_mining_drill_color_masks(object, root1, root2, direction, mask_color)
-
   if root2 == "working_visualisations" then
     local direction2 = direction .. "_animation"
 
@@ -15,12 +14,14 @@ local function add_mining_drill_color_masks(object, root1, root2, direction, mas
     if not object[root1][root2][setindex][direction2].layers then
       local layerfixbase = util.copy(object[root1][root2][setindex][direction2])
       object[root1][root2][setindex][direction2] = {
-        layers = {layerfixbase}
+        layers = { layerfixbase },
       }
     end
     if direction == "south" then
       local basegraphics = util.copy(object[root1][root2][setindex][direction2].layers[2])
-      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-" .. direction .. "-front-mask.png"
+      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-"
+        .. direction
+        .. "-front-mask.png"
       basegraphics.tint = mask_color
       if root1 == "wet_mining_graphics_set" then
         basegraphics.height = object.graphics_set.working_visualisations[7][direction2].layers[2].height
@@ -30,7 +31,9 @@ local function add_mining_drill_color_masks(object, root1, root2, direction, mas
       table.insert(object[root1][root2][setindex][direction2].layers, basegraphics)
     else
       local basegraphics = util.copy(object[root1][root2][setindex][direction2].layers[1])
-      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-" .. direction .. "-front-mask.png"
+      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-"
+        .. direction
+        .. "-front-mask.png"
       basegraphics.tint = mask_color
       if root1 == "wet_mining_graphics_set" then
         if object.graphics_set.working_visualisations[7][direction2].layers then
@@ -45,37 +48,107 @@ local function add_mining_drill_color_masks(object, root1, root2, direction, mas
       end
       table.insert(object[root1][root2][setindex][direction2].layers, basegraphics)
     end
-
   else
-
     local basegraphics = util.copy(object[root1][root2][direction].layers[1])
     basegraphics.tint = mask_color
     if root1 == "graphics_set" then
-      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-" .. direction .. "-mask.png"
+      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-"
+        .. direction
+        .. "-mask.png"
     else
-      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-" .. direction .. "-wet-mask.png"
+      basegraphics.filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-"
+        .. direction
+        .. "-wet-mask.png"
     end
     table.insert(object[root1][root2][direction].layers, 2, basegraphics)
-
   end
-
 end
 
 local firsttint = { r = 1, g = 0.7, b = 0.1, a = 1 }
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "graphics_set", "animation", "east", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "graphics_set", "animation", "north", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "graphics_set", "animation", "west", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "wet_mining_graphics_set", "animation", "east", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "wet_mining_graphics_set", "animation", "north", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "wet_mining_graphics_set", "animation", "west", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "graphics_set", "working_visualisations", "east", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "graphics_set", "working_visualisations", "south", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "graphics_set", "working_visualisations", "west", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "wet_mining_graphics_set", "working_visualisations", "east", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "wet_mining_graphics_set", "working_visualisations", "south", firsttint)
-add_mining_drill_color_masks(data.raw["mining-drill"]["electric-mining-drill"], "wet_mining_graphics_set", "working_visualisations", "west", firsttint)
-
-
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "graphics_set",
+  "animation",
+  "east",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "graphics_set",
+  "animation",
+  "north",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "graphics_set",
+  "animation",
+  "west",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "wet_mining_graphics_set",
+  "animation",
+  "east",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "wet_mining_graphics_set",
+  "animation",
+  "north",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "wet_mining_graphics_set",
+  "animation",
+  "west",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "graphics_set",
+  "working_visualisations",
+  "east",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "graphics_set",
+  "working_visualisations",
+  "south",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "graphics_set",
+  "working_visualisations",
+  "west",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "wet_mining_graphics_set",
+  "working_visualisations",
+  "east",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "wet_mining_graphics_set",
+  "working_visualisations",
+  "south",
+  firsttint
+)
+add_mining_drill_color_masks(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "wet_mining_graphics_set",
+  "working_visualisations",
+  "west",
+  firsttint
+)
 
 local function set_electric_mining_drill_animation_speed(object, animation_speed)
   if object.animation_speed then
@@ -126,18 +199,30 @@ function bobmods.mining.electric_mining_drill(inputs)
   mining_drill.wet_mining_graphics_set.working_visualisations[13].west_animation.layers[2].tint = inputs.tint
 
   if inputs.large_area == true then
-    mining_drill.graphics_set.animation.east.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-mask.png"
-    mining_drill.graphics_set.animation.north.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-north-mask.png"
-    mining_drill.graphics_set.animation.west.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-mask.png"
-    mining_drill.graphics_set.working_visualisations[7].east_animation.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-front-mask.png"
-    mining_drill.graphics_set.working_visualisations[7].south_animation.layers[3].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-south-front-mask.png"
-    mining_drill.graphics_set.working_visualisations[7].west_animation.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-front-mask.png"
-    mining_drill.wet_mining_graphics_set.animation.east.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-wet-mask.png"
-    mining_drill.wet_mining_graphics_set.animation.north.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-north-wet-mask.png"
-    mining_drill.wet_mining_graphics_set.animation.west.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-wet-mask.png"
-    mining_drill.wet_mining_graphics_set.working_visualisations[13].east_animation.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-front-mask.png"
-    mining_drill.wet_mining_graphics_set.working_visualisations[13].south_animation.layers[3].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-south-front-mask.png"
-    mining_drill.wet_mining_graphics_set.working_visualisations[13].west_animation.layers[2].filename = "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-front-mask.png"
+    mining_drill.graphics_set.animation.east.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-mask.png"
+    mining_drill.graphics_set.animation.north.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-north-mask.png"
+    mining_drill.graphics_set.animation.west.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-mask.png"
+    mining_drill.graphics_set.working_visualisations[7].east_animation.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-front-mask.png"
+    mining_drill.graphics_set.working_visualisations[7].south_animation.layers[3].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-south-front-mask.png"
+    mining_drill.graphics_set.working_visualisations[7].west_animation.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-front-mask.png"
+    mining_drill.wet_mining_graphics_set.animation.east.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-wet-mask.png"
+    mining_drill.wet_mining_graphics_set.animation.north.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-north-wet-mask.png"
+    mining_drill.wet_mining_graphics_set.animation.west.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-wet-mask.png"
+    mining_drill.wet_mining_graphics_set.working_visualisations[13].east_animation.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-east-front-mask.png"
+    mining_drill.wet_mining_graphics_set.working_visualisations[13].south_animation.layers[3].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-south-front-mask.png"
+    mining_drill.wet_mining_graphics_set.working_visualisations[13].west_animation.layers[2].filename =
+      "__bobmining__/graphics/entity/electric-mining-drill/hr-large-mining-drill-west-front-mask.png"
   end
 
   if mods["Krastorio2"] then

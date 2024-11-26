@@ -11,15 +11,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -33,15 +33,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -55,15 +55,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -77,15 +77,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
     {
@@ -99,15 +99,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
     },
   })
@@ -201,7 +201,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 1},
+        emissions_per_minute = { pollution = 1 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -249,7 +249,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       fast_replaceable_group = "pumpjack",
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 7.5,
-      next_upgrade = "water-miner-2"
+      next_upgrade = "water-miner-2",
     },
     {
       type = "mining-drill",
@@ -267,7 +267,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 1},
+        emissions_per_minute = { pollution = 1 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -322,7 +322,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 10,
-      next_upgrade = "water-miner-3"
+      next_upgrade = "water-miner-3",
     },
     {
       type = "mining-drill",
@@ -340,7 +340,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 1},
+        emissions_per_minute = { pollution = 1 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -395,7 +395,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 12.5,
-      next_upgrade = "water-miner-4"
+      next_upgrade = "water-miner-4",
     },
     {
       type = "mining-drill",
@@ -413,7 +413,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 1},
+        emissions_per_minute = { pollution = 1 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
@@ -468,7 +468,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 15,
-      next_upgrade = "water-miner-5"
+      next_upgrade = "water-miner-5",
     },
     {
       type = "mining-drill",
@@ -486,7 +486,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 1},
+        emissions_per_minute = { pollution = 1 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
