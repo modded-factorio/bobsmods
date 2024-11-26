@@ -60,7 +60,7 @@ function bobmods.lib.icons_from_item(item)
     if item.icons then
       icons = item.icons
     elseif item.icon then
-      icons = { { icon = item.icon, icon_size = item.icon_size } }
+      icons = { { icon = item.icon, icon_size = item.icon_size or 64 } }
     else
       icons = nil
       log(debug.traceback())
