@@ -3,7 +3,7 @@ data:extend({
     type = "item-subgroup",
     name = "vehicle-equipment",
     group = "combat",
-    order = "e-v",
+    order = "g-2",
   },
 
   {

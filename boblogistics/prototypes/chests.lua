@@ -110,7 +110,7 @@ if data.raw.item["titanium-plate"] then
       picture = {
         layers = {
           {
-            filename = "__boblogistics__/graphics/entity/chest/hr-titanium-chest.png",
+            filename = "__boblogistics__/graphics/entity/chest/titanium-chest.png",
             priority = "extra-high",
             width = 66,
             height = 86,
@@ -118,7 +118,7 @@ if data.raw.item["titanium-plate"] then
             scale = 0.5,
           },
           {
-            filename = "__boblogistics__/graphics/entity/chest/hr-titanium-chest-shadow.png",
+            filename = "__boblogistics__/graphics/entity/chest/titanium-chest-shadow.png",
             priority = "extra-high",
             width = 116,
             height = 48,

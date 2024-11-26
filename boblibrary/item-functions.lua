@@ -11,7 +11,7 @@ function bobmods.lib.item.get_type(name) --returns actual item type
       end
     end
     if data.raw.fluid and data.raw.fluid[name] then
-      item_type = type_name
+      item_type = "fluid"
     end
   else
     log("Item name is not a string")
@@ -93,9 +93,11 @@ function bobmods.lib.item.ingredient(inputs) --returns a valid ingredient only i
   if item then
     return item
   else
-    log(item.name)
+    if inputs and inputs.name then
+      log(inputs.name)
+    end
     log(debug.traceback())
-    bobmods.lib.error.ingredient(item)
+    bobmods.lib.error.ingredient(inputs)
     return nil
   end
 end
@@ -189,8 +191,11 @@ function bobmods.lib.item.result(inputs) --returns a valid result only if the it
   if item then
     return item
   else
+    if inputs and inputs.name then
+      log(inputs.name)
+    end
     log(debug.traceback())
-    bobmods.lib.error.result(item)
+    bobmods.lib.error.result(inputs)
     return nil
   end
 end

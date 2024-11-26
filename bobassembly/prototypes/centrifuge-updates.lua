@@ -29,7 +29,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("centrifuge-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("centrifuge-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("centrifuge-3", "advanced-processing-unit")
   end
 
   if data.raw.item["nitinol-gear-wheel"] then

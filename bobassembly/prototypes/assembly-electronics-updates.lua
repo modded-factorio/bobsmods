@@ -59,7 +59,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then
