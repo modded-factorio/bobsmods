@@ -239,7 +239,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
             },
             main_product = "steel-mixing-furnace",
             allow_as_intermediate = false,
-          }
+          },
         })
         bobmods.lib.tech.add_recipe_unlock("fluid-mixing-furnace", "steel-mixing-furnace-from-fluid-mixing-furnace")
       end
@@ -391,7 +391,10 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
             allow_as_intermediate = false,
           },
         })
-        bobmods.lib.tech.add_recipe_unlock("fluid-chemical-furnace", "steel-chemical-furnace-from-fluid-chemical-furnace")
+        bobmods.lib.tech.add_recipe_unlock(
+          "fluid-chemical-furnace",
+          "steel-chemical-furnace-from-fluid-chemical-furnace"
+        )
       end
 
       data:extend({
