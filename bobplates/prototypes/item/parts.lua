@@ -181,21 +181,21 @@ data:extend({
 
   {
     type = "item",
-    name = "grinding-wheel",
+    name = "bob-grinding-wheel",
     icon = "__bobplates__/graphics/icons/grinding-wheel.png",
     icon_size = 32,
     subgroup = "bob-intermediates",
-    order = "f-cca[grinding-wheel]",
+    order = "f-cca[bob-grinding-wheel]",
     stack_size = 100,
   },
 
   {
     type = "item",
-    name = "polishing-wheel",
+    name = "bob-polishing-wheel",
     icon = "__bobplates__/graphics/icons/polishing-wheel.png",
     icon_size = 32,
     subgroup = "bob-intermediates",
-    order = "f-ccb[polishing-wheel]",
+    order = "f-ccb[bob-polishing-wheel]",
     stack_size = 100,
   },
 })

@@ -10,6 +10,7 @@ data:extend({
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
     results = { { type = "item", name = "petroleum-jelly", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -24,6 +25,7 @@ data:extend({
       { type = "item", name = "wood", amount = 1 },
     },
     results = { { type = "item", name = "gun-cotton", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -39,6 +41,7 @@ data:extend({
       { type = "item", name = "petroleum-jelly", amount = 1 },
     },
     results = { { type = "item", name = "cordite", amount = 5 } },
+    allow_productivity = true,
   },
 
   {
@@ -51,6 +54,7 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 1 },
     },
     results = { { type = "item", name = "bullet-casing", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -63,6 +67,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "magazine", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -76,6 +81,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 1 },
     },
     results = { { type = "item", name = "bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -103,6 +109,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "ap-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -130,6 +137,7 @@ data:extend({
       { type = "item", name = "explosives", amount = 1 },
     },
     results = { { type = "item", name = "he-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -159,6 +167,7 @@ data:extend({
       { type = "fluid", name = "heavy-oil", amount = 5 },
     },
     results = { { type = "item", name = "flame-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -187,6 +196,7 @@ data:extend({
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
     results = { { type = "item", name = "acid-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -214,6 +224,7 @@ data:extend({
       { type = "item", name = "coal", amount = 1 },
     },
     results = { { type = "item", name = "poison-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -241,6 +252,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "electric-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -268,6 +280,7 @@ data:extend({
       { type = "item", name = "uranium-238", amount = 1 },
     },
     results = { { type = "item", name = "uranium-bullet-projectile", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -294,6 +307,7 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 1 },
     },
     results = { { type = "item", name = "shotgun-shell-casing", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -306,6 +320,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 1 },
     },
     results = { { type = "item", name = "shot", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -318,6 +333,7 @@ data:extend({
       { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "laser-rifle-battery-case", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -329,6 +345,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "rocket-engine", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -343,6 +360,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "rocket-body", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -355,6 +373,7 @@ data:extend({
       { type = "item", name = "explosives", amount = 1 },
     },
     results = { { type = "item", name = "rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -367,6 +386,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 2 },
     },
     results = { { type = "item", name = "piercing-rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -379,6 +399,7 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 2 },
     },
     results = { { type = "item", name = "electric-rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -391,6 +412,7 @@ data:extend({
       { type = "item", name = "explosives", amount = 2 },
     },
     results = { { type = "item", name = "explosive-rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -404,6 +426,7 @@ data:extend({
       { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
     results = { { type = "item", name = "acid-rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -418,6 +441,7 @@ data:extend({
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
     results = { { type = "item", name = "flame-rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -431,6 +455,7 @@ data:extend({
       { type = "item", name = "coal", amount = 2 },
     },
     results = { { type = "item", name = "poison-rocket-warhead", amount = 1 } },
+    allow_productivity = true,
   },
 })
 

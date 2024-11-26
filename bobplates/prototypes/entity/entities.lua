@@ -57,6 +57,42 @@ local function bob_electrolyser_animation(directory, tier, tint)
   }
 end
 
+circuit_connector_definitions["electrolyser"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 12,
+      main_offset = util.by_pixel(12, -34),
+      shadow_offset = util.by_pixel(57, 4),
+      show_shadow = true,
+    },
+    {
+      variation = 12,
+      main_offset = util.by_pixel(12, -38),
+      shadow_offset = util.by_pixel(57, 8),
+      show_shadow = true,
+    },
+    {
+      variation = 8,
+      main_offset = util.by_pixel(-10.5, -42),
+      shadow_offset = util.by_pixel(39, 31),
+      show_shadow = false,
+    },
+    {
+      variation = 8,
+      main_offset = util.by_pixel(-11, -38),
+      shadow_offset = util.by_pixel(39, 31),
+      show_shadow = false,
+    },
+  })
+
+circuit_connector_definitions["electric-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
+  })
+
 data:extend({
   {
     type = "assembling-machine",
@@ -70,42 +106,51 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     max_health = 150,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electrolyser"],
     crafting_categories = { "electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     module_slots = 1,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.8 },
+      },
+    },
+    icon_draw_specification = {
+      shift = { 0, -0.3 },
+    },
     crafting_speed = 0.75,
     energy_usage = "420kW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 4,
+      emissions_per_minute = { pollution = 4 },
     },
     fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
+        volume = 1000,
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
+        volume = 1000,
       },
     },
     graphics_set = {
@@ -115,6 +160,7 @@ data:extend({
         { r = 0.5, g = 0.5, b = 0 }
       ),
     },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
   },
 
@@ -130,6 +176,7 @@ data:extend({
     corpse = "medium-remnants",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+    impact_category = "stone",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -146,14 +193,22 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, -1.5 } } },
+        pipe_connections = {
+          { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
+        },
+        secondary_draw_orders = { north = -1, east = -1, west = -1 },
+        volume = 1000,
       },
     },
+    forced_symmetry = "vertical",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
@@ -161,7 +216,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = { pollution = 2 },
       smoke = {
         {
           name = "smoke",
@@ -241,6 +296,45 @@ data:extend({
         },
       },
     },
+    graphics_set_flipped = {
+      animation = {
+        north = {
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          x = 94,
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        west = {
+          x = 188,
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        south = {
+          x = 282,
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+        east = {
+          filename = "__bobplates__/graphics/entity/stone-chemical-furnace/stone-chemical-furnace.png",
+          priority = "extra-high",
+          width = 94,
+          height = 80,
+          frame_count = 1,
+          shift = { 0.25, 0 },
+        },
+      },
+    },
     fast_replaceable_group = "furnace",
     next_upgrade = "steel-chemical-furnace",
   },
@@ -257,6 +351,7 @@ data:extend({
     corpse = "medium-remnants",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -273,14 +368,23 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, -1.5 } } },
+        pipe_connections = {
+          { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
+        },
+        secondary_draw_orders = { north = -1, east = -1, west = -1 },
+        volume = 1000,
       },
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
+    forced_symmetry = "vertical",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
@@ -288,7 +392,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = { pollution = 4 },
       smoke = {
         {
           name = "smoke",
@@ -302,10 +406,7 @@ data:extend({
         },
       },
     },
-    graphics_set = {
-      animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
-      working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
-    },
+    graphics_set = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set),
     fast_replaceable_group = "furnace",
   },
 
@@ -317,6 +418,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "electric-chemical-furnace" },
     max_health = 350,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electric-furnace"],
     corpse = "big-remnants",
     resistances = {
       {
@@ -329,31 +432,32 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
+        volume = 1000,
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-
     module_slots = 2,
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3,
+        shift = { 0, 0.8 },
       },
     },
+    icon_draw_specification = {
+      shift = { 0, -0.1 },
+    },
     crafting_speed = 2,
-    crafting_categories = { "smelting", "chemical-furnace" },
+    crafting_categories = { "chemical-furnace" },
     energy_usage = "180kW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = { pollution = 1 },
     },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/electric-furnace.ogg",
@@ -411,6 +515,7 @@ data:extend({
     minable = { mining_time = 0.2, result = "stone-mixing-furnace" },
     max_health = 200,
     corpse = "medium-remnants",
+    impact_category = "stone",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -422,6 +527,10 @@ data:extend({
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "smelting", "mixing-furnace" },
     energy_usage = "90kW",
     crafting_speed = 1,
@@ -430,7 +539,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 2,
+      emissions_per_minute = { pollution = 2 },
       smoke = {
         {
           name = "smoke",
@@ -479,6 +588,7 @@ data:extend({
     minable = { mining_time = 0.2, result = "steel-mixing-furnace" },
     max_health = 300,
     corpse = "medium-remnants",
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/furnace.ogg" },
     },
@@ -490,6 +600,10 @@ data:extend({
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "smelting", "mixing-furnace" },
     energy_usage = "90kW",
     crafting_speed = 2,
@@ -498,7 +612,7 @@ data:extend({
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = { pollution = 4 },
       smoke = {
         {
           name = "smoke",
@@ -509,10 +623,7 @@ data:extend({
         },
       },
     },
-    graphics_set = {
-      animation = util.table.deepcopy(data.raw.furnace["steel-furnace"].animation),
-      working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations),
-    },
+    graphics_set = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set),
     fast_replaceable_group = "furnace",
   },
 
@@ -524,6 +635,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "electric-mixing-furnace" },
     max_health = 350,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electric-furnace"],
     corpse = "big-remnants",
     resistances = {
       {
@@ -538,9 +651,11 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3,
+        shift = { 0, 0.8 },
       },
+    },
+    icon_draw_specification = {
+      shift = { 0, -0.1 },
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "mixing-furnace" },
@@ -549,8 +664,9 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = { pollution = 1 },
     },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/electric-furnace.ogg",
@@ -676,13 +792,13 @@ data:extend({
     collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 25,
       pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 0, 1 } },
+        { direction = defines.direction.north, position = { 0, -0.20 } },
+        { direction = defines.direction.south, position = { 0, 0.20 } },
       },
+      volume = 2500,
       secondary_draw_orders = { north = -1, east = -1, south = 1, west = -1 },
     },
     two_direction_only = true,
@@ -743,7 +859,7 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -753,8 +869,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["bob-small-storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["bob-small-storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["bob-small-storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 
@@ -770,15 +885,15 @@ data:extend({
     collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 25,
       pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
-        { position = { 1, 0 } },
+        { direction = defines.direction.north, position = { 0, -0.2 } },
+        { direction = defines.direction.south, position = { 0, 0.2 } },
+        { direction = defines.direction.west, position = { -0.2, 0 } },
+        { direction = defines.direction.east, position = { 0.2, 0 } },
       },
+      volume = 2500,
       secondary_draw_orders = { north = -1, east = -1, south = 1, west = -1 },
     },
     fast_replaceable_group = "pipe",
@@ -836,7 +951,7 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/storage-tank.ogg",
@@ -846,8 +961,7 @@ data:extend({
       apparent_volume = 1.5,
       max_sounds_per_type = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["bob-small-storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["bob-small-storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["bob-small-storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 
@@ -876,18 +990,17 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 1,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, 1 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.25 } } },
+        volume = 200,
       },
     },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.15,
+      emissions_per_minute = { pollution = 0.15 },
     },
     energy_usage = "30kW",
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },

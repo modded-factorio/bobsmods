@@ -1,11 +1,15 @@
+data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup =
+  { { 0.5, "__core__/graphics/color_luts/lut-dawn.png" } }
+
 data:extend({
   {
     type = "night-vision-equipment",
     name = "night-vision-equipment-2",
     sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
+      scale = 0.5,
       priority = "medium",
     },
     shape = {
@@ -22,15 +26,24 @@ data:extend({
     energy_input = "15kW",
     categories = { "armor" },
     darkness_to_turn_on = 0.4,
-    color_lookup = { { 0.5, "__core__/graphics/color_luts/lut-dawn.png" } },
+    color_lookup = { { 0.5, "__core__/graphics/color_luts/nightvision.png" } },
+    activate_sound = {
+      filename = "__base__/sound/nightvision-on.ogg",
+      volume = 0.5,
+    },
+    deactivate_sound = {
+      filename = "__base__/sound/nightvision-off.ogg",
+      volume = 0.5,
+    },
   },
   {
     type = "night-vision-equipment",
     name = "night-vision-equipment-3",
     sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
+      scale = 0.5,
       priority = "medium",
     },
     shape = {
@@ -48,6 +61,14 @@ data:extend({
     categories = { "armor" },
     darkness_to_turn_on = 0.05,
     color_lookup = { { 0.5, "__core__/graphics/color_luts/identity-lut.png" } },
+    activate_sound = {
+      filename = "__base__/sound/nightvision-on.ogg",
+      volume = 0.5,
+    },
+    deactivate_sound = {
+      filename = "__base__/sound/nightvision-off.ogg",
+      volume = 0.5,
+    },
   },
 })
 
@@ -176,12 +197,16 @@ data:extend({
 
 data.raw["battery-equipment"]["battery-equipment"].sprite.filename =
   "__bobequipment__/graphics/equipment/battery-equipment.png"
+data.raw["battery-equipment"]["battery-equipment"].sprite.height = 64
+data.raw["battery-equipment"]["battery-equipment"].sprite.width = 32
+data.raw["battery-equipment"]["battery-equipment"].sprite.scale = 1
 
 data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename =
   "__bobequipment__/graphics/equipment/battery-mk2-equipment.png"
+data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.height = 64
+data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.width = 32
+data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.scale = 1
 data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.buffer_capacity = "50MJ"
-data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.input_flow_limit = "500MW"
-data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.output_flow_limit = "500MW"
 
 data:extend({
   {
@@ -201,8 +226,6 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "120MJ",
-      input_flow_limit = "1200MW",
-      output_flow_limit = "1200MW",
       usage_priority = "tertiary",
     },
     categories = { "armor" },
@@ -224,8 +247,6 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "300MJ",
-      input_flow_limit = "3000MW",
-      output_flow_limit = "3000MW",
       usage_priority = "tertiary",
     },
     categories = { "armor" },
@@ -247,8 +268,6 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "750MJ",
-      input_flow_limit = "7500MW",
-      output_flow_limit = "7500MW",
       usage_priority = "tertiary",
     },
     categories = { "armor" },
@@ -270,8 +289,6 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "1800MJ",
-      input_flow_limit = "18000MW",
-      output_flow_limit = "18000MW",
       usage_priority = "tertiary",
     },
     categories = { "armor" },
@@ -424,21 +441,12 @@ data:extend({
   },
 })
 
-local function bob_personal_laser_defense_equipment(
-  name,
-  sprite,
-  buffer_capacity,
-  energy_consumption,
-  beam,
-  damage_modifier,
-  cooldown,
-  range
-)
+local function bob_personal_laser_defense_equipment(inputs)
   return {
     type = "active-defense-equipment",
-    name = name,
+    name = inputs.name,
     sprite = {
-      filename = sprite,
+      filename = inputs.sprite,
       width = 128,
       height = 128,
       priority = "medium",
@@ -451,25 +459,25 @@ local function bob_personal_laser_defense_equipment(
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      buffer_capacity = buffer_capacity,
+      buffer_capacity = inputs.buffer_capacity,
     },
     attack_parameters = {
       type = "beam",
-      cooldown = cooldown,
-      damage_modifier = 4 * damage_modifier,
-      range = range,
+      cooldown = inputs.cooldown,
+      damage_modifier = 4 * inputs.damage_modifier,
+      range = inputs.range,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
-        energy_consumption = energy_consumption,
+        energy_consumption = inputs.energy_consumption,
         action = {
           {
             type = "direct",
             action_delivery = {
 
               type = "beam",
-              beam = beam,
-              max_length = range,
-              duration = cooldown,
+              beam = inputs.beam,
+              max_length = inputs.range,
+              duration = inputs.cooldown,
               source_offset = { 0, -1.31439 },
             },
           },
@@ -490,56 +498,56 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].sprite 
 
 data:extend({
   --  bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, projectile, damage_modifier, cooldown, range)
-  bob_personal_laser_defense_equipment(
-    "personal-laser-defense-equipment-2",
-    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
-    "380kJ",
-    "60kJ",
-    "bob-laser-beam-sapphire",
-    1.5,
-    15,
-    16
-  ),
-  bob_personal_laser_defense_equipment(
-    "personal-laser-defense-equipment-3",
-    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
-    "580kJ",
-    "70kJ",
-    "bob-laser-beam-emerald",
-    2.1,
-    12,
-    17
-  ),
-  bob_personal_laser_defense_equipment(
-    "personal-laser-defense-equipment-4",
-    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
-    "820kJ",
-    "80kJ",
-    "bob-laser-beam-amethyst",
-    2.8,
-    10,
-    18
-  ),
-  bob_personal_laser_defense_equipment(
-    "personal-laser-defense-equipment-5",
-    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
-    "1100kJ",
-    "90kJ",
-    "bob-laser-beam-topaz",
-    3.6,
-    8.5,
-    19
-  ),
-  bob_personal_laser_defense_equipment(
-    "personal-laser-defense-equipment-6",
-    "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
-    "1420kJ",
-    "100kJ",
-    "bob-laser-beam-diamond",
-    4.5,
-    7.5,
-    20
-  ),
+  bob_personal_laser_defense_equipment({
+    name = "personal-laser-defense-equipment-2",
+    sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
+    buffer_capacity = "380kJ",
+    energy_consumption = "60kJ",
+    beam = "bob-laser-beam-sapphire",
+    damage_modifier = 0.4,
+    cooldown = 36,
+    range = 16,
+  }),
+  bob_personal_laser_defense_equipment({
+    name = "personal-laser-defense-equipment-3",
+    sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
+    buffer_capacity = "580kJ",
+    energy_consumption = "70kJ",
+    beam = "bob-laser-beam-emerald",
+    damage_modifier = 0.55,
+    cooldown = 32,
+    range = 17,
+  }),
+  bob_personal_laser_defense_equipment({
+    name = "personal-laser-defense-equipment-4",
+    sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
+    buffer_capacity = "820kJ",
+    energy_consumption = "80kJ",
+    beam = "bob-laser-beam-amethyst",
+    damage_modifier = 0.7,
+    cooldown = 28,
+    range = 18,
+  }),
+  bob_personal_laser_defense_equipment({
+    name = "personal-laser-defense-equipment-5",
+    sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
+    buffer_capacity = "1100kJ",
+    energy_consumption = "90kJ",
+    beam = "bob-laser-beam-topaz",
+    damage_modifier = 0.85,
+    cooldown = 24,
+    range = 19,
+  }),
+  bob_personal_laser_defense_equipment({
+    name = "personal-laser-defense-equipment-6",
+    sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
+    buffer_capacity = "1420kJ",
+    energy_consumption = "100kJ",
+    beam = "bob-laser-beam-diamond",
+    damage_modifier = 1,
+    cooldown = 20,
+    range = 20,
+  }),
 })
 
 data:extend({
@@ -548,8 +556,9 @@ data:extend({
     name = "exoskeleton-equipment-2",
     sprite = {
       filename = "__base__/graphics/equipment/exoskeleton-equipment.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
+      scale = 0.5,
       priority = "medium",
     },
     shape = {
@@ -570,8 +579,9 @@ data:extend({
     name = "exoskeleton-equipment-3",
     sprite = {
       filename = "__base__/graphics/equipment/exoskeleton-equipment.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
+      scale = 0.5,
       priority = "medium",
     },
     shape = {

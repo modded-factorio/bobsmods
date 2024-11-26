@@ -5,19 +5,11 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace.png",
           priority = "high",
-          width = 129,
-          height = 100,
+          width = 239,
+          height = 219,
           frame_count = 1,
-          shift = { 0.421875, 0 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace.png",
-            priority = "high",
-            width = 239,
-            height = 219,
-            frame_count = 1,
-            shift = util.by_pixel(0.75, 5.75),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(0.75, 5.75),
+          scale = 0.5,
         },
         {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-mask.png",
@@ -31,21 +23,12 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
           priority = "high",
-          width = 129,
-          height = 100,
+          width = 227,
+          height = 171,
           frame_count = 1,
-          shift = { 0.421875, 0 },
           draw_as_shadow = true,
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-shadow.png",
-            priority = "high",
-            width = 227,
-            height = 171,
-            frame_count = 1,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.25, 7.75),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(11.25, 7.75),
+          scale = 0.5,
         },
       },
     }
@@ -57,21 +40,12 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
           priority = "high",
-          width = 25,
-          height = 15,
+          width = 60,
+          height = 56,
           frame_count = 12,
           animation_speed = 0.5,
-          shift = { 0.015625, 0.890625 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-            priority = "high",
-            width = 60,
-            height = 56,
-            frame_count = 12,
-            animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(1.75, 32.75),
+          scale = 0.5,
         },
         light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
       },
@@ -79,49 +53,31 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
           priority = "high",
-          width = 19,
-          height = 13,
+          width = 37,
+          height = 25,
           frame_count = 4,
           animation_speed = 0.5,
-          shift = { -0.671875, -0.640625 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-            priority = "high",
-            width = 37,
-            height = 25,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(-20.5, -18.5),
+          scale = 0.5,
         },
       },
       {
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
           priority = "high",
-          width = 12,
-          height = 9,
+          width = 23,
+          height = 15,
           frame_count = 4,
           animation_speed = 0.5,
-          shift = { 0.0625, -1.234375 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
-            priority = "high",
-            width = 23,
-            height = 15,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = util.by_pixel(3.5, -38),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(3.5, -38),
+          scale = 0.5,
         },
       },
     }
   end
 
   local function bob_electric_furnace(input)
-    return {
+    local prototype = {
       type = "furnace",
       name = input.name,
       icon = input.icon,
@@ -144,8 +100,10 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
         {
           inventory_index = defines.inventory.assembling_machine_modules,
           shift = { 0, 0.8 },
-          multi_row_initial_height_modifier = -0.3,
         },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.1 },
       },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       crafting_categories = { "smelting" },
@@ -156,9 +114,9 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = {pollution = 1},
+        emissions_per_minute = { pollution = 1 },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           filename = "__base__/sound/electric-furnace.ogg",
@@ -172,6 +130,15 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       },
       fast_replaceable_group = "furnace",
     }
+
+    if input.module_slots == 5 or input.module_slots == 6 then
+      prototype.icons_positioning[1].max_icons_per_row = 3
+    end
+    if input.module_slots > 4 then
+      prototype.icons_positioning[1].multi_row_initial_height_modifier = -0.3
+    end
+
+    return prototype
   end
 
   data.raw.item["electric-furnace"].order = "c[electric-furnace-1]"
@@ -186,6 +153,19 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       order = "c[electric-furnace-2]",
       place_result = "electric-furnace-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7,
+      },
+      weight = 20000,
     },
 
     {
@@ -197,6 +177,19 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       order = "c[electric-furnace-3]",
       place_result = "electric-furnace-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7,
+      },
+      weight = 20000,
     },
 
     {
@@ -250,7 +243,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     {
       type = "technology",
       name = "advanced-material-processing-3",
-      icon = "__base__/graphics/technology/advanced-material-processing.png",
+      icon = "__base__/graphics/technology/advanced-material-processing-2.png",
       icon_size = 256,
       order = "c-c-c",
       prerequisites = {
@@ -279,7 +272,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     {
       type = "technology",
       name = "advanced-material-processing-4",
-      icon = "__base__/graphics/technology/advanced-material-processing.png",
+      icon = "__base__/graphics/technology/advanced-material-processing-2.png",
       icon_size = 256,
       order = "c-c-d",
       prerequisites = {

@@ -67,6 +67,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
       },
       emissions_multiplier = 0.2,
+      allow_productivity = true,
     },
 
     {
@@ -89,6 +90,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         { type = "fluid", name = "hydrogen", amount = 60, catalyst_amount = 60 },
       },
       allow_decomposition = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -110,6 +112,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         { type = "fluid", name = "hydrogen", amount = 20, catalyst_amount = 20 },
       },
       allow_decomposition = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -147,6 +150,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       results = {
         { type = "fluid", name = "carbon-dioxide", amount = 25 },
       },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -168,6 +172,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         { type = "fluid", name = "petroleum-gas", amount = 25 },
       },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 

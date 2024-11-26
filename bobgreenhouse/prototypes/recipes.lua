@@ -11,6 +11,7 @@ data:extend({
       { type = "item", name = "stone", amount = 1 },
     },
     results = { { type = "item", name = "fertiliser", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -25,6 +26,7 @@ data:extend({
     results = {
       { type = "item", name = "seedling", amount_min = 1, amount_max = 9 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -57,6 +59,7 @@ data:extend({
       { type = "item", name = "wood", amount_min = 10, amount_max = 20 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -77,6 +80,7 @@ data:extend({
       { type = "item", name = "wood", amount_min = 10, amount_max = 50 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {

@@ -12,6 +12,13 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
   data.raw.item["oil-refinery"].subgroup = "bob-refinery-machine"
   data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
+  data.raw["assembling-machine"]["oil-refinery"].icons_positioning = {
+    {
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = { 0, 1 },
+    },
+  }
+
   data:extend({
     {
       type = "item",
@@ -22,6 +29,18 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       order = "d[refinery-2]",
       place_result = "oil-refinery-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -52,7 +71,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         module_slots = 4,
         crafting_speed = 1.75,
         energy_usage = "720kW",
-        energy_source = { emissions_per_minute = {pollution = 5} },
+        energy_source = { emissions_per_minute = { pollution = 5 } },
       },
     }),
 
@@ -95,6 +114,18 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       order = "d[refinery-3]",
       place_result = "oil-refinery-3",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -125,7 +156,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         module_slots = 5,
         crafting_speed = 2.5,
         energy_usage = "1MW",
-        energy_source = { emissions_per_minute = {pollution = 4} },
+        energy_source = { emissions_per_minute = { pollution = 4 } },
       },
     }),
 
@@ -169,6 +200,18 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       order = "d[refinery-4]",
       place_result = "oil-refinery-4",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -198,7 +241,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         module_slots = 6,
         crafting_speed = 3.5,
         energy_usage = "1.35MW",
-        energy_source = { emissions_per_minute = {pollution = 3} },
+        energy_source = { emissions_per_minute = { pollution = 3 } },
       },
     }),
 

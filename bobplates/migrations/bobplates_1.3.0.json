@@ -1,0 +1,55 @@
+{
+  "technology":
+  [
+    ["advanced-electronics-3", "advanced-processing-unit"]
+  ],
+  "item":
+  [
+    ["ruby-3", "bob-ruby-3"],
+    ["sapphire-3", "bob-sapphire-3"],
+    ["emerald-3", "bob-emerald-3"],
+    ["amethyst-3", "bob-amethyst-3"],
+    ["topaz-3", "bob-topaz-3"],
+    ["diamond-3", "bob-diamond-3"],
+    ["ruby-4", "bob-ruby-4"],
+    ["sapphire-4", "bob-sapphire-4"],
+    ["emerald-4", "bob-emerald-4"],
+    ["amethyst-4", "bob-amethyst-4"],
+    ["topaz-4", "bob-topaz-4"],
+    ["diamond-4", "bob-diamond-4"],
+    ["ruby-5", "bob-ruby-5"],
+    ["sapphire-5", "bob-sapphire-5"],
+    ["emerald-5", "bob-emerald-5"],
+    ["amethyst-5", "bob-amethyst-5"],
+    ["topaz-5", "bob-topaz-5"],
+    ["diamond-5", "bob-diamond-5"],
+    ["grinding-wheel", "bob-grinding-wheel"],
+    ["polishing-wheel", "bob-polishing-wheel"],
+    ["polishing-compound", "bob-polishing-compound"],
+    ["gem-ore", "bob-gem-ore"],
+    ["glass", "bob-glass"],
+    ["gold-plate", "bob-gold-plate"],
+    ["aluminium-plate", "bob-aluminium-plate"],
+    ["nickel-plate", "bob-nickel-plate"],
+    ["zinc-plate", "bob-zinc-plate"],
+    ["silicon-plate", "bob-silicon-plate"],
+    ["titanium-plate", "bob-titanium-plate"],
+    ["tungsten-plate", "bob-tungsten-plate"]
+  ],
+  "recipe":
+  [
+    ["grinding-wheel", "bob-grinding-wheel"],
+    ["polishing-wheel", "bob-polishing-wheel"],
+    ["polishing-compound", "bob-polishing-compound"],
+    ["enriched-fuel-from-liquid-fuel", "enriched-fuel"],
+    ["quartz-glass", "bob-glass"]
+  ],
+  "entity":
+  [
+    ["gem-ore", "bob-gem-ore"]
+  ],
+  "fluid":
+  [
+    ["liquid-air", "bob-liquid-air"]
+  ]
+}

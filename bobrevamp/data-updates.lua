@@ -85,16 +85,11 @@ then
   bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
   bobmods.lib.recipe.hide("sulfur")
   bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "oil-processing-with-sulfur")
-  bobmods.lib.module.add_productivity_limitation("oil-processing-with-sulfur")
 
   if data.raw.fluid["sulfur-dioxide"] then
     bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "oil-processing-with-sulfur-dioxide")
     bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "oil-processing-with-sulfur-dioxide-2")
     bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "oil-processing-with-sulfur-dioxide-3")
-
-    bobmods.lib.module.add_productivity_limitation("oil-processing-with-sulfur-dioxide")
-    bobmods.lib.module.add_productivity_limitation("oil-processing-with-sulfur-dioxide-2")
-    bobmods.lib.module.add_productivity_limitation("oil-processing-with-sulfur-dioxide-3")
   end
 end
 
@@ -105,7 +100,6 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     bobmods.lib.recipe.hide("sulfur")
   end
   bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-sour-gas")
-  bobmods.lib.module.add_productivity_limitation("solid-fuel-from-sour-gas")
   bobmods.lib.tech.add_recipe_unlock("oil-processing", "petroleum-gas-sweetening")
   bobmods.lib.create_gas_bottle(data.raw.fluid["sour-gas"])
 
@@ -139,9 +133,9 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     data.raw.recipe["petroleum-gas-sweetening"].subgroup = "bob-fluid"
   end
 
-  if data.raw.technology["solid-fuel"] and data.raw.recipe["enriched-fuel-from-liquid-fuel"] then
-    bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "enriched-fuel-from-liquid-fuel")
-    bobmods.lib.tech.add_recipe_unlock("solid-fuel", "enriched-fuel-from-liquid-fuel")
+  if data.raw.technology["solid-fuel"] and data.raw.recipe["enriched-fuel"] then
+    bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "enriched-fuel")
+    bobmods.lib.tech.add_recipe_unlock("solid-fuel", "enriched-fuel")
   end
 end
 

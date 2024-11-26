@@ -9,6 +9,18 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       order = "a[items]-a[steam-mining-drill]",
       place_result = "steam-mining-drill",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -45,12 +57,12 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   data.raw["mining-drill"]["steam-mining-drill"].energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = {pollution = 25}, --fairly sure this scales, so it would be 5 at level 1 speed.
+    emissions_per_minute = { pollution = 25 }, --fairly sure this scales, so it would be 5 at level 1 speed.
     fluid_box = {
       volume = 200,
       pipe_connections = {
-        { flow_direction = "input-output", position = { 0.7, 0.5 }, direction = defines.direction.east },
-        { flow_direction = "input-output", position = { -0.7, 0.5 }, direction = defines.direction.west },
+        { flow_direction = "input-output", position = { 0.5, 0.5 }, direction = defines.direction.east },
+        { flow_direction = "input-output", position = { -0.5, 0.5 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),

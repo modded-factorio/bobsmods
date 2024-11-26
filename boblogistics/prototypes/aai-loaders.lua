@@ -20,8 +20,8 @@ if mods["aai-loaders"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 2 })
       table.insert(ingredients.regular, { type = "item", name = "tin-plate", amount = 2 })
       table.insert(ingredients.fast, { type = "item", name = "bronze-alloy", amount = 2 })
-      table.insert(ingredients.express, { type = "item", name = "aluminium-plate", amount = 2 })
-      table.insert(ingredients.turbo, { type = "item", name = "titanium-plate", amount = 2 })
+      table.insert(ingredients.express, { type = "item", name = "bob-aluminium-plate", amount = 2 })
+      table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-plate", amount = 2 })
       table.insert(ingredients.ultimate, { type = "item", name = "nitinol-alloy", amount = 2 })
     else
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 5 })

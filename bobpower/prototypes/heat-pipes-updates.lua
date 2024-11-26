@@ -26,16 +26,16 @@ then
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-2", "invar-processing")
   end
 
-  if data.raw.item["aluminium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-2", "copper-plate", "aluminium-plate")
+  if data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-2", "copper-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-2", "aluminium-processing")
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-3", "titanium-processing")
-  elseif data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "steel-plate", "tungsten-plate")
+  elseif data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "steel-plate", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-3", "tungsten-processing")
   end
 
@@ -48,8 +48,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-4", "tungsten-alloy-processing")
   end
 
-  if data.raw.item["gold-plate"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-4", "copper-plate", "gold-plate")
+  if data.raw.item["bob-gold-plate"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-4", "copper-plate", "bob-gold-plate")
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-4", "gold-processing")
   end
 end

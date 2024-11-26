@@ -20,7 +20,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       subgroup = "bob-fuel-cells",
       order = "r[uranium-processing]-ab[plutonium-fuel-cell]",
       fuel_category = "nuclear",
-      burnt_result = "used-up-uranium-fuel-cell",
+      burnt_result = "depleted-uranium-fuel-cell",
       fuel_value = "40GJ",
       fuel_glow_color = { r = 0.7, g = 1, b = 0 },
       stack_size = 50,

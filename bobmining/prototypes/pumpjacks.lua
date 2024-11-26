@@ -2,6 +2,8 @@ data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
 data.raw.item["pumpjack"].order = "b[fluids]-b[pumpjack-1]"
 
 if settings.startup["bobmods-mining-pumpjacks"].value == true then
+  data.raw["mining-drill"]["pumpjack"].next_upgrade = "bob-pumpjack-1"
+
   data:extend({
     {
       type = "item",
@@ -12,6 +14,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-2]",
       place_result = "bob-pumpjack-1",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "item",
@@ -22,6 +36,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-3]",
       place_result = "bob-pumpjack-2",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "item",
@@ -32,6 +58,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-4]",
       place_result = "bob-pumpjack-3",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "item",
@@ -42,6 +80,18 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "b[fluids]-b[pumpjack-5]",
       place_result = "bob-pumpjack-4",
       stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
   })
 
@@ -121,16 +171,16 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        volume = 200,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
             flow_direction = "output",
-            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
             direction = defines.direction.north,
           },
         },
@@ -174,43 +224,44 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
           },
         },
       },
-      animations = {
-        north = {
-          layers = {
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-              animation_speed = 0.5,
-              scale = 0.5,
-              line_length = 8,
-              width = 206,
-              height = 202,
-              frame_count = 40,
-              shift = util.by_pixel(-4, -24),
-            },
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-              animation_speed = 0.5,
-              draw_as_shadow = true,
-              line_length = 8,
-              width = 309,
-              height = 82,
-              frame_count = 40,
-              scale = 0.5,
-              shift = util.by_pixel(17.75, 14.5),
+      graphics_set = {
+        animation = {
+          north = {
+            layers = {
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
+                animation_speed = 0.5,
+                scale = 0.5,
+                line_length = 8,
+                width = 206,
+                height = 202,
+                frame_count = 40,
+                shift = util.by_pixel(-4, -24),
+              },
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+                line_length = 8,
+                width = 309,
+                height = 82,
+                frame_count = 40,
+                scale = 0.5,
+                shift = util.by_pixel(17.75, 14.5),
+              },
             },
           },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 10,
+      next_upgrade = "bob-pumpjack-2",
     },
     {
       type = "mining-drill",
@@ -228,16 +279,16 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        volume = 200,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
             flow_direction = "output",
-            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
             direction = defines.direction.north,
           },
         },
@@ -281,43 +332,44 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
           },
         },
       },
-      animations = {
-        north = {
-          layers = {
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-              animation_speed = 0.5,
-              scale = 0.5,
-              line_length = 8,
-              width = 206,
-              height = 202,
-              frame_count = 40,
-              shift = util.by_pixel(-4, -24),
-            },
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-              animation_speed = 0.5,
-              draw_as_shadow = true,
-              line_length = 8,
-              width = 309,
-              height = 82,
-              frame_count = 40,
-              scale = 0.5,
-              shift = util.by_pixel(17.75, 14.5),
+      graphics_set = {
+        animation = {
+          north = {
+            layers = {
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
+                animation_speed = 0.5,
+                scale = 0.5,
+                line_length = 8,
+                width = 206,
+                height = 202,
+                frame_count = 40,
+                shift = util.by_pixel(-4, -24),
+              },
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+                line_length = 8,
+                width = 309,
+                height = 82,
+                frame_count = 40,
+                scale = 0.5,
+                shift = util.by_pixel(17.75, 14.5),
+              },
             },
           },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 12.5,
+      next_upgrade = "bob-pumpjack-3",
     },
     {
       type = "mining-drill",
@@ -335,16 +387,16 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        volume = 250,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
             flow_direction = "output",
-            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
             direction = defines.direction.north,
           },
         },
@@ -388,43 +440,44 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
           },
         },
       },
-      animations = {
-        north = {
-          layers = {
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-              animation_speed = 0.5,
-              scale = 0.5,
-              line_length = 8,
-              width = 206,
-              height = 202,
-              frame_count = 40,
-              shift = util.by_pixel(-4, -24),
-            },
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-              animation_speed = 0.5,
-              draw_as_shadow = true,
-              line_length = 8,
-              width = 309,
-              height = 82,
-              frame_count = 40,
-              scale = 0.5,
-              shift = util.by_pixel(17.75, 14.5),
+      graphics_set = {
+        animation = {
+          north = {
+            layers = {
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
+                animation_speed = 0.5,
+                scale = 0.5,
+                line_length = 8,
+                width = 206,
+                height = 202,
+                frame_count = 40,
+                shift = util.by_pixel(-4, -24),
+              },
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+                line_length = 8,
+                width = 309,
+                height = 82,
+                frame_count = 40,
+                scale = 0.5,
+                shift = util.by_pixel(17.75, 14.5),
+              },
             },
           },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 15,
+      next_upgrade = "bob-pumpjack-4",
     },
     {
       type = "mining-drill",
@@ -442,16 +495,16 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
       energy_source = {
         type = "electric",
-        emissions_per_minute = {pollution = 10},
+        emissions_per_minute = { pollution = 10 },
         usage_priority = "secondary-input",
       },
       output_fluid_box = {
-        volume = 300,
+        volume = 1000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
             flow_direction = "output",
-            positions = { { 1, -1.2 }, { 1.2, -1 }, { -1, 1.2 }, { -1.2, 1 } },
+            positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
             direction = defines.direction.north,
           },
         },
@@ -495,42 +548,42 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
           },
         },
       },
-      animations = {
-        north = {
-          layers = {
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-              animation_speed = 0.5,
-              scale = 0.5,
-              line_length = 8,
-              width = 206,
-              height = 202,
-              frame_count = 40,
-              shift = util.by_pixel(-4, -24),
-            },
-            {
-              priority = "extra-high",
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-              animation_speed = 0.5,
-              draw_as_shadow = true,
-              line_length = 8,
-              width = 309,
-              height = 82,
-              frame_count = 40,
-              scale = 0.5,
-              shift = util.by_pixel(17.75, 14.5),
+      graphics_set = {
+        animation = {
+          north = {
+            layers = {
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
+                animation_speed = 0.5,
+                scale = 0.5,
+                line_length = 8,
+                width = 206,
+                height = 202,
+                frame_count = 40,
+                shift = util.by_pixel(-4, -24),
+              },
+              {
+                priority = "extra-high",
+                filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+                line_length = 8,
+                width = 309,
+                height = 82,
+                frame_count = 40,
+                scale = 0.5,
+                shift = util.by_pixel(17.75, 14.5),
+              },
             },
           },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
         apparent_volume = 1.5,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-      circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+      circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 17.5,
     },
   })

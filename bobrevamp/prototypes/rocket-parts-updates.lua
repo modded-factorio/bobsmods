@@ -14,14 +14,12 @@ if data.raw.item["tungsten-carbide"] then
   bobmods.lib.tech.replace_prerequisite("heat-shield", "plastics", "tungsten-alloy-processing")
 end
 
-bobmods.lib.module.add_productivity_limitation("heat-shield-tile")
-
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("low-density-structure", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("low-density-structure", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("low-density-structure", "titanium-processing")
 end
-if data.raw.item["aluminium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("low-density-structure", "copper-plate", "aluminium-plate")
+if data.raw.item["bob-aluminium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("low-density-structure", "copper-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("low-density-structure", "aluminium-processing")
 end
 bobmods.lib.tech.remove_prerequisite("low-density-structure", "advanced-material-processing")

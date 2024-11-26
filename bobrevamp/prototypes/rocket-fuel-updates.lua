@@ -38,12 +38,6 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
   bobmods.lib.create_gas_bottle(data.raw.fluid["ammonia"])
   bobmods.lib.create_gas_bottle(data.raw.fluid["nitrogen-dioxide"])
 
-  bobmods.lib.module.add_productivity_limitation("ammonia")
-  bobmods.lib.module.add_productivity_limitation("dinitrogen-tetroxide")
-  bobmods.lib.module.add_productivity_limitation("hydrazine")
-  bobmods.lib.module.add_productivity_limitation("hydrogen-peroxide")
-  bobmods.lib.module.add_productivity_limitation("nitrogen-dioxide")
-
   if data.raw.fluid["nitric-oxide"] then
     if data.raw.fluid["pure-water"] then
       bobmods.lib.recipe.remove_result("nitric-oxide", "water")
@@ -60,6 +54,5 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
     end
 
     bobmods.lib.create_gas_bottle(data.raw.fluid["nitric-oxide"])
-    bobmods.lib.module.add_productivity_limitation("nitric-oxide")
   end
 end
