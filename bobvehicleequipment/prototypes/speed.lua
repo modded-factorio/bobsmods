@@ -6,9 +6,21 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-motor-equipment",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-e[vehicle-motor]",
+    order = "v[vehicle-equipment]-e[vehicle-motor-1]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
+      volume = 0.6
+    },
   },
 
   {
@@ -42,7 +54,7 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
       buffer_capacity = "1MJ",
-      input_flow_limit = "300KW",
+      input_flow_limit = "300kW",
     },
     energy_consumption = "200kW",
     movement_bonus = 0.3,
@@ -88,9 +100,21 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-engine-equipment",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-e[vehicle-engine]",
+    order = "v[vehicle-equipment]-e[vehicle-motor-2]",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
+      volume = 0.6
+    },
   },
 
   {
@@ -126,7 +150,7 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
       buffer_capacity = "2MJ",
-      input_flow_limit = "600KW",
+      input_flow_limit = "600kW",
     },
     energy_consumption = "400kW",
     movement_bonus = 0.6,

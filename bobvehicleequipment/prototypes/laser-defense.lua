@@ -23,9 +23,9 @@ local function bob_active_beam_weapon_equipment(data)
       type = "beam",
       cooldown = data.cooldown or 20,
       range = data.range or 15,
-      damage_modifier = 15 * data.damage_modifier or 15,
+      damage_modifier = 4 * data.damage_modifier or 15,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = data.energy_consumption,
         action = {
           type = "direct",
@@ -56,6 +56,19 @@ data:extend({
     order = "v[vehicle-equipment]-d[laser-defense]-1",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 200000
   },
 
   {
@@ -78,10 +91,10 @@ data:extend({
     height = 2,
     buffer_capacity = "220kJ",
     input_flow_limit = "1000kW",
-    energy_consumption = "200kJ",
+    energy_consumption = "100kJ",
     beam = "laser-beam",
-    damage_modifier = 1,
-    cooldown = 20,
+    damage_modifier = 0.5,
+    cooldown = 40,
     range = 15,
     categories = { "vehicle" },
   }),
@@ -90,7 +103,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-a",
@@ -129,6 +142,19 @@ data:extend({
     order = "v[vehicle-equipment]-d[laser-defense]-2",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 200000
   },
 
   {
@@ -152,10 +178,10 @@ data:extend({
     height = 2,
     buffer_capacity = "5200kJ",
     input_flow_limit = "1666kW",
-    energy_consumption = "250kJ",
+    energy_consumption = "120kJ",
     beam = "bob-laser-beam-sapphire",
-    damage_modifier = 1.5,
-    cooldown = 15,
+    damage_modifier = 0.8,
+    cooldown = 36,
     range = 16,
     categories = { "vehicle" },
   }),
@@ -164,7 +190,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-b",
@@ -202,6 +228,19 @@ data:extend({
     order = "v[vehicle-equipment]-d[laser-defense]-3",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 200000
   },
 
   {
@@ -225,10 +264,10 @@ data:extend({
     height = 2,
     buffer_capacity = "920kJ",
     input_flow_limit = "2500kW",
-    energy_consumption = "300kJ",
+    energy_consumption = "140kJ",
     beam = "bob-laser-beam-emerald",
-    damage_modifier = 2.1,
-    cooldown = 12,
+    damage_modifier = 1.1,
+    cooldown = 32,
     range = 17,
     categories = { "vehicle" },
   }),
@@ -237,7 +276,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-c",
@@ -276,6 +315,19 @@ data:extend({
     order = "v[vehicle-equipment]-d[laser-defense]-4",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 200000
   },
 
   {
@@ -299,10 +351,10 @@ data:extend({
     height = 2,
     buffer_capacity = "1420kJ",
     input_flow_limit = "3500kW",
-    energy_consumption = "350kJ",
+    energy_consumption = "160kJ",
     beam = "bob-laser-beam-amethyst",
-    damage_modifier = 2.8,
-    cooldown = 10,
+    damage_modifier = 1.4,
+    cooldown = 28,
     range = 18,
     categories = { "vehicle" },
   }),
@@ -311,7 +363,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-d",
@@ -350,6 +402,19 @@ data:extend({
     order = "v[vehicle-equipment]-d[laser-defense]-5",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 200000
   },
 
   {
@@ -373,10 +438,10 @@ data:extend({
     height = 2,
     buffer_capacity = "2020kJ",
     input_flow_limit = "4666kW",
-    energy_consumption = "400kJ",
+    energy_consumption = "180kJ",
     beam = "bob-laser-beam-topaz",
-    damage_modifier = 3.6,
-    cooldown = 8.5,
+    damage_modifier = 1.7,
+    cooldown = 24,
     range = 19,
     categories = { "vehicle" },
   }),
@@ -385,7 +450,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-e",
@@ -425,6 +490,19 @@ data:extend({
     order = "v[vehicle-equipment]-d[laser-defense]-6",
     stack_size = 50,
     default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5
+    },
+    weight = 200000
   },
 
   {
@@ -448,10 +526,10 @@ data:extend({
     height = 2,
     buffer_capacity = "2720kJ",
     input_flow_limit = "6000kW",
-    energy_consumption = "550kJ",
+    energy_consumption = "200kJ",
     beam = "bob-laser-beam-diamond",
-    damage_modifier = 4.5,
-    cooldown = 7.5,
+    damage_modifier = 2,
+    cooldown = 20,
     range = 20,
     categories = { "vehicle" },
   }),
@@ -460,7 +538,7 @@ data:extend({
     type = "technology",
     name = "vehicle-laser-defense-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
       icon_size = 64,
     }),
     order = "v-g-m-f",
