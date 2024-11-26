@@ -59,7 +59,7 @@ for index, force in pairs(game.forces) do
     force.recipes["processing-unit"].enabled = true
   end
 
-  if force.technologies["advanced-electronics-3"].researched then
+  if force.technologies["advanced-processing-unit"].researched then
     if force.recipes["gilded-copper-cable"] then
       force.recipes["gilded-copper-cable"].enabled = true
     end

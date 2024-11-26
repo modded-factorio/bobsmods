@@ -7,11 +7,24 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[resin]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7
+    },
   },
 
   {
     type = "recipe",
     name = "bob-resin-wood",
+    localised_name = { "item-name.resin" },
     category = "crafting-machine",
     subgroup = "bob-resource",
     energy_required = 1,
@@ -27,6 +40,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-resin-oil",
+    localised_name = { "item-name.resin" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     energy_required = 1,
@@ -54,11 +68,24 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[rubber]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7
+    },
   },
 
   {
     type = "recipe",
     name = "bob-rubber",
+    localised_name = { "item-name.rubber" },
     subgroup = "bob-material-smelting",
     category = "smelting",
     energy_required = 3.5,
@@ -108,6 +135,18 @@ if not data.raw.item["silicon-wafer"] then
         subgroup = "bob-resource",
         order = "f[silicon-wafer]",
         stack_size = 500,
+        drop_sound = {
+          filename = "__base__/sound/item/planner-inventory-move.ogg",
+          volume = 0.5
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/planner-inventory-move.ogg",
+          volume = 0.5
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/planner-inventory-pickup.ogg",
+          volume = 0.5
+        },
       },
 
       {
@@ -140,6 +179,18 @@ if data.raw.item["tin-plate"] then
       subgroup = "bob-alloy",
       order = "c-b-h[solder]",
       stack_size = 200,
+      drop_sound = {
+        filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
+        volume = 0.5
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
+        volume = 0.5
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+        volume = 0.6
+      },
     },
 
     {
@@ -166,6 +217,7 @@ if data.raw.item["tin-plate"] then
       {
         type = "recipe",
         name = "solder-alloy-lead",
+        localised_name = { "item-name.solder-alloy" },
         energy_required = 7,
         enabled = false,
         category = "crafting-machine",
