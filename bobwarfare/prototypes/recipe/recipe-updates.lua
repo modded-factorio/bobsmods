@@ -254,7 +254,10 @@ if data.raw.item["bob-ruby-5"] then
 end
 
 if data.raw.item["bob-sapphire-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-sapphire", { type = "item", name = "bob-sapphire-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "laser-rifle-battery-sapphire",
+    { type = "item", name = "bob-sapphire-5", amount = 1 }
+  )
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-sapphire",
     "laser-rifle-battery-ruby",
@@ -265,7 +268,10 @@ if data.raw.item["bob-sapphire-5"] then
 end
 
 if data.raw.item["bob-emerald-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-emerald", { type = "item", name = "bob-emerald-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "laser-rifle-battery-emerald",
+    { type = "item", name = "bob-emerald-5", amount = 1 }
+  )
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-emerald",
     "laser-rifle-battery-sapphire",
@@ -275,7 +281,10 @@ if data.raw.item["bob-emerald-5"] then
 end
 
 if data.raw.item["bob-amethyst-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-amethyst", { type = "item", name = "bob-amethyst-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "laser-rifle-battery-amethyst",
+    { type = "item", name = "bob-amethyst-5", amount = 1 }
+  )
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-amethyst",
     "laser-rifle-battery-emerald",
@@ -294,7 +303,10 @@ if data.raw.item["bob-topaz-5"] then
 end
 
 if data.raw.item["bob-diamond-5"] then
-  bobmods.lib.recipe.add_ingredient("laser-rifle-battery-diamond", { type = "item", name = "bob-diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "laser-rifle-battery-diamond",
+    { type = "item", name = "bob-diamond-5", amount = 1 }
+  )
   bobmods.lib.recipe.replace_ingredient(
     "laser-rifle-battery-diamond",
     "laser-rifle-battery-topaz",

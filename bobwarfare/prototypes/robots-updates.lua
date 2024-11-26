@@ -205,7 +205,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
 
   if data.raw.recipe["robot-tool-combat-3"] then
     if data.raw.item["bob-titanium-plate"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat-3", { type = "item", name = "bob-titanium-plate", amount = 1 })
+      bobmods.lib.recipe.add_ingredient(
+        "robot-tool-combat-3",
+        { type = "item", name = "bob-titanium-plate", amount = 1 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-3", { type = "item", name = "steel-plate", amount = 1 })
     end

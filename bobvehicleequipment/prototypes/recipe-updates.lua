@@ -489,7 +489,10 @@ if data.raw.item["gilded-copper-cable"] then
 end
 
 if data.raw.item["bob-ruby-5"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-laser-defense-equipment-1", { type = "item", name = "bob-ruby-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "vehicle-laser-defense-equipment-1",
+    { type = "item", name = "bob-ruby-5", amount = 1 }
+  )
   bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-1", "gem-processing-3")
 end
 

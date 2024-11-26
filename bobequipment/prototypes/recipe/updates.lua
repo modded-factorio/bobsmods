@@ -140,7 +140,11 @@ else
 
   if data.raw.item["bob-titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("personal-roboport-antenna-equipment-3", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-3", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient(
+      "personal-roboport-chargepad-equipment-3",
+      "steel-plate",
+      "bob-titanium-plate"
+    )
   end
 
   if data.raw.item["titanium-bearing"] then
