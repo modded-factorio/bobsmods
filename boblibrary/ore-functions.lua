@@ -10,10 +10,16 @@ local stone_driving_sound = {
     filename = "__base__/sound/driving/vehicle-surface-stone.ogg",
     volume = 0.8,
     advanced_volume_control = {
-      fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = {
-        1.5,
-        100.0,
-      } } },
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = { control = 0.5, volume_percentage = 0.0 },
+          to = {
+            1.5,
+            100.0,
+          },
+        },
+      },
     },
   },
   fade_ticks = 6,
@@ -24,10 +30,16 @@ local oil_driving_sound = {
     filename = "__base__/sound/driving/vehicle-surface-oil.ogg",
     volume = 0.8,
     advanced_volume_control = {
-      fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = {
-        1.5,
-        100.0,
-      } } },
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = { control = 0.5, volume_percentage = 0.0 },
+          to = {
+            1.5,
+            100.0,
+          },
+        },
+      },
     },
   },
   fade_ticks = 6,
