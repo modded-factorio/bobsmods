@@ -357,7 +357,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       allow_as_intermediate = false,
       results = {
         { type = "item", name = "stone-furnace", amount = 1 },
-        { type = "item", name = "pipe", 2 },
+        { type = "item", name = "pipe", amount = 2 },
       },
       main_product = "stone-furnace",
     },
