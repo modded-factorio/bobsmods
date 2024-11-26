@@ -214,6 +214,7 @@ if data.raw.item["tin-plate"] then
       {
         type = "recipe",
         name = "solder-alloy-lead",
+        localised_name = { "item-name.solder-alloy" },
         energy_required = 7,
         enabled = false,
         category = "crafting-machine",
