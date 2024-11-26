@@ -375,7 +375,10 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
   end
 
   if data.raw.item["bob-emerald-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-productivity-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "raw-productivity-module-6",
+      { type = "item", name = "bob-emerald-5", amount = 1 }
+    )
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(
@@ -397,7 +400,10 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
   end
 
   if data.raw.item["bob-diamond-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-productivity-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "raw-productivity-module-8",
+      { type = "item", name = "bob-diamond-5", amount = 1 }
+    )
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(

@@ -155,7 +155,7 @@ if not data.raw.item["silicon-wafer"] and data.raw.item["bob-silicon-plate"] the
       enabled = false,
       energy_required = 5,
       ingredients = {
-        { type = "item", name = "bob-silicon-plate", amount = 1 }
+        { type = "item", name = "bob-silicon-plate", amount = 1 },
       },
       results = { { type = "item", name = "silicon-wafer", amount = 8 } },
       allow_productivity = true,

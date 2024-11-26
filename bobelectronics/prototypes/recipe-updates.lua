@@ -36,9 +36,18 @@ if data.raw.item["silicon-wafer"] then
   bobmods.lib.recipe.add_ingredient("processing-electronics", { type = "item", name = "silicon-wafer", amount = 6 })
 else
   if data.raw.item["bob-silicon-plate"] then
-    bobmods.lib.recipe.add_ingredient("electronic-components", { type = "item", name = "bob-silicon-plate", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("intergrated-electronics", { type = "item", name = "bob-silicon-plate", amount = 2 })
-    bobmods.lib.recipe.add_ingredient("processing-electronics", { type = "item", name = "bob-silicon-plate", amount = 3 })
+    bobmods.lib.recipe.add_ingredient(
+      "electronic-components",
+      { type = "item", name = "bob-silicon-plate", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "intergrated-electronics",
+      { type = "item", name = "bob-silicon-plate", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "processing-electronics",
+      { type = "item", name = "bob-silicon-plate", amount = 3 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("electronic-components", { type = "item", name = "copper-plate", amount = 1 })
     bobmods.lib.recipe.add_ingredient("intergrated-electronics", { type = "item", name = "copper-plate", amount = 2 })
