@@ -355,3 +355,76 @@ function bobmods.lib.recipe.disallow_productivity(recipe_name)
     bobmods.lib.error.recipe(recipe_name)
   end
 end
+
+if feature_flags["quality"] then
+
+  function bobmods.lib.recipe.update_recycling_recipe_single(recipe_name, replace_icon)
+    if type(recipe_name) == "string" then
+      local recipe_name2 = recipe_name .. "-recycling"
+      local recipe1 = data.raw.recipe[recipe_name]
+      local recipe2 = data.raw.recipe[recipe_name2]
+      if recipe1 then
+        if recipe2 then
+          recipe2.results = {}
+          for i, outputs in pairs(recipe1.ingredients) do
+            if recipe1.ingredients[i].type == "item" then
+              recipe2.results[i] = { type = "item", name = recipe1.ingredients[i].name, amount = recipe1.ingredients[i].amount / 4, extra_count_fraction = recipe1.ingredients[i].amount % 4 / 4 }
+            end
+          end
+
+          --Tries to find replacement icon if item of same name exists. If not, icon replacement will have do be done manually if desired.
+          if replace_icon == true then
+            local recipe_icon = recipe2.icons[2].icon
+            local recipe_icon_size = recipe2.icons[2].icon_size or 64
+            if data.raw.item[recipe_name] then
+              if data.raw.item[recipe_name].icon then
+                recipe_icon = data.raw.item[recipe_name].icon
+                recipe_icon_size = data.raw.item[recipe_name].icon_size or 64
+              elseif data.raw.item[recipe_name].icons then
+                recipe_icon = data.raw.item[recipe_name].icons[1].icon
+                recipe_icon_size = data.raw.item[recipe_name].icons[1].icon_size or 64
+              end
+            end
+            recipe2.icons[2].icon = recipe_icon
+            recipe2.icons[2].icon_size = recipe_icon_size
+            recipe2.icons[2].scale = 0.4 / ( recipe_icon_size / 64  )
+          end
+  
+        else
+          log(debug.traceback())
+          log("Recycling recipe " .. recipe_name2 .. " not found")
+        end
+      else
+        log(debug.traceback())
+        bobmods.lib.error.recipe(recipe_name)
+      end
+    else
+      log(debug.traceback())
+      bobmods.lib.error.recipe(recipe_name)
+    end
+  end
+
+  function bobmods.lib.recipe.update_recycling_recipe(recipe_name)
+    if type(recipe_name) == "string" then
+      bobmods.lib.recipe.update_recycling_recipe_single(recipe_name, true)
+    end
+    if type(recipe_name) == "table" then
+      for i, single_recipe in pairs(recipe_name) do
+        bobmods.lib.recipe.update_recycling_recipe_single(single_recipe, true)
+      end
+    end
+  end
+
+else
+
+  function bobmods.lib.recipe.update_recycling_recipe_single()
+    log(debug.traceback())
+    log("Improper function call. Cannot update recycling without Quality mod.")
+  end
+
+  function bobmods.lib.recipe.update_recycling_recipe()
+    log(debug.traceback())
+    log("Improper function call. Cannot update recycling without Quality mod.")
+  end
+
+end
