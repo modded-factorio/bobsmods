@@ -13,6 +13,7 @@ data:extend({
       { type = "item", name = "bronze-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -22,12 +23,13 @@ data:extend({
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 3 },
-      { type = "item", name = "zinc-plate", amount = 2 },
+      { type = "item", name = "bob-zinc-plate", amount = 2 },
     },
     results = {
       { type = "item", name = "brass-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -43,6 +45,7 @@ data:extend({
       { type = "item", name = "copper-tungsten-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -58,10 +61,12 @@ data:extend({
       { type = "item", name = "tungsten-carbide", amount = 2 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
     name = "tungsten-carbide-2",
+    localised_name = { "item-name.tungsten-carbide" },
     enabled = false,
     category = "mixing-furnace",
     energy_required = 12.8,
@@ -73,6 +78,7 @@ data:extend({
       { type = "item", name = "tungsten-carbide", amount = 2 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -83,12 +89,13 @@ data:extend({
     ingredients = {
       { type = "item", name = "copper-plate", amount = 8 },
       { type = "item", name = "tin-plate", amount = 1 },
-      { type = "item", name = "zinc-plate", amount = 1 },
+      { type = "item", name = "bob-zinc-plate", amount = 1 },
     },
     results = {
       { type = "item", name = "gunmetal-alloy", amount = 10 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -98,13 +105,14 @@ data:extend({
     category = "mixing-furnace",
     energy_required = 16,
     ingredients = {
-      { type = "item", name = "nickel-plate", amount = 2 },
+      { type = "item", name = "bob-nickel-plate", amount = 2 },
       { type = "item", name = "iron-plate", amount = 3 },
     },
     results = {
       { type = "item", name = "invar-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
   {
     type = "recipe",
@@ -113,13 +121,14 @@ data:extend({
     category = "mixing-furnace",
     energy_required = 16,
     ingredients = {
-      { type = "item", name = "nickel-plate", amount = 3 },
-      { type = "item", name = "titanium-plate", amount = 2 },
+      { type = "item", name = "bob-nickel-plate", amount = 3 },
+      { type = "item", name = "bob-titanium-plate", amount = 2 },
     },
     results = {
       { type = "item", name = "nitinol-alloy", amount = 5 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -134,5 +143,6 @@ data:extend({
     },
     results = { { type = "item", name = "cobalt-steel-alloy", amount = 10 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

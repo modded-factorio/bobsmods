@@ -91,6 +91,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
         { type = "item", name = "electronic-circuit", amount = 2 },
       },
       results = { { type = "item", name = "robot-brain-combat", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -103,6 +104,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
         { type = "item", name = "advanced-circuit", amount = 1 },
       },
       results = { { type = "item", name = "robot-brain-combat-2", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -115,6 +117,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
         { type = "item", name = "processing-unit", amount = 1 },
       },
       results = { { type = "item", name = "robot-brain-combat-3", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -126,6 +129,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
         { type = "item", name = "processing-unit", amount = 2 },
       },
       results = { { type = "item", name = "robot-brain-combat-4", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -135,6 +139,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "robot-tool-combat", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -144,6 +149,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "robot-tool-combat-2", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -153,6 +159,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "robot-tool-combat-3", amount = 1 } },
+      allow_productivity = true,
     },
 
     {
@@ -162,6 +169,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       enabled = false,
       ingredients = {},
       results = { { type = "item", name = "robot-tool-combat-4", amount = 1 } },
+      allow_productivity = true,
     },
   })
 end

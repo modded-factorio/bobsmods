@@ -13,14 +13,14 @@ function bobmods.lib.table_merge(table1, table2)
   end
 end
 
-function bobmods.lib.result_check(object)
+function bobmods.lib.minable_result_check(object)
   if object then
     if object.results == nil then
       object.results = {}
     end
 
     if object.result then
-      local item = bobmods.lib.item.ingredient({ name = object.result })
+      local item = bobmods.lib.item.ingredient({ type = "item", name = object.result, amount = 1 })
       if object.count then
         item.amount = object.count
         object.count = nil
@@ -60,7 +60,7 @@ function bobmods.lib.icons_from_item(item)
     if item.icons then
       icons = item.icons
     elseif item.icon then
-      icons = { { icon = item.icon, icon_size = item.icon_size } }
+      icons = { { icon = item.icon, icon_size = item.icon_size or 64 } }
     else
       icons = nil
       log(debug.traceback())

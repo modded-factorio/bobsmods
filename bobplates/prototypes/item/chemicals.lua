@@ -19,7 +19,7 @@ end
 data:extend({
   {
     type = "fluid",
-    name = "liquid-air",
+    name = "bob-liquid-air",
     default_temperature = 25,
     max_temperature = 100,
     base_flow_rate = 100,
@@ -28,7 +28,7 @@ data:extend({
     flow_color = { r = 0.5, g = 1.0, b = 1.0 },
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    order = "a[fluid]-g[liquid-air]",
+    order = "a[fluid]-g[bob-liquid-air]",
     gas_temperature = -100,
     auto_barrel = false,
   },

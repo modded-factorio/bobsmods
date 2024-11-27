@@ -25,6 +25,7 @@ bobmods.ores.silver = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.silver.create_autoplace()

@@ -25,6 +25,7 @@ bobmods.ores.rutile = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.rutile.create_autoplace()

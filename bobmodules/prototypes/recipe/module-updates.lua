@@ -200,12 +200,12 @@ else
   end
 end
 
-if data.raw.item["ruby-5"] then
-  bobmods.lib.recipe.add_ingredient("speed-module-5", { type = "item", name = "ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("efficiency-module-5", { type = "item", name = "ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("productivity-module-5", { type = "item", name = "ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-module-5", { type = "item", name = "ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-module-5", { type = "item", name = "ruby-5", amount = 1 })
+if data.raw.item["bob-ruby-5"] then
+  bobmods.lib.recipe.add_ingredient("speed-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("efficiency-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
   if data.raw.technology["gem-processing-3"] then
     bobmods.lib.tech.add_prerequisite("speed-module-5", "gem-processing-3")
     bobmods.lib.tech.add_prerequisite("productivity-module-5", "gem-processing-3")
@@ -229,12 +229,12 @@ else
   end
 end
 
-if data.raw.item["emerald-5"] then
-  bobmods.lib.recipe.add_ingredient("speed-module-6", { type = "item", name = "emerald-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("efficiency-module-6", { type = "item", name = "emerald-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("productivity-module-6", { type = "item", name = "emerald-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-module-6", { type = "item", name = "emerald-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-module-6", { type = "item", name = "emerald-5", amount = 1 })
+if data.raw.item["bob-emerald-5"] then
+  bobmods.lib.recipe.add_ingredient("speed-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("efficiency-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
 else
   if data.raw.item["alien-artifact"] then
     bobmods.lib.recipe.add_ingredient("speed-module-6", { type = "item", name = "alien-artifact", amount = 1 })
@@ -251,12 +251,12 @@ else
   end
 end
 
-if data.raw.item["topaz-5"] then
-  bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "topaz-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("efficiency-module-7", { type = "item", name = "topaz-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("productivity-module-7", { type = "item", name = "topaz-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-module-7", { type = "item", name = "topaz-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-module-7", { type = "item", name = "topaz-5", amount = 1 })
+if data.raw.item["bob-topaz-5"] then
+  bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("efficiency-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
 else
   if data.raw.item["alien-artifact"] then
     bobmods.lib.recipe.add_ingredient("speed-module-7", { type = "item", name = "alien-artifact", amount = 1 })
@@ -273,12 +273,12 @@ else
   end
 end
 
-if data.raw.item["diamond-5"] then
-  bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "diamond-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("efficiency-module-8", { type = "item", name = "diamond-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("productivity-module-8", { type = "item", name = "diamond-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-clean-module-8", { type = "item", name = "diamond-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("pollution-create-module-8", { type = "item", name = "diamond-5", amount = 1 })
+if data.raw.item["bob-diamond-5"] then
+  bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("efficiency-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("productivity-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-clean-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("pollution-create-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
 else
   if data.raw.item["alien-artifact"] then
     bobmods.lib.recipe.add_ingredient("speed-module-8", { type = "item", name = "alien-artifact", amount = 1 })

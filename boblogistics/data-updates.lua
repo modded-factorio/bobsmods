@@ -8,7 +8,6 @@ require("prototypes.recipe.pump-recipe-updates")
 require("prototypes.recipe.logistic-container-recipe-updates")
 
 require("prototypes.technology-updates")
-require("prototypes.productivity-limitations")
 
 require("prototypes.repair-pack-updates")
 

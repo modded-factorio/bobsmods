@@ -11,6 +11,7 @@ data:extend({
       { type = "item", name = "steel-chest", amount = 2 },
     },
     results = { { type = "item", name = "advanced-logistic-science-pack", amount = 3 } },
+    allow_productivity = true,
   },
 
   {

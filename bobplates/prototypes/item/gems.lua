@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "ruby-3",
+    name = "bob-ruby-3",
     icon = "__bobplates__/graphics/icons/gems/ruby-3.png",
     icon_size = 32,
 
@@ -11,7 +11,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sapphire-3",
+    name = "bob-sapphire-3",
     icon = "__bobplates__/graphics/icons/gems/sapphire-3.png",
     icon_size = 32,
 
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "emerald-3",
+    name = "bob-emerald-3",
     icon = "__bobplates__/graphics/icons/gems/emerald-3.png",
     icon_size = 32,
 
@@ -31,7 +31,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "amethyst-3",
+    name = "bob-amethyst-3",
     icon = "__bobplates__/graphics/icons/gems/amethyst-3.png",
     icon_size = 32,
 
@@ -41,7 +41,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "topaz-3",
+    name = "bob-topaz-3",
     icon = "__bobplates__/graphics/icons/gems/topaz-3.png",
     icon_size = 32,
 
@@ -51,7 +51,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "diamond-3",
+    name = "bob-diamond-3",
     icon = "__bobplates__/graphics/icons/gems/diamond-3.png",
     icon_size = 32,
 
@@ -62,7 +62,7 @@ data:extend({
 
   {
     type = "item",
-    name = "ruby-4",
+    name = "bob-ruby-4",
     icon = "__bobplates__/graphics/icons/gems/ruby-4.png",
     icon_size = 32,
 
@@ -72,7 +72,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sapphire-4",
+    name = "bob-sapphire-4",
     icon = "__bobplates__/graphics/icons/gems/sapphire-4.png",
     icon_size = 32,
 
@@ -82,7 +82,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "emerald-4",
+    name = "bob-emerald-4",
     icon = "__bobplates__/graphics/icons/gems/emerald-4.png",
     icon_size = 32,
 
@@ -92,7 +92,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "amethyst-4",
+    name = "bob-amethyst-4",
     icon = "__bobplates__/graphics/icons/gems/amethyst-4.png",
     icon_size = 32,
 
@@ -102,7 +102,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "topaz-4",
+    name = "bob-topaz-4",
     icon = "__bobplates__/graphics/icons/gems/topaz-4.png",
     icon_size = 32,
 
@@ -112,7 +112,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "diamond-4",
+    name = "bob-diamond-4",
     icon = "__bobplates__/graphics/icons/gems/diamond-4.png",
     icon_size = 32,
 
@@ -123,7 +123,7 @@ data:extend({
 
   {
     type = "item",
-    name = "ruby-5",
+    name = "bob-ruby-5",
     icon = "__bobplates__/graphics/icons/gems/ruby-5.png",
     icon_size = 32,
 
@@ -133,7 +133,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sapphire-5",
+    name = "bob-sapphire-5",
     icon = "__bobplates__/graphics/icons/gems/sapphire-5.png",
     icon_size = 32,
 
@@ -143,7 +143,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "emerald-5",
+    name = "bob-emerald-5",
     icon = "__bobplates__/graphics/icons/gems/emerald-5.png",
     icon_size = 32,
 
@@ -153,7 +153,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "amethyst-5",
+    name = "bob-amethyst-5",
     icon = "__bobplates__/graphics/icons/gems/amethyst-5.png",
     icon_size = 32,
 
@@ -163,7 +163,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "topaz-5",
+    name = "bob-topaz-5",
     icon = "__bobplates__/graphics/icons/gems/topaz-5.png",
     icon_size = 32,
 
@@ -173,7 +173,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "diamond-5",
+    name = "bob-diamond-5",
     icon = "__bobplates__/graphics/icons/gems/diamond-5.png",
     icon_size = 32,
 

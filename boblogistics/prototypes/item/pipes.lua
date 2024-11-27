@@ -284,7 +284,7 @@ if data.raw.item["silicon-nitride"] then
   })
 end
 
-if data.raw.item["titanium-plate"] then
+if data.raw.item["bob-titanium-plate"] then
   data:extend({
     {
       type = "item",
@@ -317,7 +317,7 @@ if data.raw.item["titanium-plate"] then
   })
 end
 
-if data.raw.item["tungsten-plate"] then
+if data.raw.item["bob-tungsten-plate"] then
   data:extend({
     {
       type = "item",

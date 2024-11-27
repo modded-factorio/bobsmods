@@ -18,5 +18,6 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 30 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })

@@ -25,6 +25,7 @@ bobmods.ores.tin = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.tin.create_autoplace()

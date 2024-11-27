@@ -1,7 +1,7 @@
 bobmods.lib.tech.remove_prerequisite("effect-transmission", "processing-unit")
 
-if data.raw.item["aluminium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("beacon-2", "steel-plate", "aluminium-plate")
+if data.raw.item["bob-aluminium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("beacon-2", "steel-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("effect-transmission-2", "aluminium-processing")
 end
 
@@ -9,13 +9,13 @@ if data.raw.item["tinned-copper-cable"] then
   bobmods.lib.recipe.replace_ingredient("beacon-2", "copper-cable", "tinned-copper-cable")
 end
 
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("beacon-3", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("beacon-3", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("effect-transmission-3", "titanium-processing")
 end
 
-if data.raw.item["gold-plate"] then
-  bobmods.lib.recipe.replace_ingredient("beacon-3", "copper-plate", "gold-plate")
+if data.raw.item["bob-gold-plate"] then
+  bobmods.lib.recipe.replace_ingredient("beacon-3", "copper-plate", "bob-gold-plate")
   bobmods.lib.tech.add_prerequisite("effect-transmission-3", "gold-processing")
 end
 

@@ -26,7 +26,7 @@ bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "hydrogen-sulfide")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "liquid-fuel")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "enriched-fuel-from-liquid-fuel")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "enriched-fuel")
 
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "petroleum-gas-cracking")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")

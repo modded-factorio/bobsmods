@@ -106,6 +106,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },
       },
+      allow_productivity = true,
     },
 
     {
@@ -131,6 +132,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
         tertiary = { r = 0.0, g = 0.5, b = 1.0, a = 0.000 },
       },
+      allow_productivity = true,
     },
 
     {
@@ -157,6 +159,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.0, g = 0.5, b = 1.0, a = 0.000 },
         tertiary = { r = 0.7, g = 0.7, b = 1.0, a = 0.000 },
       },
+      allow_productivity = true,
     },
 
     {
@@ -182,6 +185,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
         tertiary = { r = 0.8, g = 0.0, b = 1.0, a = 0.000 },
       },
+      allow_productivity = true,
     },
 
     {
@@ -206,6 +210,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.7, g = 0.7, b = 0.3, a = 0.000 },
       },
+      allow_productivity = true,
     },
   })
 
@@ -254,6 +259,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           secondary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
           tertiary = { r = 1.0, g = 0.0, b = 1.0, a = 0.000 },
         },
+        allow_productivity = true,
       },
 
       {
@@ -279,6 +285,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
           tertiary = { r = 0.8, g = 0.0, b = 1.0, a = 0.000 },
         },
+        allow_productivity = true,
       },
     })
   end

@@ -3,10 +3,10 @@ if data.raw.item["tin-plate"] then
   bobmods.lib.recipe.add_ingredient("module-processor-board", { type = "item", name = "tin-plate", amount = 1 })
 end
 
-if data.raw.item["gold-plate"] then
-  bobmods.lib.recipe.add_ingredient("module-contact", { type = "item", name = "gold-plate", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { type = "item", name = "gold-plate", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { type = "item", name = "gold-plate", amount = 2 })
+if data.raw.item["bob-gold-plate"] then
+  bobmods.lib.recipe.add_ingredient("module-contact", { type = "item", name = "bob-gold-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { type = "item", name = "bob-gold-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { type = "item", name = "bob-gold-plate", amount = 2 })
   bobmods.lib.tech.add_prerequisite("modules", "gold-processing")
 end
 
