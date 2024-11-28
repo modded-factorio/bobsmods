@@ -365,6 +365,8 @@ if feature_flags["quality"] then
       local recipe2 = data.raw.recipe[recipe_name2]
       if recipe1 then
         if recipe2 then
+          local new_time = recipe1.energy_required or 0.5
+          recipe2.energy_required = new_time / 16
           recipe2.results = {}
           for i, outputs in pairs(recipe1.ingredients) do
             if recipe1.ingredients[i].type == "item" then
