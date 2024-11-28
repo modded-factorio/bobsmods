@@ -44,10 +44,27 @@ if feature_flags["quality"] then
     "electrolyser-3",
     "electrolyser-4",
     "electrolyser-5",
+    "fluid-furnace",
     "fluid-mixing-furnace",
     "fluid-chemical-furnace",
     "oil-refinery-2",
     "oil-refinery-3",
     "oil-refinery-4",
   })
+  if
+    settings.startup["bobmods-plates-convert-recipes"]
+    and settings.startup["bobmods-plates-convert-recipes"].value == true
+  then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "stone-furnace",
+      "stone-mixing-furnace",
+      "stone-chemical-furnace",
+      "steel-furnace",
+      "steel-mixing-furnace",
+      "steel-chemical-furnace",
+      "electric-furnace",
+      "electric-mixing-furnace",
+      "electric-chemical-furnace",
+    })
+  end
 end
