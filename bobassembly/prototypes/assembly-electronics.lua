@@ -85,6 +85,18 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           percent = 70,
         },
       },
+      fluid_boxes = {
+        {
+          production_type = "input",
+          pipe_picture = assembler3pipepictures(),
+          pipe_covers = pipecoverspictures(),
+          pipe_connections = {
+            { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
+          },
+          secondary_draw_orders = { north = -1 },
+          volume = 1000,
+        },
+      },
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
