@@ -427,7 +427,7 @@ end
 local function bob_gun_turret(inputs)
   local preparerange = inputs.range or 17
   preparerange = preparerange + 1
-  return {
+  local turret = {
     type = "ammo-turret",
     name = inputs.name,
     icon = "__base__/graphics/icons/gun-turret.png",
@@ -439,7 +439,6 @@ local function bob_gun_turret(inputs)
     corpse = "gun-turret-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    circuit_connector = circuit_connector_definitions["gun-turret"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     rotation_speed = inputs.rotation_speed or 0.015,
     preparing_speed = 0.08,
@@ -461,7 +460,7 @@ local function bob_gun_turret(inputs)
     preparing_sound = sounds.gun_turret_activate,
     folding_sound = sounds.gun_turret_deactivate,
     attacking_animation = bob_turret_attack({ type = inputs.gun_type, tint = inputs.tint }),
-    graphics_set = { base_visualisation = { animation = inputs.base } },
+    graphics_set = { base_visualisation = { animation = bob_turret_base(inputs.base) } },
     icon_draw_specification = {
       scale = 0.7
     },
@@ -491,6 +490,12 @@ local function bob_gun_turret(inputs)
     call_for_help_radius = 40,
     prepare_range = inputs.prepare_range or preparerange,
   }
+  if inputs.base.type == "gun" then
+    turret.circuit_connector = circuit_connector_definitions["gun-turret"]
+  else
+    turret.circuit_connector = circuit_connector_definitions["laser-turret"]
+  end
+  return turret
 end
 
 local function bob_laser_turret(inputs)
@@ -534,7 +539,7 @@ local function bob_laser_turret(inputs)
       tint = inputs.tint2
     },
     prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
-    graphics_set = { base_visualisation = { animation = inputs.base } },
+    graphics_set = { base_visualisation = { animation = bob_turret_base(inputs.base) } },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     call_for_help_radius = 40,
   }
@@ -637,7 +642,7 @@ data:extend({
     rotation_speed = 0.017,
     tint = red,
     gun_type = "gun",
-    base = bob_turret_base({ type = "gun", tint = blue }),
+    base = { type = "gun", tint = blue },
     next_upgrade = "bob-gun-turret-3",
   }),
   bob_gun_turret({
@@ -654,7 +659,7 @@ data:extend({
     rotation_speed = 0.019,
     tint = blue,
     gun_type = "gun",
-    base = bob_turret_base({ type = "gun", tint = blue }),
+    base = { type = "gun", tint = blue },
     next_upgrade = "bob-gun-turret-4",
   }),
   bob_gun_turret({
@@ -671,7 +676,7 @@ data:extend({
     rotation_speed = 0.021,
     tint = purple,
     gun_type = "gun",
-    base = bob_turret_base({ type = "gun", tint = blue }),
+    base = { type = "gun", tint = blue },
     next_upgrade = "bob-gun-turret-5",
   }),
   bob_gun_turret({
@@ -688,7 +693,7 @@ data:extend({
     rotation_speed = 0.023,
     tint = green,
     gun_type = "gun",
-    base = bob_turret_base({ type = "gun", tint = blue }),
+    base = { type = "gun", tint = blue },
   }),
 
   bob_gun_turret({
@@ -705,7 +710,7 @@ data:extend({
     prepare_range = 32,
     tint = yellow,
     gun_type = "gun",
-    base = bob_turret_base({ type = "laser", tint = red }),
+    base = { type = "laser", tint = red },
     next_upgrade = "bob-sniper-turret-2",
   }),
   bob_gun_turret({
@@ -722,7 +727,7 @@ data:extend({
     prepare_range = 37,
     tint = blue,
     gun_type = "gun",
-    base = bob_turret_base({ type = "laser", tint = red }),
+    base = { type = "laser", tint = red },
     next_upgrade = "bob-sniper-turret-3",
   }),
   bob_gun_turret({
@@ -739,7 +744,7 @@ data:extend({
     prepare_range = 42,
     tint = green,
     gun_type = "gun",
-    base = bob_turret_base({ type = "laser", tint = red }),
+    base = { type = "laser", tint = red },
   }),
 
   --  bob_laser_turret{name = "laser-turret", health = 1000, buffer_capacity = "801kJ", input_flow_limit = "4800kW", drain = "24kW", energy_consumption = "800kJ", projectile = "laser", damage_modifier = 2, cooldown = 40, range = 24, tint = white, base_tint = white},
@@ -759,7 +764,7 @@ data:extend({
     prepare_range = 26.5,
     rotation_speed = 0.011,
     tint = red,
-    base = bob_turret_base({ type = "laser", tint = yellow }),
+    base = { type = "laser", tint = yellow },
     next_upgrade = "bob-laser-turret-3",
   }),
   bob_laser_turret({
@@ -778,7 +783,7 @@ data:extend({
     prepare_range = 29,
     rotation_speed = 0.012,
     tint = blue,
-    base = bob_turret_base({ type = "laser", tint = yellow }),
+    base = { type = "laser", tint = yellow },
     next_upgrade = "bob-laser-turret-4",
   }),
   bob_laser_turret({
@@ -797,7 +802,7 @@ data:extend({
     prepare_range = 31.5,
     rotation_speed = 0.013,
     tint = purple,
-    base = bob_turret_base({ type = "laser", tint = yellow }),
+    base = { type = "laser", tint = yellow },
     next_upgrade = "bob-laser-turret-5",
   }),
   bob_laser_turret({
@@ -815,7 +820,7 @@ data:extend({
     prepare_range = 34,
     rotation_speed = 0.014,
     tint = green,
-    base = bob_turret_base({ type = "laser", tint = yellow }),
+    base = { type = "laser", tint = yellow },
   }),
 })
 
@@ -849,7 +854,7 @@ data:extend({
 
     size = 1.5,
     tint = yellow,
-    base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    base = { type = "gun", tint = green, size = 1.5 },
     next_upgrade = "bob-plasma-turret-2",
   }),
 
@@ -882,7 +887,7 @@ data:extend({
 
     size = 1.5,
     tint = red,
-    base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    base = { type = "gun", tint = green, size = 1.5 },
     next_upgrade = "bob-plasma-turret-3",
   }),
 
@@ -915,7 +920,7 @@ data:extend({
 
     size = 1.5,
     tint = blue,
-    base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    base = { type = "gun", tint = green, size = 1.5 },
     next_upgrade = "bob-plasma-turret-4",
   }),
 
@@ -948,7 +953,7 @@ data:extend({
 
     size = 1.5,
     tint = purple,
-    base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    base = { type = "gun", tint = green, size = 1.5 },
     next_upgrade = "bob-plasma-turret-5",
   }),
 
@@ -981,7 +986,7 @@ data:extend({
 
     size = 1.5,
     tint = green,
-    base = bob_turret_base({ type = "gun", tint = green, size = 1.5 }),
+    base = { type = "gun", tint = green, size = 1.5 },
   }),
 })
 
