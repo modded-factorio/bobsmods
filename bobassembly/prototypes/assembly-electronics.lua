@@ -97,6 +97,8 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           volume = 1000,
         },
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
+      forced_symmetry = "vertical",
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
