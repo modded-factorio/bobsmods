@@ -59,7 +59,6 @@ data:extend({
       { type = "item", name = "wood", amount_min = 10, amount_max = 20 },
     },
     allow_decomposition = false,
-    allow_productivity = true,
   },
 
   {
@@ -80,7 +79,6 @@ data:extend({
       { type = "item", name = "wood", amount_min = 10, amount_max = 50 },
     },
     allow_decomposition = false,
-    allow_productivity = true,
   },
 
   {
