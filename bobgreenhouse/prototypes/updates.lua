@@ -29,3 +29,8 @@ if data.raw.technology["nitrogen-processing"] then
 else
   bobmods.lib.tech.add_prerequisite("bob-fertiliser", "sulfur-processing")
 end
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_single("bob-greenhouse", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("wood-pellets", false)
+end
