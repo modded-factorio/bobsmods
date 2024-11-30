@@ -388,9 +388,15 @@ if feature_flags["quality"] then
           local new_time = source_recipe.energy_required or 0.5
           target_recipe.energy_required = new_time / 16
           target_recipe.results = {}
+          local source_output_amount = 1
+          for i, source_results in pairs(source_recipe.results) do
+            if source_results.name == recipe_name then
+              source_output_amount = source_results.amount
+            end
+          end
           for i, outputs in pairs(source_recipe.ingredients) do
             if source_recipe.ingredients[i].type == "item" then
-              target_recipe.results[i] = { type = "item", name = source_recipe.ingredients[i].name, amount = source_recipe.ingredients[i].amount / 4, extra_count_fraction = source_recipe.ingredients[i].amount % 4 / 4 }
+              target_recipe.results[i] = { type = "item", name = source_recipe.ingredients[i].name, amount = source_recipe.ingredients[i].amount / source_output_amount / 4, extra_count_fraction = source_recipe.ingredients[i].amount / source_output_amount % 4 / 4 }
             end
           end
 
@@ -453,7 +459,7 @@ if feature_flags["quality"] then
       local target_recipe = data.raw.recipe[target_recipe_name]
       if item_type and data.raw[item_type][item_name] then
         if target_recipe then
-          target_recipe.results = { { type = "item", name = item_name, amount = 0.25, extra_count_fraction = 0.25} }
+          target_recipe.results = { { type = "item", name = item_name, amount = 1, probability = 0.25, ignored_by_stats = 1 } }
           target_recipe.energy_required = 0.03125
 
           if replace_icon == true then
@@ -496,19 +502,25 @@ if feature_flags["quality"] then
   function bobmods.lib.recipe.update_recycling_recipe_from_recipe(recycling_recipe, desired_recipe, replace_icon)
     if type(recycling_recipe) == "string" and data.raw.recipe[recycling_recipe] and string.sub(data.raw.recipe[recycling_recipe].name, -10) == "-recycling" then
       if type(desired_recipe) == "string" and data.raw.recipe[desired_recipe] then
+        local item_name = string.sub(recycling_recipe, 1, -11)
         local target_recipe = data.raw.recipe[recycling_recipe]
         local source_recipe = data.raw.recipe[desired_recipe]
         local new_time = source_recipe.energy_required or 0.5
         target_recipe.energy_required = new_time / 16
         target_recipe.results = {}
+        local source_output_amount = 1
+        for i, source_results in pairs(source_recipe.results) do
+          if source_results.name == item_name then
+            source_output_amount = source_results.amount
+          end
+        end
         for i, outputs in pairs(source_recipe.ingredients) do
           if source_recipe.ingredients[i].type == "item" then
-            target_recipe.results[i] = { type = "item", name = source_recipe.ingredients[i].name, amount = source_recipe.ingredients[i].amount / 4, extra_count_fraction = source_recipe.ingredients[i].amount % 4 / 4 }
+            target_recipe.results[i] = { type = "item", name = source_recipe.ingredients[i].name, amount = source_recipe.ingredients[i].amount / source_output_amount / 4, extra_count_fraction = source_recipe.ingredients[i].amount / source_output_amount % 4 / 4 }
           end
         end
 
         if replace_icon == true then
-          local item_name = string.sub(target_recipe.name, 1, -11)
           local item_type = bobmods.lib.item.get_type(item_name)
           local recipe_icon = target_recipe.icons[2].icon
           local recipe_icon_size = target_recipe.icons[2].icon_size or 64
