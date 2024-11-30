@@ -24,15 +24,15 @@ data:extend({
     place_result = "stone-pipe",
     stack_size = 100,
     drop_sound = {
-      filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
       volume = 0.5,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
       volume = 0.5,
     },
     pick_sound = {
-      filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
       volume = 0.6,
     },
     weight = 5000,
@@ -48,15 +48,15 @@ data:extend({
     place_result = "stone-pipe-to-ground",
     stack_size = 50,
     drop_sound = {
-      filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
       volume = 0.5,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
       volume = 0.5,
     },
     pick_sound = {
-      filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
       volume = 0.6,
     },
   },
@@ -245,15 +245,15 @@ if data.raw.item["silicon-nitride"] then
       place_result = "ceramic-pipe",
       stack_size = 100,
       drop_sound = {
-        filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+        filename = "__base__/sound/item/brick-inventory-move.ogg",
         volume = 0.5,
       },
       inventory_move_sound = {
-        filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+        filename = "__base__/sound/item/brick-inventory-move.ogg",
         volume = 0.5,
       },
       pick_sound = {
-        filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+        filename = "__base__/sound/item/brick-inventory-pickup.ogg",
         volume = 0.6,
       },
       weight = 5000,
@@ -269,15 +269,15 @@ if data.raw.item["silicon-nitride"] then
       place_result = "ceramic-pipe-to-ground",
       stack_size = 50,
       drop_sound = {
-        filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+        filename = "__base__/sound/item/brick-inventory-move.ogg",
         volume = 0.5,
       },
       inventory_move_sound = {
-        filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+        filename = "__base__/sound/item/brick-inventory-move.ogg",
         volume = 0.5,
       },
       pick_sound = {
-        filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+        filename = "__base__/sound/item/brick-inventory-pickup.ogg",
         volume = 0.6,
       },
     },
