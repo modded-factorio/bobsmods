@@ -7,6 +7,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "steel-gear-wheel", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -17,6 +18,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "steel-bearing-ball", amount = 12 } },
+    allow_productivity = true,
   },
 
   {
@@ -28,6 +30,7 @@ data:extend({
       { type = "item", name = "steel-bearing-ball", amount = 16 },
     },
     results = { { type = "item", name = "steel-bearing", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -38,6 +41,7 @@ data:extend({
       { type = "item", name = "brass-alloy", amount = 1 },
     },
     results = { { type = "item", name = "brass-gear-wheel", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -48,6 +52,7 @@ data:extend({
       { type = "item", name = "cobalt-steel-alloy", amount = 1 },
     },
     results = { { type = "item", name = "cobalt-steel-gear-wheel", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -58,6 +63,7 @@ data:extend({
       { type = "item", name = "cobalt-steel-alloy", amount = 1 },
     },
     results = { { type = "item", name = "cobalt-steel-bearing-ball", amount = 12 } },
+    allow_productivity = true,
   },
 
   {
@@ -69,6 +75,7 @@ data:extend({
       { type = "item", name = "cobalt-steel-bearing-ball", amount = 16 },
     },
     results = { { type = "item", name = "cobalt-steel-bearing", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -76,9 +83,10 @@ data:extend({
     name = "titanium-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "titanium-plate", amount = 1 },
+      { type = "item", name = "bob-titanium-plate", amount = 1 },
     },
     results = { { type = "item", name = "titanium-gear-wheel", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -86,9 +94,10 @@ data:extend({
     name = "titanium-bearing-ball",
     enabled = false,
     ingredients = {
-      { type = "item", name = "titanium-plate", amount = 1 },
+      { type = "item", name = "bob-titanium-plate", amount = 1 },
     },
     results = { { type = "item", name = "titanium-bearing-ball", amount = 12 } },
+    allow_productivity = true,
   },
 
   {
@@ -97,11 +106,12 @@ data:extend({
     category = "crafting-with-fluid",
     enabled = false,
     ingredients = {
-      { type = "item", name = "titanium-plate", amount = 1 },
+      { type = "item", name = "bob-titanium-plate", amount = 1 },
       { type = "item", name = "titanium-bearing-ball", amount = 16 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },
     results = { { type = "item", name = "titanium-bearing", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -109,9 +119,10 @@ data:extend({
     name = "tungsten-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "tungsten-plate", amount = 1 },
+      { type = "item", name = "bob-tungsten-plate", amount = 1 },
     },
     results = { { type = "item", name = "tungsten-gear-wheel", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -122,6 +133,7 @@ data:extend({
       { type = "item", name = "nitinol-alloy", amount = 1 },
     },
     results = { { type = "item", name = "nitinol-gear-wheel", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -132,6 +144,7 @@ data:extend({
       { type = "item", name = "nitinol-alloy", amount = 1 },
     },
     results = { { type = "item", name = "nitinol-bearing-ball", amount = 12 } },
+    allow_productivity = true,
   },
 
   {
@@ -145,6 +158,7 @@ data:extend({
       { type = "fluid", name = "lubricant", amount = 10 },
     },
     results = { { type = "item", name = "nitinol-bearing", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -155,6 +169,7 @@ data:extend({
       { type = "item", name = "silicon-nitride", amount = 1 },
     },
     results = { { type = "item", name = "ceramic-bearing-ball", amount = 12 } },
+    allow_productivity = true,
   },
 
   {
@@ -168,6 +183,7 @@ data:extend({
       { type = "fluid", name = "lubricant", amount = 10 },
     },
     results = { { type = "item", name = "ceramic-bearing", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -189,6 +205,7 @@ data:extend({
       tertiary = { r = 1.0, g = 0.5, b = 0.1, a = 1.000 },
       quaternary = { r = 0.1, g = 1.0, b = 0.8, a = 1.000 },
     },
+    allow_productivity = true,
   },
 
   {
@@ -200,7 +217,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "sodium-hydroxide", amount = 2 },
       { type = "item", name = "silver-oxide", amount = 1 },
-      { type = "item", name = "zinc-plate", amount = 1 },
+      { type = "item", name = "bob-zinc-plate", amount = 1 },
       { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "silver-zinc-battery", amount = 1 } },
@@ -210,11 +227,12 @@ data:extend({
       tertiary = { r = 0.3, g = 0.3, b = 0.3, a = 1.000 },
       quaternary = { r = 0.1, g = 1.0, b = 0.1, a = 1.000 },
     },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "grinding-wheel",
+    name = "bob-grinding-wheel",
     category = "crafting",
     energy_required = 2,
     enabled = false,
@@ -222,12 +240,13 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
       { type = "item", name = "silicon-carbide", amount = 5 },
     },
-    results = { { type = "item", name = "grinding-wheel", amount = 2 } },
+    results = { { type = "item", name = "bob-grinding-wheel", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "polishing-wheel",
+    name = "bob-polishing-wheel",
     category = "crafting",
     energy_required = 2,
     enabled = false,
@@ -235,6 +254,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
       { type = "item", name = "wood", amount = 5 },
     },
-    results = { { type = "item", name = "polishing-wheel", amount = 2 } },
+    results = { { type = "item", name = "bob-polishing-wheel", amount = 2 } },
+    allow_productivity = true,
   },
 })

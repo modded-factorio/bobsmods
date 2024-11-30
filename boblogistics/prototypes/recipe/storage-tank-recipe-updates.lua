@@ -8,9 +8,9 @@ if data.raw.item["steel-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-2", "pipe", "steel-pipe")
 end
 
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("storage-tank-3", "steel-plate", "titanium-plate")
-  bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-3", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("storage-tank-3", "steel-plate", "bob-titanium-plate")
+  bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-3", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("bob-fluid-handling-3", "titanium-processing")
 end
 

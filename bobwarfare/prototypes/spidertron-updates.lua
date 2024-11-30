@@ -267,8 +267,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   if data.raw.tool["module-case"] or data.raw.item["module-case"] then
     bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "module-case", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "modules")
-  elseif data.raw.item["aluminium-plate"] then
-    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "aluminium-plate", amount = 10 })
+  elseif data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "bob-aluminium-plate", amount = 10 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "aluminium-processing")
   else
     bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "steel-plate", amount = 10 })

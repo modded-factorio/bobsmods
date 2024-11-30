@@ -20,46 +20,26 @@ then
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
+        volume = 1000,
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
-      },
-      --[[
-    {
-      production_type = "input",
-      pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      height = 2,
-      base_level = -1,
-      pipe_connections =
-      {
-        {type = "input", position = {-1, -2}},
-        {type = "input", position = {1, -2}},
-
-        {type = "input", position = {-2, -1}},
-        {type = "input", position = {2, -1}}
-      }
-    },
-]]
-      --
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
+        volume = 1000,
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
+        volume = 1000,
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
+        volume = 1000,
       },
     }
   end
@@ -70,80 +50,45 @@ then
         -- Base
         {
           filename = directory .. "/electrolyser-" .. tier .. "-base.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-base.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
         -- Mask
         {
           filename = directory .. "/electrolyser-" .. tier .. "-mask.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
           tint = tint,
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-mask.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            tint = tint,
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
         -- Highlights
         {
           filename = directory .. "/electrolyser-" .. tier .. "-highlights.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
           shift = util.by_pixel(17, 0),
           blend_mode = "additive",
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-highlights.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            shift = util.by_pixel(17, 0),
-            blend_mode = "additive",
-            scale = 0.5,
-          },
+          scale = 0.5,
         },
         -- Shadow
         {
           filename = directory .. "/electrolyser-" .. tier .. "-shadow.png",
-          x = 136 * facing,
-          width = 136,
-          height = 130,
+          x = 272 * facing,
+          width = 272,
+          height = 260,
           frame_count = 1,
-          shift = util.by_pixel(17, 0),
           draw_as_shadow = true,
-          hr_version = {
-            filename = directory .. "/hr-electrolyser-" .. tier .. "-shadow.png",
-            x = 272 * facing,
-            width = 272,
-            height = 260,
-            frame_count = 1,
-            draw_as_shadow = true,
-            shift = util.by_pixel(17, 0),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(17, 0),
+          scale = 0.5,
         },
       },
     }
@@ -168,6 +113,18 @@ then
       order = "e[electrolyser-2]",
       place_result = "electrolyser-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
     {
       type = "item",
@@ -178,6 +135,18 @@ then
       order = "e[electrolyser-3]",
       place_result = "electrolyser-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
     {
       type = "item",
@@ -188,6 +157,18 @@ then
       order = "e[electrolyser-4]",
       place_result = "electrolyser-4",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -199,6 +180,18 @@ then
       order = "e[electrolyser-5]",
       place_result = "electrolyser-5",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -277,15 +270,26 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 275,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 3,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 },
+      },
       crafting_speed = 1.25,
       energy_usage = "650kW",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 3.25,
+        emissions_per_minute = { pollution = 3.25 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -295,6 +299,7 @@ then
           { r = 0.5, g = 0.1, b = 0 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -311,15 +316,26 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 375,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 },
+      },
       crafting_speed = 2,
       energy_usage = "960kW",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 2.5,
+        emissions_per_minute = { pollution = 2.5 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -329,6 +345,7 @@ then
           { r = 0, g = 0.3, b = 0.5 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -345,15 +362,28 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 500,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 },
+      },
       crafting_speed = 2.75,
       energy_usage = "1210kW",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1.75,
+        emissions_per_minute = { pollution = 1.75 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -363,6 +393,7 @@ then
           { r = 0.5, g = 0, b = 0.5 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 
@@ -378,15 +409,28 @@ then
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 600,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["electrolyser"],
       crafting_categories = { "electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.3 },
+      },
       crafting_speed = 3.5,
       energy_usage = "1400kW",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = { pollution = 1 },
       },
       fluid_boxes = bob_electrolyser_fluid_boxes(),
       graphics_set = {
@@ -396,6 +440,7 @@ then
           { r = 0, g = 0.5, b = 0 }
         ),
       },
+      impact_category = "metal",
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     },
 

@@ -12,6 +12,18 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       order = "g[centrifuge-2]",
       place_result = "centrifuge-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "item",
@@ -22,6 +34,18 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       order = "g[centrifuge-3]",
       place_result = "centrifuge-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -65,7 +89,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         max_health = 450,
         crafting_speed = 2.25,
         energy_usage = "750kW",
-        energy_source = { emissions_per_minute = 3 },
+        energy_source = { emissions_per_minute = { pollution = 3 } },
         module_slots = 4,
         next_upgrade = "centrifuge-3",
       },
@@ -80,8 +104,16 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         max_health = 550,
         crafting_speed = 3.5,
         energy_usage = "1050kW",
-        energy_source = { emissions_per_minute = 2 },
+        energy_source = { emissions_per_minute = { pollution = 2 } },
         module_slots = 6,
+        icons_positioning = {
+          {
+            inventory_index = defines.inventory.assembling_machine_modules,
+            shift = { 0, 0.8 },
+            multi_row_initial_height_modifier = -0.3,
+            max_icons_per_row = 3,
+          },
+        },
       },
     }),
 

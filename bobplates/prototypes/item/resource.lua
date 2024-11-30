@@ -34,11 +34,11 @@ data:extend({
 
   {
     type = "item",
-    name = "glass",
+    name = "bob-glass",
     icon = "__bobplates__/graphics/icons/glass.png",
     icon_size = 32,
     subgroup = "bob-resource",
-    order = "f[glass]",
+    order = "f[bob-glass]",
     stack_size = 100,
   },
 
@@ -64,11 +64,11 @@ data:extend({
 
   {
     type = "item",
-    name = "polishing-compound",
+    name = "bob-polishing-compound",
     icon = "__bobplates__/graphics/icons/polishing-compound.png",
     icon_size = 32,
     subgroup = "bob-resource",
-    order = "f[polishing-compound]",
+    order = "f[bob-polishing-compound]",
     stack_size = 100,
   },
 

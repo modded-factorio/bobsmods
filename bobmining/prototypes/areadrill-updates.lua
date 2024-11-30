@@ -27,12 +27,12 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     end
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("bob-area-drills-3", "titanium-processing")
   else
-    if data.raw.item["tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "tungsten-plate")
+    if data.raw.item["bob-tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "bob-tungsten-plate")
       bobmods.lib.tech.add_prerequisite("bob-area-drills-3", "tungsten-processing")
     end
   end

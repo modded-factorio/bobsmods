@@ -44,6 +44,7 @@ data:extend({
       tertiary = { r = 1, g = 0.7, b = 0 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -68,6 +69,7 @@ if data.raw.item["thorium-ore"] then
         secondary = { r = 1, g = 1, b = 0 },
         tertiary = { r = 1, g = 1, b = 0 },
       },
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -75,7 +77,7 @@ if data.raw.item["thorium-ore"] then
       energy_required = 10,
       enabled = false,
       ingredients = {
-        { type = "item", name = "lead-plate", amount = 10 },
+        { type = "item", name = "bob-lead-plate", amount = 10 },
         { type = "item", name = "uranium-235", amount = 1 },
         { type = "item", name = "thorium-232", amount = 19 },
       },
@@ -84,7 +86,7 @@ if data.raw.item["thorium-ore"] then
   })
 
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-    bobmods.lib.recipe.replace_ingredient("thorium-fuel-cell", "lead-plate", "empty-nuclear-fuel-cell")
+    bobmods.lib.recipe.replace_ingredient("thorium-fuel-cell", "bob-lead-plate", "empty-nuclear-fuel-cell")
     data:extend({
       {
         type = "recipe",
@@ -123,6 +125,7 @@ if data.raw.item["thorium-ore"] then
           tertiary = { r = 1, g = 1, b = 0 },
         },
         allow_decomposition = false,
+        allow_productivity = true,
       },
     })
   else
@@ -133,7 +136,7 @@ if data.raw.item["thorium-ore"] then
         energy_required = 2,
         enabled = false,
         ingredients = {
-          { type = "item", name = "lead-plate", amount = 2 },
+          { type = "item", name = "bob-lead-plate", amount = 2 },
           { type = "item", name = "plutonium-239", amount = 2 },
           { type = "item", name = "thorium-232", amount = 2 },
         },
@@ -155,7 +158,7 @@ if data.raw.item["thorium-ore"] then
         results = {
           { type = "item", name = "thorium-232", amount = 3, catalyst_amount = 2 },
           { type = "item", name = "plutonium-239", amount = 1, catalyst_amount = 1 },
-          { type = "item", name = "lead-plate", amount = 5, catalyst_amount = 5 },
+          { type = "item", name = "bob-lead-plate", amount = 5, catalyst_amount = 5 },
           { type = "item", name = "plutonium-239", amount = 1, probability = 0.1 },
         },
         crafting_machine_tint = {
@@ -178,9 +181,10 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       enabled = false,
       ingredients = {
         { type = "item", name = "steel-plate", amount = 2 },
-        { type = "item", name = "lead-plate", amount = 5 },
+        { type = "item", name = "bob-lead-plate", amount = 5 },
       },
       results = { { type = "item", name = "empty-nuclear-fuel-cell", amount = 10 } },
+      allow_productivity = true,
     },
 
     {
@@ -220,6 +224,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         tertiary = { r = 0.7, g = 0.5, b = 0 },
       },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 
@@ -274,6 +279,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         tertiary = { r = 1, g = 0, b = 0.57 },
       },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 else
@@ -285,7 +291,7 @@ else
       energy_required = 10,
       enabled = false,
       ingredients = {
-        { type = "item", name = "lead-plate", amount = 10 },
+        { type = "item", name = "bob-lead-plate", amount = 10 },
         { type = "fluid", name = "deuterium", amount = 200 },
       },
       results = { { type = "item", name = "deuterium-fuel-cell", amount = 10 } },
@@ -304,7 +310,7 @@ else
         { type = "item", name = "used-up-deuterium-fuel-cell", amount = 5 },
       },
       results = {
-        { type = "item", name = "lead-plate", amount = 5, catalyst_amount = 5 },
+        { type = "item", name = "bob-lead-plate", amount = 5, catalyst_amount = 5 },
         { type = "item", name = "lithium", amount = 1, probability = 0.05 },
       },
       crafting_machine_tint = {
@@ -313,6 +319,7 @@ else
         tertiary = { r = 1, g = 0, b = 0.57 },
       },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end

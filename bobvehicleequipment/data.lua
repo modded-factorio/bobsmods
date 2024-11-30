@@ -13,7 +13,7 @@ data:extend({
 })
 
 function bobmods.equipment.technology_icon_constant_vehicle_equipment(technology_icon)
-  local scale = ((technology_icon.icon_size or 256) / 256) * (technology_icon.scale or 1)
+  local scale = 0.5
   local icons = {
     technology_icon,
     {

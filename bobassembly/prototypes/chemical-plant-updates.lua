@@ -13,8 +13,8 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     bobmods.lib.recipe.replace_ingredient("chemical-plant-2", "pipe", "steel-pipe")
   end
 
-  if data.raw.item["glass"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-2", "steel-plate", "glass")
+  if data.raw.item["bob-glass"] then
+    bobmods.lib.recipe.replace_ingredient("chemical-plant-2", "steel-plate", "bob-glass")
   end
 
   if data.raw.item["steel-gear-wheel"] then
@@ -25,8 +25,8 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     bobmods.lib.recipe.add_ingredient("chemical-plant-2", { type = "item", name = "steel-bearing", amount = 5 })
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-3", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("chemical-plant-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("chemical-plant-3", "titanium-processing")
   end
 
@@ -67,7 +67,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   end
 
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then

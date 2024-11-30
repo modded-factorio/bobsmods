@@ -272,7 +272,6 @@ function bobmods.logistics.set_positions(entity, player_index)
   local enabled = storage.bobmods.logistics[player_index].enabled
   if enabled then
     local force = game.players[player_index].force
-    local direction = (entity.direction / 2) + 1
 
     local long_unlocked = tech_unlocked(force, bobmods.logistics.long_technology)
 
