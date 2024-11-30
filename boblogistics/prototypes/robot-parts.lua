@@ -6,6 +6,14 @@ local part_pick = {
   filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
   volume = 0.8
 }
+local tool_drop_move = {
+  filename = "__base__/sound/item/inserter-inventory-move.ogg",
+  volume = 0.8
+}
+local tool_pick = {
+  filename = "__base__/sound/item/inserter-inventory-pickup.ogg",
+  volume = 0.8
+}
 local electronic_drop_move = {
   filename = "__base__/sound/item/electric-small-inventory-move.ogg",
   volume = 1
@@ -248,9 +256,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-1]",
       stack_size = 100,
-      drop_sound = part_drop_move,
-      inventory_move_sound = part_drop_move,
-      pick_sound = part_pick,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
     },
 
     {
@@ -261,9 +269,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-2]",
       stack_size = 100,
-      drop_sound = part_drop_move,
-      inventory_move_sound = part_drop_move,
-      pick_sound = part_pick,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
     },
 
     {
@@ -274,9 +282,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-3]",
       stack_size = 100,
-      drop_sound = part_drop_move,
-      inventory_move_sound = part_drop_move,
-      pick_sound = part_pick,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
     },
 
     {
@@ -287,9 +295,9 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       subgroup = "bob-robot-parts",
       order = "r[bob-robot-tool-4]",
       stack_size = 100,
-      drop_sound = part_drop_move,
-      inventory_move_sound = part_drop_move,
-      pick_sound = part_pick,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
     },
   })
 
