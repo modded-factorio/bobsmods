@@ -308,8 +308,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "basic-circuit-board", amount = 2 },
-        { type = "item", name = "electronic-circuit", amount = 2 },
+        { type = "item", name = "electronic-circuit", amount = 4 },
       },
       results = { { type = "item", name = "bob-robot-brain", amount = 1 } },
       allow_productivity = true,
