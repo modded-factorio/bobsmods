@@ -338,7 +338,9 @@ data:extend({
     type = "projectile",
     name = "bob-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -399,7 +401,9 @@ data:extend({
     type = "projectile",
     name = "bob-piercing-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -460,7 +464,9 @@ data:extend({
     type = "projectile",
     name = "bob-electric-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -521,7 +527,9 @@ data:extend({
     type = "projectile",
     name = "bob-explosive-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -594,7 +602,9 @@ data:extend({
     type = "projectile",
     name = "bob-flame-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -675,7 +685,9 @@ data:extend({
     type = "projectile",
     name = "bob-poison-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -756,7 +768,9 @@ data:extend({
     type = "projectile",
     name = "bob-acid-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
