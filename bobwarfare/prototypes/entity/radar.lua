@@ -6,13 +6,20 @@ data:extend({
     type = "radar",
     name = "radar-2",
     icon = "__base__/graphics/icons/radar.png",
-    icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "radar-2" },
     fast_replaceable_group = "radar",
     max_health = 300,
     next_upgrade = "radar-3",
     corpse = "big-remnants",
+    dying_explosion = "radar-explosion",
+    damaged_trigger_effect = {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "spark-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 1 } },
+    },
     resistances = {
       {
         type = "fire",
@@ -29,6 +36,7 @@ data:extend({
     max_distance_of_sector_revealed = 17,
     max_distance_of_nearby_sector_revealed = 5,
     energy_per_nearby_scan = "240kJ",
+    rotation_speed = 0.0125,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -73,7 +81,23 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    water_reflection = {
+      orientation_to_variation = false,
+      rotate = false,
+      pictures = {
+        filename = "__base__/graphics/entity/radar/radar-reflection.png",
+        width = 28,
+        height = 32,
+        variation_count = 1,
+        priority = "extra-high",
+        scale = 5,
+        shift = {
+          0.15625,
+          1.09375
+        },
+      },
+    },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -83,19 +107,29 @@ data:extend({
       apparent_volume = 2,
     },
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
+    is_military_target = false,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = 9,
   },
 
   {
     type = "radar",
     name = "radar-3",
     icon = "__base__/graphics/icons/radar.png",
-    icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "radar-3" },
     fast_replaceable_group = "radar",
     max_health = 350,
     next_upgrade = "radar-4",
     corpse = "big-remnants",
+    dying_explosion = "radar-explosion",
+    damaged_trigger_effect = {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "spark-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 1 } },
+    },
     resistances = {
       {
         type = "fire",
@@ -112,6 +146,7 @@ data:extend({
     max_distance_of_sector_revealed = 20,
     max_distance_of_nearby_sector_revealed = 7,
     energy_per_nearby_scan = "230kJ",
+    rotation_speed = 0.015,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -156,7 +191,23 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    water_reflection = {
+      orientation_to_variation = false,
+      rotate = false,
+      pictures = {
+        filename = "__base__/graphics/entity/radar/radar-reflection.png",
+        width = 28,
+        height = 32,
+        variation_count = 1,
+        priority = "extra-high",
+        scale = 5,
+        shift = {
+          0.15625,
+          1.09375
+        },
+      },
+    },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -166,19 +217,29 @@ data:extend({
       apparent_volume = 2,
     },
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
+    is_military_target = false,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = 9,
   },
 
   {
     type = "radar",
     name = "radar-4",
     icon = "__base__/graphics/icons/radar.png",
-    icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "radar-4" },
     fast_replaceable_group = "radar",
     max_health = 400,
     next_upgrade = "radar-5",
     corpse = "big-remnants",
+    dying_explosion = "radar-explosion",
+    damaged_trigger_effect = {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "spark-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 1 } },
+    },
     resistances = {
       {
         type = "fire",
@@ -195,6 +256,7 @@ data:extend({
     max_distance_of_sector_revealed = 23,
     max_distance_of_nearby_sector_revealed = 9,
     energy_per_nearby_scan = "220kJ",
+    rotation_speed = 0.0175,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -239,7 +301,23 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    water_reflection = {
+      orientation_to_variation = false,
+      rotate = false,
+      pictures = {
+        filename = "__base__/graphics/entity/radar/radar-reflection.png",
+        width = 28,
+        height = 32,
+        variation_count = 1,
+        priority = "extra-high",
+        scale = 5,
+        shift = {
+          0.15625,
+          1.09375
+        },
+      },
+    },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -249,18 +327,28 @@ data:extend({
       apparent_volume = 2,
     },
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
+    is_military_target = false,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = 9,
   },
 
   {
     type = "radar",
     name = "radar-5",
     icon = "__base__/graphics/icons/radar.png",
-    icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "radar-5" },
     fast_replaceable_group = "radar",
     max_health = 450,
     corpse = "big-remnants",
+    dying_explosion = "radar-explosion",
+    damaged_trigger_effect = {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "spark-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 1 } },
+    },
     resistances = {
       {
         type = "fire",
@@ -277,6 +365,7 @@ data:extend({
     max_distance_of_sector_revealed = 26,
     max_distance_of_nearby_sector_revealed = 11,
     energy_per_nearby_scan = "210kJ",
+    rotation_speed = 0.02,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -321,7 +410,23 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    water_reflection = {
+      orientation_to_variation = false,
+      rotate = false,
+      pictures = {
+        filename = "__base__/graphics/entity/radar/radar-reflection.png",
+        width = 28,
+        height = 32,
+        variation_count = 1,
+        priority = "extra-high",
+        scale = 5,
+        shift = {
+          0.15625,
+          1.09375
+        },
+      },
+    },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -331,5 +436,8 @@ data:extend({
       apparent_volume = 2,
     },
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
+    is_military_target = false,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = 9,
   },
 })
