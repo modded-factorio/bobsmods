@@ -414,6 +414,7 @@ if feature_flags["quality"] then
                 target_recipe.icons = { { icon = "__quality__/graphics/icons/recycling.png" } }
                 for i, icon_replacement in pairs (data.raw[item_type][recipe_name].icons) do
                   local image_size = icon_replacement.icon_size or 64
+                  local image_scale = icon_replacement.scale or 1
                   table.insert(target_recipe.icons, {
                     icon = icon_replacement.icon,
                     icon_size = image_size,
@@ -473,6 +474,7 @@ if feature_flags["quality"] then
               target_recipe.icons = { { icon = "__quality__/graphics/icons/recycling.png" } }
               for i, icon_replacement in pairs (data.raw[item_type][item_name].icons) do
                 local image_size = icon_replacement.icon_size or 64
+                local image_scale = icon_replacement.scale or 1
                 table.insert(target_recipe.icons, {
                   icon = icon_replacement.icon,
                   icon_size = image_size,
