@@ -425,6 +425,7 @@ local function bob_turret_extension(inputs)
 end
 
 local function bob_gun_turret(inputs)
+  local size = inputs.size or 1
   local preparerange = inputs.range or 17
   preparerange = preparerange + 1
   local turret = {
@@ -439,6 +440,7 @@ local function bob_gun_turret(inputs)
     corpse = "gun-turret-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    drawing_box_vertical_extension = 0.2 * size,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     rotation_speed = inputs.rotation_speed or 0.015,
     preparing_speed = 0.08,
@@ -461,10 +463,22 @@ local function bob_gun_turret(inputs)
     folding_sound = sounds.gun_turret_deactivate,
     attacking_animation = bob_turret_attack({ type = inputs.gun_type, tint = inputs.tint }),
     graphics_set = { base_visualisation = { animation = bob_turret_base(inputs.base) } },
+    water_reflection = {
+      rotate = false,
+      orientation_to_variation = false,
+      pictures = {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-reflection.png",
+        width = 20,
+        height = 32,
+        priority = "extra-high",
+        scale = 5 * size,
+        shift = util.mul_shift({ 0, 1.25 }, size),
+        variation_count = 1,
+      },
+    },
     icon_draw_specification = {
       scale = 0.7
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = {
       type = "projectile",
       ammo_category = inputs.ammo_category or "bullet",
@@ -513,6 +527,7 @@ local function bob_laser_turret(inputs)
     corpse = "laser-turret-remnants",
     collision_box = { { -0.7 * size, -0.7 * size }, { 0.7 * size, 0.7 * size } },
     selection_box = { { -1 * size, -1 * size }, { 1 * size, 1 * size } },
+    drawing_box_vertical_extension = 0.3 * size,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     dying_explosion = "medium-explosion",
     rotation_speed = inputs.rotation_speed or 0.01,
@@ -540,7 +555,19 @@ local function bob_laser_turret(inputs)
     },
     prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
     graphics_set = { base_visualisation = { animation = bob_turret_base(inputs.base) } },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    water_reflection = {
+      rotate = false,
+      orientation_to_variation = false,
+      pictures = {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-reflection.png",
+        width = 20,
+        height = 32,
+        priority = "extra-high",
+        scale = 5 * size,
+        shift = util.mul_shift({ 0, 1.25 }, size),
+        variation_count = 1,
+      },
+    },
     call_for_help_radius = 40,
   }
   if inputs.turret_base_8_directions == true then
