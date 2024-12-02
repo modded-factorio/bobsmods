@@ -120,11 +120,10 @@ data:extend({
   {
     type = "technology",
     name = "bob-repair-pack-2",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "steel-processing",
-      "electronics",
     },
     effects = {
       {
@@ -139,13 +138,12 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
   {
     type = "technology",
     name = "bob-repair-pack-3",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "bob-repair-pack-2",
       "advanced-circuit",
@@ -164,13 +162,12 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
   {
     type = "technology",
     name = "bob-repair-pack-4",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "bob-repair-pack-3",
       "processing-unit",
@@ -190,13 +187,12 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
   {
     type = "technology",
     name = "bob-repair-pack-5",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "bob-repair-pack-4",
       "production-science-pack",
@@ -217,6 +213,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
 })
