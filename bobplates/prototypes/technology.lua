@@ -4,7 +4,9 @@ data:extend({
     name = "electrolysis-1",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "steam-power"
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -68,7 +70,9 @@ data:extend({
     name = "chemical-processing-1",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "steam-power",
+    },
     effects = {
       {
         type = "unlock-recipe",

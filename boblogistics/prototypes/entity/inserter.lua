@@ -114,6 +114,7 @@ data.raw.inserter["steam-inserter"].energy_source = {
     },
   },
 }
+bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-inserter")
 
 data:extend({
   util.merge({

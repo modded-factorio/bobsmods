@@ -26,6 +26,7 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
     {
       type = "recipe",
       name = "steam-mining-drill",
+      enabled = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "burner-mining-drill", amount = 1 },
@@ -47,7 +48,7 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       },
     }),
   })
-
+  bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-mining-drill")
   data.raw["mining-drill"]["steam-mining-drill"].resource_searching_radius = 1.99
   data.raw["mining-drill"]["steam-mining-drill"].radius_visualisation_picture = {
     filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
