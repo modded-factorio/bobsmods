@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
     prerequisites = {
-      "steam-power"
+      "steam-power",
     },
     effects = {
       {
