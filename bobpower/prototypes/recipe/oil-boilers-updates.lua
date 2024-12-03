@@ -13,8 +13,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "zinc-processing")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("oil-boiler-3", "steel-plate", "tungsten-plate")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("oil-boiler-3", "steel-plate", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "tungsten-processing")
   end
 

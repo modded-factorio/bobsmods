@@ -25,9 +25,9 @@ if data.raw.tool["module-case"] or data.raw.item["module-case"] then
   bobmods.lib.recipe.remove_ingredient("player-brain-2", "steel-plate")
   bobmods.lib.recipe.add_ingredient("player-brain-2", { type = "item", name = "module-case", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bodies", "modules")
-elseif data.raw.item["aluminium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("player-brain", "iron-plate", "aluminium-plate")
-  bobmods.lib.recipe.replace_ingredient("player-brain-2", "steel-plate", "aluminium-plate")
+elseif data.raw.item["bob-aluminium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("player-brain", "iron-plate", "bob-aluminium-plate")
+  bobmods.lib.recipe.replace_ingredient("player-brain-2", "steel-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("bodies", "aluminium-processing")
 end
 
@@ -41,11 +41,11 @@ if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("player-brain-2", { type = "item", name = "solder", amount = 10 })
 end
 
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("player-gloves-2", "steel-plate", "titanium-plate")
-  bobmods.lib.recipe.replace_ingredient("player-boots-2", "steel-plate", "titanium-plate")
-  bobmods.lib.recipe.replace_ingredient("player-head-2", "steel-plate", "titanium-plate")
-  bobmods.lib.recipe.replace_ingredient("player-frame-2", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("player-gloves-2", "steel-plate", "bob-titanium-plate")
+  bobmods.lib.recipe.replace_ingredient("player-boots-2", "steel-plate", "bob-titanium-plate")
+  bobmods.lib.recipe.replace_ingredient("player-head-2", "steel-plate", "bob-titanium-plate")
+  bobmods.lib.recipe.replace_ingredient("player-frame-2", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("bodies-2", "titanium-processing")
 end
 

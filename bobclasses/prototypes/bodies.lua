@@ -1,3 +1,13 @@
+local body_drop_move = {
+  filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+  volume = 0.7,
+}
+
+local body_pick = {
+  filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
+  volume = 0.7,
+}
+
 data:extend({
   {
     type = "item",
@@ -7,7 +17,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-1",
     place_result = "character",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -28,7 +41,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-1-miner",
     place_result = "bob-character-miner",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -49,7 +65,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-1-fighter",
     place_result = "bob-character-fighter",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -70,7 +89,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-1-builder",
     place_result = "bob-character-builder",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
 
   {
@@ -92,7 +114,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-2",
     place_result = "bob-character-balanced-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -119,7 +144,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-2-miner",
     place_result = "bob-character-miner-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -146,7 +174,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-2-fighter",
     place_result = "bob-character-fighter-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -173,7 +204,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-2-builder",
     place_result = "bob-character-builder-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
 
   {
@@ -195,7 +229,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-2-engineer",
     place_result = "bob-character-engineer",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -216,7 +253,10 @@ data:extend({
     subgroup = "bodies",
     order = "a[character]-2-prospector",
     place_result = "bob-character-prospector",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
 })
 

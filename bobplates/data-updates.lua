@@ -1,6 +1,5 @@
 require("prototypes.recipe.entity-recipe-updates")
 require("prototypes.technology-updates")
-require("prototypes.productivity-limitations")
 
 data.raw.character.character.inventory_size = settings.startup["bobmods-plates-inventorysize"].value
 
@@ -37,7 +36,7 @@ else
 end
 
 -- small storage tank recipe move.
-if data.raw["item-subgroup"]["bob-storage-tank"] then
+if mods["boblogistics"] then
   bobmods.lib.item.set_subgroup("bob-small-storage-tank", "bob-storage-tank")
   bobmods.lib.item.set_subgroup("bob-small-inline-storage-tank", "bob-storage-tank")
 end
@@ -93,10 +92,10 @@ else
 end
 
 if settings.startup["bobmods-plates-batteryupdate"].value == true then
-  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics" }
+  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics", "lead-processing" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
-  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "lead-plate", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "bob-lead-plate", amount = 2 })
   bobmods.lib.recipe.add_ingredient("battery", { type = "fluid", name = "sulfuric-acid", amount = 20 })
   bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "plastic-bar", amount = 1 })
 end
@@ -116,6 +115,7 @@ bobmods.lib.recipe.set_subgroup("uranium-processing", "bob-nuclear")
 bobmods.lib.recipe.set_subgroup("kovarex-enrichment-process", "bob-nuclear")
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
+  bobmods.lib.recipe.disallow_productivity("uranium-fuel-cell")
   bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "empty-nuclear-fuel-cell")
 
   data.raw.technology["nuclear-fuel-reprocessing"].icon =
@@ -152,7 +152,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   )
   bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "fusion-catalyst", amount = 1 })
 else
-  bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
+  bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "bob-lead-plate")
 
   bobmods.lib.recipe.set_result(
     "nuclear-fuel-reprocessing",
@@ -160,7 +160,7 @@ else
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "lead-plate", amount = 5, catalyst_amount = 5 }
+    { type = "item", name = "bob-lead-plate", amount = 5, catalyst_amount = 5 }
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
@@ -195,10 +195,7 @@ bobmods.lib.create_fluid_canister(data.raw.fluid["alien-poison"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["alien-fire"])
 
 for i, recipe in pairs(data.raw.recipe) do
-  if
-    (string.sub(recipe.name, 1, 5) == "fill-" or string.sub(recipe.name, 1, 6) == "empty-")
-    and recipe.category == "crafting-with-fluid"
-  then
+  if string.sub(recipe.name, -7) == "-barrel" and recipe.category == "crafting-with-fluid" then
     data.raw.recipe[recipe.name].category = "barrelling"
     if bobmods.lib.tech.has_recipe_unlock("fluid-handling", recipe.name) then
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", recipe.name)

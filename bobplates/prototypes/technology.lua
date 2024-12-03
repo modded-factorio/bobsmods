@@ -4,7 +4,9 @@ data:extend({
     name = "electrolysis-1",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -68,7 +70,9 @@ data:extend({
     name = "chemical-processing-1",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -146,8 +150,8 @@ data:extend({
       {
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
         icon_size = 64,
-        scale = 2,
-        shift = { -64, -64 },
+        scale = 1,
+        shift = { -48, -48 },
       },
     },
     prerequisites = {
@@ -176,14 +180,14 @@ data:extend({
     name = "electric-chemical-furnace",
     icons = {
       {
-        icon = "__base__/graphics/technology/advanced-material-processing.png",
+        icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         icon_size = 256,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
         icon_size = 64,
-        scale = 2,
-        shift = { -64, -64 },
+        scale = 1,
+        shift = { -32, -32 },
       },
     },
     prerequisites = {
@@ -213,7 +217,9 @@ data:extend({
     name = "alloy-processing",
     icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -245,7 +251,8 @@ data:extend({
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
         icon_size = 128,
-        shift = { -64, -64 },
+        scale = 0.5,
+        shift = { -48, -48 },
       },
     },
     prerequisites = {
@@ -274,13 +281,14 @@ data:extend({
     name = "electric-mixing-furnace",
     icons = {
       {
-        icon = "__base__/graphics/technology/advanced-material-processing.png",
+        icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         icon_size = 256,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
         icon_size = 128,
-        shift = { -64, -64 },
+        scale = 0.5,
+        shift = { -32, -32 },
       },
     },
     prerequisites = {
@@ -381,7 +389,9 @@ data:extend({
     name = "air-compressor-1",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -468,7 +478,7 @@ data:extend({
       "air-compressor-3",
       "nitinol-processing",
       "electric-engine",
-      "advanced-electronics-3",
+      "advanced-processing-unit",
     },
     effects = {
       {
@@ -494,7 +504,9 @@ data:extend({
     name = "water-bore-1",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -577,7 +589,7 @@ data:extend({
       "water-bore-3",
       "nitinol-processing",
       "electric-engine",
-      "advanced-electronics-3",
+      "advanced-processing-unit",
     },
     effects = {
       {
@@ -702,7 +714,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "grinding-wheel",
+        recipe = "bob-grinding-wheel",
       },
     },
     order = "b-c-b",
@@ -728,11 +740,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "polishing-compound",
+        recipe = "bob-polishing-compound",
       },
       {
         type = "unlock-recipe",
-        recipe = "polishing-wheel",
+        recipe = "bob-polishing-wheel",
       },
     },
     order = "b-c-c",
@@ -903,7 +915,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "advanced-electronics-3",
+    name = "advanced-processing-unit",
     icon = "__bobplates__/graphics/icons/technology/advanced-electronics-3.png",
     icon_size = 128,
     prerequisites = {

@@ -15,7 +15,7 @@ then
       enabled = false,
       ingredients = {
         { type = "item", name = "alien-artifact-blue", amount = 1 },
-        { type = "item", name = "tungsten-plate", amount = 10 },
+        { type = "item", name = "bob-tungsten-plate", amount = 10 },
       },
       results = { { type = "item", name = "alien-blue-alloy", amount = 10 } },
       crafting_machine_tint = {

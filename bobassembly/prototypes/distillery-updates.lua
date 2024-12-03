@@ -10,8 +10,8 @@ then
   end
 
   bobmods.lib.recipe.replace_ingredient("bob-distillery", "pipe", "copper-pipe")
-  if data.raw.item["glass"] then
-    bobmods.lib.recipe.replace_ingredient("bob-distillery", "copper-plate", "glass")
+  if data.raw.item["bob-glass"] then
+    bobmods.lib.recipe.replace_ingredient("bob-distillery", "copper-plate", "bob-glass")
   end
 
   if data.raw.item["bronze-alloy"] then
@@ -37,8 +37,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-distillery-3", "invar-processing")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-distillery-4", "steel-plate", "tungsten-plate")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-distillery-4", "steel-plate", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-distillery-4", "tungsten-processing")
   end
 

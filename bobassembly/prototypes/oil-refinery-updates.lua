@@ -27,8 +27,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "pipe", "steel-pipe")
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("oil-processing-3", "titanium-processing")
   end
 
@@ -65,8 +65,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "steel-plate", "nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("oil-processing-4", "nitinol-processing")
   else
-    if data.raw.item["titanium-plate"] then
-      bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "steel-plate", "titanium-plate")
+    if data.raw.item["bob-titanium-plate"] then
+      bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "steel-plate", "bob-titanium-plate")
     end
   end
 
@@ -74,8 +74,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "stone-brick", "copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("oil-processing-4", "tungsten-alloy-processing")
   else
-    if data.raw.item["tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "stone-brick", "tungsten-plate")
+    if data.raw.item["bob-tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "stone-brick", "bob-tungsten-plate")
       bobmods.lib.tech.add_prerequisite("oil-processing-4", "tungsten-processing")
     end
   end
@@ -104,6 +104,6 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("oil-processing-4", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "advanced-processing-unit")
   end
 end

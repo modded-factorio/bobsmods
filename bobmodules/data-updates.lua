@@ -58,25 +58,3 @@ if data.raw["recipe-category"]["electronics-machine"] then
   data.raw.recipe["pollution-clean-processor-3"].category = "electronics-machine"
   data.raw.recipe["pollution-create-processor-3"].category = "electronics-machine"
 end
-
-bobmods.lib.module.add_productivity_limitation("module-case")
-bobmods.lib.module.add_productivity_limitation("module-contact")
-bobmods.lib.module.add_productivity_limitation("module-circuit-board")
-bobmods.lib.module.add_productivity_limitation("module-processor-board")
-bobmods.lib.module.add_productivity_limitation("module-processor-board-2")
-bobmods.lib.module.add_productivity_limitation("module-processor-board-3")
-bobmods.lib.module.add_productivity_limitation("speed-processor")
-bobmods.lib.module.add_productivity_limitation("efficiency-processor")
-bobmods.lib.module.add_productivity_limitation("productivity-processor")
-bobmods.lib.module.add_productivity_limitation("pollution-clean-processor")
-bobmods.lib.module.add_productivity_limitation("pollution-create-processor")
-bobmods.lib.module.add_productivity_limitation("speed-processor-2")
-bobmods.lib.module.add_productivity_limitation("efficiency-processor-2")
-bobmods.lib.module.add_productivity_limitation("productivity-processor-2")
-bobmods.lib.module.add_productivity_limitation("pollution-clean-processor-2")
-bobmods.lib.module.add_productivity_limitation("pollution-create-processor-2")
-bobmods.lib.module.add_productivity_limitation("speed-processor-3")
-bobmods.lib.module.add_productivity_limitation("efficiency-processor-3")
-bobmods.lib.module.add_productivity_limitation("productivity-processor-3")
-bobmods.lib.module.add_productivity_limitation("pollution-clean-processor-3")
-bobmods.lib.module.add_productivity_limitation("pollution-create-processor-3")

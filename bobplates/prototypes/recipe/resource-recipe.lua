@@ -12,11 +12,13 @@ data:extend({
     },
     results = { { type = "item", name = "carbon", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
     name = "bob-resin-wood",
+    localised_name = { "item-name.resin" },
     category = "crafting-machine",
     energy_required = 1,
     enabled = false,
@@ -25,11 +27,13 @@ data:extend({
     },
     results = { { type = "item", name = "resin", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
     name = "bob-resin-oil",
+    localised_name = { "item-name.resin" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     energy_required = 1,
@@ -44,11 +48,13 @@ data:extend({
       tertiary = { r = 1, g = 0.6, b = 0.0, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
     name = "bob-rubber",
+    localised_name = { "item-name.rubber" },
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
@@ -58,19 +64,21 @@ data:extend({
     },
     results = { { type = "item", name = "rubber", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "quartz-glass",
+    name = "bob-glass",
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = {
       { type = "item", name = "quartz", amount = 1 },
     },
-    results = { { type = "item", name = "glass", amount = 1 } },
+    results = { { type = "item", name = "bob-glass", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -80,9 +88,11 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "silicon", amount = 1 },
+      { type = "item", name = "bob-silicon-plate", amount = 1 },
     },
     results = { { type = "item", name = "silicon-wafer", amount = 8 } },
+    allow_productivity = true,
+    allow_productivity = true,
   },
 
   {
@@ -93,9 +103,10 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "silicon", amount = 1 },
+      { type = "item", name = "bob-silicon-plate", amount = 1 },
     },
     results = { { type = "item", name = "silicon-powder", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
@@ -111,6 +122,7 @@ data:extend({
     },
     results = { { type = "item", name = "silicon-nitride", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -125,6 +137,7 @@ data:extend({
       { type = "item", name = "cobalt-oxide", amount = 1 },
     },
     results = { { type = "item", name = "lithium-cobalt-oxide", amount = 2 } },
+    allow_productivity = true,
   },
 
   {
@@ -147,6 +160,7 @@ data:extend({
       tertiary = { r = 1, g = 0.6, b = 0.4, a = 0.000 },
     },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 
   {
@@ -160,6 +174,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "gas-canister", amount = 5 } },
+    allow_productivity = true,
   },
 
   {
@@ -174,11 +189,12 @@ data:extend({
       { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "empty-canister", amount = 5 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "polishing-compound",
+    name = "bob-polishing-compound",
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     enabled = false,
@@ -187,17 +203,19 @@ data:extend({
       { type = "item", name = "alumina", amount = 1 },
       { type = "fluid", name = "light-oil", amount = 15 },
     },
-    results = { { type = "item", name = "polishing-compound", amount = 2 } },
+    results = { { type = "item", name = "bob-polishing-compound", amount = 2 } },
     crafting_machine_tint = {
       primary = { r = 0.57, g = 0.33, b = 0.0, a = 0.000 },
       secondary = { r = 1, g = 0.73, b = 0.07, a = 0.000 },
       tertiary = { r = 1, g = 1, b = 1, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
     name = "bob-coal-from-wood",
+    localised_name = { "item-name.coal" },
     category = "smelting",
     energy_required = 1.6,
     ingredients = {
@@ -229,11 +247,12 @@ data:extend({
       secondary = { r = 0.589, g = 0.540, b = 0.615, a = 0.361 },
       tertiary = { r = 0.469, g = 0.145, b = 0.695, a = 0.000 },
     },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "enriched-fuel-from-liquid-fuel",
+    name = "enriched-fuel",
     icon = "__bobplates__/graphics/icons/enriched-fuel.png",
     icon_size = 32,
     category = "chemistry",

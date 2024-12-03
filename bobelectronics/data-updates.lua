@@ -1,9 +1,7 @@
 require("prototypes.recipe-updates")
 require("prototypes.technology-updates")
-require("prototypes.productivity-limitations")
 
 data.raw.recipe["copper-cable"].category = "electronics"
-data.raw.recipe["rocket-control-unit"].category = "electronics"
 
 if data.raw["recipe-category"]["chemical-furnace"] then
   if data.raw.recipe["carbon"] then

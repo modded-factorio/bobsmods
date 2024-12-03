@@ -14,21 +14,19 @@ if data.raw.item["tungsten-carbide"] then
   bobmods.lib.tech.replace_prerequisite("heat-shield", "plastics", "tungsten-alloy-processing")
 end
 
-bobmods.lib.module.add_productivity_limitation("heat-shield-tile")
-
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("low-density-structure", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("low-density-structure", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("low-density-structure", "titanium-processing")
 end
-if data.raw.item["aluminium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("low-density-structure", "copper-plate", "aluminium-plate")
+if data.raw.item["bob-aluminium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("low-density-structure", "copper-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("low-density-structure", "aluminium-processing")
 end
 bobmods.lib.tech.remove_prerequisite("low-density-structure", "advanced-material-processing")
 
 bobmods.lib.tech.remove_prerequisite("rocket-silo", "productivity-module-3")
-if data.raw.technology["advanced-electronics-3"] then
-  bobmods.lib.tech.replace_prerequisite("rocket-silo", "processing-unit", "advanced-electronics-3")
+if data.raw.technology["advanced-processing-unit"] then
+  bobmods.lib.tech.replace_prerequisite("rocket-silo", "processing-unit", "advanced-processing-unit")
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "speed-module-3")
 end
 
@@ -53,10 +51,10 @@ then
       { type = "item", name = "multi-layer-circuit-board", amount = 2 }
     )
   end
-  bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
+  bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-processing-unit")
 elseif data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("rocket-control-unit", "speed-module", "advanced-processing-unit")
-  bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-electronics-3")
+  bobmods.lib.tech.replace_prerequisite("rocket-control-unit", "speed-module", "advanced-processing-unit")
 end
 bobmods.lib.tech.add_science_pack("rocket-control-unit", "production-science-pack", 1)
 

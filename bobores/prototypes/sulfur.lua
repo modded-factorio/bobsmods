@@ -10,6 +10,7 @@ bobmods.ores.sulfur = {
   items = {
     {
       name = "sulfur",
+      amount = 1,
     },
   },
   sprite = {
@@ -26,6 +27,7 @@ bobmods.ores.sulfur = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.sulfur.create_autoplace()

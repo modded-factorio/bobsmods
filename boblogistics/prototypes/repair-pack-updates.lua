@@ -19,8 +19,8 @@ if data.raw.item["titanium-bearing"] then
   bobmods.lib.recipe.add_ingredient("repair-pack-4", { type = "item", name = "titanium-bearing", amount = 1 })
 end
 
-if data.raw.item["titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("repair-pack-4", "steel-plate", "titanium-plate")
+if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("repair-pack-4", "steel-plate", "bob-titanium-plate")
   bobmods.lib.tech.add_prerequisite("bob-repair-pack-4", "titanium-processing")
 end
 
@@ -35,7 +35,7 @@ end
 
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "advanced-processing-unit")
 end
 
 if data.raw.item["tungsten-carbide"] then

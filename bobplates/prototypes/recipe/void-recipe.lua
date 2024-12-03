@@ -9,6 +9,7 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
       {
         type = "recipe",
         name = "void-" .. name,
+        localised_name = { "recipe-name.bob-void", name },
         icons = bobmods.plates.get_void_icon(name),
         subgroup = "void",
         order = name,
