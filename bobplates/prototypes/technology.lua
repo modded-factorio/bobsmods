@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
     prerequisites = {
-      "steam-power",
+      "automation-science-pack",
     },
     effects = {
       {
@@ -71,7 +71,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
     prerequisites = {
-      "steam-power",
+      "automation-science-pack",
     },
     effects = {
       {
@@ -217,7 +217,9 @@ data:extend({
     name = "alloy-processing",
     icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -387,7 +389,9 @@ data:extend({
     name = "air-compressor-1",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -500,7 +504,9 @@ data:extend({
     name = "water-bore-1",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",

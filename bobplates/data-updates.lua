@@ -92,7 +92,7 @@ else
 end
 
 if settings.startup["bobmods-plates-batteryupdate"].value == true then
-  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics" }
+  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics", "lead-processing" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
   bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "bob-lead-plate", amount = 2 })
