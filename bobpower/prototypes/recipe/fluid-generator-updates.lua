@@ -132,7 +132,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     if data.raw.item["advanced-processing-unit"] then
       bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "processing-unit", "advanced-processing-unit")
-      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-electronics-3")
+      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-processing-unit")
     else
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "processing-unit")
     end

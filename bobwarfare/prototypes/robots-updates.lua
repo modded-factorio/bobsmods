@@ -86,7 +86,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         "bob-laser-robot",
         { type = "item", name = "advanced-processing-unit", amount = 1 }
       )
-      bobmods.lib.tech.add_prerequisite("bob-laser-robot", "advanced-electronics-3")
+      bobmods.lib.tech.add_prerequisite("bob-laser-robot", "advanced-processing-unit")
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "processing-unit", amount = 1 })
     end
