@@ -1,6 +1,5 @@
 data.raw["item-with-entity-data"]["tank"].order = "b[personal-transport]-b[tank-1]"
 data.raw["item-with-entity-data"]["tank"].stack_size = 10
-data.raw["item-with-entity-data"]["tank"].default_request_amount = 1
 
 data:extend({
   {

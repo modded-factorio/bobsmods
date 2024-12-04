@@ -36,7 +36,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "advanced-processing-unit")
   end
 
   if data.raw.item["bob-lead-plate"] then

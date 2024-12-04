@@ -168,7 +168,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 10 },
@@ -276,7 +276,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 10 },
@@ -384,7 +384,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 10 },
@@ -492,7 +492,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 10 },
@@ -672,6 +672,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "d-a-c-4",
       prerequisites = {
         "bob-pumpjacks-3",
+        "production-science-pack",
       },
       unit = {
         count = 150,

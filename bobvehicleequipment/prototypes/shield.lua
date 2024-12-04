@@ -8,7 +8,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-1",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -102,7 +101,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-2",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -197,7 +195,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-3",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -294,7 +291,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-4",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -390,7 +386,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-5",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -488,7 +483,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-6",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,

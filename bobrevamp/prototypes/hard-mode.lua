@@ -9,7 +9,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       default_temperature = 15,
       max_temperature = 100,
       gas_temperature = -56.6,
-      base_flow_rate = 100,
       heat_capacity = "1kJ",
       base_color = { r = 0.5, g = 0.0, b = 0.0 },
       flow_color = { r = 0.0, g = 0.0, b = 0.0 },
@@ -58,7 +57,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       },
       results = {
         { type = "item", name = "limestone", amount = 1 },
-        { type = "fluid", name = "carbon-dioxide", amount = 25, catalyst_amount = 25 },
+        { type = "fluid", name = "carbon-dioxide", amount = 25, ignored_by_productivity = 25 },
       },
       main_product = "limestone",
       crafting_machine_tint = {
@@ -87,7 +86,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "sodium-chlorate",
       results = {
         { type = "item", name = "sodium-chlorate", amount = 1 },
-        { type = "fluid", name = "hydrogen", amount = 60, catalyst_amount = 60 },
+        { type = "fluid", name = "hydrogen", amount = 60, ignored_by_productivity = 60 },
       },
       allow_decomposition = false,
       allow_productivity = true,
@@ -109,7 +108,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "sodium-perchlorate",
       results = {
         { type = "item", name = "sodium-perchlorate", amount = 1 },
-        { type = "fluid", name = "hydrogen", amount = 20, catalyst_amount = 20 },
+        { type = "fluid", name = "hydrogen", amount = 20, ignored_by_productivity = 20 },
       },
       allow_decomposition = false,
       allow_productivity = true,
@@ -131,7 +130,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "lithium-perchlorate",
       results = {
         { type = "item", name = "lithium-perchlorate", amount = 1 },
-        { type = "item", name = "salt", amount = 1, catalyst_amount = 1 },
+        { type = "item", name = "salt", amount = 1, ignored_by_productivity = 1 },
       },
       allow_decomposition = false,
     },

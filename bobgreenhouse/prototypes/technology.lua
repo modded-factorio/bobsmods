@@ -4,7 +4,9 @@ data:extend({
     name = "bob-greenhouse",
     icon = "__bobgreenhouse__/graphics/icons/technology/greenhouse.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "steam-power",
+    },
     effects = {
       {
         type = "unlock-recipe",

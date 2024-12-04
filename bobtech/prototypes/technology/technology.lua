@@ -136,26 +136,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
     },
   })
 
-  data:extend({
-    {
-      type = "technology",
-      name = "steam-power",
-      icon = "__base__/graphics/icons/fluid/steam.png",
-      icon_size = 64,
-      prerequisites = {},
-      effects = {},
-      unit = {
-        count = 10,
-        ingredients = {
-          { "steam-science-pack", 1 },
-        },
-        time = 10,
-      },
-      ignore_tech_cost_multiplier = true,
-      order = "c-a",
-    },
-  })
-
   bobmods.lib.recipe.enabled("automation-science-pack", false)
   bobmods.lib.recipe.enabled("boiler", false)
   bobmods.lib.recipe.enabled("steam-engine", false)

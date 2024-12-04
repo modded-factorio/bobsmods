@@ -49,7 +49,7 @@ if data.raw.item["titanium-chest"] then
       "requester-chest-3",
       { type = "item", name = "advanced-processing-unit", amount = 1 }
     )
-    bobmods.lib.tech.add_prerequisite("logistic-system-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("logistic-system-3", "advanced-processing-unit")
   end
 else
   if data.raw.item["advanced-processing-unit"] then
@@ -58,6 +58,6 @@ else
     bobmods.lib.recipe.replace_ingredient("storage-chest-3", "processing-unit", "advanced-processing-unit")
     bobmods.lib.recipe.replace_ingredient("buffer-chest-3", "processing-unit", "advanced-processing-unit")
     bobmods.lib.recipe.replace_ingredient("requester-chest-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("logistic-system-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("logistic-system-3", "advanced-processing-unit")
   end
 end
