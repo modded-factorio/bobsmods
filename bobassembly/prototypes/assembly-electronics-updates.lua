@@ -1,5 +1,4 @@
 if settings.startup["bobmods-assembly-electronicmachines"].value == true then
-
   if data.raw.item["bronze-alloy"] then
     bobmods.lib.recipe.replace_ingredient("electronics-machine-1", "steel-plate", "bronze-alloy")
     if mods["bobelectronics"] then
@@ -15,7 +14,10 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   if data.raw.item["cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-2", { type = "item", name = "cobalt-steel-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "electronics-machine-2",
+      { type = "item", name = "cobalt-steel-bearing", amount = 5 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("electronics-machine-2", { type = "item", name = "iron-gear-wheel", amount = 3 })
   end

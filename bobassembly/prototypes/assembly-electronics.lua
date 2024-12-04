@@ -386,7 +386,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         "electronics-machine-1",
         "steel-processing",
         "processing-unit",
-        "production-science-pack"
+        "production-science-pack",
       },
       unit = {
         count = 80,
