@@ -141,16 +141,13 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     { type = "item", name = "uranium-238", amount = 6, ignored_by_productivity = 5 }
   )
 
-  bobmods.lib.recipe.add_result(
-    "nuclear-fuel-reprocessing",
-    {
-      type = "item",
-      name = "empty-nuclear-fuel-cell",
-      amount = 10,
-      ignored_by_productivity = 10,
-      ignored_by_stats = 10,
-    }
-  )
+  bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", {
+    type = "item",
+    name = "empty-nuclear-fuel-cell",
+    amount = 10,
+    ignored_by_productivity = 10,
+    ignored_by_stats = 10,
+  })
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
     { type = "item", name = "uranium-235", amount = 1, probability = 0.2 }
