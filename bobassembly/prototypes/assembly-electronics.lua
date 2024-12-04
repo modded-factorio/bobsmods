@@ -187,7 +187,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       enabled = false,
       ingredients = {
         { type = "item", name = "electronic-circuit", amount = 5 },
-        { type = "item", name = "iron-plate", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
       results = { { type = "item", name = "electronics-machine-1", amount = 1 } },
@@ -205,12 +205,13 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
       },
       prerequisites = {
-        "automation",
+        "automation-2",
       },
       unit = {
         count = 30,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 10,
       },
@@ -363,7 +364,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       enabled = false,
       ingredients = {
         { type = "item", name = "electronics-machine-1", amount = 1 },
-        { type = "item", name = "advanced-circuit", amount = 5 },
+        { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "steel-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
@@ -384,8 +385,8 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       prerequisites = {
         "electronics-machine-1",
         "steel-processing",
-        "advanced-circuit",
-        "chemical-science-pack",
+        "processing-unit",
+        "production-science-pack"
       },
       unit = {
         count = 80,
@@ -394,6 +395,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       order = "a-c-b",
@@ -545,6 +547,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         { type = "item", name = "electronics-machine-2", amount = 1 },
         { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
       results = { { type = "item", name = "electronics-machine-3", amount = 1 } },
@@ -564,8 +567,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       prerequisites = {
         "electronics-machine-2",
         "processing-unit",
-        "production-science-pack",
-        "utility-science-pack",
+        "space-science-pack",
       },
       unit = {
         count = 140,
@@ -576,6 +578,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
           { "utility-science-pack", 1 },
+          { "space-science-pack", 1 },
         },
       },
       order = "a-c-c",
