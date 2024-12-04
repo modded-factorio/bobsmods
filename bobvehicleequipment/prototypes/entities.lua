@@ -13,8 +13,6 @@ data:extend({
         frame_count = 64,
         line_length = 8,
         scale = 4,
-        axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.5,
       },
     },
