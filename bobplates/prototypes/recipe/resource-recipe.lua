@@ -18,6 +18,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-resin-wood",
+    localised_name = { "item-name.resin" },
     category = "crafting-machine",
     energy_required = 1,
     enabled = false,
@@ -32,6 +33,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-resin-oil",
+    localised_name = { "item-name.resin" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
     energy_required = 1,
@@ -52,6 +54,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-rubber",
+    localised_name = { "item-name.rubber" },
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,

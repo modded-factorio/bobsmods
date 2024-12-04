@@ -29,6 +29,7 @@ data:extend({
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.tech.add_recipe_unlock("uranium-processing", "empty-nuclear-fuel-cell")
+  bobmods.lib.tech.add_prerequisite("uranium-processing", "lead-processing")
 
   bobmods.lib.tech.add_prerequisite("bobingabout-enrichment-process", "nuclear-fuel-reprocessing")
   bobmods.lib.tech.add_recipe_unlock("bobingabout-enrichment-process", "plutonium-nucleosynthesis")

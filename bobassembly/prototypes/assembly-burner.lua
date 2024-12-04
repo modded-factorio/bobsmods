@@ -349,6 +349,9 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           recipe = "steam-assembling-machine",
         },
       },
+      prerequisites = {
+        "automation-science-pack",
+      },
       unit = {
         count = 5,
         ingredients = {

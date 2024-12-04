@@ -672,6 +672,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       order = "d-a-c-4",
       prerequisites = {
         "bob-pumpjacks-3",
+        "production-science-pack",
       },
       unit = {
         count = 150,
