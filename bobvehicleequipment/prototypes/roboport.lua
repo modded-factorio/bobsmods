@@ -8,7 +8,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-f[roboport-1]",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
       volume = 0.45,
@@ -32,7 +31,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-f[roboport-2]",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
       volume = 0.45,
@@ -56,7 +54,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-f[roboport-3]",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
       volume = 0.45,
@@ -80,7 +77,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-f[roboport-4]",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/roboport-inventory-move.ogg",
       volume = 0.45,

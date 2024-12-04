@@ -34,7 +34,9 @@
     ["zinc-plate", "bob-zinc-plate"],
     ["silicon-plate", "bob-silicon-plate"],
     ["titanium-plate", "bob-titanium-plate"],
-    ["tungsten-plate", "bob-tungsten-plate"]
+    ["tungsten-plate", "bob-tungsten-plate"],
+    ["used-up-thorium-fuel-cell", "bob-depleted-thorium-fuel-cell"],
+    ["used-up-deuterium-fuel-cell", "bob-depleted-deuterium-fuel-cell"]
   ],
   "recipe":
   [
