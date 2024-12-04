@@ -1,7 +1,10 @@
 if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinitrogen-tetroxide"] then
   if data.raw.fluid["pure-water"] then
     bobmods.lib.recipe.remove_result("hydrazine", "water")
-    bobmods.lib.recipe.add_result("hydrazine", { type = "fluid", name = "pure-water", amount = 4, ignored_by_productivity = 4 })
+    bobmods.lib.recipe.add_result(
+      "hydrazine",
+      { type = "fluid", name = "pure-water", amount = 4, ignored_by_productivity = 4 }
+    )
   end
 
   data.raw.recipe["rocket-fuel"].ingredients = {

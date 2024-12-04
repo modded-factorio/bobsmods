@@ -117,7 +117,10 @@ bobmods.lib.recipe.set_subgroup("kovarex-enrichment-process", "bob-nuclear")
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.recipe.disallow_productivity("uranium-fuel-cell")
   bobmods.lib.recipe.remove_ingredient("uranium-fuel-cell", "iron-plate")
-  bobmods.lib.recipe.add_ingredient("uranium-fuel-cell", { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10})
+  bobmods.lib.recipe.add_ingredient(
+    "uranium-fuel-cell",
+    { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
+  )
 
   data.raw.technology["nuclear-fuel-reprocessing"].icon =
     "__bobplates__/graphics/icons/technology/uranium-nuclear-fuel-reprocessing-new.png"
@@ -129,12 +132,22 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
-log(serpent.block(data.raw.recipe["nuclear-fuel-reprocessing"], {comment = true, refcomment = true, tablecomment = false}))
+  log(
+    serpent.block(
+      data.raw.recipe["nuclear-fuel-reprocessing"],
+      { comment = true, refcomment = true, tablecomment = false }
+    )
+  )
   bobmods.lib.recipe.add_ingredient(
     "nuclear-fuel-reprocessing",
     { type = "item", name = "used-up-uranium-fuel-cell", amount = 5 }
   ) -- +5 from base
-log(serpent.block(data.raw.recipe["nuclear-fuel-reprocessing"], {comment = true, refcomment = true, tablecomment = false}))
+  log(
+    serpent.block(
+      data.raw.recipe["nuclear-fuel-reprocessing"],
+      { comment = true, refcomment = true, tablecomment = false }
+    )
+  )
   bobmods.lib.recipe.set_result(
     "nuclear-fuel-reprocessing",
     { type = "item", name = "uranium-238", amount = 6, ignored_by_productivity = 5 }
@@ -142,7 +155,13 @@ log(serpent.block(data.raw.recipe["nuclear-fuel-reprocessing"], {comment = true,
 
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10 }
+    {
+      type = "item",
+      name = "empty-nuclear-fuel-cell",
+      amount = 10,
+      ignored_by_productivity = 10,
+      ignored_by_stats = 10,
+    }
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
