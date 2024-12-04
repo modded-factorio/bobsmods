@@ -107,7 +107,7 @@ bobmods.lib.tech.add_prerequisite("steel-processing", "chemical-processing-1")
 --Nuclear fuel update.
 data.raw.item["uranium-fuel-cell"].fuel_glow_color = { r = 0, g = 1, b = 0 }
 bobmods.lib.item.set_subgroup("uranium-fuel-cell", "bob-fuel-cells")
-bobmods.lib.item.set_subgroup("used-up-uranium-fuel-cell", "bob-fuel-cells")
+bobmods.lib.item.set_subgroup("depleted-uranium-fuel-cell", "bob-fuel-cells")
 bobmods.lib.recipe.set_subgroup("nuclear-fuel-reprocessing", "bob-fuel-cells")
 bobmods.lib.item.set_subgroup("uranium-235", "bob-nuclear")
 bobmods.lib.item.set_subgroup("uranium-238", "bob-nuclear")
@@ -129,12 +129,10 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
-log(serpent.block(data.raw.recipe["nuclear-fuel-reprocessing"], {comment = true, refcomment = true, tablecomment = false}))
   bobmods.lib.recipe.add_ingredient(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "used-up-uranium-fuel-cell", amount = 5 }
+    { type = "item", name = "depleted-uranium-fuel-cell", amount = 5 }
   ) -- +5 from base
-log(serpent.block(data.raw.recipe["nuclear-fuel-reprocessing"], {comment = true, refcomment = true, tablecomment = false}))
   bobmods.lib.recipe.set_result(
     "nuclear-fuel-reprocessing",
     { type = "item", name = "uranium-238", amount = 6, ignored_by_productivity = 5 }

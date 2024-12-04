@@ -112,7 +112,7 @@ if data.raw.item["thorium-ore"] then
         enabled = false,
         category = "centrifuging",
         ingredients = {
-          { type = "item", name = "used-up-thorium-fuel-cell", amount = 10 },
+          { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 10 },
         },
         results = {
           { type = "item", name = "thorium-232", amount = 4, ignored_by_productivity = 3 },
@@ -154,7 +154,7 @@ if data.raw.item["thorium-ore"] then
         enabled = false,
         category = "centrifuging",
         ingredients = {
-          { type = "item", name = "used-up-thorium-fuel-cell", amount = 5 },
+          { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 5 },
         },
         results = {
           { type = "item", name = "thorium-232", amount = 3, ignored_by_productivity = 2 },
@@ -267,7 +267,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       enabled = false,
       category = "centrifuging",
       ingredients = {
-        { type = "item", name = "used-up-deuterium-fuel-cell", amount = 10 },
+        { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 10 },
       },
       results = {
         { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10 },
@@ -308,7 +308,7 @@ else
       enabled = false,
       category = "centrifuging",
       ingredients = {
-        { type = "item", name = "used-up-deuterium-fuel-cell", amount = 5 },
+        { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 5 },
       },
       results = {
         { type = "item", name = "bob-lead-plate", amount = 5, ignored_by_productivity = 5 },
