@@ -117,7 +117,10 @@ bobmods.lib.recipe.set_subgroup("kovarex-enrichment-process", "bob-nuclear")
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.recipe.disallow_productivity("uranium-fuel-cell")
   bobmods.lib.recipe.remove_ingredient("uranium-fuel-cell", "iron-plate")
-  bobmods.lib.recipe.add_ingredient("uranium-fuel-cell", { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10})
+  bobmods.lib.recipe.add_ingredient(
+    "uranium-fuel-cell",
+    { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
+  )
 
   data.raw.technology["nuclear-fuel-reprocessing"].icon =
     "__bobplates__/graphics/icons/technology/uranium-nuclear-fuel-reprocessing-new.png"
@@ -140,7 +143,13 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
 
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10 }
+    {
+      type = "item",
+      name = "empty-nuclear-fuel-cell",
+      amount = 10,
+      ignored_by_productivity = 10,
+      ignored_by_stats = 10,
+    }
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",

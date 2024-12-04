@@ -87,7 +87,10 @@ if data.raw.item["thorium-ore"] then
 
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     bobmods.lib.recipe.remove_ingredient("thorium-fuel-cell", "bob-lead-plate")
-    bobmods.lib.recipe.add_ingredient("thorium-fuel-cell", { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "thorium-fuel-cell",
+      { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
+    )
     data:extend({
       {
         type = "recipe",
@@ -117,7 +120,13 @@ if data.raw.item["thorium-ore"] then
         results = {
           { type = "item", name = "thorium-232", amount = 4, ignored_by_productivity = 3 },
           { type = "item", name = "uranium-235", amount = 3, ignored_by_productivity = 2 },
-          { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10 },
+          {
+            type = "item",
+            name = "empty-nuclear-fuel-cell",
+            amount = 10,
+            ignored_by_productivity = 10,
+            ignored_by_stats = 10,
+          },
           { type = "item", name = "fusion-catalyst", amount = 1 },
         },
         crafting_machine_tint = {
@@ -270,7 +279,13 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
         { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 10 },
       },
       results = {
-        { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_productivity = 10, ignored_by_stats = 10 },
+        {
+          type = "item",
+          name = "empty-nuclear-fuel-cell",
+          amount = 10,
+          ignored_by_productivity = 10,
+          ignored_by_stats = 10,
+        },
         { type = "item", name = "lithium", amount = 1, probability = 0.1 },
         { type = "item", name = "fusion-catalyst", amount = 1 },
       },
