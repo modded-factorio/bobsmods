@@ -25,6 +25,7 @@ then
 
   if data.raw.item["brass-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-distillery-3", "copper-plate", "brass-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-distillery-3", "zinc-processing")
   end
 
   if data.raw.item["brass-pipe"] then
