@@ -131,7 +131,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "sodium-bicarbonate", amount = 1 },
-          { type = "item", name = "ammonium-chloride", amount = 1, catalyst_amount = 1 },
+          { type = "item", name = "ammonium-chloride", amount = 1, ignored_by_productivity = 1 },
         },
         main_product = "sodium-bicarbonate",
         crafting_machine_tint = {
@@ -156,7 +156,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "sodium-carbonate", amount = 1 },
-          { type = "fluid", name = "water", amount = 10, fluidbox_index = 1, catalyst_amount = 10 },
+          { type = "fluid", name = "water", amount = 10, fluidbox_index = 1, ignored_by_productivity = 10 },
           { type = "fluid", name = "carbon-dioxide", amount = 25, fluidbox_index = 2 },
         },
         main_product = "sodium-carbonate",
@@ -280,7 +280,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       results = {
         { type = "item", name = "sodium-cobaltate", amount = 5 },
-        { type = "fluid", name = "oxygen", amount = 200, catalyst_amount = 200 },
+        { type = "fluid", name = "oxygen", amount = 200, ignored_by_productivity = 200 },
       },
       main_product = "sodium-cobaltate",
       crafting_machine_tint = {
