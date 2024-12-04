@@ -551,7 +551,9 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       order = "d-a-d-1",
-      prerequisites = {},
+      prerequisites = {
+        "automation-science-pack",
+      },
       unit = {
         count = 10,
         time = 30,
