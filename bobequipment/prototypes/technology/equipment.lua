@@ -528,6 +528,17 @@ data.raw["technology"]["personal-laser-defense-equipment"].icons =
   })
 bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "low-density-structure")
 bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "military-3")
+if not mods["bobwarfare"] then
+  bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "power-armor")
+  bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "laser-turret")
+  bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment", "military-science-pack")
+  bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment", "laser")
+  bobmods.lib.tech.remove_science_pack("laser", "chemical-science-pack")
+  bobmods.lib.tech.remove_prerequisite("laser", "chemical-science-pack")
+  bobmods.lib.tech.add_prerequisite("laser-turret", "chemical-science-pack")
+end
+bobmods.lib.tech.remove_science_pack("laser-shooting-speed-1", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("laser-weapons-damage-1", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("personal-laser-defense-equipment", "chemical-science-pack")
 
 data:extend({
