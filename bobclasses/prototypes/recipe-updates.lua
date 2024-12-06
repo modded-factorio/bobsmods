@@ -65,9 +65,15 @@ if data.raw.item["titanium-chest"] then
   bobmods.lib.recipe.replace_ingredient("player-frame-2", "steel-chest", "titanium-chest")
 end
 
+if data.raw.item["turbo-inserter"] then
+  bobmods.lib.tech.replace_prerequisite("builder-body", "fast-inserter", "express-inserters")
+  bobmods.lib.recipe.replace_ingredient("bob-character-builder-2", "bulk-inserter", "turbo-inserter")
+  bobmods.lib.tech.replace_prerequisite("builder-body-2", "bulk-inserter", "turbo-inserter")
+end
+
 if data.raw.item["assembling-machine-4"] then
-  bobmods.lib.recipe.replace_ingredient("bob-character-builder-2", "assembling-machine-3", "assembling-machine-4")
-  bobmods.lib.tech.add_prerequisite("builder-body-2", "automation-4")
+  bobmods.lib.recipe.replace_ingredient("bob-character-miner-2", "assembling-machine-3", "assembling-machine-4")
+  bobmods.lib.tech.add_prerequisite("miner-body-2", "automation-4")
 end
 
 if data.raw.item["electric-furnace-2"] then
