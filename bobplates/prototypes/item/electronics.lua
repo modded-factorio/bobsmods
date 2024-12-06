@@ -9,5 +9,17 @@ data:extend({
     subgroup = "intermediate-product",
     order = "g[processing-unit-2]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 })
