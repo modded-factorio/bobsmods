@@ -39,3 +39,22 @@ if data.raw["item-group"]["bob-intermediate-products"] then
 end
 
 require("prototypes.recipe-updates")
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe({
+    "bob-character-miner-2",
+    "bob-character-fighter-2",
+    "bob-character-builder-2",
+    "player-brain",
+    "player-head",
+    "player-boots",
+    "player-gloves",
+    "player-power-core",
+    "player-frame",
+    "player-brain-2",
+    "player-head-2",
+    "player-boots-2",
+    "player-gloves-2",
+    "player-frame-2",
+  })
+end
