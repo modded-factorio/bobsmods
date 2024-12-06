@@ -4,6 +4,7 @@ data:extend({
     name = "ferric-chloride-solution",
     icon = "__bobelectronics__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
+    subgroup = "bob-fluid",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0.6, b = 0.2 },
