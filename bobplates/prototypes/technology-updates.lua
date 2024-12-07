@@ -46,7 +46,7 @@ bobmods.lib.tech.add_recipe_unlock("zinc-processing", "brass-gear-wheel")
 
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide-2")
-bobmods.lib.tech.add_recipe_unlock("lead-processing", "bob-lead-plate")
+bobmods.lib.tech.add_recipe_unlock("lead-processing", "bob-lead-plate-2")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "silver-from-lead")
 bobmods.lib.tech.add_prerequisite("lead-processing", "nickel-processing")
 
