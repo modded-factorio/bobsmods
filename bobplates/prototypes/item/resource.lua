@@ -227,7 +227,7 @@ data:extend({
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.1,
     fuel_emissions_multiplier = 0.7,
-    subgroup = "bob-resource",
+    subgroup = "bob-chemical-fuels",
     order = "d[enriched-fuel]",
     stack_size = 20,
     drop_sound = {
