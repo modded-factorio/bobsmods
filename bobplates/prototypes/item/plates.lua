@@ -1,10 +1,10 @@
 local plate_drop_move = {
   filename = "__base__/sound/item/metal-small-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local plate_pick = {
   filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 
 data:extend({
