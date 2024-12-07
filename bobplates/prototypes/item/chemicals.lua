@@ -6,7 +6,7 @@ local powder_drop_move = {
 local powder_pick = {
   filename = "__base__/sound/item/landfill-inventory-pickup.ogg",
   volume = 0.6,
-  speed = 1.2
+  speed = 1.2,
 }
 
 if settings.startup["bobmods-plates-purewater"].value == true then
