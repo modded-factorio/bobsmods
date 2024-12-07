@@ -9,10 +9,25 @@ then
     settings.startup["bobmods-plates-expensive-electrolysis"]
     and settings.startup["bobmods-plates-expensive-electrolysis"].value == true
   then
-    data.raw["assembling-machine"]["electrolyser-2"].energy_usage = "1625kW"
-    data.raw["assembling-machine"]["electrolyser-3"].energy_usage = "2400kW"
-    data.raw["assembling-machine"]["electrolyser-4"].energy_usage = "3025kW"
-    data.raw["assembling-machine"]["electrolyser-5"].energy_usage = "3500kW"
+    if feature_flags["quality"] then
+      data.raw["assembling-machine"]["electrolyser-2"].energy_usage = "1470kW"
+      data.raw["assembling-machine"]["electrolyser-2"].energy_source.drain = "16kW"
+      data.raw["assembling-machine"]["electrolyser-3"].energy_usage = "2150kW"
+      data.raw["assembling-machine"]["electrolyser-3"].energy_source.drain = "24kW"
+      data.raw["assembling-machine"]["electrolyser-4"].energy_usage = "2670kW"
+      data.raw["assembling-machine"]["electrolyser-4"].energy_source.drain = "30kW"
+      data.raw["assembling-machine"]["electrolyser-5"].energy_usage = "3030kW"
+      data.raw["assembling-machine"]["electrolyser-5"].energy_source.drain = "34kW"
+    else
+      data.raw["assembling-machine"]["electrolyser-2"].energy_usage = "1625kW"
+      data.raw["assembling-machine"]["electrolyser-2"].energy_source.drain = "18kW"
+      data.raw["assembling-machine"]["electrolyser-3"].energy_usage = "2400kW"
+      data.raw["assembling-machine"]["electrolyser-3"].energy_source.drain = "27kW"
+      data.raw["assembling-machine"]["electrolyser-4"].energy_usage = "3025kW"
+      data.raw["assembling-machine"]["electrolyser-4"].energy_source.drain = "34kW"
+      data.raw["assembling-machine"]["electrolyser-5"].energy_usage = "3500kW"
+      data.raw["assembling-machine"]["electrolyser-5"].energy_source.drain = "39kW"
+    end
   end
 
   data.raw["assembling-machine"]["electrolyser"].next_upgrade = "electrolyser-2"
