@@ -208,6 +208,10 @@ then
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
   bobmods.lib.tech.remove_prerequisite("thorium-fuel-reprocessing", "production-science-pack")
   bobmods.lib.tech.replace_prerequisite("thorium-fuel-reprocessing", "thorium-processing", "bob-nuclear-power-2")
+
+  if feature_flags["quality"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("nuclear-reactor-2", true)
+  end
 end
 
 if
@@ -267,4 +271,21 @@ then
     data.raw.technology["bob-nuclear-power-3"].icon =
       "__bobrevamp__/graphics/icons/technology/deuterium-nuclear-power.png"
   end
+
+  if feature_flags["quality"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("nuclear-reactor-3", true)
+  end
+end
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-chlorate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-perchlorate", false)
+
+  bobmods.lib.recipe.update_recycling_recipe({
+    "low-density-structure",
+    "heat-shield-tile",
+    "rocket-silo",
+    "rocket-part",
+    "satellite",
+  })
 end
