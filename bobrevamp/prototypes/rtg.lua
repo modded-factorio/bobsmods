@@ -189,7 +189,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       {
         type = "recipe",
-        name = "ammonium-chloride-recycling",
+        name = "bob-ammonium-chloride-recycling",
         icon = "__bobrevamp__/graphics/icons/ammonium-chloride-recycling.png",
         icon_size = 64,
         subgroup = "bob-resource-chemical",
