@@ -253,7 +253,6 @@ data:extend({
     type = "item",
     name = "sodium-hydroxide",
     icon = "__bobplates__/graphics/icons/sodium-hydroxide.png",
-    icon_size = 32,
     subgroup = "bob-resource-chemical",
     order = "f[sodium-hydroxide]",
     stack_size = 100,
