@@ -50,12 +50,6 @@ data:extend({
 
   {
     type = "item-subgroup",
-    name = "bob-storage",
-    group = "bob-logistics",
-    order = "a-a",
-  },
-  {
-    type = "item-subgroup",
     name = "bob-belt",
     group = "bob-logistics",
     order = "b-a",
@@ -273,6 +267,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "bob-chemical-fuels",
+    group = "bob-resource-products",
+    order = "b-a1",
+  },
+  {
+    type = "item-subgroup",
     name = "bob-resource",
     group = "bob-resource-products",
     order = "b-b",
@@ -319,6 +319,12 @@ data:extend({
     group = "bob-resource-products",
     order = "c-c",
   },
+  {
+    type = "item-subgroup",
+    name = "bob-nuclear",
+    group = "bob-resource-products",
+    order = "c-d",
+  },
 
   {
     type = "item-group",
@@ -330,57 +336,41 @@ data:extend({
 
   {
     type = "item-subgroup",
-    name = "bob-intermediates",
-    group = "bob-intermediate-products",
-    order = "e-1",
-  },
-  {
-    type = "item-subgroup",
     name = "bob-electronic-components",
-    group = "bob-intermediate-products",
+    group = "intermediate-products",
     order = "e-a1",
   },
   {
     type = "item-subgroup",
     name = "bob-boards",
-    group = "bob-intermediate-products",
+    group = "intermediate-products",
     order = "e-a2",
   },
   {
     type = "item-subgroup",
     name = "bob-electronic-boards",
-    group = "bob-intermediate-products",
+    group = "intermediate-products",
     order = "e-a3",
   },
+
+
   {
     type = "item-subgroup",
     name = "bob-gears",
-    group = "bob-intermediate-products",
-    order = "e-b",
+    group = "intermediate-products",
+    order = "b-a",
   },
   {
     type = "item-subgroup",
     name = "bob-bearings",
-    group = "bob-intermediate-products",
-    order = "e-c",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-roboport-parts",
-    group = "bob-intermediate-products",
-    order = "e-d",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-nuclear",
     group = "intermediate-products",
-    order = "f-a",
+    order = "b-b",
   },
   {
     type = "item-subgroup",
     name = "bob-fuel-cells",
     group = "intermediate-products",
-    order = "f-b",
+    order = "e-e3",
   },
 
   {
