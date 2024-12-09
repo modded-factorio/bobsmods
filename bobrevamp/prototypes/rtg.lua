@@ -1,4 +1,15 @@
 if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
+  local powder_drop_move = {
+    filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+    volume = 0.7,
+    speed = 1.3,
+  }
+  local powder_pick = {
+    filename = "__base__/sound/item/landfill-inventory-pickup.ogg",
+    volume = 0.6,
+    speed = 1.2,
+  }
+
   data:extend({
     {
       type = "item",
@@ -8,6 +19,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
   })
 
@@ -58,6 +72,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         subgroup = "bob-resource-chemical",
         order = "f[sodium-chlorate]",
         stack_size = 100,
+        drop_sound = powder_drop_move,
+        inventory_move_sound = powder_drop_move,
+        pick_sound = powder_pick,
       },
       {
         type = "item",
@@ -67,6 +84,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         subgroup = "bob-resource-chemical",
         order = "f[sodium-chlorate]",
         stack_size = 100,
+        drop_sound = powder_drop_move,
+        inventory_move_sound = powder_drop_move,
+        pick_sound = powder_pick,
       },
 
       {
@@ -254,15 +274,30 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
     {
       type = "item",
       name = "rtg",
       icon = "__bobrevamp__/graphics/icons/technology/rtg.png",
       icon_size = 128,
-      subgroup = "bob-intermediates",
+      subgroup = "intermediate-product",
       order = "m[rtg]",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "recipe",
