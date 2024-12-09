@@ -1,4 +1,15 @@
 if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true then
+  local powder_drop_move = {
+    filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+    volume = 0.7,
+    speed = 1.3,
+  }
+  local powder_pick = {
+    filename = "__base__/sound/item/landfill-inventory-pickup.ogg",
+    volume = 0.6,
+    speed = 1.2,
+  }
+
   data:extend({
     {
       type = "fluid",
@@ -22,6 +33,18 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       subgroup = "bob-resource-chemical",
       order = "f[limestone]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/resource-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/resource-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "item",
@@ -31,6 +54,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
     {
       type = "item",
@@ -40,6 +66,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       subgroup = "bob-resource-chemical",
       order = "f[sodium-perchlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
 
     {
