@@ -570,6 +570,7 @@ data:extend({
     category = "chemistry",
     enabled = false,
     energy_required = 2,
+    emissions_multiplier = 0.25,
     ingredients = {
       { type = "item", name = "lead-ore", amount = 1 },
       { type = "fluid", name = "oxygen", amount = 10 },
@@ -734,6 +735,7 @@ data:extend({
     category = "chemistry",
     enabled = false,
     energy_required = 2,
+    emissions_multiplier = 0.25,
     ingredients = {
       { type = "item", name = "lead-ore", amount = 1 },
       { type = "fluid", name = "water", amount = 4 },
