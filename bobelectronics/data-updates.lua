@@ -2,6 +2,8 @@ require("prototypes.recipe-updates")
 require("prototypes.technology-updates")
 
 data.raw.recipe["copper-cable"].category = "electronics"
+data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
+data.raw.item["copper-cable"].order = "0-a1"
 
 if data.raw["recipe-category"]["chemical-furnace"] then
   if data.raw.recipe["carbon"] then
