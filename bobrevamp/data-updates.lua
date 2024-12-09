@@ -17,6 +17,7 @@ end
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "advanced-processing-unit")
 end
 if data.raw.item["nitinol-alloy"] then
   bobmods.lib.tech.add_prerequisite("rocket-silo", "nitinol-processing")
