@@ -297,8 +297,8 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           { type = "item", name = "solid-fuel", amount = 1 },
         },
         results = { { type = "item", name = "enriched-fuel", amount = 1 } },
-        subgroup = "bob-resource-chemical",
-        order = "d[enriched-fuel]",
+        subgroup = "bob-chemical-fuels",
+        order = "d[enriched-fuel]-2",
         crafting_machine_tint = {
           primary = { r = 0.9, g = 0.9, b = 0.9, a = 0.000 },
           secondary = { r = 0.8, g = 0.8, b = 0.8, a = 0.000 },
