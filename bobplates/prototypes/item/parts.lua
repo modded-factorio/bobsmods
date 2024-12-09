@@ -241,8 +241,8 @@ data:extend({
     name = "lithium-ion-battery",
     icon = "__bobplates__/graphics/icons/lithium-ion-battery.png",
     icon_size = 64,
-    subgroup = "bob-intermediates",
-    order = "f-cba[lithium-ion-battery]",
+    subgroup = "intermediate-product",
+    order = "b[chemistry]-d[battery]-2",
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
@@ -263,8 +263,8 @@ data:extend({
     name = "silver-zinc-battery",
     icon = "__bobplates__/graphics/icons/silver-zinc-battery.png",
     icon_size = 64,
-    subgroup = "bob-intermediates",
-    order = "f-cbb[silver-zinc-battery]",
+    subgroup = "intermediate-product",
+    order = "b[chemistry]-d[battery]-3",
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
@@ -285,7 +285,7 @@ data:extend({
     name = "bob-grinding-wheel",
     icon = "__bobplates__/graphics/icons/grinding-wheel.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
+    subgroup = "intermediate-product",
     order = "f-cca[bob-grinding-wheel]",
     stack_size = 100,
     drop_sound = {
@@ -309,7 +309,7 @@ data:extend({
     name = "bob-polishing-wheel",
     icon = "__bobplates__/graphics/icons/polishing-wheel.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
+    subgroup = "intermediate-product",
     order = "f-ccb[bob-polishing-wheel]",
     stack_size = 100,
     drop_sound = {
