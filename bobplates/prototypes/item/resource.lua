@@ -167,8 +167,8 @@ data:extend({
     name = "gas-canister",
     icon = "__bobplates__/graphics/icons/gas-canister.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f-b[gas-canister]",
+    subgroup = "intermediate-product",
+    order = "a[basic-intermediates]-d[gas-canister]",
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/metal-chest-inventory-move.ogg",
@@ -189,8 +189,8 @@ data:extend({
     name = "empty-canister",
     icon = "__bobplates__/graphics/icons/empty-canister.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f-c[empty-canister]",
+    subgroup = "intermediate-product",
+    order = "a[basic-intermediates]-d[fluid-canister]",
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/plastic-inventory-move.ogg",
