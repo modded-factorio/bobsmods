@@ -7,6 +7,18 @@ data:extend({
     subgroup = "intermediate-product",
     order = "m[heat-shield-tile]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.7
+    },
   },
   {
     type = "recipe",
