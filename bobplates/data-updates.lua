@@ -327,3 +327,78 @@ data.raw.recipe["steel-plate"].subgroup = "bob-material-smelting"
 data.raw.recipe["plastic-bar"].subgroup = "bob-material-chemical"
 data.raw.recipe["uranium-fuel-cell"].subgroup = "bob-fuel-cells"
 data.raw.recipe["nuclear-fuel-reprocessing"].order = "r[uranium-processing]-b[reprocessing]"
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-blue-alloy", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-orange-alloy", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-perchlorate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-hydroxide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alumina", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("powdered-tungsten", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-powder", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-nitride", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("cobalt-oxide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-carbide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-ruby-3", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-ruby-4", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-ruby-5", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sapphire-3", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sapphire-4", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sapphire-5", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-emerald-3", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-emerald-4", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-emerald-5", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-amethyst-3", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-amethyst-4", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-amethyst-5", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-topaz-3", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-topaz-4", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-topaz-5", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-diamond-3", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-diamond-4", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-diamond-5", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("thorium-232", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("uranium-235", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("uranium-238", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("battery", true)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-ion-battery", true)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silver-zinc-battery", true
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-lead-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-gold-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-nickel-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-zinc-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-aluminium-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-titanium-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-tungsten-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("cobalt-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("carbon", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-wafer", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-cobalt-oxide", false)
+
+  bobmods.lib.recipe.update_recycling_recipe({
+    "air-pump",
+    "air-pump-2",
+    "air-pump-3",
+    "air-pump-4",
+    "water-pump",
+    "water-pump-2",
+    "water-pump-3",
+    "water-pump-4",
+    "void-pump",
+    "bob-distillery",
+    "electrolyser",
+    "stone-furnace",
+    "steel-furnace",
+    "electric-furnace",
+    "stone-mixing-furnace",
+    "steel-mixing-furnace",
+    "electric-mixing-furnace",
+    "stone-chemical-furnace",
+    "steel-chemical-furnace",
+    "electric-chemical-furnace",
+    "uranium-fuel-cell",
+  })
+end
