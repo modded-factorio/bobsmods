@@ -61,7 +61,9 @@ bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-powder")
 
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "bob-titanium-plate")
 
-bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungstic-acid")
+if data.raw.recipe["tungstic-acid"] then
+  bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungstic-acid")
+end
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungsten-oxide")
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "powdered-tungsten")
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "bob-tungsten-plate")
