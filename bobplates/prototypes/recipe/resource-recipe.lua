@@ -167,7 +167,6 @@ data:extend({
     type = "recipe",
     name = "gas-canister",
     category = "crafting",
-    subgroup = "bob-intermediates",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -181,7 +180,6 @@ data:extend({
     type = "recipe",
     name = "empty-canister",
     category = "crafting",
-    subgroup = "bob-intermediates",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -222,7 +220,8 @@ data:extend({
       { type = "item", name = "wood", amount = 2 },
     },
     results = { { type = "item", name = "coal", amount = 1 } },
-    subgroup = "bob-chemical-fuels",
+    subgroup = "bob-resource",
+    order = "c",
     allow_decomposition = false,
   },
 
