@@ -1,6 +1,6 @@
 local smallammopartsound = {
   filename = "__base__/sound/item/ammo-small-inventory-pickup.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 
 data:extend({
@@ -354,8 +354,8 @@ data:extend({
     name = "rocket-engine",
     icon = "__bobwarfare__/graphics/icons/rocket-engine.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f[rocket-engine]",
+    subgroup = "intermediate-product",
+    order = "m[rocket-engine]",
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
