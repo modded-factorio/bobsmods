@@ -34,8 +34,4 @@ if data.raw["recipe-category"]["mixing-furnace"] then
   end
 end
 
-if data.raw["item-group"]["bob-intermediate-products"] then
-  data.raw["item-subgroup"]["body-parts"].group = "bob-intermediate-products"
-end
-
 require("prototypes.recipe-updates")
