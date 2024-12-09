@@ -9,7 +9,17 @@ end
 
 --Electrolyser power
 if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
-  data.raw["assembling-machine"]["electrolyser"].energy_usage = "1050kW"
+  if feature_flags["quality"] then
+    data.raw.fluid["hydrogen"].fuel_value = "35kJ"
+    data.raw.fluid["deuterium"].fuel_value = "35kJ"
+    data.raw.recipe["water-electrolysis"].energy_required = 2
+    data.raw.recipe["heavy-water-electrolysis"].energy_required = 2
+    data.raw["assembling-machine"]["electrolyser"].energy_usage = "950kW"
+    data.raw["assembling-machine"]["electrolyser"].energy_source.drain = "11kW"
+  else
+    data.raw["assembling-machine"]["electrolyser"].energy_usage = "1050kW"
+    data.raw["assembling-machine"]["electrolyser"].energy_source.drain = "12kW"
+  end
 end
 
 --change icons.
@@ -43,8 +53,10 @@ end
 
 -- add Assembling Machine catagory.
 bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "crafting-machine")
-bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "distillery") -- Adds distilling recipies to assembling machines that can handle fluids
 bobmods.lib.machine.type_if_add_category("assembling-machine", "chemistry", "distillery") -- Adds distilling recipies to chemical plants
+if not data.raw.furnace["bob-distillery"] then
+  bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "distillery") -- Adds distilling recipies to assembling machines that can handle fluids
+end
 
 -- Reduce cost of Steel and new Steel
 if settings.startup["bobmods-plates-cheapersteel"].value == true then
@@ -263,3 +275,50 @@ if not bobmods.ores.cobalt.enabled then
   bobmods.lib.tech.remove_recipe_unlock("cobalt-processing", "cobalt-oxide")
   bobmods.lib.recipe.hide("cobalt-oxide")
 end
+
+--Intermediate reogranization
+data.raw["item-subgroup"]["fluid-recipes"].group = "bob-fluid-products"
+data.raw["item-subgroup"]["science-pack"].order = "a"
+data.raw["item-subgroup"]["intermediate-product"].order = "c"
+
+data.raw.fluid.water.subgroup = "bob-fluid"
+data.raw.fluid.steam.subgroup = "bob-fluid"
+data.raw.fluid["crude-oil"].subgroup = "bob-fluid"
+data.raw.fluid["petroleum-gas"].subgroup = "bob-fluid"
+data.raw.fluid["light-oil"].subgroup = "bob-fluid"
+data.raw.fluid["heavy-oil"].subgroup = "bob-fluid"
+data.raw.fluid.lubricant.subgroup = "bob-fluid"
+data.raw.fluid["sulfuric-acid"].subgroup = "bob-fluid"
+
+data.raw.item["solid-fuel"].subgroup = "bob-chemical-fuels"
+data.raw.item["rocket-fuel"].subgroup = "bob-chemical-fuels"
+data.raw.item["nuclear-fuel"].subgroup = "bob-chemical-fuels"
+data.raw.item["iron-plate"].subgroup = "bob-material"
+data.raw.item["copper-plate"].subgroup = "bob-material"
+data.raw.item["steel-plate"].subgroup = "bob-material"
+data.raw.item["uranium-fuel-cell"].order = "r[uranium-processing]-a[uranium-fuel-cell]"
+data.raw.item["nuclear-fuel"].subgroup = "bob-chemical-fuels"
+data.raw.item["nuclear-fuel"].order = "e[nuclear-fuel]"
+data.raw.item["iron-gear-wheel"].subgroup = "bob-gears"
+data.raw.item.battery.subgroup = "intermediate-product"
+data.raw.item.explosives.subgroup = "intermediate-product"
+if mods["bobgreenhouse"] then
+  data.raw.item["wood-pellets"].subgroup = "bob-chemical-fuels"
+  data.raw.item.seedling.subgroup = "bob-resource"
+  data.raw.recipe["bob-basic-greenhouse-cycle"].subgroup = "bob-resource"
+  data.raw.recipe["bob-advanced-greenhouse-cycle"].subgroup = "bob-resource"
+  data.raw.recipe["bob-basic-greenhouse-cycle"].order = "b[greenhouse-cycle-1]"
+  data.raw.recipe["bob-advanced-greenhouse-cycle"].order = "b[greenhouse-cycle-2]"
+end
+
+data.raw.recipe["solid-fuel-from-heavy-oil"].subgroup = "bob-chemical-fuels"
+data.raw.recipe["solid-fuel-from-light-oil"].subgroup = "bob-chemical-fuels"
+data.raw.recipe["solid-fuel-from-petroleum-gas"].subgroup = "bob-chemical-fuels"
+data.raw.recipe["nuclear-fuel"].subgroup = "bob-chemical-fuels"
+data.raw.recipe["nuclear-fuel"].order = "e[nuclear-fuel]"
+data.raw.recipe["iron-plate"].subgroup = "bob-material-smelting"
+data.raw.recipe["copper-plate"].subgroup = "bob-material-smelting"
+data.raw.recipe["steel-plate"].subgroup = "bob-material-smelting"
+data.raw.recipe["plastic-bar"].subgroup = "bob-material-chemical"
+data.raw.recipe["uranium-fuel-cell"].subgroup = "bob-fuel-cells"
+data.raw.recipe["nuclear-fuel-reprocessing"].order = "r[uranium-processing]-b[reprocessing]"
