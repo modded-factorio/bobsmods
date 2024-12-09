@@ -13,12 +13,6 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "bob-intermediates",
-    group = "intermediate-products",
-    order = "e-1",
-  },
-  {
-    type = "item-subgroup",
     name = "bob-robot-parts",
     group = "intermediate-products",
     order = "e-e",
@@ -92,12 +86,6 @@ data:extend({
     name = "beam-rifle",
   },
 })
-
-if data.raw["item-group"]["bob-intermediate-products"] then
-  data.raw["item-subgroup"]["bob-ammo-parts"].group = "bob-intermediate-products"
-  data.raw["item-subgroup"]["bob-intermediates"].group = "bob-intermediate-products"
-  data.raw["item-subgroup"]["bob-robot-parts"].group = "bob-intermediate-products"
-end
 
 if data.raw["item-group"]["bob-resource-products"] then
   data.raw["item-subgroup"]["bob-resource"].group = "bob-resource-products"
