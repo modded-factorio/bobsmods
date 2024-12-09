@@ -209,7 +209,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         results = {
           { type = "item", name = "sodium-hydroxide", amount = 1 },
           { type = "fluid", name = "chlorine", amount = 25 },
-          { type = "fluid", name = "hydrogen", amount = 20 },
+          { type = "fluid", name = "hydrogen", amount = 10 },
         },
         allow_decomposition = false,
       },
