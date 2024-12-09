@@ -261,7 +261,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       icon = "__bobrevamp__/graphics/icons/technology/rtg.png",
       icon_size = 128,
       subgroup = "bob-intermediates",
-      order = "f[rtg]",
+      order = "m[rtg]",
       stack_size = 50,
     },
     {
