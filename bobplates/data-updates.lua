@@ -362,7 +362,7 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("uranium-238", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("battery", true)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-ion-battery", true)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silver-zinc-battery", true
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silver-zinc-battery", true)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-lead-plate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-gold-plate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-nickel-plate", false)
