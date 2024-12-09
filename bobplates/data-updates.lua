@@ -329,8 +329,10 @@ data.raw.recipe["uranium-fuel-cell"].subgroup = "bob-fuel-cells"
 data.raw.recipe["nuclear-fuel-reprocessing"].order = "r[uranium-processing]-b[reprocessing]"
 
 if feature_flags["quality"] then
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-blue-alloy", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-orange-alloy", false)
+  if data.raw.item["alien-blue-alloy"] then
+    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-blue-alloy", false)
+    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-orange-alloy", false)
+  end
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-perchlorate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-hydroxide", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alumina", false)
