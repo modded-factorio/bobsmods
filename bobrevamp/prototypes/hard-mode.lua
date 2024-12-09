@@ -16,6 +16,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       name = "carbon-dioxide",
       icon = "__bobrevamp__/graphics/icons/carbon-dioxide.png",
       icon_size = 64,
+      subgroup = "bob-fluid",
       order = "a[fluid]-g[carbon-dioxide]",
       default_temperature = 15,
       max_temperature = 100,
