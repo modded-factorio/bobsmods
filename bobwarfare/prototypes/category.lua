@@ -9,7 +9,7 @@ data:extend({
     type = "item-subgroup",
     name = "bob-ammo-parts",
     group = "intermediate-products",
-    order = "d-a",
+    order = "x-a",
   },
   {
     type = "item-subgroup",
