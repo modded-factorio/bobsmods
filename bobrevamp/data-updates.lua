@@ -18,6 +18,7 @@ if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "advanced-processing-unit")
 end
 if data.raw.item["nitinol-alloy"] then
   bobmods.lib.tech.add_prerequisite("rocket-silo", "nitinol-processing")
@@ -27,6 +28,8 @@ end
 bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "low-density-structure", amount = 50 })
 bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "rocket-control-unit", amount = 25 })
 bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "heat-shield-tile", amount = 100 })
+bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "heat-shield-tile", amount = 100 })
+bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "electric-engine-unit", amount = 40 })
 
 -- oil overhaul
 if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup["bobmods-revamp-oil"].value == true then
@@ -288,5 +291,6 @@ if feature_flags["quality"] then
     "rocket-silo",
     "rocket-part",
     "satellite",
+    "cargo-landing-pad",
   })
 end
