@@ -81,7 +81,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       name = "burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
       icon_size = 32,
-      localised_description = { "entity-description.burner-reactor", 750 },
+      localised_description = { "entity-description.burner-reactor", "750" },
       max_health = 300,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.3, result = "burner-reactor" },
@@ -103,7 +103,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         type = "burner",
         fuel_categories = { "chemical" },
         effectivity = 1,
-        emissions_per_minute = 15,
+        emissions_per_minute = { pollution = 15 },
         fuel_inventory_size = 1,
         smoke = {
           {
@@ -207,7 +207,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       data.raw.reactor["burner-reactor"],
       {
         name = "burner-reactor-2",
-        localised_description = { "entity-description.burner-reactor", 1000 },
+        localised_description = { "entity-description.burner-reactor", "1000" },
         minable = { result = "burner-reactor-2" },
         max_health = 500,
         consumption = "9MW",
@@ -252,7 +252,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         name = "fluid-reactor",
         minable = { result = "fluid-reactor" },
         next_upgrade = "fluid-reactor-2",
-        localised_description = { "entity-description.fluid-reactor", 750 },
+        localised_description = { "entity-description.fluid-reactor", "750" },
       },
     }),
   })
@@ -287,7 +287,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       {
         name = "fluid-reactor-2",
         minable = { result = "fluid-reactor-2" },
-        localised_description = { "entity-description.fluid-reactor", 1000 },
+        localised_description = { "entity-description.fluid-reactor", "1000" },
       },
     }),
   })
@@ -362,16 +362,14 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   local fluid_reactor_energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = 10,
+    emissions_per_minute = { pollution = 10 },
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_connections = {
-        { type = "input-output", position = { 0, 2 } },
-        { type = "input-output", position = { 0, -2 } },
-        { type = "input-output", position = { 2, 0 } },
-        { type = "input-output", position = { -2, 0 } },
+        { flow_direction = "input-output", position = { 0, 1 }, direction = defines.direction.south },
+        { flow_direction = "input-output", position = { 0, -1 }, direction = defines.direction.north },
+        { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
+        { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
