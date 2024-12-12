@@ -51,10 +51,11 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         usage_priority = "secondary-output",
       },
       burner = {
-        fuel_category = "chemical",
+        type = "burner",
+        fuel_categories = {"chemical"},
         effectivity = 0.75,
         fuel_inventory_size = 1,
-        emissions_per_minute = 15,
+        emissions_per_minute = {pollution = 15},
         smoke = {
           {
             name = "smoke",
