@@ -19,7 +19,6 @@ then
       type = "item",
       name = "heat-pipe-2",
       icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[nuclear-energy]-c[heat-pipe-2]",
       place_result = "heat-pipe-2",
@@ -29,7 +28,6 @@ then
       type = "item",
       name = "heat-pipe-3",
       icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[nuclear-energy]-c[heat-pipe-3]",
       place_result = "heat-pipe-3",
@@ -39,7 +37,6 @@ then
       type = "item",
       name = "heat-pipe-4",
       icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[nuclear-energy]-c[heat-pipe-4]",
       place_result = "heat-pipe-4",
@@ -86,7 +83,6 @@ then
         name = "heat-pipe-2",
         localised_description = { "entity-description.heat-pipe", "1000" },
         icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
-        icon_size = 32,
         minable = { mining_time = 0.1, result = "heat-pipe-2" },
         max_health = 300,
         heat_buffer = {
@@ -121,7 +117,6 @@ then
         name = "heat-pipe-3",
         localised_description = { "entity-description.heat-pipe", "1250" },
         icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
-        icon_size = 32,
         minable = { mining_time = 0.1, result = "heat-pipe-3" },
         max_health = 300,
         heat_buffer = {
@@ -156,7 +151,6 @@ then
         name = "heat-pipe-4",
         localised_description = { "entity-description.heat-pipe", "1500" },
         icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
-        icon_size = 32,
         minable = { mining_time = 0.1, result = "heat-pipe-4" },
         max_health = 400,
         heat_buffer = {
