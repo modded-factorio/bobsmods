@@ -23,6 +23,18 @@ then
       order = "f[nuclear-energy]-c[heat-pipe-2]",
       place_result = "heat-pipe-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "item",
@@ -32,6 +44,18 @@ then
       order = "f[nuclear-energy]-c[heat-pipe-3]",
       place_result = "heat-pipe-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "item",
@@ -41,6 +65,18 @@ then
       order = "f[nuclear-energy]-c[heat-pipe-4]",
       place_result = "heat-pipe-4",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
