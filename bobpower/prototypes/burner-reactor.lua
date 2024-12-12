@@ -2,16 +2,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   local function lower_layer_picture(suffix)
     return {
       filename = "__bobpower__/graphics/burner-reactor/reactor-pipes" .. suffix .. ".png",
-      width = 96,
-      height = 96,
+      width = 192,
+      height = 192,
+      scale = 0.5,
       shift = { -0.03125, -0.1875 },
-      hr_version = {
-        filename = "__bobpower__/graphics/burner-reactor/hr-reactor-pipes" .. suffix .. ".png",
-        width = 192,
-        height = 192,
-        scale = 0.5,
-        shift = { -0.03125, -0.1875 },
-      },
     }
   end
 
@@ -19,16 +13,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
-        width = 32,
-        height = 32,
+        width = 64,
+        height = 64,
         variation_count = 12,
-        hr_version = {
-          filename = "__bobpower__/graphics/burner-reactor/hr-reactor-connect-patches" .. suffix .. ".png",
-          width = 64,
-          height = 64,
-          variation_count = 12,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
     }
   end
@@ -37,18 +25,11 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
-        width = 32,
-        height = 32,
+        width = 64,
+        height = 64,
         variation_count = 12,
-        y = 32,
-        hr_version = {
-          filename = "__bobpower__/graphics/burner-reactor/hr-reactor-connect-patches" .. suffix .. ".png",
-          width = 64,
-          height = 64,
-          variation_count = 12,
-          y = 64,
-          scale = 0.5,
-        },
+        y = 64,
+        scale = 0.5,
       },
     }
   end
@@ -58,7 +39,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-a[burner-reactor-1]",
       place_result = "burner-reactor",
@@ -80,7 +60,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "reactor",
       name = "burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       localised_description = { "entity-description.burner-reactor", "750" },
       max_health = 300,
       flags = { "placeable-neutral", "player-creation" },
@@ -184,7 +163,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "burner-reactor-2",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-a[burner-reactor-2]",
       place_result = "burner-reactor-2",
@@ -229,7 +207,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "fluid-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-b[fluid-reactor-1]",
       place_result = "fluid-reactor",
@@ -262,7 +239,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "fluid-reactor-2",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-b[fluid-reactor-2]",
       place_result = "fluid-reactor-2",
