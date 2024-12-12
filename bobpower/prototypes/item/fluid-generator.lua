@@ -8,6 +8,18 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       order = "fluid-generator-1",
       place_result = "fluid-generator",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -18,6 +30,18 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       order = "fluid-generator-1",
       place_result = "fluid-generator-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -28,6 +52,18 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       order = "fluid-generator-1",
       place_result = "fluid-generator-3",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
   })
 
@@ -41,6 +77,18 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         order = "fluid-generator-1",
         place_result = "hydrazine-generator",
         stack_size = 10,
+        drop_sound = {
+          filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+          volume = 0.7,
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+          volume = 0.7,
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+          volume = 0.8,
+        },
       },
     })
   end
