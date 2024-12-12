@@ -3,14 +3,14 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     return {
       layers = {
         { --bodge layer
-          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan-spin.png",
+          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan-spin.png",
           priority = "extra-high",
           width = 1,
           height = 1,
           frame_count = 120,
         },
         {
-          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator.png",
+          filename = "__bobpower__/graphics/fluid-generator/fluid-generator.png",
           priority = "extra-high",
           width = 264,
           height = 284,
@@ -20,7 +20,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           scale = 0.5,
         },
         {
-          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan.png",
+          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan.png",
           priority = "extra-high",
           width = 78,
           height = 70,
@@ -30,7 +30,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           scale = 0.5,
         },
         {
-          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-fan-spin.png",
+          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan-spin.png",
           priority = "extra-high",
           width = 60,
           height = 46,
@@ -40,7 +40,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           scale = 0.5,
         },
         {
-          filename = "__bobpower__/graphics/fluid-generator/hr-fluid-generator-shadow.png",
+          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-shadow.png",
           priority = "extra-high",
           width = 311,
           height = 194,
@@ -59,13 +59,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       type = "generator",
       name = "fluid-generator",
       icon = "__bobpower__/graphics/icons/fluid-generator.png",
-      icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 1, result = "fluid-generator" },
       max_health = 500,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
-      effectivity = 1,
+      effectivity = 0.75,
       fluid_usage_per_tick = 1,
       maximum_temperature = 165,
       burns_fluid = true,
@@ -123,7 +122,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           starting_frame_deviation = 60,
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       working_sound = {
         sound = {
           filename = "__base__/sound/steam-engine-90bpm.ogg",
@@ -139,13 +138,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       type = "generator",
       name = "fluid-generator-2",
       icon = "__bobpower__/graphics/icons/fluid-generator.png",
-      icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 1, result = "fluid-generator-2" },
       max_health = 650,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
-      effectivity = 1,
+      effectivity = 0.8,
       fluid_usage_per_tick = 1.5,
       maximum_temperature = 165,
       burns_fluid = true,
@@ -203,7 +201,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           starting_frame_deviation = 60,
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       working_sound = {
         sound = {
           filename = "__base__/sound/steam-engine-90bpm.ogg",
@@ -219,13 +217,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       type = "generator",
       name = "fluid-generator-3",
       icon = "__bobpower__/graphics/icons/fluid-generator.png",
-      icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 1, result = "fluid-generator-3" },
       max_health = 800,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
-      effectivity = 1,
+      effectivity = 0.85,
       fluid_usage_per_tick = 2,
       maximum_temperature = 165,
       burns_fluid = true,
@@ -282,7 +279,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           starting_frame_deviation = 60,
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       working_sound = {
         sound = {
           filename = "__base__/sound/steam-engine-90bpm.ogg",
@@ -301,7 +298,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         type = "generator",
         name = "hydrazine-generator",
         icon = "__bobpower__/graphics/icons/fluid-generator.png",
-        icon_size = 32,
         flags = { "placeable-neutral", "player-creation" },
         minable = { mining_time = 1, result = "hydrazine-generator" },
         max_health = 950,
@@ -365,7 +361,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             starting_frame_deviation = 60,
           },
         },
-        vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
         working_sound = {
           sound = {
             filename = "__base__/sound/steam-engine-90bpm.ogg",
