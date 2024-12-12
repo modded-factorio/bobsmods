@@ -14,12 +14,9 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.fluid["deuterium"].fuel_value = "35kJ"
     data.raw.recipe["water-electrolysis"].energy_required = 2
     data.raw.recipe["heavy-water-electrolysis"].energy_required = 2
-    data.raw["assembling-machine"]["electrolyser"].energy_usage = "950kW"
-    data.raw["assembling-machine"]["electrolyser"].energy_source.drain = "11kW"
-  else
-    data.raw["assembling-machine"]["electrolyser"].energy_usage = "1050kW"
-    data.raw["assembling-machine"]["electrolyser"].energy_source.drain = "12kW"
   end
+  data.raw["assembling-machine"]["electrolyser"].energy_usage = "1050kW"
+  data.raw["assembling-machine"]["electrolyser"].energy_source.drain = "12kW"
 end
 
 --change icons.
