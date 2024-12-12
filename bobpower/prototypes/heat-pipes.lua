@@ -6,7 +6,7 @@ then
   data.raw.item["heat-pipe"].order = "f[nuclear-energy]-c[heat-pipe-1]"
   data.raw["heat-pipe"]["heat-pipe"].fast_replaceable_group = "heat-pipe"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.minimum_glow_temperature = 300
-  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "4GW"
+  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "2GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
   data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", "750" }
   bobmods.lib.recipe.set_ingredients(
@@ -90,7 +90,7 @@ then
         minable = { mining_time = 0.1, result = "heat-pipe-2" },
         max_health = 300,
         heat_buffer = {
-          max_transfer = "9GW",
+          max_transfer = "4GW",
           max_temperature = 1000,
           minimum_glow_temperature = 400,
         },
@@ -125,7 +125,7 @@ then
         minable = { mining_time = 0.1, result = "heat-pipe-3" },
         max_health = 300,
         heat_buffer = {
-          max_transfer = "16GW",
+          max_transfer = "7GW",
           max_temperature = 1250,
           minimum_glow_temperature = 400,
         },
@@ -160,7 +160,7 @@ then
         minable = { mining_time = 0.1, result = "heat-pipe-4" },
         max_health = 400,
         heat_buffer = {
-          max_transfer = "25GW",
+          max_transfer = "10GW",
           max_temperature = 1500,
           minimum_glow_temperature = 450,
         },
