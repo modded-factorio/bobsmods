@@ -43,6 +43,18 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       order = "f[heat-energy]-a[burner-reactor-1]",
       place_result = "burner-reactor",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -68,7 +80,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       corpse = "medium-remnants",
       fast_replaceable_group = "burner-reactor",
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       resistances = {
         {
           type = "fire",
@@ -167,6 +179,18 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       order = "f[heat-energy]-a[burner-reactor-2]",
       place_result = "burner-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -211,6 +235,18 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       order = "f[heat-energy]-b[fluid-reactor-1]",
       place_result = "fluid-reactor",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -243,6 +279,18 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       order = "f[heat-energy]-b[fluid-reactor-2]",
       place_result = "fluid-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
