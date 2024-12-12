@@ -6,22 +6,40 @@ if settings.startup["bobmods-power-nuclear"].value == true then
   data.raw.reactor["nuclear-reactor"].default_fuel_glow_color = { 0, 1, 0, 1 } -- color used as working_light_picture tint for fuels that don't have glow color defined
   data.raw.reactor["nuclear-reactor"].localised_description =
     { "", { "entity-description.nuclear-reactor" }, { "entity-description.reactor-max-temperature", "1000" } }
+  data.raw.reactor["nuclear-reactor"].lower_layer_picture = {
+    filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes.png",
+    width = 320,
+    height = 316,
+    scale = 0.5,
+    shift = { -0.03125, -0.15625 },
+  }
+  data.raw.reactor["nuclear-reactor"].connection_patches_connected = {
+    sheet = {
+      filename = "__bobpower__/graphics/nuclear-reactor/reactor-connect-patches.png",
+      width = 64,
+      height = 64,
+      variation_count = 12,
+      scale = 0.5,
+    },
+  }
+  data.raw.reactor["nuclear-reactor"].connection_patches_disconnected = {
+    sheet = {
+      filename = "__bobpower__/graphics/nuclear-reactor/reactor-connect-patches.png",
+      width = 64,
+      height = 64,
+      variation_count = 12,
+      y = 64,
+      scale = 0.5,
+    },
+  }
   data.raw.reactor["nuclear-reactor"].working_light_picture = {
     filename = "__bobpower__/graphics/nuclear-reactor/reactor-lights.png",
-    width = 160,
-    height = 160,
+    width = 320,
+    height = 320,
+    scale = 0.5,
     shift = { -0.03125, -0.1875 },
     blend_mode = "additive",
     draw_as_glow = true,
-    hr_version = {
-      filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-lights.png",
-      width = 320,
-      height = 320,
-      scale = 0.5,
-      shift = { -0.03125, -0.1875 },
-      blend_mode = "additive",
-      draw_as_glow = true,
-    },
   }
 
   data:extend({
@@ -45,47 +63,28 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         },
         lower_layer_picture = {
           filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes-2.png",
-          width = 156,
-          height = 156,
-          shift = { -0.0625, -0.125 },
-          hr_version = {
-            filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-pipes-2.png",
-            width = 320,
-            height = 316,
-            scale = 0.5,
-            shift = { -0.03125, -0.15625 },
-          },
+          width = 320,
+          height = 316,
+          scale = 0.5,
+          shift = { -0.03125, -0.15625 },
         },
         connection_patches_connected = {
           sheet = {
             filename = "__bobpower__/graphics/nuclear-reactor/reactor-connect-patches-2.png",
-            width = 32,
-            height = 32,
+            width = 64,
+            height = 64,
             variation_count = 12,
-            hr_version = {
-              filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-connect-patches-2.png",
-              width = 64,
-              height = 64,
-              variation_count = 12,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
         connection_patches_disconnected = {
           sheet = {
             filename = "__bobpower__/graphics/nuclear-reactor/reactor-connect-patches-2.png",
-            width = 32,
-            height = 32,
+            width = 64,
+            height = 64,
             variation_count = 12,
-            y = 32,
-            hr_version = {
-              filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-connect-patches-2.png",
-              width = 64,
-              height = 64,
-              variation_count = 12,
-              y = 64,
-              scale = 0.5,
-            },
+            y = 64,
+            scale = 0.5,
           },
         },
       },
@@ -113,47 +112,28 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         },
         lower_layer_picture = {
           filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes-3.png",
-          width = 156,
-          height = 156,
-          shift = { -0.0625, -0.125 },
-          hr_version = {
-            filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-pipes-3.png",
-            width = 320,
-            height = 316,
-            scale = 0.5,
-            shift = { -0.03125, -0.15625 },
-          },
+          width = 320,
+          height = 316,
+          scale = 0.5,
+          shift = { -0.03125, -0.15625 },
         },
         connection_patches_connected = {
           sheet = {
             filename = "__bobpower__/graphics/nuclear-reactor/reactor-connect-patches-3.png",
-            width = 32,
-            height = 32,
+            width = 64,
+            height = 64,
             variation_count = 12,
-            hr_version = {
-              filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-connect-patches-3.png",
-              width = 64,
-              height = 64,
-              variation_count = 12,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
         connection_patches_disconnected = {
           sheet = {
             filename = "__bobpower__/graphics/nuclear-reactor/reactor-connect-patches-3.png",
-            width = 32,
-            height = 32,
+            width = 64,
+            height = 64,
             variation_count = 12,
-            y = 32,
-            hr_version = {
-              filename = "__bobpower__/graphics/nuclear-reactor/hr-reactor-connect-patches-3.png",
-              width = 64,
-              height = 64,
-              variation_count = 12,
-              y = 64,
-              scale = 0.5,
-            },
+            y = 64,
+            scale = 0.5,
           },
         },
       },
