@@ -424,6 +424,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       {
         type = "recipe",
         name = "fluid-reactor-from-fluid-furnace",
+        localised_name = { "entity-name.fluid-reactor" },
         energy_required = 2,
         enabled = false,
         ingredients = {
