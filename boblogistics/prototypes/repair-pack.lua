@@ -116,6 +116,7 @@ data:extend({
   },
 })
 
+data.raw.technology["repair-pack"].unit.count = 15
 data:extend({
   {
     type = "technology",
@@ -124,6 +125,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "steel-processing",
+      "repair-pack",
     },
     effects = {
       {
@@ -132,7 +134,7 @@ data:extend({
       },
     },
     unit = {
-      count = 20,
+      count = 25,
       ingredients = {
         { "automation-science-pack", 1 },
       },
