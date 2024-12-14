@@ -183,10 +183,10 @@ if
   settings.startup["bobmods-logistics-inserteroverhaul"]
   and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
 then
-  bobmods.lib.tech.add_prerequisite("advanced-research", "express-inserters")
+  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter-2")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "express-inserters")
 else
-  bobmods.lib.tech.add_prerequisite("advanced-research", "fast-inserter")
+  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "fast-inserter")
 end
 
