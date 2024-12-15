@@ -3,6 +3,7 @@ Version: 1.3.0
 Date: ???
   Changes:
     - Update for Factorio 2.0 #189
+    - Changed axe techs to be unlocked via trigger rather than via science packs (when Bob's MCI mod is enabled) #240
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
