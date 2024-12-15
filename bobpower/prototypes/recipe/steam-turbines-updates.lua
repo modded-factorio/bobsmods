@@ -122,7 +122,7 @@ if settings.startup["bobmods-power-steam"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("steam-turbine-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "advanced-processing-unit")
   else
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "processing-unit")
   end

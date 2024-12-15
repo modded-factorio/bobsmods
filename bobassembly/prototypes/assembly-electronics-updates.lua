@@ -1,33 +1,61 @@
 if settings.startup["bobmods-assembly-electronicmachines"].value == true then
-  if data.raw.item["basic-circuit-board"] then
-    bobmods.lib.recipe.replace_ingredient("electronics-machine-1", "electronic-circuit", "basic-circuit-board")
+  if data.raw.item["bronze-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-1", "steel-plate", "bronze-alloy")
+    if mods["bobelectronics"] then
+      bobmods.lib.tech.add_prerequisite("electronics-machine-1", "bob-electronics")
+    else
+      bobmods.lib.tech.add_prerequisite("electronics-machine-1", "alloy-processing")
+    end
   end
 
-  if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-2", { type = "item", name = "steel-bearing", amount = 5 })
+  if data.raw.item["cobalt-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-2", "iron-gear-wheel", "cobalt-steel-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-2", "cobalt-processing")
+  end
+
+  if data.raw.item["cobalt-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "electronics-machine-2",
+      { type = "item", name = "cobalt-steel-bearing", amount = 5 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("electronics-machine-2", { type = "item", name = "iron-gear-wheel", amount = 3 })
   end
 
-  if data.raw.item["steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("electronics-machine-2", "iron-gear-wheel", "steel-gear-wheel")
+  if data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-2", "steel-plate", "bob-aluminium-plate")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-2", "aluminium-processing")
   end
 
-  if data.raw.item["bob-titanium-plate"] then
+  if data.raw.item["nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "steel-plate", "nitinol-alloy")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "nitinol-processing")
+  elseif data.raw.item["bob-titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("electronics-machine-3", "titanium-processing")
+  end
+
+  if data.raw.item["copper-tungsten-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-plate", "copper-tungsten-alloy")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "tungsten-alloy-processing")
   elseif data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "steel-plate", "bob-tungsten-plate")
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-plate", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("electronics-machine-3", "tungsten-processing")
   end
 
-  if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "titanium-bearing", amount = 5 })
+  if data.raw.item["ceramic-bearing"] then
+    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "ceramic-bearing", amount = 5 })
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "ceramics")
+  elseif data.raw.item["nitinol-bearing"] then
+    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "nitinol-bearing", amount = 5 })
   else
     bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "iron-gear-wheel", amount = 3 })
   end
 
-  if data.raw.item["titanium-gear-wheel"] then
+  if data.raw.item["nitinol-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-gear-wheel", "nitinol-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "nitinol-processing")
+  elseif data.raw.item["titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "iron-gear-wheel", "titanium-gear-wheel")
     bobmods.lib.tech.add_prerequisite("electronics-machine-3", "titanium-processing")
   elseif data.raw.item["tungsten-gear-wheel"] then

@@ -305,16 +305,19 @@ data:extend({
     order = "c-a2[phenolic-board]",
     stack_size = 200,
     drop_sound = {
-      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
       volume = 0.7,
+      speed = 0.85,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
       volume = 0.7,
+      speed = 0.85,
     },
     pick_sound = {
-      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
     },
   },
 
@@ -342,16 +345,19 @@ data:extend({
     order = "c-a3[fibreglass-board]",
     stack_size = 200,
     drop_sound = {
-      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
     pick_sound = {
-      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
   },
 
@@ -417,16 +423,19 @@ data:extend({
     order = "c-b2[circuit-board]",
     stack_size = 200,
     drop_sound = {
-      filename = "__base__/sound/item/planner-inventory-move.ogg",
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
       volume = 0.7,
+      speed = 0.85,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/planner-inventory-move.ogg",
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
       volume = 0.7,
+      speed = 0.85,
     },
     pick_sound = {
-      filename = "__base__/sound/item/planner-inventory-pickup.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
     },
   },
 
@@ -457,16 +466,19 @@ data:extend({
     order = "c-b3[superior-circuit-board]",
     stack_size = 200,
     drop_sound = {
-      filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
     pick_sound = {
-      filename = "__base__/sound/item/planner-inventory-pickup.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
   },
 
@@ -497,16 +509,19 @@ data:extend({
     order = "c-b4[multi-layer-circuit-board]",
     stack_size = 200,
     drop_sound = {
-      filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
     inventory_move_sound = {
-      filename = "__base__/sound/item/planner-inventory-move.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
     pick_sound = {
-      filename = "__base__/sound/item/planner-inventory-pickup.ogg",
-      volume = 0.7,
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
     },
   },
 

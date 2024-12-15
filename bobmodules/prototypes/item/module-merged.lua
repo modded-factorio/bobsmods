@@ -13,7 +13,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 1,
       order = "m-rs-1",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -33,7 +32,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 2,
       order = "m-rs-2",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -53,7 +51,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 3,
       order = "m-rs-3",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -73,7 +70,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 4,
       order = "m-rs-4",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -93,7 +89,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 5,
       order = "m-rs-5",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -113,7 +108,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 6,
       order = "m-rs-6",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -133,7 +127,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 7,
       order = "m-rs-7",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -153,7 +146,6 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 8,
       order = "m-rs-8",
       stack_size = 100,
-      default_request_amount = 10,
       effect = { speed = { bonus = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
@@ -177,7 +169,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 1,
       order = "m-g-1",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -200,7 +191,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 2,
       order = "m-g-2",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -223,7 +213,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 3,
       order = "m-g-3",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -246,7 +235,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 4,
       order = "m-g-4",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -269,7 +257,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 5,
       order = "m-g-5",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -292,7 +279,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 6,
       order = "m-g-6",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -315,7 +301,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 7,
       order = "m-g-7",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -7 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -338,7 +323,6 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       tier = 8,
       order = "m-g-8",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
         consumption = { bonus = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
@@ -365,7 +349,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 1,
       order = "m-rp-1",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -388,7 +371,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 2,
       order = "m-rp-2",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -411,7 +393,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 3,
       order = "m-rp-3",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -434,7 +415,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 4,
       order = "m-rp-4",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -457,7 +437,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 5,
       order = "m-rp-5",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -480,7 +459,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 6,
       order = "m-rp-6",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -503,7 +481,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 7,
       order = "m-rp-7",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -526,7 +503,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       tier = 8,
       order = "m-rp-8",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       },
@@ -553,7 +529,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       tier = 1,
       order = "m-g-1",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
         pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
@@ -579,7 +554,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       tier = 2,
       order = "m-g-2",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
         pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
@@ -605,7 +579,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       tier = 3,
       order = "m-g-3",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
         pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
@@ -631,7 +604,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       tier = 4,
       order = "m-g-4",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
         pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
@@ -657,7 +629,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       tier = 5,
       order = "m-g-5",
       stack_size = 100,
-      default_request_amount = 10,
       effect = {
         productivity = { bonus = 10 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
         pollution = { bonus = -10 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },

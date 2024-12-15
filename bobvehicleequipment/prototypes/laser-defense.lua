@@ -55,7 +55,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-1",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
       volume = 0.6,
@@ -141,7 +140,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-2",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
       volume = 0.6,
@@ -227,7 +225,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-3",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
       volume = 0.6,
@@ -314,7 +311,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-4",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
       volume = 0.6,
@@ -401,7 +397,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-5",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
       volume = 0.6,
@@ -489,7 +484,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-d[laser-defense]-6",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/turret-inventory-move.ogg",
       volume = 0.6,

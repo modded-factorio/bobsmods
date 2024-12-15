@@ -154,7 +154,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       energy_usage = "170kW",
       mining_speed = 0.75,
       resource_searching_radius = 3.49,
-      module_slots = 3,
+      module_slots = 4,
       tint = { r = 0.7, g = 0.2, b = 0.1, a = 1 },
       circuit_wire_max_distance = 10,
       emissions_per_minute = { pollution = 8 },
@@ -170,7 +170,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       energy_usage = "270kW",
       mining_speed = 1.25,
       resource_searching_radius = 5.49,
-      module_slots = 4,
+      module_slots = 5,
       tint = { r = 0.2, g = 0.35, b = 0.5, a = 1 },
       circuit_wire_max_distance = 12.5,
       emissions_per_minute = { pollution = 6 },
@@ -186,7 +186,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       energy_usage = "380kW",
       mining_speed = 2,
       resource_searching_radius = 6.49,
-      module_slots = 4,
+      module_slots = 6,
       tint = { r = 0.7, g = 0.25, b = 0.7, a = 1 },
       circuit_wire_max_distance = 15,
       emissions_per_minute = { pollution = 4 },
@@ -202,7 +202,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       energy_usage = "500kW",
       mining_speed = 3.25,
       resource_searching_radius = 8.49,
-      module_slots = 5,
+      module_slots = 8,
       tint = { r = 0.25, g = 0.5, b = 0.25, a = 1 },
       circuit_wire_max_distance = 17.5,
       emissions_per_minute = { pollution = 2 },
@@ -219,7 +219,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       order = "d-a-b-1",
       prerequisites = {
         "steel-processing",
-        "electronics",
+        "electric-mining-drill",
       },
       unit = {
         count = 50,
@@ -294,6 +294,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
       order = "d-a-b-4",
       prerequisites = {
         "bob-area-drills-3",
+        "production-science-pack",
       },
       unit = {
         count = 150,
