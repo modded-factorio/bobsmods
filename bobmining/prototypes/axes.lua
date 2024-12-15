@@ -3,16 +3,15 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
   data.raw.technology["steel-axe"].effects[1].modifier = 0.5
 
   if mods["bobplates"] then
-
-    data.raw.technology["steel-axe"].localised_name = {"technology-name.bronze-axe"}
-    data.raw.technology["steel-axe"].prerequisites = {"alloy-processing"}
+    data.raw.technology["steel-axe"].localised_name = { "technology-name.bronze-axe" }
+    data.raw.technology["steel-axe"].prerequisites = { "alloy-processing" }
     data.raw.technology["steel-axe"].research_trigger.item = "bronze-alloy"
 
     data:extend({
       {
         type = "technology",
         name = "steel-axe-2",
-        localised_name = {"technology-name.steel-axe"},
+        localised_name = { "technology-name.steel-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -28,7 +27,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "steel-axe-3",
-        localised_name = {"technology-name.cobalt-steel-axe"},
+        localised_name = { "technology-name.cobalt-steel-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -44,7 +43,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "steel-axe-4",
-        localised_name = {"technology-name.tungsten-axe"},
+        localised_name = { "technology-name.tungsten-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -60,7 +59,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "steel-axe-5",
-        localised_name = {"technology-name.nitinol-axe"},
+        localised_name = { "technology-name.nitinol-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -76,7 +75,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "steel-axe-6",
-        localised_name = {"technology-name.diamond-axe"},
+        localised_name = { "technology-name.diamond-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -90,9 +89,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         upgrade = true,
       },
     })
-
   else
-
     data:extend({
       {
         type = "technology",
@@ -211,7 +208,5 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         upgrade = true,
       },
     })
-
   end
-
 end

@@ -517,7 +517,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
           inventory_index = defines.inventory.mining_drill_modules,
           shift = { 0, 0.5 },
           multi_row_initial_height_modifier = -0.3,
-          max_icons_per_row = 3
+          max_icons_per_row = 3,
         },
       },
       fast_replaceable_group = "pumpjack",
