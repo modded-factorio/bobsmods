@@ -285,7 +285,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         type = "technology",
         name = "bob-steam-engine-1",
         icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-        icon_size = 128,
+        icon_size = 256,
         prerequisites = {
           "electricity",
           "steam-power",
