@@ -23,4 +23,15 @@ if settings.startup["bobmods-tech-colorupdate"].value == true then
   data.raw.technology["logistic-science-pack"].icon_size = 128
   data.raw.technology["utility-science-pack"].icon = "__base__/graphics/technology/logistic-science-pack.png"
   data.raw.technology["utility-science-pack"].icon_size = 256
+
+  
+  if feature_flags["quality"] then
+    bobmods.lib.recipe.update_recycling_recipe_icon("automation-science-pack-recycling", "__base__/graphics/icons/utility-science-pack.png")
+    bobmods.lib.recipe.update_recycling_recipe_icon("logistic-science-pack-recycling", "__base__/graphics/icons/automation-science-pack.png")
+    bobmods.lib.recipe.update_recycling_recipe_icon("utility-science-pack-recycling", "__base__/graphics/icons/logistic-science-pack.png")
+  end
+end
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_single("lab")
 end
