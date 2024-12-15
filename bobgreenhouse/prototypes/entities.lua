@@ -1,3 +1,11 @@
+circuit_connector_definitions["bob-greenhouse"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
+    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
+    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
+    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
+  })
+
 data:extend({
   {
     type = "assembling-machine",
@@ -9,6 +17,8 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     max_health = 250,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["bob-greenhouse"],
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     fast_replaceable_group = "bob-greenhouse",
@@ -17,7 +27,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = -10,
+      emissions_per_minute = { pollution = -10 },
     },
     energy_usage = "100kW", --"25kW",
     resistances = {
@@ -31,12 +41,12 @@ data:extend({
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -2 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { 0, -1 }, direction = defines.direction.north } },
+        secondary_draw_orders = { north = -1 },
       },
     },
-    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    allowed_effects = {},
     graphics_set = {
       animation = {
         filename = "__bobgreenhouse__/graphics/entity/greenhouse.png",
@@ -60,6 +70,6 @@ data:extend({
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "glass",
   },
 })
