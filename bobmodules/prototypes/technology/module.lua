@@ -787,54 +787,29 @@ data:extend({
   },
 })
 
-table.insert(data.raw.technology["speed-module-3"].effects, { type = "unlock-recipe", recipe = "speed-processor-2" })
-table.insert(
-  data.raw.technology["efficiency-module-3"].effects,
-  { type = "unlock-recipe", recipe = "efficiency-processor-2" }
-)
-table.insert(
-  data.raw.technology["productivity-module-3"].effects,
-  { type = "unlock-recipe", recipe = "productivity-processor-2" }
-)
-table.insert(
-  data.raw.technology["pollution-clean-module-3"].effects,
-  { type = "unlock-recipe", recipe = "pollution-clean-processor-2" }
-)
-table.insert(
-  data.raw.technology["pollution-create-module-3"].effects,
-  { type = "unlock-recipe", recipe = "pollution-create-processor-2" }
-)
+bobmods.lib.tech.add_recipe_unlock("speed-module-3", "speed-processor-2")
+bobmods.lib.tech.add_recipe_unlock("efficiency-module-3", "efficiency-processor-2")
+bobmods.lib.tech.add_recipe_unlock("productivity-module-3", "productivity-processor-2")
+bobmods.lib.tech.add_recipe_unlock("pollution-clean-module-3", "pollution-clean-processor-2")
+bobmods.lib.tech.add_recipe_unlock("pollution-create-module-3", "pollution-create-processor-2")
+bobmods.lib.tech.add_recipe_unlock("speed-module-6", "speed-processor-3")
+bobmods.lib.tech.add_recipe_unlock("efficiency-module-6", "efficiency-processor-3")
+bobmods.lib.tech.add_recipe_unlock("productivity-module-6", "productivity-processor-3")
+bobmods.lib.tech.add_recipe_unlock("pollution-clean-module-6", "pollution-clean-processor-3")
+bobmods.lib.tech.add_recipe_unlock("pollution-create-module-6", "pollution-create-processor-3")
 
-table.insert(data.raw.technology["speed-module-6"].effects, { type = "unlock-recipe", recipe = "speed-processor-3" })
-table.insert(
-  data.raw.technology["efficiency-module-6"].effects,
-  { type = "unlock-recipe", recipe = "efficiency-processor-3" }
-)
-table.insert(
-  data.raw.technology["productivity-module-6"].effects,
-  { type = "unlock-recipe", recipe = "productivity-processor-3" }
-)
-table.insert(
-  data.raw.technology["pollution-clean-module-6"].effects,
-  { type = "unlock-recipe", recipe = "pollution-clean-processor-3" }
-)
-table.insert(
-  data.raw.technology["pollution-create-module-6"].effects,
-  { type = "unlock-recipe", recipe = "pollution-create-processor-3" }
-)
+bobmods.lib.tech.add_prerequisite("speed-module-3", "processing-unit")
+bobmods.lib.tech.add_prerequisite("efficiency-module-3", "processing-unit")
+bobmods.lib.tech.add_prerequisite("productivity-module-3", "processing-unit")
+bobmods.lib.tech.add_prerequisite("pollution-clean-module-3", "processing-unit")
+bobmods.lib.tech.add_prerequisite("pollution-create-module-3", "processing-unit")
 
-table.insert(data.raw.technology["speed-module-3"].prerequisites, "processing-unit")
-table.insert(data.raw.technology["efficiency-module-3"].prerequisites, "processing-unit")
-table.insert(data.raw.technology["productivity-module-3"].prerequisites, "processing-unit")
-table.insert(data.raw.technology["pollution-clean-module-3"].prerequisites, "processing-unit")
-table.insert(data.raw.technology["pollution-create-module-3"].prerequisites, "processing-unit")
-
-if data.raw.technology["advanced-electronics-3"] then
-  table.insert(data.raw.technology["speed-module-6"].prerequisites, "advanced-electronics-3")
-  table.insert(data.raw.technology["efficiency-module-6"].prerequisites, "advanced-electronics-3")
-  table.insert(data.raw.technology["productivity-module-6"].prerequisites, "advanced-electronics-3")
-  table.insert(data.raw.technology["pollution-clean-module-6"].prerequisites, "advanced-electronics-3")
-  table.insert(data.raw.technology["pollution-create-module-6"].prerequisites, "advanced-electronics-3")
+if data.raw.technology["advanced-processing-unit"] then
+  bobmods.lib.tech.add_prerequisite("speed-module-6", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("efficiency-module-6", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("productivity-module-6", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("pollution-clean-module-6", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("pollution-create-module-6", "advanced-processing-unit")
 else
   bobmods.lib.tech.add_prerequisite("speed-module-6", "production-science-pack")
   bobmods.lib.tech.add_prerequisite("efficiency-module-6", "production-science-pack")

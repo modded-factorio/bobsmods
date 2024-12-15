@@ -183,6 +183,19 @@ function bobmods.mining.electric_mining_drill(inputs)
 
   mining_drill.energy_source.emissions_per_minute = inputs.emissions_per_minute or 10
 
+  mining_drill.icons_positioning = {
+    {
+      inventory_index = defines.inventory.mining_drill_modules,
+      shift = { 0, 0.7 },
+    },
+  }
+  if inputs.module_slots == 5 or inputs.module_slots == 6 then
+    mining_drill.icons_positioning[1].max_icons_per_row = 3
+  end
+  if inputs.module_slots > 4 then
+    mining_drill.icons_positioning[1].multi_row_initial_height_modifier = -0.3
+  end
+
   set_electric_mining_drill_animation_speed(mining_drill, inputs.animation_speed * 0.8)
 
   mining_drill.graphics_set.animation.east.layers[2].tint = inputs.tint

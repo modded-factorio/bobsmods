@@ -101,7 +101,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("water-miner-5", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("water-miner-5", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("water-miner-5", "advanced-processing-unit")
   end
 
   if data.raw.item["nitinol-pipe"] then
