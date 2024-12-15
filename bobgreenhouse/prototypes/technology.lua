@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobgreenhouse__/graphics/icons/technology/greenhouse.png",
     icon_size = 128,
     prerequisites = {
-      "steam-power",
+      "automation-science-pack",
     },
     effects = {
       {
