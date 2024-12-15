@@ -275,7 +275,7 @@ if not bobmods.ores.cobalt.enabled then
   bobmods.lib.recipe.hide("cobalt-oxide")
 end
 
---Intermediate reogranization
+--Intermediate reorganization
 data.raw["item-subgroup"]["fluid-recipes"].group = "bob-fluid-products"
 data.raw["item-subgroup"]["science-pack"].order = "a"
 data.raw["item-subgroup"]["intermediate-product"].order = "c"
