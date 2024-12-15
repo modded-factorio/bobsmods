@@ -23,7 +23,7 @@ data:extend({
   {
     type = "recipe",
     name = "heat-shield-tile",
-    category = "crafting-with-fluid",
+    category = "advanced-crafting",
     energy_required = 30,
     enabled = false,
     ingredients = {
