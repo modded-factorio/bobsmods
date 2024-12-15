@@ -1,9 +1,29 @@
 circuit_connector_definitions["bob-greenhouse"] =
   circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
-    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
-    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
-    { variation = 27, main_offset = util.by_pixel(30.5, 15.5), shadow_offset = util.by_pixel(37, 20.5), show_shadow = false },
+    {
+      variation = 27,
+      main_offset = util.by_pixel(30.5, 15.5),
+      shadow_offset = util.by_pixel(37, 20.5),
+      show_shadow = false,
+    },
+    {
+      variation = 27,
+      main_offset = util.by_pixel(30.5, 15.5),
+      shadow_offset = util.by_pixel(37, 20.5),
+      show_shadow = false,
+    },
+    {
+      variation = 27,
+      main_offset = util.by_pixel(30.5, 15.5),
+      shadow_offset = util.by_pixel(37, 20.5),
+      show_shadow = false,
+    },
+    {
+      variation = 27,
+      main_offset = util.by_pixel(30.5, 15.5),
+      shadow_offset = util.by_pixel(37, 20.5),
+      show_shadow = false,
+    },
   })
 
 data:extend({
