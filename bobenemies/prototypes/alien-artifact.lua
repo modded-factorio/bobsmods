@@ -10,7 +10,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       subgroup = "raw-material",
       order = "g[alien-artifact]-a[pink]",
       stack_size = 500,
-      default_request_amount = 10,
     },
   })
 
@@ -24,7 +23,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-a[pink]-a[small]",
         stack_size = 500,
-        default_request_amount = 100,
       },
       {
         type = "recipe",
@@ -50,7 +48,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-b[red]",
         stack_size = 500,
-        default_request_amount = 10,
       },
       {
         type = "recipe",
@@ -75,7 +72,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-c[orange]",
         stack_size = 500,
-        default_request_amount = 10,
       },
       {
         type = "recipe",
@@ -106,7 +102,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-d[yellow]",
         stack_size = 500,
-        default_request_amount = 10,
       },
       {
         type = "recipe",
@@ -137,7 +132,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-e[green]",
         stack_size = 500,
-        default_request_amount = 10,
       },
       {
         type = "recipe",
@@ -168,7 +162,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-f[blue]",
         stack_size = 500,
-        default_request_amount = 10,
       },
       {
         type = "recipe",
@@ -199,7 +192,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         subgroup = "raw-material",
         order = "g[alien-artifact]-g[purple]",
         stack_size = 500,
-        default_request_amount = 10,
       },
       {
         type = "recipe",
@@ -233,7 +225,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           subgroup = "raw-material",
           order = "g[alien-artifact]-b[red]-a[small]",
           stack_size = 500,
-          default_request_amount = 100,
         },
         {
           type = "recipe",
@@ -257,7 +248,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           subgroup = "raw-material",
           order = "g[alien-artifact]-c[orange]-a[small]",
           stack_size = 500,
-          default_request_amount = 100,
         },
         {
           type = "recipe",
@@ -281,7 +271,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           subgroup = "raw-material",
           order = "g[alien-artifact]-d[yellow]-a[small]",
           stack_size = 500,
-          default_request_amount = 100,
         },
         {
           type = "recipe",
@@ -305,7 +294,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           subgroup = "raw-material",
           order = "g[alien-artifact]-e[green]-a[small]",
           stack_size = 500,
-          default_request_amount = 100,
         },
         {
           type = "recipe",
@@ -329,7 +317,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           subgroup = "raw-material",
           order = "g[alien-artifact]-f[blue]-a[small]",
           stack_size = 500,
-          default_request_amount = 100,
         },
         {
           type = "recipe",
@@ -353,7 +340,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           subgroup = "raw-material",
           order = "g[alien-artifact]-g[purple]-a[small]",
           stack_size = 500,
-          default_request_amount = 100,
         },
         {
           type = "recipe",

@@ -202,5 +202,5 @@ end
 
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("ultimate-splitter", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("logistics-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("logistics-5", "advanced-processing-unit")
 end

@@ -134,7 +134,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "4MJ",
@@ -187,7 +187,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "4MJ",
@@ -240,7 +240,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "15MJ",
@@ -293,7 +293,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "6MJ",
@@ -346,7 +346,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "6MJ",
@@ -399,7 +399,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "22.5MJ",
@@ -451,7 +451,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "9MJ",
@@ -503,7 +503,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "9MJ",

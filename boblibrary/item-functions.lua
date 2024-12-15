@@ -230,12 +230,20 @@ function bobmods.lib.item.combine(item1_in, item2_in)
       item.probability = (item2.probability + 1) / 2
     end
 
-    if item1.catalyst_amount and item2.catalyst_amount then
-      item.catalyst_amount = item1.catalyst_amount + item2.catalyst_amount
-    elseif item1.catalyst_amount then
-      item.catalyst_amount = item1.catalyst_amount
-    elseif item2.catalyst_amount then
-      item.catalyst_amount = item2.catalyst_amount
+    if item1.ignored_by_productivity and item2.ignored_by_productivity then
+      item.ignored_by_productivity = item1.ignored_by_productivity + item2.ignored_by_productivity
+    elseif item1.ignored_by_productivity then
+      item.ignored_by_productivity = item1.ignored_by_productivity
+    elseif item2.ignored_by_productivity then
+      item.ignored_by_productivity = item2.ignored_by_productivity
+    end
+
+    if item1.ignored_by_stats and item2.ignored_by_stats then
+      item.ignored_by_stats = item1.ignored_by_stats + item2.ignored_by_stats
+    elseif item1.ignored_by_stats then
+      item.ignored_by_stats = item1.ignored_by_stats
+    elseif item2.ignored_by_stats then
+      item.ignored_by_stats = item2.ignored_by_stats
     end
 
     item.fluidbox_index = item1.fluidbox_index or item2.fluidbox_index

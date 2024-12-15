@@ -254,7 +254,6 @@ data:extend({
     },
     collision_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
     selection_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
-    drawing_box = { { -0.9, -0.9 }, { 0.9, 0.75 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -347,7 +346,6 @@ data:extend({
     },
     collision_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
     selection_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
-    drawing_box = { { -0.9, -0.9 }, { 0.9, 0.75 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -421,7 +419,6 @@ data:extend({
     },
     collision_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
     selection_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
-    drawing_box = { { -0.9, -0.9 }, { 0.9, 0.75 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -512,7 +509,6 @@ data:extend({
     },
     collision_box = { { -0.45 * 1.5, -0.65 * 1.5 }, { 0.45 * 1.5, 0.65 * 1.5 } },
     selection_box = { { -0.45 * 1.5, -0.65 * 1.5 }, { 0.45 * 1.5, 0.65 * 1.5 } },
-    drawing_box = { { -0.9 * 1.5, -0.9 * 1.5 }, { 0.9 * 1.5, 0.75 * 1.5 } },
     distraction_cooldown = 300,
 
     attack_parameters = {

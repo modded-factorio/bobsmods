@@ -198,7 +198,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -271,7 +271,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -344,7 +344,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -417,7 +417,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -490,7 +490,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -559,7 +559,9 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       order = "d-a-d-1",
-      prerequisites = {},
+      prerequisites = {
+        "automation-science-pack",
+      },
       unit = {
         count = 10,
         time = 30,

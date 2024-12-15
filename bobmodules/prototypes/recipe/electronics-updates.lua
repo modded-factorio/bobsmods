@@ -169,8 +169,8 @@ bobmods.lib.tech.add_recipe_unlock("pollution-clean-module-1", "pollution-clean-
 bobmods.lib.tech.add_recipe_unlock("pollution-create-module-1", "pollution-create-processor")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "module-processor-board-2")
 
-if data.raw.technology["advanced-electronics-3"] then
-  bobmods.lib.tech.add_recipe_unlock("advanced-electronics-3", "module-processor-board-3")
+if data.raw.technology["advanced-processing-unit"] then
+  bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "module-processor-board-3")
 else
   bobmods.lib.tech.add_recipe_unlock("processing-unit", "module-processor-board-3")
 end
