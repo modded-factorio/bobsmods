@@ -8,6 +8,7 @@ then
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.minimum_glow_temperature = 300
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "2GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
+  data.raw["heat-pipe"]["heat-pipe"].next_upgrade = "heat-pipe-2"
   data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", "750" }
   bobmods.lib.recipe.set_ingredients(
     "heat-pipe",
@@ -127,6 +128,7 @@ then
           minimum_glow_temperature = 400,
         },
         fast_replaceable_group = "heat-pipe",
+        next_upgrade = "heat-pipe-3",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-2/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
@@ -161,6 +163,7 @@ then
           minimum_glow_temperature = 400,
         },
         fast_replaceable_group = "heat-pipe",
+        next_upgrade = "heat-pipe-4",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-3/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
