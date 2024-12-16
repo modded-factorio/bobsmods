@@ -13,20 +13,10 @@ bobmods.ores.gems = {
     frame_count = 4,
     variation_count = 8,
     scale = 1,
-    -- hr_version can now be specified as a table within sprite, which uses the same table values as sprite.
   },
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = false,
-    richness = 0.01,
-    size = 1
-  }
-]]
-  --
   autoplace = "control-only",
   planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.gems.create_autoplace()
