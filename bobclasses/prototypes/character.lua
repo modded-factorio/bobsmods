@@ -65,7 +65,7 @@ bobmods.classes.characters["bob-character-fighter"] = util.merge({
       "not-repairable",
       "not-on-map",
       "not-flammable",
-      "get-by-unit-number"
+      "get-by-unit-number",
     },
     max_health = 400,
     healing_per_tick = 0.3,
@@ -101,7 +101,8 @@ bobmods.classes.characters["bob-character-fighter"].tool_attack_result = {
   },
 }
 if mods["bobwarfare"] then
-  bobmods.classes.characters["bob-character-fighter"].tool_attack_result.action_delivery.target_effects[1].damage.type = "plasma"
+  bobmods.classes.characters["bob-character-fighter"].tool_attack_result.action_delivery.target_effects[1].damage.type =
+    "plasma"
 end
 
 bobmods.classes.characters["bob-character-builder"] = util.merge({
@@ -230,7 +231,7 @@ bobmods.classes.characters["bob-character-fighter-2"] = util.merge({
       "not-repairable",
       "not-on-map",
       "not-flammable",
-      "get-by-unit-number"
+      "get-by-unit-number",
     },
     max_health = 600,
     healing_per_tick = 0.45,
@@ -289,7 +290,8 @@ bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result = {
   },
 }
 if mods["bobwarfare"] then
-  bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result[1].action_delivery.target_effects[1].damage.type = "plasma"
+  bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result[1].action_delivery.target_effects[1].damage.type =
+    "plasma"
 end
 
 bobmods.classes.characters["bob-character-builder-2"] = util.merge({
@@ -385,7 +387,7 @@ bobmods.classes.characters["bob-character-prospector"] = util.merge({
       "not-repairable",
       "not-on-map",
       "not-flammable",
-      "get-by-unit-number"
+      "get-by-unit-number",
     },
     max_health = 450,
     healing_per_tick = 0.3,
@@ -443,7 +445,8 @@ bobmods.classes.characters["bob-character-prospector"].tool_attack_result = {
   },
 }
 if mods["bobwarfare"] then
-  bobmods.classes.characters["bob-character-prospector"].tool_attack_result[1].action_delivery.target_effects[1].damage.type = "plasma"
+  bobmods.classes.characters["bob-character-prospector"].tool_attack_result[1].action_delivery.target_effects[1].damage.type =
+    "plasma"
 end
 
 for index, character in pairs(bobmods.classes.characters) do

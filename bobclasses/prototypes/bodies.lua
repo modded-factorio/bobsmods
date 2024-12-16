@@ -549,7 +549,7 @@ data:extend({
   {
     type = "technology",
     name = "bodies-2",
-    localised_description = {"technology-description.bodies2"},
+    localised_description = { "technology-description.bodies2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -608,7 +608,7 @@ data:extend({
   {
     type = "technology",
     name = "miner-body-2",
-    localised_description = {"technology-description.miner-body2"},
+    localised_description = { "technology-description.miner-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -646,7 +646,7 @@ data:extend({
   {
     type = "technology",
     name = "fighter-body-2",
-    localised_description = {"technology-description.fighter-body2"},
+    localised_description = { "technology-description.fighter-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -684,7 +684,7 @@ data:extend({
   {
     type = "technology",
     name = "builder-body-2",
-    localised_description = {"technology-description.builder-body2"},
+    localised_description = { "technology-description.builder-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
