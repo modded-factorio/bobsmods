@@ -326,6 +326,7 @@ function bobmods.lib.resource.create(inputs)
       name = inputs.name,
       flags = { "placeable-neutral" },
       category = inputs.category,
+      subgroup = inputs.subgroup,
       order = "b-d-" .. inputs.name,
       minimum = minimum,
       normal = normal,

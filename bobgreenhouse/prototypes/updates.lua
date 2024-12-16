@@ -4,10 +4,6 @@ if data.raw["item-subgroup"]["bob-resource-chemical"] then
   bobmods.lib.item.set_subgroup("fertiliser", "bob-resource-chemical")
 end
 
-if data.raw["item-group"]["bob-intermediate-products"] then
-  data.raw["item-subgroup"]["bob-greenhouse-items"].group = "bob-intermediate-products"
-end
-
 if data.raw.item["bob-glass"] then
   bobmods.lib.recipe.replace_ingredient("bob-greenhouse", "copper-plate", "bob-glass")
 end

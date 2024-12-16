@@ -25,5 +25,5 @@ end
 
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("beacon-3", "electronic-circuit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("effect-transmission-3", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("effect-transmission-3", "advanced-processing-unit")
 end

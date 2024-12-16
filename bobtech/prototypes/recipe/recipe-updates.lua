@@ -16,6 +16,15 @@ if bobmods.tech.advanced_logistic_science then
     bobmods.lib.recipe.replace_ingredient("advanced-logistic-science-pack", "steel-chest", "brass-chest")
     bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "zinc-processing")
   end
+  if
+    settings.startup["bobmods-logistics-inserteroverhaul"]
+    and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
+  then
+    bobmods.lib.recipe.set_ingredient(
+      "advanced-logistic-science-pack",
+      { type = "item", name = "fast-inserter", amount = 1 }
+    )
+  end
 else
   bobmods.lib.recipe.hide("advanced-logistic-science-pack")
 end

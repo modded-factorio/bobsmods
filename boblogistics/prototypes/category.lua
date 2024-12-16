@@ -192,11 +192,3 @@ data:extend({
     order = "e-e",
   },
 })
-
-if data.raw["item-group"]["bob-intermediate-products"] then
-  data.raw["item-subgroup"]["bob-roboport-parts"].group = "bob-intermediate-products"
-  data.raw["item-subgroup"]["bob-roboport-parts-antenna"].group = "bob-intermediate-products"
-  data.raw["item-subgroup"]["bob-roboport-parts-door"].group = "bob-intermediate-products"
-  data.raw["item-subgroup"]["bob-roboport-parts-charge"].group = "bob-intermediate-products"
-  data.raw["item-subgroup"]["bob-robot-parts"].group = "bob-intermediate-products"
-end

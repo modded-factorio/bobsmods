@@ -183,10 +183,10 @@ if
   settings.startup["bobmods-logistics-inserteroverhaul"]
   and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
 then
-  bobmods.lib.tech.add_prerequisite("advanced-research", "express-inserters")
+  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter-2")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "express-inserters")
 else
-  bobmods.lib.tech.add_prerequisite("advanced-research", "fast-inserter")
+  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "fast-inserter")
 end
 
@@ -215,14 +215,12 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["electrolysis-1"] then
     bobmods.lib.tech.add_prerequisite("electrolysis-1", "automation-science-pack")
     bobmods.lib.tech.add_prerequisite("electrolysis-1", "electricity")
-    bobmods.lib.tech.add_prerequisite("electrolysis-1", "steam-power")
   end
   if data.raw.technology["alloy-processing"] then
     bobmods.lib.tech.add_prerequisite("alloy-processing", "automation-science-pack")
   end
   if data.raw.technology["chemical-processing-1"] then
     bobmods.lib.tech.add_prerequisite("chemical-processing-1", "automation-science-pack")
-    bobmods.lib.tech.add_prerequisite("chemical-processing-1", "steam-power")
   end
   if data.raw.technology["air-compressor-1"] then
     bobmods.lib.tech.add_prerequisite("air-compressor-1", "automation-science-pack")
@@ -235,22 +233,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["bob-greenhouse"] then
     bobmods.lib.tech.add_prerequisite("bob-greenhouse", "automation-science-pack")
     bobmods.lib.tech.add_prerequisite("bob-greenhouse", "electricity")
-    bobmods.lib.tech.add_prerequisite("bob-greenhouse", "steam-power")
   end
   if data.raw.technology["water-miner-1"] then
     bobmods.lib.tech.add_prerequisite("water-miner-1", "automation-science-pack")
     bobmods.lib.tech.add_prerequisite("water-miner-1", "electricity")
-  end
-
-  bobmods.lib.tech.add_recipe_unlock("steam-power", "boiler")
-  bobmods.lib.tech.add_recipe_unlock("steam-power", "offshore-pump")
-  if data.raw.recipe["steam-mining-drill"] then
-    data.raw.recipe["steam-mining-drill"].enabled = false
-    bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-mining-drill")
-  end
-  if data.raw.recipe["steam-inserter"] then
-    data.raw.recipe["steam-inserter"].enabled = false
-    bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-inserter")
   end
 
   if data.raw.technology["basic-automation"] then
@@ -299,7 +285,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         type = "technology",
         name = "bob-steam-engine-1",
         icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-        icon_size = 128,
+        icon_size = 256,
         prerequisites = {
           "electricity",
           "steam-power",

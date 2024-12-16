@@ -202,7 +202,7 @@ function bobmods.warfare.create_spidertron(arguments)
       icon_size = 64,
       collision_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
-      drawing_box = { { -3 * scale, -4 * scale }, { 3 * scale, 2 * scale } },
+      drawing_box_vertical_extension = 3 * scale,
       collision_mask = {},
       minable = { mining_time = 1, result = arguments.name },
 

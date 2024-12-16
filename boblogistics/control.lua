@@ -187,7 +187,7 @@ function tech_unlocked(force, tech)
 end
 
 function bobmods.logistics.create_gui_button(player_index)
-  if not game.active_mods["bobinserters"] then
+  if not script.active_mods["bobinserters"] then
     local player = game.players[player_index]
 
     -- remove legacy GUI
@@ -404,7 +404,7 @@ script.on_event(defines.events.on_player_joined_game, function(event)
 end)
 
 script.on_event(defines.events.on_gui_checked_state_changed, function(event)
-  if not game.active_mods["bobinserters"] then
+  if not script.active_mods["bobinserters"] then
     if event.element.name == "bob_logistics_inserter_enabled" then
       storage.bobmods.logistics[event.player_index].enabled = event.element.state
       bobmods.logistics.create_gui(event.player_index)
@@ -415,7 +415,7 @@ script.on_event(defines.events.on_gui_checked_state_changed, function(event)
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)
-  if not game.active_mods["bobinserters"] then
+  if not script.active_mods["bobinserters"] then
     if event.element.valid and event.element.name == "bob_logistics_inserter_button" then
       if storage.bobmods.logistics[event.player_index].show then
         storage.bobmods.logistics[event.player_index].show = false
@@ -446,7 +446,7 @@ script.on_event(defines.events.on_built_entity, function(event)
   end
 
   if
-    not game.active_mods["bobinserters"]
+    not script.active_mods["bobinserters"]
     and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and not storage.bobmods.logistics.blacklist[entity_name]
   then

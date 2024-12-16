@@ -65,7 +65,7 @@ if settings.startup["bobmods-power-poles"].value == true then
         name = "big-electric-pole-4",
         minable = { result = "big-electric-pole-4" },
         max_health = 375,
-        maximum_wire_distance = 60,
+        maximum_wire_distance = 64,
         supply_area_distance = 2,
       },
     }),

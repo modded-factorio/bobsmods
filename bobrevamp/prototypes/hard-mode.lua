@@ -1,15 +1,26 @@
 if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true then
+  local powder_drop_move = {
+    filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+    volume = 0.7,
+    speed = 1.3,
+  }
+  local powder_pick = {
+    filename = "__base__/sound/item/landfill-inventory-pickup.ogg",
+    volume = 0.6,
+    speed = 1.2,
+  }
+
   data:extend({
     {
       type = "fluid",
       name = "carbon-dioxide",
       icon = "__bobrevamp__/graphics/icons/carbon-dioxide.png",
       icon_size = 64,
+      subgroup = "bob-fluid",
       order = "a[fluid]-g[carbon-dioxide]",
       default_temperature = 15,
       max_temperature = 100,
       gas_temperature = -56.6,
-      base_flow_rate = 100,
       heat_capacity = "1kJ",
       base_color = { r = 0.5, g = 0.0, b = 0.0 },
       flow_color = { r = 0.0, g = 0.0, b = 0.0 },
@@ -23,6 +34,18 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       subgroup = "bob-resource-chemical",
       order = "f[limestone]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/resource-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/resource-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "item",
@@ -32,6 +55,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
     {
       type = "item",
@@ -41,6 +67,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       subgroup = "bob-resource-chemical",
       order = "f[sodium-perchlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
 
     {
@@ -58,7 +87,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       },
       results = {
         { type = "item", name = "limestone", amount = 1 },
-        { type = "fluid", name = "carbon-dioxide", amount = 25, catalyst_amount = 25 },
+        { type = "fluid", name = "carbon-dioxide", amount = 25, ignored_by_productivity = 25 },
       },
       main_product = "limestone",
       crafting_machine_tint = {
@@ -87,7 +116,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "sodium-chlorate",
       results = {
         { type = "item", name = "sodium-chlorate", amount = 1 },
-        { type = "fluid", name = "hydrogen", amount = 60, catalyst_amount = 60 },
+        { type = "fluid", name = "hydrogen", amount = 60, ignored_by_productivity = 60 },
       },
       allow_decomposition = false,
       allow_productivity = true,
@@ -109,7 +138,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "sodium-perchlorate",
       results = {
         { type = "item", name = "sodium-perchlorate", amount = 1 },
-        { type = "fluid", name = "hydrogen", amount = 20, catalyst_amount = 20 },
+        { type = "fluid", name = "hydrogen", amount = 20, ignored_by_productivity = 20 },
       },
       allow_decomposition = false,
       allow_productivity = true,
@@ -131,7 +160,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "lithium-perchlorate",
       results = {
         { type = "item", name = "lithium-perchlorate", amount = 1 },
-        { type = "item", name = "salt", amount = 1, catalyst_amount = 1 },
+        { type = "item", name = "salt", amount = 1, ignored_by_productivity = 1 },
       },
       allow_decomposition = false,
     },

@@ -95,7 +95,7 @@ end
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("roboport-antenna-4", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("roboport-chargepad-4", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "advanced-processing-unit")
 end
 
 if data.raw.item["silver-zinc-battery"] then
