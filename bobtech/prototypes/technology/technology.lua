@@ -4,7 +4,6 @@ data:extend({
     name = "advanced-research",
     icon = "__bobtech__/graphics/icons/lab2-technology.png",
     icon_size = 128,
-    order = "c-k-m-a",
     prerequisites = {
       "advanced-circuit",
       "logistics-3",
@@ -31,7 +30,7 @@ data:extend({
     name = "advanced-logistic-science-pack",
     localised_name = { "technology-name.logistic-science-pack" },
     icon = "__bobtech__/graphics/icons/logistic-science-pack-technology.png",
-    icon_size = 128,
+    icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -51,7 +50,6 @@ data:extend({
       "logistics-3",
       "robotics",
     },
-    order = "c-a",
   },
 })
 
@@ -59,27 +57,6 @@ data.raw.technology["logistic-science-pack"].localised_name = { "technology-name
 
 if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
-    {
-      type = "technology",
-      name = "automation-science-pack",
-      icon = "__bobtech__/graphics/icons/red-science-pack-technology.png",
-      icon_size = 128,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "automation-science-pack",
-        },
-      },
-      unit = {
-        count = 25,
-        ingredients = {
-          { "steam-science-pack", 1 },
-        },
-        time = 5,
-      },
-      ignore_tech_cost_multiplier = true,
-      order = "c-a",
-    },
 
     {
       type = "technology",
@@ -111,7 +88,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
         time = 10,
       },
       ignore_tech_cost_multiplier = true,
-      order = "c-a",
     },
 
     {
