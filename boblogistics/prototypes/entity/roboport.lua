@@ -26,7 +26,6 @@ data.raw.roboport["roboport"].base_patch = {
   priority = "medium",
   width = 138,
   height = 100,
-  frame_count = 1,
   shift = util.by_pixel(1.5, 5),
   scale = 0.5,
 }
@@ -106,7 +105,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5, 5),
         scale = 0.5,
       },
@@ -237,7 +235,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5, 5),
         scale = 0.5,
       },
@@ -368,7 +365,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5, 5),
         scale = 0.5,
       },
@@ -483,7 +479,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/roboport-door-up.png",
@@ -572,7 +567,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/roboport-door-up-2.png",
@@ -660,7 +654,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/roboport-door-up-3.png",
@@ -747,7 +740,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/roboport-door-up-4.png",
@@ -838,7 +830,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -922,7 +913,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1006,7 +996,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1090,7 +1079,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1211,7 +1199,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1330,7 +1317,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1449,7 +1435,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1567,7 +1552,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1736,7 +1720,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -1905,7 +1888,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -2074,7 +2056,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -2242,7 +2223,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
@@ -2334,7 +2314,6 @@ data:extend({
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__boblogistics__/graphics/entity/roboport/blank.png",

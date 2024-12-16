@@ -191,8 +191,6 @@ local function bob_pipepictures(pipe_type)
       width = 48,
       height = 30,
       frame_count = 60,
-      axially_symmetrical = false,
-      direction_count = 1,
     },
   }
 end

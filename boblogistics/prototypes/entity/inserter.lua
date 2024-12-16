@@ -107,7 +107,6 @@ data.raw.inserter["steam-inserter"].energy_source = {
       name = "light-smoke",
       frequency = 10 / 32,
       starting_vertical_speed = 0.08,
-      slow_down_factor = 1,
       starting_frame_deviation = 60,
     },
   },
