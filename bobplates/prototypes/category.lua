@@ -327,14 +327,6 @@ data:extend({
   },
 
   {
-    type = "item-group",
-    name = "bob-intermediate-products",
-    order = "c-i",
-    icon = "__bobplates__/graphics/icons/technology/intermediates.png",
-    icon_size = 64,
-  },
-
-  {
     type = "item-subgroup",
     name = "bob-electronic-components",
     group = "intermediate-products",
