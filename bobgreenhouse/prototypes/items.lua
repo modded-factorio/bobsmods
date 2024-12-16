@@ -3,7 +3,6 @@ data:extend({
     type = "item",
     name = "bob-greenhouse",
     icon = "__bobgreenhouse__/graphics/icons/greenhouse.png",
-    icon_size = 32,
     subgroup = "bob-greenhouse",
     order = "g[greenhouse]",
     place_result = "bob-greenhouse",
