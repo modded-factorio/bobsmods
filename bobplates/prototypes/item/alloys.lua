@@ -1,3 +1,12 @@
+local plate_drop_move = {
+  filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+  volume = 0.8,
+}
+local plate_pick = {
+  filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+  volume = 0.8,
+}
+
 data:extend({
   {
     type = "item",
@@ -7,6 +16,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-a[bronze]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -16,6 +28,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-b[brass]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -25,6 +40,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-d[copper-tungsten]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -34,6 +52,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-d[tungsten-carbide]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -43,6 +64,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-e[gunmetal]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -53,6 +77,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-f[invar]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -62,6 +89,9 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-g[nitinol]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -71,5 +101,8 @@ data:extend({
     subgroup = "bob-alloy",
     order = "c-b-i[cobalt-steel]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 })

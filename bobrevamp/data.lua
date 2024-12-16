@@ -148,6 +148,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       name = "sour-gas",
       icon = "__bobrevamp__/graphics/icons/sour-gas.png",
       icon_size = 64,
+      subgroup = "bob-fluid",
       default_temperature = 25,
       heat_capacity = "0.1kJ",
       base_color = { r = 0.4, g = 0.1, b = 0.3 },
@@ -182,11 +183,13 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     {
       type = "recipe",
       name = "solid-fuel-from-sour-gas",
-      icon = "__bobrevamp__/graphics/icons/solid-fuel-from-sour-gas.png",
-      icon_size = 32,
+      icons = {
+        {icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64},
+        {icon = "__bobrevamp__/graphics/icons/sour-gas.png", icon_size = 64, scale = 0.25, shift = {-8, -8}}
+      },
       category = "chemistry",
       subgroup = "fluid-recipes",
-      order = "b[fluid-chemistry]-d[solid-fuel-from-sour-gas]",
+      order = "b[fluid-chemistry]-c[solid-fuel-from-i-sour-gas]",
       enabled = false,
       energy_required = 2,
       emissions_multiplier = 2,

@@ -167,7 +167,6 @@ data:extend({
     type = "recipe",
     name = "gas-canister",
     category = "crafting",
-    subgroup = "bob-intermediates",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -181,7 +180,6 @@ data:extend({
     type = "recipe",
     name = "empty-canister",
     category = "crafting",
-    subgroup = "bob-intermediates",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -222,6 +220,8 @@ data:extend({
       { type = "item", name = "wood", amount = 2 },
     },
     results = { { type = "item", name = "coal", amount = 1 } },
+    subgroup = "bob-resource",
+    order = "c",
     allow_decomposition = false,
   },
 
@@ -237,9 +237,11 @@ data:extend({
     results = {
       { type = "item", name = "solid-fuel", amount = 1 },
     },
-    icon = "__bobplates__/graphics/icons/solid-fuel-from-hydrogen.png",
-    icon_size = 32,
-    subgroup = "bob-resource-chemical",
+    icons = {
+      { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64},
+      { icon = "__bobplates__/graphics/icons/hydrogen.png", icon_size = 64, scale = 0.25, shift = {-8, -8}, }
+    },
+    subgroup = "bob-chemical-fuels",
     enabled = false,
     order = "b[fluid-chemistry]-c[solid-fuel-from-hydrogen]",
     crafting_machine_tint = {
@@ -262,7 +264,7 @@ data:extend({
       { type = "fluid", name = "liquid-fuel", amount = 20 },
     },
     results = { { type = "item", name = "enriched-fuel", amount = 1 } },
-    subgroup = "bob-resource-chemical",
+    subgroup = "bob-chemical-fuels",
     order = "d[enriched-fuel]",
     crafting_machine_tint = {
       primary = { r = 0.9, g = 0.9, b = 0.9, a = 0.000 },

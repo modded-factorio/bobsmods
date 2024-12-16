@@ -71,29 +71,21 @@ data:extend({
   },
 
   {
-    type = "item-group",
-    name = "bob-intermediate-products",
-    order = "c-i",
-    icon = "__bobelectronics__/graphics/icons/technology/intermediates.png",
-    icon_size = 64,
-  },
-
-  {
     type = "item-subgroup",
     name = "bob-electronic-components",
-    group = "bob-intermediate-products",
+    group = "intermediate-products",
     order = "e-a1",
   },
   {
     type = "item-subgroup",
     name = "bob-boards",
-    group = "bob-intermediate-products",
+    group = "intermediate-products",
     order = "e-a2",
   },
   {
     type = "item-subgroup",
     name = "bob-electronic-boards",
-    group = "bob-intermediate-products",
+    group = "intermediate-products",
     order = "e-a3",
   },
 })

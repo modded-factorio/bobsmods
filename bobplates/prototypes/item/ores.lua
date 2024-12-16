@@ -1,3 +1,12 @@
+local resource_drop_move = {
+  filename = "__base__/sound/item/resource-inventory-move.ogg",
+  volume = 0.8
+}
+local resouce_pick = {
+  filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+  volume = 0.6
+}
+
 if not data.raw.item["gold-ore"] then
   data:extend({
     {
@@ -8,6 +17,9 @@ if not data.raw.item["gold-ore"] then
       subgroup = "bob-ores",
       order = "b-d[gold-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -22,6 +34,9 @@ if not data.raw.item["lead-ore"] then
       subgroup = "bob-ores",
       order = "b-d[lead-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -36,6 +51,9 @@ if not data.raw.item["silver-ore"] then
       subgroup = "bob-ores",
       order = "b-d[silver-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -50,6 +68,9 @@ if not data.raw.item["tin-ore"] then
       subgroup = "bob-ores",
       order = "b-d[tin-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -64,6 +85,9 @@ if not data.raw.item["tungsten-ore"] then
       subgroup = "bob-ores",
       order = "b-d[tungsten-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -78,6 +102,9 @@ if not data.raw.item["zinc-ore"] then
       subgroup = "bob-ores",
       order = "b-d[zinc-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -92,6 +119,9 @@ if not data.raw.item["bauxite-ore"] then
       subgroup = "bob-ores",
       order = "b-d[bauxite-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -106,6 +136,9 @@ if not data.raw.item["rutile-ore"] then
       subgroup = "bob-ores",
       order = "b-d[rutile-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -120,6 +153,9 @@ if not data.raw.item["quartz"] then
       subgroup = "bob-ores",
       order = "b-d[quartz]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -134,6 +170,9 @@ if not data.raw.item["nickel-ore"] then
       subgroup = "bob-ores",
       order = "b-d[nickel-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
@@ -148,6 +187,9 @@ if not data.raw.item["cobalt-ore"] then
       subgroup = "bob-ores",
       order = "b-d[cobalt-ore]",
       stack_size = 200,
+      drop_sound = resource_drop_move,
+      inventory_move_sound = resource_drop_move,
+      pick_sound = resouce_pick,
     },
   })
 end
