@@ -279,7 +279,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "player-frame", amount = 1 },
-      { type = "item", name = "assembling-machine-3", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
       { type = "item", name = "electric-furnace", amount = 1 },
     },
     results = { { type = "item", name = "bob-character-miner", amount = 1 } },
@@ -460,7 +460,7 @@ data:extend({
     },
     prerequisites = {
       "bodies",
-      "automation-3",
+      "automation-2",
       "advanced-material-processing-2",
     },
     unit = {

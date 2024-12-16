@@ -72,7 +72,9 @@ if data.raw.item["turbo-inserter"] then
 end
 
 if data.raw.item["assembling-machine-4"] then
+  bobmods.lib.recipe.replace_ingredient("bob-character-miner", "assembling-machine-2", "assembling-machine-3")
   bobmods.lib.recipe.replace_ingredient("bob-character-miner-2", "assembling-machine-3", "assembling-machine-4")
+  bobmods.lib.tech.add_prerequisite("miner-body", "automation-3")
   bobmods.lib.tech.add_prerequisite("miner-body-2", "automation-4")
 end
 
