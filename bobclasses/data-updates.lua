@@ -23,9 +23,19 @@ data.raw.character["bob-character-engineer"].crafting_categories = util.copy(cat
 data.raw.character["bob-character-prospector"].crafting_categories = util.copy(categories)
 
 table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "smelting")
+table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "basic-crafting")
+table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "advanced-crafting")
 table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "smelting")
+table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "basic-crafting")
+table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "advanced-crafting")
 table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "smelting")
-table.insert(bobmods.classes.characters["bob-character-prospector"].crafting_categories, "smelting")
+table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "basic-crafting")
+table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "advanced-crafting")
+if data.raw["recipe-category"]["machine-crafting"] then
+  table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "machine-crafting")
+  table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "machine-crafting")
+  table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "machine-crafting")
+end
 
 --if mixing furnace category exists, add it to characters with smelting category
 if data.raw["recipe-category"]["mixing-furnace"] then
