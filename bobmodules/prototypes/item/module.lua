@@ -6,7 +6,6 @@ data.raw["module"]["speed-module"].icon = "__bobmodules__/graphics/icons/speed-m
 data.raw["module"]["speed-module"].icon_size = 32
 data.raw["module"]["speed-module"].subgroup = "speed-module"
 data.raw["module"]["speed-module"].order = "m-s-1"
-data.raw["module"]["speed-module"].default_request_amount = 10
 data.raw["module"]["speed-module"].beacon_tint =
   { primary = { r = 0, g = 0.34, b = 1, a = 1 }, secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 } }
 data.raw["module"]["speed-module"].effect = {
@@ -19,7 +18,6 @@ data.raw["module"]["speed-module-2"].icon = "__bobmodules__/graphics/icons/speed
 data.raw["module"]["speed-module-2"].icon_size = 32
 data.raw["module"]["speed-module-2"].subgroup = "speed-module"
 data.raw["module"]["speed-module-2"].order = "m-s-2"
-data.raw["module"]["speed-module-2"].default_request_amount = 10
 data.raw["module"]["speed-module-2"].beacon_tint =
   { primary = { r = 0, g = 0.34, b = 1, a = 1 }, secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 } }
 data.raw["module"]["speed-module-2"].effect = {
@@ -32,7 +30,6 @@ data.raw["module"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/speed
 data.raw["module"]["speed-module-3"].icon_size = 32
 data.raw["module"]["speed-module-3"].subgroup = "speed-module"
 data.raw["module"]["speed-module-3"].order = "m-s-3"
-data.raw["module"]["speed-module-3"].default_request_amount = 10
 data.raw["module"]["speed-module-3"].beacon_tint =
   { primary = { r = 0, g = 0.34, b = 1, a = 1 }, secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 } }
 data.raw["module"]["speed-module-3"].effect = {
@@ -51,7 +48,6 @@ data:extend({
     tier = 4,
     order = "m-s-4",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       speed = { bonus = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       consumption = {
@@ -76,7 +72,6 @@ data:extend({
     tier = 5,
     order = "m-s-5",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       speed = { bonus = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       consumption = {
@@ -101,7 +96,6 @@ data:extend({
     tier = 6,
     order = "m-s-6",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       speed = { bonus = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       consumption = {
@@ -126,7 +120,6 @@ data:extend({
     tier = 7,
     order = "m-s-7",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       speed = { bonus = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       consumption = {
@@ -151,7 +144,6 @@ data:extend({
     tier = 8,
     order = "m-s-8",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       speed = { bonus = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       consumption = {
@@ -175,7 +167,6 @@ data.raw["module"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/ye
 data.raw["module"]["efficiency-module"].icon_size = 32
 data.raw["module"]["efficiency-module"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module"].order = "m-e-1"
-data.raw["module"]["efficiency-module"].default_request_amount = 10
 data.raw["module"]["efficiency-module"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
 data.raw["module"]["efficiency-module"].effect =
@@ -186,7 +177,6 @@ data.raw["module"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/
 data.raw["module"]["efficiency-module-2"].icon_size = 32
 data.raw["module"]["efficiency-module-2"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-2"].order = "m-e-2"
-data.raw["module"]["efficiency-module-2"].default_request_amount = 10
 data.raw["module"]["efficiency-module-2"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
 data.raw["module"]["efficiency-module-2"].effect =
@@ -197,7 +187,6 @@ data.raw["module"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/
 data.raw["module"]["efficiency-module-3"].icon_size = 32
 data.raw["module"]["efficiency-module-3"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-3"].order = "m-e-3"
-data.raw["module"]["efficiency-module-3"].default_request_amount = 10
 data.raw["module"]["efficiency-module-3"].beacon_tint =
   { primary = { r = 0.3, g = 0.6, b = 0.1 }, secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 } }
 data.raw["module"]["efficiency-module-3"].effect =
@@ -214,7 +203,6 @@ data:extend({
     tier = 4,
     order = "m-e-4",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       consumption = { bonus = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
     },
@@ -236,7 +224,6 @@ data:extend({
     tier = 5,
     order = "m-e-5",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       consumption = { bonus = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
     },
@@ -258,7 +245,6 @@ data:extend({
     tier = 6,
     order = "m-e-6",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       consumption = { bonus = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
     },
@@ -280,7 +266,6 @@ data:extend({
     tier = 7,
     order = "m-e-7",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       consumption = { bonus = -7 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
     },
@@ -302,7 +287,6 @@ data:extend({
     tier = 8,
     order = "m-e-8",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       consumption = { bonus = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001 },
     },
@@ -329,7 +313,6 @@ data:extend({
     tier = 1,
     order = "m-p-1",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = { bonus = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 },
@@ -354,7 +337,6 @@ data:extend({
     tier = 2,
     order = "m-p-2",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -381,7 +363,6 @@ data:extend({
     tier = 3,
     order = "m-p-3",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -408,7 +389,6 @@ data:extend({
     tier = 4,
     order = "m-p-4",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -435,7 +415,6 @@ data:extend({
     tier = 5,
     order = "m-p-5",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -462,7 +441,6 @@ data:extend({
     tier = 6,
     order = "m-p-6",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -489,7 +467,6 @@ data:extend({
     tier = 7,
     order = "m-p-7",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -516,7 +493,6 @@ data:extend({
     tier = 8,
     order = "m-p-8",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       productivity = { bonus = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001 },
       consumption = {
@@ -567,7 +543,6 @@ data:extend({
     tier = 1,
     order = "m-p-cl-1",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -587,7 +562,6 @@ data:extend({
     tier = 2,
     order = "m-p-cl-2",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -607,7 +581,6 @@ data:extend({
     tier = 3,
     order = "m-p-cl-3",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -627,7 +600,6 @@ data:extend({
     tier = 4,
     order = "m-p-cl-4",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -647,7 +619,6 @@ data:extend({
     tier = 5,
     order = "m-p-cl-5",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -667,7 +638,6 @@ data:extend({
     tier = 6,
     order = "m-p-cl-6",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -687,7 +657,6 @@ data:extend({
     tier = 7,
     order = "m-p-cl-7",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -707,7 +676,6 @@ data:extend({
     tier = 8,
     order = "m-p-cl-8",
     stack_size = 100,
-    default_request_amount = 10,
     effect = { pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
@@ -732,7 +700,6 @@ data:extend({
     tier = 1,
     order = "m-p-cr-1",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -754,7 +721,6 @@ data:extend({
     tier = 2,
     order = "m-p-cr-2",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 2 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -776,7 +742,6 @@ data:extend({
     tier = 3,
     order = "m-p-cr-3",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 3 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -798,7 +763,6 @@ data:extend({
     tier = 4,
     order = "m-p-cr-4",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 4 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -820,7 +784,6 @@ data:extend({
     tier = 5,
     order = "m-p-cr-5",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 5 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -842,7 +805,6 @@ data:extend({
     tier = 6,
     order = "m-p-cr-6",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 6 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -864,7 +826,6 @@ data:extend({
     tier = 7,
     order = "m-p-cr-7",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 7 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },
@@ -886,7 +847,6 @@ data:extend({
     tier = 8,
     order = "m-p-cr-8",
     stack_size = 100,
-    default_request_amount = 10,
     effect = {
       pollution = { bonus = 8 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus + 0.001 },
     },

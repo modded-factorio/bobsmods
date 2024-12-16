@@ -15,6 +15,18 @@ then
       subgroup = "bob-alien-resource",
       order = "f[alien]-a",
       stack_size = 200,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -25,6 +37,18 @@ then
       subgroup = "bob-alien-resource",
       order = "f[alien]-b",
       stack_size = 200,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -36,7 +60,6 @@ then
       order = "f[alien]-c",
       default_temperature = 20,
       max_temperature = 100,
-      base_flow_rate = 100,
       heat_capacity = "1kJ",
       base_color = { r = 0.4, g = 0.0, b = 0.8 },
       flow_color = { r = 0.6, g = 0.5, b = 1.0 },
@@ -51,7 +74,6 @@ then
       order = "f[alien]-d",
       default_temperature = 20,
       max_temperature = 100,
-      base_flow_rate = 100,
       heat_capacity = "1kJ",
       base_color = { r = 0.8, g = 0.8, b = 0.0 },
       flow_color = { r = 1.0, g = 1.0, b = 0.5 },
@@ -65,7 +87,6 @@ then
       subgroup = "bob-alien-resource",
       order = "f[alien]-e",
       default_temperature = 20,
-      base_flow_rate = 100,
       heat_capacity = "1kJ",
       base_color = { r = 0.0, g = 0.8, b = 0.0 },
       flow_color = { r = 0.5, g = 1.0, b = 0.5 },
@@ -80,7 +101,6 @@ then
       subgroup = "bob-alien-resource",
       order = "f[alien]-f",
       default_temperature = 20,
-      base_flow_rate = 100,
       heat_capacity = "1kJ",
       base_color = { r = 0.8, g = 0, b = 0 },
       flow_color = { r = 1.0, g = 0.5, b = 0.5 },

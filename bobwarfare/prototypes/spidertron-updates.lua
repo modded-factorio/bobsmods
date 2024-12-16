@@ -237,7 +237,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "advanced-processing-unit", amount = 20 })
-    bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-processing-unit")
   else
     bobmods.lib.recipe.add_ingredient("mech-brain", { type = "item", name = "efficiency-module-3", amount = 6 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "efficiency-module-3")
@@ -259,7 +259,7 @@ else
     bobmods.lib.recipe.add_ingredient("spidertron", { type = "item", name = "advanced-processing-unit", amount = 10 })
 
     bobmods.lib.recipe.add_ingredient("antron", { type = "item", name = "advanced-processing-unit", amount = 8 })
-    bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("walking-vehicle", "advanced-processing-unit")
     bobmods.lib.recipe.add_ingredient("tankotron", { type = "item", name = "advanced-processing-unit", amount = 8 })
     bobmods.lib.recipe.add_ingredient(
       "logistic-spidertron",

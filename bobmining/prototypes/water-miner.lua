@@ -198,7 +198,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -220,6 +220,13 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
       module_slots = 1,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.mining_drill_modules,
+          shift = { 0, 0.5 },
+          multi_row_initial_height_modifier = -0.3,
+        },
+      },
       radius_visualisation_picture = {
         filename = "__bobmining__/graphics/entity/water-miner/water-miner-radius-visualization.png",
         width = 12,
@@ -264,7 +271,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -337,7 +344,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -410,7 +417,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -483,7 +490,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         emissions_per_minute = { pollution = 1 },
@@ -504,12 +511,13 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       mining_speed = 5,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
-      module_slots = 5,
+      module_slots = 6,
       icons_positioning = {
         {
           inventory_index = defines.inventory.mining_drill_modules,
           shift = { 0, 0.5 },
           multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
         },
       },
       fast_replaceable_group = "pumpjack",
@@ -551,7 +559,9 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       order = "d-a-d-1",
-      prerequisites = {},
+      prerequisites = {
+        "automation-science-pack",
+      },
       unit = {
         count = 10,
         time = 30,
