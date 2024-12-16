@@ -31,7 +31,6 @@ data:extend({
     type = "assembling-machine",
     name = "bob-greenhouse",
     icon = "__bobgreenhouse__/graphics/icons/greenhouse.png",
-    icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-greenhouse" },
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
@@ -59,7 +58,44 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = {
+          north =
+          {
+            filename = "__bobgreenhouse__/graphics/entity/greenhouse-pipe-N.png",
+            priority = "extra-high",
+            width = 71,
+            height = 46,
+            shift = util.by_pixel(2.25, 17),
+            scale = 0.5
+          },
+          east =
+          {
+            filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-pipe-E.png",
+            priority = "extra-high",
+            width = 42,
+            height = 76,
+            shift = util.by_pixel(-24.5, 1),
+            scale = 0.5
+          },
+          south =
+          {
+            filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-pipe-S.png",
+            priority = "extra-high",
+            width = 88,
+            height = 61,
+            shift = util.by_pixel(0, -31.25),
+            scale = 0.5
+          },
+          west =
+          {
+            filename = "__bobgreenhouse__/graphics/entity/greenhouse-pipe-W.png",
+            priority = "extra-high",
+            width = 39,
+            height = 73,
+            shift = util.by_pixel(25.75, 1.25),
+            scale = 0.5
+          }
+        },
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", position = { 0, -1 }, direction = defines.direction.north } },
@@ -69,21 +105,38 @@ data:extend({
     allowed_effects = {},
     graphics_set = {
       animation = {
-        filename = "__bobgreenhouse__/graphics/entity/greenhouse.png",
-        width = 113,
-        height = 91,
-        frame_count = 1,
-        shift = { 0.2, 0.15 },
+        layers = {
+          {
+            filename = "__bobgreenhouse__/graphics/entity/greenhouse.png",
+            priority = "high",
+            width = 194,
+            height = 174,
+            frame_count = 1,
+            shift = util.by_pixel(0, 3),
+            scale = 0.5
+          },
+          {
+            filename = "__base__/graphics/entity/lab/lab-shadow.png",
+            width = 242,
+            height = 136,
+            frame_count = 1,
+            shift = util.by_pixel(13, 15),
+            scale = 0.5,
+            draw_as_shadow = true
+          }
+        }
       },
       working_visualisations = {
         {
           light = { intensity = 1, size = 6 },
           animation = {
             filename = "__bobgreenhouse__/graphics/entity/greenhouse-light.png",
-            width = 113,
-            height = 91,
             frame_count = 1,
-            shift = { 0.2, 0.15 },
+            width = 194,
+            height = 174,
+            shift = util.by_pixel(0, 3),
+            scale = 0.5,
+            blend_mode = "additive-soft",
           },
         },
       },

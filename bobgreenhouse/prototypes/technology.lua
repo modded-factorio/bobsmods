@@ -3,7 +3,7 @@ data:extend({
     type = "technology",
     name = "bob-greenhouse",
     icon = "__bobgreenhouse__/graphics/icons/technology/greenhouse.png",
-    icon_size = 128,
+    icon_size = 256,
     prerequisites = {
       "automation-science-pack",
     },
