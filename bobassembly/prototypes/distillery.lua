@@ -15,7 +15,6 @@ then
       type = "item",
       name = "bob-distillery-2",
       icon = "__bobassembly__/graphics/icons/distillery-red.png",
-      icon_size = 32,
       subgroup = "production-machine",
       order = "e[distillery]",
       place_result = "bob-distillery-2",
@@ -38,7 +37,6 @@ then
       type = "item",
       name = "bob-distillery-3",
       icon = "__bobassembly__/graphics/icons/distillery-blue.png",
-      icon_size = 32,
       subgroup = "production-machine",
       order = "e[distillery]",
       place_result = "bob-distillery-3",
@@ -62,7 +60,6 @@ then
       type = "item",
       name = "bob-distillery-4",
       icon = "__bobassembly__/graphics/icons/distillery-purple.png",
-      icon_size = 32,
       subgroup = "production-machine",
       order = "e[distillery]",
       place_result = "bob-distillery-4",
@@ -86,7 +83,6 @@ then
       type = "item",
       name = "bob-distillery-5",
       icon = "__bobassembly__/graphics/icons/distillery-green.png",
-      icon_size = 32,
       subgroup = "production-machine",
       order = "e[distillery]",
       place_result = "bob-distillery-5",
@@ -166,7 +162,6 @@ then
       {
         name = "bob-distillery-2",
         icon = "__bobassembly__/graphics/icons/distillery-red.png",
-        icon_size = 32,
         minable = { mining_time = 0.2, result = "bob-distillery-2" },
         max_health = 250,
         graphics_set = {
@@ -188,7 +183,6 @@ then
       {
         name = "bob-distillery-3",
         icon = "__bobassembly__/graphics/icons/distillery-blue.png",
-        icon_size = 32,
         minable = { mining_time = 0.2, result = "bob-distillery-3" },
         max_health = 300,
         graphics_set = {
@@ -219,7 +213,6 @@ then
       {
         name = "bob-distillery-4",
         icon = "__bobassembly__/graphics/icons/distillery-purple.png",
-        icon_size = 32,
         minable = { mining_time = 0.2, result = "bob-distillery-4" },
         max_health = 350,
         graphics_set = {
@@ -250,7 +243,6 @@ then
       {
         name = "bob-distillery-5",
         icon = "__bobassembly__/graphics/icons/distillery-green.png",
-        icon_size = 32,
         minable = { mining_time = 0.2, result = "bob-distillery-5" },
         max_health = 400,
         graphics_set = {
