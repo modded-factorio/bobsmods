@@ -183,10 +183,10 @@ if
   settings.startup["bobmods-logistics-inserteroverhaul"]
   and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
 then
-  bobmods.lib.tech.add_prerequisite("advanced-research", "express-inserters")
+  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter-2")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "express-inserters")
 else
-  bobmods.lib.tech.add_prerequisite("advanced-research", "fast-inserter")
+  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "fast-inserter")
 end
 
@@ -285,7 +285,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         type = "technology",
         name = "bob-steam-engine-1",
         icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-        icon_size = 128,
+        icon_size = 256,
         prerequisites = {
           "electricity",
           "steam-power",
