@@ -7,7 +7,6 @@ if
   and data.raw.item["alien-artifact-green"]
   and data.raw.item["alien-artifact-red"]
 then
-
   local science_drop_move = {
     filename = "__base__/sound/item/science-inventory-move.ogg",
     volume = 0.6,

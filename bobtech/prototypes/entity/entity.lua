@@ -137,13 +137,13 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.lab_modules,
-        shift = {0, 0.9},
+        shift = { 0, 0.9 },
       },
       {
         inventory_index = defines.inventory.lab_input,
-        shift = {0, 0},
+        shift = { 0, 0 },
         max_icons_per_row = 4,
-        separation_multiplier = 1/1.1
+        separation_multiplier = 1 / 1.1,
       },
     },
     fast_replaceable_group = "lab",
@@ -281,9 +281,9 @@ if settings.startup["bobmods-burnerphase"].value == true then
       icons_positioning = {
         {
           inventory_index = defines.inventory.lab_input,
-          shift = {0, 0},
+          shift = { 0, 0 },
           max_icons_per_row = 4,
-          separation_multiplier = 1/1.1
+          separation_multiplier = 1 / 1.1,
         },
       },
       fast_replaceable_group = "lab",

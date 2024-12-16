@@ -20,7 +20,10 @@ if bobmods.tech.advanced_logistic_science then
     settings.startup["bobmods-logistics-inserteroverhaul"]
     and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
   then
-    bobmods.lib.recipe.set_ingredient("advanced-logistic-science-pack", { type = "item", name = "fast-inserter", amount = 1})
+    bobmods.lib.recipe.set_ingredient(
+      "advanced-logistic-science-pack",
+      { type = "item", name = "fast-inserter", amount = 1 }
+    )
   end
 else
   bobmods.lib.recipe.hide("advanced-logistic-science-pack")
