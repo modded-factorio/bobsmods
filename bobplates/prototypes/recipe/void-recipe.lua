@@ -14,7 +14,6 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
         subgroup = "void",
         order = name,
         category = "void-fluid",
-        hidden = true,
         hide_from_player_crafting = true,
         energy_required = 1,
         ingredients = {
