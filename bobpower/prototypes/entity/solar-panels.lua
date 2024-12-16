@@ -28,6 +28,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       production = "26.67kW",
       fast_replaceable_group = "solar-panel",
       next_upgrade = "solar-panel-small-2",
+      impact_category = "glass",
     },
 
     {
@@ -55,6 +56,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       production = "106.67kW",
       fast_replaceable_group = "solar-panel",
       next_upgrade = "solar-panel-large-2",
+      impact_category = "glass",
     },
 
     {
@@ -82,6 +84,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       production = "40kW",
       fast_replaceable_group = "solar-panel",
       next_upgrade = "solar-panel-small-3",
+      impact_category = "glass",
     },
 
     {
@@ -109,6 +112,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       production = "90kW",
       fast_replaceable_group = "solar-panel",
       next_upgrade = "solar-panel-3",
+      impact_category = "glass",
     },
 
     {
@@ -136,6 +140,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       production = "160kW",
       fast_replaceable_group = "solar-panel",
       next_upgrade = "solar-panel-large-3",
+      impact_category = "glass",
     },
 
     {
@@ -188,6 +193,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       },
       production = "135kW",
       fast_replaceable_group = "solar-panel",
+      impact_category = "glass",
     },
 
     {
@@ -214,6 +220,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       },
       production = "240kW",
       fast_replaceable_group = "solar-panel",
+      impact_category = "glass",
     },
   })
 end

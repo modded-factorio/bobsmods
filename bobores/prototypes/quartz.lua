@@ -14,18 +14,9 @@ bobmods.ores.quartz = {
   sprite = {
     sheet = 3,
   },
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = true,
-    richness = 1,
-    size = 1
-  }
-]]
-  --
   autoplace = "control-only",
   planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.quartz.create_autoplace()

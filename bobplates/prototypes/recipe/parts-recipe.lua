@@ -4,7 +4,7 @@ data:extend({
     name = "steel-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 2 },
     },
     results = { { type = "item", name = "steel-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -38,7 +38,7 @@ data:extend({
     name = "brass-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "brass-alloy", amount = 1 },
+      { type = "item", name = "brass-alloy", amount = 2 },
     },
     results = { { type = "item", name = "brass-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -49,7 +49,7 @@ data:extend({
     name = "cobalt-steel-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-steel-alloy", amount = 1 },
+      { type = "item", name = "cobalt-steel-alloy", amount = 2 },
     },
     results = { { type = "item", name = "cobalt-steel-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -83,7 +83,7 @@ data:extend({
     name = "titanium-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "bob-titanium-plate", amount = 1 },
+      { type = "item", name = "bob-titanium-plate", amount = 2 },
     },
     results = { { type = "item", name = "titanium-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -119,7 +119,7 @@ data:extend({
     name = "tungsten-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "bob-tungsten-plate", amount = 1 },
+      { type = "item", name = "bob-tungsten-plate", amount = 2 },
     },
     results = { { type = "item", name = "tungsten-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -130,7 +130,7 @@ data:extend({
     name = "nitinol-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "nitinol-alloy", amount = 1 },
+      { type = "item", name = "nitinol-alloy", amount = 2 },
     },
     results = { { type = "item", name = "nitinol-gear-wheel", amount = 1 } },
     allow_productivity = true,

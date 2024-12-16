@@ -1,3 +1,12 @@
+local radioactive_drop_move = {
+  filename = "__base__/sound/item/nuclear-inventory-move.ogg",
+  volume = 0.6,
+}
+local radioactive_pick = {
+  filename = "__base__/sound/item/nuclear-inventory-pickup.ogg",
+  volume = 0.6,
+}
+
 data:extend({
   {
     type = "item",
@@ -7,6 +16,9 @@ data:extend({
     subgroup = "bob-nuclear",
     order = "s[plutonium-239]",
     stack_size = 100,
+    drop_sound = radioactive_drop_move,
+    inventory_move_sound = radioactive_drop_move,
+    pick_sound = radioactive_pick,
   },
 })
 
@@ -24,6 +36,9 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       fuel_value = "40GJ",
       fuel_glow_color = { r = 0.7, g = 1, b = 0 },
       stack_size = 50,
+      drop_sound = radioactive_drop_move,
+      inventory_move_sound = radioactive_drop_move,
+      pick_sound = radioactive_pick,
     },
     {
       type = "item",
@@ -33,6 +48,30 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       subgroup = "bob-fuel-cells",
       order = "r[uranium-processing]-0[empty-nuclear-fuel-cell]",
       stack_size = 50,
+      drop_sound = {
+        aggregation = {
+          max_count = 1,
+          remove = true,
+        },
+        filename = "__base__/sound/item/fuel-cell-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        aggregation = {
+          max_count = 1,
+          remove = true,
+        },
+        filename = "__base__/sound/item/fuel-cell-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        aggregation = {
+          max_count = 1,
+          remove = true,
+        },
+        filename = "__base__/sound/item/fuel-cell-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
   })
 end
@@ -47,6 +86,9 @@ if data.raw.item["thorium-ore"] then
       subgroup = "bob-nuclear",
       order = "s[thorium-232]",
       stack_size = 100,
+      drop_sound = radioactive_drop_move,
+      inventory_move_sound = radioactive_drop_move,
+      pick_sound = radioactive_pick,
     },
     {
       type = "item",
@@ -60,6 +102,9 @@ if data.raw.item["thorium-ore"] then
       fuel_value = "6GJ",
       fuel_glow_color = { r = 1, g = 1, b = 0 },
       stack_size = 50,
+      drop_sound = radioactive_drop_move,
+      inventory_move_sound = radioactive_drop_move,
+      pick_sound = radioactive_pick,
     },
     {
       type = "item",
@@ -73,6 +118,9 @@ if data.raw.item["thorium-ore"] then
       fuel_value = "40GJ",
       fuel_glow_color = { r = 1, g = 0.7, b = 0 },
       stack_size = 50,
+      drop_sound = radioactive_drop_move,
+      inventory_move_sound = radioactive_drop_move,
+      pick_sound = radioactive_pick,
     },
     {
       type = "item",
@@ -82,6 +130,9 @@ if data.raw.item["thorium-ore"] then
       subgroup = "bob-fuel-cells",
       order = "s[bob-depleted-thorium-fuel-cell]",
       stack_size = 50,
+      drop_sound = radioactive_drop_move,
+      inventory_move_sound = radioactive_drop_move,
+      pick_sound = radioactive_pick,
     },
   })
 
@@ -104,6 +155,18 @@ data:extend({
     fuel_value = "100GJ",
     fuel_glow_color = { r = 1, g = 0, b = 0.57 },
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5,
+    },
   },
   {
     type = "item",
@@ -113,6 +176,18 @@ data:extend({
     subgroup = "bob-fuel-cells",
     order = "t[bob-depleted-deuterium-fuel-cell]",
     stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5,
+    },
   },
 })
 
@@ -131,6 +206,18 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       fuel_value = "120GJ",
       fuel_glow_color = { r = 1, g = 0, b = 0.9 },
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
     {
       type = "item",
@@ -140,6 +227,9 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       subgroup = "bob-nuclear",
       order = "t[fusion-catalyst]",
       stack_size = 50,
+      drop_sound = radioactive_drop_move,
+      inventory_move_sound = radioactive_drop_move,
+      pick_sound = radioactive_pick,
     },
   })
 end

@@ -10,9 +10,13 @@ then
     and settings.startup["bobmods-plates-expensive-electrolysis"].value == true
   then
     data.raw["assembling-machine"]["electrolyser-2"].energy_usage = "1625kW"
+    data.raw["assembling-machine"]["electrolyser-2"].energy_source.drain = "18kW"
     data.raw["assembling-machine"]["electrolyser-3"].energy_usage = "2400kW"
+    data.raw["assembling-machine"]["electrolyser-3"].energy_source.drain = "27kW"
     data.raw["assembling-machine"]["electrolyser-4"].energy_usage = "3025kW"
+    data.raw["assembling-machine"]["electrolyser-4"].energy_source.drain = "34kW"
     data.raw["assembling-machine"]["electrolyser-5"].energy_usage = "3500kW"
+    data.raw["assembling-machine"]["electrolyser-5"].energy_source.drain = "39kW"
   end
 
   data.raw["assembling-machine"]["electrolyser"].next_upgrade = "electrolyser-2"

@@ -38,8 +38,8 @@ function bobmods.lib.belt_speed_ips(ips)
   return ips * 1 / 480
 end
 
---Inserts the new item into the table only if it doesn't already exist. (Designed to insert strings only)
-function bobmods.lib.safe_insert(array, new_item)
+--Inserts the new item into the table only if it doesn't already exist. (Index optional. Designed to insert strings only.)
+function bobmods.lib.safe_insert(array, new_item, index)
   local addit = true
   for i, item in pairs(array) do
     if item == new_item then
@@ -47,7 +47,11 @@ function bobmods.lib.safe_insert(array, new_item)
     end
   end
   if addit then
-    table.insert(array, new_item)
+    if index then
+      table.insert(array, index, new_item)
+    else
+      table.insert(array, new_item)
+    end
   end
 end
 
