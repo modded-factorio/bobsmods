@@ -1,5 +1,4 @@
 if settings.startup["bobmods-power-steam"].value == true then
-
   local steam_drop_move = {
     filename = "__base__/sound/item/steam-inventory-move.ogg",
     volume = 0.6,

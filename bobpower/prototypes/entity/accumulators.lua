@@ -2,7 +2,6 @@ local sounds = require("__base__.prototypes.entity.sounds")
 --local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 if settings.startup["bobmods-power-accumulators"].value == true then
-
   function bobmods.power.large_accumulator_picture(tint, repeat_count)
     return {
       layers = {
@@ -134,9 +133,9 @@ if settings.startup["bobmods-power-accumulators"].value == true then
               filename = "__base__/sound/accumulator-working.ogg",
               modifiers = {
                 type = "main-menu",
-                volume_multiplier = 1.44
+                volume_multiplier = 1.44,
               },
-              volume = 0.4
+              volume = 0.4,
             },
           },
           {
@@ -148,9 +147,9 @@ if settings.startup["bobmods-power-accumulators"].value == true then
               filename = "__base__/sound/accumulator-discharging.ogg",
               modifiers = {
                 type = "main-menu",
-                volume_multiplier = 1.44
+                volume_multiplier = 1.44,
               },
-              volume = 0.4
+              volume = 0.4,
             },
           },
         },

@@ -361,7 +361,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             starting_frame_deviation = 60,
           },
         },
-      impact_category = "metal-large",
+        impact_category = "metal-large",
         working_sound = {
           sound = {
             filename = "__base__/sound/steam-engine-90bpm.ogg",

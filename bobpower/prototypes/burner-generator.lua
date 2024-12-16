@@ -64,10 +64,10 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       },
       burner = {
         type = "burner",
-        fuel_categories = {"chemical"},
+        fuel_categories = { "chemical" },
         effectivity = 0.75,
         fuel_inventory_size = 1,
-        emissions_per_minute = {pollution = 15},
+        emissions_per_minute = { pollution = 15 },
         smoke = {
           {
             name = "smoke",
