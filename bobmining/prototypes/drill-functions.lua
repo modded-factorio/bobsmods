@@ -181,7 +181,7 @@ function bobmods.mining.electric_mining_drill(inputs)
   mining_drill.circuit_wire_max_distance = inputs.circuit_wire_max_distance or default_circuit_wire_max_distance
   mining_drill.next_upgrade = inputs.next_upgrade
 
-  mining_drill.energy_source.emissions_per_minute = inputs.emissions_per_minute or 10
+  mining_drill.energy_source.emissions_per_minute = inputs.emissions_per_minute or { pollution = 10 }
 
   mining_drill.icons_positioning = {
     {
