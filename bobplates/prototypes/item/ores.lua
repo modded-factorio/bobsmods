@@ -1,10 +1,10 @@
 local resource_drop_move = {
   filename = "__base__/sound/item/resource-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local resouce_pick = {
   filename = "__base__/sound/item/resource-inventory-pickup.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 
 if not data.raw.item["gold-ore"] then

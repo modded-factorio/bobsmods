@@ -395,15 +395,12 @@ if feature_flags["quality"] then
           end
           for i, outputs in pairs(source_recipe.ingredients) do
             if source_recipe.ingredients[i].type == "item" then
-              table.insert(
-                target_recipe.results,
-                {
-                  type = "item",
-                  name = source_recipe.ingredients[i].name,
-                  amount = source_recipe.ingredients[i].amount / source_output_amount / 4,
-                  extra_count_fraction = source_recipe.ingredients[i].amount / source_output_amount % 4 / 4,
-                }
-              )
+              table.insert(target_recipe.results, {
+                type = "item",
+                name = source_recipe.ingredients[i].name,
+                amount = source_recipe.ingredients[i].amount / source_output_amount / 4,
+                extra_count_fraction = source_recipe.ingredients[i].amount / source_output_amount % 4 / 4,
+              })
             end
           end
 
@@ -528,15 +525,12 @@ if feature_flags["quality"] then
         end
         for i, outputs in pairs(source_recipe.ingredients) do
           if source_recipe.ingredients[i].type == "item" then
-            table.insert(
-              target_recipe.results,
-              {
-                type = "item",
-                name = source_recipe.ingredients[i].name,
-                amount = source_recipe.ingredients[i].amount / source_output_amount / 4,
-                extra_count_fraction = source_recipe.ingredients[i].amount / source_output_amount % 4 / 4,
-              }
-            )
+            table.insert(target_recipe.results, {
+              type = "item",
+              name = source_recipe.ingredients[i].name,
+              amount = source_recipe.ingredients[i].amount / source_output_amount / 4,
+              extra_count_fraction = source_recipe.ingredients[i].amount / source_output_amount % 4 / 4,
+            })
           end
         end
 

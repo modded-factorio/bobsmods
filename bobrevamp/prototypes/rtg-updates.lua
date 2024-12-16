@@ -14,7 +14,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       )
 
       bobmods.lib.recipe.remove_result("bob-ammonium-chloride-recycling", "water")
-      bobmods.lib.recipe.add_result("bob-ammonium-chloride-recycling", { type = "fluid", name = "pure-water", amount = 10 })
+      bobmods.lib.recipe.add_result(
+        "bob-ammonium-chloride-recycling",
+        { type = "fluid", name = "pure-water", amount = 10 }
+      )
 
       bobmods.lib.recipe.replace_ingredient("brine", "water", "pure-water")
     end

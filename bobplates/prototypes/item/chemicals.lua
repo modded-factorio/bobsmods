@@ -466,7 +466,6 @@ data:extend({
   },
 })
 
-
 if not feature_flags["quality"] then
   data:extend({
 
@@ -483,6 +482,5 @@ if not feature_flags["quality"] then
       subgroup = "bob-fluid",
       order = "a[fluid]-g[tungstic-acid]",
     },
-
   })
 end

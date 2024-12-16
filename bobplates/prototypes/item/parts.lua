@@ -254,7 +254,7 @@ data:extend({
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -276,7 +276,7 @@ data:extend({
     },
     pick_sound = {
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 

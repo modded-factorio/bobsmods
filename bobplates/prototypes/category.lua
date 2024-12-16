@@ -345,7 +345,6 @@ data:extend({
     order = "e-a3",
   },
 
-
   {
     type = "item-subgroup",
     name = "bob-gears",

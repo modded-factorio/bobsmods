@@ -238,8 +238,8 @@ data:extend({
       { type = "item", name = "solid-fuel", amount = 1 },
     },
     icons = {
-      { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64},
-      { icon = "__bobplates__/graphics/icons/hydrogen.png", icon_size = 64, scale = 0.25, shift = {-8, -8}, }
+      { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
+      { icon = "__bobplates__/graphics/icons/hydrogen.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
     },
     subgroup = "bob-chemical-fuels",
     enabled = false,

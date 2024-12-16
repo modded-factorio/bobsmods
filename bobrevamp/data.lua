@@ -184,8 +184,8 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       type = "recipe",
       name = "solid-fuel-from-sour-gas",
       icons = {
-        {icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64},
-        {icon = "__bobrevamp__/graphics/icons/sour-gas.png", icon_size = 64, scale = 0.25, shift = {-8, -8}}
+        { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
+        { icon = "__bobrevamp__/graphics/icons/sour-gas.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
       },
       category = "chemistry",
       subgroup = "fluid-recipes",

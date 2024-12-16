@@ -920,7 +920,6 @@ if not feature_flags["quality"] then
       results = { { type = "item", name = "tungsten-oxide", amount = 1 } },
       allow_productivity = true,
     },
-
   })
 else
   data:extend({
@@ -948,6 +947,5 @@ else
       },
       allow_productivity = true,
     },
-
   })
 end
