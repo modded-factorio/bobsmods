@@ -367,7 +367,7 @@ data:extend({
   {
     type = "item-group",
     name = "void",
-    order = "aaaaa",
+    order = "x",
     icon = "__bobplates__/graphics/icons/technology/void.png",
     icon_size = 128,
   },
