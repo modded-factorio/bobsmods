@@ -1,18 +1,18 @@
 local belt_drop_move = {
   filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 local belt_pick = {
   filename = "__base__/sound/item/transport-belt-inventory-pickup.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 local mechanical_drop_move = {
   filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 local mechanical_pick = {
   filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then

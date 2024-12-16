@@ -6,11 +6,11 @@ data.raw.item["bulk-inserter"].order = "e[inserter]-d[express]-c[bulk]"
 
 local inserter_drop_move = {
   filename = "__base__/sound/item/inserter-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local inserter_pick = {
   filename = "__base__/sound/item/inserter-inventory-pickup.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 
 data:extend({
@@ -153,9 +153,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.item["express-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-inserter.png"
   data.raw.item["express-inserter"].subgroup = "bob-logistic-tier-5"
 
-
   data.raw.item["express-bulk-inserter"].localised_name = { "entity-name.ultimate-bulk-inserter" }
   data.raw.item["express-bulk-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-bulk-inserter.png"
   data.raw.item["express-bulk-inserter"].subgroup = "bob-logistic-tier-5"
-
 end

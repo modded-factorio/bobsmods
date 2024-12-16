@@ -33,7 +33,6 @@ data.raw.roboport["roboport"].door_animation_up.shift = util.by_pixel(-0.25, -29
 data.raw.roboport["roboport"].door_animation_down.shift = util.by_pixel(-0.25, -9.75)
 data.raw.roboport["roboport"].base_animation.shift = util.by_pixel(-17.75, -61.25)
 
-
 if settings.startup["bobmods-logistics-disableroboports"].value == false then
   data:extend({
     {

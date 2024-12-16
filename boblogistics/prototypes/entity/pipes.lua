@@ -384,7 +384,7 @@ data:extend({
           position = { 0, 0 },
           direction = defines.direction.south,
           connection_type = "underground",
-          max_underground_distance = 10
+          max_underground_distance = 10,
         },
       },
     },
@@ -1291,15 +1291,15 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/metal-small-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/metal-small-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       weight = 5000,
     },
@@ -1315,15 +1315,15 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/metal-small-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/metal-small-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {

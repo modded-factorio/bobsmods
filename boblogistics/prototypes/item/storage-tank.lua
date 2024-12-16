@@ -4,11 +4,11 @@ data.raw.item["storage-tank"].icon = "__boblogistics__/graphics/icons/storage-ta
 
 local storage_drop_move = {
   filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 local storage_pick = {
   filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 
 data:extend({

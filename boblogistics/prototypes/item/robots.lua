@@ -10,11 +10,11 @@ data.raw.item["construction-robot"].icon_size = 32
 
 local robot_drop_move = {
   filename = "__base__/sound/item/robotic-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local robot_pick = {
   filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-  volume = 0.5
+  volume = 0.5,
 }
 
 data:extend({

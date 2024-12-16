@@ -3,11 +3,11 @@ data.raw.container["iron-chest"].next_upgrade = "steel-chest"
 
 local chest_drop_move = {
   filename = "__base__/sound/item/metal-chest-inventory-move.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 local chest_pick = {
   filename = "__base__/sound/item/metal-chest-inventory-pickup.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 
 if data.raw.item["brass-alloy"] then

@@ -13,23 +13,23 @@ if settings.startup["bobmods-logistics-trains"].value == true then
 
   local locomotive_drop_move = {
     filename = "__base__/sound/item/locomotive-inventory-move.ogg",
-    volume = 0.4
+    volume = 0.4,
   }
   local locomotive_pick = {
     filename = "__base__/sound/item/locomotive-inventory-pickup.ogg",
-    volume = 0.4
+    volume = 0.4,
   }
   local wagon_drop_move = {
     filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-    volume = 0.7
+    volume = 0.7,
   }
   local fluid_drop_move = {
     filename = "__base__/sound/item/fluid-inventory-move.ogg",
-    volume = 0.6
+    volume = 0.6,
   }
-  local fluid_pick= {
+  local fluid_pick = {
     filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
-    volume = 0.5
+    volume = 0.5,
   }
 
   data:extend({

@@ -6,11 +6,11 @@ data.raw.item["pipe-to-ground"].order = "a[pipe]-b[pipe-to-ground]-1-2"
 
 local pipe_drop_move = {
   filename = "__base__/sound/item/metal-small-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local pipe_pick = {
   filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 
 data:extend({
@@ -130,15 +130,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/plastic-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/plastic-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     weight = 5000,
   },
@@ -154,15 +154,15 @@ data:extend({
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/plastic-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/plastic-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 })

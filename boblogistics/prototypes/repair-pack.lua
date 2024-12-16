@@ -4,11 +4,11 @@ data.raw["repair-tool"]["repair-pack"].order = "b[repair]-a[repair-pack-1]"
 
 local repair_drop_move = {
   filename = "__base__/sound/item/repair-pack-inventory-move.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 local repair_pick = {
   filename = "__base__/sound/item/repair-pack-inventory-pickup.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 
 data:extend({

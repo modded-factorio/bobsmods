@@ -1,28 +1,28 @@
 local roboport_drop_move = {
   filename = "__base__/sound/item/roboport-inventory-move.ogg",
-  volume = 0.4
+  volume = 0.4,
 }
 local roboport_pick = {
   filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-  volume = 0.3
+  volume = 0.3,
 }
 
 local radio_drop_move = {
   filename = "__base__/sound/item/robotic-inventory-move.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 local radio_pick = {
   filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-  volume = 0.4
+  volume = 0.4,
 }
 
 local charger_drop_move = {
   filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 local charger_pick = {
   filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 
 data:extend({

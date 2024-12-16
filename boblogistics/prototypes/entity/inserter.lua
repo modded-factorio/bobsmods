@@ -152,8 +152,7 @@ data:extend({
   }),
 })
 data.raw.inserter["express-bulk-inserter"].hand_base_picture = inserter.graphics.dark_green.hand_base_picture()
-data.raw.inserter["express-bulk-inserter"].hand_closed_picture =
-  inserter.graphics.dark_green.bulk.hand_closed_picture()
+data.raw.inserter["express-bulk-inserter"].hand_closed_picture = inserter.graphics.dark_green.bulk.hand_closed_picture()
 data.raw.inserter["express-bulk-inserter"].hand_open_picture = inserter.graphics.dark_green.bulk.hand_open_picture()
 data.raw.inserter["express-bulk-inserter"].platform_picture = inserter.graphics.dark_green.platform_picture()
 

@@ -4,18 +4,16 @@ data.raw["storage-tank"]["storage-tank"].next_upgrade = "storage-tank-2"
 
 local storagetankbase = settings.startup["bobmods-logistics-storagetankbase"].value * 1000
 data.raw["storage-tank"]["storage-tank"].fluid_box.volume = storagetankbase
-table.insert(data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets, 2, 
-  {
-    filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-mask.png",
-    priority = "extra-high",
-    frames = 2,
-    width = 219,
-    height = 215,
-    shift = util.by_pixel(-0.25, 3.75),
-    scale = 0.5,
-    tint = { r = 0.65, g = 0.2, b = 0.15 }
-  }
-)
+table.insert(data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets, 2, {
+  filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-mask.png",
+  priority = "extra-high",
+  frames = 2,
+  width = 219,
+  height = 215,
+  shift = util.by_pixel(-0.25, 3.75),
+  scale = 0.5,
+  tint = { r = 0.65, g = 0.2, b = 0.15 },
+})
 
 function storage_tank_pictures(tint)
   local graphics = {
@@ -38,7 +36,7 @@ function storage_tank_pictures(tint)
           height = 215,
           shift = util.by_pixel(-0.25, 3.75),
           scale = 0.5,
-          tint = tint
+          tint = tint,
         },
         {
           filename = "__base__/graphics/entity/storage-tank/storage-tank-shadow.png",
@@ -85,7 +83,6 @@ function storage_tank_pictures(tint)
   return graphics
 end
 
-
 function storage_tank_all_pictures(tint)
   local graphics = {
     picture = {
@@ -107,7 +104,7 @@ function storage_tank_all_pictures(tint)
           height = 215,
           shift = util.by_pixel(-0.25, 3.75),
           scale = 0.5,
-          tint = tint
+          tint = tint,
         },
         {
           filename = "__boblogistics__/graphics/entity/storage-tank/storage-tank-shadow.png",
@@ -292,13 +289,13 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { -1, -1 }, direction = defines.direction.north },
-        { position = {  1, -1 }, direction = defines.direction.north },
-        { position = { -1,  1 }, direction = defines.direction.south },
-        { position = {  1,  1 }, direction = defines.direction.south },
+        { position = { 1, -1 }, direction = defines.direction.north },
+        { position = { -1, 1 }, direction = defines.direction.south },
+        { position = { 1, 1 }, direction = defines.direction.south },
         { position = { -1, -1 }, direction = defines.direction.west },
-        { position = { -1,  1 }, direction = defines.direction.west },
-        { position = {  1, -1 }, direction = defines.direction.east },
-        { position = {  1,  1 }, direction = defines.direction.east },
+        { position = { -1, 1 }, direction = defines.direction.west },
+        { position = { 1, -1 }, direction = defines.direction.east },
+        { position = { 1, 1 }, direction = defines.direction.east },
       },
       hide_connection_info = true,
     },
@@ -335,13 +332,13 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { -1, -1 }, direction = defines.direction.north },
-        { position = {  1, -1 }, direction = defines.direction.north },
-        { position = { -1,  1 }, direction = defines.direction.south },
-        { position = {  1,  1 }, direction = defines.direction.south },
+        { position = { 1, -1 }, direction = defines.direction.north },
+        { position = { -1, 1 }, direction = defines.direction.south },
+        { position = { 1, 1 }, direction = defines.direction.south },
         { position = { -1, -1 }, direction = defines.direction.west },
-        { position = { -1,  1 }, direction = defines.direction.west },
-        { position = {  1, -1 }, direction = defines.direction.east },
-        { position = {  1,  1 }, direction = defines.direction.east },
+        { position = { -1, 1 }, direction = defines.direction.west },
+        { position = { 1, -1 }, direction = defines.direction.east },
+        { position = { 1, 1 }, direction = defines.direction.east },
       },
       hide_connection_info = true,
     },
@@ -378,13 +375,13 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { -1, -1 }, direction = defines.direction.north },
-        { position = {  1, -1 }, direction = defines.direction.north },
-        { position = { -1,  1 }, direction = defines.direction.south },
-        { position = {  1,  1 }, direction = defines.direction.south },
+        { position = { 1, -1 }, direction = defines.direction.north },
+        { position = { -1, 1 }, direction = defines.direction.south },
+        { position = { 1, 1 }, direction = defines.direction.south },
         { position = { -1, -1 }, direction = defines.direction.west },
-        { position = { -1,  1 }, direction = defines.direction.west },
-        { position = {  1, -1 }, direction = defines.direction.east },
-        { position = {  1,  1 }, direction = defines.direction.east },
+        { position = { -1, 1 }, direction = defines.direction.west },
+        { position = { 1, -1 }, direction = defines.direction.east },
+        { position = { 1, 1 }, direction = defines.direction.east },
       },
       hide_connection_info = true,
     },
@@ -421,13 +418,13 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { -1, -1 }, direction = defines.direction.north },
-        { position = {  1, -1 }, direction = defines.direction.north },
-        { position = { -1,  1 }, direction = defines.direction.south },
-        { position = {  1,  1 }, direction = defines.direction.south },
+        { position = { 1, -1 }, direction = defines.direction.north },
+        { position = { -1, 1 }, direction = defines.direction.south },
+        { position = { 1, 1 }, direction = defines.direction.south },
         { position = { -1, -1 }, direction = defines.direction.west },
-        { position = { -1,  1 }, direction = defines.direction.west },
-        { position = {  1, -1 }, direction = defines.direction.east },
-        { position = {  1,  1 }, direction = defines.direction.east },
+        { position = { -1, 1 }, direction = defines.direction.west },
+        { position = { 1, -1 }, direction = defines.direction.east },
+        { position = { 1, 1 }, direction = defines.direction.east },
       },
       hide_connection_info = true,
     },

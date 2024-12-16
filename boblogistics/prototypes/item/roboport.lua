@@ -4,29 +4,29 @@ data.raw.item["roboport"].subgroup = "bob-logistic-roboport"
 
 local roboport_drop_move = {
   filename = "__base__/sound/item/roboport-inventory-move.ogg",
-  volume = 0.45
+  volume = 0.45,
 }
 local roboport_pick = {
   filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-  volume = 0.35
+  volume = 0.35,
 }
 
 local radio_drop_move = {
   filename = "__base__/sound/item/robotic-inventory-move.ogg",
-  volume = 0.8
+  volume = 0.8,
 }
 local radio_pick = {
   filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-  volume = 0.5
+  volume = 0.5,
 }
 
 local charger_drop_move = {
   filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 local charger_pick = {
   filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-  volume = 0.7
+  volume = 0.7,
 }
 
 if settings.startup["bobmods-logistics-disableroboports"].value == false then
@@ -336,15 +336,15 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/rocket-control-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/rocket-control-inventory-move.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     pick_sound = {
       filename = "__base__/sound/item/rocket-control-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
     weight = 10000,
   },
