@@ -9,7 +9,7 @@ if data.raw.item["brass-chest"] then
     "passive-provider-chest-2",
     { type = "item", name = "advanced-circuit", amount = 3 }
   )
-  bobmods.lib.recipe.add_ingredient("active-provider-2", { type = "item", name = "advanced-circuit", amount = 3 })
+  bobmods.lib.recipe.add_ingredient("active-provider-chest-2", { type = "item", name = "advanced-circuit", amount = 3 })
   bobmods.lib.recipe.add_ingredient("storage-chest-2", { type = "item", name = "advanced-circuit", amount = 3 })
   bobmods.lib.recipe.add_ingredient("buffer-chest-2", { type = "item", name = "advanced-circuit", amount = 3 })
   bobmods.lib.recipe.add_ingredient("requester-chest-2", { type = "item", name = "advanced-circuit", amount = 3 })

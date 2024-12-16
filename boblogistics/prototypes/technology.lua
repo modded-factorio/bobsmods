@@ -811,6 +811,9 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           recipe = "basic-splitter",
         },
       },
+      prerequisites = {
+        "automation-science-pack",
+      },
       unit = {
         count = 10,
         ingredients = {

@@ -26,7 +26,20 @@
     ["robot-tool-construction", "bob-robot-tool"],
     ["robot-tool-construction-2", "bob-robot-tool-2"],
     ["robot-tool-construction-3", "bob-robot-tool-3"],
-    ["robot-tool-construction-4", "bob-robot-tool-4"]
+    ["robot-tool-construction-4", "bob-robot-tool-4"],
+    ["yellow-filter-inserter", "inserter"],
+    ["red-filter-inserter", "long-handed-inserter"],
+    ["filter-inserter", "fast-inserter"],
+    ["turbo-filter-inserter", "turbo-inserter"],
+    ["express-filter-inserter", "express-inserter"],
+    ["red-stack-inserter", "red-bulk-inserter"],
+    ["stack-inserter", "bulk-inserter"],
+    ["turbo-stack-inserter", "turbo-bulk-inserter"],
+    ["express-stack-inserter", "express-bulk-inserter"],
+    ["stack-filter-inserter", "bulk-inserter"],
+    ["red-stack-filter-inserter", "red-bulk-inserter"],
+    ["turbo-stack-filter-inserter", "turbo-bulk-inserter"],
+    ["express-stack-filter-inserter", "express-bulk-inserter"]
   ],
   "recipe":
   [
@@ -55,7 +68,20 @@
     ["robot-tool-construction", "bob-robot-tool"],
     ["robot-tool-construction-2", "bob-robot-tool-2"],
     ["robot-tool-construction-3", "bob-robot-tool-3"],
-    ["robot-tool-construction-4", "bob-robot-tool-4"]
+    ["robot-tool-construction-4", "bob-robot-tool-4"],
+    ["yellow-filter-inserter", "inserter"],
+    ["red-filter-inserter", "long-handed-inserter"],
+    ["filter-inserter", "fast-inserter"],
+    ["turbo-filter-inserter", "turbo-inserter"],
+    ["express-filter-inserter", "express-inserter"],
+    ["red-stack-inserter", "red-bulk-inserter"],
+    ["stack-inserter", "bulk-inserter"],
+    ["turbo-stack-inserter", "turbo-bulk-inserter"],
+    ["express-stack-inserter", "express-bulk-inserter"],
+    ["stack-filter-inserter", "bulk-inserter"],
+    ["red-stack-filter-inserter", "red-bulk-inserter"],
+    ["turbo-stack-filter-inserter", "turbo-bulk-inserter"],
+    ["express-stack-filter-inserter", "express-bulk-inserter"]
   ],
   "entity":
   [
@@ -68,6 +94,25 @@
     ["logistic-chest-passive-provider-3", "passive-provider-chest-3"],
     ["logistic-chest-storage-3", "storage-chest-3"],
     ["logistic-chest-requester-3", "requester-chest-3"],
-    ["logistic-chest-buffer-3", "buffer-chest-3"]
-  ]  
+    ["logistic-chest-buffer-3", "buffer-chest-3"],
+    ["yellow-filter-inserter", "inserter"],
+    ["red-filter-inserter", "red-inserter"],
+    ["filter-inserter", "fast-inserter"],
+    ["turbo-filter-inserter", "turbo-inserter"],
+    ["express-filter-inserter", "express-inserter"],
+    ["red-stack-inserter", "red-bulk-inserter"],
+    ["stack-inserter", "bulk-inserter"],
+    ["turbo-stack-inserter", "turbo-bulk-inserter"],
+    ["express-stack-inserter", "express-bulk-inserter"],
+    ["stack-filter-inserter", "bulk-inserter"],
+    ["red-stack-filter-inserter", "red-bulk-inserter"],
+    ["turbo-stack-filter-inserter", "turbo-bulk-inserter"],
+    ["express-stack-filter-inserter", "express-bulk-inserter"]
+  ],
+  "technology":
+  [
+    ["stack-inserter-2", "bulk-inserter-2"],
+    ["stack-inserter-3", "bulk-inserter-3"],
+    ["stack-inserter-4", "bulk-inserter-4"]
+  ]
 }

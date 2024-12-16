@@ -1,6 +1,15 @@
 data.raw.container["wooden-chest"].next_upgrade = "iron-chest"
 data.raw.container["iron-chest"].next_upgrade = "steel-chest"
 
+local chest_drop_move = {
+  filename = "__base__/sound/item/metal-chest-inventory-move.ogg",
+  volume = 0.6
+}
+local chest_pick = {
+  filename = "__base__/sound/item/metal-chest-inventory-pickup.ogg",
+  volume = 0.6
+}
+
 if data.raw.item["brass-alloy"] then
   data.raw.container["steel-chest"].next_upgrade = "brass-chest"
   data:extend({
@@ -20,6 +29,9 @@ if data.raw.item["brass-alloy"] then
       order = "a[items]-d[brass-chest]",
       place_result = "brass-chest",
       stack_size = 50,
+      drop_sound = chest_drop_move,
+      inventory_move_sound = chest_drop_move,
+      pick_sound = chest_pick,
     },
     {
       type = "container",
@@ -47,7 +59,7 @@ if data.raw.item["brass-alloy"] then
       fast_replaceable_group = "container",
       next_upgrade = "titanium-chest",
       inventory_size = 64,
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       picture = {
         filename = "__boblogistics__/graphics/entity/chest/brass-chest.png",
         priority = "extra-high",
@@ -55,8 +67,7 @@ if data.raw.item["brass-alloy"] then
         height = 32,
         shift = { 0.21875, 0 },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["chest"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
@@ -80,6 +91,9 @@ if data.raw.item["bob-titanium-plate"] then
       order = "a[items]-e[titanium-chest]",
       place_result = "titanium-chest",
       stack_size = 50,
+      drop_sound = chest_drop_move,
+      inventory_move_sound = chest_drop_move,
+      pick_sound = chest_pick,
     },
     {
       type = "container",
@@ -106,7 +120,7 @@ if data.raw.item["bob-titanium-plate"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fast_replaceable_group = "container",
       inventory_size = 80,
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       picture = {
         layers = {
           {
@@ -128,8 +142,7 @@ if data.raw.item["bob-titanium-plate"] then
           },
         },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["chest"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
