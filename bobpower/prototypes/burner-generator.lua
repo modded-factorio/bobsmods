@@ -9,6 +9,18 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       order = "burner-generator",
       place_result = "bob-burner-generator",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
@@ -51,10 +63,11 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         usage_priority = "secondary-output",
       },
       burner = {
-        fuel_category = "chemical",
+        type = "burner",
+        fuel_categories = {"chemical"},
         effectivity = 0.75,
         fuel_inventory_size = 1,
-        emissions_per_minute = 15,
+        emissions_per_minute = {pollution = 15},
         smoke = {
           {
             name = "smoke",
@@ -96,7 +109,7 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
           },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       working_sound = {
         sound = {
           filename = "__base__/sound/steam-engine-90bpm.ogg",

@@ -9,7 +9,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         "logistic-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
@@ -35,7 +35,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
@@ -62,7 +62,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         "production-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
@@ -95,7 +95,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           "utility-science-pack",
         },
         icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "unlock-recipe",
