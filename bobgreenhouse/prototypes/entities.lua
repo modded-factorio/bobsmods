@@ -59,42 +59,38 @@ data:extend({
       {
         production_type = "input",
         pipe_picture = {
-          north =
-          {
+          north = {
             filename = "__bobgreenhouse__/graphics/entity/greenhouse-pipe-N.png",
             priority = "extra-high",
             width = 71,
             height = 46,
             shift = util.by_pixel(2.25, 17),
-            scale = 0.5
+            scale = 0.5,
           },
-          east =
-          {
+          east = {
             filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-pipe-E.png",
             priority = "extra-high",
             width = 42,
             height = 76,
             shift = util.by_pixel(-24.5, 1),
-            scale = 0.5
+            scale = 0.5,
           },
-          south =
-          {
+          south = {
             filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-pipe-S.png",
             priority = "extra-high",
             width = 88,
             height = 61,
             shift = util.by_pixel(0, -31.25),
-            scale = 0.5
+            scale = 0.5,
           },
-          west =
-          {
+          west = {
             filename = "__bobgreenhouse__/graphics/entity/greenhouse-pipe-W.png",
             priority = "extra-high",
             width = 39,
             height = 73,
             shift = util.by_pixel(25.75, 1.25),
-            scale = 0.5
-          }
+            scale = 0.5,
+          },
         },
         pipe_covers = pipecoverspictures(),
         volume = 1000,
@@ -113,7 +109,7 @@ data:extend({
             height = 174,
             frame_count = 1,
             shift = util.by_pixel(0, 3),
-            scale = 0.5
+            scale = 0.5,
           },
           {
             filename = "__base__/graphics/entity/lab/lab-shadow.png",
@@ -122,9 +118,9 @@ data:extend({
             frame_count = 1,
             shift = util.by_pixel(13, 15),
             scale = 0.5,
-            draw_as_shadow = true
-          }
-        }
+            draw_as_shadow = true,
+          },
+        },
       },
       working_visualisations = {
         {
