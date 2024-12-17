@@ -387,11 +387,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -450,11 +447,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -513,11 +507,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -588,11 +579,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -671,11 +659,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -754,11 +739,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -829,11 +811,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true
@@ -1033,7 +1012,6 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
@@ -1106,7 +1084,6 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
@@ -1181,7 +1158,6 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
@@ -1229,14 +1205,12 @@ data:extend({
     },
     picture = {
       filename = "__base__/graphics/entity/combat-robot-capsule/distractor-capsule.png",
-      frame_count = 1,
       width = 36,
       height = 30,
       priority = "high",
     },
     shadow = {
       filename = "__base__/graphics/entity/combat-robot-capsule/distractor-capsule-shadow.png",
-      frame_count = 1,
       width = 40,
       height = 26,
       priority = "high",
@@ -1244,7 +1218,6 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
@@ -1274,7 +1247,7 @@ data:extend({
           {
             type = "destroy-cliffs",
             radius = 9,
-            explosion = "explosion",
+            explosion_at_trigger = "explosion"
           },
           {
             type = "create-entity",
@@ -1282,7 +1255,6 @@ data:extend({
           },
           {
             type = "camera-effect",
-            effect = "screen-burn",
             duration = 60,
             ease_in_duration = 5,
             ease_out_duration = 60,
@@ -1486,7 +1458,6 @@ data:extend({
     shadow = {
       filename = "__base__/graphics/entity/rocket/rocket.png",
       draw_as_shadow = true,
-      frame_count = 1,
       line_length = 1,
       width = 20,
       height = 60,
@@ -1498,7 +1469,6 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
@@ -1713,11 +1683,8 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
     hidden = true

@@ -220,7 +220,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
           projectile_creation_distance = 0.6,
           range = 25,
           ammo_type = {
-            category = "capsule",
             target_type = "position",
             action = {
               type = "direct",
@@ -325,7 +324,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         damage_modifier = 2.5,
         sound = make_laser_sounds(),
         ammo_type = {
-          category = "laser",
           action = {
             type = "direct",
             action_delivery = {

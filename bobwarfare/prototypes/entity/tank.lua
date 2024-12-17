@@ -279,7 +279,6 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.15,
     working_sound = {
       sound = {
         filename = "__base__/sound/fight/tank-engine.ogg",
@@ -429,7 +428,6 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.15,
     working_sound = {
       sound = {
         filename = "__base__/sound/fight/tank-engine.ogg",

@@ -11,7 +11,6 @@ data:extend({
     order = "b[personal-transport]-b[tank-2]",
     place_result = "bob-tank-2",
     stack_size = 10,
-    default_request_amount = 1,
     drop_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
       volume = 0.6
@@ -35,7 +34,6 @@ data:extend({
     order = "b[personal-transport]-b[tank-3]",
     place_result = "bob-tank-3",
     stack_size = 10,
-    default_request_amount = 1,
     drop_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
       volume = 0.6

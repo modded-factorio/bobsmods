@@ -340,8 +340,6 @@ function bobmods.warfare.create_spidertron(arguments)
       mined_sound = { filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8 },
       open_sound = { filename = "__base__/sound/spidertron/spidertron-door-open.ogg", volume = 0.45 },
       close_sound = { filename = "__base__/sound/spidertron/spidertron-door-close.ogg", volume = 0.4 },
-      sound_minimum_speed = 0.1,
-      sound_scaling_ratio = 0.6,
       working_sound = {
         sound = {
           filename = "__base__/sound/spidertron/spidertron-vox.ogg",
@@ -405,7 +403,6 @@ function bobmods.warfare.create_spidertron(arguments)
 
   if arguments.legs == 6 then
     data.raw["spider-vehicle"][arguments.name].spider_engine = {
-      military_target = "spidertron-military-target",
       legs = {
         { -- 1
           leg = arguments.name .. "-leg-1",
@@ -453,7 +450,6 @@ function bobmods.warfare.create_spidertron(arguments)
     }
   else
     data.raw["spider-vehicle"][arguments.name].spider_engine = {
-      military_target = "spidertron-military-target",
       legs = {
         { -- 1
           leg = arguments.name .. "-leg-1",
