@@ -25,19 +25,15 @@ if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
   )
 end
 
-if data.raw.tool["module-case"] or data.raw.item["module-case"] then
-  if data.raw.recipe["bob-robot-brain"] then
-    bobmods.lib.tech.add_recipe_unlock("robotics", "module-case")
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "module-case", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "module-case", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "module-case", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "module-case", amount = 1 })
-  end
-end
-
 if data.raw.recipe["bob-robot-brain"] then
   if data.raw["recipe-category"]["electronics"] then
     data.raw.recipe["bob-robot-brain"].category = "electronics"
+  end
+  if data.raw.item["basic-circuit-board"] then
+    data.raw.recipe["bob-robot-brain"].ingredients = {
+      { type = "item", name = "basic-circuit-board", amount = 2 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+    }
   end
   if data.raw.item["solder"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "solder", amount = 5 })
@@ -75,6 +71,16 @@ if data.raw.recipe["bob-robot-brain-4"] then
       "bob-robot-brain-4",
       { type = "item", name = "advanced-processing-unit", amount = 2 }
     )
+  end
+end
+
+if data.raw.tool["module-case"] or data.raw.item["module-case"] then
+  if data.raw.recipe["bob-robot-brain"] then
+    bobmods.lib.tech.add_recipe_unlock("robotics", "module-case")
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "module-case", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "module-case", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "module-case", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "module-case", amount = 1 })
   end
 end
 

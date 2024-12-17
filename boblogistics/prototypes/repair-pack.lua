@@ -2,6 +2,15 @@ data.raw["repair-tool"]["repair-pack"].icon = "__boblogistics__/graphics/icons/r
 data.raw["repair-tool"]["repair-pack"].icon_size = 32
 data.raw["repair-tool"]["repair-pack"].order = "b[repair]-a[repair-pack-1]"
 
+local repair_drop_move = {
+  filename = "__base__/sound/item/repair-pack-inventory-move.ogg",
+  volume = 0.7,
+}
+local repair_pick = {
+  filename = "__base__/sound/item/repair-pack-inventory-pickup.ogg",
+  volume = 0.7,
+}
+
 data:extend({
   {
     type = "repair-tool",
@@ -13,6 +22,9 @@ data:extend({
     speed = 4,
     durability = 600,
     stack_size = 100,
+    drop_sound = repair_drop_move,
+    inventory_move_sound = repair_drop_move,
+    pick_sound = repair_pick,
   },
   {
     type = "repair-tool",
@@ -24,6 +36,9 @@ data:extend({
     speed = 6,
     durability = 1250,
     stack_size = 100,
+    drop_sound = repair_drop_move,
+    inventory_move_sound = repair_drop_move,
+    pick_sound = repair_pick,
   },
   {
     type = "repair-tool",
@@ -35,6 +50,9 @@ data:extend({
     speed = 8,
     durability = 2500,
     stack_size = 100,
+    drop_sound = repair_drop_move,
+    inventory_move_sound = repair_drop_move,
+    pick_sound = repair_pick,
   },
   {
     type = "repair-tool",
@@ -46,6 +64,9 @@ data:extend({
     speed = 10,
     durability = 5000,
     stack_size = 100,
+    drop_sound = repair_drop_move,
+    inventory_move_sound = repair_drop_move,
+    pick_sound = repair_pick,
   },
 })
 
@@ -95,15 +116,16 @@ data:extend({
   },
 })
 
+data.raw.technology["repair-pack"].unit.count = 15
 data:extend({
   {
     type = "technology",
     name = "bob-repair-pack-2",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "steel-processing",
-      "electronics",
+      "repair-pack",
     },
     effects = {
       {
@@ -112,19 +134,18 @@ data:extend({
       },
     },
     unit = {
-      count = 20,
+      count = 25,
       ingredients = {
         { "automation-science-pack", 1 },
       },
       time = 30,
     },
-    order = "a-1",
   },
   {
     type = "technology",
     name = "bob-repair-pack-3",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "bob-repair-pack-2",
       "advanced-circuit",
@@ -143,13 +164,12 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
   {
     type = "technology",
     name = "bob-repair-pack-4",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "bob-repair-pack-3",
       "processing-unit",
@@ -169,13 +189,12 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
   {
     type = "technology",
     name = "bob-repair-pack-5",
-    icon = "__boblogistics__/graphics/icons/technology/repair-pack.png",
-    icon_size = 32,
+    icon = "__base__/graphics/technology/repair-pack.png",
+    icon_size = 256,
     prerequisites = {
       "bob-repair-pack-4",
       "production-science-pack",
@@ -196,6 +215,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-1",
   },
 })

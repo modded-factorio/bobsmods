@@ -4,7 +4,6 @@ function bobmods.logistics.logistic_container(inputs)
     type = "logistic-container",
     name = inputs.name,
     icons = inputs.icons,
-    icon_size = inputs.icon_size or 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.max_health or 150,
@@ -19,11 +18,10 @@ function bobmods.logistics.logistic_container(inputs)
     max_logistic_slots = inputs.logistic_slots_count,
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = inputs.picture,
     animation = inputs.animation,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = inputs.circuit_wire_max_distance or 7.5,
   }
 end
