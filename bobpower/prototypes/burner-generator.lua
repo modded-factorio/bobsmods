@@ -104,7 +104,6 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
             width = 36,
             height = 19,
             frame_count = 12,
-            direction_count = 1,
             shift = util.by_pixel(2, 37.5),
           },
         },
@@ -117,8 +116,6 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         },
         match_speed_to_activity = true,
       },
-      min_perceived_performance = 0.25,
-      performance_to_sound_speedup = 0.5,
     },
   })
 end

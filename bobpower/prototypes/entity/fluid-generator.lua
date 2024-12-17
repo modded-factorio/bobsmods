@@ -130,8 +130,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         },
         match_speed_to_activity = true,
       },
-      min_perceived_performance = 0.25,
-      performance_to_sound_speedup = 0.5,
     },
 
     {
@@ -209,8 +207,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         },
         match_speed_to_activity = true,
       },
-      min_perceived_performance = 0.25,
-      performance_to_sound_speedup = 0.5,
     },
 
     {
@@ -287,8 +283,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         },
         match_speed_to_activity = true,
       },
-      min_perceived_performance = 0.25,
-      performance_to_sound_speedup = 0.5,
     },
   })
 
@@ -347,7 +341,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             east_position = util.by_pixel(38.5, -16),
             frequency = 1 / 10, --0.105,
             starting_vertical_speed = 0,
-            slow_down_factor = 1,
             starting_frame_deviation = 60,
           },
           {
@@ -357,7 +350,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             east_position = util.by_pixel(-38, -63.5),
             frequency = 1 / 12, --0.095,
             starting_vertical_speed = 0,
-            slow_down_factor = 1,
             starting_frame_deviation = 60,
           },
         },
@@ -369,8 +361,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           },
           match_speed_to_activity = true,
         },
-        min_perceived_performance = 0.25,
-        performance_to_sound_speedup = 0.5,
       },
     })
   end
