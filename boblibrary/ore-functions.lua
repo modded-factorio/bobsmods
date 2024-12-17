@@ -667,7 +667,7 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
           if type(world) == "string" and data.raw.planet[world] then
             data.raw.planet[world].map_gen_settings.autoplace_controls[inputs.name] = {}
             data.raw.planet[world].map_gen_settings.autoplace_settings.entity.settings[inputs.name] = {}
-            log(inputs.name .. " added to planet " .. world)
+            --log(inputs.name .. " added to planet " .. world)
           end
         end
       else
