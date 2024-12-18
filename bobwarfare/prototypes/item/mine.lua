@@ -10,15 +10,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 
@@ -33,15 +33,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 
@@ -56,15 +56,15 @@ data:extend({
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 })

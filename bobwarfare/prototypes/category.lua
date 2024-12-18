@@ -74,7 +74,7 @@ data:extend({
     name = "laser-rifle",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-ammo-category.png",
     icon_size = 32,
-    subgroup = "ammo-category"
+    subgroup = "ammo-category",
   },
 })
 

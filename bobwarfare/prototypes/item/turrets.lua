@@ -3,11 +3,11 @@ data.raw.item["laser-turret"].order = "b[turret]-b[laser-turret-1]"
 
 local turretmovesound = {
   filename = "__base__/sound/item/turret-inventory-move.ogg",
-  volume = 0.6
+  volume = 0.6,
 }
 local turretplacesound = {
   filename = "__base__/sound/item/turret-inventory-pickup.ogg",
-  volume = 0.5
+  volume = 0.5,
 }
 
 data:extend({
@@ -246,15 +246,15 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
   },
 
@@ -269,15 +269,15 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
-      volume = 0.4
+      volume = 0.4,
     },
   },
 })

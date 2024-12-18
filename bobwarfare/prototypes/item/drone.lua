@@ -9,17 +9,17 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 10000
+    weight = 10000,
   },
   {
     type = "item",
@@ -31,17 +31,17 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 20000
+    weight = 20000,
   },
 })
 
@@ -57,17 +57,17 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 10000
+    weight = 10000,
   },
 })
 
@@ -83,17 +83,17 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 10000
+    weight = 10000,
   },
 })
 
@@ -109,17 +109,17 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 10000
+    weight = 10000,
   },
 })
 
@@ -135,16 +135,16 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
-    weight = 20000
+    weight = 20000,
   },
 })

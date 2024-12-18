@@ -57,15 +57,15 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/armor-small-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/armor-small-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/armor-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
   {
@@ -128,15 +128,15 @@ data:extend({
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/armor-small-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/armor-small-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/armor-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -207,15 +207,15 @@ data:extend({
     close_sound = "__base__/sound/armor-close.ogg",
     drop_sound = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_size_bonus = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_size_bonus = 40,
   },
@@ -287,15 +287,15 @@ data:extend({
     close_sound = "__base__/sound/armor-close.ogg",
     drop_sound = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_size_bonus = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_size_bonus = 50,
   },
@@ -366,15 +366,15 @@ data:extend({
     close_sound = "__base__/sound/armor-close.ogg",
     drop_sound = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_size_bonus = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_size_bonus = 60,
   },

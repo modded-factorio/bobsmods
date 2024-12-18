@@ -47,7 +47,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -73,7 +73,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -99,7 +99,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -141,10 +141,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -190,7 +190,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -215,7 +215,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -240,7 +240,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -282,10 +282,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -331,7 +331,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -356,7 +356,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -381,7 +381,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -423,10 +423,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -472,7 +472,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -497,7 +497,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -522,7 +522,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -564,10 +564,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -613,7 +613,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -638,7 +638,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -663,7 +663,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -705,10 +705,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -754,7 +754,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -779,7 +779,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -804,7 +804,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -846,10 +846,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -899,7 +899,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -925,7 +925,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -951,7 +951,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -993,10 +993,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -1042,7 +1042,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -1067,7 +1067,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -1092,7 +1092,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -1134,10 +1134,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -1183,7 +1183,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -1208,7 +1208,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -1233,7 +1233,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -1275,10 +1275,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -1324,7 +1324,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -1349,7 +1349,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -1374,7 +1374,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -1416,10 +1416,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -1465,7 +1465,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -1490,7 +1490,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -1515,7 +1515,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -1557,10 +1557,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -1606,7 +1606,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -1631,7 +1631,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -1656,7 +1656,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -1698,10 +1698,10 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
   {
     type = "beam",
@@ -1747,7 +1747,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         tail = {
           layers = {
@@ -1772,7 +1772,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
         body = {
           layers = {
@@ -1797,7 +1797,7 @@ data:extend({
               scale = 0.5,
               animation_speed = 0.5,
             },
-          }
+          },
         },
       },
       ground = {
@@ -1839,9 +1839,9 @@ data:extend({
           scale = 0.5,
           animation_speed = 0.5,
         },
-      }
+      },
     },
     working_sound = warefareSounds.laserBeam,
-    hidden = true
+    hidden = true,
   },
 })

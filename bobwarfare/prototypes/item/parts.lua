@@ -14,15 +14,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/raw-fish-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/raw-fish-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/raw-fish-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -36,15 +36,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 
@@ -58,15 +58,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
-      volume = 1
+      volume = 1,
     },
     pick_sound = {
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 
@@ -337,15 +337,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -359,15 +359,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -381,15 +381,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -403,15 +403,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -425,15 +425,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -447,15 +447,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -469,15 +469,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -491,15 +491,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -513,15 +513,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -535,15 +535,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 })
@@ -585,15 +585,15 @@ data:extend({
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-      volume = 0.5
+      volume = 0.5,
     },
     pick_sound = {
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 })

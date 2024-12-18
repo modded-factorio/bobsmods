@@ -21,14 +21,13 @@ sounds.laser = {
 }
 
 sounds.laserBeam = {
-  sound =
-  {
+  sound = {
     category = "weapon",
     filename = "__base__/sound/fight/laser-beam.ogg",
     volume = 0.75,
-    modifiers = volume_multiplier("main-menu", 2.5)
+    modifiers = volume_multiplier("main-menu", 2.5),
   },
-  max_sounds_per_type = 1
+  max_sounds_per_type = 1,
 }
 
 sounds.plasmaTurret = function(volume)

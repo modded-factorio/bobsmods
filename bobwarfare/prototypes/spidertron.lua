@@ -10,15 +10,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -31,15 +31,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -52,15 +52,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -73,15 +73,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -94,15 +94,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -115,15 +115,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-        volume = 1
+        volume = 1,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-        volume = 1
+        volume = 1,
       },
       pick_sound = {
         filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
     },
     {
@@ -136,15 +136,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 5,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
-        volume = 0.6
+        volume = 0.6,
       },
       pick_sound = {
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
     },
     {
@@ -157,15 +157,15 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/metal-large-inventory-move.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       pick_sound = {
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
     },
   })
@@ -286,7 +286,7 @@ function bobmods.warfare.create_spidertron(arguments)
       end
     end
   else
-    spidertron_leg_resistances = {{ type = "explosion", percent = 100 }}
+    spidertron_leg_resistances = { { type = "explosion", percent = 100 } }
   end
   data:extend({
     {
@@ -302,15 +302,15 @@ function bobmods.warfare.create_spidertron(arguments)
       stack_size = 1,
       drop_sound = {
         filename = "__base__/sound/item/spidertron-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/spidertron-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/spidertron-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
     {
@@ -354,12 +354,11 @@ function bobmods.warfare.create_spidertron(arguments)
           volume = 0.5,
         },
         match_speed_to_activity = true,
-        activity_to_speed_modifiers =
-        {
+        activity_to_speed_modifiers = {
           multiplier = 6.0,
           minimum = 1.0,
-          offset = 0.93333333333
-        }
+          offset = 0.93333333333,
+        },
       },
       weight = 1,
       braking_force = 1,
@@ -370,12 +369,11 @@ function bobmods.warfare.create_spidertron(arguments)
         size = { 128, 128 },
         scale = 0.5,
       },
-      selected_minimap_representation =
-      {
+      selected_minimap_representation = {
         filename = "__base__/graphics/entity/spidertron/spidertron-map-selected.png",
-        flags = {"icon"},
-        size = {128, 128},
-        scale = 0.5
+        flags = { "icon" },
+        size = { 128, 128 },
+        scale = 0.5,
       },
       corpse = "spidertron-remnants",
       dying_explosion = "spidertron-explosion",
@@ -384,14 +382,70 @@ function bobmods.warfare.create_spidertron(arguments)
       selection_priority = 60,
       graphics_set = spidertron_torso_graphics_set(scale),
     },
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 1, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 2, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 3, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 4, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 5, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 6, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 7, spidertron_leg_resistances),
-    make_spidertron_leg(arguments.name, leg_scale, arguments.leg_thickness, arguments.leg_movement_speed, 8, spidertron_leg_resistances),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      1,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      2,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      3,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      4,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      5,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      6,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      7,
+      spidertron_leg_resistances
+    ),
+    make_spidertron_leg(
+      arguments.name,
+      leg_scale,
+      arguments.leg_thickness,
+      arguments.leg_movement_speed,
+      8,
+      spidertron_leg_resistances
+    ),
     {
       type = "equipment-grid",
       name = arguments.name .. "-equipment-grid",

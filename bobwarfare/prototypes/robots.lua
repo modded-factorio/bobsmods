@@ -34,15 +34,15 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
     {
@@ -64,15 +64,15 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
     {
@@ -94,15 +94,15 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
     {
@@ -163,15 +163,15 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
 
@@ -237,15 +237,15 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       inventory_move_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
-        volume = 0.8
+        volume = 0.8,
       },
       pick_sound = {
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
-        volume = 0.5
+        volume = 0.5,
       },
     },
 
@@ -282,7 +282,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         priority = "high",
       },
       smoke = capsule_smoke,
-      hidden = true
+      hidden = true,
     },
 
     {

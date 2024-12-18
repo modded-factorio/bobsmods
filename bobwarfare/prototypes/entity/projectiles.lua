@@ -27,7 +27,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -55,7 +55,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -83,7 +83,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -139,7 +139,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -195,7 +195,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -247,7 +247,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -303,7 +303,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -331,7 +331,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -391,7 +391,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -451,7 +451,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -511,7 +511,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -583,7 +583,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -663,7 +663,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -743,7 +743,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -815,7 +815,7 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -857,7 +857,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -920,7 +920,7 @@ data:extend({
       priority = "high",
     },
     smoke = capsule_smoke,
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -1018,7 +1018,7 @@ data:extend({
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -1090,7 +1090,7 @@ data:extend({
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -1164,7 +1164,7 @@ data:extend({
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -1224,7 +1224,7 @@ data:extend({
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
-    hidden = true
+    hidden = true,
   },
   {
     type = "artillery-projectile",
@@ -1247,7 +1247,7 @@ data:extend({
           {
             type = "destroy-cliffs",
             radius = 9,
-            explosion_at_trigger = "explosion"
+            explosion_at_trigger = "explosion",
           },
           {
             type = "create-entity",
@@ -1475,7 +1475,7 @@ data:extend({
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -1559,9 +1559,9 @@ data:extend({
           scale = 4,
           priority = "high",
         },
-      }
+      },
     },
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -1614,7 +1614,7 @@ data:extend({
       priority = "high",
     },
     rotatable = false,
-    hidden = true
+    hidden = true,
   },
   {
     type = "projectile",
@@ -1687,6 +1687,6 @@ data:extend({
         starting_frame_deviation = 5,
       },
     },
-    hidden = true
+    hidden = true,
   },
 })

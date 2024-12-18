@@ -85,7 +85,7 @@ data:extend({
       },
     },
     action_cooldown = 30,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -182,7 +182,7 @@ data:extend({
       },
     },
     action_cooldown = 30,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -194,7 +194,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -206,7 +206,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -218,7 +218,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -230,7 +230,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -242,7 +242,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -254,7 +254,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 
   {
@@ -266,7 +266,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
-    hidden = true
+    hidden = true,
   },
 })
 
@@ -315,7 +315,7 @@ data:extend({
         },
       },
     },
-    hidden = true
+    hidden = true,
   },
   {
     type = "explosion",
@@ -361,7 +361,7 @@ data:extend({
         },
       },
     },
-    hidden = true
+    hidden = true,
   },
 })
 

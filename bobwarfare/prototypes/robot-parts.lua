@@ -1,22 +1,20 @@
 if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.warfare.RobotParts == true then
-
   local electronicdropsound = {
     filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-    volume = 1
+    volume = 1,
   }
   local electronicpicksound = {
     filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-    volume = 0.7
+    volume = 0.7,
   }
   local tooldropsound = {
     filename = "__base__/sound/item/inserter-inventory-move.ogg",
-    volume = 0.8
+    volume = 0.8,
   }
   local toolpicksound = {
     filename = "__base__/sound/item/inserter-inventory-pickup.ogg",
-    volume = 0.8
+    volume = 0.8,
   }
-
 
   data:extend({
     {

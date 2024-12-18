@@ -6,7 +6,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "military-2",
-      "radar"
+      "radar",
     },
     effects = {
       {

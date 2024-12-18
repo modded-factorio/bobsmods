@@ -32,15 +32,15 @@ data:extend({
     },
     drop_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -74,15 +74,15 @@ data:extend({
     },
     drop_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 
@@ -104,15 +104,15 @@ data:extend({
     },
     drop_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 })
@@ -151,15 +151,15 @@ data:extend({
     },
     drop_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
     pick_sound = {
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
-      volume = 0.7
+      volume = 0.7,
     },
   },
 

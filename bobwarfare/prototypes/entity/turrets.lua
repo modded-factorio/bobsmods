@@ -17,19 +17,57 @@ local blue = { r = 0.5, g = 0.8, b = 1, a = 1 }
 local purple = { r = 0.8, g = 0.5, b = 1, a = 1 }
 local green = { r = 0.5, g = 1, b = 0.5, a = 1 }
 
-circuit_connector_definitions["8-way-laser-turret"] = circuit_connector_definitions.create_vector(
-  universal_connector_template,
-  {
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel( -21 * 1.5, 1 * 1.5), shadow_offset = util.by_pixel( -12 * 1.5, 10 * 1.5), show_shadow = true },
-  }
-)
+circuit_connector_definitions["8-way-laser-turret"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(-21 * 1.5, 1 * 1.5),
+      shadow_offset = util.by_pixel(-12 * 1.5, 10 * 1.5),
+      show_shadow = true,
+    },
+  })
 
 local function bob_gun_turret_extension(inputs)
   return {
@@ -459,7 +497,7 @@ local function bob_gun_turret(inputs)
       },
     },
     icon_draw_specification = {
-      scale = 0.7
+      scale = 0.7,
     },
     attack_parameters = {
       type = "projectile",
@@ -533,7 +571,7 @@ local function bob_laser_turret(inputs)
       shift = util.by_pixel(-0.5, -35),
       blend_mode = "additive",
       scale = 0.5,
-      tint = inputs.tint2
+      tint = inputs.tint2,
     },
     prepared_animation = bob_laser_turret_attack({ tint = inputs.tint, size = size }),
     graphics_set = { base_visualisation = { animation = bob_turret_base(inputs.base) } },

@@ -13,15 +13,15 @@ data:extend({
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/concrete-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/concrete-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
   {
@@ -35,15 +35,15 @@ data:extend({
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/concrete-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     inventory_move_sound = {
       filename = "__base__/sound/item/concrete-inventory-move.ogg",
-      volume = 0.6
+      volume = 0.6,
     },
     pick_sound = {
       filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
 })
