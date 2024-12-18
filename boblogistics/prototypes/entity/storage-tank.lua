@@ -15,7 +15,7 @@ table.insert(data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets, 2
   tint = { r = 0.65, g = 0.2, b = 0.15 },
 })
 
-function storage_tank_pictures(tint)
+local function storage_tank_pictures(tint)
   local graphics = {
     picture = {
       sheets = {
@@ -83,7 +83,7 @@ function storage_tank_pictures(tint)
   return graphics
 end
 
-function storage_tank_all_pictures(tint)
+local function storage_tank_all_pictures(tint)
   local graphics = {
     picture = {
       sheets = {
