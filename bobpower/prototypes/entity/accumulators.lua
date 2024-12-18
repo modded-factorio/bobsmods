@@ -13,7 +13,6 @@ if settings.startup["bobmods-power-accumulators"].value == true then
           repeat_count = repeat_count,
           shift = util.by_pixel(0, -19),
           tint = tint,
-          animation_speed = 0.5,
           scale = 0.5,
         },
         {

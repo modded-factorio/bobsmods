@@ -336,6 +336,7 @@ data:extend({
     }),
     order = "v-g-k-d",
     prerequisites = {
+      "production-science-pack",
       "vehicle-solar-panel-equipment-3",
     },
     unit = {

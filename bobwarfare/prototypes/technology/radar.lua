@@ -1,41 +1,12 @@
-if not mods["aai-industry"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "radars-1",
-      icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-      icon_size = 128,
-      prerequisites = {
-        "military",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "radar",
-        },
-      },
-      unit = {
-        count = 25,
-        ingredients = {
-          { "automation-science-pack", 1 },
-        },
-        time = 30,
-      },
-      order = "e-b-a",
-    },
-  })
-end
-
 data:extend({
   {
     type = "technology",
     name = "radars-2",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
       "military-2",
-      "steel-processing",
-      "electronics",
+      "radar",
     },
     effects = {
       {
@@ -51,18 +22,16 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-b",
   },
 
   {
     type = "technology",
     name = "radars-3",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
       "radars-2",
       "military-3",
-      "advanced-circuit",
     },
     effects = {
       {
@@ -79,14 +48,13 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-c",
   },
 
   {
     type = "technology",
     name = "radars-4",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
       "radars-3",
       "production-science-pack",
@@ -108,14 +76,13 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-d",
   },
 
   {
     type = "technology",
     name = "radars-5",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
       "radars-4",
       "military-4",
@@ -137,10 +104,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-e",
   },
 })
-
-if not mods["aai-industry"] then
-  bobmods.lib.tech.add_prerequisite("radars-2", "radars-1")
-end
