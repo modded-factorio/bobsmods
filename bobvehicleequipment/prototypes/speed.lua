@@ -164,6 +164,7 @@ data:extend({
     }),
     order = "v-g-h-b",
     prerequisites = {
+      "production-science-pack",
       "vehicle-motor-equipment",
     },
     unit = {
