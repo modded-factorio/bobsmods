@@ -699,42 +699,6 @@ data:extend({
     weight = 40000
   },
 
-  --[[
-  {
-    type = "ammo",
-    name = "flame-thrower-acid",
-    icon = "__base__/graphics/icons/flame-thrower-ammo.png",
-    icon_size = 64,
-    subgroup = "ammo",
-    order = "f[flame-thrower-acid]",
-    stack_size = 50,
-    magazine_size = 100,
-    ammo_type =
-    {
-      category = "flame-thrower",
-      target_type = "direction",
-      action =
-      {
-        type = "direct",
-        action_delivery =
-        {
-          {
-            type = "flame-thrower",
-            explosion = "flame-thrower-acid-mist",
-            direction_deviation = 0.07,
-            speed_deviation = 0.1,
-            starting_frame_deviation = 0.07,
-            damage = { amount = 20, type = "acid"},
-            projectile_starting_speed = 0.2,
-            starting_distance = 0.6,
-          }
-        }
-      }
-    },
-  },
-]]
-  --
-
   {
     type = "ammo",
     name = "laser-rifle-battery",

@@ -185,30 +185,6 @@ data:extend({
     hidden = true
   },
 
-  --[[
-  {
-    type = "flame-thrower-explosion",
-    name = "flame-thrower-acid-mist",
-    flags = {"not-on-map"},
-    animation_speed = 1,
-    animations =
-    {
-      {
-        filename = "__base__/graphics/entity/flame-thrower-explosion/flame-thrower-explosion.png",
-        priority = "extra-high",
-        width = 64,
-        height = 64,
-        frame_count = 64,
-        line_length = 8
-      }
-    },
-    light = {intensity = 0.2, size = 20},
-    slow_down_factor = 0.98,
-    damage = {amount = 2, type = "acid"}
-  },
-]]
-  --
-
   {
     type = "explosion",
     name = "bob-laser-bubble-glass",
