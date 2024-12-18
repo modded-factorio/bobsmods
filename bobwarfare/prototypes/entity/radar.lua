@@ -1,5 +1,4 @@
 data.raw["radar"]["radar"].fast_replaceable_group = "radar"
-data.raw["radar"]["radar"].next_upgrade = "radar-2"
 
 data:extend({
   {
@@ -10,7 +9,6 @@ data:extend({
     minable = { mining_time = 0.5, result = "radar-2" },
     fast_replaceable_group = "radar",
     max_health = 300,
-    next_upgrade = "radar-3",
     corpse = "big-remnants",
     dying_explosion = "radar-explosion",
     damaged_trigger_effect = {
@@ -117,7 +115,6 @@ data:extend({
     minable = { mining_time = 0.5, result = "radar-3" },
     fast_replaceable_group = "radar",
     max_health = 350,
-    next_upgrade = "radar-4",
     corpse = "big-remnants",
     dying_explosion = "radar-explosion",
     damaged_trigger_effect = {
@@ -224,7 +221,6 @@ data:extend({
     minable = { mining_time = 0.5, result = "radar-4" },
     fast_replaceable_group = "radar",
     max_health = 400,
-    next_upgrade = "radar-5",
     corpse = "big-remnants",
     dying_explosion = "radar-explosion",
     damaged_trigger_effect = {
