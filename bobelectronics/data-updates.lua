@@ -74,6 +74,10 @@ if feature_flags["quality"] then
     "multi-layer-circuit-board",
   })
   if settings.startup["bobmods-colorupdate"].value == true then
-    bobmods.lib.recipe.update_recycling_recipe_icon("basic-circuit-board-recycling", "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png", 128)
+    bobmods.lib.recipe.update_recycling_recipe_icon(
+      "basic-circuit-board-recycling",
+      "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png",
+      128
+    )
   end
 end
