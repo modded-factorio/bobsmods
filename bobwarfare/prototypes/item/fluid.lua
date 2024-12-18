@@ -10,10 +10,12 @@ if data.raw.fluid["nitric-acid"] then
       max_temperature = 100,
       icon = "__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png",
       icon_size = 32,
-      subgroup = "bob-fluid",
       order = "a[fluid]-g[sulfuric-nitric-acid]",
     },
   })
+  if data.raw["item-subgroup"]["bob-fluid"] then
+    data.raw.fluid["sulfuric-nitric-acid"].subgroup = "bob-fluid"
+  end
 end
 
 data:extend({
@@ -27,7 +29,6 @@ data:extend({
     max_temperature = 100,
     icon = "__bobwarfare__/graphics/icons/nitroglycerin.png",
     icon_size = 64,
-    subgroup = "bob-fluid",
     order = "a[fluid]-g[nitroglycerin]",
   },
 
@@ -41,8 +42,11 @@ data:extend({
     max_temperature = 100,
     icon = "__bobwarfare__/graphics/icons/glycerol.png",
     icon_size = 64,
-    subgroup = "bob-fluid",
     order = "a[fluid]-g[glycerol]",
     fuel_value = "730kJ", --"1.46MJ"
   },
 })
+if data.raw["item-subgroup"]["bob-fluid"] then
+  data.raw.fluid["nitroglycerin"].subgroup = "bob-fluid"
+  data.raw.fluid["glycerol"].subgroup = "bob-fluid"
+end
