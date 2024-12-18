@@ -13,6 +13,9 @@ if data.raw.fluid["nitric-acid"] then
       order = "a[fluid]-g[sulfuric-nitric-acid]",
     },
   })
+  if data.raw["item-subgroup"]["bob-fluid"] then
+    data.raw.fluid["sulfuric-nitric-acid"].subgroup = "bob-fluid"
+  end
 end
 
 data:extend({
@@ -43,3 +46,7 @@ data:extend({
     fuel_value = "730kJ", --"1.46MJ"
   },
 })
+if data.raw["item-subgroup"]["bob-fluid"] then
+  data.raw.fluid["nitroglycerin"].subgroup = "bob-fluid"
+  data.raw.fluid["glycerol"].subgroup = "bob-fluid"
+end

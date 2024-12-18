@@ -27,6 +27,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
+    hidden = true
   },
 
   {
@@ -54,6 +55,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
+    hidden = true
   },
 
   {
@@ -81,6 +83,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
+    hidden = true
   },
 
   {
@@ -136,6 +139,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
+    hidden = true
   },
 
   {
@@ -191,6 +195,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
+    hidden = true
   },
 
   {
@@ -242,6 +247,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
+    hidden = true
   },
 
   {
@@ -297,6 +303,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     rotatable = false,
+    hidden = true
   },
 
   {
@@ -324,13 +331,16 @@ data:extend({
       height = 50,
       priority = "high",
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -377,20 +387,20 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-piercing-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -437,20 +447,20 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-electric-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -497,20 +507,20 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-explosive-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -569,20 +579,20 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-flame-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -649,20 +659,20 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-poison-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -729,20 +739,20 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 
   {
     type = "projectile",
     name = "bob-acid-rocket",
     flags = { "not-on-map" },
-    acceleration = 0.005,
+    acceleration = 0.01,
+    turn_speed = 0.003,
+    turning_speed_increases_exponentially_with_projectile_speed = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -801,13 +811,11 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 })
 
@@ -816,6 +824,7 @@ data:extend({
     type = "projectile",
     name = "cannon-projectile-pellet",
     flags = { "not-on-map" },
+    force_condition = "enemy",
     collision_box = { { -0.05, -0.25 }, { 0.05, 0.25 } },
     acceleration = 0,
     direction_only = true,
@@ -848,6 +857,7 @@ data:extend({
       height = 50,
       priority = "high",
     },
+    hidden = true
   },
 })
 
@@ -910,6 +920,7 @@ data:extend({
       priority = "high",
     },
     smoke = capsule_smoke,
+    hidden = true
   },
 })
 
@@ -1001,13 +1012,13 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
+    hidden = true
   },
 
   {
@@ -1073,13 +1084,13 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
+    hidden = true
   },
 
   {
@@ -1139,7 +1150,7 @@ data:extend({
       },
     },
     picture = {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+      filename = "__base__/graphics/entity/artillery-projectile/shell.png",
       width = 64,
       height = 64,
       scale = 0.5,
@@ -1147,13 +1158,13 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
+    hidden = true
   },
 
   {
@@ -1194,14 +1205,12 @@ data:extend({
     },
     picture = {
       filename = "__base__/graphics/entity/combat-robot-capsule/distractor-capsule.png",
-      frame_count = 1,
       width = 36,
       height = 30,
       priority = "high",
     },
     shadow = {
       filename = "__base__/graphics/entity/combat-robot-capsule/distractor-capsule-shadow.png",
-      frame_count = 1,
       width = 40,
       height = 26,
       priority = "high",
@@ -1209,13 +1218,13 @@ data:extend({
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
+    hidden = true
   },
   {
     type = "artillery-projectile",
@@ -1233,12 +1242,12 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { "water-tile" },
+            tile_collision_mask = { layers = { water_tile = true } },
           },
           {
             type = "destroy-cliffs",
             radius = 9,
-            explosion = "explosion",
+            explosion_at_trigger = "explosion"
           },
           {
             type = "create-entity",
@@ -1246,7 +1255,6 @@ data:extend({
           },
           {
             type = "camera-effect",
-            effect = "screen-burn",
             duration = 60,
             ease_in_duration = 5,
             ease_out_duration = 60,
@@ -1420,7 +1428,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { "water-tile" },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -1448,23 +1456,26 @@ data:extend({
       priority = "high",
     },
     shadow = {
-      filename = "__base__/graphics/entity/rocket/rocket-shadow.png",
-      frame_count = 1,
-      width = 7,
-      height = 24,
+      filename = "__base__/graphics/entity/rocket/rocket.png",
+      draw_as_shadow = true,
+      line_length = 1,
+      width = 20,
+      height = 60,
       priority = "high",
-      shift = { 0, 0 },
+      scale = 0.5,
+      rotate_shift = true,
+      shift = { 0, -0.25 },
     },
     chart_picture = {
       filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
       flags = { "icon" },
-      frame_count = 1,
       width = 64,
       height = 64,
       priority = "high",
       scale = 0.25,
     },
     height_from_ground = 280 / 64,
+    hidden = true
   },
 })
 
@@ -1524,16 +1535,33 @@ data:extend({
       },
     },
     animation = {
-      filename = "__bobwarfare__/graphics/entities/particles2.png",
-      tint = { r = 0.4, g = 0.7, b = 1, a = 1 },
-      frame_count = 32,
-      line_length = 8,
-      x = 512,
-      y = 0,
-      width = 64,
-      height = 64,
-      priority = "high",
+      layers = {
+        {
+          filename = "__bobwarfare__/graphics/entities/particles2.png",
+          tint = { r = 0.4, g = 0.7, b = 1, a = 1 },
+          frame_count = 32,
+          line_length = 8,
+          x = 512,
+          y = 0,
+          width = 64,
+          height = 64,
+          priority = "high",
+        },
+        {
+          filename = "__core__/graphics/light-small.png",
+          tint = { r = 0.6, g = 0.9, b = 1, a = 1 },
+          flags = { "light" },
+          draw_as_light = true,
+          frame_count = 1,
+          repeat_count = 32,
+          width = 150,
+          height = 150,
+          scale = 4,
+          priority = "high",
+        },
+      }
     },
+    hidden = true
   },
 })
 
@@ -1586,6 +1614,7 @@ data:extend({
       priority = "high",
     },
     rotatable = false,
+    hidden = true
   },
   {
     type = "projectile",
@@ -1654,12 +1683,10 @@ data:extend({
         deviation = { 0.15, 0.15 },
         frequency = 1,
         position = { 0, 0 },
-        slow_down_factor = 1,
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
       },
     },
+    hidden = true
   },
 })

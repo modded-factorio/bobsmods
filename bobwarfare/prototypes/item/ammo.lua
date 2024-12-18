@@ -1,7 +1,6 @@
-local function boblaserammo(catagory, projectile)
+local function boblaserammo(projectile)
   return {
     type = "beam",
-    category = catagory,
     action = {
       type = "direct",
       action_delivery = {
@@ -14,9 +13,8 @@ local function boblaserammo(catagory, projectile)
   }
 end
 
-local function bobmissileammo(catagory, projectile)
+local function bobmissileammo(projectile)
   return {
-    category = catagory,
     action = {
       type = "direct",
       action_delivery = {
@@ -32,6 +30,26 @@ local function bobmissileammo(catagory, projectile)
   }
 end
 
+local ammodropmove = {
+  filename = "__base__/sound/item/ammo-small-inventory-move.ogg",
+  volume = 0.8
+}
+
+local ammopickup = {
+  filename = "__base__/sound/item/ammo-small-inventory-pickup.ogg",
+  volume = 0.7
+}
+
+local largeammodropmove = {
+  filename = "__base__/sound/item/ammo-large-inventory-move.ogg",
+  volume = 0.6
+}
+
+local largeammopickup = {
+  filename = "__base__/sound/item/ammo-large-inventory-pickup.ogg",
+  volume = 0.7
+}
+
 data:extend({
   {
     type = "ammo",
@@ -39,11 +57,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-a[bullet-magazine]",
+    order = "a[basic-clips]-a[magazine]-1",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         {
           type = "direct",
@@ -65,12 +83,20 @@ data:extend({
                   type = "damage",
                   damage = { amount = 16, type = "physical" },
                 },
+                {
+                  type = "activate-impact",
+                  deliver_category = "bullet"
+                }
               },
             },
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 20000
   },
 
   {
@@ -79,11 +105,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/ap-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-ap]",
+    order = "a[basic-clips]-a[magazine]-2",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -105,10 +131,18 @@ data:extend({
               type = "damage",
               damage = { amount = 12, type = "bob-pierce" },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -117,11 +151,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/he-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-he]",
+    order = "a[basic-clips]-a[magazine]-5",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -155,10 +189,18 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -167,11 +209,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/flame-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-flame]",
+    order = "a[basic-clips]-a[magazine]-7",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -209,6 +251,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -217,11 +263,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/acid-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-acid]",
+    order = "a[basic-clips]-a[magazine]-4",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -255,10 +301,18 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -267,11 +321,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/poison-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-poison]",
+    order = "a[basic-clips]-a[magazine]-6",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -305,10 +359,18 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -317,11 +379,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/electric-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-electric]",
+    order = "a[basic-clips]-a[magazine]-3",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -343,10 +405,18 @@ data:extend({
               type = "damage",
               damage = { amount = 12, type = "electric" },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -355,11 +425,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-shell]",
+    order = "b[shotgun]-c1",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -378,6 +448,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 20000
   },
 
   {
@@ -386,11 +460,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-ap-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-ap-shell]",
+    order = "b[shotgun]-c2",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -409,6 +483,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -417,11 +495,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-electric-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-electric-shell]",
+    order = "b[shotgun]-c3",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -440,6 +518,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -448,11 +530,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-explosive-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-explosive-shell]",
+    order = "b[shotgun]-c5",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -471,6 +553,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -479,11 +565,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-flame-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-flame-shell]",
+    order = "b[shotgun]-c7",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -502,6 +588,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -510,11 +600,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-acid-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-acid-shell]",
+    order = "b[shotgun]-c4",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -533,6 +623,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -541,11 +635,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-poison-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-poison-shell]",
+    order = "b[shotgun]-c6",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -564,6 +658,10 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
 
   {
@@ -572,11 +670,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-uranium-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-uranium-shell]",
+    order = "b[shotgun]-c8",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -595,43 +693,11 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
-
-  --[[
-  {
-    type = "ammo",
-    name = "flame-thrower-acid",
-    icon = "__base__/graphics/icons/flame-thrower-ammo.png",
-    icon_size = 64,
-    subgroup = "ammo",
-    order = "f[flame-thrower-acid]",
-    stack_size = 50,
-    magazine_size = 100,
-    ammo_type =
-    {
-      category = "flame-thrower",
-      target_type = "direction",
-      action =
-      {
-        type = "direct",
-        action_delivery =
-        {
-          {
-            type = "flame-thrower",
-            explosion = "flame-thrower-acid-mist",
-            direction_deviation = 0.07,
-            speed_deviation = 0.1,
-            starting_frame_deviation = 0.07,
-            damage = { amount = 20, type = "acid"},
-            projectile_starting_speed = 0.2,
-            starting_distance = 0.6,
-          }
-        }
-      }
-    },
-  },
-]]
-  --
 
   {
     type = "ammo",
@@ -642,7 +708,21 @@ data:extend({
     order = "f[laser-rifle-battery]-0",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-glass-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-glass-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -654,7 +734,21 @@ data:extend({
     order = "f[laser-rifle-battery]-1",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-ruby-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-ruby-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -666,7 +760,21 @@ data:extend({
     order = "f[laser-rifle-battery]-2",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-sapphire-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-sapphire-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -678,7 +786,21 @@ data:extend({
     order = "f[laser-rifle-battery]-3",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-emerald-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-emerald-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -690,7 +812,21 @@ data:extend({
     order = "f[laser-rifle-battery]-4",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-amethyst-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-amethyst-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -702,7 +838,21 @@ data:extend({
     order = "f[laser-rifle-battery]-5",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-topaz-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-topaz-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -714,7 +864,21 @@ data:extend({
     order = "f[laser-rifle-battery]-6",
     stack_size = 200,
     magazine_size = 50,
-    ammo_type = boblaserammo("laser-rifle", "bob-laser-beam-diamond-ammo"),
+    ammo_category = "laser-rifle",
+    ammo_type = boblaserammo("bob-laser-beam-diamond-ammo"),
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
+      volume = 0.7
+    },
+    weight = 20000
   },
 
   {
@@ -722,10 +886,15 @@ data:extend({
     name = "bob-rocket",
     icon = "__bobwarfare__/graphics/icons/rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-0",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -733,10 +902,15 @@ data:extend({
     name = "bob-piercing-rocket",
     icon = "__bobwarfare__/graphics/icons/piercing-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-piercing-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-piercing-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-1",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -744,10 +918,15 @@ data:extend({
     name = "bob-electric-rocket",
     icon = "__bobwarfare__/graphics/icons/electric-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-electric-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-electric-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-2",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -755,10 +934,15 @@ data:extend({
     name = "bob-explosive-rocket",
     icon = "__bobwarfare__/graphics/icons/explosive-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-explosive-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-explosive-rocket"),
     subgroup = "bob-ammo",
-    order = "d[rocket-launcher]-c-3",
+    order = "d[rocket-launcher]-c-4",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -766,10 +950,15 @@ data:extend({
     name = "bob-flame-rocket",
     icon = "__bobwarfare__/graphics/icons/flame-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-flame-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-flame-rocket"),
     subgroup = "bob-ammo",
-    order = "d[rocket-launcher]-c-4",
+    order = "d[rocket-launcher]-c-6",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -777,10 +966,15 @@ data:extend({
     name = "bob-poison-rocket",
     icon = "__bobwarfare__/graphics/icons/poison-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-poison-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-poison-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-5",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 
   {
@@ -788,10 +982,15 @@ data:extend({
     name = "bob-acid-rocket",
     icon = "__bobwarfare__/graphics/icons/acid-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-acid-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-acid-rocket"),
     subgroup = "bob-ammo",
-    order = "d[rocket-launcher]-c-6",
+    order = "d[rocket-launcher]-c-3",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 })
 
@@ -811,8 +1010,8 @@ data:extend({
         shift = { -8, -8 },
       },
     },
+    ammo_category = "cannon-shell",
     ammo_type = {
-      category = "cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -834,6 +1033,10 @@ data:extend({
     subgroup = "ammo",
     order = "d[cannon-shell]-c[scatter]",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 20000
   },
 })
 
@@ -853,7 +1056,6 @@ data:extend({
         projectile_creation_distance = 0.6,
         range = 25,
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",
@@ -869,6 +1071,19 @@ data:extend({
     subgroup = "capsule",
     order = "b[fire-capsule]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/grenade-inventory-move.ogg",
+      volume = 1
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/grenade-inventory-move.ogg",
+      volume = 1
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/grenade-inventory-pickup.ogg",
+      volume = 0.8
+    },
+    weight = 10000
   },
 })
 
@@ -889,8 +1104,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -911,6 +1126,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[poison]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -928,8 +1156,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -950,6 +1178,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[fire]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -967,8 +1208,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -989,6 +1230,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[explosive]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -1006,8 +1260,8 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -1028,6 +1282,19 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[distractor]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-move.ogg",
+      volume = 0.5
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
+      volume = 0.4
+    },
+    weight = 100000
   },
   {
     type = "ammo",
@@ -1045,9 +1312,9 @@ data:extend({
       },
     },
     icon_size = 32,
+    ammo_category = "artillery-shell",
     ammo_type = {
       cooldown_modifier = 3,
-      category = "artillery-shell",
       target_type = "position",
       clamp_position = true,
       action = {
@@ -1068,8 +1335,23 @@ data:extend({
     subgroup = "ammo",
     order = "e[artillery-shell]-a[atomic-bomb]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/atomic-bomb-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/atomic-bomb-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/atomic-bomb-inventory-pickup.ogg",
+      volume = 0.6
+    },
+    weight = 1500000
   },
 })
+
+data.raw.ammo["artillery-shell"].order = "e[artillery-shell]"
 
 data:extend({
   {
@@ -1078,11 +1360,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/plasma-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "a[basic-clips]-b[bullet-magazine-plasma]",
+    order = "a[basic-clips]-a[magazine]-8",
     stack_size = 200,
     magazine_size = 25,
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -1116,10 +1398,18 @@ data:extend({
                 },
               },
             },
+            {
+              type = "activate-impact",
+              deliver_category = "bullet"
+            }
           },
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
   {
     type = "ammo",
@@ -1127,11 +1417,11 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-plasma-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
-    order = "f[shotgun-plasma-shell]",
+    order = "b[shotgun]-c9",
     stack_size = 200,
     magazine_size = 10,
+    ammo_category = "shotgun-shell",
     ammo_type = {
-      category = "shotgun-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -1150,15 +1440,24 @@ data:extend({
         },
       },
     },
+    drop_sound = ammodropmove,
+    inventory_move_sound = ammodropmove,
+    pick_sound = ammopickup,
+    weight = 40000
   },
   {
     type = "ammo",
     name = "bob-plasma-rocket",
     icon = "__bobwarfare__/graphics/icons/plasma-rocket.png",
     icon_size = 32,
-    ammo_type = bobmissileammo("rocket", "bob-plasma-rocket"),
+    ammo_category = "rocket",
+    ammo_type = bobmissileammo("bob-plasma-rocket"),
     subgroup = "bob-ammo",
     order = "d[rocket-launcher]-c-7",
     stack_size = 200,
+    drop_sound = largeammodropmove,
+    inventory_move_sound = largeammodropmove,
+    pick_sound = largeammopickup,
+    weight = 40000
   },
 })

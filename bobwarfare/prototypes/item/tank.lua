@@ -11,6 +11,18 @@ data:extend({
     order = "b[personal-transport]-b[tank-2]",
     place_result = "bob-tank-2",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
+      volume = 0.4
+    },
   },
 
   {
@@ -22,5 +34,17 @@ data:extend({
     order = "b[personal-transport]-b[tank-3]",
     place_result = "bob-tank-3",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-move.ogg",
+      volume = 0.6
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
+      volume = 0.4
+    },
   },
 })

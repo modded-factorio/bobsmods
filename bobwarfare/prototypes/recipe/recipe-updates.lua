@@ -109,7 +109,6 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("rocket-body", "steel-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("bob-rocket", "aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("radar-3", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("radars-3", "aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("rifle", "copper-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("military-3", "aluminium-processing")
 end
@@ -711,8 +710,6 @@ if data.raw.fluid.deuterium then
   data.raw.recipe["plasma-rocket-warhead"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "deuterium-processing")
 end
-
-bobmods.lib.recipe.enabled("radar", false)
 
 -- Armor
 bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")

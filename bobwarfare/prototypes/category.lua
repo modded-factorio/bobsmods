@@ -72,18 +72,9 @@ data:extend({
   {
     type = "ammo-category",
     name = "laser-rifle",
-  },
-  {
-    type = "ammo-category",
-    name = "artillery-shell",
-  },
-  {
-    type = "ammo-category",
-    name = "tank-laser",
-  },
-  {
-    type = "ammo-category",
-    name = "beam-rifle",
+    icon = "__bobwarfare__/graphics/icons/laser-rifle-ammo-category.png",
+    icon_size = 32,
+    subgroup = "ammo-category"
   },
 })
 
