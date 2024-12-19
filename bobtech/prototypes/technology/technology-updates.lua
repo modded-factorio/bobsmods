@@ -204,7 +204,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
       { "automation-science-pack", 1 },
     },
   }
-  bobmods.lib.tech.add_prerequisite("automation-science-pack", "electricity")
   bobmods.lib.tech.remove_prerequisite("automation-science-pack", "electronics")
   bobmods.lib.tech.add_prerequisite("electronics", "automation-science-pack")
   data.raw.technology["automation-science-pack"].research_trigger = {
@@ -212,6 +211,9 @@ if settings.startup["bobmods-burnerphase"].value == true then
     item = "burner-lab",
   }
 
+  if mods["bobgreenhouse"] then
+    bobmods.lib.tech.add_prerequisite("bob-greenhouse", "electricity")
+  end
   if mods["bobplates"] then
     data.raw.recipe["burner-lab"].enabled = false
     bobmods.lib.tech.add_prerequisite("automation-science-pack", "burner-lab")
