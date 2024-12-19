@@ -366,7 +366,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
               width = 36,
               height = 19,
               frame_count = 12,
-              direction_count = 1,
               shift = util.by_pixel(2, 37.5),
             },
           },
