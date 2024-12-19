@@ -43,7 +43,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
       results = { { type = "item", name = "burner-lab", amount = 1 } },
     },
   })
-  if not data.raw["burner-generator"]["bob-burner-generator"] then
+  if not data.raw.recipe["bob-burner-generator"] then
     data:extend({
       {
         type = "recipe",
