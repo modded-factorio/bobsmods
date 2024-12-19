@@ -68,6 +68,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
 
   if data.raw.technology["electrolysis-2"] then
     bobmods.lib.tech.remove_recipe_unlock("electrolysis-2", "storage-tank")
+    bobmods.lib.tech.replace_prerequisite("electrolysis-2", "steel-processing", "electrolysis-1")
   end
 
   if data.raw.fluid.chlorine then
