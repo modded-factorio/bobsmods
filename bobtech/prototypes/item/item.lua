@@ -70,7 +70,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
       },
     },
   })
-  if not data.raw["burner-generator"]["bob-burner-generator"] then
+  if not data.raw.item["bob-burner-generator"] then
     data:extend({
       {
         type = "item",
