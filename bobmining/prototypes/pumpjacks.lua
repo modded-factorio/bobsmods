@@ -104,7 +104,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         { type = "item", name = "pumpjack", amount = 1 },
         { type = "item", name = "steel-plate", amount = 20 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "electronic-circuit", amount = 5 },
+        { type = "item", name = "advanced-circuit", amount = 5 },
         { type = "item", name = "pipe", amount = 10 },
       },
       results = { { type = "item", name = "bob-pumpjack-1", amount = 1 } },
@@ -593,15 +593,15 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "bob-pumpjacks-1",
+      name = "bob-pumpjacks-2",
       icon = "__base__/graphics/technology/oil-gathering.png",
       icon_size = 256,
-      order = "d-a-c-1",
       prerequisites = {
         "oil-processing",
+        "advanced-circuit",
       },
       unit = {
-        count = 50,
+        count = 150,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
@@ -617,20 +617,20 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     },
     {
       type = "technology",
-      name = "bob-pumpjacks-2",
+      name = "bob-pumpjacks-3",
       icon = "__base__/graphics/technology/oil-gathering.png",
       icon_size = 256,
-      order = "d-a-c-2",
       prerequisites = {
-        "bob-pumpjacks-1",
-        "advanced-circuit",
+        "bob-pumpjacks-2",
+        "chemical-science-pack",
       },
       unit = {
-        count = 75,
+        count = 200,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
-          { "logistic-science-pack", 2 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
       },
       effects = {
@@ -642,21 +642,22 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     },
     {
       type = "technology",
-      name = "bob-pumpjacks-3",
+      name = "bob-pumpjacks-4",
       icon = "__base__/graphics/technology/oil-gathering.png",
       icon_size = 256,
-      order = "d-a-c-3",
       prerequisites = {
-        "bob-pumpjacks-2",
+        "bob-pumpjacks-3",
         "processing-unit",
+        "production-science-pack",
       },
       unit = {
-        count = 100,
+        count = 250,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       effects = {
@@ -668,22 +669,22 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     },
     {
       type = "technology",
-      name = "bob-pumpjacks-4",
+      name = "bob-pumpjacks-5",
       icon = "__base__/graphics/technology/oil-gathering.png",
       icon_size = 256,
-      order = "d-a-c-4",
       prerequisites = {
-        "bob-pumpjacks-3",
-        "production-science-pack",
+        "bob-pumpjacks-4",
+        "utility-science-pack",
       },
       unit = {
-        count = 150,
+        count = 300,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
       },
       effects = {
