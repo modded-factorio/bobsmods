@@ -379,8 +379,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
           },
           match_speed_to_activity = true,
         },
-        min_perceived_performance = 0.25,
-        performance_to_sound_speedup = 0.5,
+        perceived_performance = {
+          minimum = 0.25,
+          performance_to_activity_rate = 2,
+        },
       },
     })
   end
