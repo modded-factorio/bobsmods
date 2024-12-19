@@ -268,6 +268,12 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-4")
 end
 
+bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe-to-ground")
+
+bobmods.lib.tech.add_recipe_unlock("steam-power", "stone-pipe")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "stone-pipe-to-ground")
+
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-pipe")
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-pipe-to-ground")
 
