@@ -116,6 +116,10 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         },
         match_speed_to_activity = true,
       },
+      perceived_performance = {
+        minimum = 0.25,
+        performance_to_activity_rate = 2,
+      },
     },
   })
 end
