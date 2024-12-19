@@ -341,7 +341,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
           },
         },
         idle_animation = {
-          filename = "__bobtech__/graphics/burner-generator/burner-generator.png",
+          filename = "__bobtech__/graphics/entity/burner-generator/burner-generator.png",
           priority = "extra-high",
           width = 180,
           height = 190,
@@ -352,7 +352,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         animation = {
           layers = {
             {
-              filename = "__bobtech__/graphics/burner-generator/burner-generator.png",
+              filename = "__bobtech__/graphics/entity/burner-generator/burner-generator.png",
               priority = "extra-high",
               width = 180,
               height = 190,
@@ -361,7 +361,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
               shift = util.by_pixel(40, 12),
             },
             {
-              filename = "__bobtech__/graphics/burner-generator/burner-generator-fire.png",
+              filename = "__bobtech__/graphics/entity/burner-generator/burner-generator-fire.png",
               priority = "high",
               width = 36,
               height = 19,
