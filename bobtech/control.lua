@@ -6,9 +6,6 @@ function setup(event)
       remote.call("DiscoScience", "setIngredientColor", "utility-science-pack", { r = 0.1, g = 1.0, b = 0.1 })
     end
     remote.call("DiscoScience", "setIngredientColor", "advanced-logistic-science-pack", { r = 1.0, g = 0.2, b = 0.6 })
-    if settings.startup["bobmods-burnerphase"].value == true then
-      remote.call("DiscoScience", "setIngredientColor", "steam-science-pack", { r = 0.8, g = 0.8, b = 0.8 })
-    end
     if
       settings.startup["bobmods-enemies-enableartifacts"]
       and settings.startup["bobmods-enemies-enableartifacts"].value == true
