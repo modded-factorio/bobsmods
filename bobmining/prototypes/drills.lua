@@ -218,12 +218,14 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       prerequisites = {
         "steel-processing",
         "electric-mining-drill",
+        "logistic-science-pack",
       },
       unit = {
         count = 50,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
       },
       effects = {
@@ -241,7 +243,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       order = "d-a-a-2",
       prerequisites = {
         "bob-drills-1",
-        "advanced-circuit",
+        "chemical-science-pack",
       },
       unit = {
         count = 75,
@@ -249,6 +251,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
       },
       effects = {
@@ -267,6 +270,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       prerequisites = {
         "bob-drills-2",
         "processing-unit",
+        "production-science-pack",
       },
       unit = {
         count = 100,
@@ -275,6 +279,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       effects = {
@@ -292,7 +297,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
       order = "d-a-a-4",
       prerequisites = {
         "bob-drills-3",
-        "production-science-pack",
+        "utility-science-pack",
       },
       unit = {
         count = 150,
@@ -302,6 +307,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
       },
       effects = {
