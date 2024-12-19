@@ -558,7 +558,6 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       name = "water-miner-1",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
-      order = "d-a-d-1",
       prerequisites = {
         "automation-science-pack",
       },
@@ -581,17 +580,18 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       name = "water-miner-2",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
-      order = "d-a-d-2",
       prerequisites = {
         "water-miner-1",
         "steel-processing",
         "electronics",
+        "logistic-science-pack",
       },
       unit = {
         count = 30,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
       },
       effects = {
@@ -606,10 +606,9 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       name = "water-miner-3",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
-      order = "d-a-d-3",
       prerequisites = {
         "water-miner-2",
-        "advanced-circuit",
+        "chemical-science-pack",
       },
       unit = {
         count = 50,
@@ -617,6 +616,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
       },
       effects = {
@@ -631,10 +631,10 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       name = "water-miner-4",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
-      order = "d-a-d-4",
       prerequisites = {
         "water-miner-3",
         "processing-unit",
+        "production-science-pack",
       },
       unit = {
         count = 75,
@@ -643,6 +643,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       effects = {
@@ -660,6 +661,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       order = "d-a-d-5",
       prerequisites = {
         "water-miner-4",
+        "utility-science-pack",
       },
       unit = {
         count = 100,
@@ -669,6 +671,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
       },
       effects = {
