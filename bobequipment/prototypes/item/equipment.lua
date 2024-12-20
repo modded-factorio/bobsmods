@@ -209,15 +209,13 @@ data:extend({
 })
 
 data.raw.item["fission-reactor-equipment"].icon =
-  "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png"
-data.raw.item["fission-reactor-equipment"].icon_size = 128
+  "__bobequipment__/graphics/icons/fission-reactor-equipment-1.png"
 
 data:extend({
   {
     type = "item",
     name = "fission-reactor-equipment-2",
-    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
-    icon_size = 128,
+    icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-2.png",
     place_as_equipment_result = "fission-reactor-equipment-2",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-2]",
@@ -239,8 +237,7 @@ data:extend({
   {
     type = "item",
     name = "fission-reactor-equipment-3",
-    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
-    icon_size = 128,
+    icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-3.png",
     place_as_equipment_result = "fission-reactor-equipment-3",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-3]",
@@ -262,8 +259,7 @@ data:extend({
   {
     type = "item",
     name = "fission-reactor-equipment-4",
-    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
-    icon_size = 128,
+    icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-4.png",
     place_as_equipment_result = "fission-reactor-equipment-4",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-4]",
