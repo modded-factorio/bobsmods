@@ -3,7 +3,7 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
     bobmods.lib.recipe.remove_result("hydrazine", "water")
     bobmods.lib.recipe.add_result(
       "hydrazine",
-      { type = "fluid", name = "pure-water", amount = 4, ignored_by_productivity = 4 }
+      { type = "fluid", name = "pure-water", amount = 4 }
     )
   end
 
@@ -11,6 +11,7 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
     { type = "fluid", name = "hydrazine", amount = 160 },
     { type = "fluid", name = "dinitrogen-tetroxide", amount = 80 },
   }
+  data.raw.recipe["rocket-fuel"].allow_productivity = false
 
   data.raw.recipe["rocket-fuel"].category = "chemistry"
   data.raw.recipe["rocket-fuel"].crafting_machine_tint = {
@@ -46,7 +47,7 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
       bobmods.lib.recipe.remove_result("nitric-oxide", "water")
       bobmods.lib.recipe.add_result(
         "nitric-oxide",
-        { type = "fluid", name = "pure-water", amount = 12, ignored_by_productivity = 12 }
+        { type = "fluid", name = "pure-water", amount = 12 }
       )
     end
 
