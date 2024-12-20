@@ -7,6 +7,10 @@ if data.raw["god-controller"] and data.raw["god-controller"]["default"] then
   data.raw["god-controller"]["default"].inventory_size = settings.startup["bobmods-plates-inventorysize"].value
 end
 
+--Sulfur update
+data.raw.recipe.sulfur.allow_productivity = false
+data.raw.recipe["sulfuric-acid"].allow_productivity = false
+
 --Electrolyser power
 if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   if feature_flags["quality"] then
