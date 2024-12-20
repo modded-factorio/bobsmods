@@ -370,8 +370,8 @@ data:extend({
 
 data.raw["generator-equipment"]["fission-reactor-equipment"].sprite = {
   filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",
-  width = 128,
-  height = 128,
+  width = 256,
+  height = 256,
   priority = "medium",
 }
 
@@ -381,8 +381,8 @@ data:extend({
     name = "fission-reactor-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
-      width = 128,
-      height = 128,
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -402,8 +402,8 @@ data:extend({
     name = "fission-reactor-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
-      width = 128,
-      height = 128,
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -423,8 +423,8 @@ data:extend({
     name = "fission-reactor-equipment-4",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
-      width = 128,
-      height = 128,
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
