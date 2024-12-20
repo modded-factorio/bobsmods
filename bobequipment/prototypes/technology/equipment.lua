@@ -13,7 +13,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk3-equipment.png",
       icon_size = 128,
     }),
-    order = "g-e-c",
     prerequisites = {
       "processing-unit",
       "energy-shield-mk2-equipment",
@@ -46,7 +45,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk4-equipment.png",
       icon_size = 128,
     }),
-    order = "g-e-d",
     prerequisites = {
       "bob-energy-shield-equipment-3",
     },
@@ -76,7 +74,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk5-equipment.png",
       icon_size = 128,
     }),
-    order = "g-e-e",
     prerequisites = {
       "bob-energy-shield-equipment-4",
       "utility-science-pack",
@@ -108,7 +105,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk6-equipment.png",
       icon_size = 128,
     }),
-    order = "g-e-f",
     prerequisites = {
       "bob-energy-shield-equipment-5",
     },
@@ -151,7 +147,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/battery-mk3-equipment.png",
       icon_size = 64,
     }),
-    order = "g-i-c",
     prerequisites = {
       "battery-mk2-equipment",
     },
@@ -179,7 +174,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/battery-mk4-equipment.png",
       icon_size = 64,
     }),
-    order = "g-i-d",
     prerequisites = {
       "processing-unit",
       "bob-battery-equipment-3",
@@ -210,7 +204,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/battery-mk5-equipment.png",
       icon_size = 64,
     }),
-    order = "g-i-e",
     prerequisites = {
       "bob-battery-equipment-4",
     },
@@ -239,7 +232,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/battery-mk6-equipment.png",
       icon_size = 64,
     }),
-    order = "g-i-f",
     prerequisites = {
       "bob-battery-equipment-5",
       "utility-science-pack",
@@ -266,7 +258,7 @@ data:extend({
 
 data.raw["technology"]["fission-reactor-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
   icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",
-  icon_size = 128,
+  icon_size = 256,
 })
 bobmods.lib.tech.remove_science_pack("fission-reactor-equipment", "military-science-pack")
 bobmods.lib.tech.remove_prerequisite("fission-reactor-equipment", "military-science-pack")
@@ -277,9 +269,8 @@ data:extend({
     name = "fission-reactor-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
-      icon_size = 128,
+      icon_size = 256,
     }),
-    order = "g-l-b",
     prerequisites = {
       "fission-reactor-equipment",
       "production-science-pack",
@@ -308,9 +299,8 @@ data:extend({
     name = "fission-reactor-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
-      icon_size = 128,
+      icon_size = 256,
     }),
-    order = "g-l-c",
     prerequisites = {
       "fission-reactor-equipment-2",
     },
@@ -339,9 +329,8 @@ data:extend({
     name = "fission-reactor-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_equipment({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
-      icon_size = 128,
+      icon_size = 256,
     }),
-    order = "g-l-d",
     prerequisites = {
       "fission-reactor-equipment-3",
     },
@@ -374,7 +363,6 @@ data:extend({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
     }),
-    order = "g-g-b",
     prerequisites = {
       "chemical-science-pack",
       "night-vision-equipment",
@@ -403,7 +391,6 @@ data:extend({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
     }),
-    order = "g-g-c",
     prerequisites = {
       "processing-unit",
       "night-vision-equipment-2",
@@ -436,7 +423,6 @@ data:extend({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
     }),
-    order = "g-k-b",
     prerequisites = {
       "chemical-science-pack",
       "solar-panel-equipment",
@@ -465,7 +451,6 @@ data:extend({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
     }),
-    order = "g-k-c",
     prerequisites = {
       "solar-panel-equipment-2",
       "processing-unit",
@@ -496,7 +481,6 @@ data:extend({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
     }),
-    order = "g-k-d",
     prerequisites = {
       "solar-panel-equipment-3",
       "utility-science-pack",
@@ -549,7 +533,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
       icon_size = 128,
     }),
-    order = "g-m-b",
     prerequisites = {
       "chemical-science-pack",
       "personal-laser-defense-equipment",
@@ -579,7 +562,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
       icon_size = 128,
     }),
-    order = "g-m-c",
     prerequisites = {
       "processing-unit",
       "personal-laser-defense-equipment-2",
@@ -611,7 +593,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
       icon_size = 128,
     }),
-    order = "g-m-d",
     prerequisites = {
       "personal-laser-defense-equipment-3",
     },
@@ -641,7 +622,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
       icon_size = 128,
     }),
-    order = "g-m-e",
     prerequisites = {
       "personal-laser-defense-equipment-4",
       "military-4",
@@ -673,7 +653,6 @@ data:extend({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
       icon_size = 128,
     }),
-    order = "g-m-f",
     prerequisites = {
       "personal-laser-defense-equipment-5",
     },
@@ -709,7 +688,6 @@ data:extend({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
     }),
-    order = "g-h-b",
     prerequisites = {
       "exoskeleton-equipment",
       "processing-unit",
@@ -737,7 +715,6 @@ data:extend({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
     }),
-    order = "g-h-c",
     prerequisites = {
       "exoskeleton-equipment-2",
       "production-science-pack",
