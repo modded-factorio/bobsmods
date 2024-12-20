@@ -148,6 +148,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       name = "sour-gas",
       icon = "__bobrevamp__/graphics/icons/sour-gas.png",
       icon_size = 64,
+      subgroup = "fluid",
       default_temperature = 25,
       heat_capacity = "0.1kJ",
       base_color = { r = 0.4, g = 0.1, b = 0.3 },
@@ -203,7 +204,6 @@ if settings.startup["bobmods-revamp-oil"].value == true then
         secondary = { r = 0.789, g = 0.540, b = 0.615 },
         tertiary = { r = 0.669, g = 0.145, b = 0.695 },
       },
-      allow_productivity = true,
     },
   })
 
