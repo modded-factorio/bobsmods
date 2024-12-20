@@ -25,13 +25,6 @@ data:extend({
   },
 
   {
-    type = "item-subgroup",
-    name = "bob-fluid",
-    group = "bob-fluid-products",
-    order = "a-a",
-  },
-
-  {
     type = "item-group",
     name = "bob-resource-products",
     order = "c-g",
