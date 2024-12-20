@@ -2,8 +2,7 @@ data:extend({
   {
     type = "item",
     name = "vehicle-fission-cell-equipment-1",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-1.png",
-    icon_size = 64,
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-cell-equipment-1.png",
     place_as_equipment_result = "vehicle-fission-cell-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-1",
@@ -39,8 +38,8 @@ data:extend({
     name = "vehicle-fission-cell-equipment-1",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-1.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -60,10 +59,9 @@ data:extend({
     type = "technology",
     name = "vehicle-fission-cell-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment-1.png",
       icon_size = 128,
     }),
-    order = "v-g-l-a",
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "processing-unit",
@@ -90,8 +88,7 @@ data:extend({
   {
     type = "item",
     name = "vehicle-fission-cell-equipment-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-2.png",
-    icon_size = 64,
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-cell-equipment-2.png",
     place_as_equipment_result = "vehicle-fission-cell-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-2",
@@ -131,8 +128,8 @@ data:extend({
     name = "vehicle-fission-cell-equipment-2",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-2.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -152,10 +149,9 @@ data:extend({
     type = "technology",
     name = "vehicle-fission-cell-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment-2.png",
       icon_size = 128,
     }),
-    order = "v-g-l-b",
     prerequisites = {
       "vehicle-fission-cell-equipment-1",
       "production-science-pack",
@@ -183,8 +179,7 @@ data:extend({
   {
     type = "item",
     name = "vehicle-fission-cell-equipment-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-3.png",
-    icon_size = 64,
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-cell-equipment-3.png",
     place_as_equipment_result = "vehicle-fission-cell-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-3",
@@ -224,8 +219,8 @@ data:extend({
     name = "vehicle-fission-cell-equipment-3",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-3.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -245,10 +240,9 @@ data:extend({
     type = "technology",
     name = "vehicle-fission-cell-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment-3.png",
       icon_size = 128,
     }),
-    order = "v-g-l-c",
     prerequisites = {
       "vehicle-fission-cell-equipment-2",
       "utility-science-pack",
@@ -277,8 +271,7 @@ data:extend({
   {
     type = "item",
     name = "vehicle-fission-cell-equipment-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-4.png",
-    icon_size = 64,
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-cell-equipment-4.png",
     place_as_equipment_result = "vehicle-fission-cell-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-4",
@@ -318,8 +311,8 @@ data:extend({
     name = "vehicle-fission-cell-equipment-4",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-4.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -339,10 +332,9 @@ data:extend({
     type = "technology",
     name = "vehicle-fission-cell-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment-4.png",
       icon_size = 128,
     }),
-    order = "v-g-l-d",
     prerequisites = {
       "vehicle-fission-cell-equipment-3",
     },
@@ -370,8 +362,7 @@ data:extend({
   {
     type = "item",
     name = "vehicle-fission-cell-equipment-5",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-5.png",
-    icon_size = 64,
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-cell-equipment-5.png",
     place_as_equipment_result = "vehicle-fission-cell-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-5",
@@ -411,8 +402,8 @@ data:extend({
     name = "vehicle-fission-cell-equipment-5",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-5.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -432,10 +423,9 @@ data:extend({
     type = "technology",
     name = "vehicle-fission-cell-equipment-5",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment-5.png",
       icon_size = 128,
     }),
-    order = "v-g-l-e",
     prerequisites = {
       "vehicle-fission-cell-equipment-4",
     },
@@ -463,8 +453,7 @@ data:extend({
   {
     type = "item",
     name = "vehicle-fission-cell-equipment-6",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-6.png",
-    icon_size = 64,
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-cell-equipment-6.png",
     place_as_equipment_result = "vehicle-fission-cell-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-6",
@@ -504,8 +493,8 @@ data:extend({
     name = "vehicle-fission-cell-equipment-6",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-cell-equipment-6.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -525,10 +514,9 @@ data:extend({
     type = "technology",
     name = "vehicle-fission-cell-equipment-6",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-cell-equipment-6.png",
       icon_size = 128,
     }),
-    order = "v-g-l-f",
     prerequisites = {
       "vehicle-fission-cell-equipment-5",
     },
