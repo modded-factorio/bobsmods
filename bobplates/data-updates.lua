@@ -8,7 +8,7 @@ if data.raw["god-controller"] and data.raw["god-controller"]["default"] then
 end
 
 --Sulfur update
-data.raw.recipe.sulfur.allow_productivity = false
+data.raw.recipe["sulfur"].allow_productivity = false
 data.raw.recipe["sulfuric-acid"].allow_productivity = false
 
 --Electrolyser power
