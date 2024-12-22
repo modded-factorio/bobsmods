@@ -214,14 +214,14 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
   end
 
   if data.raw["item-subgroup"]["bob-fluid"] then
-    data.raw.fluid.ammonia.subgroup = "bob-fluid"
+    data.raw.fluid["ammonia"].subgroup = "bob-fluid"
     data.raw.fluid["dinitrogen-tetroxide"].subgroup = "bob-fluid"
-    data.raw.fluid.hydrazine.subgroup = "bob-fluid"
+    data.raw.fluid["hydrazine"].subgroup = "bob-fluid"
     data.raw.fluid["hydrogen-peroxide"].subgroup = "bob-fluid"
     data.raw.fluid["nitrogen-dioxide"].subgroup = "bob-fluid"
-    data.raw.recipe.ammonia.subgroup = "bob-fluid"
+    data.raw.recipe["ammonia"].subgroup = "bob-fluid"
     data.raw.recipe["hydrogen-peroxide"].subgroup = "bob-fluid"
-    data.raw.recipe.hydrazine.subgroup = "bob-fluid"
+    data.raw.recipe["hydrazine"].subgroup = "bob-fluid"
     data.raw.recipe["nitrogen-dioxide"].subgroup = "bob-fluid"
     data.raw.recipe["dinitrogen-tetroxide"].subgroup = "bob-fluid"
   end
