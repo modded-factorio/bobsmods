@@ -18,7 +18,7 @@ data:extend({
     name = "ferric-chloride-solution",
     icon = "__bobelectronics__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
-    subgroup = "fluid",
+    subgroup = "fluid-recipes",
     order = "b[fluid-chemistry]-a[ferric-chloride-solution]",
     category = "chemistry",
     enabled = false,
