@@ -5,7 +5,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       name = "ammonia",
       icon = "__bobrevamp__/graphics/icons/ammonia.png",
       icon_size = 64,
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       order = "a[fluid]-g[ammonia]",
       default_temperature = 15,
       max_temperature = 100,
@@ -20,7 +20,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       name = "dinitrogen-tetroxide",
       icon = "__bobrevamp__/graphics/icons/dinitrogen-tetroxide.png",
       icon_size = 64,
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       order = "a[fluid]-g[dinitrogen-tetroxide]",
       default_temperature = 15,
       max_temperature = 100,
@@ -35,7 +35,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       name = "hydrazine",
       icon = "__bobrevamp__/graphics/icons/hydrazine.png",
       icon_size = 64,
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       order = "a[fluid]-g[hydrazine]",
       default_temperature = 15,
       max_temperature = 100,
@@ -52,7 +52,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       name = "hydrogen-peroxide",
       icon = "__bobrevamp__/graphics/icons/hydrogen-peroxide.png",
       icon_size = 64,
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       order = "a[fluid]-g[hydrogen-peroxide]",
       default_temperature = 15,
       max_temperature = 100,
@@ -70,7 +70,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         name = "nitrogen-dioxide",
         icon = "__bobrevamp__/graphics/icons/nitrogen-dioxide.png",
         icon_size = 64,
-        subgroup = "bob-fluid",
+        subgroup = "fluid",
         order = "a[fluid]-g[nitrogen-dioxide]",
         default_temperature = 25,
         max_temperature = 100,
@@ -91,7 +91,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[ammonia]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "nitrogen", amount = 10 },
@@ -106,7 +106,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },
       },
-      allow_productivity = true,
     },
 
     {
@@ -117,7 +116,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[hydrogen-peroxide]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "hydrogen", amount = 16 },
@@ -132,7 +131,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
         tertiary = { r = 0.0, g = 0.5, b = 1.0, a = 0.000 },
       },
-      allow_productivity = true,
     },
 
     {
@@ -143,7 +141,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[hydrazine]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "ammonia", amount = 20 },
@@ -151,7 +149,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       },
       results = {
         { type = "fluid", name = "hydrazine", amount = 8 },
-        { type = "fluid", name = "water", amount = 4, ignored_by_productivity = 4 },
+        { type = "fluid", name = "water", amount = 4 },
       },
       main_product = "hydrazine",
       crafting_machine_tint = {
@@ -159,7 +157,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.0, g = 0.5, b = 1.0, a = 0.000 },
         tertiary = { r = 0.7, g = 0.7, b = 1.0, a = 0.000 },
       },
-      allow_productivity = true,
     },
 
     {
@@ -170,7 +167,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "nitrogen", amount = 10 },
@@ -185,7 +182,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
         tertiary = { r = 0.8, g = 0.0, b = 1.0, a = 0.000 },
       },
-      allow_productivity = true,
     },
 
     {
@@ -196,7 +192,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[dinitrogen-tetroxide]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "bob-fluid",
+      subgroup = "fluid",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
@@ -210,12 +206,24 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.7, g = 0.7, b = 0.3, a = 0.000 },
       },
-      allow_productivity = true,
     },
   })
 
   if bobmods.plates.make_void_fluid_recipe then
     bobmods.plates.make_void_fluid_recipe("ammonia", 25, 15)
+  end
+
+  if data.raw["item-subgroup"]["bob-fluid"] then
+    data.raw.fluid["ammonia"].subgroup = "bob-fluid"
+    data.raw.fluid["dinitrogen-tetroxide"].subgroup = "bob-fluid"
+    data.raw.fluid["hydrazine"].subgroup = "bob-fluid"
+    data.raw.fluid["hydrogen-peroxide"].subgroup = "bob-fluid"
+    data.raw.fluid["nitrogen-dioxide"].subgroup = "bob-fluid"
+    data.raw.recipe["ammonia"].subgroup = "bob-fluid"
+    data.raw.recipe["hydrogen-peroxide"].subgroup = "bob-fluid"
+    data.raw.recipe["hydrazine"].subgroup = "bob-fluid"
+    data.raw.recipe["nitrogen-dioxide"].subgroup = "bob-fluid"
+    data.raw.recipe["dinitrogen-tetroxide"].subgroup = "bob-fluid"
   end
 
   if settings.startup["bobmods-revamp-hardmode"].value == true then
@@ -225,7 +233,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         name = "nitric-oxide",
         icon = "__bobrevamp__/graphics/icons/nitric-oxide.png",
         icon_size = 64,
-        subgroup = "bob-fluid",
+        subgroup = "fluid",
         order = "a[fluid]-g[nitric-oxide]",
         default_temperature = 15,
         max_temperature = 100,
@@ -243,7 +251,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         order = "b[fluid-chemistry]-b[nitric-oxide]",
         energy_required = 1,
         category = "chemistry",
-        subgroup = "bob-fluid",
+        subgroup = "fluid",
         enabled = false,
         ingredients = {
           { type = "fluid", name = "ammonia", amount = 20 },
@@ -251,7 +259,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         },
         results = {
           { type = "fluid", name = "nitric-oxide", amount = 20 },
-          { type = "fluid", name = "water", amount = 12, ignored_by_productivity = 12 },
+          { type = "fluid", name = "water", amount = 12 },
         },
         main_product = "nitric-oxide",
         crafting_machine_tint = {
@@ -259,7 +267,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           secondary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
           tertiary = { r = 1.0, g = 0.0, b = 1.0, a = 0.000 },
         },
-        allow_productivity = true,
       },
 
       {
@@ -270,7 +277,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
         energy_required = 1,
         category = "chemistry",
-        subgroup = "bob-fluid",
+        subgroup = "fluid",
         enabled = false,
         ingredients = {
           { type = "fluid", name = "nitric-oxide", amount = 20 },
@@ -285,9 +292,15 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
           tertiary = { r = 0.8, g = 0.0, b = 1.0, a = 0.000 },
         },
-        allow_productivity = true,
       },
     })
+
+    if data.raw["item-subgroup"]["bob-fluid"] then
+      data.raw.fluid["nitric-oxide"].subgroup = "bob-fluid"
+      data.raw.recipe["nitric-oxide"].subgroup = "bob-fluid"
+      data.raw.recipe["nitrogen-dioxide"].subgroup = "bob-fluid"
+    end
+
   end
 
   if data.raw.item["enriched-fuel"] then

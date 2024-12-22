@@ -249,7 +249,6 @@ data:extend({
       secondary = { r = 0.589, g = 0.540, b = 0.615, a = 0.361 },
       tertiary = { r = 0.469, g = 0.145, b = 0.695, a = 0.000 },
     },
-    allow_productivity = true,
   },
 
   {
@@ -273,3 +272,7 @@ data:extend({
     },
   },
 })
+
+data.raw.recipe["solid-fuel-from-petroleum-gas"].allow_productivity = false
+data.raw.recipe["solid-fuel-from-light-oil"].allow_productivity = false
+data.raw.recipe["solid-fuel-from-heavy-oil"].allow_productivity = false
