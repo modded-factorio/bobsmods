@@ -300,7 +300,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       data.raw.recipe["nitric-oxide"].subgroup = "bob-fluid"
       data.raw.recipe["nitrogen-dioxide"].subgroup = "bob-fluid"
     end
-
   end
 
   if data.raw.item["enriched-fuel"] then
