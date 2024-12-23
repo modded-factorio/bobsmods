@@ -116,10 +116,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "sodium-chlorate",
       results = {
         { type = "item", name = "sodium-chlorate", amount = 1 },
-        { type = "fluid", name = "hydrogen", amount = 60, ignored_by_productivity = 60 },
+        { type = "fluid", name = "hydrogen", amount = 60 },
       },
       allow_decomposition = false,
-      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -138,10 +137,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "sodium-perchlorate",
       results = {
         { type = "item", name = "sodium-perchlorate", amount = 1 },
-        { type = "fluid", name = "hydrogen", amount = 20, ignored_by_productivity = 20 },
+        { type = "fluid", name = "hydrogen", amount = 20 },
       },
       allow_decomposition = false,
-      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -160,7 +158,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       main_product = "lithium-perchlorate",
       results = {
         { type = "item", name = "lithium-perchlorate", amount = 1 },
-        { type = "item", name = "salt", amount = 1, ignored_by_productivity = 1 },
+        { type = "item", name = "salt", amount = 1 },
       },
       allow_decomposition = false,
     },
@@ -179,7 +177,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       results = {
         { type = "fluid", name = "carbon-dioxide", amount = 25 },
       },
-      allow_productivity = true,
     },
     {
       type = "recipe",
