@@ -218,7 +218,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if mods["bobplates"] then
     data.raw.recipe["burner-lab"].enabled = false
     bobmods.lib.tech.add_prerequisite("automation-science-pack", "burner-lab")
-    bobmods.lib.recipe.add_ingredient("burner-lab", { type = "item", name = "bob-glass", amount = 5})
+    bobmods.lib.recipe.add_ingredient("burner-lab", { type = "item", name = "bob-glass", amount = 5 })
     bobmods.lib.tech.remove_prerequisite("gas-canisters", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("fluid-barrel-processing", "logistic-science-pack")
   end
@@ -286,7 +286,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
     bobmods.lib.tech.remove_prerequisite("bob-drills-2", "logistic-science-pack")
   end
   if data.raw.technology["bob-area-drills-2"] then
-    bobmods.lib.tech.remove_prerequisite("bob-area-drills-2","logistic-science-pack")
+    bobmods.lib.tech.remove_prerequisite("bob-area-drills-2", "logistic-science-pack")
   end
 
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "steam-engine")
@@ -311,5 +311,4 @@ if settings.startup["bobmods-burnerphase"].value == true then
     item = "stone-brick",
     count = 25,
   }
-
 end

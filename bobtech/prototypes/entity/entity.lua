@@ -385,5 +385,4 @@ if settings.startup["bobmods-burnerphase"].value == true then
       },
     })
   end
-
 end

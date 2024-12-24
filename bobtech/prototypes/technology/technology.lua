@@ -116,7 +116,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
       icon = "__bobtech__/graphics/icons/lab-technology.png",
       icon_size = 128,
       prerequisites = {
-        "logistics"
+        "logistics",
       },
       effects = {},
       unit = {
