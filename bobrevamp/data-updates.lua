@@ -54,13 +54,13 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)
 
   bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
-  bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-hydrogen")
 
   --chemical plant before oil processing
   if data.raw.technology["chemical-processing-2"] then
     bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "chemical-plant")
     bobmods.lib.tech.add_prerequisite("chemical-processing-2", "chemical-plant")
     bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
+    bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-hydrogen")
     bobmods.lib.tech.replace_prerequisite("nitrogen-processing", "chemical-processing-2", "chemical-plant")
   end
 
@@ -68,11 +68,6 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.add_prerequisite("plastics", "chemical-plant")
   bobmods.lib.tech.add_prerequisite("chemical-plant", "steel-processing")
   bobmods.lib.tech.add_prerequisite("chemical-plant", "electronics")
-
-  if data.raw.technology["electrolysis-2"] then
-    bobmods.lib.tech.remove_recipe_unlock("electrolysis-2", "storage-tank")
-    bobmods.lib.tech.replace_prerequisite("electrolysis-2", "steel-processing", "electrolysis-1")
-  end
 
   if data.raw.fluid["chlorine"] then
     bobmods.lib.recipe.replace_ingredient("plastic-bar", "coal", "chlorine")
