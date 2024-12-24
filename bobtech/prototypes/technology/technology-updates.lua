@@ -194,6 +194,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.add_recipe_unlock("lab", "lab")
   bobmods.lib.tech.add_prerequisite("logistic-science-pack", "lab")
   bobmods.lib.tech.add_prerequisite("electronics", "electricity")
+  bobmods.lib.tech.remove_recipe_unlock("electronics", "copper-cable")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "lab")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "small-electric-pole")
   data.raw.technology.electronics.research_trigger = nil
@@ -222,8 +223,8 @@ if settings.startup["bobmods-burnerphase"].value == true then
     bobmods.lib.tech.remove_prerequisite("fluid-barrel-processing", "logistic-science-pack")
   end
 
-
   bobmods.lib.tech.add_prerequisite("automation", "electronics")
+  bobmods.lib.tech.add_prerequisite("fast-inserter", "electronics")
   bobmods.lib.tech.remove_prerequisite("lamp", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("lamp", "electronics")
   bobmods.lib.tech.remove_prerequisite("repair-pack", "automation-science-pack")
@@ -243,7 +244,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
   end
   if mods["bobelectronics"] then
     bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
-    bobmods.lib.tech.remove_prerequisite("logistics-2", "electronics")
     if mods["bobpower"] then
       bobmods.lib.tech.remove_prerequisite("fluid-generator-1", "electronics")
     end
@@ -268,7 +268,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.remove_prerequisite("automation-2", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("electric-energy-distribution-1", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("engine", "logistic-science-pack")
-  bobmods.lib.tech.remove_prerequisite("logistics-2", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("military-2", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("solar-energy", "logistic-science-pack")
   bobmods.lib.tech.add_science_pack("heavy-armor", "logistic-science-pack", 1)

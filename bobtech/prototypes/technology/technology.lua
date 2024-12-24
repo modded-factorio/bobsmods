@@ -91,6 +91,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "copper-cable",
+        },
+        {
+          type = "unlock-recipe",
           recipe = "small-electric-pole",
         },
         {
