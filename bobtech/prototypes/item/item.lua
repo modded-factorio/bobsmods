@@ -49,20 +49,6 @@ data:extend({
 if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
     {
-      type = "tool",
-      name = "steam-science-pack",
-      icon = "__bobtech__/graphics/icons/steam-science-pack.png",
-      subgroup = "science-pack",
-      order = "0[steam-science-pack]",
-      stack_size = 200,
-      durability = 1,
-      durability_description_key = "description.science-pack-remaining-amount-key",
-      durability_description_value = "description.science-pack-remaining-amount-value",
-      drop_sound = science_drop_move,
-      inventory_move_sound = science_drop_move,
-      pick_sound = science_pick,
-    },
-    {
       type = "item",
       name = "burner-lab",
       icon = "__bobtech__/graphics/icons/lab-red.png",
@@ -84,6 +70,30 @@ if settings.startup["bobmods-burnerphase"].value == true then
       },
     },
   })
+  if not data.raw.item["bob-burner-generator"] then
+    data:extend({
+      {
+        type = "item",
+        name = "bob-burner-generator",
+        icon = "__bobtech__/graphics/icons/burner-generator.png",
+        icon_size = 64,
+        subgroup = "energy",
+        order = "burner-generator",
+        place_result = "bob-burner-generator",
+        stack_size = 10,
+        drop_sound = {
+          filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+          volume = 0.7,
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+          volume = 0.7,
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+          volume = 0.8,
+        },
+      },
+    })
+  end
 end
-
-data.raw.tool["logistic-science-pack"].localised_name = { "item-name.transport-science-pack" }

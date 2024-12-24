@@ -3,6 +3,10 @@ if mods["aai-loaders"] and settings.startup["aai-loaders-fit-assemblers"].value 
   aailoaderssize = true
 end
 
+if settings.startup["bobmods-assembly-burner"].value == true then
+  bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-assembling-machine")
+end
+
 data.raw.technology["automation-2"].prerequisites = { "automation", "electronics" }
 bobmods.lib.tech.add_prerequisite("automation-2", "steel-processing")
 bobmods.lib.tech.add_prerequisite("automation-2", "logistic-science-pack")

@@ -126,6 +126,7 @@ data:extend({
     prerequisites = {
       "steel-processing",
       "repair-pack",
+      "logistic-science-pack",
     },
     effects = {
       {
@@ -137,6 +138,7 @@ data:extend({
       count = 25,
       ingredients = {
         { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -149,6 +151,7 @@ data:extend({
     prerequisites = {
       "bob-repair-pack-2",
       "advanced-circuit",
+      "chemical-science-pack",
     },
     effects = {
       {
@@ -161,6 +164,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -173,6 +177,7 @@ data:extend({
     prerequisites = {
       "bob-repair-pack-3",
       "processing-unit",
+      "production-science-pack",
     },
     effects = {
       {
@@ -186,6 +191,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -198,6 +204,7 @@ data:extend({
     prerequisites = {
       "bob-repair-pack-4",
       "production-science-pack",
+      "utility-science-pack",
     },
     effects = {
       {
@@ -212,6 +219,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
