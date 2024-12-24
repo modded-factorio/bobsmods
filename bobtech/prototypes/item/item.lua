@@ -97,5 +97,3 @@ if settings.startup["bobmods-burnerphase"].value == true then
     })
   end
 end
-
-data.raw.tool["logistic-science-pack"].localised_name = { "item-name.transport-science-pack" }
