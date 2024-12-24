@@ -20,11 +20,9 @@ if feature_flags["quality"] then
     "bob-pumpjack-1",
     "bob-pumpjack-2",
     "bob-pumpjack-3",
-    "bob-pumpjack-4",
     "water-miner-1",
     "water-miner-2",
     "water-miner-3",
     "water-miner-4",
-    "water-miner-5",
   })
 end
