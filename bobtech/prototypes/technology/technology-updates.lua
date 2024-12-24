@@ -261,7 +261,9 @@ if settings.startup["bobmods-burnerphase"].value == true then
 
   bobmods.lib.tech.add_science_pack("steel-processing", "logistic-science-pack", 1)
   bobmods.lib.tech.add_prerequisite("steel-processing", "logistic-science-pack")
-  bobmods.lib.tech.add_prerequisite("steel-processing", "alloy-processing")
+  if data.raw.technology["alloy-processing"] then
+    bobmods.lib.tech.add_prerequisite("steel-processing", "alloy-processing")
+  end
   bobmods.lib.tech.remove_prerequisite("advanced-material-processing", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("automation-2", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("electric-energy-distribution-1", "logistic-science-pack")
