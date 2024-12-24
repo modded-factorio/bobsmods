@@ -289,66 +289,8 @@ if settings.startup["bobmods-burnerphase"].value == true then
     bobmods.lib.tech.remove_prerequisite("bob-area-drills-2","logistic-science-pack")
   end
 
-  data:extend({
-    {
-      type = "technology",
-      name = "bob-steam-engine-1",
-      icon = "__base__/graphics/technology/steam-power.png",
-      icon_size = 256,
-      prerequisites = {
-        "logistic-science-pack",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "steam-engine",
-        },
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-        },
-        time = 10,
-      },
-    },
-  })
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "steam-engine")
   data.raw.technology["steam-power"].localised_description = { "technology-description.steam-power-alt" }
-
-  if data.raw.technology["basic-automation"] then
-    bobmods.lib.tech.remove_recipe_unlock("basic-automation", "steam-assembling-machine")
-    bobmods.lib.tech.add_prerequisite("automation", "basic-automation")
-
-    data.raw.technology["basic-automation"].localised_name = { "technology-name.burner-automation" }
-    data:extend({
-      {
-        type = "technology",
-        name = "steam-automation",
-        icon = "__base__/graphics/technology/automation-1.png",
-        icon_size = 256,
-        prerequisites = {
-          "basic-automation",
-          "steam-power",
-        },
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "steam-assembling-machine",
-          },
-        },
-        unit = {
-          count = 10,
-          ingredients = {
-            { "automation-science-pack", 1 },
-          },
-          time = 5,
-        },
-      },
-    })
-    bobmods.lib.tech.add_prerequisite("bob-steam-engine-1", "steam-automation")
-  end
 
   if mods["bobpower"] then
     bobmods.lib.recipe.enabled("bob-burner-generator", false)

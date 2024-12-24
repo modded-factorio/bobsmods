@@ -127,5 +127,29 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
       },
     },
+    {
+      type = "technology",
+      name = "bob-steam-engine-1",
+      icon = "__base__/graphics/technology/steam-power.png",
+      icon_size = 256,
+      prerequisites = {
+        "logistic-science-pack",
+        "steam-power",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "steam-engine",
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+        },
+        time = 10,
+      },
+    },
   })
 end
