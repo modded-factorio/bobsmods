@@ -53,9 +53,8 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   bobmods.lib.tech.replace_prerequisite("fluid-handling", "oil-processing", "steel-processing")
   bobmods.lib.tech.set_science_pack_count("fluid-handling", 30)
 
-  bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
-
   --chemical plant before oil processing
+  bobmods.lib.tech.add_prerequisite("oil-processing", "chemical-plant")
   if data.raw.technology["chemical-processing-2"] then
     bobmods.lib.tech.remove_recipe_unlock("chemical-processing-2", "chemical-plant")
     bobmods.lib.tech.add_prerequisite("chemical-processing-2", "chemical-plant")
