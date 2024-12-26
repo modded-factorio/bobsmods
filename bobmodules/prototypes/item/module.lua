@@ -308,7 +308,6 @@ data:extend({
       consumption = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 ,
       pollution = bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -332,7 +331,6 @@ data:extend({
       consumption = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001 ,
       pollution = 2 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001 
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -356,7 +354,6 @@ data:extend({
       consumption = 3 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
       pollution = 3 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -380,7 +377,6 @@ data:extend({
       consumption = 4 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
       pollution = 4 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -404,7 +400,6 @@ data:extend({
       consumption = 5 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
       pollution = 5 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -428,7 +423,6 @@ data:extend({
       consumption = 6 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
       pollution = 6 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -452,7 +446,6 @@ data:extend({
       consumption = 7 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
       pollution = 7 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },
@@ -476,7 +469,6 @@ data:extend({
       consumption = 8 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty + 0.001,
       pollution = 8 * bobmods.modules.PollutionPenaltyPerLevel + bobmods.modules.PollutionPenalty + 0.001
     },
-    limitation_message_key = "production-module-usable-only-on-intermediates",
     beacon_tint = {
       primary = { r = 0.68, g = 0.3, b = 0.8, a = 1 },
       secondary = { r = 1, g = 0.6, b = 0.9, a = 1 },

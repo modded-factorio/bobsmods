@@ -352,7 +352,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -374,7 +373,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -396,7 +394,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 3 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -418,7 +415,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -440,7 +436,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 5 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -462,7 +457,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 6 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -484,7 +478,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 7 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -506,7 +499,6 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
       effect = {
         productivity = 8 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0, b = 0 },
         secondary = { r = 1, g = 0.37, b = 0.37 },
@@ -535,7 +527,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0.5, b = 0.5 },
         secondary = { r = 1, g = 1, b = 1 },
@@ -560,7 +551,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0.5, b = 0.5 },
         secondary = { r = 1, g = 1, b = 1 },
@@ -585,7 +575,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -6 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0.5, b = 0.5 },
         secondary = { r = 1, g = 1, b = 1 },
@@ -610,7 +599,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -8 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0.5, b = 0.5 },
         secondary = { r = 1, g = 1, b = 1 },
@@ -635,7 +623,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -10 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus - 0.001,
         speed = 10 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001,
       },
-      limitation_message_key = "production-module-usable-only-on-intermediates",
       beacon_tint = {
         primary = { r = 0.5, g = 0.5, b = 0.5 },
         secondary = { r = 1, g = 1, b = 1 },
