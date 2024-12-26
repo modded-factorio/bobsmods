@@ -211,7 +211,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     data.raw.fluid["sour-gas"].subgroup = "bob-fluid"
   end
 
-  if data.raw["recipe-category"]["void-fluid"] and data.raw.item.void then
+  if data.raw["recipe-category"]["void-fluid"] then
     if bobmods.plates and bobmods.plates.make_void_fluid_recipe then
       bobmods.plates.make_void_fluid_recipe("sour-gas", 25, 55)
     else
@@ -240,7 +240,6 @@ if settings.startup["bobmods-revamp-oil"].value == true then
             { type = "fluid", name = "sour-gas", amount = 25 },
           },
           results = {
-            { type = "item", name = "void", amount = 1, probability = 0 },
           },
           emissions_multiplier = 55,
         },
