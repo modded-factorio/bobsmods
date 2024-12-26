@@ -159,7 +159,6 @@ then
           percent = 80,
         },
       },
-      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
@@ -232,7 +231,6 @@ then
           percent = 80,
         },
       },
-      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",

@@ -197,6 +197,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         results = { { type = "item", name = "turbo-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
+
       {
         type = "recipe",
         name = "turbo-bulk-inserter", --turbo

@@ -57,7 +57,6 @@ data:extend({
         percent = 70,
       },
     },
-    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
       {
         production_type = "input",
@@ -234,18 +233,17 @@ data:extend({
         percent = 70,
       },
     },
-    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
       },
       {
         production_type = "output",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
@@ -419,18 +417,17 @@ data:extend({
         percent = 70,
       },
     },
-    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
       },
       {
         production_type = "output",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,

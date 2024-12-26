@@ -185,7 +185,6 @@ if
 then
   bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter-2")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "express-inserters")
-  bobmods.lib.recipe.set_ingredient("advanced-logistic-science-pack", { type = "item", name = "fast-inserter", amount = 1})
 else
   bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "fast-inserter")

@@ -262,7 +262,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           percent = 70,
         },
       },
-      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
@@ -446,7 +445,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           percent = 70,
         },
       },
-      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
