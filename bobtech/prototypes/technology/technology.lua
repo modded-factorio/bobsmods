@@ -28,7 +28,6 @@ data:extend({
   {
     type = "technology",
     name = "advanced-logistic-science-pack",
-    localised_name = { "technology-name.logistic-science-pack" },
     icon = "__bobtech__/graphics/icons/logistic-science-pack-technology.png",
     icon_size = 256,
     effects = {
@@ -52,8 +51,6 @@ data:extend({
     },
   },
 })
-
-data.raw.technology["logistic-science-pack"].localised_name = { "technology-name.transport-science-pack" }
 
 if settings.startup["bobmods-burnerphase"].value == true then
   if mods["bobplates"] then
