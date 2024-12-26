@@ -20,8 +20,7 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
         ingredients = {
           { type = "fluid", name = name, amount = amount or 25 },
         },
-        results = {
-        },
+        results = {},
         emissions_multiplier = polution,
       },
     })
