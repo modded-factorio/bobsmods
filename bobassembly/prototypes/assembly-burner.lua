@@ -219,7 +219,6 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           percent = 70,
         },
       },
-      fluid_boxes_off_when_no_fluid_recipe = true,
       fluid_boxes = {
         {
           production_type = "input",
