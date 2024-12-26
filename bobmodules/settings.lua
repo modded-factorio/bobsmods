@@ -115,15 +115,6 @@ data:extend({
   },
   {
     type = "double-setting",
-    name = "bobmods-modules-perlevel-bonus-quality",
-    setting_type = "startup",
-    default_value = 0.5,
-    maximum_value = 1,
-    minimum_value = 0,
-  },
-
-  {
-    type = "double-setting",
     name = "bobmods-modules-start-bonus-speed",
     setting_type = "startup",
     default_value = 0,
@@ -187,23 +178,31 @@ data:extend({
     maximum_value = 1,
     minimum_value = 0,
   },
-  {
-    type = "double-setting",
-    name = "bobmods-modules-start-bonus-quality",
-    setting_type = "startup",
-    default_value = 0,
-    maximum_value = 1,
-    minimum_value = 0,
-  },
 })
 
 if mods["quality"] then
-	data:extend({
-	  {
-		type = "bool-setting",
-		name = "bobmods-modules-transmitquality",
-		setting_type = "startup",
-		default_value = false,
-	  },
-	})
+  data:extend({
+    {
+      type = "bool-setting",
+      name = "bobmods-modules-transmitquality",
+      setting_type = "startup",
+      default_value = false,
+    },
+    {
+      type = "double-setting",
+      name = "bobmods-modules-start-bonus-quality",
+      setting_type = "startup",
+      default_value = 0,
+      maximum_value = 1,
+      minimum_value = 0,
+    },
+    {
+      type = "double-setting",
+      name = "bobmods-modules-perlevel-bonus-quality",
+      setting_type = "startup",
+      default_value = 0.5,
+      maximum_value = 1,
+      minimum_value = 0,
+    },
+  })
 end
