@@ -13,7 +13,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 1,
       order = "m-rs-1",
       stack_size = 100,
-      effect = { speed = { bonus = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -32,7 +32,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 2,
       order = "m-rs-2",
       stack_size = 100,
-      effect = { speed = { bonus = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -51,7 +51,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 3,
       order = "m-rs-3",
       stack_size = 100,
-      effect = { speed = { bonus = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 3 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -70,7 +70,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 4,
       order = "m-rs-4",
       stack_size = 100,
-      effect = { speed = { bonus = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -89,7 +89,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 5,
       order = "m-rs-5",
       stack_size = 100,
-      effect = { speed = { bonus = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 5 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -108,7 +108,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 6,
       order = "m-rs-6",
       stack_size = 100,
-      effect = { speed = { bonus = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 6 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -127,7 +127,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 7,
       order = "m-rs-7",
       stack_size = 100,
-      effect = { speed = { bonus = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 7 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },
@@ -146,7 +146,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
       tier = 8,
       order = "m-rs-8",
       stack_size = 100,
-      effect = { speed = { bonus = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 } },
+      effect = { speed = 8 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus + 0.001 },
       beacon_tint = {
         primary = { r = 0, g = 0.8, b = 0.8 },
         secondary = { r = 0.37, g = 1, b = 1 },

@@ -511,7 +511,7 @@ data:extend({
     tier = 1,
     order = "m-p-cl-1",
     stack_size = 100,
-    effect = { pollution = { bonus = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -530,7 +530,7 @@ data:extend({
     tier = 2,
     order = "m-p-cl-2",
     stack_size = 100,
-    effect = { pollution = { bonus = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -549,7 +549,7 @@ data:extend({
     tier = 3,
     order = "m-p-cl-3",
     stack_size = 100,
-    effect = { pollution = { bonus = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -568,7 +568,7 @@ data:extend({
     tier = 4,
     order = "m-p-cl-4",
     stack_size = 100,
-    effect = { pollution = { bonus = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -587,7 +587,7 @@ data:extend({
     tier = 5,
     order = "m-p-cl-5",
     stack_size = 100,
-    effect = { pollution = { bonus = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -5 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -606,8 +606,7 @@ data:extend({
     tier = 6,
     order = "m-p-cl-6",
     stack_size = 100,
-=======
-    effect = { pollution = { bonus = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -6 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -626,7 +625,7 @@ data:extend({
     tier = 7,
     order = "m-p-cl-7",
     stack_size = 100,
-    effect = { pollution = { bonus = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -7 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
@@ -645,7 +644,7 @@ data:extend({
     tier = 8,
     order = "m-p-cl-8",
     stack_size = 100,
-    effect = { pollution = { bonus = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 } },
+    effect = { pollution = -8 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus - 0.001 },
     beacon_tint = {
       primary = { r = 0.2, g = 0.5, b = 0.3 },
       secondary = { r = 0.4, g = 0.7, b = 0.5 },
