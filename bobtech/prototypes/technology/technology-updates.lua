@@ -233,7 +233,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.add_prerequisite("radar", "electronics")
   bobmods.lib.tech.remove_prerequisite("electric-mining-drill", "automation-science-pack")
   bobmods.lib.tech.add_prerequisite("electric-mining-drill", "electronics")
-  if mods["bobmining"] then
+  if mods["bobmining"] and settings.startup["bobmods-mining-waterminers"].value == true and data.raw["resource-category"]["water"] then
     bobmods.lib.tech.add_prerequisite("water-miner-1", "electronics")
     bobmods.lib.tech.remove_prerequisite("water-miner-2", "logistic-science-pack")
   end

@@ -334,7 +334,6 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
     },
   })
 
-  bobmods.lib.tech.add_prerequisite("automation", "basic-automation")
   bobmods.lib.tech.ignore_tech_cost_multiplier("automation", false)
 
   if settings.startup["bobmods-assembly-limits"].value == true then
