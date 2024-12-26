@@ -39,11 +39,22 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-a[burner-reactor-1]",
       place_result = "burner-reactor",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -61,8 +72,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "reactor",
       name = "burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
-      localised_description = { "entity-description.burner-reactor", tostring(750) },
+      localised_description = { "entity-description.burner-reactor", "750" },
       max_health = 300,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.3, result = "burner-reactor" },
@@ -70,7 +80,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       corpse = "medium-remnants",
       fast_replaceable_group = "burner-reactor",
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       resistances = {
         {
           type = "fire",
@@ -84,7 +94,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         type = "burner",
         fuel_categories = { "chemical" },
         effectivity = 1,
-        emissions_per_minute = {pollution = 15},
+        emissions_per_minute = { pollution = 15 },
         fuel_inventory_size = 1,
         smoke = {
           {
@@ -165,11 +175,22 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "burner-reactor-2",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-a[burner-reactor-2]",
       place_result = "burner-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -188,7 +209,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       data.raw.reactor["burner-reactor"],
       {
         name = "burner-reactor-2",
-        localised_description = { "entity-description.burner-reactor", tostring(1000) },
+        localised_description = { "entity-description.burner-reactor", "1000" },
         minable = { result = "burner-reactor-2" },
         max_health = 500,
         consumption = "9MW",
@@ -210,11 +231,22 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "fluid-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-b[fluid-reactor-1]",
       place_result = "fluid-reactor",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -233,7 +265,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         name = "fluid-reactor",
         minable = { result = "fluid-reactor" },
         next_upgrade = "fluid-reactor-2",
-        localised_description = { "entity-description.fluid-reactor", tostring(750) },
+        localised_description = { "entity-description.fluid-reactor", "750" },
       },
     }),
   })
@@ -243,11 +275,22 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       type = "item",
       name = "fluid-reactor-2",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-b[fluid-reactor-2]",
       place_result = "fluid-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
@@ -268,7 +311,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       {
         name = "fluid-reactor-2",
         minable = { result = "fluid-reactor-2" },
-        localised_description = { "entity-description.fluid-reactor", tostring(1000) },
+        localised_description = { "entity-description.fluid-reactor", "1000" },
       },
     }),
   })
@@ -343,14 +386,14 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   local fluid_reactor_energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = {pollution = 10},
+    emissions_per_minute = { pollution = 10 },
     fluid_box = {
       volume = 200,
       pipe_connections = {
-        { flow_direction = "input-output", position = { 0, 1.2 }, direction = defines.direction.south },
-        { flow_direction = "input-output", position = { 0, -1.2 }, direction = defines.direction.north },
-        { flow_direction = "input-output", position = { 1.2, 0 }, direction = defines.direction.east },
-        { flow_direction = "input-output", position = { -1.2, 0 }, direction = defines.direction.west },
+        { flow_direction = "input-output", position = { 0, 1 }, direction = defines.direction.south },
+        { flow_direction = "input-output", position = { 0, -1 }, direction = defines.direction.north },
+        { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
+        { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
@@ -381,6 +424,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       {
         type = "recipe",
         name = "fluid-reactor-from-fluid-furnace",
+        localised_name = { "entity-name.fluid-reactor" },
         energy_required = 2,
         enabled = false,
         ingredients = {

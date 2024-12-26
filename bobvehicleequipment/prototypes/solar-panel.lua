@@ -8,7 +8,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-1",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
       volume = 0.7,
@@ -99,7 +98,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-2",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
       volume = 0.7,
@@ -189,7 +187,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-3",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
       volume = 0.7,
@@ -280,7 +277,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-4",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
       volume = 0.7,
@@ -340,6 +336,7 @@ data:extend({
     }),
     order = "v-g-k-d",
     prerequisites = {
+      "production-science-pack",
       "vehicle-solar-panel-equipment-3",
     },
     unit = {
@@ -371,7 +368,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-5",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
       volume = 0.7,
@@ -464,7 +460,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[solar-panel]-6",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/electric-large-inventory-move.ogg",
       volume = 0.7,

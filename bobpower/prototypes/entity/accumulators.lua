@@ -2,19 +2,6 @@ local sounds = require("__base__.prototypes.entity.sounds")
 --local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 if settings.startup["bobmods-power-accumulators"].value == true then
-  local accumulator = data.raw["accumulator"]["accumulator"]
-  accumulator.fast_replaceable_group = "accumulator"
-  accumulator.next_upgrade = "large-accumulator-2"
-  accumulator.energy_source = {
-    type = "electric",
-    buffer_capacity = "10MJ",
-    usage_priority = "tertiary",
-    input_flow_limit = "600kW",
-    output_flow_limit = "600kW",
-  }
-  accumulator.localised_name = { "entity-name.large-accumulator" }
-  accumulator.localised_description = { "entity-description.large-accumulator" }
-
   function bobmods.power.large_accumulator_picture(tint, repeat_count)
     return {
       layers = {
@@ -26,7 +13,6 @@ if settings.startup["bobmods-power-accumulators"].value == true then
           repeat_count = repeat_count,
           shift = util.by_pixel(0, -19),
           tint = tint,
-          animation_speed = 0.5,
           scale = 0.5,
         },
         {
@@ -81,6 +67,25 @@ if settings.startup["bobmods-power-accumulators"].value == true then
     }
   end
 
+  local accumulator = data.raw["accumulator"]["accumulator"]
+  accumulator.fast_replaceable_group = "accumulator"
+  accumulator.next_upgrade = "large-accumulator-2"
+  accumulator.energy_source = {
+    type = "electric",
+    buffer_capacity = "10MJ",
+    usage_priority = "tertiary",
+    input_flow_limit = "600kW",
+    output_flow_limit = "600kW",
+  }
+  accumulator.localised_name = { "entity-name.large-accumulator" }
+  accumulator.localised_description = { "entity-description.large-accumulator" }
+  accumulator.drawing_box_vertical_extension = 1
+  accumulator.chargable_graphics.picture = bobmods.power.large_accumulator_picture()
+  accumulator.chargable_graphics.charge_animation = bobmods.power.large_accumulator_charge()
+  accumulator.chargable_graphics.discharge_animation = bobmods.power.large_accumulator_discharge()
+  accumulator.chargable_graphics.charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } }
+  accumulator.chargable_graphics.discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } }
+
   data:extend({
     {
       type = "accumulator",
@@ -95,7 +100,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "4MJ",
@@ -103,34 +108,60 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "240kW",
         output_flow_limit = "960kW",
       },
-      picture = accumulator_picture(),
-      charge_animation = accumulator_charge(),
+      chargable_graphics = {
+        picture = accumulator_picture(),
+        charge_animation = accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
-        sound = {
-          filename = "__base__/sound/accumulator-working.ogg",
-          volume = 1,
+        main_sounds = {
+          {
+            activity_to_volume_modifiers = { inverted = true, offset = 2 },
+            fade_in_ticks = 4,
+            fade_out_ticks = 20,
+            match_volume_to_activity = true,
+            sound = {
+              filename = "__base__/sound/accumulator-working.ogg",
+              modifiers = {
+                type = "main-menu",
+                volume_multiplier = 1.44,
+              },
+              volume = 0.4,
+            },
+          },
+          {
+            activity_to_volume_modifiers = { offset = 1 },
+            fade_in_ticks = 4,
+            fade_out_ticks = 20,
+            match_volume_to_activity = true,
+            sound = {
+              filename = "__base__/sound/accumulator-discharging.ogg",
+              modifiers = {
+                type = "main-menu",
+                volume_multiplier = 1.44,
+              },
+              volume = 0.4,
+            },
+          },
         },
         idle_sound = {
           filename = "__base__/sound/accumulator-idle.ogg",
           volume = 0.4,
         },
         max_sounds_per_type = 3,
-        fade_in_ticks = 10,
-        fade_out_ticks = 30,
+        audible_distance_modifier = 0.5,
       },
       fast_replaceable_group = "accumulator",
       next_upgrade = "fast-accumulator-2",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 9,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -148,7 +179,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "4MJ",
@@ -156,15 +187,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "240kW",
         output_flow_limit = "30kW",
       },
-      picture = accumulator_picture(),
-      charge_animation = accumulator_charge(),
+      chargable_graphics = {
+        picture = accumulator_picture(),
+        charge_animation = accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -182,8 +215,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       },
       fast_replaceable_group = "accumulator",
       next_upgrade = "slow-accumulator-2",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 9,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -201,7 +233,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         buffer_capacity = "15MJ",
@@ -209,15 +241,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "900kW",
         output_flow_limit = "900kW",
       },
-      picture = bobmods.power.large_accumulator_picture(),
-      charge_animation = bobmods.power.large_accumulator_charge(),
+      chargable_graphics = {
+        picture = bobmods.power.large_accumulator_picture(),
+        charge_animation = bobmods.power.large_accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = bobmods.power.large_accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = bobmods.power.large_accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -235,8 +269,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       },
       fast_replaceable_group = "accumulator",
       next_upgrade = "large-accumulator-3",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 10,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -254,7 +287,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "6MJ",
@@ -262,15 +295,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "360kW",
         output_flow_limit = "1440kW",
       },
-      picture = accumulator_picture(),
-      charge_animation = accumulator_charge(),
+      chargable_graphics = {
+        picture = accumulator_picture(),
+        charge_animation = accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -288,8 +323,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       },
       fast_replaceable_group = "accumulator",
       next_upgrade = "fast-accumulator-3",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 10,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -307,7 +341,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "6MJ",
@@ -315,15 +349,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "360kW",
         output_flow_limit = "45kW",
       },
-      picture = accumulator_picture(),
-      charge_animation = accumulator_charge(),
+      chargable_graphics = {
+        picture = accumulator_picture(),
+        charge_animation = accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -341,8 +377,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       },
       fast_replaceable_group = "accumulator",
       next_upgrade = "slow-accumulator-3",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 10,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -360,7 +395,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 1,
       energy_source = {
         type = "electric",
         buffer_capacity = "22.5MJ",
@@ -368,15 +403,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "1350kW",
         output_flow_limit = "1350kW",
       },
-      picture = bobmods.power.large_accumulator_picture(),
-      charge_animation = bobmods.power.large_accumulator_charge(),
+      chargable_graphics = {
+        picture = bobmods.power.large_accumulator_picture(),
+        charge_animation = bobmods.power.large_accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = bobmods.power.large_accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = bobmods.power.large_accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -393,8 +430,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 12.5,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -412,7 +448,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "9MJ",
@@ -420,15 +456,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "540kW",
         output_flow_limit = "2160kW",
       },
-      picture = accumulator_picture(),
-      charge_animation = accumulator_charge(),
+      chargable_graphics = {
+        picture = accumulator_picture(),
+        charge_animation = accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -445,8 +483,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 12.5,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },
@@ -464,7 +501,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       --    damaged_trigger_effect = hit_effects.entity(),
-      drawing_box = { { -1, -1.5 }, { 1, 1 } },
+      drawing_box_vertical_extension = 0.5,
       energy_source = {
         type = "electric",
         buffer_capacity = "9MJ",
@@ -472,15 +509,17 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         input_flow_limit = "540kW",
         output_flow_limit = "65kW",
       },
-      picture = accumulator_picture(),
-      charge_animation = accumulator_charge(),
+      chargable_graphics = {
+        picture = accumulator_picture(),
+        charge_animation = accumulator_charge(),
+        charge_cooldown = 30,
+        discharge_animation = accumulator_discharge(),
+        discharge_cooldown = 60,
+        charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
+      },
       water_reflection = accumulator_reflection(),
-      charge_cooldown = 30,
-      charge_light = { intensity = 0.3, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      discharge_animation = accumulator_discharge(),
-      discharge_cooldown = 60,
-      discharge_light = { intensity = 0.7, size = 7, color = { r = 1.0, g = 1.0, b = 1.0 } },
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "metal",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -497,8 +536,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-      circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+      circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 12.5,
       default_output_signal = { type = "virtual", name = "signal-A" },
     },

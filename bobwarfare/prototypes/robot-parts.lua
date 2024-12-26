@@ -1,4 +1,21 @@
 if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.warfare.RobotParts == true then
+  local electronicdropsound = {
+    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+    volume = 1,
+  }
+  local electronicpicksound = {
+    filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+    volume = 0.7,
+  }
+  local tooldropsound = {
+    filename = "__base__/sound/item/inserter-inventory-move.ogg",
+    volume = 0.8,
+  }
+  local toolpicksound = {
+    filename = "__base__/sound/item/inserter-inventory-pickup.ogg",
+    volume = 0.8,
+  }
+
   data:extend({
     {
       type = "item",
@@ -8,6 +25,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-brain-combat-1]",
       stack_size = 100,
+      drop_sound = electronicdropsound,
+      inventory_move_sound = electronicdropsound,
+      pick_sound = electronicpicksound,
     },
 
     {
@@ -18,6 +38,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-brain-combat-2]",
       stack_size = 100,
+      drop_sound = electronicdropsound,
+      inventory_move_sound = electronicdropsound,
+      pick_sound = electronicpicksound,
     },
 
     {
@@ -28,6 +51,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-brain-combat-3]",
       stack_size = 100,
+      drop_sound = electronicdropsound,
+      inventory_move_sound = electronicdropsound,
+      pick_sound = electronicpicksound,
     },
 
     {
@@ -38,6 +64,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-brain-combat-4]",
       stack_size = 100,
+      drop_sound = electronicdropsound,
+      inventory_move_sound = electronicdropsound,
+      pick_sound = electronicpicksound,
     },
 
     {
@@ -48,6 +77,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-tool-combat-1]",
       stack_size = 100,
+      drop_sound = tooldropsound,
+      inventory_move_sound = tooldropsound,
+      pick_sound = toolpicksound,
     },
 
     {
@@ -58,6 +90,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-tool-combat-2]",
       stack_size = 100,
+      drop_sound = tooldropsound,
+      inventory_move_sound = tooldropsound,
+      pick_sound = toolpicksound,
     },
 
     {
@@ -68,6 +103,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-tool-combat-3]",
       stack_size = 100,
+      drop_sound = tooldropsound,
+      inventory_move_sound = tooldropsound,
+      pick_sound = toolpicksound,
     },
 
     {
@@ -78,6 +116,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       subgroup = "bob-robot-parts",
       order = "r[robot-tool-combat-4]",
       stack_size = 100,
+      drop_sound = tooldropsound,
+      inventory_move_sound = tooldropsound,
+      pick_sound = toolpicksound,
     },
   })
 

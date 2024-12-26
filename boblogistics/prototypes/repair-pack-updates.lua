@@ -1,3 +1,7 @@
+if data.raw.technology["bob-electronics"] then
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-2", "bob-electronics")
+end
+
 if data.raw.item["steel-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-2", "iron-gear-wheel", "steel-gear-wheel")
 end
@@ -35,7 +39,7 @@ end
 
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "advanced-processing-unit")
 end
 
 if data.raw.item["tungsten-carbide"] then

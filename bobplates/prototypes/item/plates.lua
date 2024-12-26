@@ -1,3 +1,12 @@
+local plate_drop_move = {
+  filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+  volume = 0.8,
+}
+local plate_pick = {
+  filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+  volume = 0.8,
+}
+
 data:extend({
   {
     type = "item",
@@ -7,6 +16,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-a[tin-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -16,6 +28,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-c[silver-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -43,6 +58,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-f[bob-nickel-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -52,6 +70,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-b[bob-zinc-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -70,6 +91,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-h[bob-titanium-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -79,6 +103,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-i[bob-tungsten-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -88,6 +115,18 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-e[bob-silicon-plate]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
+      volume = 0.5,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/brick-inventory-move.ogg",
+      volume = 0.5,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
+      volume = 0.6,
+    },
   },
   {
     type = "item",
@@ -97,6 +136,9 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-e[lithium-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
   {
     type = "item",
@@ -106,5 +148,8 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-j[cobalt-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 })

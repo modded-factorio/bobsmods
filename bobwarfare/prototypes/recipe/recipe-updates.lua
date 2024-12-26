@@ -109,7 +109,6 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("rocket-body", "steel-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("bob-rocket", "aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("radar-3", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("radars-3", "aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("rifle", "copper-plate", "bob-aluminium-plate")
   bobmods.lib.tech.add_prerequisite("military-3", "aluminium-processing")
 end
@@ -130,18 +129,18 @@ end
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "advanced-circuit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "advanced-circuit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("radar-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("radars-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("radars-5", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("bob-tank-3", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-3", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "advanced-processing-unit")
 
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-5", "advanced-processing-unit")
 end
 
 if data.raw.item["bob-titanium-plate"] then
@@ -711,8 +710,6 @@ if data.raw.fluid.deuterium then
   data.raw.recipe["plasma-rocket-warhead"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "deuterium-processing")
 end
-
-bobmods.lib.recipe.enabled("radar", false)
 
 -- Armor
 bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")

@@ -5,7 +5,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "oil-boiler",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
-        icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler" },
         max_health = 300,
         target_temperature = 315,
@@ -17,11 +16,11 @@ if settings.startup["bobmods-power-steam"].value == true then
 
   data.raw.boiler["oil-boiler"].energy_source = {
     type = "fluid",
-    emissions_per_minute = {pollution = 22.5},
+    emissions_per_minute = { pollution = 22.5 },
     fluid_box = {
       volume = 200,
       pipe_connections = {
-        { flow_direction = "input", position = { 0, 0.79 }, direction = defines.direction.south },
+        { flow_direction = "input", position = { 0, 0.5 }, direction = defines.direction.south },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
@@ -50,14 +49,13 @@ if settings.startup["bobmods-power-steam"].value == true then
         name = "oil-boiler-2",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
         localised_description = { "entity-description.oil-boiler" },
-        icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler-2" },
         max_health = 375,
         target_temperature = 465,
         energy_consumption = "8.1MW",
         next_upgrade = "oil-boiler-3",
         energy_source = {
-          emissions_per_minute = {pollution = 16.875},
+          emissions_per_minute = { pollution = 16.875 },
         },
       },
     }),
@@ -68,14 +66,13 @@ if settings.startup["bobmods-power-steam"].value == true then
         name = "oil-boiler-3",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
         localised_description = { "entity-description.oil-boiler" },
-        icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler-3" },
         max_health = 450,
         target_temperature = 615,
         energy_consumption = "10.8MW",
         next_upgrade = "oil-boiler-4",
         energy_source = {
-          emissions_per_minute = {pollution = 11.25},
+          emissions_per_minute = { pollution = 11.25 },
         },
       },
     }),
@@ -86,13 +83,12 @@ if settings.startup["bobmods-power-steam"].value == true then
         name = "oil-boiler-4",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
         localised_description = { "entity-description.oil-boiler" },
-        icon_size = 32,
         minable = { mining_time = 0.5, result = "oil-boiler-4" },
         max_health = 525,
         target_temperature = 765,
         energy_consumption = "13.5MW",
         energy_source = {
-          emissions_per_minute = {pollution = 7.03125},
+          emissions_per_minute = { pollution = 7.03125 },
         },
       },
     }),

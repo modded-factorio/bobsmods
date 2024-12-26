@@ -12,7 +12,6 @@ then
       type = "lab",
       name = "lab-alien",
       icon = "__bobtech__/graphics/icons/lab-alien.png",
-      icon_size = 32,
       flags = { "placeable-player", "player-creation" },
       minable = { mining_time = 1, result = "lab-alien" },
       max_health = 200,
@@ -20,7 +19,6 @@ then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-      light = { intensity = 0.75, size = 8 },
       on_animation = {
         layers = {
           {
@@ -42,6 +40,18 @@ then
             repeat_count = 33,
             animation_speed = 1 / 3,
             shift = util.by_pixel(0, 15.5),
+            scale = 0.5,
+          },
+          {
+            filename = "__bobtech__/graphics/entity/lab/lab-alien-light.png",
+            width = 216,
+            height = 194,
+            frame_count = 33,
+            line_length = 11,
+            animation_speed = 1 / 3,
+            blend_mode = "additive",
+            draw_as_light = true,
+            shift = { 0, 0 },
             scale = 0.5,
           },
           {
@@ -88,12 +98,33 @@ then
         },
       },
       working_sound = {
+        audible_distance_modifier = 0.7,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20,
         sound = {
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 2.2,
+            },
+            {
+              type = "tips-and-tricks",
+              volume_multiplier = 0.8,
+            },
+          },
         },
-        apparent_volume = 1,
       },
+      open_sound = {
+        filename = "__base__/sound/open-close/lab-open.ogg",
+        volume = 0.6,
+      },
+      close_sound = {
+        filename = "__base__/sound/open-close/lab-close.ogg",
+        volume = 0.6,
+      },
+      impact_category = "glass",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -115,6 +146,12 @@ then
         {
           inventory_index = defines.inventory.lab_modules,
           shift = { 0, 0.9 },
+        },
+        {
+          inventory_index = defines.inventory.lab_input,
+          shift = { 0, 0 },
+          max_icons_per_row = 4,
+          separation_multiplier = 1 / 1.1,
         },
       },
       fast_replaceable_group = "lab",

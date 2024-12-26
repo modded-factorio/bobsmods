@@ -30,6 +30,18 @@ data:extend({
         starting_frame_speed_deviation = 0.1,
       },
     },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
@@ -60,6 +72,18 @@ data:extend({
         starting_frame_speed_deviation = 0.1,
       },
     },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
@@ -77,6 +101,18 @@ data:extend({
       movement_slow_down_factor = 0.5,
       damage_modifier = 1.2,
       range = 20,
+    },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
     },
   },
 })
@@ -112,6 +148,18 @@ data:extend({
         starting_frame_speed = 0.4,
         starting_frame_speed_deviation = 0.1,
       },
+    },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
     },
   },
 

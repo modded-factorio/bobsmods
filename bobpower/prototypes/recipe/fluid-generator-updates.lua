@@ -20,7 +20,11 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.add_ingredient("fluid-generator", { type = "item", name = "electronic-circuit", amount = 5 })
-    bobmods.lib.tech.add_prerequisite("fluid-generator-1", "electronics")
+    if data.raw.technology["bob-electronics"] then
+      bobmods.lib.tech.add_prerequisite("fluid-generator-1", "bob-electronics")
+    else
+      bobmods.lib.tech.add_prerequisite("fluid-generator-1", "electronics")
+    end
   end
 
   if data.raw.item["cobalt-steel-bearing"] then
@@ -132,7 +136,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     if data.raw.item["advanced-processing-unit"] then
       bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "processing-unit", "advanced-processing-unit")
-      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-electronics-3")
+      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-processing-unit")
     else
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "processing-unit")
     end

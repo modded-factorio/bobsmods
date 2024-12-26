@@ -27,8 +27,8 @@ function graphics.hand_open_shadow()
   }
 end
 
-graphics.stack = {}
-function graphics.stack.hand_closed_shadow()
+graphics.bulk = {}
+function graphics.bulk.hand_closed_shadow()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/bulk-inserter-hand-closed-shadow.png",
     priority = "extra-high",
@@ -37,7 +37,7 @@ function graphics.stack.hand_closed_shadow()
     scale = 0.25,
   }
 end
-function graphics.stack.hand_open_shadow()
+function graphics.bulk.hand_open_shadow()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/bulk-inserter-hand-open-shadow.png",
     priority = "extra-high",
@@ -46,7 +46,6 @@ function graphics.stack.hand_open_shadow()
     scale = 0.25,
   }
 end
-
 
 graphics.white = {}
 function graphics.white.hand_base_picture()
@@ -159,8 +158,8 @@ function graphics.red.platform_picture()
   }
 end
 
-graphics.red.stack = {}
-function graphics.red.stack.hand_closed_picture()
+graphics.red.bulk = {}
+function graphics.red.bulk.hand_closed_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/red-bulk-inserter-hand-closed.png",
     priority = "extra-high",
@@ -169,7 +168,7 @@ function graphics.red.stack.hand_closed_picture()
     scale = 0.25,
   }
 end
-function graphics.red.stack.hand_open_picture()
+function graphics.red.bulk.hand_open_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/red-bulk-inserter-hand-open.png",
     priority = "extra-high",
@@ -220,8 +219,8 @@ function graphics.blue.platform_picture()
   }
 end
 
-graphics.blue.stack = {}
-function graphics.blue.stack.hand_closed_picture()
+graphics.blue.bulk = {}
+function graphics.blue.bulk.hand_closed_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/blue-bulk-inserter-hand-closed.png",
     priority = "extra-high",
@@ -230,7 +229,7 @@ function graphics.blue.stack.hand_closed_picture()
     scale = 0.25,
   }
 end
-function graphics.blue.stack.hand_open_picture()
+function graphics.blue.bulk.hand_open_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/blue-bulk-inserter-hand-open.png",
     priority = "extra-high",
@@ -281,8 +280,8 @@ function graphics.purple.platform_picture()
   }
 end
 
-graphics.purple.stack = {}
-function graphics.purple.stack.hand_closed_picture()
+graphics.purple.bulk = {}
+function graphics.purple.bulk.hand_closed_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-bulk-inserter-hand-closed.png",
     priority = "extra-high",
@@ -291,7 +290,7 @@ function graphics.purple.stack.hand_closed_picture()
     scale = 0.25,
   }
 end
-function graphics.purple.stack.hand_open_picture()
+function graphics.purple.bulk.hand_open_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/purple-bulk-inserter-hand-open.png",
     priority = "extra-high",
@@ -342,8 +341,8 @@ function graphics.green.platform_picture()
   }
 end
 
-graphics.green.stack = {}
-function graphics.green.stack.hand_closed_picture()
+graphics.green.bulk = {}
+function graphics.green.bulk.hand_closed_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/green-bulk-inserter-hand-closed.png",
     priority = "extra-high",
@@ -352,7 +351,7 @@ function graphics.green.stack.hand_closed_picture()
     scale = 0.25,
   }
 end
-function graphics.green.stack.hand_open_picture()
+function graphics.green.bulk.hand_open_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/green-bulk-inserter-hand-open.png",
     priority = "extra-high",
@@ -466,8 +465,8 @@ function graphics.dark_green.platform_picture()
     },
   }
 end
-graphics.dark_green.stack = {}
-function graphics.dark_green.stack.hand_closed_picture()
+graphics.dark_green.bulk = {}
+function graphics.dark_green.bulk.hand_closed_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/dark-green-big-inserter-hand-closed.png",
     priority = "extra-high",
@@ -476,7 +475,7 @@ function graphics.dark_green.stack.hand_closed_picture()
     scale = 0.25,
   }
 end
-function graphics.dark_green.stack.hand_open_picture()
+function graphics.dark_green.bulk.hand_open_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/dark-green-big-inserter-hand-open.png",
     priority = "extra-high",
@@ -508,8 +507,8 @@ function graphics.stripe.platform_picture()
     },
   }
 end
-graphics.stripe.stack = {}
-function graphics.stripe.stack.hand_closed_picture()
+graphics.stripe.bulk = {}
+function graphics.stripe.bulk.hand_closed_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/stripe-inserter-hand-closed.png",
     priority = "extra-high",
@@ -518,7 +517,7 @@ function graphics.stripe.stack.hand_closed_picture()
     scale = 0.25,
   }
 end
-function graphics.stripe.stack.hand_open_picture()
+function graphics.stripe.bulk.hand_open_picture()
   return {
     filename = "__boblogistics__/graphics/entity/inserter/stripe-inserter-hand-open.png",
     priority = "extra-high",

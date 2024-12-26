@@ -11,8 +11,8 @@ function bobmods.warfare.tank_drone_animation(scale, tint1, tint2)
     layers = {
       {
         priority = "low",
-        width = 136,
-        height = 106,
+        width = 270,
+        height = 212,
         frame_count = 2,
         tint = tint1,
         direction_count = 64,
@@ -41,46 +41,12 @@ function bobmods.warfare.tank_drone_animation(scale, tint1, tint2)
             height_in_frames = 16,
           },
         },
-        scale = scale,
-        hr_version = {
-          priority = "low",
-          width = 270,
-          height = 212,
-          frame_count = 2,
-          tint = tint1,
-          direction_count = 64,
-          shift = util.by_pixel(scale * 0, scale * -10),
-          animation_speed = 8,
-          max_advance = 1,
-          stripes = {
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-1.png",
-              width_in_frames = 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-2.png",
-              width_in_frames = 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-3.png",
-              width_in_frames = 2,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-4.png",
-              width_in_frames = 2,
-              height_in_frames = 16,
-            },
-          },
-          scale = scale * 0.5,
-        },
+        scale = scale * 0.5,
       },
       {
         priority = "low",
-        width = 104,
-        height = 83,
+        width = 208,
+        height = 166,
         frame_count = 2,
         tint = tint2,
         direction_count = 64,
@@ -104,41 +70,12 @@ function bobmods.warfare.tank_drone_animation(scale, tint1, tint2)
             height_in_frames = 20,
           },
         }),
-        scale = scale,
-        hr_version = {
-          priority = "low",
-          width = 208,
-          height = 166,
-          frame_count = 2,
-          tint = tint2,
-          direction_count = 64,
-          shift = util.by_pixel(scale * 0, scale * -21.5),
-          max_advance = 1,
-          line_length = 2,
-          stripes = util.multiplystripes(2, {
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-mask-1.png",
-              width_in_frames = 1,
-              height_in_frames = 22,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-mask-2.png",
-              width_in_frames = 1,
-              height_in_frames = 22,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-mask-3.png",
-              width_in_frames = 1,
-              height_in_frames = 20,
-            },
-          }),
-          scale = scale * 0.5,
-        },
+        scale = scale * 0.5,
       },
       {
         priority = "low",
-        width = 151,
-        height = 98,
+        width = 302,
+        height = 194,
         frame_count = 2,
         draw_as_shadow = true,
         direction_count = 64,
@@ -166,40 +103,7 @@ function bobmods.warfare.tank_drone_animation(scale, tint1, tint2)
             height_in_frames = 16,
           },
         }),
-        scale = scale,
-        hr_version = {
-          priority = "low",
-          width = 302,
-          height = 194,
-          frame_count = 2,
-          draw_as_shadow = true,
-          direction_count = 64,
-          shift = util.by_pixel(scale * 22.5, scale * 7),
-          max_advance = 1,
-          stripes = util.multiplystripes(2, {
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-shadow-1.png",
-              width_in_frames = 1,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-shadow-2.png",
-              width_in_frames = 1,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-shadow-3.png",
-              width_in_frames = 1,
-              height_in_frames = 16,
-            },
-            {
-              filename = "__base__/graphics/entity/tank/hr-tank-base-shadow-4.png",
-              width_in_frames = 1,
-              height_in_frames = 16,
-            },
-          }),
-          scale = scale * 0.5,
-        },
+        scale = scale * 0.5,
       },
     },
   }
@@ -252,9 +156,9 @@ data:extend({
         percent = 40,
       },
     },
+    impact_category = "metal-large",
     collision_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
     selection_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
-    drawing_box = { { -0.9, -0.9 }, { 0.9, 0.75 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -303,7 +207,7 @@ data:extend({
     vision_distance = 30,
     movement_speed = 0.16,
     distance_per_frame = 0.15,
-    absorptions_to_join_attack = {pollution = 10},
+    absorptions_to_join_attack = { pollution = 10 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_gun, tint_drone_1),
   },
 })
@@ -345,9 +249,9 @@ data:extend({
         percent = 40,
       },
     },
+    impact_category = "metal-large",
     collision_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
     selection_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
-    drawing_box = { { -0.9, -0.9 }, { 0.9, 0.75 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -377,7 +281,7 @@ data:extend({
     vision_distance = 35,
     movement_speed = 0.16,
     distance_per_frame = 0.15,
-    absorptions_to_join_attack = {pollution = 15},
+    absorptions_to_join_attack = { pollution = 15 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_laser, tint_drone_1),
   },
 })
@@ -419,9 +323,9 @@ data:extend({
         percent = 40,
       },
     },
+    impact_category = "metal-large",
     collision_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
     selection_box = { { -0.45, -0.65 }, { 0.45, 0.65 } },
-    drawing_box = { { -0.9, -0.9 }, { 0.9, 0.75 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -467,7 +371,7 @@ data:extend({
     vision_distance = 40,
     movement_speed = 0.16,
     distance_per_frame = 0.15,
-    absorptions_to_join_attack = {pollution = 20},
+    absorptions_to_join_attack = { pollution = 20 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5, tint_drone_flamethrower, tint_drone_1),
   },
 })
@@ -509,9 +413,9 @@ data:extend({
         percent = 40,
       },
     },
+    impact_category = "metal-large",
     collision_box = { { -0.45 * 1.5, -0.65 * 1.5 }, { 0.45 * 1.5, 0.65 * 1.5 } },
     selection_box = { { -0.45 * 1.5, -0.65 * 1.5 }, { 0.45 * 1.5, 0.65 * 1.5 } },
-    drawing_box = { { -0.9 * 1.5, -0.9 * 1.5 }, { 0.9 * 1.5, 0.75 * 1.5 } },
     distraction_cooldown = 300,
 
     attack_parameters = {
@@ -550,7 +454,7 @@ data:extend({
     vision_distance = 70,
     movement_speed = 0.1,
     distance_per_frame = 0.1,
-    absorptions_to_join_attack = {pollution = 30},
+    absorptions_to_join_attack = { pollution = 30 },
     run_animation = bobmods.warfare.tank_drone_animation(0.5 * 1.5, tint_drone_plasma, tint_drone_1),
   },
 })

@@ -42,6 +42,7 @@ if bobmods.ores.settings.GemsFromOtherOres == true then
     amount = 1,
     probability = bobmods.ores.settings.GemProbability * bobmods.gems.DiamondRatio,
   })
+  data.raw.resource["coal"].subgroup = "bob-ores"
 
   bobmods.lib.resource.add_result("quartz", {
     type = "item",
@@ -136,3 +137,10 @@ if settings.startup["bobmods-ores-infiniteore"].value == true then
     end
   end
 end
+
+--Intermediate reorganization
+data.raw.item["coal"].subgroup = "bob-ores"
+data.raw.item["stone"].subgroup = "bob-ores"
+data.raw.item["iron-ore"].subgroup = "bob-ores"
+data.raw.item["copper-ore"].subgroup = "bob-ores"
+data.raw.item["uranium-ore"].subgroup = "bob-ores"

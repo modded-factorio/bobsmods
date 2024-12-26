@@ -182,7 +182,6 @@ data:extend({
     type = "technology",
     name = "inserter-bulk-size-bonus-1",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -208,7 +207,6 @@ data:extend({
     type = "technology",
     name = "inserter-bulk-size-bonus-2",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -232,7 +230,6 @@ data:extend({
     type = "technology",
     name = "inserter-bulk-size-bonus-3",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -257,7 +254,6 @@ data:extend({
     type = "technology",
     name = "inserter-bulk-size-bonus-4",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
     effects = {
       {
         type = "inserter-stack-size-bonus",

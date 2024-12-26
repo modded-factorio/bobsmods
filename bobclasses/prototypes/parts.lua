@@ -92,7 +92,7 @@ data:extend({
     icon = "__bobclasses__/icons/bodies/shell.png",
     icon_size = 128,
     subgroup = "body-parts",
-    order = "a[player]-power-core",
+    order = "a[player]-i",
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",
@@ -246,7 +246,7 @@ data:extend({
     icon = "__bobclasses__/icons/bodies/shell.png",
     icon_size = 128,
     subgroup = "body-parts",
-    order = "a[player]-power-core-2",
+    order = "a[player]-i2",
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/armor-large-inventory-move.ogg",

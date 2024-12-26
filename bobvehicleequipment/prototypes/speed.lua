@@ -8,7 +8,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-e[vehicle-motor-1]",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
       volume = 0.6,
@@ -102,7 +101,6 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-e[vehicle-motor-2]",
     stack_size = 50,
-    default_request_amount = 10,
     drop_sound = {
       filename = "__base__/sound/item/vehicle-inventory-move.ogg",
       volume = 0.6,
@@ -166,6 +164,7 @@ data:extend({
     }),
     order = "v-g-h-b",
     prerequisites = {
+      "production-science-pack",
       "vehicle-motor-equipment",
     },
     unit = {

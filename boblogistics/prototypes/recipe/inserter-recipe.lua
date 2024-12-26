@@ -2,6 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "steam-inserter",
+    enabled = false,
     ingredients = {
       { type = "item", name = "burner-inserter", amount = 1 },
       { type = "item", name = "pipe", amount = 1 },
@@ -34,6 +35,7 @@ data:extend({
     requester_paste_multiplier = 4,
   },
 })
+bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-inserter")
 
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data:extend({

@@ -38,7 +38,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-a",
   },
 
   {
@@ -74,7 +73,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-b",
   },
 
   {
@@ -110,7 +108,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-c",
   },
 
   {
@@ -146,7 +143,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-d",
   },
 
   {
@@ -182,7 +178,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-e",
   },
 
   {
@@ -218,7 +213,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-f",
   },
 
   {
@@ -254,7 +248,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-g",
   },
 
   {
@@ -288,7 +281,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-a",
   },
 
   {
@@ -316,7 +308,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-b",
   },
 
   {
@@ -344,7 +335,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-c",
   },
 
   {
@@ -372,7 +362,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-d",
   },
 
   {
@@ -400,7 +389,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-e",
   },
 
   {
@@ -428,7 +416,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-f",
   },
 
   {
@@ -456,7 +443,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-g",
   },
 
   {
@@ -482,7 +468,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a1",
   },
 
   {
@@ -508,7 +493,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a2",
   },
 
   {
@@ -536,7 +520,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a3",
   },
 
   {
@@ -563,7 +546,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a4",
   },
 
   {
@@ -592,7 +574,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a5",
   },
 
   {
@@ -620,7 +601,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a6",
   },
 
   {
@@ -662,7 +642,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-a",
   },
 
   {
@@ -693,7 +672,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-b",
   },
 
   {
@@ -724,7 +702,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-c",
   },
 
   {
@@ -755,7 +732,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-d",
   },
 
   {
@@ -786,7 +762,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-e",
   },
 
   {
@@ -817,7 +792,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-f",
   },
 
   {
@@ -848,7 +822,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-g",
   },
 })
 
@@ -856,11 +829,11 @@ data:extend({
   {
     type = "technology",
     name = "bob-scatter-cannon-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
         icon_size = 64,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/icons/shotgun-shell.png",
@@ -889,17 +862,16 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-c-c-a",
   },
 
   {
     type = "technology",
     name = "bob-poison-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/icons/poison-capsule.png",
@@ -927,16 +899,15 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-a",
   },
   {
     type = "technology",
     name = "bob-fire-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
+        scale = 1,
       },
       {
         icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
@@ -963,16 +934,15 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-b",
   },
   {
     type = "technology",
     name = "bob-explosive-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/icons/grenade.png",
@@ -1000,20 +970,20 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-c",
   },
   {
     type = "technology",
     name = "bob-distractor-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
+        scale = 1,
       },
       {
         icon = "__bobwarfare__/graphics/icons/distractor.png",
         icon_size = 32,
+        scale = 1,
         shift = { -16, -16 },
       },
     },
@@ -1037,17 +1007,16 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-d",
   },
 
   {
     type = "technology",
     name = "bob-atomic-artillery-shell",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/technology/atomic-bomb.png",
@@ -1078,7 +1047,6 @@ data:extend({
       },
       time = 45,
     },
-    order = "d-e-f-e",
   },
 })
 
@@ -1116,7 +1084,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-h",
   },
   {
     type = "technology",
@@ -1143,7 +1110,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-h",
   },
   {
     type = "technology",
@@ -1174,6 +1140,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-g",
   },
 })

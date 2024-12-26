@@ -2,6 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "stone-pipe",
+    enabled = false,
     ingredients = {
       { type = "item", name = "stone-brick", amount = 1 },
     },
@@ -11,6 +12,7 @@ data:extend({
   {
     type = "recipe",
     name = "stone-pipe-to-ground",
+    enabled = false,
     ingredients = {
       { type = "item", name = "stone-pipe", amount = 10 },
       { type = "item", name = "stone-brick", amount = 5 },
@@ -21,6 +23,7 @@ data:extend({
   {
     type = "recipe",
     name = "copper-pipe",
+    enabled = false,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 1 },
     },
@@ -30,6 +33,7 @@ data:extend({
   {
     type = "recipe",
     name = "copper-pipe-to-ground",
+    enabled = false,
     ingredients = {
       { type = "item", name = "copper-pipe", amount = 10 },
       { type = "item", name = "copper-plate", amount = 5 },
