@@ -128,6 +128,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-1-combine",
+      localised_name = { "item-name.raw-speed-module-1" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -142,6 +143,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-2-combine",
+      localised_name = { "item-name.raw-speed-module-2" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -156,6 +158,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-3-combine",
+      localised_name = { "item-name.raw-speed-module-3" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -170,6 +173,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-4-combine",
+      localised_name = { "item-name.raw-speed-module-4" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -184,6 +188,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-5-combine",
+      localised_name = { "item-name.raw-speed-module-5" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -198,6 +203,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-6-combine",
+      localised_name = { "item-name.raw-speed-module-6" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -212,6 +218,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-7-combine",
+      localised_name = { "item-name.raw-speed-module-7" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -226,6 +233,7 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     {
       type = "recipe",
       name = "raw-speed-module-8-combine",
+      localised_name = { "item-name.raw-speed-module-8" },
       subgroup = "raw-speed-module-combine",
       enabled = false,
       ingredients = {
@@ -369,6 +377,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-1-combine",
+      localised_name = { "item-name.green-module-1" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -383,6 +392,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-2-combine",
+      localised_name = { "item-name.green-module-2" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -397,6 +407,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-3-combine",
+      localised_name = { "item-name.green-module-3" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -411,6 +422,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-4-combine",
+      localised_name = { "item-name.green-module-4" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -425,6 +437,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-5-combine",
+      localised_name = { "item-name.green-module-5" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -439,6 +452,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-6-combine",
+      localised_name = { "item-name.green-module-6" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -453,6 +467,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-7-combine",
+      localised_name = { "item-name.green-module-7" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -467,6 +482,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "recipe",
       name = "green-module-8-combine",
+      localised_name = { "item-name.green-module-8" },
       subgroup = "green-module-combine",
       enabled = false,
       ingredients = {
@@ -618,6 +634,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-1-combine",
+      localised_name = { "item-name.raw-productivity-module-1" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -633,6 +650,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-2-combine",
+      localised_name = { "item-name.raw-productivity-module-2" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -648,6 +666,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-3-combine",
+      localised_name = { "item-name.raw-productivity-module-3" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -663,6 +682,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-4-combine",
+      localised_name = { "item-name.raw-productivity-module-4" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -678,6 +698,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-5-combine",
+      localised_name = { "item-name.raw-productivity-module-5" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -693,6 +714,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-6-combine",
+      localised_name = { "item-name.raw-productivity-module-6" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -708,6 +730,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-7-combine",
+      localised_name = { "item-name.raw-productivity-module-7" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
@@ -723,6 +746,7 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     {
       type = "recipe",
       name = "raw-productivity-module-8-combine",
+      localised_name = { "item-name.raw-productivity-module-8" },
       subgroup = "raw-productivity-module-combine",
       enabled = false,
       ingredients = {
