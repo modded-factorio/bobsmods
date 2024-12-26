@@ -65,7 +65,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-vertical.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -89,7 +89,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-vertical.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -113,7 +113,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-horizontal.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -137,7 +137,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-horizontal.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -252,7 +252,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-vertical.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -276,7 +276,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-vertical.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -300,7 +300,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-horizontal.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -324,7 +324,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-horizontal.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -438,7 +438,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-vertical.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -462,7 +462,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-vertical.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -486,7 +486,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-horizontal.png",
               priority = "extra-high",
               width = 128,
               height = 128,
@@ -510,7 +510,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__boblogistics__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+              filename = "__boblogistics__/graphics/entity/pipe/pipe-straight-horizontal.png",
               priority = "extra-high",
               width = 128,
               height = 128,
