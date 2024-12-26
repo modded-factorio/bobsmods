@@ -656,7 +656,6 @@ if data.raw.item["bronze-alloy"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("bronze"),
       impact_category = "metal",
       working_sound = {
@@ -739,7 +738,6 @@ if data.raw.item["brass-alloy"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("brass"),
       impact_category = "metal",
       working_sound = {
@@ -822,7 +820,6 @@ if data.raw.item["silicon-nitride"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("ceramic"),
       impact_category = "stone",
       working_sound = {
@@ -905,7 +902,6 @@ if data.raw.item["bob-titanium-plate"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("titanium"),
       impact_category = "metal",
       working_sound = {
@@ -988,7 +984,6 @@ if data.raw.item["bob-tungsten-plate"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("tungsten"),
       impact_category = "metal",
       working_sound = {
@@ -1071,7 +1066,6 @@ if data.raw.item["nitinol-alloy"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("nitinol"),
       impact_category = "metal",
       working_sound = {
@@ -1154,7 +1148,6 @@ if data.raw.item["copper-tungsten-alloy"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("copper-tungsten"),
       impact_category = "metal",
       working_sound = {
@@ -1237,7 +1230,6 @@ if data.raw.item["se-iridium-plate"] and mods["b-se-k2-integration"] then
           { position = { 0, 0 }, direction = defines.direction.west },
         },
       },
-    },
       pictures = bob_pipepictures("brass"),
       impact_category = "metal",
       working_sound = {
