@@ -631,12 +631,4 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       requires_beacon_alt_mode = false,
     },
   })
-
-  if feature_flags["quality"] then
-    data.raw["module"]["god-module-1"].effect.quality = 2 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus + 0.001
-    data.raw["module"]["god-module-2"].effect.quality = 4 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus + 0.001
-    data.raw["module"]["god-module-3"].effect.quality = 6 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus + 0.001
-    data.raw["module"]["god-module-4"].effect.quality = 8 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus + 0.001
-    data.raw["module"]["god-module-5"].effect.quality = 10 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus + 0.001
-  end
 end
