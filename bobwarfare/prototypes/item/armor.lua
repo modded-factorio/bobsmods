@@ -55,6 +55,18 @@ data:extend({
     infinite = true,
     order = "c-a",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/armor-small-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/armor-small-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/armor-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
   {
     type = "armor",
@@ -114,6 +126,18 @@ data:extend({
     infinite = true,
     order = "c-b",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/armor-small-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/armor-small-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/armor-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
@@ -179,6 +203,20 @@ data:extend({
     order = "f[power-armor-mk3]",
     stack_size = 1,
     equipment_grid = "power-armor-equipment-grid-mk3",
+    open_sound = "__base__/sound/armor-open.ogg",
+    close_sound = "__base__/sound/armor-close.ogg",
+    drop_sound = {
+      filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_size_bonus = {
+      filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
     inventory_size_bonus = 40,
   },
 
@@ -245,6 +283,20 @@ data:extend({
     order = "g[power-armor-mk4]",
     stack_size = 1,
     equipment_grid = "power-armor-equipment-grid-mk4",
+    open_sound = "__base__/sound/armor-open.ogg",
+    close_sound = "__base__/sound/armor-close.ogg",
+    drop_sound = {
+      filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_size_bonus = {
+      filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
     inventory_size_bonus = 50,
   },
 
@@ -310,6 +362,20 @@ data:extend({
     order = "h[power-armor-mk5]",
     stack_size = 1,
     equipment_grid = "power-armor-equipment-grid-mk5",
+    open_sound = "__base__/sound/armor-open.ogg",
+    close_sound = "__base__/sound/armor-close.ogg",
+    drop_sound = {
+      filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_size_bonus = {
+      filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
     inventory_size_bonus = 60,
   },
 })

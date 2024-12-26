@@ -4,6 +4,15 @@ data.raw.item["storage-chest"].order = "b[storage]-[storage-chest-1]"
 data.raw.item["buffer-chest"].order = "b[storage]-[buffer-chest-1]"
 data.raw.item["requester-chest"].order = "b[storage]-[requester-chest-1]"
 
+local chest_drop_move = {
+  filename = "__base__/sound/item/metal-chest-inventory-move.ogg",
+  volume = 0.6,
+}
+local chest_pick = {
+  filename = "__base__/sound/item/metal-chest-inventory-pickup.ogg",
+  volume = 0.6,
+}
+
 data:extend({
   {
     type = "item",
@@ -27,6 +36,9 @@ data:extend({
     order = "b[storage]-[passive-provider-chest-2]",
     place_result = "passive-provider-chest-2",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
@@ -50,6 +62,9 @@ data:extend({
     order = "b[storage]-[active-provider-chest-2]",
     place_result = "active-provider-chest-2",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
@@ -73,6 +88,9 @@ data:extend({
     order = "b[storage]-[storage-chest-2]",
     place_result = "storage-chest-2",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
@@ -96,6 +114,9 @@ data:extend({
     order = "b[storage]-[buffer-chest-2]",
     place_result = "buffer-chest-2",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
@@ -119,6 +140,9 @@ data:extend({
     order = "b[storage]-[requester-chest-2]",
     place_result = "requester-chest-2",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
 })
 
@@ -128,7 +152,7 @@ data:extend({
     name = "passive-provider-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
         icon_size = 32,
       },
       {
@@ -145,13 +169,16 @@ data:extend({
     order = "b[storage]-[passive-provider-chest-3]",
     place_result = "passive-provider-chest-3",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
     name = "active-provider-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
         icon_size = 32,
       },
       {
@@ -168,13 +195,16 @@ data:extend({
     order = "b[storage]-[active-provider-chest-3]",
     place_result = "active-provider-chest-3",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
     name = "storage-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
         icon_size = 32,
       },
       {
@@ -191,13 +221,16 @@ data:extend({
     order = "b[storage]-[storage-chest-3]",
     place_result = "storage-chest-3",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
     name = "buffer-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
         icon_size = 32,
       },
       {
@@ -214,13 +247,16 @@ data:extend({
     order = "b[storage]-[buffer-chest-3]",
     place_result = "buffer-chest-3",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
   {
     type = "item",
     name = "requester-chest-3",
     icons = {
       {
-        icon = "__boblogistics__/graphics/icons/brass-chest.png",
+        icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
         icon_size = 32,
       },
       {
@@ -237,5 +273,8 @@ data:extend({
     order = "b[storage]-[requester-chest-3]",
     place_result = "requester-chest-3",
     stack_size = 50,
+    drop_sound = chest_drop_move,
+    inventory_move_sound = chest_drop_move,
+    pick_sound = chest_pick,
   },
 })

@@ -142,12 +142,8 @@ data:extend({
     },
     energy_usage = "300kW",
     module_slots = 4,
-    icons_positioning = {
-      {
-        inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3,
-      },
+    icon_draw_specification = {
+      shift = { 0, -0.3 },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
@@ -326,9 +322,13 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
+        shift = { 0, 0.8 },
         multi_row_initial_height_modifier = -0.3,
+        max_icons_per_row = 3,
       },
+    },
+    icon_draw_specification = {
+      shift = { 0, -0.3 },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
@@ -506,9 +506,13 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
+        shift = { 0, 0.8 },
         multi_row_initial_height_modifier = -0.3,
+        max_icons_per_row = 3,
       },
+    },
+    icon_draw_specification = {
+      shift = { 0, -0.3 },
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },

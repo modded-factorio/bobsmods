@@ -17,7 +17,6 @@ if data.raw.fluid["nitric-acid"] then
       icon = "__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png",
       icon_size = 32,
       order = "b[fluid-chemistry]-b[sulfuric-nitric-acid]",
-      allow_productivity = true,
     },
   })
 end
@@ -39,7 +38,6 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/glycerol.png",
     icon_size = 64,
     order = "b[fluid-chemistry]-b[glycerol]",
-    allow_productivity = true,
   },
 
   {
@@ -59,14 +57,16 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/nitroglycerin.png",
     icon_size = 64,
     order = "b[fluid-chemistry]-b[nitroglycerin]",
-    allow_productivity = true,
   },
 })
 
 if data.raw["item-subgroup"]["bob-fluid"] then
   if data.raw.recipe["sulfuric-nitric-acid"] then
     data.raw.recipe["sulfuric-nitric-acid"].subgroup = "bob-fluid"
+    data.raw.fluid["sulfuric-nitric-acid"].subgroup = "bob-fluid"
   end
   data.raw.recipe["glycerol"].subgroup = "bob-fluid"
   data.raw.recipe["nitroglycerin"].subgroup = "bob-fluid"
+  data.raw.fluid["glycerol"].subgroup = "bob-fluid"
+  data.raw.fluid["nitroglycerin"].subgroup = "bob-fluid"
 end

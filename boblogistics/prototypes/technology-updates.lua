@@ -1,5 +1,5 @@
-bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-overflow-valve")
-bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-topup-valve")
+-- bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-overflow-valve")
+-- bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-topup-valve")
 bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-storage-tank-all-corners")
 
 -- 0.17.60 balancing
@@ -229,14 +229,14 @@ end
 if data.raw.technology["bob-robotics-4"] then
   bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-robotics-4")
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "advanced-processing-unit")
   end
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-4", "ceramics")
   end
 else
   if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("bob-robots-3", "advanced-processing-unit")
   end
   if data.raw.item["silicon-nitride"] then
     bobmods.lib.tech.add_prerequisite("bob-robots-3", "ceramics")
@@ -267,6 +267,12 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-brain-4")
   bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-4")
 end
+
+bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe-to-ground")
+
+bobmods.lib.tech.add_recipe_unlock("steam-power", "stone-pipe")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "stone-pipe-to-ground")
 
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-pipe")
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-pipe-to-ground")

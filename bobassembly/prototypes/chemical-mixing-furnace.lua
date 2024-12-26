@@ -177,9 +177,11 @@ then
       icons_positioning = {
         {
           inventory_index = defines.inventory.assembling_machine_modules,
-          shift = { 0, 0.5 },
-          multi_row_initial_height_modifier = -0.3,
+          shift = { 0, 0.8 },
         },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.1 },
       },
       crafting_speed = 3,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
@@ -248,9 +250,13 @@ then
       icons_positioning = {
         {
           inventory_index = defines.inventory.assembling_machine_modules,
-          shift = { 0, 0.5 },
+          shift = { 0, 0.8 },
           multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
         },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.1 },
       },
       crafting_speed = 4,
       crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
@@ -286,24 +292,24 @@ then
     {
       type = "technology",
       name = "multi-purpose-furnace-1",
-      --    icon = "__bobassembly__/graphics/icons/technology/multi-purpose-furnace.png",
+      icon_size = 128,
       icons = {
         {
           icon_size = 256,
-          scale = 0.25,
-          icon = "__base__/graphics/technology/advanced-material-processing.png",
+          scale = 0.5,
+          icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
           icon_size = 64,
-          scale = 0.5,
-          shift = { -16, -16 },
+          scale = 1,
+          shift = { -32, -32 },
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
           icon_size = 128,
-          scale = 0.25,
-          shift = { 16, -16 },
+          scale = 0.5,
+          shift = { 32, -32 },
         },
       },
       order = "c-c-b-1",
@@ -332,22 +338,24 @@ then
     {
       type = "technology",
       name = "multi-purpose-furnace-2",
-      --    icon = "__bobassembly__/graphics/icons/technology/multi-purpose-furnace.png",
+      icon_size = 128,
       icons = {
         {
           icon_size = 256,
-          icon = "__base__/graphics/technology/advanced-material-processing.png",
+          scale = 0.5,
+          icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
           icon_size = 64,
-          scale = 2,
-          shift = { -64, -64 },
+          scale = 1,
+          shift = { -32, -32 },
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
           icon_size = 128,
-          shift = { 64, -64 },
+          scale = 0.5,
+          shift = { 32, -32 },
         },
       },
       order = "c-c-b-2",

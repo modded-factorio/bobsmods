@@ -8,7 +8,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-1",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
@@ -51,7 +63,7 @@ data:extend({
     type = "technology",
     name = "vehicle-battery-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment-1.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
     }),
     order = "v-g-i-a",
@@ -86,7 +98,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-2",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
@@ -165,7 +189,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-3",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
@@ -243,7 +279,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-4",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
@@ -323,7 +371,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-5",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
@@ -402,7 +462,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-6",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {

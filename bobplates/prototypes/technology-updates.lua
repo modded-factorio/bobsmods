@@ -26,7 +26,7 @@ bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "hydrogen-sulfide")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "liquid-fuel")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "enriched-fuel-from-liquid-fuel")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "enriched-fuel")
 
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "petroleum-gas-cracking")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")
@@ -46,7 +46,7 @@ bobmods.lib.tech.add_recipe_unlock("zinc-processing", "brass-gear-wheel")
 
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide-2")
-bobmods.lib.tech.add_recipe_unlock("lead-processing", "bob-lead-plate")
+bobmods.lib.tech.add_recipe_unlock("lead-processing", "bob-lead-plate-2")
 bobmods.lib.tech.add_recipe_unlock("lead-processing", "silver-from-lead")
 bobmods.lib.tech.add_prerequisite("lead-processing", "nickel-processing")
 
@@ -61,7 +61,9 @@ bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-powder")
 
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "bob-titanium-plate")
 
-bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungstic-acid")
+if data.raw.recipe["tungstic-acid"] then
+  bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungstic-acid")
+end
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungsten-oxide")
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "powdered-tungsten")
 bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "bob-tungsten-plate")

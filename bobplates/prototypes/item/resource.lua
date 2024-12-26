@@ -10,6 +10,18 @@ data:extend({
     fuel_value = "2MJ", --"4MJ",
     fuel_emissions_multiplier = 0.9,
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/resource-inventory-move.ogg",
+      volume = 0.8,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+      volume = 0.6,
+    },
   },
 
   {
@@ -20,6 +32,18 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[resin]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
@@ -30,16 +54,43 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[rubber]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "item",
-    name = "glass",
+    name = "bob-glass",
     icon = "__bobplates__/graphics/icons/glass.png",
     icon_size = 32,
     subgroup = "bob-resource",
-    order = "f[glass]",
+    order = "f[bob-glass]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
@@ -50,6 +101,18 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[silicon-wafer]",
     stack_size = 500,
+    drop_sound = {
+      filename = "__base__/sound/item/planner-inventory-move.ogg",
+      volume = 0.5,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/planner-inventory-move.ogg",
+      volume = 0.5,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/planner-inventory-pickup.ogg",
+      volume = 0.5,
+    },
   },
 
   {
@@ -60,16 +123,43 @@ data:extend({
     subgroup = "bob-resource",
     order = "c-b[lithium-cobalt-oxide]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+      volume = 0.7,
+      speed = 1.3,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+      volume = 0.7,
+      speed = 1.3,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/landfill-inventory-pickup.ogg",
+      volume = 0.6,
+      speed = 1.2,
+    },
   },
 
   {
     type = "item",
-    name = "polishing-compound",
+    name = "bob-polishing-compound",
     icon = "__bobplates__/graphics/icons/polishing-compound.png",
     icon_size = 32,
     subgroup = "bob-resource",
-    order = "f[polishing-compound]",
+    order = "f[bob-polishing-compound]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/fluid-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+      volume = 0.5,
+    },
   },
 
   {
@@ -77,9 +167,21 @@ data:extend({
     name = "gas-canister",
     icon = "__bobplates__/graphics/icons/gas-canister.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f-b[gas-canister]",
+    subgroup = "intermediate-product",
+    order = "a[basic-intermediates]-d[gas-canister]",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-chest-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-chest-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-chest-inventory-pickup.ogg",
+      volume = 0.6,
+    },
   },
 
   {
@@ -87,9 +189,21 @@ data:extend({
     name = "empty-canister",
     icon = "__bobplates__/graphics/icons/empty-canister.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f-c[empty-canister]",
+    subgroup = "intermediate-product",
+    order = "a[basic-intermediates]-d[fluid-canister]",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/plastic-inventory-move.ogg",
+      volume = 0.5,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/plastic-inventory-move.ogg",
+      volume = 0.5,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
@@ -113,8 +227,20 @@ data:extend({
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.1,
     fuel_emissions_multiplier = 0.7,
-    subgroup = "bob-resource",
+    subgroup = "bob-chemical-fuels",
     order = "d[enriched-fuel]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 })

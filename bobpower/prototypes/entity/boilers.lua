@@ -24,7 +24,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         target_temperature = 315,
         energy_consumption = "3.6MW",
         energy_source = {
-          emissions_per_minute = {pollution = 30},
+          emissions_per_minute = { pollution = 30 },
         },
       },
     }),
@@ -42,7 +42,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         target_temperature = 465,
         energy_consumption = "5.4MW",
         energy_source = {
-          emissions_per_minute = {pollution = 22.5},
+          emissions_per_minute = { pollution = 22.5 },
         },
       },
     }),
@@ -60,7 +60,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         target_temperature = 615,
         energy_consumption = "7.2MW",
         energy_source = {
-          emissions_per_minute = {pollution = 15},
+          emissions_per_minute = { pollution = 15 },
         },
       },
     }),
@@ -77,7 +77,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         target_temperature = 765,
         energy_consumption = "9MW",
         energy_source = {
-          emissions_per_minute = {pollution = 9.375},
+          emissions_per_minute = { pollution = 9.375 },
         },
       },
     }),

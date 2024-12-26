@@ -1,3 +1,32 @@
+local plate_drop_move = {
+  filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+  volume = 0.8,
+}
+local plate_pick = {
+  filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+  volume = 0.8,
+}
+local bearing_drop_move = {
+  filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+  volume = 1,
+  speed = 1.8,
+}
+local bearing_pick = {
+  filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+  volume = 1,
+  speed = 1.6,
+}
+local ball_drop_move = {
+  filename = "__base__/sound/item/low-density-inventory-move.ogg",
+  volume = 0.9,
+  speed = 1.6,
+}
+local ball_pick = {
+  filename = "__base__/sound/item/low-density-inventory-pickup.ogg",
+  volume = 0.7,
+  speed = 1.6,
+}
+
 data:extend({
   {
     type = "item",
@@ -7,6 +36,9 @@ data:extend({
     subgroup = "bob-gears",
     order = "ba[steel-gear-wheel]",
     stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -17,6 +49,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "baa[ball-bearing-steel]",
     stack_size = 500,
+    drop_sound = ball_drop_move,
+    inventory_move_sound = ball_drop_move,
+    pick_sound = ball_pick,
   },
 
   {
@@ -27,6 +62,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bba[bearing-steel]",
     stack_size = 100,
+    drop_sound = bearing_drop_move,
+    inventory_move_sound = bearing_drop_move,
+    pick_sound = bearing_pick,
   },
 
   {
@@ -37,6 +75,9 @@ data:extend({
     subgroup = "bob-gears",
     order = "bb[brass-gear-wheel]",
     stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -47,6 +88,9 @@ data:extend({
     subgroup = "bob-gears",
     order = "bc[cobalt-steel-gear-wheel]",
     stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -57,6 +101,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bac[ball-bearing-cobalt-steel]",
     stack_size = 500,
+    drop_sound = ball_drop_move,
+    inventory_move_sound = ball_drop_move,
+    pick_sound = ball_pick,
   },
 
   {
@@ -67,6 +114,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bbc[bearing-cobalt-steel]",
     stack_size = 100,
+    drop_sound = bearing_drop_move,
+    inventory_move_sound = bearing_drop_move,
+    pick_sound = bearing_pick,
   },
 
   {
@@ -77,6 +127,9 @@ data:extend({
     subgroup = "bob-gears",
     order = "bd[titanium-gear-wheel]",
     stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -87,6 +140,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bad[ball-bearing-titanium]",
     stack_size = 500,
+    drop_sound = ball_drop_move,
+    inventory_move_sound = ball_drop_move,
+    pick_sound = ball_pick,
   },
 
   {
@@ -97,6 +153,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bbd[bearing-titanium]",
     stack_size = 100,
+    drop_sound = bearing_drop_move,
+    inventory_move_sound = bearing_drop_move,
+    pick_sound = bearing_pick,
   },
 
   {
@@ -107,6 +166,9 @@ data:extend({
     subgroup = "bob-gears",
     order = "be[tungsten-gear-wheel]",
     stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -117,6 +179,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bae[ball-bearing-ceramic]",
     stack_size = 500,
+    drop_sound = ball_drop_move,
+    inventory_move_sound = ball_drop_move,
+    pick_sound = ball_pick,
   },
 
   {
@@ -127,6 +192,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bbe[bearing-ceramic]",
     stack_size = 100,
+    drop_sound = bearing_drop_move,
+    inventory_move_sound = bearing_drop_move,
+    pick_sound = bearing_pick,
   },
 
   {
@@ -137,6 +205,9 @@ data:extend({
     subgroup = "bob-gears",
     order = "bf[nitinol-gear-wheel]",
     stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
   },
 
   {
@@ -147,6 +218,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "baf[ball-bearing-nitinol]",
     stack_size = 500,
+    drop_sound = ball_drop_move,
+    inventory_move_sound = ball_drop_move,
+    pick_sound = ball_pick,
   },
 
   {
@@ -157,6 +231,9 @@ data:extend({
     subgroup = "bob-bearings",
     order = "bbf[bearing-nitinol]",
     stack_size = 100,
+    drop_sound = bearing_drop_move,
+    inventory_move_sound = bearing_drop_move,
+    pick_sound = bearing_pick,
   },
 
   {
@@ -164,9 +241,21 @@ data:extend({
     name = "lithium-ion-battery",
     icon = "__bobplates__/graphics/icons/lithium-ion-battery.png",
     icon_size = 64,
-    subgroup = "bob-intermediates",
-    order = "f-cba[lithium-ion-battery]",
+    subgroup = "intermediate-product",
+    order = "b[chemistry]-d[battery]-2",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
@@ -174,28 +263,68 @@ data:extend({
     name = "silver-zinc-battery",
     icon = "__bobplates__/graphics/icons/silver-zinc-battery.png",
     icon_size = 64,
-    subgroup = "bob-intermediates",
-    order = "f-cbb[silver-zinc-battery]",
+    subgroup = "intermediate-product",
+    order = "b[chemistry]-d[battery]-3",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "item",
-    name = "grinding-wheel",
+    name = "bob-grinding-wheel",
     icon = "__bobplates__/graphics/icons/grinding-wheel.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f-cca[grinding-wheel]",
+    subgroup = "intermediate-product",
+    order = "f-cca[bob-grinding-wheel]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 1.3,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 1.3,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/explosive-inventory-move.ogg",
+      volume = 1,
+    },
   },
 
   {
     type = "item",
-    name = "polishing-wheel",
+    name = "bob-polishing-wheel",
     icon = "__bobplates__/graphics/icons/polishing-wheel.png",
     icon_size = 32,
-    subgroup = "bob-intermediates",
-    order = "f-ccb[polishing-wheel]",
+    subgroup = "intermediate-product",
+    order = "f-ccb[bob-polishing-wheel]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 1.3,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 1.3,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/explosive-inventory-move.ogg",
+      volume = 1,
+    },
   },
 })

@@ -3,10 +3,10 @@ if data.raw.item["tin-plate"] then
   bobmods.lib.recipe.add_ingredient("module-processor-board", { type = "item", name = "tin-plate", amount = 1 })
 end
 
-if data.raw.item["gold-plate"] then
-  bobmods.lib.recipe.add_ingredient("module-contact", { type = "item", name = "gold-plate", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { type = "item", name = "gold-plate", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { type = "item", name = "gold-plate", amount = 2 })
+if data.raw.item["bob-gold-plate"] then
+  bobmods.lib.recipe.add_ingredient("module-contact", { type = "item", name = "bob-gold-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-2", { type = "item", name = "bob-gold-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("module-processor-board-3", { type = "item", name = "bob-gold-plate", amount = 2 })
   bobmods.lib.tech.add_prerequisite("modules", "gold-processing")
 end
 
@@ -169,8 +169,8 @@ bobmods.lib.tech.add_recipe_unlock("pollution-clean-module-1", "pollution-clean-
 bobmods.lib.tech.add_recipe_unlock("pollution-create-module-1", "pollution-create-processor")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "module-processor-board-2")
 
-if data.raw.technology["advanced-electronics-3"] then
-  bobmods.lib.tech.add_recipe_unlock("advanced-electronics-3", "module-processor-board-3")
+if data.raw.technology["advanced-processing-unit"] then
+  bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "module-processor-board-3")
 else
   bobmods.lib.tech.add_recipe_unlock("processing-unit", "module-processor-board-3")
 end

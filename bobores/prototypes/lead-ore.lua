@@ -15,17 +15,9 @@ bobmods.ores.lead = {
     sheet = 1,
   },
   enabled = false,
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = true,
-    richness = 1.2,
-    size = 1
-  }
-]]
-  --
   autoplace = "control-only",
+  planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.lead.create_autoplace()

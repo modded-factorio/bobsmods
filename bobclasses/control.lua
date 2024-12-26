@@ -75,7 +75,7 @@ function gui_add_title(gui, title, button_name, drag_target)
     type = "sprite-button",
     name = button_name,
     style = "frame_action_button",
-    sprite = "utility/close_white",
+    sprite = "utility/close",
   })
   if drag_target then
     gui.title_flow.title.drag_target = gui
@@ -152,18 +152,15 @@ function add_classes()
         tooltip = { "gui.bob-class-builder" },
         sprite = "class-builder-button",
       },
-      bonuses = {
-        character_crafting_speed_modifier = 1,
-      },
+      bonuses = {},
       starting_inventory = {
         add = {
           { name = "burner-inserter", count = 2 },
-          { name = "transport-belt", count = 10 },
+          { name = "transport-belt", count = 45 },
+          { name = "burner-inserter", count = 10 },
         },
         replace = {
-          { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-          { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-          { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+          { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
         },
       },
       respawn_inventory = {
@@ -295,7 +292,9 @@ function init()
       sprite = "class-balanced-button",
       group = "t1",
     },
-    bonuses = {},
+    bonuses = {
+      character_crafting_speed_modifier = 1,
+    },
     starting_inventory = {
       add = {},
       replace = {},
@@ -313,12 +312,15 @@ function init()
       sprite = "class-miner-button",
       group = "t1",
     },
-    bonuses = {},
+    bonuses = {
+      character_crafting_speed_modifier = 2,
+    },
     starting_inventory = {
-      add = {},
-      replace = {
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "burner-mining-drill", count = 1 } },
+      add = {
+        { name = "burner-mining-drill", count = 1 },
+        { name = "stone-furnace", count = 1 },
       },
+      replace = {},
     },
     respawn_inventory = {
       add = {},
@@ -333,11 +335,17 @@ function init()
       sprite = "class-fighter-button",
       group = "t1",
     },
-    bonuses = {},
+    bonuses = {
+      character_maximum_following_robot_count_bonus = 10,
+    },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "modular-armor", count = 1 },
+        { name = "personal-laser-defense-equipment", count = 1 },
+        { name = "battery-equipment", count = 2 },
+        { name = "solar-panel-equipment", count = 6 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "heavy-armor", count = 1 } },
         { remove = { name = "pistol", count = 1 }, add = { name = "submachine-gun", count = 1 } },
         { remove = { name = "burner-mining-drill", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
         { remove = { name = "stone-furnace", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
@@ -359,15 +367,14 @@ function init()
       sprite = "class-builder-button",
       group = "t1",
     },
-    bonuses = {
-      character_crafting_speed_modifier = 1,
-    },
+    bonuses = {},
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "burner-inserter", count = 6 },
+        { name = "transport-belt", count = 20 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-        { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-        { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+        { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
       },
     },
     respawn_inventory = {
@@ -384,7 +391,9 @@ function init()
       group = "t2",
     },
     prerequisites = { "bodies-2" },
-    bonuses = {},
+    bonuses = {
+      character_crafting_speed_modifier = 2,
+    },
     starting_inventory = {
       add = {},
       replace = {},
@@ -403,12 +412,15 @@ function init()
       group = "t2",
     },
     prerequisites = { "miner-body-2" },
-    bonuses = {},
+    bonuses = {
+      character_crafting_speed_modifier = 3,
+    },
     starting_inventory = {
-      add = {},
-      replace = {
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "burner-mining-drill", count = 1 } },
+      add = {
+        { name = "burner-mining-drill", count = 1 },
+        { name = "stone-furnace", count = 1 },
       },
+      replace = {},
     },
     respawn_inventory = {
       add = {},
@@ -424,11 +436,17 @@ function init()
       group = "t2",
     },
     prerequisites = { "fighter-body-2" },
-    bonuses = {},
+    bonuses = {
+      character_maximum_following_robot_count_bonus = 20,
+    },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "modular-armor", count = 1 },
+        { name = "personal-laser-defense-equipment", count = 1 },
+        { name = "battery-equipment", count = 2 },
+        { name = "solar-panel-equipment", count = 6 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "heavy-armor", count = 1 } },
         { remove = { name = "pistol", count = 1 }, add = { name = "submachine-gun", count = 1 } },
         { remove = { name = "burner-mining-drill", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
         { remove = { name = "stone-furnace", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
@@ -455,11 +473,12 @@ function init()
       character_crafting_speed_modifier = 2,
     },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "burner-inserter", count = 6 },
+        { name = "transport-belt", count = 20 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-        { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-        { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+        { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
       },
     },
     respawn_inventory = {
@@ -477,15 +496,16 @@ function init()
     },
     prerequisites = { "engineer-body" },
     bonuses = {
-      character_crafting_speed_modifier = 1,
+      character_crafting_speed_modifier = 2,
     },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "burner-mining-drill", count = 1 },
+        { name = "burner-inserter", count = 4 },
+        { name = "transport-belt", count = 10 },
+      },
       replace = {
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "burner-mining-drill", count = 1 } },
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-        { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-        { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+        { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
       },
     },
     respawn_inventory = {
@@ -502,13 +522,19 @@ function init()
       group = "t2_advanced",
     },
     prerequisites = { "prospector-body" },
-    bonuses = {},
+    bonuses = {
+      character_maximum_following_robot_count_bonus = 10,
+    },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "modular-armor", count = 1 },
+        { name = "energy-shield-equipment", count = 1 },
+        { name = "battery-equipment", count = 2 },
+        { name = "solar-panel-equipment", count = 6 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "heavy-armor", count = 1 } },
         { remove = { name = "pistol", count = 1 }, add = { name = "submachine-gun", count = 1 } },
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "firearm-magazine", count = 40 } },
+        { remove = { name = "burner-mining-drill", count = 1 }, add = { name = "firearm-magazine", count = 50 } },
       },
     },
     respawn_inventory = {
@@ -1018,7 +1044,7 @@ function draw_buttons_row(player_index)
     gui.add({
       type = "sprite-button",
       name = "bob_avatar_rename",
-      sprite = "utility/rename_icon_normal",
+      sprite = "utility/rename_icon",
       style = "mod_gui_button_28",
     })
     gui.add({ type = "empty-widget", name = "filler", style = "bob_draggable_footer" })

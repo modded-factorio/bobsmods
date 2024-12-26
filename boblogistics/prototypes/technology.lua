@@ -808,15 +808,17 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         },
         {
           type = "unlock-recipe",
+          recipe = "copper-cable",
+        },
+        {
+          type = "unlock-recipe",
           recipe = "basic-splitter",
         },
       },
-      unit = {
+      research_trigger = {
+        type = "craft-item",
+        item = "iron-gear-wheel",
         count = 10,
-        ingredients = {
-          { "automation-science-pack", 1 },
-        },
-        time = 10,
       },
       order = "a-f-0",
       ignore_tech_cost_multiplier = true,

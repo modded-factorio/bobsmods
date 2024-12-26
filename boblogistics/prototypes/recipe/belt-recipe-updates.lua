@@ -23,10 +23,10 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     bobmods.lib.recipe.replace_ingredient("fast-splitter", "iron-gear-wheel", "steel-gear-wheel")
   end
 
-  if data.raw.item["aluminium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("express-transport-belt", "steel-plate", "aluminium-plate")
-    bobmods.lib.recipe.replace_ingredient("express-underground-belt", "steel-plate", "aluminium-plate")
-    bobmods.lib.recipe.replace_ingredient("express-splitter", "steel-plate", "aluminium-plate")
+  if data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("express-transport-belt", "steel-plate", "bob-aluminium-plate")
+    bobmods.lib.recipe.replace_ingredient("express-underground-belt", "steel-plate", "bob-aluminium-plate")
+    bobmods.lib.recipe.replace_ingredient("express-splitter", "steel-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("logistics-3", "aluminium-processing")
   end
 
@@ -90,10 +90,10 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     bobmods.lib.tech.add_prerequisite("logistics-3", "zinc-processing")
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("turbo-transport-belt", "steel-plate", "titanium-plate")
-    bobmods.lib.recipe.replace_ingredient("turbo-underground-belt", "steel-plate", "titanium-plate")
-    bobmods.lib.recipe.replace_ingredient("turbo-splitter", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("turbo-transport-belt", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("turbo-underground-belt", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("turbo-splitter", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("logistics-4", "titanium-processing")
   end
 
@@ -202,5 +202,5 @@ end
 
 if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("ultimate-splitter", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("logistics-5", "advanced-electronics-3")
+  bobmods.lib.tech.add_prerequisite("logistics-5", "advanced-processing-unit")
 end

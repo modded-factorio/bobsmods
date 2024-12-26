@@ -1,8 +1,11 @@
 data.raw.item["fission-reactor-equipment"].order = "a[energy-source]-b[fission-reactor-1]"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a[night-vision-equipment-1]"
+data.raw.item["night-vision-equipment"].subgroup = "equipment"
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a[solar-panel-1]"
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[personal-laser-defense-equipment-1]"
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equipment-1]"
+data.raw.item["exoskeleton-equipment"].subgroup = "equipment"
+data.raw.item["belt-immunity-equipment"].subgroup = "equipment"
 
 data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
 data.raw.item["energy-shield-equipment"].icon_size = 64
@@ -18,9 +21,21 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "energy-shield-mk3-equipment",
     subgroup = "military-equipment",
-    order = "b[shield]-c[energy-shield-equipment-mk3]",
+    order = "a[shield]-c[energy-shield-equipment-mk3]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
   {
     type = "item",
@@ -29,9 +44,21 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "energy-shield-mk4-equipment",
     subgroup = "military-equipment",
-    order = "b[shield]-d[energy-shield-equipment-mk4]",
+    order = "a[shield]-d[energy-shield-equipment-mk4]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
   {
     type = "item",
@@ -40,9 +67,21 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "energy-shield-mk5-equipment",
     subgroup = "military-equipment",
-    order = "b[shield]-e[energy-shield-equipment-mk5]",
+    order = "a[shield]-e[energy-shield-equipment-mk5]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
   {
     type = "item",
@@ -51,9 +90,21 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "energy-shield-mk6-equipment",
     subgroup = "military-equipment",
-    order = "b[shield]-f[energy-shield-equipment-mk6]",
+    order = "a[shield]-f[energy-shield-equipment-mk6]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 })
 
@@ -72,7 +123,19 @@ data:extend({
     subgroup = "equipment",
     order = "c[battery]-c[battery-mk3-equipment]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
   {
     type = "item",
@@ -83,7 +146,19 @@ data:extend({
     subgroup = "equipment",
     order = "c[battery]-d[battery-mk4-equipment]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
   {
     type = "item",
@@ -94,7 +169,19 @@ data:extend({
     subgroup = "equipment",
     order = "c[battery]-e[battery-mk5-equipment]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
   {
     type = "item",
@@ -105,7 +192,19 @@ data:extend({
     subgroup = "equipment",
     order = "c[battery]-f[battery-mk6-equipment]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 })
 
@@ -123,6 +222,19 @@ data:extend({
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
   {
     type = "item",
@@ -133,6 +245,19 @@ data:extend({
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
   {
     type = "item",
@@ -143,6 +268,19 @@ data:extend({
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
 
   {
@@ -154,6 +292,18 @@ data:extend({
     subgroup = "equipment",
     order = "f[night-vision]-b[night-vision-equipment-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
   {
     type = "item",
@@ -164,6 +314,18 @@ data:extend({
     subgroup = "equipment",
     order = "f[night-vision]-c[night-vision-equipment-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 })
 
@@ -180,6 +342,18 @@ data:extend({
     subgroup = "equipment",
     order = "a[energy-source]-a[solar-panel-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
   {
     type = "item",
@@ -190,6 +364,18 @@ data:extend({
     subgroup = "equipment",
     order = "a[energy-source]-a[solar-panel-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
   {
     type = "item",
@@ -200,6 +386,18 @@ data:extend({
     subgroup = "equipment",
     order = "a[energy-source]-a[solar-panel-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 })
 
@@ -217,6 +415,19 @@ data:extend({
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5,
+    },
+    weight = 200000,
   },
   {
     type = "item",
@@ -227,6 +438,19 @@ data:extend({
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5,
+    },
+    weight = 200000,
   },
   {
     type = "item",
@@ -237,6 +461,19 @@ data:extend({
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5,
+    },
+    weight = 200000,
   },
   {
     type = "item",
@@ -247,6 +484,19 @@ data:extend({
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-5]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5,
+    },
+    weight = 200000,
   },
   {
     type = "item",
@@ -257,6 +507,19 @@ data:extend({
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-6]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/turret-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/turret-inventory-pickup.ogg",
+      volume = 0.5,
+    },
+    weight = 200000,
   },
 
   {
@@ -267,7 +530,19 @@ data:extend({
     place_as_equipment_result = "exoskeleton-equipment-2",
     subgroup = "equipment",
     order = "e[exoskeleton]-a[exoskeleton-equipment-2]",
-    stack_size = 10,
+    stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
+      volume = 0.6,
+    },
   },
   {
     type = "item",
@@ -277,6 +552,18 @@ data:extend({
     place_as_equipment_result = "exoskeleton-equipment-3",
     subgroup = "equipment",
     order = "e[exoskeleton]-a[exoskeleton-equipment-3]",
-    stack_size = 10,
+    stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
+      volume = 0.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/exoskeleton-inventory-move.ogg",
+      volume = 0.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
+      volume = 0.6,
+    },
   },
 })

@@ -14,16 +14,9 @@ bobmods.ores.bauxite = {
   sprite = {
     sheet = 1,
   },
-  --[[  autoplace = 
-  {
-    create = true,
-    starting_area = false,
-    richness = 0.8,
-    size = 1.5
-  }
-]]
-  --
   autoplace = "control-only",
+  planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.bauxite.create_autoplace()

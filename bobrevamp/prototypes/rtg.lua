@@ -1,4 +1,15 @@
 if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
+  local powder_drop_move = {
+    filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+    volume = 0.7,
+    speed = 1.3,
+  }
+  local powder_pick = {
+    filename = "__base__/sound/item/landfill-inventory-pickup.ogg",
+    volume = 0.6,
+    speed = 1.2,
+  }
+
   data:extend({
     {
       type = "item",
@@ -8,6 +19,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
   })
 
@@ -18,6 +32,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         name = "brine",
         icon = "__bobrevamp__/graphics/icons/brine.png",
         icon_size = 32,
+        subgroup = "bob-fluid",
         order = "a[fluid]-a[brine]",
         default_temperature = 15,
         max_temperature = 100,
@@ -41,6 +56,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
             shift = { 0, 5 },
           },
         },
+        subgroup = "bob-fluid",
         order = "a[fluid]-a[brine]",
         default_temperature = 15,
         max_temperature = 100,
@@ -58,6 +74,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         subgroup = "bob-resource-chemical",
         order = "f[sodium-chlorate]",
         stack_size = 100,
+        drop_sound = powder_drop_move,
+        inventory_move_sound = powder_drop_move,
+        pick_sound = powder_pick,
       },
       {
         type = "item",
@@ -67,6 +86,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         subgroup = "bob-resource-chemical",
         order = "f[sodium-chlorate]",
         stack_size = 100,
+        drop_sound = powder_drop_move,
+        inventory_move_sound = powder_drop_move,
+        pick_sound = powder_pick,
       },
 
       {
@@ -90,7 +112,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.8, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -113,7 +134,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.8, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -131,7 +151,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "sodium-bicarbonate", amount = 1 },
-          { type = "item", name = "ammonium-chloride", amount = 1, catalyst_amount = 1 },
+          { type = "item", name = "ammonium-chloride", amount = 1 },
         },
         main_product = "sodium-bicarbonate",
         crafting_machine_tint = {
@@ -139,7 +159,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.4, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -156,7 +175,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "sodium-carbonate", amount = 1 },
-          { type = "fluid", name = "water", amount = 10, fluidbox_index = 1, catalyst_amount = 10 },
+          { type = "fluid", name = "water", amount = 10, fluidbox_index = 1 },
           { type = "fluid", name = "carbon-dioxide", amount = 25, fluidbox_index = 2 },
         },
         main_product = "sodium-carbonate",
@@ -165,11 +184,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.0, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
-        name = "ammonium-chloride-recycling",
+        name = "bob-ammonium-chloride-recycling",
         icon = "__bobrevamp__/graphics/icons/ammonium-chloride-recycling.png",
         icon_size = 64,
         subgroup = "bob-resource-chemical",
@@ -209,7 +227,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         results = {
           { type = "item", name = "sodium-hydroxide", amount = 1 },
           { type = "fluid", name = "chlorine", amount = 25 },
-          { type = "fluid", name = "hydrogen", amount = 20 },
+          { type = "fluid", name = "hydrogen", amount = 10 },
         },
         allow_decomposition = false,
       },
@@ -240,7 +258,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.4, a = 0.000 },
         },
-        allow_productivity = true,
       },
     })
   end
@@ -254,15 +271,30 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
       stack_size = 100,
+      drop_sound = powder_drop_move,
+      inventory_move_sound = powder_drop_move,
+      pick_sound = powder_pick,
     },
     {
       type = "item",
       name = "rtg",
       icon = "__bobrevamp__/graphics/icons/technology/rtg.png",
       icon_size = 128,
-      subgroup = "bob-intermediates",
-      order = "f[rtg]",
+      subgroup = "intermediate-product",
+      order = "m[rtg]",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "recipe",
@@ -280,7 +312,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       results = {
         { type = "item", name = "sodium-cobaltate", amount = 5 },
-        { type = "fluid", name = "oxygen", amount = 200, catalyst_amount = 200 },
+        { type = "fluid", name = "oxygen", amount = 200 },
       },
       main_product = "sodium-cobaltate",
       crafting_machine_tint = {
@@ -288,7 +320,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
       },
-      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -298,8 +329,8 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       enabled = false,
       ingredients = {
         { type = "item", name = "plutonium-239", amount = 1 },
-        { type = "item", name = "lead-plate", amount = 1 },
-        { type = "item", name = "aluminium-plate", amount = 5 },
+        { type = "item", name = "bob-lead-plate", amount = 1 },
+        { type = "item", name = "bob-aluminium-plate", amount = 5 },
         { type = "item", name = "sodium-cobaltate", amount = 2 },
       },
       results = { { type = "item", name = "rtg", amount = 1 } },

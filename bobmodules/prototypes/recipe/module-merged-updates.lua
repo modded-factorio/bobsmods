@@ -64,32 +64,32 @@ if settings.startup["bobmods-modules-enablerawspeedmodules"].value == true then
     end
   end
 
-  if data.raw.item["ruby-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-speed-module-5", { type = "item", name = "ruby-5", amount = 1 })
+  if data.raw.item["bob-ruby-5"] then
+    bobmods.lib.recipe.add_ingredient("raw-speed-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("raw-speed-module-5", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["emerald-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-speed-module-6", { type = "item", name = "emerald-5", amount = 1 })
+  if data.raw.item["bob-emerald-5"] then
+    bobmods.lib.recipe.add_ingredient("raw-speed-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("raw-speed-module-6", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["topaz-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-speed-module-7", { type = "item", name = "topaz-5", amount = 1 })
+  if data.raw.item["bob-topaz-5"] then
+    bobmods.lib.recipe.add_ingredient("raw-speed-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("raw-speed-module-7", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["diamond-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-speed-module-8", { type = "item", name = "diamond-5", amount = 1 })
+  if data.raw.item["bob-diamond-5"] then
+    bobmods.lib.recipe.add_ingredient("raw-speed-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("raw-speed-module-8", { type = "item", name = "alien-artifact", amount = 1 })
@@ -157,32 +157,32 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     end
   end
 
-  if data.raw.item["ruby-5"] then
-    bobmods.lib.recipe.add_ingredient("green-module-5", { type = "item", name = "ruby-5", amount = 1 })
+  if data.raw.item["bob-ruby-5"] then
+    bobmods.lib.recipe.add_ingredient("green-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("green-module-5", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["emerald-5"] then
-    bobmods.lib.recipe.add_ingredient("green-module-6", { type = "item", name = "emerald-5", amount = 1 })
+  if data.raw.item["bob-emerald-5"] then
+    bobmods.lib.recipe.add_ingredient("green-module-6", { type = "item", name = "bob-emerald-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("green-module-6", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["topaz-5"] then
-    bobmods.lib.recipe.add_ingredient("green-module-7", { type = "item", name = "topaz-5", amount = 1 })
+  if data.raw.item["bob-topaz-5"] then
+    bobmods.lib.recipe.add_ingredient("green-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("green-module-7", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["diamond-5"] then
-    bobmods.lib.recipe.add_ingredient("green-module-8", { type = "item", name = "diamond-5", amount = 1 })
+  if data.raw.item["bob-diamond-5"] then
+    bobmods.lib.recipe.add_ingredient("green-module-8", { type = "item", name = "bob-diamond-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("green-module-8", { type = "item", name = "alien-artifact", amount = 1 })
@@ -363,8 +363,8 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     end
   end
 
-  if data.raw.item["ruby-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-productivity-module-5", { type = "item", name = "ruby-5", amount = 1 })
+  if data.raw.item["bob-ruby-5"] then
+    bobmods.lib.recipe.add_ingredient("raw-productivity-module-5", { type = "item", name = "bob-ruby-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(
@@ -374,8 +374,11 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     end
   end
 
-  if data.raw.item["emerald-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-productivity-module-6", { type = "item", name = "emerald-5", amount = 1 })
+  if data.raw.item["bob-emerald-5"] then
+    bobmods.lib.recipe.add_ingredient(
+      "raw-productivity-module-6",
+      { type = "item", name = "bob-emerald-5", amount = 1 }
+    )
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(
@@ -385,8 +388,8 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     end
   end
 
-  if data.raw.item["topaz-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-productivity-module-7", { type = "item", name = "topaz-5", amount = 1 })
+  if data.raw.item["bob-topaz-5"] then
+    bobmods.lib.recipe.add_ingredient("raw-productivity-module-7", { type = "item", name = "bob-topaz-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(
@@ -396,8 +399,11 @@ if settings.startup["bobmods-modules-enablerawproductivitymodules"].value == tru
     end
   end
 
-  if data.raw.item["diamond-5"] then
-    bobmods.lib.recipe.add_ingredient("raw-productivity-module-8", { type = "item", name = "diamond-5", amount = 1 })
+  if data.raw.item["bob-diamond-5"] then
+    bobmods.lib.recipe.add_ingredient(
+      "raw-productivity-module-8",
+      { type = "item", name = "bob-diamond-5", amount = 1 }
+    )
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(
@@ -457,48 +463,48 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     end
   end
 
-  if data.raw.item["ruby-5"] then
-    bobmods.lib.recipe.add_ingredient("god-module-3", { type = "item", name = "ruby-5", amount = 1 })
+  if data.raw.item["bob-ruby-5"] then
+    bobmods.lib.recipe.add_ingredient("god-module-3", { type = "item", name = "bob-ruby-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("god-module-3", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["sapphire-5"] then
-    bobmods.lib.recipe.add_ingredient("god-module-3", { type = "item", name = "sapphire-5", amount = 1 })
+  if data.raw.item["bob-sapphire-5"] then
+    bobmods.lib.recipe.add_ingredient("god-module-3", { type = "item", name = "bob-sapphire-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("god-module-3", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["amethyst-5"] then
-    bobmods.lib.recipe.add_ingredient("god-module-4", { type = "item", name = "amethyst-5", amount = 1 })
+  if data.raw.item["bob-amethyst-5"] then
+    bobmods.lib.recipe.add_ingredient("god-module-4", { type = "item", name = "bob-amethyst-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("god-module-4", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["emerald-5"] then
-    bobmods.lib.recipe.add_ingredient("god-module-4", { type = "item", name = "emerald-5", amount = 1 })
+  if data.raw.item["bob-emerald-5"] then
+    bobmods.lib.recipe.add_ingredient("god-module-4", { type = "item", name = "bob-emerald-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("god-module-4", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["topaz-5"] then
-    bobmods.lib.recipe.add_ingredient("god-module-5", { type = "item", name = "topaz-5", amount = 1 })
+  if data.raw.item["bob-topaz-5"] then
+    bobmods.lib.recipe.add_ingredient("god-module-5", { type = "item", name = "bob-topaz-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("god-module-5", { type = "item", name = "alien-artifact", amount = 1 })
     end
   end
 
-  if data.raw.item["diamond-5"] then
-    bobmods.lib.recipe.add_ingredient("god-module-5", { type = "item", name = "diamond-5", amount = 1 })
+  if data.raw.item["bob-diamond-5"] then
+    bobmods.lib.recipe.add_ingredient("god-module-5", { type = "item", name = "bob-diamond-5", amount = 1 })
   else
     if data.raw.item["alien-artifact"] then
       bobmods.lib.recipe.add_ingredient("god-module-5", { type = "item", name = "alien-artifact", amount = 1 })

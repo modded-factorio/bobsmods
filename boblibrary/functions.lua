@@ -13,14 +13,14 @@ function bobmods.lib.table_merge(table1, table2)
   end
 end
 
-function bobmods.lib.result_check(object)
+function bobmods.lib.minable_result_check(object)
   if object then
     if object.results == nil then
       object.results = {}
     end
 
     if object.result then
-      local item = bobmods.lib.item.ingredient({ name = object.result })
+      local item = bobmods.lib.item.ingredient({ type = "item", name = object.result, amount = 1 })
       if object.count then
         item.amount = object.count
         object.count = nil
@@ -38,8 +38,8 @@ function bobmods.lib.belt_speed_ips(ips)
   return ips * 1 / 480
 end
 
---Inserts the new item into the table only if it doesn't already exist. (Designed to insert strings only)
-function bobmods.lib.safe_insert(array, new_item)
+--Inserts the new item into the table only if it doesn't already exist. (Index optional. Designed to insert strings only.)
+function bobmods.lib.safe_insert(array, new_item, index)
   local addit = true
   for i, item in pairs(array) do
     if item == new_item then
@@ -47,7 +47,11 @@ function bobmods.lib.safe_insert(array, new_item)
     end
   end
   if addit then
-    table.insert(array, new_item)
+    if index then
+      table.insert(array, index, new_item)
+    else
+      table.insert(array, new_item)
+    end
   end
 end
 
@@ -60,7 +64,7 @@ function bobmods.lib.icons_from_item(item)
     if item.icons then
       icons = item.icons
     elseif item.icon then
-      icons = { { icon = item.icon, icon_size = item.icon_size } }
+      icons = { { icon = item.icon, icon_size = item.icon_size or 64 } }
     else
       icons = nil
       log(debug.traceback())

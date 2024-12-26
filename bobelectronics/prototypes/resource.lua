@@ -7,11 +7,24 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[resin]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "recipe",
     name = "bob-resin-wood",
+    localised_name = { "item-name.resin" },
     category = "crafting-machine",
     subgroup = "bob-resource",
     energy_required = 1,
@@ -27,8 +40,9 @@ data:extend({
   {
     type = "recipe",
     name = "bob-resin-oil",
+    localised_name = { "item-name.resin" },
     category = "chemistry",
-    subgroup = "bob-resource-chemical",
+    subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -54,12 +68,25 @@ data:extend({
     subgroup = "bob-resource",
     order = "f[rubber]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "recipe",
     name = "bob-rubber",
-    subgroup = "bob-material-smelting",
+    localised_name = { "item-name.rubber" },
+    subgroup = "bob-resource",
     category = "smelting",
     energy_required = 3.5,
     enabled = false,
@@ -78,7 +105,7 @@ data:extend({
     name = "synthetic-wood",
     icon = "__bobelectronics__/graphics/icons/synthetic-wood.png",
     icon_size = 32,
-    subgroup = "bob-resource-chemical",
+    subgroup = "bob-resource",
     localised_name = { "recipe-name.synthetic-wood" },
     category = "chemistry",
     energy_required = 1,
@@ -97,37 +124,43 @@ data:extend({
   },
 })
 
-if not data.raw.item["silicon-wafer"] then
-  if data.raw.item["silicon"] or data.raw.item["silicon-plate"] then
-    data:extend({
-      {
-        type = "item",
-        name = "silicon-wafer",
-        icon = "__bobelectronics__/graphics/icons/silicon-wafer.png",
-        icon_size = 32,
-        subgroup = "bob-resource",
-        order = "f[silicon-wafer]",
-        stack_size = 500,
+if not data.raw.item["silicon-wafer"] and data.raw.item["bob-silicon-plate"] then
+  data:extend({
+    {
+      type = "item",
+      name = "silicon-wafer",
+      icon = "__bobelectronics__/graphics/icons/silicon-wafer.png",
+      icon_size = 32,
+      subgroup = "bob-resource",
+      order = "f[silicon-wafer]",
+      stack_size = 500,
+      drop_sound = {
+        filename = "__base__/sound/item/planner-inventory-move.ogg",
+        volume = 0.5,
       },
-
-      {
-        type = "recipe",
-        name = "silicon-wafer",
-        category = "crafting-machine",
-        enabled = false,
-        energy_required = 5,
-        ingredients = {},
-        results = { { type = "item", name = "silicon-wafer", amount = 8 } },
-        allow_productivity = true,
+      inventory_move_sound = {
+        filename = "__base__/sound/item/planner-inventory-move.ogg",
+        volume = 0.5,
       },
-    })
+      pick_sound = {
+        filename = "__base__/sound/item/planner-inventory-pickup.ogg",
+        volume = 0.5,
+      },
+    },
 
-    if data.raw.item["silicon"] then
-      table.insert(data.raw.recipe["silicon-wafer"].ingredients, { "silicon", amount = 1 })
-    else
-      table.insert(data.raw.recipe["silicon-wafer"].ingredients, { "silicon-plate", amount = 1 })
-    end
-  end
+    {
+      type = "recipe",
+      name = "silicon-wafer",
+      category = "crafting-machine",
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        { type = "item", name = "bob-silicon-plate", amount = 1 },
+      },
+      results = { { type = "item", name = "silicon-wafer", amount = 8 } },
+      allow_productivity = true,
+    },
+  })
 end
 
 if data.raw.item["tin-plate"] then
@@ -137,9 +170,21 @@ if data.raw.item["tin-plate"] then
       name = "solder-alloy",
       icon = "__bobelectronics__/graphics/icons/solder-plate.png",
       icon_size = 32,
-      subgroup = "bob-alloy",
+      subgroup = "raw-material",
       order = "c-b-h[solder]",
       stack_size = 200,
+      drop_sound = {
+        filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
+        volume = 0.5,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/transport-belt-inventory-move.ogg",
+        volume = 0.5,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
 
     {
@@ -157,21 +202,25 @@ if data.raw.item["tin-plate"] then
       allow_productivity = true,
     },
   })
+  if data.raw["item-subgroup"]["bob-alloy"] then
+    data.raw.item["solder-alloy"].subgroup = "bob-alloy"
+  end
   if data.raw.item["silver-plate"] then
     table.insert(data.raw.recipe["solder-alloy"].ingredients, { type = "item", name = "silver-plate", amount = 1 })
   end
 
-  if data.raw.item["lead-plate"] then
+  if data.raw.item["bob-lead-plate"] then
     data:extend({
       {
         type = "recipe",
         name = "solder-alloy-lead",
+        localised_name = { "item-name.solder-alloy" },
         energy_required = 7,
         enabled = false,
         category = "crafting-machine",
         ingredients = {
           { type = "item", name = "tin-plate", amount = 4 },
-          { type = "item", name = "lead-plate", amount = 7 },
+          { type = "item", name = "bob-lead-plate", amount = 7 },
         },
         results = { { type = "item", name = "solder-alloy", amount = 11 } },
         allow_decomposition = false,

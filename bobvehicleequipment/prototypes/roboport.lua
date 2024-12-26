@@ -6,9 +6,20 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-1",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-1]",
+    order = "e[robotics]-f[roboport-1]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -18,9 +29,20 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-2",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-2]",
+    order = "e[robotics]-f[roboport-2]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -30,9 +52,20 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-3",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-3]",
+    order = "e[robotics]-f[roboport-3]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -42,9 +75,20 @@ data:extend({
     icon_size = 64,
     place_as_equipment_result = "vehicle-roboport-equipment-4",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-f[roboport-4]",
+    order = "e[robotics]-f[roboport-4]",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -124,7 +168,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "35MJ",
-      input_flow_limit = "3500KW",
+      input_flow_limit = "3500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1000kW",
@@ -168,11 +212,11 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "75MJ",
-      input_flow_limit = "7500KW",
+      input_flow_limit = "7500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1500kW",
-    robot_limit = 15,
+    robot_limit = 20,
     construction_radius = 20,
     spawn_and_station_height = 0.4,
     charge_approach_distance = 2.6,
@@ -212,11 +256,11 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "135MJ",
-      input_flow_limit = "13500KW",
+      input_flow_limit = "13500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",
-    robot_limit = 20,
+    robot_limit = 30,
     construction_radius = 25,
     spawn_and_station_height = 0.4,
     charge_approach_distance = 2.6,
@@ -255,11 +299,11 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "215MJ",
-      input_flow_limit = "21500KW",
+      input_flow_limit = "21500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2500kW",
-    robot_limit = 25,
+    robot_limit = 40,
     construction_radius = 30,
     spawn_and_station_height = 0.4,
     charge_approach_distance = 2.6,
@@ -420,6 +464,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -438,6 +494,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -456,6 +524,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -474,6 +554,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-antenna-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -493,6 +585,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -511,6 +615,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -529,6 +645,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -547,6 +675,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-chargepad-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -566,6 +706,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-1]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -584,6 +736,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-2]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -602,6 +766,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-3]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
   {
     type = "item",
@@ -620,6 +796,18 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "e[robotics]-a[vehicle-roboport-equipment-robot-4]",
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/roboport-inventory-move.ogg",
+      volume = 0.45,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+      volume = 0.35,
+    },
   },
 
   {
@@ -640,7 +828,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "100kJ",
-      input_flow_limit = "20KW",
+      input_flow_limit = "20kW",
       drain = "10kW",
       usage_priority = "secondary-input",
     },
@@ -684,7 +872,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "150kJ",
-      input_flow_limit = "30KW",
+      input_flow_limit = "30kW",
       drain = "15kW",
       usage_priority = "secondary-input",
     },
@@ -728,7 +916,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "200kJ",
-      input_flow_limit = "40KW",
+      input_flow_limit = "40kW",
       drain = "20kW",
       usage_priority = "secondary-input",
     },
@@ -772,7 +960,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "250kJ",
-      input_flow_limit = "50KW",
+      input_flow_limit = "50kW",
       drain = "25kW",
       usage_priority = "secondary-input",
     },
@@ -817,7 +1005,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "35MJ",
-      input_flow_limit = "3500KW",
+      input_flow_limit = "3500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1000kW",
@@ -860,7 +1048,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "75MJ",
-      input_flow_limit = "7500KW",
+      input_flow_limit = "7500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1500kW",
@@ -903,7 +1091,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "135MJ",
-      input_flow_limit = "13500KW",
+      input_flow_limit = "13500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",
@@ -946,7 +1134,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "215MJ",
-      input_flow_limit = "21500KW",
+      input_flow_limit = "21500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2500kW",
@@ -990,7 +1178,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "50kJ",
-      input_flow_limit = "10KW",
+      input_flow_limit = "10kW",
       drain = "5kW",
       usage_priority = "secondary-input",
     },
@@ -1034,7 +1222,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "100kJ",
-      input_flow_limit = "20KW",
+      input_flow_limit = "20kW",
       drain = "10kW",
       usage_priority = "secondary-input",
     },
@@ -1078,7 +1266,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "150kJ",
-      input_flow_limit = "30KW",
+      input_flow_limit = "30kW",
       drain = "15kW",
       usage_priority = "secondary-input",
     },
@@ -1122,7 +1310,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "200kJ",
-      input_flow_limit = "40KW",
+      input_flow_limit = "40kW",
       drain = "20kW",
       usage_priority = "secondary-input",
     },
@@ -1301,7 +1489,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-1",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
@@ -1336,7 +1524,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-2",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
@@ -1372,7 +1560,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-3",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {
@@ -1409,7 +1597,7 @@ data:extend({
     type = "technology",
     name = "vehicle-roboport-modular-equipment-4",
     icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport.png",
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
       icon_size = 128,
     }),
     effects = {

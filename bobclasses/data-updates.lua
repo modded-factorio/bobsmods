@@ -10,6 +10,33 @@ for index, character in pairs(bobmods.classes.characters) do
   end
 end
 
+--Fix for Space Age crafting category changes
+local categories = data.raw.character.character.crafting_categories
+data.raw.character["bob-character-miner"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-fighter"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-builder"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-balanced-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-miner-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-fighter-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-builder-2"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-engineer"].crafting_categories = util.copy(categories)
+data.raw.character["bob-character-prospector"].crafting_categories = util.copy(categories)
+
+table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "smelting")
+table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "basic-crafting")
+table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "advanced-crafting")
+table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "smelting")
+table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "basic-crafting")
+table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "advanced-crafting")
+table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "smelting")
+table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "basic-crafting")
+table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "advanced-crafting")
+if data.raw["recipe-category"]["machine-crafting"] then
+  table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "machine-crafting")
+  table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "machine-crafting")
+  table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "machine-crafting")
+end
+
 --if mixing furnace category exists, add it to characters with smelting category
 if data.raw["recipe-category"]["mixing-furnace"] then
   for index, character in pairs(bobmods.classes.characters) do
@@ -17,8 +44,23 @@ if data.raw["recipe-category"]["mixing-furnace"] then
   end
 end
 
-if data.raw["item-group"]["bob-intermediate-products"] then
-  data.raw["item-subgroup"]["body-parts"].group = "bob-intermediate-products"
-end
-
 require("prototypes.recipe-updates")
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe({
+    "bob-character-miner-2",
+    "bob-character-fighter-2",
+    "bob-character-builder-2",
+    "player-brain",
+    "player-head",
+    "player-boots",
+    "player-gloves",
+    "player-power-core",
+    "player-frame",
+    "player-brain-2",
+    "player-head-2",
+    "player-boots-2",
+    "player-gloves-2",
+    "player-frame-2",
+  })
+end

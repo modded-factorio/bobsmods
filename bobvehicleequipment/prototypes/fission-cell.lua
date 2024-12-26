@@ -8,7 +8,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-1",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 125000,
   },
 
   {
@@ -84,7 +96,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-2",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 125000,
   },
 
   {
@@ -165,7 +189,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-3",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 125000,
   },
 
   {
@@ -247,7 +283,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-4",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 125000,
   },
 
   {
@@ -328,7 +376,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-5",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 125000,
   },
 
   {
@@ -409,7 +469,19 @@ data:extend({
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-cell]-6",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 125000,
   },
 
   {

@@ -9,11 +9,24 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       order = "a[items]-a[steam-mining-drill]",
       place_result = "steam-mining-drill",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/drill-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/drill-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
       type = "recipe",
       name = "steam-mining-drill",
+      enabled = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "burner-mining-drill", amount = 1 },
@@ -35,7 +48,7 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       },
     }),
   })
-
+  bobmods.lib.tech.add_recipe_unlock("steam-power", "steam-mining-drill")
   data.raw["mining-drill"]["steam-mining-drill"].resource_searching_radius = 1.99
   data.raw["mining-drill"]["steam-mining-drill"].radius_visualisation_picture = {
     filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
@@ -45,12 +58,12 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   data.raw["mining-drill"]["steam-mining-drill"].energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = {pollution = 25}, --fairly sure this scales, so it would be 5 at level 1 speed.
+    emissions_per_minute = { pollution = 25 }, --fairly sure this scales, so it would be 5 at level 1 speed.
     fluid_box = {
       volume = 200,
       pipe_connections = {
-        { flow_direction = "input-output", position = { 0.7, 0.5 }, direction = defines.direction.east },
-        { flow_direction = "input-output", position = { -0.7, 0.5 }, direction = defines.direction.west },
+        { flow_direction = "input-output", position = { 0.5, 0.5 }, direction = defines.direction.east },
+        { flow_direction = "input-output", position = { -0.5, 0.5 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
@@ -66,7 +79,6 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
         name = "light-smoke",
         frequency = 10 / 32,
         starting_vertical_speed = 0.08,
-        slow_down_factor = 1,
         starting_frame_deviation = 60,
       },
     },
@@ -76,7 +88,6 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
   for i, direction in pairs(data.raw["mining-drill"]["steam-mining-drill"].graphics_set.animation) do
     for j, layer in pairs(direction.layers) do
       layer.animation_speed = 4
-      layer.hr_version.animation_speed = 4
     end
   end
 end

@@ -55,7 +55,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
     {
       type = "recipe",
       name = "burner-assembling-machine",
-      enabled = false,
+      enabled = true,
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 5 },
         { type = "item", name = "iron-plate", amount = 9 },
@@ -158,6 +158,10 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         },
       },
       energy_usage = "60kW",
+      icon_draw_specification = {
+        scale = 0.66,
+        shift = { 0, -0.15 },
+      },
       allowed_effects = {},
     },
 
@@ -319,39 +323,15 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
             name = "light-smoke",
             frequency = 10 / 32,
             starting_vertical_speed = 0.08,
-            slow_down_factor = 1,
             starting_frame_deviation = 60,
           },
         },
       },
       energy_usage = "300kW",
+      icon_draw_specification = {
+        shift = { 0, -0.3 },
+      },
       allowed_effects = {},
-    },
-
-    {
-      type = "technology",
-      name = "basic-automation",
-      icon = "__base__/graphics/technology/automation-1.png",
-      icon_size = 256,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "burner-assembling-machine",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-assembling-machine",
-        },
-      },
-      unit = {
-        count = 5,
-        ingredients = {
-          { "automation-science-pack", 1 },
-        },
-        time = 5,
-      },
-      ignore_tech_cost_multiplier = true,
-      order = "a-b-0",
     },
   })
 

@@ -112,6 +112,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       {
         type = "recipe",
         name = "steel-furnace-from-fluid-furnace",
+        localised_name = { "entity-name.steel-furnace" },
         energy_required = 0.1,
         enabled = false,
         ingredients = {
@@ -178,7 +179,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           {
             icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
             icon_size = 128,
-            shift = { -64, -64 },
+            scale = 0.5,
+            shift = { -48, -48 },
           },
         },
         prerequisites = {
@@ -219,26 +221,34 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       settings.startup["bobmods-plates-convert-recipes"]
       and settings.startup["bobmods-plates-convert-recipes"].value == true
     then
+      if data.raw["assembling-machine"]["steel-mixing-furnace"] then
+        data:extend({
+          {
+            type = "recipe",
+            name = "steel-mixing-furnace-from-fluid-mixing-furnace",
+            localised_name = { "entity-name.steel-mixing-furnace" },
+            subgroup = "bob-smelting-machine-convert",
+            energy_required = 0.1,
+            enabled = false,
+            ingredients = {
+              { type = "item", name = "fluid-mixing-furnace", amount = 1 },
+            },
+            results = {
+              { type = "item", name = "steel-mixing-furnace", amount = 1 },
+              { type = "item", name = "pipe", amount = 2 },
+            },
+            main_product = "steel-mixing-furnace",
+            allow_as_intermediate = false,
+          },
+        })
+        bobmods.lib.tech.add_recipe_unlock("fluid-mixing-furnace", "steel-mixing-furnace-from-fluid-mixing-furnace")
+      end
+
       data:extend({
         {
           type = "recipe",
-          name = "steel-mixing-furnace-from-fluid-mixing-furnace",
-          subgroup = "bob-smelting-machine-convert",
-          energy_required = 0.1,
-          enabled = false,
-          ingredients = {
-            { type = "item", name = "fluid-mixing-furnace", amount = 1 },
-          },
-          results = {
-            { type = "item", name = "pipe", amount = 2 },
-          },
-          main_product = "steel-mixing-furnace",
-          allow_as_intermediate = false,
-        },
-
-        {
-          type = "recipe",
           name = "fluid-mixing-furnace-from-fluid-furnace",
+          localised_name = { "entity-name.fluid-mixing-furnace" },
           subgroup = "bob-smelting-machine-convert",
           energy_required = 0.1,
           enabled = false,
@@ -251,6 +261,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         {
           type = "recipe",
           name = "fluid-furnace-from-fluid-mixing-furnace",
+          localised_name = { "entity-name.fluid-furnace" },
           subgroup = "bob-base-smelting-machine-convert",
           energy_required = 0.1,
           enabled = false,
@@ -262,14 +273,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         },
       })
 
-      if data.raw["assembling-machine"]["steel-mixing-furnace"] then
-        bobmods.lib.recipe.add_result(
-          "steel-mixing-furnace-from-fluid-mixing-furnace",
-          { type = "item", name = "steel-mixing-furnace", amount = 1 }
-        )
-      end
-
-      bobmods.lib.tech.add_recipe_unlock("fluid-mixing-furnace", "steel-mixing-furnace-from-fluid-mixing-furnace")
       bobmods.lib.tech.add_recipe_unlock("fluid-mixing-furnace", "fluid-mixing-furnace-from-fluid-furnace")
       bobmods.lib.tech.add_recipe_unlock("fluid-mixing-furnace", "fluid-furnace-from-fluid-mixing-furnace")
     end
@@ -321,8 +324,8 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           {
             icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
             icon_size = 64,
-            scale = 2,
-            shift = { -64, -64 },
+            scale = 1,
+            shift = { -48, -48 },
           },
         },
         prerequisites = {
@@ -368,26 +371,37 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       settings.startup["bobmods-plates-convert-recipes"]
       and settings.startup["bobmods-plates-convert-recipes"].value == true
     then
+      if data.raw["assembling-machine"]["steel-chemical-furnace"] then
+        data:extend({
+          {
+            type = "recipe",
+            name = "steel-chemical-furnace-from-fluid-chemical-furnace",
+            localised_name = { "entity-name.steel-chemical-furnace" },
+            subgroup = "bob-smelting-machine-convert",
+            energy_required = 0.1,
+            enabled = false,
+            ingredients = {
+              { type = "item", name = "fluid-chemical-furnace", amount = 1 },
+            },
+            results = {
+              { type = "item", name = "steel-chemical-furnace", amount = 1 },
+              { type = "item", name = "pipe", amount = 2 },
+            },
+            main_product = "steel-chemical-furnace",
+            allow_as_intermediate = false,
+          },
+        })
+        bobmods.lib.tech.add_recipe_unlock(
+          "fluid-chemical-furnace",
+          "steel-chemical-furnace-from-fluid-chemical-furnace"
+        )
+      end
+
       data:extend({
         {
           type = "recipe",
-          name = "steel-chemical-furnace-from-fluid-chemical-furnace",
-          subgroup = "bob-smelting-machine-convert",
-          energy_required = 0.1,
-          enabled = false,
-          ingredients = {
-            { type = "item", name = "fluid-chemical-furnace", amount = 1 },
-          },
-          results = {
-            { type = "item", name = "pipe", amount = 2 },
-          },
-          main_product = "steel-chemical-furnace",
-          allow_as_intermediate = false,
-        },
-
-        {
-          type = "recipe",
           name = "fluid-chemical-furnace-from-fluid-furnace",
+          localised_name = { "entity-name.fluid-chemical-furnace" },
           subgroup = "bob-smelting-machine-convert",
           energy_required = 2,
           enabled = false,
@@ -401,6 +415,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         {
           type = "recipe",
           name = "fluid-furnace-from-fluid-chemical-furnace",
+          localised_name = { "entity-name.fluid-furnace" },
           subgroup = "bob-base-smelting-machine-convert",
           energy_required = 0.1,
           enabled = false,
@@ -416,14 +431,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         },
       })
 
-      if data.raw["assembling-machine"]["steel-chemical-furnace"] then
-        bobmods.lib.recipe.add_result(
-          "steel-chemical-furnace-from-fluid-chemical-furnace",
-          { type = "item", name = "steel-chemical-furnace", amount = 1 }
-        )
-      end
-
-      bobmods.lib.tech.add_recipe_unlock("fluid-chemical-furnace", "steel-chemical-furnace-from-fluid-chemical-furnace")
       bobmods.lib.tech.add_recipe_unlock("fluid-chemical-furnace", "fluid-chemical-furnace-from-fluid-furnace")
       bobmods.lib.tech.add_recipe_unlock("fluid-chemical-furnace", "fluid-furnace-from-fluid-chemical-furnace")
     end

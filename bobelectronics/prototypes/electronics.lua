@@ -1,13 +1,33 @@
+local electronic_part_drop_move = {
+  filename = "__base__/sound/item/wire-inventory-move.ogg",
+  volume = 0.8,
+}
+local electronic_part_pick = {
+  filename = "__base__/sound/item/wire-inventory-pickup.ogg",
+  volume = 0.6,
+}
+
+local electronic_board_drop_move = {
+  filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+  volume = 1,
+}
+local electronic_board_pick = {
+  filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+  volume = 0.7,
+}
+
 if data.raw.item["tin-plate"] then
   data:extend({
     {
       type = "item",
       name = "tinned-copper-cable",
       icon = "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
-      icon_size = 32,
       subgroup = "bob-electronic-components",
       order = "0-a1[tinned-copper-cable]",
       stack_size = 200,
+      drop_sound = electronic_part_drop_move,
+      inventory_move_sound = electronic_part_drop_move,
+      pick_sound = electronic_part_pick,
     },
 
     {
@@ -31,10 +51,12 @@ data:extend({
     type = "item",
     name = "insulated-cable",
     icon = "__bobelectronics__/graphics/icons/insulated-cable.png",
-    icon_size = 32,
     subgroup = "bob-electronic-components",
     order = "0-a2[insulated-cable]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
@@ -52,16 +74,18 @@ data:extend({
   },
 })
 
-if data.raw.item["gold-plate"] then
+if data.raw.item["bob-gold-plate"] then
   data:extend({
     {
       type = "item",
       name = "gilded-copper-cable",
       icon = "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
-      icon_size = 32,
       subgroup = "bob-electronic-components",
       order = "0-a3[gilded-copper-cable]",
       stack_size = 200,
+      drop_sound = electronic_part_drop_move,
+      inventory_move_sound = electronic_part_drop_move,
+      pick_sound = electronic_part_pick,
     },
 
     {
@@ -71,7 +95,7 @@ if data.raw.item["gold-plate"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
-        { type = "item", name = "gold-plate", amount = 1 },
+        { type = "item", name = "bob-gold-plate", amount = 1 },
       },
       results = { { type = "item", name = "gilded-copper-cable", amount = 3 } },
       allow_decomposition = false,
@@ -90,6 +114,9 @@ if data.raw.item["solder-alloy"] then
       subgroup = "bob-electronic-components",
       order = "0-a4[solder]",
       stack_size = 200,
+      drop_sound = electronic_part_drop_move,
+      inventory_move_sound = electronic_part_drop_move,
+      pick_sound = electronic_part_pick,
     },
 
     {
@@ -118,6 +145,9 @@ data:extend({
     subgroup = "bob-electronic-components",
     order = "0-b1[basic-electronic-components]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
@@ -144,6 +174,9 @@ data:extend({
     subgroup = "bob-electronic-components",
     order = "0-b2[electronic-components]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
@@ -171,6 +204,9 @@ data:extend({
     subgroup = "bob-electronic-components",
     order = "0-b3[integrated-electronics]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
@@ -199,6 +235,9 @@ data:extend({
     subgroup = "bob-electronic-components",
     order = "0-b4[cpu]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
@@ -227,6 +266,18 @@ data:extend({
     subgroup = "bob-boards",
     order = "c-a1[wooden-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
 
   {
@@ -250,6 +301,21 @@ data:extend({
     subgroup = "bob-boards",
     order = "c-a2[phenolic-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
+    },
   },
 
   {
@@ -275,6 +341,21 @@ data:extend({
     subgroup = "bob-boards",
     order = "c-a3[fibreglass-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
@@ -299,12 +380,25 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-b1[basic-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
 
   {
     type = "recipe",
     name = "basic-circuit-board",
     category = "electronics",
+    enabled = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "wooden-board", amount = 1 },
@@ -325,6 +419,21 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-b2[circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
+    },
   },
 
   {
@@ -353,6 +462,21 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-b3[superior-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
@@ -381,6 +505,21 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-b4[multi-layer-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
@@ -409,6 +548,9 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-c1[basic-electronic-circuit-board]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
@@ -435,6 +577,9 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-c2[electronic-circuit-board]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
@@ -462,6 +607,9 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-c3[electronic-logic-board]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
@@ -490,6 +638,9 @@ data:extend({
     subgroup = "bob-electronic-boards",
     order = "c-c4[electronic-processing-board]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {

@@ -60,19 +60,29 @@ end
 circuit_connector_definitions["electrolyser"] =
   circuit_connector_definitions.create_vector(universal_connector_template, {
     {
-      variation = 8,
-      main_offset = util.by_pixel(-12, -34),
-      shadow_offset = util.by_pixel(39, 31),
-      show_shadow = false,
+      variation = 12,
+      main_offset = util.by_pixel(12, -34),
+      shadow_offset = util.by_pixel(57, 4),
+      show_shadow = true,
     },
-    { variation = 6, main_offset = util.by_pixel(0, -19), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+    {
+      variation = 12,
+      main_offset = util.by_pixel(12, -38),
+      shadow_offset = util.by_pixel(57, 8),
+      show_shadow = true,
+    },
     {
       variation = 8,
-      main_offset = util.by_pixel(-12, -41),
+      main_offset = util.by_pixel(-10.5, -42),
       shadow_offset = util.by_pixel(39, 31),
       show_shadow = false,
     },
-    { variation = 2, main_offset = util.by_pixel(0, -25), shadow_offset = util.by_pixel(39, 31), show_shadow = false },
+    {
+      variation = 8,
+      main_offset = util.by_pixel(-11, -38),
+      shadow_offset = util.by_pixel(39, 31),
+      show_shadow = false,
+    },
   })
 
 circuit_connector_definitions["electric-furnace"] =
@@ -101,6 +111,15 @@ data:extend({
     crafting_categories = { "electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     module_slots = 1,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.assembling_machine_modules,
+        shift = { 0, 0.8 },
+      },
+    },
+    icon_draw_specification = {
+      shift = { 0, -0.3 },
+    },
     crafting_speed = 0.75,
     energy_usage = "420kW",
     energy_source = {
@@ -182,16 +201,14 @@ data:extend({
         secondary_draw_orders = { north = -1, east = -1, west = -1 },
         volume = 1000,
       },
-      {
-        production_type = "output",
-        pipe_connections = {
-          { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } },
-        },
-        volume = 1,
-      },
     },
+    forced_symmetry = "vertical",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
@@ -359,17 +376,15 @@ data:extend({
         secondary_draw_orders = { north = -1, east = -1, west = -1 },
         volume = 1000,
       },
-      {
-        production_type = "output",
-        pipe_connections = {
-          { flow_direction = "output", direction = defines.direction.south, position = { 0.5, 0.5 } },
-        },
-        volume = 1,
-      },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
+    forced_symmetry = "vertical",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
@@ -424,17 +439,18 @@ data:extend({
     fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-
     module_slots = 2,
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3,
+        shift = { 0, 0.8 },
       },
     },
+    icon_draw_specification = {
+      shift = { 0, -0.1 },
+    },
     crafting_speed = 2,
-    crafting_categories = { "smelting", "chemical-furnace" },
+    crafting_categories = { "chemical-furnace" },
     energy_usage = "180kW",
     energy_source = {
       type = "electric",
@@ -511,6 +527,10 @@ data:extend({
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "smelting", "mixing-furnace" },
     energy_usage = "90kW",
     crafting_speed = 1,
@@ -580,6 +600,10 @@ data:extend({
     },
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
+    icon_draw_specification = {
+      scale = 0.66,
+      shift = { 0, -0.1 },
+    },
     crafting_categories = { "smelting", "mixing-furnace" },
     energy_usage = "90kW",
     crafting_speed = 2,
@@ -627,9 +651,11 @@ data:extend({
     icons_positioning = {
       {
         inventory_index = defines.inventory.assembling_machine_modules,
-        shift = { 0, 0.5 },
-        multi_row_initial_height_modifier = -0.3,
+        shift = { 0, 0.8 },
       },
+    },
+    icon_draw_specification = {
+      shift = { 0, -0.1 },
     },
     crafting_speed = 2,
     crafting_categories = { "smelting", "mixing-furnace" },
@@ -826,9 +852,7 @@ data:extend({
         width = 48,
         height = 30,
         frame_count = 60,
-        axially_symmetrical = false,
         animation_speed = 0.25,
-        direction_count = 1,
         scale = 0.5,
       },
     },
@@ -919,8 +943,6 @@ data:extend({
         width = 1,
         height = 1,
         frame_count = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.25,
       },
     },

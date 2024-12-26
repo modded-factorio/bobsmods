@@ -12,13 +12,13 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "zinc-processing")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-2", "steel-plate", "tungsten-plate")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-2", "steel-plate", "bob-tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "tungsten-processing")
   end
 
-  if data.raw.item["lead-plate"] then
-    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-2", "concrete", "lead-plate")
+  if data.raw.item["bob-lead-plate"] then
+    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-2", "concrete", "bob-lead-plate")
   end
 
   if data.raw.item["heat-pipe-4"] then
@@ -36,10 +36,10 @@ if settings.startup["bobmods-power-nuclear"].value == true then
 
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "advanced-electronics-3")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "advanced-processing-unit")
   end
 
-  if data.raw.item["lead-plate"] then
-    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "concrete", "lead-plate")
+  if data.raw.item["bob-lead-plate"] then
+    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "concrete", "bob-lead-plate")
   end
 end

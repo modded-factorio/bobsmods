@@ -7,6 +7,7 @@ Date: ???
     - Changed robot brains to use circuits rather than circuit components #184
     - Removed circuits from flying robot frame recipes #184
     - Update for Factorio 2.0 #189
+    - Slightly increase construction area of logistic zone expander #177
   Balancing:
     - Increased default fluid wagon capacity from 25000 to 50000 to make fluid wagons more compelling compared to the new pipe mechanics. (Matching base game)
 ---------------------------------------------------------------------------------------------------

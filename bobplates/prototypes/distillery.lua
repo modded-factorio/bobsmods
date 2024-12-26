@@ -372,7 +372,6 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       type = "item",
       name = "bob-distillery",
       icon = "__bobplates__/graphics/icons/distillery.png",
-      icon_size = 32,
       subgroup = "production-machine",
       order = "e[distillery]",
       place_result = "bob-distillery",
@@ -409,7 +408,6 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       type = "furnace",
       name = "bob-distillery",
       icon = "__bobplates__/graphics/icons/distillery.png",
-      icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.2, result = "bob-distillery" },
       max_health = 200,
@@ -454,6 +452,18 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       },
       allowed_effects = { "consumption", "speed", "pollution" },
       module_slots = 1,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.5 },
+          scale = 0.4,
+          multi_row_initial_height_modifier = -0.3,
+        },
+      },
+      icon_draw_specification = {
+        scale = 0.66,
+        shift = { 0, -0.25 },
+      },
       working_sound = {
         sound = {
           filename = "__base__/sound/boiler.ogg",
