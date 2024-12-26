@@ -32,7 +32,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "small-alien-artifact", amount = 25 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
     })
@@ -60,7 +60,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
 
@@ -90,7 +90,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
 
@@ -120,7 +120,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
 
@@ -150,7 +150,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
 
@@ -180,7 +180,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
 
@@ -210,7 +210,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = "true",
+        enabled = true,
         category = "crafting",
       },
     })
@@ -234,7 +234,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-red", amount = 25 },
           },
           energy_required = 1,
-          enabled = "true",
+          enabled = true,
           category = "crafting",
         },
       })
@@ -257,7 +257,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-orange", amount = 25 },
           },
           energy_required = 1,
-          enabled = "true",
+          enabled = true,
           category = "crafting",
         },
       })
@@ -280,7 +280,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-yellow", amount = 25 },
           },
           energy_required = 1,
-          enabled = "true",
+          enabled = true,
           category = "crafting",
         },
       })
@@ -303,7 +303,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-green", amount = 25 },
           },
           energy_required = 1,
-          enabled = "true",
+          enabled = true,
           category = "crafting",
         },
       })
@@ -326,7 +326,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-blue", amount = 25 },
           },
           energy_required = 1,
-          enabled = "true",
+          enabled = true,
           category = "crafting",
         },
       })
@@ -349,7 +349,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-purple", amount = 25 },
           },
           energy_required = 1,
-          enabled = "true",
+          enabled = true,
           category = "crafting",
         },
       })
