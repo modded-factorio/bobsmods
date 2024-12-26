@@ -11,6 +11,18 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       order = "f[nuclear-energy]-a[reactor-2]",
       place_result = "nuclear-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
     {
       type = "item",
@@ -21,6 +33,18 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       order = "f[nuclear-energy]-a[reactor-3]",
       place_result = "nuclear-reactor-3",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/reactor-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+        volume = 0.6,
+      },
     },
   })
 end

@@ -66,7 +66,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       type = "recipe",
       name = "basic-underground-belt",
       enabled = false,
-      energy_required = 1,
+      energy_required = 0.5,
       ingredients = {
         { type = "item", name = "basic-transport-belt", amount = 5 },
         { type = "item", name = "stone", amount = 2 },
@@ -133,7 +133,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       {
         type = "recipe",
         name = "express-underground-belt",
-        energy_required = 2,
+        energy_required = 3,
         enabled = false,
         ingredients = {
           { type = "item", name = "fast-underground-belt", amount = 2 },
@@ -145,6 +145,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       {
         type = "recipe",
         name = "turbo-underground-belt",
+        energy_required = 4,
         enabled = false,
         ingredients = {
           { type = "item", name = "express-underground-belt", amount = 2 },
@@ -156,6 +157,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       {
         type = "recipe",
         name = "ultimate-underground-belt",
+        energy_required = 5,
         enabled = false,
         ingredients = {
           { type = "item", name = "turbo-underground-belt", amount = 2 },
@@ -258,7 +260,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       {
         type = "recipe",
         name = "express-underground-belt",
-        energy_required = 2,
+        energy_required = 3,
         enabled = false,
         ingredients = {
           { type = "item", name = "express-transport-belt", amount = 5 },
@@ -269,6 +271,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       {
         type = "recipe",
         name = "turbo-underground-belt",
+        energy_required = 4,
         enabled = false,
         ingredients = {
           { type = "item", name = "turbo-transport-belt", amount = 5 },
@@ -279,6 +282,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       {
         type = "recipe",
         name = "ultimate-underground-belt",
+        energy_required = 5,
         enabled = false,
         ingredients = {
           { type = "item", name = "ultimate-transport-belt", amount = 5 },

@@ -42,7 +42,7 @@ data:extend({
     name = "bob-resin-oil",
     localised_name = { "item-name.resin" },
     category = "chemistry",
-    subgroup = "bob-resource-chemical",
+    subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -86,7 +86,7 @@ data:extend({
     type = "recipe",
     name = "bob-rubber",
     localised_name = { "item-name.rubber" },
-    subgroup = "bob-material-smelting",
+    subgroup = "bob-resource",
     category = "smelting",
     energy_required = 3.5,
     enabled = false,
@@ -105,7 +105,7 @@ data:extend({
     name = "synthetic-wood",
     icon = "__bobelectronics__/graphics/icons/synthetic-wood.png",
     icon_size = 32,
-    subgroup = "bob-resource-chemical",
+    subgroup = "bob-resource",
     localised_name = { "recipe-name.synthetic-wood" },
     category = "chemistry",
     energy_required = 1,
@@ -170,7 +170,7 @@ if data.raw.item["tin-plate"] then
       name = "solder-alloy",
       icon = "__bobelectronics__/graphics/icons/solder-plate.png",
       icon_size = 32,
-      subgroup = "bob-alloy",
+      subgroup = "raw-material",
       order = "c-b-h[solder]",
       stack_size = 200,
       drop_sound = {
@@ -202,6 +202,9 @@ if data.raw.item["tin-plate"] then
       allow_productivity = true,
     },
   })
+  if data.raw["item-subgroup"]["bob-alloy"] then
+    data.raw.item["solder-alloy"].subgroup = "bob-alloy"
+  end
   if data.raw.item["silver-plate"] then
     table.insert(data.raw.recipe["solder-alloy"].ingredients, { type = "item", name = "silver-plate", amount = 1 })
   end

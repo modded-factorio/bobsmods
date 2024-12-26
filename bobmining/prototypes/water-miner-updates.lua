@@ -78,37 +78,4 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       bobmods.lib.tech.add_prerequisite("water-miner-4", "plastics")
     end
   end
-
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-5", "steel-plate", "nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("water-miner-5", "nitinol-processing")
-  else
-    if data.raw.item["copper-tungsten-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("water-miner-5", "steel-plate", "copper-tungsten-alloy")
-      bobmods.lib.tech.add_prerequisite("water-miner-5", "tungsten-alloy-processing")
-    end
-  end
-
-  if data.raw.item["nitinol-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-5", "iron-gear-wheel", "nitinol-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("water-miner-5", "nitinol-processing")
-  else
-    if data.raw.item["tungsten-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("water-miner-5", "iron-gear-wheel", "tungsten-gear-wheel")
-      bobmods.lib.tech.add_prerequisite("water-miner-5", "tungsten-processing")
-    end
-  end
-
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-5", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("water-miner-5", "advanced-processing-unit")
-  end
-
-  if data.raw.item["nitinol-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-5", "pipe", "nitinol-pipe")
-    bobmods.lib.tech.add_prerequisite("water-miner-5", "nitinol-processing")
-  elseif data.raw.item["tungsten-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("water-miner-5", "pipe", "tungsten-pipe")
-    bobmods.lib.tech.add_prerequisite("water-miner-5", "tungsten-processing")
-  end
 end

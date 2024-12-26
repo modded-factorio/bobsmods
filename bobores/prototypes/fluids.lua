@@ -2,6 +2,7 @@ bobmods.ores.water = {
   name = "ground-water",
   icon = "__base__/graphics/icons/fluid/water.png",
   icon_size = 64,
+  subgroup = "bob-fluid",
   category = "water",
   infinite = true,
   minimum = 400000,
@@ -73,6 +74,7 @@ end
 bobmods.ores.lithia_water = {
   name = "lithia-water",
   icon = "__bobores__/graphics/icons/lithia-water.png",
+  subgroup = "bob-fluid",
   category = "water",
   infinite = true,
   minimum = 2000000,

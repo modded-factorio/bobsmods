@@ -1,4 +1,4 @@
-bobmods.lib.tech.remove_science_pack("follower-robot-count-7", "production-science-pack")
+bobmods.lib.tech.remove_science_pack("follower-robot-count-5", "production-science-pack")
 
 bobmods.lib.tech.remove_science_pack("artillery", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("artillery", "military-4")
@@ -562,13 +562,6 @@ if mods["boblogistics"] then
   bobmods.lib.tech.remove_science_pack("bob-robot-laser-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-flamethrower-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
-end
-
-if mods["aai-industry"] then
-  bobmods.lib.tech.add_prerequisite("radars-2", "radar")
-else
-  bobmods.lib.tech.add_prerequisite("artillery", "radars-1")
-  bobmods.lib.tech.add_prerequisite("spidertron", "radars-1")
 end
 
 -- Armor

@@ -15,12 +15,12 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
         order = name,
         category = "void-fluid",
         hide_from_player_crafting = true,
+        show_amount_in_title = false,
         energy_required = 1,
         ingredients = {
           { type = "fluid", name = name, amount = amount or 25 },
         },
         results = {
-          { type = "item", name = "void", amount = 1, probability = 0 },
         },
         emissions_multiplier = polution,
       },

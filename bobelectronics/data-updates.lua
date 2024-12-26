@@ -2,6 +2,8 @@ require("prototypes.recipe-updates")
 require("prototypes.technology-updates")
 
 data.raw.recipe["copper-cable"].category = "electronics"
+data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
+data.raw.item["copper-cable"].order = "0-a1"
 
 if data.raw["recipe-category"]["chemical-furnace"] then
   if data.raw.recipe["carbon"] then
@@ -50,4 +52,32 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw.item["advanced-circuit"].icon_size = 128
   data.raw.item["processing-unit"].icon_size = 128
   data.raw.item["advanced-processing-unit"].icon_size = 128
+end
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("wooden-board", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("phenolic-board", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("fibreglass-board", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("solder-alloy", false)
+  bobmods.lib.recipe.update_recycling_recipe({
+    "basic-electronic-components",
+    "electronic-components",
+    "intergrated-electronics",
+    "processing-electronics",
+    "electronic-circuit",
+    "advanced-circuit",
+    "processing-unit",
+    "advanced-processing-unit",
+    "circuit-board",
+    "superior-circuit-board",
+    "multi-layer-circuit-board",
+  })
+  if settings.startup["bobmods-colorupdate"].value == true then
+    bobmods.lib.recipe.update_recycling_recipe_icon(
+      "basic-circuit-board-recycling",
+      "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png",
+      128
+    )
+  end
 end

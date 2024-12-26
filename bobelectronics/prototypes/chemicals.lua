@@ -4,6 +4,7 @@ data:extend({
     name = "ferric-chloride-solution",
     icon = "__bobelectronics__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
+    subgroup = "fluid",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0.6, b = 0.2 },
@@ -17,7 +18,7 @@ data:extend({
     name = "ferric-chloride-solution",
     icon = "__bobelectronics__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
-    subgroup = "bob-fluid",
+    subgroup = "fluid-recipes",
     order = "b[fluid-chemistry]-a[ferric-chloride-solution]",
     category = "chemistry",
     enabled = false,
@@ -35,9 +36,13 @@ data:extend({
       tertiary = { r = 0.0, g = 0.7, b = 0.7, a = 0.000 },
     },
     allow_decomposition = false,
-    allow_productivity = true,
   },
 })
+
+if data.raw["item-subgroup"]["bob-fluid"] then
+  data.raw.recipe["ferric-chloride-solution"].subgroup = "bob-fluid"
+  data.raw.fluid["ferric-chloride-solution"].subgroup = "bob-fluid"
+end
 
 data:extend({
   {
@@ -45,13 +50,13 @@ data:extend({
     name = "coal-cracking",
     icon = "__bobelectronics__/graphics/icons/coal-cracking.png",
     icon_size = 32,
-    subgroup = "bob-fluid",
-    order = "b[fluid-chemistry]-a[coal-cracking]",
+    subgroup = "fluid-recipes",
+    order = "a[oil-processing]-c[coal-cracking]",
     category = "chemistry",
     enabled = false,
-    energy_required = 2.5,
+    energy_required = 3,
     ingredients = {
-      { type = "item", name = "coal", amount = 2 },
+      { type = "item", name = "coal", amount = 3 },
       { type = "fluid", name = "water", amount = 15 },
     },
     results = {

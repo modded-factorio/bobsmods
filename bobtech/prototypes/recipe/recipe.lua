@@ -5,7 +5,7 @@ data:extend({
     enabled = false,
     energy_required = 21,
     ingredients = {
-      { type = "item", name = "filter-inserter", amount = 1 },
+      { type = "item", name = "fast-inserter", amount = 4 },
       { type = "item", name = "express-transport-belt", amount = 1 },
       { type = "item", name = "flying-robot-frame", amount = 1 },
       { type = "item", name = "steel-chest", amount = 2 },
@@ -22,7 +22,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "lab", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 10 },
-      { type = "item", name = "filter-inserter", amount = 4 },
+      { type = "item", name = "bulk-inserter", amount = 4 },
       { type = "item", name = "express-transport-belt", amount = 4 },
     },
     results = { { type = "item", name = "lab-2", amount = 1 } },
@@ -31,17 +31,6 @@ data:extend({
 
 if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
-    {
-      type = "recipe",
-      name = "steam-science-pack",
-      energy_required = 2.5,
-      ingredients = {
-        { type = "item", name = "coal", amount = 1 },
-        { type = "item", name = "stone", amount = 1 },
-      },
-      results = { { type = "item", name = "steam-science-pack", amount = 1 } },
-    },
-
     {
       type = "recipe",
       name = "burner-lab",
@@ -54,4 +43,19 @@ if settings.startup["bobmods-burnerphase"].value == true then
       results = { { type = "item", name = "burner-lab", amount = 1 } },
     },
   })
+  if not data.raw.recipe["bob-burner-generator"] then
+    data:extend({
+      {
+        type = "recipe",
+        name = "bob-burner-generator",
+        enabled = false,
+        ingredients = {
+          { type = "item", name = "stone-furnace", amount = 1 },
+          { type = "item", name = "iron-plate", amount = 8 },
+          { type = "item", name = "iron-gear-wheel", amount = 5 },
+        },
+        results = { { type = "item", name = "bob-burner-generator", amount = 1 } },
+      },
+    })
+  end
 end

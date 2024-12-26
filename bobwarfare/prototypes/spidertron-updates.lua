@@ -2,6 +2,27 @@ table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "poi
 table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "plasma", decrease = 0, percent = 90 })
 table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "bob-pierce", decrease = 0, percent = 50 })
 
+local vanilla_spidertron_leg_resistances = {
+  { type = "physical", decrease = 15, percent = 60 },
+  { type = "impact", decrease = 50, percent = 80 },
+  { type = "bob-pierce", percent = 50 },
+  { type = "electric", decrease = 0, percent = 70 },
+  { type = "explosion", percent = 100 },
+  { type = "acid", decrease = 0, percent = 70 },
+  { type = "fire", decrease = 15, percent = 60 },
+  { type = "poison", decrease = 15, percent = 80 },
+  { type = "laser", decrease = 0, percent = 70 },
+  { type = "plasma", decrease = 0, percent = 90 },
+}
+data.raw["spider-leg"]["spidertron-leg-1"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-2"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-3"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-4"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-5"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-6"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-7"].resistances = vanilla_spidertron_leg_resistances
+data.raw["spider-leg"]["spidertron-leg-8"].resistances = vanilla_spidertron_leg_resistances
+
 bobmods.lib.recipe.remove_ingredient("spidertron", "raw-fish")
 bobmods.lib.recipe.remove_ingredient("spidertron", "radar")
 bobmods.lib.tech.remove_prerequisite("spidertron", "efficiency-module-3")
