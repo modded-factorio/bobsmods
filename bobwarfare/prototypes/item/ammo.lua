@@ -1055,7 +1055,6 @@ data:extend({
         cooldown = 30,
         projectile_creation_distance = 0.6,
         range = 25,
-        ammo_category = "capsule",
         ammo_type = {
           target_type = "position",
           action = {
