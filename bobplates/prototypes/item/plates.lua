@@ -130,11 +130,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "lithium",
+    name = "bob-lithium",
     icon = "__bobplates__/graphics/icons/plate/lithium-plate.png",
     icon_size = 64,
     subgroup = "bob-material",
-    order = "c-a-e[lithium-plate]",
+    order = "c-a-e[bob-lithium-plate]",
     stack_size = 200,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,

@@ -286,7 +286,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
           ignored_by_productivity = 10,
           ignored_by_stats = 10,
         },
-        { type = "item", name = "lithium", amount = 1, probability = 0.1 },
+        { type = "item", name = "bob-lithium", amount = 1, probability = 0.1 },
         { type = "item", name = "fusion-catalyst", amount = 1 },
       },
       crafting_machine_tint = {
@@ -327,7 +327,7 @@ else
       },
       results = {
         { type = "item", name = "bob-lead-plate", amount = 5, ignored_by_productivity = 5 },
-        { type = "item", name = "lithium", amount = 1, probability = 0.05 },
+        { type = "item", name = "bob-lithium", amount = 1, probability = 0.05 },
       },
       crafting_machine_tint = {
         primary = { r = 1, g = 0, b = 0.57 },

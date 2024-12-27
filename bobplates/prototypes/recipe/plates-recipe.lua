@@ -191,7 +191,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "lithium",
+    name = "bob-lithium",
     category = "electrolysis",
     subgroup = "bob-material-electrolysis",
     energy_required = 3.2,
@@ -199,7 +199,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "lithium-chloride", amount = 1 },
     },
-    results = { { type = "item", name = "lithium", amount = 1 } },
+    results = { { type = "item", name = "bob-lithium", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
