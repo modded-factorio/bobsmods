@@ -11,10 +11,10 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.recipe.replace_ingredient("medium-electric-pole-2", "copper-plate", "tinned-copper-cable")
     bobmods.lib.recipe.replace_ingredient("big-electric-pole-2", "copper-plate", "tinned-copper-cable")
     bobmods.lib.recipe.replace_ingredient("substation-2", "copper-plate", "tinned-copper-cable")
-  elseif data.raw.item["tin-plate"] then
-    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-2", "copper-plate", "tin-plate")
-    bobmods.lib.recipe.replace_ingredient("big-electric-pole-2", "copper-plate", "tin-plate")
-    bobmods.lib.recipe.replace_ingredient("substation-2", "copper-plate", "tin-plate")
+  elseif data.raw.item["bob-tin-plate"] then
+    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-2", "copper-plate", "bob-tin-plate")
+    bobmods.lib.recipe.replace_ingredient("big-electric-pole-2", "copper-plate", "bob-tin-plate")
+    bobmods.lib.recipe.replace_ingredient("substation-2", "copper-plate", "bob-tin-plate")
   end
 
   if data.raw.item["bob-titanium-plate"] then

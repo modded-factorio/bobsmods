@@ -18,7 +18,7 @@ if mods["aai-loaders"] then
     -- Plates
     if mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 2 })
-      table.insert(ingredients.regular, { type = "item", name = "tin-plate", amount = 2 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-tin-plate", amount = 2 })
       table.insert(ingredients.fast, { type = "item", name = "bronze-alloy", amount = 2 })
       table.insert(ingredients.express, { type = "item", name = "bob-aluminium-plate", amount = 2 })
       table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-plate", amount = 2 })

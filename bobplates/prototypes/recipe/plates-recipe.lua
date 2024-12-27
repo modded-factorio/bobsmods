@@ -26,12 +26,12 @@ data:extend({
 
   {
     type = "recipe",
-    name = "tin-plate",
+    name = "bob-tin-plate",
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = { { type = "item", name = "tin-ore", amount = 1 } },
-    results = { { type = "item", name = "tin-plate", amount = 1 } },
+    results = { { type = "item", name = "bob-tin-plate", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },

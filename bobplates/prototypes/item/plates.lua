@@ -10,11 +10,11 @@ local plate_pick = {
 data:extend({
   {
     type = "item",
-    name = "tin-plate",
+    name = "bob-tin-plate",
     icon = "__bobplates__/graphics/icons/plate/tin-plate.png",
     icon_size = 32,
     subgroup = "bob-material",
-    order = "c-a-a[tin-plate]",
+    order = "c-a-a[bob-tin-plate]",
     stack_size = 200,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,

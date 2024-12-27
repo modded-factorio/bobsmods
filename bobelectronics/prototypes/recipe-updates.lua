@@ -73,8 +73,8 @@ else
   bobmods.lib.recipe.add_ingredient("fibreglass-board", { type = "item", name = "plastic-bar", amount = 1 })
 end
 
-if data.raw.item["tin-plate"] then
-  bobmods.lib.recipe.add_ingredient("circuit-board", { type = "item", name = "tin-plate", amount = 1 })
+if data.raw.item["bob-tin-plate"] then
+  bobmods.lib.recipe.add_ingredient("circuit-board", { type = "item", name = "bob-tin-plate", amount = 1 })
 else
   bobmods.lib.recipe.add_ingredient("circuit-board", { type = "item", name = "copper-plate", amount = 1 })
 end
@@ -83,9 +83,9 @@ if data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "bob-gold-plate", amount = 1 })
   bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "bob-gold-plate", amount = 2 })
 else
-  if data.raw.item["tin-plate"] then
-    bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "tin-plate", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "tin-plate", amount = 2 })
+  if data.raw.item["bob-tin-plate"] then
+    bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "bob-tin-plate", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "bob-tin-plate", amount = 2 })
   else
     bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "copper-plate", amount = 1 })
     bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "copper-plate", amount = 2 })

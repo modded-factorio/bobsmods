@@ -163,7 +163,7 @@ if not data.raw.item["silicon-wafer"] and data.raw.item["bob-silicon-plate"] the
   })
 end
 
-if data.raw.item["tin-plate"] then
+if data.raw.item["bob-tin-plate"] then
   data:extend({
     {
       type = "item",
@@ -194,7 +194,7 @@ if data.raw.item["tin-plate"] then
       enabled = false,
       category = "crafting-machine",
       ingredients = {
-        { type = "item", name = "tin-plate", amount = 9 },
+        { type = "item", name = "bob-tin-plate", amount = 9 },
         { type = "item", name = "copper-plate", amount = 1 },
       },
       results = { { type = "item", name = "solder-alloy", amount = 11 } },
@@ -219,7 +219,7 @@ if data.raw.item["tin-plate"] then
         enabled = false,
         category = "crafting-machine",
         ingredients = {
-          { type = "item", name = "tin-plate", amount = 4 },
+          { type = "item", name = "bob-tin-plate", amount = 4 },
           { type = "item", name = "bob-lead-plate", amount = 7 },
         },
         results = { { type = "item", name = "solder-alloy", amount = 11 } },

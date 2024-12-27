@@ -16,7 +16,7 @@ local electronic_board_pick = {
   volume = 0.7,
 }
 
-if data.raw.item["tin-plate"] then
+if data.raw.item["bob-tin-plate"] then
   data:extend({
     {
       type = "item",
@@ -37,7 +37,7 @@ if data.raw.item["tin-plate"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
-        { type = "item", name = "tin-plate", amount = 1 },
+        { type = "item", name = "bob-tin-plate", amount = 1 },
       },
       results = { { type = "item", name = "tinned-copper-cable", amount = 3 } },
       allow_decomposition = false,

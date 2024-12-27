@@ -2,10 +2,10 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   bobmods.lib.recipe.replace_ingredient("logistic-science-pack", "transport-belt", "basic-transport-belt")
   bobmods.lib.recipe.replace_ingredient("lab", "transport-belt", "basic-transport-belt")
 
-  if data.raw.item["tin-plate"] then
-    bobmods.lib.recipe.replace_ingredient("transport-belt", "iron-plate", "tin-plate")
-    bobmods.lib.recipe.replace_ingredient("underground-belt", "iron-plate", "tin-plate")
-    bobmods.lib.recipe.replace_ingredient("splitter", "iron-plate", "tin-plate")
+  if data.raw.item["bob-tin-plate"] then
+    bobmods.lib.recipe.replace_ingredient("transport-belt", "iron-plate", "bob-tin-plate")
+    bobmods.lib.recipe.replace_ingredient("underground-belt", "iron-plate", "bob-tin-plate")
+    bobmods.lib.recipe.replace_ingredient("splitter", "iron-plate", "bob-tin-plate")
   end
 
   bobmods.lib.tech.add_prerequisite("logistics-2", "steel-processing")

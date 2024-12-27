@@ -1,12 +1,12 @@
-if data.raw.item["tin-plate"] then
-  bobmods.lib.recipe.add_ingredient("bob-module-circuit-board", { type = "item", name = "tin-plate", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-module-processor-board", { type = "item", name = "tin-plate", amount = 1 })
+if data.raw.item["bob-tin-plate"] then
+  bobmods.lib.recipe.add_ingredient("bob-module-circuit-board", { type = "item", name = "bob-tin-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("bob-module-processor-board", { type = "item", name = "bob-tin-plate", amount = 1 })
 end
 
-if data.raw.item["silver-plate"] then
+if data.raw.item["bob-silver-plate"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-module-processor-board-2",
-    { type = "item", name = "silver-plate", amount = 1 }
+    { type = "item", name = "bob-silver-plate", amount = 1 }
   )
   bobmods.lib.tech.add_prerequisite("processing-unit", "lead-processing")
 end

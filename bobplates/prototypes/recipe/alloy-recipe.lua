@@ -7,7 +7,7 @@ data:extend({
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 3 },
-      { type = "item", name = "tin-plate", amount = 2 },
+      { type = "item", name = "bob-tin-plate", amount = 2 },
     },
     results = {
       { type = "item", name = "bronze-alloy", amount = 5 },
@@ -88,7 +88,7 @@ data:extend({
     energy_required = 32,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 8 },
-      { type = "item", name = "tin-plate", amount = 1 },
+      { type = "item", name = "bob-tin-plate", amount = 1 },
       { type = "item", name = "bob-zinc-plate", amount = 1 },
     },
     results = {
