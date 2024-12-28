@@ -35,10 +35,10 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.recipe.replace_ingredient("medium-electric-pole-3", "copper-plate", "insulated-cable")
     bobmods.lib.recipe.replace_ingredient("big-electric-pole-3", "copper-plate", "insulated-cable")
     bobmods.lib.recipe.replace_ingredient("substation-3", "copper-plate", "insulated-cable")
-  elseif data.raw.item["silver-plate"] then
-    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-3", "copper-plate", "silver-plate")
-    bobmods.lib.recipe.replace_ingredient("big-electric-pole-3", "copper-plate", "silver-plate")
-    bobmods.lib.recipe.replace_ingredient("substation-3", "copper-plate", "silver-plate")
+  elseif data.raw.item["bob-silver-plate"] then
+    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-3", "copper-plate", "bob-silver-plate")
+    bobmods.lib.recipe.replace_ingredient("big-electric-pole-3", "copper-plate", "bob-silver-plate")
+    bobmods.lib.recipe.replace_ingredient("substation-3", "copper-plate", "bob-silver-plate")
   end
 
   if data.raw.item["advanced-processing-unit"] then

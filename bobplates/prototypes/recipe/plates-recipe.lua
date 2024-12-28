@@ -14,12 +14,12 @@ data:extend({
 
   {
     type = "recipe",
-    name = "silver-plate",
+    name = "bob-silver-plate",
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = { { type = "item", name = "silver-ore", amount = 1 } },
-    results = { { type = "item", name = "silver-plate", amount = 1 } },
+    results = { { type = "item", name = "bob-silver-plate", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },

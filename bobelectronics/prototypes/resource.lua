@@ -205,8 +205,8 @@ if data.raw.item["bob-tin-plate"] then
   if data.raw["item-subgroup"]["bob-alloy"] then
     data.raw.item["solder-alloy"].subgroup = "bob-alloy"
   end
-  if data.raw.item["silver-plate"] then
-    table.insert(data.raw.recipe["solder-alloy"].ingredients, { type = "item", name = "silver-plate", amount = 1 })
+  if data.raw.item["bob-silver-plate"] then
+    table.insert(data.raw.recipe["solder-alloy"].ingredients, { type = "item", name = "bob-silver-plate", amount = 1 })
   end
 
   if data.raw.item["bob-lead-plate"] then

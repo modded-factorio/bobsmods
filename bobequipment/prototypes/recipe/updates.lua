@@ -317,8 +317,8 @@ if data.raw.item["bob-glass"] then
   bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-2", "steel-plate", "bob-glass")
 end
 
-if data.raw.item["silver-plate"] then
-  bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-2", "copper-plate", "silver-plate")
+if data.raw.item["bob-silver-plate"] then
+  bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-2", "copper-plate", "bob-silver-plate")
 end
 
 if data.raw.item["invar-alloy"] then

@@ -39,8 +39,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-3", "tungsten-processing")
   end
 
-  if data.raw.item["silver-plate"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "copper-plate", "silver-plate")
+  if data.raw.item["bob-silver-plate"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "copper-plate", "bob-silver-plate")
   end
 
   if data.raw.item["copper-tungsten-alloy"] then

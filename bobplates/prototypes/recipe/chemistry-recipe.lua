@@ -583,7 +583,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "silver-plate", amount = 1 },
+      { type = "item", name = "bob-silver-plate", amount = 1 },
       { type = "fluid", name = "nitrogen-dioxide", amount = 10 },
     },
     results = { { type = "item", name = "silver-nitrate", amount = 1 } },

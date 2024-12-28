@@ -22,11 +22,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "silver-plate",
+    name = "bob-silver-plate",
     icon = "__bobplates__/graphics/icons/plate/silver-plate.png",
     icon_size = 32,
     subgroup = "bob-material",
-    order = "c-a-c[silver-plate]",
+    order = "c-a-c[bob-silver-plate]",
     stack_size = 200,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,

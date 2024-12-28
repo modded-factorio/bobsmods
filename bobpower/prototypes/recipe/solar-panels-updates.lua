@@ -5,10 +5,10 @@ if settings.startup["bobmods-power-solar"].value == true then
     bobmods.lib.recipe.replace_ingredient("solar-panel-large-2", "steel-plate", "bob-glass")
   end
 
-  if data.raw.item["silver-plate"] then
-    bobmods.lib.recipe.replace_ingredient("solar-panel-small-2", "copper-plate", "silver-plate")
-    bobmods.lib.recipe.replace_ingredient("solar-panel-2", "copper-plate", "silver-plate")
-    bobmods.lib.recipe.replace_ingredient("solar-panel-large-2", "copper-plate", "silver-plate")
+  if data.raw.item["bob-silver-plate"] then
+    bobmods.lib.recipe.replace_ingredient("solar-panel-small-2", "copper-plate", "bob-silver-plate")
+    bobmods.lib.recipe.replace_ingredient("solar-panel-2", "copper-plate", "bob-silver-plate")
+    bobmods.lib.recipe.replace_ingredient("solar-panel-large-2", "copper-plate", "bob-silver-plate")
   end
 
   if data.raw.item["bob-titanium-plate"] then
