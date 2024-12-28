@@ -183,8 +183,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   end
 
   if data.raw.recipe["robot-tool-combat-2"] then
-    if data.raw.item["brass-alloy"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "brass-alloy", amount = 1 })
+    if data.raw.item["bob-brass-alloy"] then
+      bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "bob-brass-alloy", amount = 1 })
       bobmods.lib.tech.add_prerequisite("distractor", "zinc-processing")
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "steel-plate", amount = 1 })

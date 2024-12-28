@@ -3,8 +3,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.add_ingredient("boiler-2", { type = "item", name = "steel-pipe", amount = 4 })
   end
 
-  if data.raw.item["invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("boiler-3", "steel-plate", "invar-alloy")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("boiler-3", "steel-plate", "bob-invar-alloy")
     bobmods.lib.tech.add_prerequisite("bob-boiler-3", "invar-processing")
   end
 
@@ -23,8 +23,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-boiler-4", "ceramics")
   end
 
-  if data.raw.item["copper-tungsten-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("boiler-5", "steel-plate", "copper-tungsten-alloy")
+  if data.raw.item["bob-copper-tungsten-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("boiler-5", "steel-plate", "bob-copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("bob-boiler-5", "tungsten-alloy-processing")
   end
 

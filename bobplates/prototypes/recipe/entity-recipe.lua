@@ -140,7 +140,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "air-pump-3", amount = 1 },
-      { type = "item", name = "nitinol-alloy", amount = 2 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 2 },
       { type = "item", name = "nitinol-gear-wheel", amount = 4 },
       { type = "item", name = "nitinol-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },
@@ -201,7 +201,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "water-pump-3", amount = 1 },
-      { type = "item", name = "nitinol-alloy", amount = 2 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 2 },
       { type = "item", name = "nitinol-gear-wheel", amount = 4 },
       { type = "item", name = "nitinol-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },

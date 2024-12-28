@@ -9,8 +9,8 @@ if data.raw.item["silicon-nitride"] then
   bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "steel-plate", "silicon-nitride")
   bobmods.lib.tech.replace_prerequisite("heat-shield", "steel-processing", "ceramics")
 end
-if data.raw.item["tungsten-carbide"] then
-  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "plastic-bar", "tungsten-carbide")
+if data.raw.item["bob-tungsten-carbide"] then
+  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "plastic-bar", "bob-tungsten-carbide")
   bobmods.lib.tech.replace_prerequisite("heat-shield", "plastics", "tungsten-alloy-processing")
 end
 

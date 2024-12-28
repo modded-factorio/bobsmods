@@ -223,7 +223,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "bronze-alloy",
+        recipe = "bob-bronze-alloy",
       },
     },
     unit = {

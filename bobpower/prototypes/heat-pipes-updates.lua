@@ -21,8 +21,8 @@ if
   or settings.startup["bobmods-power-nuclear"].value == true
   or settings.startup["bobmods-power-heatsources"].value == true
 then
-  if data.raw.item["invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-2", "steel-plate", "invar-alloy")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-2", "steel-plate", "bob-invar-alloy")
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-2", "invar-processing")
   end
 
@@ -43,8 +43,8 @@ then
     bobmods.lib.recipe.replace_ingredient("heat-pipe-3", "copper-plate", "bob-silver-plate")
   end
 
-  if data.raw.item["copper-tungsten-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("heat-pipe-4", "steel-plate", "copper-tungsten-alloy")
+  if data.raw.item["bob-copper-tungsten-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("heat-pipe-4", "steel-plate", "bob-copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("bob-heat-pipe-4", "tungsten-alloy-processing")
   end
 

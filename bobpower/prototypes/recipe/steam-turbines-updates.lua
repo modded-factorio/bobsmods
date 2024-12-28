@@ -26,8 +26,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.replace_ingredient("steam-turbine", "copper-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-1", "aluminium-processing")
   else
-    if data.raw.item["invar-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("steam-turbine", "copper-plate", "invar-alloy")
+    if data.raw.item["bob-invar-alloy"] then
+      bobmods.lib.recipe.replace_ingredient("steam-turbine", "copper-plate", "bob-invar-alloy")
       bobmods.lib.tech.add_prerequisite("bob-steam-turbine-1", "invar-processing")
     end
   end
@@ -104,8 +104,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     end
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("steam-turbine-3", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("steam-turbine-3", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "nitinol-processing")
   else
     if data.raw.item["bob-tungsten-plate"] then

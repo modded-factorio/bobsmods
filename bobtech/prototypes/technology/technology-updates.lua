@@ -163,7 +163,7 @@ else
   bobmods.lib.tech.hide("advanced-logistic-science-pack")
 end
 
-if data.raw.item["bronze-alloy"] then
+if data.raw.item["bob-bronze-alloy"] then
   bobmods.lib.tech.add_prerequisite("chemical-science-pack", "alloy-processing")
 end
 bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")

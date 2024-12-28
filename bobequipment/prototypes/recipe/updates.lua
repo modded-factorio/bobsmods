@@ -71,8 +71,8 @@ else
     bobmods.lib.recipe.replace_ingredient("personal-roboport-antenna-equipment-2", "steel-plate", "bob-aluminium-plate")
   end
 
-  if data.raw.item["invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-2", "steel-plate", "invar-alloy")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-2", "steel-plate", "bob-invar-alloy")
   end
 
   if data.raw.item["steel-bearing"] then
@@ -101,7 +101,7 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "aluminium-processing")
 end
 
-if data.raw.item["invar-alloy"] then
+if data.raw.item["bob-invar-alloy"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "invar-processing")
 end
 
@@ -228,9 +228,9 @@ else
     bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-4", "battery", "silver-zinc-battery")
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-antenna-equipment-4", "steel-plate", "nitinol-alloy")
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-4", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("personal-roboport-antenna-equipment-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-4", "steel-plate", "bob-nitinol-alloy")
   end
 
   if data.raw.item["nitinol-bearing"] then
@@ -262,8 +262,8 @@ if data.raw.item["silver-zinc-battery"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-mk4-equipment", "battery-3")
 end
 
-if data.raw.item["nitinol-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("personal-roboport-mk4-equipment", "steel-plate", "nitinol-alloy")
+if data.raw.item["bob-nitinol-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("personal-roboport-mk4-equipment", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.tech.add_prerequisite("personal-roboport-mk4-equipment", "nitinol-processing")
 end
 
@@ -321,10 +321,10 @@ if data.raw.item["bob-silver-plate"] then
   bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-2", "copper-plate", "bob-silver-plate")
 end
 
-if data.raw.item["invar-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-3", "steel-plate", "invar-alloy")
+if data.raw.item["bob-invar-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-3", "steel-plate", "bob-invar-alloy")
   bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-3", "invar-processing")
-  bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment-2", "steel-plate", "invar-alloy")
+  bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment-2", "steel-plate", "bob-invar-alloy")
   bobmods.lib.tech.add_prerequisite("exoskeleton-equipment-2", "invar-processing")
 end
 
@@ -415,12 +415,12 @@ if data.raw.item["silver-zinc-battery"] then
   bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-6", "battery", "silver-zinc-battery")
 end
 
-if data.raw.item["nitinol-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-4", "steel-plate", "nitinol-alloy")
+if data.raw.item["bob-nitinol-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-4", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.tech.add_prerequisite("solar-panel-equipment-4", "nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-5", "steel-plate", "nitinol-alloy")
+  bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-5", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-5", "nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-6", "steel-plate", "nitinol-alloy")
+  bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-6", "steel-plate", "bob-nitinol-alloy")
 end
 
 if data.raw.item["bob-sapphire-5"] then

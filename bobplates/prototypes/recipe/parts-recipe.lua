@@ -38,7 +38,7 @@ data:extend({
     name = "brass-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "brass-alloy", amount = 2 },
+      { type = "item", name = "bob-brass-alloy", amount = 2 },
     },
     results = { { type = "item", name = "brass-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -49,7 +49,7 @@ data:extend({
     name = "cobalt-steel-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-steel-alloy", amount = 2 },
+      { type = "item", name = "bob-cobalt-steel-alloy", amount = 2 },
     },
     results = { { type = "item", name = "cobalt-steel-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -60,7 +60,7 @@ data:extend({
     name = "cobalt-steel-bearing-ball",
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-steel-alloy", amount = 1 },
+      { type = "item", name = "bob-cobalt-steel-alloy", amount = 1 },
     },
     results = { { type = "item", name = "cobalt-steel-bearing-ball", amount = 12 } },
     allow_productivity = true,
@@ -71,7 +71,7 @@ data:extend({
     name = "cobalt-steel-bearing",
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-steel-alloy", amount = 1 },
+      { type = "item", name = "bob-cobalt-steel-alloy", amount = 1 },
       { type = "item", name = "cobalt-steel-bearing-ball", amount = 16 },
     },
     results = { { type = "item", name = "cobalt-steel-bearing", amount = 2 } },
@@ -130,7 +130,7 @@ data:extend({
     name = "nitinol-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "nitinol-alloy", amount = 2 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 2 },
     },
     results = { { type = "item", name = "nitinol-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -141,7 +141,7 @@ data:extend({
     name = "nitinol-bearing-ball",
     enabled = false,
     ingredients = {
-      { type = "item", name = "nitinol-alloy", amount = 1 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 1 },
     },
     results = { { type = "item", name = "nitinol-bearing-ball", amount = 12 } },
     allow_productivity = true,
@@ -153,7 +153,7 @@ data:extend({
     category = "crafting-with-fluid",
     enabled = false,
     ingredients = {
-      { type = "item", name = "nitinol-alloy", amount = 1 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 1 },
       { type = "item", name = "nitinol-bearing-ball", amount = 16 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },

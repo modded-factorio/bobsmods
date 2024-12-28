@@ -20,9 +20,9 @@ if data.raw.item["advanced-processing-unit"] then
   bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "advanced-processing-unit")
 end
-if data.raw.item["nitinol-alloy"] then
+if data.raw.item["bob-nitinol-alloy"] then
   bobmods.lib.tech.add_prerequisite("rocket-silo", "nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("rocket-silo", "steel-plate", "nitinol-alloy")
+  bobmods.lib.recipe.replace_ingredient("rocket-silo", "steel-plate", "bob-nitinol-alloy")
 end
 
 bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "low-density-structure", amount = 50 })

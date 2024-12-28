@@ -3,16 +3,16 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-mining-drill-1", "iron-gear-wheel", "steel-gear-wheel")
   end
 
-  if data.raw.item["cobalt-steel-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "steel-plate", "cobalt-steel-alloy")
+  if data.raw.item["bob-cobalt-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "steel-plate", "bob-cobalt-steel-alloy")
     bobmods.lib.tech.add_prerequisite("bob-drills-3", "cobalt-processing")
   else
-    if data.raw.item["invar-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "steel-plate", "invar-alloy")
+    if data.raw.item["bob-invar-alloy"] then
+      bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "steel-plate", "bob-invar-alloy")
       bobmods.lib.tech.add_prerequisite("bob-drills-3", "invar-processing")
     else
-      if data.raw.item["brass-alloy"] then
-        bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "steel-plate", "brass-alloy")
+      if data.raw.item["bob-brass-alloy"] then
+        bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "steel-plate", "bob-brass-alloy")
         bobmods.lib.tech.add_prerequisite("bob-drills-3", "zinc-processing")
       end
     end
@@ -52,12 +52,12 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-drills-5", "advanced-processing-unit")
   end
 
-  if data.raw.item["tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "tungsten-carbide")
+  if data.raw.item["bob-tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "bob-tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-drills-5", "tungsten-alloy-processing")
   else
-    if data.raw.item["copper-tungsten-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "copper-tungsten-alloy")
+    if data.raw.item["bob-copper-tungsten-alloy"] then
+      bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "bob-copper-tungsten-alloy")
       bobmods.lib.tech.add_prerequisite("bob-drills-5", "tungsten-alloy-processing")
     end
   end

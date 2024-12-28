@@ -238,8 +238,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.add_ingredient("mech-knee", { type = "item", name = "titanium-bearing", amount = 2 })
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("mech-leg-segment", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("mech-leg-segment", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "nitinol-processing")
   end
 
@@ -247,8 +247,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.replace_ingredient("mech-leg", "copper-cable", "insulated-cable")
   end
 
-  if data.raw.item["tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("mech-armor-plate", "steel-plate", "tungsten-carbide")
+  if data.raw.item["bob-tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("mech-armor-plate", "steel-plate", "bob-tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("tankotron", "tungsten-alloy-processing")
   end
 

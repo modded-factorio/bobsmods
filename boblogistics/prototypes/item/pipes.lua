@@ -167,7 +167,7 @@ data:extend({
   },
 })
 
-if data.raw.item["bronze-alloy"] then
+if data.raw.item["bob-bronze-alloy"] then
   data:extend({
     {
       type = "item",
@@ -200,7 +200,7 @@ if data.raw.item["bronze-alloy"] then
   })
 end
 
-if data.raw.item["brass-alloy"] then
+if data.raw.item["bob-brass-alloy"] then
   data:extend({
     {
       type = "item",
@@ -350,7 +350,7 @@ if data.raw.item["bob-tungsten-plate"] then
   })
 end
 
-if data.raw.item["nitinol-alloy"] then
+if data.raw.item["bob-nitinol-alloy"] then
   data:extend({
     {
       type = "item",
@@ -383,7 +383,7 @@ if data.raw.item["nitinol-alloy"] then
   })
 end
 
-if data.raw.item["copper-tungsten-alloy"] then
+if data.raw.item["bob-copper-tungsten-alloy"] then
   data:extend({
     {
       type = "item",

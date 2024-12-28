@@ -1,13 +1,13 @@
 if settings.startup["bobmods-assembly-oilrefineries"].value == true then
   data.raw["assembling-machine"]["oil-refinery"].next_upgrade = "oil-refinery-2"
 
-  if data.raw.item["brass-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "steel-plate", "brass-alloy")
+  if data.raw.item["bob-brass-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "steel-plate", "bob-brass-alloy")
     bobmods.lib.tech.add_prerequisite("oil-processing-2", "zinc-processing")
   end
 
-  if data.raw.item["invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "stone-brick", "invar-alloy")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "stone-brick", "bob-invar-alloy")
     bobmods.lib.tech.add_prerequisite("oil-processing-2", "invar-processing")
   end
 
@@ -61,8 +61,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     end
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("oil-processing-4", "nitinol-processing")
   else
     if data.raw.item["bob-titanium-plate"] then
@@ -70,8 +70,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     end
   end
 
-  if data.raw.item["copper-tungsten-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "stone-brick", "copper-tungsten-alloy")
+  if data.raw.item["bob-copper-tungsten-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "stone-brick", "bob-copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("oil-processing-4", "tungsten-alloy-processing")
   else
     if data.raw.item["bob-tungsten-plate"] then

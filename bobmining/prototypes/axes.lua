@@ -5,7 +5,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
   if mods["bobplates"] then
     data.raw.technology["steel-axe"].localised_name = { "technology-name.bronze-axe" }
     data.raw.technology["steel-axe"].prerequisites = { "alloy-processing" }
-    data.raw.technology["steel-axe"].research_trigger.item = "bronze-alloy"
+    data.raw.technology["steel-axe"].research_trigger.item = "bob-bronze-alloy"
 
     data:extend({
       {
@@ -37,7 +37,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
           },
         },
         prerequisites = { "steel-axe-2", "cobalt-processing" },
-        research_trigger = { type = "craft-item", item = "cobalt-steel-alloy", count = 50 },
+        research_trigger = { type = "craft-item", item = "bob-cobalt-steel-alloy", count = 50 },
         upgrade = true,
       },
       {
@@ -69,7 +69,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
           },
         },
         prerequisites = { "steel-axe-4", "nitinol-processing" },
-        research_trigger = { type = "craft-item", item = "nitinol-alloy", count = 50 },
+        research_trigger = { type = "craft-item", item = "bob-nitinol-alloy", count = 50 },
         upgrade = true,
       },
       {

@@ -9,8 +9,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.replace_ingredient("fluid-generator", "iron-gear-wheel", "steel-gear-wheel")
   end
 
-  if data.raw.item["bronze-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("fluid-generator", "iron-plate", "bronze-alloy")
+  if data.raw.item["bob-bronze-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("fluid-generator", "iron-plate", "bob-bronze-alloy")
     bobmods.lib.tech.add_prerequisite("fluid-generator-1", "alloy-processing")
   end
 
@@ -46,8 +46,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.replace_ingredient("fluid-generator-2", "iron-gear-wheel", "steel-gear-wheel")
   end
 
-  if data.raw.item["invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("fluid-generator-2", "iron-plate", "invar-alloy")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("fluid-generator-2", "iron-plate", "bob-invar-alloy")
     bobmods.lib.tech.add_prerequisite("fluid-generator-2", "invar-processing")
   end
 
@@ -113,13 +113,13 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "iron-gear-wheel", "nitinol-gear-wheel")
     end
 
-    if data.raw.item["copper-tungsten-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "iron-plate", "copper-tungsten-alloy")
+    if data.raw.item["bob-copper-tungsten-alloy"] then
+      bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "iron-plate", "bob-copper-tungsten-alloy")
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "tungsten-alloy-processing")
     end
 
-    if data.raw.item["nitinol-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "steel-plate", "nitinol-alloy")
+    if data.raw.item["bob-nitinol-alloy"] then
+      bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "steel-plate", "bob-nitinol-alloy")
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "nitinol-processing")
     end
 

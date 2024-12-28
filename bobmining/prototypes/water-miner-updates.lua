@@ -24,8 +24,8 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     bobmods.lib.recipe.replace_ingredient("water-miner-3", "steel-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("water-miner-3", "aluminium-processing")
   else
-    if data.raw.item["brass-alloy"] then
-      bobmods.lib.recipe.replace_ingredient("water-miner-3", "steel-plate", "brass-plate")
+    if data.raw.item["bob-brass-alloy"] then
+      bobmods.lib.recipe.replace_ingredient("water-miner-3", "steel-plate", "bob-brass-alloy")
       bobmods.lib.tech.add_prerequisite("water-miner-3", "zinc-processing")
     end
   end

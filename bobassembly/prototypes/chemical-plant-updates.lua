@@ -42,8 +42,8 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     bobmods.lib.recipe.add_ingredient("chemical-plant-3", { type = "item", name = "titanium-bearing", amount = 5 })
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("chemical-plant-4", "nitinol-processing")
   end
 

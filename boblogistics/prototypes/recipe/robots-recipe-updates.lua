@@ -142,8 +142,8 @@ if data.raw.recipe["bob-robot-tool-4"] then
   if data.raw.item["ceramic-bearing"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "ceramic-bearing", amount = 2 })
   end
-  if data.raw.item["tungsten-carbide"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "tungsten-carbide", amount = 1 })
+  if data.raw.item["bob-tungsten-carbide"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "bob-tungsten-carbide", amount = 1 })
     bobmods.lib.tech.add_prerequisite("bob-robots-3", "tungsten-alloy-processing")
   end
 end

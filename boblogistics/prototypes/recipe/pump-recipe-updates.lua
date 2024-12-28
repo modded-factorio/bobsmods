@@ -21,8 +21,8 @@ if data.raw.item["brass-pipe"] then
   bobmods.lib.tech.add_prerequisite("bob-fluid-handling-3", "zinc-processing")
 end
 
-if data.raw.item["nitinol-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("bob-pump-4", "steel-plate", "nitinol-alloy")
+if data.raw.item["bob-nitinol-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("bob-pump-4", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.tech.add_prerequisite("bob-fluid-handling-4", "nitinol-processing")
 end
 

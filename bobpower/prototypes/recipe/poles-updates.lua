@@ -1,8 +1,8 @@
 if settings.startup["bobmods-power-poles"].value == true then
-  if data.raw.item["brass-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-2", "steel-plate", "brass-alloy")
-    bobmods.lib.recipe.replace_ingredient("big-electric-pole-2", "steel-plate", "brass-alloy")
-    bobmods.lib.recipe.replace_ingredient("substation-2", "steel-plate", "brass-alloy")
+  if data.raw.item["bob-brass-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-2", "steel-plate", "bob-brass-alloy")
+    bobmods.lib.recipe.replace_ingredient("big-electric-pole-2", "steel-plate", "bob-brass-alloy")
+    bobmods.lib.recipe.replace_ingredient("substation-2", "steel-plate", "bob-brass-alloy")
     bobmods.lib.tech.add_prerequisite("electric-pole-2", "zinc-processing")
     bobmods.lib.tech.add_prerequisite("electric-substation-2", "zinc-processing")
   end
@@ -46,16 +46,16 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.tech.add_prerequisite("electric-substation-4", "advanced-processing-unit")
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "steel-plate", "nitinol-alloy")
-    bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "steel-plate", "nitinol-alloy")
-    bobmods.lib.recipe.replace_ingredient("substation-4", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("substation-4", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("electric-pole-4", "nitinol-processing")
     bobmods.lib.tech.add_prerequisite("electric-substation-4", "nitinol-processing")
-  elseif data.raw.item["copper-tungsten-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "steel-plate", "copper-tungsten-alloy")
-    bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "steel-plate", "copper-tungsten-alloy")
-    bobmods.lib.recipe.replace_ingredient("substation-4", "steel-plate", "copper-tungsten-alloy")
+  elseif data.raw.item["bob-copper-tungsten-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "steel-plate", "bob-copper-tungsten-alloy")
+    bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "steel-plate", "bob-copper-tungsten-alloy")
+    bobmods.lib.recipe.replace_ingredient("substation-4", "steel-plate", "bob-copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("electric-pole-4", "tungsten-alloy-processing")
     bobmods.lib.tech.add_prerequisite("electric-substation-4", "tungsten-alloy-processing")
   end

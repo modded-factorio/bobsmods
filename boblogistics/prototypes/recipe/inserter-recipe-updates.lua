@@ -1,7 +1,7 @@
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
-  if data.raw.item["bronze-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("long-handed-inserter", "steel-plate", "bronze-alloy")
-    bobmods.lib.recipe.replace_ingredient("red-bulk-inserter", "steel-plate", "bronze-alloy")
+  if data.raw.item["bob-bronze-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("long-handed-inserter", "steel-plate", "bob-bronze-alloy")
+    bobmods.lib.recipe.replace_ingredient("red-bulk-inserter", "steel-plate", "bob-bronze-alloy")
     bobmods.lib.tech.add_prerequisite("logistics-2", "alloy-processing")
   end
 
@@ -68,9 +68,9 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     bobmods.lib.recipe.replace_ingredient("turbo-bulk-inserter", "iron-gear-wheel", "titanium-gear-wheel")
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("express-inserter", "steel-plate", "nitinol-alloy")
-    bobmods.lib.recipe.replace_ingredient("express-bulk-inserter", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("express-inserter", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("express-bulk-inserter", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("logistics-5", "nitinol-processing")
   end
 
