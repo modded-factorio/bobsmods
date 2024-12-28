@@ -9,7 +9,7 @@ then
   data:extend({
     {
       type = "item",
-      name = "alien-blue-alloy",
+      name = "bob-alien-blue-alloy",
       icon = "__bobplates__/graphics/icons/alien/alien-blue-alloy.png",
       icon_size = 32,
       subgroup = "bob-alien-resource",
@@ -31,7 +31,7 @@ then
 
     {
       type = "item",
-      name = "alien-orange-alloy",
+      name = "bob-alien-orange-alloy",
       icon = "__bobplates__/graphics/icons/alien/alien-orange-alloy.png",
       icon_size = 32,
       subgroup = "bob-alien-resource",
@@ -53,7 +53,7 @@ then
 
     {
       type = "fluid",
-      name = "alien-acid",
+      name = "bob-alien-acid",
       icon = "__bobplates__/graphics/icons/alien/alien-acid.png",
       icon_size = 32,
       subgroup = "bob-alien-resource",
@@ -67,7 +67,7 @@ then
 
     {
       type = "fluid",
-      name = "alien-explosive",
+      name = "bob-alien-explosive",
       icon = "__bobplates__/graphics/icons/alien/alien-explosive.png",
       icon_size = 32,
       subgroup = "bob-alien-resource",
@@ -81,7 +81,7 @@ then
 
     {
       type = "fluid",
-      name = "alien-poison",
+      name = "bob-alien-poison",
       icon = "__bobplates__/graphics/icons/alien/alien-poison.png",
       icon_size = 32,
       subgroup = "bob-alien-resource",
@@ -95,7 +95,7 @@ then
 
     {
       type = "fluid",
-      name = "alien-fire",
+      name = "bob-alien-fire",
       icon = "__bobplates__/graphics/icons/alien/alien-fire.png",
       icon_size = 32,
       subgroup = "bob-alien-resource",
@@ -111,6 +111,6 @@ then
 
   table.insert(
     data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids,
-    { type = "alien-fire", damage_modifier = 2 }
+    { type = "bob-alien-fire", damage_modifier = 2 }
   )
 end

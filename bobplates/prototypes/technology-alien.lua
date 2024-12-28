@@ -20,7 +20,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-blue-alloy",
+          recipe = "bob-alien-blue-alloy",
         },
       },
       unit = {
@@ -49,7 +49,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-orange-alloy",
+          recipe = "bob-alien-orange-alloy",
         },
       },
       unit = {
@@ -78,7 +78,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-acid",
+          recipe = "bob-alien-acid",
         },
       },
       unit = {
@@ -107,7 +107,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-explosive",
+          recipe = "bob-alien-explosive",
         },
       },
       unit = {
@@ -136,7 +136,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-poison",
+          recipe = "bob-alien-poison",
         },
       },
       unit = {
@@ -165,7 +165,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-fire",
+          recipe = "bob-alien-fire",
         },
       },
       unit = {

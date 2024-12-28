@@ -5,6 +5,16 @@
   ],
   "item":
   [
+    ["alien-blue-alloy", "bob-alien-blue-alloy"],
+    ["alien-orange-alloy", "bob-alien-orange-alloy"],
+    ["alien-acid", "bob-alien-acid"],
+    ["alien-acid-barrel", "bob-alien-acid-barrel"],
+    ["alien-explosive", "bob-alien-explosive"],
+    ["alien-explosive-barrel", "bob-alien-explosive-barrel"],
+    ["alien-poison", "bob-alien-poison"],
+    ["alien-poison-barrel", "bob-alien-poison-barrel"],
+    ["alien-fire", "bob-alien-fire"],
+    ["alien-fire-barrel", "bob-alien-fire-barrel"],
     ["ruby-3", "bob-ruby-3"],
     ["sapphire-3", "bob-sapphire-3"],
     ["emerald-3", "bob-emerald-3"],

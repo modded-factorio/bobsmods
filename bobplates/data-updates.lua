@@ -207,10 +207,10 @@ bobmods.lib.create_fluid_canister(data.raw.fluid["ferric-chloride-solution"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["nitric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-nitric-acid"])
-bobmods.lib.create_fluid_canister(data.raw.fluid["alien-acid"])
-bobmods.lib.create_fluid_canister(data.raw.fluid["alien-explosive"])
-bobmods.lib.create_fluid_canister(data.raw.fluid["alien-poison"])
-bobmods.lib.create_fluid_canister(data.raw.fluid["alien-fire"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-explosive"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-poison"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-fire"])
 if data.raw.fluid["tungstic-acid"] then
   bobmods.lib.create_fluid_canister(data.raw.fluid["tungstic-acid"])
 end
@@ -336,9 +336,9 @@ for _, recipe_name in pairs({
 end
 
 if feature_flags["quality"] then
-  if data.raw.item["alien-blue-alloy"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-blue-alloy", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-orange-alloy", false)
+  if data.raw.item["bob-alien-blue-alloy"] then
+    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-blue-alloy", false)
+    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-orange-alloy", false)
   end
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-perchlorate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-hydroxide", false)
