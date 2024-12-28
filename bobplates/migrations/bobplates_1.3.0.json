@@ -37,6 +37,8 @@
     ["tungsten-plate", "bob-tungsten-plate"],
     ["lithium", "lithium-plate"],
     ["tin-plate", "bob-tin-plate"],
+    ["silver-plate", "bob-silver-plate"],
+    ["cobalt-plate", "bob-cobalt-plate"],
     ["used-up-thorium-fuel-cell", "bob-depleted-thorium-fuel-cell"],
     ["used-up-deuterium-fuel-cell", "bob-depleted-deuterium-fuel-cell"],
     ["carbon", "bob-carbon"]

@@ -142,11 +142,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "cobalt-plate",
+    name = "bob-cobalt-plate",
     icon = "__bobplates__/graphics/icons/plate/cobalt-plate.png",
     icon_size = 64,
     subgroup = "bob-material",
-    order = "c-a-j[cobalt-plate]",
+    order = "c-a-j[bob-cobalt-plate]",
     stack_size = 200,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,

@@ -84,7 +84,7 @@ bobmods.lib.tech.add_recipe_unlock("tungsten-alloy-processing", "tungsten-carbid
 
 bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-oxide")
 bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-oxide-from-copper")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-plate")
+bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "bob-cobalt-plate")
 bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-alloy")
 bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-gear-wheel")
 bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-bearing-ball")

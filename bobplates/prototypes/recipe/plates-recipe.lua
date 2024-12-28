@@ -70,7 +70,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "cobalt-plate",
+    name = "bob-cobalt-plate",
     category = "chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
@@ -79,7 +79,7 @@ data:extend({
       { type = "item", name = "cobalt-oxide", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
-    results = { { type = "item", name = "cobalt-plate", amount = 1 } },
+    results = { { type = "item", name = "bob-cobalt-plate", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
