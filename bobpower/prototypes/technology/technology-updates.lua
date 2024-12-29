@@ -25,7 +25,9 @@ if settings.startup["bobmods-power-poles"].value == true then
 end
 
 if settings.startup["bobmods-power-solar"].value == true then
+  bobmods.lib.tech.remove_recipe_unlock("solar-energy", "solar-panel")
   bobmods.lib.tech.add_recipe_unlock("solar-energy", "solar-panel-small")
+  bobmods.lib.tech.add_recipe_unlock("solar-energy", "solar-panel")
   bobmods.lib.tech.add_recipe_unlock("solar-energy", "solar-panel-large")
 end
 
