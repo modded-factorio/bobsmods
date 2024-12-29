@@ -57,7 +57,7 @@
     ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
     ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
     ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
-    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-5"]
   ],
   "equipment":
   [
@@ -117,7 +117,7 @@
     ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
     ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
     ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
-    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-5"]
   ],
   "recipe":
   [
@@ -177,7 +177,7 @@
     ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
     ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
     ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
-    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-5"]
   ],
   "technology":
   [
