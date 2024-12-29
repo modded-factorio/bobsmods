@@ -1,5 +1,5 @@
 function bobmods.plates.get_void_icon(name)
-  local icons = bobmods.lib.icons_from_item(data.raw.item.void)
+  local icons = { { icon = "__bobplates__/graphics/icons/void.png", icon_size = 64 } }
   return util.combine_icons(icons, bobmods.lib.icons_from_item(data.raw.fluid[name]), { scale = 0.5 })
 end
 
@@ -20,8 +20,7 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
         ingredients = {
           { type = "fluid", name = name, amount = amount or 25 },
         },
-        results = {
-        },
+        results = {},
         emissions_multiplier = polution,
       },
     })

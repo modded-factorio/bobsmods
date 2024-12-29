@@ -239,8 +239,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
           ingredients = {
             { type = "fluid", name = "sour-gas", amount = 25 },
           },
-          results = {
-          },
+          results = {},
           emissions_multiplier = 55,
         },
       })
