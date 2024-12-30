@@ -10,10 +10,10 @@ function bobmods.equipment.technology_icon_constant_equipment(technology_icon)
   local icons = {
     technology_icon,
     {
-      icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
-      icon_size = 128,
+      icon = "__bobequipment__/graphics/icons/technology/constant-equipment.png",
+      icon_size = 104,
       scale = scale,
-      shift = { 100 * scale, 100 * scale },
+      shift = { 48 * scale, 76 * scale },
     },
   }
   return icons
