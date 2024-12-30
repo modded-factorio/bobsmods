@@ -18,9 +18,9 @@ function bobmods.equipment.technology_icon_constant_vehicle_equipment(technology
     technology_icon,
     {
       icon = "__bobvehicleequipment__/graphics/technology/constant-vehicle-equipment.png",
-      icon_size = 128,
+      icon_size = 110,
       scale = scale,
-      shift = { 70 * scale, 100 * scale },
+      shift = { 56 * scale, 72 * scale },
     },
   }
   return icons
