@@ -57,7 +57,6 @@ require("prototypes.technology")
 require("prototypes.technology-logistics")
 require("prototypes.technology-inserter")
 
---require("prototypes.valves")
 require("prototypes.chests")
 require("prototypes.repair-pack")
 
