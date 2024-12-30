@@ -166,7 +166,7 @@ data:extend({
     name = "ceramic-bearing-ball",
     enabled = false,
     ingredients = {
-      { type = "item", name = "silicon-nitride", amount = 1 },
+      { type = "item", name = "bob-silicon-nitride", amount = 1 },
     },
     results = { { type = "item", name = "ceramic-bearing-ball", amount = 12 } },
     allow_productivity = true,
@@ -178,7 +178,7 @@ data:extend({
     category = "crafting-with-fluid",
     enabled = false,
     ingredients = {
-      { type = "item", name = "silicon-nitride", amount = 1 },
+      { type = "item", name = "bob-silicon-nitride", amount = 1 },
       { type = "item", name = "ceramic-bearing-ball", amount = 16 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },
@@ -193,7 +193,7 @@ data:extend({
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "lithium-perchlorate", amount = 2 },
+      { type = "item", name = "bob-lithium-perchlorate", amount = 2 },
       { type = "item", name = "lithium-cobalt-oxide", amount = 1 },
       { type = "item", name = "bob-carbon", amount = 1 },
       { type = "item", name = "plastic-bar", amount = 1 },
@@ -215,8 +215,8 @@ data:extend({
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "sodium-hydroxide", amount = 2 },
-      { type = "item", name = "silver-oxide", amount = 1 },
+      { type = "item", name = "bob-sodium-hydroxide", amount = 2 },
+      { type = "item", name = "bob-silver-oxide", amount = 1 },
       { type = "item", name = "bob-zinc-plate", amount = 1 },
       { type = "item", name = "plastic-bar", amount = 1 },
     },
@@ -238,7 +238,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
-      { type = "item", name = "silicon-carbide", amount = 5 },
+      { type = "item", name = "bob-silicon-carbide", amount = 5 },
     },
     results = { { type = "item", name = "bob-grinding-wheel", amount = 2 } },
     allow_productivity = true,

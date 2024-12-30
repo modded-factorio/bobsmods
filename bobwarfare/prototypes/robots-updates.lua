@@ -75,8 +75,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
     end
 
-    if data.raw.item["silicon-nitride"] then
-      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "silicon-nitride", amount = 1 })
+    if data.raw.item["bob-silicon-nitride"] then
+      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "bob-silicon-nitride", amount = 1 })
       bobmods.lib.tech.add_prerequisite("bob-laser-robot", "ceramics")
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "steel-plate", amount = 1 })
@@ -236,8 +236,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   end
 
   if data.raw.recipe["robot-tool-combat-4"] then
-    if data.raw.item["silicon-nitride"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "silicon-nitride", amount = 1 })
+    if data.raw.item["bob-silicon-nitride"] then
+      bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "bob-silicon-nitride", amount = 1 })
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "steel-plate", amount = 1 })
     end

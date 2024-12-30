@@ -76,7 +76,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "salt",
+        recipe = "bob-salt",
       },
       {
         type = "unlock-recipe",
@@ -109,15 +109,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "hydrogen-chloride",
+        recipe = "bob-hydrogen-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "calcium-chloride",
+        recipe = "bob-calcium-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "ferric-chloride-solution",
+        recipe = "bob-ferric-chloride-solution",
       },
       {
         type = "unlock-recipe",
@@ -321,15 +321,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nitrogen",
+        recipe = "bob-nitrogen",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitrogen-dioxide",
+        recipe = "bob-nitrogen-dioxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitric-acid",
+        recipe = "bob-nitric-acid",
       },
     },
     unit = {
@@ -357,7 +357,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-nitride",
+        recipe = "bob-silicon-nitride",
       },
       {
         type = "unlock-recipe",
@@ -706,7 +706,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-carbide",
+        recipe = "bob-silicon-carbide",
       },
       {
         type = "unlock-recipe",
@@ -995,11 +995,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-oxide",
+        recipe = "bob-silver-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "silver-nitrate",
+        recipe = "bob-silver-nitrate",
       },
       {
         type = "unlock-recipe",

@@ -97,7 +97,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "silicon-powder",
+    name = "bob-silicon-powder",
     category = "crafting-machine",
     subgroup = "bob-resource",
     enabled = false,
@@ -105,22 +105,22 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-silicon-plate", amount = 1 },
     },
-    results = { { type = "item", name = "silicon-powder", amount = 1 } },
+    results = { { type = "item", name = "bob-silicon-powder", amount = 1 } },
     allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "silicon-nitride",
+    name = "bob-silicon-nitride",
     category = "chemical-furnace",
     subgroup = "bob-material-chemical",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { type = "item", name = "silicon-powder", amount = 1 },
-      { type = "fluid", name = "nitrogen", amount = 12.5 },
+      { type = "item", name = "bob-silicon-powder", amount = 1 },
+      { type = "fluid", name = "bob-nitrogen", amount = 12.5 },
     },
-    results = { { type = "item", name = "silicon-nitride", amount = 1 } },
+    results = { { type = "item", name = "bob-silicon-nitride", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -134,7 +134,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-lithium", amount = 1 },
-      { type = "item", name = "cobalt-oxide", amount = 1 },
+      { type = "item", name = "bob-cobalt-oxide", amount = 1 },
     },
     results = { { type = "item", name = "lithium-cobalt-oxide", amount = 2 } },
     allow_productivity = true,
@@ -198,7 +198,7 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "alumina", amount = 1 },
+      { type = "item", name = "bob-alumina", amount = 1 },
       { type = "fluid", name = "light-oil", amount = 15 },
     },
     results = { { type = "item", name = "bob-polishing-compound", amount = 2 } },
@@ -231,7 +231,7 @@ data:extend({
     category = "chemistry",
     energy_required = 3,
     ingredients = {
-      { type = "fluid", name = "hydrogen", amount = 175 },
+      { type = "fluid", name = "bob-hydrogen", amount = 175 },
       { type = "item", name = "coal", amount = 1 },
     },
     results = {
@@ -260,7 +260,7 @@ data:extend({
     enabled = false,
     energy_required = 12,
     ingredients = {
-      { type = "fluid", name = "liquid-fuel", amount = 20 },
+      { type = "fluid", name = "bob-liquid-fuel", amount = 20 },
     },
     results = { { type = "item", name = "enriched-fuel", amount = 1 } },
     subgroup = "bob-chemical-fuels",

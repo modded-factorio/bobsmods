@@ -5,8 +5,8 @@ end
 
 bobmods.lib.tech.add_prerequisite("rocket-silo", "heat-shield")
 bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "heat-shield-tile", amount = 10 })
-if data.raw.item["silicon-nitride"] then
-  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "steel-plate", "silicon-nitride")
+if data.raw.item["bob-silicon-nitride"] then
+  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "steel-plate", "bob-silicon-nitride")
   bobmods.lib.tech.replace_prerequisite("heat-shield", "steel-processing", "ceramics")
 end
 if data.raw.item["bob-tungsten-carbide"] then

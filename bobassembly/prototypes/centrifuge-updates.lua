@@ -1,6 +1,6 @@
 if settings.startup["bobmods-assembly-centrifuge"].value == true then
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.replace_ingredient("centrifuge-2", "refined-concrete", "silicon-nitride")
+  if data.raw.item["bob-silicon-nitride"] then
+    bobmods.lib.recipe.replace_ingredient("centrifuge-2", "refined-concrete", "bob-silicon-nitride")
     bobmods.lib.tech.add_prerequisite("centrifuge-2", "ceramics")
   end
 

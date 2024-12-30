@@ -95,7 +95,7 @@ then
       ingredients = {
         { type = "item", name = "alien-artifact-green", amount = 1 },
         { type = "item", name = "coal", amount = 6 },
-        { type = "fluid", name = "nitric-acid", amount = 60 },
+        { type = "fluid", name = "bob-nitric-acid", amount = 60 },
       },
       results = {
         { type = "fluid", name = "bob-alien-poison", amount = 100 },

@@ -14,8 +14,8 @@ data.raw.recipe["sulfuric-acid"].allow_productivity = false
 --Electrolyser power
 if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   if feature_flags["quality"] then
-    data.raw.fluid["hydrogen"].fuel_value = "35kJ"
-    data.raw.fluid["deuterium"].fuel_value = "35kJ"
+    data.raw.fluid["bob-hydrogen"].fuel_value = "35kJ"
+    data.raw.fluid["bob-deuterium"].fuel_value = "35kJ"
     data.raw.recipe["water-electrolysis"].energy_required = 2
     data.raw.recipe["heavy-water-electrolysis"].energy_required = 2
   end
@@ -70,7 +70,7 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
       energy_required = 3.2,
       ingredients = {
         { type = "item", name = "iron-plate", amount = 2 },
-        { type = "fluid", name = "oxygen", amount = 10 },
+        { type = "fluid", name = "bob-oxygen", amount = 10 },
       },
       results = { { type = "item", name = "steel-plate", amount = 1 } },
       allow_decomposition = false,
@@ -96,7 +96,7 @@ else
       energy_required = 16,
       ingredients = {
         { type = "item", name = "iron-plate", amount = 5 },
-        { type = "fluid", name = "oxygen", amount = 50 },
+        { type = "fluid", name = "bob-oxygen", amount = 50 },
       },
       results = { { type = "item", name = "steel-plate", amount = 2 } },
       allow_decomposition = false,
@@ -191,28 +191,28 @@ data.raw["item-subgroup"]["fill-barrel"].group = "fluids"
 data.raw["item-subgroup"]["empty-barrel"].group = "fluids"
 data.raw["item-subgroup"]["barrel"].group = "fluids"
 
-bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["oxygen"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["nitrogen"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["chlorine"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen-chloride"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["nitrogen-dioxide"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["sulfur-dioxide"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["deuterium"])
-bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen-sulfide"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-hydrogen"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-oxygen"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-nitrogen"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-chlorine"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-hydrogen-chloride"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-nitrogen-dioxide"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-sulfur-dioxide"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-deuterium"])
+bobmods.lib.create_gas_bottle(data.raw.fluid["bob-hydrogen-sulfide"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["petroleum-gas"])
 
-bobmods.lib.create_fluid_canister(data.raw.fluid["liquid-fuel"])
-bobmods.lib.create_fluid_canister(data.raw.fluid["ferric-chloride-solution"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-liquid-fuel"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-ferric-chloride-solution"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-acid"])
-bobmods.lib.create_fluid_canister(data.raw.fluid["nitric-acid"])
+bobmods.lib.create_fluid_canister(data.raw.fluid["bob-nitric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["sulfuric-nitric-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-explosive"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-poison"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-fire"])
-if data.raw.fluid["tungstic-acid"] then
-  bobmods.lib.create_fluid_canister(data.raw.fluid["tungstic-acid"])
+if data.raw.fluid["bob-tungstic-acid"] then
+  bobmods.lib.create_fluid_canister(data.raw.fluid["bob-tungstic-acid"])
 end
 
 for i, recipe in pairs(data.raw.recipe) do
@@ -235,18 +235,18 @@ bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("ground-water", "water")
-  bobmods.lib.resource.add_result("ground-water", { type = "fluid", name = "pure-water", amount = 10, probability = 1 })
+  bobmods.lib.resource.add_result("ground-water", { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 })
 
-  bobmods.lib.recipe.replace_ingredient("water-electrolysis", "water", "pure-water")
-  bobmods.lib.recipe.replace_ingredient("salt-water-electrolysis", "water", "pure-water")
-  bobmods.lib.recipe.replace_ingredient("lithium-water-electrolysis", "water", "pure-water")
+  bobmods.lib.recipe.replace_ingredient("water-electrolysis", "water", "bob-pure-water")
+  bobmods.lib.recipe.replace_ingredient("salt-water-electrolysis", "water", "bob-pure-water")
+  bobmods.lib.recipe.replace_ingredient("lithium-water-electrolysis", "water", "bob-pure-water")
 
   bobmods.lib.recipe.remove_result("bob-heavy-water", "water") -- There is no replace_result.
-  bobmods.lib.recipe.add_result("bob-heavy-water", { type = "fluid", name = "pure-water", amount = 99.5 })
+  bobmods.lib.recipe.add_result("bob-heavy-water", { type = "fluid", name = "bob-pure-water", amount = 99.5 })
 
   bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "bob-distillery")
-  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "pure-water")
-  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "pure-water-from-lithia")
+  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "bob-pure-water")
+  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "bob-pure-water-from-lithia")
 end
 
 data.raw.fluid["petroleum-gas"].gas_temperature = -42
@@ -275,8 +275,8 @@ data.raw.item["sulfur"].stack_size = 200
 data.raw.item["wood"].stack_size = 200
 
 if not bobmods.ores.cobalt.enabled then
-  bobmods.lib.tech.remove_recipe_unlock("cobalt-processing", "cobalt-oxide")
-  bobmods.lib.recipe.hide("cobalt-oxide")
+  bobmods.lib.tech.remove_recipe_unlock("cobalt-processing", "bob-cobalt-oxide")
+  bobmods.lib.recipe.hide("bob-cobalt-oxide")
 end
 
 --Intermediate reorganization
@@ -340,14 +340,14 @@ if feature_flags["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-blue-alloy", false)
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-orange-alloy", false)
   end
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-perchlorate", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-hydroxide", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alumina", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("powdered-tungsten", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-powder", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-nitride", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("cobalt-oxide", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-carbide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-lithium-perchlorate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-hydroxide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alumina", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-powdered-tungsten", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-powder", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-nitride", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-cobalt-oxide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-carbide", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-ruby-3", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-ruby-4", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-ruby-5", false)

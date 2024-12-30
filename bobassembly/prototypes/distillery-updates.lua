@@ -47,8 +47,8 @@ then
     bobmods.lib.recipe.replace_ingredient("bob-distillery-4", "pipe", "ceramic-pipe")
   end
 
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.replace_ingredient("bob-distillery-4", "copper-plate", "silicon-nitride")
+  if data.raw.item["bob-silicon-nitride"] then
+    bobmods.lib.recipe.replace_ingredient("bob-distillery-4", "copper-plate", "bob-silicon-nitride")
     bobmods.lib.tech.add_prerequisite("bob-distillery-4", "ceramics")
   end
 

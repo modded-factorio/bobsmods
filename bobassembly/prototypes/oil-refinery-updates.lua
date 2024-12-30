@@ -32,8 +32,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.tech.add_prerequisite("oil-processing-3", "titanium-processing")
   end
 
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "stone-brick", "silicon-nitride")
+  if data.raw.item["bob-silicon-nitride"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "stone-brick", "bob-silicon-nitride")
     bobmods.lib.tech.add_prerequisite("oil-processing-3", "ceramics")
   end
 

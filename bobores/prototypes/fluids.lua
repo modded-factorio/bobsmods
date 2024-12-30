@@ -72,7 +72,7 @@ function bobmods.ores.water.create_autoplace()
 end
 
 bobmods.ores.lithia_water = {
-  name = "lithia-water",
+  name = "bob-lithia-water",
   icon = "__bobores__/graphics/icons/lithia-water.png",
   subgroup = "fluid",
   category = "water",
@@ -89,7 +89,7 @@ bobmods.ores.lithia_water = {
   items = {
     {
       type = "fluid",
-      name = "lithia-water",
+      name = "bob-lithia-water",
       amount_min = 10,
       amount_max = 10,
       probability = 1,
@@ -115,7 +115,7 @@ bobmods.ores.lithia_water = {
     peaks =
     {
       {
-        noise_layer = "lithia-water",
+        noise_layer = "bob-lithia-water",
         noise_octaves_difference = -0.5,
         noise_persistence = 0.4,
       }
@@ -129,8 +129,8 @@ bobmods.ores.lithia_water = {
 
 function bobmods.ores.lithia_water.create_autoplace()
   bobmods.lib.resource.generate_autoplace_control("ground-water")
-  data.raw.resource["lithia-water"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "lithia-water",
+  data.raw.resource["bob-lithia-water"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-lithia-water",
     order = "c",
     base_density = 5,
     base_spots_per_km2 = 0.6,
@@ -147,7 +147,7 @@ end
 data:extend({
   {
     type = "fluid",
-    name = "lithia-water",
+    name = "bob-lithia-water",
     default_temperature = 15,
     max_temperature = 100,
     heat_capacity = "0.2kJ",

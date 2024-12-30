@@ -35,8 +35,8 @@ else
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })
 end
 
-if data.raw.item["silicon-nitride"] then
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "silicon-nitride", amount = 10 })
+if data.raw.item["bob-silicon-nitride"] then
+  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "bob-silicon-nitride", amount = 10 })
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "ceramics")
 else
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })

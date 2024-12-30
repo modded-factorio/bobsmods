@@ -2,16 +2,16 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "lithia-water",
+      name = "bob-lithia-water",
       icon = "__bobplates__/graphics/icons/lithia-water.png",
       icon_size = 32,
       subgroup = "bob-fluid-pump",
-      order = "b[fluid-chemistry]-b[lithia-water]",
+      order = "b[fluid-chemistry]-b[bob-lithia-water]",
       category = "water-pump",
       energy_required = 1,
       ingredients = {},
       results = {
-        { type = "fluid", name = "lithia-water", amount = 100 },
+        { type = "fluid", name = "bob-lithia-water", amount = 100 },
       },
       allow_decomposition = false,
     },
@@ -41,12 +41,12 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
         icon = "__bobplates__/graphics/icons/pure-water.png",
         icon_size = 64,
         subgroup = "bob-fluid-pump",
-        order = "b[fluid-chemistry]-b[pure-water]",
+        order = "b[fluid-chemistry]-b[bob-pure-water]",
         category = "water-pump",
         energy_required = 1,
         ingredients = {},
         results = {
-          { type = "fluid", name = "pure-water", amount = 100 },
+          { type = "fluid", name = "bob-pure-water", amount = 100 },
         },
         allow_decomposition = false,
       },
@@ -58,7 +58,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "pure-water",
+      name = "bob-pure-water",
       icon = "__bobplates__/graphics/icons/pure-water.png",
       icon_size = 64,
       subgroup = "fluid-recipes",
@@ -70,7 +70,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         { type = "fluid", name = "water", amount = 100 },
       },
       results = {
-        { type = "fluid", name = "pure-water", amount = 100 },
+        { type = "fluid", name = "bob-pure-water", amount = 100 },
       },
       crafting_machine_tint = {
         primary = { r = 0, g = 0.34, b = 0.6, a = 0.000 },
@@ -81,8 +81,8 @@ if settings.startup["bobmods-plates-purewater"].value == true then
     },
     {
       type = "recipe",
-      name = "pure-water-from-lithia",
-      localised_name = { "fluid-name.pure-water" },
+      name = "bob-pure-water-from-lithia",
+      localised_name = { "fluid-name.bob-pure-water" },
       icon = "__bobplates__/graphics/icons/pure-water.png",
       icon_size = 64,
       subgroup = "fluid-recipes",
@@ -91,10 +91,10 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       enabled = false,
       energy_required = 2,
       ingredients = {
-        { type = "fluid", name = "lithia-water", amount = 100 },
+        { type = "fluid", name = "bob-lithia-water", amount = 100 },
       },
       results = {
-        { type = "fluid", name = "pure-water", amount = 100 },
+        { type = "fluid", name = "bob-pure-water", amount = 100 },
       },
       crafting_machine_tint = {
         primary = { r = 0, g = 0.34, b = 0.6, a = 0.000 },
@@ -138,15 +138,15 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     results = {
-      { type = "fluid", name = "hydrogen", amount = 20 },
-      { type = "fluid", name = "oxygen", amount = 12.5 },
+      { type = "fluid", name = "bob-hydrogen", amount = 20 },
+      { type = "fluid", name = "bob-oxygen", amount = 12.5 },
     },
     allow_decomposition = false,
   },
 
   {
     type = "recipe",
-    name = "nitrogen",
+    name = "bob-nitrogen",
     icon = "__bobplates__/graphics/icons/nitrogen.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
@@ -158,10 +158,10 @@ data:extend({
       { type = "fluid", name = "bob-liquid-air", amount = 25 },
     },
     results = {
-      { type = "fluid", name = "nitrogen", amount = 20 },
-      { type = "fluid", name = "oxygen", amount = 5 },
+      { type = "fluid", name = "bob-nitrogen", amount = 20 },
+      { type = "fluid", name = "bob-oxygen", amount = 5 },
     },
-    main_product = "nitrogen",
+    main_product = "bob-nitrogen",
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.8, b = 0.0, a = 0.000 },
       secondary = { r = 0.5, g = 1.0, b = 0.5, a = 0.000 },
@@ -181,20 +181,20 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "salt", amount = 1 },
+      { type = "item", name = "bob-salt", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
     results = {
-      { type = "item", name = "sodium-hydroxide", amount = 1 },
-      { type = "fluid", name = "chlorine", amount = 25 },
-      { type = "fluid", name = "hydrogen", amount = 10 },
+      { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
+      { type = "fluid", name = "bob-chlorine", amount = 25 },
+      { type = "fluid", name = "bob-hydrogen", amount = 10 },
     },
     allow_decomposition = false,
   },
 
   {
     type = "recipe",
-    name = "lithium-water-electrolysis",
+    name = "bob-lithium-water-electrolysis",
     icon = "__bobplates__/graphics/icons/lithium-perchlorate.png",
     icon_size = 32,
     subgroup = "bob-fluid-electrolysis",
@@ -203,19 +203,19 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "lithium-chloride", amount = 1 },
+      { type = "item", name = "bob-lithium-chloride", amount = 1 },
       { type = "fluid", name = "water", amount = 10 },
     },
     results = {
-      { type = "item", name = "lithium-perchlorate", amount = 1 },
-      { type = "fluid", name = "hydrogen", amount = 20 },
+      { type = "item", name = "bob-lithium-perchlorate", amount = 1 },
+      { type = "fluid", name = "bob-hydrogen", amount = 20 },
     },
     allow_decomposition = false,
   },
 
   {
     type = "recipe",
-    name = "nitrogen-dioxide",
+    name = "bob-nitrogen-dioxide",
     icon = "__bobplates__/graphics/icons/nitrogen-dioxide.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
@@ -224,11 +224,11 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "fluid", name = "nitrogen", amount = 10 },
-      { type = "fluid", name = "oxygen", amount = 20 },
+      { type = "fluid", name = "bob-nitrogen", amount = 10 },
+      { type = "fluid", name = "bob-oxygen", amount = 20 },
     },
     results = {
-      { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
+      { type = "fluid", name = "bob-nitrogen-dioxide", amount = 20 },
     },
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
@@ -239,7 +239,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "hydrogen-chloride",
+    name = "bob-hydrogen-chloride",
     icon = "__bobplates__/graphics/icons/hydrogen-chloride.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
@@ -248,11 +248,11 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "fluid", name = "chlorine", amount = 12.5 },
-      { type = "fluid", name = "hydrogen", amount = 10 },
+      { type = "fluid", name = "bob-chlorine", amount = 12.5 },
+      { type = "fluid", name = "bob-hydrogen", amount = 10 },
     },
     results = {
-      { type = "fluid", name = "hydrogen-chloride", amount = 25 },
+      { type = "fluid", name = "bob-hydrogen-chloride", amount = 25 },
     },
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.7, b = 0.2, a = 0.000 },
@@ -263,7 +263,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nitric-acid",
+    name = "bob-nitric-acid",
     icon = "__bobplates__/graphics/icons/nitric-acid.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
@@ -273,10 +273,10 @@ data:extend({
     energy_required = 1,
     ingredients = {
       { type = "fluid", name = "water", amount = 20 },
-      { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
+      { type = "fluid", name = "bob-nitrogen-dioxide", amount = 20 },
     },
     results = {
-      { type = "fluid", name = "nitric-acid", amount = 20 },
+      { type = "fluid", name = "bob-nitric-acid", amount = 20 },
     },
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
@@ -287,7 +287,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "ferric-chloride-solution",
+    name = "bob-ferric-chloride-solution",
     icon = "__bobplates__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
@@ -297,10 +297,10 @@ data:extend({
     energy_required = 2.5,
     ingredients = {
       { type = "item", name = "iron-ore", amount = 1 },
-      { type = "fluid", name = "hydrogen-chloride", amount = 30 },
+      { type = "fluid", name = "bob-hydrogen-chloride", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "ferric-chloride-solution", amount = 50 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 50 },
     },
     crafting_machine_tint = {
       primary = { r = 0.7, g = 0.6, b = 0.2, a = 0.000 },
@@ -312,7 +312,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "liquid-fuel",
+    name = "bob-liquid-fuel",
     icon = "__bobplates__/graphics/icons/liquid-fuel.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
@@ -324,7 +324,7 @@ data:extend({
       { type = "fluid", name = "light-oil", amount = 10 },
     },
     results = {
-      { type = "fluid", name = "liquid-fuel", amount = 10 },
+      { type = "fluid", name = "bob-liquid-fuel", amount = 10 },
     },
     crafting_machine_tint = {
       primary = { r = 1.0, g = 0.9, b = 0.5, a = 0.000 },
@@ -343,7 +343,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 50 },
-      { type = "fluid", name = "sulfur-dioxide", amount = 50 },
+      { type = "fluid", name = "bob-sulfur-dioxide", amount = 50 },
     },
     results = {
       { type = "fluid", name = "sulfuric-acid", amount = 50 },
@@ -363,7 +363,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "sulfur-dioxide",
+    name = "bob-sulfur-dioxide",
     category = "chemistry",
     subgroup = "fluid-recipes",
     order = "a[fluid]-g[sulfur-dioxide]",
@@ -371,10 +371,10 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "sulfur", amount = 5 },
-      { type = "fluid", name = "oxygen", amount = 50 },
+      { type = "fluid", name = "bob-oxygen", amount = 50 },
     },
     results = {
-      { type = "fluid", name = "sulfur-dioxide", amount = 50 },
+      { type = "fluid", name = "bob-sulfur-dioxide", amount = 50 },
     },
     crafting_machine_tint = {
       primary = { r = 0.7, g = 0.7, b = 0.0, a = 0.000 },
@@ -399,7 +399,7 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 5 },
     },
     results = {
-      { type = "fluid", name = "hydrogen", amount = 250 },
+      { type = "fluid", name = "bob-hydrogen", amount = 250 },
     },
     main_product = "", -- Causes it to use the recipe name.
     crafting_machine_tint = {
@@ -461,7 +461,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "salt",
+    name = "bob-salt",
     subgroup = "bob-material-chemical",
     category = "chemical-furnace",
     energy_required = 0.5,
@@ -469,21 +469,21 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "water", amount = 25 },
     },
-    results = { { type = "item", name = "salt", amount = 1 } },
+    results = { { type = "item", name = "bob-salt", amount = 1 } },
     allow_decomposition = false,
   },
 
   {
     type = "recipe",
-    name = "lithium-chloride",
+    name = "bob-lithium-chloride",
     subgroup = "bob-material-chemical",
     category = "chemical-furnace",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "lithia-water", amount = 25 },
+      { type = "fluid", name = "bob-lithia-water", amount = 25 },
     },
-    results = { { type = "item", name = "lithium-chloride", amount = 1 } },
+    results = { { type = "item", name = "bob-lithium-chloride", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -498,8 +498,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "sulfur-dioxide", amount = 50 },
-      { type = "fluid", name = "hydrogen", amount = 80 },
+      { type = "fluid", name = "bob-sulfur-dioxide", amount = 50 },
+      { type = "fluid", name = "bob-hydrogen", amount = 80 },
     },
     results = { { type = "item", name = "sulfur", amount = 5 } },
     crafting_machine_tint = {
@@ -512,17 +512,17 @@ data:extend({
 
   {
     type = "recipe",
-    name = "calcium-chloride",
+    name = "bob-calcium-chloride",
     subgroup = "bob-resource-chemical",
-    order = "f[calcium-chloride]",
+    order = "f[bob-calcium-chloride]",
     category = "chemistry",
     energy_required = 1,
     enabled = false,
     ingredients = {
       { type = "item", name = "stone", amount = 1 },
-      { type = "fluid", name = "hydrogen-chloride", amount = 10 },
+      { type = "fluid", name = "bob-hydrogen-chloride", amount = 10 },
     },
-    results = { { type = "item", name = "calcium-chloride", amount = 1 } },
+    results = { { type = "item", name = "bob-calcium-chloride", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.5, g = 0.5, b = 0.4, a = 0.000 },
       secondary = { r = 0.7, g = 0.5, b = 0.0, a = 0.000 },
@@ -532,40 +532,40 @@ data:extend({
 
   {
     type = "recipe",
-    name = "alumina",
+    name = "bob-alumina",
     category = "chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "sodium-hydroxide", amount = 1 },
+      { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
       { type = "item", name = "bauxite-ore", amount = 1 },
     },
-    results = { { type = "item", name = "alumina", amount = 1 } },
-    order = "f[alumina]",
+    results = { { type = "item", name = "bob-alumina", amount = 1 } },
+    order = "f[bob-alumina]",
     allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "lead-oxide",
+    name = "bob-lead-oxide",
     icon = "__bobplates__/graphics/icons/lead-oxide.png",
     icon_size = 64,
     subgroup = "bob-resource-chemical",
-    order = "f[lead-oxide]",
+    order = "f[bob-lead-oxide]",
     category = "chemistry",
     enabled = false,
     energy_required = 2,
     emissions_multiplier = 0.25,
     ingredients = {
       { type = "item", name = "lead-ore", amount = 1 },
-      { type = "fluid", name = "oxygen", amount = 10 },
+      { type = "fluid", name = "bob-oxygen", amount = 10 },
     },
     results = {
-      { type = "item", name = "lead-oxide", amount = 1 },
-      { type = "fluid", name = "sulfur-dioxide", amount = 10 },
+      { type = "item", name = "bob-lead-oxide", amount = 1 },
+      { type = "fluid", name = "bob-sulfur-dioxide", amount = 10 },
     },
-    main_product = "lead-oxide",
+    main_product = "bob-lead-oxide",
     crafting_machine_tint = {
       primary = { r = 0.1, g = 0.1, b = 0.1, a = 0.000 },
       secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
@@ -576,17 +576,17 @@ data:extend({
 
   {
     type = "recipe",
-    name = "silver-nitrate",
+    name = "bob-silver-nitrate",
     subgroup = "bob-resource-chemical",
-    order = "f[lead-oxide]",
+    order = "f[bob-silver-nitrate]",
     category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "bob-silver-plate", amount = 1 },
-      { type = "fluid", name = "nitrogen-dioxide", amount = 10 },
+      { type = "fluid", name = "bob-nitrogen-dioxide", amount = 10 },
     },
-    results = { { type = "item", name = "silver-nitrate", amount = 1 } },
+    results = { { type = "item", name = "bob-silver-nitrate", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -597,17 +597,17 @@ data:extend({
 
   {
     type = "recipe",
-    name = "silver-oxide",
+    name = "bob-silver-oxide",
     subgroup = "bob-resource-chemical",
-    order = "f[lead-oxide]",
+    order = "f[bob-silver-oxide]",
     category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "silver-nitrate", amount = 1 },
-      { type = "item", name = "sodium-hydroxide", amount = 1 },
+      { type = "item", name = "bob-silver-nitrate", amount = 1 },
+      { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
     },
-    results = { { type = "item", name = "silver-oxide", amount = 1 } },
+    results = { { type = "item", name = "bob-silver-oxide", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.3, g = 0.3, b = 0.3, a = 0.000 },
       secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -618,22 +618,22 @@ data:extend({
 
   {
     type = "recipe",
-    name = "powdered-tungsten",
+    name = "bob-powdered-tungsten",
     subgroup = "bob-material-chemical",
     category = "chemical-furnace",
     energy_required = 3.5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tungsten-oxide", amount = 1 },
-      { type = "fluid", name = "hydrogen", amount = 15 },
+      { type = "item", name = "bob-tungsten-oxide", amount = 1 },
+      { type = "fluid", name = "bob-hydrogen", amount = 15 },
     },
-    results = { { type = "item", name = "powdered-tungsten", amount = 1 } },
+    results = { { type = "item", name = "bob-powdered-tungsten", amount = 1 } },
     allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "cobalt-oxide",
+    name = "bob-cobalt-oxide",
     subgroup = "bob-material-chemical",
     category = "chemical-furnace",
     energy_required = 7,
@@ -642,17 +642,17 @@ data:extend({
       { type = "item", name = "cobalt-ore", amount = 2 },
       { type = "item", name = "stone", amount = 1 },
     },
-    results = { { type = "item", name = "cobalt-oxide", amount = 2 } },
+    results = { { type = "item", name = "bob-cobalt-oxide", amount = 2 } },
     allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "cobalt-oxide-from-copper",
+    name = "bob-cobalt-oxide-from-copper",
     icon = "__bobplates__/graphics/icons/copper-cobalt-oxide.png",
     icon_size = 32,
     subgroup = "bob-material-chemical",
-    order = "c-b[cobalt-oxide-from-copper]",
+    order = "c-b[bob-cobalt-oxide-from-copper]",
     category = "chemical-furnace",
     energy_required = 25,
     enabled = false,
@@ -660,11 +660,11 @@ data:extend({
       { type = "item", name = "copper-ore", amount = 7 },
       { type = "item", name = "stone", amount = 1 },
       { type = "item", name = "bob-carbon", amount = 1 },
-      { type = "fluid", name = "hydrogen", amount = 5 },
+      { type = "fluid", name = "bob-hydrogen", amount = 5 },
     },
     results = {
       { type = "item", name = "copper-plate", amount_min = 7, amount_max = 11 },
-      { type = "item", name = "cobalt-oxide", amount_min = 1, amount_max = 3 },
+      { type = "item", name = "bob-cobalt-oxide", amount_min = 1, amount_max = 3 },
     },
     main_product = "copper-plate",
     allow_decomposition = false,
@@ -682,7 +682,7 @@ data:extend({
     energy_required = 25,
     enabled = false,
     ingredients = {
-      { type = "item", name = "lead-oxide", amount = 7 },
+      { type = "item", name = "bob-lead-oxide", amount = 7 },
       { type = "item", name = "bob-carbon", amount = 3 },
       { type = "item", name = "bob-nickel-plate", amount = 1 },
     },
@@ -696,16 +696,16 @@ data:extend({
 
   {
     type = "recipe",
-    name = "silicon-carbide",
+    name = "bob-silicon-carbide",
     subgroup = "bob-material-chemical",
     category = "chemical-furnace",
     energy_required = 7,
     enabled = false,
     ingredients = {
-      { type = "item", name = "silicon-powder", amount = 1 },
+      { type = "item", name = "bob-silicon-powder", amount = 1 },
       { type = "item", name = "bob-carbon", amount = 1 },
     },
-    results = { { type = "item", name = "silicon-carbide", amount = 2 } },
+    results = { { type = "item", name = "bob-silicon-carbide", amount = 2 } },
     allow_productivity = true,
   },
 })
@@ -713,11 +713,11 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "lead-oxide-2",
+    name = "bob-lead-oxide-2",
     icon = "__bobplates__/graphics/icons/lead-oxide.png",
     icon_size = 64,
     subgroup = "bob-resource-chemical",
-    order = "f[lead-oxide]",
+    order = "f[bob-lead-oxide-2]",
     category = "chemistry",
     enabled = false,
     energy_required = 2,
@@ -727,10 +727,10 @@ data:extend({
       { type = "fluid", name = "water", amount = 4 },
     },
     results = {
-      { type = "item", name = "lead-oxide", amount = 1 },
-      { type = "fluid", name = "hydrogen-sulfide", amount = 10 },
+      { type = "item", name = "bob-lead-oxide", amount = 1 },
+      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 10 },
     },
-    main_product = "lead-oxide",
+    main_product = "bob-lead-oxide",
     crafting_machine_tint = {
       primary = { r = 0.1, g = 0.1, b = 0.1, a = 0.000 },
       secondary = { r = 0, g = 0.3, b = 0.7, a = 0.000 },
@@ -742,7 +742,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "hydrogen-sulfide",
+    name = "bob-hydrogen-sulfide",
     icon = "__bobplates__/graphics/icons/hydrogen-sulfide.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
@@ -752,10 +752,10 @@ data:extend({
     energy_required = 1,
     ingredients = {
       { type = "item", name = "sulfur", amount = 5 },
-      { type = "fluid", name = "hydrogen", amount = 80 },
+      { type = "fluid", name = "bob-hydrogen", amount = 80 },
     },
     results = {
-      { type = "fluid", name = "hydrogen-sulfide", amount = 50 },
+      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 50 },
     },
     crafting_machine_tint = {
       primary = { r = 0.7, g = 0.7, b = 0.0, a = 0.000 },
@@ -774,8 +774,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "hydrogen-sulfide", amount = 50 },
-      { type = "fluid", name = "oxygen", amount = 25 },
+      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 50 },
+      { type = "fluid", name = "bob-oxygen", amount = 25 },
     },
     results = { { type = "item", name = "sulfur", amount = 5 } },
     crafting_machine_tint = {
@@ -798,8 +798,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "hydrogen-sulfide", amount = 50 },
-      { type = "fluid", name = "oxygen", amount = 100 },
+      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 50 },
+      { type = "fluid", name = "bob-oxygen", amount = 100 },
     },
     results = {
       { type = "fluid", name = "sulfuric-acid", amount = 50 },
@@ -824,10 +824,10 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "water", amount = 100 },
-      { type = "fluid", name = "hydrogen-sulfide", amount = 1 },
+      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "heavy-water", amount = 0.5 },
+      { type = "fluid", name = "bob-heavy-water", amount = 0.5 },
       { type = "fluid", name = "water", amount = 99.5 },
     },
     crafting_machine_tint = {
@@ -849,11 +849,11 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "fluid", name = "heavy-water", amount = 10 },
+      { type = "fluid", name = "bob-heavy-water", amount = 10 },
     },
     results = {
-      { type = "fluid", name = "deuterium", amount = 20 },
-      { type = "fluid", name = "oxygen", amount = 12.5 },
+      { type = "fluid", name = "bob-deuterium", amount = 20 },
+      { type = "fluid", name = "bob-oxygen", amount = 12.5 },
     },
     allow_decomposition = false,
   },
@@ -864,7 +864,7 @@ if not feature_flags["quality"] then
 
     {
       type = "recipe",
-      name = "tungstic-acid",
+      name = "bob-tungstic-acid",
       icon = "__bobplates__/graphics/icons/tungstic-acid.png",
       icon_size = 32,
       subgroup = "fluid-recipes",
@@ -874,13 +874,13 @@ if not feature_flags["quality"] then
       energy_required = 2,
       ingredients = {
         { type = "item", name = "tungsten-ore", amount = 2 },
-        { type = "fluid", name = "hydrogen-chloride", amount = 50 },
+        { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 },
       },
       results = {
-        { type = "fluid", name = "tungstic-acid", amount = 20 },
-        { type = "item", name = "calcium-chloride", amount = 1 },
+        { type = "fluid", name = "bob-tungstic-acid", amount = 20 },
+        { type = "item", name = "bob-calcium-chloride", amount = 1 },
       },
-      main_product = "tungstic-acid",
+      main_product = "bob-tungstic-acid",
       crafting_machine_tint = {
         primary = { r = 0.0, g = 0.2, b = 0.7, a = 0.000 },
         secondary = { r = 0.0, g = 0.7, b = 0.7, a = 0.000 },
@@ -890,15 +890,15 @@ if not feature_flags["quality"] then
 
     {
       type = "recipe",
-      name = "tungsten-oxide",
+      name = "bob-tungsten-oxide",
       subgroup = "bob-material-chemical",
       category = "chemical-furnace",
       energy_required = 2,
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "tungstic-acid", amount = 10 },
+        { type = "fluid", name = "bob-tungstic-acid", amount = 10 },
       },
-      results = { { type = "item", name = "tungsten-oxide", amount = 1 } },
+      results = { { type = "item", name = "bob-tungsten-oxide", amount = 1 } },
       allow_productivity = true,
     },
   })
@@ -907,20 +907,20 @@ else
 
     {
       type = "recipe",
-      name = "tungsten-oxide",
+      name = "bob-tungsten-oxide",
       subgroup = "bob-material-chemical",
       category = "chemistry",
       enabled = false,
       energy_required = 4,
       ingredients = {
         { type = "item", name = "tungsten-ore", amount = 2 },
-        { type = "fluid", name = "hydrogen-chloride", amount = 50 },
+        { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 },
       },
       results = {
-        { type = "item", name = "tungsten-oxide", amount = 2 },
-        { type = "item", name = "calcium-chloride", amount = 1 },
+        { type = "item", name = "bob-tungsten-oxide", amount = 2 },
+        { type = "item", name = "bob-calcium-chloride", amount = 1 },
       },
-      main_product = "tungsten-oxide",
+      main_product = "bob-tungsten-oxide",
       crafting_machine_tint = {
         primary = { r = 0.0, g = 0.2, b = 0.7, a = 0.000 },
         secondary = { r = 0.0, g = 0.7, b = 0.7, a = 0.000 },

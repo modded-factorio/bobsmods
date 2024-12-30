@@ -233,7 +233,7 @@ if data.raw.item["bob-brass-alloy"] then
   })
 end
 
-if data.raw.item["silicon-nitride"] then
+if data.raw.item["bob-silicon-nitride"] then
   data:extend({
     {
       type = "item",

@@ -39,7 +39,7 @@ data:extend({
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 2 },
-      { type = "item", name = "powdered-tungsten", amount = 3 },
+      { type = "item", name = "bob-powdered-tungsten", amount = 3 },
     },
     results = {
       { type = "item", name = "bob-copper-tungsten-alloy", amount = 5 },
@@ -55,7 +55,7 @@ data:extend({
     energy_required = 6.4,
     ingredients = {
       { type = "item", name = "bob-carbon", amount = 1 },
-      { type = "item", name = "tungsten-oxide", amount = 1 },
+      { type = "item", name = "bob-tungsten-oxide", amount = 1 },
     },
     results = {
       { type = "item", name = "bob-tungsten-carbide", amount = 2 },
@@ -72,7 +72,7 @@ data:extend({
     energy_required = 12.8,
     ingredients = {
       { type = "item", name = "bob-carbon", amount = 1 },
-      { type = "item", name = "powdered-tungsten", amount = 1 },
+      { type = "item", name = "bob-powdered-tungsten", amount = 1 },
     },
     results = {
       { type = "item", name = "bob-tungsten-carbide", amount = 2 },

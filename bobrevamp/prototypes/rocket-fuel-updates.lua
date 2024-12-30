@@ -1,7 +1,7 @@
-if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinitrogen-tetroxide"] then
-  if data.raw.fluid["pure-water"] then
+if data.raw.fluid["ammonia"] and data.raw.fluid["hydrazine"] and data.raw.fluid["dinitrogen-tetroxide"] then
+  if data.raw.fluid["bob-pure-water"] then
     bobmods.lib.recipe.remove_result("hydrazine", "water")
-    bobmods.lib.recipe.add_result("hydrazine", { type = "fluid", name = "pure-water", amount = 4 })
+    bobmods.lib.recipe.add_result("hydrazine", { type = "fluid", name = "bob-pure-water", amount = 4 })
   end
 
   data.raw.recipe["rocket-fuel"].ingredients = {
@@ -24,7 +24,7 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
     bobmods.lib.tech.add_prerequisite("hydrazine", "nitrogen-processing")
   else
     bobmods.lib.tech.add_recipe_unlock("chemical-plant", "ammonia")
-    bobmods.lib.tech.add_recipe_unlock("chemical-plant", "nitrogen-dioxide")
+    bobmods.lib.tech.add_recipe_unlock("chemical-plant", "bob-nitrogen-dioxide")
     bobmods.lib.tech.add_prerequisite("hydrazine", "chemical-plant")
   end
 
@@ -37,12 +37,12 @@ if data.raw.fluid.ammonia and data.raw.fluid.hydrazine and data.raw.fluid["dinit
   end
 
   bobmods.lib.create_gas_bottle(data.raw.fluid["ammonia"])
-  bobmods.lib.create_gas_bottle(data.raw.fluid["nitrogen-dioxide"])
+  bobmods.lib.create_gas_bottle(data.raw.fluid["bob-nitrogen-dioxide"])
 
   if data.raw.fluid["nitric-oxide"] then
-    if data.raw.fluid["pure-water"] then
+    if data.raw.fluid["bob-pure-water"] then
       bobmods.lib.recipe.remove_result("nitric-oxide", "water")
-      bobmods.lib.recipe.add_result("nitric-oxide", { type = "fluid", name = "pure-water", amount = 12 })
+      bobmods.lib.recipe.add_result("nitric-oxide", { type = "fluid", name = "bob-pure-water", amount = 12 })
     end
 
     if data.raw.technology["nitrogen-processing"] then

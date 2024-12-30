@@ -248,7 +248,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       ingredients = {
         { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 },
         { type = "item", name = "fusion-catalyst", amount = 1 },
-        { type = "fluid", name = "deuterium", amount = 190 },
+        { type = "fluid", name = "bob-deuterium", amount = 190 },
       },
       results = { { type = "item", name = "deuterium-fuel-cell", amount = 10 } },
     },
@@ -261,7 +261,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       ingredients = {
         { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 },
         { type = "item", name = "fusion-catalyst", amount = 5 },
-        { type = "fluid", name = "deuterium", amount = 250 },
+        { type = "fluid", name = "bob-deuterium", amount = 250 },
       },
       results = { { type = "item", name = "deuterium-fuel-cell-2", amount = 10 } },
     },
@@ -308,7 +308,7 @@ else
       enabled = false,
       ingredients = {
         { type = "item", name = "bob-lead-plate", amount = 10 },
-        { type = "fluid", name = "deuterium", amount = 200 },
+        { type = "fluid", name = "bob-deuterium", amount = 200 },
       },
       results = { { type = "item", name = "deuterium-fuel-cell", amount = 10 } },
     },

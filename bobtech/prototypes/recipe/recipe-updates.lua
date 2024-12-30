@@ -1,5 +1,5 @@
-if data.raw.item["sodium-hydroxide"] then
-  bobmods.lib.recipe.add_ingredient("chemical-science-pack", { type = "item", name = "sodium-hydroxide", amount = 2 })
+if data.raw.item["bob-sodium-hydroxide"] then
+  bobmods.lib.recipe.add_ingredient("chemical-science-pack", { type = "item", name = "bob-sodium-hydroxide", amount = 2 })
 end
 data.raw.recipe["chemical-science-pack"].energy_required = 14
 
@@ -36,8 +36,8 @@ if data.raw.item["lithium-ion-battery"] then
 else
   bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "battery", amount = 4 })
 end
-if data.raw.item["silicon-nitride"] then
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "silicon-nitride", amount = 4 })
+if data.raw.item["bob-silicon-nitride"] then
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "bob-silicon-nitride", amount = 4 })
 end
 if data.raw.item["titanium-bearing"] then
   bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "titanium-bearing", amount = 4 })

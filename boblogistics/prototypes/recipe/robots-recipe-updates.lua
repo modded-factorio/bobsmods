@@ -128,8 +128,8 @@ if data.raw.recipe["bob-robot-tool-3"] then
 end
 
 if data.raw.recipe["bob-robot-tool-4"] then
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "silicon-nitride", amount = 1 })
+  if data.raw.item["bob-silicon-nitride"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "bob-silicon-nitride", amount = 1 })
   else
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "steel-plate", amount = 1 })
   end
@@ -229,8 +229,8 @@ if data.raw.item["flying-robot-frame-4"] then
     end
   end
 
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "silicon-nitride")
+  if data.raw.item["bob-silicon-nitride"] then
+    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "bob-silicon-nitride")
   end
 
   if data.raw.item["advanced-processing-unit"] then
@@ -262,8 +262,8 @@ else
       end
     end
 
-    if data.raw.item["silicon-nitride"] then
-      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "silicon-nitride", amount = 1 })
+    if data.raw.item["bob-silicon-nitride"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-silicon-nitride", amount = 1 })
     else
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
     end
@@ -393,8 +393,8 @@ else
       data.raw.recipe[robot].energy_required = 20
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
 
-      if data.raw.item["silicon-nitride"] then
-        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "silicon-nitride", amount = 1 })
+      if data.raw.item["bob-silicon-nitride"] then
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-silicon-nitride", amount = 1 })
       else
         bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
       end

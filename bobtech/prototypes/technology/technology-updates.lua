@@ -175,7 +175,7 @@ if data.raw.item["lithium-ion-battery"] then
 else
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery")
 end
-if data.raw.item["silicon-nitride"] then
+if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "ceramics")
 end
 

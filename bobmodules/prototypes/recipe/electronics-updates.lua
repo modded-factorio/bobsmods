@@ -32,22 +32,22 @@ if data.raw.item["fibreglass-board"] then
   bobmods.lib.recipe.replace_ingredient("bob-module-processor-board-3", "plastic-bar", "fibreglass-board")
 end
 
-if data.raw.fluid["ferric-chloride-solution"] then
+if data.raw.fluid["bob-ferric-chloride-solution"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-module-circuit-board",
-    { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
+    { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-module-processor-board",
-    { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
+    { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-module-processor-board-2",
-    { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
+    { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-module-processor-board-3",
-    { type = "fluid", name = "ferric-chloride-solution", amount = 10 }
+    { type = "fluid", name = "bob-ferric-chloride-solution", amount = 10 }
   )
   if mods["bobplates"] then
     bobmods.lib.tech.add_prerequisite("modules", "chemical-processing-2")

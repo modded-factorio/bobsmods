@@ -445,7 +445,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "phenolic-board", amount = 1 },
       { type = "item", name = "copper-plate", amount = 1 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 },
     },
     results = { { type = "item", name = "circuit-board", amount = 1 } },
     allow_decomposition = false,
@@ -488,7 +488,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fibreglass-board", amount = 1 },
       { type = "item", name = "copper-plate", amount = 1 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 },
     },
     results = { { type = "item", name = "superior-circuit-board", amount = 1 } },
     allow_decomposition = false,
@@ -531,7 +531,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fibreglass-board", amount = 1 },
       { type = "item", name = "copper-plate", amount = 2 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 10 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 10 },
     },
     results = { { type = "item", name = "multi-layer-circuit-board", amount = 1 } },
     allow_decomposition = false,

@@ -102,7 +102,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("fluid-generator-3", "processing-unit")
   end
 
-  if mods["bobrevamp"] and data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
+  if mods["bobrevamp"] and data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.fluid["bob-nitrogen"] then
     if data.raw.item["nitinol-bearing"] then
       bobmods.lib.recipe.add_ingredient("hydrazine-generator", { type = "item", name = "nitinol-bearing", amount = 10 })
     else

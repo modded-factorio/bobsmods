@@ -134,14 +134,14 @@ if data.raw.item["bob-brass-alloy"] then
   })
 end
 
-if data.raw.item["silicon-nitride"] then
+if data.raw.item["bob-silicon-nitride"] then
   data:extend({
     {
       type = "recipe",
       name = "ceramic-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "silicon-nitride", amount = 1 },
+        { type = "item", name = "bob-silicon-nitride", amount = 1 },
       },
       results = { { type = "item", name = "ceramic-pipe", amount = 1 } },
     },
@@ -152,7 +152,7 @@ if data.raw.item["silicon-nitride"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "ceramic-pipe", amount = 16 },
-        { type = "item", name = "silicon-nitride", amount = 5 },
+        { type = "item", name = "bob-silicon-nitride", amount = 5 },
       },
       results = { { type = "item", name = "ceramic-pipe-to-ground", amount = 2 } },
     },

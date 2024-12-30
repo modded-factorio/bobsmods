@@ -69,7 +69,7 @@ then
     },
   })
 
-  if data.raw.fluid["sulfur-dioxide"] then
+  if data.raw.fluid["bob-sulfur-dioxide"] then
     data:extend({
       {
         type = "recipe",
@@ -86,7 +86,7 @@ then
           { type = "fluid", name = "crude-oil", amount = 100 },
         },
         results = {
-          { type = "fluid", name = "sulfur-dioxide", amount = 40 },
+          { type = "fluid", name = "bob-sulfur-dioxide", amount = 40 },
           { type = "fluid", name = "light-oil", amount = 30 },
           { type = "fluid", name = "petroleum-gas", amount = 40 },
         },
@@ -109,7 +109,7 @@ then
         },
         results = {
           { type = "fluid", name = "heavy-oil", amount = 30 },
-          { type = "fluid", name = "sulfur-dioxide", amount = 40 },
+          { type = "fluid", name = "bob-sulfur-dioxide", amount = 40 },
           { type = "fluid", name = "petroleum-gas", amount = 40 },
         },
         allow_productivity = true,
@@ -132,7 +132,7 @@ then
         results = {
           { type = "fluid", name = "heavy-oil", amount = 30 },
           { type = "fluid", name = "light-oil", amount = 30 },
-          { type = "fluid", name = "sulfur-dioxide", amount = 50 },
+          { type = "fluid", name = "bob-sulfur-dioxide", amount = 50 },
         },
         allow_productivity = true,
       },

@@ -15,8 +15,8 @@ for i, recipe in pairs(data.raw.recipe) do
   end
 end
 
-if data.raw.fluid["hydrogen-chloride"] then
-  bobmods.lib.recipe.replace_ingredient("ferric-chloride-solution", "water", "hydrogen-chloride")
+if data.raw.fluid["bob-hydrogen-chloride"] then
+  bobmods.lib.recipe.replace_ingredient("bob-ferric-chloride-solution", "water", "bob-hydrogen-chloride")
 end
 
 if data.raw.item["tinned-copper-cable"] then
@@ -63,8 +63,8 @@ else
   end
 end
 
-if data.raw.item["silicon-nitride"] then
-  bobmods.lib.recipe.replace_ingredient("processing-electronics", "plastic-bar", "silicon-nitride")
+if data.raw.item["bob-silicon-nitride"] then
+  bobmods.lib.recipe.replace_ingredient("processing-electronics", "plastic-bar", "bob-silicon-nitride")
 end
 
 if data.raw.item["bob-glass"] then

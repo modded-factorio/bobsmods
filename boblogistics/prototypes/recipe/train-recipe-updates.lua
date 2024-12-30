@@ -86,7 +86,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   if data.raw.item["bob-tungsten-carbide"] then
     bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "tungsten-alloy-processing")
     bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "tungsten-alloy-processing")
-    if data.raw.item["silicon-nitride"] then
+    if data.raw.item["bob-silicon-nitride"] then
       bobmods.lib.recipe.remove_ingredient("bob-armoured-locomotive-2", "steel-plate")
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-locomotive-2",
@@ -94,7 +94,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-locomotive-2",
-        { type = "item", name = "silicon-nitride", amount = 15 }
+        { type = "item", name = "bob-silicon-nitride", amount = 15 }
       )
 
       bobmods.lib.recipe.remove_ingredient("bob-armoured-cargo-wagon-2", "steel-plate")
@@ -104,7 +104,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-cargo-wagon-2",
-        { type = "item", name = "silicon-nitride", amount = 15 }
+        { type = "item", name = "bob-silicon-nitride", amount = 15 }
       )
 
       bobmods.lib.recipe.remove_ingredient("bob-armoured-fluid-wagon-2", "steel-plate")
@@ -114,7 +114,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-fluid-wagon-2",
-        { type = "item", name = "silicon-nitride", amount = 15 }
+        { type = "item", name = "bob-silicon-nitride", amount = 15 }
       )
 
       bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "ceramics")
@@ -125,10 +125,10 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "steel-plate", "bob-tungsten-carbide")
     end
   else
-    if data.raw.item["silicon-nitride"] then
-      bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "steel-plate", "silicon-nitride")
-      bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "steel-plate", "silicon-nitride")
-      bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "steel-plate", "silicon-nitride")
+    if data.raw.item["bob-silicon-nitride"] then
+      bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "steel-plate", "bob-silicon-nitride")
+      bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "steel-plate", "bob-silicon-nitride")
+      bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "steel-plate", "bob-silicon-nitride")
       bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "ceramics")
       bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "ceramics")
     end
