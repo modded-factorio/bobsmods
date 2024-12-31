@@ -1,5 +1,3 @@
--- bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-overflow-valve")
--- bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-topup-valve")
 bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-storage-tank-all-corners")
 
 -- 0.17.60 balancing
