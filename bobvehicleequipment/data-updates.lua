@@ -93,8 +93,6 @@ if feature_flags["quality"] then
     "vehicle-solar-panel-equipment-1",
     "vehicle-solar-panel-equipment-2",
     "vehicle-solar-panel-equipment-3",
-    "vehicle-solar-panel-equipment-4",
-    "vehicle-solar-panel-equipment-5",
     "vehicle-fission-cell-equipment-1",
     "vehicle-fission-cell-equipment-2",
     "vehicle-fission-cell-equipment-3",
@@ -127,4 +125,10 @@ if feature_flags["quality"] then
     "vehicle-big-turret-equipment-4",
     "vehicle-engine-equipment",
   })
+  if data.raw.recipe["vehicle-solar-panel-equipment-4"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("vehicle-solar-panel-equipment-4", false)
+  end
+  if data.raw.recipe["vehicle-solar-panel-equipment-5"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("vehicle-solar-panel-equipment-5", false)
+  end
 end
