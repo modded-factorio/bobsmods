@@ -91,7 +91,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[ammonia]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "fluid",
+      subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "nitrogen", amount = 10 },
@@ -116,7 +116,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[hydrogen-peroxide]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "fluid",
+      subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "hydrogen", amount = 16 },
@@ -141,7 +141,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[hydrazine]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "fluid",
+      subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "ammonia", amount = 20 },
@@ -167,7 +167,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "fluid",
+      subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "nitrogen", amount = 10 },
@@ -192,7 +192,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       order = "b[fluid-chemistry]-b[dinitrogen-tetroxide]",
       energy_required = 1,
       category = "chemistry",
-      subgroup = "fluid",
+      subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
         { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
@@ -211,19 +211,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
 
   if bobmods.plates.make_void_fluid_recipe then
     bobmods.plates.make_void_fluid_recipe("ammonia", 25, 15)
-  end
-
-  if data.raw["item-subgroup"]["bob-fluid"] then
-    data.raw.fluid["ammonia"].subgroup = "bob-fluid"
-    data.raw.fluid["dinitrogen-tetroxide"].subgroup = "bob-fluid"
-    data.raw.fluid["hydrazine"].subgroup = "bob-fluid"
-    data.raw.fluid["hydrogen-peroxide"].subgroup = "bob-fluid"
-    data.raw.fluid["nitrogen-dioxide"].subgroup = "bob-fluid"
-    data.raw.recipe["ammonia"].subgroup = "bob-fluid"
-    data.raw.recipe["hydrogen-peroxide"].subgroup = "bob-fluid"
-    data.raw.recipe["hydrazine"].subgroup = "bob-fluid"
-    data.raw.recipe["nitrogen-dioxide"].subgroup = "bob-fluid"
-    data.raw.recipe["dinitrogen-tetroxide"].subgroup = "bob-fluid"
   end
 
   if settings.startup["bobmods-revamp-hardmode"].value == true then
@@ -251,7 +238,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         order = "b[fluid-chemistry]-b[nitric-oxide]",
         energy_required = 1,
         category = "chemistry",
-        subgroup = "fluid",
+        subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
           { type = "fluid", name = "ammonia", amount = 20 },
@@ -277,7 +264,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
         energy_required = 1,
         category = "chemistry",
-        subgroup = "fluid",
+        subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
           { type = "fluid", name = "nitric-oxide", amount = 20 },
@@ -294,12 +281,6 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         },
       },
     })
-
-    if data.raw["item-subgroup"]["bob-fluid"] then
-      data.raw.fluid["nitric-oxide"].subgroup = "bob-fluid"
-      data.raw.recipe["nitric-oxide"].subgroup = "bob-fluid"
-      data.raw.recipe["nitrogen-dioxide"].subgroup = "bob-fluid"
-    end
   end
 
   if data.raw.item["enriched-fuel"] then
