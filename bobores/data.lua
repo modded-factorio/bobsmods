@@ -41,7 +41,6 @@ bobmods.gems.AmethystRatio = settings.startup["bobmods-gems-amethystratio"].valu
 bobmods.gems.TopazRatio = settings.startup["bobmods-gems-topazratio"].value
 bobmods.gems.DiamondRatio = settings.startup["bobmods-gems-diamondratio"].value
 
-require("prototypes.category")
 require("prototypes.gems") -- must be after gem changes are defined.
 require("prototypes.tin-ore")
 require("prototypes.lead-ore")

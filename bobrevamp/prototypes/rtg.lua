@@ -94,7 +94,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       {
         type = "recipe",
         name = "brine",
-        subgroup = "fluid",
+        subgroup = "fluid-recipes",
         order = "f[brine]",
         category = "chemistry",
         energy_required = 0.5,
@@ -116,7 +116,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       {
         type = "recipe",
         name = "ammoniated-brine",
-        subgroup = "fluid",
+        subgroup = "fluid-recipes",
         order = "f[ammoniated-brine]",
         category = "chemistry",
         energy_required = 1,

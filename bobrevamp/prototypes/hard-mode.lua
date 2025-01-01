@@ -166,7 +166,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       type = "recipe",
       name = "carbon-dioxide",
       category = "chemistry",
-      subgroup = "fluid",
+      subgroup = "fluid-recipes",
       enabled = false,
       energy_required = 1,
       main_product = "carbon-dioxide",
