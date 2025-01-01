@@ -4,6 +4,18 @@ Date: ???
   Changes:
     - Update for Factorio 2.0 #189
     - Removed Modules Lab #196
+    - Rebalanced all of Bob's Modules, making it less over powered with default settings #269
+      - Reduced number of module tiers from 8 down to 5
+      - Added Quality modules
+      - Removed pure speed and pure productivity modules
+      - Changed god modules to have a single tier (down from 5 tiers)
+      - Added god module variants:
+        - God module
+        - God module (productivity)
+        - God module (quality)
+      - Moved the circuit / logic / processor boards up a tech tier
+      - Rebalanced mod setting defaults
+      - Updated beacon 2 & 3 effects
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023

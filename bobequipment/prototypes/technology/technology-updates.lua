@@ -113,52 +113,25 @@ then
   end
 end
 
-if data.raw.technology["speed-module-4"] then
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "speed-module-4")
+if data.raw.technology["bob-speed-module-4"] then
+  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "bob-speed-module-4")
 else
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "speed-module-3")
 end
 
-if data.raw.technology["efficiency-module-4"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "efficiency-module-4")
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "efficiency-module-4")
+if data.raw.technology["bob-efficiency-module-4"] then
+  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "bob-efficiency-module-4")
+  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "bob-efficiency-module-4")
 else
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "efficiency-module-3")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "efficiency-module-3")
 end
 
-if data.raw.technology["productivity-module-4"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "productivity-module-4")
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "productivity-module-4")
+if data.raw.technology["bob-productivity-module-4"] then
+  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "bob-productivity-module-4")
+  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "bob-productivity-module-4")
 else
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "productivity-module-3")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "productivity-module-3")
 end
 
-if data.raw.technology["speed-module-6"] then
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-3", "speed-module-6")
-end
-
-if data.raw.technology["efficiency-module-6"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-5", "efficiency-module-6")
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-3", "efficiency-module-6")
-end
-
-if data.raw.technology["productivity-module-6"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-5", "productivity-module-6")
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-3", "productivity-module-6")
-end
-
-if data.raw.technology["speed-module-8"] then
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "speed-module-8")
-end
-
-if data.raw.technology["efficiency-module-8"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-6", "efficiency-module-8")
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "efficiency-module-8")
-end
-
-if data.raw.technology["productivity-module-8"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-6", "productivity-module-8")
-  bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "productivity-module-8")
-end

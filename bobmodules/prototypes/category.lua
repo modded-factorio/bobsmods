@@ -9,14 +9,6 @@ data:extend({
   },
   {
     type = "module-category",
-    name = "raw-productivity",
-  },
-  {
-    type = "module-category",
-    name = "raw-speed",
-  },
-  {
-    type = "module-category",
     name = "green",
   },
   {
@@ -72,39 +64,9 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "raw-speed-module",
-    group = "bobmodules",
-    order = "f-6",
-  },
-  {
-    type = "item-subgroup",
-    name = "raw-speed-module-combine",
-    group = "bobmodules",
-    order = "f-6-1",
-  },
-  {
-    type = "item-subgroup",
     name = "green-module",
     group = "bobmodules",
     order = "f-7",
-  },
-  {
-    type = "item-subgroup",
-    name = "green-module-combine",
-    group = "bobmodules",
-    order = "f-7-1",
-  },
-  {
-    type = "item-subgroup",
-    name = "raw-productivity-module",
-    group = "bobmodules",
-    order = "f-8",
-  },
-  {
-    type = "item-subgroup",
-    name = "raw-productivity-module-combine",
-    group = "bobmodules",
-    order = "f-8-1",
   },
   {
     type = "item-subgroup",
@@ -119,3 +81,14 @@ data:extend({
     order = "f-z",
   },
 })
+
+if mods["quality"] then
+  data:extend({
+    {
+      type = "item-subgroup",
+      name = "quality-module",
+      group = "bobmodules",
+      order = "f-6",
+    },
+  })
+end
