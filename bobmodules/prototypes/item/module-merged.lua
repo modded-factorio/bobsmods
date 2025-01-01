@@ -126,7 +126,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       stack_size = 50,
       effect = {
         pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-        consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
+        consumption = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
         speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
       },
       beacon_tint = {
@@ -149,7 +149,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       effect = {
         productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus,
         pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-        consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
+        consumption = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
         speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
       },
       beacon_tint = {
@@ -175,7 +175,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         effect = {
           quality = 4 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus,
           pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-          consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
+          consumption = -5 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
           speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
         },
         beacon_tint = {
