@@ -353,8 +353,8 @@ data:extend({
   {
     type = "item-subgroup",
     name = "void",
-    group = "other",
-    order = "d",
+    group = "fluids",
+    order = "z",
   },
 })
 
