@@ -532,14 +532,15 @@ data:extend({
 })
 
 if mods["quality"] then
+  data.raw["module"]["quality-module"].icon = "__bobmodules__/graphics/icons/quality-module-1.png"
   data.raw["module"]["quality-module"].effect = {
     quality = bobmods.modules.QualityBonus,
     speed = -bobmods.modules.SpeedPenalty,
   }
-
   data.raw["module"]["quality-module"].subgroup = "quality-module"
   --data.raw["module"]["quality-module"].order = "m-q-1"
 
+  data.raw["module"]["quality-module-2"].icon = "__bobmodules__/graphics/icons/quality-module-2.png"
   data.raw["module"]["quality-module-2"].effect = {
     quality = bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus,
     speed = -bobmods.modules.SpeedPenalty,
@@ -548,11 +549,11 @@ if mods["quality"] then
   data.raw["module"]["quality-module-2"].subgroup = "quality-module"
   --data.raw["module"]["quality-module-2"].order = "m-q-2"
 
+  data.raw["module"]["quality-module-3"].icon = "__bobmodules__/graphics/icons/quality-module-3.png"
   data.raw["module"]["quality-module-3"].effect = {
     quality = 2 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus,
     speed = -bobmods.modules.SpeedPenalty,
   }
-
   data.raw["module"]["quality-module-3"].subgroup = "quality-module"
   --data.raw["module"]["quality-module-3"].order = "m-q-3"
 
@@ -562,7 +563,7 @@ if mods["quality"] then
       name = "bob-quality-module-4",
       localised_name = { "", { "item-name.quality-module" }, " 4" },
       localised_description = { "item-description.quality-module" },
-      icon = "__quality__/graphics/icons/quality-module-3.png",
+      icon = "__bobmodules__/graphics/icons/quality-module-4.png",
       subgroup = "quality-module",
       color_hint = { text = "Q" },
       category = "quality",
@@ -583,7 +584,7 @@ if mods["quality"] then
       name = "bob-quality-module-5",
       localised_name = { "", { "item-name.quality-module" }, " 5" },
       localised_description = { "item-description.quality-module" },
-      icon = "__quality__/graphics/icons/quality-module-3.png",
+      icon = "__bobmodules__/graphics/icons/quality-module-5.png",
       subgroup = "quality-module",
       color_hint = { text = "Q" },
       category = "quality",

@@ -551,6 +551,14 @@ if data.raw.technology["advanced-processing-unit"] then
 end
 
 if mods["quality"] then
+  data.raw.technology["quality-module"].icon = "__bobmodules__/graphics/icons/quality-module-1.png"
+  data.raw.technology["quality-module-2"].icon = "__bobmodules__/graphics/icons/quality-module-2.png"
+  data.raw.technology["quality-module-3"].icon = "__bobmodules__/graphics/icons/quality-module-3.png"
+
+  data.raw.technology["quality-module"].icon_size = 64
+  data.raw.technology["quality-module-2"].icon_size = 64
+  data.raw.technology["quality-module-3"].icon_size = 64
+
   bobmods.lib.tech.remove_prerequisite("quality-module-2", "processing-unit")
   bobmods.lib.tech.add_prerequisite("quality-module-2", "advanced-circuit")
   bobmods.lib.tech.add_prerequisite("quality-module-2", "chemical-science-pack")
@@ -558,9 +566,9 @@ if mods["quality"] then
   bobmods.lib.tech.set_science_pack_count("quality-module-2", 100)
   bobmods.lib.tech.set_science_pack_count("quality-module-3", 150)
 
-  data.raw["technology"]["quality-module"].upgrade = false
-  data.raw["technology"]["quality-module-2"].upgrade = false
-  data.raw["technology"]["quality-module-3"].upgrade = false
+  data.raw.technology["quality-module"].upgrade = false
+  data.raw.technology["quality-module-2"].upgrade = false
+  data.raw.technology["quality-module-3"].upgrade = false
 
   data:extend({
     {
@@ -568,8 +576,8 @@ if mods["quality"] then
       name = "bob-quality-module-4",
       localised_name = { "", { "technology-name.quality-module" }, " 4" },
       localised_description = { "technology-description.quality-module" },
-      icon = "__quality__/graphics/technology/quality-module-3.png",
-      icon_size = 256,
+      icon = "__bobmodules__/graphics/icons/quality-module-4.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
@@ -601,8 +609,8 @@ if mods["quality"] then
       name = "bob-quality-module-5",
       localised_name = { "", { "technology-name.quality-module" }, " 5" },
       localised_description = { "technology-description.quality-module" },
-      icon = "__quality__/graphics/technology/quality-module-3.png",
-      icon_size = 256,
+      icon = "__bobmodules__/graphics/icons/quality-module-5.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
