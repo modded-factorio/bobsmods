@@ -205,3 +205,86 @@ if mods["quality"] then
   bobmods.lib.tech.add_recipe_unlock("quality-module-2", "bob-quality-processor")
   bobmods.lib.tech.add_recipe_unlock("quality-module-3", "bob-quality-processor-2")  
 end
+
+if data.raw.item["alien-artifact"] then
+  local module_names = {
+    "bob-module-processor-board",
+    "bob-module-processor-board-2",
+    "bob-module-processor-board-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "alien-artifact", amount = i * 2 })
+  end
+end
+
+if data.raw.item["bob-ruby-5"] then
+  local module_names = {
+    "bob-productivity-processor",
+    "bob-productivity-processor-2",
+    "bob-productivity-processor-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-ruby-5", amount = i * 2 })
+  end
+  bobmods.lib.tech.add_prerequisite("productivity-module-2", "gem-processing-3")
+end
+
+if data.raw.item["bob-sapphire-5"] then
+  local module_names = {
+    "bob-speed-processor",
+    "bob-speed-processor-2",
+    "bob-speed-processor-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-sapphire-5", amount = i * 2 })
+  end
+  bobmods.lib.tech.add_prerequisite("speed-module-2", "gem-processing-3")
+end
+
+if data.raw.item["bob-emerald-5"] then
+  local module_names = {
+    "bob-efficiency-processor",
+    "bob-efficiency-processor-2",
+    "bob-efficiency-processor-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-emerald-5", amount = i * 2 })
+  end
+  bobmods.lib.tech.add_prerequisite("efficiency-module-2", "gem-processing-3")
+end
+
+if data.raw.item["bob-amethyst-5"] then
+  local module_names = {
+    "bob-pollution-clean-processor",
+    "bob-pollution-clean-processor-2",
+    "bob-pollution-clean-processor-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-amethyst-5", amount = i * 2 })
+  end
+  bobmods.lib.tech.add_prerequisite("bob-pollution-clean-module-2", "gem-processing-3")
+end
+
+if data.raw.item["bob-topaz-5"] then
+  local module_names = {
+    "bob-pollution-create-processor",
+    "bob-pollution-create-processor-2",
+    "bob-pollution-create-processor-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-topaz-5", amount = i * 2 })
+  end
+  bobmods.lib.tech.add_prerequisite("bob-pollution-create-module-2", "gem-processing-3")
+end
+
+if mods["quality"] and data.raw.item["bob-diamond-5"] then
+  local module_names = {
+    "bob-quality-processor",
+    "bob-quality-processor-2",
+    "bob-quality-processor-3",
+  }
+  for i, module_name in pairs(module_names) do
+    bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-diamond-5", amount = i * 2 })
+  end
+  bobmods.lib.tech.add_prerequisite("quality-module-2", "gem-processing-3")
+end
