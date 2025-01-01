@@ -98,7 +98,7 @@ data:extend({
     type = "double-setting",
     name = "bobmods-modules-start-bonus-consumption-",
     setting_type = "startup",
-    default_value = 0.3,
+    default_value = 0.4,
     maximum_value = 1,
     minimum_value = 0,
   },
