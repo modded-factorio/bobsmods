@@ -473,6 +473,13 @@ data:extend({
   },
 })
 
+local qualmod = 2
+if feature_flags["quality"] then
+  qualmod = 1
+else
+  data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_parameters.damage_modifier = 2
+end
+
 local function bob_personal_laser_defense_equipment(inputs)
   return {
     type = "active-defense-equipment",
@@ -496,7 +503,7 @@ local function bob_personal_laser_defense_equipment(inputs)
     attack_parameters = {
       type = "beam",
       cooldown = inputs.cooldown,
-      damage_modifier = 4 * inputs.damage_modifier,
+      damage_modifier = 4 * inputs.damage_modifier * qualmod,
       range = inputs.range,
       ammo_category = "laser",
       ammo_type = {
