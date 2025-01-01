@@ -187,54 +187,59 @@ data:extend({
     group = "production",
     order = "e-e",
   },
-
   {
     type = "item-subgroup",
-    name = "bob-fluid-electrolysis",
+    name = "bob-fluid-oil",
     group = "fluids",
     order = "a-b",
   },
   {
     type = "item-subgroup",
-    name = "bob-fluid-pump",
+    name = "bob-fluid-electrolysis",
     group = "fluids",
     order = "a-c",
   },
   {
     type = "item-subgroup",
-    name = "bob-gas-bottle",
+    name = "bob-fluid-pump",
     group = "fluids",
     order = "a-d",
   },
   {
     type = "item-subgroup",
-    name = "bob-empty-gas-bottle",
-    group = "fluids",
-    order = "a-d2",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-barrel",
+    name = "bob-gas-bottle",
     group = "fluids",
     order = "a-e",
   },
   {
     type = "item-subgroup",
-    name = "bob-empty-barrel",
+    name = "bob-empty-gas-bottle",
     group = "fluids",
     order = "a-e2",
   },
   {
     type = "item-subgroup",
-    name = "bob-canister",
+    name = "bob-barrel",
     group = "fluids",
     order = "a-f",
   },
   {
     type = "item-subgroup",
-    name = "bob-empty-canister",
+    name = "bob-empty-barrel",
     group = "fluids",
     order = "a-f2",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-canister",
+    group = "fluids",
+    order = "a-g",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-empty-canister",
+    group = "fluids",
+    order = "a-g2",
   },
 
   {

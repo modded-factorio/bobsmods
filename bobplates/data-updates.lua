@@ -322,6 +322,19 @@ data.raw.recipe["plastic-bar"].subgroup = "bob-material-chemical"
 data.raw.recipe["uranium-fuel-cell"].subgroup = "bob-fuel-cells"
 data.raw.recipe["nuclear-fuel-reprocessing"].order = "r[uranium-processing]-b[reprocessing]"
 
+for _, recipe_name in pairs({
+  "advanced-oil-processing",
+  "basic-oil-processing",
+  "bob-oil-processing",
+  "carbon-dioxide-oil-processing",
+  "coal-liquefaction",
+}) do
+  local recipe = data.raw.recipe[recipe_name]
+  if recipe then
+    recipe.subgroup = "bob-fluid-oil"
+  end
+end
+
 if feature_flags["quality"] then
   if data.raw.item["alien-blue-alloy"] then
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-blue-alloy", false)
