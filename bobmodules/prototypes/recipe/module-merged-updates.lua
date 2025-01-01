@@ -27,7 +27,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
 
   if data.raw.item["alien-artifact"] then
     bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "alien-artifact", amount = 10 })
-    bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "alien-artifact", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-god-module-productivity",
+      { type = "item", name = "alien-artifact", amount = 10 }
+    )
   end
 
   if mods["quality"] then
@@ -36,7 +39,10 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     end
 
     if data.raw.item["alien-artifact"] then
-      bobmods.lib.recipe.add_ingredient("bob-god-module-quality", { type = "item", name = "alien-artifact", amount = 10 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-god-module-quality",
+        { type = "item", name = "alien-artifact", amount = 10 }
+      )
     end
   end
 end

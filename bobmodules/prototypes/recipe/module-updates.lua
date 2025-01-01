@@ -59,12 +59,18 @@ if data.raw.item["advanced-processing-unit"] then
   )
   if mods["quality"] then
     bobmods.lib.recipe.replace_ingredient("bob-quality-module-4", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.recipe.add_ingredient("bob-quality-module-5", { type = "item", name = "advanced-processing-unit", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-quality-module-5",
+      { type = "item", name = "advanced-processing-unit", amount = 5 }
+    )
   end
 else
   bobmods.lib.recipe.add_ingredient("bob-speed-module-4", { type = "item", name = "advanced-circuit", amount = 5 })
   bobmods.lib.recipe.add_ingredient("bob-efficiency-module-4", { type = "item", name = "advanced-circuit", amount = 5 })
-  bobmods.lib.recipe.add_ingredient("bob-productivity-module-4", { type = "item", name = "advanced-circuit", amount = 5 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-productivity-module-4",
+    { type = "item", name = "advanced-circuit", amount = 5 }
+  )
   bobmods.lib.recipe.add_ingredient(
     "bob-pollution-clean-module-4",
     { type = "item", name = "advanced-circuit", amount = 5 }
@@ -75,7 +81,10 @@ else
   )
   bobmods.lib.recipe.add_ingredient("bob-speed-module-5", { type = "item", name = "processing-unit", amount = 5 })
   bobmods.lib.recipe.add_ingredient("bob-efficiency-module-5", { type = "item", name = "processing-unit", amount = 5 })
-  bobmods.lib.recipe.add_ingredient("bob-productivity-module-5", { type = "item", name = "processing-unit", amount = 5 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-productivity-module-5",
+    { type = "item", name = "processing-unit", amount = 5 }
+  )
   bobmods.lib.recipe.add_ingredient(
     "bob-pollution-clean-module-5",
     { type = "item", name = "processing-unit", amount = 5 }

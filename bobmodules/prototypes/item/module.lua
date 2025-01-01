@@ -6,9 +6,9 @@ data.raw["module"]["speed-module"].icon = "__bobmodules__/graphics/icons/speed-m
 data.raw["module"]["speed-module"].icon_size = 32
 data.raw["module"]["speed-module"].subgroup = "speed-module"
 data.raw["module"]["speed-module"].order = "m-s-1"
-data.raw["module"]["speed-module"].beacon_tint = { 
-  primary = { r = 0, g = 0.34, b = 1, a = 1 }, 
-  secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 }
+data.raw["module"]["speed-module"].beacon_tint = {
+  primary = { r = 0, g = 0.34, b = 1, a = 1 },
+  secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 },
 }
 data.raw["module"]["speed-module"].effect = {
   speed = bobmods.modules.SpeedBonus,
@@ -21,8 +21,8 @@ data.raw["module"]["speed-module-2"].icon_size = 32
 data.raw["module"]["speed-module-2"].subgroup = "speed-module"
 data.raw["module"]["speed-module-2"].order = "m-s-2"
 data.raw["module"]["speed-module-2"].beacon_tint = {
-  primary = { r = 0, g = 0.34, b = 1, a = 1 }, 
-  secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 }
+  primary = { r = 0, g = 0.34, b = 1, a = 1 },
+  secondary = { r = 0.388, g = 0.976, b = 1.000, a = 1.000 },
 }
 data.raw["module"]["speed-module-2"].effect = {
   speed = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
@@ -106,7 +106,7 @@ data.raw["module"]["efficiency-module"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module"].order = "m-e-1"
 data.raw["module"]["efficiency-module"].beacon_tint = {
   primary = { r = 0.3, g = 0.6, b = 0.1 },
-  secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 }
+  secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 },
 }
 data.raw["module"]["efficiency-module"].effect = {
   consumption = -1 * bobmods.modules.ConsumptionBonus,
@@ -118,7 +118,7 @@ data.raw["module"]["efficiency-module-2"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-2"].order = "m-e-2"
 data.raw["module"]["efficiency-module-2"].beacon_tint = {
   primary = { r = 0.3, g = 0.6, b = 0.1 },
-  secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 }
+  secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 },
 }
 data.raw["module"]["efficiency-module-2"].effect = {
   consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
@@ -130,7 +130,7 @@ data.raw["module"]["efficiency-module-3"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-3"].order = "m-e-3"
 data.raw["module"]["efficiency-module-3"].beacon_tint = {
   primary = { r = 0.3, g = 0.6, b = 0.1 },
-  secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 }
+  secondary = { r = 0.370, g = 1.000, b = 0.370, a = 1.000 },
 }
 data.raw["module"]["efficiency-module-3"].effect = {
   consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,

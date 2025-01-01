@@ -477,8 +477,16 @@ if data.raw.module["bob-speed-module-4"] then
 end
 
 if data.raw.module["bob-productivity-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk4-equipment", "productivity-module-3", "bob-productivity-module-4")
-  bobmods.lib.recipe.replace_ingredient("fission-reactor-equipment-2", "productivity-module-3", "bob-productivity-module-4")
+  bobmods.lib.recipe.replace_ingredient(
+    "energy-shield-mk4-equipment",
+    "productivity-module-3",
+    "bob-productivity-module-4"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "fission-reactor-equipment-2",
+    "productivity-module-3",
+    "bob-productivity-module-4"
+  )
 end
 
 if data.raw.item["alien-artifact"] then

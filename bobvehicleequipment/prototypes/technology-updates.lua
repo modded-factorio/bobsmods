@@ -168,7 +168,6 @@ if data.raw.technology["bob-productivity-module-5"] then
   bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-4", "bob-productivity-module-5")
 end
 
-
 if mods["boblogistics"] then
   -- Bob's Logistics mod removes blue science from Electric engine and Robotics
 

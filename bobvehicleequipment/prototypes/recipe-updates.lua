@@ -543,7 +543,11 @@ if data.raw.module["bob-efficiency-module-4"] then
 end
 
 if data.raw.module["bob-productivity-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-4", "productivity-module-3", "bob-productivity-module-4")
+  bobmods.lib.recipe.replace_ingredient(
+    "vehicle-shield-equipment-4",
+    "productivity-module-3",
+    "bob-productivity-module-4"
+  )
 end
 
 if data.raw.module["bob-efficiency-module-5"] then

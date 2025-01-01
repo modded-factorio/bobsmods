@@ -185,6 +185,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         art_style = "vanilla",
         requires_beacon_alt_mode = false,
       },
-    })  
+    })
   end
 end

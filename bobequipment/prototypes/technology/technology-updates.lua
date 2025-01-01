@@ -134,4 +134,3 @@ else
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "productivity-module-3")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "productivity-module-3")
 end
-

@@ -13,7 +13,12 @@ bobmods.modules.PollutionCreatePerLevel = settings.startup["bobmods-modules-perl
 bobmods.modules.SpeedPenaltyPerLevel = settings.startup["bobmods-modules-perlevel-penalty-speed-"].value
 bobmods.modules.PollutionPenaltyPerLevel = settings.startup["bobmods-modules-perlevel-penalty-pollution-"].value
 bobmods.modules.ConsumptionPenaltyPerLevel = settings.startup["bobmods-modules-perlevel-penalty-consumption-"].value
-bobmods.modules.QualityPerLevel = 10 * (settings.startup["bobmods-modules-perlevel-bonus-quality-"] and settings.startup["bobmods-modules-perlevel-bonus-quality-"].value or 0.01)
+bobmods.modules.QualityPerLevel = 10
+  * (
+    settings.startup["bobmods-modules-perlevel-bonus-quality-"]
+      and settings.startup["bobmods-modules-perlevel-bonus-quality-"].value
+    or 0.01
+  )
 
 bobmods.modules.SpeedBonus = settings.startup["bobmods-modules-start-bonus-speed-"].value
 bobmods.modules.PollutionBonus = settings.startup["bobmods-modules-start-bonus-pollution-"].value
@@ -23,7 +28,12 @@ bobmods.modules.PollutionCreateBonus = settings.startup["bobmods-modules-start-b
 bobmods.modules.SpeedPenalty = settings.startup["bobmods-modules-start-penalty-speed-"].value
 bobmods.modules.PollutionPenalty = settings.startup["bobmods-modules-start-penalty-pollution-"].value
 bobmods.modules.ConsumptionPenalty = settings.startup["bobmods-modules-start-penalty-consumption-"].value
-bobmods.modules.QualityBonus = 10 * (settings.startup["bobmods-modules-start-bonus-quality-"] and settings.startup["bobmods-modules-start-bonus-quality-"].value or 0.01)
+bobmods.modules.QualityBonus = 10
+  * (
+    settings.startup["bobmods-modules-start-bonus-quality-"]
+      and settings.startup["bobmods-modules-start-bonus-quality-"].value
+    or 0.01
+  )
 
 require("prototypes.category")
 require("prototypes.beacon")

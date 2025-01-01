@@ -13,7 +13,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       },
       prerequisites = {
         "efficiency-module",
-        "bob-pollution-clean-module-1"
+        "bob-pollution-clean-module-1",
       },
       unit = {
         count = 50,
@@ -38,7 +38,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       prerequisites = {
         "bob-green-module-1",
         "efficiency-module-2",
-        "bob-pollution-clean-module-2"
+        "bob-pollution-clean-module-2",
       },
       unit = {
         count = 100,
@@ -64,7 +64,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       prerequisites = {
         "bob-green-module-2",
         "efficiency-module-3",
-        "bob-pollution-clean-module-3"
+        "bob-pollution-clean-module-3",
       },
       unit = {
         count = 150,
@@ -91,7 +91,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       prerequisites = {
         "bob-green-module-3",
         "bob-efficiency-module-4",
-        "bob-pollution-clean-module-4"
+        "bob-pollution-clean-module-4",
       },
       unit = {
         count = 200,
@@ -119,7 +119,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       prerequisites = {
         "bob-green-module-4",
         "bob-efficiency-module-5",
-        "bob-pollution-clean-module-5"
+        "bob-pollution-clean-module-5",
       },
       unit = {
         count = 250,
