@@ -1,3 +1,8 @@
+local qualmod = 2
+if feature_flags["quality"] then
+  qualmod = 1
+end
+
 local function bob_active_beam_weapon_equipment(data)
   local equipment = {
     type = "active-defense-equipment",
@@ -23,7 +28,7 @@ local function bob_active_beam_weapon_equipment(data)
       type = "beam",
       cooldown = data.cooldown or 20,
       range = data.range or 15,
-      damage_modifier = 4 * data.damage_modifier or 15,
+      damage_modifier = 4 * data.damage_modifier * qualmod or 15,
       ammo_category = "laser",
       ammo_type = {
         energy_consumption = data.energy_consumption,
