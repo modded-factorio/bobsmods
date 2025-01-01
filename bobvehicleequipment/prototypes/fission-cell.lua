@@ -67,6 +67,7 @@ data:extend({
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "nuclear-power",
+      "military-science-pack",
     },
     unit = {
       count = 150,
