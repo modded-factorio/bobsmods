@@ -54,17 +54,17 @@ local function add_big_worm_turret(turret_type, seed)
     util.merge({
       data.raw.turret["big-worm-turret"],
       {
-        name = "bob-big-"..turret_type.."-worm-turret",
+        name = "bob-big-" .. turret_type .. "-worm-turret",
         order = "b-b-g",
-        corpse = "bob-big-"..turret_type.."-worm-corpse",
-        autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(8,"..seed..")"),
-      }
-    })
+        corpse = "bob-big-" .. turret_type .. "-worm-corpse",
+        autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(8," .. seed .. ")"),
+      },
+    }),
   })
 end
 
 local function set_worm_attack_parameters(worm_type)
-  data.raw.turret["bob-big-"..worm_type.."-worm-turret"].attack_parameters = {
+  data.raw.turret["bob-big-" .. worm_type .. "-worm-turret"].attack_parameters = {
     type = "stream",
     damage_modifier = 5,
     cooldown = 4,
@@ -79,7 +79,7 @@ local function set_worm_attack_parameters(worm_type)
         type = "direct",
         action_delivery = {
           type = "stream",
-          stream = "bob-"..worm_type.."-stream",
+          stream = "bob-" .. worm_type .. "-stream",
           source_offset = { 0.15, -0.5 },
         },
       },
@@ -88,7 +88,7 @@ local function set_worm_attack_parameters(worm_type)
 end
 
 local function set_worm_resistance(worm_type, damage_type)
-  data.raw.turret["bob-big-"..worm_type.."-worm-turret"].resistances = {
+  data.raw.turret["bob-big-" .. worm_type .. "-worm-turret"].resistances = {
     {
       type = "physical",
       decrease = 8,
@@ -106,27 +106,32 @@ local function set_worm_resistance(worm_type, damage_type)
   }
 end
 
-local worm_types={"explosive", "fire", "poison", "piercing", "electric"}
-local damage_types={"explosive", "fire", "poison", "bob-pierce", "electric"}
-local tints={bobmods.enemies.explosive_worm_tint, bobmods.enemies.fire_worm_tint, bobmods.enemies.poison_worm_tint, bobmods.enemies.piercing_worm_tint, bobmods.enemies.electric_worm_tint}
-local order={2,3,4,5,6}
-for i,t in pairs(worm_types)
-do
+local worm_types = { "explosive", "fire", "poison", "piercing", "electric" }
+local damage_types = { "explosive", "fire", "poison", "bob-pierce", "electric" }
+local tints = {
+  bobmods.enemies.explosive_worm_tint,
+  bobmods.enemies.fire_worm_tint,
+  bobmods.enemies.poison_worm_tint,
+  bobmods.enemies.piercing_worm_tint,
+  bobmods.enemies.electric_worm_tint,
+}
+local order = { 2, 3, 4, 5, 6 }
+for i, t in pairs(worm_types) do
   --seed is arbitrary but has to be unique
-  add_big_worm_turret(t, tostring(i+2048))
+  add_big_worm_turret(t, tostring(i + 2048))
   set_worm_attack_parameters(t)
   set_worm_resistance(t, damage_types[i])
-  set_worm_animations(data.raw.turret["bob-big-"..t.."-worm-turret"], scale_worm_big, tints[i])
+  set_worm_animations(data.raw.turret["bob-big-" .. t .. "-worm-turret"], scale_worm_big, tints[i])
   data:extend({
     util.merge({
       data.raw.corpse["big-worm-corpse"],
       {
-        name = "bob-big-"..t.."-worm-corpse",
-        order = "c[corpse]-c[worm]-c[big"..tostring(order[i]).."]",
+        name = "bob-big-" .. t .. "-worm-corpse",
+        order = "c[corpse]-c[worm]-c[big" .. tostring(order[i]) .. "]",
       },
-    })
+    }),
   })
-  data.raw.corpse["bob-big-"..t.."-worm-corpse"].animation = worm_die_animation(scale_worm_big, tints[i])
+  data.raw.corpse["bob-big-" .. t .. "-worm-corpse"].animation = worm_die_animation(scale_worm_big, tints[i])
 end
 
 --all worms have explosion resistance, the explosive worm has higher resistance

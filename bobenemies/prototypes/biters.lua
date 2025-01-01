@@ -94,7 +94,7 @@ data:extend({
     movement_speed = 0.17,
     distance_per_frame = 0.2,
     -- in pu
-    absorptions_to_join_attack = { pollution = 100},
+    absorptions_to_join_attack = { pollution = 100 },
     corpse = "bob-big-piercing-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(0.9),
@@ -217,7 +217,7 @@ data:extend({
     movement_speed = 0.16,
     distance_per_frame = 0.15,
     -- in pu
-    absorptions_to_join_attack = { pollution = 125},
+    absorptions_to_join_attack = { pollution = 125 },
     corpse = "bob-huge-acid-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.2),
@@ -340,7 +340,7 @@ data:extend({
     movement_speed = 0.16,
     distance_per_frame = 0.15,
     -- in pu
-    absorptions_to_join_attack = { pollution = 125},
+    absorptions_to_join_attack = { pollution = 125 },
     corpse = "bob-huge-explosive-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.2),
@@ -475,7 +475,7 @@ data:extend({
     movement_speed = 0.12,
     distance_per_frame = 0.2,
     -- in pu
-    absorptions_to_join_attack = { pollution = 200},
+    absorptions_to_join_attack = { pollution = 200 },
     corpse = "bob-giant-poison-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.5),
@@ -605,7 +605,7 @@ data:extend({
     movement_speed = 0.12,
     distance_per_frame = 0.2,
     -- in pu
-    absorptions_to_join_attack = { pollution = 200},
+    absorptions_to_join_attack = { pollution = 200 },
     corpse = "bob-giant-fire-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.5),
@@ -743,7 +743,7 @@ data:extend({
     movement_speed = 0.15,
     distance_per_frame = 0.2,
     -- in pu
-    absorptions_to_join_attack = { pollution = 300},
+    absorptions_to_join_attack = { pollution = 300 },
     corpse = "bob-titan-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.5),
@@ -887,7 +887,7 @@ data:extend({
     movement_speed = 0.2,
     distance_per_frame = 0.2,
     -- in pu
-    absorptions_to_join_attack = { pollution = 500},
+    absorptions_to_join_attack = { pollution = 500 },
     corpse = "bob-behemoth-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.5),
@@ -1049,7 +1049,7 @@ data:extend({
     movement_speed = 0.2,
     distance_per_frame = 0.2,
     -- in pu
-    absorptions_to_join_attack = { pollution = 1000},
+    absorptions_to_join_attack = { pollution = 1000 },
     corpse = "bob-leviathan-biter-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = sounds.biter_calls_big(1.5),
