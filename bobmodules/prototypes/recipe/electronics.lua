@@ -19,6 +19,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 1 },
+      { type = "item", name = "copper-cable", amount = 3 },
     },
     results = { { type = "item", name = "bob-module-contact", amount = 5 } },
     allow_productivity = true,
@@ -49,6 +50,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "copper-plate", amount = 1 },
       { type = "item", name = "plastic-bar", amount = 1 },
+      { type = "item", name = "bob-module-contact", amount = 5 },
     },
     results = { { type = "item", name = "bob-module-processor-board", amount = 4 } },
     allow_productivity = true,
@@ -77,6 +79,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "copper-plate", amount = 2 },
       { type = "item", name = "plastic-bar", amount = 1 },
+      { type = "item", name = "bob-module-contact", amount = 5 },
     },
     results = { { type = "item", name = "bob-module-processor-board-3", amount = 4 } },
     allow_productivity = true,

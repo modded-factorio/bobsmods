@@ -3,12 +3,18 @@ if data.raw.item["tin-plate"] then
   bobmods.lib.recipe.add_ingredient("bob-module-processor-board", { type = "item", name = "tin-plate", amount = 1 })
 end
 
+if data.raw.item["silver-plate"] then
+  bobmods.lib.recipe.add_ingredient("bob-module-processor-board-2", { type = "item", name = "silver-plate", amount = 1 })
+  bobmods.lib.tech.add_prerequisite("processing-unit", "lead-processing")
+end
+
 if data.raw.item["bob-gold-plate"] then
-  bobmods.lib.recipe.add_ingredient("bob-module-contact", { type = "item", name = "bob-gold-plate", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-module-processor-board-2", { type = "item", name = "bob-gold-plate", amount = 1 })
   bobmods.lib.recipe.add_ingredient("bob-module-processor-board-3", { type = "item", name = "bob-gold-plate", amount = 2 })
-  bobmods.lib.tech.add_prerequisite("modules", "gold-processing")
   bobmods.lib.tech.add_prerequisite("processing-unit", "gold-processing")
+end
+
+if data.raw.item["tinned-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("bob-module-contact", "copper-cable", "tinned-copper-cable")
 end
 
 if data.raw.item["phenolic-board"] then
