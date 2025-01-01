@@ -392,15 +392,7 @@ data:extend({
   {
     type = "item-subgroup",
     name = "bob-gems-polished",
-    group = "dytechgem",
     group = "bob-gems",
     order = "6",
   },
 })
-
-if data.raw["item-group"]["dytechgem"] then
-  data.raw["item-subgroup"]["bob-gems-ore"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-raw"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-cut"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-polished"].group = "dytechgem"
-end
