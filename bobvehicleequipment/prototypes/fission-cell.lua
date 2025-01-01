@@ -28,9 +28,9 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "advanced-circuit", amount = 15 },
-      { type = "item", name = "steel-plate", amount = 40 },
-      { type = "item", name = "uranium-fuel-cell", amount = 3 },
+      { type = "item", name = "advanced-circuit", amount = 30 },
+      { type = "item", name = "steel-plate", amount = 60 },
+      { type = "item", name = "uranium-fuel-cell", amount = 6 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 } },
   },
@@ -74,6 +74,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
       },
     },
@@ -117,9 +118,9 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 },
-      { type = "item", name = "advanced-circuit", amount = 15 },
-      { type = "item", name = "steel-plate", amount = 40 },
-      { type = "item", name = "uranium-fuel-cell", amount = 3 },
+      { type = "item", name = "advanced-circuit", amount = 30 },
+      { type = "item", name = "steel-plate", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 6 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-2", amount = 1 } },
   },
@@ -163,6 +164,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
       },
@@ -207,8 +209,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-2", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "uranium-fuel-cell", amount = 12 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "uranium-fuel-cell", amount = 18 },
       { type = "item", name = "low-density-structure", amount = 25 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-3", amount = 1 } },
@@ -253,6 +255,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
       },
@@ -297,8 +300,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-3", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "uranium-fuel-cell", amount = 18 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "uranium-fuel-cell", amount = 24 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-4", amount = 1 } },
   },
@@ -342,6 +345,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -387,8 +391,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-4", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "uranium-fuel-cell", amount = 24 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "uranium-fuel-cell", amount = 30 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-5", amount = 1 } },
   },
@@ -431,6 +435,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -476,7 +481,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-5", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "processing-unit", amount = 75 },
       { type = "item", name = "uranium-fuel-cell", amount = 48 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-6", amount = 1 } },
@@ -521,6 +526,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
