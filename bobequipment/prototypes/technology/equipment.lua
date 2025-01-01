@@ -14,7 +14,6 @@ data:extend({
       icon_size = 128,
     }),
     prerequisites = {
-      "processing-unit",
       "energy-shield-mk2-equipment",
       "productivity-module-2",
       "production-science-pack",
@@ -47,6 +46,8 @@ data:extend({
     }),
     prerequisites = {
       "bob-energy-shield-equipment-3",
+      "efficiency-module-3",
+      "productivity-module-3",
     },
     unit = {
       count = 300,
@@ -262,6 +263,10 @@ data.raw["technology"]["fission-reactor-equipment"].icons = bobmods.equipment.te
 })
 bobmods.lib.tech.remove_science_pack("fission-reactor-equipment", "military-science-pack")
 bobmods.lib.tech.remove_prerequisite("fission-reactor-equipment", "military-science-pack")
+bobmods.lib.tech.remove_science_pack("fission-reactor-equipment", "utility-science-pack")
+bobmods.lib.tech.remove_prerequisite("fission-reactor-equipment", "utility-science-pack")
+bobmods.lib.tech.add_science_pack("fission-reactor-equipment", "production-science-pack", 1)
+bobmods.lib.tech.add_prerequisite("fission-reactor-equipment", "production-science-pack")
 
 data:extend({
   {
@@ -273,7 +278,7 @@ data:extend({
     }),
     prerequisites = {
       "fission-reactor-equipment",
-      "production-science-pack",
+      "low-density-structure",
     },
     effects = {
       {
@@ -289,7 +294,6 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
       },
     },
   },
@@ -303,6 +307,7 @@ data:extend({
     }),
     prerequisites = {
       "fission-reactor-equipment-2",
+      "utility-science-pack"
     },
     effects = {
       {
@@ -318,7 +323,6 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "military-science-pack", 1 },
         { "utility-science-pack", 1 },
       },
     },
@@ -333,6 +337,7 @@ data:extend({
     }),
     prerequisites = {
       "fission-reactor-equipment-3",
+      "space-science-pack"
     },
     effects = {
       {
@@ -348,8 +353,8 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "military-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
   },
@@ -415,6 +420,11 @@ data:extend({
   },
 })
 
+data.raw.technology["solar-panel-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+  icon = "__base__/graphics/technology/solar-panel-equipment.png",
+  icon_size = 256,
+})
+
 data:extend({
   {
     type = "technology",
@@ -474,36 +484,75 @@ data:extend({
     },
   },
 
-  {
-    type = "technology",
-    name = "solar-panel-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_equipment({
-      icon = "__base__/graphics/technology/solar-panel-equipment.png",
-      icon_size = 256,
-    }),
-    prerequisites = {
-      "solar-panel-equipment-3",
-      "utility-science-pack",
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "solar-panel-equipment-4",
-      },
-    },
-    unit = {
-      count = 100,
-      time = 45,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-      },
-    },
-  },
 })
+
+if data.raw.item["alien-artifact"] then
+  data:extend({
+    {
+      type = "technology",
+      name = "solar-panel-equipment-4",
+      icons = bobmods.equipment.technology_icon_constant_equipment({
+        icon = "__base__/graphics/technology/solar-panel-equipment.png",
+        icon_size = 256,
+      }),
+      prerequisites = {
+        "solar-panel-equipment-3",
+        "utility-science-pack",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "solar-panel-equipment-4",
+        },
+      },
+      unit = {
+        count = 100,
+        time = 45,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+        },
+      },
+    },
+  })
+  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+    data:extend({
+      {
+        type = "technology",
+        name = "solar-panel-equipment-5",
+        icons = bobmods.equipment.technology_icon_constant_equipment({
+          icon = "__base__/graphics/technology/solar-panel-equipment.png",
+          icon_size = 256,
+        }),
+        prerequisites = {
+          "solar-panel-equipment-4",
+          "alien-orange-research",
+          "alien-purple-research"
+        },
+        effects = {
+          {
+            type = "unlock-recipe",
+            recipe = "solar-panel-equipment-5",
+          },
+        },
+        unit = {
+          count = 200,
+          time = 45,
+          ingredients = {
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 },
+            { "chemical-science-pack", 1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack", 1 },
+          },
+        },
+      },
+    })
+  end
+end
 
 data.raw["technology"]["personal-laser-defense-equipment"].icons =
   bobmods.equipment.technology_icon_constant_equipment({
@@ -512,8 +561,9 @@ data.raw["technology"]["personal-laser-defense-equipment"].icons =
   })
 bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "low-density-structure")
 bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "military-3")
+bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "power-armor")
+bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment", "modular-armor")
 if not mods["bobwarfare"] then
-  bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "power-armor")
   bobmods.lib.tech.remove_prerequisite("personal-laser-defense-equipment", "laser-turret")
   bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment", "military-science-pack")
   bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment", "laser")
@@ -534,7 +584,7 @@ data:extend({
       icon_size = 128,
     }),
     prerequisites = {
-      "chemical-science-pack",
+      "military-3",
       "personal-laser-defense-equipment",
     },
     effects = {
@@ -549,8 +599,8 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
   },
@@ -563,9 +613,7 @@ data:extend({
       icon_size = 128,
     }),
     prerequisites = {
-      "processing-unit",
       "personal-laser-defense-equipment-2",
-      "production-science-pack",
     },
     effects = {
       {
@@ -574,14 +622,13 @@ data:extend({
       },
     },
     unit = {
-      count = 250,
+      count = 200,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
   },
@@ -595,6 +642,8 @@ data:extend({
     }),
     prerequisites = {
       "personal-laser-defense-equipment-3",
+      "processing-unit",
+      "production-science-pack",
     },
     effects = {
       {
@@ -603,13 +652,13 @@ data:extend({
       },
     },
     unit = {
-      count = 300,
+      count = 250,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
       },
     },
@@ -655,6 +704,8 @@ data:extend({
     }),
     prerequisites = {
       "personal-laser-defense-equipment-5",
+      "speed-module-3",
+      "efficiency-module-3",
     },
     effects = {
       {
@@ -679,6 +730,10 @@ data:extend({
 
 bobmods.lib.tech.remove_prerequisite("exoskeleton-equipment", "processing-unit")
 bobmods.lib.tech.add_prerequisite("exoskeleton-equipment", "advanced-circuit")
+data.raw.technology["exoskeleton-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+  icon = "__base__/graphics/technology/exoskeleton-equipment.png",
+  icon_size = 256,
+}),
 
 data:extend({
   {
@@ -691,6 +746,7 @@ data:extend({
     prerequisites = {
       "exoskeleton-equipment",
       "processing-unit",
+      "speed-module-2",
     },
     effects = {
       {
@@ -717,7 +773,7 @@ data:extend({
     }),
     prerequisites = {
       "exoskeleton-equipment-2",
-      "production-science-pack",
+      "speed-module-3",
     },
     effects = {
       {

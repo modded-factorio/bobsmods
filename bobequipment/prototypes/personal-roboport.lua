@@ -219,7 +219,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-k-d-zz3",
   },
   {
     type = "technology",
@@ -249,7 +248,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-k-d-zz4",
   },
 })
 
@@ -1170,7 +1168,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "electronic-circuit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 20 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
@@ -1345,7 +1343,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-k-d-zzz1",
   },
   {
     type = "technology",
@@ -1381,7 +1378,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-k-d-zzz2",
   },
   {
     type = "technology",
@@ -1418,7 +1414,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-k-d-zzz3",
   },
   {
     type = "technology",
@@ -1456,6 +1451,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-k-d-zzz4",
   },
 })

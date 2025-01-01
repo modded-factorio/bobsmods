@@ -11,9 +11,9 @@
     ["vehicle-big-turret-1", "vehicle-big-turret-equipment-1"],
     ["vehicle-big-turret-2", "vehicle-big-turret-equipment-2"],
     ["vehicle-big-turret-3", "vehicle-big-turret-equipment-3"],
-    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-4"],
-    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-5"],
-    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-6"],
+    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-4"],
 
     ["vehicle-engine", "vehicle-engine-equipment"],
 
@@ -57,7 +57,7 @@
     ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
     ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
     ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
-    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-5"]
   ],
   "equipment":
   [
@@ -71,9 +71,9 @@
     ["vehicle-big-turret-1", "vehicle-big-turret-equipment-1"],
     ["vehicle-big-turret-2", "vehicle-big-turret-equipment-2"],
     ["vehicle-big-turret-3", "vehicle-big-turret-equipment-3"],
-    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-4"],
-    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-5"],
-    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-6"],
+    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-4"],
 
     ["vehicle-engine", "vehicle-engine-equipment"],
 
@@ -117,7 +117,7 @@
     ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
     ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
     ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
-    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-5"]
   ],
   "recipe":
   [
@@ -131,9 +131,9 @@
     ["vehicle-big-turret-1", "vehicle-big-turret-equipment-1"],
     ["vehicle-big-turret-2", "vehicle-big-turret-equipment-2"],
     ["vehicle-big-turret-3", "vehicle-big-turret-equipment-3"],
-    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-4"],
-    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-5"],
-    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-6"],
+    ["vehicle-big-turret-4", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-5", "vehicle-big-turret-equipment-3"],
+    ["vehicle-big-turret-6", "vehicle-big-turret-equipment-4"],
 
     ["vehicle-engine", "vehicle-engine-equipment"],
 
@@ -177,7 +177,7 @@
     ["vehicle-solar-panel-3", "vehicle-solar-panel-equipment-3"],
     ["vehicle-solar-panel-4", "vehicle-solar-panel-equipment-4"],
     ["vehicle-solar-panel-5", "vehicle-solar-panel-equipment-5"],
-    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-6"]
+    ["vehicle-solar-panel-6", "vehicle-solar-panel-equipment-5"]
   ],
   "technology":
   [

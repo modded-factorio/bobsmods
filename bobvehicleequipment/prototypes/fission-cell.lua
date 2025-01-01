@@ -28,7 +28,9 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "processing-unit", amount = 125 },
+      { type = "item", name = "advanced-circuit", amount = 15 },
+      { type = "item", name = "steel-plate", amount = 40 },
+      { type = "item", name = "uranium-fuel-cell", amount = 3 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 } },
   },
@@ -51,7 +53,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "200kW",
+    power = "100kW",
     categories = { "vehicle" },
   },
 
@@ -64,10 +66,10 @@ data:extend({
     }),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
-      "processing-unit",
+      "nuclear-power",
     },
     unit = {
-      count = 100,
+      count = 150,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -115,10 +117,9 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "efficiency-module-2", amount = 1 },
-      { type = "item", name = "speed-module-2", amount = 1 },
-      { type = "item", name = "productivity-module-2", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 15 },
+      { type = "item", name = "steel-plate", amount = 40 },
+      { type = "item", name = "uranium-fuel-cell", amount = 3 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-2", amount = 1 } },
   },
@@ -141,7 +142,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "300kW",
+    power = "200kW",
     categories = { "vehicle" },
   },
 
@@ -157,7 +158,7 @@ data:extend({
       "production-science-pack",
     },
     unit = {
-      count = 125,
+      count = 200,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -207,9 +208,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "efficiency-module-3", amount = 1 },
-      { type = "item", name = "speed-module-3", amount = 1 },
-      { type = "item", name = "productivity-module-3", amount = 1 },
+      { type = "item", name = "uranium-fuel-cell", amount = 12 },
+      { type = "item", name = "low-density-structure", amount = 25 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-3", amount = 1 } },
   },
@@ -232,7 +232,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "450kW",
+    power = "400kW",
     categories = { "vehicle" },
   },
 
@@ -245,17 +245,16 @@ data:extend({
     }),
     prerequisites = {
       "vehicle-fission-cell-equipment-2",
-      "utility-science-pack",
+      "low-density-structure",
     },
     unit = {
-      count = 150,
+      count = 250,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
       },
     },
     effects = {
@@ -299,9 +298,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "efficiency-module-3", amount = 1 },
-      { type = "item", name = "speed-module-3", amount = 1 },
-      { type = "item", name = "productivity-module-3", amount = 1 },
+      { type = "item", name = "uranium-fuel-cell", amount = 18 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-4", amount = 1 } },
   },
@@ -324,7 +321,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "650kW",
+    power = "700kW",
     categories = { "vehicle" },
   },
 
@@ -337,9 +334,10 @@ data:extend({
     }),
     prerequisites = {
       "vehicle-fission-cell-equipment-3",
+      "utility-science-pack",
     },
     unit = {
-      count = 200,
+      count = 300,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -390,9 +388,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "efficiency-module-3", amount = 1 },
-      { type = "item", name = "speed-module-3", amount = 1 },
-      { type = "item", name = "productivity-module-3", amount = 1 },
+      { type = "item", name = "uranium-fuel-cell", amount = 24 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-5", amount = 1 } },
   },
@@ -415,7 +411,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "900kW",
+    power = "1050kW",
     categories = { "vehicle" },
   },
 
@@ -430,7 +426,7 @@ data:extend({
       "vehicle-fission-cell-equipment-4",
     },
     unit = {
-      count = 250,
+      count = 350,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -480,10 +476,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-cell-equipment-5", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 25 },
-      { type = "item", name = "efficiency-module-3", amount = 1 },
-      { type = "item", name = "speed-module-3", amount = 1 },
-      { type = "item", name = "productivity-module-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "uranium-fuel-cell", amount = 48 },
     },
     results = { { type = "item", name = "vehicle-fission-cell-equipment-6", amount = 1 } },
   },
@@ -506,7 +500,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "1200kW",
+    power = "1600kW",
     categories = { "vehicle" },
   },
 
@@ -519,9 +513,10 @@ data:extend({
     }),
     prerequisites = {
       "vehicle-fission-cell-equipment-5",
+      "space-science-pack",
     },
     unit = {
-      count = 300,
+      count = 400,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
@@ -529,6 +524,7 @@ data:extend({
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
     effects = {
