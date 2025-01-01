@@ -10,49 +10,6 @@ local function set_worm_animations(entiy, scale, tint)
   entiy.folding_animation = worm_preparing_animation(scale, tint, "backward")
 end
 
-data:extend({
-  util.merge({
-    data.raw.turret["big-worm-turret"],
-    {
-      name = "bob-big-explosive-worm-turret",
-      order = "b-b-g",
-      corpse = "bob-big-explosive-worm-corpse",
-    },
-  }),
-  util.merge({
-    data.raw.turret["big-worm-turret"],
-    {
-      name = "bob-big-fire-worm-turret",
-      order = "b-b-g",
-      corpse = "bob-big-fire-worm-corpse",
-    },
-  }),
-  util.merge({
-    data.raw.turret["big-worm-turret"],
-    {
-      name = "bob-big-poison-worm-turret",
-      order = "b-b-g",
-      corpse = "bob-big-poison-worm-corpse",
-    },
-  }),
-  util.merge({
-    data.raw.turret["big-worm-turret"],
-    {
-      name = "bob-big-piercing-worm-turret",
-      order = "b-b-g",
-      corpse = "bob-big-piercing-worm-corpse",
-    },
-  }),
-  util.merge({
-    data.raw.turret["big-worm-turret"],
-    {
-      name = "bob-big-electric-worm-turret",
-      order = "b-b-h",
-      corpse = "bob-big-electric-worm-corpse",
-    },
-  }),
-})
-
 set_worm_animations(data.raw.turret["big-worm-turret"], scale_worm_big, bobmods.enemies.acid_worm_tint)
 data.raw.turret["big-worm-turret"].resistances = {
   {
@@ -79,8 +36,8 @@ data.raw.turret["big-worm-turret"].attack_parameters = {
   projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
   use_shooter_direction = true,
   lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
+  ammo_category = "biological",
   ammo_type = {
-    category = "biological",
     action = {
       type = "direct",
       action_delivery = {
@@ -92,11 +49,87 @@ data.raw.turret["big-worm-turret"].attack_parameters = {
   },
 }
 
-set_worm_animations(
-  data.raw.turret["bob-big-explosive-worm-turret"],
-  scale_worm_big,
-  bobmods.enemies.explosive_worm_tint
-)
+local function add_big_worm_turret(turret_type, seed)
+  data:extend({
+    util.merge({
+      data.raw.turret["big-worm-turret"],
+      {
+        name = "bob-big-"..turret_type.."-worm-turret",
+        order = "b-b-g",
+        corpse = "bob-big-"..turret_type.."-worm-corpse",
+        autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(8,"..seed..")"),
+      }
+    })
+  })
+end
+
+local function set_worm_attack_parameters(worm_type)
+  data.raw.turret["bob-big-"..worm_type.."-worm-turret"].attack_parameters = {
+    type = "stream",
+    damage_modifier = 5,
+    cooldown = 4,
+    range = 38,
+    min_range = 0,
+    projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
+    use_shooter_direction = true,
+    lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
+    ammo_category = "biological",
+    ammo_type = {
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "stream",
+          stream = "bob-"..worm_type.."-stream",
+          source_offset = { 0.15, -0.5 },
+        },
+      },
+    },
+  }
+end
+
+local function set_worm_resistance(worm_type, damage_type)
+  data.raw.turret["bob-big-"..worm_type.."-worm-turret"].resistances = {
+    {
+      type = "physical",
+      decrease = 8,
+    },
+    {
+      type = "explosion",
+      decrease = 10,
+      percent = 25,
+    },
+    {
+      type = damage_type,
+      decrease = 5,
+      percent = 40,
+    },
+  }
+end
+
+local worm_types={"explosive", "fire", "poison", "piercing", "electric"}
+local damage_types={"explosive", "fire", "poison", "bob-pierce", "electric"}
+local tints={bobmods.enemies.explosive_worm_tint, bobmods.enemies.fire_worm_tint, bobmods.enemies.poison_worm_tint, bobmods.enemies.piercing_worm_tint, bobmods.enemies.electric_worm_tint}
+local order={2,3,4,5,6}
+for i,t in pairs(worm_types)
+do
+  --seed is arbitrary but has to be unique
+  add_big_worm_turret(t, tostring(i+2048))
+  set_worm_attack_parameters(t)
+  set_worm_resistance(t, damage_types[i])
+  set_worm_animations(data.raw.turret["bob-big-"..t.."-worm-turret"], scale_worm_big, tints[i])
+  data:extend({
+    util.merge({
+      data.raw.corpse["big-worm-corpse"],
+      {
+        name = "bob-big-"..t.."-worm-corpse",
+        order = "c[corpse]-c[worm]-c[big"..tostring(order[i]).."]",
+      },
+    })
+  })
+  data.raw.corpse["bob-big-"..t.."-worm-corpse"].animation = worm_die_animation(scale_worm_big, tints[i])
+end
+
+--all worms have explosion resistance, the explosive worm has higher resistance
 data.raw.turret["bob-big-explosive-worm-turret"].resistances = {
   {
     type = "physical",
@@ -108,233 +141,8 @@ data.raw.turret["bob-big-explosive-worm-turret"].resistances = {
     percent = 50,
   },
 }
-data.raw.turret["bob-big-explosive-worm-turret"].attack_parameters = {
-  type = "stream",
-  damage_modifier = 5,
-  cooldown = 4,
-  range = 38,
-  min_range = 0,
-  projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
-  use_shooter_direction = true,
-  lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-  ammo_type = {
-    category = "biological",
-    action = {
-      type = "direct",
-      action_delivery = {
-        type = "stream",
-        stream = "bob-explosive-stream",
-        source_offset = { 0.15, -0.5 },
-      },
-    },
-  },
-}
-
-set_worm_animations(data.raw.turret["bob-big-fire-worm-turret"], scale_worm_big, bobmods.enemies.fire_worm_tint)
-data.raw.turret["bob-big-fire-worm-turret"].resistances = {
-  {
-    type = "physical",
-    decrease = 8,
-  },
-  {
-    type = "explosion",
-    decrease = 10,
-    percent = 25,
-  },
-  {
-    type = "fire",
-    decrease = 5,
-    percent = 40,
-  },
-}
-data.raw.turret["bob-big-fire-worm-turret"].attack_parameters = {
-  type = "stream",
-  damage_modifier = 5,
-  cooldown = 4,
-  range = 38,
-  min_range = 0,
-  projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
-  use_shooter_direction = true,
-  lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-  ammo_type = {
-    category = "biological",
-    action = {
-      type = "direct",
-      action_delivery = {
-        type = "stream",
-        stream = "bob-fire-stream",
-        source_offset = { 0.15, -0.5 },
-      },
-    },
-  },
-}
-
-set_worm_animations(data.raw.turret["bob-big-poison-worm-turret"], scale_worm_big, bobmods.enemies.poison_worm_tint)
-data.raw.turret["bob-big-poison-worm-turret"].resistances = {
-  {
-    type = "physical",
-    decrease = 8,
-  },
-  {
-    type = "explosion",
-    decrease = 10,
-    percent = 25,
-  },
-  {
-    type = "poison",
-    decrease = 5,
-    percent = 40,
-  },
-}
-data.raw.turret["bob-big-poison-worm-turret"].attack_parameters = {
-  type = "stream",
-  damage_modifier = 5,
-  cooldown = 4,
-  range = 38,
-  min_range = 0,
-  projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
-  use_shooter_direction = true,
-  lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-  ammo_type = {
-    category = "biological",
-    action = {
-      type = "direct",
-      action_delivery = {
-        type = "stream",
-        stream = "bob-poison-stream",
-        source_offset = { 0.15, -0.5 },
-      },
-    },
-  },
-}
-
-set_worm_animations(data.raw.turret["bob-big-piercing-worm-turret"], scale_worm_big, bobmods.enemies.piercing_worm_tint)
-data.raw.turret["bob-big-piercing-worm-turret"].resistances = {
-  {
-    type = "physical",
-    decrease = 8,
-  },
-  {
-    type = "explosion",
-    decrease = 10,
-    percent = 25,
-  },
-  {
-    type = "bob-pierce",
-    decrease = 5,
-    percent = 40,
-  },
-}
-data.raw.turret["bob-big-piercing-worm-turret"].attack_parameters = {
-  type = "stream",
-  damage_modifier = 5,
-  cooldown = 4,
-  range = 38,
-  min_range = 0,
-  projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
-  use_shooter_direction = true,
-  lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-  ammo_type = {
-    category = "biological",
-    action = {
-      type = "direct",
-      action_delivery = {
-        type = "stream",
-        stream = "bob-piercing-stream",
-        source_offset = { 0.15, -0.5 },
-      },
-    },
-  },
-}
-
-set_worm_animations(data.raw.turret["bob-big-electric-worm-turret"], scale_worm_big, bobmods.enemies.electric_worm_tint)
-data.raw.turret["bob-big-electric-worm-turret"].resistances = {
-  {
-    type = "physical",
-    decrease = 8,
-  },
-  {
-    type = "explosion",
-    decrease = 10,
-    percent = 25,
-  },
-  {
-    type = "electric",
-    decrease = 5,
-    percent = 40,
-  },
-}
-data.raw.turret["bob-big-electric-worm-turret"].attack_parameters = {
-  type = "stream",
-  damage_modifier = 5,
-  cooldown = 4,
-  range = 38,
-  min_range = 0,
-  projectile_creation_parameters = worm_shoot_shiftings(scale_worm_big, scale_worm_big * scale_worm_stream),
-  use_shooter_direction = true,
-  lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
-  ammo_type = {
-    category = "biological",
-    action = {
-      type = "direct",
-      action_delivery = {
-        type = "stream",
-        stream = "bob-electric-stream",
-        source_offset = { 0.15, -0.5 },
-      },
-    },
-  },
-}
-
-data:extend({
-  util.merge({
-    data.raw.corpse["big-worm-corpse"],
-    {
-      name = "bob-big-explosive-worm-corpse",
-      order = "c[corpse]-c[worm]-c[big2]",
-    },
-  }),
-  util.merge({
-    data.raw.corpse["big-worm-corpse"],
-    {
-      name = "bob-big-fire-worm-corpse",
-      order = "c[corpse]-c[worm]-c[big3]",
-    },
-  }),
-  util.merge({
-    data.raw.corpse["big-worm-corpse"],
-    {
-      name = "bob-big-poison-worm-corpse",
-      order = "c[corpse]-c[worm]-c[big4]",
-    },
-  }),
-  util.merge({
-    data.raw.corpse["big-worm-corpse"],
-    {
-      name = "bob-big-piercing-worm-corpse",
-      order = "c[corpse]-c[worm]-c[big5]",
-    },
-  }),
-  util.merge({
-    data.raw.corpse["big-worm-corpse"],
-    {
-      name = "bob-big-electric-worm-corpse",
-      order = "c[corpse]-c[worm]-c[big6]",
-    },
-  }),
-})
 
 data.raw.corpse["big-worm-corpse"].animation = worm_die_animation(scale_worm_big, bobmods.enemies.acid_worm_tint)
-data.raw.corpse["bob-big-explosive-worm-corpse"].animation =
-  worm_die_animation(scale_worm_big, bobmods.enemies.explosive_worm_tint)
-data.raw.corpse["bob-big-fire-worm-corpse"].animation =
-  worm_die_animation(scale_worm_big, bobmods.enemies.fire_worm_tint)
-data.raw.corpse["bob-big-poison-worm-corpse"].animation =
-  worm_die_animation(scale_worm_big, bobmods.enemies.poison_worm_tint)
-data.raw.corpse["bob-big-piercing-worm-corpse"].animation =
-  worm_die_animation(scale_worm_big, bobmods.enemies.piercing_worm_tint)
-data.raw.corpse["bob-big-electric-worm-corpse"].animation =
-  worm_die_animation(scale_worm_big, bobmods.enemies.electric_worm_tint)
 
 data:extend({
   {
@@ -371,6 +179,7 @@ data:extend({
     corpse = "bob-giant-worm-corpse",
     dying_explosion = "blood-explosion-big",
     dying_sound = sounds.worm_dying(1.0),
+    graphics_set = {},
     folded_speed = 0.01,
     folded_speed_secondary = 0.024,
     folded_animation = worm_folded_animation(bobmods.enemies.giant_scale, bobmods.enemies.giant_worm_tint),
@@ -408,8 +217,7 @@ data:extend({
       "backward"
     ),
     folding_sound = sounds.worm_fold(1),
-    integration = worm_integration(bobmods.enemies.giant_scale),
-    secondary_animation = true,
+    integration = worm_integration(bobmods.enemies.giant_scale, true),
     random_animation_offset = true,
     attack_from_start_frame = true,
     prepare_range = 70,
@@ -428,7 +236,6 @@ data:extend({
       use_shooter_direction = true,
       lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
       ammo_type = {
-        category = "biological",
         action = {
           type = "direct",
           action_delivery = {
@@ -440,7 +247,7 @@ data:extend({
       },
     },
     build_base_evolution_requirement = 0.75,
-    autoplace = enemy_autoplace.enemy_worm_autoplace(7),
+    autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(7, 10)"),
     call_for_help_radius = 40,
   },
 
@@ -461,7 +268,7 @@ set_worm_animations(data.raw.turret["behemoth-worm-turret"], bobmods.enemies.beh
 data.raw.turret["behemoth-worm-turret"].collision_box = { { -2.8, -2.4 }, { 2.8, 2.4 } }
 data.raw.turret["behemoth-worm-turret"].selection_box = { { -2.8, -2.4 }, { 2.8, 2.4 } }
 data.raw.turret["behemoth-worm-turret"].map_generator_bounding_box = { { -3.8, -3.4 }, { 3.8, 3.4 } }
-data.raw.turret["behemoth-worm-turret"].integration = worm_integration(bobmods.enemies.behemoth_scale)
+data.raw.turret["behemoth-worm-turret"].integration = worm_integration(bobmods.enemies.behemoth_scale, true)
 data.raw.turret["behemoth-worm-turret"].max_health = 1500
 data.raw.turret["behemoth-worm-turret"].shooting_cursor_size = 8
 
