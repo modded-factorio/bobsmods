@@ -39,11 +39,6 @@ data:extend({
   },
 })
 
-if data.raw["item-subgroup"]["bob-fluid"] then
-  data.raw.recipe["ferric-chloride-solution"].subgroup = "bob-fluid"
-  data.raw.fluid["ferric-chloride-solution"].subgroup = "bob-fluid"
-end
-
 data:extend({
   {
     type = "recipe",

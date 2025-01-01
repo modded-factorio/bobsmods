@@ -187,9 +187,9 @@ else
   )
 end
 
-data.raw["item-subgroup"]["fill-barrel"].group = "bob-fluid-products"
-data.raw["item-subgroup"]["empty-barrel"].group = "bob-fluid-products"
-data.raw["item-subgroup"]["barrel"].group = "bob-fluid-products"
+data.raw["item-subgroup"]["fill-barrel"].group = "fluids"
+data.raw["item-subgroup"]["empty-barrel"].group = "fluids"
+data.raw["item-subgroup"]["barrel"].group = "fluids"
 
 bobmods.lib.create_gas_bottle(data.raw.fluid["hydrogen"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["oxygen"])
@@ -280,18 +280,11 @@ if not bobmods.ores.cobalt.enabled then
 end
 
 --Intermediate reorganization
-data.raw["item-subgroup"]["fluid-recipes"].group = "bob-fluid-products"
+data.raw["item-group"].fluids.icon = "__bobplates__/graphics/icons/technology/fluids.png"
+data.raw["item-group"].fluids.icon_size = 64
+data.raw["item-subgroup"]["fluid-recipes"].group = "fluids"
 data.raw["item-subgroup"]["science-pack"].order = "a"
 data.raw["item-subgroup"]["intermediate-product"].order = "c"
-
-data.raw.fluid.water.subgroup = "bob-fluid"
-data.raw.fluid.steam.subgroup = "bob-fluid"
-data.raw.fluid["crude-oil"].subgroup = "bob-fluid"
-data.raw.fluid["petroleum-gas"].subgroup = "bob-fluid"
-data.raw.fluid["light-oil"].subgroup = "bob-fluid"
-data.raw.fluid["heavy-oil"].subgroup = "bob-fluid"
-data.raw.fluid.lubricant.subgroup = "bob-fluid"
-data.raw.fluid["sulfuric-acid"].subgroup = "bob-fluid"
 
 data.raw.item["solid-fuel"].subgroup = "bob-chemical-fuels"
 data.raw.item["rocket-fuel"].subgroup = "bob-chemical-fuels"
@@ -328,6 +321,19 @@ data.raw.recipe["steel-plate"].subgroup = "bob-material-smelting"
 data.raw.recipe["plastic-bar"].subgroup = "bob-material-chemical"
 data.raw.recipe["uranium-fuel-cell"].subgroup = "bob-fuel-cells"
 data.raw.recipe["nuclear-fuel-reprocessing"].order = "r[uranium-processing]-b[reprocessing]"
+
+for _, recipe_name in pairs({
+  "advanced-oil-processing",
+  "basic-oil-processing",
+  "bob-oil-processing",
+  "carbon-dioxide-oil-processing",
+  "coal-liquefaction",
+}) do
+  local recipe = data.raw.recipe[recipe_name]
+  if recipe then
+    recipe.subgroup = "bob-fluid-oil"
+  end
+end
 
 if feature_flags["quality"] then
   if data.raw.item["alien-blue-alloy"] then
