@@ -6,7 +6,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     emissions_multiplier = 10,
-    ingredients = { { type = "item", name = "lead-ore", amount = 1 } },
+    ingredients = { { type = "item", name = "bob-lead-ore", amount = 1 } },
     results = { { type = "item", name = "bob-lead-plate", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
@@ -18,7 +18,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
-    ingredients = { { type = "item", name = "silver-ore", amount = 1 } },
+    ingredients = { { type = "item", name = "bob-silver-ore", amount = 1 } },
     results = { { type = "item", name = "bob-silver-plate", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
@@ -30,7 +30,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
-    ingredients = { { type = "item", name = "tin-ore", amount = 1 } },
+    ingredients = { { type = "item", name = "bob-tin-ore", amount = 1 } },
     results = { { type = "item", name = "bob-tin-plate", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
@@ -60,7 +60,7 @@ data:extend({
     energy_required = 3.2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "gold-ore", amount = 1 },
+      { type = "item", name = "bob-gold-ore", amount = 1 },
       { type = "fluid", name = "bob-chlorine", amount = 3 },
     },
     results = { { type = "item", name = "bob-gold-plate", amount = 1 } },
@@ -108,7 +108,7 @@ data:extend({
     energy_required = 3.2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "zinc-ore", amount = 1 },
+      { type = "item", name = "bob-zinc-ore", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
     results = { { type = "item", name = "bob-zinc-plate", amount = 1 } },
@@ -127,7 +127,7 @@ data:extend({
     enabled = false,
     energy_required = 3.2,
     ingredients = {
-      { type = "item", name = "nickel-ore", amount = 1 },
+      { type = "item", name = "bob-nickel-ore", amount = 1 },
       { type = "fluid", name = "bob-oxygen", amount = 8 },
     },
     results = {
@@ -165,7 +165,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
       { type = "item", name = "bob-carbon", amount = 1 },
-      { type = "item", name = "rutile-ore", amount = 2 },
+      { type = "item", name = "bob-rutile-ore", amount = 2 },
     },
     results = { { type = "item", name = "bob-titanium-plate", amount = 2 } },
     allow_decomposition = false,
@@ -182,7 +182,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
       { type = "item", name = "bob-carbon", amount = 1 },
-      { type = "item", name = "quartz", amount = 2 },
+      { type = "item", name = "bob-quartz", amount = 2 },
     },
     results = { { type = "item", name = "bob-silicon-plate", amount = 2 } },
     allow_decomposition = false,

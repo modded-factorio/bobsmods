@@ -539,7 +539,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
-      { type = "item", name = "bauxite-ore", amount = 1 },
+      { type = "item", name = "bob-bauxite-ore", amount = 1 },
     },
     results = { { type = "item", name = "bob-alumina", amount = 1 } },
     order = "f[bob-alumina]",
@@ -558,7 +558,7 @@ data:extend({
     energy_required = 2,
     emissions_multiplier = 0.25,
     ingredients = {
-      { type = "item", name = "lead-ore", amount = 1 },
+      { type = "item", name = "bob-lead-ore", amount = 1 },
       { type = "fluid", name = "bob-oxygen", amount = 10 },
     },
     results = {
@@ -639,7 +639,7 @@ data:extend({
     energy_required = 7,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 2 },
+      { type = "item", name = "bob-cobalt-ore", amount = 2 },
       { type = "item", name = "stone", amount = 1 },
     },
     results = { { type = "item", name = "bob-cobalt-oxide", amount = 2 } },
@@ -688,7 +688,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bob-lead-plate", amount_min = 7, amount_max = 11 },
-      { type = "item", name = "silver-ore", amount_min = 1, amount_max = 3 },
+      { type = "item", name = "bob-silver-ore", amount_min = 1, amount_max = 3 },
     },
     allow_decomposition = false,
     allow_productivity = true,
@@ -723,7 +723,7 @@ data:extend({
     energy_required = 2,
     emissions_multiplier = 0.25,
     ingredients = {
-      { type = "item", name = "lead-ore", amount = 1 },
+      { type = "item", name = "bob-lead-ore", amount = 1 },
       { type = "fluid", name = "water", amount = 4 },
     },
     results = {
@@ -873,7 +873,7 @@ if not feature_flags["quality"] then
       enabled = false,
       energy_required = 2,
       ingredients = {
-        { type = "item", name = "tungsten-ore", amount = 2 },
+        { type = "item", name = "bob-tungsten-ore", amount = 2 },
         { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 },
       },
       results = {
@@ -913,7 +913,7 @@ else
       enabled = false,
       energy_required = 4,
       ingredients = {
-        { type = "item", name = "tungsten-ore", amount = 2 },
+        { type = "item", name = "bob-tungsten-ore", amount = 2 },
         { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 },
       },
       results = {

@@ -74,7 +74,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     ingredients = {
-      { type = "item", name = "quartz", amount = 1 },
+      { type = "item", name = "bob-quartz", amount = 1 },
     },
     results = { { type = "item", name = "bob-glass", amount = 1 } },
     allow_decomposition = false,

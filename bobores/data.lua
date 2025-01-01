@@ -51,19 +51,19 @@ bobmods.gems.TopazRatio = settings.startup["bobmods-gems-topazratio"].value
 bobmods.gems.DiamondRatio = settings.startup["bobmods-gems-diamondratio"].value
 
 require("prototypes.gems") -- must be after gem changes are defined.
-require("prototypes.tin-ore")
-require("prototypes.lead-ore")
-require("prototypes.quartz")
-require("prototypes.silver-ore")
-require("prototypes.zinc-ore")
-require("prototypes.gold-ore")
-require("prototypes.bauxite")
-require("prototypes.rutile")
-require("prototypes.tungsten-ore")
+require("prototypes.bob-tin-ore")
+require("prototypes.bob-lead-ore")
+require("prototypes.bob-quartz")
+require("prototypes.bob-silver-ore")
+require("prototypes.bob-zinc-ore")
+require("prototypes.bob-gold-ore")
+require("prototypes.bob-bauxite")
+require("prototypes.bob-rutile")
+require("prototypes.bob-tungsten-ore")
 require("prototypes.thorium-ore")
 
-require("prototypes.nickel-ore")
-require("prototypes.cobalt-ore")
+require("prototypes.bob-nickel-ore")
+require("prototypes.bob-cobalt-ore")
 require("prototypes.sulfur")
 require("prototypes.gem-ore")
 

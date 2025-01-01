@@ -1,5 +1,5 @@
 bobmods.ores.gold = {
-  name = "gold-ore",
+  name = "bob-gold-ore",
   tint = { r = 1, g = 0.75, b = 0 },
   map_color = { r = 1, g = 0.7, b = 0 },
   mining_time = 0.75,
@@ -30,7 +30,7 @@ bobmods.ores.gold = {
 
 function bobmods.ores.gold.create_autoplace()
   data.raw.resource["gold-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "gold-ore",
+    name = "bob-gold-ore",
     order = "c",
     base_density = 4,
     has_starting_area_placement = false,
