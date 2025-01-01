@@ -261,8 +261,6 @@ data.raw["technology"]["fission-reactor-equipment"].icons = bobmods.equipment.te
   icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",
   icon_size = 256,
 })
-bobmods.lib.tech.remove_science_pack("fission-reactor-equipment", "military-science-pack")
-bobmods.lib.tech.remove_prerequisite("fission-reactor-equipment", "military-science-pack")
 bobmods.lib.tech.remove_science_pack("fission-reactor-equipment", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("fission-reactor-equipment", "utility-science-pack")
 bobmods.lib.tech.add_science_pack("fission-reactor-equipment", "production-science-pack", 1)
@@ -292,6 +290,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
       },
@@ -321,6 +320,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -351,6 +351,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
