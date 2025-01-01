@@ -115,9 +115,9 @@ data:extend({
 })
 
 data.raw.recipe["fission-reactor-equipment"].ingredients = {
-  { type = "item", name = "advanced-circuit", amount = 50 },
-  { type = "item", name = "steel-plate", amount = 100 },
-  { type = "item", name = "uranium-fuel-cell", amount = 12 },
+  { type = "item", name = "advanced-circuit", amount = 100 },
+  { type = "item", name = "steel-plate", amount = 250 },
+  { type = "item", name = "uranium-fuel-cell", amount = 24 },
 }
 
 data:extend({
@@ -128,8 +128,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "fission-reactor-equipment", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "uranium-fuel-cell", amount = 24 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 36 },
       { type = "item", name = "low-density-structure", amount = 50 },
     },
     results = { { type = "item", name = "fission-reactor-equipment-2", amount = 1 } },
@@ -141,8 +141,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "fission-reactor-equipment-2", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "uranium-fuel-cell", amount = 36 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 48 },
     },
     results = { { type = "item", name = "fission-reactor-equipment-3", amount = 1 } },
   },
@@ -153,8 +153,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "fission-reactor-equipment-3", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "uranium-fuel-cell", amount = 48 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 60 },
     },
     results = { { type = "item", name = "fission-reactor-equipment-4", amount = 1 } },
   },
