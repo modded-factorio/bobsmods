@@ -123,20 +123,17 @@ sounds.plasmaExplosion = {
 }
 
 sounds.deconstruct_large = function(volume)
-  return
-  {
-    switch_vibration_data =
-    {
+  return {
+    switch_vibration_data = {
       filename = "__core__/sound/deconstruct-large.bnvib",
-      gain = 0.25
+      gain = 0.25,
     },
-    variations =
-    {
+    variations = {
       {
         filename = "__core__/sound/deconstruct-large.ogg",
-        volume = volume
-      }
-    }
+        volume = volume,
+      },
+    },
   }
 end
 

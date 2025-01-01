@@ -268,8 +268,7 @@ data:extend({
         intensity = 0.6,
       },
     },
-    light_animation =
-    {
+    light_animation = {
       filename = "__base__/graphics/entity/tank/tank-light.png",
       priority = "low",
       blend_mode = "additive",
@@ -319,7 +318,7 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-    open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume= 0.48 },
+    open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume = 0.48 },
     close_sound = { filename = "__base__/sound/fight/tank-door-close.ogg", volume = 0.43 },
     rotation_speed = 0.006,
     tank_driving = true,
@@ -441,8 +440,7 @@ data:extend({
         intensity = 0.6,
       },
     },
-    light_animation =
-    {
+    light_animation = {
       filename = "__base__/graphics/entity/tank/tank-light.png",
       priority = "low",
       blend_mode = "additive",
@@ -492,7 +490,7 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-    open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume= 0.48 },
+    open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume = 0.48 },
     close_sound = { filename = "__base__/sound/fight/tank-door-close.ogg", volume = 0.43 },
     rotation_speed = 0.01,
     tank_driving = true,
