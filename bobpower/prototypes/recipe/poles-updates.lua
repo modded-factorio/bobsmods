@@ -41,9 +41,9 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.recipe.replace_ingredient("substation-3", "copper-plate", "bob-silver-plate")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("substation-4", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("electric-substation-4", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("substation-4", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("electric-substation-4", "bob-advanced-processing-unit")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
@@ -64,8 +64,8 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "copper-plate", "gilded-copper-cable")
     bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "copper-plate", "gilded-copper-cable")
     bobmods.lib.recipe.replace_ingredient("substation-4", "copper-plate", "gilded-copper-cable")
-    bobmods.lib.tech.add_prerequisite("electric-pole-4", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("electric-substation-4", "advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("electric-pole-4", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("electric-substation-4", "bob-advanced-processing-unit")
   elseif data.raw.item["bob-gold-plate"] then
     bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "copper-plate", "bob-gold-plate")
     bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "copper-plate", "bob-gold-plate")

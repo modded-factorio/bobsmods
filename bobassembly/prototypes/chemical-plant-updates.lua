@@ -58,16 +58,16 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "iron-gear-wheel", "nitinol-gear-wheel")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "processing-unit", "bob-advanced-processing-unit")
   end
 
   if data.raw.item["nitinol-bearing"] then
     bobmods.lib.recipe.add_ingredient("chemical-plant-4", { type = "item", name = "nitinol-bearing", amount = 5 })
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "bob-advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then

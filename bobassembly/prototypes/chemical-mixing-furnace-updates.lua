@@ -42,13 +42,13 @@ then
     bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "tungsten-alloy-processing")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient(
       "electric-chemical-mixing-furnace-2",
       "processing-unit",
-      "advanced-processing-unit"
+      "bob-advanced-processing-unit"
     )
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "bob-advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then

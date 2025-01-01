@@ -94,10 +94,10 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     bobmods.lib.recipe.replace_ingredient("express-bulk-inserter", "iron-gear-wheel", "nitinol-gear-wheel")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("express-inserter", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("express-inserter", "processing-unit", "bob-advanced-processing-unit")
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.replace_ingredient("express-bulk-inserter", "processing-unit", "advanced-processing-unit")
+      bobmods.lib.recipe.replace_ingredient("express-bulk-inserter", "processing-unit", "bob-advanced-processing-unit")
     end
   end
 else

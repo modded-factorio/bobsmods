@@ -65,11 +65,11 @@ if data.raw.recipe["bob-robot-brain-4"] then
   if data.raw.item["solder"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "solder", amount = 5 })
   end
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.set_ingredient("bob-robot-brain-4", { type = "item", name = "processing-unit", amount = 2 })
     bobmods.lib.recipe.add_ingredient(
       "bob-robot-brain-4",
-      { type = "item", name = "advanced-processing-unit", amount = 2 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 2 }
     )
   end
 end
@@ -233,8 +233,8 @@ if data.raw.item["flying-robot-frame-4"] then
     bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "bob-silicon-nitride")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "processing-unit", "bob-advanced-processing-unit")
   end
 
   bobmods.lib.recipe.add_ingredient(
@@ -268,8 +268,8 @@ else
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
     end
 
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "advanced-processing-unit", amount = 3 })
+    if data.raw.item["bob-advanced-processing-unit"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-advanced-processing-unit", amount = 3 })
     else
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "processing-unit", amount = 3 })
     end
@@ -336,14 +336,14 @@ if data.raw.item["bob-robot-brain-4"] and data.raw.item["bob-robot-tool-4"] then
     { type = "item", name = "bob-robot-tool-4", amount = 1 }
   )
 else
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-logistic-robot-4",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "bob-construction-robot-4",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
   else
     bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { type = "item", name = "processing-unit", amount = 1 })
@@ -399,8 +399,8 @@ else
         bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
       end
 
-      if data.raw.item["advanced-processing-unit"] then
-        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "advanced-processing-unit", amount = 3 })
+      if data.raw.item["bob-advanced-processing-unit"] then
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-advanced-processing-unit", amount = 3 })
       else
         bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "processing-unit", amount = 3 })
       end
@@ -419,14 +419,14 @@ else
       { type = "item", name = "bob-robot-tool-4", amount = 1 }
     )
   else
-    if data.raw.item["advanced-processing-unit"] then
+    if data.raw.item["bob-advanced-processing-unit"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-logistic-robot-5",
-        { type = "item", name = "advanced-processing-unit", amount = 1 }
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-construction-robot-5",
-        { type = "item", name = "advanced-processing-unit", amount = 1 }
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
       )
     else
       bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "processing-unit", amount = 1 })

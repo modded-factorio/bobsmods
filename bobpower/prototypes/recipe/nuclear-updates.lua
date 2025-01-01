@@ -34,9 +34,9 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "steel-plate", "bob-tungsten-carbide")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("nuclear-reactor-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-advanced-processing-unit")
   end
 
   if data.raw.item["bob-lead-plate"] then

@@ -82,12 +82,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data.raw.recipe["advanced-circuit"].category = "electronics"
   data.raw.recipe["processing-unit"].category = "electronics-machine"
 
-  if data.raw.recipe["advanced-processing-unit"] then
-    data.raw.recipe["advanced-processing-unit"].category = "electronics-machine"
+  if data.raw.recipe["bob-advanced-processing-unit"] then
+    data.raw.recipe["bob-advanced-processing-unit"].category = "electronics-machine"
   end
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("electronics-machine-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("electronics-machine-3", "bob-advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then

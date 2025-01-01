@@ -102,8 +102,8 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "pipe", "tungsten-pipe")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("oil-processing-4", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "bob-advanced-processing-unit")
   end
 end

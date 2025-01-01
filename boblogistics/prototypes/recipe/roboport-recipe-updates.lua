@@ -92,10 +92,10 @@ if data.raw.item["gilded-copper-cable"] then
   bobmods.lib.recipe.replace_ingredient("roboport-antenna-4", "copper-cable", "gilded-copper-cable")
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("roboport-antenna-4", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("roboport-chargepad-4", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.recipe.replace_ingredient("roboport-antenna-4", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("roboport-chargepad-4", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "bob-advanced-processing-unit")
 end
 
 if data.raw.item["silver-zinc-battery"] then

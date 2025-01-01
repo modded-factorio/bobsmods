@@ -14,11 +14,11 @@ bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "electr
 if data.raw.item["titanium-pipe"] then
   bobmods.lib.recipe.replace_ingredient("rocket-silo", "pipe", "titanium-pipe")
 end
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "bob-advanced-processing-unit")
 end
 if data.raw.item["bob-nitinol-alloy"] then
   bobmods.lib.tech.add_prerequisite("rocket-silo", "nitinol-processing")

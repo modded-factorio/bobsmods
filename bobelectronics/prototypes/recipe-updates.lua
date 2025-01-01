@@ -96,5 +96,5 @@ if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("electronic-circuit", { type = "item", name = "solder", amount = 1 })
   bobmods.lib.recipe.add_ingredient("advanced-circuit", { type = "item", name = "solder", amount = 1 })
   bobmods.lib.recipe.add_ingredient("processing-unit", { type = "item", name = "solder", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("advanced-processing-unit", { type = "item", name = "solder", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("bob-advanced-processing-unit", { type = "item", name = "solder", amount = 4 })
 end

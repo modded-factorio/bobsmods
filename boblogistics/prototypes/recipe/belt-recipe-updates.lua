@@ -200,7 +200,7 @@ else
   end
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("ultimate-splitter", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("logistics-5", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.recipe.replace_ingredient("ultimate-splitter", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("logistics-5", "bob-advanced-processing-unit")
 end

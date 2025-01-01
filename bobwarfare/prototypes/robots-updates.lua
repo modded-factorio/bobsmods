@@ -81,12 +81,12 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "steel-plate", amount = 1 })
     end
-    if data.raw.item["advanced-processing-unit"] then
+    if data.raw.item["bob-advanced-processing-unit"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-laser-robot",
-        { type = "item", name = "advanced-processing-unit", amount = 1 }
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
       )
-      bobmods.lib.tech.add_prerequisite("bob-laser-robot", "advanced-processing-unit")
+      bobmods.lib.tech.add_prerequisite("bob-laser-robot", "bob-advanced-processing-unit")
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "processing-unit", amount = 1 })
     end
@@ -132,11 +132,11 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     if data.raw.item["solder"] then
       bobmods.lib.recipe.add_ingredient("robot-brain-combat-4", { type = "item", name = "solder", amount = 5 })
     end
-    if data.raw.item["advanced-processing-unit"] then
+    if data.raw.item["bob-advanced-processing-unit"] then
       bobmods.lib.recipe.set_ingredient("robot-brain-combat-4", { type = "item", name = "processing-unit", amount = 1 })
       bobmods.lib.recipe.add_ingredient(
         "robot-brain-combat-4",
-        { type = "item", name = "advanced-processing-unit", amount = 1 }
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
       )
     end
   end
@@ -163,10 +163,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     bobmods.lib.tech.add_recipe_unlock("bob-laser-robot", "robot-brain-combat-4")
     bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "robot-brain-combat-4", amount = 1 })
   else
-    if data.raw.item["advanced-processing-unit"] then
+    if data.raw.item["bob-advanced-processing-unit"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-laser-robot",
-        { type = "item", name = "advanced-processing-unit", amount = 1 }
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
       )
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "processing-unit", amount = 1 })

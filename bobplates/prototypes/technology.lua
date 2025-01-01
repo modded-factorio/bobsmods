@@ -474,7 +474,7 @@ data:extend({
       "air-compressor-3",
       "nitinol-processing",
       "electric-engine",
-      "advanced-processing-unit",
+      "bob-advanced-processing-unit",
     },
     effects = {
       {
@@ -585,7 +585,7 @@ data:extend({
       "water-bore-3",
       "nitinol-processing",
       "electric-engine",
-      "advanced-processing-unit",
+      "bob-advanced-processing-unit",
     },
     effects = {
       {
@@ -911,7 +911,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     icon = "__bobplates__/graphics/icons/technology/advanced-electronics-3.png",
     icon_size = 128,
     prerequisites = {
@@ -921,7 +921,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "advanced-processing-unit",
+        recipe = "bob-advanced-processing-unit",
       },
     },
     unit = {

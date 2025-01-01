@@ -55,7 +55,7 @@ if mods["bobplates"] then
   bobmods.lib.tech.add_prerequisite("chemical-processing-2", "bob-electronics")
   bobmods.lib.tech.add_prerequisite("advanced-circuit", "chemical-processing-2")
   bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-wafer")
-  bobmods.lib.tech.add_prerequisite("advanced-processing-unit", "ceramics")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-processing-unit", "ceramics")
   bobmods.lib.tech.replace_prerequisite("air-compressor-1", "electronics", "bob-electronics")
   bobmods.lib.tech.replace_prerequisite("water-bore-1", "electronics", "bob-electronics")
 else
@@ -77,11 +77,11 @@ bobmods.lib.tech.add_recipe_unlock("processing-unit", "superior-circuit-board")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "processing-unit")
 
 if data.raw.recipe["gilded-copper-cable"] then
-  bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "gilded-copper-cable")
+  bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "gilded-copper-cable")
 end
 
-bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "processing-electronics")
-bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "multi-layer-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "processing-electronics")
+bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "multi-layer-circuit-board")
 
 data.raw.technology["electronics"].icon = "__bobelectronics__/graphics/icons/technology/electronics.png"
 data.raw.technology["advanced-circuit"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"

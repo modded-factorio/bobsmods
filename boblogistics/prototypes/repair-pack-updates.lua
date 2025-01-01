@@ -37,9 +37,9 @@ if data.raw.item["nitinol-bearing"] then
   bobmods.lib.recipe.add_ingredient("repair-pack-5", { type = "item", name = "nitinol-bearing", amount = 1 })
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("repair-pack-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.recipe.replace_ingredient("repair-pack-5", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "bob-advanced-processing-unit")
 end
 
 if data.raw.item["bob-tungsten-carbide"] then

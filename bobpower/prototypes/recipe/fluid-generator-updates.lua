@@ -18,7 +18,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.replace_ingredient("fluid-generator", "pipe", "steel-pipe")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.add_ingredient("fluid-generator", { type = "item", name = "electronic-circuit", amount = 5 })
     if data.raw.technology["bob-electronics"] then
       bobmods.lib.tech.add_prerequisite("fluid-generator-1", "bob-electronics")
@@ -63,7 +63,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.add_ingredient("fluid-generator-2", { type = "item", name = "steel-pipe", amount = 5 })
   end
 
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("fluid-generator-2", "electronic-circuit", "advanced-circuit")
     bobmods.lib.tech.add_prerequisite("fluid-generator-2", "advanced-circuit")
   end
@@ -97,7 +97,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("fluid-generator-3", "ceramics")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("fluid-generator-3", "advanced-circuit", "processing-unit")
     bobmods.lib.tech.add_prerequisite("fluid-generator-3", "processing-unit")
   end
@@ -134,9 +134,9 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "tungsten-processing")
     end
 
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "processing-unit", "advanced-processing-unit")
-      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "advanced-processing-unit")
+    if data.raw.item["bob-advanced-processing-unit"] then
+      bobmods.lib.recipe.replace_ingredient("hydrazine-generator", "processing-unit", "bob-advanced-processing-unit")
+      bobmods.lib.tech.add_prerequisite("hydrazine-generator", "bob-advanced-processing-unit")
     else
       bobmods.lib.tech.add_prerequisite("hydrazine-generator", "processing-unit")
     end

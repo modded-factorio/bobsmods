@@ -632,11 +632,11 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     icon = "__bobelectronics__/graphics/icons/electronic-processing-board.png",
     icon_size = 128,
     subgroup = "bob-electronic-boards",
-    order = "c-c4[electronic-processing-board]",
+    order = "c-c4[bob-advanced-processing-unit]",
     stack_size = 200,
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
@@ -645,7 +645,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     category = "electronics",
     energy_required = 15,
     enabled = false,
@@ -656,7 +656,7 @@ data:extend({
       { type = "item", name = "intergrated-electronics", amount = 4 },
       { type = "item", name = "processing-electronics", amount = 1 },
     },
-    results = { { type = "item", name = "advanced-processing-unit", amount = 1 } },
+    results = { { type = "item", name = "bob-advanced-processing-unit", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },

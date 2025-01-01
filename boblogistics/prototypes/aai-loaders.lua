@@ -39,14 +39,14 @@ if mods["aai-loaders"] then
       table.insert(ingredients.fast, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.express, { type = "item", name = "advanced-circuit", amount = 5 })
       table.insert(ingredients.turbo, { type = "item", name = "processing-unit", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "advanced-processing-unit", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-advanced-processing-unit", amount = 5 })
     elseif mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.fast, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.express, { type = "item", name = "advanced-circuit", amount = 5 })
       table.insert(ingredients.turbo, { type = "item", name = "processing-unit", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "advanced-processing-unit", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-advanced-processing-unit", amount = 5 })
     else
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "electronic-circuit", amount = 5 })
@@ -151,7 +151,7 @@ if mods["aai-loaders"] then
         "logistics-4",
         "aai-express-loader",
         "utility-science-pack",
-        data.raw.item["advanced-processing-unit"] and "advanced-processing-unit" or nil,
+        data.raw.item["bob-advanced-processing-unit"] and "bob-advanced-processing-unit" or nil,
       },
       unit = {
         count = 400,
