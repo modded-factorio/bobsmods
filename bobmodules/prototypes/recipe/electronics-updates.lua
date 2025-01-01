@@ -200,6 +200,7 @@ bobmods.lib.tech.add_recipe_unlock("productivity-module-2", "bob-productivity-pr
 bobmods.lib.tech.add_recipe_unlock("productivity-module-3", "bob-productivity-processor-2")
 bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-module-processor-board")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-module-processor-board-2")
+bobmods.lib.tech.add_prerequisite("advanced-circuit", "modules")
 
 if data.raw.technology["advanced-processing-unit"] then
   bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "bob-module-processor-board-3")
