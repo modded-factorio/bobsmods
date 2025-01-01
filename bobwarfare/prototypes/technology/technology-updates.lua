@@ -527,30 +527,26 @@ if data.raw.recipe["gun-cotton-synthetic"] then
 end
 
 if mods["bobmodules"] then
-  if data.raw.technology["speed-module-4"] then
-    bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-2")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-4")
+  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-2")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-3")
+
+  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "efficiency-module-2")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "efficiency-module-3")
+
+  if data.raw.technology["bob-speed-module-4"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-speed-module-4")
   end
 
-  if data.raw.technology["efficiency-module-4"] then
-    bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "efficiency-module-2")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "efficiency-module-4")
+  if data.raw.technology["bob-efficiency-module-4"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-efficiency-module-4")
   end
 
-  if data.raw.technology["speed-module-6"] then
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "speed-module-6")
+  if data.raw.technology["bob-speed-module-5"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-speed-module-5")
   end
 
-  if data.raw.technology["efficiency-module-6"] then
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "efficiency-module-6")
-  end
-
-  if data.raw.technology["speed-module-8"] then
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "speed-module-8")
-  end
-
-  if data.raw.technology["efficiency-module-8"] then
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "efficiency-module-8")
+  if data.raw.technology["bob-efficiency-module-5"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-efficiency-module-5")
   end
 else
   bobmods.lib.tech.replace_prerequisite("power-armor-mk2", "speed-module-2", "speed-module")

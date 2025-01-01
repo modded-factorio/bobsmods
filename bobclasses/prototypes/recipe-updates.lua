@@ -19,11 +19,11 @@ elseif data.raw.item["alien-artifact"] then
   bobmods.lib.recipe.add_ingredient("player-power-core", { type = "item", name = "alien-artifact", amount = 50 })
 end
 
-if data.raw.tool["module-case"] or data.raw.item["module-case"] then
+if data.raw.item["bob-module-case"] then
   bobmods.lib.recipe.remove_ingredient("player-brain", "iron-plate")
-  bobmods.lib.recipe.add_ingredient("player-brain", { type = "item", name = "module-case", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("player-brain", { type = "item", name = "bob-module-case", amount = 1 })
   bobmods.lib.recipe.remove_ingredient("player-brain-2", "steel-plate")
-  bobmods.lib.recipe.add_ingredient("player-brain-2", { type = "item", name = "module-case", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("player-brain-2", { type = "item", name = "bob-module-case", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bodies", "modules")
 elseif data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("player-brain", "iron-plate", "bob-aluminium-plate")

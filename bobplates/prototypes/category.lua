@@ -187,54 +187,59 @@ data:extend({
     group = "production",
     order = "e-e",
   },
-
   {
     type = "item-subgroup",
-    name = "bob-fluid-electrolysis",
-    group = "bob-fluid-products",
+    name = "bob-fluid-oil",
+    group = "fluids",
     order = "a-b",
   },
   {
     type = "item-subgroup",
-    name = "bob-fluid-pump",
-    group = "bob-fluid-products",
+    name = "bob-fluid-electrolysis",
+    group = "fluids",
     order = "a-c",
   },
   {
     type = "item-subgroup",
-    name = "bob-gas-bottle",
-    group = "bob-fluid-products",
+    name = "bob-fluid-pump",
+    group = "fluids",
     order = "a-d",
   },
   {
     type = "item-subgroup",
-    name = "bob-empty-gas-bottle",
-    group = "bob-fluid-products",
-    order = "a-d2",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-barrel",
-    group = "bob-fluid-products",
+    name = "bob-gas-bottle",
+    group = "fluids",
     order = "a-e",
   },
   {
     type = "item-subgroup",
-    name = "bob-empty-barrel",
-    group = "bob-fluid-products",
+    name = "bob-empty-gas-bottle",
+    group = "fluids",
     order = "a-e2",
   },
   {
     type = "item-subgroup",
-    name = "bob-canister",
-    group = "bob-fluid-products",
+    name = "bob-barrel",
+    group = "fluids",
     order = "a-f",
   },
   {
     type = "item-subgroup",
-    name = "bob-empty-canister",
-    group = "bob-fluid-products",
+    name = "bob-empty-barrel",
+    group = "fluids",
     order = "a-f2",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-canister",
+    group = "fluids",
+    order = "a-g",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-empty-canister",
+    group = "fluids",
+    order = "a-g2",
   },
 
   {
@@ -351,17 +356,10 @@ data:extend({
   },
 
   {
-    type = "item-group",
-    name = "void",
-    order = "x",
-    icon = "__bobplates__/graphics/icons/technology/void.png",
-    icon_size = 128,
-  },
-  {
     type = "item-subgroup",
     name = "void",
-    group = "void",
-    order = "a-a",
+    group = "fluids",
+    order = "z",
   },
 })
 
@@ -372,6 +370,12 @@ data:extend({
     order = "d-g",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-gems-support",
+    group = "bob-gems",
+    order = "1",
   },
   {
     type = "item-subgroup",
@@ -394,15 +398,7 @@ data:extend({
   {
     type = "item-subgroup",
     name = "bob-gems-polished",
-    group = "dytechgem",
     group = "bob-gems",
     order = "6",
   },
 })
-
-if data.raw["item-group"]["dytechgem"] then
-  data.raw["item-subgroup"]["bob-gems-ore"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-raw"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-cut"].group = "dytechgem"
-  data.raw["item-subgroup"]["bob-gems-polished"].group = "dytechgem"
-end
