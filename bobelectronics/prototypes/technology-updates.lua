@@ -6,7 +6,7 @@ bobmods.lib.tech.add_prerequisite("gate", "bob-electronics")
 bobmods.lib.tech.add_prerequisite("defender", "bob-electronics")
 bobmods.lib.tech.replace_prerequisite("fast-inserter", "automation-science-pack", "bob-electronics")
 if mods["bobassembly"] then
-  bobmods.lib.tech.add_prerequisite("electrolyser-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-electrolyser-2", "bob-electronics")
 end
 if mods["bobmining"] then
   bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")

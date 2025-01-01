@@ -19,8 +19,8 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.recipe["water-electrolysis"].energy_required = 2
     data.raw.recipe["heavy-water-electrolysis"].energy_required = 2
   end
-  data.raw["assembling-machine"]["electrolyser"].energy_usage = "1050kW"
-  data.raw["assembling-machine"]["electrolyser"].energy_source.drain = "12kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "1050kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "12kW"
 end
 
 --change icons.
@@ -132,7 +132,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   bobmods.lib.recipe.remove_ingredient("uranium-fuel-cell", "iron-plate")
   bobmods.lib.recipe.add_ingredient(
     "uranium-fuel-cell",
-    { type = "item", name = "empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
+    { type = "item", name = "bob-empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
   )
 
   data.raw.technology["nuclear-fuel-reprocessing"].icon =
@@ -156,7 +156,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
 
   bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", {
     type = "item",
-    name = "empty-nuclear-fuel-cell",
+    name = "bob-empty-nuclear-fuel-cell",
     amount = 10,
     ignored_by_productivity = 10,
     ignored_by_stats = 10,
@@ -167,9 +167,9 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "plutonium-239", amount = 1, probability = 0.8 }
+    { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.8 }
   )
-  bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "fusion-catalyst", amount = 1 })
+  bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "bob-fusion-catalyst", amount = 1 })
 else
   bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "bob-lead-plate")
 
@@ -183,7 +183,7 @@ else
   )
   bobmods.lib.recipe.add_result(
     "nuclear-fuel-reprocessing",
-    { type = "item", name = "plutonium-239", amount = 1, probability = 0.1 }
+    { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.1 }
   )
 end
 
@@ -227,7 +227,7 @@ end
 
 if settings.startup["bobmods-plates-vanillabarrelling"].value == true then
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "barrelling") -- Adds barrelling to assembling machines
-  bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "air-pump") -- Adds barrelling to assembling machines
+  bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "bob-air-pump") -- Adds barrelling to assembling machines
 end
 
 bobmods.lib.tech.add_prerequisite("cliff-explosives", "fluid-barrel-processing")
@@ -366,7 +366,7 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-diamond-3", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-diamond-4", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-diamond-5", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("thorium-232", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-thorium-232", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("uranium-235", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("uranium-238", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("battery", true)
@@ -388,26 +388,26 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-cobalt-oxide", false)
 
   bobmods.lib.recipe.update_recycling_recipe({
-    "air-pump",
-    "air-pump-2",
-    "air-pump-3",
-    "air-pump-4",
-    "water-pump",
-    "water-pump-2",
-    "water-pump-3",
-    "water-pump-4",
-    "void-pump",
+    "bob-air-pump",
+    "bob-air-pump-2",
+    "bob-air-pump-3",
+    "bob-air-pump-4",
+    "bob-water-pump",
+    "bob-water-pump-2",
+    "bob-water-pump-3",
+    "bob-water-pump-4",
+    "bob-void-pump",
     "bob-distillery",
-    "electrolyser",
+    "bob-electrolyser",
     "stone-furnace",
     "steel-furnace",
     "electric-furnace",
-    "stone-mixing-furnace",
-    "steel-mixing-furnace",
-    "electric-mixing-furnace",
-    "stone-chemical-furnace",
-    "steel-chemical-furnace",
-    "electric-chemical-furnace",
+    "bob-stone-mixing-furnace",
+    "bob-steel-mixing-furnace",
+    "bob-electric-mixing-furnace",
+    "bob-stone-chemical-furnace",
+    "bob-steel-chemical-furnace",
+    "bob-electric-chemical-furnace",
     "uranium-fuel-cell",
   })
 end

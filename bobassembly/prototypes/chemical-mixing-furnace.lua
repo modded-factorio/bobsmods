@@ -3,8 +3,8 @@ if
   and data.raw["item-subgroup"]["bob-smelting-machine"]
   and data.raw["recipe-category"]["chemical-furnace"]
   and data.raw["recipe-category"]["mixing-furnace"]
-  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["electric-mixing-furnace"])
-  and data.raw.technology["electric-chemical-furnace"]
+  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
+  and data.raw.technology["bob-electric-chemical-furnace"]
 then
   local function bob_electric_multipurpose_furnace_working_visualisations()
     return {
@@ -118,7 +118,7 @@ then
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "electric-chemical-furnace", amount = 1 },
+        { type = "item", name = "bob-electric-chemical-furnace", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "stone-brick", amount = 10 },
         { type = "item", name = "processing-unit", amount = 5 },
@@ -380,11 +380,11 @@ then
       },
     },
   })
-  if data.raw.technology["electric-chemical-furnace"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "electric-chemical-furnace")
+  if data.raw.technology["bob-electric-chemical-furnace"] then
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-electric-chemical-furnace")
   end
-  if data.raw.technology["electric-mixing-furnace"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "electric-mixing-furnace")
+  if data.raw.technology["bob-electric-mixing-furnace"] then
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-electric-mixing-furnace")
   elseif data.raw.technology["alloy-processing-2"] then
     bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "alloy-processing-2")
   end

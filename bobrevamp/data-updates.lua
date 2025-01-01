@@ -151,14 +151,14 @@ data.raw.item["nuclear-fuel"].fuel_glow_color = { r = 0.5, g = 1, b = 0.5 }
 if settings.startup["bobmods-revamp-nuclear"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("uranium-processing", "uranium-fuel-cell")
   bobmods.lib.tech.add_recipe_unlock("nuclear-power", "uranium-fuel-cell")
-  if data.raw.item["empty-nuclear-fuel-cell"] then
-    bobmods.lib.tech.remove_recipe_unlock("uranium-processing", "empty-nuclear-fuel-cell")
-    bobmods.lib.tech.add_recipe_unlock("nuclear-power", "empty-nuclear-fuel-cell")
+  if data.raw.item["bob-empty-nuclear-fuel-cell"] then
+    bobmods.lib.tech.remove_recipe_unlock("uranium-processing", "bob-empty-nuclear-fuel-cell")
+    bobmods.lib.tech.add_recipe_unlock("nuclear-power", "bob-empty-nuclear-fuel-cell")
   end
 end
 
 if
-  data.raw.item["thorium-fuel-cell"]
+  data.raw.item["bob-thorium-fuel-cell"]
   and data.raw.reactor["nuclear-reactor-2"]
   and settings.startup["bobmods-revamp-nuclear"].value == true
 then
@@ -182,12 +182,12 @@ then
   data.raw.reactor["nuclear-reactor-2"].icon = "__bobrevamp__/graphics/icons/thorium-reactor.png"
   data.raw.reactor["nuclear-reactor-2"].icon_size = 32
 
-  data.raw.item["thorium-fuel-cell"].fuel_category = "thorium"
-  if data.raw.item["thorium-plutonium-fuel-cell"] then
-    data.raw.item["thorium-plutonium-fuel-cell"].fuel_category = "thorium"
+  data.raw.item["bob-thorium-fuel-cell"].fuel_category = "thorium"
+  if data.raw.item["bob-thorium-plutonium-fuel-cell"] then
+    data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_category = "thorium"
   end
-  if data.raw.technology["thorium-plutonium-fuel-cell"] then
-    bobmods.lib.tech.replace_prerequisite("thorium-plutonium-fuel-cell", "thorium-processing", "bob-nuclear-power-2")
+  if data.raw.technology["bob-thorium-plutonium-fuel-cell"] then
+    bobmods.lib.tech.replace_prerequisite("bob-thorium-plutonium-fuel-cell", "thorium-processing", "bob-nuclear-power-2")
   end
 
   data.raw.item["nuclear-reactor-2"].localised_name = { "entity-name.thorium-reactor" }
@@ -203,10 +203,10 @@ then
   bobmods.lib.tech.add_science_pack("thorium-processing", "production-science-pack", 1)
   bobmods.lib.tech.add_prerequisite("thorium-processing", "production-science-pack")
   bobmods.lib.tech.replace_prerequisite("thorium-processing", "nuclear-power", "uranium-processing")
-  bobmods.lib.tech.remove_recipe_unlock("thorium-processing", "thorium-fuel-cell")
+  bobmods.lib.tech.remove_recipe_unlock("thorium-processing", "bob-thorium-fuel-cell")
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "thorium-processing")
   bobmods.lib.tech.remove_prerequisite("bob-nuclear-power-2", "production-science-pack")
-  bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
+  bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "bob-thorium-fuel-cell")
   bobmods.lib.tech.remove_prerequisite("thorium-fuel-reprocessing", "production-science-pack")
   bobmods.lib.tech.replace_prerequisite("thorium-fuel-reprocessing", "thorium-processing", "bob-nuclear-power-2")
 
@@ -216,7 +216,7 @@ then
 end
 
 if
-  data.raw.item["deuterium-fuel-cell"]
+  data.raw.item["bob-deuterium-fuel-cell"]
   and data.raw.reactor["nuclear-reactor-3"]
   and settings.startup["bobmods-revamp-nuclear"].value == true
 then
@@ -232,12 +232,12 @@ then
     { "", { "entity-description.deuterium-reactor" }, { "entity-description.reactor-max-temperature", "1500" } }
   data.raw.reactor["nuclear-reactor-3"].icon_size = 32
 
-  data.raw.item["deuterium-fuel-cell"].fuel_category = "bob-deuterium"
-  if data.raw.item["deuterium-fuel-cell-2"] then
-    data.raw.item["deuterium-fuel-cell-2"].fuel_category = "bob-deuterium"
+  data.raw.item["bob-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
+  if data.raw.item["bob-deuterium-fuel-cell-2"] then
+    data.raw.item["bob-deuterium-fuel-cell-2"].fuel_category = "bob-deuterium"
   end
-  if data.raw.technology["deuterium-fuel-cell-2"] then
-    bobmods.lib.tech.replace_prerequisite("deuterium-fuel-cell-2", "deuterium-processing", "bob-nuclear-power-3")
+  if data.raw.technology["bob-deuterium-fuel-cell-2"] then
+    bobmods.lib.tech.replace_prerequisite("bob-deuterium-fuel-cell-2", "deuterium-processing", "bob-nuclear-power-3")
   end
 
   data.raw.item["nuclear-reactor-3"].localised_name = { "entity-name.deuterium-reactor" }
@@ -249,10 +249,10 @@ then
   data.raw.technology["bob-nuclear-power-3"].icon_size = 128
 
   bobmods.lib.tech.remove_prerequisite("deuterium-processing", "nuclear-fuel-reprocessing")
-  bobmods.lib.tech.remove_recipe_unlock("deuterium-processing", "deuterium-fuel-cell")
+  bobmods.lib.tech.remove_recipe_unlock("deuterium-processing", "bob-deuterium-fuel-cell")
   bobmods.lib.tech.replace_prerequisite("bob-nuclear-power-3", "bob-nuclear-power-2", "deuterium-processing")
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "nuclear-fuel-reprocessing")
-  bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
+  bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-3", "bob-deuterium-fuel-cell")
   bobmods.lib.tech.add_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)
   bobmods.lib.tech.replace_prerequisite("deuterium-fuel-reprocessing", "deuterium-processing", "bob-nuclear-power-3")
 

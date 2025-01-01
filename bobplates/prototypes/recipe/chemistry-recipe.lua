@@ -7,7 +7,7 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
       icon_size = 32,
       subgroup = "bob-fluid-pump",
       order = "b[fluid-chemistry]-b[bob-lithia-water]",
-      category = "water-pump",
+      category = "bob-water-pump",
       energy_required = 1,
       ingredients = {},
       results = {
@@ -23,7 +23,7 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
       icon_size = 64,
       subgroup = "bob-fluid-pump",
       order = "b[fluid-chemistry]-b[water]",
-      category = "water-pump",
+      category = "bob-water-pump",
       energy_required = 1,
       ingredients = {},
       results = {
@@ -42,7 +42,7 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
         icon_size = 64,
         subgroup = "bob-fluid-pump",
         order = "b[fluid-chemistry]-b[bob-pure-water]",
-        category = "water-pump",
+        category = "bob-water-pump",
         energy_required = 1,
         ingredients = {},
         results = {
@@ -114,7 +114,7 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-fluid-pump",
     order = "b[fluid-chemistry]-b[bob-liquid-air]",
-    category = "air-pump",
+    category = "bob-air-pump",
     enabled = false,
     energy_required = 1,
     ingredients = {},

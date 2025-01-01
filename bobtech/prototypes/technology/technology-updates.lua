@@ -255,7 +255,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
       bobmods.lib.tech.remove_prerequisite("water-miner-2", "electronics")
     end
     if mods["bobassembly"] then
-      bobmods.lib.tech.remove_prerequisite("electrolyser-2", "electronics")
+      bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "electronics")
     end
     if data.raw.technology["chemical-plant"] then
       bobmods.lib.tech.remove_prerequisite("chemical-plant", "electronics")
@@ -279,7 +279,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
     bobmods.lib.tech.remove_prerequisite("chemical-plant", "logistic-science-pack")
   end
   if mods["bobassembly"] then
-    bobmods.lib.tech.remove_prerequisite("electrolyser-2", "logistic-science-pack")
+    bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-distillery-2", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-distillery-2", "alloy-processing")
   end

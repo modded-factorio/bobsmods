@@ -10,7 +10,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electrolyser",
+        recipe = "bob-electrolyser",
       },
       {
         type = "unlock-recipe",
@@ -72,7 +72,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "stone-chemical-furnace",
+        recipe = "bob-stone-chemical-furnace",
       },
       {
         type = "unlock-recipe",
@@ -137,7 +137,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "steel-chemical-furnace",
+    name = "bob-steel-chemical-furnace",
     icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
@@ -157,7 +157,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "steel-chemical-furnace",
+        recipe = "bob-steel-chemical-furnace",
       },
     },
     unit = {
@@ -173,7 +173,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "electric-chemical-furnace",
+    name = "bob-electric-chemical-furnace",
     icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing-2.png",
@@ -193,7 +193,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-chemical-furnace",
+        recipe = "bob-electric-chemical-furnace",
       },
     },
     unit = {
@@ -219,7 +219,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "stone-mixing-furnace",
+        recipe = "bob-stone-mixing-furnace",
       },
       {
         type = "unlock-recipe",
@@ -238,7 +238,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "steel-mixing-furnace",
+    name = "bob-steel-mixing-furnace",
     icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
@@ -258,7 +258,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "steel-mixing-furnace",
+        recipe = "bob-steel-mixing-furnace",
       },
     },
     unit = {
@@ -274,7 +274,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "electric-mixing-furnace",
+    name = "bob-electric-mixing-furnace",
     icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing-2.png",
@@ -294,7 +294,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-mixing-furnace",
+        recipe = "bob-electric-mixing-furnace",
       },
     },
     unit = {
@@ -391,7 +391,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump",
+        recipe = "bob-air-pump",
       },
       {
         type = "unlock-recipe",
@@ -422,7 +422,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-2",
+        recipe = "bob-air-pump-2",
       },
     },
     unit = {
@@ -450,7 +450,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-3",
+        recipe = "bob-air-pump-3",
       },
     },
     unit = {
@@ -479,7 +479,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-4",
+        recipe = "bob-air-pump-4",
       },
     },
     unit = {
@@ -506,7 +506,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump",
+        recipe = "bob-water-pump",
       },
     },
     unit = {
@@ -533,7 +533,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-2",
+        recipe = "bob-water-pump-2",
       },
     },
     unit = {
@@ -561,7 +561,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-3",
+        recipe = "bob-water-pump-3",
       },
     },
     unit = {
@@ -590,7 +590,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-4",
+        recipe = "bob-water-pump-4",
       },
     },
     unit = {
@@ -903,7 +903,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "void-pump",
+        recipe = "bob-void-pump",
       },
     },
     order = "void-fluid",

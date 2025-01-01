@@ -3,14 +3,14 @@ if
   and data.raw["item-subgroup"]["bob-smelting-machine"]
   and data.raw["recipe-category"]["chemical-furnace"]
   and data.raw["recipe-category"]["mixing-furnace"]
-  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["electric-mixing-furnace"])
-  and data.raw.technology["electric-chemical-furnace"]
+  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
+  and data.raw.technology["bob-electric-chemical-furnace"]
 then
-  if data.raw["assembling-machine"]["electric-chemical-furnace"] then
-    data.raw["assembling-machine"]["electric-chemical-furnace"].next_upgrade = "electric-chemical-mixing-furnace"
+  if data.raw["assembling-machine"]["bob-electric-chemical-furnace"] then
+    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].next_upgrade = "electric-chemical-mixing-furnace"
   end
 
-  data.raw["assembling-machine"]["electric-mixing-furnace"].next_upgrade = "electric-chemical-mixing-furnace"
+  data.raw["assembling-machine"]["bob-electric-mixing-furnace"].next_upgrade = "electric-chemical-mixing-furnace"
 
   if data.raw.item["bob-invar-alloy"] then
     bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace", "steel-plate", "bob-invar-alloy")
@@ -55,24 +55,24 @@ then
     data.raw["assembling-machine"]["electric-chemical-mixing-furnace"].ingredient_count = 6
     data.raw["assembling-machine"]["electric-chemical-mixing-furnace-2"].ingredient_count = 8
 
-    if data.raw["assembling-machine"]["stone-chemical-furnace"] then
-      data.raw["assembling-machine"]["stone-chemical-furnace"].ingredient_count = 2
+    if data.raw["assembling-machine"]["bob-stone-chemical-furnace"] then
+      data.raw["assembling-machine"]["bob-stone-chemical-furnace"].ingredient_count = 2
     end
-    if data.raw["assembling-machine"]["steel-chemical-furnace"] then
-      data.raw["assembling-machine"]["steel-chemical-furnace"].ingredient_count = 4
+    if data.raw["assembling-machine"]["bob-steel-chemical-furnace"] then
+      data.raw["assembling-machine"]["bob-steel-chemical-furnace"].ingredient_count = 4
     end
-    if data.raw["assembling-machine"]["electric-chemical-furnace"] then
-      data.raw["assembling-machine"]["electric-chemical-furnace"].ingredient_count = 4
+    if data.raw["assembling-machine"]["bob-electric-chemical-furnace"] then
+      data.raw["assembling-machine"]["bob-electric-chemical-furnace"].ingredient_count = 4
     end
 
-    if data.raw["assembling-machine"]["stone-mixing-furnace"] then
-      data.raw["assembling-machine"]["stone-mixing-furnace"].ingredient_count = 2
+    if data.raw["assembling-machine"]["bob-stone-mixing-furnace"] then
+      data.raw["assembling-machine"]["bob-stone-mixing-furnace"].ingredient_count = 2
     end
-    if data.raw["assembling-machine"]["steel-mixing-furnace"] then
-      data.raw["assembling-machine"]["steel-mixing-furnace"].ingredient_count = 2
+    if data.raw["assembling-machine"]["bob-steel-mixing-furnace"] then
+      data.raw["assembling-machine"]["bob-steel-mixing-furnace"].ingredient_count = 2
     end
-    if data.raw["assembling-machine"]["electric-mixing-furnace"] then
-      data.raw["assembling-machine"]["electric-mixing-furnace"].ingredient_count = 4
+    if data.raw["assembling-machine"]["bob-electric-mixing-furnace"] then
+      data.raw["assembling-machine"]["bob-electric-mixing-furnace"].ingredient_count = 4
     end
   end
 end

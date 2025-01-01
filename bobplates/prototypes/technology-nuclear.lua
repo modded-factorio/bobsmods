@@ -28,7 +28,7 @@ data:extend({
 })
 
 if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-  bobmods.lib.tech.add_recipe_unlock("uranium-processing", "empty-nuclear-fuel-cell")
+  bobmods.lib.tech.add_recipe_unlock("uranium-processing", "bob-empty-nuclear-fuel-cell")
   bobmods.lib.tech.add_prerequisite("uranium-processing", "lead-processing")
 
   bobmods.lib.tech.add_prerequisite("bobingabout-enrichment-process", "nuclear-fuel-reprocessing")
@@ -40,13 +40,13 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "plutonium-fuel-cell",
+      name = "bob-plutonium-fuel-cell",
       icon = "__bobplates__/graphics/icons/nuclear/plutonium-fuel-cell.png",
       icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "plutonium-fuel-cell",
+          recipe = "bob-plutonium-fuel-cell",
         },
       },
       prerequisites = {
@@ -80,7 +80,7 @@ if data.raw.item["thorium-ore"] then
         },
         {
           type = "unlock-recipe",
-          recipe = "thorium-fuel-cell",
+          recipe = "bob-thorium-fuel-cell",
         },
       },
       prerequisites = {
@@ -130,13 +130,13 @@ if data.raw.item["thorium-ore"] then
     data:extend({
       {
         type = "technology",
-        name = "thorium-plutonium-fuel-cell",
+        name = "bob-thorium-plutonium-fuel-cell",
         icon = "__bobplates__/graphics/icons/nuclear/thorium-plutonium-fuel-cell.png",
         icon_size = 64,
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "thorium-plutonium-fuel-cell",
+            recipe = "bob-thorium-plutonium-fuel-cell",
           },
         },
         prerequisites = {
@@ -161,7 +161,7 @@ if data.raw.item["thorium-ore"] then
     data.raw.technology["thorium-fuel-reprocessing"].icon =
       "__bobplates__/graphics/icons/technology/thorium-nuclear-fuel-reprocessing-new.png"
   else
-    bobmods.lib.tech.add_recipe_unlock("thorium-fuel-reprocessing", "thorium-plutonium-fuel-cell")
+    bobmods.lib.tech.add_recipe_unlock("thorium-fuel-reprocessing", "bob-thorium-plutonium-fuel-cell")
     bobmods.lib.tech.add_prerequisite("bobingabout-enrichment-process", "thorium-fuel-reprocessing")
   end
 end
@@ -222,7 +222,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "deuterium-fuel-cell",
+        recipe = "bob-deuterium-fuel-cell",
       },
     },
   },
@@ -262,13 +262,13 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "deuterium-fuel-cell-2",
+      name = "bob-deuterium-fuel-cell-2",
       icon = "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-2.png",
       icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "deuterium-fuel-cell-2",
+          recipe = "bob-deuterium-fuel-cell-2",
         },
       },
       prerequisites = {
@@ -292,7 +292,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   if settings.startup["bobmods-plates-bluedeuterium"].value == true then
     data.raw.technology["deuterium-fuel-reprocessing"].icon =
       "__bobplates__/graphics/icons/technology/deuterium-nuclear-fuel-reprocessing-blue-new.png"
-    data.raw.technology["deuterium-fuel-cell-2"].icon =
+    data.raw.technology["bob-deuterium-fuel-cell-2"].icon =
       "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-2-blue.png"
   else
     data.raw.technology["deuterium-fuel-reprocessing"].icon =

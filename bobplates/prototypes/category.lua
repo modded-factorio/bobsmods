@@ -13,11 +13,11 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "air-pump",
+    name = "bob-air-pump",
   },
   {
     type = "recipe-category",
-    name = "water-pump",
+    name = "bob-water-pump",
   },
   {
     type = "recipe-category",
