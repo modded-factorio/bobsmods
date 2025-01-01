@@ -6,7 +6,7 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
       icon = "__bobores__/graphics/icons/gem-ore.png",
       icon_size = 32,
 
-      subgroup = "bob-ores",
+      subgroup = "bob-gems-ore",
       order = "a-0[bob-gem-ore]",
       stack_size = 200,
       drop_sound = {
@@ -38,7 +38,7 @@ if settings.startup["bobmods-ores-unsortedgemore"].value == true then
         { type = "item", name = "bob-topaz-ore", amount = 1, probability = bobmods.gems.TopazRatio },
         { type = "item", name = "bob-diamond-ore", amount = 1, probability = bobmods.gems.DiamondRatio },
       },
-      subgroup = "bob-ores",
+      subgroup = "bob-gems-ore",
       icon = "__bobores__/graphics/icons/gem-ore.png",
       icon_size = 32,
       order = "a-0",
@@ -55,7 +55,7 @@ data:extend({
     icon_size = 32,
     icon = "__bobores__/graphics/icons/ruby-ore.png",
 
-    subgroup = "bob-ores",
+    subgroup = "bob-gems-ore",
     order = "a-1",
     stack_size = 100,
     drop_sound = {
@@ -78,7 +78,7 @@ data:extend({
     icon_size = 32,
     icon = "__bobores__/graphics/icons/sapphire-ore.png",
 
-    subgroup = "bob-ores",
+    subgroup = "bob-gems-ore",
     order = "b-1",
     stack_size = 100,
     drop_sound = {
@@ -101,7 +101,7 @@ data:extend({
     icon_size = 32,
     icon = "__bobores__/graphics/icons/emerald-ore.png",
 
-    subgroup = "bob-ores",
+    subgroup = "bob-gems-ore",
     order = "c-1",
     stack_size = 100,
     drop_sound = {
@@ -124,7 +124,7 @@ data:extend({
     icon_size = 32,
     icon = "__bobores__/graphics/icons/amethyst-ore.png",
 
-    subgroup = "bob-ores",
+    subgroup = "bob-gems-ore",
     order = "d-1",
     stack_size = 100,
     drop_sound = {
@@ -147,7 +147,7 @@ data:extend({
     icon_size = 32,
     icon = "__bobores__/graphics/icons/topaz-ore.png",
 
-    subgroup = "bob-ores",
+    subgroup = "bob-gems-ore",
     order = "e-1",
     stack_size = 100,
     drop_sound = {
@@ -170,7 +170,7 @@ data:extend({
     icon_size = 32,
     icon = "__bobores__/graphics/icons/diamond-ore.png",
 
-    subgroup = "bob-ores",
+    subgroup = "bob-gems-ore",
     order = "f-1",
     stack_size = 100,
     drop_sound = {

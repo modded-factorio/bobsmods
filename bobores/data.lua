@@ -19,6 +19,12 @@ data:extend({
     order = "b-a",
   },
   {
+    type = "item-subgroup",
+    name = "bob-gems-ore",
+    group = "intermediate-products",
+    order = "2",
+  },
+  {
     type = "resource-category",
     name = "water",
   },

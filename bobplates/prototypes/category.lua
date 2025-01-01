@@ -373,6 +373,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "bob-gems-support",
+    group = "bob-gems",
+    order = "1",
+  },
+  {
+    type = "item-subgroup",
     name = "bob-gems-ore",
     group = "bob-gems",
     order = "2",
