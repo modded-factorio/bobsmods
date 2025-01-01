@@ -1,4 +1,4 @@
-if settings.startup["bobmods-ores-unsortedgemore"].value == true then
+if bobmods.ores.settings.UnsortedGemOre == true then
   data:extend({
     {
       type = "item",

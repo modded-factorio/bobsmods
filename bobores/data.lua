@@ -32,6 +32,9 @@ data:extend({
 
 bobmods.ores.settings.UnsortedGemOre = settings.startup["bobmods-ores-unsortedgemore"].value
 bobmods.ores.settings.GemsFromOtherOres = settings.startup["bobmods-ores-gemsfromotherores"].value
+if bobmods.ores.settings.GemsFromOtherOres == true then
+  bobmods.ores.settings.UnsortedGemOre = false
+end
 bobmods.ores.settings.GemProbability = settings.startup["bobmods-ores-gemprobability"].value
 
 bobmods.ores.settings.LeadGivesNickel = settings.startup["bobmods-ores-leadgivesnickel"].value
