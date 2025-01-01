@@ -152,20 +152,30 @@ function bobmods.warfare.tank_turret_animation(tint)
   }
 end
 
+local sounds = require("prototypes.entity.sounds")
+local movement_triggers = require("__base__/prototypes/entity/movement-triggers")
+
 data:extend({
   {
     type = "car",
     name = "bob-tank-2",
     icon = "__bobwarfare__/graphics/icons/tank-2.png",
     icon_size = 64,
-    flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
+    flags = { "placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable" },
     minable = { mining_time = 1, result = "bob-tank-2" },
+    mined_sound = sounds.deconstruct_large(0.8),
     max_health = 2500,
+    is_military_target = true,
+    deliver_category = "vehicle",
     corpse = "tank-remnants",
-    dying_explosion = "medium-explosion",
+    dying_explosion = "tank-explosion",
+    alert_icon_shift = util.by_pixel(0, -13),
     immune_to_tree_impacts = true,
     immune_to_rock_impacts = true,
     energy_per_hit_point = 0.5,
+    allow_remote_driving = true,
+    equipment_grid = "medium-equipment-grid",
+    trash_inventory_size = 20,
     resistances = {
       {
         type = "fire",
@@ -203,7 +213,6 @@ data:extend({
         percent = 75,
       },
     },
-    deliver_category = "vehicle",
     impact_category = "metal-large",
     collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
@@ -233,7 +242,8 @@ data:extend({
         minimum_darkness = 0.3,
         picture = {
           filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
+          priority = "extra-high",
+          flags = { "light" },
           scale = 2,
           width = 200,
           height = 200,
@@ -247,7 +257,8 @@ data:extend({
         minimum_darkness = 0.3,
         picture = {
           filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
+          priority = "extra-high",
+          flags = { "light" },
           scale = 2,
           width = 200,
           height = 200,
@@ -256,6 +267,20 @@ data:extend({
         size = 2,
         intensity = 0.6,
       },
+    },
+    light_animation =
+    {
+      filename = "__base__/graphics/entity/tank/tank-light.png",
+      priority = "low",
+      blend_mode = "additive",
+      draw_as_glow = true,
+      width = 260,
+      height = 210,
+      line_length = 8,
+      direction_count = 64,
+      scale = 0.5,
+      shift = util.by_pixel(-1, -17 + 6),
+      repeat_count = 2,
     },
     animation = bobmods.warfare.tank_animation(tank_mk2_tint),
     turret_animation = bobmods.warfare.tank_turret_animation(tank_mk2_tint),
@@ -273,7 +298,7 @@ data:extend({
         type = "play-sound",
         sound = {
           {
-            filename = "__base__/sound/car-breaks.ogg",
+            filename = "__base__/sound/fight/tank-brakes.ogg",
             volume = 0.6,
           },
         },
@@ -294,13 +319,15 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 },
-    close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+    open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume= 0.48 },
+    close_sound = { filename = "__base__/sound/fight/tank-door-close.ogg", volume = 0.43 },
     rotation_speed = 0.006,
     tank_driving = true,
     weight = 20000,
     inventory_size = 100,
+    track_particle_triggers = movement_triggers.tank,
     guns = { "tank-cannon-2", "gatling-gun", "tank-flamethrower-2", "tank-artillery-1" },
+    water_reflection = car_reflection(1.2),
   },
 
   {
@@ -308,14 +335,21 @@ data:extend({
     name = "bob-tank-3",
     icon = "__bobwarfare__/graphics/icons/tank-3.png",
     icon_size = 64,
-    flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
+    flags = { "placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable" },
     minable = { mining_time = 1, result = "bob-tank-3" },
+    mined_sound = sounds.deconstruct_large(0.8),
     max_health = 5000,
+    is_military_target = true,
+    deliver_category = "vehicle",
     corpse = "tank-remnants",
-    dying_explosion = "medium-explosion",
+    dying_explosion = "tank-explosion",
+    alert_icon_shift = util.by_pixel(0, -13),
     immune_to_tree_impacts = true,
     immune_to_rock_impacts = true,
     energy_per_hit_point = 0.5,
+    allow_remote_driving = true,
+    equipment_grid = "medium-equipment-grid",
+    trash_inventory_size = 20,
     resistances = {
       {
         type = "fire",
@@ -352,7 +386,6 @@ data:extend({
         percent = 100,
       },
     },
-    deliver_category = "vehicle",
     impact_category = "metal-large",
     collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
@@ -382,7 +415,8 @@ data:extend({
         minimum_darkness = 0.3,
         picture = {
           filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
+          priority = "extra-high",
+          flags = { "light" },
           scale = 2,
           width = 200,
           height = 200,
@@ -396,7 +430,8 @@ data:extend({
         minimum_darkness = 0.3,
         picture = {
           filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
+          priority = "extra-high",
+          flags = { "light" },
           scale = 2,
           width = 200,
           height = 200,
@@ -405,6 +440,20 @@ data:extend({
         size = 2,
         intensity = 0.6,
       },
+    },
+    light_animation =
+    {
+      filename = "__base__/graphics/entity/tank/tank-light.png",
+      priority = "low",
+      blend_mode = "additive",
+      draw_as_glow = true,
+      width = 260,
+      height = 210,
+      line_length = 8,
+      direction_count = 64,
+      scale = 0.5,
+      shift = util.by_pixel(-1, -17 + 6),
+      repeat_count = 2,
     },
     animation = bobmods.warfare.tank_animation(tank_mk3_tint),
     turret_animation = bobmods.warfare.tank_turret_animation(tank_mk3_tint),
@@ -422,7 +471,7 @@ data:extend({
         type = "play-sound",
         sound = {
           {
-            filename = "__base__/sound/car-breaks.ogg",
+            filename = "__base__/sound/fight/tank-brakes.ogg",
             volume = 0.6,
           },
         },
@@ -443,12 +492,14 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 },
-    close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+    open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume= 0.48 },
+    close_sound = { filename = "__base__/sound/fight/tank-door-close.ogg", volume = 0.43 },
     rotation_speed = 0.01,
     tank_driving = true,
     weight = 20000,
     inventory_size = 100,
+    track_particle_triggers = movement_triggers.tank,
     guns = { "tank-cannon-3", "gatling-gun", "tank-flamethrower-3", "tank-artillery-2", "tank-laser" },
+    water_reflection = car_reflection(1.2),
   },
 })
