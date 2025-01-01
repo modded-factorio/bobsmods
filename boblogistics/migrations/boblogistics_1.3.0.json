@@ -39,7 +39,10 @@
     ["stack-filter-inserter", "bulk-inserter"],
     ["red-stack-filter-inserter", "red-bulk-inserter"],
     ["turbo-stack-filter-inserter", "turbo-bulk-inserter"],
-    ["express-stack-filter-inserter", "express-bulk-inserter"]
+    ["express-stack-filter-inserter", "express-bulk-inserter"],
+    ["bob-valve", "valves-one_way"],
+    ["bob-overflow-valve", "valves-overflow"],
+    ["bob-topup-valve", "valves-top_up"]
   ],
   "recipe":
   [
@@ -81,7 +84,10 @@
     ["stack-filter-inserter", "bulk-inserter"],
     ["red-stack-filter-inserter", "red-bulk-inserter"],
     ["turbo-stack-filter-inserter", "turbo-bulk-inserter"],
-    ["express-stack-filter-inserter", "express-bulk-inserter"]
+    ["express-stack-filter-inserter", "express-bulk-inserter"],
+    ["bob-valve", "valves-one_way"],
+    ["bob-overflow-valve", "valves-overflow"],
+    ["bob-topup-valve", "valves-top_up"]
   ],
   "entity":
   [
@@ -107,7 +113,13 @@
     ["stack-filter-inserter", "bulk-inserter"],
     ["red-stack-filter-inserter", "red-bulk-inserter"],
     ["turbo-stack-filter-inserter", "turbo-bulk-inserter"],
-    ["express-stack-filter-inserter", "express-bulk-inserter"]
+    ["express-stack-filter-inserter", "express-bulk-inserter"],
+    ["bob-valve", "valves-one_way"],
+    ["bob-overflow-valve", "valves-overflow"],
+    ["bob-topup-valve", "valves-top_up"],
+    ["bob-valve", "valves-one_way"],
+    ["bob-overflow-valve", "valves-overflow"],
+    ["bob-topup-valve", "valves-top_up"]
   ],
   "technology":
   [
