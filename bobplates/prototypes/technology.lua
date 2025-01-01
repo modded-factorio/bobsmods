@@ -41,17 +41,13 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
     prerequisites = {
-      "steel-processing",
-      "logistic-science-pack",
+      "chemical-processing-1",
+      "fluid-handling",
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "salt-water-electrolysis",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "storage-tank",
       },
     },
     unit = {

@@ -1,10 +1,7 @@
 if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
   if settings.startup["bobmods-revamp-hardmode"].value == true then
     data.raw.recipe["sodium-cobaltate"].emissions_multiplier = 0.2
-    bobmods.lib.recipe.add_result(
-      "sodium-cobaltate",
-      { type = "fluid", name = "carbon-dioxide", amount = 150, ignored_by_productivity = 150 }
-    )
+    bobmods.lib.recipe.add_result("sodium-cobaltate", { type = "fluid", name = "carbon-dioxide", amount = 150 })
 
     if data.raw.fluid["pure-water"] then
       bobmods.lib.recipe.remove_result("sodium-carbonate", "water")

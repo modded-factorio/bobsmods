@@ -213,19 +213,20 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "bob-area-drills-1",
+      name = "bob-area-drills-2",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      order = "d-a-b-1",
       prerequisites = {
         "steel-processing",
         "electric-mining-drill",
+        "logistic-science-pack",
       },
       unit = {
         count = 50,
         time = 30,
         ingredients = {
           { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
       },
       effects = {
@@ -237,13 +238,12 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     },
     {
       type = "technology",
-      name = "bob-area-drills-2",
+      name = "bob-area-drills-3",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      order = "d-a-b-2",
       prerequisites = {
-        "bob-area-drills-1",
-        "advanced-circuit",
+        "bob-area-drills-2",
+        "chemical-science-pack",
       },
       unit = {
         count = 75,
@@ -251,6 +251,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
       },
       effects = {
@@ -262,13 +263,13 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     },
     {
       type = "technology",
-      name = "bob-area-drills-3",
+      name = "bob-area-drills-4",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      order = "d-a-b-3",
       prerequisites = {
-        "bob-area-drills-2",
+        "bob-area-drills-3",
         "processing-unit",
+        "production-science-pack",
       },
       unit = {
         count = 100,
@@ -277,6 +278,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       effects = {
@@ -288,13 +290,12 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     },
     {
       type = "technology",
-      name = "bob-area-drills-4",
+      name = "bob-area-drills-5",
       icon = "__base__/graphics/technology/mining-productivity.png",
       icon_size = 256,
-      order = "d-a-b-4",
       prerequisites = {
-        "bob-area-drills-3",
-        "production-science-pack",
+        "bob-area-drills-4",
+        "utility-science-pack",
       },
       unit = {
         count = 150,
@@ -304,6 +305,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
       },
       effects = {

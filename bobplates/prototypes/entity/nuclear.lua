@@ -4,7 +4,7 @@ data.raw["assembling-machine"]["centrifuge"].graphics_set.working_visualisations
     -- Centrifuge C, Top.
     apply_recipe_tint = "tertiary",
     animation = {
-      filename = "__bobplates__/graphics/entity/centrifuge/hr-centrifuge-C-light.png",
+      filename = "__bobplates__/graphics/entity/centrifuge/centrifuge-C-light.png",
       priority = "high",
       scale = 0.5,
       blend_mode = "additive", -- centrifuge
@@ -19,7 +19,7 @@ data.raw["assembling-machine"]["centrifuge"].graphics_set.working_visualisations
   {
     apply_recipe_tint = "secondary",
     animation = {
-      filename = "__bobplates__/graphics/entity/centrifuge/hr-centrifuge-B-light.png",
+      filename = "__bobplates__/graphics/entity/centrifuge/centrifuge-B-light.png",
       priority = "high",
       scale = 0.5,
       blend_mode = "additive", -- centrifuge
@@ -34,7 +34,7 @@ data.raw["assembling-machine"]["centrifuge"].graphics_set.working_visualisations
   {
     apply_recipe_tint = "primary",
     animation = {
-      filename = "__bobplates__/graphics/entity/centrifuge/hr-centrifuge-A-light.png",
+      filename = "__bobplates__/graphics/entity/centrifuge/centrifuge-A-light.png",
       priority = "high",
       scale = 0.5,
       blend_mode = "additive", -- centrifuge

@@ -12,8 +12,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   data.raw.recipe["calcium-chloride"].main_product = "calcium-chloride"
 
   bobmods.lib.recipe.set_ingredient("petroleum-gas-cracking", { type = "fluid", name = "water", amount = 20 })
-  --  bobmods.lib.recipe.add_result("petroleum-gas-cracking", {type = "fluid", name = "carbon-dioxide", amount = 25, ignored_by_productivity = 25})
-  --  data.raw.recipe["petroleum-gas-cracking"].emissions_multiplier = 0.2
 
   bobmods.lib.tech.add_recipe_unlock("chemical-processing-2", "limestone")
 
@@ -30,6 +28,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
   bobmods.lib.tech.add_recipe_unlock("chemical-processing-2", "carbon-dioxide")
   bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "carbon-dioxide-oil-processing")
+  bobmods.lib.tech.add_prerequisite("advanced-oil-processing", "chemical-processing-2")
 
   bobmods.lib.recipe.replace_ingredient("sulfuric-acid-2", "water", "hydrogen-peroxide")
   bobmods.lib.recipe.replace_ingredient("nitric-acid", "water", "hydrogen-peroxide")

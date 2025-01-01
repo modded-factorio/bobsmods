@@ -316,19 +316,19 @@ data:extend({
     type = "item-subgroup",
     name = "bob-electronic-components",
     group = "intermediate-products",
-    order = "e-a1",
+    order = "e-a2",
   },
   {
     type = "item-subgroup",
     name = "bob-boards",
     group = "intermediate-products",
-    order = "e-a2",
+    order = "e-a3",
   },
   {
     type = "item-subgroup",
     name = "bob-electronic-boards",
     group = "intermediate-products",
-    order = "e-a3",
+    order = "e-a4",
   },
 
   {

@@ -208,17 +208,6 @@ data:extend({
 
   {
     type = "item",
-    name = "void",
-    icon = "__bobplates__/graphics/icons/void.png",
-    icon_size = 64,
-    hidden = true,
-    subgroup = "void",
-    order = "void",
-    stack_size = 100,
-  },
-
-  {
-    type = "item",
     name = "enriched-fuel",
     icon = "__bobplates__/graphics/icons/enriched-fuel.png",
     icon_size = 32,

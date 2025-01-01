@@ -112,7 +112,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.8, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -135,7 +134,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.8, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -153,7 +151,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "sodium-bicarbonate", amount = 1 },
-          { type = "item", name = "ammonium-chloride", amount = 1, ignored_by_productivity = 1 },
+          { type = "item", name = "ammonium-chloride", amount = 1 },
         },
         main_product = "sodium-bicarbonate",
         crafting_machine_tint = {
@@ -161,7 +159,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.4, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -178,7 +175,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "sodium-carbonate", amount = 1 },
-          { type = "fluid", name = "water", amount = 10, fluidbox_index = 1, ignored_by_productivity = 10 },
+          { type = "fluid", name = "water", amount = 10, fluidbox_index = 1 },
           { type = "fluid", name = "carbon-dioxide", amount = 25, fluidbox_index = 2 },
         },
         main_product = "sodium-carbonate",
@@ -187,7 +184,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.0, g = 0.5, b = 0.8, a = 0.000 },
           tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
         },
-        allow_productivity = true,
       },
       {
         type = "recipe",
@@ -262,7 +258,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
           tertiary = { r = 0.4, g = 0.4, b = 0.4, a = 0.000 },
         },
-        allow_productivity = true,
       },
     })
   end
@@ -317,7 +312,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       results = {
         { type = "item", name = "sodium-cobaltate", amount = 5 },
-        { type = "fluid", name = "oxygen", amount = 200, ignored_by_productivity = 200 },
+        { type = "fluid", name = "oxygen", amount = 200 },
       },
       main_product = "sodium-cobaltate",
       crafting_machine_tint = {
@@ -325,7 +320,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         tertiary = { r = 0.8, g = 0.4, b = 0.4, a = 0.000 },
       },
-      allow_productivity = true,
     },
     {
       type = "recipe",

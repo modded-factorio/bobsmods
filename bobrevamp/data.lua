@@ -148,6 +148,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       name = "sour-gas",
       icon = "__bobrevamp__/graphics/icons/sour-gas.png",
       icon_size = 64,
+      subgroup = "fluid",
       default_temperature = 25,
       heat_capacity = "0.1kJ",
       base_color = { r = 0.4, g = 0.1, b = 0.3 },
@@ -203,7 +204,6 @@ if settings.startup["bobmods-revamp-oil"].value == true then
         secondary = { r = 0.789, g = 0.540, b = 0.615 },
         tertiary = { r = 0.669, g = 0.145, b = 0.695 },
       },
-      allow_productivity = true,
     },
   })
 
@@ -211,7 +211,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     data.raw.fluid["sour-gas"].subgroup = "bob-fluid"
   end
 
-  if data.raw["recipe-category"]["void-fluid"] and data.raw.item.void then
+  if data.raw["recipe-category"]["void-fluid"] then
     if bobmods.plates and bobmods.plates.make_void_fluid_recipe then
       bobmods.plates.make_void_fluid_recipe("sour-gas", 25, 55)
     else
@@ -239,9 +239,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
           ingredients = {
             { type = "fluid", name = "sour-gas", amount = 25 },
           },
-          results = {
-            { type = "item", name = "void", amount = 1, probability = 0 },
-          },
+          results = {},
           emissions_multiplier = 55,
         },
       })
