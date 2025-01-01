@@ -83,7 +83,6 @@ data:extend({
       width = 60,
       height = 118,
       frame_count = 25,
-      direction_count = 1,
       blend_mode = "additive",
       animation_speed = 1,
       scale = 0.4,

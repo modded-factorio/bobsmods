@@ -217,8 +217,7 @@ data:extend({
       "backward"
     ),
     folding_sound = sounds.worm_fold(1),
-    integration = worm_integration(bobmods.enemies.giant_scale),
-    secondary_animation = true,
+    integration = worm_integration(bobmods.enemies.giant_scale, true),
     random_animation_offset = true,
     attack_from_start_frame = true,
     prepare_range = 70,
@@ -269,7 +268,7 @@ set_worm_animations(data.raw.turret["behemoth-worm-turret"], bobmods.enemies.beh
 data.raw.turret["behemoth-worm-turret"].collision_box = { { -2.8, -2.4 }, { 2.8, 2.4 } }
 data.raw.turret["behemoth-worm-turret"].selection_box = { { -2.8, -2.4 }, { 2.8, 2.4 } }
 data.raw.turret["behemoth-worm-turret"].map_generator_bounding_box = { { -3.8, -3.4 }, { 3.8, 3.4 } }
-data.raw.turret["behemoth-worm-turret"].integration = worm_integration(bobmods.enemies.behemoth_scale)
+data.raw.turret["behemoth-worm-turret"].integration = worm_integration(bobmods.enemies.behemoth_scale, true)
 data.raw.turret["behemoth-worm-turret"].max_health = 1500
 data.raw.turret["behemoth-worm-turret"].shooting_cursor_size = 8
 

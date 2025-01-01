@@ -63,7 +63,6 @@ data:extend({
       type = "projectile",
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -187,7 +186,6 @@ data:extend({
       type = "projectile",
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -311,7 +309,6 @@ data:extend({
       type = "projectile",
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -442,7 +439,6 @@ data:extend({
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -573,7 +569,6 @@ data:extend({
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -707,7 +702,6 @@ data:extend({
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -848,7 +842,6 @@ data:extend({
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",
@@ -999,7 +992,6 @@ data:extend({
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "entity",
         action = {
           type = "direct",

@@ -175,7 +175,6 @@ function bobmods.enemies.spitter_attack_parameters(data)
     use_shooter_direction = true,
     lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5, -- this is same as particle horizontal speed of flamethrower fire stream
     ammo_type = {
-      category = "biological",
       action = {
         type = "direct",
         action_delivery = {
