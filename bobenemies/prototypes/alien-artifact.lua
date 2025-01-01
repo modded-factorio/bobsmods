@@ -6,7 +6,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       type = "item",
       name = "alien-artifact",
       icon = "__bobenemies__/graphics/icons/alien-artifact.png",
-      icon_size = 32,
+      icon_size = 64,
       subgroup = "raw-material",
       order = "g[alien-artifact]-a[pink]",
       stack_size = 500,
