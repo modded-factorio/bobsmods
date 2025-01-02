@@ -33,7 +33,7 @@ then
       enabled = false,
       ingredients = {
         { type = "item", name = "alien-artifact-orange", amount = 1 },
-        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "bob-gold-plate", amount = 10 },
       },
       results = { { type = "item", name = "alien-orange-alloy", amount = 10 } },
       crafting_machine_tint = {
