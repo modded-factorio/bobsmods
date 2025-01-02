@@ -378,7 +378,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-big-turret-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "low-density-structure", amount = 30 },
+      { type = "item", name = "low-density-structure", amount = 10 },
       { type = "item", name = "efficiency-module-3", amount = 2 },
     },
     results = { { type = "item", name = "vehicle-big-turret-equipment-4", amount = 1 } },
