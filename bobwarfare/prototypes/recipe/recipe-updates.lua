@@ -355,15 +355,15 @@ if mods["bobmodules"] then
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "speed-module-2", "speed-module-3")
 
   if data.raw.module["bob-efficiency-module-4"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "efficiency-module-3", "efficiency-module-4")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "efficiency-module-3", "bob-efficiency-module-4")
   end
 
   if data.raw.module["bob-speed-module-4"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "speed-module-3", "speed-module-4")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "speed-module-3", "bob-speed-module-4")
   end
 
   if data.raw.module["bob-efficiency-module-5"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "efficiency-module-3", "efficiency-module-5")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "efficiency-module-3", "bob-efficiency-module-5")
     bobmods.lib.recipe.remove_ingredient("bob-plasma-turret-4", "efficiency-module-3")
     bobmods.lib.recipe.add_new_ingredient("bob-plasma-turret-4", { type = "item", name = "bob-efficiency-module-5", amount = 1 })
     bobmods.lib.tech.remove_prerequisite("bob-plasma-turrets-4", "efficiency-module-3")
@@ -371,7 +371,7 @@ if mods["bobmodules"] then
   end
 
   if data.raw.module["bob-speed-module-5"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "speed-module-3", "speed-module-5")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "speed-module-3", "bob-speed-module-5")
   end
 
   if data.raw.module["bob-quality-module-5"] then
