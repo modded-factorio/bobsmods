@@ -481,6 +481,10 @@ if data.raw.item["alien-orange-alloy"] then
   bobmods.lib.recipe.replace_ingredient("electric-bullet-projectile", "steel-plate", "alien-orange-alloy")
   bobmods.lib.recipe.replace_ingredient("shotgun-electric-shell", "copper-plate", "alien-orange-alloy")
   bobmods.lib.recipe.replace_ingredient("electric-rocket-warhead", "copper-plate", "alien-orange-alloy")
+elseif data.raw.item["bob-gold-plate"] then
+  bobmods.lib.recipe.replace_ingredient("electric-bullet-projectile", "steel-plate", "bob-gold-plate")
+  bobmods.lib.recipe.replace_ingredient("shotgun-electric-shell", "copper-plate", "bob-gold-plate")
+  bobmods.lib.recipe.replace_ingredient("electric-rocket-warhead", "copper-plate", "bob-gold-plate")
 end
 
 if data.raw.fluid["alien-acid"] then
