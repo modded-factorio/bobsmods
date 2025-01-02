@@ -33,7 +33,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a1",
     },
 
     {
@@ -42,9 +41,9 @@ then
       icon = "__bobplates__/graphics/icons/technology/alien-orange-alloy.png",
       icon_size = 64,
       prerequisites = {
-        "steel-processing",
         "military-science-pack",
         "chemical-science-pack",
+        "gold-processing",
       },
       effects = {
         {
@@ -62,7 +61,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a2",
     },
 
     {
@@ -91,7 +89,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a3",
     },
 
     {
@@ -120,7 +117,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a4",
     },
 
     {
@@ -149,7 +145,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a5",
     },
 
     {
@@ -178,7 +173,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a6",
     },
   })
 end
