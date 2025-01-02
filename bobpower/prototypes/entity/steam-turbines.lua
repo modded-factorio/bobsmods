@@ -10,6 +10,7 @@ ST2: 0.2kW * 60 * 1.0 * ( 615 -15) =  7200kW
 ST3: 0.2kW * 60 * 1.0 * ( 765 -15) =  9000kW
 ]]
 --
+data.raw.generator["steam-turbine"].energy_source.usage_priority = "primary-output"
 
 if settings.startup["bobmods-power-steam"].value == true then
   data.raw.generator["steam-turbine"].max_health = 750
