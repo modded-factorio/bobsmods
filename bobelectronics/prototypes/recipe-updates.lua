@@ -92,9 +92,14 @@ else
   end
 end
 
+--Use this standard when adding solder: basic-electronic-components = 1/6 solder, electronic-components = 1/5 solder, intergrated-electronics = 1/4 solder, processing-electronics = 1/3 solder
 if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("electronic-circuit", { type = "item", name = "solder", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("advanced-circuit", { type = "item", name = "solder", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("processing-unit", { type = "item", name = "solder", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("advanced-processing-unit", { type = "item", name = "solder", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("advanced-circuit", { type = "item", name = "solder", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("processing-unit", { type = "item", name = "solder", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("advanced-processing-unit", { type = "item", name = "solder", amount = 6 })
 end
+
+bobmods.lib.recipe.replace_ingredient("arithmetic-combinator", "copper-cable", "insulated-cable")
+bobmods.lib.recipe.replace_ingredient("decider-combinator", "copper-cable", "insulated-cable")
+bobmods.lib.recipe.replace_ingredient("constant-combinator", "copper-cable", "insulated-cable")
