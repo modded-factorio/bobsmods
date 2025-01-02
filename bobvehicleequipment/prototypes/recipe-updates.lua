@@ -591,7 +591,7 @@ if data.raw.module["bob-speed-module-5"] then
   bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-6", "bob-speed-module-5")
   bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-6", "bob-efficiency-module-5")
   bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-6", "bob-productivity-module-5")
-  if data.raw.module["quality-module-5"] then
+  if data.raw.module["bob-quality-module-5"] then
     bobmods.lib.recipe.add_new_ingredient("vehicle-fission-reactor-equipment-6", { type = "item", name = "bob-quality-module-5", amount = 2 })
     bobmods.lib.tech.add_prerequisite("vehicle-fission-reactor-equipment-6", "bob-quality-module-5")
     bobmods.lib.recipe.add_new_ingredient("vehicle-fission-cell-equipment-6", { type = "item", name = "bob-quality-module-5", amount = 1 })
