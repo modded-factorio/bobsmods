@@ -223,20 +223,6 @@ data:extend({
 
   {
     type = "item",
-    name = "bob-plasma-turret-5",
-    icon = "__base__/graphics/icons/laser-turret.png",
-    icon_size = 64,
-    subgroup = "turret",
-    order = "b[turret]-d[plasma-turret-5]",
-    place_result = "bob-plasma-turret-5",
-    stack_size = 50,
-    drop_sound = turretmovesound,
-    inventory_move_sound = turretmovesound,
-    pick_sound = turretplacesound,
-  },
-
-  {
-    type = "item",
     name = "bob-artillery-turret-2",
     icon = "__base__/graphics/icons/artillery-turret.png",
     icon_size = 64,
