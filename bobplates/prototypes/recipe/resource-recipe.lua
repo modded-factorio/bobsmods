@@ -217,7 +217,7 @@ data:extend({
     category = "smelting",
     energy_required = 1.6,
     ingredients = {
-      { type = "item", name = "wood", amount = 2 },
+      { type = "item", name = "wood", amount = 1 },
     },
     results = { { type = "item", name = "bob-carbon", amount = 1 } },
     subgroup = "bob-resource",
