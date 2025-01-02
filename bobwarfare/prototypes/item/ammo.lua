@@ -125,11 +125,11 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "bob-pierce" },
+              damage = { amount = 10, type = "bob-pierce" },
             },
             {
               type = "activate-impact",
@@ -171,7 +171,7 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "nested-result",
@@ -183,7 +183,7 @@ data:extend({
                   target_effects = {
                     {
                       type = "damage",
-                      damage = { amount = 12, type = "explosion" },
+                      damage = { amount = 6, type = "explosion" },
                     },
                   },
                 },
@@ -229,7 +229,7 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "nested-result",
@@ -241,7 +241,7 @@ data:extend({
                   target_effects = {
                     {
                       type = "damage",
-                      damage = { amount = 12, type = "fire" },
+                      damage = { amount = 6, type = "fire" },
                     },
                   },
                 },
@@ -283,7 +283,7 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "nested-result",
@@ -295,7 +295,7 @@ data:extend({
                   target_effects = {
                     {
                       type = "damage",
-                      damage = { amount = 12, type = "acid" },
+                      damage = { amount = 6, type = "acid" },
                     },
                   },
                 },
@@ -341,7 +341,7 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "nested-result",
@@ -353,7 +353,7 @@ data:extend({
                   target_effects = {
                     {
                       type = "damage",
-                      damage = { amount = 12, type = "poison" },
+                      damage = { amount = 6, type = "poison" },
                     },
                   },
                 },
@@ -399,11 +399,11 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 12, type = "electric" },
+              damage = { amount = 10, type = "electric" },
             },
             {
               type = "activate-impact",
@@ -1392,7 +1392,7 @@ data:extend({
                   target_effects = {
                     {
                       type = "damage",
-                      damage = { amount = 15, type = "plasma" },
+                      damage = { amount = 8, type = "plasma" },
                     },
                   },
                 },
@@ -1461,3 +1461,29 @@ data:extend({
     weight = 40000,
   },
 })
+
+if
+  data.raw.item["alien-orange-alloy"]
+  and data.raw.item["alien-blue-alloy"]
+  and data.raw.fluid["alien-explosive"]
+  and data.raw.fluid["alien-acid"]
+  and data.raw.fluid["alien-fire"]
+  and data.raw.fluid["alien-poison"]
+then
+  data.raw.ammo["bullet-magazine"].ammo_type.action[1].action_delivery[1].target_effects[2].damage.amount = 20
+  data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 30
+  data.raw.ammo["ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 24
+  data.raw.ammo["ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 12
+  data.raw.ammo["electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 18
+  data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 24
+end
