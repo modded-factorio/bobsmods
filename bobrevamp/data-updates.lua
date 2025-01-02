@@ -86,6 +86,7 @@ if
   and not settings.startup["bobmods-revamp-oil"].value == true
 then
   bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
+  bobmods.lib.tech.remove_recipe_unlock("oil-processing", "sulfur")
   bobmods.lib.recipe.hide("sulfur")
   bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "oil-processing-with-sulfur")
 
@@ -100,6 +101,7 @@ end
 if settings.startup["bobmods-revamp-oil"].value == true then
   if data.raw.recipe["sulfur-2"] or data.raw.recipe["sulfur-3"] then
     bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
+    bobmods.lib.tech.remove_recipe_unlock("oil-processing", "sulfur")
     bobmods.lib.recipe.hide("sulfur")
   end
   bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-sour-gas")

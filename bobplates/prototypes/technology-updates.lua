@@ -16,6 +16,12 @@ if bobmods.electronics then
   bobmods.lib.tech.add_prerequisite("water-bore-1", "electronics")
 end
 
+bobmods.lib.tech.remove_prerequisite("sulfur-processing", "oil-processing")
+bobmods.lib.tech.add_prerequisite("oil-processing", "sulfur-processing")
+bobmods.lib.tech.add_prerequisite("sulfur-processing", "chemical-processing-2")
+bobmods.lib.tech.add_prerequisite("sulfur-processing", "nickel-processing")
+bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
+bobmods.lib.tech.add_recipe_unlock("oil-processing", "sulfur")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfur-2")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfur-3")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfuric-acid-2")

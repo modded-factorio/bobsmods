@@ -659,7 +659,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "copper-ore", amount = 7 },
       { type = "item", name = "stone", amount = 1 },
-      { type = "item", name = "carbon", amount = 1 },
+      { type = "item", name = "bob-carbon", amount = 1 },
       { type = "fluid", name = "hydrogen", amount = 5 },
     },
     results = {
@@ -683,7 +683,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "lead-oxide", amount = 7 },
-      { type = "item", name = "carbon", amount = 3 },
+      { type = "item", name = "bob-carbon", amount = 3 },
       { type = "item", name = "bob-nickel-plate", amount = 1 },
     },
     results = {
@@ -703,7 +703,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "silicon-powder", amount = 1 },
-      { type = "item", name = "carbon", amount = 1 },
+      { type = "item", name = "bob-carbon", amount = 1 },
     },
     results = { { type = "item", name = "silicon-carbide", amount = 2 } },
     allow_productivity = true,

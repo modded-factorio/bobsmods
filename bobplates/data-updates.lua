@@ -105,12 +105,12 @@ else
 end
 
 if settings.startup["bobmods-plates-batteryupdate"].value == true then
-  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "plastics", "lead-processing" }
+  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "lead-processing" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
   bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "bob-lead-plate", amount = 2 })
   bobmods.lib.recipe.add_ingredient("battery", { type = "fluid", name = "sulfuric-acid", amount = 20 })
-  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "plastic-bar", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "steel-plate", amount = 1 })
 end
 
 data.raw.recipe["steel-plate"].category = "chemical-furnace"
@@ -382,7 +382,7 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-plate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("cobalt-plate", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("carbon", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-carbon", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-wafer", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-cobalt-oxide", false)

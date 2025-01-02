@@ -6,8 +6,8 @@ data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
 data.raw.item["copper-cable"].order = "0-a1"
 
 if data.raw["recipe-category"]["chemical-furnace"] then
-  if data.raw.recipe["carbon"] then
-    data.raw.recipe["carbon"].category = "chemical-furnace"
+  if data.raw.recipe["bob-carbon"] then
+    data.raw.recipe["bob-carbon"].category = "chemical-furnace"
   end
 end
 

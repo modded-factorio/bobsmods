@@ -26,8 +26,8 @@ if data.raw.item["tinned-copper-cable"] then
   bobmods.lib.recipe.replace_ingredient("intergrated-electronics", "copper-cable", "tinned-copper-cable")
 end
 
-if data.raw.item["carbon"] then
-  bobmods.lib.recipe.replace_ingredient("basic-electronic-components", "coal", "carbon")
+if data.raw.item["bob-carbon"] then
+  bobmods.lib.recipe.replace_ingredient("basic-electronic-components", "coal", "bob-carbon")
 end
 
 if data.raw.item["silicon-wafer"] then

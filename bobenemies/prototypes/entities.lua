@@ -78,12 +78,11 @@ data:extend({
     name = "poison-sticker",
     flags = { "not-on-map" },
     animation = {
-      filename = "__base__/graphics/entity/fire-flame/fire-flame-13.png",
+      filename = "__bobenemies__/graphics/entity/fire-flame/fire-flame-13.png",
       line_length = 8,
       width = 60,
       height = 118,
       frame_count = 25,
-      direction_count = 1,
       blend_mode = "additive",
       animation_speed = 1,
       scale = 0.4,
