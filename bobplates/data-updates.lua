@@ -382,7 +382,7 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-plate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("cobalt-plate", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("carbon", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-carbon", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-wafer", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-cobalt-oxide", false)

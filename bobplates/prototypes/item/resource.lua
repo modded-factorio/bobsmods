@@ -1,11 +1,11 @@
 data:extend({
   {
     type = "item",
-    name = "carbon",
+    name = "bob-carbon",
     icon = "__bobplates__/graphics/icons/carbon.png",
     icon_size = 32,
     subgroup = "bob-resource",
-    order = "f[carbon]",
+    order = "f[bob-carbon]",
     fuel_category = "chemical",
     fuel_value = "2MJ", --"4MJ",
     fuel_emissions_multiplier = 0.9,

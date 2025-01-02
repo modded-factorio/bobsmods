@@ -171,7 +171,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       energy_required = 1,
       main_product = "carbon-dioxide",
       ingredients = {
-        { type = "item", name = "carbon", amount = 1 },
+        { type = "item", name = "bob-carbon", amount = 1 },
         { type = "fluid", name = "oxygen", amount = 25 },
       },
       results = {
@@ -206,5 +206,3 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     bobmods.plates.make_void_fluid_recipe("carbon-dioxide", 25, 10)
   end
 end
-
---1 Carbon + 25 Oxygen -> 25 CO2
