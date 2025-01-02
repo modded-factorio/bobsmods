@@ -72,6 +72,9 @@ if feature_flags["quality"] then
     "circuit-board",
     "superior-circuit-board",
     "multi-layer-circuit-board",
+    "arithmetic-combinator",
+    "decider-combinator",
+    "constant-combinator",
   })
   if settings.startup["bobmods-colorupdate"].value == true then
     bobmods.lib.recipe.update_recycling_recipe_icon(
