@@ -283,7 +283,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
     })
   end
 
-  if data.raw.item["enriched-fuel"] then
+  if data.raw.item["bob-enriched-fuel"] then
     data:extend({
       {
         type = "recipe",
@@ -295,9 +295,9 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
           { type = "fluid", name = "hydrazine", amount = 100 },
           { type = "item", name = "solid-fuel", amount = 1 },
         },
-        results = { { type = "item", name = "enriched-fuel", amount = 1 } },
+        results = { { type = "item", name = "bob-enriched-fuel", amount = 1 } },
         subgroup = "bob-chemical-fuels",
-        order = "d[enriched-fuel]-2",
+        order = "d[bob-enriched-fuel]-2",
         crafting_machine_tint = {
           primary = { r = 0.9, g = 0.9, b = 0.9, a = 0.000 },
           secondary = { r = 0.8, g = 0.8, b = 0.8, a = 0.000 },

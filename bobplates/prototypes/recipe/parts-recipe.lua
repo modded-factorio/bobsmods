@@ -194,7 +194,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-lithium-perchlorate", amount = 2 },
-      { type = "item", name = "lithium-cobalt-oxide", amount = 1 },
+      { type = "item", name = "bob-lithium-cobalt-oxide", amount = 1 },
       { type = "item", name = "bob-carbon", amount = 1 },
       { type = "item", name = "plastic-bar", amount = 1 },
     },

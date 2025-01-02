@@ -54,15 +54,15 @@ if mods["bobplates"] then
   bobmods.lib.tech.add_recipe_unlock("chemical-processing-2", "bob-ferric-chloride-solution")
   bobmods.lib.tech.add_prerequisite("chemical-processing-2", "bob-electronics")
   bobmods.lib.tech.add_prerequisite("advanced-circuit", "chemical-processing-2")
-  bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-wafer")
+  bobmods.lib.tech.add_recipe_unlock("silicon-processing", "bob-silicon-wafer")
   bobmods.lib.tech.add_prerequisite("bob-advanced-processing-unit", "ceramics")
   bobmods.lib.tech.replace_prerequisite("air-compressor-1", "electronics", "bob-electronics")
   bobmods.lib.tech.replace_prerequisite("water-bore-1", "electronics", "bob-electronics")
 else
   bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-ferric-chloride-solution")
   bobmods.lib.tech.add_prerequisite("advanced-circuit", "oil-processing")
-  if data.raw.recipe["silicon-wafer"] then
-    data.raw.recipe["silicon-wafer"].enabled = true
+  if data.raw.recipe["bob-silicon-wafer"] then
+    data.raw.recipe["bob-silicon-wafer"].enabled = true
   end
 end
 

@@ -352,8 +352,8 @@ if data.raw.item["bob-lithium-ion-battery"] then
   bobmods.lib.recipe.replace_ingredient("personal-laser-defense-equipment-4", "battery", "bob-lithium-ion-battery")
 end
 
-if data.raw.item["silicon-wafer"] then
-  bobmods.lib.recipe.add_ingredient("solar-panel-equipment-3", { type = "item", name = "silicon-wafer", amount = 8 })
+if data.raw.item["bob-silicon-wafer"] then
+  bobmods.lib.recipe.add_ingredient("solar-panel-equipment-3", { type = "item", name = "bob-silicon-wafer", amount = 8 })
 end
 
 if data.raw.item["bob-advanced-processing-unit"] then

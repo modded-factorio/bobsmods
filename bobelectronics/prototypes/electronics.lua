@@ -66,7 +66,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "copper-cable", amount = 2 },
-      { type = "item", name = "rubber", amount = 1 },
+      { type = "item", name = "bob-rubber", amount = 1 },
     },
     results = { { type = "item", name = "insulated-cable", amount = 2 } },
     allow_decomposition = false,
@@ -127,7 +127,7 @@ if data.raw.item["solder-alloy"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "solder-alloy", amount = 4 },
-        { type = "item", name = "resin", amount = 1 },
+        { type = "item", name = "bob-resin", amount = 1 },
       },
       results = { { type = "item", name = "solder", amount = 8 } },
       allow_decomposition = false,
@@ -325,7 +325,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
-      { type = "item", name = "resin", amount = 1 },
+      { type = "item", name = "bob-resin", amount = 1 },
     },
     results = { { type = "item", name = "phenolic-board", amount = 2 } },
     allow_productivity = true,

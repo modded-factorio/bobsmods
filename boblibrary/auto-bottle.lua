@@ -121,7 +121,7 @@ local function create_fill_gas_bottle_recipe(fluid)
     icons = generate_fill_gas_bottle_icons(fluid),
     ingredients = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -147,7 +147,7 @@ local function create_fill_fluid_canister_recipe(fluid)
     icons = generate_fill_fluid_canister_icons(fluid),
     ingredients = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -179,7 +179,7 @@ local function create_empty_gas_bottle_recipe(fluid)
     },
     results = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     allow_decomposition = false,
   }
@@ -205,7 +205,7 @@ local function create_empty_fluid_canister_recipe(fluid)
     },
     results = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     allow_decomposition = false,
   }
@@ -242,7 +242,7 @@ function bobmods.lib.create_gas_bottle(fluid)
       fill_recipe.subgroup = "bob-gas-bottle"
       fill_recipe.icons = generate_fill_gas_bottle_icons(fluid)
 
-      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "gas-canister")
+      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-gas-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", fill_recipe.name)
     else
@@ -257,7 +257,7 @@ function bobmods.lib.create_gas_bottle(fluid)
       empty_recipe.icons = generate_empty_gas_bottle_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
-      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "gas-canister", amount = 1 })
+      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-gas-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
     else
@@ -297,7 +297,7 @@ function bobmods.lib.create_fluid_canister(fluid)
       fill_recipe.subgroup = "bob-canister"
       fill_recipe.icons = generate_fill_fluid_canister_icons(fluid)
 
-      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "empty-canister")
+      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-empty-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", fill_recipe.name)
     else
@@ -311,7 +311,7 @@ function bobmods.lib.create_fluid_canister(fluid)
       empty_recipe.icons = generate_empty_fluid_canister_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
-      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "empty-canister", amount = 1 })
+      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-empty-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
     else

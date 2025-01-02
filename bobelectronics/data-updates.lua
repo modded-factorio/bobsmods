@@ -55,7 +55,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
 end
 
 if feature_flags["quality"] then
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-resin", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("wooden-board", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("phenolic-board", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("fibreglass-board", false)

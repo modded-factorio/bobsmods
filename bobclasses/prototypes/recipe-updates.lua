@@ -1,6 +1,6 @@
-if data.raw.item["rubber"] then
-  bobmods.lib.recipe.replace_ingredient("player-boots", "plastic-bar", "rubber")
-  bobmods.lib.recipe.replace_ingredient("player-boots-2", "plastic-bar", "rubber")
+if data.raw.item["bob-rubber"] then
+  bobmods.lib.recipe.replace_ingredient("player-boots", "plastic-bar", "bob-rubber")
+  bobmods.lib.recipe.replace_ingredient("player-boots-2", "plastic-bar", "bob-rubber")
   bobmods.lib.tech.add_prerequisite("bodies", "bob-wood-processing")
 end
 

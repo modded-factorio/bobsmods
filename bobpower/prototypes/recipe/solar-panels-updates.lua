@@ -25,10 +25,10 @@ if settings.startup["bobmods-power-solar"].value == true then
     end
   end
 
-  if data.raw.item["silicon-wafer"] then
-    bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "silicon-wafer", amount = 16 })
-    bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "silicon-wafer", amount = 36 })
-    bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "silicon-wafer", amount = 64 })
+  if data.raw.item["bob-silicon-wafer"] then
+    bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "bob-silicon-wafer", amount = 16 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "bob-silicon-wafer", amount = 36 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "bob-silicon-wafer", amount = 64 })
     bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "silicon-processing")
   elseif data.raw.item["bob-silicon-plate"] then
     bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "bob-silicon-plate", amount = 2 })

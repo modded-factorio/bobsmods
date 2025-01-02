@@ -338,19 +338,19 @@ if data.raw.item["bob-lithium-ion-battery"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-4", "battery", "bob-lithium-ion-battery")
 end
 
-if data.raw.item["silicon-wafer"] then
+if data.raw.item["bob-silicon-wafer"] then
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-solar-panel-equipment-4",
-    { type = "item", name = "silicon-wafer", amount = 10 }
+    { type = "item", name = "bob-silicon-wafer", amount = 10 }
   )
   bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "silicon-processing")
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-solar-panel-equipment-5",
-    { type = "item", name = "silicon-wafer", amount = 10 }
+    { type = "item", name = "bob-silicon-wafer", amount = 10 }
   )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-solar-panel-equipment-6",
-    { type = "item", name = "silicon-wafer", amount = 10 }
+    { type = "item", name = "bob-silicon-wafer", amount = 10 }
   )
 end
 

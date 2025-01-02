@@ -619,7 +619,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-canister",
+        recipe = "bob-gas-canister",
       },
     },
     unit = {
@@ -672,7 +672,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "empty-canister",
+        recipe = "bob-empty-canister",
       },
     },
     unit = {
@@ -960,7 +960,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lithium-cobalt-oxide",
+        recipe = "bob-lithium-cobalt-oxide",
       },
       {
         type = "unlock-recipe",

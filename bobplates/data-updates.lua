@@ -383,9 +383,9 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-lithium", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-cobalt-plate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-carbon", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("silicon-wafer", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("lithium-cobalt-oxide", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-resin", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-wafer", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-lithium-cobalt-oxide", false)
 
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-air-pump",

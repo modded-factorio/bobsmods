@@ -219,8 +219,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   bobmods.lib.recipe.add_ingredient("heavy-spidertron", { type = "item", name = "mech-armor-plate", amount = 20 })
   bobmods.lib.recipe.set_energy_required("heavy-spidertron", 6)
 
-  if data.raw.item.rubber then
-    bobmods.lib.recipe.add_ingredient("mech-foot", { type = "item", name = "rubber", amount = 1 })
+  if data.raw.item["bob-rubber"] then
+    bobmods.lib.recipe.add_ingredient("mech-foot", { type = "item", name = "bob-rubber", amount = 1 })
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "bob-wood-processing")
   end
 

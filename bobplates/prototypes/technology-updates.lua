@@ -32,7 +32,7 @@ bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-hydrogen-sulfide")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-liquid-fuel")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "enriched-fuel")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-enriched-fuel")
 
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "petroleum-gas-cracking")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")
@@ -62,7 +62,7 @@ bobmods.lib.tech.add_recipe_unlock("aluminium-processing", "bob-aluminium-plate"
 bobmods.lib.tech.add_recipe_unlock("gold-processing", "bob-gold-plate")
 
 bobmods.lib.tech.add_recipe_unlock("silicon-processing", "bob-silicon-plate")
-bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-wafer")
+bobmods.lib.tech.add_recipe_unlock("silicon-processing", "bob-silicon-wafer")
 bobmods.lib.tech.add_recipe_unlock("silicon-processing", "bob-silicon-powder")
 
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "bob-titanium-plate")
