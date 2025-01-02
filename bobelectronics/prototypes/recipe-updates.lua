@@ -79,8 +79,11 @@ else
   bobmods.lib.recipe.add_ingredient("circuit-board", { type = "item", name = "copper-plate", amount = 1 })
 end
 
+if data.raw.item["silver-plate"] then
+  bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "silver-plate", amount = 1 })
+end
+
 if data.raw.item["bob-gold-plate"] then
-  bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "bob-gold-plate", amount = 1 })
   bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "bob-gold-plate", amount = 2 })
 else
   if data.raw.item["tin-plate"] then
