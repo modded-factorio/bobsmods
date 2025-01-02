@@ -590,8 +590,8 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "circuit-board", amount = 1 },
-      { type = "item", name = "basic-electronic-components", amount = 3 },
-      { type = "item", name = "electronic-components", amount = 3 },
+      { type = "item", name = "basic-electronic-components", amount = 4 },
+      { type = "item", name = "electronic-components", amount = 4 },
     },
     results = { { type = "item", name = "advanced-circuit", amount = 1 } },
     allow_decomposition = false,
