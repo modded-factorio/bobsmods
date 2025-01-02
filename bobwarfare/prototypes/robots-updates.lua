@@ -54,8 +54,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "steel-plate", amount = 1 })
     end
     bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "advanced-circuit", amount = 1 })
-    if data.raw.item["brass-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "brass-gear-wheel", amount = 3 })
+    if data.raw.item["bob-brass-gear-wheel"] then
+      bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "bob-brass-gear-wheel", amount = 3 })
       bobmods.lib.tech.add_prerequisite("distractor", "zinc-processing")
     else
       bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
@@ -69,8 +69,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     end
     bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "processing-unit", amount = 1 })
     bobmods.lib.tech.add_prerequisite("destroyer", "processing-unit")
-    if data.raw.item["titanium-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "titanium-gear-wheel", amount = 3 })
+    if data.raw.item["bob-titanium-gear-wheel"] then
+      bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "bob-titanium-gear-wheel", amount = 3 })
     else
       bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
     end
@@ -90,8 +90,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "processing-unit", amount = 1 })
     end
-    if data.raw.item["nitinol-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "nitinol-gear-wheel", amount = 3 })
+    if data.raw.item["bob-nitinol-gear-wheel"] then
+      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "bob-nitinol-gear-wheel", amount = 3 })
       bobmods.lib.tech.add_prerequisite("bob-laser-robot", "nitinol-processing")
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
@@ -175,8 +175,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
 
   if data.raw.recipe["robot-tool-combat"] then
     bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "steel-plate", amount = 1 })
-    if data.raw.item["steel-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "steel-gear-wheel", amount = 5 })
+    if data.raw.item["bob-steel-gear-wheel"] then
+      bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "bob-steel-gear-wheel", amount = 5 })
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "iron-gear-wheel", amount = 5 })
     end
@@ -190,8 +190,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "steel-plate", amount = 1 })
     end
 
-    if data.raw.item["brass-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "brass-gear-wheel", amount = 2 })
+    if data.raw.item["bob-brass-gear-wheel"] then
+      bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "bob-brass-gear-wheel", amount = 2 })
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "iron-gear-wheel", amount = 2 })
     end
@@ -212,18 +212,18 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-3", { type = "item", name = "steel-plate", amount = 1 })
     end
-    if data.raw.item["titanium-gear-wheel"] then
+    if data.raw.item["bob-titanium-gear-wheel"] then
       bobmods.lib.recipe.add_ingredient(
         "robot-tool-combat-3",
-        { type = "item", name = "titanium-gear-wheel", amount = 2 }
+        { type = "item", name = "bob-titanium-gear-wheel", amount = 2 }
       )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-3", { type = "item", name = "iron-gear-wheel", amount = 2 })
     end
-    if data.raw.item["lithium-ion-battery"] then
+    if data.raw.item["bob-lithium-ion-battery"] then
       bobmods.lib.recipe.add_ingredient(
         "robot-tool-combat-3",
-        { type = "item", name = "lithium-ion-battery", amount = 1 }
+        { type = "item", name = "bob-lithium-ion-battery", amount = 1 }
       )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-3", { type = "item", name = "battery", amount = 1 })
@@ -241,19 +241,19 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "steel-plate", amount = 1 })
     end
-    if data.raw.item["nitinol-gear-wheel"] then
+    if data.raw.item["bob-nitinol-gear-wheel"] then
       bobmods.lib.recipe.add_ingredient(
         "robot-tool-combat-4",
-        { type = "item", name = "nitinol-gear-wheel", amount = 2 }
+        { type = "item", name = "bob-nitinol-gear-wheel", amount = 2 }
       )
       bobmods.lib.tech.add_prerequisite("bob-laser-robot", "nitinol-processing")
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "iron-gear-wheel", amount = 2 })
     end
-    if data.raw.item["silver-zinc-battery"] then
+    if data.raw.item["bob-silver-zinc-battery"] then
       bobmods.lib.recipe.add_ingredient(
         "robot-tool-combat-4",
-        { type = "item", name = "silver-zinc-battery", amount = 1 }
+        { type = "item", name = "bob-silver-zinc-battery", amount = 1 }
       )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "battery", amount = 1 })

@@ -361,11 +361,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "ceramic-bearing-ball",
+        recipe = "bob-ceramic-bearing-ball",
       },
       {
         type = "unlock-recipe",
-        recipe = "ceramic-bearing",
+        recipe = "bob-ceramic-bearing",
       },
     },
     unit = {
@@ -964,7 +964,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "lithium-ion-battery",
+        recipe = "bob-lithium-ion-battery",
       },
     },
     order = "b-c-a",
@@ -1003,7 +1003,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "silver-zinc-battery",
+        recipe = "bob-silver-zinc-battery",
       },
     },
     order = "b-c-b",

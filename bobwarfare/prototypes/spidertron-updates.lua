@@ -228,14 +228,14 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.replace_ingredient("mech-leg-segment", "pipe", "titanium-pipe")
   end
 
-  if data.raw.item["titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("mech-hip", "iron-gear-wheel", "titanium-gear-wheel")
-    bobmods.lib.recipe.replace_ingredient("mech-knee", "iron-gear-wheel", "titanium-gear-wheel")
+  if data.raw.item["bob-titanium-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("mech-hip", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("mech-knee", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
-  if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("mech-hip", { type = "item", name = "titanium-bearing", amount = 4 })
-    bobmods.lib.recipe.add_ingredient("mech-knee", { type = "item", name = "titanium-bearing", amount = 2 })
+  if data.raw.item["bob-titanium-bearing"] then
+    bobmods.lib.recipe.add_ingredient("mech-hip", { type = "item", name = "bob-titanium-bearing", amount = 4 })
+    bobmods.lib.recipe.add_ingredient("mech-knee", { type = "item", name = "bob-titanium-bearing", amount = 2 })
   end
 
   if data.raw.item["bob-nitinol-alloy"] then

@@ -4,12 +4,12 @@ if data.raw.item["rubber"] then
   bobmods.lib.tech.add_prerequisite("bodies", "bob-wood-processing")
 end
 
-if data.raw.item["steel-gear-wheel"] then
-  bobmods.lib.recipe.replace_ingredient("player-gloves", "iron-gear-wheel", "steel-gear-wheel")
+if data.raw.item["bob-steel-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("player-gloves", "iron-gear-wheel", "bob-steel-gear-wheel")
 end
 
-if data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("player-gloves", { type = "item", name = "steel-bearing", amount = 8 })
+if data.raw.item["bob-steel-bearing"] then
+  bobmods.lib.recipe.add_ingredient("player-gloves", { type = "item", name = "bob-steel-bearing", amount = 8 })
 end
 
 if data.raw.item["rtg"] then
@@ -49,16 +49,16 @@ if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.tech.add_prerequisite("bodies-2", "titanium-processing")
 end
 
-if data.raw.item["titanium-gear-wheel"] then
-  bobmods.lib.recipe.replace_ingredient("player-gloves-2", "iron-gear-wheel", "titanium-gear-wheel")
-elseif data.raw.item["steel-gear-wheel"] then
-  bobmods.lib.recipe.replace_ingredient("player-gloves-2", "iron-gear-wheel", "steel-gear-wheel")
+if data.raw.item["bob-titanium-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("player-gloves-2", "iron-gear-wheel", "bob-titanium-gear-wheel")
+elseif data.raw.item["bob-steel-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("player-gloves-2", "iron-gear-wheel", "bob-steel-gear-wheel")
 end
 
-if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("player-gloves-2", { type = "item", name = "titanium-bearing", amount = 8 })
-elseif data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("player-gloves-2", { type = "item", name = "steel-bearing", amount = 8 })
+if data.raw.item["bob-titanium-bearing"] then
+  bobmods.lib.recipe.add_ingredient("player-gloves-2", { type = "item", name = "bob-titanium-bearing", amount = 8 })
+elseif data.raw.item["bob-steel-bearing"] then
+  bobmods.lib.recipe.add_ingredient("player-gloves-2", { type = "item", name = "bob-steel-bearing", amount = 8 })
 end
 
 if data.raw.item["titanium-chest"] then

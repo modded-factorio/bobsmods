@@ -31,16 +31,16 @@ end
 
 bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "electric-engine-unit")
 bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "processing-unit", amount = 4 })
-if data.raw.item["lithium-ion-battery"] then
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "lithium-ion-battery", amount = 4 })
+if data.raw.item["bob-lithium-ion-battery"] then
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "bob-lithium-ion-battery", amount = 4 })
 else
   bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "battery", amount = 4 })
 end
 if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "bob-silicon-nitride", amount = 4 })
 end
-if data.raw.item["titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "titanium-bearing", amount = 4 })
+if data.raw.item["bob-titanium-bearing"] then
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "bob-titanium-bearing", amount = 4 })
 end
 
 data.raw.recipe["utility-science-pack"].energy_required = 28

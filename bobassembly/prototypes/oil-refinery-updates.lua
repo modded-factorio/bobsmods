@@ -11,16 +11,16 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.tech.add_prerequisite("oil-processing-2", "invar-processing")
   end
 
-  if data.raw.item["brass-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "iron-gear-wheel", "brass-gear-wheel")
+  if data.raw.item["bob-brass-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "iron-gear-wheel", "bob-brass-gear-wheel")
   else
-    if data.raw.item["steel-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "iron-gear-wheel", "steel-gear-wheel")
+    if data.raw.item["bob-steel-gear-wheel"] then
+      bobmods.lib.recipe.replace_ingredient("oil-refinery-2", "iron-gear-wheel", "bob-steel-gear-wheel")
     end
   end
 
-  if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("oil-refinery-2", { type = "item", name = "steel-bearing", amount = 5 })
+  if data.raw.item["bob-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient("oil-refinery-2", { type = "item", name = "bob-steel-bearing", amount = 5 })
   end
 
   if data.raw.item["steel-pipe"] then
@@ -37,19 +37,19 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     bobmods.lib.tech.add_prerequisite("oil-processing-3", "ceramics")
   end
 
-  if data.raw.item["titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "iron-gear-wheel", "titanium-gear-wheel")
+  if data.raw.item["bob-titanium-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
   else
-    if data.raw.item["steel-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "iron-gear-wheel", "steel-gear-wheel")
+    if data.raw.item["bob-steel-gear-wheel"] then
+      bobmods.lib.recipe.replace_ingredient("oil-refinery-3", "iron-gear-wheel", "bob-steel-gear-wheel")
     end
   end
 
-  if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("oil-refinery-3", { type = "item", name = "titanium-bearing", amount = 5 })
+  if data.raw.item["bob-titanium-bearing"] then
+    bobmods.lib.recipe.add_ingredient("oil-refinery-3", { type = "item", name = "bob-titanium-bearing", amount = 5 })
   else
-    if data.raw.item["steel-bearing"] then
-      bobmods.lib.recipe.add_ingredient("oil-refinery-3", { type = "item", name = "steel-bearing", amount = 5 })
+    if data.raw.item["bob-steel-bearing"] then
+      bobmods.lib.recipe.add_ingredient("oil-refinery-3", { type = "item", name = "bob-steel-bearing", amount = 5 })
     end
   end
 
@@ -80,19 +80,19 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
     end
   end
 
-  if data.raw.item["nitinol-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "iron-gear-wheel", "nitinol-gear-wheel")
+  if data.raw.item["bob-nitinol-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "iron-gear-wheel", "bob-nitinol-gear-wheel")
   else
-    if data.raw.item["steel-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "iron-gear-wheel", "steel-gear-wheel")
+    if data.raw.item["bob-steel-gear-wheel"] then
+      bobmods.lib.recipe.replace_ingredient("oil-refinery-4", "iron-gear-wheel", "bob-steel-gear-wheel")
     end
   end
 
-  if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("oil-refinery-4", { type = "item", name = "nitinol-bearing", amount = 5 })
+  if data.raw.item["bob-nitinol-bearing"] then
+    bobmods.lib.recipe.add_ingredient("oil-refinery-4", { type = "item", name = "bob-nitinol-bearing", amount = 5 })
   else
-    if data.raw.item["steel-bearing"] then
-      bobmods.lib.recipe.add_ingredient("oil-refinery-4", { type = "item", name = "steel-bearing", amount = 5 })
+    if data.raw.item["bob-steel-bearing"] then
+      bobmods.lib.recipe.add_ingredient("oil-refinery-4", { type = "item", name = "bob-steel-bearing", amount = 5 })
     end
   end
 

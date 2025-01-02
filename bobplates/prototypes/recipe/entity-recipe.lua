@@ -110,7 +110,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-air-pump", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
-      { type = "item", name = "steel-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-steel-gear-wheel", amount = 4 },
       { type = "item", name = "advanced-circuit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
@@ -125,8 +125,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-air-pump-2", amount = 1 },
       { type = "item", name = "bob-titanium-plate", amount = 2 },
-      { type = "item", name = "titanium-gear-wheel", amount = 4 },
-      { type = "item", name = "titanium-bearing", amount = 4 },
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
@@ -141,8 +141,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-air-pump-3", amount = 1 },
       { type = "item", name = "bob-nitinol-alloy", amount = 2 },
-      { type = "item", name = "nitinol-gear-wheel", amount = 4 },
-      { type = "item", name = "nitinol-bearing", amount = 4 },
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-nitinol-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },
       { type = "item", name = "bob-advanced-processing-unit", amount = 3 },
     },
@@ -171,7 +171,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-water-pump", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
-      { type = "item", name = "steel-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-steel-gear-wheel", amount = 4 },
       { type = "item", name = "advanced-circuit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
@@ -186,7 +186,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-water-pump-2", amount = 1 },
       { type = "item", name = "bob-titanium-plate", amount = 2 },
-      { type = "item", name = "titanium-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 4 },
       { type = "item", name = "titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
@@ -202,8 +202,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-water-pump-3", amount = 1 },
       { type = "item", name = "bob-nitinol-alloy", amount = 2 },
-      { type = "item", name = "nitinol-gear-wheel", amount = 4 },
-      { type = "item", name = "nitinol-bearing", amount = 4 },
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-nitinol-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },
       { type = "item", name = "bob-advanced-processing-unit", amount = 3 },
     },
