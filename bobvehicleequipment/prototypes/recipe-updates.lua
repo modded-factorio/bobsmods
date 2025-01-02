@@ -542,7 +542,7 @@ if data.raw.item["tungsten-carbide"] then
 end
 
 if data.raw.item["heat-shield-tile"] then
-  bobmods.lib.recipe.add_ingredient("vehicle-big-turret-equipment-4", { type = "item", name = "heat-shield-tile", amount = 30 })
+  bobmods.lib.recipe.add_ingredient("vehicle-big-turret-equipment-4", { type = "item", name = "heat-shield-tile", amount = 10 })
 end
 
 if data.raw.item.lithium then
