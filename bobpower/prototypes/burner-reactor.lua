@@ -34,6 +34,12 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     }
   end
 
+  circuit_connector_definitions["burner-reactor"] = circuit_connector_definitions.create_single
+  (
+    universal_connector_template,
+    { variation = 26, main_offset = util.by_pixel(10, -20), shadow_offset = util.by_pixel(32, 0), show_shadow = false }
+  )
+
   data:extend({
     {
       type = "item",
@@ -87,13 +93,13 @@ if settings.startup["bobmods-power-heatsources"].value == true then
           percent = 90,
         },
       },
-      consumption = "5.4MW",
-      neighbour_bonus = 0.5,
-      scale_energy_usage = true,
+      consumption = "0.9MW",
+      neighbour_bonus = 0.12,
+      scale_energy_usage = false,
       energy_source = {
         type = "burner",
         fuel_categories = { "chemical" },
-        effectivity = 1,
+        effectivity = 0.79,
         emissions_per_minute = { pollution = 15 },
         fuel_inventory_size = 1,
         smoke = {
@@ -168,6 +174,8 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       lower_layer_picture = lower_layer_picture(""),
       connection_patches_connected = connection_patches_connected(""),
       connection_patches_disconnected = connection_patches_disconnected(""),
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["burner-reactor"],
     },
   })
   data:extend({
@@ -212,8 +220,12 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         localised_description = { "entity-description.burner-reactor", "1000" },
         minable = { result = "burner-reactor-2" },
         max_health = 500,
-        consumption = "9MW",
-        neighbour_bonus = 1,
+        consumption = "1.8MW",
+        neighbour_bonus = 0.12,
+        energy_source = {
+          effectivity = 0.82,
+          emissions_per_minute = { pollution = 20 },
+        },
         lower_layer_picture = lower_layer_picture("-2"),
         connection_patches_connected = connection_patches_connected("-2"),
         connection_patches_disconnected = connection_patches_disconnected("-2"),
@@ -386,7 +398,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   local fluid_reactor_energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = { pollution = 10 },
+    emissions_per_minute = { pollution = 15 },
     fluid_box = {
       volume = 200,
       pipe_connections = {
@@ -412,8 +424,13 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     },
   }
 
-  data.raw.reactor["fluid-reactor"].energy_source = fluid_reactor_energy_source
-  data.raw.reactor["fluid-reactor-2"].energy_source = fluid_reactor_energy_source
+  data.raw.reactor["fluid-reactor"].energy_source = util.copy(fluid_reactor_energy_source)
+  data.raw.reactor["fluid-reactor-2"].energy_source = util.copy(fluid_reactor_energy_source)
+  data.raw.reactor["fluid-reactor"].energy_source.effectivity = 0.75
+  data.raw.reactor["fluid-reactor-2"].energy_source.effectivity = 0.72
+  data.raw.reactor["fluid-reactor"].neighbour_bonus = 0.13
+  data.raw.reactor["fluid-reactor-2"].neighbour_bonus = 0.13
+  data.raw.reactor["fluid-reactor-2"].energy_source.emissions_per_minute = { pollution = 25 }
 
   --If the oil burning steel furnace exists, add a new alternate recipe to craft the fluid reactor from it.
   if
