@@ -184,6 +184,10 @@ elseif data.raw.technology["alien-research"] then
   bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "alien-research")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "alien-research")
   bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "alien-research")
+else
+  bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "gold-processing")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "gold-processing")
+  bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "gold-processing")
 end
 
 if data.raw.technology["alien-purple-research"] then
