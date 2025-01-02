@@ -36,7 +36,8 @@
     ["titanium-plate", "bob-titanium-plate"],
     ["tungsten-plate", "bob-tungsten-plate"],
     ["used-up-thorium-fuel-cell", "bob-depleted-thorium-fuel-cell"],
-    ["used-up-deuterium-fuel-cell", "bob-depleted-deuterium-fuel-cell"]
+    ["used-up-deuterium-fuel-cell", "bob-depleted-deuterium-fuel-cell"],
+    ["carbon", "bob-carbon"]
   ],
   "recipe":
   [
@@ -44,7 +45,9 @@
     ["polishing-wheel", "bob-polishing-wheel"],
     ["polishing-compound", "bob-polishing-compound"],
     ["enriched-fuel-from-liquid-fuel", "enriched-fuel"],
-    ["quartz-glass", "bob-glass"]
+    ["quartz-glass", "bob-glass"],
+    ["bob-coal-from-wood", "bob-carbon-from-wood"],
+    ["carbon", "bob-carbon"]
   ],
   "entity":
   [

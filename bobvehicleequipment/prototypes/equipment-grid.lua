@@ -9,22 +9,22 @@ data:extend({
   {
     type = "equipment-grid",
     name = "bob-tank",
-    width = 10,
-    height = 2,
+    width = 6,
+    height = 8,
     equipment_categories = { "tank", "vehicle", "armoured-vehicle" },
   },
   {
     type = "equipment-grid",
     name = "bob-tank-2",
-    width = 10,
-    height = 4,
+    width = 6,
+    height = 10,
     equipment_categories = { "tank", "vehicle", "armoured-vehicle" },
   },
   {
     type = "equipment-grid",
     name = "bob-tank-3",
-    width = 10,
-    height = 6,
+    width = 6,
+    height = 12,
     equipment_categories = { "tank", "vehicle", "armoured-vehicle" },
   },
 

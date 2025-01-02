@@ -207,10 +207,6 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     },
   })
 
-  if data.raw["item-subgroup"]["bob-fluid"] then
-    data.raw.fluid["sour-gas"].subgroup = "bob-fluid"
-  end
-
   if data.raw["recipe-category"]["void-fluid"] then
     if bobmods.plates and bobmods.plates.make_void_fluid_recipe then
       bobmods.plates.make_void_fluid_recipe("sour-gas", 25, 55)

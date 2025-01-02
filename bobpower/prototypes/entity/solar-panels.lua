@@ -1,6 +1,78 @@
 if settings.startup["bobmods-power-solar"].value == true then
-  data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
-  data.raw["solar-panel"]["solar-panel"].next_upgrade = "solar-panel-2"
+
+  -- Copied from reskins-library with permission
+
+  ---@type data.Color[]
+  local standard_tier_colors = {
+      ---@type data.Color
+      [0] = util.color("808080"), -- 1.1.7: 4d4d4d
+      [1] = util.color("ffb726"), -- 1.1.7: de9400
+      [2] = util.color("f22318"), -- 1.1.7: c20600
+      [3] = util.color("33b4ff"), -- 1.1.7: 0099ff, 1.1.0: 1b87c2
+      [4] = util.color("b459ff"), -- 1.1.7: a600bf
+      [5] = util.color("2ee55c"), -- 1.1.7: 16c746, 1.1.6: 23de55
+      [6] = util.color("ff8533"), -- 1.1.7: ff7700
+  }
+
+  local solar_panel = data.raw["solar-panel"]["solar-panel"]
+  solar_panel.fast_replaceable_group = "solar-panel"
+  solar_panel.next_upgrade = "solar-panel-2"
+  solar_panel.picture = {
+    layers = {
+      -- Base
+      {
+        filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+        priority = "high",
+        width = 230,
+        height = 224,
+        shift = util.by_pixel(-3, 3.5),
+        scale = 0.5,
+      },
+      -- Mask
+      {
+        filename = "__bobpower__/graphics/solar-panel/solar-panel-mask.png",
+        priority = "high",
+        width = 230,
+        height = 224,
+        shift = util.by_pixel(-3, 3.5),
+        tint = util.copy(standard_tier_colors[2]), -- T2
+        scale = 0.5,
+      },
+      -- Highlights
+      {
+        filename = "__bobpower__/graphics/solar-panel/solar-panel-highlights.png",
+        priority = "high",
+        width = 230,
+        height = 224,
+        shift = util.by_pixel(-3, 3.5),
+        blend_mode = "additive",
+        scale = 0.5,
+      },
+      -- Shadow
+      {
+        filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow.png",
+        priority = "high",
+        width = 220,
+        height = 180,
+        shift = util.by_pixel(9.5, 6),
+        draw_as_shadow = true,
+        scale = 0.5,
+      },
+    },
+  }
+  solar_panel.overlay = {
+    layers = {
+      {
+        filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow-overlay.png",
+        priority = "high",
+        width = 214,
+        height = 180,
+        shift = util.by_pixel(10.5, 6),
+        scale = 0.5,
+      },
+    },
+  }
+
 
   data:extend({
     {
@@ -20,10 +92,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-s.png",
-        priority = "high",
-        width = 71,
-        height = 66,
+        layers = {
+          -- Base
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/solar-panel-small-mask.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            tint = util.copy(standard_tier_colors[2]), -- T2
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/solar-panel-small-highlights.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small-shadow.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small-shadow-overlay.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            scale = 0.5,
+          },
+        },
       },
       production = "26.67kW",
       fast_replaceable_group = "solar-panel",
@@ -48,10 +169,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-l.png",
-        priority = "high",
-        width = 128,
-        height = 123,
+        layers = {
+          -- Base
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/solar-panel-large-mask.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            tint = util.copy(standard_tier_colors[2]), -- T2
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/solar-panel-large-highlights.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large-shadow.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large-shadow-overlay.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            scale = 0.5,
+          },
+        },
       },
       production = "106.67kW",
       fast_replaceable_group = "solar-panel",
@@ -76,10 +246,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-s2.png",
-        priority = "high",
-        width = 72,
-        height = 69,
+        layers = {
+          -- Base
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/solar-panel-small-mask.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            tint = util.copy(standard_tier_colors[3]), -- T3
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/solar-panel-small-highlights.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small-shadow.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small-shadow-overlay.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            scale = 0.5,
+          },
+        },
       },
       production = "40kW",
       fast_replaceable_group = "solar-panel",
@@ -104,10 +323,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-2.png",
-        priority = "high",
-        width = 104,
-        height = 97,
+        layers = {
+          -- Base
+          {
+            filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+            priority = "high",
+            width = 230,
+            height = 224,
+            shift = util.by_pixel(-3, 3.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel/solar-panel-mask.png",
+            priority = "high",
+            width = 230,
+            height = 224,
+            shift = util.by_pixel(-3, 3.5),
+            tint = util.copy(standard_tier_colors[3]), -- T3
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel/solar-panel-highlights.png",
+            priority = "high",
+            width = 230,
+            height = 224,
+            shift = util.by_pixel(-3, 3.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow.png",
+            priority = "high",
+            width = 220,
+            height = 180,
+            shift = util.by_pixel(9.5, 6),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow-overlay.png",
+            priority = "high",
+            width = 214,
+            height = 180,
+            shift = util.by_pixel(10.5, 6),
+            scale = 0.5,
+          },
+        },
       },
       production = "90kW",
       fast_replaceable_group = "solar-panel",
@@ -132,10 +400,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-l2.png",
-        priority = "high",
-        width = 136,
-        height = 126,
+        layers = {
+          -- Base
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/solar-panel-large-mask.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            tint = util.copy(standard_tier_colors[3]), -- T3
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/solar-panel-large-highlights.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large-shadow.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large-shadow-overlay.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            scale = 0.5,
+          },
+        },
       },
       production = "160kW",
       fast_replaceable_group = "solar-panel",
@@ -160,10 +477,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-s2.png",
-        priority = "high",
-        width = 72,
-        height = 69,
+        layers = {
+          -- Base
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/solar-panel-small-mask.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            tint = util.copy(standard_tier_colors[4]), -- T4
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/solar-panel-small-highlights.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small-shadow.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__bobpower__/graphics/solar-panel-small/base/solar-panel-small-shadow-overlay.png",
+            priority = "high",
+            width = 180,
+            height = 150,
+            shift = util.by_pixel(5, 0.5),
+            scale = 0.5,
+          },
+        },
       },
       production = "60kW",
       fast_replaceable_group = "solar-panel",
@@ -186,10 +552,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-2.png",
-        priority = "high",
-        width = 104,
-        height = 97,
+        layers = {
+          -- Base
+          {
+            filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+            priority = "high",
+            width = 230,
+            height = 224,
+            shift = util.by_pixel(-3, 3.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel/solar-panel-mask.png",
+            priority = "high",
+            width = 230,
+            height = 224,
+            shift = util.by_pixel(-3, 3.5),
+            tint = util.copy(standard_tier_colors[4]), -- T4
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel/solar-panel-highlights.png",
+            priority = "high",
+            width = 230,
+            height = 224,
+            shift = util.by_pixel(-3, 3.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow.png",
+            priority = "high",
+            width = 220,
+            height = 180,
+            shift = util.by_pixel(9.5, 6),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/solar-panel/solar-panel-shadow-overlay.png",
+            priority = "high",
+            width = 214,
+            height = 180,
+            shift = util.by_pixel(10.5, 6),
+            scale = 0.5,
+          },
+        },
       },
       production = "135kW",
       fast_replaceable_group = "solar-panel",
@@ -213,10 +628,59 @@ if settings.startup["bobmods-power-solar"].value == true then
         usage_priority = "solar",
       },
       picture = {
-        filename = "__bobpower__/graphics/solar-panel/solar-panel-l2.png",
-        priority = "high",
-        width = 136,
-        height = 126,
+        layers = {
+          -- Base
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            scale = 0.5,
+          },
+          -- Mask
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/solar-panel-large-mask.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            tint = util.copy(standard_tier_colors[4]), -- T4
+            scale = 0.5,
+          },
+          -- Highlights
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/solar-panel-large-highlights.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large-shadow.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      overlay = {
+        layers = {
+          {
+            filename = "__bobpower__/graphics/solar-panel-large/base/solar-panel-large-shadow-overlay.png",
+            priority = "high",
+            width = 308,
+            height = 274,
+            shift = util.by_pixel(5, 3.5),
+            scale = 0.5,
+          },
+        },
       },
       production = "240kW",
       fast_replaceable_group = "solar-panel",

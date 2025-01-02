@@ -80,7 +80,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon",
+        recipe = "bob-carbon",
       },
     },
     unit = {

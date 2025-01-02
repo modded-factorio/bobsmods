@@ -121,4 +121,20 @@ sounds.plasmaExplosion = {
     volume = 1.0,
   },
 }
+
+sounds.deconstruct_large = function(volume)
+  return {
+    switch_vibration_data = {
+      filename = "__core__/sound/deconstruct-large.bnvib",
+      gain = 0.25,
+    },
+    variations = {
+      {
+        filename = "__core__/sound/deconstruct-large.ogg",
+        volume = volume,
+      },
+    },
+  }
+end
+
 return sounds

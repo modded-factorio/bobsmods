@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "carbon",
+    name = "bob-carbon",
     category = "chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 2,
@@ -10,7 +10,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 5 },
       { type = "item", name = "coal", amount = 1 },
     },
-    results = { { type = "item", name = "carbon", amount = 2 } },
+    results = { { type = "item", name = "bob-carbon", amount = 2 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -194,7 +194,7 @@ data:extend({
     type = "recipe",
     name = "bob-polishing-compound",
     category = "chemistry",
-    subgroup = "bob-resource-chemical",
+    subgroup = "bob-gems-support",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -212,14 +212,14 @@ data:extend({
 
   {
     type = "recipe",
-    name = "bob-coal-from-wood",
-    localised_name = { "item-name.coal" },
+    name = "bob-carbon-from-wood",
+    localised_name = { "item-name.bob-carbon" },
     category = "smelting",
     energy_required = 1.6,
     ingredients = {
       { type = "item", name = "wood", amount = 2 },
     },
-    results = { { type = "item", name = "coal", amount = 1 } },
+    results = { { type = "item", name = "bob-carbon", amount = 1 } },
     subgroup = "bob-resource",
     order = "c",
     allow_decomposition = false,

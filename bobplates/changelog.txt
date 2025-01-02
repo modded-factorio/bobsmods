@@ -7,6 +7,7 @@ Date: ???
     - New lead oxide graphics #191
     - Removed some old low-resolution graphics #200
     - Added circuit connections to relevant machines #200
+    - Replaced wood -> coal recipe with wood -> carbon recipe to prevent looping #267
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
