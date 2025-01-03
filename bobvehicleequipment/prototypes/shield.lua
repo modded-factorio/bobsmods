@@ -49,7 +49,7 @@ data:extend({
       height = 2,
       type = "full",
     },
-    max_shield_value = 50,
+    max_shield_value = 90,
     energy_source = {
       type = "electric",
       buffer_capacity = "240kJ",
@@ -122,7 +122,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-equipment-1", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 10 },
-      { type = "item", name = "productivity-module", amount = 2 },
+      { type = "item", name = "productivity-module", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-equipment-2", amount = 1 } },
   },
@@ -141,7 +141,7 @@ data:extend({
       height = 2,
       type = "full",
     },
-    max_shield_value = 100,
+    max_shield_value = 180,
     energy_source = {
       type = "electric",
       buffer_capacity = "360kJ",
@@ -216,7 +216,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
-      { type = "item", name = "productivity-module-2", amount = 2 },
+      { type = "item", name = "productivity-module-2", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-equipment-3", amount = 1 } },
   },
@@ -224,7 +224,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "vehicle-shield-equipment-3",
-    max_shield_value = 200,
+    max_shield_value = 360,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
@@ -311,8 +311,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-equipment-4", amount = 1 } },
   },
@@ -320,7 +319,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "vehicle-shield-equipment-4",
-    max_shield_value = 360,
+    max_shield_value = 600,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
@@ -351,6 +350,7 @@ data:extend({
     }),
     prerequisites = {
       "vehicle-shield-equipment-3",
+      "productivity-module-3",
     },
     unit = {
       count = 300,
@@ -405,8 +405,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-equipment-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-equipment-5", amount = 1 } },
   },
@@ -414,7 +413,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "vehicle-shield-equipment-5",
-    max_shield_value = 620,
+    max_shield_value = 960,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
@@ -501,8 +500,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "vehicle-shield-equipment-5", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
     results = { { type = "item", name = "vehicle-shield-equipment-6", amount = 1 } },
   },
@@ -510,7 +508,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "vehicle-shield-equipment-6",
-    max_shield_value = 1000,
+    max_shield_value = 1440,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
