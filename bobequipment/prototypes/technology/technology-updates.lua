@@ -100,19 +100,14 @@ then
     bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "alien-research")
     bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "alien-research")
   end
-end
-
-if data.raw.technology["bob-efficiency-module-4"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-5", "bob-efficiency-module-4")
+else
+  if data.raw.technology["bob-productivity-module-5"] then
+    bobmods.lib.tech.add_science_pack("bob-energy-shield-equipment-6", "space-science-pack", 1)
+  end
 end
 
 if data.raw.technology["bob-productivity-module-4"] then
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-5", "bob-productivity-module-4")
-end
-
-if data.raw.technology["bob-efficiency-module-5"] then
-  bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-6", "bob-efficiency-module-5")
-  bobmods.lib.tech.add_science_pack("bob-energy-shield-equipment-6", "space-science-pack", 1)
 end
 
 if data.raw.technology["bob-productivity-module-5"] then
