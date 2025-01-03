@@ -14,22 +14,12 @@ bobmods.ores.gold = {
   sprite = {
     sheet = 2,
   },
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = false,
-    richness = 1,
-    size = 1.2
-  }
-]]
-  --
   autoplace = "control-only",
   planets = { "nauvis" },
 }
 
 function bobmods.ores.gold.create_autoplace()
-  data.raw.resource["gold-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+  data.raw.resource["bob-gold-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
     name = "bob-gold-ore",
     order = "c",
     base_density = 4,

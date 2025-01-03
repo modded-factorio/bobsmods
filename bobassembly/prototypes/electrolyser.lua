@@ -450,7 +450,7 @@ then
       icon = "__bobassembly__/graphics/icons/technology/electrolyser.png",
       icon_size = 128,
       prerequisites = {
-        "bob-electrolysis-1",
+        "electrolysis-1",
         "steel-processing",
         "electronics",
         "logistic-science-pack",

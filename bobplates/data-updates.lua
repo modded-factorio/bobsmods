@@ -239,7 +239,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
 
   bobmods.lib.recipe.replace_ingredient("water-electrolysis", "water", "bob-pure-water")
   bobmods.lib.recipe.replace_ingredient("salt-water-electrolysis", "water", "bob-pure-water")
-  bobmods.lib.recipe.replace_ingredient("lithium-water-electrolysis", "water", "bob-pure-water")
+  bobmods.lib.recipe.replace_ingredient("bob-lithium-water-electrolysis", "water", "bob-pure-water")
 
   bobmods.lib.recipe.remove_result("bob-heavy-water", "water") -- There is no replace_result.
   bobmods.lib.recipe.add_result("bob-heavy-water", { type = "fluid", name = "bob-pure-water", amount = 99.5 })

@@ -202,7 +202,7 @@ data:extend({
     base_color = { r = 1.0, g = 0.9, b = 0.5 },
     flow_color = { r = 0.5, g = 0.5, b = 0.5 },
     max_temperature = 100,
-    icon = "__bobplates__/graphics/icons/bob-liquid-fuel.png",
+    icon = "__bobplates__/graphics/icons/liquid-fuel.png",
     icon_size = 32,
     subgroup = "fluid",
     order = "a[fluid]-g[liquid-fuel]",

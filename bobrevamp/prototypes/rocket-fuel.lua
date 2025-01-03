@@ -119,7 +119,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "hydrogen", amount = 16 },
+        { type = "fluid", name = "bob-hydrogen", amount = 16 },
         { type = "fluid", name = "bob-oxygen", amount = 20 },
       },
       results = {

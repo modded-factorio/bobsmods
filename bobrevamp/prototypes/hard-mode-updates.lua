@@ -9,7 +9,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     "bob-calcium-chloride",
     { type = "fluid", name = "bob-hydrogen", amount = 20, ignored_by_productivity = 20 }
   )
-  data.raw.recipe["bob-calcium-chloride"].main_product = "calcium-chloride"
+  data.raw.recipe["bob-calcium-chloride"].main_product = "bob-calcium-chloride"
 
   bobmods.lib.recipe.set_ingredient("petroleum-gas-cracking", { type = "fluid", name = "water", amount = 20 })
 

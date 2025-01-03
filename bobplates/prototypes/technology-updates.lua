@@ -92,7 +92,7 @@ bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "bob-cobalt-steel-bearin
 
 bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium")
 bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-chloride")
-bobmods.lib.tech.add_recipe_unlock("lithium-processing", "lithium-water-electrolysis")
+bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-water-electrolysis")
 
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "bob-titanium-gear-wheel")
 bobmods.lib.tech.add_recipe_unlock("titanium-processing", "bob-titanium-bearing-ball")

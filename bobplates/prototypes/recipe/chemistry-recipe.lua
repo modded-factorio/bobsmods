@@ -198,7 +198,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/lithium-perchlorate.png",
     icon_size = 32,
     subgroup = "bob-fluid-electrolysis",
-    order = "b[fluid-chemistry]-b[lithium-water-electrolysis]",
+    order = "b[fluid-chemistry]-b[bob-lithium-water-electrolysis]",
     category = "electrolysis",
     enabled = false,
     energy_required = 1,

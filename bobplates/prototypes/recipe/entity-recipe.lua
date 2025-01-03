@@ -187,7 +187,7 @@ data:extend({
       { type = "item", name = "bob-water-pump-2", amount = 1 },
       { type = "item", name = "bob-titanium-plate", amount = 2 },
       { type = "item", name = "bob-titanium-gear-wheel", amount = 4 },
-      { type = "item", name = "titanium-bearing", amount = 4 },
+      { type = "item", name = "bob-titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },

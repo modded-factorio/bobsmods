@@ -218,7 +218,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bob-air-pump-3",
-    icon = "__bobplates__/graphics/icons/bob-air-pump-3.png",
+    icon = "__bobplates__/graphics/icons/air-pump-3.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "bob-air-pump-3" },
