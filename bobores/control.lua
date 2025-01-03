@@ -21,13 +21,13 @@ remote.add_interface("bobores", {
 
     regenerate_entity("bob-nickel-ore")
     regenerate_entity("bob-cobalt-ore")
-    regenerate_entity("sulfur")
+    regenerate_entity("bob-sulfur")
     regenerate_entity("bob-gem-ore")
 
     regenerate_entity("bob-lithia-water")
-    regenerate_entity("ground-water")
+    regenerate_entity("bob-ground-water")
 
-    regenerate_entity("thorium-ore")
+    regenerate_entity("bob-thorium-ore")
     for i, player in ipairs(game.players) do
       player.print("All ores successfully regenerated!")
     end

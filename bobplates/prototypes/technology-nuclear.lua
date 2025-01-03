@@ -66,7 +66,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
   })
 end
 
-if data.raw.item["thorium-ore"] then
+if data.raw.item["bob-thorium-ore"] then
   data:extend({
     {
       type = "technology",

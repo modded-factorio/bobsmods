@@ -234,8 +234,8 @@ bobmods.lib.tech.add_prerequisite("cliff-explosives", "fluid-barrel-processing")
 bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
 if settings.startup["bobmods-plates-purewater"].value == true then
-  bobmods.lib.resource.remove_result("ground-water", "water")
-  bobmods.lib.resource.add_result("ground-water", { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 })
+  bobmods.lib.resource.remove_result("bob-ground-water", "water")
+  bobmods.lib.resource.add_result("bob-ground-water", { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 })
 
   bobmods.lib.recipe.replace_ingredient("water-electrolysis", "water", "bob-pure-water")
   bobmods.lib.recipe.replace_ingredient("salt-water-electrolysis", "water", "bob-pure-water")

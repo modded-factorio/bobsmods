@@ -109,7 +109,7 @@ end
 
 if bobmods.ores.settings.UnsortedGemOre == true then
   if data.raw["item-subgroup"]["bob-gems-support"] then
-    data.raw.recipe["sort-gem-ore"].subgroup = "bob-gems-support"
+    data.raw.recipe["bob-sort-gem-ore"].subgroup = "bob-gems-support"
     data.raw.item["bob-gem-ore"].subgroup = "bob-gems-support"
   end
 end

@@ -48,7 +48,7 @@ data:extend({
   },
 })
 
-if data.raw.item["thorium-ore"] then
+if data.raw.item["bob-thorium-ore"] then
   data:extend({
     {
       type = "recipe",
@@ -61,7 +61,7 @@ if data.raw.item["thorium-ore"] then
       enabled = false,
       category = "centrifuging",
       ingredients = {
-        { type = "item", name = "thorium-ore", amount = 10 },
+        { type = "item", name = "bob-thorium-ore", amount = 10 },
       },
       results = { { type = "item", name = "bob-thorium-232", amount = 1 } },
       crafting_machine_tint = {

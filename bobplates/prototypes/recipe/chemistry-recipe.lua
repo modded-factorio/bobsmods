@@ -18,7 +18,7 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
 
     {
       type = "recipe",
-      name = "ground-water",
+      name = "bob-ground-water",
       icon = "__base__/graphics/icons/fluid/water.png",
       icon_size = 64,
       subgroup = "bob-fluid-pump",
