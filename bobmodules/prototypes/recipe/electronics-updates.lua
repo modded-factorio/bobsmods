@@ -151,32 +151,32 @@ if data.raw.item["processing-electronics"] then
       { type = "item", name = "processing-electronics", amount = 1 }
     )
   end
-elseif data.raw.item["advanced-processing-unit"] then
+elseif data.raw.item["bob-advanced-processing-unit"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-speed-processor-3",
-    { type = "item", name = "advanced-processing-unit", amount = 1 }
+    { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-efficiency-processor-3",
-    { type = "item", name = "advanced-processing-unit", amount = 1 }
+    { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-productivity-processor-3",
-    { type = "item", name = "advanced-processing-unit", amount = 1 }
+    { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-pollution-clean-processor-3",
-    { type = "item", name = "advanced-processing-unit", amount = 1 }
+    { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-pollution-create-processor-3",
-    { type = "item", name = "advanced-processing-unit", amount = 1 }
+    { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
   )
 
   if mods["quality"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-quality-processor-3",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
   end
 else
@@ -245,8 +245,8 @@ bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-module-processor-boa
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-module-processor-board-2")
 bobmods.lib.tech.add_prerequisite("advanced-circuit", "modules")
 
-if data.raw.technology["advanced-processing-unit"] then
-  bobmods.lib.tech.add_recipe_unlock("advanced-processing-unit", "bob-module-processor-board-3")
+if data.raw.technology["bob-advanced-processing-unit"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-module-processor-board-3")
 else
   bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-module-processor-board-3")
 end

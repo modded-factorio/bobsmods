@@ -29,7 +29,7 @@ if data.raw.item["insulated-cable"] then
   bobmods.lib.recipe.replace_ingredient("bob-beacon-3", "copper-cable", "insulated-cable")
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("bob-beacon-3", "electronic-circuit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("effect-transmission-3", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.recipe.replace_ingredient("bob-beacon-3", "electronic-circuit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("effect-transmission-3", "bob-advanced-processing-unit")
 end
