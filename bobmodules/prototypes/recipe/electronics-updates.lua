@@ -16,7 +16,6 @@ if data.raw.item["bob-gold-plate"] then
     "bob-module-processor-board-3",
     { type = "item", name = "bob-gold-plate", amount = 2 }
   )
-  bobmods.lib.tech.add_prerequisite("processing-unit", "gold-processing")
 end
 
 if data.raw.item["tinned-copper-cable"] then
