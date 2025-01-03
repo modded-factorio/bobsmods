@@ -543,12 +543,12 @@ if data.raw.item["bob-diamond-5"] then
 end
 
 if data.raw.module["bob-speed-module-5"] then
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "efficiency-module-3", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "speed-module-3", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "bob-efficiency-module-4", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "bob-speed-module-4", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "bob-efficiency-module-5", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "bob-speed-module-5", amount = 2 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "efficiency-module-3", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "speed-module-3", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "bob-efficiency-module-4", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "bob-speed-module-4", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "bob-efficiency-module-5", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "bob-speed-module-5", amount = 1 })
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "efficiency-module-3")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "speed-module-3")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-3", "bob-efficiency-module-4")
@@ -556,15 +556,15 @@ if data.raw.module["bob-speed-module-5"] then
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "bob-efficiency-module-5")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "bob-speed-module-5")
 else
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "efficiency-module-2", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "speed-module-2", amount = 2 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "efficiency-module-2", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-2", { type = "item", name = "speed-module-2", amount = 1 })
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "efficiency-module-2")
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "speed-module-2")
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "efficiency-module-3", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "speed-module-3", amount = 2 })
-  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "productivity-module-3", amount = 4 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "efficiency-module-3", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-3", { type = "item", name = "speed-module-3", amount = 1 })
+  bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "productivity-module-3", amount = 2 })
   if data.raw.module["quality-module-3"] then
-    bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "quality-module-3", amount = 4 })
+    bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment-4", { type = "item", name = "quality-module-3", amount = 2 })
     bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "quality-module-3")
   end
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-3", "efficiency-module-3")
@@ -572,20 +572,12 @@ else
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "productivity-module-3")
 end
 
-if data.raw.module["efficiency-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk5-equipment", "efficiency-module-3", "efficiency-module-4")
+if data.raw.module["bob-productivity-module-4"] then
+  bobmods.lib.recipe.replace_ingredient("energy-shield-mk5-equipment", "productivity-module-3", "bob-productivity-module-4")
 end
 
-if data.raw.module["productivity-module-4"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk5-equipment", "productivity-module-3", "productivity-module-4")
-end
-
-if data.raw.module["efficiency-module-5"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk6-equipment", "efficiency-module-3", "efficiency-module-5")
-end
-
-if data.raw.module["productivity-module-5"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk6-equipment", "productivity-module-3", "productivity-module-5")
+if data.raw.module["bob-productivity-module-5"] then
+  bobmods.lib.recipe.replace_ingredient("energy-shield-mk6-equipment", "productivity-module-3", "bob-productivity-module-5")
 end
 
 if data.raw.item["alien-artifact"] then
@@ -597,7 +589,7 @@ if data.raw.item["alien-artifact"] then
     "night-vision-equipment-3",
     { type = "item", name = "alien-artifact", amount = 10 }
   )
-  bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-2", { type = "item", name = "alien-artifact", amount = 30 })
+  bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-2", { type = "item", name = "alien-artifact", amount = 50 })
 
   bobmods.lib.recipe.add_ingredient("personal-laser-defense-equipment-5", { type = "item", name = "alien-artifact", amount = 5 })
 else
@@ -632,14 +624,14 @@ if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue
     { type = "item", name = "alien-artifact-blue", amount = 5 }
   )
   if data.raw.item["alien-blue-alloy"] then
-    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "item", name = "alien-blue-alloy", amount = 40 })
+    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "item", name = "alien-blue-alloy", amount = 80 })
     bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "alien-blue-research")
     bobmods.lib.recipe.add_ingredient("personal-laser-defense-equipment-6", { type = "item", name = "alien-blue-alloy", amount = 15 })
     bobmods.lib.tech.add_prerequisite("personal-laser-defense-equipment-6", "alien-blue-research")
     bobmods.lib.recipe.add_ingredient("exoskeleton-equipment-3", { type = "item", name = "alien-blue-alloy", amount = 20 })
     bobmods.lib.tech.add_prerequisite("exoskeleton-equipment-3", "alien-blue-research")
   else
-    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "item", name = "alien-artifact-blue", amount = 15 })
+    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "item", name = "alien-artifact-blue", amount = 50 })
     bobmods.lib.recipe.add_ingredient("personal-laser-defense-equipment-6", { type = "item", name = "alien-artifact-blue", amount = 5 })
     bobmods.lib.recipe.add_ingredient("exoskeleton-equipment-3", { type = "item", name = "alien-artifact-blue", amount = 5 })
   end
@@ -669,7 +661,7 @@ if data.raw.item["alien-artifact-yellow"] and data.raw.item["alien-artifact-purp
   )
   bobmods.lib.recipe.add_new_ingredient(
     "fission-reactor-equipment-3",
-    { type = "item", name = "alien-artifact-yellow", amount = 15 }
+    { type = "item", name = "alien-artifact-yellow", amount = 50 }
   )
 
   bobmods.lib.recipe.add_new_ingredient(
@@ -705,11 +697,11 @@ if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"]
     { type = "item", name = "alien-artifact-red", amount = 5 }
   )
   if data.raw.fluid["alien-fire"] then
-    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "fluid", name = "alien-fire", amount = 200 })
+    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "fluid", name = "alien-fire", amount = 400 })
     data.raw.recipe["fission-reactor-equipment-4"].category = "crafting-with-fluid"
     bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-4", "alien-red-research")
   else
-    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "item", name = "alien-artifact-red", amount = 15 })
+    bobmods.lib.recipe.add_ingredient("fission-reactor-equipment-4", { type = "item", name = "alien-artifact-red", amount = 50 })
   end
 
   bobmods.lib.recipe.add_new_ingredient(
@@ -722,7 +714,7 @@ if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"]
   )
   bobmods.lib.recipe.add_new_ingredient(
     "fission-reactor-equipment-3",
-    { type = "item", name = "alien-artifact-green", amount = 15 }
+    { type = "item", name = "alien-artifact-green", amount = 50 }
   )
   if data.raw.fluid["alien-poison"] then
     bobmods.lib.recipe.add_ingredient("personal-laser-defense-equipment-6", { type = "fluid", name = "alien-poison", amount = 120 })
