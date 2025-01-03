@@ -46,7 +46,6 @@ data:extend({
     }),
     prerequisites = {
       "bob-energy-shield-equipment-3",
-      "efficiency-module-3",
       "productivity-module-3",
     },
     unit = {
