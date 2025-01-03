@@ -259,12 +259,8 @@ if data.raw.item["flying-robot-frame-4"] then
     end
   end
 
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "silicon-nitride")
-  end
-
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "nitinol-alloy")
   end
 
   bobmods.lib.recipe.add_ingredient(
