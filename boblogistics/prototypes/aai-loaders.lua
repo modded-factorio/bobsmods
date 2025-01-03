@@ -151,7 +151,7 @@ if mods["aai-loaders"] then
         "logistics-4",
         "aai-express-loader",
         "utility-science-pack",
-        data.raw.item["bob-advanced-processing-unit"] and "bob-advanced-processing-unit" or nil,
+        data.raw.tehnology["bob-advanced-processing-unit"] and "bob-advanced-processing-unit" or nil,
       },
       unit = {
         count = 400,
