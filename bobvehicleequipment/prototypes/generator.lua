@@ -54,7 +54,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "225kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -145,7 +145,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "450kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -236,7 +236,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "1000kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -326,7 +326,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "1600kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -417,7 +417,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "2400kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -507,7 +507,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "3600kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
