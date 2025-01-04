@@ -54,7 +54,7 @@ data:extend({
       buffer_capacity = "20MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -141,7 +141,7 @@ data:extend({
       buffer_capacity = "50MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -229,7 +229,7 @@ data:extend({
       buffer_capacity = "120MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -316,7 +316,7 @@ data:extend({
       buffer_capacity = "300MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -406,7 +406,7 @@ data:extend({
       buffer_capacity = "750MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -494,7 +494,7 @@ data:extend({
       buffer_capacity = "1800MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
