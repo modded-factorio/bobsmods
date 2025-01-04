@@ -464,23 +464,17 @@ data:extend({
     base_color = { r = 0.7, g = 0.7, b = 0 },
     flow_color = { r = 1, g = 1, b = 0.5 },
   },
+  {
+    type = "fluid",
+    name = "tungstic-acid",
+    default_temperature = 25,
+    heat_capacity = "1kJ",
+    base_color = { r = 0, g = 0.2, b = 0.7 },
+    flow_color = { r = 0.5, g = 0.5, b = 0.5 },
+    max_temperature = 100,
+    icon = "__bobplates__/graphics/icons/tungstic-acid.png",
+    icon_size = 32,
+    subgroup = "fluid",
+    order = "a[fluid]-g[tungstic-acid]",
+  },
 })
-
-if not feature_flags["quality"] then
-  data:extend({
-
-    {
-      type = "fluid",
-      name = "tungstic-acid",
-      default_temperature = 25,
-      heat_capacity = "1kJ",
-      base_color = { r = 0, g = 0.2, b = 0.7 },
-      flow_color = { r = 0.5, g = 0.5, b = 0.5 },
-      max_temperature = 100,
-      icon = "__bobplates__/graphics/icons/tungstic-acid.png",
-      icon_size = 32,
-      subgroup = "fluid",
-      order = "a[fluid]-g[tungstic-acid]",
-    },
-  })
-end
