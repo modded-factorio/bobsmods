@@ -72,6 +72,35 @@ end
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories =
   { "spidertron", "vehicle", "armoured-vehicle" }
 
+if data.raw.car["vehicle-hauler"] then
+  data.raw.car["vehicle-hauler"].equipment_grid = "bob-car"
+end
+if data.raw.car["vehicle-chaingunner"] then
+  data.raw.car["vehicle-chaingunner"].equipment_grid = "bob-car"
+end
+if data.raw.car["vehicle-warden"] then
+  data.raw.car["vehicle-warden"].equipment_grid = "unarmed-grid"
+end
+if data.raw.car["vehicle-laser-tank"] then
+  data.raw.car["vehicle-laser-tank"].equipment_grid = "bob-tank-2"
+end
+if data.raw.car["vehicle-flame-tank"] then
+  data.raw.car["vehicle-flame-tank"].equipment_grid = "bob-tank"
+end
+if data.raw.car["vehicle-flame-tumbler"] then
+  data.raw.car["vehicle-flame-tumbler"].equipment_grid = "bob-car"
+end
+if data.raw.car.ironclad then
+  data.raw.car.ironclad.equipment_grid = "boat-grid"
+end
+if data.raw.car["vehicle-miner-mk5"] then
+  data.raw.car["vehicle-miner"].equipment_grid = "bob-tank"
+  data.raw.car["vehicle-miner-mk2"].equipment_grid = "bob-tank"
+  data.raw.car["vehicle-miner-mk3"].equipment_grid = "bob-tank-2"
+  data.raw.car["vehicle-miner-mk4"].equipment_grid = "bob-tank-2"
+  data.raw.car["vehicle-miner-mk5"].equipment_grid = "bob-tank-3"
+end
+
 if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "vehicle-roboport-equipment-1",
