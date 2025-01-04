@@ -55,7 +55,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "120kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -144,7 +144,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "180kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -234,7 +234,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "270kW",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -327,7 +327,7 @@ if data.raw.item["alien-artifact"] then
         usage_priority = "primary-output",
       },
       power = "400kW",
-      categories = { "vehicle" },
+      categories = { "vehicle", "unarmed-vehicle" },
     },
 
     {
@@ -420,7 +420,7 @@ if data.raw.item["alien-artifact"] then
           usage_priority = "primary-output",
         },
         power = "600kW",
-        categories = { "vehicle" },
+        categories = { "vehicle", "unarmed-vehicle" },
       },
 
       {
