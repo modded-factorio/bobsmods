@@ -24,5 +24,6 @@ require("prototypes.recipe.equipment")
 require("prototypes.technology.equipment")
 require("prototypes.equipment.equipment")
 require("prototypes.beams")
+require("prototypes.armor")
 
 require("prototypes.personal-roboport")
