@@ -211,9 +211,7 @@ bobmods.lib.create_fluid_canister(data.raw.fluid["alien-acid"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["alien-explosive"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["alien-poison"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["alien-fire"])
-if data.raw.fluid["tungstic-acid"] then
-  bobmods.lib.create_fluid_canister(data.raw.fluid["tungstic-acid"])
-end
+bobmods.lib.create_fluid_canister(data.raw.fluid["tungstic-acid"])
 
 for i, recipe in pairs(data.raw.recipe) do
   if string.sub(recipe.name, -7) == "-barrel" and recipe.category == "crafting-with-fluid" then
