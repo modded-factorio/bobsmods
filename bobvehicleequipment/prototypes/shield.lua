@@ -57,7 +57,7 @@ data:extend({
       usage_priority = "primary-input",
     },
     energy_per_shield = "20kJ",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -149,7 +149,7 @@ data:extend({
       usage_priority = "primary-input",
     },
     energy_per_shield = "20kJ",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -243,7 +243,7 @@ data:extend({
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -338,7 +338,7 @@ data:extend({
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -432,7 +432,7 @@ data:extend({
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
@@ -527,7 +527,7 @@ data:extend({
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
