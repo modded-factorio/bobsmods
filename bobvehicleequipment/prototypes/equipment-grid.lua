@@ -173,16 +173,16 @@ data:extend({
   {
     type = "equipment-grid",
     name = "unarmed-grid",
-    width = 8,
-    height = 4,
+    width = 5,
+    height = 10,
     equipment_categories = {"car", "unarmed-vehicle"}
   },
 
   {
     type = "equipment-grid",
     name = "boat-grid",
-    width = 8,
-    height = 4,
+    width = 6,
+    height = 12,
     equipment_categories = {"vehicle", "armoured-vehicle", "cargo-wagon"}
   },
 })
