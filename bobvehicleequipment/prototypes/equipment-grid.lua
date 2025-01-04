@@ -169,4 +169,20 @@ data:extend({
     height = 8,
     equipment_categories = { "train", "vehicle", "armoured-vehicle", "armoured-train" },
   },
+
+  {
+    type = "equipment-grid",
+    name = "unarmed-grid",
+    width = 8,
+    height = 4,
+    equipment_categories = {"car", "unarmed-vehicle"}
+  },
+
+  {
+    type = "equipment-grid",
+    name = "boat-grid",
+    width = 8,
+    height = 4,
+    equipment_categories = {"vehicle", "armoured-vehicle", "cargo-wagon"}
+  },
 })
