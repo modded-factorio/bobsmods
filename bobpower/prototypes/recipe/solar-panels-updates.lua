@@ -5,13 +5,13 @@ if settings.startup["bobmods-power-solar"].value == true then
     bobmods.lib.recipe.add_ingredient("solar-panel-large", { type = "item", name = "bob-glass", amount = 16 })
   end
 
-  if data.raw.item["silver-plate"] then
+  if data.raw.item["bob-silver-plate"] then
     bobmods.lib.recipe.remove_ingredient("solar-panel-small-2", "copper-plate")
     bobmods.lib.recipe.remove_ingredient("solar-panel-2", "copper-plate")
     bobmods.lib.recipe.remove_ingredient("solar-panel-large-2", "copper-plate")
-    bobmods.lib.recipe.add_ingredient("solar-panel-small-2", { type = "item", name = "silver-plate", amount = 4 })
-    bobmods.lib.recipe.add_ingredient("solar-panel-2", { type = "item", name = "silver-plate", amount = 9 })
-    bobmods.lib.recipe.add_ingredient("solar-panel-large-2", { type = "item", name = "silver-plate", amount = 16 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-small-2", { type = "item", name = "bob-silver-plate", amount = 4 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-2", { type = "item", name = "bob-silver-plate", amount = 9 })
+    bobmods.lib.recipe.add_ingredient("solar-panel-large-2", { type = "item", name = "bob-silver-plate", amount = 16 })
   end
 
   if data.raw.item["bob-aluminium-plate"] then
@@ -21,7 +21,7 @@ if settings.startup["bobmods-power-solar"].value == true then
     bobmods.lib.recipe.add_ingredient("solar-panel-small-2", { type = "item", name = "bob-aluminium-plate", amount = 4 })
     bobmods.lib.recipe.add_ingredient("solar-panel-2", { type = "item", name = "bob-aluminium-plate", amount = 9 })
     bobmods.lib.recipe.add_ingredient("solar-panel-large-2", { type = "item", name = "bob-aluminium-plate", amount = 16 })
-    bobmods.lib.tech.add_prerequisite("bob-solar-energy-2", "aluminium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-solar-energy-2", "bob-aluminium-processing")
   end
 
   if data.raw.item["tinned-copper-cable"] then
@@ -40,7 +40,7 @@ if settings.startup["bobmods-power-solar"].value == true then
     bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "bob-titanium-plate", amount = 4 })
     bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "bob-titanium-plate", amount = 9 })
     bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "bob-titanium-plate", amount = 16 })
-    bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-gold-plate"] then
@@ -50,7 +50,7 @@ if settings.startup["bobmods-power-solar"].value == true then
     bobmods.lib.recipe.add_ingredient("solar-panel-small-3", { type = "item", name = "bob-gold-plate", amount = 4 })
     bobmods.lib.recipe.add_ingredient("solar-panel-3", { type = "item", name = "bob-gold-plate", amount = 9 })
     bobmods.lib.recipe.add_ingredient("solar-panel-large-3", { type = "item", name = "bob-gold-plate", amount = 16 })
-    bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "gold-processing")
+    bobmods.lib.tech.add_prerequisite("bob-solar-energy-3", "bob-gold-processing")
   end
 
   if data.raw.item["gilded-copper-cable"] then

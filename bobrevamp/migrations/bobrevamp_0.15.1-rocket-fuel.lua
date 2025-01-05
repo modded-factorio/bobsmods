@@ -4,8 +4,8 @@ for index, force in pairs(game.forces) do
   force.reset_recipes()
   force.reset_technologies()
 
-  if force.technologies["nitrogen-processing"] then
-    if force.technologies["nitrogen-processing"].researched then
+  if force.technologies["bob-nitrogen-processing"] then
+    if force.technologies["bob-nitrogen-processing"].researched then
       if force.recipes["ammonia"] then
         force.recipes["ammonia"].enabled = true
       end

@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "fluid",
-    name = "ferric-chloride-solution",
+    name = "bob-ferric-chloride-solution",
     icon = "__bobelectronics__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
     subgroup = "fluid",
@@ -10,16 +10,16 @@ data:extend({
     base_color = { r = 0.7, g = 0.6, b = 0.2 },
     flow_color = { r = 0.5, g = 0.5, b = 0.5 },
     max_temperature = 100,
-    order = "a[fluid]-g[ferric-chloride-solution]",
+    order = "a[fluid]-g[bob-ferric-chloride-solution]",
   },
 
   {
     type = "recipe",
-    name = "ferric-chloride-solution",
+    name = "bob-ferric-chloride-solution",
     icon = "__bobelectronics__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-a[ferric-chloride-solution]",
+    order = "b[fluid-chemistry]-a[bob-ferric-chloride-solution]",
     category = "chemistry",
     enabled = false,
     energy_required = 2.5,
@@ -28,7 +28,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "ferric-chloride-solution", amount = 50 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 50 },
     },
     crafting_machine_tint = {
       primary = { r = 0.7, g = 0.6, b = 0.2, a = 0.000 },

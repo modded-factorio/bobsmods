@@ -10,14 +10,14 @@ local chest_pick = {
   volume = 0.6,
 }
 
-if data.raw.item["brass-alloy"] then
+if data.raw.item["bob-brass-alloy"] then
   data.raw.container["steel-chest"].next_upgrade = "brass-chest"
   data:extend({
     {
       type = "recipe",
       name = "brass-chest",
       enabled = false,
-      ingredients = { { type = "item", name = "brass-alloy", amount = 8 } },
+      ingredients = { { type = "item", name = "bob-brass-alloy", amount = 8 } },
       results = { { type = "item", name = "brass-chest", amount = 1 } },
     },
     {

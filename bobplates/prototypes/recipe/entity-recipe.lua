@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "electrolyser",
+    name = "bob-electrolyser",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -10,47 +10,47 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 5 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "electrolyser", amount = 1 } },
+    results = { { type = "item", name = "bob-electrolyser", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "stone-mixing-furnace",
+    name = "bob-stone-mixing-furnace",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
       { type = "item", name = "stone", amount = 5 },
     },
-    results = { { type = "item", name = "stone-mixing-furnace", amount = 1 } },
+    results = { { type = "item", name = "bob-stone-mixing-furnace", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "stone-chemical-furnace",
+    name = "bob-stone-chemical-furnace",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
       { type = "item", name = "stone", amount = 5 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "stone-chemical-furnace", amount = 1 } },
+    results = { { type = "item", name = "bob-stone-chemical-furnace", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "steel-mixing-furnace",
+    name = "bob-steel-mixing-furnace",
     energy_required = 3,
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 6 },
       { type = "item", name = "stone-brick", amount = 10 },
     },
-    results = { { type = "item", name = "steel-mixing-furnace", amount = 1 } },
+    results = { { type = "item", name = "bob-steel-mixing-furnace", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "steel-chemical-furnace",
+    name = "bob-steel-chemical-furnace",
     energy_required = 3,
     enabled = false,
     ingredients = {
@@ -58,12 +58,12 @@ data:extend({
       { type = "item", name = "stone-brick", amount = 10 },
       { type = "item", name = "pipe", amount = 5 },
     },
-    results = { { type = "item", name = "steel-chemical-furnace", amount = 1 } },
+    results = { { type = "item", name = "bob-steel-chemical-furnace", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "electric-mixing-furnace",
+    name = "bob-electric-mixing-furnace",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -71,12 +71,12 @@ data:extend({
       { type = "item", name = "stone-brick", amount = 10 },
       { type = "item", name = "advanced-circuit", amount = 5 },
     },
-    results = { { type = "item", name = "electric-mixing-furnace", amount = 1 } },
+    results = { { type = "item", name = "bob-electric-mixing-furnace", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "electric-chemical-furnace",
+    name = "bob-electric-chemical-furnace",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -85,12 +85,12 @@ data:extend({
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "pipe", amount = 5 },
     },
-    results = { { type = "item", name = "electric-chemical-furnace", amount = 1 } },
+    results = { { type = "item", name = "bob-electric-chemical-furnace", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "air-pump",
+    name = "bob-air-pump",
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -99,59 +99,59 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 2 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "air-pump", amount = 1 } },
+    results = { { type = "item", name = "bob-air-pump", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "air-pump-2",
+    name = "bob-air-pump-2",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "air-pump", amount = 1 },
+      { type = "item", name = "bob-air-pump", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
-      { type = "item", name = "steel-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-steel-gear-wheel", amount = 4 },
       { type = "item", name = "advanced-circuit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "air-pump-2", amount = 1 } },
+    results = { { type = "item", name = "bob-air-pump-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "air-pump-3",
+    name = "bob-air-pump-3",
     energy_required = 7,
     enabled = false,
     ingredients = {
-      { type = "item", name = "air-pump-2", amount = 1 },
+      { type = "item", name = "bob-air-pump-2", amount = 1 },
       { type = "item", name = "bob-titanium-plate", amount = 2 },
-      { type = "item", name = "titanium-gear-wheel", amount = 4 },
-      { type = "item", name = "titanium-bearing", amount = 4 },
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "air-pump-3", amount = 1 } },
+    results = { { type = "item", name = "bob-air-pump-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "air-pump-4",
+    name = "bob-air-pump-4",
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "air-pump-3", amount = 1 },
-      { type = "item", name = "nitinol-alloy", amount = 2 },
-      { type = "item", name = "nitinol-gear-wheel", amount = 4 },
-      { type = "item", name = "nitinol-bearing", amount = 4 },
+      { type = "item", name = "bob-air-pump-3", amount = 1 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 2 },
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-nitinol-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },
-      { type = "item", name = "advanced-processing-unit", amount = 3 },
+      { type = "item", name = "bob-advanced-processing-unit", amount = 3 },
     },
-    results = { { type = "item", name = "air-pump-4", amount = 1 } },
+    results = { { type = "item", name = "bob-air-pump-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "water-pump",
+    name = "bob-water-pump",
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -160,54 +160,54 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 2 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "water-pump", amount = 1 } },
+    results = { { type = "item", name = "bob-water-pump", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "water-pump-2",
+    name = "bob-water-pump-2",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "water-pump", amount = 1 },
+      { type = "item", name = "bob-water-pump", amount = 1 },
       { type = "item", name = "steel-plate", amount = 2 },
-      { type = "item", name = "steel-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-steel-gear-wheel", amount = 4 },
       { type = "item", name = "advanced-circuit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "water-pump-2", amount = 1 } },
+    results = { { type = "item", name = "bob-water-pump-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "water-pump-3",
+    name = "bob-water-pump-3",
     energy_required = 7,
     enabled = false,
     ingredients = {
-      { type = "item", name = "water-pump-2", amount = 1 },
+      { type = "item", name = "bob-water-pump-2", amount = 1 },
       { type = "item", name = "bob-titanium-plate", amount = 2 },
-      { type = "item", name = "titanium-gear-wheel", amount = 4 },
-      { type = "item", name = "titanium-bearing", amount = 4 },
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-titanium-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "water-pump-3", amount = 1 } },
+    results = { { type = "item", name = "bob-water-pump-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "water-pump-4",
+    name = "bob-water-pump-4",
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "water-pump-3", amount = 1 },
-      { type = "item", name = "nitinol-alloy", amount = 2 },
-      { type = "item", name = "nitinol-gear-wheel", amount = 4 },
-      { type = "item", name = "nitinol-bearing", amount = 4 },
+      { type = "item", name = "bob-water-pump-3", amount = 1 },
+      { type = "item", name = "bob-nitinol-alloy", amount = 2 },
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-nitinol-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },
-      { type = "item", name = "advanced-processing-unit", amount = 3 },
+      { type = "item", name = "bob-advanced-processing-unit", amount = 3 },
     },
-    results = { { type = "item", name = "water-pump-4", amount = 1 } },
+    results = { { type = "item", name = "bob-water-pump-4", amount = 1 } },
   },
 
   {
@@ -236,7 +236,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "void-pump",
+    name = "bob-void-pump",
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -245,7 +245,7 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 2 },
       { type = "item", name = "pipe", amount = 2 },
     },
-    results = { { type = "item", name = "void-pump", amount = 1 } },
+    results = { { type = "item", name = "bob-void-pump", amount = 1 } },
   },
 })
 
@@ -262,13 +262,13 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { type = "item", name = "stone-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
-      results = { { type = "item", name = "stone-mixing-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-stone-mixing-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
       name = "stone-chemical-furnace-from-stone-furnace",
-      localised_name = { "entity-name.stone-chemical-furnace" },
+      localised_name = { "entity-name.bob-stone-chemical-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -277,13 +277,13 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { type = "item", name = "pipe", amount = 2 },
       },
       allow_as_intermediate = false,
-      results = { { type = "item", name = "stone-chemical-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-stone-chemical-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
       name = "steel-mixing-furnace-from-steel-furnace",
-      localised_name = { "entity-name.steel-mixing-furnace" },
+      localised_name = { "entity-name.bob-steel-mixing-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -291,13 +291,13 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { type = "item", name = "steel-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
-      results = { { type = "item", name = "steel-mixing-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-steel-mixing-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
       name = "steel-chemical-furnace-from-steel-furnace",
-      localised_name = { "entity-name.steel-chemical-furnace" },
+      localised_name = { "entity-name.bob-steel-chemical-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -306,13 +306,13 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { type = "item", name = "pipe", amount = 5 },
       },
       allow_as_intermediate = false,
-      results = { { type = "item", name = "steel-chemical-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-steel-chemical-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
       name = "electric-mixing-furnace-from-electric-furnace",
-      localised_name = { "entity-name.electric-mixing-furnace" },
+      localised_name = { "entity-name.bob-electric-mixing-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -320,13 +320,13 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { type = "item", name = "electric-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
-      results = { { type = "item", name = "electric-mixing-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-electric-mixing-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
       name = "electric-chemical-furnace-from-electric-furnace",
-      localised_name = { "entity-name.electric-chemical-furnace" },
+      localised_name = { "entity-name.bob-electric-chemical-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
@@ -335,7 +335,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
         { type = "item", name = "pipe", amount = 5 },
       },
       allow_as_intermediate = false,
-      results = { { type = "item", name = "electric-chemical-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-electric-chemical-furnace", amount = 1 } },
     },
 
     {
@@ -346,7 +346,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
       ingredients = {
-        { type = "item", name = "stone-mixing-furnace", amount = 1 },
+        { type = "item", name = "bob-stone-mixing-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
       results = { { type = "item", name = "stone-furnace", amount = 1 } },
@@ -360,7 +360,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
       ingredients = {
-        { type = "item", name = "stone-chemical-furnace", amount = 1 },
+        { type = "item", name = "bob-stone-chemical-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
       results = {
@@ -378,7 +378,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
       ingredients = {
-        { type = "item", name = "steel-mixing-furnace", amount = 1 },
+        { type = "item", name = "bob-steel-mixing-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
       results = { { type = "item", name = "steel-furnace", amount = 1 } },
@@ -392,7 +392,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
       ingredients = {
-        { type = "item", name = "steel-chemical-furnace", amount = 1 },
+        { type = "item", name = "bob-steel-chemical-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
       results = {
@@ -410,7 +410,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
       ingredients = {
-        { type = "item", name = "electric-mixing-furnace", amount = 1 },
+        { type = "item", name = "bob-electric-mixing-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
       results = { { type = "item", name = "electric-furnace", amount = 1 } },
@@ -424,7 +424,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       enabled = false,
       subgroup = "bob-base-smelting-machine-convert",
       ingredients = {
-        { type = "item", name = "electric-chemical-furnace", amount = 1 },
+        { type = "item", name = "bob-electric-chemical-furnace", amount = 1 },
       },
       allow_as_intermediate = false,
       results = {

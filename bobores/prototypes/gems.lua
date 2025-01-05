@@ -25,7 +25,7 @@ if bobmods.ores.settings.UnsortedGemOre == true then
     },
     {
       type = "recipe",
-      name = "sort-gem-ore",
+      name = "bob-sort-gem-ore",
       energy_required = 1,
       ingredients = {
         { type = "item", name = "bob-gem-ore", amount = 1 },

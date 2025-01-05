@@ -24,16 +24,54 @@ local electronic_pick = {
 }
 
 if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
-  data.raw.item["flying-robot-frame"].order = "j[flying-robot-frame-1]"
-  data.raw.item["flying-robot-frame"].subgroup = "bob-robot-parts"
+  local item = data.raw.item["flying-robot-frame"]
+  item.order = "j[flying-robot-frame-1]"
+  item.subgroup = "bob-robot-parts"
+  item.icon = nil
+  item.icons = {
+    {
+      icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
+      icon_size = 64,
+      scale = 0.5,
+    },
+    {
+      icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-mask.png",
+      icon_size = 64,
+      scale = 0.5,
+      tint = util.copy(bobmods.lib.standard_tier_colors[2]), -- T2
+    },
+    {
+      icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-highlights.png",
+      icon_size = 64,
+      scale = 0.5,
+      tint = { 1, 1, 1, 0 },
+    },
+  }
   bobmods.lib.recipe.remove_ingredient("flying-robot-frame", "electronic-circuit")
 
   data:extend({
     {
       type = "item",
       name = "flying-robot-frame-2",
-      icon = "__boblogistics__/graphics/icons/flying-robot-frame-2.png",
-      icon_size = 32,
+      icons = {
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
+          icon_size = 64,
+          scale = 0.5,
+        },
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-mask.png",
+          icon_size = 64,
+          scale = 0.5,
+          tint = util.copy(bobmods.lib.standard_tier_colors[3]), -- T3
+        },
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-highlights.png",
+          icon_size = 64,
+          scale = 0.5,
+          tint = { 1, 1, 1, 0 },
+        },
+      },
       subgroup = "bob-robot-parts",
       order = "j[flying-robot-frame-2]",
       stack_size = 50,
@@ -44,8 +82,25 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
     {
       type = "item",
       name = "flying-robot-frame-3",
-      icon = "__boblogistics__/graphics/icons/flying-robot-frame-3.png",
-      icon_size = 32,
+      icons = {
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
+          icon_size = 64,
+          scale = 0.5,
+        },
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-mask.png",
+          icon_size = 64,
+          scale = 0.5,
+          tint = util.copy(bobmods.lib.standard_tier_colors[4]), -- T4
+        },
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-highlights.png",
+          icon_size = 64,
+          scale = 0.5,
+          tint = { 1, 1, 1, 0 },
+        },
+      },
       subgroup = "bob-robot-parts",
       order = "j[flying-robot-frame-3]",
       stack_size = 50,
@@ -56,8 +111,25 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
     {
       type = "item",
       name = "flying-robot-frame-4",
-      icon = "__boblogistics__/graphics/icons/flying-robot-frame-4.png",
-      icon_size = 32,
+      icons = {
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
+          icon_size = 64,
+          scale = 0.5,
+        },
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-mask.png",
+          icon_size = 64,
+          scale = 0.5,
+          tint = util.copy(bobmods.lib.standard_tier_colors[5]), -- T5
+        },
+        {
+          icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-highlights.png",
+          icon_size = 64,
+          scale = 0.5,
+          tint = { 1, 1, 1, 0 },
+        },
+      },
       subgroup = "bob-robot-parts",
       order = "j[flying-robot-frame-4]",
       stack_size = 50,

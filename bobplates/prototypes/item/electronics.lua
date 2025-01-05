@@ -5,7 +5,7 @@ data.raw.item["processing-unit"].order = "a[circuits]-c[processing-unit-1]"
 data:extend({
   {
     type = "item",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     icon = "__bobplates__/graphics/icons/advanced-processing-unit.png",
     icon_size = 32,
     subgroup = "intermediate-product",
