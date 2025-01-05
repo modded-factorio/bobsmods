@@ -73,7 +73,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   end
   if data.raw.fluid["bob-sulfur-dioxide"] and data.raw.recipe["bob-sulfuric-acid-2"] then
     for i, technology in pairs(data.raw.technology) do
-      bobmods.lib.tech.remove_recipe_unlock(technology.name, "bob-sulfuric-acid")
+      bobmods.lib.tech.remove_recipe_unlock(technology.name, "sulfuric-acid")
     end
     bobmods.lib.recipe.hide("sulfuric-acid")
   end
