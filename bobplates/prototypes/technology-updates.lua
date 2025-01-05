@@ -28,6 +28,7 @@ bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfuric-acid-2")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfuric-acid-3")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfur-dioxide")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "hydrogen-sulfide")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sodium-hydroxide-sink")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
