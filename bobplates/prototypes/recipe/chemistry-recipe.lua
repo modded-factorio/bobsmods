@@ -194,16 +194,16 @@ data:extend({
 
   {
     type = "recipe",
-    name = "sodium-hydroxide-sink",
+    name = "bob-sodium-hydroxide-sink",
     icon = "__bobplates__/graphics/icons/sodium-hydroxide-sink.png",
     icon_size = 64,
     subgroup = "fluid",
-    order = "b[fluid-chemistry]-b[sodium-hydroxide-sink]",
+    order = "b[fluid-chemistry]-b[bob-sodium-hydroxide-sink]",
     category = "chemistry",
     enabled = false,
     energy_required = 0.1,
     ingredients = {
-      { type = "item", name = "sodium-hydroxide", amount = 1 },
+      { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
       { type = "fluid", name = "water", amount = 5 },
     },
@@ -925,5 +925,5 @@ data:extend({
 })
 
 if mods["bobpower"] then
-  data.raw.recipe["sodium-hydroxide-sink"].results[1].temperature = 465
+  data.raw.recipe["bob-sodium-hydroxide-sink"].results[1].temperature = 465
 end
