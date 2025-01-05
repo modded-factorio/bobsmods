@@ -913,17 +913,3 @@ if bobmods.enemies.small_alien_artifacts ~= true then
     end
   end
 end
-
-if feature_flags["quality"] then
-  if data.raw.item["alien-artifact"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact", false)
-  end
-  if data.raw.item["alien-artifact-red"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact-red", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact-orange", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact-yellow", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact-green", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact-blue", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("alien-artifact-purple", false)
-  end
-end
