@@ -1,3 +1,12 @@
+data.raw["technology"]["belt-immunity-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+  icon = "__base__/graphics/technology/belt-immunity-equipment.png",
+  icon_size = 256,
+})
+
+data.raw["technology"]["energy-shield-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+  icon = "__base__/graphics/technology/energy-shield-equipment.png",
+  icon_size = 256,
+})
 data.raw["technology"]["energy-shield-mk2-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
   icon = "__bobequipment__/graphics/icons/technology/energy-shield-mk2-equipment.png",
   icon_size = 128,
@@ -358,6 +367,11 @@ data:extend({
       },
     },
   },
+})
+
+data.raw["technology"]["night-vision-equipment"].icons = bobmods.equipment.technology_icon_constant_equipment({
+  icon = "__base__/graphics/technology/night-vision-equipment.png",
+  icon_size = 256,
 })
 
 data:extend({
