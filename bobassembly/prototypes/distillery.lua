@@ -274,7 +274,7 @@ then
       icon = "__bobassembly__/graphics/icons/technology/distillery-red.png",
       icon_size = 128,
       prerequisites = {
-        "electrolysis-1",
+        "bob-electrolysis-1",
         "steel-processing",
         "logistic-science-pack",
       },

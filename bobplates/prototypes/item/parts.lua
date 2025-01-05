@@ -30,11 +30,11 @@ local ball_pick = {
 data:extend({
   {
     type = "item",
-    name = "steel-gear-wheel",
+    name = "bob-steel-gear-wheel",
     icon = "__bobplates__/graphics/icons/steel-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "ba[steel-gear-wheel]",
+    order = "ba[bob-steel-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
@@ -43,11 +43,11 @@ data:extend({
 
   {
     type = "item",
-    name = "steel-bearing-ball",
+    name = "bob-steel-bearing-ball",
     icon = "__bobplates__/graphics/icons/steel-bearing-ball.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "baa[ball-bearing-steel]",
+    order = "baa[bob-ball-bearing-steel]",
     stack_size = 500,
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
@@ -56,11 +56,11 @@ data:extend({
 
   {
     type = "item",
-    name = "steel-bearing",
+    name = "bob-steel-bearing",
     icon = "__bobplates__/graphics/icons/steel-bearing.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bba[bearing-steel]",
+    order = "bba[bob-bearing-steel]",
     stack_size = 100,
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
@@ -69,11 +69,11 @@ data:extend({
 
   {
     type = "item",
-    name = "brass-gear-wheel",
+    name = "bob-brass-gear-wheel",
     icon = "__bobplates__/graphics/icons/brass-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "bb[brass-gear-wheel]",
+    order = "bb[bob-brass-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
@@ -82,11 +82,11 @@ data:extend({
 
   {
     type = "item",
-    name = "cobalt-steel-gear-wheel",
+    name = "bob-cobalt-steel-gear-wheel",
     icon = "__bobplates__/graphics/icons/cobalt-steel-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "bc[cobalt-steel-gear-wheel]",
+    order = "bc[bob-cobalt-steel-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
@@ -95,11 +95,11 @@ data:extend({
 
   {
     type = "item",
-    name = "cobalt-steel-bearing-ball",
+    name = "bob-cobalt-steel-bearing-ball",
     icon = "__bobplates__/graphics/icons/cobalt-steel-bearing-ball.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bac[ball-bearing-cobalt-steel]",
+    order = "bac[bob-ball-bearing-cobalt-steel]",
     stack_size = 500,
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
@@ -108,11 +108,11 @@ data:extend({
 
   {
     type = "item",
-    name = "cobalt-steel-bearing",
+    name = "bob-cobalt-steel-bearing",
     icon = "__bobplates__/graphics/icons/cobalt-steel-bearing.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bbc[bearing-cobalt-steel]",
+    order = "bbc[bob-bearing-cobalt-steel]",
     stack_size = 100,
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
@@ -121,11 +121,11 @@ data:extend({
 
   {
     type = "item",
-    name = "titanium-gear-wheel",
+    name = "bob-titanium-gear-wheel",
     icon = "__bobplates__/graphics/icons/titanium-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "bd[titanium-gear-wheel]",
+    order = "bd[bob-titanium-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
@@ -134,11 +134,11 @@ data:extend({
 
   {
     type = "item",
-    name = "titanium-bearing-ball",
+    name = "bob-titanium-bearing-ball",
     icon = "__bobplates__/graphics/icons/titanium-bearing-ball.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bad[ball-bearing-titanium]",
+    order = "bad[bob-ball-bearing-titanium]",
     stack_size = 500,
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
@@ -147,11 +147,11 @@ data:extend({
 
   {
     type = "item",
-    name = "titanium-bearing",
+    name = "bob-titanium-bearing",
     icon = "__bobplates__/graphics/icons/titanium-bearing.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bbd[bearing-titanium]",
+    order = "bbd[bob-bearing-titanium]",
     stack_size = 100,
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
@@ -160,11 +160,11 @@ data:extend({
 
   {
     type = "item",
-    name = "tungsten-gear-wheel",
+    name = "bob-tungsten-gear-wheel",
     icon = "__bobplates__/graphics/icons/tungsten-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "be[tungsten-gear-wheel]",
+    order = "be[bob-tungsten-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
@@ -173,11 +173,11 @@ data:extend({
 
   {
     type = "item",
-    name = "ceramic-bearing-ball",
+    name = "bob-ceramic-bearing-ball",
     icon = "__bobplates__/graphics/icons/ceramic-bearing-ball.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bae[ball-bearing-ceramic]",
+    order = "bae[bob-ball-bearing-ceramic]",
     stack_size = 500,
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
@@ -186,11 +186,11 @@ data:extend({
 
   {
     type = "item",
-    name = "ceramic-bearing",
+    name = "bob-ceramic-bearing",
     icon = "__bobplates__/graphics/icons/ceramic-bearing.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bbe[bearing-ceramic]",
+    order = "bbe[bob-bearing-ceramic]",
     stack_size = 100,
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
@@ -199,11 +199,11 @@ data:extend({
 
   {
     type = "item",
-    name = "nitinol-gear-wheel",
+    name = "bob-nitinol-gear-wheel",
     icon = "__bobplates__/graphics/icons/nitinol-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "bf[nitinol-gear-wheel]",
+    order = "bf[bob-nitinol-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
@@ -212,11 +212,11 @@ data:extend({
 
   {
     type = "item",
-    name = "nitinol-bearing-ball",
+    name = "bob-nitinol-bearing-ball",
     icon = "__bobplates__/graphics/icons/nitinol-bearing-ball.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "baf[ball-bearing-nitinol]",
+    order = "baf[bob-ball-bearing-nitinol]",
     stack_size = 500,
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
@@ -225,11 +225,11 @@ data:extend({
 
   {
     type = "item",
-    name = "nitinol-bearing",
+    name = "bob-nitinol-bearing",
     icon = "__bobplates__/graphics/icons/nitinol-bearing.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bbf[bearing-nitinol]",
+    order = "bbf[bob-bearing-nitinol]",
     stack_size = 100,
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
@@ -238,11 +238,11 @@ data:extend({
 
   {
     type = "item",
-    name = "lithium-ion-battery",
+    name = "bob-lithium-ion-battery",
     icon = "__bobplates__/graphics/icons/lithium-ion-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
-    order = "b[chemistry]-d[battery]-2",
+    order = "b[chemistry]-d[bob-battery]-2",
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
@@ -260,11 +260,11 @@ data:extend({
 
   {
     type = "item",
-    name = "silver-zinc-battery",
+    name = "bob-silver-zinc-battery",
     icon = "__bobplates__/graphics/icons/silver-zinc-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
-    order = "b[chemistry]-d[battery]-3",
+    order = "b[chemistry]-d[bob-battery]-3",
     stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",

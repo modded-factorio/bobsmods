@@ -1,4 +1,4 @@
-if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
+if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.fluid["bob-nitrogen"] then
   data:extend({
     {
       type = "fluid",
@@ -63,15 +63,15 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
     },
   })
 
-  if not data.raw.fluid["nitrogen-dioxide"] then
+  if not data.raw.fluid["bob-nitrogen-dioxide"] then
     data:extend({
       {
         type = "fluid",
-        name = "nitrogen-dioxide",
+        name = "bob-nitrogen-dioxide",
         icon = "__bobrevamp__/graphics/icons/nitrogen-dioxide.png",
         icon_size = 64,
         subgroup = "fluid",
-        order = "a[fluid]-g[nitrogen-dioxide]",
+        order = "a[fluid]-g[bob-nitrogen-dioxide]",
         default_temperature = 25,
         max_temperature = 100,
         heat_capacity = "1kJ",
@@ -94,8 +94,8 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "nitrogen", amount = 10 },
-        { type = "fluid", name = "hydrogen", amount = 24 },
+        { type = "fluid", name = "bob-nitrogen", amount = 10 },
+        { type = "fluid", name = "bob-hydrogen", amount = 24 },
       },
       results = {
         { type = "fluid", name = "ammonia", amount = 20 },
@@ -119,8 +119,8 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "hydrogen", amount = 16 },
-        { type = "fluid", name = "oxygen", amount = 20 },
+        { type = "fluid", name = "bob-hydrogen", amount = 16 },
+        { type = "fluid", name = "bob-oxygen", amount = 20 },
       },
       results = {
         { type = "fluid", name = "hydrogen-peroxide", amount = 8 },
@@ -161,22 +161,22 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
 
     {
       type = "recipe",
-      name = "nitrogen-dioxide",
+      name = "bob-nitrogen-dioxide",
       icon = "__bobrevamp__/graphics/icons/nitrogen-dioxide.png",
       icon_size = 64,
-      order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
+      order = "b[fluid-chemistry]-b[bob-nitrogen-dioxide]",
       energy_required = 1,
       category = "chemistry",
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "nitrogen", amount = 10 },
-        { type = "fluid", name = "oxygen", amount = 20 },
+        { type = "fluid", name = "bob-nitrogen", amount = 10 },
+        { type = "fluid", name = "bob-oxygen", amount = 20 },
       },
       results = {
-        { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
+        { type = "fluid", name = "bob-nitrogen-dioxide", amount = 20 },
       },
-      main_product = "nitrogen-dioxide",
+      main_product = "bob-nitrogen-dioxide",
       crafting_machine_tint = {
         primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
         secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
@@ -195,7 +195,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
+        { type = "fluid", name = "bob-nitrogen-dioxide", amount = 20 },
       },
       results = {
         { type = "fluid", name = "dinitrogen-tetroxide", amount = 8 },
@@ -242,7 +242,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
         enabled = false,
         ingredients = {
           { type = "fluid", name = "ammonia", amount = 20 },
-          { type = "fluid", name = "oxygen", amount = 25 },
+          { type = "fluid", name = "bob-oxygen", amount = 25 },
         },
         results = {
           { type = "fluid", name = "nitric-oxide", amount = 20 },
@@ -258,22 +258,22 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
 
       {
         type = "recipe",
-        name = "nitrogen-dioxide",
+        name = "bob-nitrogen-dioxide",
         icon = "__bobrevamp__/graphics/icons/nitrogen-dioxide.png",
         icon_size = 64,
-        order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
+        order = "b[fluid-chemistry]-b[bob-nitrogen-dioxide]",
         energy_required = 1,
         category = "chemistry",
         subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
           { type = "fluid", name = "nitric-oxide", amount = 20 },
-          { type = "fluid", name = "oxygen", amount = 10 },
+          { type = "fluid", name = "bob-oxygen", amount = 10 },
         },
         results = {
-          { type = "fluid", name = "nitrogen-dioxide", amount = 20 },
+          { type = "fluid", name = "bob-nitrogen-dioxide", amount = 20 },
         },
-        main_product = "nitrogen-dioxide",
+        main_product = "bob-nitrogen-dioxide",
         crafting_machine_tint = {
           primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
           secondary = { r = 0.7, g = 0.0, b = 0.0, a = 0.000 },
@@ -283,7 +283,7 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
     })
   end
 
-  if data.raw.item["enriched-fuel"] then
+  if data.raw.item["bob-enriched-fuel"] then
     data:extend({
       {
         type = "recipe",
@@ -295,9 +295,9 @@ if data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen
           { type = "fluid", name = "hydrazine", amount = 100 },
           { type = "item", name = "solid-fuel", amount = 1 },
         },
-        results = { { type = "item", name = "enriched-fuel", amount = 1 } },
+        results = { { type = "item", name = "bob-enriched-fuel", amount = 1 } },
         subgroup = "bob-chemical-fuels",
-        order = "d[enriched-fuel]-2",
+        order = "d[bob-enriched-fuel]-2",
         crafting_machine_tint = {
           primary = { r = 0.9, g = 0.9, b = 0.9, a = 0.000 },
           secondary = { r = 0.8, g = 0.8, b = 0.8, a = 0.000 },

@@ -7,15 +7,15 @@ local resouce_pick = {
   volume = 0.6,
 }
 
-if not data.raw.item["gold-ore"] then
+if not data.raw.item["bob-gold-ore"] then
   data:extend({
     {
       type = "item",
-      name = "gold-ore",
+      name = "bob-gold-ore",
       icon = "__bobplates__/graphics/icons/ore/gold-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[gold-ore]",
+      order = "b-d[bob-gold-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -24,15 +24,15 @@ if not data.raw.item["gold-ore"] then
   })
 end
 
-if not data.raw.item["lead-ore"] then
+if not data.raw.item["bob-lead-ore"] then
   data:extend({
     {
       type = "item",
-      name = "lead-ore",
+      name = "bob-lead-ore",
       icon = "__bobplates__/graphics/icons/ore/lead-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[lead-ore]",
+      order = "b-d[bob-lead-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -41,15 +41,15 @@ if not data.raw.item["lead-ore"] then
   })
 end
 
-if not data.raw.item["silver-ore"] then
+if not data.raw.item["bob-silver-ore"] then
   data:extend({
     {
       type = "item",
-      name = "silver-ore",
+      name = "bob-silver-ore",
       icon = "__bobplates__/graphics/icons/ore/silver-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[silver-ore]",
+      order = "b-d[bob-silver-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -58,15 +58,15 @@ if not data.raw.item["silver-ore"] then
   })
 end
 
-if not data.raw.item["tin-ore"] then
+if not data.raw.item["bob-tin-ore"] then
   data:extend({
     {
       type = "item",
-      name = "tin-ore",
+      name = "bob-tin-ore",
       icon = "__bobplates__/graphics/icons/ore/tin-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[tin-ore]",
+      order = "b-d[bob-tin-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -75,15 +75,15 @@ if not data.raw.item["tin-ore"] then
   })
 end
 
-if not data.raw.item["tungsten-ore"] then
+if not data.raw.item["bob-tungsten-ore"] then
   data:extend({
     {
       type = "item",
-      name = "tungsten-ore",
+      name = "bob-tungsten-ore",
       icon = "__bobplates__/graphics/icons/ore/tungsten-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[tungsten-ore]",
+      order = "b-d[bob-tungsten-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -92,15 +92,15 @@ if not data.raw.item["tungsten-ore"] then
   })
 end
 
-if not data.raw.item["zinc-ore"] then
+if not data.raw.item["bob-zinc-ore"] then
   data:extend({
     {
       type = "item",
-      name = "zinc-ore",
+      name = "bob-zinc-ore",
       icon = "__bobplates__/graphics/icons/ore/zinc-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[zinc-ore]",
+      order = "b-d[bob-zinc-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -109,15 +109,15 @@ if not data.raw.item["zinc-ore"] then
   })
 end
 
-if not data.raw.item["bauxite-ore"] then
+if not data.raw.item["bob-bauxite-ore"] then
   data:extend({
     {
       type = "item",
-      name = "bauxite-ore",
+      name = "bob-bauxite-ore",
       icon = "__bobplates__/graphics/icons/ore/bauxite-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[bauxite-ore]",
+      order = "b-d[bob-bauxite-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -126,15 +126,15 @@ if not data.raw.item["bauxite-ore"] then
   })
 end
 
-if not data.raw.item["rutile-ore"] then
+if not data.raw.item["bob-rutile-ore"] then
   data:extend({
     {
       type = "item",
-      name = "rutile-ore",
+      name = "bob-rutile-ore",
       icon = "__bobplates__/graphics/icons/ore/rutile-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[rutile-ore]",
+      order = "b-d[bob-rutile-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -143,15 +143,15 @@ if not data.raw.item["rutile-ore"] then
   })
 end
 
-if not data.raw.item["quartz"] then
+if not data.raw.item["bob-quartz"] then
   data:extend({
     {
       type = "item",
-      name = "quartz",
+      name = "bob-quartz",
       icon = "__bobplates__/graphics/icons/ore/quartz.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[quartz]",
+      order = "b-d[bob-quartz]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -160,15 +160,15 @@ if not data.raw.item["quartz"] then
   })
 end
 
-if not data.raw.item["nickel-ore"] then
+if not data.raw.item["bob-nickel-ore"] then
   data:extend({
     {
       type = "item",
-      name = "nickel-ore",
+      name = "bob-nickel-ore",
       icon = "__bobplates__/graphics/icons/ore/nickel-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[nickel-ore]",
+      order = "b-d[bob-nickel-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
@@ -177,15 +177,15 @@ if not data.raw.item["nickel-ore"] then
   })
 end
 
-if not data.raw.item["cobalt-ore"] then
+if not data.raw.item["bob-cobalt-ore"] then
   data:extend({
     {
       type = "item",
-      name = "cobalt-ore",
+      name = "bob-cobalt-ore",
       icon = "__bobplates__/graphics/icons/ore/cobalt-ore.png",
       icon_size = 32,
       subgroup = "bob-ores",
-      order = "b-d[cobalt-ore]",
+      order = "b-d[bob-cobalt-ore]",
       stack_size = 200,
       drop_sound = resource_drop_move,
       inventory_move_sound = resource_drop_move,
