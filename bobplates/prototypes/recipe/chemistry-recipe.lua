@@ -204,10 +204,11 @@ data:extend({
     energy_required = 0.1,
     ingredients = {
       { type = "item", name = "sodium-hydroxide", amount = 1 },
-      { type = "fluid", name = "sulfuric-acid", amount = 5 },
+      { type = "fluid", name = "sulfuric-acid", amount = 10 },
+      { type = "fluid", name = "water", amount = 5 },
     },
     results = {
-      { type = "fluid", name = "steam", amount = 10, temperature = 500 },
+      { type = "fluid", name = "steam", amount = 20, temperature = 500 },
     },
     main_product = "",
     crafting_machine_tint = {
