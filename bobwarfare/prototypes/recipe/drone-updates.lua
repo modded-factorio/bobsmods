@@ -25,12 +25,15 @@ else
   )
 end
 
-if data.raw.item["steel-gear-wheel"] then
-  bobmods.lib.recipe.replace_ingredient("robot-drone-frame", "iron-gear-wheel", "steel-gear-wheel")
-  bobmods.lib.recipe.replace_ingredient("robot-drone-frame-large", "iron-gear-wheel", "steel-gear-wheel")
+if data.raw.item["bob-steel-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("robot-drone-frame", "iron-gear-wheel", "bob-steel-gear-wheel")
+  bobmods.lib.recipe.replace_ingredient("robot-drone-frame-large", "iron-gear-wheel", "bob-steel-gear-wheel")
 end
 
-if data.raw.item["steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("robot-drone-frame", { type = "item", name = "steel-bearing", amount = 10 })
-  bobmods.lib.recipe.add_ingredient("robot-drone-frame-large", { type = "item", name = "steel-bearing", amount = 10 })
+if data.raw.item["bob-steel-bearing"] then
+  bobmods.lib.recipe.add_ingredient("robot-drone-frame", { type = "item", name = "bob-steel-bearing", amount = 10 })
+  bobmods.lib.recipe.add_ingredient(
+    "robot-drone-frame-large",
+    { type = "item", name = "bob-steel-bearing", amount = 10 }
+  )
 end

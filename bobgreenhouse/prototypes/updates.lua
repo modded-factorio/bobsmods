@@ -8,20 +8,20 @@ if data.raw.item["bob-glass"] then
   bobmods.lib.recipe.replace_ingredient("bob-greenhouse", "copper-plate", "bob-glass")
 end
 
-if data.raw.fluid.ammonia and data.raw.fluid["nitric-acid"] then
+if data.raw.fluid["ammonia"] and data.raw.fluid["bob-nitric-acid"] then
   data.raw.recipe["bob-fertiliser"].ingredients = {
-    { type = "fluid", name = "nitric-acid", amount = 10 },
+    { type = "fluid", name = "bob-nitric-acid", amount = 10 },
     { type = "fluid", name = "ammonia", amount = 10 },
   }
-elseif data.raw.fluid.nitrogen then
+elseif data.raw.fluid["bob-nitrogen"] then
   data.raw.recipe["bob-fertiliser"].ingredients = {
     { type = "fluid", name = "petroleum-gas", amount = 10 },
-    { type = "fluid", name = "nitrogen", amount = 10 },
+    { type = "fluid", name = "bob-nitrogen", amount = 10 },
   }
 end
 
-if data.raw.technology["nitrogen-processing"] then
-  bobmods.lib.tech.add_prerequisite("bob-fertiliser", "nitrogen-processing")
+if data.raw.technology["bob-nitrogen-processing"] then
+  bobmods.lib.tech.add_prerequisite("bob-fertiliser", "bob-nitrogen-processing")
 else
   bobmods.lib.tech.add_prerequisite("bob-fertiliser", "sulfur-processing")
 end

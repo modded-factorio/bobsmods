@@ -57,7 +57,7 @@ local function bob_electrolyser_animation(directory, tier, tint)
   }
 end
 
-circuit_connector_definitions["electrolyser"] =
+circuit_connector_definitions["bob-electrolyser"] =
   circuit_connector_definitions.create_vector(universal_connector_template, {
     {
       variation = 12,
@@ -96,19 +96,19 @@ circuit_connector_definitions["electric-furnace"] =
 data:extend({
   {
     type = "assembling-machine",
-    name = "electrolyser",
+    name = "bob-electrolyser",
     icon = "__bobplates__/graphics/icons/electrolyser.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "electrolyser" },
-    fast_replaceable_group = "electrolyser",
+    minable = { mining_time = 0.5, result = "bob-electrolyser" },
+    fast_replaceable_group = "bob-electrolyser",
     corpse = "big-remnants",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     max_health = 150,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-    circuit_connector = circuit_connector_definitions["electrolyser"],
-    crafting_categories = { "electrolysis" },
+    circuit_connector = circuit_connector_definitions["bob-electrolyser"],
+    crafting_categories = { "bob-electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     module_slots = 1,
     icons_positioning = {
@@ -166,11 +166,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "stone-chemical-furnace",
+    name = "bob-stone-chemical-furnace",
     icon = "__bobplates__/graphics/icons/stone-chemical-furnace.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "stone-chemical-furnace" },
+    minable = { mining_time = 0.2, result = "bob-stone-chemical-furnace" },
     max_health = 200,
     crafting_speed = 1,
     corpse = "medium-remnants",
@@ -336,16 +336,16 @@ data:extend({
       },
     },
     fast_replaceable_group = "furnace",
-    next_upgrade = "steel-chemical-furnace",
+    next_upgrade = "bob-steel-chemical-furnace",
   },
 
   {
     type = "assembling-machine",
-    name = "steel-chemical-furnace",
+    name = "bob-steel-chemical-furnace",
     icon = "__base__/graphics/icons/steel-furnace.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "steel-chemical-furnace" },
+    minable = { mining_time = 0.2, result = "bob-steel-chemical-furnace" },
     max_health = 300,
     crafting_speed = 2,
     corpse = "medium-remnants",
@@ -412,11 +412,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "electric-chemical-furnace",
+    name = "bob-electric-chemical-furnace",
     icon = "__bobplates__/graphics/icons/chemical-furnace.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "electric-chemical-furnace" },
+    minable = { mining_time = 0.2, result = "bob-electric-chemical-furnace" },
     max_health = 350,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["electric-furnace"],
@@ -508,11 +508,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "stone-mixing-furnace",
+    name = "bob-stone-mixing-furnace",
     icon = "__bobplates__/graphics/icons/stone-mixing-furnace.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "stone-mixing-furnace" },
+    minable = { mining_time = 0.2, result = "bob-stone-mixing-furnace" },
     max_health = 200,
     corpse = "medium-remnants",
     impact_category = "stone",
@@ -576,16 +576,16 @@ data:extend({
       },
     },
     fast_replaceable_group = "furnace",
-    next_upgrade = "steel-mixing-furnace",
+    next_upgrade = "bob-steel-mixing-furnace",
   },
 
   {
     type = "assembling-machine",
-    name = "steel-mixing-furnace",
+    name = "bob-steel-mixing-furnace",
     icon = "__base__/graphics/icons/steel-furnace.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "steel-mixing-furnace" },
+    minable = { mining_time = 0.2, result = "bob-steel-mixing-furnace" },
     max_health = 300,
     corpse = "medium-remnants",
     impact_category = "metal",
@@ -629,11 +629,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "electric-mixing-furnace",
+    name = "bob-electric-mixing-furnace",
     icon = "__bobplates__/graphics/icons/electric-mixing-furnace.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "electric-mixing-furnace" },
+    minable = { mining_time = 1, result = "bob-electric-mixing-furnace" },
     max_health = 350,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["electric-furnace"],
@@ -963,11 +963,11 @@ data:extend({
 
   {
     type = "furnace",
-    name = "void-pump",
+    name = "bob-void-pump",
     icon = "__bobplates__/graphics/icons/void-pump.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "void-pump" },
+    minable = { mining_time = 1, result = "bob-void-pump" },
     allowed_effects = { "consumption", "speed", "pollution" },
     max_health = 100,
     fast_replaceable_group = "pipe",
@@ -1002,7 +1002,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-    crafting_categories = { "void-fluid" },
+    crafting_categories = { "bob-void-fluid" },
     crafting_speed = 5,
     result_inventory_size = 0,
     source_inventory_size = 0,

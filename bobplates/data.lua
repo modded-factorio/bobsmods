@@ -68,6 +68,6 @@ require("prototypes.technology-alien")
 
 if feature_flags["quality"] then
   table.insert(data.raw["assembling-machine"].electrolyser.allowed_effects, "quality")
-  table.insert(data.raw["assembling-machine"]["electric-chemical-furnace"].allowed_effects, "quality")
-  table.insert(data.raw["assembling-machine"]["electric-mixing-furnace"].allowed_effects, "quality")
+  table.insert(data.raw["assembling-machine"]["bob-electric-chemical-furnace"].allowed_effects, "quality")
+  table.insert(data.raw["assembling-machine"]["bob-electric-mixing-furnace"].allowed_effects, "quality")
 end

@@ -40,10 +40,10 @@ if feature_flags["quality"] then
     "bob-distillery-5",
     "electric-furnace-2",
     "electric-furnace-3",
-    "electrolyser-2",
-    "electrolyser-3",
-    "electrolyser-4",
-    "electrolyser-5",
+    "bob-electrolyser-2",
+    "bob-electrolyser-3",
+    "bob-electrolyser-4",
+    "bob-electrolyser-5",
     "fluid-furnace",
     "fluid-mixing-furnace",
     "fluid-chemical-furnace",
@@ -57,14 +57,14 @@ if feature_flags["quality"] then
   then
     bobmods.lib.recipe.update_recycling_recipe({
       "stone-furnace",
-      "stone-mixing-furnace",
-      "stone-chemical-furnace",
+      "bob-stone-mixing-furnace",
+      "bob-stone-chemical-furnace",
       "steel-furnace",
-      "steel-mixing-furnace",
-      "steel-chemical-furnace",
+      "bob-steel-mixing-furnace",
+      "bob-steel-chemical-furnace",
       "electric-furnace",
-      "electric-mixing-furnace",
-      "electric-chemical-furnace",
+      "bob-electric-mixing-furnace",
+      "bob-electric-chemical-furnace",
     })
   end
 end
