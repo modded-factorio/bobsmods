@@ -41,7 +41,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
     "__bobelectronics__/graphics/icons/colour-coded/basic-electronic-circuit-board.png"
   data.raw.item["advanced-circuit"].icon = "__bobelectronics__/graphics/icons/colour-coded/electronic-circuit-board.png"
   data.raw.item["processing-unit"].icon = "__bobelectronics__/graphics/icons/colour-coded/electronic-logic-board.png"
-  data.raw.item["advanced-processing-unit"].icon =
+  data.raw.item["bob-advanced-processing-unit"].icon =
     "__bobelectronics__/graphics/icons/colour-coded/electronic-processing-board.png"
 
   data.raw.item["basic-circuit-board"].icon_size = 128
@@ -51,11 +51,11 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw.item["electronic-circuit"].icon_size = 128
   data.raw.item["advanced-circuit"].icon_size = 128
   data.raw.item["processing-unit"].icon_size = 128
-  data.raw.item["advanced-processing-unit"].icon_size = 128
+  data.raw.item["bob-advanced-processing-unit"].icon_size = 128
 end
 
 if feature_flags["quality"] then
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("resin", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-resin", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("wooden-board", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("phenolic-board", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("fibreglass-board", false)
@@ -68,7 +68,7 @@ if feature_flags["quality"] then
     "electronic-circuit",
     "advanced-circuit",
     "processing-unit",
-    "advanced-processing-unit",
+    "bob-advanced-processing-unit",
     "circuit-board",
     "superior-circuit-board",
     "multi-layer-circuit-board",

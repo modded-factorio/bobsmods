@@ -37,11 +37,11 @@ if feature_flags["quality"] then
     table.insert(data.raw.furnace["electric-furnace-2"].allowed_effects, "quality")
     table.insert(data.raw.furnace["electric-furnace-3"].allowed_effects, "quality")
   end
-  if data.raw["assembling-machine"]["electrolyser-5"] then
-    table.insert(data.raw["assembling-machine"]["electrolyser-2"].allowed_effects, "quality")
-    table.insert(data.raw["assembling-machine"]["electrolyser-3"].allowed_effects, "quality")
-    table.insert(data.raw["assembling-machine"]["electrolyser-4"].allowed_effects, "quality")
-    table.insert(data.raw["assembling-machine"]["electrolyser-5"].allowed_effects, "quality")
+  if data.raw["assembling-machine"]["bob-electrolyser-5"] then
+    table.insert(data.raw["assembling-machine"]["bob-electrolyser-2"].allowed_effects, "quality")
+    table.insert(data.raw["assembling-machine"]["bob-electrolyser-3"].allowed_effects, "quality")
+    table.insert(data.raw["assembling-machine"]["bob-electrolyser-4"].allowed_effects, "quality")
+    table.insert(data.raw["assembling-machine"]["bob-electrolyser-5"].allowed_effects, "quality")
   end
   if data.raw["assembling-machine"]["electric-chemical-mixing-furnace-2"] then
     table.insert(data.raw["assembling-machine"]["electric-chemical-mixing-furnace"].allowed_effects, "quality")

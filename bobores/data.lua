@@ -61,7 +61,6 @@ require("prototypes.bauxite")
 require("prototypes.rutile")
 require("prototypes.tungsten-ore")
 require("prototypes.thorium-ore")
-
 require("prototypes.nickel-ore")
 require("prototypes.cobalt-ore")
 require("prototypes.sulfur")
