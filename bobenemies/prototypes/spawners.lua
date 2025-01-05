@@ -202,10 +202,10 @@ data:extend({
     max_friends_around_to_spawn = 5,
     graphics_set = {
       animations = {
-        spawner_idle_animation(0, bobmods.enemies.biter_spawner_tint),
-        spawner_idle_animation(1, bobmods.enemies.biter_spawner_tint),
-        spawner_idle_animation(2, bobmods.enemies.biter_spawner_tint),
-        spawner_idle_animation(3, bobmods.enemies.biter_spawner_tint),
+        spawner_idle_animation(0, bobmods.enemies.spitter_spawner_tint),
+        spawner_idle_animation(1, bobmods.enemies.spitter_spawner_tint),
+        spawner_idle_animation(2, bobmods.enemies.spitter_spawner_tint),
+        spawner_idle_animation(3, bobmods.enemies.spitter_spawner_tint),
       },
     },
     result_units = {
@@ -342,10 +342,10 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       max_friends_around_to_spawn = 10,
       graphics_set = {
         animations = {
-          spawner_idle_animation(0, bobmods.enemies.biter_spawner_tint),
-          spawner_idle_animation(1, bobmods.enemies.biter_spawner_tint),
-          spawner_idle_animation(2, bobmods.enemies.biter_spawner_tint),
-          spawner_idle_animation(3, bobmods.enemies.biter_spawner_tint),
+          spawner_idle_animation(0, bobmods.enemies.super_spawner_tint),
+          spawner_idle_animation(1, bobmods.enemies.super_spawner_tint),
+          spawner_idle_animation(2, bobmods.enemies.super_spawner_tint),
+          spawner_idle_animation(3, bobmods.enemies.super_spawner_tint),
         },
       },
       result_units = {
