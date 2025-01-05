@@ -900,13 +900,13 @@ if bobmods.enemies.small_alien_artifacts ~= true then
   end
   -- hide recipies
   for _, recipe_name in pairs({
-    "alien-artifact-from-small",
-    "alien-artifact-red-from-small",
-    "alien-artifact-orange-from-small",
-    "alien-artifact-yellow-from-small",
-    "alien-artifact-green-from-small",
-    "alien-artifact-blue-from-small",
-    "alien-artifact-purple-from-small",
+    "alien-artifact",
+    "alien-artifact-red",
+    "alien-artifact-orange",
+    "alien-artifact-yellow",
+    "alien-artifact-green",
+    "alien-artifact-blue",
+    "alien-artifact-purple",
   }) do
     if data.raw.recipe[recipe_name] then
       bobmods.lib.recipe.hide(recipe_name)
