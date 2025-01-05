@@ -194,6 +194,31 @@ data:extend({
 
   {
     type = "recipe",
+    name = "sodium-hydroxide-sink",
+    icon = "__bobplates__/graphics/icons/sodium-hydroxide-sink.png",
+    icon_size = 64,
+    subgroup = "fluid",
+    order = "b[fluid-chemistry]-b[sodium-hydroxide-sink]",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 0.1,
+    ingredients = {
+      { type = "item", name = "sodium-hydroxide", amount = 1 },
+      { type = "fluid", name = "sulfuric-acid", amount = 5 },
+    },
+    results = {
+      { type = "fluid", name = "steam", amount = 10, temperature = 500 },
+    },
+    main_product = "",
+    crafting_machine_tint = {
+      primary = { r = 0.3, g = 0.3, b = 0.3, a = 0.000 },
+      secondary = { r = 0.5, g = 0.5, b = 0.5, a = 0.000 },
+      tertiary = { r = 0.3, g = 0.3, b = 0.3, a = 0.000 },
+    },
+  },
+
+  {
+    type = "recipe",
     name = "lithium-water-electrolysis",
     icon = "__bobplates__/graphics/icons/lithium-perchlorate.png",
     icon_size = 32,
@@ -929,4 +954,8 @@ else
       allow_productivity = true,
     },
   })
+end
+
+if mods["bobpower"] then
+  data.raw.recipe["sodium-hydroxide-sink"].results[1].temperature = 465
 end
