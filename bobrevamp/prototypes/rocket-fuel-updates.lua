@@ -19,9 +19,9 @@ if data.raw.fluid["ammonia"] and data.raw.fluid["hydrazine"] and data.raw.fluid[
 
   data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1.2
 
-  if data.raw.technology["nitrogen-processing"] then
-    bobmods.lib.tech.add_recipe_unlock("nitrogen-processing", "ammonia")
-    bobmods.lib.tech.add_prerequisite("hydrazine", "nitrogen-processing")
+  if data.raw.technology["bob-nitrogen-processing"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-nitrogen-processing", "ammonia")
+    bobmods.lib.tech.add_prerequisite("hydrazine", "bob-nitrogen-processing")
   else
     bobmods.lib.tech.add_recipe_unlock("chemical-plant", "ammonia")
     bobmods.lib.tech.add_recipe_unlock("chemical-plant", "bob-nitrogen-dioxide")
@@ -45,8 +45,8 @@ if data.raw.fluid["ammonia"] and data.raw.fluid["hydrazine"] and data.raw.fluid[
       bobmods.lib.recipe.add_result("nitric-oxide", { type = "fluid", name = "bob-pure-water", amount = 12 })
     end
 
-    if data.raw.technology["nitrogen-processing"] then
-      bobmods.lib.tech.add_recipe_unlock("nitrogen-processing", "nitric-oxide")
+    if data.raw.technology["bob-nitrogen-processing"] then
+      bobmods.lib.tech.add_recipe_unlock("bob-nitrogen-processing", "nitric-oxide")
     else
       bobmods.lib.tech.add_recipe_unlock("chemical-plant", "nitric-oxide")
     end

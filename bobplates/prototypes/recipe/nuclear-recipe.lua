@@ -52,7 +52,7 @@ if data.raw.item["bob-thorium-ore"] then
   data:extend({
     {
       type = "recipe",
-      name = "thorium-processing",
+      name = "bob-thorium-processing",
       icon = "__bobplates__/graphics/icons/nuclear/thorium-processing.png",
       icon_size = 32,
       subgroup = "bob-nuclear",
@@ -106,7 +106,7 @@ if data.raw.item["bob-thorium-ore"] then
       },
       {
         type = "recipe",
-        name = "thorium-fuel-reprocessing",
+        name = "bob-thorium-fuel-reprocessing",
         icon = "__bobplates__/graphics/icons/nuclear/thorium-nuclear-fuel-reprocessing.png",
         icon_size = 32,
         subgroup = "bob-fuel-cells",
@@ -154,11 +154,11 @@ if data.raw.item["bob-thorium-ore"] then
       },
       {
         type = "recipe",
-        name = "thorium-fuel-reprocessing",
+        name = "bob-thorium-fuel-reprocessing",
         icon = "__bobplates__/graphics/icons/nuclear/thorium-nuclear-fuel-reprocessing-old.png",
         icon_size = 32,
         subgroup = "bob-fuel-cells",
-        order = "s[thorium-processing]-b[thorium-fuel-reprocessing]",
+        order = "s[thorium-processing]-b[bob-thorium-fuel-reprocessing]",
         energy_required = 60,
         enabled = false,
         category = "centrifuging",
@@ -211,7 +211,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     },
     {
       type = "recipe",
-      name = "plutonium-nucleosynthesis",
+      name = "bob-plutonium-nucleosynthesis",
       icon = "__bobplates__/graphics/icons/technology/plutonium-nucleosynthesis.png",
       icon_size = 128,
       subgroup = "bob-nuclear",
@@ -267,7 +267,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     },
     {
       type = "recipe",
-      name = "deuterium-fuel-reprocessing",
+      name = "bob-deuterium-fuel-reprocessing",
       icon = "__bobplates__/graphics/icons/nuclear/deuterium-nuclear-fuel-reprocessing-new.png",
       icon_size = 32,
       subgroup = "bob-fuel-cells",
@@ -314,7 +314,7 @@ else
     },
     {
       type = "recipe",
-      name = "deuterium-fuel-reprocessing",
+      name = "bob-deuterium-fuel-reprocessing",
       icon = "__bobplates__/graphics/icons/nuclear/deuterium-nuclear-fuel-reprocessing.png",
       icon_size = 32,
       subgroup = "bob-fuel-cells",
@@ -341,15 +341,15 @@ else
 end
 
 if settings.startup["bobmods-plates-bluedeuterium"].value == true then
-  data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint = data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint
+  data.raw.recipe["bob-deuterium-fuel-reprocessing"].crafting_machine_tint = data.raw.recipe["bob-deuterium-fuel-reprocessing"].crafting_machine_tint
     or {}
-  data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint.primary = { r = 0, g = 0.7, b = 1 }
-  data.raw.recipe["deuterium-fuel-reprocessing"].crafting_machine_tint.tertiary = { r = 0, g = 0.7, b = 1 }
+  data.raw.recipe["bob-deuterium-fuel-reprocessing"].crafting_machine_tint.primary = { r = 0, g = 0.7, b = 1 }
+  data.raw.recipe["bob-deuterium-fuel-reprocessing"].crafting_machine_tint.tertiary = { r = 0, g = 0.7, b = 1 }
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-    data.raw.recipe["deuterium-fuel-reprocessing"].icon =
+    data.raw.recipe["bob-deuterium-fuel-reprocessing"].icon =
       "__bobplates__/graphics/icons/nuclear/deuterium-nuclear-fuel-reprocessing-blue-new.png"
   else
-    data.raw.recipe["deuterium-fuel-reprocessing"].icon =
+    data.raw.recipe["bob-deuterium-fuel-reprocessing"].icon =
       "__bobplates__/graphics/icons/nuclear/deuterium-nuclear-fuel-reprocessing-blue.png"
   end
 end

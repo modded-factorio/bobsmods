@@ -1,8 +1,8 @@
 if
   settings.startup["bobmods-assembly-electrolysers"].value
-  and data.raw.technology["electrolysis-1"]
+  and data.raw.technology["bob-electrolysis-1"]
   and data.raw.item["bob-electrolyser"]
-  and data.raw["recipe-category"]["electrolysis"]
+  and data.raw["recipe-category"]["bob-electrolysis"]
 then
   data:extend({
     {
@@ -272,7 +272,7 @@ then
       max_health = 275,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["bob-electrolyser"],
-      crafting_categories = { "electrolysis" },
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 3,
       icons_positioning = {
@@ -318,7 +318,7 @@ then
       max_health = 375,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["bob-electrolyser"],
-      crafting_categories = { "electrolysis" },
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
       icons_positioning = {
@@ -364,7 +364,7 @@ then
       max_health = 500,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["bob-electrolyser"],
-      crafting_categories = { "electrolysis" },
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
       icons_positioning = {
@@ -411,7 +411,7 @@ then
       max_health = 600,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["bob-electrolyser"],
-      crafting_categories = { "electrolysis" },
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
       icons_positioning = {
@@ -450,7 +450,7 @@ then
       icon = "__bobassembly__/graphics/icons/technology/electrolyser.png",
       icon_size = 128,
       prerequisites = {
-        "electrolysis-1",
+        "bob-electrolysis-1",
         "steel-processing",
         "electronics",
         "logistic-science-pack",

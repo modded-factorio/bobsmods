@@ -20,8 +20,8 @@ elseif data.raw.fluid["bob-nitrogen"] then
   }
 end
 
-if data.raw.technology["nitrogen-processing"] then
-  bobmods.lib.tech.add_prerequisite("bob-fertiliser", "nitrogen-processing")
+if data.raw.technology["bob-nitrogen-processing"] then
+  bobmods.lib.tech.add_prerequisite("bob-fertiliser", "bob-nitrogen-processing")
 else
   bobmods.lib.tech.add_prerequisite("bob-fertiliser", "sulfur-processing")
 end

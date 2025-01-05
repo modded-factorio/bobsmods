@@ -1,7 +1,7 @@
 if data.raw.fluid["sulfuric-nitric-acid"] then
   bobmods.lib.recipe.replace_ingredient("nitroglycerin", "sulfuric-acid", "sulfuric-nitric-acid")
   bobmods.lib.tech.add_recipe_unlock("nitroglycerin-processing", "sulfuric-nitric-acid")
-  bobmods.lib.tech.add_prerequisite("nitroglycerin-processing", "nitrogen-processing")
+  bobmods.lib.tech.add_prerequisite("nitroglycerin-processing", "bob-nitrogen-processing")
 end
 
 if data.raw.fluid["bob-nitric-acid"] then
@@ -11,13 +11,13 @@ end
 if data.raw.item["bob-gunmetal-alloy"] then
   bobmods.lib.recipe.replace_ingredient("bullet-casing", "copper-plate", "bob-gunmetal-alloy")
   bobmods.lib.recipe.replace_ingredient("shotgun-shell-casing", "copper-plate", "bob-gunmetal-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-bullets", "zinc-processing")
-  bobmods.lib.tech.add_prerequisite("bob-shotgun-shells", "zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-bullets", "bob-zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-shells", "bob-zinc-processing")
 elseif data.raw.item["bob-brass-alloy"] then
   bobmods.lib.recipe.replace_ingredient("bullet-casing", "copper-plate", "bob-brass-alloy")
   bobmods.lib.recipe.replace_ingredient("shotgun-shell-casing", "copper-plate", "bob-brass-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-bullets", "zinc-processing")
-  bobmods.lib.tech.add_prerequisite("bob-shotgun-shells", "zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-bullets", "bob-zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-shells", "bob-zinc-processing")
 end
 
 if data.raw.item["bob-lead-plate"] then
@@ -28,7 +28,7 @@ end
 if data.raw.item["bob-tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("rocket-engine", "steel-plate", "bob-tungsten-plate")
   bobmods.lib.recipe.add_ingredient("rocket-engine", { type = "item", name = "bob-tungsten-gear-wheel", amount = 1 })
-  bobmods.lib.tech.add_prerequisite("bob-rocket", "tungsten-processing")
+  bobmods.lib.tech.add_prerequisite("bob-rocket", "bob-tungsten-processing")
 end
 
 if data.raw.fluid["bob-liquid-fuel"] then
@@ -52,7 +52,7 @@ end
 
 if data.raw.item["bob-cobalt-steel-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("bob-sniper-turret-2", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-2", "cobalt-processing")
+  bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-2", "bob-cobalt-processing")
 elseif data.raw.item["bob-steel-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("bob-sniper-turret-2", "iron-gear-wheel", "bob-steel-gear-wheel")
 end
@@ -73,56 +73,56 @@ end
 
 if data.raw.item["bob-invar-alloy"] then
   bobmods.lib.recipe.replace_ingredient("heavy-armor-2", "iron-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-3", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("bob-armor-making-3", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "iron-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-3", "steel-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-turrets-3", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("bob-turrets-3", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("bob-sniper-turret-2", "iron-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-2", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-2", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "steel-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-3", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-3", "bob-invar-processing")
 
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-3", "steel-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("tank", "steel-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("tank", "invar-processing")
+  bobmods.lib.tech.add_prerequisite("tank", "bob-invar-processing")
 end
 
 if data.raw.item["bob-cobalt-steel-alloy"] then
   bobmods.lib.recipe.replace_ingredient("heavy-armor-2", "steel-plate", "bob-cobalt-steel-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-3", "cobalt-processing")
+  bobmods.lib.tech.add_prerequisite("bob-armor-making-3", "bob-cobalt-processing")
 end
 
 if data.raw.item["bob-brass-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("radar-3", "iron-gear-wheel", "bob-brass-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("radars-3", "zinc-processing")
+  bobmods.lib.tech.add_prerequisite("radars-3", "bob-zinc-processing")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-3", "iron-gear-wheel", "bob-brass-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("bob-turrets-3", "zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-turrets-3", "bob-zinc-processing")
   bobmods.lib.recipe.replace_ingredient("tank", "iron-gear-wheel", "bob-brass-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("tank", "zinc-processing")
+  bobmods.lib.tech.add_prerequisite("tank", "bob-zinc-processing")
 end
 
 if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("rocket-body", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-rocket", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-rocket", "bob-aluminium-processing")
   bobmods.lib.recipe.replace_ingredient("radar-3", "steel-plate", "bob-aluminium-plate")
   bobmods.lib.recipe.replace_ingredient("rifle", "copper-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("military-3", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("military-3", "bob-aluminium-processing")
 end
 
 if data.raw.item["bob-lithium-ion-battery"] then
-  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-3", "battery-2")
+  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-3", "bob-battery-2")
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-emerald", "battery", "bob-lithium-ion-battery")
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-amethyst", "battery", "bob-lithium-ion-battery")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "battery", "bob-lithium-ion-battery")
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-3", "battery-2")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-3", "bob-battery-2")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-4", "battery", "bob-lithium-ion-battery")
 
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-3", "battery", "bob-lithium-ion-battery")
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "battery-2")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "bob-battery-2")
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-4", "battery", "bob-lithium-ion-battery")
 end
 
@@ -145,23 +145,23 @@ end
 
 if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("heavy-armor-3", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-armor-making-4", "bob-titanium-processing")
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-titanium-processing")
   bobmods.lib.recipe.replace_ingredient("radar-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("radars-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("radars-4", "bob-titanium-processing")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-turrets-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-turrets-4", "bob-titanium-processing")
   bobmods.lib.recipe.replace_ingredient("bob-sniper-turret-3", "steel-plate", "bob-titanium-plate")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-4", "bob-titanium-processing")
   bobmods.lib.recipe.replace_ingredient("bob-tank-2", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-tanks-2", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-tanks-2", "bob-titanium-processing")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-2", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "bob-titanium-processing")
 
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-4", "bob-titanium-processing")
 end
 
 if data.raw.item["bob-titanium-gear-wheel"] then
@@ -181,60 +181,60 @@ end
 if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.recipe.replace_ingredient("heavy-armor-3", "plastic-bar", "bob-silicon-nitride")
   bobmods.lib.tech.remove_prerequisite("bob-armor-making-4", "plastics")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-4", "ceramics")
+  bobmods.lib.tech.add_prerequisite("bob-armor-making-4", "bob-ceramics")
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "plastic-bar", "bob-silicon-nitride")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "ceramics")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-ceramics")
   bobmods.lib.recipe.replace_ingredient("bob-tank-3", "plastic-bar", "bob-silicon-nitride")
-  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "ceramics")
+  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "bob-ceramics")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-2", "concrete", "bob-silicon-nitride")
-  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "ceramics")
+  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "bob-ceramics")
 end
 
 if data.raw.item["bob-silver-zinc-battery"] then
-  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-5", "battery-3")
+  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-5", "bob-battery-3")
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-diamond", "battery", "bob-silver-zinc-battery")
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-topaz", "battery", "bob-silver-zinc-battery")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "battery", "bob-silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "battery-3")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "bob-battery-3")
 
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-5", "battery", "bob-silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-5", "battery-3")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-5", "bob-battery-3")
 end
 
 if data.raw.item["bob-copper-tungsten-alloy"] then
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "bob-copper-tungsten-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-alloy-processing")
 end
 
 if data.raw.item["bob-tungsten-carbide"] then
   bobmods.lib.recipe.replace_ingredient("bob-tank-3", "steel-plate", "bob-tungsten-carbide")
-  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "bob-tungsten-alloy-processing")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-3", "concrete", "bob-tungsten-carbide")
-  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "bob-tungsten-alloy-processing")
 end
 
 if data.raw.item["bob-nitinol-alloy"] then
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "plastic-bar", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("radar-5", "steel-plate", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("radars-5", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("radars-5", "bob-nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-5", "steel-plate", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-turrets-5", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-turrets-5", "bob-nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("bob-sniper-turret-3", "plastic-bar", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-3", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-3", "bob-nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "steel-plate", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "bob-nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-3", "steel-plate", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "bob-nitinol-processing")
 
   bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-5", "steel-plate", "bob-nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-5", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-5", "bob-nitinol-processing")
 end
 
 if data.raw.item["bob-nitinol-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("radar-5", "iron-gear-wheel", "bob-nitinol-gear-wheel")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-5", "iron-gear-wheel", "bob-nitinol-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-tanks-3", "bob-nitinol-processing")
   bobmods.lib.recipe.replace_ingredient("bob-tank-3", "iron-gear-wheel", "bob-nitinol-gear-wheel")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-3", "iron-gear-wheel", "bob-nitinol-gear-wheel")
 end
@@ -249,7 +249,7 @@ end
 if data.raw.item["bob-ruby-5"] then
   bobmods.lib.recipe.add_ingredient("laser-rifle-battery-ruby", { type = "item", name = "bob-ruby-5", amount = 1 })
   bobmods.lib.recipe.replace_ingredient("laser-rifle-battery-ruby", "laser-rifle-battery", "laser-rifle-battery-case")
-  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-1", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-1", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-sapphire-5"] then
@@ -263,7 +263,7 @@ if data.raw.item["bob-sapphire-5"] then
     "laser-rifle-battery-case"
   )
   bobmods.lib.recipe.add_ingredient("bob-laser-turret-2", { type = "item", name = "bob-sapphire-5", amount = 1 })
-  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("bob-laser-turrets-2", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-emerald-5"] then
@@ -450,7 +450,7 @@ if data.raw.fluid["bob-alien-explosive"] then
   bobmods.lib.recipe.replace_ingredient("explosive-artillery-shell", "explosives", "bob-alien-explosive")
   bobmods.lib.recipe.add_new_ingredient("explosive-artillery-shell", { type = "item", name = "explosives", amount = 3 })
   data.raw.recipe["explosive-artillery-shell"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "alien-yellow-research")
+  bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "bob-alien-yellow-research")
 end
 
 if data.raw.fluid["bob-alien-poison"] then
@@ -465,7 +465,7 @@ if data.raw.fluid["bob-alien-poison"] then
 
   bobmods.lib.recipe.replace_ingredient("poison-artillery-shell", "coal", "bob-alien-poison")
   data.raw.recipe["poison-artillery-shell"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-poison-artillery-shells", "alien-green-research")
+  bobmods.lib.tech.add_prerequisite("bob-poison-artillery-shells", "bob-alien-green-research")
 end
 
 if data.raw.fluid["bob-alien-fire"] then
@@ -485,7 +485,7 @@ if data.raw.fluid["bob-alien-fire"] then
   data.raw.recipe["flame-rocket-warhead"].category = "crafting-with-fluid"
 
   bobmods.lib.recipe.replace_ingredient("fire-artillery-shell", "light-oil", "bob-alien-fire")
-  bobmods.lib.tech.add_prerequisite("bob-fire-artillery-shells", "alien-red-research")
+  bobmods.lib.tech.add_prerequisite("bob-fire-artillery-shells", "bob-alien-red-research")
 elseif data.raw.fluid["bob-liquid-fuel"] then
   bobmods.lib.recipe.replace_ingredient("fire-artillery-shell", "light-oil", "bob-liquid-fuel")
 end
@@ -695,15 +695,15 @@ bobmods.lib.recipe.set_ingredient("artillery-shell", { type = "item", name = "ex
 if data.raw.fluid["bob-deuterium"] then
   bobmods.lib.recipe.add_new_ingredient("plasma-bullet-projectile", { type = "fluid", name = "bob-deuterium", amount = 10 })
   data.raw.recipe["plasma-bullet-projectile"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "bob-deuterium-processing")
 
   bobmods.lib.recipe.add_new_ingredient("shotgun-plasma-shell", { type = "fluid", name = "bob-deuterium", amount = 10 })
   data.raw.recipe["shotgun-plasma-shell"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-shotgun-plasma-shells", "deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-plasma-shells", "bob-deuterium-processing")
 
   bobmods.lib.recipe.add_new_ingredient("plasma-rocket-warhead", { type = "fluid", name = "bob-deuterium", amount = 10 })
   data.raw.recipe["plasma-rocket-warhead"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "bob-deuterium-processing")
 end
 
 -- Armor

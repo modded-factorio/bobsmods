@@ -28,7 +28,7 @@ if data.raw.item["bob-module-case"] then
 elseif data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("player-brain", "iron-plate", "bob-aluminium-plate")
   bobmods.lib.recipe.replace_ingredient("player-brain-2", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("bodies", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("bodies", "bob-aluminium-processing")
 end
 
 if data.raw["recipe-category"]["electronics"] then
@@ -46,7 +46,7 @@ if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("player-boots-2", "steel-plate", "bob-titanium-plate")
   bobmods.lib.recipe.replace_ingredient("player-head-2", "steel-plate", "bob-titanium-plate")
   bobmods.lib.recipe.replace_ingredient("player-frame-2", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bodies-2", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bodies-2", "bob-titanium-processing")
 end
 
 if data.raw.item["bob-titanium-gear-wheel"] then

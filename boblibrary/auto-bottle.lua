@@ -244,7 +244,7 @@ function bobmods.lib.create_gas_bottle(fluid)
 
       bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-gas-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", fill_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", fill_recipe.name)
     else
       fill_recipe = create_fill_gas_bottle_recipe(fluid)
     end
@@ -259,14 +259,14 @@ function bobmods.lib.create_gas_bottle(fluid)
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
       bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-gas-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", empty_recipe.name)
     else
       empty_recipe = create_empty_gas_bottle_recipe(fluid)
     end
 
     -- add barrel recipe to the unlock list of the technology
-    bobmods.lib.tech.add_recipe_unlock("gas-canisters", fill_recipe.name)
-    bobmods.lib.tech.add_recipe_unlock("gas-canisters", empty_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-gas-canisters", fill_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-gas-canisters", empty_recipe.name)
   end
 end
 
@@ -299,7 +299,7 @@ function bobmods.lib.create_fluid_canister(fluid)
 
       bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-empty-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", fill_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", fill_recipe.name)
     else
       fill_recipe = create_fill_fluid_canister_recipe(fluid)
     end
@@ -313,13 +313,13 @@ function bobmods.lib.create_fluid_canister(fluid)
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
       bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-empty-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", empty_recipe.name)
     else
       empty_recipe = create_empty_fluid_canister_recipe(fluid)
     end
 
     -- add barrel recipe to the unlock list of the technology
-    bobmods.lib.tech.add_recipe_unlock("fluid-canister-processing", fill_recipe.name)
-    bobmods.lib.tech.add_recipe_unlock("fluid-canister-processing", empty_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-fluid-canister-processing", fill_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-fluid-canister-processing", empty_recipe.name)
   end
 end

@@ -108,7 +108,7 @@ data:extend({
     max_health = 150,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["bob-electrolyser"],
-    crafting_categories = { "electrolysis" },
+    crafting_categories = { "bob-electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     module_slots = 1,
     icons_positioning = {
@@ -1002,7 +1002,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-    crafting_categories = { "void-fluid" },
+    crafting_categories = { "bob-void-fluid" },
     crafting_speed = 5,
     result_inventory_size = 0,
     source_inventory_size = 0,

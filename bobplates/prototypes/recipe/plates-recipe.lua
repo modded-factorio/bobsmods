@@ -103,7 +103,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-zinc-plate",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     subgroup = "bob-material-electrolysis",
     energy_required = 3.2,
     enabled = false,
@@ -123,7 +123,7 @@ data:extend({
     icon_size = 64,
     subgroup = "bob-material-electrolysis",
     order = "c-a-f[nickel-plate]",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     enabled = false,
     energy_required = 3.2,
     ingredients = {
@@ -142,7 +142,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-aluminium-plate",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
@@ -158,7 +158,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-titanium-plate",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
@@ -175,7 +175,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-plate",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
@@ -192,7 +192,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-lithium",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     subgroup = "bob-material-electrolysis",
     energy_required = 3.2,
     enabled = false,

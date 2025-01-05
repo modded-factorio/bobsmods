@@ -102,7 +102,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "synthetic-wood",
+    name = "bob-synthetic-wood",
     icon = "__bobelectronics__/graphics/icons/synthetic-wood.png",
     icon_size = 32,
     subgroup = "bob-resource",

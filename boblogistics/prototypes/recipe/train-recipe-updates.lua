@@ -3,8 +3,8 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-locomotive-2", "steel-plate", "bob-invar-alloy")
     bobmods.lib.recipe.replace_ingredient("bob-cargo-wagon-2", "steel-plate", "bob-invar-alloy")
     bobmods.lib.recipe.replace_ingredient("bob-fluid-wagon-2", "steel-plate", "bob-invar-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-railway-2", "invar-processing")
-    bobmods.lib.tech.add_prerequisite("bob-fluid-wagon-2", "invar-processing")
+    bobmods.lib.tech.add_prerequisite("bob-railway-2", "bob-invar-processing")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-wagon-2", "bob-invar-processing")
   end
 
   if data.raw.item["bob-steel-bearing"] then
@@ -27,14 +27,14 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-locomotive-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.recipe.replace_ingredient("bob-cargo-wagon-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.recipe.replace_ingredient("bob-fluid-wagon-3", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.tech.add_prerequisite("bob-railway-3", "titanium-processing")
-    bobmods.lib.tech.add_prerequisite("bob-fluid-wagon-3", "titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-railway-3", "bob-titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-wagon-3", "bob-titanium-processing")
 
     bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive", "steel-plate", "bob-titanium-plate")
     bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon", "steel-plate", "bob-titanium-plate")
     bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.tech.add_prerequisite("bob-armoured-railway", "titanium-processing")
-    bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon", "titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-armoured-railway", "bob-titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-titanium-bearing"] then
@@ -84,8 +84,8 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   end
 
   if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "tungsten-alloy-processing")
-    bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "bob-tungsten-alloy-processing")
     if data.raw.item["bob-silicon-nitride"] then
       bobmods.lib.recipe.remove_ingredient("bob-armoured-locomotive-2", "steel-plate")
       bobmods.lib.recipe.add_ingredient(
@@ -117,8 +117,8 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         { type = "item", name = "bob-silicon-nitride", amount = 15 }
       )
 
-      bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "ceramics")
-      bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "ceramics")
+      bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "bob-ceramics")
+      bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "bob-ceramics")
     else
       bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "steel-plate", "bob-tungsten-carbide")
       bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "steel-plate", "bob-tungsten-carbide")
@@ -129,8 +129,8 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "steel-plate", "bob-silicon-nitride")
       bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "steel-plate", "bob-silicon-nitride")
       bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "steel-plate", "bob-silicon-nitride")
-      bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "ceramics")
-      bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "ceramics")
+      bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "bob-ceramics")
+      bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "bob-ceramics")
     end
   end
 end

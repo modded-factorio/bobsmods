@@ -3,8 +3,8 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
   if data.raw.technology["chemical-plant"] then
     bobmods.lib.tech.add_prerequisite("chemical-plant-2", "chemical-plant")
-  elseif data.raw.technology["chemical-processing-2"] then
-    bobmods.lib.tech.add_prerequisite("chemical-plant-2", "chemical-processing-2")
+  elseif data.raw.technology["bob-chemical-processing-2"] then
+    bobmods.lib.tech.add_prerequisite("chemical-plant-2", "bob-chemical-processing-2")
   else
     bobmods.lib.tech.add_prerequisite("chemical-plant-2", "oil-processing")
   end
@@ -27,7 +27,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
   if data.raw.item["bob-titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("chemical-plant-3", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.tech.add_prerequisite("chemical-plant-3", "titanium-processing")
+    bobmods.lib.tech.add_prerequisite("chemical-plant-3", "bob-titanium-processing")
   end
 
   if data.raw.item["titanium-pipe"] then
@@ -44,14 +44,14 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
   if data.raw.item["bob-nitinol-alloy"] then
     bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "steel-plate", "bob-nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "nitinol-processing")
+    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "bob-nitinol-processing")
   end
 
   if data.raw.item["nitinol-pipe"] then
     bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "pipe", "nitinol-pipe")
   elseif data.raw.item["tungsten-pipe"] then
     bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "pipe", "tungsten-pipe")
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "tungsten-processing")
+    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-nitinol-gear-wheel"] then

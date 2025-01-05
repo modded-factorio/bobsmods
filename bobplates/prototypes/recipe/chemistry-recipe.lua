@@ -126,12 +126,12 @@ data:extend({
 
   {
     type = "recipe",
-    name = "water-electrolysis",
+    name = "bob-water-electrolysis",
     icon = "__bobplates__/graphics/icons/water-electrolysis.png",
     icon_size = 64,
     subgroup = "bob-fluid-electrolysis",
-    order = "b[fluid-chemistry]-b[water-electrolysis]",
-    category = "electrolysis",
+    order = "b[fluid-chemistry]-b[bob-water-electrolysis]",
+    category = "bob-electrolysis",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -150,7 +150,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/nitrogen.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-b[nitrogen]",
+    order = "b[fluid-chemistry]-b[bob-nitrogen]",
     category = "chemistry",
     enabled = false,
     energy_required = 1,
@@ -172,12 +172,12 @@ data:extend({
 
   {
     type = "recipe",
-    name = "salt-water-electrolysis",
+    name = "bob-salt-water-electrolysis",
     icon = "__bobplates__/graphics/icons/salt-water-electrolysis.png",
     icon_size = 64,
     subgroup = "bob-fluid-electrolysis",
-    order = "b[fluid-chemistry]-b[salt-water-electrolysis]",
-    category = "electrolysis",
+    order = "b[fluid-chemistry]-b[bob-salt-water-electrolysis]",
+    category = "bob-electrolysis",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -199,7 +199,7 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-fluid-electrolysis",
     order = "b[fluid-chemistry]-b[bob-lithium-water-electrolysis]",
-    category = "electrolysis",
+    category = "bob-electrolysis",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -219,7 +219,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/nitrogen-dioxide.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-b[nitrogen-dioxide]",
+    order = "b[fluid-chemistry]-b[bob-nitrogen-dioxide]",
     category = "chemistry",
     enabled = false,
     energy_required = 1,
@@ -243,7 +243,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/hydrogen-chloride.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-b[hydrogen-chloride]",
+    order = "b[fluid-chemistry]-b[bob-hydrogen-chloride]",
     category = "chemistry",
     enabled = false,
     energy_required = 1,
@@ -267,7 +267,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/nitric-acid.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-b[nitric-acid]",
+    order = "b[fluid-chemistry]-b[bob-nitric-acid]",
     category = "chemistry",
     enabled = false,
     energy_required = 1,
@@ -291,7 +291,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/ferric-chloride-solution.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-a[ferric-chloride-solution]",
+    order = "b[fluid-chemistry]-a[bob-ferric-chloride-solution]",
     category = "chemistry",
     enabled = false,
     energy_required = 2.5,
@@ -316,7 +316,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/liquid-fuel.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-b[liquid-fuel]",
+    order = "b[fluid-chemistry]-b[bob-liquid-fuel]",
     category = "chemistry",
     enabled = false,
     energy_required = 1,
@@ -336,7 +336,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "sulfuric-acid-2",
+    name = "bob-sulfuric-acid-2",
     localised_name = { "fluid-name.sulfuric-acid" },
     category = "chemistry",
     energy_required = 1,
@@ -386,7 +386,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "petroleum-gas-cracking",
+    name = "bob-petroleum-gas-cracking",
     icon = "__bobplates__/graphics/icons/petrolium-gas-cracking.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
@@ -449,7 +449,6 @@ data:extend({
     results = {
       { type = "fluid", name = "heavy-oil", amount = 12 },
     },
-    main_product = "", -- Causes it to use the recipe name.
     crafting_machine_tint = {
       primary = { r = 0.0, g = 0.34, b = 0.5, a = 0.000 },
       secondary = { r = 0.1, g = 0.1, b = 0.1, a = 0.000 },
@@ -490,7 +489,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "sulfur-2",
+    name = "bob-sulfur-2",
     localised_name = { "item-name.sulfur" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
@@ -673,7 +672,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "silver-from-lead",
+    name = "bob-silver-from-lead",
     icon = "__bobplates__/graphics/icons/lead-silver.png",
     icon_size = 32,
     subgroup = "bob-material-chemical",
@@ -766,7 +765,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "sulfur-3",
+    name = "bob-sulfur-3",
     localised_name = { "item-name.sulfur" },
     category = "chemistry",
     subgroup = "bob-resource-chemical",
@@ -788,7 +787,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "sulfuric-acid-3",
+    name = "bob-sulfuric-acid-3",
     localised_name = { "fluid-name.sulfuric-acid" },
     icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
     icon_size = 64,
@@ -818,7 +817,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/heavy-water.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
-    order = "b[fluid-chemistry]-b[heavy-water]",
+    order = "b[fluid-chemistry]-b[bob-heavy-water]",
     category = "chemistry",
     enabled = false,
     energy_required = 2,
@@ -840,12 +839,12 @@ data:extend({
 
   {
     type = "recipe",
-    name = "heavy-water-electrolysis",
+    name = "bob-heavy-water-electrolysis",
     icon = "__bobplates__/graphics/icons/heavy-water-electrolysis.png",
     icon_size = 64,
     subgroup = "bob-fluid-electrolysis",
-    order = "b[fluid-chemistry]-b[heavy-water-electrolysis]",
-    category = "electrolysis",
+    order = "b[fluid-chemistry]-b[bob-heavy-water-electrolysis]",
+    category = "bob-electrolysis",
     enabled = false,
     energy_required = 1,
     ingredients = {

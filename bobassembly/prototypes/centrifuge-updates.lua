@@ -1,12 +1,12 @@
 if settings.startup["bobmods-assembly-centrifuge"].value == true then
   if data.raw.item["bob-silicon-nitride"] then
     bobmods.lib.recipe.replace_ingredient("centrifuge-2", "refined-concrete", "bob-silicon-nitride")
-    bobmods.lib.tech.add_prerequisite("centrifuge-2", "ceramics")
+    bobmods.lib.tech.add_prerequisite("centrifuge-2", "bob-ceramics")
   end
 
   if data.raw.item["bob-titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("centrifuge-2", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.tech.add_prerequisite("centrifuge-2", "titanium-processing")
+    bobmods.lib.tech.add_prerequisite("centrifuge-2", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-titanium-gear-wheel"] then
@@ -19,12 +19,12 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
 
   if data.raw.item["bob-nitinol-alloy"] then
     bobmods.lib.recipe.replace_ingredient("centrifuge-3", "steel-plate", "bob-nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("centrifuge-3", "nitinol-processing")
+    bobmods.lib.tech.add_prerequisite("centrifuge-3", "bob-nitinol-processing")
   end
 
   if data.raw.item["bob-tungsten-carbide"] then
     bobmods.lib.recipe.replace_ingredient("centrifuge-3", "refined-concrete", "bob-tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("centrifuge-3", "tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("centrifuge-3", "bob-tungsten-alloy-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then

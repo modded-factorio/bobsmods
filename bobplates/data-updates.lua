@@ -16,8 +16,8 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   if feature_flags["quality"] then
     data.raw.fluid["bob-hydrogen"].fuel_value = "35kJ"
     data.raw.fluid["bob-deuterium"].fuel_value = "35kJ"
-    data.raw.recipe["water-electrolysis"].energy_required = 2
-    data.raw.recipe["heavy-water-electrolysis"].energy_required = 2
+    data.raw.recipe["bob-water-electrolysis"].energy_required = 2
+    data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
   end
   data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "1050kW"
   data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "12kW"
@@ -105,7 +105,7 @@ else
 end
 
 if settings.startup["bobmods-plates-batteryupdate"].value == true then
-  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "lead-processing" }
+  data.raw.technology["battery"].prerequisites = { "sulfur-processing", "bob-lead-processing" }
   bobmods.lib.recipe.clear_ingredients("battery")
 
   bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "bob-lead-plate", amount = 2 })
@@ -114,8 +114,8 @@ if settings.startup["bobmods-plates-batteryupdate"].value == true then
 end
 
 data.raw.recipe["steel-plate"].category = "chemical-furnace"
-bobmods.lib.tech.add_prerequisite("steel-processing", "electrolysis-1")
-bobmods.lib.tech.add_prerequisite("steel-processing", "chemical-processing-1")
+bobmods.lib.tech.add_prerequisite("steel-processing", "bob-electrolysis-1")
+bobmods.lib.tech.add_prerequisite("steel-processing", "bob-chemical-processing-1")
 
 --Nuclear fuel update.
 data.raw.item["uranium-fuel-cell"].fuel_glow_color = { r = 0, g = 1, b = 0 }
@@ -220,7 +220,7 @@ for i, recipe in pairs(data.raw.recipe) do
     data.raw.recipe[recipe.name].category = "barrelling"
     if bobmods.lib.tech.has_recipe_unlock("fluid-handling", recipe.name) then
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", recipe.name)
-      bobmods.lib.tech.add_recipe_unlock("fluid-barrel-processing", recipe.name)
+      bobmods.lib.tech.add_recipe_unlock("bob-fluid-barrel-processing", recipe.name)
     end
   end
 end
@@ -230,23 +230,23 @@ if settings.startup["bobmods-plates-vanillabarrelling"].value == true then
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "bob-air-pump") -- Adds barrelling to assembling machines
 end
 
-bobmods.lib.tech.add_prerequisite("cliff-explosives", "fluid-barrel-processing")
+bobmods.lib.tech.add_prerequisite("cliff-explosives", "bob-fluid-barrel-processing")
 bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("bob-ground-water", "water")
   bobmods.lib.resource.add_result("bob-ground-water", { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 })
 
-  bobmods.lib.recipe.replace_ingredient("water-electrolysis", "water", "bob-pure-water")
-  bobmods.lib.recipe.replace_ingredient("salt-water-electrolysis", "water", "bob-pure-water")
+  bobmods.lib.recipe.replace_ingredient("bob-water-electrolysis", "water", "bob-pure-water")
+  bobmods.lib.recipe.replace_ingredient("bob-salt-water-electrolysis", "water", "bob-pure-water")
   bobmods.lib.recipe.replace_ingredient("bob-lithium-water-electrolysis", "water", "bob-pure-water")
 
   bobmods.lib.recipe.remove_result("bob-heavy-water", "water") -- There is no replace_result.
   bobmods.lib.recipe.add_result("bob-heavy-water", { type = "fluid", name = "bob-pure-water", amount = 99.5 })
 
-  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "bob-distillery")
-  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "bob-pure-water")
-  bobmods.lib.tech.add_recipe_unlock("electrolysis-1", "bob-pure-water-from-lithia")
+  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-distillery")
+  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water")
+  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
 end
 
 data.raw.fluid["petroleum-gas"].gas_temperature = -42
@@ -275,7 +275,7 @@ data.raw.item["sulfur"].stack_size = 200
 data.raw.item["wood"].stack_size = 200
 
 if not bobmods.ores.cobalt.enabled then
-  bobmods.lib.tech.remove_recipe_unlock("cobalt-processing", "bob-cobalt-oxide")
+  bobmods.lib.tech.remove_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
   bobmods.lib.recipe.hide("bob-cobalt-oxide")
 end
 

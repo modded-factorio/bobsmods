@@ -15,7 +15,7 @@ if data.raw.item["bob-gold-plate"] then
     "bob-module-processor-board-3",
     { type = "item", name = "bob-gold-plate", amount = 2 }
   )
-  bobmods.lib.tech.add_prerequisite("processing-unit", "gold-processing")
+  bobmods.lib.tech.add_prerequisite("processing-unit", "bob-gold-processing")
 end
 
 if data.raw.item["tinned-copper-cable"] then
@@ -49,8 +49,8 @@ if data.raw.fluid["bob-ferric-chloride-solution"] then
     { type = "fluid", name = "bob-ferric-chloride-solution", amount = 10 }
   )
   if mods["bobplates"] then
-    bobmods.lib.tech.add_prerequisite("modules", "chemical-processing-2")
-    bobmods.lib.tech.add_prerequisite("advanced-circuit", "chemical-processing-2")
+    bobmods.lib.tech.add_prerequisite("modules", "bob-chemical-processing-2")
+    bobmods.lib.tech.add_prerequisite("advanced-circuit", "bob-chemical-processing-2")
   end
 end
 
@@ -276,7 +276,7 @@ if data.raw.item["bob-ruby-5"] then
   for i, module_name in pairs(module_names) do
     bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-ruby-5", amount = i * 2 })
   end
-  bobmods.lib.tech.add_prerequisite("productivity-module-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("productivity-module-2", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-sapphire-5"] then
@@ -288,7 +288,7 @@ if data.raw.item["bob-sapphire-5"] then
   for i, module_name in pairs(module_names) do
     bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-sapphire-5", amount = i * 2 })
   end
-  bobmods.lib.tech.add_prerequisite("speed-module-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("speed-module-2", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-emerald-5"] then
@@ -300,7 +300,7 @@ if data.raw.item["bob-emerald-5"] then
   for i, module_name in pairs(module_names) do
     bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-emerald-5", amount = i * 2 })
   end
-  bobmods.lib.tech.add_prerequisite("efficiency-module-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("efficiency-module-2", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-amethyst-5"] then
@@ -312,7 +312,7 @@ if data.raw.item["bob-amethyst-5"] then
   for i, module_name in pairs(module_names) do
     bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-amethyst-5", amount = i * 2 })
   end
-  bobmods.lib.tech.add_prerequisite("bob-pollution-clean-module-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("bob-pollution-clean-module-2", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-topaz-5"] then
@@ -324,7 +324,7 @@ if data.raw.item["bob-topaz-5"] then
   for i, module_name in pairs(module_names) do
     bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-topaz-5", amount = i * 2 })
   end
-  bobmods.lib.tech.add_prerequisite("bob-pollution-create-module-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("bob-pollution-create-module-2", "bob-gem-processing-3")
 end
 
 if mods["quality"] and data.raw.item["bob-diamond-5"] then
@@ -336,5 +336,5 @@ if mods["quality"] and data.raw.item["bob-diamond-5"] then
   for i, module_name in pairs(module_names) do
     bobmods.lib.recipe.add_ingredient(module_name, { type = "item", name = "bob-diamond-5", amount = i * 2 })
   end
-  bobmods.lib.tech.add_prerequisite("quality-module-2", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("quality-module-2", "bob-gem-processing-3")
 end

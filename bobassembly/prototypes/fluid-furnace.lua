@@ -362,7 +362,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     if data.raw.technology["bob-steel-chemical-furnace"] then
       bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "bob-steel-chemical-furnace")
     else
-      bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "chemical-processing-2")
+      bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "bob-chemical-processing-2")
     end
 
     data.raw["assembling-machine"]["fluid-chemical-furnace"].energy_source = fluid_energy_source()

@@ -3,7 +3,7 @@ if
   and data.raw["item-subgroup"]["bob-smelting-machine"]
   and data.raw["recipe-category"]["chemical-furnace"]
   and data.raw["recipe-category"]["mixing-furnace"]
-  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
+  and (data.raw.technology["bob-alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
   and data.raw.technology["bob-electric-chemical-furnace"]
 then
   if data.raw["assembling-machine"]["bob-electric-chemical-furnace"] then
@@ -14,12 +14,12 @@ then
 
   if data.raw.item["bob-invar-alloy"] then
     bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace", "steel-plate", "bob-invar-alloy")
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "invar-processing")
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-invar-processing")
   end
 
   if data.raw.item["bob-tungsten-plate"] then
     bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace", "stone-brick", "bob-tungsten-plate")
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "tungsten-processing")
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-tungsten-processing")
   end
 
   if data.raw.item["tungsten-pipe"] then
@@ -34,12 +34,12 @@ then
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace-2", "steel-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "bob-tungsten-alloy-processing")
   end
 
   if data.raw.item["bob-tungsten-carbide"] then
     bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace-2", "stone-brick", "bob-tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "bob-tungsten-alloy-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then

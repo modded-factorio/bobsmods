@@ -8,7 +8,7 @@ end
 
 if data.raw.item["bob-cobalt-steel-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-3", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-3", "cobalt-processing")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-3", "bob-cobalt-processing")
 end
 
 if data.raw.item["bob-cobalt-steel-alloy"] then
@@ -25,12 +25,12 @@ end
 
 if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-4", "bob-titanium-processing")
 end
 
 if data.raw.item["bob-nitinol-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-5", "iron-gear-wheel", "bob-nitinol-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "nitinol-processing")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "bob-nitinol-processing")
 end
 
 if data.raw.item["bob-nitinol-bearing"] then
@@ -44,5 +44,5 @@ end
 
 if data.raw.item["bob-tungsten-carbide"] then
   bobmods.lib.recipe.replace_ingredient("repair-pack-5", "steel-plate", "bob-tungsten-carbide")
-  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("bob-repair-pack-5", "bob-tungsten-alloy-processing")
 end

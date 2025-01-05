@@ -4,9 +4,9 @@ for index, force in pairs(game.forces) do
   force.reset_recipes()
   force.reset_technologies()
 
-  if force.technologies["chemical-processing-2"] then
-    if force.technologies["chemical-processing-2"].researched then
-      force.recipes["ferric-chloride-solution"].enabled = true
+  if force.technologies["bob-chemical-processing-2"] then
+    if force.technologies["bob-chemical-processing-2"].researched then
+      force.recipes["bob-ferric-chloride-solution"].enabled = true
     end
   else
     if force.technologies["oil-processing"].researched then
@@ -24,7 +24,7 @@ for index, force in pairs(game.forces) do
   end
 
   if force.technologies["plastics"].researched then
-    force.recipes["synthetic-wood"].enabled = true
+    force.recipes["bob-synthetic-wood"].enabled = true
   end
 
   if force.technologies["electronics"].researched then
@@ -68,8 +68,8 @@ for index, force in pairs(game.forces) do
     force.recipes["bob-advanced-processing-unit"].enabled = true
   end
 
-  if force.technologies["silicon-processing"] then
-    if force.technologies["silicon-processing"].researched then
+  if force.technologies["bob-silicon-processing"] then
+    if force.technologies["bob-silicon-processing"].researched then
       if force.recipes["silicon-wafer"] then
         force.recipes["silicon-wafer"].enabled = true
       end
@@ -91,8 +91,8 @@ for index, force in pairs(game.forces) do
   end
 
   if
-    force.technologies["alloy-processing-2"]
-    and force.technologies["alloy-processing-2"].researched
+    force.technologies["bob-alloy-processing-2"]
+    and force.technologies["bob-alloy-processing-2"].researched
     and force.recipes["solder-alloy"]
   then
     force.recipes["solder-alloy"].enabled = true

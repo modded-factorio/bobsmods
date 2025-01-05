@@ -48,15 +48,15 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     )
   end
 
-  bobmods.lib.tech.add_recipe_unlock("chemical-processing-1", "stone-chemical-furnace-from-stone-furnace")
-  bobmods.lib.tech.add_recipe_unlock("chemical-processing-1", "stone-furnace-from-stone-chemical-furnace")
+  bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-1", "stone-chemical-furnace-from-stone-furnace")
+  bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-1", "stone-furnace-from-stone-chemical-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-steel-chemical-furnace", "steel-chemical-furnace-from-steel-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-steel-chemical-furnace", "steel-furnace-from-steel-chemical-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-electric-chemical-furnace", "electric-chemical-furnace-from-electric-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-electric-chemical-furnace", "electric-furnace-from-electric-chemical-furnace")
 
-  bobmods.lib.tech.add_recipe_unlock("alloy-processing", "stone-mixing-furnace-from-stone-furnace")
-  bobmods.lib.tech.add_recipe_unlock("alloy-processing", "stone-furnace-from-stone-mixing-furnace")
+  bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "stone-mixing-furnace-from-stone-furnace")
+  bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "stone-furnace-from-stone-mixing-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-steel-mixing-furnace", "steel-mixing-furnace-from-steel-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-steel-mixing-furnace", "steel-furnace-from-steel-mixing-furnace")
   bobmods.lib.tech.add_recipe_unlock("bob-electric-mixing-furnace", "electric-mixing-furnace-from-electric-furnace")

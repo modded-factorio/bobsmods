@@ -4,7 +4,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
 
   if mods["bobplates"] then
     data.raw.technology["steel-axe"].localised_name = { "technology-name.bronze-axe" }
-    data.raw.technology["steel-axe"].prerequisites = { "alloy-processing" }
+    data.raw.technology["steel-axe"].prerequisites = { "bob-alloy-processing" }
     data.raw.technology["steel-axe"].research_trigger.item = "bob-bronze-alloy"
 
     data:extend({
@@ -36,7 +36,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
             modifier = 0.5,
           },
         },
-        prerequisites = { "steel-axe-2", "cobalt-processing" },
+        prerequisites = { "steel-axe-2", "bob-cobalt-processing" },
         research_trigger = { type = "craft-item", item = "bob-cobalt-steel-alloy", count = 50 },
         upgrade = true,
       },
@@ -52,7 +52,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
             modifier = 0.5,
           },
         },
-        prerequisites = { "steel-axe-3", "tungsten-processing" },
+        prerequisites = { "steel-axe-3", "bob-tungsten-processing" },
         research_trigger = { type = "craft-item", item = "bob-tungsten-plate", count = 50 },
         upgrade = true,
       },
@@ -68,7 +68,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
             modifier = 1,
           },
         },
-        prerequisites = { "steel-axe-4", "nitinol-processing" },
+        prerequisites = { "steel-axe-4", "bob-nitinol-processing" },
         research_trigger = { type = "craft-item", item = "bob-nitinol-alloy", count = 50 },
         upgrade = true,
       },
@@ -84,7 +84,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
             modifier = 1,
           },
         },
-        prerequisites = { "steel-axe-5", "gem-processing-3" },
+        prerequisites = { "steel-axe-5", "bob-gem-processing-3" },
         research_trigger = { type = "craft-item", item = "bob-diamond-5", count = 50 },
         upgrade = true,
       },

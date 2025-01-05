@@ -106,7 +106,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       icon_size = 32,
       subgroup = "bob-fluid-electrolysis",
       order = "b[fluid-chemistry]-b[sodium-chlorate]",
-      category = "electrolysis",
+      category = "bob-electrolysis",
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -127,7 +127,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       icon_size = 32,
       subgroup = "bob-fluid-electrolysis",
       order = "b[fluid-chemistry]-b[sodium-perchlorate]",
-      category = "electrolysis",
+      category = "bob-electrolysis",
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -148,7 +148,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       icon_size = 32,
       subgroup = "bob-fluid-electrolysis",
       order = "b[fluid-chemistry]-b[bob-lithium-perchlorate]",
-      category = "electrolysis",
+      category = "bob-electrolysis",
       enabled = false,
       energy_required = 1,
       ingredients = {

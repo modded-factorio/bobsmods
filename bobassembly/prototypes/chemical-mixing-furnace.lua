@@ -3,7 +3,7 @@ if
   and data.raw["item-subgroup"]["bob-smelting-machine"]
   and data.raw["recipe-category"]["chemical-furnace"]
   and data.raw["recipe-category"]["mixing-furnace"]
-  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
+  and (data.raw.technology["bob-alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
   and data.raw.technology["bob-electric-chemical-furnace"]
 then
   local function bob_electric_multipurpose_furnace_working_visualisations()
@@ -385,7 +385,7 @@ then
   end
   if data.raw.technology["bob-electric-mixing-furnace"] then
     bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-electric-mixing-furnace")
-  elseif data.raw.technology["alloy-processing-2"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "alloy-processing-2")
+  elseif data.raw.technology["bob-alloy-processing-2"] then
+    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-alloy-processing-2")
   end
 end

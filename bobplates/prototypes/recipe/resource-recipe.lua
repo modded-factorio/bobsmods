@@ -142,8 +142,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "synthetic-wood",
-    localised_name = { "recipe-name.synthetic-wood" },
+    name = "bob-synthetic-wood",
     icon = "__bobplates__/graphics/icons/synthetic-wood.png",
     icon_size = 32,
     category = "chemistry",
@@ -227,7 +226,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "solid-fuel-from-hydrogen",
+    name = "bob-solid-fuel-from-hydrogen",
     category = "chemistry",
     energy_required = 3,
     ingredients = {
@@ -243,7 +242,7 @@ data:extend({
     },
     subgroup = "bob-chemical-fuels",
     enabled = false,
-    order = "b[fluid-chemistry]-c[solid-fuel-from-hydrogen]",
+    order = "b[fluid-chemistry]-c[bob-solid-fuel-from-hydrogen]",
     crafting_machine_tint = {
       primary = { r = 0.331, g = 0.075, b = 0.510, a = 0.000 },
       secondary = { r = 0.589, g = 0.540, b = 0.615, a = 0.361 },

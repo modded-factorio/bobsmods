@@ -207,7 +207,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     },
   })
 
-  if data.raw["recipe-category"]["void-fluid"] then
+  if data.raw["recipe-category"]["bob-void-fluid"] then
     if bobmods.plates and bobmods.plates.make_void_fluid_recipe then
       bobmods.plates.make_void_fluid_recipe("sour-gas", 25, 55)
     else
@@ -227,9 +227,9 @@ if settings.startup["bobmods-revamp-oil"].value == true then
               scale = 0.25,
             },
           },
-          subgroup = "void",
+          subgroup = "bob-void",
           order = "sour-gas",
-          category = "void-fluid",
+          category = "bob-void-fluid",
           hide_from_player_crafting = true,
           energy_required = 1,
           ingredients = {

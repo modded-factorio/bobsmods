@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "electrolysis-1",
+    name = "bob-electrolysis-1",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
     prerequisites = {
@@ -14,7 +14,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "water-electrolysis",
+        recipe = "bob-water-electrolysis",
       },
       {
         type = "unlock-recipe",
@@ -37,17 +37,17 @@ data:extend({
 
   {
     type = "technology",
-    name = "electrolysis-2",
+    name = "bob-electrolysis-2",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
     prerequisites = {
-      "chemical-processing-1",
+      "bob-chemical-processing-1",
       "fluid-handling",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "salt-water-electrolysis",
+        recipe = "bob-salt-water-electrolysis",
       },
     },
     unit = {
@@ -63,7 +63,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "chemical-processing-1",
+    name = "bob-chemical-processing-1",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
     prerequisites = {
@@ -95,12 +95,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "chemical-processing-2",
+    name = "bob-chemical-processing-2",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
     prerequisites = {
-      "electrolysis-2",
-      "chemical-processing-1",
+      "bob-electrolysis-2",
+      "bob-chemical-processing-1",
     },
     effects = {
       {
@@ -121,7 +121,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-from-hydrogen",
+        recipe = "bob-solid-fuel-from-hydrogen",
       },
     },
     unit = {
@@ -151,7 +151,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "chemical-processing-1",
+      "bob-chemical-processing-1",
       "advanced-material-processing",
     },
     effects = {
@@ -187,7 +187,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "chemical-processing-1",
+      "bob-chemical-processing-1",
       "advanced-material-processing-2",
     },
     effects = {
@@ -210,7 +210,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "alloy-processing",
+    name = "bob-alloy-processing",
     icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
     icon_size = 128,
     prerequisites = {
@@ -252,7 +252,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "alloy-processing",
+      "bob-alloy-processing",
       "advanced-material-processing",
     },
     effects = {
@@ -288,7 +288,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "alloy-processing",
+      "bob-alloy-processing",
       "advanced-material-processing-2",
     },
     effects = {
@@ -311,12 +311,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "nitrogen-processing",
+    name = "bob-nitrogen-processing",
     icon = "__bobplates__/graphics/icons/technology/nitrogen-processing.png",
     icon_size = 128,
     prerequisites = {
-      "chemical-processing-2",
-      "air-compressor-1",
+      "bob-chemical-processing-2",
+      "bob-air-compressor-1",
     },
     effects = {
       {
@@ -345,12 +345,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "ceramics",
+    name = "bob-ceramics",
     icon = "__bobplates__/graphics/icons/technology/ceramics.png",
     icon_size = 64,
     prerequisites = {
-      "nitrogen-processing",
-      "silicon-processing",
+      "bob-nitrogen-processing",
+      "bob-silicon-processing",
       "chemical-science-pack",
       "lubricant",
     },
@@ -382,7 +382,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-1",
+    name = "bob-air-compressor-1",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
@@ -410,13 +410,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-2",
+    name = "bob-air-compressor-2",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
-      "air-compressor-1",
+      "bob-air-compressor-1",
       "steel-processing",
-      "alloy-processing",
+      "bob-alloy-processing",
       "advanced-circuit",
     },
     effects = {
@@ -438,13 +438,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-3",
+    name = "bob-air-compressor-3",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
-      "air-compressor-2",
-      "zinc-processing",
-      "titanium-processing",
+      "bob-air-compressor-2",
+      "bob-zinc-processing",
+      "bob-titanium-processing",
       "processing-unit",
     },
     effects = {
@@ -467,12 +467,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-4",
+    name = "bob-air-compressor-4",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
-      "air-compressor-3",
-      "nitinol-processing",
+      "bob-air-compressor-3",
+      "bob-nitinol-processing",
       "electric-engine",
       "bob-advanced-processing-unit",
     },
@@ -497,7 +497,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-1",
+    name = "bob-water-bore-1",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     prerequisites = {
@@ -521,13 +521,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-2",
+    name = "bob-water-bore-2",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     prerequisites = {
-      "water-bore-1",
+      "bob-water-bore-1",
       "steel-processing",
-      "alloy-processing",
+      "bob-alloy-processing",
       "advanced-circuit",
     },
     effects = {
@@ -549,13 +549,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-3",
+    name = "bob-water-bore-3",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     prerequisites = {
-      "water-bore-2",
-      "zinc-processing",
-      "titanium-processing",
+      "bob-water-bore-2",
+      "bob-zinc-processing",
+      "bob-titanium-processing",
       "processing-unit",
     },
     effects = {
@@ -578,12 +578,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-4",
+    name = "bob-water-bore-4",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     prerequisites = {
-      "water-bore-3",
-      "nitinol-processing",
+      "bob-water-bore-3",
+      "bob-nitinol-processing",
       "electric-engine",
       "bob-advanced-processing-unit",
     },
@@ -608,11 +608,11 @@ data:extend({
 
   {
     type = "technology",
-    name = "gas-canisters",
+    name = "bob-gas-canisters",
     icon = "__bobplates__/graphics/icons/technology/gas-canister.png",
     icon_size = 64,
     prerequisites = {
-      "air-compressor-1",
+      "bob-air-compressor-1",
       "logistic-science-pack",
       "steel-processing",
     },
@@ -635,11 +635,11 @@ data:extend({
 
   {
     type = "technology",
-    name = "fluid-barrel-processing",
+    name = "bob-fluid-barrel-processing",
     icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
     icon_size = 64,
     prerequisites = {
-      "water-bore-1",
+      "bob-water-bore-1",
       "logistic-science-pack",
       "steel-processing",
     },
@@ -662,11 +662,11 @@ data:extend({
 
   {
     type = "technology",
-    name = "fluid-canister-processing",
+    name = "bob-fluid-canister-processing",
     icon = "__bobplates__/graphics/icons/technology/fluid-canister.png",
     icon_size = 720,
     prerequisites = {
-      "water-bore-1",
+      "bob-water-bore-1",
       "plastics",
     },
     effects = {
@@ -688,12 +688,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "grinding",
+    name = "bob-grinding",
     icon = "__bobplates__/graphics/icons/technology/grinding.png",
     icon_size = 64,
     prerequisites = {
-      "chemical-processing-1",
-      "silicon-processing",
+      "bob-chemical-processing-1",
+      "bob-silicon-processing",
     },
     unit = {
       count = 50,
@@ -718,12 +718,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "polishing",
+    name = "bob-polishing",
     icon = "__bobplates__/graphics/icons/technology/polishing.png",
     icon_size = 64,
     prerequisites = {
       "oil-processing",
-      "aluminium-processing",
+      "bob-aluminium-processing",
     },
     unit = {
       count = 75,
@@ -748,7 +748,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "gem-processing-1",
+    name = "bob-gem-processing-1",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
@@ -792,12 +792,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "gem-processing-2",
+    name = "bob-gem-processing-2",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
-      "gem-processing-1",
-      "grinding",
+      "bob-gem-processing-1",
+      "bob-grinding",
       "automation-2",
     },
     unit = {
@@ -839,20 +839,18 @@ data:extend({
 
   {
     type = "technology",
-    name = "gem-processing-3",
+    name = "bob-gem-processing-3",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
-      "gem-processing-2",
-      "polishing",
-      --      "chemical-science-pack", --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
+      "bob-gem-processing-2",
+      "bob-polishing",
     },
     unit = {
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        --        {"chemical-science-pack", 1}, --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
       },
       time = 30,
     },
@@ -887,11 +885,11 @@ data:extend({
 
   {
     type = "technology",
-    name = "void-fluid",
+    name = "bob-void-fluid",
     icon = "__bobplates__/graphics/icons/technology/void.png",
     icon_size = 128,
     prerequisites = {
-      "air-compressor-1",
+      "bob-air-compressor-1",
     },
     unit = {
       count = 30,
@@ -906,7 +904,6 @@ data:extend({
         recipe = "bob-void-pump",
       },
     },
-    order = "void-fluid",
   },
 
   {
@@ -939,13 +936,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "battery-2",
+    name = "bob-battery-2",
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
     prerequisites = {
       "battery",
-      "lithium-processing",
-      "cobalt-processing",
+      "bob-lithium-processing",
+      "bob-cobalt-processing",
       "chemical-science-pack",
     },
     unit = {
@@ -972,14 +969,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "battery-3",
+    name = "bob-battery-3",
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
     prerequisites = {
-      "battery-2",
-      "nitrogen-processing",
-      "electrolysis-2",
-      "zinc-processing",
+      "bob-battery-2",
+      "bob-nitrogen-processing",
+      "bob-electrolysis-2",
+      "bob-zinc-processing",
       "production-science-pack",
     },
     unit = {
