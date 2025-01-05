@@ -118,7 +118,10 @@ if data.raw.recipe["bob-robot-tool-3"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-3", { type = "item", name = "steel-plate", amount = 1 })
   end
   if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-3", { type = "item", name = "bob-titanium-gear-wheel", amount = 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-3",
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 2 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-3", { type = "item", name = "iron-gear-wheel", amount = 2 })
   end
@@ -134,7 +137,10 @@ if data.raw.recipe["bob-robot-tool-4"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "steel-plate", amount = 1 })
   end
   if data.raw.item["bob-nitinol-gear-wheel"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "bob-nitinol-gear-wheel", amount = 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-4",
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 2 }
+    )
     bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-nitinol-processing")
   else
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-4", { type = "item", name = "iron-gear-wheel", amount = 2 })

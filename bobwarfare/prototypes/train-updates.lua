@@ -9,7 +9,10 @@ if data.raw.item["bob-titanium-plate"] then
 end
 
 if data.raw.item["bob-titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-2", { type = "item", name = "bob-titanium-bearing", amount = 8 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-artillery-wagon-2",
+    { type = "item", name = "bob-titanium-bearing", amount = 8 }
+  )
 elseif data.raw.item["bob-steel-bearing"] then
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-2", { type = "item", name = "bob-steel-bearing", amount = 8 })
 else
@@ -29,14 +32,20 @@ elseif data.raw.item["steel-pipe"] then
 end
 
 if data.raw.item["bob-tungsten-carbide"] then
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "bob-tungsten-carbide", amount = 10 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-artillery-wagon-3",
+    { type = "item", name = "bob-tungsten-carbide", amount = 10 }
+  )
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-tungsten-alloy-processing")
 else
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })
 end
 
 if data.raw.item["bob-silicon-nitride"] then
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "bob-silicon-nitride", amount = 10 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-artillery-wagon-3",
+    { type = "item", name = "bob-silicon-nitride", amount = 10 }
+  )
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-ceramics")
 else
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })
@@ -48,7 +57,10 @@ if data.raw.item["bob-nitinol-alloy"] then
 end
 
 if data.raw.item["bob-nitinol-bearing"] then
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "bob-nitinol-bearing", amount = 8 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-artillery-wagon-3",
+    { type = "item", name = "bob-nitinol-bearing", amount = 8 }
+  )
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-nitinol-processing")
 else
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "iron-gear-wheel", amount = 8 })

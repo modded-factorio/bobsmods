@@ -14,7 +14,10 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["bob-cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("steam-engine-3", { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "steam-engine-3",
+      { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
+    )
     bobmods.lib.tech.add_prerequisite("bob-steam-engine-3", "bob-cobalt-processing")
   else
     if data.raw.item["bob-steel-bearing"] then

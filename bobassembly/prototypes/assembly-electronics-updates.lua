@@ -44,10 +44,16 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   if data.raw.item["bob-ceramic-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "bob-ceramic-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "electronics-machine-3",
+      { type = "item", name = "bob-ceramic-bearing", amount = 5 }
+    )
     bobmods.lib.tech.add_prerequisite("electronics-machine-3", "bob-ceramics")
   elseif data.raw.item["bob-nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "bob-nitinol-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "electronics-machine-3",
+      { type = "item", name = "bob-nitinol-bearing", amount = 5 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("electronics-machine-3", { type = "item", name = "iron-gear-wheel", amount = 3 })
   end

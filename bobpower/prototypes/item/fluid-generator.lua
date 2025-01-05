@@ -67,7 +67,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     },
   })
 
-  if mods["bobrevamp"] and data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.fluid["bob-nitrogen"] then
+  if
+    mods["bobrevamp"]
+    and data.raw.fluid["bob-hydrogen"]
+    and data.raw.fluid["bob-oxygen"]
+    and data.raw.fluid["bob-nitrogen"]
+  then
     data:extend({
       {
         type = "item",

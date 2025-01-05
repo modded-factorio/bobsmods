@@ -39,7 +39,10 @@ data.raw.recipe["assembling-machine-3"].ingredients = {
 }
 
 if data.raw.item["bob-steel-gear-wheel"] then
-  bobmods.lib.recipe.add_ingredient("assembling-machine-3", { type = "item", name = "bob-steel-gear-wheel", amount = 5 })
+  bobmods.lib.recipe.add_ingredient(
+    "assembling-machine-3",
+    { type = "item", name = "bob-steel-gear-wheel", amount = 5 }
+  )
 else
   bobmods.lib.recipe.add_ingredient("assembling-machine-3", { type = "item", name = "iron-gear-wheel", amount = 5 })
 end
@@ -77,7 +80,10 @@ elseif data.raw.item["bob-tungsten-plate"] then
 end
 
 if data.raw.item["bob-titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("assembling-machine-5", { type = "item", name = "bob-titanium-bearing", amount = 5 })
+  bobmods.lib.recipe.add_ingredient(
+    "assembling-machine-5",
+    { type = "item", name = "bob-titanium-bearing", amount = 5 }
+  )
 else
   bobmods.lib.recipe.add_ingredient("assembling-machine-5", { type = "item", name = "iron-gear-wheel", amount = 3 })
 end
@@ -109,7 +115,10 @@ end
 if data.raw.item["bob-nitinol-bearing"] then
   bobmods.lib.recipe.add_ingredient("assembling-machine-6", { type = "item", name = "bob-nitinol-bearing", amount = 5 })
 elseif data.raw.item["bob-titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("assembling-machine-6", { type = "item", name = "bob-titanium-bearing", amount = 5 })
+  bobmods.lib.recipe.add_ingredient(
+    "assembling-machine-6",
+    { type = "item", name = "bob-titanium-bearing", amount = 5 }
+  )
 else
   bobmods.lib.recipe.add_ingredient("assembling-machine-6", { type = "item", name = "iron-gear-wheel", amount = 3 })
 end

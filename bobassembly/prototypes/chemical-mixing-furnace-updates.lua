@@ -33,7 +33,11 @@ then
   end
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("electric-chemical-mixing-furnace-2", "steel-plate", "bob-copper-tungsten-alloy")
+    bobmods.lib.recipe.replace_ingredient(
+      "electric-chemical-mixing-furnace-2",
+      "steel-plate",
+      "bob-copper-tungsten-alloy"
+    )
     bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-2", "bob-tungsten-alloy-processing")
   end
 

@@ -55,7 +55,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     end
     bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "advanced-circuit", amount = 1 })
     if data.raw.item["bob-brass-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "bob-brass-gear-wheel", amount = 3 })
+      bobmods.lib.recipe.add_ingredient(
+        "distractor-robot",
+        { type = "item", name = "bob-brass-gear-wheel", amount = 3 }
+      )
       bobmods.lib.tech.add_prerequisite("distractor", "bob-zinc-processing")
     else
       bobmods.lib.recipe.add_ingredient("distractor-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
@@ -70,7 +73,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "processing-unit", amount = 1 })
     bobmods.lib.tech.add_prerequisite("destroyer", "processing-unit")
     if data.raw.item["bob-titanium-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "bob-titanium-gear-wheel", amount = 3 })
+      bobmods.lib.recipe.add_ingredient(
+        "destroyer-robot",
+        { type = "item", name = "bob-titanium-gear-wheel", amount = 3 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("destroyer-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
     end
@@ -91,7 +97,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "processing-unit", amount = 1 })
     end
     if data.raw.item["bob-nitinol-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "bob-nitinol-gear-wheel", amount = 3 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-laser-robot",
+        { type = "item", name = "bob-nitinol-gear-wheel", amount = 3 }
+      )
       bobmods.lib.tech.add_prerequisite("bob-laser-robot", "bob-nitinol-processing")
     else
       bobmods.lib.recipe.add_ingredient("bob-laser-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
@@ -176,7 +185,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   if data.raw.recipe["robot-tool-combat"] then
     bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "steel-plate", amount = 1 })
     if data.raw.item["bob-steel-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "bob-steel-gear-wheel", amount = 5 })
+      bobmods.lib.recipe.add_ingredient(
+        "robot-tool-combat",
+        { type = "item", name = "bob-steel-gear-wheel", amount = 5 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat", { type = "item", name = "iron-gear-wheel", amount = 5 })
     end
@@ -191,7 +203,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     end
 
     if data.raw.item["bob-brass-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "bob-brass-gear-wheel", amount = 2 })
+      bobmods.lib.recipe.add_ingredient(
+        "robot-tool-combat-2",
+        { type = "item", name = "bob-brass-gear-wheel", amount = 2 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-2", { type = "item", name = "iron-gear-wheel", amount = 2 })
     end
@@ -237,7 +252,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
 
   if data.raw.recipe["robot-tool-combat-4"] then
     if data.raw.item["bob-silicon-nitride"] then
-      bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "bob-silicon-nitride", amount = 1 })
+      bobmods.lib.recipe.add_ingredient(
+        "robot-tool-combat-4",
+        { type = "item", name = "bob-silicon-nitride", amount = 1 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("robot-tool-combat-4", { type = "item", name = "steel-plate", amount = 1 })
     end

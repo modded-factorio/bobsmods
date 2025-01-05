@@ -4,7 +4,10 @@ end
 
 if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true then
   bobmods.lib.recipe.replace_ingredient("bob-calcium-chloride", "stone", "limestone")
-  bobmods.lib.recipe.set_ingredient("bob-calcium-chloride", { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 })
+  bobmods.lib.recipe.set_ingredient(
+    "bob-calcium-chloride",
+    { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 }
+  )
   bobmods.lib.recipe.add_result(
     "bob-calcium-chloride",
     { type = "fluid", name = "bob-hydrogen", amount = 20, ignored_by_productivity = 20 }
@@ -24,7 +27,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
   bobmods.lib.recipe.replace_ingredient("bob-cobalt-oxide", "stone", "limestone")
   bobmods.lib.recipe.replace_ingredient("bob-cobalt-oxide-from-copper", "stone", "limestone")
-  bobmods.lib.tech.replace_prerequisite("bob-cobalt-processing", "bob-chemical-processing-1", "bob-chemical-processing-2")
+  bobmods.lib.tech.replace_prerequisite(
+    "bob-cobalt-processing",
+    "bob-chemical-processing-1",
+    "bob-chemical-processing-2"
+  )
 
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "carbon-dioxide")
   bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "carbon-dioxide-oil-processing")

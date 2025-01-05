@@ -169,7 +169,10 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     "nuclear-fuel-reprocessing",
     { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.8 }
   )
-  bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "bob-fusion-catalyst", amount = 1 })
+  bobmods.lib.recipe.add_result(
+    "nuclear-fuel-reprocessing",
+    { type = "item", name = "bob-fusion-catalyst", amount = 1 }
+  )
 else
   bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "bob-lead-plate")
 
@@ -235,7 +238,10 @@ bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("bob-ground-water", "water")
-  bobmods.lib.resource.add_result("bob-ground-water", { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 })
+  bobmods.lib.resource.add_result(
+    "bob-ground-water",
+    { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 }
+  )
 
   bobmods.lib.recipe.replace_ingredient("bob-water-electrolysis", "water", "bob-pure-water")
   bobmods.lib.recipe.replace_ingredient("bob-salt-water-electrolysis", "water", "bob-pure-water")

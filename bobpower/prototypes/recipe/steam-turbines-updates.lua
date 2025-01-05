@@ -1,6 +1,9 @@
 if settings.startup["bobmods-power-steam"].value == true then
   if data.raw.item["bob-cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("steam-turbine", { type = "item", name = "bob-cobalt-steel-bearing", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "steam-turbine",
+      { type = "item", name = "bob-cobalt-steel-bearing", amount = 10 }
+    )
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-1", "bob-cobalt-processing")
   else
     if data.raw.item["bob-steel-bearing"] then
@@ -84,7 +87,10 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.add_ingredient("steam-turbine-3", { type = "item", name = "bob-nitinol-bearing", amount = 15 })
   else
     if data.raw.item["bob-titanium-bearing"] then
-      bobmods.lib.recipe.add_ingredient("steam-turbine-3", { type = "item", name = "bob-titanium-bearing", amount = 15 })
+      bobmods.lib.recipe.add_ingredient(
+        "steam-turbine-3",
+        { type = "item", name = "bob-titanium-bearing", amount = 15 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("steam-turbine-3", { type = "item", name = "iron-gear-wheel", amount = 25 })
     end

@@ -135,7 +135,11 @@ then
 else
   if data.raw.item["bob-lithium-ion-battery"] then
     bobmods.lib.recipe.replace_ingredient("personal-roboport-mk3-equipment", "battery", "bob-lithium-ion-battery")
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-3", "battery", "bob-lithium-ion-battery")
+    bobmods.lib.recipe.replace_ingredient(
+      "personal-roboport-chargepad-equipment-3",
+      "battery",
+      "bob-lithium-ion-battery"
+    )
   end
 
   if data.raw.item["bob-titanium-plate"] then
@@ -159,7 +163,11 @@ else
   end
 
   if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-mk3-equipment", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient(
+      "personal-roboport-mk3-equipment",
+      "iron-gear-wheel",
+      "bob-titanium-gear-wheel"
+    )
     bobmods.lib.recipe.replace_ingredient(
       "personal-roboport-antenna-equipment-3",
       "iron-gear-wheel",
@@ -225,7 +233,11 @@ else
 
   if data.raw.item["bob-silver-zinc-battery"] then
     bobmods.lib.recipe.replace_ingredient("personal-roboport-mk4-equipment", "battery", "bob-silver-zinc-battery")
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-chargepad-equipment-4", "battery", "bob-silver-zinc-battery")
+    bobmods.lib.recipe.replace_ingredient(
+      "personal-roboport-chargepad-equipment-4",
+      "battery",
+      "bob-silver-zinc-battery"
+    )
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
@@ -245,7 +257,11 @@ else
   end
 
   if data.raw.item["bob-nitinol-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("personal-roboport-mk4-equipment", "iron-gear-wheel", "bob-nitinol-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient(
+      "personal-roboport-mk4-equipment",
+      "iron-gear-wheel",
+      "bob-nitinol-gear-wheel"
+    )
     bobmods.lib.recipe.replace_ingredient(
       "personal-roboport-antenna-equipment-4",
       "bob-iron-gear-wheel",
@@ -353,21 +369,48 @@ if data.raw.item["bob-lithium-ion-battery"] then
 end
 
 if data.raw.item["bob-silicon-wafer"] then
-  bobmods.lib.recipe.add_ingredient("solar-panel-equipment-3", { type = "item", name = "bob-silicon-wafer", amount = 8 })
+  bobmods.lib.recipe.add_ingredient(
+    "solar-panel-equipment-3",
+    { type = "item", name = "bob-silicon-wafer", amount = 8 }
+  )
 end
 
 if data.raw.item["bob-advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk4-equipment", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "energy-shield-mk4-equipment",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk5-equipment", "processing-unit", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("energy-shield-mk6-equipment", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "energy-shield-mk5-equipment",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "energy-shield-mk6-equipment",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
   bobmods.lib.recipe.replace_ingredient("battery-mk4-equipment", "processing-unit", "bob-advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("battery-mk6-equipment", "processing-unit", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("fission-reactor-equipment-2", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "fission-reactor-equipment-2",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment-2", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("fission-reactor-equipment-3", "processing-unit", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("fission-reactor-equipment-4", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient(
+    "fission-reactor-equipment-3",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
+  bobmods.lib.recipe.replace_ingredient(
+    "fission-reactor-equipment-4",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
   bobmods.lib.recipe.replace_ingredient("night-vision-equipment-3", "processing-unit", "bob-advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("night-vision-equipment-3", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-4", "processing-unit", "bob-advanced-processing-unit")

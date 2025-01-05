@@ -186,7 +186,11 @@ then
     data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_category = "thorium"
   end
   if data.raw.technology["bob-thorium-plutonium-fuel-cell"] then
-    bobmods.lib.tech.replace_prerequisite("bob-thorium-plutonium-fuel-cell", "bob-thorium-processing", "bob-nuclear-power-2")
+    bobmods.lib.tech.replace_prerequisite(
+      "bob-thorium-plutonium-fuel-cell",
+      "bob-thorium-processing",
+      "bob-nuclear-power-2"
+    )
   end
 
   data.raw.item["nuclear-reactor-2"].localised_name = { "entity-name.thorium-reactor" }
@@ -207,7 +211,11 @@ then
   bobmods.lib.tech.remove_prerequisite("bob-nuclear-power-2", "production-science-pack")
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "bob-thorium-fuel-cell")
   bobmods.lib.tech.remove_prerequisite("bob-thorium-fuel-reprocessing", "production-science-pack")
-  bobmods.lib.tech.replace_prerequisite("bob-thorium-fuel-reprocessing", "bob-thorium-processing", "bob-nuclear-power-2")
+  bobmods.lib.tech.replace_prerequisite(
+    "bob-thorium-fuel-reprocessing",
+    "bob-thorium-processing",
+    "bob-nuclear-power-2"
+  )
 
   if feature_flags["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_single("nuclear-reactor-2", true)
@@ -236,7 +244,11 @@ then
     data.raw.item["bob-deuterium-fuel-cell-2"].fuel_category = "bob-deuterium"
   end
   if data.raw.technology["bob-deuterium-fuel-cell-2"] then
-    bobmods.lib.tech.replace_prerequisite("bob-deuterium-fuel-cell-2", "bob-deuterium-processing", "bob-nuclear-power-3")
+    bobmods.lib.tech.replace_prerequisite(
+      "bob-deuterium-fuel-cell-2",
+      "bob-deuterium-processing",
+      "bob-nuclear-power-3"
+    )
   end
 
   data.raw.item["nuclear-reactor-3"].localised_name = { "entity-name.deuterium-reactor" }
@@ -253,7 +265,11 @@ then
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "nuclear-fuel-reprocessing")
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-3", "bob-deuterium-fuel-cell")
   bobmods.lib.tech.add_science_pack("bob-deuterium-fuel-reprocessing", "utility-science-pack", 1)
-  bobmods.lib.tech.replace_prerequisite("bob-deuterium-fuel-reprocessing", "bob-deuterium-processing", "bob-nuclear-power-3")
+  bobmods.lib.tech.replace_prerequisite(
+    "bob-deuterium-fuel-reprocessing",
+    "bob-deuterium-processing",
+    "bob-nuclear-power-3"
+  )
 
   if
     settings.startup["bobmods-plates-bluedeuterium"]

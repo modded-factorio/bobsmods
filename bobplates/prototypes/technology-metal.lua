@@ -88,7 +88,8 @@ if not data.raw.technology["bob-aluminium-processing"] then
   })
 end
 
-data.raw.technology["bob-aluminium-processing"].icon = "__bobplates__/graphics/icons/technology/aluminium-processing.png"
+data.raw.technology["bob-aluminium-processing"].icon =
+  "__bobplates__/graphics/icons/technology/aluminium-processing.png"
 data.raw.technology["bob-aluminium-processing"].icon_size = 128
 data.raw.technology["bob-aluminium-processing"].order = "c-b-d2"
 data.raw.technology["bob-aluminium-processing"].unit = {
@@ -279,7 +280,8 @@ if not data.raw.technology["bob-tungsten-alloy-processing"] then
   })
 end
 
-data.raw.technology["bob-tungsten-alloy-processing"].icon = "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png"
+data.raw.technology["bob-tungsten-alloy-processing"].icon =
+  "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png"
 data.raw.technology["bob-tungsten-alloy-processing"].icon_size = 32
 data.raw.technology["bob-tungsten-alloy-processing"].order = "c-b-e3"
 data.raw.technology["bob-tungsten-alloy-processing"].unit = {

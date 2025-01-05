@@ -28,7 +28,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["bob-cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("fluid-generator-2", { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "fluid-generator-2",
+      { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
+    )
     bobmods.lib.tech.add_prerequisite("fluid-generator-2", "bob-cobalt-processing")
   elseif data.raw.item["bob-steel-bearing"] then
     bobmods.lib.recipe.add_ingredient("fluid-generator-2", { type = "item", name = "bob-steel-bearing", amount = 10 })
@@ -69,7 +72,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["bob-titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("fluid-generator-3", { type = "item", name = "bob-titanium-bearing", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "fluid-generator-3",
+      { type = "item", name = "bob-titanium-bearing", amount = 10 }
+    )
   elseif data.raw.item["bob-steel-bearing"] then
     bobmods.lib.recipe.add_ingredient("fluid-generator-3", { type = "item", name = "bob-steel-bearing", amount = 10 })
   else
@@ -102,9 +108,17 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("fluid-generator-3", "processing-unit")
   end
 
-  if mods["bobrevamp"] and data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.fluid["bob-nitrogen"] then
+  if
+    mods["bobrevamp"]
+    and data.raw.fluid["bob-hydrogen"]
+    and data.raw.fluid["bob-oxygen"]
+    and data.raw.fluid["bob-nitrogen"]
+  then
     if data.raw.item["bob-nitinol-bearing"] then
-      bobmods.lib.recipe.add_ingredient("hydrazine-generator", { type = "item", name = "bob-nitinol-bearing", amount = 10 })
+      bobmods.lib.recipe.add_ingredient(
+        "hydrazine-generator",
+        { type = "item", name = "bob-nitinol-bearing", amount = 10 }
+      )
     else
       bobmods.lib.recipe.add_ingredient("hydrazine-generator", { type = "item", name = "iron-gear-wheel", amount = 10 })
     end

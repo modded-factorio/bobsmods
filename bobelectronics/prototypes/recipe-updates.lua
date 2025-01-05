@@ -32,7 +32,10 @@ end
 
 if data.raw.item["bob-silicon-wafer"] then
   bobmods.lib.recipe.add_ingredient("electronic-components", { type = "item", name = "bob-silicon-wafer", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("intergrated-electronics", { type = "item", name = "bob-silicon-wafer", amount = 4 })
+  bobmods.lib.recipe.add_ingredient(
+    "intergrated-electronics",
+    { type = "item", name = "bob-silicon-wafer", amount = 4 }
+  )
   bobmods.lib.recipe.add_ingredient("processing-electronics", { type = "item", name = "bob-silicon-wafer", amount = 6 })
 else
   if data.raw.item["bob-silicon-plate"] then
@@ -85,7 +88,10 @@ if data.raw.item["bob-gold-plate"] then
 else
   if data.raw.item["bob-tin-plate"] then
     bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "bob-tin-plate", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "bob-tin-plate", amount = 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "multi-layer-circuit-board",
+      { type = "item", name = "bob-tin-plate", amount = 2 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "copper-plate", amount = 1 })
     bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "copper-plate", amount = 2 })

@@ -239,7 +239,8 @@ if settings.startup["bobmods-plates-bluedeuterium"].value == true then
   data.raw.item["bob-deuterium-fuel-cell"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-blue.png"
   if settings.startup["bobmods-plates-nuclearupdate"].value == true then
     data.raw.item["bob-deuterium-fuel-cell-2"].fuel_glow_color = { r = 0, g = 1, b = 0.85 }
-    data.raw.item["bob-deuterium-fuel-cell-2"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-2-blue.png"
+    data.raw.item["bob-deuterium-fuel-cell-2"].icon =
+      "__bobplates__/graphics/icons/nuclear/deuterium-fuel-cell-2-blue.png"
   end
   data.raw.item["bob-depleted-deuterium-fuel-cell"].icon =
     "__bobplates__/graphics/icons/nuclear/depleted-deuterium-fuel-cell-blue.png"

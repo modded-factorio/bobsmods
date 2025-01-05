@@ -32,5 +32,8 @@ end
 
 if data.raw.item["bob-steel-bearing"] then
   bobmods.lib.recipe.add_ingredient("robot-drone-frame", { type = "item", name = "bob-steel-bearing", amount = 10 })
-  bobmods.lib.recipe.add_ingredient("robot-drone-frame-large", { type = "item", name = "bob-steel-bearing", amount = 10 })
+  bobmods.lib.recipe.add_ingredient(
+    "robot-drone-frame-large",
+    { type = "item", name = "bob-steel-bearing", amount = 10 }
+  )
 end
