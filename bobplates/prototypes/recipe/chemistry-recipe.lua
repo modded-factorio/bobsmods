@@ -868,8 +868,8 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "tungsten-ore", amount = 2 },
-      { type = "fluid", name = "hydrogen-chloride", amount = 50 },
+      { type = "item", name = "bob-tungsten-ore", amount = 2 },
+      { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 },
     },
     results = {
       { type = "fluid", name = "bob-tungstic-acid", amount = 20 },
