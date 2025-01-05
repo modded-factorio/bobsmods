@@ -1,4 +1,4 @@
-if data.raw.fluid["nitric-acid"] then
+if data.raw.fluid["bob-nitric-acid"] then
   data:extend({
     {
       type = "fluid",

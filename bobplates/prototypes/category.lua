@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe-category",
-    name = "electrolysis",
+    name = "bob-electrolysis",
   },
   {
     type = "recipe-category",
@@ -13,11 +13,11 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "air-pump",
+    name = "bob-air-pump",
   },
   {
     type = "recipe-category",
-    name = "water-pump",
+    name = "bob-water-pump",
   },
   {
     type = "recipe-category",
@@ -25,11 +25,11 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "void",
+    name = "bob-void",
   },
   {
     type = "recipe-category",
-    name = "void-fluid",
+    name = "bob-void-fluid",
   },
   {
     type = "recipe-category",
@@ -357,7 +357,7 @@ data:extend({
 
   {
     type = "item-subgroup",
-    name = "void",
+    name = "bob-void",
     group = "fluids",
     order = "z",
   },

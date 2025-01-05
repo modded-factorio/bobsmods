@@ -69,7 +69,7 @@ then
     },
   })
 
-  if data.raw.fluid["sulfur-dioxide"] then
+  if data.raw.fluid["bob-sulfur-dioxide"] then
     data:extend({
       {
         type = "recipe",
@@ -86,7 +86,7 @@ then
           { type = "fluid", name = "crude-oil", amount = 100 },
         },
         results = {
-          { type = "fluid", name = "sulfur-dioxide", amount = 40 },
+          { type = "fluid", name = "bob-sulfur-dioxide", amount = 40 },
           { type = "fluid", name = "light-oil", amount = 30 },
           { type = "fluid", name = "petroleum-gas", amount = 40 },
         },
@@ -109,7 +109,7 @@ then
         },
         results = {
           { type = "fluid", name = "heavy-oil", amount = 30 },
-          { type = "fluid", name = "sulfur-dioxide", amount = 40 },
+          { type = "fluid", name = "bob-sulfur-dioxide", amount = 40 },
           { type = "fluid", name = "petroleum-gas", amount = 40 },
         },
         allow_productivity = true,
@@ -132,7 +132,7 @@ then
         results = {
           { type = "fluid", name = "heavy-oil", amount = 30 },
           { type = "fluid", name = "light-oil", amount = 30 },
-          { type = "fluid", name = "sulfur-dioxide", amount = 50 },
+          { type = "fluid", name = "bob-sulfur-dioxide", amount = 50 },
         },
         allow_productivity = true,
       },
@@ -207,7 +207,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     },
   })
 
-  if data.raw["recipe-category"]["void-fluid"] then
+  if data.raw["recipe-category"]["bob-void-fluid"] then
     if bobmods.plates and bobmods.plates.make_void_fluid_recipe then
       bobmods.plates.make_void_fluid_recipe("sour-gas", 25, 55)
     else
@@ -227,9 +227,9 @@ if settings.startup["bobmods-revamp-oil"].value == true then
               scale = 0.25,
             },
           },
-          subgroup = "void",
+          subgroup = "bob-void",
           order = "sour-gas",
-          category = "void-fluid",
+          category = "bob-void-fluid",
           hide_from_player_crafting = true,
           energy_required = 1,
           ingredients = {

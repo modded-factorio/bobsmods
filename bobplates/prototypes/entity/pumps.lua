@@ -85,15 +85,15 @@ circuit_connector_definitions["fluid-pump"] =
 data:extend({
   {
     type = "assembling-machine",
-    name = "air-pump",
+    name = "bob-air-pump",
     icon = "__bobplates__/graphics/icons/air-pump-1.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "air-pump" },
+    minable = { mining_time = 1, result = "bob-air-pump" },
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
     max_health = 150,
-    crafting_categories = { "air-pump" },
+    crafting_categories = { "bob-air-pump" },
     crafting_speed = 1,
     module_slots = 1,
     icons_positioning = {
@@ -109,8 +109,8 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "air-pump",
-    next_upgrade = "air-pump-2",
+    fast_replaceable_group = "bob-air-pump",
+    next_upgrade = "bob-air-pump-2",
     corpse = "small-remnants",
     resistances = {
       {
@@ -151,15 +151,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "air-pump-2",
+    name = "bob-air-pump-2",
     icon = "__bobplates__/graphics/icons/air-pump-2.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "air-pump-2" },
+    minable = { mining_time = 1, result = "bob-air-pump-2" },
     max_health = 180,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "air-pump" },
+    crafting_categories = { "bob-air-pump" },
     crafting_speed = 2,
     module_slots = 2,
     icons_positioning = {
@@ -175,8 +175,8 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "air-pump",
-    next_upgrade = "air-pump-3",
+    fast_replaceable_group = "bob-air-pump",
+    next_upgrade = "bob-air-pump-3",
     corpse = "small-remnants",
     resistances = {
       {
@@ -217,15 +217,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "air-pump-3",
+    name = "bob-air-pump-3",
     icon = "__bobplates__/graphics/icons/air-pump-3.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "air-pump-3" },
+    minable = { mining_time = 1, result = "bob-air-pump-3" },
     max_health = 230,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "air-pump" },
+    crafting_categories = { "bob-air-pump" },
     crafting_speed = 3.5,
     module_slots = 4,
     icons_positioning = {
@@ -242,8 +242,8 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "air-pump",
-    next_upgrade = "air-pump-4",
+    fast_replaceable_group = "bob-air-pump",
+    next_upgrade = "bob-air-pump-4",
     corpse = "small-remnants",
     resistances = {
       {
@@ -284,15 +284,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "air-pump-4",
+    name = "bob-air-pump-4",
     icon = "__bobplates__/graphics/icons/air-pump-4.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "air-pump-4" },
+    minable = { mining_time = 1, result = "bob-air-pump-4" },
     max_health = 300,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "air-pump" },
+    crafting_categories = { "bob-air-pump" },
     crafting_speed = 5,
     module_slots = 6,
     icons_positioning = {
@@ -309,7 +309,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "air-pump",
+    fast_replaceable_group = "bob-air-pump",
     corpse = "small-remnants",
     resistances = {
       {
@@ -350,15 +350,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "water-pump",
+    name = "bob-water-pump",
     icon = "__bobplates__/graphics/icons/water-pump-1.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "water-pump" },
+    minable = { mining_time = 1, result = "bob-water-pump" },
     max_health = 120,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "water-pump", "barrelling" },
+    crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 1,
     module_slots = 1,
     icons_positioning = {
@@ -374,8 +374,8 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "water-pump",
-    next_upgrade = "water-pump-2",
+    fast_replaceable_group = "bob-water-pump",
+    next_upgrade = "bob-water-pump-2",
     corpse = "small-remnants",
     resistances = {
       {
@@ -416,15 +416,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "water-pump-2",
+    name = "bob-water-pump-2",
     icon = "__bobplates__/graphics/icons/water-pump-2.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "water-pump-2" },
+    minable = { mining_time = 1, result = "bob-water-pump-2" },
     max_health = 180,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "water-pump", "barrelling" },
+    crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 2,
     module_slots = 2,
     icons_positioning = {
@@ -440,8 +440,8 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "water-pump",
-    next_upgrade = "water-pump-3",
+    fast_replaceable_group = "bob-water-pump",
+    next_upgrade = "bob-water-pump-3",
     corpse = "small-remnants",
     resistances = {
       {
@@ -482,15 +482,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "water-pump-3",
+    name = "bob-water-pump-3",
     icon = "__bobplates__/graphics/icons/water-pump-3.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "water-pump-3" },
+    minable = { mining_time = 1, result = "bob-water-pump-3" },
     max_health = 230,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "water-pump", "barrelling" },
+    crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 3.5,
     module_slots = 4,
     icons_positioning = {
@@ -507,8 +507,8 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "water-pump",
-    next_upgrade = "water-pump-4",
+    fast_replaceable_group = "bob-water-pump",
+    next_upgrade = "bob-water-pump-4",
     corpse = "small-remnants",
     resistances = {
       {
@@ -549,15 +549,15 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "water-pump-4",
+    name = "bob-water-pump-4",
     icon = "__bobplates__/graphics/icons/water-pump-4.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "water-pump-4" },
+    minable = { mining_time = 1, result = "bob-water-pump-4" },
     max_health = 300,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
-    crafting_categories = { "water-pump", "barrelling" },
+    crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 5,
     module_slots = 6,
     icons_positioning = {
@@ -574,7 +574,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
-    fast_replaceable_group = "water-pump",
+    fast_replaceable_group = "bob-water-pump",
     corpse = "small-remnants",
     resistances = {
       {

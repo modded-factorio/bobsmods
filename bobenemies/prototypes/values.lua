@@ -22,45 +22,45 @@ bobmods.enemies.behemoth_scale = 2
 bobmods.enemies.leviathan_scale = 2.5
 
 -- Blue
-bobmods.enemies.pierce_tint = { r = 0.3, g = 0.6, b = 0.9, a = 0.6 }
-bobmods.enemies.pierce_tint2 = { r = 0.2, g = 0.6, b = 1.0, a = 0.9 }
+bobmods.enemies.pierce_tint = { r = 0.2, g = 0.6, b = 1.0, a = 0.9 }
+bobmods.enemies.pierce_tint2 = { r = 0.3, g = 0.6, b = 0.9, a = 0.6 }
 
 -- Orange
-bobmods.enemies.electric_tint = { r = 0.9, g = 0.6, b = 0.3, a = 0.6 }
-bobmods.enemies.electric_tint2 = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 }
+bobmods.enemies.electric_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 }
+bobmods.enemies.electric_tint2 = { r = 0.9, g = 0.6, b = 0.3, a = 0.6 }
 
 -- Purple
-bobmods.enemies.acid_tint = { r = 0.6, g = 0.3, b = 0.9, a = 0.6 }
-bobmods.enemies.acid_tint2 = { r = 1, g = 0.2, b = 1.0, a = 0.9 }
+bobmods.enemies.acid_tint = { r = 1, g = 0.2, b = 1.0, a = 0.9 }
+bobmods.enemies.acid_tint2 = { r = 0.6, g = 0.3, b = 0.9, a = 0.6 }
 
 -- Yellow
-bobmods.enemies.explosive_tint = { r = 0.9, g = 0.9, b = 0.3, a = 0.6 }
-bobmods.enemies.explosive_tint2 = { r = 1.0, g = 1.0, b = 0.2, a = 0.9 }
+bobmods.enemies.explosive_tint = { r = 1.0, g = 1.0, b = 0.2, a = 0.9 }
+bobmods.enemies.explosive_tint2 = { r = 0.9, g = 0.9, b = 0.3, a = 0.6 }
 
 -- Turquoise/Green
-bobmods.enemies.poison_tint = { r = 0.3, g = 0.9, b = 0.6, a = 0.6 }
-bobmods.enemies.poison_tint2 = { r = 0.2, g = 1.0, b = 0.6, a = 0.9 }
+bobmods.enemies.poison_tint = { r = 0.2, g = 1.0, b = 0.6, a = 0.9 }
+bobmods.enemies.poison_tint2 = { r = 0.3, g = 0.9, b = 0.6, a = 0.6 }
 
 -- Red
-bobmods.enemies.fire_tint = { r = 0.9, g = 0.3, b = 0.3, a = 0.6 }
-bobmods.enemies.fire_tint2 = { r = 1.0, g = 0.2, b = 0.6, a = 0.9 }
+bobmods.enemies.fire_tint = { r = 1.0, g = 0.2, b = 0.6, a = 0.9 }
+bobmods.enemies.fire_tint2 = { r = 0.9, g = 0.3, b = 0.3, a = 0.6 }
 
 -- Violet
-bobmods.enemies.titan_tint = { r = 0.3, g = 0.3, b = 0.9, a = 0.6 }
-bobmods.enemies.titan_tint2 = { r = 0.2, g = 0.2, b = 1, a = 1.0 }
+bobmods.enemies.titan_tint = { r = 0.2, g = 0.2, b = 1, a = 1.0 }
+bobmods.enemies.titan_tint2 = { r = 0.3, g = 0.3, b = 0.9, a = 0.6 }
 
 -- Lime Green
-bobmods.enemies.behemoth_tint = { r = 0.6, g = 0.9, b = 0.3, a = 0.6 }
-bobmods.enemies.behemoth_tint2 = { r = 0.6, g = 1, b = 0.2, a = 1.0 }
+bobmods.enemies.behemoth_tint = { r = 0.6, g = 1, b = 0.2, a = 1.0 }
+bobmods.enemies.behemoth_tint2 = { r = 0.6, g = 0.9, b = 0.3, a = 0.6 }
 
 -- Pink
-bobmods.enemies.leviathan_tint = { r = 0.9, g = 0.3, b = 0.6, a = 0.6 }
-bobmods.enemies.leviathan_tint2 = { r = 1, g = 0.2, b = 0.6, a = 1.0 }
+bobmods.enemies.leviathan_tint = { r = 1, g = 0.2, b = 0.6, a = 1.0 }
+bobmods.enemies.leviathan_tint2 = { r = 0.9, g = 0.3, b = 0.6, a = 0.6 }
 
 -- Already a lot of greeny colours
-bobmods.enemies.cyan_tint = { r = 0.3, g = 0.9, b = 0.9, a = 0.6 }
-bobmods.enemies.cyan_tint2 = { r = 0.2, g = 1, b = 1, a = 1.0 }
+bobmods.enemies.cyan_tint = { r = 0.2, g = 1, b = 1, a = 1.0 }
+bobmods.enemies.cyan_tint2 = { r = 0.3, g = 0.9, b = 0.9, a = 0.6 }
 
 --looks too much like poison
-bobmods.enemies.magenta_tint = { r = 0.9, g = 0.3, b = 0.9, a = 0.6 }
-bobmods.enemies.magenta_tint2 = { r = 1, g = 0.2, b = 1, a = 1.0 }
+bobmods.enemies.magenta_tint = { r = 1, g = 0.2, b = 1, a = 1.0 }
+bobmods.enemies.magenta_tint2 = { r = 0.9, g = 0.3, b = 0.9, a = 0.6 }

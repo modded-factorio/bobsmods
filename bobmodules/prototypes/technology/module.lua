@@ -542,12 +542,12 @@ bobmods.lib.tech.add_prerequisite("speed-module-3", "processing-unit")
 bobmods.lib.tech.add_prerequisite("efficiency-module-3", "processing-unit")
 bobmods.lib.tech.add_prerequisite("productivity-module-3", "processing-unit")
 
-if data.raw.technology["advanced-processing-unit"] then
-  bobmods.lib.tech.add_prerequisite("bob-speed-module-4", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-efficiency-module-4", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-productivity-module-4", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-pollution-clean-module-4", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-pollution-create-module-4", "advanced-processing-unit")
+if data.raw.technology["bob-advanced-processing-unit"] then
+  bobmods.lib.tech.add_prerequisite("bob-speed-module-4", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-efficiency-module-4", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-productivity-module-4", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-pollution-clean-module-4", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-pollution-create-module-4", "bob-advanced-processing-unit")
 end
 
 if mods["quality"] then
@@ -638,7 +638,7 @@ if mods["quality"] then
 
   bobmods.lib.tech.add_prerequisite("quality-module-3", "processing-unit")
 
-  if data.raw.technology["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("bob-quality-module-4", "advanced-processing-unit")
+  if data.raw.technology["bob-advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("bob-quality-module-4", "bob-advanced-processing-unit")
   end
 end

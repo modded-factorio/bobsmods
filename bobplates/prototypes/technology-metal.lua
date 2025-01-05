@@ -1,20 +1,20 @@
-if not data.raw.technology["nickel-processing"] then
+if not data.raw.technology["bob-nickel-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "nickel-processing",
+      name = "bob-nickel-processing",
       prerequisites = {
-        "electrolysis-1",
+        "bob-electrolysis-1",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["nickel-processing"].icon = "__bobplates__/graphics/icons/technology/nickel-processing.png"
-data.raw.technology["nickel-processing"].icon_size = 128
-data.raw.technology["nickel-processing"].order = "c-b-c1"
-data.raw.technology["nickel-processing"].unit = {
+data.raw.technology["bob-nickel-processing"].icon = "__bobplates__/graphics/icons/technology/nickel-processing.png"
+data.raw.technology["bob-nickel-processing"].icon_size = 128
+data.raw.technology["bob-nickel-processing"].order = "c-b-c1"
+data.raw.technology["bob-nickel-processing"].unit = {
   count = 40,
   time = 30,
   ingredients = {
@@ -22,25 +22,25 @@ data.raw.technology["nickel-processing"].unit = {
   },
 }
 
-if not data.raw.technology["zinc-processing"] then
+if not data.raw.technology["bob-zinc-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "zinc-processing",
+      name = "bob-zinc-processing",
       prerequisites = {
-        "electrolysis-1",
+        "bob-electrolysis-1",
         "sulfur-processing",
-        "alloy-processing",
+        "bob-alloy-processing",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["zinc-processing"].icon = "__bobplates__/graphics/icons/technology/zinc-processing.png"
-data.raw.technology["zinc-processing"].icon_size = 128
-data.raw.technology["zinc-processing"].order = "c-b-c2"
-data.raw.technology["zinc-processing"].unit = {
+data.raw.technology["bob-zinc-processing"].icon = "__bobplates__/graphics/icons/technology/zinc-processing.png"
+data.raw.technology["bob-zinc-processing"].icon_size = 128
+data.raw.technology["bob-zinc-processing"].order = "c-b-c2"
+data.raw.technology["bob-zinc-processing"].unit = {
   count = 40,
   time = 30,
   ingredients = {
@@ -49,24 +49,24 @@ data.raw.technology["zinc-processing"].unit = {
   },
 }
 
-if not data.raw.technology["lead-processing"] then
+if not data.raw.technology["bob-lead-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "lead-processing",
+      name = "bob-lead-processing",
       prerequisites = {
-        "electrolysis-1",
-        "chemical-processing-2",
+        "bob-electrolysis-1",
+        "bob-chemical-processing-2",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["lead-processing"].icon = "__bobplates__/graphics/icons/technology/lead-processing.png"
-data.raw.technology["lead-processing"].icon_size = 128
-data.raw.technology["lead-processing"].order = "c-b-c3"
-data.raw.technology["lead-processing"].unit = {
+data.raw.technology["bob-lead-processing"].icon = "__bobplates__/graphics/icons/technology/lead-processing.png"
+data.raw.technology["bob-lead-processing"].icon_size = 128
+data.raw.technology["bob-lead-processing"].order = "c-b-c3"
+data.raw.technology["bob-lead-processing"].unit = {
   count = 70,
   time = 30,
   ingredients = {
@@ -75,23 +75,24 @@ data.raw.technology["lead-processing"].unit = {
   },
 }
 
-if not data.raw.technology["aluminium-processing"] then
+if not data.raw.technology["bob-aluminium-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "aluminium-processing",
+      name = "bob-aluminium-processing",
       prerequisites = {
-        "electrolysis-2",
+        "bob-electrolysis-2",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["aluminium-processing"].icon = "__bobplates__/graphics/icons/technology/aluminium-processing.png"
-data.raw.technology["aluminium-processing"].icon_size = 128
-data.raw.technology["aluminium-processing"].order = "c-b-d2"
-data.raw.technology["aluminium-processing"].unit = {
+data.raw.technology["bob-aluminium-processing"].icon =
+  "__bobplates__/graphics/icons/technology/aluminium-processing.png"
+data.raw.technology["bob-aluminium-processing"].icon_size = 128
+data.raw.technology["bob-aluminium-processing"].order = "c-b-d2"
+data.raw.technology["bob-aluminium-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {
@@ -100,23 +101,23 @@ data.raw.technology["aluminium-processing"].unit = {
   },
 }
 
-if not data.raw.technology["gold-processing"] then
+if not data.raw.technology["bob-gold-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "gold-processing",
+      name = "bob-gold-processing",
       prerequisites = {
-        "electrolysis-2",
+        "bob-electrolysis-2",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["gold-processing"].icon = "__bobplates__/graphics/icons/technology/gold-processing.png"
-data.raw.technology["gold-processing"].icon_size = 128
-data.raw.technology["gold-processing"].order = "c-b-d3"
-data.raw.technology["gold-processing"].unit = {
+data.raw.technology["bob-gold-processing"].icon = "__bobplates__/graphics/icons/technology/gold-processing.png"
+data.raw.technology["bob-gold-processing"].icon_size = 128
+data.raw.technology["bob-gold-processing"].order = "c-b-d3"
+data.raw.technology["bob-gold-processing"].unit = {
   count = 70,
   time = 30,
   ingredients = {
@@ -125,24 +126,24 @@ data.raw.technology["gold-processing"].unit = {
   },
 }
 
-if not data.raw.technology["silicon-processing"] then
+if not data.raw.technology["bob-silicon-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "silicon-processing",
+      name = "bob-silicon-processing",
       prerequisites = {
         "automation",
-        "chemical-processing-2",
+        "bob-chemical-processing-2",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["silicon-processing"].icon = "__bobplates__/graphics/icons/plate/silicon-plate.png"
-data.raw.technology["silicon-processing"].icon_size = 32
-data.raw.technology["silicon-processing"].order = "c-b-d1"
-data.raw.technology["silicon-processing"].unit = {
+data.raw.technology["bob-silicon-processing"].icon = "__bobplates__/graphics/icons/plate/silicon-plate.png"
+data.raw.technology["bob-silicon-processing"].icon_size = 32
+data.raw.technology["bob-silicon-processing"].order = "c-b-d1"
+data.raw.technology["bob-silicon-processing"].unit = {
   count = 50,
   time = 30,
   ingredients = {
@@ -151,13 +152,13 @@ data.raw.technology["silicon-processing"].unit = {
   },
 }
 
-if not data.raw.technology["titanium-processing"] then
+if not data.raw.technology["bob-titanium-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "titanium-processing",
+      name = "bob-titanium-processing",
       prerequisites = {
-        "chemical-processing-2",
+        "bob-chemical-processing-2",
         "chemical-science-pack",
       },
       effects = {},
@@ -165,10 +166,10 @@ if not data.raw.technology["titanium-processing"] then
   })
 end
 
-data.raw.technology["titanium-processing"].icon = "__bobplates__/graphics/icons/technology/titanium-processing.png"
-data.raw.technology["titanium-processing"].icon_size = 64
-data.raw.technology["titanium-processing"].order = "c-b-e1"
-data.raw.technology["titanium-processing"].unit = {
+data.raw.technology["bob-titanium-processing"].icon = "__bobplates__/graphics/icons/technology/titanium-processing.png"
+data.raw.technology["bob-titanium-processing"].icon_size = 64
+data.raw.technology["bob-titanium-processing"].order = "c-b-e1"
+data.raw.technology["bob-titanium-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {
@@ -178,26 +179,26 @@ data.raw.technology["titanium-processing"].unit = {
   },
 }
 
-if not data.raw.technology["tungsten-processing"] then
+if not data.raw.technology["bob-tungsten-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "tungsten-processing",
+      name = "bob-tungsten-processing",
       prerequisites = {
-        "chemical-processing-2",
+        "bob-chemical-processing-2",
         "chemical-science-pack",
-        "nickel-processing",
-        "alloy-processing",
+        "bob-nickel-processing",
+        "bob-alloy-processing",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["tungsten-processing"].icon = "__bobplates__/graphics/icons/technology/tungsten-processing.png"
-data.raw.technology["tungsten-processing"].icon_size = 64
-data.raw.technology["tungsten-processing"].order = "c-b-e2"
-data.raw.technology["tungsten-processing"].unit = {
+data.raw.technology["bob-tungsten-processing"].icon = "__bobplates__/graphics/icons/technology/tungsten-processing.png"
+data.raw.technology["bob-tungsten-processing"].icon_size = 64
+data.raw.technology["bob-tungsten-processing"].order = "c-b-e2"
+data.raw.technology["bob-tungsten-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {
@@ -207,14 +208,14 @@ data.raw.technology["tungsten-processing"].unit = {
   },
 }
 
-if not data.raw.technology["invar-processing"] then
+if not data.raw.technology["bob-invar-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "invar-processing",
+      name = "bob-invar-processing",
       prerequisites = {
-        "alloy-processing",
-        "nickel-processing",
+        "bob-alloy-processing",
+        "bob-nickel-processing",
         "logistic-science-pack",
       },
       effects = {},
@@ -222,10 +223,10 @@ if not data.raw.technology["invar-processing"] then
   })
 end
 
-data.raw.technology["invar-processing"].icon = "__bobplates__/graphics/icons/technology/invar-processing.png"
-data.raw.technology["invar-processing"].icon_size = 128
-data.raw.technology["invar-processing"].order = "c-b-g"
-data.raw.technology["invar-processing"].unit = {
+data.raw.technology["bob-invar-processing"].icon = "__bobplates__/graphics/icons/technology/invar-processing.png"
+data.raw.technology["bob-invar-processing"].icon_size = 128
+data.raw.technology["bob-invar-processing"].order = "c-b-g"
+data.raw.technology["bob-invar-processing"].unit = {
   count = 50,
   time = 30,
   ingredients = {
@@ -234,15 +235,15 @@ data.raw.technology["invar-processing"].unit = {
   },
 }
 
-if not data.raw.technology["nitinol-processing"] then
+if not data.raw.technology["bob-nitinol-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "nitinol-processing",
+      name = "bob-nitinol-processing",
       prerequisites = {
-        "alloy-processing",
-        "nickel-processing",
-        "titanium-processing",
+        "bob-alloy-processing",
+        "bob-nickel-processing",
+        "bob-titanium-processing",
         "production-science-pack",
       },
       effects = {},
@@ -250,10 +251,10 @@ if not data.raw.technology["nitinol-processing"] then
   })
 end
 
-data.raw.technology["nitinol-processing"].icon = "__bobplates__/graphics/icons/plate/nitinol-plate.png"
-data.raw.technology["nitinol-processing"].icon_size = 32
-data.raw.technology["nitinol-processing"].order = "c-b-h"
-data.raw.technology["nitinol-processing"].unit = {
+data.raw.technology["bob-nitinol-processing"].icon = "__bobplates__/graphics/icons/plate/nitinol-plate.png"
+data.raw.technology["bob-nitinol-processing"].icon_size = 32
+data.raw.technology["bob-nitinol-processing"].order = "c-b-h"
+data.raw.technology["bob-nitinol-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {
@@ -264,14 +265,14 @@ data.raw.technology["nitinol-processing"].unit = {
   },
 }
 
-if not data.raw.technology["tungsten-alloy-processing"] then
+if not data.raw.technology["bob-tungsten-alloy-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "tungsten-alloy-processing",
+      name = "bob-tungsten-alloy-processing",
       prerequisites = {
-        "alloy-processing",
-        "tungsten-processing",
+        "bob-alloy-processing",
+        "bob-tungsten-processing",
         "production-science-pack",
       },
       effects = {},
@@ -279,10 +280,11 @@ if not data.raw.technology["tungsten-alloy-processing"] then
   })
 end
 
-data.raw.technology["tungsten-alloy-processing"].icon = "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png"
-data.raw.technology["tungsten-alloy-processing"].icon_size = 32
-data.raw.technology["tungsten-alloy-processing"].order = "c-b-e3"
-data.raw.technology["tungsten-alloy-processing"].unit = {
+data.raw.technology["bob-tungsten-alloy-processing"].icon =
+  "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png"
+data.raw.technology["bob-tungsten-alloy-processing"].icon_size = 32
+data.raw.technology["bob-tungsten-alloy-processing"].order = "c-b-e3"
+data.raw.technology["bob-tungsten-alloy-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {
@@ -293,26 +295,26 @@ data.raw.technology["tungsten-alloy-processing"].unit = {
   },
 }
 
-if not data.raw.technology["cobalt-processing"] then
+if not data.raw.technology["bob-cobalt-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "cobalt-processing",
+      name = "bob-cobalt-processing",
       prerequisites = {
-        "chemical-processing-1",
-        "electrolysis-1",
+        "bob-chemical-processing-1",
+        "bob-electrolysis-1",
         "sulfur-processing",
-        "alloy-processing",
+        "bob-alloy-processing",
       },
       effects = {},
     },
   })
 end
 
-data.raw.technology["cobalt-processing"].icon = "__bobplates__/graphics/icons/technology/cobalt-processing.png"
-data.raw.technology["cobalt-processing"].icon_size = 128
-data.raw.technology["cobalt-processing"].order = "c-b-d1"
-data.raw.technology["cobalt-processing"].unit = {
+data.raw.technology["bob-cobalt-processing"].icon = "__bobplates__/graphics/icons/technology/cobalt-processing.png"
+data.raw.technology["bob-cobalt-processing"].icon_size = 128
+data.raw.technology["bob-cobalt-processing"].order = "c-b-d1"
+data.raw.technology["bob-cobalt-processing"].unit = {
   count = 80,
   time = 30,
   ingredients = {
@@ -321,14 +323,14 @@ data.raw.technology["cobalt-processing"].unit = {
   },
 }
 
-if not data.raw.technology["lithium-processing"] then
+if not data.raw.technology["bob-lithium-processing"] then
   data:extend({
     {
       type = "technology",
-      name = "lithium-processing",
+      name = "bob-lithium-processing",
       prerequisites = {
-        "chemical-processing-1",
-        "electrolysis-1",
+        "bob-chemical-processing-1",
+        "bob-electrolysis-1",
         "logistic-science-pack",
       },
       effects = {},
@@ -336,10 +338,10 @@ if not data.raw.technology["lithium-processing"] then
   })
 end
 
-data.raw.technology["lithium-processing"].icon = "__bobplates__/graphics/icons/technology/lithium-processing.png"
-data.raw.technology["lithium-processing"].icon_size = 128
-data.raw.technology["lithium-processing"].order = "c-b-d1"
-data.raw.technology["lithium-processing"].unit = {
+data.raw.technology["bob-lithium-processing"].icon = "__bobplates__/graphics/icons/technology/lithium-processing.png"
+data.raw.technology["bob-lithium-processing"].icon_size = 128
+data.raw.technology["bob-lithium-processing"].order = "c-b-d1"
+data.raw.technology["bob-lithium-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {
