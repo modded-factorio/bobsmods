@@ -11,9 +11,9 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
         name = "void-" .. name,
         localised_name = { "recipe-name.bob-void", name },
         icons = bobmods.plates.get_void_icon(name),
-        subgroup = "void",
+        subgroup = "bob-void",
         order = name,
-        category = "void-fluid",
+        category = "bob-void-fluid",
         hide_from_player_crafting = true,
         show_amount_in_title = false,
         energy_required = 1,
@@ -29,13 +29,13 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
   end
 end
 
-bobmods.plates.make_void_fluid_recipe("oxygen", 25, -1)
-bobmods.plates.make_void_fluid_recipe("hydrogen", 20, 0.1)
-bobmods.plates.make_void_fluid_recipe("nitrogen", 25, -0.2)
-bobmods.plates.make_void_fluid_recipe("chlorine", 25, 25)
-bobmods.plates.make_void_fluid_recipe("hydrogen-chloride", 25, 13)
-bobmods.plates.make_void_fluid_recipe("sulfur-dioxide", 25, 50)
+bobmods.plates.make_void_fluid_recipe("bob-oxygen", 25, -1)
+bobmods.plates.make_void_fluid_recipe("bob-hydrogen", 20, 0.1)
+bobmods.plates.make_void_fluid_recipe("bob-nitrogen", 25, -0.2)
+bobmods.plates.make_void_fluid_recipe("bob-chlorine", 25, 25)
+bobmods.plates.make_void_fluid_recipe("bob-hydrogen-chloride", 25, 13)
+bobmods.plates.make_void_fluid_recipe("bob-sulfur-dioxide", 25, 50)
 bobmods.plates.make_void_fluid_recipe("steam", 10, 0)
 bobmods.plates.make_void_fluid_recipe("petroleum-gas", 10, 35)
-bobmods.plates.make_void_fluid_recipe("deuterium", 20, 0.1)
-bobmods.plates.make_void_fluid_recipe("hydrogen-sulfide", 25, 50)
+bobmods.plates.make_void_fluid_recipe("bob-deuterium", 20, 0.1)
+bobmods.plates.make_void_fluid_recipe("bob-hydrogen-sulfide", 25, 50)

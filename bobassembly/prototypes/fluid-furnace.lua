@@ -133,7 +133,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     end
   end
 
-  if data.raw["assembling-machine"]["steel-mixing-furnace"] then
+  if data.raw["assembling-machine"]["bob-steel-mixing-furnace"] then
     data:extend({
       {
         type = "item",
@@ -164,7 +164,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         enabled = false,
         ingredients = {
           { type = "item", name = "pipe", amount = 2 },
-          { type = "item", name = "steel-mixing-furnace", amount = 1 },
+          { type = "item", name = "bob-steel-mixing-furnace", amount = 1 },
         },
         results = { { type = "item", name = "fluid-mixing-furnace", amount = 1 } },
       },
@@ -185,7 +185,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         },
         prerequisites = {
           "oil-processing",
-          "steel-mixing-furnace",
+          "bob-steel-mixing-furnace",
         },
         effects = {
           {
@@ -207,7 +207,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
 
     data:extend({
       util.merge({
-        data.raw["assembling-machine"]["steel-mixing-furnace"],
+        data.raw["assembling-machine"]["bob-steel-mixing-furnace"],
         {
           name = "fluid-mixing-furnace",
           minable = { result = "fluid-mixing-furnace" },
@@ -221,12 +221,12 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       settings.startup["bobmods-plates-convert-recipes"]
       and settings.startup["bobmods-plates-convert-recipes"].value == true
     then
-      if data.raw["assembling-machine"]["steel-mixing-furnace"] then
+      if data.raw["assembling-machine"]["bob-steel-mixing-furnace"] then
         data:extend({
           {
             type = "recipe",
             name = "steel-mixing-furnace-from-fluid-mixing-furnace",
-            localised_name = { "entity-name.steel-mixing-furnace" },
+            localised_name = { "entity-name.bob-steel-mixing-furnace" },
             subgroup = "bob-smelting-machine-convert",
             energy_required = 0.1,
             enabled = false,
@@ -234,10 +234,10 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
               { type = "item", name = "fluid-mixing-furnace", amount = 1 },
             },
             results = {
-              { type = "item", name = "steel-mixing-furnace", amount = 1 },
+              { type = "item", name = "bob-steel-mixing-furnace", amount = 1 },
               { type = "item", name = "pipe", amount = 2 },
             },
-            main_product = "steel-mixing-furnace",
+            main_product = "bob-steel-mixing-furnace",
             allow_as_intermediate = false,
           },
         })
@@ -278,7 +278,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     end
   end
 
-  if data.raw["assembling-machine"]["steel-chemical-furnace"] then
+  if data.raw["assembling-machine"]["bob-steel-chemical-furnace"] then
     data:extend({
       {
         type = "item",
@@ -309,7 +309,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         enabled = false,
         ingredients = {
           { type = "item", name = "pipe", amount = 2 },
-          { type = "item", name = "steel-chemical-furnace", amount = 1 },
+          { type = "item", name = "bob-steel-chemical-furnace", amount = 1 },
         },
         results = { { type = "item", name = "fluid-chemical-furnace", amount = 1 } },
       },
@@ -351,7 +351,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
 
     data:extend({
       util.merge({
-        data.raw["assembling-machine"]["steel-chemical-furnace"],
+        data.raw["assembling-machine"]["bob-steel-chemical-furnace"],
         {
           name = "fluid-chemical-furnace",
           minable = { result = "fluid-chemical-furnace" },
@@ -359,10 +359,10 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       }),
     })
 
-    if data.raw.technology["steel-chemical-furnace"] then
-      bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "steel-chemical-furnace")
+    if data.raw.technology["bob-steel-chemical-furnace"] then
+      bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "bob-steel-chemical-furnace")
     else
-      bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "chemical-processing-2")
+      bobmods.lib.tech.add_prerequisite("fluid-chemical-furnace", "bob-chemical-processing-2")
     end
 
     data.raw["assembling-machine"]["fluid-chemical-furnace"].energy_source = fluid_energy_source()
@@ -371,12 +371,12 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       settings.startup["bobmods-plates-convert-recipes"]
       and settings.startup["bobmods-plates-convert-recipes"].value == true
     then
-      if data.raw["assembling-machine"]["steel-chemical-furnace"] then
+      if data.raw["assembling-machine"]["bob-steel-chemical-furnace"] then
         data:extend({
           {
             type = "recipe",
             name = "steel-chemical-furnace-from-fluid-chemical-furnace",
-            localised_name = { "entity-name.steel-chemical-furnace" },
+            localised_name = { "entity-name.bob-steel-chemical-furnace" },
             subgroup = "bob-smelting-machine-convert",
             energy_required = 0.1,
             enabled = false,
@@ -384,10 +384,10 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
               { type = "item", name = "fluid-chemical-furnace", amount = 1 },
             },
             results = {
-              { type = "item", name = "steel-chemical-furnace", amount = 1 },
+              { type = "item", name = "bob-steel-chemical-furnace", amount = 1 },
               { type = "item", name = "pipe", amount = 2 },
             },
-            main_product = "steel-chemical-furnace",
+            main_product = "bob-steel-chemical-furnace",
             allow_as_intermediate = false,
           },
         })

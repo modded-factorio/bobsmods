@@ -7,11 +7,11 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     bobmods.lib.recipe.add_ingredient("bob-green-module-5", { type = "item", name = "solder", amount = 5 })
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("bob-green-module-4", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("bob-green-module-4", "processing-unit", "bob-advanced-processing-unit")
     bobmods.lib.recipe.add_ingredient(
       "bob-green-module-5",
-      { type = "item", name = "advanced-processing-unit", amount = 8 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 8 }
     )
   else
     bobmods.lib.recipe.add_ingredient("bob-green-module-4", { type = "item", name = "advanced-circuit", amount = 5 })

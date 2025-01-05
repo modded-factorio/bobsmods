@@ -16,7 +16,7 @@ local electronic_board_pick = {
   volume = 0.7,
 }
 
-if data.raw.item["tin-plate"] then
+if data.raw.item["bob-tin-plate"] then
   data:extend({
     {
       type = "item",
@@ -37,7 +37,7 @@ if data.raw.item["tin-plate"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
-        { type = "item", name = "tin-plate", amount = 1 },
+        { type = "item", name = "bob-tin-plate", amount = 1 },
       },
       results = { { type = "item", name = "tinned-copper-cable", amount = 3 } },
       allow_decomposition = false,
@@ -66,7 +66,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "copper-cable", amount = 2 },
-      { type = "item", name = "rubber", amount = 1 },
+      { type = "item", name = "bob-rubber", amount = 1 },
     },
     results = { { type = "item", name = "insulated-cable", amount = 2 } },
     allow_decomposition = false,
@@ -127,7 +127,7 @@ if data.raw.item["solder-alloy"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "solder-alloy", amount = 4 },
-        { type = "item", name = "resin", amount = 1 },
+        { type = "item", name = "bob-resin", amount = 1 },
       },
       results = { { type = "item", name = "solder", amount = 8 } },
       allow_decomposition = false,
@@ -325,7 +325,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
-      { type = "item", name = "resin", amount = 1 },
+      { type = "item", name = "bob-resin", amount = 1 },
     },
     results = { { type = "item", name = "phenolic-board", amount = 2 } },
     allow_productivity = true,
@@ -445,7 +445,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "phenolic-board", amount = 1 },
       { type = "item", name = "copper-plate", amount = 1 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 },
     },
     results = { { type = "item", name = "circuit-board", amount = 1 } },
     allow_decomposition = false,
@@ -488,7 +488,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fibreglass-board", amount = 1 },
       { type = "item", name = "copper-plate", amount = 1 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 },
     },
     results = { { type = "item", name = "superior-circuit-board", amount = 1 } },
     allow_decomposition = false,
@@ -531,7 +531,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "fibreglass-board", amount = 1 },
       { type = "item", name = "copper-plate", amount = 2 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 10 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 10 },
     },
     results = { { type = "item", name = "multi-layer-circuit-board", amount = 1 } },
     allow_decomposition = false,
@@ -632,11 +632,11 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     icon = "__bobelectronics__/graphics/icons/electronic-processing-board.png",
     icon_size = 128,
     subgroup = "bob-electronic-boards",
-    order = "c-c4[electronic-processing-board]",
+    order = "c-c4[bob-advanced-processing-unit]",
     stack_size = 200,
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
@@ -645,7 +645,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     category = "electronics",
     energy_required = 15,
     enabled = false,
@@ -656,7 +656,7 @@ data:extend({
       { type = "item", name = "intergrated-electronics", amount = 4 },
       { type = "item", name = "processing-electronics", amount = 1 },
     },
-    results = { { type = "item", name = "advanced-processing-unit", amount = 1 } },
+    results = { { type = "item", name = "bob-advanced-processing-unit", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },

@@ -84,14 +84,14 @@ data:extend({
   },
 })
 
-if data.raw.item["bronze-alloy"] then
+if data.raw.item["bob-bronze-alloy"] then
   data:extend({
     {
       type = "recipe",
       name = "bronze-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "bronze-alloy", amount = 1 },
+        { type = "item", name = "bob-bronze-alloy", amount = 1 },
       },
       results = { { type = "item", name = "bronze-pipe", amount = 1 } },
     },
@@ -102,21 +102,21 @@ if data.raw.item["bronze-alloy"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "bronze-pipe", amount = 12 },
-        { type = "item", name = "bronze-alloy", amount = 5 },
+        { type = "item", name = "bob-bronze-alloy", amount = 5 },
       },
       results = { { type = "item", name = "bronze-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["brass-alloy"] then
+if data.raw.item["bob-brass-alloy"] then
   data:extend({
     {
       type = "recipe",
       name = "brass-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "brass-alloy", amount = 1 },
+        { type = "item", name = "bob-brass-alloy", amount = 1 },
       },
       results = { { type = "item", name = "brass-pipe", amount = 1 } },
     },
@@ -127,21 +127,21 @@ if data.raw.item["brass-alloy"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "brass-pipe", amount = 14 },
-        { type = "item", name = "brass-alloy", amount = 5 },
+        { type = "item", name = "bob-brass-alloy", amount = 5 },
       },
       results = { { type = "item", name = "brass-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["silicon-nitride"] then
+if data.raw.item["bob-silicon-nitride"] then
   data:extend({
     {
       type = "recipe",
       name = "ceramic-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "silicon-nitride", amount = 1 },
+        { type = "item", name = "bob-silicon-nitride", amount = 1 },
       },
       results = { { type = "item", name = "ceramic-pipe", amount = 1 } },
     },
@@ -152,7 +152,7 @@ if data.raw.item["silicon-nitride"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "ceramic-pipe", amount = 16 },
-        { type = "item", name = "silicon-nitride", amount = 5 },
+        { type = "item", name = "bob-silicon-nitride", amount = 5 },
       },
       results = { { type = "item", name = "ceramic-pipe-to-ground", amount = 2 } },
     },
@@ -209,14 +209,14 @@ if data.raw.item["bob-tungsten-plate"] then
   })
 end
 
-if data.raw.item["nitinol-alloy"] then
+if data.raw.item["bob-nitinol-alloy"] then
   data:extend({
     {
       type = "recipe",
       name = "nitinol-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "nitinol-alloy", amount = 1 },
+        { type = "item", name = "bob-nitinol-alloy", amount = 1 },
       },
       results = { { type = "item", name = "nitinol-pipe", amount = 1 } },
     },
@@ -227,21 +227,21 @@ if data.raw.item["nitinol-alloy"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "nitinol-pipe", amount = 18 },
-        { type = "item", name = "nitinol-alloy", amount = 5 },
+        { type = "item", name = "bob-nitinol-alloy", amount = 5 },
       },
       results = { { type = "item", name = "nitinol-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["copper-tungsten-alloy"] then
+if data.raw.item["bob-copper-tungsten-alloy"] then
   data:extend({
     {
       type = "recipe",
       name = "copper-tungsten-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "copper-tungsten-alloy", amount = 1 },
+        { type = "item", name = "bob-copper-tungsten-alloy", amount = 1 },
       },
       results = { { type = "item", name = "copper-tungsten-pipe", amount = 1 } },
     },
@@ -252,7 +252,7 @@ if data.raw.item["copper-tungsten-alloy"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-tungsten-pipe", amount = 18 },
-        { type = "item", name = "copper-tungsten-alloy", amount = 5 },
+        { type = "item", name = "bob-copper-tungsten-alloy", amount = 5 },
       },
       results = { { type = "item", name = "copper-tungsten-pipe-to-ground", amount = 2 } },
     },
