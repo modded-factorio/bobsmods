@@ -30,9 +30,9 @@ for index, force in pairs(game.forces) do
       force.recipes["empty-nitrogen-dioxide-barrel"].enabled = true
     end
   end
-  if force.recipes["enriched-fuel"] then
-    if force.technologies["chemical-processing-2"].researched then
-      force.recipes["enriched-fuel"].enabled = true
+  if force.recipes["bob-enriched-fuel"] then
+    if force.technologies["bob-chemical-processing-2"].researched then
+      force.recipes["bob-enriched-fuel"].enabled = true
     end
   end
   if force.recipes["enriched-fuel-from-hydrazine"] then

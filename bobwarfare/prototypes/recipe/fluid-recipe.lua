@@ -1,4 +1,4 @@
-if data.raw.fluid["nitric-acid"] then
+if data.raw.fluid["bob-nitric-acid"] then
   data:extend({
     {
       type = "recipe",
@@ -8,7 +8,7 @@ if data.raw.fluid["nitric-acid"] then
       energy_required = 0.5,
       ingredients = {
         { type = "fluid", name = "sulfuric-acid", amount = 10 },
-        { type = "fluid", name = "nitric-acid", amount = 10 },
+        { type = "fluid", name = "bob-nitric-acid", amount = 10 },
       },
       results = {
         { type = "fluid", name = "sulfuric-nitric-acid", amount = 20 },

@@ -55,8 +55,8 @@ then
   bobmods.lib.tech.add_recipe_unlock("vehicle-roboport-equipment-2", "roboport-chargepad-2")
   bobmods.lib.tech.add_recipe_unlock("vehicle-roboport-equipment-2", "roboport-door-2")
 
-  if data.raw.item["brass-gear-wheel"] then
-    bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-2", "zinc-processing")
+  if data.raw.item["bob-brass-gear-wheel"] then
+    bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-2", "bob-zinc-processing")
   end
 else
   data.raw.recipe["vehicle-roboport-equipment-2"].ingredients = {
@@ -71,34 +71,34 @@ else
     bobmods.lib.recipe.replace_ingredient("vehicle-roboport-antenna-equipment-2", "steel-plate", "bob-aluminium-plate")
   end
 
-  if data.raw.item["invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-2", "steel-plate", "invar-alloy")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-2", "steel-plate", "bob-invar-alloy")
   end
 
-  if data.raw.item["steel-bearing"] then
+  if data.raw.item["bob-steel-bearing"] then
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-equipment-2",
-      { type = "item", name = "steel-bearing", amount = 5 }
+      { type = "item", name = "bob-steel-bearing", amount = 5 }
     )
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-antenna-equipment-2",
-      { type = "item", name = "steel-bearing", amount = 5 }
+      { type = "item", name = "bob-steel-bearing", amount = 5 }
     )
   end
 
-  if data.raw.item["steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-2", "iron-gear-wheel", "steel-gear-wheel")
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-antenna-equipment-2", "iron-gear-wheel", "steel-gear-wheel")
+  if data.raw.item["bob-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-2", "iron-gear-wheel", "bob-steel-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-antenna-equipment-2", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
 end
 
 if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-2", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-2", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-2", "bob-aluminium-processing")
 end
 
-if data.raw.item["invar-alloy"] then
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-2", "invar-processing")
+if data.raw.item["bob-invar-alloy"] then
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-2", "bob-invar-processing")
 end
 
 if
@@ -129,9 +129,9 @@ then
   bobmods.lib.tech.add_recipe_unlock("vehicle-roboport-equipment-3", "roboport-chargepad-3")
   bobmods.lib.tech.add_recipe_unlock("vehicle-roboport-equipment-3", "roboport-door-3")
 else
-  if data.raw.item["lithium-ion-battery"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-3", "battery", "lithium-ion-battery")
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-3", "battery", "lithium-ion-battery")
+  if data.raw.item["bob-lithium-ion-battery"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-3", "battery", "bob-lithium-ion-battery")
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-3", "battery", "bob-lithium-ion-battery")
   end
 
   if data.raw.item["bob-titanium-plate"] then
@@ -139,34 +139,34 @@ else
     bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-3", "steel-plate", "bob-titanium-plate")
   end
 
-  if data.raw.item["titanium-bearing"] then
+  if data.raw.item["bob-titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-equipment-3",
-      { type = "item", name = "titanium-bearing", amount = 5 }
+      { type = "item", name = "bob-titanium-bearing", amount = 5 }
     )
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-antenna-equipment-3",
-      { type = "item", name = "titanium-bearing", amount = 5 }
+      { type = "item", name = "bob-titanium-bearing", amount = 5 }
     )
   end
 
-  if data.raw.item["titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-3", "iron-gear-wheel", "titanium-gear-wheel")
+  if data.raw.item["bob-titanium-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.recipe.replace_ingredient(
       "vehicle-roboport-antenna-equipment-3",
       "iron-gear-wheel",
-      "titanium-gear-wheel"
+      "bob-titanium-gear-wheel"
     )
   end
 end
 
-if data.raw.item["lithium-ion-battery"] then
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-3", "battery-2")
+if data.raw.item["bob-lithium-ion-battery"] then
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-3", "bob-battery-2")
 end
 
 if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-3", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-3", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-3", "bob-titanium-processing")
 end
 
 if
@@ -197,70 +197,70 @@ then
   bobmods.lib.tech.add_recipe_unlock("vehicle-roboport-equipment-4", "roboport-chargepad-4")
   bobmods.lib.tech.add_recipe_unlock("vehicle-roboport-equipment-4", "roboport-door-4")
 else
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "processing-unit", "bob-advanced-processing-unit")
     bobmods.lib.recipe.replace_ingredient(
       "vehicle-roboport-antenna-equipment-4",
       "processing-unit",
-      "advanced-processing-unit"
+      "bob-advanced-processing-unit"
     )
     bobmods.lib.recipe.replace_ingredient(
       "vehicle-roboport-chargepad-equipment-4",
       "processing-unit",
-      "advanced-processing-unit"
+      "bob-advanced-processing-unit"
     )
   end
 
-  if data.raw.item["silver-zinc-battery"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "battery", "silver-zinc-battery")
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-4", "battery", "silver-zinc-battery")
+  if data.raw.item["bob-silver-zinc-battery"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "battery", "bob-silver-zinc-battery")
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-4", "battery", "bob-silver-zinc-battery")
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-antenna-equipment-4", "steel-plate", "nitinol-alloy")
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-4", "steel-plate", "nitinol-alloy")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-antenna-equipment-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-chargepad-equipment-4", "steel-plate", "bob-nitinol-alloy")
   end
 
-  if data.raw.item["nitinol-bearing"] then
+  if data.raw.item["bob-nitinol-bearing"] then
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-equipment-4",
-      { type = "item", name = "nitinol-bearing", amount = 5 }
+      { type = "item", name = "bob-nitinol-bearing", amount = 5 }
     )
     bobmods.lib.recipe.add_ingredient(
       "vehicle-roboport-antenna-equipment-4",
-      { type = "item", name = "nitinol-bearing", amount = 5 }
+      { type = "item", name = "bob-nitinol-bearing", amount = 5 }
     )
   end
 
-  if data.raw.item["nitinol-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "iron-gear-wheel", "nitinol-gear-wheel")
+  if data.raw.item["bob-nitinol-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "iron-gear-wheel", "bob-nitinol-gear-wheel")
     bobmods.lib.recipe.replace_ingredient(
       "vehicle-roboport-antenna-equipment-4",
       "iron-gear-wheel",
-      "nitinol-gear-wheel"
+      "bob-nitinol-gear-wheel"
     )
   end
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "bob-advanced-processing-unit")
 end
 
-if data.raw.item["silver-zinc-battery"] then
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "battery-3")
+if data.raw.item["bob-silver-zinc-battery"] then
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "bob-battery-3")
 end
 
-if data.raw.item["nitinol-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "steel-plate", "nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "nitinol-processing")
+if data.raw.item["bob-nitinol-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-roboport-equipment-4", "steel-plate", "bob-nitinol-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "bob-nitinol-processing")
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.tech.add_prerequisite("vehicle-roboport-equipment-4", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-roboport-robot-equipment-4",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
 end
 
@@ -304,181 +304,181 @@ if data.raw.item["bob-glass"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-2", "steel-plate", "bob-glass")
 end
 
-if data.raw.item["silver-plate"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-2", "copper-plate", "silver-plate")
+if data.raw.item["bob-silver-plate"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-2", "copper-plate", "bob-silver-plate")
 end
 
-if data.raw.item["invar-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-3", "steel-plate", "invar-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-3", "invar-processing")
+if data.raw.item["bob-invar-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-3", "steel-plate", "bob-invar-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-3", "bob-invar-processing")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-3", "steel-plate", "invar-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-3", "invar-processing")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-3", "steel-plate", "bob-invar-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-3", "bob-invar-processing")
 end
 
 if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-3", "steel-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-3", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-3", "bob-aluminium-processing")
 end
 
 if data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-3", "copper-plate", "bob-gold-plate")
 end
 
-if data.raw.item["lithium-ion-battery"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-3", "battery", "lithium-ion-battery")
-  bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-3", "battery-2")
+if data.raw.item["bob-lithium-ion-battery"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-3", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-3", "bob-battery-2")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-3", "battery", "lithium-ion-battery")
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-3", "battery-2")
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-4", "battery", "lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-3", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-3", "bob-battery-2")
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-4", "battery", "bob-lithium-ion-battery")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-3", "battery", "lithium-ion-battery")
-  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-3", "battery-2")
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-4", "battery", "lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-3", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-3", "bob-battery-2")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-4", "battery", "bob-lithium-ion-battery")
 end
 
-if data.raw.item["silicon-wafer"] then
+if data.raw.item["bob-silicon-wafer"] then
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-solar-panel-equipment-4",
-    { type = "item", name = "silicon-wafer", amount = 10 }
+    { type = "item", name = "bob-silicon-wafer", amount = 10 }
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "silicon-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "bob-silicon-processing")
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-solar-panel-equipment-5",
-    { type = "item", name = "silicon-wafer", amount = 10 }
+    { type = "item", name = "bob-silicon-wafer", amount = 10 }
   )
   bobmods.lib.recipe.add_new_ingredient(
     "vehicle-solar-panel-equipment-6",
-    { type = "item", name = "silicon-wafer", amount = 10 }
+    { type = "item", name = "bob-silicon-wafer", amount = 10 }
   )
 end
 
-if data.raw.item["advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-3", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("vehicle-shield-equipment-3", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-4", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-5", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-6", "processing-unit", "advanced-processing-unit")
+if data.raw.item["bob-advanced-processing-unit"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-3", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-shield-equipment-3", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-4", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-5", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-shield-equipment-6", "processing-unit", "bob-advanced-processing-unit")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-4", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-4", "advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-6", "processing-unit", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-4", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-4", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-6", "processing-unit", "bob-advanced-processing-unit")
 
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-fission-reactor-equipment-4",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-fission-reactor-equipment-4", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-fission-reactor-equipment-4", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-fission-reactor-equipment-5",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-fission-reactor-equipment-6",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
 
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-fission-cell-equipment-4",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-4", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-fission-cell-equipment-4", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-fission-cell-equipment-5",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-fission-cell-equipment-6",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
 
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-solar-panel-equipment-4",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-solar-panel-equipment-5",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-solar-panel-equipment-6",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
 
   bobmods.lib.recipe.replace_ingredient(
     "vehicle-laser-defense-equipment-6",
     "processing-unit",
-    "advanced-processing-unit"
+    "bob-advanced-processing-unit"
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-6", "advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-6", "bob-advanced-processing-unit")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-6", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-6", "bob-advanced-processing-unit")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-engine-equipment", "processing-unit", "advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("vehicle-engine-equipment", "advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("vehicle-engine-equipment", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("vehicle-engine-equipment", "bob-advanced-processing-unit")
 end
 
 if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-4", "bob-titanium-processing")
 
   bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-4", "bob-titanium-processing")
 
   bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-4", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-4", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-4", "bob-titanium-processing")
 end
 
-if data.raw.item["silver-zinc-battery"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-5", "battery", "silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-5", "battery-3")
+if data.raw.item["bob-silver-zinc-battery"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-battery-equipment-5", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.tech.add_prerequisite("vehicle-battery-equipment-5", "bob-battery-3")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-5", "battery", "silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-5", "battery-3")
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-6", "battery", "silver-zinc-battery")
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-5", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-5", "bob-battery-3")
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-6", "battery", "bob-silver-zinc-battery")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-5", "battery", "silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-5", "battery-3")
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "battery", "silver-zinc-battery")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-5", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-5", "bob-battery-3")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "battery", "bob-silver-zinc-battery")
 end
 
-if data.raw.item["nitinol-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-5", "steel-plate", "nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-5", "nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-6", "steel-plate", "nitinol-alloy")
+if data.raw.item["bob-nitinol-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-5", "steel-plate", "bob-nitinol-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-5", "bob-nitinol-processing")
+  bobmods.lib.recipe.replace_ingredient("vehicle-solar-panel-equipment-6", "steel-plate", "bob-nitinol-alloy")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-5", "steel-plate", "nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-5", "nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-6", "steel-plate", "nitinol-alloy")
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-5", "steel-plate", "bob-nitinol-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-5", "bob-nitinol-processing")
+  bobmods.lib.recipe.replace_ingredient("vehicle-laser-defense-equipment-6", "steel-plate", "bob-nitinol-alloy")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-5", "steel-plate", "nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-5", "nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "steel-plate", "nitinol-alloy")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-5", "steel-plate", "bob-nitinol-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-big-turret-equipment-5", "bob-nitinol-processing")
+  bobmods.lib.recipe.replace_ingredient("vehicle-big-turret-equipment-6", "steel-plate", "bob-nitinol-alloy")
 
-  bobmods.lib.recipe.replace_ingredient("vehicle-engine-equipment", "steel-plate", "nitinol-alloy")
-  bobmods.lib.tech.add_prerequisite("vehicle-engine-equipment", "nitinol-processing")
+  bobmods.lib.recipe.replace_ingredient("vehicle-engine-equipment", "steel-plate", "bob-nitinol-alloy")
+  bobmods.lib.tech.add_prerequisite("vehicle-engine-equipment", "bob-nitinol-processing")
 end
 
-if data.raw.item["nitinol-gear-wheel"] then
-  bobmods.lib.recipe.replace_ingredient("vehicle-engine-equipment", "iron-gear-wheel", "nitinol-gear-wheel")
+if data.raw.item["bob-nitinol-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("vehicle-engine-equipment", "iron-gear-wheel", "bob-nitinol-gear-wheel")
 end
 
-if data.raw.item["nitinol-bearing"] then
+if data.raw.item["bob-nitinol-bearing"] then
   bobmods.lib.recipe.add_ingredient(
     "vehicle-engine-equipment",
-    { type = "item", name = "nitinol-bearing", amount = 30 }
+    { type = "item", name = "bob-nitinol-bearing", amount = 30 }
   )
 end
 
@@ -493,7 +493,7 @@ if data.raw.item["bob-ruby-5"] then
     "vehicle-laser-defense-equipment-1",
     { type = "item", name = "bob-ruby-5", amount = 1 }
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-1", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("vehicle-laser-defense-equipment-1", "bob-gem-processing-3")
 end
 
 if data.raw.item["bob-sapphire-5"] then
@@ -531,7 +531,7 @@ if data.raw.item["bob-diamond-5"] then
     "vehicle-laser-defense-equipment-6",
     { type = "item", name = "bob-diamond-5", amount = 1 }
   )
-  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-6", "gem-processing-3")
+  bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-6", "bob-gem-processing-3")
   bobmods.lib.recipe.add_ingredient(
     "vehicle-solar-panel-equipment-6",
     { type = "item", name = "bob-diamond-5", amount = 1 }

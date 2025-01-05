@@ -12,106 +12,106 @@ bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
 if bobmods.electronics then
-  bobmods.lib.tech.add_prerequisite("air-compressor-1", "electronics")
-  bobmods.lib.tech.add_prerequisite("water-bore-1", "electronics")
+  bobmods.lib.tech.add_prerequisite("bob-air-compressor-1", "electronics")
+  bobmods.lib.tech.add_prerequisite("bob-water-bore-1", "electronics")
 end
 
 bobmods.lib.tech.remove_prerequisite("sulfur-processing", "oil-processing")
 bobmods.lib.tech.add_prerequisite("oil-processing", "sulfur-processing")
-bobmods.lib.tech.add_prerequisite("sulfur-processing", "chemical-processing-2")
-bobmods.lib.tech.add_prerequisite("sulfur-processing", "nickel-processing")
+bobmods.lib.tech.add_prerequisite("sulfur-processing", "bob-chemical-processing-2")
+bobmods.lib.tech.add_prerequisite("sulfur-processing", "bob-nickel-processing")
 bobmods.lib.tech.remove_recipe_unlock("sulfur-processing", "sulfur")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "sulfur")
-bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfur-2")
-bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfur-3")
-bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfuric-acid-2")
-bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfuric-acid-3")
-bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "sulfur-dioxide")
-bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "hydrogen-sulfide")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfur-2")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfur-3")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfuric-acid-2")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfuric-acid-3")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfur-dioxide")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-hydrogen-sulfide")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
-bobmods.lib.tech.add_recipe_unlock("oil-processing", "liquid-fuel")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "enriched-fuel")
+bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-liquid-fuel")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-enriched-fuel")
 
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "petroleum-gas-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-petroleum-gas-cracking")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")
 
-bobmods.lib.tech.add_recipe_unlock("plastics", "synthetic-wood")
+bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 
-bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-gear-wheel")
-bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-bearing-ball")
-bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-bearing")
+bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-gear-wheel")
+bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-bearing-ball")
+bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-bearing")
 
-bobmods.lib.tech.add_recipe_unlock("nickel-processing", "bob-nickel-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-nickel-processing", "bob-nickel-plate")
 
-bobmods.lib.tech.add_recipe_unlock("zinc-processing", "bob-zinc-plate")
-bobmods.lib.tech.add_recipe_unlock("zinc-processing", "brass-alloy")
-bobmods.lib.tech.add_recipe_unlock("zinc-processing", "gunmetal-alloy")
-bobmods.lib.tech.add_recipe_unlock("zinc-processing", "brass-gear-wheel")
+bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-zinc-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-gunmetal-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-gear-wheel")
 
-bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide")
-bobmods.lib.tech.add_recipe_unlock("lead-processing", "lead-oxide-2")
-bobmods.lib.tech.add_recipe_unlock("lead-processing", "bob-lead-plate-2")
-bobmods.lib.tech.add_recipe_unlock("lead-processing", "silver-from-lead")
-bobmods.lib.tech.add_prerequisite("lead-processing", "nickel-processing")
+bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide")
+bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide-2")
+bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-plate-2")
+bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-silver-from-lead")
+bobmods.lib.tech.add_prerequisite("bob-lead-processing", "bob-nickel-processing")
 
-bobmods.lib.tech.add_recipe_unlock("aluminium-processing", "alumina")
-bobmods.lib.tech.add_recipe_unlock("aluminium-processing", "bob-aluminium-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-alumina")
+bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-aluminium-plate")
 
-bobmods.lib.tech.add_recipe_unlock("gold-processing", "bob-gold-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-gold-processing", "bob-gold-plate")
 
-bobmods.lib.tech.add_recipe_unlock("silicon-processing", "bob-silicon-plate")
-bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-wafer")
-bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-powder")
+bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-wafer")
+bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-powder")
 
-bobmods.lib.tech.add_recipe_unlock("titanium-processing", "bob-titanium-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-plate")
 
-if data.raw.recipe["tungstic-acid"] then
-  bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungstic-acid")
+if data.raw.recipe["bob-tungstic-acid"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungstic-acid")
 end
-bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungsten-oxide")
-bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "powdered-tungsten")
-bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "bob-tungsten-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-oxide")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-powdered-tungsten")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-plate")
 
-bobmods.lib.tech.add_recipe_unlock("invar-processing", "invar-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-invar-processing", "bob-invar-alloy")
 
-bobmods.lib.tech.add_recipe_unlock("nitinol-processing", "nitinol-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-alloy")
 
-bobmods.lib.tech.add_recipe_unlock("tungsten-alloy-processing", "copper-tungsten-alloy")
-bobmods.lib.tech.add_recipe_unlock("tungsten-alloy-processing", "tungsten-carbide")
-bobmods.lib.tech.add_recipe_unlock("tungsten-alloy-processing", "tungsten-carbide-2")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-tungsten-carbide")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-tungsten-carbide-2")
 
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-oxide")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-oxide-from-copper")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-plate")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-alloy")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-gear-wheel")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-bearing-ball")
-bobmods.lib.tech.add_recipe_unlock("cobalt-processing", "cobalt-steel-bearing")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide-from-copper")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-plate")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-gear-wheel")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing-ball")
+bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing")
 
-bobmods.lib.tech.add_recipe_unlock("lithium-processing", "lithium")
-bobmods.lib.tech.add_recipe_unlock("lithium-processing", "lithium-chloride")
-bobmods.lib.tech.add_recipe_unlock("lithium-processing", "lithium-water-electrolysis")
+bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium")
+bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-chloride")
+bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-water-electrolysis")
 
-bobmods.lib.tech.add_recipe_unlock("titanium-processing", "titanium-gear-wheel")
-bobmods.lib.tech.add_recipe_unlock("titanium-processing", "titanium-bearing-ball")
-bobmods.lib.tech.add_recipe_unlock("titanium-processing", "titanium-bearing")
-bobmods.lib.tech.add_prerequisite("titanium-processing", "lubricant")
+bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-gear-wheel")
+bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-bearing-ball")
+bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-bearing")
+bobmods.lib.tech.add_prerequisite("bob-titanium-processing", "lubricant")
 
-bobmods.lib.tech.add_recipe_unlock("tungsten-processing", "tungsten-gear-wheel")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-gear-wheel")
 
-bobmods.lib.tech.add_recipe_unlock("nitinol-processing", "nitinol-gear-wheel")
-bobmods.lib.tech.add_recipe_unlock("nitinol-processing", "nitinol-bearing-ball")
-bobmods.lib.tech.add_recipe_unlock("nitinol-processing", "nitinol-bearing")
+bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-gear-wheel")
+bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-bearing-ball")
+bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-bearing")
 
 if data.raw.technology["alien-research"] then
-  bobmods.lib.tech.add_prerequisite("alien-blue-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("alien-orange-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("alien-purple-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("alien-yellow-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("alien-green-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("alien-red-research", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-blue-research", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-orange-research", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-purple-research", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-yellow-research", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-green-research", "alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-red-research", "alien-research")
 end
 
 if
@@ -123,17 +123,17 @@ if
   and data.raw.tool["alien-science-pack-green"]
   and data.raw.tool["alien-science-pack-red"]
 then
-  data.raw.technology["alien-blue-research"].unit.ingredients =
+  data.raw.technology["bob-alien-blue-research"].unit.ingredients =
     { { "science-pack-gold", 1 }, { "alien-science-pack-blue", 1 } }
-  data.raw.technology["alien-orange-research"].unit.ingredients =
+  data.raw.technology["bob-alien-orange-research"].unit.ingredients =
     { { "science-pack-gold", 1 }, { "alien-science-pack-orange", 1 } }
-  data.raw.technology["alien-purple-research"].unit.ingredients =
+  data.raw.technology["bob-alien-purple-research"].unit.ingredients =
     { { "science-pack-gold", 1 }, { "alien-science-pack-purple", 1 } }
-  data.raw.technology["alien-yellow-research"].unit.ingredients =
+  data.raw.technology["bob-alien-yellow-research"].unit.ingredients =
     { { "science-pack-gold", 1 }, { "alien-science-pack-yellow", 1 } }
-  data.raw.technology["alien-green-research"].unit.ingredients =
+  data.raw.technology["bob-alien-green-research"].unit.ingredients =
     { { "science-pack-gold", 1 }, { "alien-science-pack-green", 1 } }
-  data.raw.technology["alien-red-research"].unit.ingredients =
+  data.raw.technology["bob-alien-red-research"].unit.ingredients =
     { { "science-pack-gold", 1 }, { "alien-science-pack-red", 1 } }
 end
 

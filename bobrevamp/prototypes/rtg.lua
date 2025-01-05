@@ -100,7 +100,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         energy_required = 0.5,
         enabled = false,
         ingredients = {
-          { type = "item", name = "salt", amount = 1 },
+          { type = "item", name = "bob-salt", amount = 1 },
           { type = "fluid", name = "water", amount = 10 },
         },
         results = {
@@ -200,7 +200,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           { type = "item", name = "limestone", amount = 1 },
         },
         results = {
-          { type = "item", name = "calcium-chloride", amount = 1 },
+          { type = "item", name = "bob-calcium-chloride", amount = 1 },
           { type = "fluid", name = "ammonia", amount = 50 },
           { type = "fluid", name = "water", amount = 10 },
         },
@@ -218,16 +218,16 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 64,
         subgroup = "bob-fluid-electrolysis",
         order = "b[fluid-chemistry]-b[salt-water-electrolysis]",
-        category = "electrolysis",
+        category = "bob-electrolysis",
         enabled = false,
         energy_required = 1.5,
         ingredients = {
           { type = "fluid", name = "brine", amount = 10 },
         },
         results = {
-          { type = "item", name = "sodium-hydroxide", amount = 1 },
-          { type = "fluid", name = "chlorine", amount = 25 },
-          { type = "fluid", name = "hydrogen", amount = 10 },
+          { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
+          { type = "fluid", name = "bob-chlorine", amount = 25 },
+          { type = "fluid", name = "bob-hydrogen", amount = 10 },
         },
         allow_decomposition = false,
       },
@@ -245,12 +245,12 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         energy_required = 5,
         enabled = false,
         ingredients = {
-          { type = "item", name = "salt", amount = 2 },
+          { type = "item", name = "bob-salt", amount = 2 },
           { type = "item", name = "stone", amount = 1 },
         },
         results = {
           { type = "item", name = "sodium-carbonate", amount = 1 },
-          { type = "item", name = "calcium-chloride", amount = 1 },
+          { type = "item", name = "bob-calcium-chloride", amount = 1 },
         },
         main_product = "sodium-carbonate",
         crafting_machine_tint = {
@@ -308,11 +308,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       enabled = false,
       ingredients = {
         { type = "item", name = "sodium-carbonate", amount = 6 },
-        { type = "item", name = "cobalt-oxide", amount = 5 },
+        { type = "item", name = "bob-cobalt-oxide", amount = 5 },
       },
       results = {
         { type = "item", name = "sodium-cobaltate", amount = 5 },
-        { type = "fluid", name = "oxygen", amount = 200 },
+        { type = "fluid", name = "bob-oxygen", amount = 200 },
       },
       main_product = "sodium-cobaltate",
       crafting_machine_tint = {
@@ -328,7 +328,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       energy_required = 20,
       enabled = false,
       ingredients = {
-        { type = "item", name = "plutonium-239", amount = 1 },
+        { type = "item", name = "bob-plutonium-239", amount = 1 },
         { type = "item", name = "bob-lead-plate", amount = 1 },
         { type = "item", name = "bob-aluminium-plate", amount = 5 },
         { type = "item", name = "sodium-cobaltate", amount = 2 },
@@ -348,9 +348,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       icon = "__bobrevamp__/graphics/icons/technology/rtg.png",
       icon_size = 128,
       prerequisites = {
-        "nitrogen-processing",
-        "cobalt-processing",
-        "aluminium-processing",
+        "bob-nitrogen-processing",
+        "bob-cobalt-processing",
+        "bob-aluminium-processing",
         "nuclear-fuel-reprocessing",
       },
       effects = {

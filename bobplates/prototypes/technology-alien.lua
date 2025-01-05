@@ -9,18 +9,18 @@ then
   data:extend({
     {
       type = "technology",
-      name = "alien-blue-research",
+      name = "bob-alien-blue-research",
       icon = "__bobplates__/graphics/icons/technology/alien-blue-alloy.png",
       icon_size = 64,
       prerequisites = {
-        "tungsten-processing",
+        "bob-tungsten-processing",
         "military-science-pack",
         "chemical-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-blue-alloy",
+          recipe = "bob-alien-blue-alloy",
         },
       },
       unit = {
@@ -38,7 +38,7 @@ then
 
     {
       type = "technology",
-      name = "alien-orange-research",
+      name = "bob-alien-orange-research",
       icon = "__bobplates__/graphics/icons/technology/alien-orange-alloy.png",
       icon_size = 64,
       prerequisites = {
@@ -49,7 +49,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-orange-alloy",
+          recipe = "bob-alien-orange-alloy",
         },
       },
       unit = {
@@ -67,7 +67,7 @@ then
 
     {
       type = "technology",
-      name = "alien-purple-research",
+      name = "bob-alien-purple-research",
       icon = "__bobplates__/graphics/icons/alien/alien-acid.png",
       icon_size = 32,
       prerequisites = {
@@ -78,7 +78,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-acid",
+          recipe = "bob-alien-acid",
         },
       },
       unit = {
@@ -96,7 +96,7 @@ then
 
     {
       type = "technology",
-      name = "alien-yellow-research",
+      name = "bob-alien-yellow-research",
       icon = "__bobplates__/graphics/icons/alien/alien-explosive.png",
       icon_size = 32,
       prerequisites = {
@@ -107,7 +107,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-explosive",
+          recipe = "bob-alien-explosive",
         },
       },
       unit = {
@@ -125,18 +125,18 @@ then
 
     {
       type = "technology",
-      name = "alien-green-research",
+      name = "bob-alien-green-research",
       icon = "__bobplates__/graphics/icons/alien/alien-poison.png",
       icon_size = 32,
       prerequisites = {
-        "nitrogen-processing",
+        "bob-nitrogen-processing",
         "military-science-pack",
         "chemical-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-poison",
+          recipe = "bob-alien-poison",
         },
       },
       unit = {
@@ -154,7 +154,7 @@ then
 
     {
       type = "technology",
-      name = "alien-red-research",
+      name = "bob-alien-red-research",
       icon = "__bobplates__/graphics/icons/alien/alien-fire.png",
       icon_size = 32,
       prerequisites = {
@@ -165,7 +165,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-fire",
+          recipe = "bob-alien-fire",
         },
       },
       unit = {

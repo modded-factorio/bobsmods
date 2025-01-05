@@ -113,7 +113,7 @@ local function create_fill_gas_bottle_recipe(fluid)
     type = "recipe",
     name = "fill-" .. fluid.name .. "-barrel",
     localised_name = { "recipe-name.fill-gas-canister", fluid.localised_name or { "fluid-name." .. fluid.name } },
-    category = "air-pump",
+    category = "bob-air-pump",
     subgroup = "bob-gas-bottle",
     energy_required = 0.2,
     order = "b[fill-" .. fluid.name .. "-barrel" .. "]",
@@ -121,7 +121,7 @@ local function create_fill_gas_bottle_recipe(fluid)
     icons = generate_fill_gas_bottle_icons(fluid),
     ingredients = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -139,7 +139,7 @@ local function create_fill_fluid_canister_recipe(fluid)
     type = "recipe",
     name = "fill-" .. fluid.name .. "-barrel",
     localised_name = { "recipe-name.fill-canister", fluid.localised_name or { "fluid-name." .. fluid.name } },
-    category = "air-pump",
+    category = "bob-air-pump",
     subgroup = "bob-canister",
     energy_required = 0.2,
     order = "b[fill-" .. fluid.name .. "-barrel" .. "]",
@@ -147,7 +147,7 @@ local function create_fill_fluid_canister_recipe(fluid)
     icons = generate_fill_fluid_canister_icons(fluid),
     ingredients = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -168,7 +168,7 @@ local function create_empty_gas_bottle_recipe(fluid)
       "recipe-name.empty-filled-gas-canister",
       fluid.localised_name or { "fluid-name." .. fluid.name },
     },
-    category = "air-pump",
+    category = "bob-air-pump",
     subgroup = "bob-empty-gas-bottle",
     energy_required = 0.2,
     order = "c[empty-" .. fluid.name .. "-barrel" .. "]",
@@ -179,7 +179,7 @@ local function create_empty_gas_bottle_recipe(fluid)
     },
     results = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     allow_decomposition = false,
   }
@@ -194,7 +194,7 @@ local function create_empty_fluid_canister_recipe(fluid)
     type = "recipe",
     name = "empty-" .. fluid.name .. "-barrel",
     localised_name = { "recipe-name.empty-filled-canister", fluid.localised_name or { "fluid-name." .. fluid.name } },
-    category = "air-pump",
+    category = "bob-air-pump",
     subgroup = "bob-empty-canister",
     energy_required = 0.2,
     order = "c[empty-" .. fluid.name .. "-barrel" .. "]",
@@ -205,7 +205,7 @@ local function create_empty_fluid_canister_recipe(fluid)
     },
     results = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
-      { type = "item", name = "gas-canister", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "bob-gas-canister", amount = 1, ignored_by_stats = 1 },
     },
     allow_decomposition = false,
   }
@@ -218,7 +218,7 @@ function bobmods.lib.create_gas_bottle(fluid)
   if
     fluid
     and data.raw["item-subgroup"]["bob-empty-gas-bottle"]
-    and data.raw["recipe-category"]["air-pump"]
+    and data.raw["recipe-category"]["bob-air-pump"]
     and data.raw["item-subgroup"]["bob-gas-bottle"]
   then
     -- check if a barrel already exists for this fluid if not - create one
@@ -238,13 +238,13 @@ function bobmods.lib.create_gas_bottle(fluid)
     if fill_recipe then
       fill_recipe.localised_name =
         { "recipe-name.fill-gas-canister", fluid.localised_name or { "fluid-name." .. fluid.name } }
-      fill_recipe.category = "air-pump"
+      fill_recipe.category = "bob-air-pump"
       fill_recipe.subgroup = "bob-gas-bottle"
       fill_recipe.icons = generate_fill_gas_bottle_icons(fluid)
 
-      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "gas-canister")
+      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-gas-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", fill_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", fill_recipe.name)
     else
       fill_recipe = create_fill_gas_bottle_recipe(fluid)
     end
@@ -252,21 +252,21 @@ function bobmods.lib.create_gas_bottle(fluid)
     if empty_recipe then
       empty_recipe.localised_name =
         { "recipe-name.empty-filled-gas-canister", fluid.localised_name or { "fluid-name." .. fluid.name } }
-      empty_recipe.category = "air-pump"
+      empty_recipe.category = "bob-air-pump"
       empty_recipe.subgroup = "bob-empty-gas-bottle"
       empty_recipe.icons = generate_empty_gas_bottle_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
-      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "gas-canister", amount = 1 })
+      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-gas-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", empty_recipe.name)
     else
       empty_recipe = create_empty_gas_bottle_recipe(fluid)
     end
 
     -- add barrel recipe to the unlock list of the technology
-    bobmods.lib.tech.add_recipe_unlock("gas-canisters", fill_recipe.name)
-    bobmods.lib.tech.add_recipe_unlock("gas-canisters", empty_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-gas-canisters", fill_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-gas-canisters", empty_recipe.name)
   end
 end
 
@@ -297,9 +297,9 @@ function bobmods.lib.create_fluid_canister(fluid)
       fill_recipe.subgroup = "bob-canister"
       fill_recipe.icons = generate_fill_fluid_canister_icons(fluid)
 
-      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "empty-canister")
+      bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-empty-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", fill_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", fill_recipe.name)
     else
       fill_recipe = create_fill_fluid_canister_recipe(fluid)
     end
@@ -311,15 +311,15 @@ function bobmods.lib.create_fluid_canister(fluid)
       empty_recipe.icons = generate_empty_fluid_canister_icons(fluid)
 
       bobmods.lib.recipe.remove_result(empty_recipe.name, "barrel")
-      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "empty-canister", amount = 1 })
+      bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-empty-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
-      bobmods.lib.tech.remove_recipe_unlock("fluid-barrel-processing", empty_recipe.name)
+      bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", empty_recipe.name)
     else
       empty_recipe = create_empty_fluid_canister_recipe(fluid)
     end
 
     -- add barrel recipe to the unlock list of the technology
-    bobmods.lib.tech.add_recipe_unlock("fluid-canister-processing", fill_recipe.name)
-    bobmods.lib.tech.add_recipe_unlock("fluid-canister-processing", empty_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-fluid-canister-processing", fill_recipe.name)
+    bobmods.lib.tech.add_recipe_unlock("bob-fluid-canister-processing", empty_recipe.name)
   end
 end

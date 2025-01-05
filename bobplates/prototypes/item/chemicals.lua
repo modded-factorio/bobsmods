@@ -13,7 +13,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
   data:extend({
     {
       type = "fluid",
-      name = "pure-water",
+      name = "bob-pure-water",
       icon = "__bobplates__/graphics/icons/pure-water.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -23,7 +23,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       heat_capacity = "0.2kJ",
       base_color = { r = 0.3, g = 0.6, b = 0.8 },
       flow_color = { r = 1.0, g = 1.0, b = 1.0 },
-      order = "a[fluid]-a[water-pure]",
+      order = "a[fluid]-a[bob-pure-water]",
     },
   })
 end
@@ -47,7 +47,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "lithia-water",
+    name = "bob-lithia-water",
     default_temperature = 15,
     max_temperature = 100,
     heat_capacity = "0.2kJ",
@@ -61,7 +61,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "hydrogen",
+    name = "bob-hydrogen",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0.7, b = 0.7 },
@@ -78,7 +78,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "oxygen",
+    name = "bob-oxygen",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0, b = 0 },
@@ -93,7 +93,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "nitrogen",
+    name = "bob-nitrogen",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.0, g = 0.0, b = 1.0 },
@@ -108,7 +108,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "chlorine",
+    name = "bob-chlorine",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0, g = 0.7, b = 0.2 },
@@ -123,7 +123,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "hydrogen-chloride",
+    name = "bob-hydrogen-chloride",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.2, g = 0.7, b = 0 },
@@ -138,7 +138,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "nitrogen-dioxide",
+    name = "bob-nitrogen-dioxide",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.8, g = 0.0, b = 1.0 },
@@ -153,7 +153,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "sulfur-dioxide",
+    name = "bob-sulfur-dioxide",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0.7, b = 0 },
@@ -168,7 +168,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "nitric-acid",
+    name = "bob-nitric-acid",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 1.0, g = 0.7, b = 0.0 },
@@ -182,7 +182,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "ferric-chloride-solution",
+    name = "bob-ferric-chloride-solution",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0.6, b = 0.2 },
@@ -196,7 +196,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "liquid-fuel",
+    name = "bob-liquid-fuel",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 1.0, g = 0.9, b = 0.5 },
@@ -212,11 +212,11 @@ data:extend({
 
   {
     type = "item",
-    name = "salt",
+    name = "bob-salt",
     icon = "__bobplates__/graphics/icons/salt.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[salt]",
+    order = "f[bob-salt]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -225,11 +225,11 @@ data:extend({
 
   {
     type = "item",
-    name = "lithium-chloride",
+    name = "bob-lithium-chloride",
     icon = "__bobplates__/graphics/icons/lithium-chloride.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[lithium-chloride]",
+    order = "f[bob-lithium-chloride]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -238,11 +238,11 @@ data:extend({
 
   {
     type = "item",
-    name = "lithium-perchlorate",
+    name = "bob-lithium-perchlorate",
     icon = "__bobplates__/graphics/icons/lithium-perchlorate.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[lithium-perchlorate]",
+    order = "f[bob-lithium-perchlorate]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -251,10 +251,10 @@ data:extend({
 
   {
     type = "item",
-    name = "sodium-hydroxide",
+    name = "bob-sodium-hydroxide",
     icon = "__bobplates__/graphics/icons/sodium-hydroxide.png",
     subgroup = "bob-resource-chemical",
-    order = "f[sodium-hydroxide]",
+    order = "f[bob-sodium-hydroxide]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -263,11 +263,11 @@ data:extend({
 
   {
     type = "item",
-    name = "calcium-chloride",
+    name = "bob-calcium-chloride",
     icon = "__bobplates__/graphics/icons/calcium-chloride.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[calcium-chloride]",
+    order = "f[bob-calcium-chloride]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -276,11 +276,11 @@ data:extend({
 
   {
     type = "item",
-    name = "lead-oxide",
+    name = "bob-lead-oxide",
     icon = "__bobplates__/graphics/icons/lead-oxide.png",
     icon_size = 64,
     subgroup = "bob-resource-chemical",
-    order = "f[lead-oxide]",
+    order = "f[bob-lead-oxide]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -289,11 +289,11 @@ data:extend({
 
   {
     type = "item",
-    name = "alumina",
+    name = "bob-alumina",
     icon = "__bobplates__/graphics/icons/corundum.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[alumina]",
+    order = "f[bob-alumina]",
     stack_size = 100,
     drop_sound = {
       filename = "__base__/sound/item/resource-inventory-move.ogg",
@@ -311,11 +311,11 @@ data:extend({
 
   {
     type = "item",
-    name = "tungsten-oxide",
+    name = "bob-tungsten-oxide",
     icon = "__bobplates__/graphics/icons/tungsten-oxide.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[tungsten-oxide]",
+    order = "f[bob-tungsten-oxide]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -324,11 +324,11 @@ data:extend({
 
   {
     type = "item",
-    name = "powdered-tungsten",
+    name = "bob-powdered-tungsten",
     icon = "__bobplates__/graphics/icons/powdered-tungsten.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[powdered-tungsten]",
+    order = "f[bob-powdered-tungsten]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -337,11 +337,11 @@ data:extend({
 
   {
     type = "item",
-    name = "silicon-powder",
+    name = "bob-silicon-powder",
     icon = "__bobplates__/graphics/icons/powdered-silicon.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[silicon-powder]",
+    order = "f[bob-silicon-powder]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -350,11 +350,11 @@ data:extend({
 
   {
     type = "item",
-    name = "silicon-nitride",
+    name = "bob-silicon-nitride",
     icon = "__bobplates__/graphics/icons/silicon-nitride.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[silicon-nitride]",
+    order = "f[bob-silicon-nitride]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -363,11 +363,11 @@ data:extend({
 
   {
     type = "item",
-    name = "cobalt-oxide",
+    name = "bob-cobalt-oxide",
     icon = "__bobplates__/graphics/icons/cobalt-oxide.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[cobalt-oxide]",
+    order = "f[bob-cobalt-oxide]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -376,11 +376,11 @@ data:extend({
 
   {
     type = "item",
-    name = "silicon-carbide",
+    name = "bob-silicon-carbide",
     icon = "__bobplates__/graphics/icons/silicon-carbide.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[silicon-carbide]",
+    order = "f[bob-silicon-carbide]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -389,11 +389,11 @@ data:extend({
 
   {
     type = "item",
-    name = "silver-nitrate",
+    name = "bob-silver-nitrate",
     icon = "__bobplates__/graphics/icons/silver-nitrate.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[silver-nitrate]",
+    order = "f[bob-silver-nitrate]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -402,11 +402,11 @@ data:extend({
 
   {
     type = "item",
-    name = "silver-oxide",
+    name = "bob-silver-oxide",
     icon = "__bobplates__/graphics/icons/silver-oxide.png",
     icon_size = 32,
     subgroup = "bob-resource-chemical",
-    order = "f[silver-oxide]",
+    order = "f[bob-silver-oxide]",
     stack_size = 100,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
@@ -416,13 +416,13 @@ data:extend({
 
 table.insert(
   data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids,
-  { type = "liquid-fuel", damage_modifier = 1.5 }
+  { type = "bob-liquid-fuel", damage_modifier = 1.5 }
 )
 
 data:extend({
   {
     type = "fluid",
-    name = "heavy-water",
+    name = "bob-heavy-water",
     icon = "__bobplates__/graphics/icons/heavy-water.png",
     icon_size = 64,
     subgroup = "fluid",
@@ -436,7 +436,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "deuterium",
+    name = "bob-deuterium",
     icon = "__bobplates__/graphics/icons/deuterium.png",
     icon_size = 64,
     subgroup = "fluid",
@@ -452,7 +452,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "hydrogen-sulfide",
+    name = "bob-hydrogen-sulfide",
     icon = "__bobplates__/graphics/icons/hydrogen-sulfide.png",
     icon_size = 64,
     subgroup = "fluid",
@@ -471,7 +471,7 @@ if not feature_flags["quality"] then
 
     {
       type = "fluid",
-      name = "tungstic-acid",
+      name = "bob-tungstic-acid",
       default_temperature = 25,
       heat_capacity = "1kJ",
       base_color = { r = 0, g = 0.2, b = 0.7 },

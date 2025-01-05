@@ -28,36 +28,36 @@ if data.raw.item["titanium-chest"] then
   bobmods.lib.recipe.add_ingredient("buffer-chest-3", { type = "item", name = "processing-unit", amount = 2 })
   bobmods.lib.recipe.add_ingredient("requester-chest-3", { type = "item", name = "processing-unit", amount = 2 })
 
-  if data.raw.item["advanced-processing-unit"] then
+  if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.add_ingredient(
       "passive-provider-chest-3",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "active-provider-chest-3",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "storage-chest-3",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "buffer-chest-3",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "requester-chest-3",
-      { type = "item", name = "advanced-processing-unit", amount = 1 }
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
-    bobmods.lib.tech.add_prerequisite("logistic-system-3", "advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("logistic-system-3", "bob-advanced-processing-unit")
   end
 else
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("passive-provider-chest-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.recipe.replace_ingredient("active-provider-chest-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.recipe.replace_ingredient("storage-chest-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.recipe.replace_ingredient("buffer-chest-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.recipe.replace_ingredient("requester-chest-3", "processing-unit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("logistic-system-3", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("passive-provider-chest-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient("active-provider-chest-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient("storage-chest-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient("buffer-chest-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient("requester-chest-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("logistic-system-3", "bob-advanced-processing-unit")
   end
 end
