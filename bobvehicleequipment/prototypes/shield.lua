@@ -63,10 +63,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-shield-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
-      icon_size = 64,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "military-science-pack",
@@ -155,10 +159,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-shield-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
-      icon_size = 64,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-shield-equipment-1",
       "productivity-module",
@@ -249,10 +257,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-shield-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
-      icon_size = 64,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-shield-equipment-2",
       "productivity-module-2",
@@ -344,10 +356,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-shield-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
-      icon_size = 64,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-shield-equipment-3",
       "productivity-module-3",
@@ -438,10 +454,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-shield-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
-      icon_size = 64,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-shield-equipment-4",
       "utility-science-pack",
@@ -533,10 +553,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-shield-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
-      icon_size = 64,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-shield-equipment-5",
     },
