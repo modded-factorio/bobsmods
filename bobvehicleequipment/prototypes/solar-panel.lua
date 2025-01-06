@@ -61,10 +61,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-solar-panel-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "solar-energy",
       "automobilism",
@@ -150,10 +154,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-solar-panel-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "chemical-science-pack",
@@ -240,10 +248,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-solar-panel-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-solar-panel-equipment-2",
       "processing-unit",
@@ -333,10 +345,14 @@ if data.raw.item["alien-artifact"] then
     {
       type = "technology",
       name = "vehicle-solar-panel-equipment-4",
-      icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-        icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
-        icon_size = 128,
-      }),
+      icons = bobmods.lib.tech.technology_icon_constant({
+          icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
+          icon_size = 128,
+        },
+        "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+        56,
+        64
+      ),
       prerequisites = {
         "vehicle-solar-panel-equipment-3",
         "utility-science-pack",
@@ -426,10 +442,14 @@ if data.raw.item["alien-artifact"] then
       {
         type = "technology",
         name = "vehicle-solar-panel-equipment-5",
-        icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-          icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
-          icon_size = 128,
-        }),
+        icons = bobmods.lib.tech.technology_icon_constant({
+            icon = "__bobvehicleequipment__/graphics/technology/vehicle-solar-panel-equipment.png",
+            icon_size = 128,
+          },
+          "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+          56,
+          64
+        ),
         prerequisites = {
           "vehicle-solar-panel-equipment-4",
           "alien-orange-research",
