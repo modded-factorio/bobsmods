@@ -564,7 +564,6 @@ if mods["boblogistics"] then
   bobmods.lib.tech.remove_science_pack("bob-robot-gun-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-laser-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-flamethrower-drones", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
 end
 
 -- Armor
