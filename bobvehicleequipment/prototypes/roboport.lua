@@ -328,10 +328,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "construction-robotics",
       "vehicle-solar-panel-equipment-1",
@@ -356,10 +360,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-roboport-equipment-1",
       "chemical-science-pack",
@@ -384,10 +392,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     effects = {
       {
         type = "unlock-recipe",
@@ -414,10 +426,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     effects = {
       {
         type = "unlock-recipe",
@@ -1484,10 +1500,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-modular-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     effects = {
       {
         type = "unlock-recipe",
@@ -1518,10 +1538,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-modular-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     effects = {
       {
         type = "unlock-recipe",
@@ -1553,10 +1577,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-modular-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     effects = {
       {
         type = "unlock-recipe",
@@ -1589,10 +1617,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-roboport-modular-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
-      icon_size = 128,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-roboport-equipment.png",
+        icon_size = 128,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     effects = {
       {
         type = "unlock-recipe",
