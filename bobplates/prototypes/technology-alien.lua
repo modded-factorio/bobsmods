@@ -43,7 +43,7 @@ then
       prerequisites = {
         "military-science-pack",
         "chemical-science-pack",
-        "gold-processing",
+        "bob-gold-processing",
       },
       effects = {
         {
