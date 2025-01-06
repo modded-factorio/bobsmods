@@ -129,10 +129,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-big-turret-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
-      icon_size = 256,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
+        icon_size = 256,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "laser-turret",
@@ -222,10 +226,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-big-turret-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
-      icon_size = 256,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
+        icon_size = 256,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-big-turret-equipment-1",
       "processing-unit",
@@ -316,10 +324,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-big-turret-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
-      icon_size = 256,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
+        icon_size = 256,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-big-turret-equipment-2",
       "military-4",
@@ -410,10 +422,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-big-turret-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
-      icon_size = 256,
-    }),
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-big-turret-equipment.png",
+        icon_size = 256,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-big-turret-equipment-3",
       "space-science-pack",
