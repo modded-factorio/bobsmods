@@ -724,6 +724,7 @@ data:extend({
     prerequisites = {
       "oil-processing",
       "bob-aluminium-processing",
+      "plastics",
     },
     unit = {
       count = 75,
@@ -845,7 +846,6 @@ data:extend({
     prerequisites = {
       "bob-gem-processing-2",
       "bob-polishing",
-      "plastics",
     },
     unit = {
       count = 100,
