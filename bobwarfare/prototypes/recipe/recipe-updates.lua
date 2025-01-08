@@ -4,6 +4,12 @@ if data.raw.fluid["sulfuric-nitric-acid"] then
   bobmods.lib.tech.add_prerequisite("nitroglycerin-processing", "bob-nitrogen-processing")
 end
 
+if mods["bobgreenhouse"] then
+  bobmods.lib.recipe.replace_ingredient("gun-cotton", "plastic-bar", "wood")
+elseif data.raw.item["bob-resin"] then
+  bobmods.lib.recipe.replace_ingredient("gun-cotton", "plastic-bar", "bob-resin")
+end
+
 if data.raw.fluid["bob-nitric-acid"] then
   bobmods.lib.recipe.replace_ingredient("gun-cotton", "sulfuric-acid", "bob-nitric-acid")
 end
