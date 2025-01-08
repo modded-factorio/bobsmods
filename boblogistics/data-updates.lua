@@ -11,6 +11,10 @@ require("prototypes.technology-updates")
 
 require("prototypes.repair-pack-updates")
 
+if mods["bobgreenhouse"] then
+  bobmods.lib.recipe.replace_ingredient("rail", "stone", "wood")
+end
+
 -- Allow burner inserters to fuel themselves from the burner inventory of a machine they're pulling items out of.
 data.raw.inserter["burner-inserter"].allow_burner_leech = true
 
