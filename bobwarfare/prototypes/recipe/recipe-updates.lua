@@ -6,8 +6,6 @@ end
 
 if mods["bobgreenhouse"] then
   bobmods.lib.recipe.replace_ingredient("gun-cotton", "plastic-bar", "wood")
-elseif data.raw.item["bob-resin"] then
-  bobmods.lib.recipe.replace_ingredient("gun-cotton", "plastic-bar", "bob-resin")
 end
 
 if data.raw.fluid["bob-nitric-acid"] then
