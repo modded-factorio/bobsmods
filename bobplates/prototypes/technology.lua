@@ -845,6 +845,7 @@ data:extend({
     prerequisites = {
       "bob-gem-processing-2",
       "bob-polishing",
+      "plastics",
     },
     unit = {
       count = 100,
