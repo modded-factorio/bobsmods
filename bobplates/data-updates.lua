@@ -296,6 +296,7 @@ data.raw.item["nuclear-fuel"].subgroup = "bob-chemical-fuels"
 data.raw.item["iron-plate"].subgroup = "bob-material"
 data.raw.item["copper-plate"].subgroup = "bob-material"
 data.raw.item["steel-plate"].subgroup = "bob-material"
+data.raw.item["plastic-bar"].subgroup = "bob-material-chemical"
 data.raw.item["uranium-fuel-cell"].order = "r[uranium-processing]-a[uranium-fuel-cell]"
 data.raw.item["nuclear-fuel"].subgroup = "bob-chemical-fuels"
 data.raw.item["nuclear-fuel"].order = "e[nuclear-fuel]"
@@ -313,6 +314,8 @@ if mods["bobgreenhouse"] then
   data.raw.recipe["bob-basic-greenhouse-cycle"].order = "b[greenhouse-cycle-1]"
   data.raw.recipe["bob-advanced-greenhouse-cycle"].order = "b[greenhouse-cycle-2]"
 end
+data.raw.item.wood.subgroup = "bob-resource"
+data.raw.capsule["raw-fish"].subgroup = "bob-resource"
 
 data.raw.recipe["solid-fuel-from-heavy-oil"].subgroup = "bob-chemical-fuels"
 data.raw.recipe["solid-fuel-from-light-oil"].subgroup = "bob-chemical-fuels"
