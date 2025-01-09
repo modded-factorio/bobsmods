@@ -15,6 +15,11 @@ if bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.replace_science_pack("braking-force-7", "production-science-pack", "advanced-logistic-science-pack")
   bobmods.lib.tech.replace_prerequisite("braking-force-3", "production-science-pack", "advanced-logistic-science-pack")
 
+  if data.raw.technology["elevated-rail"] then
+    bobmods.lib.tech.replace_science_pack("elevated-rail", "production-science-pack", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_prerequisite("elevated-rail", "production-science-pack", "advanced-logistic-science-pack")
+  end
+
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-4",
     "production-science-pack",
