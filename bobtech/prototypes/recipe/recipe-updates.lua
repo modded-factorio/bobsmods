@@ -16,8 +16,8 @@ bobmods.lib.recipe.add_ingredient(
   "production-science-pack",
   { type = "item", name = "assembling-machine-2", amount = 1 }
 )
-if data.raw.item["electrolyser-3"] then
-  bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "electrolyser-3", amount = 1 })
+if data.raw.item["bob-electrolyser-3"] then
+  bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "bob-electrolyser-3", amount = 1 })
   data.raw.recipe["production-science-pack"].energy_required = 35
   data.raw.recipe["production-science-pack"].results = {{ type = "item", name = "production-science-pack", amount = 5 }}
 elseif data.raw.item["chemical-plant-2"] then
