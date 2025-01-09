@@ -25,6 +25,7 @@ data.raw["spider-leg"]["spidertron-leg-8"].resistances = vanilla_spidertron_leg_
 
 bobmods.lib.recipe.remove_ingredient("spidertron", "raw-fish")
 bobmods.lib.recipe.remove_ingredient("spidertron", "radar")
+bobmods.lib.recipe.remove_ingredient("spidertron", "processing-unit")
 bobmods.lib.tech.remove_prerequisite("spidertron", "efficiency-module-3")
 bobmods.lib.tech.remove_prerequisite("spidertron", "exoskeleton-equipment")
 
