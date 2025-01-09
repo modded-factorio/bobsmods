@@ -82,8 +82,11 @@ else
   bobmods.lib.recipe.add_ingredient("circuit-board", { type = "item", name = "copper-plate", amount = 1 })
 end
 
+if data.raw.item["silver-plate"] then
+  bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "silver-plate", amount = 1 })
+end
+
 if data.raw.item["bob-gold-plate"] then
-  bobmods.lib.recipe.add_ingredient("superior-circuit-board", { type = "item", name = "bob-gold-plate", amount = 1 })
   bobmods.lib.recipe.add_ingredient("multi-layer-circuit-board", { type = "item", name = "bob-gold-plate", amount = 2 })
 else
   if data.raw.item["bob-tin-plate"] then
@@ -98,9 +101,14 @@ else
   end
 end
 
+--Use this standard when adding solder: basic-electronic-components = 1/6 solder, electronic-components = 1/5 solder, intergrated-electronics = 1/4 solder, processing-electronics = 1/3 solder
 if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("electronic-circuit", { type = "item", name = "solder", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("advanced-circuit", { type = "item", name = "solder", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("processing-unit", { type = "item", name = "solder", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("bob-advanced-processing-unit", { type = "item", name = "solder", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("advanced-circuit", { type = "item", name = "solder", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("processing-unit", { type = "item", name = "solder", amount = 4 })
+  bobmods.lib.recipe.add_ingredient("bob-advanced-processing-unit", { type = "item", name = "solder", amount = 6 })
 end
+
+bobmods.lib.recipe.replace_ingredient("arithmetic-combinator", "copper-cable", "insulated-cable")
+bobmods.lib.recipe.replace_ingredient("decider-combinator", "copper-cable", "insulated-cable")
+bobmods.lib.recipe.replace_ingredient("constant-combinator", "copper-cable", "insulated-cable")

@@ -49,8 +49,6 @@ end
 
 if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
-    "heavy-armor-2",
-    "heavy-armor-3",
     "modular-armor",
     "power-armor",
     "power-armor-mk2",
@@ -129,7 +127,6 @@ if feature_flags["quality"] then
     "bob-plasma-turret-2",
     "bob-plasma-turret-3",
     "bob-plasma-turret-4",
-    "bob-plasma-turret-5",
     "bob-artillery-turret-2",
     "bob-artillery-turret-3",
     "robot-brain-combat",

@@ -74,10 +74,14 @@ then
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-green", 1 },
-    {
-      "alien-science-pack-red",
-      1,
-    },
+    { "alien-science-pack-red", 1 },
+  }
+
+  data.raw.technology["bob-plasma-turrets-4"].unit.ingredients = {
+    { "science-pack-gold", 1 },
+    { "alien-science-pack", 1 },
+    { "alien-science-pack-yellow", 1 },
+    { "alien-science-pack-orange", 1 },
   }
 
   data.raw.technology["bob-plasma-bullets"].unit.ingredients = {
@@ -180,6 +184,10 @@ elseif data.raw.technology["alien-research"] then
   bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "alien-research")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "alien-research")
   bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "alien-research")
+else
+  bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "bob-gold-processing")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "bob-gold-processing")
+  bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "bob-gold-processing")
 end
 
 if data.raw.technology["bob-alien-purple-research"] then
@@ -529,7 +537,6 @@ end
 if mods["bobmodules"] then
   bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-2")
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-3")
-
   bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "efficiency-module-2")
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "efficiency-module-3")
 
@@ -557,7 +564,6 @@ if mods["boblogistics"] then
   bobmods.lib.tech.remove_science_pack("bob-robot-gun-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-laser-drones", "chemical-science-pack")
   bobmods.lib.tech.remove_science_pack("bob-robot-flamethrower-drones", "chemical-science-pack")
-  bobmods.lib.tech.remove_science_pack("bob-robot-plasma-drones", "chemical-science-pack")
 end
 
 -- Armor
@@ -579,7 +585,13 @@ end
 bobmods.lib.tech.remove_science_pack("power-armor-mk2", "utility-science-pack")
 bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "military-4")
 bobmods.lib.tech.add_prerequisite("power-armor-mk2", "military-3")
-bobmods.lib.tech.add_prerequisite("power-armor-mk2", "low-density-structure")
+if mods["bobplates"] then
+  if not mods["bobrevamp"] then
+    bobmods.lib.tech.add_prerequisite("power-armor-mk2", "low-density-structure")
+  end
+else
+  bobmods.lib.tech.add_prerequisite("power-armor-mk2", "low-density-structure")
+end
 
 bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
 bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "processing-unit")
