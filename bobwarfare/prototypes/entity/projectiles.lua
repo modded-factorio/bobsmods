@@ -617,7 +617,7 @@ data:extend({
                   {
                     type = "create-sticker",
                     sticker = "fire-sticker",
-                    show_in_tooltip = true
+                    show_in_tooltip = true,
                   },
                 },
               },
@@ -698,7 +698,7 @@ data:extend({
                   {
                     type = "create-sticker",
                     sticker = "poison-sticker",
-                    show_in_tooltip = true
+                    show_in_tooltip = true,
                   },
                 },
               },
@@ -775,7 +775,7 @@ data:extend({
                   {
                     type = "create-sticker",
                     sticker = "slowdown-sticker",
-                    show_in_tooltip = true
+                    show_in_tooltip = true,
                   },
                 },
               },
@@ -1648,7 +1648,7 @@ data:extend({
                   {
                     type = "create-sticker",
                     sticker = "plasma-sticker",
-                    show_in_tooltip = true
+                    show_in_tooltip = true,
                   },
                 },
               },
@@ -1704,30 +1704,44 @@ then
   data.raw.projectile["shotgun-ap-projectile"].action.action_delivery.target_effects.damage.amount = 27
   data.raw.projectile["shotgun-electric-projectile"].action.action_delivery.target_effects.damage.amount = 27
   data.raw.ammo["shotgun-acid-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.projectile["shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+    22
   data.raw.ammo["shotgun-explosive-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.projectile["shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.action_delivery.target_effects[1].damage.amount =
+    22
   data.raw.ammo["shotgun-flame-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.projectile["shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+    22
   data.raw.ammo["shotgun-poison-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.projectile["shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+    22
   data.raw.ammo["shotgun-plasma-shell"].ammo_type.action.repeat_count = 15
   data.raw.ammo["shotgun-plasma-shell"].ammo_type.action.repeat_count = 20
-  data.raw.projectile["shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 30
+  data.raw.projectile["shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+    30
 
   data.raw.projectile["bob-piercing-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
   data.raw.projectile["bob-piercing-rocket"].action.action_delivery.target_effects[3].damage.amount = 880
   data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
   data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects[3].damage.amount = 540
-  table.insert(data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects, {type = "create-sticker", sticker = "stun-sticker", show_in_tooltip = true})
+  table.insert(
+    data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects,
+    { type = "create-sticker", sticker = "stun-sticker", show_in_tooltip = true }
+  )
   data.raw.projectile["bob-explosive-rocket"].action.action_delivery.target_effects[2].damage.amount = 400
-  data.raw.projectile["bob-explosive-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 300
-  data.raw.projectile["bob-flame-rocket"].action.action_delivery.target_effects[4].action.action_delivery.target_effects[1].damage.amount = 200
+  data.raw.projectile["bob-explosive-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    300
+  data.raw.projectile["bob-flame-rocket"].action.action_delivery.target_effects[4].action.action_delivery.target_effects[1].damage.amount =
+    200
   data.raw.projectile["bob-poison-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
-  data.raw.projectile["bob-poison-rocket"].action.action_delivery.target_effects[4].action.action_delivery.target_effects[1].damage.amount = 300
+  data.raw.projectile["bob-poison-rocket"].action.action_delivery.target_effects[4].action.action_delivery.target_effects[1].damage.amount =
+    300
   data.raw.projectile["bob-acid-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
-  data.raw.projectile["bob-acid-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 300
+  data.raw.projectile["bob-acid-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    300
   data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[2].damage.amount = 450
-  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 450
-  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[2].show_in_tooltip = true
+  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    450
+  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[2].show_in_tooltip =
+    true
 end

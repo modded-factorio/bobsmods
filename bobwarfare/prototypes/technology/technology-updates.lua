@@ -74,7 +74,7 @@ then
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-green", 1 },
-    { "alien-science-pack-red", 1, },
+    { "alien-science-pack-red", 1 },
   }
 
   data.raw.technology["bob-plasma-turrets-4"].unit.ingredients = {
@@ -535,10 +535,10 @@ if data.raw.recipe["gun-cotton-synthetic"] then
 end
 
 if mods["bobmodules"] then
-    bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-2")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-3")
-    bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "efficiency-module-2")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "efficiency-module-3")
+  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "speed-module-2")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "speed-module-3")
+  bobmods.lib.tech.remove_prerequisite("bob-power-armor-3", "efficiency-module-2")
+  bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "efficiency-module-3")
 
   if data.raw.technology["bob-speed-module-4"] then
     bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-speed-module-4")

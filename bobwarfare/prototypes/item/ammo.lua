@@ -1477,13 +1477,18 @@ then
   data.raw.ammo["electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
   data.raw.ammo["electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 18
   data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    12
   data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    12
   data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    12
   data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 12
+  data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    12
   data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 24
+  data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+    24
 end
