@@ -261,6 +261,7 @@ data:extend({
     prerequisites = {
       "vehicle-fission-reactor-equipment-2",
       "low-density-structure",
+      "processing-unit",
     },
     unit = {
       count = 250,

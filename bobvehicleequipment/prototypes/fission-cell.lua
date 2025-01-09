@@ -261,6 +261,7 @@ data:extend({
     prerequisites = {
       "vehicle-fission-cell-equipment-2",
       "low-density-structure",
+      "processing-unit",
     },
     unit = {
       count = 250,

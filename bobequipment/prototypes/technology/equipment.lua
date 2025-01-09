@@ -34,6 +34,7 @@ data:extend({
       "energy-shield-mk2-equipment",
       "productivity-module-2",
       "production-science-pack",
+      "processing-unit",
     },
     unit = {
       count = 250,

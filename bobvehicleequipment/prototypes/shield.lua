@@ -269,6 +269,7 @@ data:extend({
       "vehicle-shield-equipment-2",
       "productivity-module-2",
       "production-science-pack",
+      "processing-unit",
     },
     unit = {
       count = 250,
