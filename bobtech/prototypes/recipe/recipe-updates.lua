@@ -54,7 +54,7 @@ if data.raw.item["solar-panel-small"] then
 else
   bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "solar-panel", amount = 1 })
 end
-bobmods.lib.tech.add_prerequisite("utility-science-pack", "solar-power")
+bobmods.lib.tech.add_prerequisite("utility-science-pack", "solar-energy")
 if data.raw.item["bob-lithium-ion-battery"] then
   bobmods.lib.recipe.add_ingredient(
     "utility-science-pack",
