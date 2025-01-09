@@ -259,6 +259,6 @@ data:extend({
   },
 })
 
-if mods["bobgreenhouse"] then
+if bobmods.greenhouse then
   bobmods.lib.recipe.replace_ingredient("bob-polishing-wheel", "plastic-bar", "wood")
 end
