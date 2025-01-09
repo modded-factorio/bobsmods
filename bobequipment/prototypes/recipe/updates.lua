@@ -358,6 +358,7 @@ end
 
 if data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.replace_ingredient("solar-panel-equipment-3", "copper-plate", "bob-gold-plate")
+  bobmods.lib.tech.add_prerequisite("solar-panel-equipment-3", "bob-gold-processing")
 end
 
 if data.raw.item["bob-lithium-ion-battery"] then
