@@ -1,3 +1,7 @@
+if data.raw.item["bob-glass"] then
+  bobmods.lib.recipe.add_ingredient("automation-science-pack", { type = "item", name = "bob-glass", amount = 1 })
+end
+
 if data.raw.item["bob-sodium-hydroxide"] then
   bobmods.lib.recipe.add_ingredient(
     "chemical-science-pack",
@@ -12,7 +16,13 @@ bobmods.lib.recipe.add_ingredient(
   "production-science-pack",
   { type = "item", name = "assembling-machine-2", amount = 1 }
 )
-bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "chemical-plant", amount = 1 })
+if data.raw.item["chemical-plant-2"] then
+  bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "chemical-plant-2", amount = 1 })
+  data.raw.recipe["production-science-pack"].energy_required = 28
+  data.raw.recipe["production-science-pack"].results = {{ type = "item", name = "production-science-pack", amount = 4 }}
+else
+  bobmods.lib.recipe.add_ingredient("production-science-pack", { type = "item", name = "chemical-plant", amount = 1 })
+end
 
 if bobmods.tech.advanced_logistic_science then
   if data.raw.item["brass-chest"] then
@@ -32,8 +42,15 @@ else
   bobmods.lib.recipe.hide("advanced-logistic-science-pack")
 end
 
-bobmods.lib.recipe.replace_ingredient("utility-science-pack", "flying-robot-frame", "electric-engine-unit")
+bobmods.lib.recipe.remove_ingredient("utility-science-pack", "flying-robot-frame")
+bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "electric-engine-unit", amount = 2 })
 bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "processing-unit", amount = 4 })
+if data.raw.item["solar-panel-small"] then
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "solar-panel-small", amount = 1 })
+else
+  bobmods.lib.recipe.add_ingredient("utility-science-pack", { type = "item", name = "solar-panel", amount = 1 })
+end
+bobmods.lib.tech.add_prerequisite("utility-science-pack", "solar-power")
 if data.raw.item["bob-lithium-ion-battery"] then
   bobmods.lib.recipe.add_ingredient(
     "utility-science-pack",
