@@ -1,4 +1,5 @@
 data.raw.item["wood"].stack_size = 200
+bobmods.lib.recipe.replace_ingredient("rail", "iron-stick", "wood")
 
 if data.raw["item-subgroup"]["bob-resource-chemical"] then
   bobmods.lib.item.set_subgroup("fertiliser", "bob-resource-chemical")
