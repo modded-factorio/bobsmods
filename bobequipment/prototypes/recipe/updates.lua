@@ -386,7 +386,7 @@ end
 if data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.remove_ingredient("solar-panel-equipment-3", "copper-plate")
   bobmods.lib.recipe.add_ingredient("solar-panel-equipment-3", { type = "item", name = "bob-gold-plate", amount = 4 })
-  bobmods.lib.tech.add_prerequisite("solar-panel-equipment-3", "gold-processing")
+  bobmods.lib.tech.add_prerequisite("solar-panel-equipment-3", "bob-gold-processing")
 end
 
 if data.raw.item["gilded-copper-cable"] then
