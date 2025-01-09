@@ -1,6 +1,11 @@
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
-  bobmods.lib.recipe.replace_ingredient("logistic-science-pack", "transport-belt", "basic-transport-belt")
-  bobmods.lib.recipe.replace_ingredient("lab", "transport-belt", "basic-transport-belt")
+  if mods["bobtech"] then
+    if settings.startup["bobmods-burnerphase"].value ~= true then
+      bobmods.lib.recipe.replace_ingredient("lab", "transport-belt", "basic-transport-belt")
+    end
+  else
+    bobmods.lib.recipe.replace_ingredient("lab", "transport-belt", "basic-transport-belt")
+  end
 
   if data.raw.item["bob-tin-plate"] then
     bobmods.lib.recipe.replace_ingredient("transport-belt", "iron-plate", "bob-tin-plate")
