@@ -368,3 +368,50 @@ function bobmods.lib.tech.ignore_tech_cost_multiplier(technology_name, ignore)
     bobmods.lib.error.technology(technology_name)
   end
 end
+
+function bobmods.lib.tech.technology_icon_constant(technology_icon, constant_icon, x, y)
+  local scale = 0.5
+  local xshift = x or 64
+  local yshift = y or 64
+  if type(technology_icon) == "table" and technology_icon.icon and technology_icon.icon_size then
+    local icons = {
+      technology_icon,
+      {
+        icon = constant_icon,
+        icon_size = 128,
+        scale = scale,
+        shift = { xshift * scale, yshift * scale },
+      },
+    }
+    return icons
+  else
+    log(debug.traceback())
+    log(technology_icon .. " not given in required table format")
+  end
+end
+
+function bobmods.lib.tech.technology_line_icon_constant(technology_line, first, last, technology_icon, constant_icon)
+  local scale = 0.5
+  if type(technology_icon) == "table" and technology_icon.icon and technology_icon.icon_size then
+    for i = first, last do
+      local tech_name = technology_line .. "-" .. i
+      if data.raw.technology[tech_name] then
+        data.raw.technology[tech_name].icons = {
+          technology_icon,
+          {
+            icon = constant_icon,
+            icon_size = 128,
+            scale = scale,
+            shift = { 64 * scale, 64 * scale },
+          },
+        }
+      else
+        log(debug.traceback())
+        bobmods.lib.error.technology(tech_name)
+      end
+    end
+  else
+    log(debug.traceback())
+    log(technology_icon .. " not given in required table format")
+  end
+end

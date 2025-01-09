@@ -1,3 +1,8 @@
+local qualmod = 2
+if feature_flags["quality"] then
+  qualmod = 1
+end
+
 local function bob_active_beam_weapon_equipment(data)
   local equipment = {
     type = "active-defense-equipment",
@@ -23,7 +28,7 @@ local function bob_active_beam_weapon_equipment(data)
       type = "beam",
       cooldown = data.cooldown or 20,
       range = data.range or 15,
-      damage_modifier = 4 * data.damage_modifier or 15,
+      damage_modifier = 4 * data.damage_modifier * qualmod or 15,
       ammo_category = "laser",
       ammo_type = {
         energy_consumption = data.energy_consumption,
@@ -74,11 +79,11 @@ data:extend({
     type = "recipe",
     name = "vehicle-laser-defense-equipment-1",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "electronic-circuit", amount = 5 },
-      { type = "item", name = "battery", amount = 3 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "electronic-circuit", amount = 10 },
+      { type = "item", name = "battery", amount = 6 },
     },
     results = { { type = "item", name = "vehicle-laser-defense-equipment-1", amount = 1 } },
   },
@@ -101,22 +106,23 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-laser-defense-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
-      icon_size = 64,
-    }),
-    order = "v-g-m-a",
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "laser-turret",
-      "military-3",
     },
     unit = {
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
       },
       time = 30,
@@ -159,12 +165,11 @@ data:extend({
     type = "recipe",
     name = "vehicle-laser-defense-equipment-2",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "vehicle-laser-defense-equipment-1", amount = 1 },
-      { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "advanced-circuit", amount = 5 },
-      { type = "item", name = "battery", amount = 3 },
+      { type = "item", name = "plastic-bar", amount = 10 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
     },
     results = { { type = "item", name = "vehicle-laser-defense-equipment-2", amount = 1 } },
   },
@@ -187,14 +192,17 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-laser-defense-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
-      icon_size = 64,
-    }),
-    order = "v-g-m-b",
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-laser-defense-equipment-1",
-      "advanced-circuit",
+      "military-3",
     },
     unit = {
       count = 150,
@@ -202,8 +210,8 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
     effects = {
@@ -244,12 +252,11 @@ data:extend({
     type = "recipe",
     name = "vehicle-laser-defense-equipment-3",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "vehicle-laser-defense-equipment-2", amount = 1 },
-      { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "advanced-circuit", amount = 5 },
-      { type = "item", name = "battery", amount = 3 },
+      { type = "item", name = "steel-plate", amount = 16 },
+      { type = "item", name = "battery", amount = 24 },
     },
     results = { { type = "item", name = "vehicle-laser-defense-equipment-3", amount = 1 } },
   },
@@ -272,24 +279,25 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-laser-defense-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
-      icon_size = 64,
-    }),
-    order = "v-g-m-c",
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-laser-defense-equipment-2",
-      "production-science-pack",
     },
     unit = {
-      count = 250,
+      count = 200,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
     effects = {
@@ -330,12 +338,11 @@ data:extend({
     type = "recipe",
     name = "vehicle-laser-defense-equipment-4",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "vehicle-laser-defense-equipment-3", amount = 1 },
-      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 24 },
       { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "battery", amount = 3 },
     },
     results = { { type = "item", name = "vehicle-laser-defense-equipment-4", amount = 1 } },
   },
@@ -358,23 +365,27 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-laser-defense-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
-      icon_size = 64,
-    }),
-    order = "v-g-m-d",
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-laser-defense-equipment-3",
       "processing-unit",
+      "production-science-pack",
     },
     unit = {
-      count = 300,
+      count = 250,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
       },
     },
@@ -416,12 +427,11 @@ data:extend({
     type = "recipe",
     name = "vehicle-laser-defense-equipment-5",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "vehicle-laser-defense-equipment-4", amount = 1 },
-      { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "battery", amount = 3 },
+      { type = "item", name = "steel-plate", amount = 32 },
+      { type = "item", name = "battery", amount = 36 },
     },
     results = { { type = "item", name = "vehicle-laser-defense-equipment-5", amount = 1 } },
   },
@@ -444,11 +454,14 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-laser-defense-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
-      icon_size = 64,
-    }),
-    order = "v-g-m-e",
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-laser-defense-equipment-4",
       "military-4",
@@ -503,12 +516,12 @@ data:extend({
     type = "recipe",
     name = "vehicle-laser-defense-equipment-6",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "vehicle-laser-defense-equipment-5", amount = 1 },
-      { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "processing-unit", amount = 5 },
-      { type = "item", name = "battery", amount = 3 },
+      { type = "item", name = "processing-unit", amount = 30 },
+      { type = "item", name = "speed-module-3", amount = 2 },
+      { type = "item", name = "efficiency-module-3", amount = 2 },
     },
     results = { { type = "item", name = "vehicle-laser-defense-equipment-6", amount = 1 } },
   },
@@ -531,13 +544,18 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-laser-defense-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
-      icon_size = 64,
-    }),
-    order = "v-g-m-f",
+    icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobvehicleequipment__/graphics/technology/vehicle-laser-defense-equipment.png",
+        icon_size = 64,
+      },
+      "__boblibrary__/graphics/constants/constant-vehicle-equipment.png",
+      56,
+      64
+    ),
     prerequisites = {
       "vehicle-laser-defense-equipment-5",
+      "speed-module-3",
+      "efficiency-module-3",
     },
     unit = {
       count = 350,
