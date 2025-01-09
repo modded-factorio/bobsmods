@@ -129,7 +129,6 @@ if feature_flags["quality"] then
     "bob-plasma-turret-2",
     "bob-plasma-turret-3",
     "bob-plasma-turret-4",
-    "bob-plasma-turret-5",
     "bob-artillery-turret-2",
     "bob-artillery-turret-3",
     "robot-brain-combat",

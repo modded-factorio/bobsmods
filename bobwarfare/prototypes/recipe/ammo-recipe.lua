@@ -1,3 +1,11 @@
+if mods["bobplates"] then
+  data.raw.recipe["firearm-magazine"].ingredients = {
+    { type = "item", name = "iron-plate", amount = 1 },
+    { type = "item", name = "coal", amount = 1 },
+    { type = "item", name = "bob-lead-plate", amount = 1 },
+  }
+end
+
 data:extend({
   {
     type = "recipe",

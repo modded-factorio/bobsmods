@@ -43,7 +43,7 @@ data:extend({
         type = "instant",
         target_effects = {
           type = "damage",
-          damage = { amount = 12, type = "bob-pierce" },
+          damage = { amount = 14, type = "bob-pierce" },
         },
       },
     },
@@ -71,7 +71,7 @@ data:extend({
         type = "instant",
         target_effects = {
           type = "damage",
-          damage = { amount = 12, type = "electric" },
+          damage = { amount = 14, type = "electric" },
         },
       },
     },
@@ -112,7 +112,7 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 12, type = "explosion" },
+                    damage = { amount = 10, type = "explosion" },
                   },
                 },
               },
@@ -164,11 +164,7 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 12, type = "fire" },
-                  },
-                  {
-                    type = "create-sticker",
-                    sticker = "fire-sticker",
+                    damage = { amount = 10, type = "fire" },
                   },
                 },
               },
@@ -220,7 +216,7 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 12, type = "acid" },
+                    damage = { amount = 10, type = "acid" },
                   },
                 },
               },
@@ -272,11 +268,7 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 12, type = "poison" },
-                  },
-                  {
-                    type = "create-sticker",
-                    sticker = "poison-sticker",
+                    damage = { amount = 10, type = "poison" },
                   },
                 },
               },
@@ -319,7 +311,7 @@ data:extend({
         type = "instant",
         target_effects = {
           type = "damage",
-          damage = { amount = 16, type = "physical" },
+          damage = { amount = 25, type = "physical" },
         },
       },
     },
@@ -416,7 +408,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 240, type = "bob-pierce" },
+            damage = { amount = 360, type = "bob-pierce" },
           },
           {
             type = "create-entity",
@@ -476,7 +468,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 240, type = "electric" },
+            damage = { amount = 360, type = "electric" },
           },
           {
             type = "create-entity",
@@ -544,7 +536,7 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 180, type = "explosion" },
+                    damage = { amount = 240, type = "explosion" },
                   },
                 },
               },
@@ -614,17 +606,18 @@ data:extend({
             type = "nested-result",
             action = {
               type = "area",
-              radius = 6.5,
+              radius = 4.5,
               action_delivery = {
                 type = "instant",
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 180, type = "fire" },
+                    damage = { amount = 140, type = "fire" },
                   },
                   {
                     type = "create-sticker",
                     sticker = "fire-sticker",
+                    show_in_tooltip = true
                   },
                 },
               },
@@ -694,17 +687,18 @@ data:extend({
             type = "nested-result",
             action = {
               type = "area",
-              radius = 6.5,
+              radius = 4.5,
               action_delivery = {
                 type = "instant",
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 180, type = "poison" },
+                    damage = { amount = 200, type = "poison" },
                   },
                   {
                     type = "create-sticker",
                     sticker = "poison-sticker",
+                    show_in_tooltip = true
                   },
                 },
               },
@@ -770,13 +764,18 @@ data:extend({
             type = "nested-result",
             action = {
               type = "area",
-              radius = 6.5,
+              radius = 4.5,
               action_delivery = {
                 type = "instant",
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 180, type = "acid" },
+                    damage = { amount = 160, type = "acid" },
+                  },
+                  {
+                    type = "create-sticker",
+                    sticker = "slowdown-sticker",
+                    show_in_tooltip = true
                   },
                 },
               },
@@ -1588,7 +1587,7 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 25, type = "plasma" },
+                    damage = { amount = 15, type = "plasma" },
                   },
                   {
                     type = "create-sticker",
@@ -1649,6 +1648,7 @@ data:extend({
                   {
                     type = "create-sticker",
                     sticker = "plasma-sticker",
+                    show_in_tooltip = true
                   },
                 },
               },
@@ -1690,3 +1690,44 @@ data:extend({
     hidden = true,
   },
 })
+
+if
+  data.raw.item["alien-orange-alloy"]
+  and data.raw.item["alien-blue-alloy"]
+  and data.raw.fluid["alien-explosive"]
+  and data.raw.fluid["alien-acid"]
+  and data.raw.fluid["alien-fire"]
+  and data.raw.fluid["alien-poison"]
+then
+  data.raw.projectile["better-shotgun-projectile"].action.action_delivery.target_effects.damage.amount = 16
+  data.raw.projectile["shotgun-uranium-projectile"].action.action_delivery.target_effects.damage.amount = 24
+  data.raw.projectile["shotgun-ap-projectile"].action.action_delivery.target_effects.damage.amount = 27
+  data.raw.projectile["shotgun-electric-projectile"].action.action_delivery.target_effects.damage.amount = 27
+  data.raw.ammo["shotgun-acid-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.ammo["shotgun-explosive-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.ammo["shotgun-flame-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.ammo["shotgun-poison-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 22
+  data.raw.ammo["shotgun-plasma-shell"].ammo_type.action.repeat_count = 15
+  data.raw.ammo["shotgun-plasma-shell"].ammo_type.action.repeat_count = 20
+  data.raw.projectile["shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount = 30
+
+  data.raw.projectile["bob-piercing-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
+  data.raw.projectile["bob-piercing-rocket"].action.action_delivery.target_effects[3].damage.amount = 880
+  data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
+  data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects[3].damage.amount = 540
+  table.insert(data.raw.projectile["bob-electric-rocket"].action.action_delivery.target_effects, {type = "create-sticker", sticker = "stun-sticker", show_in_tooltip = true})
+  data.raw.projectile["bob-explosive-rocket"].action.action_delivery.target_effects[2].damage.amount = 400
+  data.raw.projectile["bob-explosive-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 300
+  data.raw.projectile["bob-flame-rocket"].action.action_delivery.target_effects[4].action.action_delivery.target_effects[1].damage.amount = 200
+  data.raw.projectile["bob-poison-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
+  data.raw.projectile["bob-poison-rocket"].action.action_delivery.target_effects[4].action.action_delivery.target_effects[1].damage.amount = 300
+  data.raw.projectile["bob-acid-rocket"].action.action_delivery.target_effects[2].damage.amount = 160
+  data.raw.projectile["bob-acid-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 300
+  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[2].damage.amount = 450
+  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount = 450
+  data.raw.projectile["bob-plasma-rocket"].action.action_delivery.target_effects[3].action.action_delivery.target_effects[2].show_in_tooltip = true
+end

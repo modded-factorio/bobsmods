@@ -420,7 +420,7 @@ data:extend({
 
     attack_parameters = {
       type = "projectile",
-      cooldown = 200,
+      cooldown = 800,
       damage_modifier = 15,
       lead_target_for_projectile_speed = 1,
       projectile_center = { 0, -0.5 * 1.5 },
