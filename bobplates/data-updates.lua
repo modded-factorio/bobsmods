@@ -234,6 +234,10 @@ end
 bobmods.lib.tech.add_prerequisite("cliff-explosives", "bob-fluid-barrel-processing")
 bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
+if bobmods.greenhouse then
+  bobmods.lib.recipe.replace_ingredient("bob-polishing-wheel", "plastic-bar", "wood")
+end
+
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("bob-ground-water", "water")
   bobmods.lib.resource.add_result(
@@ -296,6 +300,7 @@ data.raw.item["nuclear-fuel"].subgroup = "bob-chemical-fuels"
 data.raw.item["iron-plate"].subgroup = "bob-material"
 data.raw.item["copper-plate"].subgroup = "bob-material"
 data.raw.item["steel-plate"].subgroup = "bob-material"
+data.raw.item["plastic-bar"].subgroup = "bob-resource-chemical"
 data.raw.item["uranium-fuel-cell"].order = "r[uranium-processing]-a[uranium-fuel-cell]"
 data.raw.item["nuclear-fuel"].subgroup = "bob-chemical-fuels"
 data.raw.item["nuclear-fuel"].order = "e[nuclear-fuel]"
@@ -313,6 +318,8 @@ if mods["bobgreenhouse"] then
   data.raw.recipe["bob-basic-greenhouse-cycle"].order = "b[greenhouse-cycle-1]"
   data.raw.recipe["bob-advanced-greenhouse-cycle"].order = "b[greenhouse-cycle-2]"
 end
+data.raw.item.wood.subgroup = "bob-resource"
+data.raw.capsule["raw-fish"].subgroup = "bob-resource"
 
 data.raw.recipe["solid-fuel-from-heavy-oil"].subgroup = "bob-chemical-fuels"
 data.raw.recipe["solid-fuel-from-light-oil"].subgroup = "bob-chemical-fuels"
@@ -322,7 +329,7 @@ data.raw.recipe["nuclear-fuel"].order = "e[nuclear-fuel]"
 data.raw.recipe["iron-plate"].subgroup = "bob-material-smelting"
 data.raw.recipe["copper-plate"].subgroup = "bob-material-smelting"
 data.raw.recipe["steel-plate"].subgroup = "bob-material-smelting"
-data.raw.recipe["plastic-bar"].subgroup = "bob-material-chemical"
+data.raw.recipe["plastic-bar"].subgroup = "bob-resource-chemical"
 data.raw.recipe["uranium-fuel-cell"].subgroup = "bob-fuel-cells"
 data.raw.recipe["nuclear-fuel-reprocessing"].order = "r[uranium-processing]-b[reprocessing]"
 

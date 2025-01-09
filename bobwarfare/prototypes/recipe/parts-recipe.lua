@@ -22,7 +22,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
-      { type = "item", name = "wood", amount = 1 },
+      { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "gun-cotton", amount = 1 } },
     allow_productivity = true,
