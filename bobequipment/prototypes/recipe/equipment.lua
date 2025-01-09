@@ -344,7 +344,6 @@ data:extend({
       { type = "item", name = "iron-gear-wheel", amount = 30 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "speed-module-2", amount = 1 },
-      
     },
     results = { { type = "item", name = "exoskeleton-equipment-2", amount = 1 } },
   },

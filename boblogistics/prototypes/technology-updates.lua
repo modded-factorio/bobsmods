@@ -328,7 +328,13 @@ end
 remove_inserter_stack_size_bonus("inserter-capacity-bonus-2")
 remove_inserter_stack_size_bonus("inserter-capacity-bonus-7")
 
-bobmods.lib.tech.technology_line_icon_constant("inserter-capacity-bonus", 1, 7, { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",  icon_size = 128 }, "__boblibrary__/graphics/constants/constant-capacity.png")
+bobmods.lib.tech.technology_line_icon_constant(
+  "inserter-capacity-bonus",
+  1,
+  7,
+  { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
+  "__boblibrary__/graphics/constants/constant-capacity.png"
+)
 
 if settings.startup["bobmods-logistics-disableroboports"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "roboport")

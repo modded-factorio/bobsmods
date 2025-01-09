@@ -175,7 +175,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-1",
-    icons = bobmods.lib.tech.technology_icon_constant({ icon ="__base__/graphics/technology/inserter-capacity.png", icon_size = 256 }, "__boblibrary__/graphics/constants/constant-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -199,7 +202,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-2",
-    icons = bobmods.lib.tech.technology_icon_constant({ icon ="__base__/graphics/technology/inserter-capacity.png", icon_size = 256 }, "__boblibrary__/graphics/constants/constant-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -221,7 +227,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-3",
-    icons = bobmods.lib.tech.technology_icon_constant({ icon ="__base__/graphics/technology/inserter-capacity.png", icon_size = 256 }, "__boblibrary__/graphics/constants/constant-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -244,7 +253,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-4",
-    icons = bobmods.lib.tech.technology_icon_constant({ icon ="__base__/graphics/technology/inserter-capacity.png", icon_size = 256 }, "__boblibrary__/graphics/constants/constant-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -271,7 +283,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-capacity-bonus-8",
-    icons = bobmods.lib.tech.technology_icon_constant({ icon ="__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 }, "__boblibrary__/graphics/constants/constant-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     icon_size = 128,
     effects = {
       {

@@ -175,7 +175,7 @@ data:extend({
     name = "unarmed-grid",
     width = 5,
     height = 10,
-    equipment_categories = {"car", "unarmed-vehicle"}
+    equipment_categories = { "car", "unarmed-vehicle" },
   },
 
   {
@@ -183,6 +183,6 @@ data:extend({
     name = "boat-grid",
     width = 6,
     height = 12,
-    equipment_categories = {"vehicle", "armoured-vehicle", "cargo-wagon"}
+    equipment_categories = { "vehicle", "armoured-vehicle", "cargo-wagon" },
   },
 })

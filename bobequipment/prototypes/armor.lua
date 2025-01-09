@@ -379,7 +379,6 @@ if not mods["bobwarfare"] then
         time = 30,
       },
     },
-
   })
 
   table.insert(data.raw.character.character.animations[3].armors, "bob-power-armor-mk3")
@@ -441,5 +440,4 @@ if not mods["bobwarfare"] then
       },
     })
   end
-
 end

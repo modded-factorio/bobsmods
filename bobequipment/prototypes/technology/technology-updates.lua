@@ -66,33 +66,33 @@ then
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-green", 1 },
-    { "alien-science-pack-red", 1, },
+    { "alien-science-pack-red", 1 },
   }
   data.raw.technology["bob-battery-equipment-6"].unit.ingredients = {
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-green", 1 },
-    { "alien-science-pack-red", 1, },
+    { "alien-science-pack-red", 1 },
   }
   data.raw.technology["fission-reactor-equipment-4"].unit.ingredients = {
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-blue", 1 },
-    { "alien-science-pack-red", 1, },
+    { "alien-science-pack-red", 1 },
   }
   data.raw.technology["personal-laser-defense-equipment-6"].unit.ingredients = {
     { "science-pack-gold", 1 },
     { "alien-science-pack", 1 },
     { "alien-science-pack-blue", 1 },
     { "alien-science-pack-orange", 1 },
-    { "alien-science-pack-green", 1, },
+    { "alien-science-pack-green", 1 },
   }
   if data.raw.technology["solar-panel-equipment-5"] then
     data.raw.technology["solar-panel-equipment-5"].unit.ingredients = {
       { "science-pack-gold", 1 },
       { "alien-science-pack", 1 },
       { "alien-science-pack-orange", 1 },
-      { "alien-science-pack-purple", 1, },
+      { "alien-science-pack-purple", 1 },
     }
   end
   if data.raw.technology["alien-research"] then

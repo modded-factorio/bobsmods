@@ -1,23 +1,28 @@
 --Remember when making any change to power armor to duplicate the edits in Bob's Warfare mod
 
 if not mods["bobwarfare"] then
-
   if mods["bobplates"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "iron-plate", "invar-alloy")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "invar-processing")
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "steel-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "aluminium-processing")
-    if mods ["bobrevamp"] then
+    if mods["bobrevamp"] then
       bobmods.lib.recipe.remove_ingredient("power-armor-mk2", "low-density-structure")
       bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "low-density-structure")
       if data.raw.item["cobalt-steel-alloy"] then
-        bobmods.lib.recipe.add_ingredient("power-armor-mk2", { type = "item", name = "cobalt-steel-alloy", amount = 50 })
+        bobmods.lib.recipe.add_ingredient(
+          "power-armor-mk2",
+          { type = "item", name = "cobalt-steel-alloy", amount = 50 }
+        )
         bobmods.lib.tech.add_prerequisite("power-armor-mk2", "cobalt-processing")
       else
         bobmods.lib.recipe.add_ingredient("power-armor-mk2", { type = "item", name = "steel-plate", amount = 60 })
       end
       bobmods.lib.recipe.remove_ingredient("bob-power-armor-mk4", "steel-plate")
-      bobmods.lib.recipe.add_ingredient("bob-power-armor-mk4", { type = "item", name = "low-density-structure", amount = 5 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-power-armor-mk4",
+        { type = "item", name = "low-density-structure", amount = 5 }
+      )
       bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "low-density-structure")
     else
       bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "steel-plate", "bob-titanium-plate")
@@ -35,7 +40,8 @@ if not mods["bobwarfare"] then
   bobmods.lib.recipe.add_new_ingredient("power-armor-mk2", { type = "item", name = "power-armor", amount = 1 })
 
   bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
-  bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
+  bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
+  bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
   if data.raw.item["advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "advanced-circuit", "advanced-processing-unit")
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "advanced-circuit", "advanced-processing-unit")
@@ -56,7 +62,10 @@ if not mods["bobwarfare"] then
       { type = "item", name = "alien-artifact-blue", amount = 25 }
     )
   elseif data.raw.item["alien-artifact"] then
-    bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk3", { type = "item", name = "alien-artifact", amount = 70 })
+    bobmods.lib.recipe.add_new_ingredient(
+      "bob-power-armor-mk3",
+      { type = "item", name = "alien-artifact", amount = 70 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk3", { type = "item", name = "processing-unit", amount = 70 })
   end
@@ -70,7 +79,10 @@ if not mods["bobwarfare"] then
       { type = "item", name = "alien-artifact-purple", amount = 25 }
     )
   elseif data.raw.item["alien-artifact"] then
-    bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk4", { type = "item", name = "alien-artifact", amount = 90 })
+    bobmods.lib.recipe.add_new_ingredient(
+      "bob-power-armor-mk4",
+      { type = "item", name = "alien-artifact", amount = 90 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk4", { type = "item", name = "processing-unit", amount = 90 })
   end
@@ -84,7 +96,10 @@ if not mods["bobwarfare"] then
       { type = "item", name = "alien-artifact-green", amount = 25 }
     )
   elseif data.raw.item["alien-artifact"] then
-    bobmods.lib.recipe.add_new_ingredient("bob-power-armor-mk5", { type = "item", name = "alien-artifact", amount = 120 })
+    bobmods.lib.recipe.add_new_ingredient(
+      "bob-power-armor-mk5",
+      { type = "item", name = "alien-artifact", amount = 120 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk5", { type = "item", name = "processing-unit", amount = 120 })
   end
@@ -114,7 +129,7 @@ if not mods["bobwarfare"] then
       { "science-pack-gold", 1 },
       { "alien-science-pack", 1 },
       { "alien-science-pack-green", 1 },
-      { "alien-science-pack-red", 1, },
+      { "alien-science-pack-red", 1 },
     }
   end
 
@@ -184,5 +199,4 @@ if not mods["bobwarfare"] then
 
   bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
   bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "processing-unit")
-
 end

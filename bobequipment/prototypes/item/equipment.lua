@@ -208,8 +208,7 @@ data:extend({
   },
 })
 
-data.raw.item["fission-reactor-equipment"].icon =
-  "__bobequipment__/graphics/icons/fission-reactor-equipment-1.png"
+data.raw.item["fission-reactor-equipment"].icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-1.png"
 
 data:extend({
   {
