@@ -173,6 +173,9 @@ if data.raw.item["bob-bronze-alloy"] then
 end
 bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")
 bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
+if data.raw.technology["chemical-plant-2"] then
+  bobmods.lib.tech.add_prerequisite("production-science-pack", "chemical-plant-2")
+end
 
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
 if data.raw.item["bob-lithium-ion-battery"] then
