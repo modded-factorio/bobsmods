@@ -11,7 +11,7 @@ bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas"
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
-if mods["bobgreenhouse"] then
+if bobmods.greenhouse then
   bobmods.lib.tech.replace_prerequisite("bob-polishing", "plastics", "oil-processing")
 end
 

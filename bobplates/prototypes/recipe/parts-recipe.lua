@@ -258,7 +258,3 @@ data:extend({
     allow_productivity = true,
   },
 })
-
-if bobmods.greenhouse then
-  bobmods.lib.recipe.replace_ingredient("bob-polishing-wheel", "plastic-bar", "wood")
-end

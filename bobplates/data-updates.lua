@@ -234,6 +234,10 @@ end
 bobmods.lib.tech.add_prerequisite("cliff-explosives", "bob-fluid-barrel-processing")
 bobmods.lib.tech.remove_recipe_unlock("fluid-handling", "barrel")
 
+if bobmods.greenhouse then
+  bobmods.lib.recipe.replace_ingredient("bob-polishing-wheel", "plastic-bar", "wood")
+end
+
 if settings.startup["bobmods-plates-purewater"].value == true then
   bobmods.lib.resource.remove_result("bob-ground-water", "water")
   bobmods.lib.resource.add_result(
