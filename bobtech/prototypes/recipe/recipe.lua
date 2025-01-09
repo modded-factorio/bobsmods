@@ -6,7 +6,7 @@ data:extend({
     energy_required = 21,
     ingredients = {
       { type = "item", name = "fast-inserter", amount = 4 },
-      { type = "item", name = "express-transport-belt", amount = 1 },
+      { type = "item", name = "express-transport-belt", amount = 2 },
       { type = "item", name = "flying-robot-frame", amount = 1 },
       { type = "item", name = "steel-chest", amount = 2 },
     },
