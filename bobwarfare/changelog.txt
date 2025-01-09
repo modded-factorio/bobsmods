@@ -9,6 +9,7 @@ Date: ???
     - Update for Factorio 2.0 #189
     - Added significant power drain to plasma turrets #212
     - General rebalancing #280
+    - Removed Invar Cobalt-steel armor and Titanium-Ceramic armor #292
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024

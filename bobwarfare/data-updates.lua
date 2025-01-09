@@ -49,8 +49,6 @@ end
 
 if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
-    "heavy-armor-2",
-    "heavy-armor-3",
     "modular-armor",
     "power-armor",
     "power-armor-mk2",

@@ -90,8 +90,6 @@ elseif data.raw.item["bob-steel-bearing"] then
 end
 
 if data.raw.item["bob-invar-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("heavy-armor-2", "iron-plate", "bob-invar-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-3", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "iron-plate", "bob-invar-alloy")
   bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-invar-processing")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-3", "steel-plate", "bob-invar-alloy")
@@ -116,11 +114,6 @@ if data.raw.item["bob-invar-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-1", "steel-plate", "bob-invar-alloy")
   end
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-1", "bob-invar-processing")
-end
-
-if data.raw.item["bob-cobalt-steel-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("heavy-armor-2", "steel-plate", "bob-cobalt-steel-alloy")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-3", "bob-cobalt-processing")
 end
 
 if data.raw.item["bob-brass-gear-wheel"] then
@@ -173,8 +166,6 @@ if data.raw.item["bob-advanced-processing-unit"] then
 end
 
 if data.raw.item["bob-titanium-plate"] then
-  bobmods.lib.recipe.replace_ingredient("heavy-armor-3", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-4", "bob-titanium-processing")
   if mods["bobrevamp"] then
     bobmods.lib.recipe.remove_ingredient("power-armor-mk2", "low-density-structure")
     bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "low-density-structure")
@@ -228,9 +219,6 @@ if data.raw.item["bob-titanium-bearing"] then
 end
 
 if data.raw.item["bob-silicon-nitride"] then
-  bobmods.lib.recipe.replace_ingredient("heavy-armor-3", "plastic-bar", "bob-silicon-nitride")
-  bobmods.lib.tech.remove_prerequisite("bob-armor-making-4", "plastics")
-  bobmods.lib.tech.add_prerequisite("bob-armor-making-4", "bob-ceramics")
   bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "plastic-bar", "bob-silicon-nitride")
   bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-ceramics")
   bobmods.lib.recipe.replace_ingredient("bob-tank-3", "plastic-bar", "bob-silicon-nitride")
