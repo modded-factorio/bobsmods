@@ -177,7 +177,7 @@ data:extend({
               type = "nested-result",
               action = {
                 type = "area",
-                radius = 3,
+                radius = 2,
                 action_delivery = {
                   type = "instant",
                   target_effects = {
@@ -235,7 +235,7 @@ data:extend({
               type = "nested-result",
               action = {
                 type = "area",
-                radius = 3,
+                radius = 2,
                 action_delivery = {
                   type = "instant",
                   target_effects = {
@@ -289,7 +289,7 @@ data:extend({
               type = "nested-result",
               action = {
                 type = "area",
-                radius = 3,
+                radius = 2,
                 action_delivery = {
                   type = "instant",
                   target_effects = {
@@ -347,7 +347,7 @@ data:extend({
               type = "nested-result",
               action = {
                 type = "area",
-                radius = 3,
+                radius = 2,
                 action_delivery = {
                   type = "instant",
                   target_effects = {
@@ -1386,7 +1386,7 @@ data:extend({
               type = "nested-result",
               action = {
                 type = "area",
-                radius = 3,
+                radius = 2,
                 action_delivery = {
                   type = "instant",
                   target_effects = {
