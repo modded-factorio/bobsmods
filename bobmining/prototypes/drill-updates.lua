@@ -37,14 +37,9 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
     end
   end
 
-  if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-drills-4", "bob-titanium-processing")
-  else
-    if data.raw.item["bob-tungsten-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("bob-mining-drill-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
-      bobmods.lib.tech.add_prerequisite("bob-drills-4", "bob-tungsten-processing")
-    end
+  if data.raw.item["bob-tungsten-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-drills-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
