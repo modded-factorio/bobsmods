@@ -18,9 +18,23 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.fluid["bob-deuterium"].fuel_value = "35kJ"
     data.raw.recipe["bob-water-electrolysis"].energy_required = 2
     data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
+    if data.raw.recipe["sodium-chlorate"] then
+      data.raw.recipe["sodium-chlorate"].energy_required = 6
+      data.raw.recipe["sodium-perchlorate"].energy_required = 2
+    end
   end
   data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "1050kW"
   data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "12kW"
+  data.raw.recipe["bob-water-electrolysis"].allow_consumption = false
+  data.raw.recipe["bob-salt-water-electrolysis"].allow_consumption = false
+  data.raw.recipe["bob-heavy-water-electrolysis"].allow_consumption = false
+  if data.raw.recipe["sodium-chlorate"] then
+    data.raw.recipe["sodium-chlorate"].allow_consumption = false
+    data.raw.recipe["sodium-perchlorate"].allow_consumption = false
+  end
+  if data.raw.recipe["brine-electrolysis"] then
+    data.raw.recipe["brine-electrolysis"].allow_consumption = false
+  end
 end
 
 --change icons.
