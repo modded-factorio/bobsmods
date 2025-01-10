@@ -297,8 +297,6 @@ if feature_flags["quality"] then
   if data.raw.recipe["sodium-chlorate"] then
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-chlorate", false)
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("sodium-perchlorate", false)
-    data.raw.recipe["sodium-chlorate"].energy_required = 6
-    data.raw.recipe["sodium-perchlorate"].energy_required = 2
   end
 
   bobmods.lib.recipe.update_recycling_recipe({
