@@ -105,6 +105,7 @@ end
 
 if not bobmods.ores.cobalt.enabled then
   bobmods.lib.item.hide("bob-cobalt-ore")
+  bobmods.lib.item.hide_entity("resource", "bob-cobalt-ore")
 end
 
 if bobmods.ores.settings.UnsortedGemOre == true then
