@@ -14,6 +14,13 @@ if not mods["bobequipment"] then
   bobmods.lib.tech.add_prerequisite("personal-roboport-equipment", "chemical-science-pack")
 end
 
+-- 2.0 revisions
+data.raw.recipe["iron-stick"].enabled = true
+bobmods.lib.tech.remove_recipe_unlock("railway", "iron-stick")
+bobmods.lib.tech.remove_recipe_unlock("circuit-network", "iron-stick")
+bobmods.lib.tech.remove_recipe_unlock("electric-energy-distribution-1", "iron-stick")
+bobmods.lib.tech.remove_recipe_unlock("concrete", "iron-stick")
+
 bobmods.lib.tech.replace_prerequisite("lubricant", "advanced-oil-processing", "oil-processing")
 bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("electric-engine", "chemical-science-pack")
@@ -328,23 +335,13 @@ end
 remove_inserter_stack_size_bonus("inserter-capacity-bonus-2")
 remove_inserter_stack_size_bonus("inserter-capacity-bonus-7")
 
-for i = 1, 7 do
-  if data.raw.technology["inserter-capacity-bonus-" .. i] then
-    data.raw.technology["inserter-capacity-bonus-" .. i].icons = {
-      {
-        icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
-        icon_size = 128,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
-        icon_size = 128,
-        shift = { 50, 50 },
-        scale = 0.5,
-      },
-    }
-    data.raw.technology["inserter-capacity-bonus-" .. i].icon_size = 128
-  end
-end
+bobmods.lib.tech.technology_line_icon_constant(
+  "inserter-capacity-bonus",
+  1,
+  7,
+  { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
+  "__boblibrary__/graphics/constants/constant-capacity.png"
+)
 
 if settings.startup["bobmods-logistics-disableroboports"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("construction-robotics", "roboport")

@@ -10,6 +10,12 @@ data:extend({
     type = "equipment-category",
     name = "vehicle",
   },
+
+  {
+    type = "equipment-category",
+    name = "unarmed-vehicle",
+  },
+
   {
     type = "equipment-category",
     name = "armoured-vehicle",

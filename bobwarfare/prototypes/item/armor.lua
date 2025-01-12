@@ -1,3 +1,5 @@
+--Remember when making any change to power armor to duplicate the edits in Bob's Personal Equipment mod
+
 data:extend({
   {
     type = "armor",

@@ -70,7 +70,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       ingredients = {
         { type = "item", name = "basic-transport-belt", amount = 5 },
         { type = "item", name = "stone", amount = 2 },
-        { type = "item", name = "wood", amount = 2 },
+        { type = "item", name = "iron-stick", amount = 2 },
       },
       results = { { type = "item", name = "basic-underground-belt", amount = 2 } },
     },
@@ -81,7 +81,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       energy_required = 1,
       ingredients = {
         { type = "item", name = "basic-transport-belt", amount = 5 },
-        { type = "item", name = "wood", amount = 4 },
+        { type = "item", name = "iron-stick", amount = 4 },
         { type = "item", name = "iron-gear-wheel", amount = 2 },
         { type = "item", name = "copper-cable", amount = 4 },
       },

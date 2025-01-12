@@ -14,8 +14,7 @@ then
       icon_size = 64,
       prerequisites = {
         "bob-tungsten-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -41,8 +40,7 @@ then
       icon = "__bobplates__/graphics/icons/technology/alien-orange-alloy.png",
       icon_size = 64,
       prerequisites = {
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
         "bob-gold-processing",
       },
       effects = {
@@ -70,8 +68,7 @@ then
       icon_size = 32,
       prerequisites = {
         "sulfur-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -98,8 +95,7 @@ then
       icon_size = 32,
       prerequisites = {
         "sulfur-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -126,8 +122,7 @@ then
       icon_size = 32,
       prerequisites = {
         "bob-nitrogen-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -154,8 +149,7 @@ then
       icon_size = 32,
       prerequisites = {
         "oil-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {

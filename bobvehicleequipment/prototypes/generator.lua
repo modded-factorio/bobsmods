@@ -3,7 +3,6 @@ data:extend({
     type = "item",
     name = "vehicle-fission-reactor-equipment-1",
     icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-1.png",
-    icon_size = 64,
     place_as_equipment_result = "vehicle-fission-reactor-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-reactor]-1",
@@ -29,7 +28,9 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "processing-unit", amount = 250 },
+      { type = "item", name = "advanced-circuit", amount = 60 },
+      { type = "item", name = "steel-plate", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 12 },
     },
     results = { { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 1 } },
   },
@@ -39,8 +40,8 @@ data:extend({
     name = "vehicle-fission-reactor-equipment-1",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-1.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -52,28 +53,29 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "500kW",
-    categories = { "vehicle" },
+    power = "225kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fission-reactor-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment.png",
-      icon_size = 128,
-    }),
-    order = "v-g-l-a",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-1.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
-      "processing-unit",
+      "nuclear-power",
+      "military-3",
     },
     unit = {
-      count = 200,
+      count = 150,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
       },
     },
@@ -91,7 +93,6 @@ data:extend({
     type = "item",
     name = "vehicle-fission-reactor-equipment-2",
     icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-2.png",
-    icon_size = 64,
     place_as_equipment_result = "vehicle-fission-reactor-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-reactor]-2",
@@ -118,10 +119,9 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-reactor-equipment-1", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "efficiency-module-2", amount = 2 },
-      { type = "item", name = "speed-module-2", amount = 2 },
-      { type = "item", name = "productivity-module-2", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 60 },
+      { type = "item", name = "steel-plate", amount = 150 },
+      { type = "item", name = "uranium-fuel-cell", amount = 12 },
     },
     results = { { type = "item", name = "vehicle-fission-reactor-equipment-2", amount = 1 } },
   },
@@ -131,8 +131,8 @@ data:extend({
     name = "vehicle-fission-reactor-equipment-2",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-2.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -144,30 +144,30 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "750kW",
-    categories = { "vehicle" },
+    power = "450kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fission-reactor-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment.png",
-      icon_size = 128,
-    }),
-    order = "v-g-l-b",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-2.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-fission-reactor-equipment-1",
-      "utility-science-pack",
+      "production-science-pack",
     },
     unit = {
-      count = 150,
+      count = 200,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "utility-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
     },
     effects = {
@@ -184,7 +184,6 @@ data:extend({
     type = "item",
     name = "vehicle-fission-reactor-equipment-3",
     icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-3.png",
-    icon_size = 64,
     place_as_equipment_result = "vehicle-fission-reactor-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-reactor]-3",
@@ -211,10 +210,9 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-reactor-equipment-2", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "speed-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 36 },
+      { type = "item", name = "low-density-structure", amount = 50 },
     },
     results = { { type = "item", name = "vehicle-fission-reactor-equipment-3", amount = 1 } },
   },
@@ -224,8 +222,8 @@ data:extend({
     name = "vehicle-fission-reactor-equipment-3",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-3.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -237,31 +235,31 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "1250kW",
-    categories = { "vehicle" },
+    power = "1000kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fission-reactor-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment.png",
-      icon_size = 128,
-    }),
-    order = "v-g-l-c",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-3.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-fission-reactor-equipment-2",
-      "production-science-pack",
+      "low-density-structure",
+      "processing-unit",
     },
     unit = {
-      count = 300,
+      count = 250,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
       },
     },
     effects = {
@@ -278,7 +276,6 @@ data:extend({
     type = "item",
     name = "vehicle-fission-reactor-equipment-4",
     icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-4.png",
-    icon_size = 64,
     place_as_equipment_result = "vehicle-fission-reactor-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-reactor]-4",
@@ -305,10 +302,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-reactor-equipment-3", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "speed-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 48 },
     },
     results = { { type = "item", name = "vehicle-fission-reactor-equipment-4", amount = 1 } },
   },
@@ -318,8 +313,8 @@ data:extend({
     name = "vehicle-fission-reactor-equipment-4",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-4.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -331,27 +326,28 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "2000kW",
-    categories = { "vehicle" },
+    power = "1600kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fission-reactor-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment.png",
-      icon_size = 128,
-    }),
-    order = "v-g-l-d",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-4.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-fission-reactor-equipment-3",
+      "utility-science-pack",
     },
     unit = {
-      count = 350,
+      count = 300,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -371,7 +367,6 @@ data:extend({
     type = "item",
     name = "vehicle-fission-reactor-equipment-5",
     icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-5.png",
-    icon_size = 64,
     place_as_equipment_result = "vehicle-fission-reactor-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-reactor]-5",
@@ -398,10 +393,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-reactor-equipment-4", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "speed-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 60 },
     },
     results = { { type = "item", name = "vehicle-fission-reactor-equipment-5", amount = 1 } },
   },
@@ -411,8 +404,8 @@ data:extend({
     name = "vehicle-fission-reactor-equipment-5",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-5.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -424,27 +417,27 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "3000kW",
-    categories = { "vehicle" },
+    power = "2400kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fission-reactor-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment.png",
-      icon_size = 128,
-    }),
-    order = "v-g-l-e",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-5.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-fission-reactor-equipment-4",
     },
     unit = {
-      count = 400,
+      count = 350,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -464,7 +457,6 @@ data:extend({
     type = "item",
     name = "vehicle-fission-reactor-equipment-6",
     icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-6.png",
-    icon_size = 64,
     place_as_equipment_result = "vehicle-fission-reactor-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[fission-reactor]-6",
@@ -491,10 +483,8 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-fission-reactor-equipment-5", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 50 },
-      { type = "item", name = "efficiency-module-3", amount = 2 },
-      { type = "item", name = "speed-module-3", amount = 2 },
-      { type = "item", name = "productivity-module-3", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 150 },
+      { type = "item", name = "uranium-fuel-cell", amount = 96 },
     },
     results = { { type = "item", name = "vehicle-fission-reactor-equipment-6", amount = 1 } },
   },
@@ -504,8 +494,8 @@ data:extend({
     name = "vehicle-fission-reactor-equipment-6",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-6.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -517,30 +507,32 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "4250kW",
-    categories = { "vehicle" },
+    power = "3600kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-fission-reactor-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment.png",
-      icon_size = 128,
-    }),
-    order = "v-g-l-f",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-6.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-fission-reactor-equipment-5",
+      "space-science-pack",
     },
     unit = {
-      count = 450,
+      count = 400,
       time = 45,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
     effects = {

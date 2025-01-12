@@ -18,7 +18,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-d-b",
   },
   {
     type = "technology",
@@ -39,7 +38,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-o-a2",
   },
 })
 
@@ -83,7 +81,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "a-d-c",
     },
     {
       type = "technology",
@@ -111,7 +108,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "a-d-d",
     },
     {
       type = "technology",
@@ -138,7 +134,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "c-o-a3",
     },
 
     {
@@ -167,7 +162,6 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "c-o-a4",
     },
   })
 else
@@ -181,7 +175,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -201,12 +198,14 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-a",
   },
   {
     type = "technology",
     name = "inserter-stack-size-bonus-2",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -224,12 +223,14 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-b",
   },
   {
     type = "technology",
     name = "inserter-stack-size-bonus-3",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -248,12 +249,14 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-c",
   },
   {
     type = "technology",
     name = "inserter-stack-size-bonus-4",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -273,7 +276,6 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-d",
   },
 })
 
@@ -281,18 +283,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-capacity-bonus-8",
-    icons = {
-      {
-        icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
-        icon_size = 128,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
-        icon_size = 128,
-        shift = { 50, 50 },
-        scale = 0.5,
-      },
-    },
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     icon_size = 128,
     effects = {
       {
@@ -323,7 +317,6 @@ data:extend({
     },
     max_level = "infinite",
     upgrade = true,
-    order = "c-o-i",
   },
 })
 
@@ -345,7 +338,6 @@ if not data.raw.technology["long-inserters-1"] then
         },
         time = 15,
       },
-      order = "a-f-a-1",
     },
   })
 end

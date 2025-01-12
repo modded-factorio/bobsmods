@@ -11,6 +11,10 @@ bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas"
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
+if bobmods.greenhouse then
+  bobmods.lib.tech.replace_prerequisite("bob-polishing", "plastics", "oil-processing")
+end
+
 if bobmods.electronics then
   bobmods.lib.tech.add_prerequisite("bob-air-compressor-1", "electronics")
   bobmods.lib.tech.add_prerequisite("bob-water-bore-1", "electronics")
