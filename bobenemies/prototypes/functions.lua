@@ -224,6 +224,7 @@ function bobmods.enemies.acid_stream(data)
     type = "stream",
     name = data.name,
     flags = { "not-on-map" },
+    hidden = true,
     particle_buffer_size = 90,
     particle_spawn_interval = data.particle_spawn_interval,
     particle_spawn_timeout = data.particle_spawn_timeout,
