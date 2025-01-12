@@ -343,6 +343,7 @@ function bobmods.lib.resource.create(inputs)
         mining_particle = inputs.particle,
         mining_time = inputs.mining_time or 2,
       },
+      factoriopedia_simulation = { init = make_resource(inputs.name) },
     },
   })
   if inputs.walking_sound == "oil" then
