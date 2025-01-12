@@ -276,36 +276,32 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data.raw["spider-vehicle"]["spidertron"].order = "b[personal-transport]-c[spidertron]-c[spidertron]"
 
 local factoriopedia_antron = {
-  init =
-  [[
+  init = [[
     game.simulation.camera_zoom = 1.3
     game.simulation.camera_position = { 0, -1 }
     game.surfaces[1].create_entity({ name = "antron", position = { 0, 0 } })
-  ]]
+  ]],
 }
 local factoriopedia_tankotron = {
-  init =
-  [[
+  init = [[
     game.simulation.camera_zoom = 1.3
     game.simulation.camera_position = { 0, -1 }
     game.surfaces[1].create_entity({ name = "tankotron", position = { 0, 0 } })
-  ]]
+  ]],
 }
 local factoriopedia_logistic_spidertron = {
-  init =
-  [[
+  init = [[
     game.simulation.camera_zoom = 1.2
     game.simulation.camera_position = { 0, -1 }
     game.surfaces[1].create_entity({ name = "logistic-spidertron", position = { 0, 0 } })
-  ]]
+  ]],
 }
 local factoriopedia_heavy_spidertron = {
-  init =
-  [[
+  init = [[
     game.simulation.camera_zoom = 0.8
     game.simulation.camera_position = { 0, -2 }
     game.surfaces[1].create_entity({ name = "heavy-spidertron", position = { 0, 0 } })
-  ]]
+  ]],
 }
 
 function bobmods.warfare.create_spidertron(arguments)
