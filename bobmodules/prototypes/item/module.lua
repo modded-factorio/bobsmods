@@ -1,10 +1,10 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 local module_color_map = {
-    ["blue"] = { primary = util.color("70b6ff"), secondary = util.color("30d2ff") },
-    ["brown"] = { primary = util.color("9c7c60"), secondary = util.color("fff0d9") },
-    ["pine"] = { primary = util.color("7a9e96"), secondary = util.color("bfffd2") },
-    ["red-yellow"] = { primary = util.color("f27c52"), secondary = util.color("ffe27c") },
-    ["yellow"] = { primary = util.color("ffdd45"), secondary = util.color("ffed66") },
+  ["blue"] = { primary = util.color("70b6ff"), secondary = util.color("30d2ff") },
+  ["brown"] = { primary = util.color("9c7c60"), secondary = util.color("fff0d9") },
+  ["pine"] = { primary = util.color("7a9e96"), secondary = util.color("bfffd2") },
+  ["red-yellow"] = { primary = util.color("f27c52"), secondary = util.color("ffe27c") },
+  ["yellow"] = { primary = util.color("ffdd45"), secondary = util.color("ffed66") },
 }
 
 --[[Speed Modules]]

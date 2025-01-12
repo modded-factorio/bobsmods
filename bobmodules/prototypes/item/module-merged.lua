@@ -1,6 +1,6 @@
 if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
   local module_color_map = {
-      ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
+    ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
   }
   data:extend({
     {
