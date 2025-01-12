@@ -23,8 +23,8 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
       data.raw.recipe["sodium-perchlorate"].energy_required = 2
     end
   end
-  data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "1050kW"
-  data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "12kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "1200kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "13kW"
   data.raw.recipe["bob-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-salt-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-heavy-water-electrolysis"].allow_consumption = false

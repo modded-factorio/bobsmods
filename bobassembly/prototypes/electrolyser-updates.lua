@@ -9,14 +9,14 @@ then
     settings.startup["bobmods-plates-expensive-electrolysis"]
     and settings.startup["bobmods-plates-expensive-electrolysis"].value == true
   then
-    data.raw["assembling-machine"]["bob-electrolyser-2"].energy_usage = "1625kW"
-    data.raw["assembling-machine"]["bob-electrolyser-2"].energy_source.drain = "18kW"
-    data.raw["assembling-machine"]["bob-electrolyser-3"].energy_usage = "2400kW"
-    data.raw["assembling-machine"]["bob-electrolyser-3"].energy_source.drain = "27kW"
-    data.raw["assembling-machine"]["bob-electrolyser-4"].energy_usage = "3025kW"
-    data.raw["assembling-machine"]["bob-electrolyser-4"].energy_source.drain = "34kW"
-    data.raw["assembling-machine"]["bob-electrolyser-5"].energy_usage = "3500kW"
-    data.raw["assembling-machine"]["bob-electrolyser-5"].energy_source.drain = "39kW"
+    data.raw["assembling-machine"]["bob-electrolyser-2"].energy_usage = "1870kW"
+    data.raw["assembling-machine"]["bob-electrolyser-2"].energy_source.drain = "21kW"
+    data.raw["assembling-machine"]["bob-electrolyser-3"].energy_usage = "2750kW"
+    data.raw["assembling-machine"]["bob-electrolyser-3"].energy_source.drain = "31kW"
+    data.raw["assembling-machine"]["bob-electrolyser-4"].energy_usage = "3450kW"
+    data.raw["assembling-machine"]["bob-electrolyser-4"].energy_source.drain = "38kW"
+    data.raw["assembling-machine"]["bob-electrolyser-5"].energy_usage = "3950kW"
+    data.raw["assembling-machine"]["bob-electrolyser-5"].energy_source.drain = "44kW"
   end
 
   data.raw["assembling-machine"]["bob-electrolyser"].next_upgrade = "bob-electrolyser-2"
