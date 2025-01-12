@@ -223,7 +223,6 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "gun-turret",
-      "logistic-science-pack",
       "military-science-pack",
     },
     effects = {
