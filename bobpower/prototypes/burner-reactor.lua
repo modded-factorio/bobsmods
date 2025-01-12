@@ -93,13 +93,13 @@ if settings.startup["bobmods-power-heatsources"].value == true then
           percent = 90,
         },
       },
-      consumption = "0.9MW",
-      neighbour_bonus = 0.12,
+      consumption = "0.6MW",
+      neighbour_bonus = 0.25,
       scale_energy_usage = false,
       energy_source = {
         type = "burner",
         fuel_categories = { "chemical" },
-        effectivity = 0.79,
+        effectivity = 0.60,
         emissions_per_minute = { pollution = 15 },
         fuel_inventory_size = 1,
         smoke = {
@@ -220,10 +220,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         localised_description = { "entity-description.burner-reactor", "1000" },
         minable = { result = "burner-reactor-2" },
         max_health = 500,
-        consumption = "1.8MW",
-        neighbour_bonus = 0.12,
+        consumption = "1.4MW",
+        neighbour_bonus = 0.25,
         energy_source = {
-          effectivity = 0.82,
+          effectivity = 0.7,
           emissions_per_minute = { pollution = 20 },
         },
         lower_layer_picture = lower_layer_picture("-2"),
@@ -426,10 +426,12 @@ if settings.startup["bobmods-power-heatsources"].value == true then
 
   data.raw.reactor["fluid-reactor"].energy_source = util.copy(fluid_reactor_energy_source)
   data.raw.reactor["fluid-reactor-2"].energy_source = util.copy(fluid_reactor_energy_source)
-  data.raw.reactor["fluid-reactor"].energy_source.effectivity = 0.75
-  data.raw.reactor["fluid-reactor-2"].energy_source.effectivity = 0.72
-  data.raw.reactor["fluid-reactor"].neighbour_bonus = 0.13
-  data.raw.reactor["fluid-reactor-2"].neighbour_bonus = 0.13
+  data.raw.reactor["fluid-reactor"].consumption = "0.8MW"
+  data.raw.reactor["fluid-reactor-2"].consumption = "1.8MW"
+  data.raw.reactor["fluid-reactor"].energy_source.effectivity = 0.8
+  data.raw.reactor["fluid-reactor-2"].energy_source.effectivity = 0.9
+  data.raw.reactor["fluid-reactor"].neighbour_bonus = 0.1
+  data.raw.reactor["fluid-reactor-2"].neighbour_bonus = 0.1
   data.raw.reactor["fluid-reactor-2"].energy_source.emissions_per_minute = { pollution = 25 }
 
   --If the oil burning steel furnace exists, add a new alternate recipe to craft the fluid reactor from it.
