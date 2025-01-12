@@ -1,8 +1,6 @@
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
-  if mods["bobtech"] then
-    if settings.startup["bobmods-burnerphase"].value ~= true then
-      bobmods.lib.recipe.replace_ingredient("lab", "transport-belt", "basic-transport-belt")
-    end
+  if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
+    -- Do nothing
   else
     bobmods.lib.recipe.replace_ingredient("lab", "transport-belt", "basic-transport-belt")
   end
