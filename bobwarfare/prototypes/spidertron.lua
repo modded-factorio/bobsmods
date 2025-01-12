@@ -275,6 +275,39 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 data.raw["spider-vehicle"]["spidertron"].order = "b[personal-transport]-c[spidertron]-c[spidertron]"
 
+local factoriopedia_antron = {
+  init =
+  [[
+    game.simulation.camera_zoom = 1.3
+    game.simulation.camera_position = { 0, -1 }
+    game.surfaces[1].create_entity({ name = "antron", position = { 0, 0 } })
+  ]]
+}
+local factoriopedia_tankotron = {
+  init =
+  [[
+    game.simulation.camera_zoom = 1.3
+    game.simulation.camera_position = { 0, -1 }
+    game.surfaces[1].create_entity({ name = "tankotron", position = { 0, 0 } })
+  ]]
+}
+local factoriopedia_logistic_spidertron = {
+  init =
+  [[
+    game.simulation.camera_zoom = 1.2
+    game.simulation.camera_position = { 0, -1 }
+    game.surfaces[1].create_entity({ name = "logistic-spidertron", position = { 0, 0 } })
+  ]]
+}
+local factoriopedia_heavy_spidertron = {
+  init =
+  [[
+    game.simulation.camera_zoom = 0.8
+    game.simulation.camera_position = { 0, -2 }
+    game.surfaces[1].create_entity({ name = "heavy-spidertron", position = { 0, 0 } })
+  ]]
+}
+
 function bobmods.warfare.create_spidertron(arguments)
   local scale = arguments.scale
   local leg_scale = scale * arguments.leg_scale
@@ -318,11 +351,11 @@ function bobmods.warfare.create_spidertron(arguments)
       name = arguments.name,
       icon = "__base__/graphics/icons/spidertron.png",
       icon_size = 64,
+      factoriopedia_simulation = arguments.factoriopedia_simulation,
       collision_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       drawing_box_vertical_extension = 3 * scale,
       minable = { mining_time = 1, result = arguments.name },
-
       max_health = arguments.max_health or 3000,
       resistances = arguments.resistances,
       guns = arguments.guns,
@@ -723,6 +756,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 1, -- relative to scale
   leg_thickness = 1.25, -- relative to leg_scale
   leg_movement_speed = 0.75, --1,
+  factoriopedia_simulation = factoriopedia_antron,
   order_letter = "a",
   guns = {
     "spidertron-gatling-gun",
@@ -758,6 +792,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 1.25, -- relative to scale
   leg_thickness = 1, -- relative to leg_scale
   leg_movement_speed = 1, --1,
+  factoriopedia_simulation = factoriopedia_tankotron,
   order_letter = "b",
   guns = {
     "spidertron-cannon-1",
@@ -793,6 +828,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 0.8, -- relative to scale
   leg_thickness = 1, -- relative to leg_scale
   leg_movement_speed = 1, --1,
+  factoriopedia_simulation = factoriopedia_logistic_spidertron,
   order_letter = "d",
   guns = {
     "spidertron-gatling-gun",
@@ -827,6 +863,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 1.25, -- relative to scale
   leg_thickness = 1, -- relative to leg_scale
   leg_movement_speed = 1.5,
+  factoriopedia_simulation = factoriopedia_heavy_spidertron,
   order_letter = "e",
   guns = {
     "spidertron-rocket-launcher-1",
