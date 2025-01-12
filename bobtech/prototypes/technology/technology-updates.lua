@@ -15,6 +15,11 @@ if bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.replace_science_pack("braking-force-7", "production-science-pack", "advanced-logistic-science-pack")
   bobmods.lib.tech.replace_prerequisite("braking-force-3", "production-science-pack", "advanced-logistic-science-pack")
 
+  if data.raw.technology["elevated-rail"] then
+    bobmods.lib.tech.replace_science_pack("elevated-rail", "production-science-pack", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_prerequisite("elevated-rail", "production-science-pack", "advanced-logistic-science-pack")
+  end
+
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-4",
     "production-science-pack",
@@ -172,6 +177,11 @@ if data.raw.item["bob-bronze-alloy"] then
 end
 bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")
 bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
+if data.raw.technology["bob-electrolyser-3"] then
+  bobmods.lib.tech.add_prerequisite("production-science-pack", "bob-electrolyser-3")
+elseif data.raw.technology["chemical-plant-2"] then
+  bobmods.lib.tech.add_prerequisite("production-science-pack", "chemical-plant-2")
+end
 
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
 if data.raw.item["bob-lithium-ion-battery"] then
