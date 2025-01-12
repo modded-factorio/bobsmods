@@ -1,8 +1,8 @@
 if
   settings.startup["bobmods-assembly-electrolysers"].value
-  and data.raw.technology["electrolysis-1"]
-  and data.raw.item["electrolyser"]
-  and data.raw["recipe-category"]["electrolysis"]
+  and data.raw.technology["bob-electrolysis-1"]
+  and data.raw.item["bob-electrolyser"]
+  and data.raw["recipe-category"]["bob-electrolysis"]
 then
   data:extend({
     {
@@ -13,7 +13,7 @@ then
     },
   })
 
-  data.raw.item["electrolyser"].subgroup = "bob-electrolyser-machine"
+  data.raw.item["bob-electrolyser"].subgroup = "bob-electrolyser-machine"
 
   local function bob_electrolyser_fluid_boxes()
     return {
@@ -106,12 +106,12 @@ then
   data:extend({
     {
       type = "item",
-      name = "electrolyser-2",
+      name = "bob-electrolyser-2",
       icon = "__bobassembly__/graphics/icons/electrolyser-2.png",
       icon_size = 32,
       subgroup = "bob-electrolyser-machine",
-      order = "e[electrolyser-2]",
-      place_result = "electrolyser-2",
+      order = "e[bob-electrolyser-2]",
+      place_result = "bob-electrolyser-2",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -128,12 +128,12 @@ then
     },
     {
       type = "item",
-      name = "electrolyser-3",
+      name = "bob-electrolyser-3",
       icon = "__bobassembly__/graphics/icons/electrolyser-3.png",
       icon_size = 32,
       subgroup = "bob-electrolyser-machine",
-      order = "e[electrolyser-3]",
-      place_result = "electrolyser-3",
+      order = "e[bob-electrolyser-3]",
+      place_result = "bob-electrolyser-3",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -150,12 +150,12 @@ then
     },
     {
       type = "item",
-      name = "electrolyser-4",
+      name = "bob-electrolyser-4",
       icon = "__bobassembly__/graphics/icons/electrolyser-4.png",
       icon_size = 32,
       subgroup = "bob-electrolyser-machine",
-      order = "e[electrolyser-4]",
-      place_result = "electrolyser-4",
+      order = "e[bob-electrolyser-4]",
+      place_result = "bob-electrolyser-4",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -173,12 +173,12 @@ then
 
     {
       type = "item",
-      name = "electrolyser-5",
+      name = "bob-electrolyser-5",
       icon = "__bobassembly__/graphics/icons/electrolyser-5.png",
       icon_size = 32,
       subgroup = "bob-electrolyser-machine",
-      order = "e[electrolyser-5]",
-      place_result = "electrolyser-5",
+      order = "e[bob-electrolyser-5]",
+      place_result = "bob-electrolyser-5",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -196,83 +196,83 @@ then
 
     {
       type = "recipe",
-      name = "electrolyser-2",
+      name = "bob-electrolyser-2",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "electrolyser", amount = 1 },
+        { type = "item", name = "bob-electrolyser", amount = 1 },
         { type = "item", name = "plastic-bar", amount = 10 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "electronic-circuit", amount = 5 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "electrolyser-2", amount = 1 } },
+      results = { { type = "item", name = "bob-electrolyser-2", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "electrolyser-3",
+      name = "bob-electrolyser-3",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "electrolyser-2", amount = 1 },
+        { type = "item", name = "bob-electrolyser-2", amount = 1 },
         { type = "item", name = "plastic-bar", amount = 10 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-plate", amount = 10 },
         { type = "item", name = "advanced-circuit", amount = 10 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "electrolyser-3", amount = 1 } },
+      results = { { type = "item", name = "bob-electrolyser-3", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "electrolyser-4",
+      name = "bob-electrolyser-4",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "electrolyser-3", amount = 1 },
+        { type = "item", name = "bob-electrolyser-3", amount = 1 },
         { type = "item", name = "plastic-bar", amount = 10 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-plate", amount = 10 },
         { type = "item", name = "processing-unit", amount = 10 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "electrolyser-4", amount = 1 } },
+      results = { { type = "item", name = "bob-electrolyser-4", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "electrolyser-5",
+      name = "bob-electrolyser-5",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "electrolyser-4", amount = 1 },
+        { type = "item", name = "bob-electrolyser-4", amount = 1 },
         { type = "item", name = "plastic-bar", amount = 10 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-plate", amount = 10 },
         { type = "item", name = "processing-unit", amount = 10 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "electrolyser-5", amount = 1 } },
+      results = { { type = "item", name = "bob-electrolyser-5", amount = 1 } },
     },
 
     {
       type = "assembling-machine",
-      name = "electrolyser-2",
+      name = "bob-electrolyser-2",
       icon = "__bobassembly__/graphics/icons/electrolyser-2.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electrolyser-2" },
-      fast_replaceable_group = "electrolyser",
-      next_upgrade = "electrolyser-3",
+      minable = { mining_time = 0.5, result = "bob-electrolyser-2" },
+      fast_replaceable_group = "bob-electrolyser",
+      next_upgrade = "bob-electrolyser-3",
       corpse = "big-remnants",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 275,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-      circuit_connector = circuit_connector_definitions["electrolyser"],
-      crafting_categories = { "electrolysis" },
+      circuit_connector = circuit_connector_definitions["bob-electrolyser"],
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 3,
       icons_positioning = {
@@ -305,20 +305,20 @@ then
 
     {
       type = "assembling-machine",
-      name = "electrolyser-3",
+      name = "bob-electrolyser-3",
       icon = "__bobassembly__/graphics/icons/electrolyser-3.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electrolyser-3" },
-      fast_replaceable_group = "electrolyser",
-      next_upgrade = "electrolyser-4",
+      minable = { mining_time = 0.5, result = "bob-electrolyser-3" },
+      fast_replaceable_group = "bob-electrolyser",
+      next_upgrade = "bob-electrolyser-4",
       corpse = "big-remnants",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 375,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-      circuit_connector = circuit_connector_definitions["electrolyser"],
-      crafting_categories = { "electrolysis" },
+      circuit_connector = circuit_connector_definitions["bob-electrolyser"],
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
       icons_positioning = {
@@ -351,20 +351,20 @@ then
 
     {
       type = "assembling-machine",
-      name = "electrolyser-4",
+      name = "bob-electrolyser-4",
       icon = "__bobassembly__/graphics/icons/electrolyser-4.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electrolyser-4" },
-      fast_replaceable_group = "electrolyser",
-      next_upgrade = "electrolyser-5",
+      minable = { mining_time = 0.5, result = "bob-electrolyser-4" },
+      fast_replaceable_group = "bob-electrolyser",
+      next_upgrade = "bob-electrolyser-5",
       corpse = "big-remnants",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 500,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-      circuit_connector = circuit_connector_definitions["electrolyser"],
-      crafting_categories = { "electrolysis" },
+      circuit_connector = circuit_connector_definitions["bob-electrolyser"],
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
       icons_positioning = {
@@ -399,19 +399,19 @@ then
 
     {
       type = "assembling-machine",
-      name = "electrolyser-5",
+      name = "bob-electrolyser-5",
       icon = "__bobassembly__/graphics/icons/electrolyser-5.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electrolyser-5" },
-      fast_replaceable_group = "electrolyser",
+      minable = { mining_time = 0.5, result = "bob-electrolyser-5" },
+      fast_replaceable_group = "bob-electrolyser",
       corpse = "big-remnants",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       max_health = 600,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-      circuit_connector = circuit_connector_definitions["electrolyser"],
-      crafting_categories = { "electrolysis" },
+      circuit_connector = circuit_connector_definitions["bob-electrolyser"],
+      crafting_categories = { "bob-electrolysis" },
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
       icons_positioning = {
@@ -446,11 +446,11 @@ then
 
     {
       type = "technology",
-      name = "electrolyser-2",
+      name = "bob-electrolyser-2",
       icon = "__bobassembly__/graphics/icons/technology/electrolyser.png",
       icon_size = 128,
       prerequisites = {
-        "electrolysis-1",
+        "bob-electrolysis-1",
         "steel-processing",
         "electronics",
         "logistic-science-pack",
@@ -458,7 +458,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electrolyser-2",
+          recipe = "bob-electrolyser-2",
         },
       },
       unit = {
@@ -474,17 +474,17 @@ then
 
     {
       type = "technology",
-      name = "electrolyser-3",
+      name = "bob-electrolyser-3",
       icon = "__bobassembly__/graphics/icons/technology/electrolyser.png",
       icon_size = 128,
       prerequisites = {
-        "electrolyser-2",
+        "bob-electrolyser-2",
         "chemical-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electrolyser-3",
+          recipe = "bob-electrolyser-3",
         },
       },
       unit = {
@@ -501,18 +501,18 @@ then
 
     {
       type = "technology",
-      name = "electrolyser-4",
+      name = "bob-electrolyser-4",
       icon = "__bobassembly__/graphics/icons/technology/electrolyser.png",
       icon_size = 128,
       prerequisites = {
-        "electrolyser-3",
+        "bob-electrolyser-3",
         "processing-unit",
         "production-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electrolyser-4",
+          recipe = "bob-electrolyser-4",
         },
       },
       unit = {
@@ -530,17 +530,17 @@ then
 
     {
       type = "technology",
-      name = "electrolyser-5",
+      name = "bob-electrolyser-5",
       icon = "__bobassembly__/graphics/icons/technology/electrolyser.png",
       icon_size = 128,
       prerequisites = {
-        "electrolyser-4",
+        "bob-electrolyser-4",
         "utility-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electrolyser-5",
+          recipe = "bob-electrolyser-5",
         },
       },
       unit = {

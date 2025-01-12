@@ -208,16 +208,13 @@ data:extend({
   },
 })
 
-data.raw.item["fission-reactor-equipment"].icon =
-  "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png"
-data.raw.item["fission-reactor-equipment"].icon_size = 128
+data.raw.item["fission-reactor-equipment"].icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-1.png"
 
 data:extend({
   {
     type = "item",
     name = "fission-reactor-equipment-2",
-    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
-    icon_size = 128,
+    icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-2.png",
     place_as_equipment_result = "fission-reactor-equipment-2",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-2]",
@@ -239,8 +236,7 @@ data:extend({
   {
     type = "item",
     name = "fission-reactor-equipment-3",
-    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
-    icon_size = 128,
+    icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-3.png",
     place_as_equipment_result = "fission-reactor-equipment-3",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-3]",
@@ -262,8 +258,7 @@ data:extend({
   {
     type = "item",
     name = "fission-reactor-equipment-4",
-    icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
-    icon_size = 128,
+    icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-4.png",
     place_as_equipment_result = "fission-reactor-equipment-4",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-4]",
@@ -377,29 +372,60 @@ data:extend({
       volume = 0.7,
     },
   },
-  {
-    type = "item",
-    name = "solar-panel-equipment-4",
-    icon = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
-    icon_size = 32,
-    place_as_equipment_result = "solar-panel-equipment-4",
-    subgroup = "equipment",
-    order = "a[energy-source]-a[solar-panel-4]",
-    stack_size = 20,
-    drop_sound = {
-      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-      volume = 0.7,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-      volume = 0.7,
-    },
-  },
 })
+
+if data.raw.item["alien-artifact"] then
+  data:extend({
+    {
+      type = "item",
+      name = "solar-panel-equipment-4",
+      icon = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
+      icon_size = 32,
+      place_as_equipment_result = "solar-panel-equipment-4",
+      subgroup = "equipment",
+      order = "a[energy-source]-a[solar-panel-4]",
+      stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7,
+      },
+    },
+  })
+  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+    data:extend({
+      {
+        type = "item",
+        name = "solar-panel-equipment-5",
+        icon = "__bobequipment__/graphics/icons/solar-panel-equipment-5.png",
+        icon_size = 32,
+        place_as_equipment_result = "solar-panel-equipment-5",
+        subgroup = "equipment",
+        order = "a[energy-source]-a[solar-panel-5]",
+        stack_size = 20,
+        drop_sound = {
+          filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+          volume = 0.7,
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+          volume = 0.7,
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+          volume = 0.7,
+        },
+      },
+    })
+  end
+end
 
 data.raw.item["personal-laser-defense-equipment"].icon =
   "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png"

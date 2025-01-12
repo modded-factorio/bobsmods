@@ -5,28 +5,28 @@ end
 
 bobmods.lib.tech.add_prerequisite("rocket-silo", "heat-shield")
 bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "heat-shield-tile", amount = 10 })
-if data.raw.item["silicon-nitride"] then
-  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "steel-plate", "silicon-nitride")
-  bobmods.lib.tech.replace_prerequisite("heat-shield", "steel-processing", "ceramics")
+if data.raw.item["bob-silicon-nitride"] then
+  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "steel-plate", "bob-silicon-nitride")
+  bobmods.lib.tech.replace_prerequisite("heat-shield", "steel-processing", "bob-ceramics")
 end
-if data.raw.item["tungsten-carbide"] then
-  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "plastic-bar", "tungsten-carbide")
-  bobmods.lib.tech.replace_prerequisite("heat-shield", "plastics", "tungsten-alloy-processing")
+if data.raw.item["bob-tungsten-carbide"] then
+  bobmods.lib.recipe.replace_ingredient("heat-shield-tile", "plastic-bar", "bob-tungsten-carbide")
+  bobmods.lib.tech.replace_prerequisite("heat-shield", "plastics", "bob-tungsten-alloy-processing")
 end
 
 if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("low-density-structure", "steel-plate", "bob-titanium-plate")
-  bobmods.lib.tech.add_prerequisite("low-density-structure", "titanium-processing")
+  bobmods.lib.tech.add_prerequisite("low-density-structure", "bob-titanium-processing")
 end
 if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("low-density-structure", "copper-plate", "bob-aluminium-plate")
-  bobmods.lib.tech.add_prerequisite("low-density-structure", "aluminium-processing")
+  bobmods.lib.tech.add_prerequisite("low-density-structure", "bob-aluminium-processing")
 end
 bobmods.lib.tech.remove_prerequisite("low-density-structure", "advanced-material-processing")
 
 bobmods.lib.tech.remove_prerequisite("rocket-silo", "productivity-module-3")
-if data.raw.technology["advanced-processing-unit"] then
-  bobmods.lib.tech.add_prerequisite("rocket-silo", "advanced-processing-unit")
+if data.raw.technology["bob-advanced-processing-unit"] then
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-advanced-processing-unit")
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "processing-unit")
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "speed-module-3")
 end
@@ -43,9 +43,9 @@ elseif data.raw.item["solar-panel-3"] then
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "solar-energy")
 end
 
-if data.raw.item["silver-zinc-battery"] then
-  bobmods.lib.recipe.replace_ingredient("satellite", "accumulator", "silver-zinc-battery")
-  bobmods.lib.tech.add_prerequisite("rocket-silo", "battery-3")
+if data.raw.item["bob-silver-zinc-battery"] then
+  bobmods.lib.recipe.replace_ingredient("satellite", "accumulator", "bob-silver-zinc-battery")
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-battery-3")
   bobmods.lib.tech.remove_prerequisite("rocket-silo", "electric-energy-accumulators")
 end
 

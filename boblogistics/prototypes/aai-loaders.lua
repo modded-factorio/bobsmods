@@ -18,11 +18,11 @@ if mods["aai-loaders"] then
     -- Plates
     if mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 2 })
-      table.insert(ingredients.regular, { type = "item", name = "tin-plate", amount = 2 })
-      table.insert(ingredients.fast, { type = "item", name = "bronze-alloy", amount = 2 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-tin-plate", amount = 2 })
+      table.insert(ingredients.fast, { type = "item", name = "bob-bronze-alloy", amount = 2 })
       table.insert(ingredients.express, { type = "item", name = "bob-aluminium-plate", amount = 2 })
       table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-plate", amount = 2 })
-      table.insert(ingredients.ultimate, { type = "item", name = "nitinol-alloy", amount = 2 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-nitinol-alloy", amount = 2 })
     else
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "iron-plate", amount = 10 })
@@ -39,14 +39,14 @@ if mods["aai-loaders"] then
       table.insert(ingredients.fast, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.express, { type = "item", name = "advanced-circuit", amount = 5 })
       table.insert(ingredients.turbo, { type = "item", name = "processing-unit", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "advanced-processing-unit", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-advanced-processing-unit", amount = 5 })
     elseif mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.fast, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.express, { type = "item", name = "advanced-circuit", amount = 5 })
       table.insert(ingredients.turbo, { type = "item", name = "processing-unit", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "advanced-processing-unit", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-advanced-processing-unit", amount = 5 })
     else
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "electronic-circuit", amount = 5 })
@@ -58,16 +58,16 @@ if mods["aai-loaders"] then
     -- Intermediates
     if mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-gear-wheel", amount = 5 })
-      table.insert(ingredients.regular, { type = "item", name = "steel-gear-wheel", amount = 5 })
-      table.insert(ingredients.regular, { type = "item", name = "steel-bearing", amount = 5 })
-      table.insert(ingredients.fast, { type = "item", name = "brass-gear-wheel", amount = 5 })
-      table.insert(ingredients.fast, { type = "item", name = "steel-bearing", amount = 5 })
-      table.insert(ingredients.express, { type = "item", name = "cobalt-steel-gear-wheel", amount = 5 })
-      table.insert(ingredients.express, { type = "item", name = "cobalt-steel-bearing", amount = 5 })
-      table.insert(ingredients.turbo, { type = "item", name = "titanium-gear-wheel", amount = 5 })
-      table.insert(ingredients.turbo, { type = "item", name = "titanium-bearing", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "nitinol-gear-wheel", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "nitinol-bearing", amount = 5 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-steel-gear-wheel", amount = 5 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-steel-bearing", amount = 5 })
+      table.insert(ingredients.fast, { type = "item", name = "bob-brass-gear-wheel", amount = 5 })
+      table.insert(ingredients.fast, { type = "item", name = "bob-steel-bearing", amount = 5 })
+      table.insert(ingredients.express, { type = "item", name = "bob-cobalt-steel-gear-wheel", amount = 5 })
+      table.insert(ingredients.express, { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 })
+      table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-gear-wheel", amount = 5 })
+      table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-bearing", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-nitinol-gear-wheel", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-nitinol-bearing", amount = 5 })
     else
       table.insert(ingredients.basic, { type = "item", name = "iron-gear-wheel", amount = 5 })
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 5 })
@@ -151,7 +151,7 @@ if mods["aai-loaders"] then
         "logistics-4",
         "aai-express-loader",
         "utility-science-pack",
-        data.raw.item["advanced-processing-unit"] and "advanced-processing-unit" or nil,
+        data.raw.tehnology["bob-advanced-processing-unit"] and "bob-advanced-processing-unit" or nil,
       },
       unit = {
         count = 400,

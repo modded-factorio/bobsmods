@@ -68,11 +68,10 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-belt-immunity-equipment",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/icons/belt-immunity-equipment.png",
       icon_size = 64,
-    }),
-    order = "g-g-g",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "advanced-circuit",
