@@ -261,6 +261,7 @@ if data.raw.item["flying-robot-frame-4"] then
 
   if data.raw.item["bob-nitinol-alloy"] then
     bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "bob-nitinol-processing")
   end
 
   bobmods.lib.recipe.add_ingredient(
