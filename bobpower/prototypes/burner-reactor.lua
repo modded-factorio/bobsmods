@@ -34,8 +34,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     }
   end
 
-  circuit_connector_definitions["burner-reactor"] = circuit_connector_definitions.create_single
-  (
+  circuit_connector_definitions["burner-reactor"] = circuit_connector_definitions.create_single(
     universal_connector_template,
     { variation = 26, main_offset = util.by_pixel(10, -20), shadow_offset = util.by_pixel(32, 0), show_shadow = false }
   )
