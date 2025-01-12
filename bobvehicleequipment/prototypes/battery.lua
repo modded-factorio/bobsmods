@@ -30,7 +30,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "battery", amount = 5 },
-      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "electronic-circuit", amount = 5 },
     },
     results = { { type = "item", name = "vehicle-battery-equipment-1", amount = 1 } },
   },
@@ -51,22 +51,19 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "75MJ", --"20MJ",
-      input_flow_limit = "750MW",
-      output_flow_limit = "750MW",
+      buffer_capacity = "20MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-battery-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-i-a",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "battery",
@@ -120,7 +117,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-battery-equipment-1", amount = 2 },
-      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
     },
     results = { { type = "item", name = "vehicle-battery-equipment-2", amount = 1 } },
   },
@@ -141,25 +138,22 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "120MJ",
-      input_flow_limit = "1200MW",
-      output_flow_limit = "1200MW",
+      buffer_capacity = "50MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-battery-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-i-b",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-battery-equipment-1",
-      "processing-unit",
+      "chemical-science-pack",
     },
     unit = {
       count = 100,
@@ -211,7 +205,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-battery-equipment-2", amount = 2 },
-      { type = "item", name = "battery", amount = 5 },
+      { type = "item", name = "battery", amount = 10 },
     },
     results = { { type = "item", name = "vehicle-battery-equipment-3", amount = 1 } },
   },
@@ -232,22 +226,19 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "210MJ",
-      input_flow_limit = "2100MW",
-      output_flow_limit = "2100MW",
+      buffer_capacity = "120MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-battery-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-i-c",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-battery-equipment-2",
     },
@@ -322,25 +313,23 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "360MJ",
-      input_flow_limit = "3600MW",
-      output_flow_limit = "3600MW",
+      buffer_capacity = "300MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-battery-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-i-d",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-battery-equipment-3",
       "production-science-pack",
+      "processing-unit",
     },
     unit = {
       count = 200,
@@ -393,7 +382,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "vehicle-battery-equipment-4", amount = 2 },
-      { type = "item", name = "battery", amount = 5 },
+      { type = "item", name = "battery", amount = 20 },
     },
     results = { { type = "item", name = "vehicle-battery-equipment-5", amount = 1 } },
   },
@@ -414,22 +403,19 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "600MJ",
-      input_flow_limit = "6000MW",
-      output_flow_limit = "6000MW",
+      buffer_capacity = "750MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-battery-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-i-e",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-battery-equipment-4",
     },
@@ -505,22 +491,19 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "1000MJ",
-      input_flow_limit = "10000MW",
-      output_flow_limit = "10000MW",
+      buffer_capacity = "1800MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
     name = "vehicle-battery-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-i-f",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-battery-equipment-5",
       "utility-science-pack",

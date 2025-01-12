@@ -82,8 +82,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.add_ingredient("fluid-generator-3", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
 
-  if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("fluid-generator-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
+  if data.raw.item["bob-tungsten-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("fluid-generator-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
   elseif data.raw.item["bob-steel-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("fluid-generator-3", "iron-gear-wheel", "bob-steel-gear-wheel")
   end

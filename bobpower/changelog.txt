@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Update for Factorio 2.0 #189
     - Updated solar panel graphics #258
+    - Rebalanced burner and fluid burning heat sources #283
+    - Increased the energy usage priority of steam turbines #283
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024

@@ -722,8 +722,8 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/polishing.png",
     icon_size = 64,
     prerequisites = {
-      "oil-processing",
       "bob-aluminium-processing",
+      "plastics",
     },
     unit = {
       count = 75,

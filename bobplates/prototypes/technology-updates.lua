@@ -11,6 +11,10 @@ bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas"
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
+if bobmods.greenhouse then
+  bobmods.lib.tech.replace_prerequisite("bob-polishing", "plastics", "oil-processing")
+end
+
 if bobmods.electronics then
   bobmods.lib.tech.add_prerequisite("bob-air-compressor-1", "electronics")
   bobmods.lib.tech.add_prerequisite("bob-water-bore-1", "electronics")
@@ -28,6 +32,7 @@ bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfuric-acid-2")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfuric-acid-3")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sulfur-dioxide")
 bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-hydrogen-sulfide")
+bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-sodium-hydroxide-sink")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")

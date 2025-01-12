@@ -63,11 +63,10 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-motor-equipment",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-motor-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-h-a",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "vehicle-solar-panel-equipment-1",
       "electric-engine",
@@ -158,11 +157,10 @@ data:extend({
   {
     type = "technology",
     name = "vehicle-engine-equipment",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-engine-equipment.png",
       icon_size = 128,
-    }),
-    order = "v-g-h-b",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "production-science-pack",
       "vehicle-motor-equipment",

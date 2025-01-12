@@ -46,6 +46,8 @@ if bobmods.tech.advanced_logistic_science then
     "utility-science-pack",
     "advanced-logistic-science-pack"
   )
+  bobmods.lib.tech.remove_prerequisite("worker-robots-speed-3", "utility-science-pack")
+  bobmods.lib.tech.add_prerequisite("worker-robots-speed-3", "advanced-logistic-science-pack")
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-speed-4",
     "utility-science-pack",
@@ -56,6 +58,8 @@ if bobmods.tech.advanced_logistic_science then
     "production-science-pack",
     "advanced-logistic-science-pack"
   )
+  bobmods.lib.tech.remove_prerequisite("worker-robots-speed-5", "production-science-pack")
+  bobmods.lib.tech.add_prerequisite("worker-robots-speed-5", "utility-science-pack")
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-speed-6",
     "production-science-pack",

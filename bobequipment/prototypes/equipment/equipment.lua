@@ -122,7 +122,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "energy-shield-mk4-equipment",
-    max_shield_value = 600,
+    max_shield_value = 500,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
@@ -147,7 +147,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "energy-shield-mk5-equipment",
-    max_shield_value = 1200,
+    max_shield_value = 800,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
@@ -172,7 +172,7 @@ data:extend({
   {
     type = "energy-shield-equipment",
     name = "energy-shield-mk6-equipment",
-    max_shield_value = 2400,
+    max_shield_value = 1200,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
@@ -342,38 +342,70 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "75kW",
-    categories = { "armor" },
-  },
-  {
-    type = "solar-panel-equipment",
-    name = "solar-panel-equipment-4",
-    sprite = {
-      filename = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
-      width = 32,
-      height = 32,
-      priority = "medium",
-    },
-    shape = {
-      width = 1,
-      height = 1,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "primary-output",
-    },
-    power = "120kW",
+    power = "67.5kW",
     categories = { "armor" },
   },
 })
 
+if data.raw.item["alien-artifact"] then
+  data:extend({
+    {
+      type = "solar-panel-equipment",
+      name = "solar-panel-equipment-4",
+      sprite = {
+        filename = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
+        width = 32,
+        height = 32,
+        priority = "medium",
+      },
+      shape = {
+        width = 1,
+        height = 1,
+        type = "full",
+      },
+      energy_source = {
+        type = "electric",
+        usage_priority = "primary-output",
+      },
+      power = "100kW",
+      categories = { "armor" },
+    },
+  })
+
+  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+    data:extend({
+      {
+        type = "solar-panel-equipment",
+        name = "solar-panel-equipment-5",
+        sprite = {
+          filename = "__bobequipment__/graphics/icons/solar-panel-equipment-5.png",
+          width = 32,
+          height = 32,
+          priority = "medium",
+        },
+        shape = {
+          width = 1,
+          height = 1,
+          type = "full",
+        },
+        energy_source = {
+          type = "electric",
+          usage_priority = "primary-output",
+        },
+        power = "150kW",
+        categories = { "armor" },
+      },
+    })
+  end
+end
+
 data.raw["generator-equipment"]["fission-reactor-equipment"].sprite = {
   filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",
-  width = 128,
-  height = 128,
+  width = 256,
+  height = 256,
   priority = "medium",
 }
+data.raw["generator-equipment"]["fission-reactor-equipment"].power = "450kW"
 
 data:extend({
   {
@@ -381,8 +413,8 @@ data:extend({
     name = "fission-reactor-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
-      width = 128,
-      height = 128,
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -394,7 +426,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "1250kW",
+    power = "1000kW",
     categories = { "armor" },
   },
   {
@@ -402,8 +434,8 @@ data:extend({
     name = "fission-reactor-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
-      width = 128,
-      height = 128,
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -415,7 +447,7 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "2000kW",
+    power = "1600kW",
     categories = { "armor" },
   },
   {
@@ -423,8 +455,8 @@ data:extend({
     name = "fission-reactor-equipment-4",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
-      width = 128,
-      height = 128,
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -436,10 +468,17 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "3000kW",
+    power = "2400kW",
     categories = { "armor" },
   },
 })
+
+local qualmod = 2
+if feature_flags["quality"] then
+  qualmod = 1
+else
+  data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_parameters.damage_modifier = 2
+end
 
 local function bob_personal_laser_defense_equipment(inputs)
   return {
@@ -464,7 +503,7 @@ local function bob_personal_laser_defense_equipment(inputs)
     attack_parameters = {
       type = "beam",
       cooldown = inputs.cooldown,
-      damage_modifier = 4 * inputs.damage_modifier,
+      damage_modifier = 4 * inputs.damage_modifier * qualmod,
       range = inputs.range,
       ammo_category = "laser",
       ammo_type = {

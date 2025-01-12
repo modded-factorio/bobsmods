@@ -252,7 +252,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
-      { type = "item", name = "wood", amount = 5 },
+      { type = "item", name = "plastic-bar", amount = 5 },
     },
     results = { { type = "item", name = "bob-polishing-wheel", amount = 2 } },
     allow_productivity = true,

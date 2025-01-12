@@ -47,7 +47,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -82,7 +82,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -117,7 +117,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -152,7 +152,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -187,7 +187,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -222,7 +222,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -290,7 +290,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -317,7 +317,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -344,7 +344,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -371,7 +371,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -398,7 +398,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -425,7 +425,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -502,7 +502,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-laser-rifle-ammo-2",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
@@ -1057,7 +1057,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/plasma-bullet-magazine.png",
     icon_size = 32,
     prerequisites = {
-      "utility-science-pack",
+      "military-4",
     },
     effects = {
       {
@@ -1091,7 +1091,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-plasma-shell.png",
     icon_size = 32,
     prerequisites = {
-      "utility-science-pack",
+      "military-4",
     },
     effects = {
       {
@@ -1117,7 +1117,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/plasma-rocket.png",
     icon_size = 32,
     prerequisites = {
-      "utility-science-pack",
+      "military-4",
     },
     effects = {
       {

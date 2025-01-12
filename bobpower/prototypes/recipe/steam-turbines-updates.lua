@@ -50,17 +50,12 @@ if settings.startup["bobmods-power-steam"].value == true then
     end
   end
 
-  if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("steam-turbine-2", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-titanium-processing")
+  if data.raw.item["bob-tungsten-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("steam-turbine-2", "iron-gear-wheel", "bob-tungsten-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-tungsten-processing")
   else
-    if data.raw.item["bob-tungsten-gear-wheel"] then
-      bobmods.lib.recipe.replace_ingredient("steam-turbine-2", "iron-gear-wheel", "bob-tungsten-gear-wheel")
-      bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-tungsten-processing")
-    else
-      if data.raw.item["bob-steel-gear-wheel"] then
-        bobmods.lib.recipe.replace_ingredient("steam-turbine-2", "iron-gear-wheel", "bob-steel-gear-wheel")
-      end
+    if data.raw.item["bob-steel-gear-wheel"] then
+      bobmods.lib.recipe.replace_ingredient("steam-turbine-2", "iron-gear-wheel", "bob-steel-gear-wheel")
     end
   end
 

@@ -14,8 +14,7 @@ then
       icon_size = 64,
       prerequisites = {
         "bob-tungsten-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -33,7 +32,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a1",
     },
 
     {
@@ -42,9 +40,8 @@ then
       icon = "__bobplates__/graphics/icons/technology/alien-orange-alloy.png",
       icon_size = 64,
       prerequisites = {
-        "steel-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
+        "bob-gold-processing",
       },
       effects = {
         {
@@ -62,7 +59,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a2",
     },
 
     {
@@ -72,8 +68,7 @@ then
       icon_size = 32,
       prerequisites = {
         "sulfur-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -91,7 +86,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a3",
     },
 
     {
@@ -101,8 +95,7 @@ then
       icon_size = 32,
       prerequisites = {
         "sulfur-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -120,7 +113,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a4",
     },
 
     {
@@ -130,8 +122,7 @@ then
       icon_size = 32,
       prerequisites = {
         "bob-nitrogen-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -149,7 +140,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a5",
     },
 
     {
@@ -159,8 +149,7 @@ then
       icon_size = 32,
       prerequisites = {
         "oil-processing",
-        "military-science-pack",
-        "chemical-science-pack",
+        "military-3",
       },
       effects = {
         {
@@ -178,7 +167,6 @@ then
         },
         time = 30,
       },
-      order = "e-f-a6",
     },
   })
 end
