@@ -937,6 +937,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-battery-2",
+    localised_name = { "", { "technology-name.battery" }, " 2" },
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
     prerequisites = {
@@ -970,6 +971,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-battery-3",
+    localised_name = { "", { "technology-name.battery" }, " 3" },
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
     prerequisites = {

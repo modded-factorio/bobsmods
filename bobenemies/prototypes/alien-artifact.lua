@@ -44,7 +44,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact",
-        localised_name = { "item-name.alien-artifact" },
         results = { { type = "item", name = "alien-artifact", amount = 1 } },
         ingredients = {
           { type = "item", name = "small-alien-artifact", amount = 25 },
@@ -73,7 +72,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-red",
-        localised_name = { "item-name.alien-artifact-red" },
         results = {
           { type = "item", name = "alien-artifact-red", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 },
         },
@@ -101,7 +99,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-orange",
-        localised_name = { "item-name.alien-artifact-orange" },
         results = {
           {
             type = "item",
@@ -135,7 +132,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-yellow",
-        localised_name = { "item-name.alien-artifact-yellow" },
         results = {
           {
             type = "item",
@@ -169,7 +165,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-green",
-        localised_name = { "item-name.alien-artifact-green" },
         results = {
           {
             type = "item",
@@ -203,7 +198,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-blue",
-        localised_name = { "item-name.alien-artifact-blue" },
         results = {
           {
             type = "item",
@@ -237,7 +231,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       {
         type = "recipe",
         name = "alien-artifact-purple",
-        localised_name = { "item-name.alien-artifact-purple" },
         results = {
           {
             type = "item",
