@@ -48,6 +48,7 @@ function bobmods.enemies.new_biter(input)
       icon = input.icon or "__base__/graphics/icons/big-biter-corpse.png",
       icon_size = input.icon_size or 32,
       selectable_in_game = false,
+      hidden_in_factoriopedia = true,
       selection_box = { { -1 * input.scale, -1 * input.scale }, { 1 * input.scale, 1 * input.scale } },
       subgroup = "corpses",
       order = "c[corpse]-" .. input.order,
