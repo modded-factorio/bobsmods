@@ -3,8 +3,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "technology",
       name = "bob-green-module-1",
-      icon = "__bobmodules__/graphics/icons/green-module-1.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_01.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
@@ -27,8 +27,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "technology",
       name = "bob-green-module-2",
-      icon = "__bobmodules__/graphics/icons/green-module-2.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_02.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
@@ -53,8 +53,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "technology",
       name = "bob-green-module-3",
-      icon = "__bobmodules__/graphics/icons/green-module-3.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_03.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
@@ -80,8 +80,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "technology",
       name = "bob-green-module-4",
-      icon = "__bobmodules__/graphics/icons/green-module-4.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_04.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
@@ -108,8 +108,8 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "technology",
       name = "bob-green-module-5",
-      icon = "__bobmodules__/graphics/icons/green-module-5.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_05.png",
+      icon_size = 64,
       effects = {
         {
           type = "unlock-recipe",
