@@ -11,6 +11,7 @@ ST3: 0.2kW * 60 * 1.0 * ( 765 -15) =  9000kW
 ]]
 --
 data.raw.generator["steam-turbine"].energy_source.usage_priority = "primary-output"
+data.raw.generator["steam-turbine"].localised_description = { "entity-description.steam-turbine-alt" }
 
 if settings.startup["bobmods-power-steam"].value == true then
   data.raw.generator["steam-turbine"].max_health = 750
@@ -22,7 +23,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-turbine-2",
         icon = "__base__/graphics/icons/steam-turbine.png",
-        localised_description = { "entity-description.steam-turbine" },
+        localised_description = { "entity-description.steam-turbine-alt" },
         icon_size = 64,
         minable = { mining_time = 1, result = "steam-turbine-2" },
         max_health = 1000,
@@ -36,7 +37,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         name = "steam-turbine-3",
         icon = "__base__/graphics/icons/steam-turbine.png",
-        localised_description = { "entity-description.steam-turbine" },
+        localised_description = { "entity-description.steam-turbine-alt" },
         icon_size = 64,
         minable = { mining_time = 1, result = "steam-turbine-3" },
         max_health = 1250,
