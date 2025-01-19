@@ -320,11 +320,11 @@ data:extend({
   },
 })
 
-if not data.raw.technology["long-inserters-1"] then
+if not data.raw.technology["bob-long-inserters-1"] then
   data:extend({
     {
       type = "technology",
-      name = "long-inserters-1",
+      name = "bob-long-inserters-1",
       icon = "__boblogistics__/graphics/icons/technology/long-inserters.png",
       icon_size = 128,
       effects = {},
