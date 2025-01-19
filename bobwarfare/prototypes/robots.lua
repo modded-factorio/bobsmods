@@ -261,7 +261,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
           target_effects = {
             type = "create-entity",
             show_in_tooltip = true,
-            entity_name = "bob-laser-robot",
+            entity_name = "bob-laser-robot-entity",
             offsets = { { -0.7, -0.7 }, { -0.7, 0.7 }, { 0.7, -0.7 }, { 0.7, 0.7 }, { 0, 0 } },
           },
         },
@@ -287,7 +287,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
 
     {
       type = "combat-robot",
-      name = "bob-laser-robot",
+      name = "bob-laser-robot-entity",
+      localised_name = { "item-name.bob-laser-robot" },
       icon = "__bobwarfare__/graphics/icons/laser-robot.png",
       icon_size = 32,
       flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map", "not-repairable" },
@@ -301,8 +302,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       follows_player = true,
       friction = 0.01,
       range_from_player = 6.0,
-
-      --    time_to_live = 60 * 60 * 60 * 24, -- 1 day
       time_to_live = 60 * 60 * 10, -- 10 mins
 
       destroy_action = {
