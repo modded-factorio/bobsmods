@@ -127,11 +127,10 @@ data:extend({
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-logistic-robot-2", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 
@@ -164,11 +163,10 @@ data:extend({
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-logistic-robot-3", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 
@@ -201,11 +199,10 @@ data:extend({
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-logistic-robot-4", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 
@@ -238,11 +235,10 @@ data:extend({
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-logistic-robot-5", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 })
@@ -437,11 +433,10 @@ data:extend({
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-construction-robot-2", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 
@@ -476,11 +471,10 @@ data:extend({
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-construction-robot-3", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 
@@ -515,11 +509,10 @@ data:extend({
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-construction-robot-4", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 
@@ -554,11 +547,10 @@ data:extend({
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
     factoriopedia_simulation = {
-      init =
-      [[
+      init = [[
         game.simulation.camera_position = {0, -1}
         game.surfaces[1].create_entity{name = "bob-construction-robot-5", position = {0, 0}}
-      ]]
+      ]],
     },
   },
 })
