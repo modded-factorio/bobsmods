@@ -1,14 +1,23 @@
 --Remember when making any change to power armor to duplicate the edits in Bob's Warfare mod
 
 if not mods["bobwarfare"] then
-  data:extend({
+  local make_armor = function(name)
+    return
+    [[
+      game.simulation.camera_zoom = 4
+      game.simulation.camera_position = {0.5, -0.25}
+      local character = game.surfaces[1].create_entity{name = "character", position = {0.5, 0.5}, force = "player", direction = defines.direction.south}
+      character.insert{name = "]]..name..[["}
+    ]]
+  end
 
+  data:extend({
     {
       type = "armor",
       name = "bob-power-armor-mk3",
       icon = "__bobequipment__/graphics/icons/power-armor-mk3.png",
       icon_size = 32,
-
+      factoriopedia_simulation = { init = make_armor("bob-power-armor-mk3") },
       resistances = {
         {
           type = "physical",
@@ -88,7 +97,7 @@ if not mods["bobwarfare"] then
       name = "bob-power-armor-mk4",
       icon = "__bobequipment__/graphics/icons/power-armor-mk4.png",
       icon_size = 32,
-
+      factoriopedia_simulation = { init = make_armor("bob-power-armor-mk4") },
       resistances = {
         {
           type = "physical",
@@ -168,7 +177,7 @@ if not mods["bobwarfare"] then
       name = "bob-power-armor-mk5",
       icon = "__bobequipment__/graphics/icons/power-armor-mk5.png",
       icon_size = 32,
-
+      factoriopedia_simulation = { init = make_armor("bob-power-armor-mk5") },
       resistances = {
         {
           type = "physical",
