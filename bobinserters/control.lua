@@ -79,11 +79,11 @@ function bobmods.math.offset(number)
   end
 end
 
-bobmods.inserters.long_technology = "long-inserters-1"
-bobmods.inserters.long2_technology = "long-inserters-2"
-bobmods.inserters.near_technology = "near-inserters"
-bobmods.inserters.more_technology = "more-inserters-1"
-bobmods.inserters.more2_technology = "more-inserters-2"
+bobmods.inserters.long_technology = "bob-long-inserters-1"
+bobmods.inserters.long2_technology = "bob-long-inserters-2"
+bobmods.inserters.near_technology = "bob-near-inserters"
+bobmods.inserters.more_technology = "bob-more-inserters-1"
+bobmods.inserters.more2_technology = "bob-more-inserters-2"
 bobmods.inserters.offset = 0.2
 changed_position_event = script.generate_event_name()
 

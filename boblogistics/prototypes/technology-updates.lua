@@ -123,9 +123,9 @@ if bobmods.tech and bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.remove_science_pack("inserter-capacity-bonus-4", "advanced-logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("inserter-capacity-bonus-4", "advanced-logistic-science-pack")
 
-  if data.raw.technology["more-inserters-2"] then
+  if data.raw.technology["bob-more-inserters-2"] then
     bobmods.lib.tech.replace_science_pack(
-      "more-inserters-2",
+      "bob-more-inserters-2",
       "production-science-pack",
       "advanced-logistic-science-pack"
     )
@@ -140,11 +140,11 @@ end
 bobmods.lib.tech.add_prerequisite("logistics-3", "logistics-2")
 bobmods.lib.tech.replace_prerequisite("logistics-3", "production-science-pack", "chemical-science-pack")
 
-if data.raw.technology["long-inserters-2"] then
-  bobmods.lib.tech.replace_prerequisite("long-inserters-2", "chemical-science-pack", "logistics-3")
+if data.raw.technology["bob-long-inserters-2"] then
+  bobmods.lib.tech.replace_prerequisite("bob-long-inserters-2", "chemical-science-pack", "logistics-3")
 end
-if data.raw.technology["more-inserters-2"] then
-  bobmods.lib.tech.replace_prerequisite("more-inserters-2", "logistics-3", "logistics-4")
+if data.raw.technology["bob-more-inserters-2"] then
+  bobmods.lib.tech.replace_prerequisite("bob-more-inserters-2", "logistics-3", "logistics-4")
 end
 
 bobmods.lib.tech.remove_science_pack("inserter-capacity-bonus-4", "production-science-pack")
@@ -187,7 +187,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   bobmods.lib.tech.set_science_pack_count("logistics-4", 250)
   bobmods.lib.tech.set_science_pack_count("logistics-5", 300)
 else
-  bobmods.lib.tech.add_recipe_unlock("long-inserters-1", "long-handed-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-long-inserters-1", "long-handed-inserter")
   bobmods.lib.tech.set_science_pack_count("logistics-2", 120)
   bobmods.lib.tech.set_science_pack_count("logistics-3", 250)
 end

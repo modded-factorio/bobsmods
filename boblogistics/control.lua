@@ -60,7 +60,7 @@ function bobmods.math.offset(number)
   end
 end
 
-bobmods.logistics.long_technology = "long-inserters-1"
+bobmods.logistics.long_technology = "bob-long-inserters-1"
 changed_position_event = script.generate_event_name()
 
 bobmods.logistics.offset = 0.2
