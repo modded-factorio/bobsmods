@@ -729,7 +729,7 @@ script.on_event(defines.events.on_gui_click, function(event)
     local characters = game.players[event.player_index].get_associated_characters()
     local character = characters[i]
     if character then
-      player.open_map(character.position)
+      player.set_controller({ type = defines.controllers.remote, position = character.position, surface = character.surface })
     end
   end
 
