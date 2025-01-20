@@ -2,12 +2,11 @@
 
 if not mods["bobwarfare"] then
   local make_armor = function(name)
-    return
-    [[
+    return [[
       game.simulation.camera_zoom = 4
       game.simulation.camera_position = {0.5, -0.25}
       local character = game.surfaces[1].create_entity{name = "character", position = {0.5, 0.5}, force = "player", direction = defines.direction.south}
-      character.insert{name = "]]..name..[["}
+      character.insert{name = "]] .. name .. [["}
     ]]
   end
 
