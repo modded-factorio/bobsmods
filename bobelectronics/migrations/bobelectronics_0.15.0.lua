@@ -28,7 +28,7 @@ for index, force in pairs(game.forces) do
   end
 
   if force.technologies["electronics"].researched then
-    force.recipes["insulated-cable"].enabled = true
+    force.recipes["bob-insulated-cable"].enabled = true
     force.recipes["basic-electronic-components"].enabled = true
     force.recipes["electronic-circuit"].enabled = true
     if force.recipes["solder"] then
