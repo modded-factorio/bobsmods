@@ -113,11 +113,11 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.tech.add_prerequisite("vehicle-solar-panel-equipment-2", "bob-aluminium-processing")
 end
 
-if data.raw.item["tinned-copper-cable"] then
+if data.raw.item["bob-tinned-copper-cable"] then
   bobmods.lib.recipe.remove_ingredient("vehicle-solar-panel-equipment-2", "copper-cable")
   bobmods.lib.recipe.add_ingredient(
     "vehicle-solar-panel-equipment-2",
-    { type = "item", name = "tinned-copper-cable", amount = 32 }
+    { type = "item", name = "bob-tinned-copper-cable", amount = 32 }
   )
 end
 

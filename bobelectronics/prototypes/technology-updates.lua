@@ -39,8 +39,8 @@ end
 if data.raw.recipe["solder-alloy-lead"] then
   bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "solder-alloy-lead")
 end
-if data.raw.recipe["tinned-copper-cable"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "tinned-copper-cable")
+if data.raw.recipe["bob-tinned-copper-cable"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")
 end
 
 bobmods.lib.tech.add_recipe_unlock("electronics", "basic-circuit-board")

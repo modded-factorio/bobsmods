@@ -11,8 +11,8 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.tech.add_prerequisite("effect-transmission-2", "bob-aluminium-processing")
 end
 
-if data.raw.item["tinned-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("bob-beacon-2", "copper-cable", "tinned-copper-cable")
+if data.raw.item["bob-tinned-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("bob-beacon-2", "copper-cable", "bob-tinned-copper-cable")
 end
 
 if data.raw.item["bob-titanium-plate"] then

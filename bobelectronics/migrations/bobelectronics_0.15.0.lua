@@ -40,8 +40,8 @@ for index, force in pairs(game.forces) do
     if force.recipes["solder-alloy-lead"] then
       force.recipes["solder-alloy-lead"].enabled = true
     end
-    if force.recipes["tinned-copper-cable"] then
-      force.recipes["tinned-copper-cable"].enabled = true
+    if force.recipes["bob-tinned-copper-cable"] then
+      force.recipes["bob-tinned-copper-cable"].enabled = true
     end
   end
 

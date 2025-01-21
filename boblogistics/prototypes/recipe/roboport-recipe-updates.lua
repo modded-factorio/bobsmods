@@ -23,8 +23,8 @@ if data.raw.item["bob-invar-alloy"] then
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-2", "bob-invar-processing")
 end
 
-if data.raw.item["tinned-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("roboport-antenna-2", "copper-cable", "tinned-copper-cable")
+if data.raw.item["bob-tinned-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("roboport-antenna-2", "copper-cable", "bob-tinned-copper-cable")
 end
 
 if data.raw.item["bob-steel-bearing"] then
