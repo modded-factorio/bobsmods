@@ -60,10 +60,10 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.tech.add_prerequisite("electric-substation-4", "bob-tungsten-alloy-processing")
   end
 
-  if data.raw.item["gilded-copper-cable"] then
-    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "copper-plate", "gilded-copper-cable")
-    bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "copper-plate", "gilded-copper-cable")
-    bobmods.lib.recipe.replace_ingredient("substation-4", "copper-plate", "gilded-copper-cable")
+  if data.raw.item["bob-gilded-copper-cable"] then
+    bobmods.lib.recipe.replace_ingredient("medium-electric-pole-4", "copper-plate", "bob-gilded-copper-cable")
+    bobmods.lib.recipe.replace_ingredient("big-electric-pole-4", "copper-plate", "bob-gilded-copper-cable")
+    bobmods.lib.recipe.replace_ingredient("substation-4", "copper-plate", "bob-gilded-copper-cable")
     bobmods.lib.tech.add_prerequisite("electric-pole-4", "bob-advanced-processing-unit")
     bobmods.lib.tech.add_prerequisite("electric-substation-4", "bob-advanced-processing-unit")
   elseif data.raw.item["bob-gold-plate"] then

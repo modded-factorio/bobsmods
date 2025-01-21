@@ -58,8 +58,8 @@ else
   end
 end
 
-if data.raw.item["gilded-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "gilded-copper-cable")
+if data.raw.item["bob-gilded-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "bob-gilded-copper-cable")
 else
   if data.raw.item["tinned-copper-cable"] then
     bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "tinned-copper-cable")
