@@ -457,6 +457,7 @@ local function bob_gun_turret(inputs)
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.health,
     next_upgrade = inputs.next_upgrade,
+    resistances = inputs.resistances,
     corpse = "gun-turret-remnants",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
@@ -544,6 +545,7 @@ local function bob_laser_turret(inputs)
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.health,
     next_upgrade = inputs.next_upgrade,
+    resistances = inputs.resistances,
     corpse = "laser-turret-remnants",
     collision_box = { { -0.7 * size, -0.7 * size }, { 0.7 * size, 0.7 * size } },
     selection_box = { { -1 * size, -1 * size }, { 1 * size, 1 * size } },
@@ -673,6 +675,88 @@ local function bob_laser_turret(inputs)
   return turret
 end
 
+
+data.raw["ammo-turret"]["gun-turret"].resistances = {
+  {
+    type = "acid",
+    decrease = 2,
+  },
+  {
+    type = "electric",
+    percent = 30,
+  },
+  {
+    type = "poison",
+    decrease = 3,
+    percent = 30,
+  },
+}
+
+data.raw["electric-turret"]["laser-turret"].resistances = {
+  {
+    type = "acid",
+    decrease = 4,
+    percent = 20,
+  },
+  {
+    type = "explosion",
+    percent = 30,
+  },
+  {
+    type = "fire",
+    percent = 20,
+  },
+  {
+    type = "laser",
+    percent = 10,
+  },
+  {
+    type = "physical",
+    decrease = 2,
+    percent = 10,
+  },
+  {
+    type = "poison",
+    percent = 20,
+  },
+}
+
+
+data.raw["fluid-turret"]["flamethrower-turret"].resistances = {
+  {
+    type = "acid",
+    decrease = 2,
+    percent = 20,
+  },
+  {
+    type = "electric",
+    percent = 40,
+  },
+  {
+    type = "fire",
+    percent = 100,
+  },
+  {
+    type = "impact",
+    decrease = 10,
+    percent = 30,
+  },
+  {
+    type = "laser",
+    percent = -20,
+  },
+  {
+    type = "physical",
+    decrease = 4,
+    percent = 20,
+  },
+  {
+    type = "poison",
+    decrease = 15,
+    percent = 75,
+  },
+}
+
 data:extend({
   --  bob_gun_turret{name = "gun-turret", health = 400, inventory_size = 1, automated_ammo_count = 10, ammo_category = "bullet", damage_modifier = 1, cooldown = 6, range = 18, tint = white, , base_tint = white},
   bob_gun_turret({
@@ -691,6 +775,39 @@ data:extend({
     gun_type = "gun",
     base = { type = "gun", tint = blue },
     next_upgrade = "bob-gun-turret-3",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 4,
+        percent = 20,
+      },
+      {
+        type = "electric",
+        percent = 40,
+      },
+      {
+        type = "explosion",
+        percent = 30,
+      },
+      {
+        type = "fire",
+        percent = 20,
+      },
+      {
+        type = "laser",
+        percent = 10,
+      },
+      {
+        type = "physical",
+        decrease = 2,
+        percent = 10,
+      },
+      {
+        type = "poison",
+        decrease = 5,
+        percent = 40,
+      },
+    },
   }),
   bob_gun_turret({
     name = "bob-gun-turret-3",
@@ -708,6 +825,45 @@ data:extend({
     gun_type = "gun",
     base = { type = "gun", tint = blue },
     next_upgrade = "bob-gun-turret-4",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 6,
+        percent = 30,
+      },
+      {
+        type = "electric",
+        percent = 50,
+      },
+      {
+        type = "explosion",
+        percent = 40,
+      },
+      {
+        type = "fire",
+        decrease = 4,
+        percent = 30,
+      },
+      {
+        type = "impact",
+        decrease = 20,
+        percent = 40,
+      },
+      {
+        type = "laser",
+        percent = 15,
+      },
+      {
+        type = "physical",
+        decrease = 4,
+        percent = 20,
+      },
+      {
+        type = "poison",
+        decrease = 8,
+        percent = 50,
+      },
+    },
   }),
   bob_gun_turret({
     name = "bob-gun-turret-4",
@@ -725,6 +881,46 @@ data:extend({
     gun_type = "gun",
     base = { type = "gun", tint = blue },
     next_upgrade = "bob-gun-turret-5",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 10,
+        percent = 40,
+      },
+      {
+        type = "electric",
+        decrease = 5,
+        percent = 60,
+      },
+      {
+        type = "explosion",
+        percent = 50,
+      },
+      {
+        type = "fire",
+        decrease = 10,
+        percent = 50,
+      },
+      {
+        type = "impact",
+        decrease = 40,
+        percent = 60,
+      },
+      {
+        type = "laser",
+        percent = 20,
+      },
+      {
+        type = "physical",
+        decrease = 6,
+        percent = 30,
+      },
+      {
+        type = "poison",
+        decrease = 12,
+        percent = 60,
+      },
+    },
   }),
   bob_gun_turret({
     name = "bob-gun-turret-5",
@@ -741,6 +937,46 @@ data:extend({
     tint = green,
     gun_type = "gun",
     base = { type = "gun", tint = blue },
+    resistances = {
+      {
+        type = "acid",
+        decrease = 12,
+        percent = 60,
+      },
+      {
+        type = "electric",
+        decrease = 10,
+        percent = 70,
+      },
+      {
+        type = "explosion",
+        percent = 60,
+      },
+      {
+        type = "fire",
+        decrease = 15,
+        percent = 75,
+      },
+      {
+        type = "impact",
+        decrease = 60,
+        percent = 80,
+      },
+      {
+        type = "laser",
+        percent = 30,
+      },
+      {
+        type = "physical",
+        decrease = 10,
+        percent = 50,
+      },
+      {
+        type = "poison",
+        decrease = 15,
+        percent = 70,
+      },
+    },
   }),
 
   bob_gun_turret({
@@ -759,6 +995,34 @@ data:extend({
     gun_type = "gun",
     base = { type = "laser", tint = red },
     next_upgrade = "bob-sniper-turret-2",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 2,
+        percent = 10,
+      },
+      {
+        type = "electric",
+        percent = 40,
+      },
+      {
+        type = "explosion",
+        percent = -30,
+      },
+      {
+        type = "fire",
+        percent = 10,
+      },
+      {
+        type = "laser",
+        percent = 15,
+      },
+      {
+        type = "poison",
+        decrease = 5,
+        percent = 40,
+      },
+    },
   }),
   bob_gun_turret({
     name = "bob-sniper-turret-2",
@@ -776,6 +1040,35 @@ data:extend({
     gun_type = "gun",
     base = { type = "laser", tint = red },
     next_upgrade = "bob-sniper-turret-3",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 4,
+        percent = 20,
+      },
+      {
+        type = "electric",
+        decrease = 5,
+        percent = 50,
+      },
+      {
+        type = "explosion",
+        percent = -20,
+      },
+      {
+        type = "fire",
+        percent = 20,
+      },
+      {
+        type = "laser",
+        percent = 20,
+      },
+      {
+        type = "poison",
+        decrease = 8,
+        percent = 50,
+      },
+    },
   }),
   bob_gun_turret({
     name = "bob-sniper-turret-3",
@@ -792,9 +1085,39 @@ data:extend({
     tint = green,
     gun_type = "gun",
     base = { type = "laser", tint = red },
+    resistances = {
+      {
+        type = "acid",
+        decrease = 6,
+        percent = 30,
+      },
+      {
+        type = "electric",
+        decrease = 10,
+        percent = 60,
+      },
+      {
+        type = "explosion",
+        percent = -10,
+      },
+      {
+        type = "fire",
+        percent = 30,
+      },
+      {
+        type = "laser",
+        percent = 30,
+      },
+      {
+        type = "poison",
+        decrease = 12,
+        percent = 60,
+      },
+    },
   }),
 
   --  bob_laser_turret{name = "laser-turret", health = 1000, buffer_capacity = "801kJ", input_flow_limit = "4800kW", drain = "24kW", energy_consumption = "800kJ", projectile = "laser", damage_modifier = 2, cooldown = 40, range = 24, tint = white, base_tint = white},
+
   bob_laser_turret({
     name = "bob-laser-turret-2",
     health = 1200,
@@ -813,6 +1136,45 @@ data:extend({
     tint = red,
     base = { type = "laser", tint = yellow },
     next_upgrade = "bob-laser-turret-3",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 6,
+        percent = 30,
+      },
+      {
+        type = "electric",
+        percent = 5,
+      },
+      {
+        type = "explosion",
+        percent = 35,
+      },
+      {
+        type = "fire",
+        decrease = 4,
+        percent = 30,
+      },
+      {
+        type = "impact",
+        decrease = 20,
+        percent = 40,
+      },
+      {
+        type = "laser",
+        percent = 15,
+      },
+      {
+        type = "physical",
+        decrease = 4,
+        percent = 20,
+      },
+      {
+        type = "poison",
+        decrease = 2,
+        percent = 30,
+      },
+    },
   }),
   bob_laser_turret({
     name = "bob-laser-turret-3",
@@ -832,6 +1194,45 @@ data:extend({
     tint = blue,
     base = { type = "laser", tint = yellow },
     next_upgrade = "bob-laser-turret-4",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 8,
+        percent = 40,
+      },
+      {
+        type = "electric",
+        percent = 10,
+      },
+      {
+        type = "explosion",
+        percent = 40,
+      },
+      {
+        type = "fire",
+        decrease = 8,
+        percent = 40,
+      },
+      {
+        type = "impact",
+        decrease = 40,
+        percent = 60,
+      },
+      {
+        type = "laser",
+        percent = 20,
+      },
+      {
+        type = "physical",
+        decrease = 6,
+        percent = 30,
+      },
+      {
+        type = "poison",
+        decrease = 5,
+        percent = 40,
+      },
+    },
   }),
   bob_laser_turret({
     name = "bob-laser-turret-4",
@@ -851,6 +1252,45 @@ data:extend({
     tint = purple,
     base = { type = "laser", tint = yellow },
     next_upgrade = "bob-laser-turret-5",
+    resistances = {
+      {
+        type = "acid",
+        decrease = 8,
+        percent = 40,
+      },
+      {
+        type = "electric",
+        percent = 20,
+      },
+      {
+        type = "explosion",
+        percent = 50,
+      },
+      {
+        type = "fire",
+        decrease = 10,
+        percent = 50,
+      },
+      {
+        type = "impact",
+        decrease = 50,
+        percent = 70,
+      },
+      {
+        type = "laser",
+        percent = 25,
+      },
+      {
+        type = "physical",
+        decrease = 8,
+        percent = 40,
+      },
+      {
+        type = "poison",
+        decrease = 9,
+        percent = 50,
+      },
+    },
   }),
   bob_laser_turret({
     name = "bob-laser-turret-5",
@@ -868,6 +1308,45 @@ data:extend({
     rotation_speed = 0.014,
     tint = green,
     base = { type = "laser", tint = yellow },
+    resistances = {
+      {
+        type = "acid",
+        decrease = 12,
+        percent = 60,
+      },
+      {
+        type = "electric",
+        percent = 30,
+      },
+      {
+        type = "explosion",
+        percent = 60,
+      },
+      {
+        type = "fire",
+        decrease = 15,
+        percent = 75,
+      },
+      {
+        type = "impact",
+        decrease = 60,
+        percent = 80,
+      },
+      {
+        type = "laser",
+        percent = 30,
+      },
+      {
+        type = "physical",
+        decrease = 10,
+        percent = 50,
+      },
+      {
+        type = "poison",
+        decrease = 12,
+        percent = 60,
+      },
+    },
   }),
 })
 
@@ -877,6 +1356,45 @@ data:extend({
     health = 1000,
     turret_base_has_direction = true,
     turret_base_8_directions = true,
+    resistances = {
+      {
+        type = "acid",
+        decrease = 4,
+        percent = 30,
+      },
+      {
+        type = "electric",
+        percent = 5,
+      },
+      {
+        type = "explosion",
+        percent = 30,
+      },
+      {
+        type = "fire",
+        decrease = 4,
+        percent = 30,
+      },
+      {
+        type = "impact",
+        decrease = 20,
+        percent = 40,
+      },
+      {
+        type = "laser",
+        percent = 15,
+      },
+      {
+        type = "physical",
+        decrease = 4,
+        percent = 20,
+      },
+      {
+        type = "poison",
+        decrease = 2,
+        percent = 30,
+      },
+    },
 
     drain = "7000kW",
     buffer_capacity = "28000kJ",
@@ -910,6 +1428,45 @@ data:extend({
     health = 1200,
     turret_base_has_direction = true,
     turret_base_8_directions = true,
+    resistances = {
+      {
+        type = "acid",
+        decrease = 10,
+        percent = 40,
+      },
+      {
+        type = "electric",
+        percent = 10,
+      },
+      {
+        type = "explosion",
+        percent = 40,
+      },
+      {
+        type = "fire",
+        decrease = 8,
+        percent = 40,
+      },
+      {
+        type = "impact",
+        decrease = 40,
+        percent = 60,
+      },
+      {
+        type = "laser",
+        percent = 20,
+      },
+      {
+        type = "physical",
+        decrease = 6,
+        percent = 30,
+      },
+      {
+        type = "poison",
+        decrease = 5,
+        percent = 40,
+      },
+    },
 
     drain = "10000kW",
     buffer_capacity = "40000kJ",
@@ -943,6 +1500,45 @@ data:extend({
     health = 1400,
     turret_base_has_direction = true,
     turret_base_8_directions = true,
+    resistances = {
+      {
+        type = "acid",
+        decrease = 15,
+        percent = 50,
+      },
+      {
+        type = "electric",
+        percent = 20,
+      },
+      {
+        type = "explosion",
+        percent = 60,
+      },
+      {
+        type = "fire",
+        decrease = 10,
+        percent = 50,
+      },
+      {
+        type = "impact",
+        decrease = 50,
+        percent = 70,
+      },
+      {
+        type = "laser",
+        percent = 25,
+      },
+      {
+        type = "physical",
+        decrease = 8,
+        percent = 40,
+      },
+      {
+        type = "poison",
+        decrease = 9,
+        percent = 50,
+      },
+    },
 
     drain = "13000kW",
     buffer_capacity = "64000kJ",
@@ -976,6 +1572,45 @@ data:extend({
     health = 1600,
     turret_base_has_direction = true,
     turret_base_8_directions = true,
+    resistances = {
+      {
+        type = "acid",
+        decrease = 20,
+        percent = 60,
+      },
+      {
+        type = "electric",
+        percent = 30,
+      },
+      {
+        type = "explosion",
+        percent = 75,
+      },
+      {
+        type = "fire",
+        decrease = 15,
+        percent = 75,
+      },
+      {
+        type = "impact",
+        decrease = 60,
+        percent = 80,
+      },
+      {
+        type = "laser",
+        percent = 30,
+      },
+      {
+        type = "physical",
+        decrease = 10,
+        percent = 50,
+      },
+      {
+        type = "poison",
+        decrease = 12,
+        percent = 60,
+      },
+    },
 
     drain = "16000kW",
     buffer_capacity = "80000kJ",
@@ -1005,6 +1640,50 @@ data:extend({
 })
 
 data.raw["artillery-turret"]["artillery-turret"].fast_replaceable_group = "turret"
+data.raw["artillery-turret"]["artillery-turret"].resistances = {
+  {
+    type = "acid",
+    decrease = 20,
+    percent = 60,
+  },
+  {
+    type = "bob-pierce",
+    percent = 20,
+  },
+  {
+    type = "electric",
+    decrease = 10,
+    percent = 70,
+  },
+  {
+    type = "explosion",
+    percent = 75,
+  },
+  {
+    type = "fire",
+    decrease = 15,
+    percent = 70,
+  },
+  {
+    type = "impact",
+    decrease = 60,
+    percent = 80,
+  },
+  {
+    type = "laser",
+    percent = 30,
+  },
+  {
+    type = "physical",
+    decrease = 20,
+    percent = 60,
+  },
+  {
+    type = "poison",
+    decrease = 15,
+    percent = 70,
+  },
+}
 
 local turret = util.table.deepcopy(data.raw["artillery-turret"]["artillery-turret"])
 turret.name = "bob-artillery-turret-2"
@@ -1018,6 +1697,50 @@ turret.turret_rotation_speed = 0.002
 turret.turn_after_shooting_cooldown = 40
 turret.cannon_parking_speed = 0.3
 turret.next_upgrade = "bob-artillery-turret-3"
+turret.resistances = {
+  {
+    type = "acid",
+    decrease = 25,
+    percent = 75,
+  },
+  {
+    type = "bob-pierce",
+    percent = 40,
+  },
+  {
+    type = "electric",
+    decrease = 15,
+    percent = 80,
+  },
+  {
+    type = "explosion",
+    percent = 80,
+  },
+  {
+    type = "fire",
+    decrease = 20,
+    percent = 80,
+  },
+  {
+    type = "impact",
+    decrease = 100,
+    percent = 90,
+  },
+  {
+    type = "laser",
+    percent = 40,
+  },
+  {
+    type = "physical",
+    decrease = 30,
+    percent = 75,
+  },
+  {
+    type = "poison",
+    decrease = 20,
+    percent = 80,
+  },
+}
 data:extend({ turret })
 
 local turret = util.table.deepcopy(data.raw["artillery-turret"]["artillery-turret"])
@@ -1031,6 +1754,50 @@ turret.gun = "bob-artillery-wagon-cannon-3"
 turret.turret_rotation_speed = 0.003
 turret.turn_after_shooting_cooldown = 20
 turret.cannon_parking_speed = 0.35
+turret.resistances = {
+  {
+    type = "acid",
+    decrease = 30,
+    percent = 85,
+  },
+  {
+    type = "bob-pierce",
+    percent = 60,
+  },
+  {
+    type = "electric",
+    decrease = 20,
+    percent = 90,
+  },
+  {
+    type = "explosion",
+    percent = 90,
+  },
+  {
+    type = "fire",
+    decrease = 25,
+    percent = 90,
+  },
+  {
+    type = "impact",
+    decrease = 150,
+    percent = 95,
+  },
+  {
+    type = "laser",
+    percent = 50,
+  },
+  {
+    type = "physical",
+    decrease = 40,
+    percent = 90,
+  },
+  {
+    type = "poison",
+    decrease = 25,
+    percent = 90,
+  },
+}
 data:extend({ turret })
 
 data.raw["ammo-turret"]["gun-turret"].next_upgrade = "bob-gun-turret-2"
