@@ -883,6 +883,12 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
   end
 end
 
+if data.raw.item["bob-resin"] then
+  data.raw["simple-entity"]["hardened-bile"].minable.results = {{ type = "item", name = "bob-resin", amount_min = 10, amount_max = 16 }}
+end
+
+data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_parameters.ammo_type.action[1].trigger_target_mask = { "not-electric-unit" }
+
 if bobmods.enemies.small_alien_artifacts ~= true then
   -- hide items
   for _, item_name in pairs({
