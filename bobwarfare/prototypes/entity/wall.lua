@@ -1,20 +1,64 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
-local reinforced_wall_resistances = {
+local wall_resistances = {
   {
     type = "physical",
-    decrease = 10,
-    percent = 50,
+    decrease = 3,
+    percent = 30,
   },
   {
     type = "impact",
-    decrease = 50,
+    decrease = 45,
     percent = 60,
   },
   {
     type = "explosion",
-    decrease = 10,
+    decrease = 20,
+    percent = 40,
+  },
+  {
+    type = "fire",
+    percent = 100,
+  },
+  {
+    type = "laser",
+    percent = 70,
+  },
+  {
+    type = "poison",
+    decrease = 20,
     percent = 50,
+  },
+  {
+    type = "acid",
+    decrease = 5,
+    percent = 40,
+  },
+  {
+    type = "electric",
+    percent = 50,
+  },
+}
+
+data.raw.wall["stone-wall"].max_health = 450
+data.raw.wall["stone-wall"].resistances = wall_resistances
+data.raw.gate.gate.resistances = wall_resistances
+
+local reinforced_wall_resistances = {
+  {
+    type = "physical",
+    decrease = 10,
+    percent = 60,
+  },
+  {
+    type = "impact",
+    decrease = 80,
+    percent = 80,
+  },
+  {
+    type = "explosion",
+    decrease = 30,
+    percent = 60,
   },
   {
     type = "fire",
@@ -30,22 +74,21 @@ local reinforced_wall_resistances = {
   },
   {
     type = "poison",
-    decrease = 10,
-    percent = 50,
+    decrease = 40,
+    percent = 75,
   },
   {
     type = "acid",
-    decrease = 10,
-    percent = 25,
+    decrease = 15,
+    percent = 60,
   },
   {
     type = "electric",
-    percent = 50,
+    percent = 75,
   },
   {
     type = "bob-pierce",
-    decrease = 20,
-    percent = 25,
+    percent = 35,
   },
 }
 
@@ -61,7 +104,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.wall(),
     minable = { mining_time = 0.2, result = "reinforced-wall" },
     fast_replaceable_group = "wall",
-    max_health = 750,
+    max_health = 1250,
     repair_speed_modifier = 2,
     corpse = "wall-remnants",
     dying_explosion = "wall-explosion",
