@@ -1463,12 +1463,12 @@ data:extend({
 })
 
 if
-  data.raw.item["alien-orange-alloy"]
-  and data.raw.item["alien-blue-alloy"]
-  and data.raw.fluid["alien-explosive"]
-  and data.raw.fluid["alien-acid"]
-  and data.raw.fluid["alien-fire"]
-  and data.raw.fluid["alien-poison"]
+  data.raw.item["bob-alien-orange-alloy"]
+  and data.raw.item["bob-alien-blue-alloy"]
+  and data.raw.fluid["bob-alien-explosive"]
+  and data.raw.fluid["bob-alien-acid"]
+  and data.raw.fluid["bob-alien-fire"]
+  and data.raw.fluid["bob-alien-poison"]
 then
   data.raw.ammo["bullet-magazine"].ammo_type.action[1].action_delivery[1].target_effects[2].damage.amount = 20
   data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 30
