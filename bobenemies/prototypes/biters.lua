@@ -118,7 +118,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -154,7 +154,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -190,7 +190,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -226,7 +226,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -262,7 +262,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2.2,
+    range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -473,7 +473,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -523,7 +523,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -573,7 +573,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -623,7 +623,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -673,7 +673,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2.2,
+    range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -930,7 +930,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -995,7 +995,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1060,7 +1060,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1125,7 +1125,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1190,7 +1190,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2.2,
+    range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1354,9 +1354,9 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.small_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 12,
-    dying_radius = 2.5,
-    dying_probability = 1,
+    attack_damage = 20,
+    dying_radius = 3,
+    dying_probability = 0.25,
   }),
   attack_parameters = {
     type = "projectile",
@@ -1417,9 +1417,9 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.medium_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 24,
-    dying_radius = 2.75,
-    dying_probability = 0.22,
+    attack_damage = 60,
+    dying_radius = 3.25,
+    dying_probability = 0.3,
   }),
   attack_parameters = {
     type = "projectile",
@@ -1480,9 +1480,9 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.big_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 36,
-    dying_radius = 3,
-    dying_probability = 0.24,
+    attack_damage = 90,
+    dying_radius = 3.5,
+    dying_probability = 0.35,
   }),
   attack_parameters = {
     type = "projectile",
@@ -1533,7 +1533,7 @@ bobmods.enemies.new_biter({
   name = "bob-huge-explosive-biter",
   order = "d-c-d",
   tier = 4,
-  max_health = 350,
+  max_health = 500,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1543,14 +1543,14 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.huge_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 48,
-    dying_radius = 3.25,
-    dying_probability = 0.26,
+    attack_damage = 120,
+    dying_radius = 3.75,
+    dying_probability = 0.4,
   }),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1571,7 +1571,7 @@ bobmods.enemies.new_biter({
         },
         {
           type = "area",
-          radius = 1.7,
+          radius = 1.75,
           force = "not-same",
           trigger_from_target = true,
           action_delivery = {
@@ -1596,7 +1596,7 @@ bobmods.enemies.new_biter({
   name = "bob-giant-explosive-biter",
   order = "d-c-e",
   tier = 5,
-  max_health = 800,
+  max_health = 2000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1606,14 +1606,14 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.giant_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 60,
-    dying_radius = 3.5,
-    dying_probability = 0.29,
+    attack_damage = 180,
+    dying_radius = 4,
+    dying_probability = 0.45,
   }),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1659,7 +1659,7 @@ bobmods.enemies.new_biter({
   name = "bob-titan-explosive-biter",
   order = "d-c-f",
   tier = 6,
-  max_health = 1600,
+  max_health = 6000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1669,14 +1669,14 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.titan_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 72,
-    dying_radius = 3.75,
-    dying_probability = 0.32,
+    attack_damage = 240,
+    dying_radius = 4.25,
+    dying_probability = 0.5,
   }),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.25,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1722,7 +1722,7 @@ bobmods.enemies.new_biter({
   name = "bob-behemoth-explosive-biter",
   order = "d-c-g",
   tier = 7,
-  max_health = 3500,
+  max_health = 20000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1732,14 +1732,14 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.behemoth_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 84,
-    dying_radius = 4,
-    dying_probability = 0.35,
+    attack_damage = 300,
+    dying_radius = 4.5,
+    dying_probability = 0.6,
   }),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 2.5,
     cooldown = 50,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1785,7 +1785,7 @@ bobmods.enemies.new_biter({
   name = "bob-leviathan-explosive-biter",
   order = "d-c-h",
   tier = 8,
-  max_health = 18000,
+  max_health = 60000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1795,14 +1795,14 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.leviathan_tint,
   factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
-    attack_damage = 120,
-    dying_radius = 4.5,
-    dying_probability = 0.4,
+    attack_damage = 800,
+    dying_radius = 6,
+    dying_probability = 0.8,
   }),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2.2,
+    range = 3,
     cooldown = 55,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -1845,11 +1845,11 @@ bobmods.enemies.new_biter({
 })
 
 if settings.startup["bobmods-enemies-healthincrease"].value == true then
-  data.raw.unit["bob-huge-explosive-biter"].max_health = 700
-  data.raw.unit["bob-giant-explosive-biter"].max_health = 2000
-  data.raw.unit["bob-titan-explosive-biter"].max_health = 3200
-  data.raw.unit["bob-behemoth-explosive-biter"].max_health = 12000
-  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 35000
+  data.raw.unit["bob-huge-explosive-biter"].max_health = 1800
+  data.raw.unit["bob-giant-explosive-biter"].max_health = 6000
+  data.raw.unit["bob-titan-explosive-biter"].max_health = 19000
+  data.raw.unit["bob-behemoth-explosive-biter"].max_health = 60000
+  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 250000
 end
 
 --Acid
@@ -2037,7 +2037,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -2086,7 +2086,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -2135,7 +2135,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.85,
+    range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -2184,7 +2184,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -2233,7 +2233,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
     ammo_category = "melee",
@@ -2313,6 +2313,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
     name = smoke_name,
     localised_name = { "entity-name.enemy-poison-smoke" },
     flags = { "not-on-map" },
+    hidden = true,
     show_when_smoke_off = true,
     animation = {
       width = 152,
@@ -2337,6 +2338,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
         type = "area",
         radius = scale,
         force = "enemy",
+        trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
         action_delivery = {
           type = "instant",
           target_effects = {
@@ -2359,7 +2361,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
         },
       },
     },
-    action_cooldown = 10,
+    action_cooldown = 30,
   }
 
   data:extend({sticker, alienpoisonvisual, smoke})
@@ -2391,7 +2393,7 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.small_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-small" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "enemy-poison-smoke-small", 2, -0.5, 2),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "enemy-poison-smoke-small", 6, -2, 2),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2442,7 +2444,7 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.medium_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-medium" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "enemy-poison-smoke-medium", 4, -1, 3),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "enemy-poison-smoke-medium", 12, -4, 3),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2493,7 +2495,7 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.big_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-big" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "enemy-poison-smoke-big", 6, -3, 4),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "enemy-poison-smoke-big", 18, -6, 4),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2544,11 +2546,11 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.huge_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-huge" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "enemy-poison-smoke-huge", 8, -4, 4.6),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "enemy-poison-smoke-huge", 24, -8, 4.6),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
     damage_modifier = 5,
@@ -2595,11 +2597,11 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.giant_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-giant" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "enemy-poison-smoke-giant", 10, -10, 5.2),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "enemy-poison-smoke-giant", 30, -20, 5.2),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
     damage_modifier = 7.5,
@@ -2646,11 +2648,11 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.titan_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-titan" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "enemy-poison-smoke-titan", 12, -12, 5.8),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "enemy-poison-smoke-titan", 36, -24, 5.8),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.85,
+    range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
     damage_modifier = 10,
@@ -2697,11 +2699,11 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.behemoth_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-behemoth" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth", "enemy-poison-smoke-behemoth", 14, -21, 6.4),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth", "enemy-poison-smoke-behemoth", 42, -42, 6.4),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
     damage_modifier = 15,
@@ -2748,11 +2750,11 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.leviathan_tint,
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-leviathan" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan", "enemy-poison-smoke-leviathan", 20, -30, 7),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan", "enemy-poison-smoke-leviathan", 60, -60, 7),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
     damage_modifier = 24,
@@ -2968,7 +2970,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.7,
+    range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
     damage_modifier = 3,
@@ -3022,7 +3024,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.8,
+    range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
     damage_modifier = 4,
@@ -3076,7 +3078,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.85,
+    range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
     damage_modifier = 5,
@@ -3130,7 +3132,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 1.9,
+    range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
     damage_modifier = 6,
@@ -3184,7 +3186,7 @@ bobmods.enemies.new_biter({
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
-    range = 2,
+    range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
     damage_modifier = 8,
