@@ -44,7 +44,7 @@ data.raw.armor["power-armor-mk2"].resistances = {
   },
   {
     type = "acid",
-    decrease = 8,
+    decrease = 6,
     percent = 70,
   },
   {
@@ -103,7 +103,7 @@ if not mods["bobwarfare"] then
         },
         {
           type = "acid",
-          decrease = 12,
+          decrease = 8,
           percent = 75,
         },
         {
@@ -182,7 +182,7 @@ if not mods["bobwarfare"] then
         },
         {
           type = "acid",
-          decrease = 16,
+          decrease = 12,
           percent = 80,
         },
         {
@@ -197,7 +197,7 @@ if not mods["bobwarfare"] then
         },
         {
           type = "poison",
-          decrease = 8,
+          decrease = 6,
           percent = 60,
         },
         {
@@ -261,7 +261,7 @@ if not mods["bobwarfare"] then
         },
         {
           type = "acid",
-          decrease = 20,
+          decrease = 16,
           percent = 85,
         },
         {
