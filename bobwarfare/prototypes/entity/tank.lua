@@ -13,7 +13,7 @@ data.raw.car.car.resistances = {
   },
   {
     type = "poison",
-    decrease = 10,
+    decrease = 3,
     percent = 40,
   },
   {
@@ -45,7 +45,7 @@ data.raw.car.tank.resistances = {
   },
   {
     type = "poison",
-    decrease = 20,
+    decrease = 5,
     percent = 50,
   },
   {
@@ -267,8 +267,8 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 25,
-        percent = 60,
+        decrease = 8,
+        percent = 50,
       },
       {
         type = "physical",
@@ -453,8 +453,8 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 35,
-        percent = 75,
+        decrease = 10,
+        percent = 60,
       },
       {
         type = "physical",
