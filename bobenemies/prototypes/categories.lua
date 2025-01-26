@@ -17,7 +17,7 @@ data:extend({
   },
   {
     type = "trigger-target-type",
-    name = "not-electric-unit",
+    name = "not-electric-unit",--Structures do not need this mask, since it is only used for creating stickers.
   },
   {
     type = "trigger-target-type",
