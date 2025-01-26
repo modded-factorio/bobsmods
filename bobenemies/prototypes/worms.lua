@@ -56,7 +56,7 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
   factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(3, 4)"),
+  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(4, 4)"),
   build_base_evolution_requirement = 0.5,
 
   sticker_name = "acid-sticker-big",
@@ -82,7 +82,7 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.huge_worm_tint,
   factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(4, 5)"),
+  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(4.5, 5)"),
   build_base_evolution_requirement = 0.6,
 
   sticker_name = "acid-sticker-huge",
@@ -103,15 +103,15 @@ bobmods.enemies.new_worm({
   created_effect = {
     {
       type = "cluster",
-      cluster_count = 10,
-      distance = 24,
-      distance_deviation = 10,
+      cluster_count = 14,
+      distance = 45,
+      distance_deviation = 15,
       action_delivery = {
         type = "instant",
         target_effects = {
           type = "create-entity",
           entity_name = "hardened-bile",
-          probability = 0.5,
+          probability = 0.2,
           check_buildability = true,
         },
       },
@@ -151,15 +151,15 @@ bobmods.enemies.new_worm({
   created_effect = {
     {
       type = "cluster",
-      cluster_count = 12,
-      distance = 25,
-      distance_deviation = 11,
+      cluster_count = 16,
+      distance = 45,
+      distance_deviation = 15,
       action_delivery = {
         type = "instant",
         target_effects = {
           type = "create-entity",
           entity_name = "hardened-bile",
-          probability = 0.5,
+          probability = 0.21,
           check_buildability = true,
         },
       },
@@ -178,7 +178,7 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.titan_worm_tint,
   factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(6, 7)"),
+  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(5.5, 7)"),
 
   sticker_name = "acid-sticker-titan",
   sticker_duration_in_ticks = 135,
@@ -200,15 +200,15 @@ bobmods.enemies.new_worm({
   created_effect = {
     {
       type = "cluster",
-      cluster_count = 16,
-      distance = 26,
-      distance_deviation = 12,
+      cluster_count = 18,
+      distance = 45,
+      distance_deviation = 15,
       action_delivery = {
         type = "instant",
         target_effects = {
           type = "create-entity",
           entity_name = "hardened-bile",
-          probability = 0.5,
+          probability = 0.23,
           check_buildability = true,
         },
       },
@@ -250,14 +250,14 @@ bobmods.enemies.new_worm({
     {
       type = "cluster",
       cluster_count = 20,
-      distance = 27,
-      distance_deviation = 13,
+      distance = 45,
+      distance_deviation = 15,
       action_delivery = {
         type = "instant",
         target_effects = {
           type = "create-entity",
           entity_name = "hardened-bile",
-          probability = 0.5,
+          probability = 0.25,
           check_buildability = true,
         },
       },
@@ -276,7 +276,7 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.leviathan_worm_tint,
   factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(8, 9)"),
+  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(8.5, 9)"),
   build_base_evolution_requirement = 0.95,
 
   sticker_name = "acid-sticker-leviathan",
@@ -298,15 +298,15 @@ bobmods.enemies.new_worm({
   created_effect = {
     {
       type = "cluster",
-      cluster_count = 24,
-      distance = 28,
-      distance_deviation = 14,
+      cluster_count = 20,
+      distance = 45,
+      distance_deviation = 15,
       action_delivery = {
         type = "instant",
         target_effects = {
           type = "create-entity",
           entity_name = "hardened-bile",
-          probability = 0.5,
+          probability = 0.4,
           check_buildability = true,
         },
       },
@@ -336,7 +336,7 @@ local piercing_shot = function(attack_range)
       action_delivery = {
         type = "projectile",
         starting_speed = 2,
-        max_range = attack_range,
+        max_range = 2 + attack_range,
         projectile = "bob-piercing-spine",
         source_offset = {0.15, -0.5},
         direction_deviation = 0.3,
@@ -364,7 +364,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 30,
-  attack_damage_modifier = 8,
+  attack_damage_modifier = 6,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(30),
   
@@ -392,7 +392,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 35,
-  attack_damage_modifier = 18,
+  attack_damage_modifier = 12,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(35),
   
@@ -420,7 +420,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 40,
-  attack_damage_modifier = 24,
+  attack_damage_modifier = 20,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(40),
   
@@ -476,7 +476,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 50,
-  attack_damage_modifier = 36,
+  attack_damage_modifier = 45,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(50),
   
@@ -504,7 +504,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 55,
-  attack_damage_modifier = 48,
+  attack_damage_modifier = 60,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(55),
   
@@ -532,7 +532,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 60,
-  attack_damage_modifier = 60,
+  attack_damage_modifier = 75,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(60),
   
@@ -560,7 +560,7 @@ bobmods.enemies.new_worm({
 
   no_acid_stream = true,
   attack_range = 65,
-  attack_damage_modifier = 90,
+  attack_damage_modifier = 120,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(65),
   
@@ -1088,7 +1088,7 @@ bobmods.enemies.new_worm({
   name = "bob-giant-explosive-worm-turret",
   order = "d-b-e",
   tier = 5,
-  max_health = 2800,
+  max_health = 4000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1124,7 +1124,7 @@ bobmods.enemies.new_worm({
   name = "bob-titan-explosive-worm-turret",
   order = "d-b-f",
   tier = 6,
-  max_health = 4000,
+  max_health = 8000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1160,7 +1160,7 @@ bobmods.enemies.new_worm({
   name = "bob-behemoth-explosive-worm-turret",
   order = "d-b-g",
   tier = 7,
-  max_health = 5200,
+  max_health = 30000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1196,7 +1196,7 @@ bobmods.enemies.new_worm({
   name = "bob-leviathan-explosive-worm-turret",
   order = "d-b-h",
   tier = 8,
-  max_health = 14000,
+  max_health = 80000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1229,11 +1229,11 @@ bobmods.enemies.new_worm({
 })
 
 if settings.startup["bobmods-enemies-healthincrease"].value == true then
-  data.raw.turret["bob-huge-explosive-worm-turret"].max_health = 2100
-  data.raw.turret["bob-giant-explosive-worm-turret"].max_health = 3500
-  data.raw.turret["bob-titan-explosive-worm-turret"].max_health = 8000
-  data.raw.turret["bob-behemoth-explosive-worm-turret"].max_health = 12000
-  data.raw.turret["bob-leviathan-explosive-worm-turret"].max_health = 35000
+  data.raw.turret["bob-huge-explosive-worm-turret"].max_health = 2800
+  data.raw.turret["bob-giant-explosive-worm-turret"].max_health = 7200
+  data.raw.turret["bob-titan-explosive-worm-turret"].max_health = 23000
+  data.raw.turret["bob-behemoth-explosive-worm-turret"].max_health = 64000
+  data.raw.turret["bob-leviathan-explosive-worm-turret"].max_health = 270000
 end
 
 --Acid
@@ -1554,6 +1554,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
     name = defense_smoke_name,
     localised_name = { "entity-name.poison-cloud" },
     flags = { "not-on-map" },
+    hidden = true,
     show_when_smoke_off = true,
     animation = {
       filename = "__bobenemies__/graphics/entity/invisible.png",
@@ -1563,8 +1564,8 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
     },
     affected_by_wind = false,
     cyclic = true,
-    duration = 60 * 2,
-    fade_away_duration = 0.5 * 60,
+    duration = 60,
+    fade_away_duration = 20,
     spread_duration = 10,
     color = { r = 0.3, g = 1, b = 0.3, a = 1 },
     created_effect = {
@@ -1596,6 +1597,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
                 type = "area",
                 radius = 3 * radius,
                 force = "enemy",
+                trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
                 action_delivery = {
                   type = "instant",
                   target_effects = {
@@ -1622,7 +1624,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
         },
       },
     },
-    action_cooldown = 10,
+    action_cooldown = 30,
   }
 
   data:extend({defense_smoke})
@@ -1643,7 +1645,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-small" },
 
-  attack_action = poison_attack_action(1.4, "enemy-poison-attack-smoke-small", "enemy-poison-defense-smoke-small", 2, -0.5),
+  attack_action = poison_attack_action(1.4, "enemy-poison-attack-smoke-small", "enemy-poison-defense-smoke-small", 6, -2),
   attack_range = 25,
   attack_damage_modifier = 1.2,
   attack_stream_name = "poison-stream-worm-small",
@@ -1667,7 +1669,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-medium" },
 
-  attack_action = poison_attack_action(1.6, "enemy-poison-attack-smoke-medium", "enemy-poison-defense-smoke-medium", 4, -1),
+  attack_action = poison_attack_action(1.6, "enemy-poison-attack-smoke-medium", "enemy-poison-defense-smoke-medium", 12, -4),
   attack_range = 30,
   attack_damage_modifier = 2.4,
   attack_stream_name = "poison-stream-worm-medium",
@@ -1691,7 +1693,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-big" },
 
-  attack_action = poison_attack_action(1.8, "enemy-poison-attack-smoke-big", "enemy-poison-defense-smoke-big", 6, -3),
+  attack_action = poison_attack_action(1.8, "enemy-poison-attack-smoke-big", "enemy-poison-defense-smoke-big", 18, -6),
   attack_range = 35,
   attack_damage_modifier = 3.6,
   attack_stream_name = "poison-stream-worm-big",
@@ -1715,7 +1717,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-huge" },
 
-  attack_action = poison_attack_action(2, "enemy-poison-attack-smoke-huge", "enemy-poison-defense-smoke-huge", 8, -4),
+  attack_action = poison_attack_action(2, "enemy-poison-attack-smoke-huge", "enemy-poison-defense-smoke-huge", 24, -8),
   attack_range = 40,
   attack_damage_modifier = 4.8,
   attack_stream_name = "poison-stream-worm-huge",
@@ -1739,7 +1741,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-giant" },
 
-  attack_action = poison_attack_action(2.2, "enemy-poison-attack-smoke-giant", "enemy-poison-defense-smoke-giant", 10, -10),
+  attack_action = poison_attack_action(2.2, "enemy-poison-attack-smoke-giant", "enemy-poison-defense-smoke-giant", 30, -20),
   attack_range = 45,
   attack_damage_modifier = 6,
   attack_stream_name = "poison-stream-worm-giant",
@@ -1763,7 +1765,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-titan" },
 
-  attack_action = poison_attack_action(2.4, "enemy-poison-attack-smoke-titan", "enemy-poison-defense-smoke-titan", 12, -12),
+  attack_action = poison_attack_action(2.4, "enemy-poison-attack-smoke-titan", "enemy-poison-defense-smoke-titan", 36, -24),
   attack_range = 50,
   attack_damage_modifier = 7.2,
   attack_stream_name = "poison-stream-worm-titan",
@@ -1787,7 +1789,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-behemoth" },
 
-  attack_action = poison_attack_action(2.6, "enemy-poison-attack-smoke-behemoth", "enemy-poison-defense-smoke-behemoth", 14, -21),
+  attack_action = poison_attack_action(2.6, "enemy-poison-attack-smoke-behemoth", "enemy-poison-defense-smoke-behemoth", 42, -42),
   attack_range = 55,
   attack_damage_modifier = 8.4,
   attack_stream_name = "poison-stream-worm-behemoth",
@@ -1811,7 +1813,7 @@ bobmods.enemies.new_worm({
   factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-leviathan" },
 
-  attack_action = poison_attack_action(3, "enemy-poison-attack-smoke-leviathan", "enemy-poison-defense-smoke-leviathan", 20, -30),
+  attack_action = poison_attack_action(3, "enemy-poison-attack-smoke-leviathan", "enemy-poison-defense-smoke-leviathan", 60, -60),
   attack_range = 60,
   attack_damage_modifier = 12,
   attack_stream_name = "poison-stream-worm-leviathan",
@@ -1854,21 +1856,23 @@ local fire_attack_action = function(inputs)
     },
   })
 
-  table.insert(attack_action, {
-    type = "cluster",
-    cluster_count = 2 * inputs.cluster_count,
-    distance = 1.5 * inputs.attack_spit_radius,
-    distance_deviation = 0.75 * inputs.attack_spit_radius,
-    action_delivery = {
-      type = "instant",
-      target_effects = {
-        type = "create-fire",
-        entity_name = "enemy-fire-secondary",
-        tile_collision_mask = {layers={water_tile=true}},
-        show_in_tooltip = false,
-      }
-    },
-  })
+  if inputs.cluster_count then
+    table.insert(attack_action, {
+      type = "cluster",
+      cluster_count = 2 * inputs.cluster_count,
+      distance = 1.5 * inputs.attack_spit_radius,
+      distance_deviation = 0.75 * inputs.attack_spit_radius,
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          type = "create-fire",
+          entity_name = "enemy-fire-secondary",
+          tile_collision_mask = {layers={water_tile=true}},
+          show_in_tooltip = false,
+        }
+      },
+    })
+  end
 
   table.insert(attack_action[2].action_delivery.target_effects, {
     type = "damage",
