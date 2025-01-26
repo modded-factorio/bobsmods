@@ -44,7 +44,7 @@ data.raw.armor["power-armor-mk2"].resistances = {
   },
   {
     type = "acid",
-    decrease = 8,
+    decrease = 6,
     percent = 70,
   },
   {
@@ -102,7 +102,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 12,
+        decrease = 8,
         percent = 75,
       },
       {
@@ -181,7 +181,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 16,
+        decrease = 12,
         percent = 80,
       },
       {
@@ -260,7 +260,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 20,
+        decrease = 16,
         percent = 85,
       },
       {
