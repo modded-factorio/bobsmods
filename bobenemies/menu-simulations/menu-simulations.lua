@@ -1,5 +1,4 @@
 --This menu simulation needed to be fixed due to character unexpectedly dying to stronger enemies
-  data.raw["utility-constants"].default.main_menu_simulations = {}
 if mods["bobequipment"] then
   data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_laser_defense =
   {
