@@ -683,11 +683,11 @@ data.raw["ammo-turret"]["gun-turret"].resistances = {
   },
   {
     type = "electric",
-    percent = 30,
+    percent = 20,
   },
   {
     type = "poison",
-    decrease = 3,
+    decrease = 2,
     percent = 30,
   },
 }
@@ -752,7 +752,7 @@ data.raw["fluid-turret"]["flamethrower-turret"].resistances = {
   },
   {
     type = "poison",
-    decrease = 15,
+    decrease = 10,
     percent = 75,
   },
 }
@@ -783,7 +783,7 @@ data:extend({
       },
       {
         type = "electric",
-        percent = 40,
+        percent = 30,
       },
       {
         type = "explosion",
@@ -804,7 +804,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 5,
+        decrease = 3,
         percent = 40,
       },
     },
@@ -833,7 +833,7 @@ data:extend({
       },
       {
         type = "electric",
-        percent = 50,
+        percent = 40,
       },
       {
         type = "explosion",
@@ -860,7 +860,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 8,
+        decrease = 4,
         percent = 50,
       },
     },
@@ -884,13 +884,13 @@ data:extend({
     resistances = {
       {
         type = "acid",
-        decrease = 10,
-        percent = 40,
+        decrease = 12,
+        percent = 50,
       },
       {
         type = "electric",
         decrease = 5,
-        percent = 60,
+        percent = 50,
       },
       {
         type = "explosion",
@@ -917,7 +917,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 12,
+        decrease = 6,
         percent = 60,
       },
     },
@@ -940,13 +940,13 @@ data:extend({
     resistances = {
       {
         type = "acid",
-        decrease = 12,
-        percent = 60,
+        decrease = 20,
+        percent = 70,
       },
       {
         type = "electric",
         decrease = 10,
-        percent = 70,
+        percent = 60,
       },
       {
         type = "explosion",
@@ -973,7 +973,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 15,
+        decrease = 8,
         percent = 70,
       },
     },
@@ -1003,7 +1003,7 @@ data:extend({
       },
       {
         type = "electric",
-        percent = 40,
+        percent = 30,
       },
       {
         type = "explosion",
@@ -1019,7 +1019,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 5,
+        decrease = 3,
         percent = 40,
       },
     },
@@ -1065,7 +1065,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 8,
+        decrease = 4,
         percent = 50,
       },
     },
@@ -1094,7 +1094,7 @@ data:extend({
       {
         type = "electric",
         decrease = 10,
-        percent = 60,
+        percent = 50,
       },
       {
         type = "explosion",
@@ -1110,7 +1110,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 12,
+        decrease = 6,
         percent = 60,
       },
     },
@@ -1197,8 +1197,8 @@ data:extend({
     resistances = {
       {
         type = "acid",
-        decrease = 8,
-        percent = 40,
+        decrease = 10,
+        percent = 50,
       },
       {
         type = "electric",
@@ -1229,7 +1229,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 5,
+        decrease = 3,
         percent = 40,
       },
     },
@@ -1255,8 +1255,8 @@ data:extend({
     resistances = {
       {
         type = "acid",
-        decrease = 8,
-        percent = 40,
+        decrease = 12,
+        percent = 60,
       },
       {
         type = "electric",
@@ -1287,7 +1287,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 9,
+        decrease = 5,
         percent = 50,
       },
     },
@@ -1311,8 +1311,8 @@ data:extend({
     resistances = {
       {
         type = "acid",
-        decrease = 12,
-        percent = 60,
+        decrease = 20,
+        percent = 70,
       },
       {
         type = "electric",
@@ -1343,7 +1343,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 12,
+        decrease = 8,
         percent = 60,
       },
     },
@@ -1407,8 +1407,8 @@ data:extend({
     clamp_position = true,
     damage_modifier = 7.2,
     cooldown = 900,
-    range = 60,
-    prepare_range = 62,
+    range = 50,
+    prepare_range = 58,
     sound = warefareSounds.plasmaTurret(0.7),
     min_range = 30,
     direction_deviation = 0,
@@ -1479,8 +1479,8 @@ data:extend({
     clamp_position = true,
     damage_modifier = 10.8,
     cooldown = 800,
-    range = 65,
-    prepare_range = 67,
+    range = 53,
+    prepare_range = 61,
     sound = warefareSounds.plasmaTurret(0.75),
     min_range = 30,
     direction_deviation = 0,
@@ -1535,7 +1535,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 9,
+        decrease = 8,
         percent = 50,
       },
     },
@@ -1551,8 +1551,8 @@ data:extend({
     clamp_position = true,
     damage_modifier = 12.8,
     cooldown = 700,
-    range = 70,
-    prepare_range = 72,
+    range = 56,
+    prepare_range = 64,
     sound = warefareSounds.plasmaTurret(0.8),
     min_range = 30,
     direction_deviation = 0,
@@ -1607,7 +1607,7 @@ data:extend({
       },
       {
         type = "poison",
-        decrease = 12,
+        decrease = 10,
         percent = 60,
       },
     },
@@ -1623,8 +1623,8 @@ data:extend({
     clamp_position = true,
     damage_modifier = 15,
     cooldown = 600,
-    range = 75,
-    prepare_range = 77,
+    range = 60,
+    prepare_range = 68,
     sound = warefareSounds.plasmaTurret(0.9),
     min_range = 30,
     direction_deviation = 0,
@@ -1653,7 +1653,7 @@ data.raw["artillery-turret"]["artillery-turret"].resistances = {
   {
     type = "electric",
     decrease = 10,
-    percent = 70,
+    percent = 60,
   },
   {
     type = "explosion",
@@ -1680,7 +1680,7 @@ data.raw["artillery-turret"]["artillery-turret"].resistances = {
   },
   {
     type = "poison",
-    decrease = 15,
+    decrease = 8,
     percent = 70,
   },
 }
@@ -1710,7 +1710,7 @@ turret.resistances = {
   {
     type = "electric",
     decrease = 15,
-    percent = 80,
+    percent = 70,
   },
   {
     type = "explosion",
@@ -1737,7 +1737,7 @@ turret.resistances = {
   },
   {
     type = "poison",
-    decrease = 20,
+    decrease = 12,
     percent = 80,
   },
 }
@@ -1767,7 +1767,7 @@ turret.resistances = {
   {
     type = "electric",
     decrease = 20,
-    percent = 90,
+    percent = 80,
   },
   {
     type = "explosion",
@@ -1794,7 +1794,7 @@ turret.resistances = {
   },
   {
     type = "poison",
-    decrease = 25,
+    decrease = 15,
     percent = 90,
   },
 }
