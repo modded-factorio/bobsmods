@@ -32,3 +32,5 @@ require("prototypes.biters")
 require("prototypes.spitters")
 require("prototypes.spawners")
 require("prototypes.worms")
+
+require("menu-simulations.menu-simulations")
