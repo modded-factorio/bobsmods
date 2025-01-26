@@ -4,7 +4,7 @@ local wall_resistances = {
   {
     type = "physical",
     decrease = 3,
-    percent = 30,
+    percent = 40,
   },
   {
     type = "impact",
@@ -26,8 +26,8 @@ local wall_resistances = {
   },
   {
     type = "poison",
-    decrease = 20,
-    percent = 50,
+    decrease = 6,
+    percent = 60,
   },
   {
     type = "acid",
@@ -36,19 +36,21 @@ local wall_resistances = {
   },
   {
     type = "electric",
-    percent = 50,
+    percent = 40,
   },
 }
 
 data.raw.wall["stone-wall"].max_health = 450
 data.raw.wall["stone-wall"].resistances = wall_resistances
 data.raw.gate.gate.resistances = wall_resistances
+data.raw.wall["stone-wall"].is_military_target = true
+data.raw.gate.gate.is_military_target = true
 
 local reinforced_wall_resistances = {
   {
     type = "physical",
-    decrease = 10,
-    percent = 60,
+    decrease = 6,
+    percent = 50,
   },
   {
     type = "impact",
@@ -74,21 +76,17 @@ local reinforced_wall_resistances = {
   },
   {
     type = "poison",
-    decrease = 40,
+    decrease = 12,
     percent = 75,
   },
   {
     type = "acid",
-    decrease = 15,
-    percent = 60,
+    decrease = 20,
+    percent = 80,
   },
   {
     type = "electric",
-    percent = 75,
-  },
-  {
-    type = "bob-pierce",
-    percent = 35,
+    percent = 60,
   },
 }
 
@@ -106,6 +104,7 @@ data:extend({
     fast_replaceable_group = "wall",
     max_health = 1250,
     repair_speed_modifier = 2,
+    is_military_target = true,
     corpse = "wall-remnants",
     dying_explosion = "wall-explosion",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
