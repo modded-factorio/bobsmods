@@ -9,7 +9,7 @@ data.raw["spider-vehicle"]["spidertron"].resistances = {
   { type = "explosion", decrease = 30, percent = 65 },
   { type = "acid", decrease = 5, percent = 70 },
   { type = "fire", decrease = 20, percent = 85 },
-  { type = "poison", decrease = 15, percent = 80 },
+  { type = "poison", decrease = 10, percent = 80 },
   { type = "laser", decrease = 0, percent = 70 },
   { type = "plasma", decrease = 0, percent = 90 },
 }
@@ -22,7 +22,7 @@ local vanilla_spidertron_leg_resistances = {
   { type = "explosion", percent = 100 },
   { type = "acid", decrease = 5, percent = 70 },
   { type = "fire", percent = 100 },
-  { type = "poison", decrease = 15, percent = 80 },
+  { type = "poison", decrease = 10, percent = 80 },
   { type = "laser", decrease = 0, percent = 70 },
   { type = "plasma", decrease = 0, percent = 90 },
 }
