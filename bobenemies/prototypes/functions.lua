@@ -29,7 +29,7 @@ local leviathanfrequency = settings.startup["bobmods-enemies-leviathanfrequency"
 local biter_resistances = {
   { { type = "physical" }, { type = "physical", decrease = 4, percent = 10 }, { type = "physical", decrease = 8, percent = 15 }, { type = "physical", decrease = 10, percent = 20 }, { type = "physical", decrease = 12, percent = 30 }, { type = "physical", decrease = 14, percent = 40 }, { type = "physical", decrease = 16, percent = 60 }, { type = "physical", decrease = 20, percent = 80 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 30 }, { type = "bob-pierce", percent = 40 }, },
-  { { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", decrease = 5, percent = 30 }, { type = "explosion", decrease = 10, percent = 40 }, { type = "explosion", decrease = 20, percent = 60 }, },
+  { { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, { type = "explosion", percent = 40 }, { type = "explosion", percent = 60 }, },
   { { type = "laser" }, { type = "laser" }, { type = "laser" }, { type = "laser", percent = 10 }, { type = "laser", percent = 20 }, { type = "laser", decrease = 10, percent = 35 }, { type = "laser", decrease = 15, percent = 50 }, { type = "laser", decrease = 20, percent = 75 }, },
   { { type = "fire" }, { type = "fire" }, { type = "fire" }, { type = "fire" }, { type = "fire", percent = 5 }, { type = "fire", percent = 10 }, { type = "fire", decrease = 3, percent = 40 }, { type = "fire", decrease = 5, percent = 50 }, },
   { { type = "poison" }, { type = "poison" }, { type = "poison" }, { type = "poison" }, { type = "poison", percent = 5 }, { type = "poison", percent = 10 }, { type = "poison", decrease = 3, percent = 30 }, { type = "poison", decrease = 5, percent = 50 }, },
@@ -40,9 +40,9 @@ local biter_resistances = {
 }
 
 local biter_resistances_up = {
-  { { type = "physical" }, { type = "physical", decrease = 5, percent = 35 }, { type = "physical", decrease = 9, percent = 45 }, { type = "physical", decrease = 12, percent = 55 }, { type = "physical", decrease = 14, percent = 65 }, { type = "physical", decrease = 18, percent = 75 }, { type = "physical", decrease = 24, percent = 90 }, { type = "physical", decrease = 36, percent = 95 }, },
+  { { type = "physical" }, { type = "physical", decrease = 5, percent = 30 }, { type = "physical", decrease = 9, percent = 45 }, { type = "physical", decrease = 12, percent = 60 }, { type = "physical", decrease = 14, percent = 75 }, { type = "physical", decrease = 18, percent = 85 }, { type = "physical", decrease = 24, percent = 90 }, { type = "physical", decrease = 36, percent = 95 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 40 }, { type = "bob-pierce", percent = 60 }, { type = "bob-pierce", percent = 75 }, },
-  { { type = "explosion" }, { type = "explosion", decrease = 5, percent = 30 }, { type = "explosion", decrease = 25, percent = 60 }, { type = "explosion", decrease = 30, percent = 70 }, { type = "explosion", decrease = 35, percent = 80 }, { type = "explosion", decrease = 40, percent = 85 }, { type = "explosion", decrease = 50, percent = 90 }, { type = "explosion", decrease = 60, percent = 95 }, },
+  { { type = "explosion" }, { type = "explosion", percent = 30 }, { type = "explosion", percent = 60 }, { type = "explosion", decrease = 5, percent = 70 }, { type = "explosion", decrease = 10, percent = 80 }, { type = "explosion", decrease = 15, percent = 85 }, { type = "explosion", decrease = 20, percent = 90 }, { type = "explosion", decrease = 25, percent = 95 }, },
   { { type = "laser" }, { type = "laser", decrease = 4, percent = 30 }, { type = "laser", decrease = 8, percent = 40 }, { type = "laser", decrease = 15, percent = 50 }, { type = "laser", decrease = 22, percent = 60 }, { type = "laser", decrease = 30, percent = 70 }, { type = "laser", decrease = 40, percent = 80 }, { type = "laser", decrease = 50, percent = 90 }, },
   { { type = "fire" }, { type = "fire", percent = 20 }, { type = "fire", percent = 30 }, { type = "fire", decrease = 2, percent = 40 }, { type = "fire", decrease = 4, percent = 50 }, { type = "fire", decrease = 6, percent = 60 }, { type = "fire", decrease = 8, percent = 70 }, { type = "fire", decrease = 10, percent = 80 }, },
   { { type = "poison" }, { type = "poison", percent = 40 }, { type = "poison", percent = 50 }, { type = "poison", decrease = 5, percent = 60 }, { type = "poison", decrease = 10, percent = 70 }, { type = "poison", decrease = 15, percent = 80 }, { type = "poison", decrease = 20, percent = 85 }, { type = "poison", decrease = 25, percent = 90 }, },
@@ -53,9 +53,9 @@ local biter_resistances_up = {
 }
 
 local biter_resistances_upup = {
-  { { type = "physical" }, { type = "physical", decrease = 5, percent = 35 }, { type = "physical", decrease = 9, percent = 45 }, { type = "physical", decrease = 12, percent = 55 }, { type = "physical", decrease = 14, percent = 65 }, { type = "physical", decrease = 18, percent = 75 }, { type = "physical", decrease = 24, percent = 90 }, { type = "physical", decrease = 36, percent = 95 }, },
+  { { type = "physical" }, { type = "physical", decrease = 5, percent = 30 }, { type = "physical", decrease = 9, percent = 45 }, { type = "physical", decrease = 12, percent = 60 }, { type = "physical", decrease = 14, percent = 75 }, { type = "physical", decrease = 18, percent = 85 }, { type = "physical", decrease = 24, percent = 90 }, { type = "physical", decrease = 36, percent = 95 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 40 }, { type = "bob-pierce", percent = 60 }, { type = "bob-pierce", percent = 75 }, },
-  { { type = "explosion", decrease = 20, percent = 60 }, { type = "explosion", decrease = 30, percent = 65 }, { type = "explosion", decrease = 40, percent = 70 }, { type = "explosion", decrease = 60, percent = 75 }, { type = "explosion", decrease = 80, percent = 80 }, { type = "explosion", decrease = 100, percent = 85 }, { type = "explosion", decrease = 120, percent = 90 }, { type = "explosion", decrease = 160, percent = 95 }, },
+  { { type = "explosion", decrease = 5, percent = 60 }, { type = "explosion", decrease = 10, percent = 65 }, { type = "explosion", decrease = 20, percent = 70 }, { type = "explosion", decrease = 30, percent = 75 }, { type = "explosion", decrease = 40, percent = 80 }, { type = "explosion", decrease = 60, percent = 85 }, { type = "explosion", decrease = 80, percent = 90 }, { type = "explosion", decrease = 100, percent = 95 }, },
   { { type = "laser" }, { type = "laser", decrease = 4, percent = 30 }, { type = "laser", decrease = 8, percent = 40 }, { type = "laser", decrease = 15, percent = 50 }, { type = "laser", decrease = 22, percent = 60 }, { type = "laser", decrease = 30, percent = 70 }, { type = "laser", decrease = 40, percent = 80 }, { type = "laser", decrease = 50, percent = 90 }, },
   { { type = "fire", decrease = 2, percent = 50 }, { type = "fire", decrease = 4, percent = 55 }, { type = "fire", decrease = 6, percent = 60 }, { type = "fire", decrease = 8, percent = 65 }, { type = "fire", decrease = 10, percent = 70 }, { type = "fire", decrease = 12, percent = 75 }, { type = "fire", decrease = 16, percent = 80 }, { type = "fire", decrease = 20, percent = 90 }, },
   { { type = "poison" }, { type = "poison", percent = 40 }, { type = "poison", percent = 50 }, { type = "poison", decrease = 5, percent = 60 }, { type = "poison", decrease = 10, percent = 70 }, { type = "poison", decrease = 15, percent = 80 }, { type = "poison", decrease = 20, percent = 85 }, { type = "poison", decrease = 25, percent = 90 }, },
@@ -69,7 +69,7 @@ local biter_resistances_down = {
   { { type = "physical" }, { type = "physical", decrease = 2, percent = 5 }, { type = "physical", decrease = 4, percent = 10 }, { type = "physical", decrease = 7, percent = 15 }, { type = "physical", decrease = 9, percent = 25 }, { type = "physical", decrease = 11, percent = 35 }, { type = "physical", decrease = 13, percent = 50 }, { type = "physical", decrease = 15, percent = 60 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 5 }, { type = "bob-pierce", percent = 15 }, { type = "bob-pierce", percent = 25 }, },
   { { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, },
-  { { type = "laser", percent = -50 }, { type = "laser", percent = -40 }, { type = "laser", percent = -30 }, { type = "laser", percent = -20 }, { type = "laser", percent = -10 }, { type = "laser" }, { type = "laser", percent = 10 }, { type = "laser", percent = 20 }, },
+  { { type = "laser", percent = -40 }, { type = "laser", percent = -30 }, { type = "laser", percent = -20 }, { type = "laser", percent = -10 }, { type = "laser", }, { type = "laser", percent = 10 }, { type = "laser", percent = 20 }, { type = "laser", percent = 30 }, },
   { { type = "fire", percent = -50 }, { type = "fire", percent = -40 }, { type = "fire", percent = -30 }, { type = "fire", percent = -20 }, { type = "fire", percent = -10 }, { type = "fire" }, { type = "fire", percent = 10 }, { type = "fire", percent = 20 }, },
   { { type = "poison", percent = -50 }, { type = "poison", percent = -40 }, { type = "poison", percent = -30 }, { type = "poison", percent = -20 }, { type = "poison", percent = -10 }, { type = "poison" }, { type = "poison", percent = 10 }, { type = "poison", percent = 20 }, },
   { { type = "electric", percent = -30 }, { type = "electric", percent = -20 }, { type = "electric", percent = -10 }, { type = "electric" }, { type = "electric", percent = 10 }, { type = "electric", percent = 20 }, { type = "electric", percent = 30 }, { type = "electric", percent = 40 }, },
@@ -85,23 +85,23 @@ local biter_stats = {
 
   { max_health = 250, healing_per_tick = 0.02, movement_speed = 0.26, scale = 1, distance_per_frame = 0.3, absorptions_to_join_attack = { pollution = 40 }, spawning_time_modifier = 3, dying_sound = sounds.biter_dying(0.7), working_sound = sounds.biter_calls(0.45, 0.95), walking_sound = sounds.biter_walk_big(0.37, 0.67), attacking_sound = sounds.biter_roars_mid(0.75), },
 
-  { max_health = 600, healing_per_tick = 0.04, movement_speed = 0.27, scale = 1.25, distance_per_frame = 0.375, absorptions_to_join_attack = { pollution = 60 }, spawning_time_modifier = 4, dying_sound = sounds.biter_dying(0.75), working_sound = sounds.biter_calls_big(0.4, 0.7), walking_sound = sounds.biter_walk_big(0.5, 0.6), attacking_sound = sounds.biter_roars_mid(0.8), },
+  { max_health = 750, healing_per_tick = 0.04, movement_speed = 0.27, scale = 1.25, distance_per_frame = 0.375, absorptions_to_join_attack = { pollution = 60 }, spawning_time_modifier = 4, dying_sound = sounds.biter_dying(0.75), working_sound = sounds.biter_calls_big(0.4, 0.7), walking_sound = sounds.biter_walk_big(0.5, 0.6), attacking_sound = sounds.biter_roars_mid(0.8), },
 
-  { max_health = 1200, healing_per_tick = 0.1, movement_speed = 0.28, scale = 1.5, distance_per_frame = 0.45, absorptions_to_join_attack = { pollution = 100 }, spawning_time_modifier = 5, dying_sound = sounds.biter_dying_big(0.5), working_sound = sounds.biter_calls_big(0.45, 0.75), walking_sound = sounds.biter_walk_big(0.6, 0.7), attacking_sound = sounds.biter_roars_big(0.4), },
+  { max_health = 2400, healing_per_tick = 0.1, movement_speed = 0.28, scale = 1.5, distance_per_frame = 0.45, absorptions_to_join_attack = { pollution = 100 }, spawning_time_modifier = 5, dying_sound = sounds.biter_dying_big(0.5), working_sound = sounds.biter_calls_big(0.45, 0.75), walking_sound = sounds.biter_walk_big(0.6, 0.7), attacking_sound = sounds.biter_roars_big(0.4), },
 
-  { max_health = 2500, healing_per_tick = 0.2, movement_speed = 0.29, scale = 1.75, distance_per_frame = 0.525, absorptions_to_join_attack = { pollution = 200 }, spawning_time_modifier = 6, dying_sound = sounds.biter_dying_big(0.55), working_sound = sounds.biter_calls_big(0.5, 0.8), walking_sound = sounds.biter_walk_big(0.7, 0.8), attacking_sound = sounds.biter_roars_big(0.45), },
+  { max_health = 8000, healing_per_tick = 0.2, movement_speed = 0.29, scale = 1.75, distance_per_frame = 0.525, absorptions_to_join_attack = { pollution = 200 }, spawning_time_modifier = 6, dying_sound = sounds.biter_dying_big(0.55), working_sound = sounds.biter_calls_big(0.5, 0.8), walking_sound = sounds.biter_walk_big(0.7, 0.8), attacking_sound = sounds.biter_roars_big(0.45), },
 
-  { max_health = 5000, healing_per_tick = 0.3, movement_speed = 0.3, scale = 2, distance_per_frame = 0.6, absorptions_to_join_attack = { pollution = 400 }, spawning_time_modifier = 8, dying_sound = sounds.biter_dying_big(0.6), working_sound = sounds.biter_calls_behemoth(0.5, 0.9), walking_sound = sounds.biter_walk_big(0.75, 0.9), attacking_sound = sounds.biter_roars_behemoth(0.7), },
+  { max_health = 25000, healing_per_tick = 0.3, movement_speed = 0.3, scale = 2, distance_per_frame = 0.6, absorptions_to_join_attack = { pollution = 400 }, spawning_time_modifier = 8, dying_sound = sounds.biter_dying_big(0.6), working_sound = sounds.biter_calls_behemoth(0.5, 0.9), walking_sound = sounds.biter_walk_big(0.75, 0.9), attacking_sound = sounds.biter_roars_behemoth(0.7), },
 
-  { max_health = 25000, healing_per_tick = 0.5, movement_speed = 0.32, scale = 2.5, distance_per_frame = 0.75, absorptions_to_join_attack = { pollution = 500 }, spawning_time_modifier = 12, dying_sound = sounds.biter_dying_big(0.75), working_sound = sounds.biter_calls_behemoth(0.6, 1), walking_sound = sounds.biter_walk_big(0.85, 1), attacking_sound = sounds.biter_roars_behemoth(0.8), },
+  { max_health = 80000, healing_per_tick = 0.5, movement_speed = 0.32, scale = 2.5, distance_per_frame = 0.75, absorptions_to_join_attack = { pollution = 500 }, spawning_time_modifier = 12, dying_sound = sounds.biter_dying_big(0.75), working_sound = sounds.biter_calls_behemoth(0.6, 1), walking_sound = sounds.biter_walk_big(0.85, 1), attacking_sound = sounds.biter_roars_behemoth(0.8), },
 }
 
 if health_increase == true then
-  biter_stats[4].max_health = 1000
-  biter_stats[5].max_health = 3000
-  biter_stats[6].max_health = 7500
-  biter_stats[7].max_health = 20000
-  biter_stats[8].max_health = 80000
+  biter_stats[4].max_health = 2400
+  biter_stats[5].max_health = 8000
+  biter_stats[6].max_health = 22000
+  biter_stats[7].max_health = 72000
+  biter_stats[8].max_health = 300000
 end
 
 function bobmods.enemies.new_biter(inputs)
@@ -205,7 +205,7 @@ end
 local spitter_resistances = {
   { { type = "physical" }, { type = "physical" }, { type = "physical", percent = 10 }, { type = "physical", decrease = 4, percent = 20 }, { type = "physical", decrease = 8, percent = 30 }, { type = "physical", decrease = 12, percent = 40 }, { type = "physical", decrease = 16, percent = 50 }, { type = "physical", decrease = 20, percent = 60 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 5 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 30 }, },
-  { { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, { type = "explosion", decrease = 5, percent = 40 }, { type = "explosion", decrease = 10, percent = 50 }, { type = "explosion", decrease = 20, percent = 75 }, },
+  { { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, { type = "explosion", percent = 40 }, { type = "explosion", percent = 50 }, { type = "explosion", percent = 75 }, },
   { { type = "laser" }, { type = "laser" }, { type = "laser" }, { type = "laser" }, { type = "laser", percent = 5 }, { type = "laser", percent = 15 }, { type = "laser", percent = 30 }, { type = "laser", percent = 50 }, },
   { { type = "fire" }, { type = "fire" }, { type = "fire", percent = 10 }, { type = "fire", percent = 20 }, { type = "fire", percent = 30 }, { type = "fire", decrease = 2, percent = 40 }, { type = "fire", decrease = 4, percent = 50 }, { type = "fire", decrease = 6, percent = 75 }, },
   { { type = "poison" }, { type = "poison" }, { type = "poison" }, { type = "poison" }, { type = "poison", percent = 5 }, { type = "poison", percent = 10 }, { type = "poison", decrease = 3, percent = 30 }, { type = "poison", decrease = 5, percent = 50 }, },
@@ -218,7 +218,7 @@ local spitter_resistances = {
 local spitter_resistances_up = {
   { { type = "physical" }, { type = "physical" }, { type = "physical", decrease = 4, percent = 15 }, { type = "physical", decrease = 6, percent = 25 }, { type = "physical", decrease = 10, percent = 35 }, { type = "physical", decrease = 16, percent = 45 }, { type = "physical", decrease = 20, percent = 60 }, { type = "physical", decrease = 30, percent = 75 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 40 }, { type = "bob-pierce", percent = 60 }, },
-  { { type = "explosion" }, { type = "explosion", decrease = 10, percent = 35 }, { type = "explosion", decrease = 30, percent = 70 }, { type = "explosion", decrease = 35, percent = 80 }, { type = "explosion", decrease = 40, percent = 83 }, { type = "explosion", decrease = 60, percent = 87 }, { type = "explosion", decrease = 80, percent = 90 }, { type = "explosion", decrease = 100, percent = 95 }, },
+  { { type = "explosion" }, { type = "explosion", percent = 35 }, { type = "explosion", percent = 70 }, { type = "explosion", decrease = 5, percent = 80 }, { type = "explosion", decrease = 10, percent = 83 }, { type = "explosion", decrease = 15, percent = 87 }, { type = "explosion", decrease = 20, percent = 90 }, { type = "explosion", decrease = 25, percent = 95 }, },
   { { type = "laser" }, { type = "laser", percent = 10 }, { type = "laser", percent = 20 }, { type = "laser", decrease = 5, percent = 30 }, { type = "laser", decrease = 10, percent = 40 }, { type = "laser", decrease = 15, percent = 50 }, { type = "laser", decrease = 20, percent = 60 }, { type = "laser", decrease = 30, percent = 75 }, },
   { { type = "fire" }, { type = "fire", percent = 30 }, { type = "fire", percent = 40 }, { type = "fire", decrease = 2, percent = 50 }, { type = "fire", decrease = 4, percent = 60 }, { type = "fire", decrease = 6, percent = 70 }, { type = "fire", decrease = 8, percent = 80 }, { type = "fire", decrease = 10, percent = 90 }, },
   { { type = "poison" }, { type = "poison", decrease = 5, percent = 40 }, { type = "poison", decrease = 10, percent = 50 }, { type = "poison", decrease = 15, percent = 60 }, { type = "poison", decrease = 20, percent = 70 }, { type = "poison", decrease = 25, percent = 80 }, { type = "poison", decrease = 30, percent = 85 }, { type = "poison", decrease = 35, percent = 90 }, },
@@ -231,7 +231,7 @@ local spitter_resistances_up = {
 local spitter_resistances_upup = {
   { { type = "physical" }, { type = "physical" }, { type = "physical", decrease = 4, percent = 15 }, { type = "physical", decrease = 6, percent = 25 }, { type = "physical", decrease = 10, percent = 35 }, { type = "physical", decrease = 16, percent = 45 }, { type = "physical", decrease = 20, percent = 60 }, { type = "physical", decrease = 30, percent = 75 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 40 }, { type = "bob-pierce", percent = 60 }, },
-  { { type = "explosion", decrease = 25, percent = 65 }, { type = "explosion", decrease = 35, percent = 70 }, { type = "explosion", decrease = 45, percent = 75 }, { type = "explosion", decrease = 65, percent = 80 }, { type = "explosion", decrease = 85, percent = 85 }, { type = "explosion", decrease = 120, percent = 89 }, { type = "explosion", decrease = 140, percent = 92 }, { type = "explosion", decrease = 180, percent = 95 }, },
+  { { type = "explosion", decrease = 5, percent = 65 }, { type = "explosion", decrease = 10, percent = 70 }, { type = "explosion", decrease = 20, percent = 75 }, { type = "explosion", decrease = 30, percent = 80 }, { type = "explosion", decrease = 40, percent = 85 }, { type = "explosion", decrease = 60, percent = 89 }, { type = "explosion", decrease = 80, percent = 92 }, { type = "explosion", decrease = 100, percent = 95 }, },
   { { type = "laser" }, { type = "laser", percent = 10 }, { type = "laser", percent = 20 }, { type = "laser", decrease = 5, percent = 30 }, { type = "laser", decrease = 10, percent = 40 }, { type = "laser", decrease = 15, percent = 50 }, { type = "laser", decrease = 20, percent = 60 }, { type = "laser", decrease = 30, percent = 75 }, },
   { { type = "fire", decrease = 2, percent = 60 }, { type = "fire", decrease = 4, percent = 65 }, { type = "fire", decrease = 6, percent = 70 }, { type = "fire", decrease = 8, percent = 75 }, { type = "fire", decrease = 10, percent = 80 }, { type = "fire", decrease = 12, percent = 85 }, { type = "fire", decrease = 16, percent = 90 }, { type = "fire", decrease = 20, percent = 95 }, },
   { { type = "poison" }, { type = "poison", decrease = 5, percent = 40 }, { type = "poison", decrease = 10, percent = 50 }, { type = "poison", decrease = 15, percent = 60 }, { type = "poison", decrease = 20, percent = 70 }, { type = "poison", decrease = 25, percent = 80 }, { type = "poison", decrease = 30, percent = 85 }, { type = "poison", decrease = 35, percent = 90 }, },
@@ -245,7 +245,7 @@ local spitter_resistances_down = {
   { { type = "physical" }, { type = "physical" }, { type = "physical", percent = 5 }, { type = "physical", decrease = 2, percent = 10 }, { type = "physical", decrease = 4, percent = 15 }, { type = "physical", decrease = 6, percent = 20 }, { type = "physical", decrease = 8, percent = 30 }, { type = "physical", decrease = 10, percent = 40 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 3 }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, },
   { { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, { type = "explosion", percent = 40 }, },
-  { { type = "laser", percent = -60 }, { type = "laser", percent = -55 }, { type = "laser", percent = -50 }, { type = "laser", percent = -40 }, { type = "laser", percent = -30 }, { type = "laser", percent = -20 }, { type = "laser", percent = -10 }, { type = "laser" }, },
+  { { type = "laser", percent = -50 }, { type = "laser", percent = -45 }, { type = "laser", percent = -40 }, { type = "laser", percent = -30 }, { type = "laser", percent = -20 }, { type = "laser", percent = -10 }, { type = "laser", }, { type = "laser",  percent = 10 }, },
   { { type = "fire", percent = -60 }, { type = "fire", percent = -55 }, { type = "fire", percent = -50 }, { type = "fire", percent = -40 }, { type = "fire", percent = -30 }, { type = "fire", percent = -20 }, { type = "fire", percent = -10 }, { type = "fire" }, },
   { { type = "poison", percent = -60 }, { type = "poison", percent = -55 }, { type = "poison", percent = -50 }, { type = "poison", percent = -40 }, { type = "poison", percent = -30 }, { type = "poison", percent = -20 }, { type = "poison", percent = -10 }, { type = "poison" }, },
   { { type = "electric", percent = -50 }, { type = "electric", percent = -40 }, { type = "electric", percent = -30 }, { type = "electric", percent = -20 }, { type = "electric", percent = -10 }, { type = "electric" }, { type = "electric", percent = 10 }, { type = "electric", percent = 20 }, },
@@ -261,23 +261,23 @@ local spitter_stats = {
 
   { max_health = 150, healing_per_tick = 0.02, movement_speed = 0.17, scale = 1, distance_per_frame = 0.07, absorptions_to_join_attack = { pollution = 30 }, spawning_time_modifier = 3, dying_sound = sounds.spitter_dying_big(0.67), working_sound = sounds.spitter_calls_med(0.24, 0.57), walking_sound = sounds.spitter_walk_big(0.2, 0.5), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-mid", 5, 0.38), },
 
-  { max_health = 350, healing_per_tick = 0.04, movement_speed = 0.177, scale = 1.25, distance_per_frame = 0.088, absorptions_to_join_attack = { pollution = 50 }, spawning_time_modifier = 4, dying_sound = sounds.spitter_dying_big(0.71), working_sound = sounds.spitter_calls_big(0.36, 0.56), walking_sound = sounds.spitter_walk_big(0.23, 0.53), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.49), },
+  { max_health = 500, healing_per_tick = 0.04, movement_speed = 0.177, scale = 1.25, distance_per_frame = 0.088, absorptions_to_join_attack = { pollution = 50 }, spawning_time_modifier = 4, dying_sound = sounds.spitter_dying_big(0.71), working_sound = sounds.spitter_calls_big(0.36, 0.56), walking_sound = sounds.spitter_walk_big(0.23, 0.53), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.49), },
 
-  { max_health = 800, healing_per_tick = 0.1, movement_speed = 0.185, scale = 1.5, distance_per_frame = 0.105, absorptions_to_join_attack = { pollution = 80 }, spawning_time_modifier = 5, dying_sound = sounds.spitter_dying_big(0.75), working_sound = sounds.spitter_calls_big(0.4, 0.6), walking_sound = sounds.spitter_walk_big(0.26, 0.56), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.53), },
+  { max_health = 1600, healing_per_tick = 0.1, movement_speed = 0.185, scale = 1.5, distance_per_frame = 0.105, absorptions_to_join_attack = { pollution = 80 }, spawning_time_modifier = 5, dying_sound = sounds.spitter_dying_big(0.75), working_sound = sounds.spitter_calls_big(0.4, 0.6), walking_sound = sounds.spitter_walk_big(0.26, 0.56), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.53), },
 
-  { max_health = 1600, healing_per_tick = 0.2, movement_speed = 0.19, scale = 1.75, distance_per_frame = 0.123, absorptions_to_join_attack = { pollution = 120 }, spawning_time_modifier = 6, dying_sound = sounds.spitter_dying_behemoth(0.70), working_sound = sounds.spitter_calls_big(0.45, 0.65), walking_sound = sounds.spitter_walk_big(0.3, 0.6), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.57), },
+  { max_health = 6000, healing_per_tick = 0.2, movement_speed = 0.19, scale = 1.75, distance_per_frame = 0.123, absorptions_to_join_attack = { pollution = 120 }, spawning_time_modifier = 6, dying_sound = sounds.spitter_dying_behemoth(0.70), working_sound = sounds.spitter_calls_big(0.45, 0.65), walking_sound = sounds.spitter_walk_big(0.3, 0.6), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.57), },
 
-  { max_health = 3500, healing_per_tick = 0.3, movement_speed = 0.2, scale = 2, distance_per_frame = 0.14, absorptions_to_join_attack = { pollution = 200 }, spawning_time_modifier = 8, dying_sound = sounds.spitter_dying_behemoth(0.77), working_sound = sounds.spitter_calls_big(0.5, 0.7), walking_sound = sounds.spitter_walk_big(0.33, 0.63), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.47), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.46) },
+  { max_health = 16000, healing_per_tick = 0.3, movement_speed = 0.2, scale = 2, distance_per_frame = 0.14, absorptions_to_join_attack = { pollution = 200 }, spawning_time_modifier = 8, dying_sound = sounds.spitter_dying_behemoth(0.77), working_sound = sounds.spitter_calls_big(0.5, 0.7), walking_sound = sounds.spitter_walk_big(0.33, 0.63), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.47), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.46) },
 
-  { max_health = 15000, healing_per_tick = 5, movement_speed = 0.22, scale = 2.5, distance_per_frame = 0.175, absorptions_to_join_attack = { pollution = 350 }, spawning_time_modifier = 12, dying_sound = sounds.spitter_dying_behemoth(0.85), working_sound = sounds.spitter_calls_big(0.55, 0.75), walking_sound = sounds.spitter_walk_big(0.38, 0.68), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.53), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.5), },
+  { max_health = 60000, healing_per_tick = 5, movement_speed = 0.22, scale = 2.5, distance_per_frame = 0.175, absorptions_to_join_attack = { pollution = 350 }, spawning_time_modifier = 12, dying_sound = sounds.spitter_dying_behemoth(0.85), working_sound = sounds.spitter_calls_big(0.55, 0.75), walking_sound = sounds.spitter_walk_big(0.38, 0.68), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.53), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.5), },
 }
 
 if health_increase == true then
-  spitter_stats[4].max_health = 700
-  spitter_stats[5].max_health = 2000
-  spitter_stats[6].max_health = 3200
-  spitter_stats[7].max_health = 12000
-  spitter_stats[8].max_health = 40000
+  spitter_stats[4].max_health = 1800
+  spitter_stats[5].max_health = 6000
+  spitter_stats[6].max_health = 18000
+  spitter_stats[7].max_health = 60000
+  spitter_stats[8].max_health = 240000
 end
 
 function bobmods.enemies.new_spitter(inputs)
@@ -724,7 +724,11 @@ function generate_fire_prototype(inputs, scale_value)
     initial_flame_count = 1,
     burnt_patch_lifetime = 0,
 
-    light = inputs.fire_light,
+    light = inputs.fire_light or {
+      color = fire_final_tint,
+      intensity = 0.4,
+      size = 10,
+    },
     light_size_modifier_maximum = inputs.fire_light_size_modifier_maximum,
     light_size_modifier_per_flame = inputs.fire_light_size_modifier_per_flame,
 
@@ -772,7 +776,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 210,
             height = 224,
@@ -798,7 +801,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 174,
             height = 150,
@@ -824,7 +826,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 236,
             height = 208,
@@ -850,7 +851,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 252,
             height = 154,
@@ -880,7 +880,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 210,
             height = 224,
@@ -906,7 +905,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 174,
             height = 150,
@@ -932,7 +930,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 236,
             height = 208,
@@ -958,7 +955,6 @@ function generate_fire_prototype(inputs, scale_value)
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 252,
             height = 154,
@@ -996,7 +992,6 @@ end
 
 function generate_sticker_prototype(inputs, final_sticker_name)
   if not data.raw.sticker[final_sticker_name] then
-    log(final_sticker_name)
 
     local sticker_prototype = {
       type = "sticker",
@@ -1034,7 +1029,7 @@ end
 local worm_resistances = {
   { { type = "physical" }, { type = "physical", decrease = 5 }, { type = "physical", decrease = 10, percent = 10 }, { type = "physical", decrease = 15, percent = 20 }, { type = "physical", decrease = 20, percent = 30 }, { type = "physical", decrease = 25, percent = 40 }, { type = "physical", decrease = 30, percent = 50 }, { type = "physical", decrease = 35, percent = 60 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 5 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 30 }, },
-  { { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", decrease = 5, percent = 30 }, { type = "explosion", decrease = 10, percent = 40 }, { type = "explosion", decrease = 20, percent = 60 }, },
+  { { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, { type = "explosion", percent = 40 }, { type = "explosion", percent = 50 }, { type = "explosion", percent = 60 }, { type = "explosion", percent = 70 }, },
   { { type = "laser" }, { type = "laser", percent = 20 }, { type = "laser", percent = 30 }, { type = "laser", percent = 40 }, { type = "laser", percent = 50 }, { type = "laser", percent = 60 }, { type = "laser", percent = 70 }, { type = "laser", percent = 80 }, },
   { { type = "fire" }, { type = "fire", percent = 10 }, { type = "fire", percent = 20 }, { type = "fire", percent = 30 }, { type = "fire", decrease = 2, percent = 40 }, { type = "fire", decrease = 4, percent = 50 }, { type = "fire", decrease = 6, percent = 75 }, { type = "fire", decrease = 8, percent = 85 }, },
   { { type = "poison" }, { type = "poison" }, { type = "poison" }, { type = "poison" }, { type = "poison", percent = 5 }, { type = "poison", percent = 10 }, { type = "poison", decrease = 3, percent = 30 }, { type = "poison", decrease = 5, percent = 50 }, },
@@ -1047,7 +1042,7 @@ local worm_resistances = {
 local worm_resistances_up = {
   { { type = "physical" }, { type = "physical", decrease = 8, percent = 5 }, { type = "physical", decrease = 12, percent = 15 }, { type = "physical", decrease = 18, percent = 25 }, { type = "physical", decrease = 24, percent = 35 }, { type = "physical", decrease = 32, percent = 45 }, { type = "physical", decrease = 46, percent = 60 }, { type = "physical", decrease = 60, percent = 75 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, { type = "bob-pierce", percent = 40 }, { type = "bob-pierce", percent = 60 }, },
-  { { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 15 }, { type = "explosion", decrease = 10, percent = 30 }, { type = "explosion", decrease = 20, percent = 40 }, { type = "explosion", decrease = 25, percent = 50 }, { type = "explosion", decrease = 30, percent = 60 }, { type = "explosion", decrease = 35, percent = 75 }, },
+  { { type = "explosion" }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 35 }, { type = "explosion", decrease = 10, percent = 45 }, { type = "explosion", decrease = 20, percent = 55 }, { type = "explosion", decrease = 25, percent = 65 }, { type = "explosion", decrease = 30, percent = 75 }, { type = "explosion", decrease = 35, percent = 85 }, },
   { { type = "laser" }, { type = "laser", decrease = 5, percent = 30 }, { type = "laser", decrease = 10, percent = 40 }, { type = "laser", decrease = 15, percent = 50 }, { type = "laser", decrease = 20, percent = 60 }, { type = "laser", decrease = 25, percent = 70 }, { type = "laser", decrease = 30, percent = 80 }, { type = "laser", decrease = 40, percent = 95 }, },
   { { type = "fire" }, { type = "fire", decrease = 2, percent = 20 }, { type = "fire", decrease = 3, percent = 30 }, { type = "fire", decrease = 4, percent = 40 }, { type = "fire", decrease = 5, percent = 50 }, { type = "fire", decrease = 6, percent = 60 }, { type = "fire", decrease = 8, percent = 80 }, { type = "fire", decrease = 10, percent = 90 }, },
   { { type = "poison" }, { type = "poison", decrease = 5, percent = 40 }, { type = "poison", decrease = 10, percent = 50 }, { type = "poison", decrease = 15, percent = 60 }, { type = "poison", decrease = 20, percent = 70 }, { type = "poison", decrease = 25, percent = 80 }, { type = "poison", decrease = 30, percent = 85 }, { type = "poison", decrease = 35, percent = 90 }, },
@@ -1074,7 +1069,7 @@ local worm_resistances_down = {
   { { type = "physical" }, { type = "physical", decrease = 2, }, { type = "physical", decrease = 5, percent = 5 }, { type = "physical", decrease = 8, percent = 10 }, { type = "physical", decrease = 10, percent = 15 }, { type = "physical", decrease = 13, percent = 20 }, { type = "physical", decrease = 16, percent = 30 }, { type = "physical", decrease = 20, percent = 40 }, },
   { { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce" }, { type = "bob-pierce", percent = 3 }, { type = "bob-pierce", percent = 10 }, { type = "bob-pierce", percent = 20 }, },
   { { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion" }, { type = "explosion", percent = 10 }, { type = "explosion", percent = 20 }, { type = "explosion", percent = 30 }, },
-  { { type = "laser", percent = -60 }, { type = "laser", percent = -55 }, { type = "laser", percent = -50 }, { type = "laser", percent = -40 }, { type = "laser", percent = -30 }, { type = "laser", percent = -20 }, { type = "laser", percent = -10 }, { type = "laser" }, },
+  { { type = "laser", percent = -50 }, { type = "laser", percent = -45 }, { type = "laser", percent = -40 }, { type = "laser", percent = -30 }, { type = "laser", percent = -20 }, { type = "laser", percent = -10 }, { type = "laser", }, { type = "laser",  percent = 10 }, },
   { { type = "fire", percent = -20 }, { type = "fire", percent = -10 }, { type = "fire" }, { type = "fire", percent = 10 }, { type = "fire", decrease = 2, percent = 20 }, { type = "fire", decrease = 4, percent = 30 }, { type = "fire", decrease = 6, percent = 40 }, { type = "fire", decrease = 8, percent = 50 }, },
   { { type = "poison", percent = -20 }, { type = "poison", percent = -15 }, { type = "poison", percent = -10 }, { type = "poison", percent = -5 }, { type = "poison", }, { type = "poison", percent = 5 }, { type = "poison", percent = 10 }, { type = "poison", percent = 20 }, },
   { { type = "electric", percent = -20 }, { type = "electric", percent = -15 }, { type = "electric", percent = -10 }, { type = "electric", percent = -5 }, { type = "electric", }, { type = "electric", percent = 5 }, { type = "electric", percent = 10 }, { type = "electric", percent = 20 }, },
@@ -1092,21 +1087,21 @@ local worm_stats = {
 
   { max_health = 2100, healing_per_tick = 0.12, scale = 1.1, dying_explosion = "big-worm-die", prepare_range = 20, call_for_help_radius = 70, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_big(0.65), preparing_sound = sounds.worm_standup(0.63), prepared_sound = sounds.worm_breath_big(0.6, 0.9), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.45, 0.75), starting_attack_sound = sounds.worm_roars_big(0.45, 0.75), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 4 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 2 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 3 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
 
-  { max_health = 3400, healing_per_tick = 0.3, scale = 1.2, dying_explosion = "big-worm-die", prepare_range = 24, call_for_help_radius = 75, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_big(0.7), preparing_sound = sounds.worm_standup(0.66), prepared_sound = sounds.worm_breath_big(0.6, 0.9), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.5, 0.8), starting_attack_sound = sounds.worm_roars_big(0.5, 0.8), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 4 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1, spawn_max_radius = 2 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 4 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
+  { max_health = 5000, healing_per_tick = 0.3, scale = 1.2, dying_explosion = "big-worm-die", prepare_range = 24, call_for_help_radius = 75, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_big(0.7), preparing_sound = sounds.worm_standup(0.66), prepared_sound = sounds.worm_breath_big(0.6, 0.9), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.5, 0.8), starting_attack_sound = sounds.worm_roars_big(0.5, 0.8), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 4 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1, spawn_max_radius = 2 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 4 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
 
-  { max_health = 5000, healing_per_tick = 0.6, scale = 1.3, dying_explosion = "big-worm-die", prepare_range = 28, call_for_help_radius = 80, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_big(0.75), preparing_sound = sounds.worm_standup(0.68), prepared_sound = sounds.worm_breath_big(0.6, 0.9), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.55, 0.85), starting_attack_sound = sounds.worm_roars_big(0.55, 0.85), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 5 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1, spawn_max_radius = 2 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 4 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
+  { max_health = 10000, healing_per_tick = 0.6, scale = 1.3, dying_explosion = "big-worm-die", prepare_range = 28, call_for_help_radius = 80, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_big(0.75), preparing_sound = sounds.worm_standup(0.68), prepared_sound = sounds.worm_breath_big(0.6, 0.9), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.55, 0.85), starting_attack_sound = sounds.worm_roars_big(0.55, 0.85), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 5 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1, spawn_max_radius = 2 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 4 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
 
-  { max_health = 6500, healing_per_tick = 0.9, scale = 1.4, dying_explosion = "behemoth-worm-die", prepare_range = 32, call_for_help_radius = 85, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_behemoth(0.8), preparing_sound = sounds.worm_standup(0.7), prepared_sound = sounds.worm_breath_big(0.65, 0.95), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.6, 0.9), starting_attack_sound = sounds.worm_roars_big(0.6, 0.9), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 5 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1, spawn_max_radius = 3 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 4 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
+  { max_health = 35000, healing_per_tick = 0.9, scale = 1.4, dying_explosion = "behemoth-worm-die", prepare_range = 32, call_for_help_radius = 85, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_behemoth(0.8), preparing_sound = sounds.worm_standup(0.7), prepared_sound = sounds.worm_breath_big(0.65, 0.95), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.6, 0.9), starting_attack_sound = sounds.worm_roars_big(0.6, 0.9), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 5 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1, spawn_max_radius = 3 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 4 }, { decorative = "enemy-decal-transparent", spawn_min = 3, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 4 }, }, },
 
-  { max_health = 18000, healing_per_tick = 1.5, scale = 1.5, dying_explosion = "behemoth-worm-die", prepare_range = 36, call_for_help_radius = 90, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_behemoth(0.85), preparing_sound = sounds.worm_standup(0.72), prepared_sound = sounds.worm_breath_big(0.7, 1), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.7, 1), starting_attack_sound = sounds.worm_roars_big(0.7, 0.95), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 6 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 3, spawn_min_radius = 1, spawn_max_radius = 3 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 5 }, { decorative = "enemy-decal-transparent", spawn_min = 4, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 5 }, }, },
+  { max_health = 100000, healing_per_tick = 1.5, scale = 1.5, dying_explosion = "behemoth-worm-die", prepare_range = 36, call_for_help_radius = 90, prepared_alternative_speed = 0.014, prepared_alternative_speed_secondary = 0.010, dying_sound = sounds.worm_dying_behemoth(0.85), preparing_sound = sounds.worm_standup(0.72), prepared_sound = sounds.worm_breath_big(0.7, 1), prepared_alternative_sound = sounds.worm_roar_alternative_big(0.7, 1), starting_attack_sound = sounds.worm_roars_big(0.7, 0.95), spawn_decoration = { { decorative = "worms-decal", spawn_min = 1, spawn_max = 2, spawn_min_radius = 1,  spawn_max_radius = 6 }, { decorative = "shroom-decal", spawn_min = 1, spawn_max = 3, spawn_min_radius = 1, spawn_max_radius = 3 }, { decorative = "enemy-decal", spawn_min = 1, spawn_max = 4, spawn_min_radius = 1, spawn_max_radius = 5 }, { decorative = "enemy-decal-transparent", spawn_min = 4, spawn_max = 5, spawn_min_radius = 1, spawn_max_radius = 5 }, }, },
 }
    
 if health_increase == true then
-  worm_stats[4].max_health = 2500
-  worm_stats[5].max_health = 5000
-  worm_stats[6].max_health = 10000
-  worm_stats[7].max_health = 15000
-  worm_stats[8].max_health = 50000
+  worm_stats[4].max_health = 3500
+  worm_stats[5].max_health = 9000
+  worm_stats[6].max_health = 27000
+  worm_stats[7].max_health = 80000
+  worm_stats[8].max_health = 320000
 end
 
 local end_attack_speed_multiplier_when_killed = 2
@@ -1117,7 +1112,8 @@ local preparing_speed_multiplier_when_killed = 2
 
 function bobmods.enemies.new_worm(inputs)
   local tier = inputs.tier or 3
-  local final_scale = inputs.scale or spitter_stats[tier].scale
+  local final_scale = inputs.scale or worm_stats[tier].scale
+  local map_gen_scale = math.max(1, final_scale)
   local final_prepare_range = inputs.prepare_range or worm_stats[tier].prepare_range
   local set_resistances = { inputs.physical_resist or "normal", inputs.pierce_resist or "normal", inputs.explosion_resist or "normal", inputs.laser_resist or "normal", inputs.fire_resist or "normal", inputs.poison_resist or "normal", inputs.electric_resist or "normal", inputs.acid_resist or "normal", inputs.impact_resist or "normal", inputs.plasma_resist or "normal", }
   local new_resistances = {}
@@ -1159,8 +1155,8 @@ function bobmods.enemies.new_worm(inputs)
     trigger_target_mask = inputs.trigger_target_mask,
     factoriopedia_simulation = inputs.factoriopedia_simulation,
     resistances = inputs.resistances or new_resistances,
-    collision_box = {{ -1.4 * final_scale, -1.2  * final_scale }, { 1.4  * final_scale, 1.2  * final_scale }},
-    map_generator_bounding_box = {{ -2.4 * final_scale, -2.2 * final_scale }, { 2.4 * final_scale, 2.2 * final_scale }},
+    collision_box = {{ -1.4 * final_scale, -1.2 * final_scale }, { 1.4 * final_scale, 1.2 * final_scale }},
+    map_generator_bounding_box = {{ -2.4 * map_gen_scale, -2.2 * map_gen_scale }, { 2.4 * map_gen_scale, 2.2 * map_gen_scale }},
     selection_box = {{ -1.4 * final_scale, -1.2 * final_scale }, { 1.4 * final_scale, 1.2 * final_scale }},
     created_effect = inputs.created_effect,
     damaged_trigger_effect = hit_effects.biter(),
@@ -1435,9 +1431,9 @@ function bobmods.enemies.new_spawner(inputs)
     impact_category = inputs.impact_category or "organic",
     trigger_target_mask = inputs.trigger_target_mask,
     healing_per_tick = final_healing_per_tick,
-    collision_box = { { -3.2, -2.2 }, { 2.2, 2.2 } },
-    selection_box = { { -3.5, -2.5 }, { 2.5, 2.5 } },
-    map_generator_bounding_box = { { -4.2, -3.2 }, { 3.2, 3.2 } },
+    collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
+    map_generator_bounding_box = { { -5, -4 }, { 5, 4 } },
     created_effect = inputs.created_effect,
     damaged_trigger_effect = inputs.damaged_trigger_effect or hit_effects.biter(),
     absorptions_per_second = final_absorptions_per_second,
@@ -1447,7 +1443,7 @@ function bobmods.enemies.new_spawner(inputs)
     loot = {},
     max_count_of_owned_units = final_max_count_of_owned_units,
     max_friends_around_to_spawn = final_max_friends_around_to_spawn,
-    graphics_set = {
+    graphics_set = inputs.graphics_set or {
       animations = {
         spawner_idle_animation(0, inputs.tint),
         spawner_idle_animation(1, inputs.tint),
