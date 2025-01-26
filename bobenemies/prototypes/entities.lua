@@ -8,6 +8,7 @@ data:extend({
     name = "small-poison-cloud",
     localised_name = { "entity-name.poison-cloud" },
     flags = { "not-on-map" },
+    hidden = true,
     show_when_smoke_off = true,
     animation = {
       width = 152,
@@ -114,9 +115,9 @@ data:extend({
       tint = { r = 0.1, g = 0.5, b = 0.1 },
     },
     duration_in_ticks = 15 * 60,
-    damage_interval = 10,
+    damage_interval = 30,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 0.4, type = "poison" },
+    damage_per_tick = { amount = 3, type = "poison" },
   },
 
   {
@@ -139,9 +140,9 @@ data:extend({
     fire_spread_cooldown = 30,
     fire_spread_radius = 0.75,
     duration_in_ticks = 30 * 60,
-    damage_interval = 10,
+    damage_interval = 30,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 0.5, type = "fire" },
+    damage_per_tick = { amount = 3, type = "fire" },
   },
 
   {
@@ -216,6 +217,12 @@ data:extend({
     initial_flame_count = 1,
     burnt_patch_lifetime = 0,
 
+    light = {
+      color = { 1, 0.992, 0.512, },
+      intensity = 0.4,
+      size = 10,
+    },
+
     pictures =
     {
       {
@@ -223,7 +230,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 210,
             height = 224,
@@ -249,7 +255,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 174,
             height = 150,
@@ -275,7 +280,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 236,
             height = 208,
@@ -301,7 +305,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 252,
             height = 154,
@@ -331,7 +334,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 210,
             height = 224,
@@ -357,7 +359,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 174,
             height = 150,
@@ -383,7 +384,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 236,
             height = 208,
@@ -409,7 +409,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 252,
             height = 154,
@@ -464,6 +463,12 @@ data:extend({
     initial_flame_count = 1,
     burnt_patch_lifetime = 0,
 
+    light = {
+      color = { r = 1.0, g = 1.0, b = 0.2 },
+      intensity = 0.4,
+      size = 10,
+    },
+
     pictures =
     {
       {
@@ -471,7 +476,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 210,
             height = 224,
@@ -497,7 +501,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 174,
             height = 150,
@@ -523,7 +526,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 236,
             height = 208,
@@ -549,7 +551,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 252,
             height = 154,
@@ -579,7 +580,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 210,
             height = 224,
@@ -605,7 +605,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 174,
             height = 150,
@@ -631,7 +630,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 236,
             height = 208,
@@ -657,7 +655,6 @@ data:extend({
         {
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
-            draw_as_glow = true,
             line_length = 8,
             width = 252,
             height = 154,
@@ -716,6 +713,10 @@ data:extend({
       {
         type = "impact",
         percent = 90,
+      },
+      {
+        type = "explosion",
+        percent = 75,
       },
     },
     pictures =
@@ -988,17 +989,20 @@ alienpoisonvisual.particle_duration_variation = 60
 local alienfire = util.table.deepcopy(data.raw.fire["fire-flame"])
 alienfire.name = "enemy-fire"
 alienfire.initial_lifetime = 300
+alienfire.maximum_lifetime = 300
+alienfire.lifetime_increase_by = 90
 alienfire.add_fuel_cooldown = 60
 alienfire.maximum_damage_multiplier = 10
+alienfire.emissions_per_second = { pollution = 0.05 }
 alienfire.damage_per_tick = { type = "fire", amount = 0 }
-alienfire.pictures[1].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[2].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[3].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[4].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[5].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[6].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[7].tint = { r = 1, g = 0.1, b = 0.1 }
-alienfire.pictures[8].tint = { r = 1, g = 0.1, b = 0.1 }
+alienfire.pictures[1].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[2].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[3].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[4].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[5].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[6].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[7].tint = { r = 0.5, g = 0.25, b = 0.1 }
+alienfire.pictures[8].tint = { r = 0.5, g = 0.25, b = 0.1 }
 alienfire.on_damage_tick_effect = {
   {
     type = "direct",
@@ -1059,3 +1063,4 @@ alienfire2.on_damage_tick_effect = {
 }
 
 data:extend({alienpoisonvisual, alienfire, alienfire2})
+
