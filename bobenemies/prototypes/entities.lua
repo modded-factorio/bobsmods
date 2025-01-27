@@ -992,7 +992,7 @@ alienfire.initial_lifetime = 300
 alienfire.maximum_lifetime = 300
 alienfire.lifetime_increase_by = 90
 alienfire.add_fuel_cooldown = 60
-alienfire.maximum_damage_multiplier = 10
+alienfire.maximum_damage_multiplier = 20
 alienfire.emissions_per_second = { pollution = 0.05 }
 alienfire.damage_per_tick = { type = "fire", amount = 0 }
 alienfire.pictures[1].tint = { r = 0.5, g = 0.25, b = 0.1 }
