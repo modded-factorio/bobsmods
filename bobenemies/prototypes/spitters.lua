@@ -935,6 +935,364 @@ data.raw.unit["bob-titan-electric-spitter"].attack_parameters.animation.layers[2
 data.raw.unit["bob-behemoth-electric-spitter"].attack_parameters.animation.layers[2].draw_as_glow = true
 data.raw.unit["bob-leviathan-electric-spitter"].attack_parameters.animation.layers[2].draw_as_glow = true
 
+--Acid
+local acid_dying_action = function(inputs)
+  return {
+    type = "nested-result",
+    action = {
+      type = "cluster",
+      cluster_count = inputs.dying_cluster_count,
+      distance = inputs.dying_distance,
+      distance_deviation = inputs.dying_distance_deviation,
+      probability = inputs.dying_probability,
+      action_delivery = {
+        type = "stream",
+        stream = inputs.dying_stream,
+      },
+    },
+  }
+end
+
+bobmods.enemies.new_spitter({
+  name = "bob-small-acid-spitter",
+  order = "d-d-a",
+  tier = 1,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.small_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-small",
+    dying_cluster_count = 2,
+    dying_distance = 4,
+    dying_distance_deviation = 1,
+    dying_probability = 0.1,
+  }),
+
+  sticker_name = "enemy-acid-sticker-small",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 3 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 13,
+  attack_damage = 12,
+  attack_stream_name = "acid-acid-stream-spitter-small",
+  attack_spit_radius = 1.25,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-small",
+  fire_damage_per_tick = 1.5,
+  fire_structure_damage_per_tick = 0.3,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-small-acid-spitter", 3.6)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-medium-acid-spitter",
+  order = "d-d-b",
+  tier = 2,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.medium_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-medium",
+    dying_cluster_count = 3,
+    dying_distance = 5,
+    dying_distance_deviation = 1.1,
+    dying_probability = 0.2,
+  }),
+
+  sticker_name = "enemy-acid-sticker-medium",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 6 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 14,
+  attack_damage = 24,
+  attack_stream_name = "acid-acid-stream-spitter-medium",
+  attack_spit_radius = 1.35,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-medium",
+  fire_damage_per_tick = 5.5,
+  fire_structure_damage_per_tick = 1.1,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-medium-acid-spitter", 2.6)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-big-acid-spitter",
+  order = "d-d-c",
+  tier = 3,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.big_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-big",
+    dying_cluster_count = 4,
+    dying_distance = 5.25,
+    dying_distance_deviation = 1.2,
+    dying_probability = 0.3,
+  }),
+
+  sticker_name = "enemy-acid-sticker-big",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 12 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 15,
+  attack_damage = 36,
+  attack_stream_name = "acid-acid-stream-spitter-big",
+  attack_spit_radius = 1.45,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-big",
+  fire_damage_per_tick = 16,
+  fire_structure_damage_per_tick = 3.2,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-big-acid-spitter", 1.8)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-huge-acid-spitter",
+  order = "d-d-d",
+  tier = 4,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.huge_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-huge",
+    dying_cluster_count = 5,
+    dying_distance = 5.5,
+    dying_distance_deviation = 1.3,
+    dying_probability = 0.4,
+  }),
+
+  sticker_name = "enemy-acid-sticker-huge",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 16 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 16,
+  attack_damage = 48,
+  attack_stream_name = "acid-acid-stream-spitter-huge",
+  attack_spit_radius = 1.6,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-huge",
+  fire_damage_per_tick = 32,
+  fire_structure_damage_per_tick = 6.4,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_scale = 1.05,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-huge-acid-spitter", 1.5)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-giant-acid-spitter",
+  order = "d-d-e",
+  tier = 5,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.giant_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-giant",
+    dying_cluster_count = 6,
+    dying_distance = 5.8,
+    dying_distance_deviation = 1.4,
+    dying_probability = 0.45,
+  }),
+
+  sticker_name = "enemy-acid-sticker-giant",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 20 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 17,
+  attack_damage = 60,
+  attack_stream_name = "acid-acid-stream-spitter-giant",
+  attack_spit_radius = 1.75,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-giant",
+  fire_damage_per_tick = 52,
+  fire_structure_damage_per_tick = 10.4,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_scale = 1.10,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-giant-acid-spitter", 1.3)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-titan-acid-spitter",
+  order = "d-d-f",
+  tier = 6,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.titan_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-titan",
+    dying_cluster_count = 7,
+    dying_distance = 6.1,
+    dying_distance_deviation = 1.5,
+    dying_probability = 0.5,
+  }),
+
+  sticker_name = "enemy-acid-sticker-titan",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 24 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 18,
+  attack_damage = 72,
+  attack_stream_name = "acid-acid-stream-spitter-titan",
+  attack_spit_radius = 2,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-titan",
+  fire_damage_per_tick = 76,
+  fire_structure_damage_per_tick = 15.2,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_scale = 1.15,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-titan-acid-spitter", 1.15)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-behemoth-acid-spitter",
+  order = "d-d-g",
+  tier = 7,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.behemoth_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-behemoth",
+    dying_cluster_count = 8,
+    dying_distance = 6.5,
+    dying_distance_deviation = 1.6,
+    dying_probability = 0.55,
+  }),
+
+  sticker_name = "enemy-acid-sticker-behemoth",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 28 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 19,
+  attack_damage = 84,
+  attack_stream_name = "acid-acid-stream-spitter-behemoth",
+  attack_spit_radius = 2.25,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-behemoth",
+  fire_damage_per_tick = 104,
+  fire_structure_damage_per_tick = 20.8,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_scale = 1.2,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-behemoth-acid-spitter", 1)
+  },
+})
+
+bobmods.enemies.new_spitter({
+  name = "bob-leviathan-acid-spitter",
+  order = "d-d-h",
+  tier = 8,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.acid_tint,
+  tint2 = bobmods.enemies.leviathan_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-spitter-leviathan",
+    dying_cluster_count = 10,
+    dying_distance = 7,
+    dying_distance_deviation = 1.75,
+    dying_probability = 0.6,
+  }),
+
+  sticker_name = "enemy-acid-sticker-leviathan",
+  sticker_duration_in_ticks = 300,
+  sticker_damage_interval = 15,
+  sticker_damage_per_tick = { type = "acid", amount = 36 },
+  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  attack_range = 20,
+  attack_damage = 120,
+  attack_stream_name = "acid-acid-stream-spitter-leviathan",
+  attack_spit_radius = 2.75,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-leviathan",
+  fire_damage_per_tick = 190,
+  fire_structure_damage_per_tick = 38,
+  fire_initial_lifetime = 3600,
+  fire_maximum_lifetime = 3600,
+  fire_scale = 1.3,
+  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-leviathan-acid-spitter", 0.9)
+  },
+})
 
 --Explosive
 local expl_attack = function(inputs)
@@ -1060,7 +1418,7 @@ end
 
 bobmods.enemies.new_spitter({
   name = "bob-small-explosive-spitter",
-  order = "d-d-a",
+  order = "e-d-a",
   tier = 1,
   max_health = 7,
   explosion_resist = "very-high",
@@ -1101,7 +1459,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-explosive-spitter",
-  order = "d-d-b",
+  order = "e-d-b",
   tier = 2,
   max_health = 35,
   explosion_resist = "very-high",
@@ -1142,7 +1500,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-big-explosive-spitter",
-  order = "d-d-c",
+  order = "e-d-c",
   tier = 3,
   max_health = 100,
   explosion_resist = "very-high",
@@ -1183,7 +1541,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-explosive-spitter",
-  order = "d-d-d",
+  order = "e-d-d",
   tier = 4,
   max_health = 350,
   explosion_resist = "very-high",
@@ -1224,7 +1582,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-explosive-spitter",
-  order = "d-d-e",
+  order = "e-d-e",
   tier = 5,
   max_health = 1200,
   explosion_resist = "very-high",
@@ -1265,7 +1623,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-explosive-spitter",
-  order = "d-d-f",
+  order = "e-d-f",
   tier = 6,
   max_health = 4500,
   explosion_resist = "very-high",
@@ -1306,7 +1664,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-explosive-spitter",
-  order = "d-d-g",
+  order = "e-d-g",
   tier = 7,
   max_health = 12000,
   explosion_resist = "very-high",
@@ -1347,7 +1705,7 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-explosive-spitter",
-  order = "d-d-h",
+  order = "e-d-h",
   tier = 8,
   max_health = 45000,
   explosion_resist = "very-high",
@@ -1393,365 +1751,6 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.unit["bob-behemoth-explosive-spitter"].max_health = 45000
   data.raw.unit["bob-leviathan-explosive-spitter"].max_health = 200000
 end
-
---Acid
-local acid_dying_action = function(inputs)
-  return {
-    type = "nested-result",
-    action = {
-      type = "cluster",
-      cluster_count = inputs.dying_cluster_count,
-      distance = inputs.dying_distance,
-      distance_deviation = inputs.dying_distance_deviation,
-      probability = inputs.dying_probability,
-      action_delivery = {
-        type = "stream",
-        stream = inputs.dying_stream,
-      },
-    },
-  }
-end
-
-bobmods.enemies.new_spitter({
-  name = "bob-small-acid-spitter",
-  order = "e-d-a",
-  tier = 1,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-small",
-    dying_cluster_count = 2,
-    dying_distance = 4,
-    dying_distance_deviation = 1,
-    dying_probability = 0.1,
-  }),
-
-  sticker_name = "enemy-acid-sticker-small",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 3 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 13,
-  attack_damage = 12,
-  attack_stream_name = "acid-acid-stream-spitter-small",
-  attack_spit_radius = 1.25,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-small",
-  fire_damage_per_tick = 1.5,
-  fire_structure_damage_per_tick = 0.3,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-acid-spitter", 3.6)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-medium-acid-spitter",
-  order = "e-d-b",
-  tier = 2,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-medium",
-    dying_cluster_count = 3,
-    dying_distance = 5,
-    dying_distance_deviation = 1.1,
-    dying_probability = 0.2,
-  }),
-
-  sticker_name = "enemy-acid-sticker-medium",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 6 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 14,
-  attack_damage = 24,
-  attack_stream_name = "acid-acid-stream-spitter-medium",
-  attack_spit_radius = 1.35,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-medium",
-  fire_damage_per_tick = 5.5,
-  fire_structure_damage_per_tick = 1.1,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-acid-spitter", 2.6)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-big-acid-spitter",
-  order = "e-d-c",
-  tier = 3,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-big",
-    dying_cluster_count = 4,
-    dying_distance = 5.25,
-    dying_distance_deviation = 1.2,
-    dying_probability = 0.3,
-  }),
-
-  sticker_name = "enemy-acid-sticker-big",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 12 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 15,
-  attack_damage = 36,
-  attack_stream_name = "acid-acid-stream-spitter-big",
-  attack_spit_radius = 1.45,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-big",
-  fire_damage_per_tick = 16,
-  fire_structure_damage_per_tick = 3.2,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-acid-spitter", 1.8)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-huge-acid-spitter",
-  order = "e-d-d",
-  tier = 4,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-huge",
-    dying_cluster_count = 5,
-    dying_distance = 5.5,
-    dying_distance_deviation = 1.3,
-    dying_probability = 0.4,
-  }),
-
-  sticker_name = "enemy-acid-sticker-huge",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 16 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 16,
-  attack_damage = 48,
-  attack_stream_name = "acid-acid-stream-spitter-huge",
-  attack_spit_radius = 1.6,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-huge",
-  fire_damage_per_tick = 32,
-  fire_structure_damage_per_tick = 6.4,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_scale = 1.05,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-acid-spitter", 1.5)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-giant-acid-spitter",
-  order = "e-d-e",
-  tier = 5,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-giant",
-    dying_cluster_count = 6,
-    dying_distance = 5.8,
-    dying_distance_deviation = 1.4,
-    dying_probability = 0.45,
-  }),
-
-  sticker_name = "enemy-acid-sticker-giant",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 20 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 17,
-  attack_damage = 60,
-  attack_stream_name = "acid-acid-stream-spitter-giant",
-  attack_spit_radius = 1.75,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-giant",
-  fire_damage_per_tick = 52,
-  fire_structure_damage_per_tick = 10.4,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_scale = 1.10,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-acid-spitter", 1.3)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-titan-acid-spitter",
-  order = "e-d-f",
-  tier = 6,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-titan",
-    dying_cluster_count = 7,
-    dying_distance = 6.1,
-    dying_distance_deviation = 1.5,
-    dying_probability = 0.5,
-  }),
-
-  sticker_name = "enemy-acid-sticker-titan",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 24 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 18,
-  attack_damage = 72,
-  attack_stream_name = "acid-acid-stream-spitter-titan",
-  attack_spit_radius = 2,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-titan",
-  fire_damage_per_tick = 76,
-  fire_structure_damage_per_tick = 15.2,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_scale = 1.15,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-acid-spitter", 1.15)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-behemoth-acid-spitter",
-  order = "e-d-g",
-  tier = 7,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-behemoth",
-    dying_cluster_count = 8,
-    dying_distance = 6.5,
-    dying_distance_deviation = 1.6,
-    dying_probability = 0.55,
-  }),
-
-  sticker_name = "enemy-acid-sticker-behemoth",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 28 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 19,
-  attack_damage = 84,
-  attack_stream_name = "acid-acid-stream-spitter-behemoth",
-  attack_spit_radius = 2.25,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-behemoth",
-  fire_damage_per_tick = 104,
-  fire_structure_damage_per_tick = 20.8,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_scale = 1.2,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-acid-spitter", 1)
-  },
-})
-
-bobmods.enemies.new_spitter({
-  name = "bob-leviathan-acid-spitter",
-  order = "e-d-h",
-  tier = 8,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.acid_tint,
-  tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-spitter-leviathan",
-    dying_cluster_count = 10,
-    dying_distance = 7,
-    dying_distance_deviation = 1.75,
-    dying_probability = 0.6,
-  }),
-
-  sticker_name = "enemy-acid-sticker-leviathan",
-  sticker_duration_in_ticks = 300,
-  sticker_damage_interval = 15,
-  sticker_damage_per_tick = { type = "acid", amount = 36 },
-  sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  attack_range = 20,
-  attack_damage = 120,
-  attack_stream_name = "acid-acid-stream-spitter-leviathan",
-  attack_spit_radius = 2.75,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-leviathan",
-  fire_damage_per_tick = 190,
-  fire_structure_damage_per_tick = 38,
-  fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
-  fire_scale = 1.3,
-  fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-acid-spitter", 0.9)
-  },
-})
 
 --Poison
 local poison_reaction = function(sticker_name)
