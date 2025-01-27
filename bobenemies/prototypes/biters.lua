@@ -1295,563 +1295,6 @@ data.raw.unit["bob-titan-electric-biter"].attack_parameters.animation.layers[2].
 data.raw.unit["bob-behemoth-electric-biter"].attack_parameters.animation.layers[2].draw_as_glow = true
 data.raw.unit["bob-leviathan-electric-biter"].attack_parameters.animation.layers[2].draw_as_glow = true
 
---Explosive
-local expl_dying_action = function(inputs)
-  return {
-    type = "nested-result",
-    action = {
-      type = "direct",
-      probability = dying_probability,
-      action_delivery = {
-        type = "instant",
-        target_effects = {
-          {
-            entity_name = "big-explosion",
-            type = "create-entity",
-          },
-          {
-            type = "create-entity",
-            entity_name = "big-scorchmark",
-            probability = 0.1,
-            check_buildability = true,
-          },
-          {
-            type = "nested-result",
-            action = {
-              type = "area",
-              radius = inputs.dying_radius,
-              force = "enemy",
-              ignore_collision_condition = true,
-              trigger_target_mask = { "ground-unit", "ground-structure", "flying-robot" },
-              action_delivery = {
-                type = "instant",
-                target_effects = {
-                  {
-                    type = "damage",
-                    damage = {amount = inputs.attack_damage, type = "explosion"}
-                  }
-                }
-              },
-            }
-          },
-        },
-      },
-    },
-  }
-end
-
-bobmods.enemies.new_biter({
-  name = "bob-small-explosive-biter",
-  order = "d-c-a",
-  tier = 1,
-  max_health = 10,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 20,
-    dying_radius = 3,
-    dying_probability = 0.25,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 0.5,
-    cooldown = 45,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 4, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.25,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 3, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-explosive-biter", 3.6)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-medium-explosive-biter",
-  order = "d-c-b",
-  tier = 2,
-  max_health = 50,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 60,
-    dying_radius = 3.25,
-    dying_probability = 0.3,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 1,
-    cooldown = 45,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 10, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.5,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 5, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-explosive-biter", 2.6)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-big-explosive-biter",
-  order = "d-c-c",
-  tier = 3,
-  max_health = 150,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 90,
-    dying_radius = 3.5,
-    dying_probability = 0.35,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 1.5,
-    cooldown = 45,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 20, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.6,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 10, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-explosive-biter", 1.8)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-huge-explosive-biter",
-  order = "d-c-d",
-  tier = 4,
-  max_health = 500,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 120,
-    dying_radius = 3.75,
-    dying_probability = 0.4,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 1.75,
-    cooldown = 45,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 33, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.75,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 17, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-explosive-biter", 1.5)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-giant-explosive-biter",
-  order = "d-c-e",
-  tier = 5,
-  max_health = 2000,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 180,
-    dying_radius = 4,
-    dying_probability = 0.45,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 2,
-    cooldown = 45,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 50, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.75,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 25, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-explosive-biter", 1.3)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-titan-explosive-biter",
-  order = "d-c-f",
-  tier = 6,
-  max_health = 6000,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 240,
-    dying_radius = 4.25,
-    dying_probability = 0.5,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 2.25,
-    cooldown = 45,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 66, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.8,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 34, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-explosive-biter", 1.15)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-behemoth-explosive-biter",
-  order = "d-c-g",
-  tier = 7,
-  max_health = 20000,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 300,
-    dying_radius = 4.5,
-    dying_probability = 0.6,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 2.5,
-    cooldown = 50,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 100, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.85,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 50, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-explosive-biter", 1)
-  },
-})
-
-bobmods.enemies.new_biter({
-  name = "bob-leviathan-explosive-biter",
-  order = "d-c-h",
-  tier = 8,
-  max_health = 60000,
-  explosion_resist = "very-high",
-  laser_resist = "low",
-  fire_resist = "low",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.explosive_tint,
-  tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  dying_trigger_effect = expl_dying_action({
-    attack_damage = 800,
-    dying_radius = 6,
-    dying_probability = 0.8,
-  }),
-  attack_parameters = {
-    type = "projectile",
-    range_mode = "bounding-box-to-bounding-box",
-    range = 3,
-    cooldown = 55,
-    cooldown_deviation = 0.15,
-    ammo_category = "melee",
-    ammo_type = {
-      target_type = "entity",
-      action = {
-        {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 160, type = "physical" },
-              },
-            },
-          },
-        },
-        {
-          type = "area",
-          radius = 1.9,
-          force = "not-same",
-          trigger_from_target = true,
-          action_delivery = {
-            type = "instant",
-            target_effects = {
-              {
-                type = "damage",
-                damage = { amount = 80, type = "explosion" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-explosive-biter", 0.9)
-  },
-})
-
-if settings.startup["bobmods-enemies-healthincrease"].value == true then
-  data.raw.unit["bob-huge-explosive-biter"].max_health = 1800
-  data.raw.unit["bob-giant-explosive-biter"].max_health = 6000
-  data.raw.unit["bob-titan-explosive-biter"].max_health = 19000
-  data.raw.unit["bob-behemoth-explosive-biter"].max_health = 60000
-  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 250000
-end
-
 --Acid
 local acid_dying_action = function(inputs)
   return {
@@ -1872,7 +1315,7 @@ end
 
 bobmods.enemies.new_biter({
   name = "bob-small-acid-biter",
-  order = "e-c-a",
+  order = "d-c-a",
   tier = 1,
   poison_resist = "high",
   electric_resist = "low",
@@ -1921,7 +1364,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-acid-biter",
-  order = "e-c-b",
+  order = "d-c-b",
   tier = 2,
   poison_resist = "high",
   electric_resist = "low",
@@ -1970,7 +1413,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-acid-biter",
-  order = "e-c-c",
+  order = "d-c-c",
   tier = 3,
   poison_resist = "high",
   electric_resist = "low",
@@ -2019,7 +1462,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-acid-biter",
-  order = "e-c-d",
+  order = "d-c-d",
   tier = 4,
   poison_resist = "high",
   electric_resist = "low",
@@ -2068,7 +1511,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-acid-biter",
-  order = "e-c-e",
+  order = "d-c-e",
   tier = 5,
   poison_resist = "high",
   electric_resist = "low",
@@ -2117,7 +1560,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-acid-biter",
-  order = "e-c-f",
+  order = "d-c-f",
   tier = 6,
   poison_resist = "high",
   electric_resist = "low",
@@ -2166,7 +1609,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-acid-biter",
-  order = "e-c-g",
+  order = "d-c-g",
   tier = 7,
   poison_resist = "high",
   electric_resist = "low",
@@ -2215,7 +1658,7 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-acid-biter",
-  order = "e-c-h",
+  order = "d-c-h",
   tier = 8,
   poison_resist = "high",
   electric_resist = "low",
@@ -2261,6 +1704,563 @@ bobmods.enemies.new_biter({
     init = enemy_simulation("bob-leviathan-acid-biter", 0.9)
   },
 })
+
+--Explosive
+local expl_dying_action = function(inputs)
+  return {
+    type = "nested-result",
+    action = {
+      type = "direct",
+      probability = dying_probability,
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          {
+            entity_name = "big-explosion",
+            type = "create-entity",
+          },
+          {
+            type = "create-entity",
+            entity_name = "big-scorchmark",
+            probability = 0.1,
+            check_buildability = true,
+          },
+          {
+            type = "nested-result",
+            action = {
+              type = "area",
+              radius = inputs.dying_radius,
+              force = "enemy",
+              ignore_collision_condition = true,
+              trigger_target_mask = { "ground-unit", "ground-structure", "flying-robot" },
+              action_delivery = {
+                type = "instant",
+                target_effects = {
+                  {
+                    type = "damage",
+                    damage = {amount = inputs.attack_damage, type = "explosion"}
+                  }
+                }
+              },
+            }
+          },
+        },
+      },
+    },
+  }
+end
+
+bobmods.enemies.new_biter({
+  name = "bob-small-explosive-biter",
+  order = "e-c-a",
+  tier = 1,
+  max_health = 10,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.small_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 20,
+    dying_radius = 3,
+    dying_probability = 0.25,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 0.5,
+    cooldown = 45,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 4, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 1.8,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 3, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-small-explosive-biter", 3.6)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-medium-explosive-biter",
+  order = "e-c-b",
+  tier = 2,
+  max_health = 50,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.medium_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 60,
+    dying_radius = 3.25,
+    dying_probability = 0.3,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 1,
+    cooldown = 45,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 10, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 1.9,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 5, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-medium-explosive-biter", 2.6)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-big-explosive-biter",
+  order = "e-c-c",
+  tier = 3,
+  max_health = 150,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.big_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 90,
+    dying_radius = 3.5,
+    dying_probability = 0.35,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 1.5,
+    cooldown = 45,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 20, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 2,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 10, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-big-explosive-biter", 1.8)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-huge-explosive-biter",
+  order = "e-c-d",
+  tier = 4,
+  max_health = 500,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.huge_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 120,
+    dying_radius = 3.75,
+    dying_probability = 0.4,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 1.75,
+    cooldown = 45,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 33, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 2.1,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 17, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-huge-explosive-biter", 1.5)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-giant-explosive-biter",
+  order = "e-c-e",
+  tier = 5,
+  max_health = 2000,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.giant_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 180,
+    dying_radius = 4,
+    dying_probability = 0.45,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 2,
+    cooldown = 45,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 50, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 2.25,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 25, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-giant-explosive-biter", 1.3)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-titan-explosive-biter",
+  order = "e-c-f",
+  tier = 6,
+  max_health = 6000,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.titan_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 240,
+    dying_radius = 4.25,
+    dying_probability = 0.5,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 2.25,
+    cooldown = 45,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 66, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 2.5,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 34, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-titan-explosive-biter", 1.15)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-behemoth-explosive-biter",
+  order = "e-c-g",
+  tier = 7,
+  max_health = 20000,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.behemoth_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 300,
+    dying_radius = 4.5,
+    dying_probability = 0.6,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 2.5,
+    cooldown = 50,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 100, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 2.75,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 50, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-behemoth-explosive-biter", 1)
+  },
+})
+
+bobmods.enemies.new_biter({
+  name = "bob-leviathan-explosive-biter",
+  order = "e-c-h",
+  tier = 8,
+  max_health = 60000,
+  explosion_resist = "very-high",
+  laser_resist = "low",
+  fire_resist = "low",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.explosive_tint,
+  tint2 = bobmods.enemies.leviathan_tint,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  dying_trigger_effect = expl_dying_action({
+    attack_damage = 800,
+    dying_radius = 6,
+    dying_probability = 0.8,
+  }),
+  attack_parameters = {
+    type = "projectile",
+    range_mode = "bounding-box-to-bounding-box",
+    range = 3,
+    cooldown = 55,
+    cooldown_deviation = 0.15,
+    ammo_category = "melee",
+    ammo_type = {
+      target_type = "entity",
+      action = {
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 160, type = "physical" },
+              },
+            },
+          },
+        },
+        {
+          type = "area",
+          radius = 3,
+          force = "not-same",
+          trigger_from_target = true,
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 80, type = "explosion" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-leviathan-explosive-biter", 0.9)
+  },
+})
+
+if settings.startup["bobmods-enemies-healthincrease"].value == true then
+  data.raw.unit["bob-huge-explosive-biter"].max_health = 1800
+  data.raw.unit["bob-giant-explosive-biter"].max_health = 6000
+  data.raw.unit["bob-titan-explosive-biter"].max_health = 19000
+  data.raw.unit["bob-behemoth-explosive-biter"].max_health = 60000
+  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 250000
+end
 
 --Poison
 local poison_reaction = function(sticker_name, smoke_name, damage, healing, scale)
