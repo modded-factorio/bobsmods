@@ -271,60 +271,10 @@ data.raw["unit-spawner"]["bob-electric-biter-spawner"].graphics_set.integration 
 }
 
 bobmods.enemies.new_spawner({
-  name = "bob-explosive-biter-spawner",
-  class = "biter",
-  element = "explosive",
-  order = "d-a-c",
-  max_health = 400,
-  tint = biter_spawner_tint,
-  tint2 = bobmods.enemies.explosive_spawner_tint,
-  map_color = bobmods.enemies.explosive_faction,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  resistances = {
-    { type = "physical", decrease = 5, percent = 40 },
-    { type = "bob-pierce", percent = 20 },
-    { type = "explosion", decrease = 50, percent = 60 },
-    { type = "laser", percent = 10 },
-    { type = "fire", percent = 35 },
-    { type = "electric", percent = -20 },
-    { type = "acid", decrease = 15, percent = 65 },
-    { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
-  },
-})
-
-bobmods.enemies.new_spawner({
-  name = "bob-explosive-spitter-spawner",
-  class = "spitter",
-  element = "explosive",
-  order = "d-a-d",
-  max_health = 400,
-  tint = spitter_spawner_tint,
-  tint2 = bobmods.enemies.explosive_spawner_tint,
-  map_color = bobmods.enemies.explosive_faction,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
-  resistances = {
-    { type = "physical", decrease = 5, percent = 40 },
-    { type = "explosion", decrease = 50, percent = 60 },
-    { type = "laser", percent = 10 },
-    { type = "fire", percent = 35 },
-    { type = "electric", percent = -20 },
-    { type = "acid", decrease = 15, percent = 65 },
-    { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
-  },
-})
-
-if settings.startup["bobmods-enemies-healthincrease"].value == true then
-  data.raw["unit-spawner"]["bob-explosive-biter-spawner"].max_health = 1000
-  data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].max_health = 1000
-end
-
-bobmods.enemies.new_spawner({
   name = "bob-acid-biter-spawner",
   class = "biter",
   element = "acid",
-  order = "e-a-c",
+  order = "d-a-c",
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.acid_spawner_tint,
   map_color = bobmods.enemies.acid_faction,
@@ -347,7 +297,7 @@ bobmods.enemies.new_spawner({
   name = "bob-acid-spitter-spawner",
   class = "spitter",
   element = "acid",
-  order = "e-a-d",
+  order = "d-a-d",
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.acid_spawner_tint,
   map_color = bobmods.enemies.acid_faction,
@@ -364,6 +314,56 @@ bobmods.enemies.new_spawner({
     { type = "plasma", percent = 50 },
   },
 })
+
+bobmods.enemies.new_spawner({
+  name = "bob-explosive-biter-spawner",
+  class = "biter",
+  element = "explosive",
+  order = "e-a-c",
+  max_health = 400,
+  tint = biter_spawner_tint,
+  tint2 = bobmods.enemies.explosive_spawner_tint,
+  map_color = bobmods.enemies.explosive_faction,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  resistances = {
+    { type = "physical", decrease = 5, percent = 40 },
+    { type = "bob-pierce", percent = 20 },
+    { type = "explosion", decrease = 50, percent = 60 },
+    { type = "laser", percent = 10 },
+    { type = "fire", percent = 35 },
+    { type = "electric", percent = -20 },
+    { type = "acid", decrease = 15, percent = 65 },
+    { type = "impact", decrease = 10, percent = 20 },
+    { type = "plasma", percent = 50 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-explosive-spitter-spawner",
+  class = "spitter",
+  element = "explosive",
+  order = "e-a-d",
+  max_health = 400,
+  tint = spitter_spawner_tint,
+  tint2 = bobmods.enemies.explosive_spawner_tint,
+  map_color = bobmods.enemies.explosive_faction,
+  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+  resistances = {
+    { type = "physical", decrease = 5, percent = 40 },
+    { type = "explosion", decrease = 50, percent = 60 },
+    { type = "laser", percent = 10 },
+    { type = "fire", percent = 35 },
+    { type = "electric", percent = -20 },
+    { type = "acid", decrease = 15, percent = 65 },
+    { type = "impact", decrease = 10, percent = 20 },
+    { type = "plasma", percent = 50 },
+  },
+})
+
+if settings.startup["bobmods-enemies-healthincrease"].value == true then
+  data.raw["unit-spawner"]["bob-explosive-biter-spawner"].max_health = 1000
+  data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].max_health = 1000
+end
 
 bobmods.enemies.new_spawner({
   name = "bob-poison-biter-spawner",
@@ -537,10 +537,32 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
   }
 
   bobmods.enemies.new_spawner({
+    name = "bob-acid-super-spawner",
+    class = "super",
+    element = "acid",
+    order = "d-a-e",
+    tint = bobmods.enemies.super_spawner_tint,
+    tint2 = bobmods.enemies.acid_spawner_tint,
+    map_color = bobmods.enemies.acid_faction,
+    factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+    resistances = {
+      { type = "physical", decrease = 10, percent = 50 },
+      { type = "bob-pierce", percent = 20 },
+      { type = "explosion", decrease = 5, percent = 32 },
+      { type = "laser", percent = 50 },
+      { type = "fire", decrease = 5, percent = 70 },
+      { type = "poison", decrease = 20, percent = 75 },
+      { type = "acid", decrease = 25, percent = 90 },
+      { type = "impact", decrease = 100, percent = 35 },
+      { type = "plasma", percent = 50 },
+    },
+  })
+
+  bobmods.enemies.new_spawner({
     name = "bob-explosive-super-spawner",
     class = "super",
     element = "explosive",
-    order = "d-a-e",
+    order = "e-a-e",
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.explosive_spawner_tint,
     map_color = bobmods.enemies.explosive_faction,
@@ -561,28 +583,6 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
   if settings.startup["bobmods-enemies-healthincrease"].value == true then
     data.raw["unit-spawner"]["bob-explosive-super-spawner"].max_health = 6000
   end
-
-  bobmods.enemies.new_spawner({
-    name = "bob-acid-super-spawner",
-    class = "super",
-    element = "acid",
-    order = "e-a-e",
-    tint = bobmods.enemies.super_spawner_tint,
-    tint2 = bobmods.enemies.acid_spawner_tint,
-    map_color = bobmods.enemies.acid_faction,
-    factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-    resistances = {
-      { type = "physical", decrease = 10, percent = 50 },
-      { type = "bob-pierce", percent = 20 },
-      { type = "explosion", decrease = 5, percent = 32 },
-      { type = "laser", percent = 50 },
-      { type = "fire", decrease = 5, percent = 70 },
-      { type = "poison", decrease = 20, percent = 75 },
-      { type = "acid", decrease = 25, percent = 90 },
-      { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
-    },
-  })
 
   bobmods.enemies.new_spawner({
     name = "bob-poison-super-spawner",
