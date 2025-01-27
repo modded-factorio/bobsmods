@@ -19,7 +19,7 @@ bobmods.enemies.new_worm({
   splash_fire_name = "acid-splash-fire-worm-small",
 
   factoriopedia_simulation = {
-    init = enemy_simulation("small-worm-turret", 3.6)
+    init = enemy_simulation("small-worm-turret", 2.3)
   },
 })
 
@@ -45,7 +45,7 @@ bobmods.enemies.new_worm({
   fire_damage_per_tick = 0.2,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("medium-worm-turret", 2.6)
+    init = enemy_simulation("medium-worm-turret", 2)
   },
 })
 
@@ -71,7 +71,7 @@ bobmods.enemies.new_worm({
   fire_damage_per_tick = 0.4,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("big-worm-turret", 1.8)
+    init = enemy_simulation("big-worm-turret", 1.7)
   },
 })
 
@@ -119,7 +119,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-worm-turret", 1.5)
+    init = enemy_simulation("bob-huge-worm-turret", 1.6)
   },
 })
 
@@ -167,7 +167,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-worm-turret", 1.3)
+    init = enemy_simulation("bob-giant-worm-turret", 1.55)
   },
 })
 
@@ -216,7 +216,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-worm-turret", 1.15)
+    init = enemy_simulation("bob-titan-worm-turret", 1.5)
   },
 })
 
@@ -265,7 +265,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("behemoth-worm-turret", 1)
+    init = enemy_simulation("behemoth-worm-turret", 1.45)
   },
 })
 
@@ -314,7 +314,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-worm-turret", 0.9)
+    init = enemy_simulation("bob-leviathan-worm-turret", 1.4)
   },
 })
 
@@ -369,7 +369,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(30),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-piercing-worm-turret", 3.6)
+    init = enemy_simulation("bob-small-piercing-worm-turret", 2.3)
   },
 })
 
@@ -397,7 +397,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(35),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-piercing-worm-turret", 2.6)
+    init = enemy_simulation("bob-medium-piercing-worm-turret", 2)
   },
 })
 
@@ -425,7 +425,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(40),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-piercing-worm-turret", 1.8)
+    init = enemy_simulation("bob-big-piercing-worm-turret", 1.7)
   },
 })
 
@@ -453,7 +453,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(45),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-piercing-worm-turret", 1.5)
+    init = enemy_simulation("bob-huge-piercing-worm-turret", 1.6)
   },
 })
 
@@ -481,7 +481,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(50),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-piercing-worm-turret", 1.3)
+    init = enemy_simulation("bob-giant-piercing-worm-turret", 1.55)
   },
 })
 
@@ -509,7 +509,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(55),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-piercing-worm-turret", 1.15)
+    init = enemy_simulation("bob-titan-piercing-worm-turret", 1.5)
   },
 })
 
@@ -537,7 +537,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(60),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-piercing-worm-turret", 1)
+    init = enemy_simulation("bob-behemoth-piercing-worm-turret", 1.45)
   },
 })
 
@@ -565,7 +565,7 @@ bobmods.enemies.new_worm({
   attack_ammo_type = piercing_shot(65),
   
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-piercing-worm-turret", 0.9)
+    init = enemy_simulation("bob-leviathan-piercing-worm-turret", 1.4)
   },
 })
 
@@ -597,7 +597,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-electric-worm-turret", 3.6)
+    init = enemy_simulation("bob-small-electric-worm-turret", 2.3)
   },
 })
 
@@ -628,7 +628,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-electric-worm-turret", 2.6)
+    init = enemy_simulation("bob-medium-electric-worm-turret", 2)
   },
 })
 
@@ -659,7 +659,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-electric-worm-turret", 1.8)
+    init = enemy_simulation("bob-big-electric-worm-turret", 1.7)
   },
 })
 
@@ -690,7 +690,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-electric-worm-turret", 1.5)
+    init = enemy_simulation("bob-huge-electric-worm-turret", 1.6)
   },
 })
 
@@ -721,7 +721,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-electric-worm-turret", 1.3)
+    init = enemy_simulation("bob-giant-electric-worm-turret", 1.55)
   },
 })
 
@@ -752,7 +752,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-electric-worm-turret", 1.15)
+    init = enemy_simulation("bob-titan-electric-worm-turret", 1.5)
   },
 })
 
@@ -783,7 +783,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-electric-worm-turret", 1)
+    init = enemy_simulation("bob-behemoth-electric-worm-turret", 1.45)
   },
 })
 
@@ -814,7 +814,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-electric-worm-turret", 0.9)
+    init = enemy_simulation("bob-leviathan-electric-worm-turret", 1.4)
   },
 })
 
@@ -855,6 +855,296 @@ for _, turret_name in pairs({
     },
   }
 end
+
+--Acid
+local acid_dying_action = function(inputs)
+  return {
+    type = "nested-result",
+    action = {
+      type = "cluster",
+      cluster_count = inputs.dying_cluster_count,
+      distance = inputs.dying_distance,
+      distance_deviation = inputs.dying_distance_deviation,
+      probability = inputs.dying_probability,
+      action_delivery = {
+        type = "stream",
+        stream = inputs.dying_stream,
+      },
+    },
+  }
+end
+
+bobmods.enemies.new_worm({
+  name = "bob-small-acid-worm-turret",
+  order = "d-b-a",
+  tier = 1,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.small_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-small",
+    dying_cluster_count = 2,
+    dying_distance = 4,
+    dying_distance_deviation = 1,
+    dying_probability = 0.1,
+  }),
+
+  sticker_name = "enemy-acid-sticker-small",
+
+  attack_range = 25,
+  attack_damage = 36,
+  attack_stream_name = "acid-acid-stream-worm-small",
+  attack_spit_radius = 1.65,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-small",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-small-acid-worm-turret", 2.3)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-medium-acid-worm-turret",
+  order = "d-b-b",
+  tier = 2,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.medium_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-medium",
+    dying_cluster_count = 3,
+    dying_distance = 5,
+    dying_distance_deviation = 1.1,
+    dying_probability = 0.2,
+  }),
+
+  sticker_name = "enemy-acid-sticker-medium",
+
+  attack_range = 30,
+  attack_damage = 72,
+  attack_stream_name = "acid-acid-stream-worm-medium",
+  attack_spit_radius = 1.95,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-medium",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-medium-acid-worm-turret", 2)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-big-acid-worm-turret",
+  order = "d-b-c",
+  tier = 3,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.big_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-big",
+    dying_cluster_count = 4,
+    dying_distance = 5.25,
+    dying_distance_deviation = 1.2,
+    dying_probability = 0.3,
+  }),
+
+  sticker_name = "enemy-acid-sticker-big",
+
+  attack_range = 35,
+  attack_damage = 96,
+  attack_stream_name = "acid-acid-stream-worm-big",
+  attack_spit_radius = 2.05,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-big",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-big-acid-worm-turret", 1.7)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-huge-acid-worm-turret",
+  order = "d-b-d",
+  tier = 4,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.huge_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-huge",
+    dying_cluster_count = 5,
+    dying_distance = 5.5,
+    dying_distance_deviation = 1.3,
+    dying_probability = 0.4,
+  }),
+
+  sticker_name = "enemy-acid-sticker-huge",
+
+  attack_range = 40,
+  attack_damage = 120,
+  attack_stream_name = "acid-acid-stream-worm-huge",
+  attack_spit_radius = 2.25,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-huge",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-huge-acid-worm-turret", 1.6)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-giant-acid-worm-turret",
+  order = "d-b-e",
+  tier = 5,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.giant_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-giant",
+    dying_cluster_count = 6,
+    dying_distance = 5.8,
+    dying_distance_deviation = 1.4,
+    dying_probability = 0.45,
+  }),
+
+  sticker_name = "enemy-acid-sticker-giant",
+
+  attack_range = 45,
+  attack_damage = 144,
+  attack_stream_name = "acid-acid-stream-worm-giant",
+  attack_spit_radius = 2.45,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-giant",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-giant-acid-worm-turret", 1.55)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-titan-acid-worm-turret",
+  order = "d-b-f",
+  tier = 6,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.titan_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-titan",
+    dying_cluster_count = 7,
+    dying_distance = 6.1,
+    dying_distance_deviation = 1.5,
+    dying_probability = 0.5,
+  }),
+
+  sticker_name = "enemy-acid-sticker-titan",
+
+  attack_range = 50,
+  attack_damage = 168,
+  attack_stream_name = "acid-acid-stream-worm-titan",
+  attack_spit_radius = 2.65,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-titan",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-titan-acid-worm-turret", 1.5)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-behemoth-acid-worm-turret",
+  order = "d-b-g",
+  tier = 7,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.behemoth_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-behemoth",
+    dying_cluster_count = 8,
+    dying_distance = 6.5,
+    dying_distance_deviation = 1.6,
+    dying_probability = 0.55,
+  }),
+
+  sticker_name = "enemy-acid-sticker-behemoth",
+
+  attack_range = 55,
+  attack_damage = 216,
+  attack_stream_name = "acid-acid-stream-worm-behemoth",
+  attack_spit_radius = 2.85,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-behemoth",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-behemoth-acid-worm-turret", 1.45)
+  },
+})
+
+bobmods.enemies.new_worm({
+  name = "bob-leviathan-acid-worm-turret",
+  order = "d-b-h",
+  tier = 8,
+  poison_resist = "high",
+  electric_resist = "low",
+  acid_resist = "high",
+  tint = bobmods.enemies.leviathan_worm_tint,
+  tint2 = bobmods.enemies.acid_worm_tint,
+  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+  dying_trigger_effect = acid_dying_action({
+    dying_stream = "acid-acid-stream-worm-leviathan",
+    dying_cluster_count = 10,
+    dying_distance = 7,
+    dying_distance_deviation = 1.75,
+    dying_probability = 0.6,
+  }),
+
+  sticker_name = "enemy-acid-sticker-leviathan",
+
+  attack_range = 60,
+  attack_damage = 320,
+  attack_stream_name = "acid-acid-stream-worm-leviathan",
+  attack_spit_radius = 3.25,
+  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
+
+  splash_fire_name = "acid-acid-splash-fire-leviathan",
+  skip_generate_fire = true,
+
+  factoriopedia_simulation = {
+    init = enemy_simulation("bob-leviathan-acid-worm-turret", 1.4)
+  },
+})
 
 --Explosive
 local expl_attack = function(inputs)
@@ -942,7 +1232,7 @@ end
 
 bobmods.enemies.new_worm({
   name = "bob-small-explosive-worm-turret",
-  order = "d-b-a",
+  order = "e-b-a",
   tier = 1,
   max_health = 150,
   explosion_resist = "very-high",
@@ -972,13 +1262,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-explosive-worm-turret", 3.6)
+    init = enemy_simulation("bob-small-explosive-worm-turret", 2.3)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-medium-explosive-worm-turret",
-  order = "d-b-b",
+  order = "e-b-b",
   tier = 2,
   max_health = 375,
   explosion_resist = "very-high",
@@ -1008,13 +1298,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-explosive-worm-turret", 2.6)
+    init = enemy_simulation("bob-medium-explosive-worm-turret", 2)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-big-explosive-worm-turret",
-  order = "d-b-c",
+  order = "e-b-c",
   tier = 3,
   max_health = 900,
   explosion_resist = "very-high",
@@ -1044,13 +1334,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-explosive-worm-turret", 1.8)
+    init = enemy_simulation("bob-big-explosive-worm-turret", 1.7)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-huge-explosive-worm-turret",
-  order = "d-b-d",
+  order = "e-b-d",
   tier = 4,
   max_health = 1600,
   explosion_resist = "very-high",
@@ -1080,13 +1370,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-explosive-worm-turret", 1.5)
+    init = enemy_simulation("bob-huge-explosive-worm-turret", 1.6)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-giant-explosive-worm-turret",
-  order = "d-b-e",
+  order = "e-b-e",
   tier = 5,
   max_health = 4000,
   explosion_resist = "very-high",
@@ -1116,13 +1406,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-explosive-worm-turret", 1.3)
+    init = enemy_simulation("bob-giant-explosive-worm-turret", 1.55)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-titan-explosive-worm-turret",
-  order = "d-b-f",
+  order = "e-b-f",
   tier = 6,
   max_health = 8000,
   explosion_resist = "very-high",
@@ -1152,13 +1442,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-explosive-worm-turret", 1.15)
+    init = enemy_simulation("bob-titan-explosive-worm-turret", 1.5)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-explosive-worm-turret",
-  order = "d-b-g",
+  order = "e-b-g",
   tier = 7,
   max_health = 30000,
   explosion_resist = "very-high",
@@ -1188,13 +1478,13 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-explosive-worm-turret", 1)
+    init = enemy_simulation("bob-behemoth-explosive-worm-turret", 1.45)
   },
 })
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-explosive-worm-turret",
-  order = "d-b-h",
+  order = "e-b-h",
   tier = 8,
   max_health = 80000,
   explosion_resist = "very-high",
@@ -1224,7 +1514,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-explosive-worm-turret", 0.9)
+    init = enemy_simulation("bob-leviathan-explosive-worm-turret", 1.4)
   },
 })
 
@@ -1235,296 +1525,6 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.turret["bob-behemoth-explosive-worm-turret"].max_health = 64000
   data.raw.turret["bob-leviathan-explosive-worm-turret"].max_health = 270000
 end
-
---Acid
-local acid_dying_action = function(inputs)
-  return {
-    type = "nested-result",
-    action = {
-      type = "cluster",
-      cluster_count = inputs.dying_cluster_count,
-      distance = inputs.dying_distance,
-      distance_deviation = inputs.dying_distance_deviation,
-      probability = inputs.dying_probability,
-      action_delivery = {
-        type = "stream",
-        stream = inputs.dying_stream,
-      },
-    },
-  }
-end
-
-bobmods.enemies.new_worm({
-  name = "bob-small-acid-worm-turret",
-  order = "e-b-a",
-  tier = 1,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.small_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-small",
-    dying_cluster_count = 2,
-    dying_distance = 4,
-    dying_distance_deviation = 1,
-    dying_probability = 0.1,
-  }),
-
-  sticker_name = "enemy-acid-sticker-small",
-
-  attack_range = 25,
-  attack_damage = 36,
-  attack_stream_name = "acid-acid-stream-worm-small",
-  attack_spit_radius = 1.65,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-small",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-acid-worm-turret", 3.6)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-medium-acid-worm-turret",
-  order = "e-b-b",
-  tier = 2,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.medium_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-medium",
-    dying_cluster_count = 3,
-    dying_distance = 5,
-    dying_distance_deviation = 1.1,
-    dying_probability = 0.2,
-  }),
-
-  sticker_name = "enemy-acid-sticker-medium",
-
-  attack_range = 30,
-  attack_damage = 72,
-  attack_stream_name = "acid-acid-stream-worm-medium",
-  attack_spit_radius = 1.95,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-medium",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-acid-worm-turret", 2.6)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-big-acid-worm-turret",
-  order = "e-b-c",
-  tier = 3,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.big_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-big",
-    dying_cluster_count = 4,
-    dying_distance = 5.25,
-    dying_distance_deviation = 1.2,
-    dying_probability = 0.3,
-  }),
-
-  sticker_name = "enemy-acid-sticker-big",
-
-  attack_range = 35,
-  attack_damage = 96,
-  attack_stream_name = "acid-acid-stream-worm-big",
-  attack_spit_radius = 2.05,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-big",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-acid-worm-turret", 1.8)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-huge-acid-worm-turret",
-  order = "e-b-d",
-  tier = 4,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.huge_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-huge",
-    dying_cluster_count = 5,
-    dying_distance = 5.5,
-    dying_distance_deviation = 1.3,
-    dying_probability = 0.4,
-  }),
-
-  sticker_name = "enemy-acid-sticker-huge",
-
-  attack_range = 40,
-  attack_damage = 120,
-  attack_stream_name = "acid-acid-stream-worm-huge",
-  attack_spit_radius = 2.25,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-huge",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-acid-worm-turret", 1.5)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-giant-acid-worm-turret",
-  order = "e-b-e",
-  tier = 5,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.giant_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-giant",
-    dying_cluster_count = 6,
-    dying_distance = 5.8,
-    dying_distance_deviation = 1.4,
-    dying_probability = 0.45,
-  }),
-
-  sticker_name = "enemy-acid-sticker-giant",
-
-  attack_range = 45,
-  attack_damage = 144,
-  attack_stream_name = "acid-acid-stream-worm-giant",
-  attack_spit_radius = 2.45,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-giant",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-acid-worm-turret", 1.3)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-titan-acid-worm-turret",
-  order = "e-b-f",
-  tier = 6,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.titan_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-titan",
-    dying_cluster_count = 7,
-    dying_distance = 6.1,
-    dying_distance_deviation = 1.5,
-    dying_probability = 0.5,
-  }),
-
-  sticker_name = "enemy-acid-sticker-titan",
-
-  attack_range = 50,
-  attack_damage = 168,
-  attack_stream_name = "acid-acid-stream-worm-titan",
-  attack_spit_radius = 2.65,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-titan",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-acid-worm-turret", 1.15)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-behemoth-acid-worm-turret",
-  order = "e-b-g",
-  tier = 7,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.behemoth_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-behemoth",
-    dying_cluster_count = 8,
-    dying_distance = 6.5,
-    dying_distance_deviation = 1.6,
-    dying_probability = 0.55,
-  }),
-
-  sticker_name = "enemy-acid-sticker-behemoth",
-
-  attack_range = 55,
-  attack_damage = 216,
-  attack_stream_name = "acid-acid-stream-worm-behemoth",
-  attack_spit_radius = 2.85,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-behemoth",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-acid-worm-turret", 1)
-  },
-})
-
-bobmods.enemies.new_worm({
-  name = "bob-leviathan-acid-worm-turret",
-  order = "e-b-h",
-  tier = 8,
-  poison_resist = "high",
-  electric_resist = "low",
-  acid_resist = "high",
-  tint = bobmods.enemies.leviathan_worm_tint,
-  tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
-  dying_trigger_effect = acid_dying_action({
-    dying_stream = "acid-acid-stream-worm-leviathan",
-    dying_cluster_count = 10,
-    dying_distance = 7,
-    dying_distance_deviation = 1.75,
-    dying_probability = 0.6,
-  }),
-
-  sticker_name = "enemy-acid-sticker-leviathan",
-
-  attack_range = 60,
-  attack_damage = 320,
-  attack_stream_name = "acid-acid-stream-worm-leviathan",
-  attack_spit_radius = 3.25,
-  attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
-
-  splash_fire_name = "acid-acid-splash-fire-leviathan",
-  skip_generate_fire = true,
-
-  factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-acid-worm-turret", 0.9)
-  },
-})
 
 --Poison
 local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_name, damage, healing)
@@ -1652,7 +1652,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-poison-worm-turret", 3.6)
+    init = enemy_simulation("bob-small-poison-worm-turret", 2.3)
   },
 })
 
@@ -1676,7 +1676,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-poison-worm-turret", 2.6)
+    init = enemy_simulation("bob-medium-poison-worm-turret", 2)
   },
 })
 
@@ -1700,7 +1700,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-poison-worm-turret", 1.8)
+    init = enemy_simulation("bob-big-poison-worm-turret", 1.7)
   },
 })
 
@@ -1724,7 +1724,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-poison-worm-turret", 1.5)
+    init = enemy_simulation("bob-huge-poison-worm-turret", 1.6)
   },
 })
 
@@ -1748,7 +1748,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-poison-worm-turret", 1.3)
+    init = enemy_simulation("bob-giant-poison-worm-turret", 1.55)
   },
 })
 
@@ -1772,7 +1772,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-poison-worm-turret", 1.15)
+    init = enemy_simulation("bob-titan-poison-worm-turret", 1.5)
   },
 })
 
@@ -1796,7 +1796,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-poison-worm-turret", 1)
+    init = enemy_simulation("bob-behemoth-poison-worm-turret", 1.45)
   },
 })
 
@@ -1820,7 +1820,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-poison-worm-turret", 0.9)
+    init = enemy_simulation("bob-leviathan-poison-worm-turret", 1.4)
   },
 })
 
@@ -1909,7 +1909,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-fire-worm-turret", 3.6)
+    init = enemy_simulation("bob-small-fire-worm-turret", 2.3)
   },
 })
 
@@ -1940,7 +1940,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-fire-worm-turret", 2.6)
+    init = enemy_simulation("bob-medium-fire-worm-turret", 2)
   },
 })
 
@@ -1971,7 +1971,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-fire-worm-turret", 1.8)
+    init = enemy_simulation("bob-big-fire-worm-turret", 1.7)
   },
 })
 
@@ -2002,7 +2002,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-fire-worm-turret", 1.5)
+    init = enemy_simulation("bob-huge-fire-worm-turret", 1.6)
   },
 })
 
@@ -2033,7 +2033,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-fire-worm-turret", 1.3)
+    init = enemy_simulation("bob-giant-fire-worm-turret", 1.55)
   },
 })
 
@@ -2064,7 +2064,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-fire-worm-turret", 1.15)
+    init = enemy_simulation("bob-titan-fire-worm-turret", 1.5)
   },
 })
 
@@ -2095,7 +2095,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-fire-worm-turret", 1)
+    init = enemy_simulation("bob-behemoth-fire-worm-turret", 1.45)
   },
 })
 
@@ -2126,6 +2126,6 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-fire-worm-turret", 0.9)
+    init = enemy_simulation("bob-leviathan-fire-worm-turret", 1.4)
   },
 })
