@@ -726,11 +726,7 @@ function generate_fire_prototype(inputs, scale_value)
     initial_flame_count = 1,
     burnt_patch_lifetime = 0,
 
-    light = inputs.fire_light or {
-      color = fire_final_tint,
-      intensity = 0.4,
-      size = 10,
-    },
+    light = inputs.fire_light,
     light_size_modifier_maximum = inputs.fire_light_size_modifier_maximum,
     light_size_modifier_per_flame = inputs.fire_light_size_modifier_per_flame,
 
@@ -784,6 +780,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 26,
             shift = util.mul_shift(util.by_pixel(-12, -8), fire_final_scale),
             tint = fire_final_tint,
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale
           },
           {
@@ -809,6 +806,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(-9, -17), fire_final_scale),
             tint = fire_final_tint,
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale
           },
           {
@@ -834,6 +832,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), fire_final_scale),
             tint = fire_final_tint,
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale
           },
           {
@@ -859,6 +858,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(17, -19), fire_final_scale),
             tint = fire_final_tint,
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale
           },
           {
@@ -888,6 +888,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 26,
             shift = util.mul_shift(util.by_pixel(-12, -8), fire_final_scale * ground_patch_scale_modifier),
             tint = util.multiply_color(fire_final_tint, patch_opacity),
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale * ground_patch_scale_modifier
           },
           {
@@ -913,6 +914,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(-9, -17), fire_final_scale * ground_patch_scale_modifier),
             tint = util.multiply_color(fire_final_tint, patch_opacity),
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale * ground_patch_scale_modifier
           },
           {
@@ -938,6 +940,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), fire_final_scale * ground_patch_scale_modifier),
             tint = util.multiply_color(fire_final_tint, patch_opacity),
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale * ground_patch_scale_modifier
           },
           {
@@ -963,6 +966,7 @@ function generate_fire_prototype(inputs, scale_value)
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(17, -19), fire_final_scale * ground_patch_scale_modifier),
             tint = util.multiply_color(fire_final_tint, patch_opacity),
+            draw_as_glow = true,
             scale = 0.5 * fire_final_scale * ground_patch_scale_modifier
           },
           {
