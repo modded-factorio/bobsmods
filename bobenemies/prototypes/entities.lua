@@ -236,6 +236,7 @@ data:extend({
             frame_count = 26,
             shift = util.mul_shift(util.by_pixel(-12, -8), 1),
             tint = {1.000, 0.992, 0.512, 1.000},
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -261,6 +262,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(-9, -17), 1),
             tint = {1.000, 0.992, 0.512, 1.000},
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -286,6 +288,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), 1),
             tint = {1.000, 0.992, 0.512, 1.000},
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -311,6 +314,7 @@ data:extend({
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(17, -19), 1),
             tint = {1.000, 0.992, 0.512, 1.000},
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -340,6 +344,7 @@ data:extend({
             frame_count = 26,
             shift = util.mul_shift(util.by_pixel(-12, -8), ground_patch_scale_modifier),
             tint = { 1, 0.992, 0.512, 1, },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -365,6 +370,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(-9, -17), ground_patch_scale_modifier),
             tint = { 1, 0.992, 0.512, 1, },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -390,6 +396,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), ground_patch_scale_modifier),
             tint = { 1, 0.992, 0.512, 1, },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -415,6 +422,7 @@ data:extend({
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(17, -19), ground_patch_scale_modifier),
             tint = { 1, 0.992, 0.512, 1, },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -463,12 +471,6 @@ data:extend({
     initial_flame_count = 1,
     burnt_patch_lifetime = 0,
 
-    light = {
-      color = { r = 1.0, g = 1.0, b = 0.2 },
-      intensity = 0.4,
-      size = 10,
-    },
-
     pictures =
     {
       {
@@ -482,6 +484,7 @@ data:extend({
             frame_count = 26,
             shift = util.mul_shift(util.by_pixel(-12, -8), 1),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -507,6 +510,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(-9, -17), 1),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -532,6 +536,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), 1),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -557,6 +562,7 @@ data:extend({
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(17, -19), 1),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5
           },
           {
@@ -586,6 +592,7 @@ data:extend({
             frame_count = 26,
             shift = util.mul_shift(util.by_pixel(-12, -8), ground_patch_scale_modifier),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -611,6 +618,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(-9, -17), ground_patch_scale_modifier),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -636,6 +644,7 @@ data:extend({
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), ground_patch_scale_modifier),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
@@ -661,6 +670,7 @@ data:extend({
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(17, -19), ground_patch_scale_modifier),
             tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
+            draw_as_glow = true,
             scale = 0.5 * ground_patch_scale_modifier
           },
           {
