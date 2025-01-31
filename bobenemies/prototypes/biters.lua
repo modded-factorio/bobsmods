@@ -1,12 +1,15 @@
 --Basic
 bobmods.enemies.new_biter({
   name = "small-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-a",
   tier = 1,
   explosion_resist = "high",
   tint = bobmods.enemies.small_biter_tint1,
   tint2 = bobmods.enemies.small_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -37,12 +40,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "medium-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-b",
   tier = 2,
   explosion_resist = "high",
   tint = bobmods.enemies.medium_biter_tint1,
   tint2 = bobmods.enemies.medium_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -73,12 +79,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "big-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-c",
   tier = 3,
   explosion_resist = "high",
   tint = bobmods.enemies.big_biter_tint1,
   tint2 = bobmods.enemies.big_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -109,12 +118,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-d",
   tier = 4,
   explosion_resist = "high",
   tint = bobmods.enemies.huge_biter_tint1,
   tint2 = bobmods.enemies.huge_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -145,12 +157,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-e",
   tier = 5,
   explosion_resist = "high",
   tint = bobmods.enemies.giant_biter_tint1,
   tint2 = bobmods.enemies.giant_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -181,12 +196,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-f",
   tier = 6,
   explosion_resist = "high",
   tint = bobmods.enemies.titan_biter_tint1,
   tint2 = bobmods.enemies.titan_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -217,12 +235,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "behemoth-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-g",
   tier = 7,
   explosion_resist = "high",
   tint = bobmods.enemies.behemoth_biter_tint1,
   tint2 = bobmods.enemies.behemoth_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -253,12 +274,15 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-biter.png" },
+  },
   order = "a-c-h",
   tier = 8,
   explosion_resist = "high",
   tint = bobmods.enemies.leviathan_biter_tint1,
   tint2 = bobmods.enemies.leviathan_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -305,6 +329,10 @@ local piercing_reaction = {
 
 bobmods.enemies.new_biter({
   name = "bob-small-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-a",
   tier = 1,
   healing_per_tick = 0.04,
@@ -319,7 +347,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -355,6 +382,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-b",
   tier = 2,
   healing_per_tick = 0.04,
@@ -368,7 +399,6 @@ bobmods.enemies.new_biter({
   electric_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -404,6 +434,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-c",
   tier = 3,
   healing_per_tick = 0.08,
@@ -418,7 +452,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -454,6 +487,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-d",
   tier = 4,
   healing_per_tick = 0.16,
@@ -468,7 +505,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -504,6 +540,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-e",
   tier = 5,
   healing_per_tick = 0.4,
@@ -518,7 +558,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -554,6 +593,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-f",
   tier = 6,
   healing_per_tick = 0.8,
@@ -568,7 +611,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -604,6 +646,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-g",
   tier = 7,
   healing_per_tick = 1.2,
@@ -618,7 +664,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -654,6 +699,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-piercing-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-biter.png" },
+  },
   order = "b-c-h",
   tier = 8,
   healing_per_tick = 2,
@@ -668,7 +717,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
   attack_parameters = {
     type = "projectile",
@@ -720,6 +768,10 @@ local electric_reaction = {
 
 bobmods.enemies.new_biter({
   name = "bob-small-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-a",
   tier = 1,
   laser_resist = "high",
@@ -729,7 +781,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -785,6 +836,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-b",
   tier = 2,
   laser_resist = "high",
@@ -794,7 +849,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -850,6 +904,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-c",
   tier = 3,
   laser_resist = "high",
@@ -859,7 +917,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -915,6 +972,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-d",
   tier = 4,
   laser_resist = "high",
@@ -924,7 +985,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -980,6 +1040,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-e",
   tier = 5,
   laser_resist = "high",
@@ -989,7 +1053,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -1045,6 +1108,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-f",
   tier = 6,
   laser_resist = "high",
@@ -1054,7 +1121,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -1110,6 +1176,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-g",
   tier = 7,
   laser_resist = "high",
@@ -1119,7 +1189,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -1175,6 +1244,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-electric-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-biter.png" },
+  },
   order = "c-c-h",
   tier = 8,
   laser_resist = "high",
@@ -1184,7 +1257,6 @@ bobmods.enemies.new_biter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
   attack_parameters = {
@@ -1315,6 +1387,10 @@ end
 
 bobmods.enemies.new_biter({
   name = "bob-small-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-a",
   tier = 1,
   poison_resist = "high",
@@ -1322,7 +1398,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-small",
     dying_cluster_count = 2,
@@ -1364,6 +1439,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-b",
   tier = 2,
   poison_resist = "high",
@@ -1371,7 +1450,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-medium",
     dying_cluster_count = 3,
@@ -1413,6 +1491,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-c",
   tier = 3,
   poison_resist = "high",
@@ -1420,7 +1502,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-big",
     dying_cluster_count = 4,
@@ -1462,6 +1543,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-d",
   tier = 4,
   poison_resist = "high",
@@ -1469,7 +1554,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-huge",
     dying_cluster_count = 5,
@@ -1511,6 +1595,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-e",
   tier = 5,
   poison_resist = "high",
@@ -1518,7 +1606,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-giant",
     dying_cluster_count = 6,
@@ -1560,6 +1647,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-f",
   tier = 6,
   poison_resist = "high",
@@ -1567,7 +1658,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-titan",
     dying_cluster_count = 7,
@@ -1609,6 +1699,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-g",
   tier = 7,
   poison_resist = "high",
@@ -1616,7 +1710,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-behemoth",
     dying_cluster_count = 8,
@@ -1658,6 +1751,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-acid-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-biter.png" },
+  },
   order = "d-c-h",
   tier = 8,
   poison_resist = "high",
@@ -1665,7 +1762,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-leviathan",
     dying_cluster_count = 10,
@@ -1752,6 +1848,10 @@ end
 
 bobmods.enemies.new_biter({
   name = "bob-small-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-a",
   tier = 1,
   max_health = 10,
@@ -1762,7 +1862,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 20,
     dying_radius = 3,
@@ -1815,6 +1914,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-b",
   tier = 2,
   max_health = 50,
@@ -1825,7 +1928,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 60,
     dying_radius = 3.25,
@@ -1878,6 +1980,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-c",
   tier = 3,
   max_health = 150,
@@ -1888,7 +1994,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 90,
     dying_radius = 3.5,
@@ -1941,6 +2046,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-d",
   tier = 4,
   max_health = 500,
@@ -1951,7 +2060,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 120,
     dying_radius = 3.75,
@@ -2004,6 +2112,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-e",
   tier = 5,
   max_health = 2000,
@@ -2014,7 +2126,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 180,
     dying_radius = 4,
@@ -2067,6 +2178,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-f",
   tier = 6,
   max_health = 6000,
@@ -2077,7 +2192,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 240,
     dying_radius = 4.25,
@@ -2130,6 +2244,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-g",
   tier = 7,
   max_health = 20000,
@@ -2140,7 +2258,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 300,
     dying_radius = 4.5,
@@ -2193,6 +2310,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-explosive-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-biter.png" },
+  },
   order = "e-c-h",
   tier = 8,
   max_health = 60000,
@@ -2203,7 +2324,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 800,
     dying_radius = 6,
@@ -2383,6 +2503,10 @@ end
 
 bobmods.enemies.new_biter({
   name = "bob-small-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-a",
   tier = 1,
   healing_per_tick = 0.04,
@@ -2391,7 +2515,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-small" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "enemy-poison-smoke-small", 6, -2, 2),
   attack_parameters = {
@@ -2434,6 +2557,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-b",
   tier = 2,
   healing_per_tick = 0.04,
@@ -2442,7 +2569,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-medium" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "enemy-poison-smoke-medium", 12, -4, 3),
   attack_parameters = {
@@ -2485,6 +2611,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-c",
   tier = 3,
   healing_per_tick = 0.08,
@@ -2493,7 +2623,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-big" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "enemy-poison-smoke-big", 18, -6, 4),
   attack_parameters = {
@@ -2536,6 +2665,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-d",
   tier = 4,
   healing_per_tick = 0.16,
@@ -2544,7 +2677,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-huge" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "enemy-poison-smoke-huge", 24, -8, 4.6),
   attack_parameters = {
@@ -2587,6 +2719,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-e",
   tier = 5,
   healing_per_tick = 0.4,
@@ -2595,7 +2731,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-giant" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "enemy-poison-smoke-giant", 30, -20, 5.2),
   attack_parameters = {
@@ -2638,6 +2773,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-f",
   tier = 6,
   healing_per_tick = 0.8,
@@ -2646,7 +2785,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-titan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "enemy-poison-smoke-titan", 36, -24, 5.8),
   attack_parameters = {
@@ -2689,6 +2827,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-g",
   tier = 7,
   healing_per_tick = 1.2,
@@ -2697,7 +2839,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-behemoth" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth", "enemy-poison-smoke-behemoth", 42, -42, 6.4),
   attack_parameters = {
@@ -2740,6 +2881,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-poison-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-biter.png" },
+  },
   order = "f-c-h",
   tier = 8,
   healing_per_tick = 2,
@@ -2748,7 +2893,6 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-leviathan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan", "enemy-poison-smoke-leviathan", 60, -60, 7),
   attack_parameters = {
@@ -2792,6 +2936,10 @@ bobmods.enemies.new_biter({
 --Fire
 bobmods.enemies.new_biter({
   name = "bob-small-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-a",
   tier = 1,
   physical_resist = "low",
@@ -2803,8 +2951,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.small_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2846,6 +2993,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-medium-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-b",
   tier = 2,
   physical_resist = "low",
@@ -2858,7 +3009,6 @@ bobmods.enemies.new_biter({
   tint2 = bobmods.enemies.medium_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2900,6 +3050,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-big-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-c",
   tier = 3,
   physical_resist = "low",
@@ -2911,8 +3065,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.big_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2954,6 +3107,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-huge-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-d",
   tier = 4,
   physical_resist = "low",
@@ -2965,8 +3122,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.huge_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3008,6 +3164,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-giant-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-e",
   tier = 5,
   physical_resist = "low",
@@ -3019,8 +3179,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.giant_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3062,6 +3221,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-titan-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-f",
   tier = 6,
   physical_resist = "low",
@@ -3073,8 +3236,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.titan_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3116,6 +3278,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-behemoth-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-g",
   tier = 7,
   physical_resist = "low",
@@ -3127,8 +3293,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.behemoth_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3170,6 +3335,10 @@ bobmods.enemies.new_biter({
 
 bobmods.enemies.new_biter({
   name = "bob-leviathan-fire-biter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-biter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-biter.png" },
+  },
   order = "g-c-h",
   tier = 8,
   physical_resist = "low",
@@ -3181,8 +3350,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.leviathan_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", }, 
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
