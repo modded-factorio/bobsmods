@@ -1,4 +1,12 @@
+data.raw["item-subgroup"].enemies.order = "b"
+
 data:extend({
+  {
+    type = "item-subgroup",
+    group = "enemies",
+    name = "enemy-factions",
+    order = "a",
+  },
   {
     type = "damage-type",
     name = "bob-pierce",
@@ -17,7 +25,8 @@ data:extend({
   },
   {
     type = "trigger-target-type",
-    name = "not-electric-unit",--Structures do not need this mask, since it is only used for creating stickers.
+    name = "not-electric-unit",
+    --Structures do not need this mask, since it is only used for creating stickers.
   },
   {
     type = "trigger-target-type",
