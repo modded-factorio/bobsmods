@@ -646,13 +646,15 @@ function bobmods.enemies.replace_worm(original_worm, flag)
 end
 
 script.on_event(defines.events.on_entity_died, function(event)
-  --Remove/subtract spawner from tables when one is killed
-  local spawner_faction = bobmods.enemies.identify_faction(event.entity.name)
-  storage.bobmods.enemies.nauvis_faction_table[spawner_faction] = math.max(0, storage.bobmods.enemies.nauvis_faction_table[spawner_faction] - 1)
-  for i, old_spawner in pairs(storage.bobmods.enemies.nauvis_spawners) do
-    if old_spawner.unit_number == event.entity.unit_number then
-      table.remove(storage.bobmods.enemies.nauvis_spawners[i])
-      break
+  if bobmods.enemies.stop_all ~= true then
+    --Remove/subtract spawner from tables when one is killed
+    local spawner_faction = bobmods.enemies.identify_faction(event.entity.name)
+    storage.bobmods.enemies.nauvis_faction_table[spawner_faction] = math.max(0, storage.bobmods.enemies.nauvis_faction_table[spawner_faction] - 1)
+    for i, old_spawner in pairs(storage.bobmods.enemies.nauvis_spawners) do
+      if old_spawner.unit_number == event.entity.unit_number then
+        table.remove(storage.bobmods.enemies.nauvis_spawners[i])
+        break
+      end
     end
   end
 end,
