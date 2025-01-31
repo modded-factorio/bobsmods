@@ -8,12 +8,15 @@ data.raw.sticker["acid-sticker-behemoth"].duration_in_ticks = 150
 --Basic
 bobmods.enemies.new_spitter({
   name = "small-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-a",
   tier = 1,
   explosion_resist = "high",
   tint = bobmods.enemies.small_biter_tint1,
   tint2 = bobmods.enemies.small_biter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-small",
 
@@ -31,12 +34,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "medium-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-b",
   tier = 2,
   explosion_resist = "high",
   tint = bobmods.enemies.medium_spitter_tint1,
   tint2 = bobmods.enemies.medium_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-medium",
 
@@ -55,12 +61,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "big-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-c",
   tier = 3,
   explosion_resist = "high",
   tint = bobmods.enemies.big_spitter_tint1,
   tint2 = bobmods.enemies.big_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-big",
 
@@ -79,12 +88,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-d",
   tier = 4,
   explosion_resist = "high",
   tint = bobmods.enemies.huge_spitter_tint1,
   tint2 = bobmods.enemies.huge_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-huge",
   sticker_slow_player_movement_from = 0.48,
@@ -107,12 +119,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-e",
   tier = 5,
   explosion_resist = "high",
   tint = bobmods.enemies.giant_spitter_tint1,
   tint2 = bobmods.enemies.giant_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-giant",
   sticker_slow_player_movement_from = 0.46,
@@ -135,12 +150,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-f",
   tier = 6,
   explosion_resist = "high",
   tint = bobmods.enemies.titan_spitter_tint1,
   tint2 = bobmods.enemies.titan_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-titan",
   sticker_duration_in_ticks = 135,
@@ -164,12 +182,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "behemoth-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-g",
   tier = 7,
   explosion_resist = "high",
   tint = bobmods.enemies.behemoth_spitter_tint1,
   tint2 = bobmods.enemies.behemoth_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-behemoth",
 
@@ -189,12 +210,15 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/basic-spitter.png" },
+  },
   order = "a-d-h",
   tier = 8,
   explosion_resist = "high",
   tint = bobmods.enemies.leviathan_spitter_tint1,
   tint2 = bobmods.enemies.leviathan_spitter_tint2,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
 
   sticker_name = "acid-sticker-leviathan",
   sticker_duration_in_ticks = 180,
@@ -247,6 +271,10 @@ end
 
 bobmods.enemies.new_spitter({
   name = "bob-small-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-a",
   tier = 1,
   healing_per_tick = 0.04,
@@ -261,7 +289,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -284,6 +311,10 @@ data.raw.unit["bob-small-piercing-spitter"].attack_parameters.animation.layers[4
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-b",
   tier = 2,
   healing_per_tick = 0.04,
@@ -298,7 +329,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -321,6 +351,10 @@ data.raw.unit["bob-medium-piercing-spitter"].attack_parameters.animation.layers[
 
 bobmods.enemies.new_spitter({
   name = "bob-big-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-c",
   tier = 3,
   healing_per_tick = 0.08,
@@ -335,7 +369,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -358,6 +391,10 @@ data.raw.unit["bob-big-piercing-spitter"].attack_parameters.animation.layers[4].
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-d",
   tier = 4,
   healing_per_tick = 0.16,
@@ -372,7 +409,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -395,6 +431,10 @@ data.raw.unit["bob-huge-piercing-spitter"].attack_parameters.animation.layers[4]
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-e",
   tier = 5,
   healing_per_tick = 0.4,
@@ -409,7 +449,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -432,6 +471,10 @@ data.raw.unit["bob-giant-piercing-spitter"].attack_parameters.animation.layers[4
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-f",
   tier = 6,
   healing_per_tick = 0.8,
@@ -446,7 +489,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -469,6 +511,10 @@ data.raw.unit["bob-titan-piercing-spitter"].attack_parameters.animation.layers[4
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-g",
   tier = 7,
   healing_per_tick = 1.2,
@@ -483,7 +529,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -506,6 +551,10 @@ data.raw.unit["bob-behemoth-piercing-spitter"].attack_parameters.animation.layer
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-piercing-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/piercing-spitter.png" },
+  },
   order = "b-d-h",
   tier = 8,
   healing_per_tick = 2,
@@ -520,7 +569,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
   damaged_trigger_effect = piercing_reaction,
 
   no_acid_stream = true,
@@ -559,6 +607,10 @@ local electric_reaction = {
 
 bobmods.enemies.new_spitter({
   name = "bob-small-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-a",
   tier = 1,
   laser_resist = "high",
@@ -568,7 +620,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -649,6 +700,10 @@ table.insert(data.raw.fire["enemy-electric-fire"].on_damage_tick_effect, {
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-b",
   tier = 2,
   laser_resist = "high",
@@ -658,7 +713,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -682,6 +736,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-big-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-c",
   tier = 3,
   laser_resist = "high",
@@ -691,7 +749,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -715,6 +772,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-d",
   tier = 4,
   laser_resist = "high",
@@ -724,7 +785,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -748,6 +808,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-e",
   tier = 5,
   laser_resist = "high",
@@ -757,7 +821,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -781,6 +844,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-f",
   tier = 6,
   laser_resist = "high",
@@ -790,7 +857,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -814,6 +880,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-g",
   tier = 7,
   laser_resist = "high",
@@ -823,7 +893,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -847,6 +916,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-electric-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/electric-spitter.png" },
+  },
   order = "c-d-h",
   tier = 8,
   laser_resist = "high",
@@ -856,7 +929,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "low",
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
   damaged_trigger_effect = electric_reaction,
   trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
 
@@ -955,6 +1027,10 @@ end
 
 bobmods.enemies.new_spitter({
   name = "bob-small-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-a",
   tier = 1,
   poison_resist = "high",
@@ -962,7 +1038,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-small",
     dying_cluster_count = 2,
@@ -997,6 +1072,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-b",
   tier = 2,
   poison_resist = "high",
@@ -1004,7 +1083,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-medium",
     dying_cluster_count = 3,
@@ -1039,6 +1117,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-big-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-c",
   tier = 3,
   poison_resist = "high",
@@ -1046,7 +1128,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-big",
     dying_cluster_count = 4,
@@ -1081,6 +1162,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-d",
   tier = 4,
   poison_resist = "high",
@@ -1088,7 +1173,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-huge",
     dying_cluster_count = 5,
@@ -1124,6 +1208,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-e",
   tier = 5,
   poison_resist = "high",
@@ -1131,7 +1219,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-giant",
     dying_cluster_count = 6,
@@ -1167,6 +1254,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-f",
   tier = 6,
   poison_resist = "high",
@@ -1174,7 +1265,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-titan",
     dying_cluster_count = 7,
@@ -1210,6 +1300,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-g",
   tier = 7,
   poison_resist = "high",
@@ -1217,7 +1311,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-behemoth",
     dying_cluster_count = 8,
@@ -1253,6 +1346,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-acid-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/acid-spitter.png" },
+  },
   order = "d-d-h",
   tier = 8,
   poison_resist = "high",
@@ -1260,7 +1357,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.acid_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-spitter-leviathan",
     dying_cluster_count = 10,
@@ -1418,6 +1514,10 @@ end
 
 bobmods.enemies.new_spitter({
   name = "bob-small-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-a",
   tier = 1,
   max_health = 7,
@@ -1428,7 +1528,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 12,
     dying_radius = 2.5,
@@ -1459,6 +1558,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-b",
   tier = 2,
   max_health = 35,
@@ -1469,7 +1572,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 24,
     dying_radius = 2.75,
@@ -1500,6 +1602,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-big-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-c",
   tier = 3,
   max_health = 100,
@@ -1510,7 +1616,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 36,
     dying_radius = 3,
@@ -1541,6 +1646,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-d",
   tier = 4,
   max_health = 350,
@@ -1551,7 +1660,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 48,
     dying_radius = 3.25,
@@ -1582,6 +1690,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-e",
   tier = 5,
   max_health = 1200,
@@ -1592,7 +1704,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 60,
     dying_radius = 3.5,
@@ -1623,6 +1734,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-f",
   tier = 6,
   max_health = 4500,
@@ -1633,7 +1748,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 72,
     dying_radius = 3.75,
@@ -1664,6 +1778,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-g",
   tier = 7,
   max_health = 12000,
@@ -1674,7 +1792,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 84,
     dying_radius = 4,
@@ -1705,6 +1822,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-explosive-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/explosive-spitter.png" },
+  },
   order = "e-d-h",
   tier = 8,
   max_health = 45000,
@@ -1715,7 +1836,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.explosive_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
   dying_trigger_effect = expl_dying_action({
     attack_damage = 120,
     dying_radius = 4.5,
@@ -1874,6 +1994,10 @@ end
 
 bobmods.enemies.new_spitter({
   name = "bob-small-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-a",
   tier = 1,
   healing_per_tick = 0.04,
@@ -1882,7 +2006,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.small_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-small" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-small"),
 
@@ -1899,6 +2022,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-b",
   tier = 2,
   healing_per_tick = 0.04,
@@ -1907,7 +2034,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.medium_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-medium" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium"),
 
@@ -1924,6 +2050,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-big-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-c",
   tier = 3,
   healing_per_tick = 0.08,
@@ -1932,7 +2062,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.big_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-big" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-big"),
 
@@ -1949,6 +2078,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-d",
   tier = 4,
   healing_per_tick = 0.16,
@@ -1957,7 +2090,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.huge_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-huge" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge"),
 
@@ -1974,6 +2106,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-e",
   tier = 5,
   healing_per_tick = 0.4,
@@ -1982,7 +2118,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.giant_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-giant" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant"),
 
@@ -1999,6 +2134,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-f",
   tier = 6,
   healing_per_tick = 0.8,
@@ -2007,7 +2146,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.titan_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-titan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan"),
 
@@ -2024,6 +2162,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-g",
   tier = 7,
   healing_per_tick = 1.2,
@@ -2032,7 +2174,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-behemoth" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth"),
 
@@ -2049,6 +2190,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-poison-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/poison-spitter.png" },
+  },
   order = "f-d-h",
   tier = 8,
   healing_per_tick = 2,
@@ -2057,7 +2202,6 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-leviathan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan"),
 
@@ -2116,6 +2260,10 @@ end
 
 bobmods.enemies.new_spitter({
   name = "bob-small-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/small-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-a",
   tier = 1,
   physical_resist = "low",
@@ -2128,7 +2276,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.small_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1,
@@ -2146,6 +2293,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-medium-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/medium-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-b",
   tier = 2,
   physical_resist = "low",
@@ -2158,7 +2309,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.medium_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.1,
@@ -2176,6 +2326,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-big-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/big-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-c",
   tier = 3,
   physical_resist = "low",
@@ -2188,7 +2342,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.big_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.2,
@@ -2207,6 +2360,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-huge-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/huge-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-d",
   tier = 4,
   physical_resist = "low",
@@ -2219,7 +2376,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.huge_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.35,
@@ -2238,6 +2394,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-giant-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/giant-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-e",
   tier = 5,
   physical_resist = "low",
@@ -2250,7 +2410,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.giant_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.5,
@@ -2269,6 +2428,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-titan-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/titan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-f",
   tier = 6,
   physical_resist = "low",
@@ -2281,7 +2444,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.titan_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   sticker_name = "enemy-fire-sticker",  attack_action = fire_attack_action({
     attack_spit_radius = 1.75,
@@ -2300,6 +2462,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-behemoth-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/behemoth-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-g",
   tier = 7,
   physical_resist = "low",
@@ -2312,7 +2478,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.behemoth_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2,
@@ -2331,6 +2496,10 @@ bobmods.enemies.new_spitter({
 
 bobmods.enemies.new_spitter({
   name = "bob-leviathan-fire-spitter",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/leviathan-spitter.png" },
+    { icon = "__bobenemies__/graphics/icons/fire-spitter.png" },
+  },
   order = "g-d-h",
   tier = 8,
   physical_resist = "low",
@@ -2343,7 +2512,6 @@ bobmods.enemies.new_spitter({
   tint2 = bobmods.enemies.leviathan_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   sticker_name = "enemy-fire-sticker",
   attack_action = fire_attack_action({
