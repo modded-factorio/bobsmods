@@ -12,6 +12,8 @@ Date: ???
     - The acid faction uses long-lived acid to inflict potent damage over time and spews acid upon death.
     - The poison faction generates clouds of smoke that follow them around, damaging enemies and healing allies.
     - The fire faction's damage is initially relatively low, but grows over time as more fuel is added to the blazes they set.
+    - A new base spawning system has been implemented, which will cause nearby bases to share the same faction, creating distinct territories.
+    - Enemies bases may spawn with quality boosts. This may be disabled in Mod Settings.
   Bugfixes:
     - Fixed missing poison cloud localisation #195
 ---------------------------------------------------------------------------------------------------
