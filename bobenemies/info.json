@@ -10,5 +10,5 @@
     "base >= 2.0",
     "boblibrary >= 1.3.0"
   ],
-  "description": "Re-adds Alien artifacts to the game.\nAdds 6 different coloured versions of artifacts to the game, each based on a different damage type.\nAdds small versions of artifacts dropped by biters and spitters.\nAdds extra damage type versions of big worm\nAdds a new Elemental nest that spawns the new biters and spitters\nAdds a big piercing biter and big electric spitter\nAdds Huge enemies of Acid and Explosive types\nAdds Giant enemies of Poison and Fire types\nAdds multi-type Titan type enemies\nAdds multi-type Badass behemoth enemies\nAdds multi-type Leviathan enemies, a real end-game threat."
+  "description": "Re-adds Alien artifacts to the game.\nAdds 6 different coloured versions of artifacts to the game, each based on a different damage type.\nAdds small versions of artifacts dropped by biters and spitters.\nAdds six new breeds of enemies to the game, in addition to the original vanilla type.\nAll seven breeds have a full eight tiers of worms, biters, and spitters.\nEnemy bases will initially focus on a single breed, before eventually diversifying into having two or three together.\nNearby bases will tend to belong to the same breed, creating territories.\nEnemies may have quality boosts."
 }
