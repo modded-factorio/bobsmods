@@ -60,8 +60,8 @@ bobmods.enemies.leviathan_tint = { 0.45, 0, 0, 0.6 }
 --1
 bobmods.enemies.piercing_tint = { 0.3, 0.6, 0.9, 1 }
 bobmods.enemies.electric_tint = { 0.85, 0.5, 0.2, 1 }
-bobmods.enemies.explosive_tint = { 0.9, 0.9, 0.3, 1 }
 bobmods.enemies.acid_tint = { 0.8, 0.2, 0.8, 1 }
+bobmods.enemies.explosive_tint = { 0.9, 0.9, 0.3, 1 }
 bobmods.enemies.poison_tint = { 0.2, 1, 0.6, 1 }
 bobmods.enemies.fire_tint = { 1, 0.35, 0.35, 1 }
 
@@ -78,8 +78,8 @@ bobmods.enemies.leviathan_worm_tint = { 1, 0, 0, 1 }
 --2
 bobmods.enemies.piercing_worm_tint = { 0, 0.5, 0.75, 1 }
 bobmods.enemies.electric_worm_tint = { 0.42, 0.3, 0.05, 1 }
-bobmods.enemies.explosive_worm_tint = { 0.5, 0.5, 0.2, 1 }
 bobmods.enemies.acid_worm_tint = { 0.5, 0.2, 0.5, 1 }
+bobmods.enemies.explosive_worm_tint = { 0.5, 0.5, 0.2, 1 }
 bobmods.enemies.poison_worm_tint = { 0.05, 0.65, 0.3, 1 }
 bobmods.enemies.fire_worm_tint = { 1, 0.3, 0.05, 1 }
 
@@ -91,8 +91,8 @@ bobmods.enemies.super_spawner_tint = { 0, 0.5, 0.95, 1.0 }
 --2
 bobmods.enemies.piercing_spawner_tint = { 0.15, 0.2, 1, 1 }
 bobmods.enemies.electric_spawner_tint = { 0.85, 0.5, 0.2, 1 }
-bobmods.enemies.explosive_spawner_tint = { 0.9, 0.9, 0.5, 1 }
 bobmods.enemies.acid_spawner_tint = { 0.8, 0.2, 0.8, 1 }
+bobmods.enemies.explosive_spawner_tint = { 0.9, 0.9, 0.5, 1 }
 bobmods.enemies.poison_spawner_tint = { 0.2, 1, 0.6, 1 }
 bobmods.enemies.fire_spawner_tint = { 1, 0.1, 0.1, 1 }
 
@@ -101,7 +101,7 @@ bobmods.enemies.fire_spawner_tint = { 1, 0.1, 0.1, 1 }
 bobmods.enemies.basic_faction = { 1, 0.88, 1, 1 }
 bobmods.enemies.piercing_faction = { 0.2, 0.2, 1, 1 }
 bobmods.enemies.electric_faction = { 1, 0.47, 0, 1 }
-bobmods.enemies.explosive_faction = { 1, 0.85, 0, 1 }
 bobmods.enemies.acid_faction = { 1, 0.3, 1, 1 }
+bobmods.enemies.explosive_faction = { 1, 0.85, 0, 1 }
 bobmods.enemies.poison_faction = { 0.3, 1, 0.3, 1 }
 bobmods.enemies.fire_faction = { 1, 0.5, 0.5, 1 }
