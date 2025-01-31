@@ -4,6 +4,111 @@ local decorative_trigger_effects = require("__base__.prototypes.decorative.decor
 
 data:extend({
   {
+    type = "simple-entity",
+    name = "basic-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/basic-biter.png" }
+    },
+    order = "a",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.basic-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-biter", 1.5)
+    },
+  },
+
+  {
+    type = "simple-entity",
+    name = "piercing-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/piercing-biter.png" }
+    },
+    order = "b",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-piercing-biter", 1.5)
+    },
+  },
+
+  {
+    type = "simple-entity",
+    name = "electric-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/electric-biter.png" }
+    },
+    order = "c",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.electric-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-electric-biter", 1.5)
+    },
+  },
+
+  {
+    type = "simple-entity",
+    name = "acid-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/acid-biter.png" }
+    },
+    order = "d",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-acid-biter", 1.5)
+    },
+  },
+
+  {
+    type = "simple-entity",
+    name = "explosive-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/explosive-biter.png" }
+    },
+    order = "e",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-explosive-biter", 1.5)
+    },
+  },
+
+  {
+    type = "simple-entity",
+    name = "poison-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/poison-biter.png" }
+    },
+    order = "f",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.poison-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-poison-biter", 1.5)
+    },
+  },
+
+  {
+    type = "simple-entity",
+    name = "fire-enemy",
+    icons = {
+      { icon = "__base__/graphics/icons/big-biter.png" },
+      { icon = "__bobenemies__/graphics/icons/fire-biter.png" }
+    },
+    order = "g",
+    subgroup = "enemy-factions",
+    factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+    factoriopedia_simulation = {
+      init = enemy_simulation("bob-huge-fire-biter", 1.5)
+    },
+  },
+
+  {
     type = "smoke-with-trigger",
     name = "small-poison-cloud",
     localised_name = { "entity-name.poison-cloud" },
@@ -115,9 +220,9 @@ data:extend({
       tint = { r = 0.1, g = 0.5, b = 0.1 },
     },
     duration_in_ticks = 15 * 60,
-    damage_interval = 30,
+    damage_interval = 15,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 3, type = "poison" },
+    damage_per_tick = { amount = 2, type = "poison" },
   },
 
   {
@@ -692,7 +797,7 @@ data:extend({
     name = "hardened-bile",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid", "not-deconstructable"},
-    icon = "__base__/graphics/icons/big-rock.png",
+    icon = "__bobenemies__/graphics/icons/hardened-bile.png",
     subgroup = "grass",
     order = "b[decorative]-l[rock]-b[big]",
     collision_box = {{-1.0, -0.9}, {1.0, 1.0}},
