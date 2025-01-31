@@ -1,11 +1,14 @@
 --Basic
 bobmods.enemies.new_worm({
   name = "small-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "a-b-a",
   tier = 1,
   explosion_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(0, 2)"),
 
   sticker_name = "acid-sticker-small",
@@ -25,11 +28,14 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "medium-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "a-b-b",
   tier = 2,
   explosion_resist = "high",
   tint = bobmods.enemies.medium_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(2, 3)"),
   build_base_evolution_requirement = 0.3,
 
@@ -51,13 +57,16 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "big-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "a-b-c",
   tier = 3,
   explosion_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(4, 4)"),
-  build_base_evolution_requirement = 0.5,
+  build_base_evolution_requirement = 0.45,
 
   sticker_name = "acid-sticker-big",
 
@@ -77,13 +86,14 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "a-b-d",
   tier = 4,
   explosion_resist = "high",
   tint = bobmods.enemies.huge_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(4.5, 5)"),
-  build_base_evolution_requirement = 0.6,
 
   sticker_name = "acid-sticker-huge",
   sticker_slow_player_movement = 0.4,
@@ -125,13 +135,14 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "a-b-e",
   tier = 5,
   explosion_resist = "high",
   tint = bobmods.enemies.giant_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(5, 6)"),
-  build_base_evolution_requirement = 0.7,
 
   sticker_name = "acid-sticker-giant",
   sticker_slow_player_movement = 0.35,
@@ -173,19 +184,20 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "a-b-f",
   tier = 6,
   explosion_resist = "high",
   tint = bobmods.enemies.titan_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(5.5, 7)"),
 
   sticker_name = "acid-sticker-titan",
   sticker_duration_in_ticks = 135,
   sticker_slow_player_movement = 0.325,
   sticker_slow_vehicle_speed = 0.325,
   sticker_slow_vehicle_friction = 1.7,
-  build_base_evolution_requirement = 0.8,
 
   attack_range = 50,
   attack_damage = 2,
@@ -222,13 +234,14 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "behemoth-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "a-b-g",
   tier = 7,
   explosion_resist = "high",
   tint = bobmods.enemies.behemoth_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(7, 8)"),
-  build_base_evolution_requirement = 0.9,
 
   sticker_name = "acid-sticker-behemoth",
   sticker_duration_in_ticks = 150,
@@ -271,13 +284,14 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/basic-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "a-b-h",
   tier = 8,
   explosion_resist = "high",
   tint = bobmods.enemies.leviathan_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.basic-enemy" },
-  autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(8.5, 9)"),
-  build_base_evolution_requirement = 0.95,
 
   sticker_name = "acid-sticker-leviathan",
   sticker_duration_in_ticks = 180,
@@ -318,15 +332,6 @@ bobmods.enemies.new_worm({
   },
 })
 
-if settings.startup["bobmods-enemies-biggersooner"].value == true then
-  data.raw.turret["big-worm-turret"].build_base_evolution_requirement = 0.45
-  data.raw.turret["bob-huge-worm-turret"].build_base_evolution_requirement = 0.55
-  data.raw.turret["bob-giant-worm-turret"].build_base_evolution_requirement = 0.65
-  data.raw.turret["bob-titan-worm-turret"].build_base_evolution_requirement = 0.75
-  data.raw.turret["behemoth-worm-turret"].build_base_evolution_requirement = 0.85
-  data.raw.turret["bob-leviathan-worm-turret"].build_base_evolution_requirement = 0.9
-end
-
 --Piercing
 local piercing_shot = function(attack_range)
   return {
@@ -347,6 +352,10 @@ end
 
 bobmods.enemies.new_worm({
   name = "bob-small-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "b-b-a",
   tier = 1,
   healing_per_tick = 0.08,
@@ -360,7 +369,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 30,
@@ -375,6 +383,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-medium-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "b-b-b",
   tier = 2,
   healing_per_tick = 0.08,
@@ -388,7 +400,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 35,
@@ -403,6 +414,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-big-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "b-b-c",
   tier = 3,
   healing_per_tick = 0.16,
@@ -416,7 +431,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 40,
@@ -431,6 +445,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "b-b-d",
   tier = 4,
   healing_per_tick = 0.32,
@@ -444,7 +462,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 45,
@@ -459,6 +476,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "b-b-e",
   tier = 5,
   healing_per_tick = 0.8,
@@ -472,7 +493,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 50,
@@ -487,6 +507,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "b-b-f",
   tier = 6,
   healing_per_tick = 1.6,
@@ -500,7 +524,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 55,
@@ -515,6 +538,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "b-b-g",
   tier = 7,
   healing_per_tick = 2.4,
@@ -528,7 +555,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 60,
@@ -543,6 +569,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-piercing-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/piercing-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "b-b-h",
   tier = 8,
   healing_per_tick = 4,
@@ -556,7 +586,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
 
   no_acid_stream = true,
   attack_range = 65,
@@ -572,6 +601,10 @@ bobmods.enemies.new_worm({
 --Electric
 bobmods.enemies.new_worm({
   name = "bob-small-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "c-b-a",
   tier = 1,
   laser_resist = "high",
@@ -581,7 +614,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -603,6 +635,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-medium-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "c-b-b",
   tier = 2,
   laser_resist = "high",
@@ -612,7 +648,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -634,6 +669,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-big-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "c-b-c",
   tier = 3,
   laser_resist = "high",
@@ -643,7 +682,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -665,6 +703,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "c-b-d",
   tier = 4,
   laser_resist = "high",
@@ -674,7 +716,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -696,6 +737,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "c-b-e",
   tier = 5,
   laser_resist = "high",
@@ -705,7 +750,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -727,6 +771,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "c-b-f",
   tier = 6,
   laser_resist = "high",
@@ -736,7 +784,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -758,6 +805,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "c-b-g",
   tier = 7,
   laser_resist = "high",
@@ -767,7 +818,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -789,6 +839,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-electric-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/electric-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "c-b-h",
   tier = 8,
   laser_resist = "high",
@@ -798,7 +852,6 @@ bobmods.enemies.new_worm({
   acid_resist = "low",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.electric_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.electric-enemy" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -876,6 +929,10 @@ end
 
 bobmods.enemies.new_worm({
   name = "bob-small-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "d-b-a",
   tier = 1,
   poison_resist = "high",
@@ -883,7 +940,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-small",
     dying_cluster_count = 2,
@@ -910,6 +966,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-medium-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "d-b-b",
   tier = 2,
   poison_resist = "high",
@@ -917,7 +977,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-medium",
     dying_cluster_count = 3,
@@ -944,6 +1003,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-big-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "d-b-c",
   tier = 3,
   poison_resist = "high",
@@ -951,7 +1014,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-big",
     dying_cluster_count = 4,
@@ -978,6 +1040,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "d-b-d",
   tier = 4,
   poison_resist = "high",
@@ -985,7 +1051,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-huge",
     dying_cluster_count = 5,
@@ -1012,6 +1077,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "d-b-e",
   tier = 5,
   poison_resist = "high",
@@ -1019,7 +1088,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-giant",
     dying_cluster_count = 6,
@@ -1046,6 +1114,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "d-b-f",
   tier = 6,
   poison_resist = "high",
@@ -1053,7 +1125,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-titan",
     dying_cluster_count = 7,
@@ -1080,6 +1151,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "d-b-g",
   tier = 7,
   poison_resist = "high",
@@ -1087,7 +1162,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-behemoth",
     dying_cluster_count = 8,
@@ -1114,6 +1188,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-acid-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/acid-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "d-b-h",
   tier = 8,
   poison_resist = "high",
@@ -1121,7 +1199,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.acid_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.acid-enemy" },
   dying_trigger_effect = acid_dying_action({
     dying_stream = "acid-acid-stream-worm-leviathan",
     dying_cluster_count = 10,
@@ -1232,6 +1309,10 @@ end
 
 bobmods.enemies.new_worm({
   name = "bob-small-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "e-b-a",
   tier = 1,
   max_health = 150,
@@ -1242,7 +1323,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 2,
@@ -1268,6 +1348,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-medium-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "e-b-b",
   tier = 2,
   max_health = 375,
@@ -1278,7 +1362,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 2.25,
@@ -1304,6 +1387,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-big-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "e-b-c",
   tier = 3,
   max_health = 900,
@@ -1314,7 +1401,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 2.5,
@@ -1340,6 +1426,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "e-b-d",
   tier = 4,
   max_health = 1600,
@@ -1350,7 +1440,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 2.75,
@@ -1376,6 +1465,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "e-b-e",
   tier = 5,
   max_health = 4000,
@@ -1386,7 +1479,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 3,
@@ -1412,6 +1504,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "e-b-f",
   tier = 6,
   max_health = 8000,
@@ -1422,7 +1518,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 3.25,
@@ -1448,6 +1543,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "e-b-g",
   tier = 7,
   max_health = 30000,
@@ -1458,7 +1557,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 3.5,
@@ -1484,6 +1582,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-explosive-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/explosive-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "e-b-h",
   tier = 8,
   max_health = 80000,
@@ -1494,7 +1596,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.explosive_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
 
   attack_action = expl_attack({
     attack_spit_radius = 4,
@@ -1634,6 +1735,10 @@ end
 
 bobmods.enemies.new_worm({
   name = "bob-small-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "f-b-a",
   tier = 1,
   healing_per_tick = 0.08,
@@ -1642,7 +1747,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-small" },
 
   attack_action = poison_attack_action(1.4, "enemy-poison-attack-smoke-small", "enemy-poison-defense-smoke-small", 6, -2),
@@ -1658,6 +1762,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-medium-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "f-b-b",
   tier = 2,
   healing_per_tick = 0.08,
@@ -1666,7 +1774,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-medium" },
 
   attack_action = poison_attack_action(1.6, "enemy-poison-attack-smoke-medium", "enemy-poison-defense-smoke-medium", 12, -4),
@@ -1682,6 +1789,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-big-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "f-b-c",
   tier = 3,
   healing_per_tick = 0.16,
@@ -1690,7 +1801,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-big" },
 
   attack_action = poison_attack_action(1.8, "enemy-poison-attack-smoke-big", "enemy-poison-defense-smoke-big", 18, -6),
@@ -1706,6 +1816,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "f-b-d",
   tier = 4,
   healing_per_tick = 0.32,
@@ -1714,7 +1828,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-huge" },
 
   attack_action = poison_attack_action(2, "enemy-poison-attack-smoke-huge", "enemy-poison-defense-smoke-huge", 24, -8),
@@ -1730,6 +1843,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "f-b-e",
   tier = 5,
   healing_per_tick = 0.8,
@@ -1738,7 +1855,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-giant" },
 
   attack_action = poison_attack_action(2.2, "enemy-poison-attack-smoke-giant", "enemy-poison-defense-smoke-giant", 30, -20),
@@ -1754,6 +1870,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "f-b-f",
   tier = 6,
   healing_per_tick = 1.6,
@@ -1762,7 +1882,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-titan" },
 
   attack_action = poison_attack_action(2.4, "enemy-poison-attack-smoke-titan", "enemy-poison-defense-smoke-titan", 36, -24),
@@ -1778,6 +1897,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "f-b-g",
   tier = 7,
   healing_per_tick = 2.4,
@@ -1786,7 +1909,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-behemoth" },
 
   attack_action = poison_attack_action(2.6, "enemy-poison-attack-smoke-behemoth", "enemy-poison-defense-smoke-behemoth", 42, -42),
@@ -1802,6 +1924,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-poison-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/poison-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "f-b-h",
   tier = 8,
   healing_per_tick = 4,
@@ -1810,7 +1936,6 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  factoriopedia_description = { "factoriopedia-description.poison-enemy" },
   localised_description = { "entity-description.poison-enemy-worm-leviathan" },
 
   attack_action = poison_attack_action(3, "enemy-poison-attack-smoke-leviathan", "enemy-poison-defense-smoke-leviathan", 60, -60),
@@ -1884,6 +2009,10 @@ end
 
 bobmods.enemies.new_worm({
   name = "bob-small-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/small-worm.png" },
+  },
   order = "g-b-a",
   tier = 1,
   physical_resist = "low",
@@ -1896,7 +2025,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.4,
@@ -1915,6 +2043,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-medium-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/medium-worm.png" },
+  },
   order = "g-b-b",
   tier = 2,
   physical_resist = "low",
@@ -1927,7 +2059,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.6,
@@ -1946,6 +2077,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-big-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/big-worm.png" },
+  },
   order = "g-b-c",
   tier = 3,
   physical_resist = "low",
@@ -1958,7 +2093,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.8,
@@ -1977,6 +2111,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-huge-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/huge-worm.png" },
+  },
   order = "g-b-d",
   tier = 4,
   physical_resist = "low",
@@ -1989,7 +2127,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2,
@@ -2008,6 +2145,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-giant-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/giant-worm.png" },
+  },
   order = "g-b-e",
   tier = 5,
   physical_resist = "low",
@@ -2020,7 +2161,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2.2,
@@ -2039,6 +2179,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-titan-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/titan-worm.png" },
+  },
   order = "g-b-f",
   tier = 6,
   physical_resist = "low",
@@ -2051,7 +2195,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2.4,
@@ -2070,6 +2213,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-behemoth-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/behemoth-worm.png" },
+  },
   order = "g-b-g",
   tier = 7,
   physical_resist = "low",
@@ -2082,7 +2229,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2.6,
@@ -2101,6 +2247,10 @@ bobmods.enemies.new_worm({
 
 bobmods.enemies.new_worm({
   name = "bob-leviathan-fire-worm-turret",
+  icons = {
+    { icon = "__bobenemies__/graphics/icons/fire-worm.png" },
+    { icon = "__bobenemies__/graphics/icons/leviathan-worm.png" },
+  },
   order = "g-b-h",
   tier = 8,
   physical_resist = "low",
@@ -2113,7 +2263,6 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.fire_worm_tint,
   flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
   trigger_target_mask = { "common", "ground-structure", },
-  factoriopedia_description = { "factoriopedia-description.fire-enemy" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 3,
