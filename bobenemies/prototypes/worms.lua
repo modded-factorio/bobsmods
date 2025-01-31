@@ -10,6 +10,7 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(0, 2)"),
+  build_base_evolution_requirement = 0,
 
   sticker_name = "acid-sticker-small",
 
