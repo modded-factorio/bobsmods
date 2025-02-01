@@ -112,6 +112,7 @@ bobmods.enemies.new_spawner({
   class = "biter",
   order = "a-a-c",
   tint = biter_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),--This is needed to make the game properly update the factoriopedia page with the enemy evolution factor, which displays the actual current adjusted health of the spawner, as well as providing a line on the spawn graph to show what the actual current spawns are.
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "bob-pierce", percent = 20 },
@@ -131,6 +132,7 @@ bobmods.enemies.new_spawner({
   class = "spitter",
   order = "a-a-d",
   tint = spitter_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "explosion", decrease = 20, percent = 50 },
@@ -151,6 +153,7 @@ bobmods.enemies.new_spawner({
   order = "b-a-c",
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   healing_per_tick = 0.08,
   resistances = {
     { type = "physical", decrease = 8, percent = 60 },
@@ -174,6 +177,7 @@ bobmods.enemies.new_spawner({
   order = "b-a-d",
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.piercing_worm_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   healing_per_tick = 0.08,
   resistances = {
     { type = "physical", decrease = 8, percent = 60 },
@@ -196,6 +200,7 @@ bobmods.enemies.new_spawner({
   order = "c-a-c",
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.electric_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "bob-pierce", percent = 20 },
@@ -218,6 +223,7 @@ bobmods.enemies.new_spawner({
   order = "c-a-d",
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.electric_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "explosion", decrease = 5, percent = 32 },
@@ -268,6 +274,7 @@ bobmods.enemies.new_spawner({
   order = "d-a-c",
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.acid_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "bob-pierce", percent = 20 },
@@ -290,6 +297,7 @@ bobmods.enemies.new_spawner({
   order = "d-a-d",
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.acid_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "explosion", decrease = 5, percent = 32 },
@@ -312,6 +320,7 @@ bobmods.enemies.new_spawner({
   max_health = 400,
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.explosive_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "bob-pierce", percent = 20 },
@@ -334,6 +343,7 @@ bobmods.enemies.new_spawner({
   max_health = 400,
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.explosive_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "explosion", decrease = 50, percent = 60 },
@@ -359,6 +369,7 @@ bobmods.enemies.new_spawner({
   order = "f-a-c",
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.poison_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   healing_per_tick = 0.08,
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
@@ -381,6 +392,7 @@ bobmods.enemies.new_spawner({
   order = "f-a-d",
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.poison_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   healing_per_tick = 0.08,
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
@@ -402,6 +414,7 @@ bobmods.enemies.new_spawner({
   order = "g-a-c",
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.fire_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   trigger_target_mask = { "common", "ground-structure" },
   resistances = {
     { type = "physical", decrease = 2, percent = 30 },
@@ -422,6 +435,7 @@ bobmods.enemies.new_spawner({
   order = "g-a-d",
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.fire_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   trigger_target_mask = { "common", "ground-structure" },
   resistances = {
     { type = "physical", decrease = 2, percent = 30 },
@@ -492,6 +506,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     class = "super",
     order = "a-a-e",
     tint = bobmods.enemies.super_spawner_tint,
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     resistances = {
       { type = "physical", decrease = 10, percent = 50 },
       { type = "bob-pierce", percent = 20 },
@@ -515,6 +530,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     order = "b-a-e",
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.piercing_worm_tint,
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     healing_per_tick = 2,
     resistances = {
       { type = "physical", decrease = 20, percent = 75 },
@@ -536,6 +552,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     order = "c-a-e",
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.electric_spawner_tint,
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     resistances = {
       { type = "physical", decrease = 10, percent = 50 },
       { type = "bob-pierce", percent = 20 },
@@ -572,6 +589,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     order = "d-a-e",
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.acid_spawner_tint,
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     resistances = {
       { type = "physical", decrease = 10, percent = 50 },
       { type = "bob-pierce", percent = 20 },
@@ -593,6 +611,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     order = "e-a-e",
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.explosive_spawner_tint,
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     resistances = {
       { type = "physical", decrease = 10, percent = 50 },
       { type = "bob-pierce", percent = 20 },
@@ -618,6 +637,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     order = "f-a-e",
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.poison_spawner_tint,
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     healing_per_tick = 2,
     resistances = {
       { type = "physical", decrease = 10, percent = 50 },
@@ -642,6 +662,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.fire_spawner_tint,
     trigger_target_mask = { "common", "ground-structure" },
+    autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
     resistances = {
       { type = "physical", decrease = 5, percent = 40 },
       { type = "bob-pierce", percent = 10 },
