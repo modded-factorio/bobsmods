@@ -222,7 +222,7 @@ data:extend({
     duration_in_ticks = 15 * 60,
     damage_interval = 15,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 2, type = "poison" },
+    damage_per_tick = { amount = 1.5, type = "poison" },
   },
 
   {
