@@ -2523,7 +2523,7 @@ bobmods.enemies.new_biter({
     range = 0.5,
     cooldown = 35,
     cooldown_deviation = 0.15,
-    damage_modifier = 0.7,
+    damage_modifier = 0.25,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2534,11 +2534,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 8, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 4, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2577,7 +2577,7 @@ bobmods.enemies.new_biter({
     range = 1,
     cooldown = 35,
     cooldown_deviation = 0.15,
-    damage_modifier = 1.5,
+    damage_modifier = 0.5,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2588,11 +2588,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 12, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 4, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2631,7 +2631,7 @@ bobmods.enemies.new_biter({
     range = 1.5,
     cooldown = 35,
     cooldown_deviation = 0.15,
-    damage_modifier = 3,
+    damage_modifier = 1,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2642,11 +2642,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 9, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 3, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2685,7 +2685,7 @@ bobmods.enemies.new_biter({
     range = 1.75,
     cooldown = 35,
     cooldown_deviation = 0.15,
-    damage_modifier = 5,
+    damage_modifier = 2,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2696,11 +2696,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 9, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 3, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2739,7 +2739,7 @@ bobmods.enemies.new_biter({
     range = 2,
     cooldown = 35,
     cooldown_deviation = 0.15,
-    damage_modifier = 7.5,
+    damage_modifier = 4,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2750,11 +2750,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 9, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 3, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2793,7 +2793,7 @@ bobmods.enemies.new_biter({
     range = 2.25,
     cooldown = 35,
     cooldown_deviation = 0.15,
-    damage_modifier = 10,
+    damage_modifier = 6,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2804,11 +2804,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 9, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 3, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2847,7 +2847,7 @@ bobmods.enemies.new_biter({
     range = 2.5,
     cooldown = 40,
     cooldown_deviation = 0.15,
-    damage_modifier = 15,
+    damage_modifier = 9,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2858,11 +2858,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 9, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 3, type = "poison" },
             },
             {
               type = "create-sticker",
@@ -2901,7 +2901,7 @@ bobmods.enemies.new_biter({
     range = 3,
     cooldown = 45,
     cooldown_deviation = 0.15,
-    damage_modifier = 24,
+    damage_modifier = 14,
     ammo_category = "melee",
     ammo_type = {
       target_type = "entity",
@@ -2912,11 +2912,11 @@ bobmods.enemies.new_biter({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 6, type = "physical" },
+              damage = { amount = 9, type = "physical" },
             },
             {
               type = "damage",
-              damage = { amount = 2, type = "poison" },
+              damage = { amount = 3, type = "poison" },
             },
             {
               type = "create-sticker",
