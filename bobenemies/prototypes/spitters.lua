@@ -1891,10 +1891,11 @@ end
 
 local poison_attack_action = function(radius, smoke_name, damage, healing)
   local attack_action = basic_stream_attack({
-    attack_damage = 8,
+    attack_damage = 6,
     attack_damage_type = "poison",
     attack_spit_radius = radius,
     sticker_name = "enemy-poison-sticker",
+    show_sticker_in_attack = true,
   })
 
   table.insert(attack_action[1].action_delivery.target_effects, {
@@ -2011,7 +2012,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1, "enemy-poison-attack-smoke-small", 6, -2),
   attack_range = 13,
-  attack_damage_modifier = 1.2,
+  attack_damage_modifier = 0.6,
   attack_stream_name = "poison-stream-spitter-small",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2039,7 +2040,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1.1, "enemy-poison-attack-smoke-medium", 12, -4),
   attack_range = 14,
-  attack_damage_modifier = 2.4,
+  attack_damage_modifier = 1.2,
   attack_stream_name = "poison-stream-spitter-medium",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2067,7 +2068,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1.15, "enemy-poison-attack-smoke-big", 18, -6),
   attack_range = 15,
-  attack_damage_modifier = 3.6,
+  attack_damage_modifier = 2.4,
   attack_stream_name = "poison-stream-spitter-big",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2095,7 +2096,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1.2, "enemy-poison-attack-smoke-huge", 24, -8),
   attack_range = 16,
-  attack_damage_modifier = 4.8,
+  attack_damage_modifier = 4,
   attack_stream_name = "poison-stream-spitter-huge",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2151,7 +2152,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1.5, "enemy-poison-attack-smoke-titan", 36, -24),
   attack_range = 18,
-  attack_damage_modifier = 7.2,
+  attack_damage_modifier = 8,
   attack_stream_name = "poison-stream-spitter-titan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2179,7 +2180,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1.65, "enemy-poison-attack-smoke-behemoth", 42, -42),
   attack_range = 19,
-  attack_damage_modifier = 8.4,
+  attack_damage_modifier = 11,
   attack_stream_name = "poison-stream-spitter-behemoth",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2207,7 +2208,7 @@ bobmods.enemies.new_spitter({
 
   attack_action = poison_attack_action(1.75, "enemy-poison-attack-smoke-leviathan", 60, -60),
   attack_range = 20,
-  attack_damage_modifier = 12,
+  attack_damage_modifier = 16,
   attack_stream_name = "poison-stream-spitter-leviathan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2223,6 +2224,7 @@ local fire_attack_action = function(inputs)
     attack_damage = inputs.attack_damage,
     attack_damage_type = "fire",
     sticker_name = "enemy-fire-sticker",
+    show_sticker_in_attack = true,
   })
 
   table.insert(attack_action[1].action_delivery.target_effects, {
@@ -2244,7 +2246,7 @@ local fire_attack_action = function(inputs)
           type = "create-fire",
           entity_name = "enemy-fire",
           tile_collision_mask = {layers={water_tile=true}},
-          show_in_tooltip = true,
+          show_in_tooltip = false,
         }
       },
     })
