@@ -593,7 +593,7 @@ function basic_stream_attack(inputs, scale_value)
     table.insert(params[2].action_delivery.target_effects, 1, {
       type = "create-sticker",
       sticker = inputs.sticker_name,
-      show_in_tooltip = true,
+      show_in_tooltip = inputs.show_sticker_in_attack or false,
     })
     generate_sticker_prototype(inputs, inputs.sticker_name)
   end
@@ -760,7 +760,7 @@ function generate_fire_prototype(inputs, scale_value)
             {
               type = "damage",
               damage = { amount = final_fire_structure_damage_per_tick, type = inputs.fire_damage_type or "acid" },
-              show_in_tooltip = true,
+              show_in_tooltip = false,
             }
           }
         }
@@ -988,7 +988,7 @@ function generate_fire_prototype(inputs, scale_value)
     table.insert(fire_prototype.on_damage_tick_effect[1].action_delivery.target_effects, 1, {
       type = "create-sticker",
       sticker = inputs.fire_sticker_name or inputs.sticker_name,
-      show_in_tooltip = true,
+      show_in_tooltip = inputs.show_sticker_in_fire or true,
     })
     generate_sticker_prototype(inputs, inputs.fire_sticker_name or inputs.sticker_name)
   end
