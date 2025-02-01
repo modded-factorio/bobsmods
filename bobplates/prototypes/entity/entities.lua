@@ -986,7 +986,7 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.25 } } },
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 0 } } },
         volume = 200,
       },
     },
