@@ -301,6 +301,7 @@ function bobmods.enemies.pick_random_faction()
     local_poison_faction = math.max(0, (faction_range - (4 * local_poison_faction)))
     local_fire_faction = math.max(0, (faction_range - (4 * local_fire_faction)))
     faction_range = local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction + local_explosive_faction + local_poison_faction + local_fire_faction
+    if faction_range == 0 then faction_range = 1 end
 
     local faction_random = math.random(faction_range)
     if faction_random <= local_basic_faction then
@@ -315,8 +316,10 @@ function bobmods.enemies.pick_random_faction()
       final_faction = "explosive"
     elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction + local_explosive_faction + local_poison_faction) then
       final_faction = "poison"
-    else
+    elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction + local_explosive_faction + local_poison_faction + local_fire_faction) then
       final_faction = "fire"
+    else
+      final_faction = "basic"
     end
 
   elseif storage.bobmods.enemies.nauvis_faction_unlock_table[5] then
@@ -334,6 +337,7 @@ function bobmods.enemies.pick_random_faction()
     local_acid_faction = math.max(0, (faction_range - (3 * local_acid_faction)))
     local_explosive_faction = math.max(0, (faction_range - (3 * local_explosive_faction)))
     faction_range = local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction + local_explosive_faction
+    if faction_range == 0 then faction_range = 1 end
 
     local faction_random = math.random(faction_range)
     if faction_random <= local_basic_faction then
@@ -344,8 +348,10 @@ function bobmods.enemies.pick_random_faction()
       final_faction = "electric"
     elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction) then
       final_faction = "acid"
-    else
+    elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction + local_explosive_faction) then
       final_faction = "explosive"
+    else
+      final_faction = "basic"
     end
 
   elseif storage.bobmods.enemies.nauvis_faction_unlock_table[3] then
@@ -359,14 +365,17 @@ function bobmods.enemies.pick_random_faction()
     local_piercing_faction = math.max(0, (faction_range - (2 * local_piercing_faction)))
     local_electric_faction = math.max(0, (faction_range - (2 * local_electric_faction)))
     faction_range = local_basic_faction + local_piercing_faction + local_electric_faction
+    if faction_range == 0 then faction_range = 1 end
 
     local faction_random = math.random(faction_range)
     if faction_random <= local_basic_faction then
       final_faction = "basic"
     elseif faction_random <= (local_basic_faction + local_piercing_faction) then
       final_faction = "piercing"
-    else
+    elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction)
       final_faction = "electric"
+    else
+      final_faction = "basic"
     end
 
   else
