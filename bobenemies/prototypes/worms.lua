@@ -1635,6 +1635,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
     attack_damage_type = "poison",
     attack_spit_radius = radius,
     sticker_name = "enemy-poison-sticker",
+    show_sticker_in_attack = true,
   })
 
   table.insert(attack_action[1].action_delivery.target_effects, {
@@ -1752,7 +1753,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(1.4, "enemy-poison-attack-smoke-small", "enemy-poison-defense-smoke-small", 6, -2),
   attack_range = 25,
-  attack_damage_modifier = 1.2,
+  attack_damage_modifier = 0.6,
   attack_stream_name = "poison-stream-worm-small",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1779,7 +1780,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(1.6, "enemy-poison-attack-smoke-medium", "enemy-poison-defense-smoke-medium", 12, -4),
   attack_range = 30,
-  attack_damage_modifier = 2.4,
+  attack_damage_modifier = 1.2,
   attack_stream_name = "poison-stream-worm-medium",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1806,7 +1807,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(1.8, "enemy-poison-attack-smoke-big", "enemy-poison-defense-smoke-big", 18, -6),
   attack_range = 35,
-  attack_damage_modifier = 3.6,
+  attack_damage_modifier = 2.4,
   attack_stream_name = "poison-stream-worm-big",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1833,7 +1834,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(2, "enemy-poison-attack-smoke-huge", "enemy-poison-defense-smoke-huge", 24, -8),
   attack_range = 40,
-  attack_damage_modifier = 4.8,
+  attack_damage_modifier = 4,
   attack_stream_name = "poison-stream-worm-huge",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1887,7 +1888,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(2.4, "enemy-poison-attack-smoke-titan", "enemy-poison-defense-smoke-titan", 36, -24),
   attack_range = 50,
-  attack_damage_modifier = 7.2,
+  attack_damage_modifier = 8,
   attack_stream_name = "poison-stream-worm-titan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1914,7 +1915,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(2.6, "enemy-poison-attack-smoke-behemoth", "enemy-poison-defense-smoke-behemoth", 42, -42),
   attack_range = 55,
-  attack_damage_modifier = 8.4,
+  attack_damage_modifier = 11,
   attack_stream_name = "poison-stream-worm-behemoth",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1941,7 +1942,7 @@ bobmods.enemies.new_worm({
 
   attack_action = poison_attack_action(3, "enemy-poison-attack-smoke-leviathan", "enemy-poison-defense-smoke-leviathan", 60, -60),
   attack_range = 60,
-  attack_damage_modifier = 12,
+  attack_damage_modifier = 16,
   attack_stream_name = "poison-stream-worm-leviathan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -1957,6 +1958,7 @@ local fire_attack_action = function(inputs)
     attack_damage = inputs.attack_damage,
     attack_damage_type = "fire",
     sticker_name = "enemy-fire-sticker",
+    show_sticker_in_attack = true,
   })
 
   table.insert(attack_action[1].action_delivery.target_effects, {
