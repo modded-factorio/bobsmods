@@ -928,6 +928,65 @@ local acid_dying_action = function(inputs)
   }
 end
 
+local acid_reaction = function(inputs)
+  return {
+    {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "enemy-damaged-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 0 } },
+    },
+    {
+      type = "nested-result",
+      damage_type_filters = { whitelist = true, types = "impact" },
+      action = {
+        {
+          type = "area",
+          radius = 3,
+          trigger_target_mask = { "ground-unit" },
+          force = "not-same",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = inputs.damage, type = "acid" },
+              },
+              {
+                type = "create-fire",
+                entity_name = inputs.fire_name,
+                tile_collision_mask = {layers={water_tile=true}},
+              },
+            },
+          },
+        },
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "play-sound",
+                sound = {
+                  category = "enemy",
+                  variations = {
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                  },
+                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
+                }
+              }
+            },
+          },
+        },
+      },
+    },
+  }
+end
+
 bobmods.enemies.new_worm({
   name = "bob-small-acid-worm-turret",
   icons = {
@@ -947,6 +1006,10 @@ bobmods.enemies.new_worm({
     dying_distance = 4,
     dying_distance_deviation = 1,
     dying_probability = 0.1,
+  }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 4,
+    fire_name = "acid-acid-splash-fire-small",
   }),
 
   sticker_name = "enemy-acid-sticker-small",
@@ -985,6 +1048,10 @@ bobmods.enemies.new_worm({
     dying_distance_deviation = 1.1,
     dying_probability = 0.2,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 8,
+    fire_name = "acid-acid-splash-fire-medium",
+  }),
 
   sticker_name = "enemy-acid-sticker-medium",
 
@@ -1021,6 +1088,10 @@ bobmods.enemies.new_worm({
     dying_distance = 5.25,
     dying_distance_deviation = 1.2,
     dying_probability = 0.3,
+  }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 10,
+    fire_name = "acid-acid-splash-fire-big",
   }),
 
   sticker_name = "enemy-acid-sticker-big",
@@ -1059,6 +1130,10 @@ bobmods.enemies.new_worm({
     dying_distance_deviation = 1.3,
     dying_probability = 0.4,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 12,
+    fire_name = "acid-acid-splash-fire-huge",
+  }),
 
   sticker_name = "enemy-acid-sticker-huge",
 
@@ -1095,6 +1170,10 @@ bobmods.enemies.new_worm({
     dying_distance = 5.8,
     dying_distance_deviation = 1.4,
     dying_probability = 0.45,
+  }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 14,
+    fire_name = "acid-acid-splash-fire-giant",
   }),
 
   sticker_name = "enemy-acid-sticker-giant",
@@ -1133,6 +1212,10 @@ bobmods.enemies.new_worm({
     dying_distance_deviation = 1.5,
     dying_probability = 0.5,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 16,
+    fire_name = "acid-acid-splash-fire-titan",
+  }),
 
   sticker_name = "enemy-acid-sticker-titan",
 
@@ -1170,6 +1253,10 @@ bobmods.enemies.new_worm({
     dying_distance_deviation = 1.6,
     dying_probability = 0.55,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 18,
+    fire_name = "acid-acid-splash-fire-behemoth",
+  }),
 
   sticker_name = "enemy-acid-sticker-behemoth",
 
@@ -1206,6 +1293,10 @@ bobmods.enemies.new_worm({
     dying_distance = 7,
     dying_distance_deviation = 1.75,
     dying_probability = 0.6,
+  }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 25,
+    fire_name = "acid-acid-splash-fire-leviathan",
   }),
 
   sticker_name = "enemy-acid-sticker-leviathan",
