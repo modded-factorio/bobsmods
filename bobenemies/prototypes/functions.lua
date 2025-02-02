@@ -79,21 +79,21 @@ local biter_resistances_down = {
 }
 
 local biter_stats = {
-  { max_health = 15, healing_per_tick = 0.01, movement_speed = 0.2, scale = 0.5, distance_per_frame = 0.125, absorptions_to_join_attack = { pollution = 4 }, dying_sound = sounds.biter_dying(0.5), working_sound = sounds.biter_calls(0.35, 0.7), walking_sound = sounds.biter_walk(0, 0.3), attacking_sound = sounds.biter_roars(0.35), },
+  { max_health = 15, healing_per_tick = 0.01, movement_speed = 0.2, scale = 0.5, distance_per_frame = 0.125, absorptions_to_join_attack = { pollution = 4 }, dying_sound = sounds.biter_dying(0.5), dying_explosion = "small-biter-die", working_sound = sounds.biter_calls(0.35, 0.7), walking_sound = sounds.biter_walk(0, 0.3), attacking_sound = sounds.biter_roars(0.35), },
 
-  { max_health = 75, healing_per_tick = 0.01, movement_speed = 0.24, scale = 0.7, distance_per_frame = 0.188, absorptions_to_join_attack = { pollution = 20 }, dying_sound = sounds.biter_dying(0.6), working_sound = sounds.biter_calls(0.4, 0.8), walking_sound = sounds.biter_walk(0.05, 0.35), attacking_sound = sounds.biter_roars(0.4), },
+  { max_health = 75, healing_per_tick = 0.01, movement_speed = 0.24, scale = 0.7, distance_per_frame = 0.188, absorptions_to_join_attack = { pollution = 20 }, dying_sound = sounds.biter_dying(0.6), dying_explosion = "medium-biter-die", working_sound = sounds.biter_calls(0.4, 0.8), walking_sound = sounds.biter_walk(0.05, 0.35), attacking_sound = sounds.biter_roars(0.4), },
 
-  { max_health = 250, healing_per_tick = 0.02, movement_speed = 0.26, scale = 1, distance_per_frame = 0.3, absorptions_to_join_attack = { pollution = 40 }, spawning_time_modifier = 3, dying_sound = sounds.biter_dying(0.7), working_sound = sounds.biter_calls(0.45, 0.95), walking_sound = sounds.biter_walk_big(0.37, 0.67), attacking_sound = sounds.biter_roars_mid(0.75), },
+  { max_health = 250, healing_per_tick = 0.02, movement_speed = 0.26, scale = 1, distance_per_frame = 0.3, absorptions_to_join_attack = { pollution = 40 }, spawning_time_modifier = 3, dying_sound = sounds.biter_dying(0.7), dying_explosion = "medium-biter-die", working_sound = sounds.biter_calls(0.45, 0.95), walking_sound = sounds.biter_walk_big(0.37, 0.67), attacking_sound = sounds.biter_roars_mid(0.75), },
 
-  { max_health = 750, healing_per_tick = 0.04, movement_speed = 0.27, scale = 1.25, distance_per_frame = 0.375, absorptions_to_join_attack = { pollution = 45 }, spawning_time_modifier = 4, dying_sound = sounds.biter_dying(0.75), working_sound = sounds.biter_calls_big(0.4, 0.7), walking_sound = sounds.biter_walk_big(0.5, 0.6), attacking_sound = sounds.biter_roars_mid(0.8), },
+  { max_health = 750, healing_per_tick = 0.04, movement_speed = 0.27, scale = 1.25, distance_per_frame = 0.375, absorptions_to_join_attack = { pollution = 45 }, spawning_time_modifier = 4, dying_sound = sounds.biter_dying(0.75), dying_explosion = "big-biter-die", working_sound = sounds.biter_calls_big(0.4, 0.7), walking_sound = sounds.biter_walk_big(0.5, 0.6), attacking_sound = sounds.biter_roars_mid(0.8), },
 
-  { max_health = 2400, healing_per_tick = 0.1, movement_speed = 0.28, scale = 1.5, distance_per_frame = 0.45, absorptions_to_join_attack = { pollution = 50 }, spawning_time_modifier = 5, dying_sound = sounds.biter_dying_big(0.5), working_sound = sounds.biter_calls_big(0.45, 0.75), walking_sound = sounds.biter_walk_big(0.6, 0.7), attacking_sound = sounds.biter_roars_big(0.4), },
+  { max_health = 2400, healing_per_tick = 0.1, movement_speed = 0.28, scale = 1.5, distance_per_frame = 0.45, absorptions_to_join_attack = { pollution = 50 }, spawning_time_modifier = 5, dying_sound = sounds.biter_dying_big(0.5), dying_explosion = "big-biter-die", working_sound = sounds.biter_calls_big(0.45, 0.75), walking_sound = sounds.biter_walk_big(0.6, 0.7), attacking_sound = sounds.biter_roars_big(0.4), },
 
-  { max_health = 8000, healing_per_tick = 0.2, movement_speed = 0.29, scale = 1.75, distance_per_frame = 0.525, absorptions_to_join_attack = { pollution = 55 }, spawning_time_modifier = 6, dying_sound = sounds.biter_dying_big(0.55), working_sound = sounds.biter_calls_big(0.5, 0.8), walking_sound = sounds.biter_walk_big(0.7, 0.8), attacking_sound = sounds.biter_roars_big(0.45), },
+  { max_health = 8000, healing_per_tick = 0.2, movement_speed = 0.29, scale = 1.75, distance_per_frame = 0.525, absorptions_to_join_attack = { pollution = 55 }, spawning_time_modifier = 6, dying_sound = sounds.biter_dying_big(0.55), dying_explosion = "big-biter-die", working_sound = sounds.biter_calls_big(0.5, 0.8), walking_sound = sounds.biter_walk_big(0.7, 0.8), attacking_sound = sounds.biter_roars_big(0.45), },
 
-  { max_health = 25000, healing_per_tick = 0.3, movement_speed = 0.3, scale = 2, distance_per_frame = 0.6, absorptions_to_join_attack = { pollution = 60 }, spawning_time_modifier = 8, dying_sound = sounds.biter_dying_big(0.6), working_sound = sounds.biter_calls_behemoth(0.5, 0.9), walking_sound = sounds.biter_walk_big(0.75, 0.9), attacking_sound = sounds.biter_roars_behemoth(0.7), },
+  { max_health = 25000, healing_per_tick = 0.3, movement_speed = 0.3, scale = 2, distance_per_frame = 0.6, absorptions_to_join_attack = { pollution = 60 }, spawning_time_modifier = 8, dying_sound = sounds.biter_dying_big(0.6), dying_explosion = "behemoth-biter-die", working_sound = sounds.biter_calls_behemoth(0.5, 0.9), walking_sound = sounds.biter_walk_big(0.75, 0.9), attacking_sound = sounds.biter_roars_behemoth(0.7), },
 
-  { max_health = 80000, healing_per_tick = 0.5, movement_speed = 0.32, scale = 2.5, distance_per_frame = 0.75, absorptions_to_join_attack = { pollution = 80 }, spawning_time_modifier = 12, dying_sound = sounds.biter_dying_big(0.75), working_sound = sounds.biter_calls_behemoth(0.6, 1), walking_sound = sounds.biter_walk_big(0.85, 1), attacking_sound = sounds.biter_roars_behemoth(0.8), },
+  { max_health = 80000, healing_per_tick = 0.5, movement_speed = 0.32, scale = 2.5, distance_per_frame = 0.75, absorptions_to_join_attack = { pollution = 80 }, spawning_time_modifier = 12, dying_sound = sounds.biter_dying_big(0.75), dying_explosion = "behemoth-biter-die", working_sound = sounds.biter_calls_behemoth(0.6, 1), walking_sound = sounds.biter_walk_big(0.85, 1), attacking_sound = sounds.biter_roars_behemoth(0.8), },
 }
 
 if health_increase == true then
@@ -161,7 +161,7 @@ function bobmods.enemies.new_biter(inputs)
     distance_per_frame = inputs.distance_per_frame or biter_stats[tier].distance_per_frame,
     absorptions_to_join_attack = inputs.absorptions_to_join_attack or biter_stats[tier].absorptions_to_join_attack,
     corpse = inputs.name .. "-corpse",
-    dying_explosion = inputs.dying_explosion or "blood-explosion-big",
+    dying_explosion = inputs.dying_explosion or biter_stats[tier].dying_explosion,
     dying_trigger_effect = inputs.dying_trigger_effect,
     loot = {},
     working_sound = biter_stats[tier].working_sound,
@@ -256,21 +256,21 @@ local spitter_resistances_down = {
 }
 
 local spitter_stats = {
-  { max_health = 10, healing_per_tick = 0.01, movement_speed = 0.185, scale = 0.5, distance_per_frame = 0.04, absorptions_to_join_attack = { pollution = 4 }, dying_sound = sounds.spitter_dying(0.45), working_sound = sounds.spitter_calls(0.1, 0.44), walking_sound = sounds.spitter_walk(0, 0.3), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start", 4, 0.27), },
+  { max_health = 10, healing_per_tick = 0.01, movement_speed = 0.185, scale = 0.5, distance_per_frame = 0.04, absorptions_to_join_attack = { pollution = 4 }, dying_sound = sounds.spitter_dying(0.45), dying_explosion = "small-spitter-die", working_sound = sounds.spitter_calls(0.1, 0.44), walking_sound = sounds.spitter_walk(0, 0.3), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start", 4, 0.27), },
 
-  { max_health = 50, healing_per_tick = 0.01, movement_speed = 0.165, scale = 0.7, distance_per_frame = 0.055, absorptions_to_join_attack = { pollution = 12 }, dying_sound = sounds.spitter_dying_mid(0.65), working_sound = sounds.spitter_calls_med(0.2, 0.53), walking_sound = sounds.spitter_walk(0.1, 0.4), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-mid", 5, 0.33), },
+  { max_health = 50, healing_per_tick = 0.01, movement_speed = 0.165, scale = 0.7, distance_per_frame = 0.055, absorptions_to_join_attack = { pollution = 12 }, dying_sound = sounds.spitter_dying_mid(0.65), dying_explosion = "medium-spitter-die", working_sound = sounds.spitter_calls_med(0.2, 0.53), walking_sound = sounds.spitter_walk(0.1, 0.4), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-mid", 5, 0.33), },
 
-  { max_health = 150, healing_per_tick = 0.02, movement_speed = 0.17, scale = 1, distance_per_frame = 0.07, absorptions_to_join_attack = { pollution = 30 }, spawning_time_modifier = 3, dying_sound = sounds.spitter_dying_big(0.67), working_sound = sounds.spitter_calls_med(0.24, 0.57), walking_sound = sounds.spitter_walk_big(0.2, 0.5), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-mid", 5, 0.38), },
+  { max_health = 150, healing_per_tick = 0.02, movement_speed = 0.17, scale = 1, distance_per_frame = 0.07, absorptions_to_join_attack = { pollution = 30 }, spawning_time_modifier = 3, dying_sound = sounds.spitter_dying_big(0.67), dying_explosion = "medium-spitter-die", working_sound = sounds.spitter_calls_med(0.24, 0.57), walking_sound = sounds.spitter_walk_big(0.2, 0.5), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-mid", 5, 0.38), },
 
-  { max_health = 500, healing_per_tick = 0.04, movement_speed = 0.177, scale = 1.25, distance_per_frame = 0.088, absorptions_to_join_attack = { pollution = 35 }, spawning_time_modifier = 4, dying_sound = sounds.spitter_dying_big(0.71), working_sound = sounds.spitter_calls_big(0.36, 0.56), walking_sound = sounds.spitter_walk_big(0.23, 0.53), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.49), },
+  { max_health = 500, healing_per_tick = 0.04, movement_speed = 0.177, scale = 1.25, distance_per_frame = 0.088, absorptions_to_join_attack = { pollution = 35 }, spawning_time_modifier = 4, dying_sound = sounds.spitter_dying_big(0.71), dying_explosion = "big-spitter-die", working_sound = sounds.spitter_calls_big(0.36, 0.56), walking_sound = sounds.spitter_walk_big(0.23, 0.53), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.49), },
 
-  { max_health = 1600, healing_per_tick = 0.1, movement_speed = 0.185, scale = 1.5, distance_per_frame = 0.105, absorptions_to_join_attack = { pollution = 40 }, spawning_time_modifier = 5, dying_sound = sounds.spitter_dying_big(0.75), working_sound = sounds.spitter_calls_big(0.4, 0.6), walking_sound = sounds.spitter_walk_big(0.26, 0.56), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.53), },
+  { max_health = 1600, healing_per_tick = 0.1, movement_speed = 0.185, scale = 1.5, distance_per_frame = 0.105, absorptions_to_join_attack = { pollution = 40 }, spawning_time_modifier = 5, dying_sound = sounds.spitter_dying_big(0.75), dying_explosion = "big-spitter-die", working_sound = sounds.spitter_calls_big(0.4, 0.6), walking_sound = sounds.spitter_walk_big(0.26, 0.56), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.53), },
 
-  { max_health = 6000, healing_per_tick = 0.2, movement_speed = 0.19, scale = 1.75, distance_per_frame = 0.123, absorptions_to_join_attack = { pollution = 45 }, spawning_time_modifier = 6, dying_sound = sounds.spitter_dying_behemoth(0.70), working_sound = sounds.spitter_calls_big(0.45, 0.65), walking_sound = sounds.spitter_walk_big(0.3, 0.6), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.57), },
+  { max_health = 6000, healing_per_tick = 0.2, movement_speed = 0.19, scale = 1.75, distance_per_frame = 0.123, absorptions_to_join_attack = { pollution = 45 }, spawning_time_modifier = 6, dying_sound = sounds.spitter_dying_behemoth(0.70), dying_explosion = "big-spitter-die", working_sound = sounds.spitter_calls_big(0.45, 0.65), walking_sound = sounds.spitter_walk_big(0.3, 0.6), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-big", 10, 0.57), },
 
-  { max_health = 16000, healing_per_tick = 0.3, movement_speed = 0.2, scale = 2, distance_per_frame = 0.14, absorptions_to_join_attack = { pollution = 50 }, spawning_time_modifier = 8, dying_sound = sounds.spitter_dying_behemoth(0.77), working_sound = sounds.spitter_calls_big(0.5, 0.7), walking_sound = sounds.spitter_walk_big(0.33, 0.63), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.47), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.46) },
+  { max_health = 16000, healing_per_tick = 0.3, movement_speed = 0.2, scale = 2, distance_per_frame = 0.14, absorptions_to_join_attack = { pollution = 50 }, spawning_time_modifier = 8, dying_sound = sounds.spitter_dying_behemoth(0.77), dying_explosion = "behemoth-spitter-die", working_sound = sounds.spitter_calls_big(0.5, 0.7), walking_sound = sounds.spitter_walk_big(0.33, 0.63), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.47), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.46) },
 
-  { max_health = 60000, healing_per_tick = 5, movement_speed = 0.22, scale = 2.5, distance_per_frame = 0.175, absorptions_to_join_attack = { pollution = 65 }, spawning_time_modifier = 12, dying_sound = sounds.spitter_dying_behemoth(0.85), working_sound = sounds.spitter_calls_big(0.55, 0.75), walking_sound = sounds.spitter_walk_big(0.38, 0.68), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.53), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.5), },
+  { max_health = 60000, healing_per_tick = 5, movement_speed = 0.22, scale = 2.5, distance_per_frame = 0.175, absorptions_to_join_attack = { pollution = 65 }, spawning_time_modifier = 12, dying_sound = sounds.spitter_dying_behemoth(0.85), dying_explosion = "behemoth-spitter-die", working_sound = sounds.spitter_calls_big(0.55, 0.75), walking_sound = sounds.spitter_walk_big(0.38, 0.68), attacking_sound = sound_variations("__base__/sound/creatures/spitter-spit-start-behemoth", 8, 0.53), attacking_sound_end = sound_variations("__base__/sound/creatures/spitter-spit-end-big", 5, 0.5), },
 }
 
 if health_increase == true then
@@ -339,7 +339,7 @@ function bobmods.enemies.new_spitter(inputs)
     distance_per_frame = inputs.distance_per_frame or spitter_stats[tier].distance_per_frame,
     absorptions_to_join_attack = inputs.absorptions_to_join_attack or spitter_stats[tier].absorptions_to_join_attack,
     corpse = inputs.name .. "-corpse",
-    dying_explosion = inputs.dying_explosion or "blood-explosion-big",
+    dying_explosion = inputs.dying_explosion or spitter_stats[tier].dying_explosion,
     dying_trigger_effect = inputs.dying_trigger_effect,
     loot = {},
     working_sound = spitter_stats[tier].working_sound,
@@ -1445,7 +1445,7 @@ function bobmods.enemies.new_spawner(inputs)
     damaged_trigger_effect = inputs.damaged_trigger_effect or hit_effects.biter(),
     absorptions_per_second = final_absorptions_per_second,
     corpse = inputs.name .. "-corpse",
-    dying_explosion = inputs.dying_explosion or "blood-explosion-huge",
+    dying_explosion = inputs.dying_explosion or "biter-spawner-die",
     dying_trigger_effect = inputs.dying_trigger_effect,
     loot = {},
     max_count_of_owned_units = final_max_count_of_owned_units,
