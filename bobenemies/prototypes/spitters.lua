@@ -74,7 +74,7 @@ bobmods.enemies.new_spitter({
   sticker_name = "acid-sticker-big",
 
   attack_range = 15,
-  attack_damage_modifier = 36,
+  attack_damage_modifier = 40,
   attack_stream_name = "acid-stream-spitter-big",
   attack_spit_radius = 1.2,
 
@@ -104,7 +104,7 @@ bobmods.enemies.new_spitter({
   sticker_slow_vehicle_friction_from = 1.5,
 
   attack_range = 16,
-  attack_damage_modifier = 48,
+  attack_damage_modifier = 64,
   attack_stream_name = "acid-stream-spitter-huge",
   attack_spit_radius = 1.35,
 
@@ -135,7 +135,7 @@ bobmods.enemies.new_spitter({
   sticker_slow_vehicle_friction_from = 1.6,
 
   attack_range = 17,
-  attack_damage_modifier = 60,
+  attack_damage_modifier = 90,
   attack_stream_name = "acid-stream-spitter-giant",
   attack_spit_radius = 1.5,
 
@@ -167,7 +167,7 @@ bobmods.enemies.new_spitter({
   sticker_slow_vehicle_friction_from = 1.7,
 
   attack_range = 18,
-  attack_damage_modifier = 72,
+  attack_damage_modifier = 108,
   attack_stream_name = "acid-stream-spitter-titan",
   attack_spit_radius = 1.75,
 
@@ -195,7 +195,7 @@ bobmods.enemies.new_spitter({
   sticker_name = "acid-sticker-behemoth",
 
   attack_range = 19,
-  attack_damage_modifier = 84,
+  attack_damage_modifier = 126,
   attack_stream_name = "acid-stream-spitter-behemoth",
   attack_spit_radius = 2,
 
@@ -227,7 +227,7 @@ bobmods.enemies.new_spitter({
   sticker_slow_vehicle_friction_from = 2,
 
   attack_range = 20,
-  attack_damage_modifier = 120,
+  attack_damage_modifier = 180,
   attack_stream_name = "acid-stream-spitter-leviathan",
   attack_spit_radius = 2.5,
 
@@ -1025,6 +1025,65 @@ local acid_dying_action = function(inputs)
   }
 end
 
+local acid_reaction = function(inputs)
+  return {
+    {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "enemy-damaged-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 0 } },
+    },
+    {
+      type = "nested-result",
+      damage_type_filters = { whitelist = true, types = "impact" },
+      action = {
+        {
+          type = "area",
+          radius = 3,
+          trigger_target_mask = { "ground-unit" },
+          force = "not-same",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = inputs.damage, type = "acid" },
+              },
+              {
+                type = "create-fire",
+                entity_name = inputs.fire_name,
+                tile_collision_mask = {layers={water_tile=true}},
+              },
+            },
+          },
+        },
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "play-sound",
+                sound = {
+                  category = "enemy",
+                  variations = {
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                  },
+                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
+                }
+              }
+            },
+          },
+        },
+      },
+    },
+  }
+end
+
 bobmods.enemies.new_spitter({
   name = "bob-small-acid-spitter",
   icons = {
@@ -1045,6 +1104,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1,
     dying_probability = 0.1,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 4,
+    fire_name = "acid-acid-splash-fire-small",
+  }),
 
   sticker_name = "enemy-acid-sticker-small",
   sticker_duration_in_ticks = 300,
@@ -1062,7 +1125,7 @@ bobmods.enemies.new_spitter({
   fire_damage_per_tick = 1.5,
   fire_structure_damage_per_tick = 0.3,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
@@ -1090,6 +1153,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.1,
     dying_probability = 0.2,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 8,
+    fire_name = "acid-acid-splash-fire-medium",
+  }),
 
   sticker_name = "enemy-acid-sticker-medium",
   sticker_duration_in_ticks = 300,
@@ -1107,7 +1174,7 @@ bobmods.enemies.new_spitter({
   fire_damage_per_tick = 5.5,
   fire_structure_damage_per_tick = 1.1,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
@@ -1135,6 +1202,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.2,
     dying_probability = 0.3,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 10,
+    fire_name = "acid-acid-splash-fire-big",
+  }),
 
   sticker_name = "enemy-acid-sticker-big",
   sticker_duration_in_ticks = 300,
@@ -1143,7 +1214,7 @@ bobmods.enemies.new_spitter({
   sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   attack_range = 15,
-  attack_damage = 36,
+  attack_damage = 40,
   attack_stream_name = "acid-acid-stream-spitter-big",
   attack_spit_radius = 1.45,
   attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
@@ -1152,7 +1223,7 @@ bobmods.enemies.new_spitter({
   fire_damage_per_tick = 16,
   fire_structure_damage_per_tick = 3.2,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
@@ -1180,6 +1251,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.3,
     dying_probability = 0.4,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 12,
+    fire_name = "acid-acid-splash-fire-huge",
+  }),
 
   sticker_name = "enemy-acid-sticker-huge",
   sticker_duration_in_ticks = 300,
@@ -1188,7 +1263,7 @@ bobmods.enemies.new_spitter({
   sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   attack_range = 16,
-  attack_damage = 48,
+  attack_damage = 64,
   attack_stream_name = "acid-acid-stream-spitter-huge",
   attack_spit_radius = 1.6,
   attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
@@ -1197,7 +1272,7 @@ bobmods.enemies.new_spitter({
   fire_damage_per_tick = 32,
   fire_structure_damage_per_tick = 6.4,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_scale = 1.05,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
@@ -1226,6 +1301,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.4,
     dying_probability = 0.45,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 14,
+    fire_name = "acid-acid-splash-fire-giant",
+  }),
 
   sticker_name = "enemy-acid-sticker-giant",
   sticker_duration_in_ticks = 300,
@@ -1234,16 +1313,16 @@ bobmods.enemies.new_spitter({
   sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   attack_range = 17,
-  attack_damage = 60,
+  attack_damage = 90,
   attack_stream_name = "acid-acid-stream-spitter-giant",
   attack_spit_radius = 1.75,
   attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   splash_fire_name = "acid-acid-splash-fire-giant",
   fire_damage_per_tick = 52,
-  fire_structure_damage_per_tick = 10.4,
+  fire_structure_damage_per_tick = 11.5,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_scale = 1.10,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
@@ -1272,6 +1351,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.5,
     dying_probability = 0.5,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 16,
+    fire_name = "acid-acid-splash-fire-titan",
+  }),
 
   sticker_name = "enemy-acid-sticker-titan",
   sticker_duration_in_ticks = 300,
@@ -1280,16 +1363,16 @@ bobmods.enemies.new_spitter({
   sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   attack_range = 18,
-  attack_damage = 72,
+  attack_damage = 108,
   attack_stream_name = "acid-acid-stream-spitter-titan",
   attack_spit_radius = 2,
   attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   splash_fire_name = "acid-acid-splash-fire-titan",
   fire_damage_per_tick = 76,
-  fire_structure_damage_per_tick = 15.2,
+  fire_structure_damage_per_tick = 18.5,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_scale = 1.15,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
@@ -1318,6 +1401,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.6,
     dying_probability = 0.55,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 18,
+    fire_name = "acid-acid-splash-fire-behemoth",
+  }),
 
   sticker_name = "enemy-acid-sticker-behemoth",
   sticker_duration_in_ticks = 300,
@@ -1326,16 +1413,16 @@ bobmods.enemies.new_spitter({
   sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   attack_range = 19,
-  attack_damage = 84,
+  attack_damage = 126,
   attack_stream_name = "acid-acid-stream-spitter-behemoth",
   attack_spit_radius = 2.25,
   attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   splash_fire_name = "acid-acid-splash-fire-behemoth",
   fire_damage_per_tick = 104,
-  fire_structure_damage_per_tick = 20.8,
+  fire_structure_damage_per_tick = 27,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_scale = 1.2,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
@@ -1364,6 +1451,10 @@ bobmods.enemies.new_spitter({
     dying_distance_deviation = 1.75,
     dying_probability = 0.6,
   }),
+  damaged_trigger_effect = acid_reaction({
+    damage = 25,
+    fire_name = "acid-acid-splash-fire-leviathan",
+  }),
 
   sticker_name = "enemy-acid-sticker-leviathan",
   sticker_duration_in_ticks = 300,
@@ -1372,16 +1463,16 @@ bobmods.enemies.new_spitter({
   sticker_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   attack_range = 20,
-  attack_damage = 120,
+  attack_damage = 180,
   attack_stream_name = "acid-acid-stream-spitter-leviathan",
   attack_spit_radius = 2.75,
   attack_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   splash_fire_name = "acid-acid-splash-fire-leviathan",
   fire_damage_per_tick = 190,
-  fire_structure_damage_per_tick = 38,
+  fire_structure_damage_per_tick = 57,
   fire_initial_lifetime = 3600,
-  fire_maximum_lifetime = 3600,
+  fire_maximum_lifetime = 7200,
   fire_scale = 1.3,
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
