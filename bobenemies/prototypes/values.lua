@@ -99,7 +99,7 @@ bobmods.enemies.fire_spawner_tint = { 1, 0.1, 0.1, 1 }
 
 --Map colors
 bobmods.enemies.basic_faction = { 1, 0.88, 1, 1 }
-bobmods.enemies.piercing_faction = { 0.2, 0.2, 1, 1 }
+bobmods.enemies.piercing_faction = { 0.4, 0.75, 0.9, 1 }
 bobmods.enemies.electric_faction = { 1, 0.47, 0, 1 }
 bobmods.enemies.acid_faction = { 1, 0.3, 1, 1 }
 bobmods.enemies.explosive_faction = { 1, 0.85, 0, 1 }
