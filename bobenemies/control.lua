@@ -68,7 +68,7 @@ script.on_init(function()
 end)
 
 
-script.on_nth_tick(1800, function(current_tick)
+script.on_nth_tick(600, function(current_tick)
   if bobmods.enemies.stop_all ~= true then
     if storage.bobmods.enemies.n_cycle == 0 then
       --Delete flags from table if all nearby spawners are destroyed, to reduce clutter
@@ -101,17 +101,29 @@ script.on_nth_tick(1800, function(current_tick)
       --Backup check to ensure that all registered spawners still exist
       if storage.bobmods.enemies.nauvis_spawners[1] then
         local remove_index = {}
+        local table_size = #storage.bobmods.enemies.nauvis_spawners
         local check_index1 = 1
-        local check_index2 = #storage.bobmods.enemies.nauvis_spawners
-        if check_index2 > 100 then
-          --When there are more than 100 spawners, check them in random blocks of total length 100 in order to not take too much time.
-          check_index1 = math.random(check_index2 - 100)
-          check_index2 = check_index1 + 99
+        local check_index2 = table_size
+        local overflow_count = 0
+        if check_index2 > 50 then
+          --When there are more than 50 spawners, check them in random blocks of total length 50 in order to not take too much time
+          check_index1 = math.random(check_index2)
+          check_index2 = check_index1 + 49
         end
         for i=check_index1, check_index2 do
-          local detected_spawner = game.surfaces.nauvis.count_entities_filtered{ type = "unit-spawner", position = storage.bobmods.enemies.nauvis_spawners[i].position, }
-          if detected_spawner == 0 then
-            table.insert(remove_index, i)
+          if i <= table_size then
+            local detected_spawner = game.surfaces.nauvis.count_entities_filtered{ type = "unit-spawner", position = storage.bobmods.enemies.nauvis_spawners[i].position, }
+            if detected_spawner == 0 then
+              table.insert(remove_index, i)
+            end
+          else
+            local overflowed_index = i - table_size
+            local detected_spawner = game.surfaces.nauvis.count_entities_filtered{ type = "unit-spawner", position = storage.bobmods.enemies.nauvis_spawners[overflowed_index].position, }
+            if detected_spawner == 0 then
+              overflow_count = overflow_count + 1
+              table.insert(remove_index, overflow_count, overflowed_index)
+              --Add overflowed detections in order starting at the beginning of the table, so that they are removed in the correct order
+            end
           end
         end
         --Remove missing spawners in reverse order so that when the indexes are shifted, the next part of the remove_index will still point to the correct target
@@ -483,16 +495,20 @@ end
 
 script.on_event(defines.events.on_chunk_generated, function(event)
   if bobmods.enemies.stop_all ~= true then
-    --Locate all spawners on chunk, use first one found for location of flag
+    --Locate all spawners on chunk
     local nearest_flag = { distance = 96, }
     local chunk_spawners = game.surfaces.nauvis.find_entities_filtered{ name = { "biter-spawner", "spitter-spawner" }, area = event.area }
     if chunk_spawners[1] then
-      --Check if there is already a flag nearby, plant one if not
-      for _, test_flag in pairs(storage.bobmods.enemies.faction_flags) do
-        local flag_distance = math.sqrt(((test_flag.x - chunk_spawners[1].position.x) ^ 2) + ((test_flag.y - chunk_spawners[1].position.y) ^ 2))
-        if nearest_flag.distance > flag_distance then
+      --Using first spawner detected as central location, check if there is already a flag nearby, plant one if not
+      local all_flags = storage.bobmods.enemies.faction_flags
+      for i=#all_flags, 1, -1 do
+        local flag_distance = math.sqrt(((all_flags[i].x - chunk_spawners[1].position.x) ^ 2) + ((all_flags[i].y - chunk_spawners[1].position.y) ^ 2))
+        if nearest_flag.distance >= flag_distance then
           nearest_flag.distance = flag_distance
-          nearest_flag.flag = test_flag
+          nearest_flag.flag = all_flags[i]
+        end
+        if nearest_flag.distance < 64 then
+          break
         end
       end
       if not nearest_flag.flag then
@@ -502,7 +518,6 @@ script.on_event(defines.events.on_chunk_generated, function(event)
       for _, spawners in pairs(chunk_spawners) do
         bobmods.enemies.replace_spawner(spawners, nearest_flag.flag)
       end
-
     end
 
     local chunk_worms = game.surfaces.nauvis.find_entities_filtered{ name = { "small-worm-turret", "medium-worm-turret", "big-worm-turret" }, area = event.area }
@@ -523,7 +538,6 @@ script.on_event(defines.events.on_chunk_generated, function(event)
         bobmods.enemies.replace_worm(worms, nearest_flag.flag)
       end
     end
-
   end
 end)
 
