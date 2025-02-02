@@ -266,6 +266,65 @@ data.raw["unit-spawner"]["bob-electric-biter-spawner"].graphics_set.integration 
   shift = {0, 0.5},
 }
 
+local acid_reaction = function(inputs)
+  return {
+    {
+      type = "create-entity",
+      damage_type_filters = "fire",
+      entity_name = "enemy-damaged-explosion",
+      offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      offsets = { { 0, 0 } },
+    },
+    {
+      type = "nested-result",
+      damage_type_filters = { whitelist = true, types = "impact" },
+      action = {
+        {
+          type = "area",
+          radius = 5,
+          trigger_target_mask = { "ground-unit" },
+          force = "not-same",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = inputs.damage, type = "acid" },
+              },
+              {
+                type = "create-fire",
+                entity_name = inputs.fire_name,
+                tile_collision_mask = {layers={water_tile=true}},
+              },
+            },
+          },
+        },
+        {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "play-sound",
+                sound = {
+                  category = "enemy",
+                  variations = {
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                  },
+                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
+                }
+              }
+            },
+          },
+        },
+      },
+    },
+  }
+end
+
 bobmods.enemies.new_spawner({
   name = "bob-acid-biter-spawner",
   icon = "__bobenemies__/graphics/icons/acid-biter-spawner.png",
@@ -275,6 +334,10 @@ bobmods.enemies.new_spawner({
   tint = biter_spawner_tint,
   tint2 = bobmods.enemies.acid_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  damaged_trigger_effect = acid_reaction({
+    damage = 25,
+    fire_name = "acid-acid-splash-fire-huge",
+  }),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "bob-pierce", percent = 20 },
@@ -298,6 +361,10 @@ bobmods.enemies.new_spawner({
   tint = spitter_spawner_tint,
   tint2 = bobmods.enemies.acid_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  damaged_trigger_effect = acid_reaction({
+    damage = 25,
+    fire_name = "acid-acid-splash-fire-huge",
+  }),
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "explosion", decrease = 5, percent = 32 },
@@ -590,6 +657,10 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.acid_spawner_tint,
     autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+    damaged_trigger_effect = acid_reaction({
+      damage = 50,
+      fire_name = "acid-acid-splash-fire-leviathan",
+    }),
     resistances = {
       { type = "physical", decrease = 10, percent = 50 },
       { type = "bob-pierce", percent = 20 },
