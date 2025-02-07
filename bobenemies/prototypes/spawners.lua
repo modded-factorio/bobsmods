@@ -15,8 +15,7 @@ if settings.startup["bobmods-enemies-biggersooner"].value == true then
     { "bob-leviathan-biter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   spitter_spawn = {
-    { "small-biter", { { 0.0, 0.3 }, { 0.25, 0.0 } } },
-    { "small-spitter", { { 0.1, 0.0 }, { 0.2, 0.3 }, { 0.5, 0.0 } } },
+    { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
     { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
     { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
     { "bob-huge-spitter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.1 } } },
@@ -55,8 +54,7 @@ else
     { "bob-leviathan-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   spitter_spawn = {
-    { "small-biter", { { 0.0, 0.3 }, { 0.25, 0.0 } } },
-    { "small-spitter", { { 0.1, 0.0 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
+    { "small-spitter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
     { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
     { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
     { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.1 } } },
@@ -106,6 +104,17 @@ data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[4].layers[2]
 data.raw["unit-spawner"]["biter-spawner"].icon = "__bobenemies__/graphics/icons/biter-spawner.png"
 data.raw["unit-spawner"]["spitter-spawner"].icon = "__bobenemies__/graphics/icons/spitter-spawner.png"
 
+local new_biter_spawner = table.deepcopy(data.raw["unit-spawner"]["biter-spawner"])
+new_biter_spawner.name = "bob-0-biter-spawner"
+new_biter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
+local new_spitter_spawner = table.deepcopy(data.raw["unit-spawner"]["spitter-spawner"])
+new_spitter_spawner.name = "bob-0-spitter-spawner"
+new_spitter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
+data:extend({new_biter_spawner, new_spitter_spawner})
+data.raw["unit-spawner"]["biter-spawner"].hidden = true
+data.raw["unit-spawner"]["spitter-spawner"].hidden = true
+
+
 bobmods.enemies.new_spawner({
   name = "bob-biter-spawner",
   icon = "__base__/graphics/icons/biter-spawner.png",
@@ -143,6 +152,44 @@ bobmods.enemies.new_spawner({
     { type = "plasma", percent = 50 },
   },
   result_units = spitter_spawn,
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-piercing-biter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-piercing-biter-spawner.png",
+  class = "biter-0",
+  element = "piercing",
+  order = "b-a-a",
+  tint = bobmods.enemies.biter_spawner_tint,
+  tint2 = bobmods.enemies.piercing_worm_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  healing_per_tick = 0.03,
+  resistances = {
+    { type = "physical", decrease = 3, percent = 20 },
+    { type = "explosion", decrease = 8, percent = 10 },
+    { type = "fire", decrease = 4, percent = 70 },
+    { type = "poison", percent = -20 },
+    { type = "electric", percent = -20 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-piercing-spitter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-piercing-spitter-spawner.png",
+  class = "spitter-0",
+  element = "piercing",
+  order = "b-a-b",
+  tint = bobmods.enemies.spitter_spawner_tint,
+  tint2 = bobmods.enemies.piercing_worm_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  healing_per_tick = 0.03,
+  resistances = {
+    { type = "physical", decrease = 3, percent = 20 },
+    { type = "explosion", decrease = 8, percent = 10 },
+    { type = "fire", decrease = 4, percent = 70 },
+    { type = "poison", percent = -20 },
+    { type = "electric", percent = -20 },
+  },
 })
 
 bobmods.enemies.new_spawner({
@@ -189,6 +236,40 @@ bobmods.enemies.new_spawner({
     { type = "acid", percent = 20 },
     { type = "impact", decrease = 10, percent = 20 },
     { type = "plasma", percent = 50 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-electric-biter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-electric-biter-spawner.png",
+  class = "biter-0",
+  element = "electric",
+  order = "c-a-a",
+  tint = bobmods.enemies.biter_spawner_tint,
+  tint2 = bobmods.enemies.electric_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 5 },
+    { type = "laser", percent = 20 },
+    { type = "poison", percent = -20 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-electric-spitter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-electric-spitter-spawner.png",
+  class = "spitter-0",
+  element = "electric",
+  order = "c-a-b",
+  tint = bobmods.enemies.spitter_spawner_tint,
+  tint2 = bobmods.enemies.electric_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 5 },
+    { type = "laser", percent = 20 },
+    { type = "poison", percent = -20 },
   },
 })
 
@@ -326,6 +407,46 @@ local acid_reaction = function(inputs)
 end
 
 bobmods.enemies.new_spawner({
+  name = "bob-0-acid-biter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-acid-biter-spawner.png",
+  class = "biter-0",
+  element = "acid",
+  order = "d-a-a",
+  tint = bobmods.enemies.biter_spawner_tint,
+  tint2 = bobmods.enemies.acid_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  damaged_trigger_effect = acid_reaction({
+    damage = 5,
+    fire_name = "acid-acid-splash-fire-small",
+  }),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 5 },
+    { type = "fire", decrease = 3, percent = 60 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-acid-spitter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-acid-spitter-spawner.png",
+  class = "spitter-0",
+  element = "acid",
+  order = "d-a-b",
+  tint = bobmods.enemies.spitter_spawner_tint,
+  tint2 = bobmods.enemies.acid_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  damaged_trigger_effect = acid_reaction({
+    damage = 5,
+    fire_name = "acid-acid-splash-fire-small",
+  }),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 5 },
+    { type = "fire", decrease = 3, percent = 60 },
+  },
+})
+
+bobmods.enemies.new_spawner({
   name = "bob-acid-biter-spawner",
   icon = "__bobenemies__/graphics/icons/acid-biter-spawner.png",
   class = "biter",
@@ -379,6 +500,38 @@ bobmods.enemies.new_spawner({
 })
 
 bobmods.enemies.new_spawner({
+  name = "bob-0-explosive-biter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-explosive-biter-spawner.png",
+  class = "biter-0",
+  element = "explosive",
+  order = "e-a-a",
+  max_health = 200,
+  tint = bobmods.enemies.biter_spawner_tint,
+  tint2 = bobmods.enemies.explosive_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 15, percent = 30 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-explosive-spitter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-explosive-spitter-spawner.png",
+  class = "spitter-0",
+  element = "explosive",
+  order = "e-a-b",
+  max_health = 200,
+  tint = bobmods.enemies.spitter_spawner_tint,
+  tint2 = bobmods.enemies.explosive_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 15, percent = 30 },
+  },
+})
+
+bobmods.enemies.new_spawner({
   name = "bob-explosive-biter-spawner",
   icon = "__bobenemies__/graphics/icons/explosive-biter-spawner.png",
   class = "biter",
@@ -424,9 +577,41 @@ bobmods.enemies.new_spawner({
 })
 
 if settings.startup["bobmods-enemies-healthincrease"].value == true then
+  data.raw["unit-spawner"]["bob-0-explosive-biter-spawner"].max_health = 300
+  data.raw["unit-spawner"]["bob-0-explosive-spitter-spawner"].max_health = 300
   data.raw["unit-spawner"]["bob-explosive-biter-spawner"].max_health = 1000
   data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].max_health = 1000
 end
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-poison-biter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-poison-biter-spawner.png",
+  class = "biter-0",
+  element = "poison",
+  order = "f-a-a",
+  tint = bobmods.enemies.biter_spawner_tint,
+  tint2 = bobmods.enemies.poison_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 5, },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-poison-spitter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-poison-spitter-spawner.png",
+  class = "spitter-0",
+  element = "poison",
+  order = "f-a-b",
+  tint = bobmods.enemies.spitter_spawner_tint,
+  tint2 = bobmods.enemies.poison_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, percent = 15 },
+    { type = "explosion", decrease = 5, },
+  },
+})
 
 bobmods.enemies.new_spawner({
   name = "bob-poison-biter-spawner",
@@ -474,6 +659,38 @@ bobmods.enemies.new_spawner({
 })
 
 bobmods.enemies.new_spawner({
+  name = "bob-0-fire-biter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-fire-biter-spawner.png",
+  class = "biter-0",
+  element = "fire",
+  order = "g-a-a",
+  tint = bobmods.enemies.biter_spawner_tint,
+  tint2 = bobmods.enemies.fire_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, },
+    { type = "explosion", decrease = 8, percent = 10 },
+    { type = "fire", decrease = 4, percent = 70 },
+  },
+})
+
+bobmods.enemies.new_spawner({
+  name = "bob-0-fire-spitter-spawner",
+  icon = "__bobenemies__/graphics/icons/0-fire-spitter-spawner.png",
+  class = "spitter-0",
+  element = "fire",
+  order = "g-a-b",
+  tint = bobmods.enemies.spitter_spawner_tint,
+  tint2 = bobmods.enemies.fire_spawner_tint,
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  resistances = {
+    { type = "physical", decrease = 2, },
+    { type = "explosion", decrease = 8, percent = 10 },
+    { type = "fire", decrease = 4, percent = 70 },
+  },
+})
+
+bobmods.enemies.new_spawner({
   name = "bob-fire-biter-spawner",
   icon = "__bobenemies__/graphics/icons/fire-biter-spawner.png",
   class = "biter",
@@ -514,53 +731,35 @@ bobmods.enemies.new_spawner({
   },
 })
 
-if settings.startup["bobmods-enemies-factionsappear"].value == 0 then
-  --If someone actually tries to set new factions to appear at 0 evo, reduce physical resistance and regen of new spawners so they aren't completely impossible to defeat at game start
-  data.raw["unit-spawner"]["bob-biter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-spitter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-piercing-biter-spawner"].resistances[1] = { type = "physical", decrease = 1, percent = 25 }
-  data.raw["unit-spawner"]["bob-piercing-spitter-spawner"].resistances[1] = { type = "physical", decrease = 1, percent = 25 }
-  data.raw["unit-spawner"]["bob-electric-biter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-electric-spitter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-acid-biter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-acid-spitter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-explosive-biter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-poison-biter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-poison-spitter-spawner"].resistances[1] = { type = "physical", percent = 15 }
-  data.raw["unit-spawner"]["bob-fire-biter-spawner"].resistances[1] = { type = "physical", percent = 5 }
-  data.raw["unit-spawner"]["bob-fire-spitter-spawner"].resistances[1] = { type = "physical", percent = 5 }
-  data.raw["unit-spawner"]["bob-biter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-spitter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-piercing-biter-spawner"].healing_per_tick = 0.03
-  data.raw["unit-spawner"]["bob-piercing-spitter-spawner"].healing_per_tick = 0.03
-  data.raw["unit-spawner"]["bob-electric-biter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-electric-spitter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-acid-biter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-acid-spitter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-explosive-biter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-poison-biter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-poison-spitter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-fire-biter-spawner"].healing_per_tick = 0.02
-  data.raw["unit-spawner"]["bob-fire-spitter-spawner"].healing_per_tick = 0.02
-end
-
 if settings.startup["bobmods-enemies-originalcolors"].value == false then
   data.raw["unit-spawner"]["biter-spawner"].map_color = bobmods.enemies.basic_faction
   data.raw["unit-spawner"]["spitter-spawner"].map_color = bobmods.enemies.basic_faction
+  data.raw["unit-spawner"]["bob-0-biter-spawner"].map_color = bobmods.enemies.basic_faction
+  data.raw["unit-spawner"]["bob-0-spitter-spawner"].map_color = bobmods.enemies.basic_faction
   data.raw["unit-spawner"]["bob-biter-spawner"].map_color = bobmods.enemies.basic_faction
   data.raw["unit-spawner"]["bob-spitter-spawner"].map_color = bobmods.enemies.basic_faction
+  data.raw["unit-spawner"]["bob-0-piercing-biter-spawner"].map_color = bobmods.enemies.piercing_faction
+  data.raw["unit-spawner"]["bob-0-piercing-spitter-spawner"].map_color = bobmods.enemies.piercing_faction
   data.raw["unit-spawner"]["bob-piercing-biter-spawner"].map_color = bobmods.enemies.piercing_faction
   data.raw["unit-spawner"]["bob-piercing-spitter-spawner"].map_color = bobmods.enemies.piercing_faction
+  data.raw["unit-spawner"]["bob-0-electric-biter-spawner"].map_color = bobmods.enemies.electric_faction
+  data.raw["unit-spawner"]["bob-0-electric-spitter-spawner"].map_color = bobmods.enemies.electric_faction
   data.raw["unit-spawner"]["bob-electric-biter-spawner"].map_color = bobmods.enemies.electric_faction
   data.raw["unit-spawner"]["bob-electric-spitter-spawner"].map_color = bobmods.enemies.electric_faction
+  data.raw["unit-spawner"]["bob-0-acid-biter-spawner"].map_color = bobmods.enemies.acid_faction
+  data.raw["unit-spawner"]["bob-0-acid-spitter-spawner"].map_color = bobmods.enemies.acid_faction
   data.raw["unit-spawner"]["bob-acid-biter-spawner"].map_color = bobmods.enemies.acid_faction
   data.raw["unit-spawner"]["bob-acid-spitter-spawner"].map_color = bobmods.enemies.acid_faction
+  data.raw["unit-spawner"]["bob-0-explosive-biter-spawner"].map_color = bobmods.enemies.explosive_faction
+  data.raw["unit-spawner"]["bob-0-explosive-spitter-spawner"].map_color = bobmods.enemies.explosive_faction
   data.raw["unit-spawner"]["bob-explosive-biter-spawner"].map_color = bobmods.enemies.explosive_faction
   data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].map_color = bobmods.enemies.explosive_faction
+  data.raw["unit-spawner"]["bob-0-poison-biter-spawner"].map_color = bobmods.enemies.poison_faction
+  data.raw["unit-spawner"]["bob-0-poison-spitter-spawner"].map_color = bobmods.enemies.poison_faction
   data.raw["unit-spawner"]["bob-poison-biter-spawner"].map_color = bobmods.enemies.poison_faction
   data.raw["unit-spawner"]["bob-poison-spitter-spawner"].map_color = bobmods.enemies.poison_faction
+  data.raw["unit-spawner"]["bob-0-fire-biter-spawner"].map_color = bobmods.enemies.fire_faction
+  data.raw["unit-spawner"]["bob-0-fire-spitter-spawner"].map_color = bobmods.enemies.fire_faction
   data.raw["unit-spawner"]["bob-fire-biter-spawner"].map_color = bobmods.enemies.fire_faction
   data.raw["unit-spawner"]["bob-fire-spitter-spawner"].map_color = bobmods.enemies.fire_faction
 end
