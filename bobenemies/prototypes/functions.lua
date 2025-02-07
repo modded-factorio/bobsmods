@@ -1319,7 +1319,7 @@ function bobmods.enemies.new_spawner(inputs)
     if health_increase == true then
       final_max_health = inputs.max_health or 8000
     else
-      final_max_health = inputs.max_health or 1600
+      final_max_health = inputs.max_health or 2500
     end
     final_healing_per_tick = inputs.healing_per_tick or 1
     final_absorptions_per_second = inputs.absorptions_per_second or { pollution = { absolute = 160, proportional = 0.06 } }
@@ -1368,38 +1368,58 @@ function bobmods.enemies.new_spawner(inputs)
     end
 
   else
-    if health_increase == true then
-      final_max_health = inputs.max_health or 1250
+    local final_class
+    if inputs.class == "biter" or inputs.class == "spitter" then 
+      final_class = inputs.class
+      if health_increase == true then
+        final_max_health = inputs.max_health or 2000
+      else
+        final_max_health = inputs.max_health or 500
+      end
+      final_healing_per_tick = inputs.healing_per_tick or 0.04
+      final_absorptions_per_second = inputs.absorptions_per_second or { pollution = { absolute = 80, proportional = 0.03 } }
+      final_max_count_of_owned_units = inputs.max_count_of_owned_units or 10
+      final_max_friends_around_to_spawn = inputs.max_friends_around_to_spawn or 5
+      final_spawning_cooldown = inputs.spawning_cooldown or { 300, 120 }
     else
-      final_max_health = inputs.max_health or 500
+      if string.find(inputs.class, "biter") then
+        final_class = "biter"
+      elseif string.find(inputs.class, "spitter") then
+        final_class = "spitter"
+      end
+      if health_increase == true then
+        final_max_health = inputs.max_health or 350
+      else
+        final_max_health = inputs.max_health or 250
+      end
+      final_healing_per_tick = inputs.healing_per_tick or 0.02
+      final_absorptions_per_second = inputs.absorptions_per_second or { pollution = { absolute = 20, proportional = 0.01 } }
+      final_max_count_of_owned_units = inputs.max_count_of_owned_units or 7
+      final_max_friends_around_to_spawn = inputs.max_friends_around_to_spawn or 5
+      final_spawning_cooldown = inputs.spawning_cooldown or { 360, 150 }
     end
-    final_healing_per_tick = inputs.healing_per_tick or 0.04
-    final_absorptions_per_second = inputs.absorptions_per_second or { pollution = { absolute = 80, proportional = 0.03 } }
-    final_max_count_of_owned_units = inputs.max_count_of_owned_units or 10
-    final_max_friends_around_to_spawn = inputs.max_friends_around_to_spawn or 5
-    final_spawning_cooldown = inputs.spawning_cooldown or { 300, 120 }
 
     if bigger_spawns == true then
       final_result_units = inputs.result_units or {
-        { "bob-small-" .. inputs.element .. "-" .. inputs.class, { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-        { "bob-medium-" .. inputs.element .. "-" .. inputs.class, { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-        { "bob-big-" .. inputs.element .. "-" .. inputs.class, { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-        { "bob-huge-" .. inputs.element .. "-" .. inputs.class, { { 0.55, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.1 } } },
-        { "bob-giant-" .. inputs.element .. "-" .. inputs.class, { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
-        { "bob-titan-" .. inputs.element .. "-" .. inputs.class, { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-        { "bob-behemoth-" .. inputs.element .. "-" .. inputs.class, { { 0.85, 0.0 }, { 0.95, 0.3 } } },
-        { "bob-leviathan-" .. inputs.element .. "-" .. inputs.class, { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
+        { "bob-small-" .. inputs.element .. "-" .. final_class, { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
+        { "bob-medium-" .. inputs.element .. "-" .. final_class, { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
+        { "bob-big-" .. inputs.element .. "-" .. final_class, { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
+        { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.55, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.1 } } },
+        { "bob-giant-" .. inputs.element .. "-" .. final_class, { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
+        { "bob-titan-" .. inputs.element .. "-" .. final_class, { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
+        { "bob-behemoth-" .. inputs.element .. "-" .. final_class, { { 0.85, 0.0 }, { 0.95, 0.3 } } },
+        { "bob-leviathan-" .. inputs.element .. "-" .. final_class, { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
       }
     else
       final_result_units = inputs.result_units or {
-        { "bob-small-" .. inputs.element .. "-" .. inputs.class, { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
-        { "bob-medium-" .. inputs.element .. "-" .. inputs.class, { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
-        { "bob-big-" .. inputs.element .. "-" .. inputs.class, { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-        { "bob-huge-" .. inputs.element .. "-" .. inputs.class, { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.1 } } },
-        { "bob-giant-" .. inputs.element .. "-" .. inputs.class, { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
-        { "bob-titan-" .. inputs.element .. "-" .. inputs.class, { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-        { "bob-behemoth-" .. inputs.element .. "-" .. inputs.class, { { 0.9, 0.0 }, { 1.0, 0.3 } } },
-        { "bob-leviathan-" .. inputs.element .. "-" .. inputs.class, { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
+        { "bob-small-" .. inputs.element .. "-" .. final_class, { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
+        { "bob-medium-" .. inputs.element .. "-" .. final_class, { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
+        { "bob-big-" .. inputs.element .. "-" .. final_class, { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
+        { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.1 } } },
+        { "bob-giant-" .. inputs.element .. "-" .. final_class, { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
+        { "bob-titan-" .. inputs.element .. "-" .. final_class, { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
+        { "bob-behemoth-" .. inputs.element .. "-" .. final_class, { { 0.9, 0.0 }, { 1.0, 0.3 } } },
+        { "bob-leviathan-" .. inputs.element .. "-" .. final_class, { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
       }
     end
 
