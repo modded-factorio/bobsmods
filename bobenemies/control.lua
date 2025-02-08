@@ -5,6 +5,11 @@ if not bobmods.enemies then
   bobmods.enemies = {}
 end
 bobmods.enemies.quality_enemies = settings.startup["bobmods-enemies-qualityenemies"].value
+if settings.startup["bobmods-enemies-radarscanlimit"].value == 0 then
+  bobmods.enemies.radar_scan_limit = nil
+else
+  bobmods.enemies.radar_scan_limit = settings.startup["bobmods-enemies-radarscanlimit"].value
+end
 
 if script.active_mods["Rampant"] and settings.startup["rampant--newEnemies"].value == true then
   bobmods.enemies.stop_all = true
@@ -411,12 +416,22 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
   local quality_dist
   local quality_random = math.random(20)
   --Values are proportional probabilities, sixth value is sum of all
-  if quality_random == 1 then
-    quality_dist = { 2, 3, 4, 2, 1, 12 }
-  elseif quality_random <= 5 then
-    quality_dist = { 32, 45, 8, 4, 1, 90 }
+  if evo_level <= 0.98 then
+    if quality_random == 1 then
+      quality_dist = { 2, 3, 4, 2, 1, 12 }
+    elseif quality_random <= 5 then
+      quality_dist = { 32, 45, 8, 4, 1, 90 }
+    else
+      quality_dist = { 256, 64, 16, 4, 0, 340 }
+    end
   else
-    quality_dist = { 256, 64, 16, 4, 0, 340 }
+    if quality_random == 1 then
+      quality_dist = { 0, 0, 2, 2, 1, 5 }
+    elseif quality_random <= 5 then
+      quality_dist = { 0, 2, 3, 2, 1, 8 }
+    else
+      quality_dist = { 2, 3, 4, 2, 1, 12 }
+    end
   end
 
   local planted_flag = { factions = final_factions, quality_limit = max_quality, quality_values = quality_dist, x = x_coord, y = y_coord, tick = call_tick, }
@@ -861,3 +876,21 @@ function bobmods.enemies.identify_faction(test_string)
   end
   return spawner_faction
 end
+
+--Radar section
+script.on_event(defines.events.on_sector_scanned, function(event)
+  --Convert radar position to origin point of a target chunk
+  local target_x = math.floor(event.radar.position.x / 32)
+  local target_y = math.floor(event.radar.position.y / 32)
+  target_x = (target_x + math.random(9) - 5) * 32
+  target_y = (target_y + math.random(9) - 5) * 32
+  --Do not order_deconstruction when enemies are nearby to keep bots from being targeted, and to make it less likely that they will be too busy to repair
+  local found_enemies = game.surfaces[event.radar.surface_index].count_entities_filtered{ area = {{ target_x -16, target_y - 16 },{ target_x + 48, target_y + 48 }}, force = "enemy", limit = 1 }
+  if not found_enemies == 0 then
+    local found_items = game.surfaces[event.radar.surface_index].find_entities_filtered{ area = {{ target_x -1, target_y - 1 },{ target_x + 32, target_y + 32 }}, type = "item-entity", limit = bobmods.enemies.radar_scan_limit }
+    for _, found_item in pairs(found_items) do
+      found_item.order_deconstruction("player")
+    end
+  end
+end,
+{{ filter = "name", name = "artifact-radar" }})
