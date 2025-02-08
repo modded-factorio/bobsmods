@@ -83,8 +83,8 @@ else
   }
 end
 
-data.raw["unit-spawner"]["biter-spawner"].order = "a-a-a"
-data.raw["unit-spawner"]["spitter-spawner"].order = "a-a-b"
+data.raw["unit-spawner"]["biter-spawner"].order = "zzz-a-a"
+data.raw["unit-spawner"]["spitter-spawner"].order = "zzz-a-b"
 if not settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw["unit-spawner"]["biter-spawner"].max_health = 250
   data.raw["unit-spawner"]["spitter-spawner"].max_health = 250
@@ -106,9 +106,11 @@ data.raw["unit-spawner"]["spitter-spawner"].icon = "__bobenemies__/graphics/icon
 
 local new_biter_spawner = table.deepcopy(data.raw["unit-spawner"]["biter-spawner"])
 new_biter_spawner.name = "bob-0-biter-spawner"
+new_biter_spawner.order = "a-a-a"
 new_biter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
 local new_spitter_spawner = table.deepcopy(data.raw["unit-spawner"]["spitter-spawner"])
 new_spitter_spawner.name = "bob-0-spitter-spawner"
+new_spitter_spawner.order = "a-a-b"
 new_spitter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
 data:extend({new_biter_spawner, new_spitter_spawner})
 data.raw["unit-spawner"]["biter-spawner"].hidden = true
