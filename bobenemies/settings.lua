@@ -71,6 +71,13 @@ data:extend({
     hidden = true,
     forced_value = false,
   },
+  {
+    type = "int-setting",
+    name = "bobmods-enemies-radarscanlimit",
+    setting_type = "startup",
+    default_value = 50,
+    minimum_value = 0,
+  },
 })
 
 if feature_flags["quality"] then
