@@ -27,6 +27,157 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     },
   })
 
+  if settings.startup["bobmods-enemies-enablesmallartifacts"].value == true and settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
+    data:extend({
+      {
+        type = "technology",
+        name = "bob-artifact-processing",
+        icon = "__bobenemies__/graphics/icons/alien-technology.png",
+        icon_size = 128,
+        prerequisites = {
+          "chemical-science-pack"
+        },
+        effects = {
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-red",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-red-from-small",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-orange",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-orange-from-small",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-yellow",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-yellow-from-small",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-green",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-green-from-small",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-blue",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-blue-from-small",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-purple",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-purple-from-small",
+          },
+        },
+        unit = {
+          count = 50,
+          ingredients = {
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 }, 
+            { "chemical-science-pack", 1 },
+          },
+          time = 30,
+        },
+      },
+    })
+  elseif settings.startup["bobmods-enemies-enablesmallartifacts"].value == true then
+    data:extend({
+      {
+        type = "technology",
+        name = "bob-artifact-processing",
+        icon = "__bobenemies__/graphics/icons/alien-technology.png",
+        icon_size = 128,
+        prerequisites = {
+          "chemical-science-pack"
+        },
+        effects = {
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact",
+          },
+        },
+        unit = {
+          count = 50,
+          ingredients = {
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 }, 
+            { "chemical-science-pack", 1 },
+          },
+          time = 30,
+        },
+      },
+    })
+  elseif settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
+    data:extend({
+      {
+        type = "technology",
+        name = "bob-artifact-processing",
+        icon = "__bobenemies__/graphics/icons/alien-technology.png",
+        icon_size = 128,
+        prerequisites = {
+          "chemical-science-pack"
+        },
+        effects = {
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-red",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-orange",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-yellow",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-green",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-blue",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "alien-artifact-purple",
+          },
+        },
+        unit = {
+          count = 50,
+          ingredients = {
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 }, 
+            { "chemical-science-pack", 1 },
+          },
+          time = 30,
+        },
+      },
+    })
+  end
+
   if settings.startup["bobmods-enemies-enablesmallartifacts"].value == true then
     data:extend({
       {
@@ -49,7 +200,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "small-alien-artifact", amount = 25 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
     })
@@ -80,7 +231,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
 
@@ -113,7 +264,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
 
@@ -146,7 +297,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
 
@@ -179,7 +330,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
 
@@ -212,7 +363,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
 
@@ -245,7 +396,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           { type = "item", name = "alien-artifact", amount = 5 },
         },
         energy_required = 1,
-        enabled = true,
+        enabled = false,
         category = "crafting",
       },
     })
@@ -273,7 +424,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-red", amount = 25 },
           },
           energy_required = 1,
-          enabled = true,
+          enabled = false,
           category = "crafting",
         },
       })
@@ -300,7 +451,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-orange", amount = 25 },
           },
           energy_required = 1,
-          enabled = true,
+          enabled = false,
           category = "crafting",
         },
       })
@@ -327,7 +478,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-yellow", amount = 25 },
           },
           energy_required = 1,
-          enabled = true,
+          enabled = false,
           category = "crafting",
         },
       })
@@ -354,7 +505,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-green", amount = 25 },
           },
           energy_required = 1,
-          enabled = true,
+          enabled = false,
           category = "crafting",
         },
       })
@@ -381,7 +532,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-blue", amount = 25 },
           },
           energy_required = 1,
-          enabled = true,
+          enabled = false,
           category = "crafting",
         },
       })
@@ -408,7 +559,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
             { type = "item", name = "small-alien-artifact-purple", amount = 25 },
           },
           energy_required = 1,
-          enabled = true,
+          enabled = false,
           category = "crafting",
         },
       })
