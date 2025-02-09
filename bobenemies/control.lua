@@ -886,7 +886,7 @@ script.on_event(defines.events.on_sector_scanned, function(event)
   target_y = (target_y + math.random(9) - 5) * 32
   --Do not order_deconstruction when enemies are nearby to keep bots from being targeted, and to make it less likely that they will be too busy to repair
   local found_enemies = game.surfaces[event.radar.surface_index].count_entities_filtered{ area = {{ target_x -16, target_y - 16 },{ target_x + 48, target_y + 48 }}, force = "enemy", limit = 1 }
-  if not found_enemies == 0 then
+  if found_enemies == 0 then
     local found_items = game.surfaces[event.radar.surface_index].find_entities_filtered{ area = {{ target_x -1, target_y - 1 },{ target_x + 32, target_y + 32 }}, type = "item-entity", limit = bobmods.enemies.radar_scan_limit }
     for _, found_item in pairs(found_items) do
       found_item.order_deconstruction("player")
