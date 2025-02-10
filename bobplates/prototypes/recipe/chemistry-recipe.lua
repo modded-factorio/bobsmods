@@ -35,8 +35,6 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
       allow_decomposition = false,
     },
   })
-  bobmods.lib.tech.add_recipe_unlock("bob-water-bore-1", "bob-lithia-water")
-  bobmods.lib.tech.add_recipe_unlock("bob-water-bore-1", "bob-ground-water")
 
   if settings.startup["bobmods-plates-purewater"].value == true then
     data:extend({
@@ -58,7 +56,6 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
         allow_decomposition = false,
       },
     })
-    bobmods.lib.tech.add_recipe_unlock("bob-water-bore-1", "bob-pure-water-pump")
   end
 end
 
