@@ -335,7 +335,7 @@ function bobmods.enemies.determine_faction_flag(x_coord, y_coord, call_tick)
           final_factions[1] = biggest_faction[2]
           --Add second at late evo
           local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-          if evo_level >= math.min(0.85, math.max(0.6, (storage.bobmods.enemies.factions_appear + 0.4))) then
+          if evo_level >= 0.9 then
             local biggest_faction2 = { 0, }
             for _, faction in pairs({ local_basic_faction, local_piercing_faction, local_electric_faction, local_acid_faction, local_explosive_faction, local_poison_faction, local_fire_faction }) do
               --Block first faction from being picked again
@@ -369,7 +369,7 @@ end
 
 function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_factions)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-  if evo_level >= math.min(0.85, math.max(0.6, (storage.bobmods.enemies.factions_appear + 0.4))) then
+  if evo_level >= 0.9 then
     --Randomly add second faction in late mid game if not already selected (35.3% chance), or randomly replace with low chance
     if (not final_factions[2]) and math.random(17) < 7 then
       local faction2 = bobmods.enemies.pick_random_faction()
@@ -383,7 +383,7 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
       end
     end
   end
-  if evo_level >= math.min(0.95, math.max(0.75, (storage.bobmods.enemies.factions_appear + 0.5))) then
+  if evo_level >= 0.95 then
     --Repeat with third faction in late game (23.5% chance)
     if final_factions[2] then
       if (not final_factions[3]) and math.random(17) < 5 then
@@ -416,7 +416,7 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
   local quality_dist
   local quality_random = math.random(20)
   --Values are proportional probabilities, sixth value is sum of all
-  if evo_level <= 0.98 then
+  if evo_level <= 0.97 then
     if quality_random == 1 then
       quality_dist = { 2, 3, 4, 2, 1, 12 }
     elseif quality_random <= 5 then
