@@ -1,10 +1,10 @@
 data:extend({
   {
     type = "radar",
-    name = "artifact-radar",
+    name = "bob-artifact-radar",
     icon = "__bobenemies__/graphics/icons/radar.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "artifact-radar" },
+    minable = { mining_time = 0.5, result = "bob-artifact-radar" },
     fast_replaceable_group = "radar",
     max_health = 800,
     corpse = "big-remnants",
@@ -128,12 +128,12 @@ data:extend({
 
   {
     type = "item",
-    name = "artifact-radar",
+    name = "bob-artifact-radar",
     icon = "__bobenemies__/graphics/icons/radar.png",
     icon_size = 64,
     subgroup = "defensive-structure",
     order = "d[radar]-a[radar-artifact]",
-    place_result = "artifact-radar",
+    place_result = "bob-artifact-radar",
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/metal-large-inventory-move.ogg",
@@ -151,7 +151,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "artifact-radar",
+    name = "bob-artifact-radar",
     enabled = false,
     ingredients = {
       { type = "item", name = "radar", amount = 1 },
@@ -159,12 +159,12 @@ data:extend({
       { type = "item", name = "iron-gear-wheel", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "artifact-radar", amount = 1 } },
+    results = { { type = "item", name = "bob-artifact-radar", amount = 1 } },
   },
 
   {
     type = "technology",
-    name = "artifact-radar",
+    name = "bob-artifact-radar",
     icon = "__bobenemies__/graphics/icons/radar-technology.png",
     icon_size = 256,
     prerequisites = {
@@ -175,7 +175,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "artifact-radar",
+        recipe = "bob-artifact-radar",
       },
     },
     unit = {

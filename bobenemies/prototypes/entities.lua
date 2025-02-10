@@ -5,14 +5,14 @@ local decorative_trigger_effects = require("__base__.prototypes.decorative.decor
 data:extend({
   {
     type = "simple-entity",
-    name = "basic-enemy",
+    name = "bob-basic-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/basic-biter.png" }
     },
     order = "a",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.basic-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-basic-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-biter", 1.5)
     },
@@ -20,14 +20,14 @@ data:extend({
 
   {
     type = "simple-entity",
-    name = "piercing-enemy",
+    name = "bob-piercing-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/piercing-biter.png" }
     },
     order = "b",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.piercing-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-piercing-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-piercing-biter", 1.5)
     },
@@ -35,14 +35,14 @@ data:extend({
 
   {
     type = "simple-entity",
-    name = "electric-enemy",
+    name = "bob-electric-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/electric-biter.png" }
     },
     order = "c",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.electric-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-electric-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-electric-biter", 1.5)
     },
@@ -50,14 +50,14 @@ data:extend({
 
   {
     type = "simple-entity",
-    name = "acid-enemy",
+    name = "bob-acid-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/acid-biter.png" }
     },
     order = "d",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.acid-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-acid-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-acid-biter", 1.5)
     },
@@ -65,14 +65,14 @@ data:extend({
 
   {
     type = "simple-entity",
-    name = "explosive-enemy",
+    name = "bob-explosive-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/explosive-biter.png" }
     },
     order = "e",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.explosive-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-explosive-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-explosive-biter", 1.5)
     },
@@ -80,14 +80,14 @@ data:extend({
 
   {
     type = "simple-entity",
-    name = "poison-enemy",
+    name = "bob-poison-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/poison-biter.png" }
     },
     order = "f",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.poison-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-poison-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-poison-biter", 1.5)
     },
@@ -95,14 +95,14 @@ data:extend({
 
   {
     type = "simple-entity",
-    name = "fire-enemy",
+    name = "bob-fire-enemy",
     icons = {
       { icon = "__base__/graphics/icons/big-biter.png" },
       { icon = "__bobenemies__/graphics/icons/fire-biter.png" }
     },
     order = "g",
     subgroup = "enemy-factions",
-    factoriopedia_description = { "factoriopedia-description.fire-enemy" },
+    factoriopedia_description = { "factoriopedia-description.bob-fire-enemy" },
     factoriopedia_simulation = {
       init = enemy_simulation("bob-huge-fire-biter", 1.5)
     },
@@ -794,7 +794,7 @@ data:extend({
   },
 
   {
-    name = "hardened-bile",
+    name = "bob-hardened-bile",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid", "not-deconstructable"},
     icon = "__bobenemies__/graphics/icons/hardened-bile.png",

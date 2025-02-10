@@ -893,4 +893,4 @@ script.on_event(defines.events.on_sector_scanned, function(event)
     end
   end
 end,
-{{ filter = "name", name = "artifact-radar" }})
+{{ filter = "name", name = "bob-artifact-radar" }})

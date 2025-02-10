@@ -190,7 +190,7 @@ function bobmods.enemies.new_biter(inputs)
   local corpse_prototype = add_biter_die_animation(final_scale, inputs.tint, inputs.tint2, {
     type = "corpse",
     name = inputs.name .. "-corpse",
-    localised_name = { "entity-name.corpse" },
+    localised_name = { "entity-name.bob-enemies-corpse" },
     icon = "__base__/graphics/icons/big-biter-corpse.png",
     selectable_in_game = false,
     hidden_in_factoriopedia = true,
@@ -362,7 +362,7 @@ function bobmods.enemies.new_spitter(inputs)
   local corpse_prototype = add_spitter_die_animation(final_scale, inputs.tint, inputs.tint2, {
     type = "corpse",
     name = inputs.name .. "-corpse",
-    localised_name = { "entity-name.corpse" },
+    localised_name = { "entity-name.bob-enemies-corpse" },
     icon = "__base__/graphics/icons/big-spitter-corpse.png",
     selectable_in_game = false,
     hidden_in_factoriopedia = true,
@@ -1251,8 +1251,8 @@ function bobmods.enemies.new_worm(inputs)
   local worm_corpse_2 = worm_corpse_burrowed(inputs.name, final_scale, inputs.tint, "b")
   worm_corpse_1.icon = "__base__/graphics/icons/big-worm-corpse.png"
   worm_corpse_2.icon = "__base__/graphics/icons/big-worm-corpse.png"
-  worm_corpse_1.localised_name = { "entity-name.corpse" }
-  worm_corpse_2.localised_name = { "entity-name.corpse" }
+  worm_corpse_1.localised_name = { "entity-name.bob-enemies-corpse" }
+  worm_corpse_2.localised_name = { "entity-name.bob-enemies-corpse" }
 
   if inputs.tint2 then
     table.insert(worm_prototype.ending_attack_animation.layers, 2, util.copy(worm_prototype.ending_attack_animation.layers[1]))
@@ -1563,7 +1563,7 @@ function bobmods.enemies.new_spawner(inputs)
   local spawner_corpse = {
     type = "corpse",
     name = inputs.name .. "-corpse",
-    localised_name = {"entity-name.corpse"},
+    localised_name = {"entity-name.bob-enemies-corpse"},
     hidden_in_factoriopedia = true,
     flags = {"placeable-neutral", "placeable-off-grid", "not-on-map"},
     icon = "__base__/graphics/icons/biter-spawner-corpse.png",

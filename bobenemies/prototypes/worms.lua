@@ -121,7 +121,7 @@ bobmods.enemies.new_worm({
         type = "instant",
         target_effects = {
           type = "create-entity",
-          entity_name = "hardened-bile",
+          entity_name = "bob-hardened-bile",
           probability = 0.2,
           check_buildability = true,
         },
@@ -170,7 +170,7 @@ bobmods.enemies.new_worm({
         type = "instant",
         target_effects = {
           type = "create-entity",
-          entity_name = "hardened-bile",
+          entity_name = "bob-hardened-bile",
           probability = 0.21,
           check_buildability = true,
         },
@@ -220,7 +220,7 @@ bobmods.enemies.new_worm({
         type = "instant",
         target_effects = {
           type = "create-entity",
-          entity_name = "hardened-bile",
+          entity_name = "bob-hardened-bile",
           probability = 0.23,
           check_buildability = true,
         },
@@ -270,7 +270,7 @@ bobmods.enemies.new_worm({
         type = "instant",
         target_effects = {
           type = "create-entity",
-          entity_name = "hardened-bile",
+          entity_name = "bob-hardened-bile",
           probability = 0.25,
           check_buildability = true,
         },
@@ -320,7 +320,7 @@ bobmods.enemies.new_worm({
         type = "instant",
         target_effects = {
           type = "create-entity",
-          entity_name = "hardened-bile",
+          entity_name = "bob-hardened-bile",
           probability = 0.4,
           check_buildability = true,
         },

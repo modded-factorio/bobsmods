@@ -2945,11 +2945,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 end
 
 if data.raw.item["bob-resin"] then
-  data.raw["simple-entity"]["hardened-bile"].minable.results = {{ type = "item", name = "bob-resin", amount_min = 10, amount_max = 16 }}
+  data.raw["simple-entity"]["bob-hardened-bile"].minable.results = {{ type = "item", name = "bob-resin", amount_min = 10, amount_max = 16 }}
 end
 
 if mods["bobplates"] then
-  bobmods.lib.recipe.replace_ingredient("artifact-radar", "iron-gear-wheel", "bob-steel-gear-wheel")
+  bobmods.lib.recipe.replace_ingredient("bob-artifact-radar", "iron-gear-wheel", "bob-steel-gear-wheel")
   if data.raw.technology["bob-artifact-processing"] then
     bobmods.lib.tech.remove_prerequisite("bob-artifact-processing", "chemical-science-pack")
     bobmods.lib.tech.add_prerequisite("bob-artifact-processing", "bob-chemical-processing-2")
@@ -2962,9 +2962,9 @@ if mods["bobtech"] then
   end
 end
 if mods["bobwarfare"] then
-  bobmods.lib.recipe.replace_ingredient("artifact-radar", "radar", "radar-2")
-  bobmods.lib.tech.replace_prerequisite("artifact-radar", "radar", "radars-2")
-  bobmods.lib.tech.remove_prerequisite("artifact-radar", "military-2")
+  bobmods.lib.recipe.replace_ingredient("bob-artifact-radar", "radar", "radar-2")
+  bobmods.lib.tech.replace_prerequisite("bob-artifact-radar", "radar", "radars-2")
+  bobmods.lib.tech.remove_prerequisite("bob-artifact-radar", "military-2")
 end
 
 data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_parameters.ammo_type.action[1].trigger_target_mask = { "not-electric-unit" }
