@@ -6,6 +6,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "stone-brick", amount = 3 },
       { type = "item", name = "steel-plate", amount = 3 },
+      { type = "item", name = "concrete", amount = 6 },
     },
     results = { { type = "item", name = "reinforced-wall", amount = 1 } },
   },

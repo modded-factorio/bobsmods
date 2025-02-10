@@ -1,20 +1,66 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
-local reinforced_wall_resistances = {
+local wall_resistances = {
   {
     type = "physical",
-    decrease = 10,
-    percent = 50,
+    decrease = 3,
+    percent = 40,
   },
   {
     type = "impact",
-    decrease = 50,
+    decrease = 45,
     percent = 60,
   },
   {
     type = "explosion",
-    decrease = 10,
+    decrease = 20,
+    percent = 40,
+  },
+  {
+    type = "fire",
+    percent = 100,
+  },
+  {
+    type = "laser",
+    percent = 70,
+  },
+  {
+    type = "poison",
+    decrease = 6,
+    percent = 60,
+  },
+  {
+    type = "acid",
+    decrease = 5,
+    percent = 40,
+  },
+  {
+    type = "electric",
+    percent = 40,
+  },
+}
+
+data.raw.wall["stone-wall"].max_health = 450
+data.raw.wall["stone-wall"].resistances = wall_resistances
+data.raw.gate.gate.resistances = wall_resistances
+data.raw.wall["stone-wall"].is_military_target = true
+data.raw.gate.gate.is_military_target = true
+
+local reinforced_wall_resistances = {
+  {
+    type = "physical",
+    decrease = 6,
     percent = 50,
+  },
+  {
+    type = "impact",
+    decrease = 80,
+    percent = 80,
+  },
+  {
+    type = "explosion",
+    decrease = 30,
+    percent = 60,
   },
   {
     type = "fire",
@@ -30,22 +76,17 @@ local reinforced_wall_resistances = {
   },
   {
     type = "poison",
-    decrease = 10,
-    percent = 50,
+    decrease = 12,
+    percent = 75,
   },
   {
     type = "acid",
-    decrease = 10,
-    percent = 25,
+    decrease = 20,
+    percent = 80,
   },
   {
     type = "electric",
-    percent = 50,
-  },
-  {
-    type = "bob-pierce",
-    decrease = 20,
-    percent = 25,
+    percent = 60,
   },
 }
 
@@ -61,8 +102,9 @@ data:extend({
     damaged_trigger_effect = hit_effects.wall(),
     minable = { mining_time = 0.2, result = "reinforced-wall" },
     fast_replaceable_group = "wall",
-    max_health = 750,
+    max_health = 1250,
     repair_speed_modifier = 2,
+    is_military_target = true,
     corpse = "wall-remnants",
     dying_explosion = "wall-explosion",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },

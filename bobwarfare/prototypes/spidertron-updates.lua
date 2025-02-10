@@ -1,6 +1,18 @@
-table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "poison", decrease = 15, percent = 80 })
-table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "plasma", decrease = 0, percent = 90 })
-table.insert(data.raw["spider-vehicle"]["spidertron"].resistances, { type = "bob-pierce", decrease = 0, percent = 50 })
+data.raw["spider-vehicle"]["spidertron"].order = "b[personal-transport]-c[spidertron]-c[spider]"
+data.raw["item-with-entity-data"]["spidertron"].order = "b[personal-transport]-c[spidertron]-c[spider]"
+
+data.raw["spider-vehicle"]["spidertron"].resistances = {
+  { type = "physical", decrease = 15, percent = 60 },
+  { type = "impact", decrease = 50, percent = 80 },
+  { type = "bob-pierce", percent = 50 },
+  { type = "electric", decrease = 0, percent = 70 },
+  { type = "explosion", decrease = 30, percent = 65 },
+  { type = "acid", decrease = 5, percent = 70 },
+  { type = "fire", decrease = 20, percent = 85 },
+  { type = "poison", decrease = 10, percent = 80 },
+  { type = "laser", decrease = 0, percent = 70 },
+  { type = "plasma", decrease = 0, percent = 90 },
+}
 
 local vanilla_spidertron_leg_resistances = {
   { type = "physical", decrease = 15, percent = 60 },
@@ -8,9 +20,9 @@ local vanilla_spidertron_leg_resistances = {
   { type = "bob-pierce", percent = 50 },
   { type = "electric", decrease = 0, percent = 70 },
   { type = "explosion", percent = 100 },
-  { type = "acid", decrease = 0, percent = 70 },
-  { type = "fire", decrease = 15, percent = 60 },
-  { type = "poison", decrease = 15, percent = 80 },
+  { type = "acid", decrease = 5, percent = 70 },
+  { type = "fire", percent = 100 },
+  { type = "poison", decrease = 10, percent = 80 },
   { type = "laser", decrease = 0, percent = 70 },
   { type = "plasma", decrease = 0, percent = 90 },
 }

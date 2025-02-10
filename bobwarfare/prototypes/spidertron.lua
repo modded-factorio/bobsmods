@@ -307,15 +307,18 @@ local factoriopedia_heavy_spidertron = {
 function bobmods.warfare.create_spidertron(arguments)
   local scale = arguments.scale
   local leg_scale = scale * arguments.leg_scale
-  local spidertron_leg_resistances = arguments.resistances or {}
+  local spidertron_leg_resistances = util.copy(arguments.resistances) or {}
   if arguments.resistances then
-    for i, resistances in pairs(arguments.resistances) do
+    for i, resistances in pairs(spidertron_leg_resistances) do
       if resistances.type == "explosion" then
         spidertron_leg_resistances[i] = { type = "explosion", percent = 100 }
       end
+      if resistances.type == "fire" then
+        spidertron_leg_resistances[i] = { type = "fire", percent = 100 }
+      end
     end
   else
-    spidertron_leg_resistances = { { type = "explosion", percent = 100 } }
+    spidertron_leg_resistances = { { type = "explosion", percent = 100 }, { type = "fire", percent = 100 } }
   end
   data:extend({
     {
@@ -772,10 +775,10 @@ bobmods.warfare.create_spidertron({
     { type = "impact", decrease = 30, percent = 50 },
     { type = "bob-pierce", decrease = 0, percent = 30 },
     { type = "electric", decrease = 0, percent = 50 },
-    { type = "explosion", decrease = 10, percent = 50 },
-    { type = "acid", decrease = 0, percent = 50 },
-    { type = "fire", decrease = 10, percent = 50 },
-    { type = "poison", decrease = 10, percent = 50 },
+    { type = "explosion", decrease = 15, percent = 50 },
+    { type = "acid", decrease = 5, percent = 50 },
+    { type = "fire", decrease = 15, percent = 60 },
+    { type = "poison", decrease = 8, percent = 50 },
     { type = "laser", decrease = 0, percent = 50 },
     { type = "plasma", decrease = 0, percent = 75 },
   },
@@ -808,10 +811,10 @@ bobmods.warfare.create_spidertron({
     { type = "impact", decrease = 30, percent = 60 },
     { type = "bob-pierce", decrease = 0, percent = 40 },
     { type = "electric", decrease = 0, percent = 60 },
-    { type = "explosion", decrease = 10, percent = 60 },
+    { type = "explosion", decrease = 20, percent = 60 },
     { type = "acid", decrease = 0, percent = 60 },
-    { type = "fire", decrease = 10, percent = 90 },
-    { type = "poison", decrease = 10, percent = 60 },
+    { type = "fire", decrease = 15, percent = 70 },
+    { type = "poison", decrease = 8, percent = 60 },
     { type = "laser", decrease = 0, percent = 60 },
     { type = "plasma", decrease = 0, percent = 90 },
   },
@@ -843,10 +846,10 @@ bobmods.warfare.create_spidertron({
     { type = "impact", decrease = 30, percent = 50 },
     { type = "bob-pierce", decrease = 0, percent = 30 },
     { type = "electric", decrease = 0, percent = 50 },
-    { type = "explosion", decrease = 10, percent = 50 },
-    { type = "acid", decrease = 0, percent = 50 },
-    { type = "fire", decrease = 10, percent = 50 },
-    { type = "poison", decrease = 10, percent = 50 },
+    { type = "explosion", decrease = 15, percent = 50 },
+    { type = "acid", decrease = 5, percent = 50 },
+    { type = "fire", decrease = 15, percent = 60 },
+    { type = "poison", decrease = 8, percent = 50 },
     { type = "laser", decrease = 0, percent = 50 },
     { type = "plasma", decrease = 0, percent = 75 },
   },
@@ -882,14 +885,14 @@ bobmods.warfare.create_spidertron({
   resistances = {
     { type = "physical", decrease = 25, percent = 75 },
     { type = "impact", decrease = 50, percent = 90 },
-    { type = "bob-pierce", decrease = 25, percent = 75 },
-    { type = "electric", decrease = 25, percent = 75 },
-    { type = "explosion", decrease = 25, percent = 75 },
+    { type = "bob-pierce", decrease = 0, percent = 60 },
+    { type = "electric", decrease = 10, percent = 75 },
+    { type = "explosion", decrease = 40, percent = 70 },
     { type = "acid", decrease = 25, percent = 75 },
-    { type = "fire", decrease = 25, percent = 75 },
-    { type = "poison", decrease = 25, percent = 80 },
+    { type = "fire", decrease = 25, percent = 90 },
+    { type = "poison", decrease = 12, percent = 80 },
     { type = "laser", decrease = 0, percent = 75 },
-    { type = "plasma", decrease = 0, percent = 100 },
+    { type = "plasma", decrease = 0, percent = 95 },
   },
 })
 
