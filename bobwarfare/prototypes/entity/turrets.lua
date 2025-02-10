@@ -675,7 +675,6 @@ local function bob_laser_turret(inputs)
   return turret
 end
 
-
 data.raw["ammo-turret"]["gun-turret"].resistances = {
   {
     type = "acid",
@@ -720,7 +719,6 @@ data.raw["electric-turret"]["laser-turret"].resistances = {
     percent = 20,
   },
 }
-
 
 data.raw["fluid-turret"]["flamethrower-turret"].resistances = {
   {

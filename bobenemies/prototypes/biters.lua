@@ -34,7 +34,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("small-biter", 3.6)
+    init = enemy_simulation("small-biter", 3.6),
   },
 })
 
@@ -73,7 +73,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("medium-biter", 2.6)
+    init = enemy_simulation("medium-biter", 2.6),
   },
 })
 
@@ -112,7 +112,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("big-biter", 1.8)
+    init = enemy_simulation("big-biter", 1.8),
   },
 })
 
@@ -151,7 +151,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-biter", 1.5)
+    init = enemy_simulation("bob-huge-biter", 1.5),
   },
 })
 
@@ -190,7 +190,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-biter", 1.3)
+    init = enemy_simulation("bob-giant-biter", 1.3),
   },
 })
 
@@ -229,7 +229,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-biter", 1.15)
+    init = enemy_simulation("bob-titan-biter", 1.15),
   },
 })
 
@@ -268,7 +268,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("behemoth-biter", 1)
+    init = enemy_simulation("behemoth-biter", 1),
   },
 })
 
@@ -307,7 +307,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-biter", 0.9),
   },
 })
 
@@ -376,7 +376,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-piercing-biter", 3.6)
+    init = enemy_simulation("bob-small-piercing-biter", 3.6),
   },
 })
 
@@ -428,7 +428,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-piercing-biter", 2.6)
+    init = enemy_simulation("bob-medium-piercing-biter", 2.6),
   },
 })
 
@@ -481,7 +481,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-piercing-biter", 1.8)
+    init = enemy_simulation("bob-big-piercing-biter", 1.8),
   },
 })
 
@@ -534,7 +534,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-piercing-biter", 1.5)
+    init = enemy_simulation("bob-huge-piercing-biter", 1.5),
   },
 })
 
@@ -587,7 +587,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-piercing-biter", 1.3)
+    init = enemy_simulation("bob-giant-piercing-biter", 1.3),
   },
 })
 
@@ -640,7 +640,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-piercing-biter", 1.15)
+    init = enemy_simulation("bob-titan-piercing-biter", 1.15),
   },
 })
 
@@ -693,7 +693,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-piercing-biter", 1)
+    init = enemy_simulation("bob-behemoth-piercing-biter", 1),
   },
 })
 
@@ -746,7 +746,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-piercing-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-piercing-biter", 0.9),
   },
 })
 
@@ -782,7 +782,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.small_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -830,7 +830,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-electric-biter", 3.6)
+    init = enemy_simulation("bob-small-electric-biter", 3.6),
   },
 })
 
@@ -850,7 +850,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.medium_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -898,7 +898,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-electric-biter", 2.6)
+    init = enemy_simulation("bob-medium-electric-biter", 2.6),
   },
 })
 
@@ -918,7 +918,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.big_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -966,7 +966,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-electric-biter", 1.8)
+    init = enemy_simulation("bob-big-electric-biter", 1.8),
   },
 })
 
@@ -986,7 +986,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.huge_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -1034,7 +1034,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-electric-biter", 1.5)
+    init = enemy_simulation("bob-huge-electric-biter", 1.5),
   },
 })
 
@@ -1054,7 +1054,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.giant_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -1102,7 +1102,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-electric-biter", 1.3)
+    init = enemy_simulation("bob-giant-electric-biter", 1.3),
   },
 })
 
@@ -1122,7 +1122,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.titan_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -1170,7 +1170,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-electric-biter", 1.15)
+    init = enemy_simulation("bob-titan-electric-biter", 1.15),
   },
 })
 
@@ -1190,7 +1190,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.behemoth_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -1238,7 +1238,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-electric-biter", 1)
+    init = enemy_simulation("bob-behemoth-electric-biter", 1),
   },
 })
 
@@ -1258,7 +1258,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.leviathan_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -1306,7 +1306,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-electric-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-electric-biter", 0.9),
   },
 })
 
@@ -1413,7 +1413,7 @@ local acid_reaction = function(inputs)
               {
                 type = "create-fire",
                 entity_name = inputs.fire_name,
-                tile_collision_mask = {layers={water_tile=true}},
+                tile_collision_mask = { layers = { water_tile = true } },
               },
             },
           },
@@ -1428,14 +1428,30 @@ local acid_reaction = function(inputs)
                 sound = {
                   category = "enemy",
                   variations = {
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
                   },
-                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
-                }
-              }
+                  aggregation = { max_count = 3, remove = true, count_already_playing = true },
+                },
+              },
             },
           },
         },
@@ -1496,7 +1512,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-acid-biter", 3.6)
+    init = enemy_simulation("bob-small-acid-biter", 3.6),
   },
 })
 
@@ -1552,7 +1568,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-acid-biter", 2.6)
+    init = enemy_simulation("bob-medium-acid-biter", 2.6),
   },
 })
 
@@ -1608,7 +1624,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-acid-biter", 1.8)
+    init = enemy_simulation("bob-big-acid-biter", 1.8),
   },
 })
 
@@ -1664,7 +1680,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-acid-biter", 1.5)
+    init = enemy_simulation("bob-huge-acid-biter", 1.5),
   },
 })
 
@@ -1720,7 +1736,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-acid-biter", 1.3)
+    init = enemy_simulation("bob-giant-acid-biter", 1.3),
   },
 })
 
@@ -1776,7 +1792,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-acid-biter", 1.15)
+    init = enemy_simulation("bob-titan-acid-biter", 1.15),
   },
 })
 
@@ -1832,7 +1848,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-acid-biter", 1)
+    init = enemy_simulation("bob-behemoth-acid-biter", 1),
   },
 })
 
@@ -1888,7 +1904,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-acid-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-acid-biter", 0.9),
   },
 })
 
@@ -1925,11 +1941,11 @@ local expl_dying_action = function(inputs)
                 target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = inputs.attack_damage, type = "explosion"}
-                  }
-                }
+                    damage = { amount = inputs.attack_damage, type = "explosion" },
+                  },
+                },
               },
-            }
+            },
           },
         },
       },
@@ -1999,7 +2015,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-explosive-biter", 3.6)
+    init = enemy_simulation("bob-small-explosive-biter", 3.6),
   },
 })
 
@@ -2065,7 +2081,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-explosive-biter", 2.6)
+    init = enemy_simulation("bob-medium-explosive-biter", 2.6),
   },
 })
 
@@ -2131,7 +2147,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-explosive-biter", 1.8)
+    init = enemy_simulation("bob-big-explosive-biter", 1.8),
   },
 })
 
@@ -2197,7 +2213,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-explosive-biter", 1.5)
+    init = enemy_simulation("bob-huge-explosive-biter", 1.5),
   },
 })
 
@@ -2263,7 +2279,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-explosive-biter", 1.3)
+    init = enemy_simulation("bob-giant-explosive-biter", 1.3),
   },
 })
 
@@ -2329,7 +2345,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-explosive-biter", 1.15)
+    init = enemy_simulation("bob-titan-explosive-biter", 1.15),
   },
 })
 
@@ -2395,7 +2411,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-explosive-biter", 1)
+    init = enemy_simulation("bob-behemoth-explosive-biter", 1),
   },
 })
 
@@ -2461,7 +2477,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-explosive-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-explosive-biter", 0.9),
   },
 })
 
@@ -2495,7 +2511,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
           entity_name = smoke_name,
           initial_height = 0,
           show_in_tooltip = true,
-        }
+        },
       },
       {
         time_cooldown = 150,
@@ -2503,7 +2519,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
           type = "create-entity",
           show_in_tooltip = false,
           entity_name = smoke_name .. "-visual-dummy",
-        }
+        },
       },
     },
   }
@@ -2575,7 +2591,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
     action_cooldown = 30,
   }
 
-  data:extend({sticker, alienpoisonvisual, smoke})
+  data:extend({ sticker, alienpoisonvisual, smoke })
 
   return {
     {
@@ -2642,7 +2658,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-poison-biter", 3.6)
+    init = enemy_simulation("bob-small-poison-biter", 3.6),
   },
 })
 
@@ -2696,7 +2712,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-poison-biter", 2.6)
+    init = enemy_simulation("bob-medium-poison-biter", 2.6),
   },
 })
 
@@ -2750,7 +2766,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-poison-biter", 1.8)
+    init = enemy_simulation("bob-big-poison-biter", 1.8),
   },
 })
 
@@ -2804,7 +2820,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-poison-biter", 1.5)
+    init = enemy_simulation("bob-huge-poison-biter", 1.5),
   },
 })
 
@@ -2858,7 +2874,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-poison-biter", 1.3)
+    init = enemy_simulation("bob-giant-poison-biter", 1.3),
   },
 })
 
@@ -2912,7 +2928,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-poison-biter", 1.15)
+    init = enemy_simulation("bob-titan-poison-biter", 1.15),
   },
 })
 
@@ -2966,7 +2982,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-poison-biter", 1)
+    init = enemy_simulation("bob-behemoth-poison-biter", 1),
   },
 })
 
@@ -3020,7 +3036,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-poison-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-poison-biter", 0.9),
   },
 })
 
@@ -3041,8 +3057,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.small_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3078,7 +3101,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-fire-biter", 3.6)
+    init = enemy_simulation("bob-small-fire-biter", 3.6),
   },
 })
 
@@ -3098,8 +3121,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.medium_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3135,7 +3165,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-fire-biter", 2.6)
+    init = enemy_simulation("bob-medium-fire-biter", 2.6),
   },
 })
 
@@ -3155,8 +3185,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.big_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3192,7 +3229,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-fire-biter", 1.8)
+    init = enemy_simulation("bob-big-fire-biter", 1.8),
   },
 })
 
@@ -3212,8 +3249,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.huge_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3249,7 +3293,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-fire-biter", 1.5)
+    init = enemy_simulation("bob-huge-fire-biter", 1.5),
   },
 })
 
@@ -3269,8 +3313,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.giant_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3306,7 +3357,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-fire-biter", 1.3)
+    init = enemy_simulation("bob-giant-fire-biter", 1.3),
   },
 })
 
@@ -3326,8 +3377,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.titan_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3363,7 +3421,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-fire-biter", 1.15)
+    init = enemy_simulation("bob-titan-fire-biter", 1.15),
   },
 })
 
@@ -3383,8 +3441,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3420,7 +3485,7 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-fire-biter", 1)
+    init = enemy_simulation("bob-behemoth-fire-biter", 1),
   },
 })
 
@@ -3440,8 +3505,15 @@ bobmods.enemies.new_biter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3477,6 +3549,6 @@ bobmods.enemies.new_biter({
     },
   },
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-fire-biter", 0.9)
+    init = enemy_simulation("bob-leviathan-fire-biter", 0.9),
   },
 })

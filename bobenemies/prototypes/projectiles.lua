@@ -14,11 +14,11 @@ data:extend({
         target_effects = {
           {
             type = "damage",
-            damage = { amount = 1.5, type = "physical", },
+            damage = { amount = 1.5, type = "physical" },
           },
           {
             type = "damage",
-            damage = { amount = 1, type = "bob-pierce", },
+            damage = { amount = 1, type = "bob-pierce" },
           },
         },
       },
@@ -32,8 +32,7 @@ data:extend({
     },
     collision_box = { { -0.3, -0.9 }, { 0.3, 0.9 } },
     flags = {
-      "not-on-map"
+      "not-on-map",
     },
   },
-
 })

@@ -81,7 +81,7 @@ data:extend({
           line_length = 8,
           shift = util.by_pixel(1, -16),
           scale = 0.5,
-          tint = { r = 0.7, g = 0.5, b = 0.5, a = 1}
+          tint = { r = 0.7, g = 0.5, b = 0.5, a = 1 },
         },
         {
           filename = "__base__/graphics/entity/radar/radar-shadow.png",
@@ -188,5 +188,4 @@ data:extend({
       time = 30,
     },
   },
-
 })

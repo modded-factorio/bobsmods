@@ -1,12 +1,10 @@
 --This menu simulation needed to be fixed due to character unexpectedly dying to stronger enemies
 if mods["bobequipment"] then
-  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_laser_defense =
-  {
+  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_laser_defense = {
     checkboard = false,
     save = "__base__/menu-simulations/menu-simulation-biter-base.zip",
     length = 60 * 12,
-    init =
-    [[
+    init = [[
       local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
       logo.destructible = false
       game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}
@@ -102,17 +100,14 @@ if mods["bobequipment"] then
 
       end)
 
-    ]]
+    ]],
   }
-
 else
-  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_laser_defense =
-  {
+  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_laser_defense = {
     checkboard = false,
     save = "__base__/menu-simulations/menu-simulation-biter-base.zip",
     length = 60 * 12,
-    init =
-    [[
+    init = [[
       local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
       logo.destructible = false
       game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}
@@ -211,17 +206,15 @@ else
 
       end)
 
-    ]]
+    ]],
   }
 end
 
-data.raw["utility-constants"].default.main_menu_simulations.nauvis_mining_defense =
-{
+data.raw["utility-constants"].default.main_menu_simulations.nauvis_mining_defense = {
   checkboard = false,
   save = "__base__/menu-simulations/menu-simulation-mining-defense.zip",
   length = 60 * 15,
-  init =
-  [[
+  init = [[
     local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
     game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}
     game.simulation.camera_zoom = 1
@@ -229,18 +222,15 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_mining_defens
     game.surfaces.nauvis.daytime = 0
     game.forces.enemy.set_evolution_factor(0.8)
   ]],
-  update =
-  [[
-  ]]
+  update = [[
+  ]],
 }
 
-data.raw["utility-constants"].default.main_menu_simulations.nauvis_chase_player = 
-{
+data.raw["utility-constants"].default.main_menu_simulations.nauvis_chase_player = {
   checkboard = false,
   save = "__base__/menu-simulations/menu-simulation-chase-player.zip",
   length = 60 * 16,
-  init =
-  [[
+  init = [[
     local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
     local center = {logo.position.x, logo.position.y+9.75}
     game.simulation.camera_position = center
@@ -279,16 +269,14 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_chase_player 
       end
       script.on_nth_tick(10, nil)
     end)
-  ]]
+  ]],
 }
 
-data.raw["utility-constants"].default.main_menu_simulations.nauvis_big_defense =
-{
+data.raw["utility-constants"].default.main_menu_simulations.nauvis_big_defense = {
   checkboard = false,
   save = "__base__/menu-simulations/menu-simulation-big-defense.zip",
   length = 60 * 12,
-  init =
-  [[
+  init = [[
     local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
     logo.destructible = false
     local center = {logo.position.x, logo.position.y+9.75}
@@ -313,16 +301,14 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_big_defense =
     end
 
     bop()
-  ]]
+  ]],
 }
 
-data.raw["utility-constants"].default.main_menu_simulations.nauvis_brutal_defeat =
-{
+data.raw["utility-constants"].default.main_menu_simulations.nauvis_brutal_defeat = {
   checkboard = false,
   save = "__base__/menu-simulations/menu-simulation-brutal-defeat.zip",
   length = 60 * 22,
-  init =
-  [[
+  init = [[
     local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
     logo.destructible = false
     local center = {logo.position.x, logo.position.y+9.75}
@@ -362,17 +348,15 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_brutal_defeat
     end
 
     bop()
-  ]]
+  ]],
 }
 
 if mods["bobvehicleequipment"] then
-  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_spidertron =
-  {
+  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_spidertron = {
     checkboard = false,
     save = "__base__/menu-simulations/menu-simulation-biter-base.zip",
     length = 60 * 12,
-    init =
-    [[
+    init = [[
       local surface = game.surfaces.nauvis
       local logo = surface.find_entities_filtered{name = "factorio-logo-11tiles"}[1]
       game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}
@@ -425,17 +409,14 @@ if mods["bobvehicleequipment"] then
         bonk()
       end)
 
-    ]]
+    ]],
   }
-
 else
-  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_spidertron =
-  {
+  data.raw["utility-constants"].default.main_menu_simulations.nauvis_biter_base_spidertron = {
     checkboard = false,
     save = "__base__/menu-simulations/menu-simulation-biter-base.zip",
     length = 60 * 12,
-    init =
-    [[
+    init = [[
       local surface = game.surfaces.nauvis
       local logo = surface.find_entities_filtered{name = "factorio-logo-11tiles"}[1]
       game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}
@@ -484,6 +465,6 @@ else
         bonk()
       end)
 
-    ]]
+    ]],
   }
 end

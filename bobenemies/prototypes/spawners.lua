@@ -97,10 +97,14 @@ data.raw["unit-spawner"]["biter-spawner"].graphics_set.animations[1].layers[2].t
 data.raw["unit-spawner"]["biter-spawner"].graphics_set.animations[2].layers[2].tint = bobmods.enemies.biter_spawner_tint
 data.raw["unit-spawner"]["biter-spawner"].graphics_set.animations[3].layers[2].tint = bobmods.enemies.biter_spawner_tint
 data.raw["unit-spawner"]["biter-spawner"].graphics_set.animations[4].layers[2].tint = bobmods.enemies.biter_spawner_tint
-data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[1].layers[2].tint = bobmods.enemies.spitter_spawner_tint
-data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[2].layers[2].tint = bobmods.enemies.spitter_spawner_tint
-data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[3].layers[2].tint = bobmods.enemies.spitter_spawner_tint
-data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[4].layers[2].tint = bobmods.enemies.spitter_spawner_tint
+data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[1].layers[2].tint =
+  bobmods.enemies.spitter_spawner_tint
+data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[2].layers[2].tint =
+  bobmods.enemies.spitter_spawner_tint
+data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[3].layers[2].tint =
+  bobmods.enemies.spitter_spawner_tint
+data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[4].layers[2].tint =
+  bobmods.enemies.spitter_spawner_tint
 data.raw["unit-spawner"]["biter-spawner"].icon = "__bobenemies__/graphics/icons/biter-spawner.png"
 data.raw["unit-spawner"]["spitter-spawner"].icon = "__bobenemies__/graphics/icons/spitter-spawner.png"
 
@@ -112,10 +116,9 @@ local new_spitter_spawner = table.deepcopy(data.raw["unit-spawner"]["spitter-spa
 new_spitter_spawner.name = "bob-0-spitter-spawner"
 new_spitter_spawner.order = "a-a-b"
 new_spitter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
-data:extend({new_biter_spawner, new_spitter_spawner})
+data:extend({ new_biter_spawner, new_spitter_spawner })
 data.raw["unit-spawner"]["biter-spawner"].hidden = true
 data.raw["unit-spawner"]["spitter-spawner"].hidden = true
-
 
 bobmods.enemies.new_spawner({
   name = "bob-biter-spawner",
@@ -123,14 +126,14 @@ bobmods.enemies.new_spawner({
   class = "biter",
   order = "a-a-c",
   tint = biter_spawner_tint,
-  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),--This is needed to make the game properly update the factoriopedia page with the enemy evolution factor, which displays the actual current adjusted health of the spawner, as well as providing a line on the spawn graph to show what the actual current spawns are.
+  autoplace = enemy_autoplace.enemy_spawner_autoplace("0"), --This is needed to make the game properly update the factoriopedia page with the enemy evolution factor, which displays the actual current adjusted health of the spawner, as well as providing a line on the spawn graph to show what the actual current spawns are.
   resistances = {
     { type = "physical", decrease = 5, percent = 40 },
     { type = "bob-pierce", percent = 20 },
     { type = "explosion", decrease = 10, percent = 35 },
     { type = "laser", percent = 50 },
     { type = "fire", decrease = 4, percent = 60 },
-    { type = "acid",  decrease = 10, percent = 50 },
+    { type = "acid", decrease = 10, percent = 50 },
     { type = "impact", decrease = 10, percent = 20 },
     { type = "plasma", percent = 50 },
   },
@@ -149,7 +152,7 @@ bobmods.enemies.new_spawner({
     { type = "explosion", decrease = 20, percent = 50 },
     { type = "laser", percent = 50 },
     { type = "fire", decrease = 4, percent = 60 },
-    { type = "acid",  decrease = 10, percent = 50 },
+    { type = "acid", decrease = 10, percent = 50 },
     { type = "impact", decrease = 10, percent = 20 },
     { type = "plasma", percent = 50 },
   },
@@ -336,7 +339,7 @@ data.raw["unit-spawner"]["bob-electric-spitter-spawner"].graphics_set.integratio
   priority = "high",
   draw_as_light = true,
   tint = { 0.7, 0.7, 0.85 },
-  shift = {0, 0.5},
+  shift = { 0, 0.5 },
 }
 data.raw["unit-spawner"]["bob-electric-biter-spawner"].graphics_set.integration = {
   filename = "__core__/graphics/light-medium.png",
@@ -346,7 +349,7 @@ data.raw["unit-spawner"]["bob-electric-biter-spawner"].graphics_set.integration 
   priority = "high",
   draw_as_light = true,
   tint = { 0.7, 0.7, 0.85 },
-  shift = {0, 0.5},
+  shift = { 0, 0.5 },
 }
 
 local acid_reaction = function(inputs)
@@ -377,7 +380,7 @@ local acid_reaction = function(inputs)
               {
                 type = "create-fire",
                 entity_name = inputs.fire_name,
-                tile_collision_mask = {layers={water_tile=true}},
+                tile_collision_mask = { layers = { water_tile = true } },
               },
             },
           },
@@ -392,14 +395,30 @@ local acid_reaction = function(inputs)
                 sound = {
                   category = "enemy",
                   variations = {
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
                   },
-                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
-                }
-              }
+                  aggregation = { max_count = 3, remove = true, count_already_playing = true },
+                },
+              },
             },
           },
         },
@@ -596,7 +615,7 @@ bobmods.enemies.new_spawner({
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 5, },
+    { type = "explosion", decrease = 5 },
   },
 })
 
@@ -611,7 +630,7 @@ bobmods.enemies.new_spawner({
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 5, },
+    { type = "explosion", decrease = 5 },
   },
 })
 
@@ -670,7 +689,7 @@ bobmods.enemies.new_spawner({
   tint2 = bobmods.enemies.fire_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
-    { type = "physical", decrease = 2, },
+    { type = "physical", decrease = 2 },
     { type = "explosion", decrease = 8, percent = 10 },
     { type = "fire", decrease = 4, percent = 70 },
   },
@@ -686,7 +705,7 @@ bobmods.enemies.new_spawner({
   tint2 = bobmods.enemies.fire_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
-    { type = "physical", decrease = 2, },
+    { type = "physical", decrease = 2 },
     { type = "explosion", decrease = 8, percent = 10 },
     { type = "fire", decrease = 4, percent = 70 },
   },
@@ -767,7 +786,6 @@ if settings.startup["bobmods-enemies-originalcolors"].value == false then
 end
 
 if settings.startup["bobmods-enemies-superspawner"].value == true then
-
   bobmods.enemies.new_spawner({
     name = "bob-super-spawner",
     icon = "__bobenemies__/graphics/icons/super-spawner.png",
@@ -846,7 +864,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     priority = "high",
     draw_as_light = true,
     tint = { 0.7, 0.7, 0.85 },
-    shift = {0, 0.5},
+    shift = { 0, 0.5 },
   }
 
   bobmods.enemies.new_spawner({
@@ -890,7 +908,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "explosion", decrease = 100, percent = 75 },
       { type = "laser", percent = 25 },
       { type = "fire", decrease = 4, percent = 50 },
-      { type = "poison",  percent = 20 },
+      { type = "poison", percent = 20 },
       { type = "acid", decrease = 25, percent = 90 },
       { type = "impact", decrease = 100, percent = 35 },
       { type = "plasma", percent = 50 },
@@ -957,5 +975,4 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     data.raw["unit-spawner"]["bob-poison-super-spawner"].map_color = bobmods.enemies.poison_faction
     data.raw["unit-spawner"]["bob-fire-super-spawner"].map_color = bobmods.enemies.fire_faction
   end
-
 end

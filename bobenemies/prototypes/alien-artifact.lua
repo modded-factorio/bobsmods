@@ -27,7 +27,10 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     },
   })
 
-  if settings.startup["bobmods-enemies-enablesmallartifacts"].value == true and settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
+  if
+    settings.startup["bobmods-enemies-enablesmallartifacts"].value == true
+    and settings.startup["bobmods-enemies-enablenewartifacts"].value == true
+  then
     data:extend({
       {
         type = "technology",
@@ -35,7 +38,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         icon = "__bobenemies__/graphics/icons/alien-technology.png",
         icon_size = 128,
         prerequisites = {
-          "chemical-science-pack"
+          "chemical-science-pack",
         },
         effects = {
           {
@@ -95,7 +98,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           count = 50,
           ingredients = {
             { "automation-science-pack", 1 },
-            { "logistic-science-pack", 1 }, 
+            { "logistic-science-pack", 1 },
             { "chemical-science-pack", 1 },
           },
           time = 30,
@@ -110,7 +113,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         icon = "__bobenemies__/graphics/icons/alien-technology.png",
         icon_size = 128,
         prerequisites = {
-          "chemical-science-pack"
+          "chemical-science-pack",
         },
         effects = {
           {
@@ -122,7 +125,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           count = 50,
           ingredients = {
             { "automation-science-pack", 1 },
-            { "logistic-science-pack", 1 }, 
+            { "logistic-science-pack", 1 },
             { "chemical-science-pack", 1 },
           },
           time = 30,
@@ -137,7 +140,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         icon = "__bobenemies__/graphics/icons/alien-technology.png",
         icon_size = 128,
         prerequisites = {
-          "chemical-science-pack"
+          "chemical-science-pack",
         },
         effects = {
           {
@@ -169,7 +172,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           count = 50,
           ingredients = {
             { "automation-science-pack", 1 },
-            { "logistic-science-pack", 1 }, 
+            { "logistic-science-pack", 1 },
             { "chemical-science-pack", 1 },
           },
           time = 30,

@@ -23,7 +23,7 @@ bobmods.enemies.new_worm({
   splash_fire_name = "acid-splash-fire-worm-small",
 
   factoriopedia_simulation = {
-    init = enemy_simulation("small-worm-turret", 2.3)
+    init = enemy_simulation("small-worm-turret", 2.3),
   },
 })
 
@@ -52,7 +52,7 @@ bobmods.enemies.new_worm({
   fire_damage_per_tick = 0.2,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("medium-worm-turret", 2)
+    init = enemy_simulation("medium-worm-turret", 2),
   },
 })
 
@@ -81,7 +81,7 @@ bobmods.enemies.new_worm({
   fire_damage_per_tick = 0.4,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("big-worm-turret", 1.7)
+    init = enemy_simulation("big-worm-turret", 1.7),
   },
 })
 
@@ -130,7 +130,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-worm-turret", 1.6),
   },
 })
 
@@ -179,7 +179,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-worm-turret", 1.55),
   },
 })
 
@@ -229,7 +229,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-worm-turret", 1.5),
   },
 })
 
@@ -279,7 +279,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("behemoth-worm-turret", 1.45)
+    init = enemy_simulation("behemoth-worm-turret", 1.45),
   },
 })
 
@@ -329,7 +329,7 @@ bobmods.enemies.new_worm({
   },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-worm-turret", 1.4),
   },
 })
 
@@ -346,7 +346,7 @@ local piercing_shot = function(attack_range)
         projectile = "bob-piercing-spine",
         direction_deviation = 0.3,
       },
-    }
+    },
   }
 end
 
@@ -375,9 +375,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 6,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(30),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-piercing-worm-turret", 2.3)
+    init = enemy_simulation("bob-small-piercing-worm-turret", 2.3),
   },
 })
 
@@ -406,9 +406,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 12,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(35),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-piercing-worm-turret", 2)
+    init = enemy_simulation("bob-medium-piercing-worm-turret", 2),
   },
 })
 
@@ -437,9 +437,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 20,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(40),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-piercing-worm-turret", 1.7)
+    init = enemy_simulation("bob-big-piercing-worm-turret", 1.7),
   },
 })
 
@@ -468,9 +468,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 30,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(45),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-piercing-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-piercing-worm-turret", 1.6),
   },
 })
 
@@ -499,9 +499,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 45,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(50),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-piercing-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-piercing-worm-turret", 1.55),
   },
 })
 
@@ -530,9 +530,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 60,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(55),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-piercing-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-piercing-worm-turret", 1.5),
   },
 })
 
@@ -561,9 +561,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 75,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(60),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-piercing-worm-turret", 1.45)
+    init = enemy_simulation("bob-behemoth-piercing-worm-turret", 1.45),
   },
 })
 
@@ -592,9 +592,9 @@ bobmods.enemies.new_worm({
   attack_damage_modifier = 120,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(65),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-piercing-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-piercing-worm-turret", 1.4),
   },
 })
 
@@ -629,7 +629,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-electric-worm-turret", 2.3)
+    init = enemy_simulation("bob-small-electric-worm-turret", 2.3),
   },
 })
 
@@ -663,7 +663,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-electric-worm-turret", 2)
+    init = enemy_simulation("bob-medium-electric-worm-turret", 2),
   },
 })
 
@@ -697,7 +697,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-electric-worm-turret", 1.7)
+    init = enemy_simulation("bob-big-electric-worm-turret", 1.7),
   },
 })
 
@@ -731,7 +731,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-electric-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-electric-worm-turret", 1.6),
   },
 })
 
@@ -765,7 +765,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-electric-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-electric-worm-turret", 1.55),
   },
 })
 
@@ -799,7 +799,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-electric-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-electric-worm-turret", 1.5),
   },
 })
 
@@ -833,7 +833,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-electric-worm-turret", 1.45)
+    init = enemy_simulation("bob-behemoth-electric-worm-turret", 1.45),
   },
 })
 
@@ -867,7 +867,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-electric-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-electric-worm-turret", 1.4),
   },
 })
 
@@ -955,7 +955,7 @@ local acid_reaction = function(inputs)
               {
                 type = "create-fire",
                 entity_name = inputs.fire_name,
-                tile_collision_mask = {layers={water_tile=true}},
+                tile_collision_mask = { layers = { water_tile = true } },
               },
             },
           },
@@ -970,14 +970,30 @@ local acid_reaction = function(inputs)
                 sound = {
                   category = "enemy",
                   variations = {
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
                   },
-                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
-                }
-              }
+                  aggregation = { max_count = 3, remove = true, count_already_playing = true },
+                },
+              },
             },
           },
         },
@@ -1023,7 +1039,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-acid-worm-turret", 2.3)
+    init = enemy_simulation("bob-small-acid-worm-turret", 2.3),
   },
 })
 
@@ -1064,7 +1080,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-acid-worm-turret", 2)
+    init = enemy_simulation("bob-medium-acid-worm-turret", 2),
   },
 })
 
@@ -1105,7 +1121,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-acid-worm-turret", 1.7)
+    init = enemy_simulation("bob-big-acid-worm-turret", 1.7),
   },
 })
 
@@ -1146,7 +1162,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-acid-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-acid-worm-turret", 1.6),
   },
 })
 
@@ -1187,7 +1203,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-acid-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-acid-worm-turret", 1.55),
   },
 })
 
@@ -1228,7 +1244,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-acid-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-acid-worm-turret", 1.5),
   },
 })
 
@@ -1269,7 +1285,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-acid-worm-turret", 1.45)
+    init = enemy_simulation("bob-behemoth-acid-worm-turret", 1.45),
   },
 })
 
@@ -1310,7 +1326,7 @@ bobmods.enemies.new_worm({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-acid-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-acid-worm-turret", 1.4),
   },
 })
 
@@ -1323,7 +1339,7 @@ local expl_attack = function(inputs)
   expl_action[2].ignore_collision_condition = false
   table.insert(expl_action[1].action_delivery.target_effects, {
     entity_name = "big-explosion",
-    type = "create-entity"
+    type = "create-entity",
   })
   table.insert(expl_action[1].action_delivery.target_effects, {
     type = "create-entity",
@@ -1342,9 +1358,9 @@ local expl_attack = function(inputs)
       target_effects = {
         {
           type = "damage",
-          damage = {amount = inputs.attack_damage2, type = "explosion"}
-        }
-      }
+          damage = { amount = inputs.attack_damage2, type = "explosion" },
+        },
+      },
     },
   }
   local expl_action3 = {
@@ -1392,9 +1408,9 @@ local expl_attack = function(inputs)
           },
         },
       },
-    }
+    },
   }
-  data:extend({delayed_action})
+  data:extend({ delayed_action })
   return expl_action
 end
 
@@ -1433,7 +1449,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-explosive-worm-turret", 2.3)
+    init = enemy_simulation("bob-small-explosive-worm-turret", 2.3),
   },
 })
 
@@ -1472,7 +1488,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-explosive-worm-turret", 2)
+    init = enemy_simulation("bob-medium-explosive-worm-turret", 2),
   },
 })
 
@@ -1511,7 +1527,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-explosive-worm-turret", 1.7)
+    init = enemy_simulation("bob-big-explosive-worm-turret", 1.7),
   },
 })
 
@@ -1550,7 +1566,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-explosive-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-explosive-worm-turret", 1.6),
   },
 })
 
@@ -1589,7 +1605,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-explosive-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-explosive-worm-turret", 1.55),
   },
 })
 
@@ -1628,7 +1644,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-explosive-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-explosive-worm-turret", 1.5),
   },
 })
 
@@ -1667,7 +1683,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-explosive-worm-turret", 1.45)
+    init = enemy_simulation("bob-behemoth-explosive-worm-turret", 1.45),
   },
 })
 
@@ -1706,7 +1722,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-explosive-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-explosive-worm-turret", 1.4),
   },
 })
 
@@ -1820,7 +1836,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
     action_cooldown = 30,
   }
 
-  data:extend({defense_smoke})
+  data:extend({ defense_smoke })
 
   return attack_action
 end
@@ -1841,14 +1857,20 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.poison-enemy-worm-small" },
 
-  attack_action = poison_attack_action(1.4, "enemy-poison-attack-smoke-small", "enemy-poison-defense-smoke-small", 6, -2),
+  attack_action = poison_attack_action(
+    1.4,
+    "enemy-poison-attack-smoke-small",
+    "enemy-poison-defense-smoke-small",
+    6,
+    -2
+  ),
   attack_range = 25,
   attack_damage_modifier = 0.6,
   attack_stream_name = "poison-stream-worm-small",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-poison-worm-turret", 2.3)
+    init = enemy_simulation("bob-small-poison-worm-turret", 2.3),
   },
 })
 
@@ -1868,14 +1890,20 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.poison-enemy-worm-medium" },
 
-  attack_action = poison_attack_action(1.6, "enemy-poison-attack-smoke-medium", "enemy-poison-defense-smoke-medium", 12, -4),
+  attack_action = poison_attack_action(
+    1.6,
+    "enemy-poison-attack-smoke-medium",
+    "enemy-poison-defense-smoke-medium",
+    12,
+    -4
+  ),
   attack_range = 30,
   attack_damage_modifier = 1.2,
   attack_stream_name = "poison-stream-worm-medium",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-poison-worm-turret", 2)
+    init = enemy_simulation("bob-medium-poison-worm-turret", 2),
   },
 })
 
@@ -1902,7 +1930,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-poison-worm-turret", 1.7)
+    init = enemy_simulation("bob-big-poison-worm-turret", 1.7),
   },
 })
 
@@ -1929,7 +1957,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-poison-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-poison-worm-turret", 1.6),
   },
 })
 
@@ -1949,14 +1977,20 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.poison-enemy-worm-giant" },
 
-  attack_action = poison_attack_action(2.2, "enemy-poison-attack-smoke-giant", "enemy-poison-defense-smoke-giant", 30, -20),
+  attack_action = poison_attack_action(
+    2.2,
+    "enemy-poison-attack-smoke-giant",
+    "enemy-poison-defense-smoke-giant",
+    30,
+    -20
+  ),
   attack_range = 45,
   attack_damage_modifier = 6,
   attack_stream_name = "poison-stream-worm-giant",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-poison-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-poison-worm-turret", 1.55),
   },
 })
 
@@ -1976,14 +2010,20 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.poison-enemy-worm-titan" },
 
-  attack_action = poison_attack_action(2.4, "enemy-poison-attack-smoke-titan", "enemy-poison-defense-smoke-titan", 36, -24),
+  attack_action = poison_attack_action(
+    2.4,
+    "enemy-poison-attack-smoke-titan",
+    "enemy-poison-defense-smoke-titan",
+    36,
+    -24
+  ),
   attack_range = 50,
   attack_damage_modifier = 8,
   attack_stream_name = "poison-stream-worm-titan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-poison-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-poison-worm-turret", 1.5),
   },
 })
 
@@ -2003,14 +2043,20 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.poison-enemy-worm-behemoth" },
 
-  attack_action = poison_attack_action(2.6, "enemy-poison-attack-smoke-behemoth", "enemy-poison-defense-smoke-behemoth", 42, -42),
+  attack_action = poison_attack_action(
+    2.6,
+    "enemy-poison-attack-smoke-behemoth",
+    "enemy-poison-defense-smoke-behemoth",
+    42,
+    -42
+  ),
   attack_range = 55,
   attack_damage_modifier = 11,
   attack_stream_name = "poison-stream-worm-behemoth",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-poison-worm-turret", 1.45)
+    init = enemy_simulation("bob-behemoth-poison-worm-turret", 1.45),
   },
 })
 
@@ -2030,14 +2076,20 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.poison-enemy-worm-leviathan" },
 
-  attack_action = poison_attack_action(3, "enemy-poison-attack-smoke-leviathan", "enemy-poison-defense-smoke-leviathan", 60, -60),
+  attack_action = poison_attack_action(
+    3,
+    "enemy-poison-attack-smoke-leviathan",
+    "enemy-poison-defense-smoke-leviathan",
+    60,
+    -60
+  ),
   attack_range = 60,
   attack_damage_modifier = 16,
   attack_stream_name = "poison-stream-worm-leviathan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-poison-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-poison-worm-turret", 1.4),
   },
 })
 
@@ -2054,7 +2106,7 @@ local fire_attack_action = function(inputs)
   table.insert(attack_action[1].action_delivery.target_effects, {
     type = "create-fire",
     entity_name = "enemy-fire",
-    tile_collision_mask = {layers={water_tile=true}},
+    tile_collision_mask = { layers = { water_tile = true } },
     show_in_tooltip = false,
   })
 
@@ -2068,9 +2120,9 @@ local fire_attack_action = function(inputs)
       target_effects = {
         type = "create-fire",
         entity_name = "enemy-fire",
-        tile_collision_mask = {layers={water_tile=true}},
+        tile_collision_mask = { layers = { water_tile = true } },
         show_in_tooltip = true,
-      }
+      },
     },
   })
 
@@ -2085,16 +2137,16 @@ local fire_attack_action = function(inputs)
         target_effects = {
           type = "create-fire",
           entity_name = "enemy-fire-secondary",
-          tile_collision_mask = {layers={water_tile=true}},
+          tile_collision_mask = { layers = { water_tile = true } },
           show_in_tooltip = false,
-        }
+        },
       },
     })
   end
 
   table.insert(attack_action[2].action_delivery.target_effects, {
     type = "damage",
-    damage = { amount = inputs.attack_damage, type = "acid" }
+    damage = { amount = inputs.attack_damage, type = "acid" },
   })
 
   return attack_action
@@ -2116,8 +2168,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.4,
@@ -2130,7 +2189,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-fire-worm-turret", 2.3)
+    init = enemy_simulation("bob-small-fire-worm-turret", 2.3),
   },
 })
 
@@ -2150,8 +2209,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.6,
@@ -2164,7 +2230,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-fire-worm-turret", 2)
+    init = enemy_simulation("bob-medium-fire-worm-turret", 2),
   },
 })
 
@@ -2184,8 +2250,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.8,
@@ -2198,7 +2271,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-fire-worm-turret", 1.7)
+    init = enemy_simulation("bob-big-fire-worm-turret", 1.7),
   },
 })
 
@@ -2218,8 +2291,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2,
@@ -2232,7 +2312,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-fire-worm-turret", 1.6)
+    init = enemy_simulation("bob-huge-fire-worm-turret", 1.6),
   },
 })
 
@@ -2252,8 +2332,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2.2,
@@ -2266,7 +2353,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-fire-worm-turret", 1.55)
+    init = enemy_simulation("bob-giant-fire-worm-turret", 1.55),
   },
 })
 
@@ -2286,8 +2373,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2.4,
@@ -2300,7 +2394,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-fire-worm-turret", 1.5)
+    init = enemy_simulation("bob-titan-fire-worm-turret", 1.5),
   },
 })
 
@@ -2320,8 +2414,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2.6,
@@ -2334,7 +2435,7 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-fire-worm-turret", 1.45)
+    init = enemy_simulation("bob-behemoth-fire-worm-turret", 1.45),
   },
 })
 
@@ -2354,8 +2455,15 @@ bobmods.enemies.new_worm({
   impact_resist = "low",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.fire_worm_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-structure", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-structure" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 3,
@@ -2368,6 +2476,6 @@ bobmods.enemies.new_worm({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-fire-worm-turret", 1.4)
+    init = enemy_simulation("bob-leviathan-fire-worm-turret", 1.4),
   },
 })

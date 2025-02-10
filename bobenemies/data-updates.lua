@@ -85,7 +85,6 @@ then
       data.raw.unit["behemoth-spitter"].loot = {}
     end
     if settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
-
       table.insert(
         data.raw.unit["behemoth-biter"].loot,
         { item = "small-alien-artifact", count_min = 7, count_max = 10, probability = 1 }
@@ -374,7 +373,7 @@ then
         data.raw.unit["bob-huge-fire-spitter"].loot,
         { item = "small-alien-artifact-red", count_min = 2, count_max = 5, probability = 1 }
       )
- 
+
       table.insert(
         data.raw.unit["bob-giant-piercing-biter"].loot,
         { item = "small-alien-artifact-blue", count_min = 3, count_max = 6, probability = 1 }
@@ -423,7 +422,7 @@ then
         data.raw.unit["bob-giant-fire-spitter"].loot,
         { item = "small-alien-artifact-red", count_min = 3, count_max = 6, probability = 1 }
       )
- 
+
       table.insert(
         data.raw.unit["bob-titan-piercing-biter"].loot,
         { item = "small-alien-artifact-blue", count_min = 5, count_max = 11, probability = 1 }
@@ -976,9 +975,7 @@ then
         data.raw.unit["bob-leviathan-fire-spitter"].loot,
         { item = "alien-artifact-red", count_min = 2, count_max = 3, probability = 1 }
       )
-    
     else
-
       table.insert(
         data.raw.unit["behemoth-biter"].loot,
         { item = "small-alien-artifact", count_min = 10, count_max = 16, probability = 1 }
@@ -1192,7 +1189,7 @@ then
         data.raw.unit["bob-huge-fire-spitter"].loot,
         { item = "small-alien-artifact", count_min = 2, count_max = 5, probability = 1 }
       )
- 
+
       table.insert(
         data.raw.unit["bob-giant-piercing-biter"].loot,
         { item = "small-alien-artifact", count_min = 3, count_max = 6, probability = 1 }
@@ -1241,7 +1238,7 @@ then
         data.raw.unit["bob-giant-fire-spitter"].loot,
         { item = "small-alien-artifact", count_min = 3, count_max = 6, probability = 1 }
       )
- 
+
       table.insert(
         data.raw.unit["bob-titan-piercing-biter"].loot,
         { item = "small-alien-artifact", count_min = 5, count_max = 11, probability = 1 }
@@ -1388,10 +1385,8 @@ then
         data.raw.unit["bob-leviathan-fire-spitter"].loot,
         { item = "alien-artifact", count_min = 3, count_max = 10, probability = 1 }
       )
-
     end
   else
-
     table.insert(
       data.raw.unit["bob-titan-biter"].loot,
       { item = "alien-artifact", count_min = 1, count_max = 2, probability = 0.5 }
@@ -1410,7 +1405,6 @@ then
     )
 
     if settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
-
       table.insert(
         data.raw.unit["bob-leviathan-biter"].loot,
         { item = "alien-artifact", count_min = 2, count_max = 3, probability = 1 }
@@ -1618,9 +1612,7 @@ then
         data.raw.unit["bob-leviathan-fire-spitter"].loot,
         { item = "alien-artifact-red", count_min = 5, count_max = 9, probability = 1 }
       )
-
     else
-
       table.insert(
         data.raw.unit["bob-leviathan-biter"].loot,
         { item = "alien-artifact", count_min = 5, count_max = 9, probability = 1 }
@@ -1779,7 +1771,6 @@ then
         data.raw.unit["bob-leviathan-fire-spitter"].loot,
         { item = "alien-artifact", count_min = 5, count_max = 9, probability = 1 }
       )
-
     end
   end
 end
@@ -1813,7 +1804,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
   )
 
   if settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
-
     table.insert(
       data.raw["unit-spawner"]["bob-piercing-biter-spawner"].loot,
       { item = "alien-artifact-blue", count_min = 8, count_max = 22, probability = 1 }
@@ -1864,7 +1854,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     )
 
     if settings.startup["bobmods-enemies-superspawner"].value == true then
-
       table.insert(
         data.raw["unit-spawner"]["bob-super-spawner"].loot,
         { item = "alien-artifact", count_min = 20, count_max = 36, probability = 1 }
@@ -2067,10 +2056,8 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         data.raw["unit-spawner"]["bob-fire-super-spawner"].loot,
         { item = "alien-artifact-red", count_min = 20, count_max = 36, probability = 1 }
       )
-      
     end
   else
-
     table.insert(
       data.raw["unit-spawner"]["bob-piercing-biter-spawner"].loot,
       { item = "alien-artifact", count_min = 8, count_max = 22, probability = 1 }
@@ -2121,7 +2108,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     )
 
     if settings.startup["bobmods-enemies-superspawner"].value == true then
-
       table.insert(
         data.raw["unit-spawner"]["bob-super-spawner"].loot,
         { item = "alien-artifact", count_min = 32, count_max = 84, probability = 1 }
@@ -2150,7 +2136,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         data.raw["unit-spawner"]["bob-fire-super-spawner"].loot,
         { item = "alien-artifact", count_min = 32, count_max = 84, probability = 1 }
       )
-
     end
   end
 
@@ -2198,7 +2183,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
   end
 
   if settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
-
     table.insert(
       data.raw.turret["behemoth-worm-turret"].loot,
       { item = "alien-artifact", count_min = 5, count_max = 8, probability = 1 }
@@ -2730,9 +2714,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data.raw.turret["bob-leviathan-fire-worm-turret"].loot,
       { item = "alien-artifact-purple", count_min = 1, count_max = 3, probability = 1 }
     )
-
   else
-
     table.insert(
       data.raw.turret["behemoth-worm-turret"].loot,
       { item = "alien-artifact", count_min = 9, count_max = 15, probability = 1 }
@@ -2940,12 +2922,12 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data.raw.turret["bob-leviathan-fire-worm-turret"].loot,
       { item = "alien-artifact", count_min = 14, count_max = 20, probability = 1 }
     )
-
   end
 end
 
 if data.raw.item["bob-resin"] then
-  data.raw["simple-entity"]["bob-hardened-bile"].minable.results = {{ type = "item", name = "bob-resin", amount_min = 10, amount_max = 16 }}
+  data.raw["simple-entity"]["bob-hardened-bile"].minable.results =
+    { { type = "item", name = "bob-resin", amount_min = 10, amount_max = 16 } }
 end
 
 if mods["bobplates"] then
@@ -2967,7 +2949,8 @@ if mods["bobwarfare"] then
   bobmods.lib.tech.remove_prerequisite("bob-artifact-radar", "military-2")
 end
 
-data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_parameters.ammo_type.action[1].trigger_target_mask = { "not-electric-unit" }
+data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_parameters.ammo_type.action[1].trigger_target_mask =
+  { "not-electric-unit" }
 
 if bobmods.enemies.small_alien_artifacts ~= true then
   -- hide items

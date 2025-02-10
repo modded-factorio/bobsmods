@@ -28,7 +28,7 @@ bobmods.enemies.new_spitter({
   splash_fire_name = "acid-splash-fire-spitter-small",
 
   factoriopedia_simulation = {
-    init = enemy_simulation("small-spitter", 3.6)
+    init = enemy_simulation("small-spitter", 3.6),
   },
 })
 
@@ -55,7 +55,7 @@ bobmods.enemies.new_spitter({
   fire_damage_per_tick = 0.2,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("medium-spitter", 2.6)
+    init = enemy_simulation("medium-spitter", 2.6),
   },
 })
 
@@ -82,7 +82,7 @@ bobmods.enemies.new_spitter({
   fire_damage_per_tick = 0.4,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("big-spitter", 1.8)
+    init = enemy_simulation("big-spitter", 1.8),
   },
 })
 
@@ -113,7 +113,7 @@ bobmods.enemies.new_spitter({
   fire_scale = 1.05,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-spitter", 1.5)
+    init = enemy_simulation("bob-huge-spitter", 1.5),
   },
 })
 
@@ -144,7 +144,7 @@ bobmods.enemies.new_spitter({
   fire_scale = 1.10,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-spitter", 1.3)
+    init = enemy_simulation("bob-giant-spitter", 1.3),
   },
 })
 
@@ -176,7 +176,7 @@ bobmods.enemies.new_spitter({
   fire_scale = 1.15,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-spitter", 1.15)
+    init = enemy_simulation("bob-titan-spitter", 1.15),
   },
 })
 
@@ -204,7 +204,7 @@ bobmods.enemies.new_spitter({
   fire_scale = 1.2,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("behemoth-spitter", 1)
+    init = enemy_simulation("behemoth-spitter", 1),
   },
 })
 
@@ -236,7 +236,7 @@ bobmods.enemies.new_spitter({
   fire_scale = 1.3,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-spitter", 0.9)
+    init = enemy_simulation("bob-leviathan-spitter", 0.9),
   },
 })
 
@@ -265,7 +265,7 @@ local piercing_shot = function(attack_range)
         max_range = 2 + attack_range,
         projectile = "bob-piercing-spine",
       },
-    }
+    },
   }
 end
 
@@ -298,9 +298,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 10,
   attack_lead_target_for_projectile_speed = 0,
   attack_ammo_type = piercing_shot(13),
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-piercing-spitter", 3.6)
+    init = enemy_simulation("bob-small-piercing-spitter", 3.6),
   },
 })
 
@@ -340,7 +340,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(14),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-piercing-spitter", 2.6)
+    init = enemy_simulation("bob-medium-piercing-spitter", 2.6),
   },
 })
 
@@ -380,7 +380,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(15),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-piercing-spitter", 1.8)
+    init = enemy_simulation("bob-big-piercing-spitter", 1.8),
   },
 })
 
@@ -420,7 +420,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(16),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-piercing-spitter", 1.5)
+    init = enemy_simulation("bob-huge-piercing-spitter", 1.5),
   },
 })
 
@@ -460,7 +460,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(17),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-piercing-spitter", 1.3)
+    init = enemy_simulation("bob-giant-piercing-spitter", 1.3),
   },
 })
 
@@ -500,7 +500,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(18),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-piercing-spitter", 1.15)
+    init = enemy_simulation("bob-titan-piercing-spitter", 1.15),
   },
 })
 
@@ -540,7 +540,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(19),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-piercing-spitter", 1)
+    init = enemy_simulation("bob-behemoth-piercing-spitter", 1),
   },
 })
 
@@ -580,7 +580,7 @@ bobmods.enemies.new_spitter({
   attack_ammo_type = piercing_shot(20),
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-piercing-spitter", 0.9)
+    init = enemy_simulation("bob-leviathan-piercing-spitter", 0.9),
   },
 })
 
@@ -621,7 +621,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.small_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
   sticker_duration_in_ticks = 60,
@@ -643,7 +643,7 @@ bobmods.enemies.new_spitter({
         animation_speed = 1,
         scale = 0.4,
       },
-    }
+    },
   },
 
   attack_range = 13,
@@ -677,7 +677,7 @@ bobmods.enemies.new_spitter({
   fire_light_size_modifier_per_flame = 0.1,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-electric-spitter", 3.6)
+    init = enemy_simulation("bob-small-electric-spitter", 3.6),
   },
 })
 
@@ -714,7 +714,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.medium_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -730,7 +730,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-electric-spitter", 2.6)
+    init = enemy_simulation("bob-medium-electric-spitter", 2.6),
   },
 })
 
@@ -750,7 +750,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.big_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -766,7 +766,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-electric-spitter", 1.8)
+    init = enemy_simulation("bob-big-electric-spitter", 1.8),
   },
 })
 
@@ -786,7 +786,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.huge_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -802,7 +802,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-electric-spitter", 1.5)
+    init = enemy_simulation("bob-huge-electric-spitter", 1.5),
   },
 })
 
@@ -822,7 +822,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.giant_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -838,7 +838,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-electric-spitter", 1.3)
+    init = enemy_simulation("bob-giant-electric-spitter", 1.3),
   },
 })
 
@@ -858,7 +858,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.titan_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -874,7 +874,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-electric-spitter", 1.15)
+    init = enemy_simulation("bob-titan-electric-spitter", 1.15),
   },
 })
 
@@ -894,7 +894,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.behemoth_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -910,7 +910,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-electric-spitter", 1)
+    init = enemy_simulation("bob-behemoth-electric-spitter", 1),
   },
 })
 
@@ -930,7 +930,7 @@ bobmods.enemies.new_spitter({
   tint = bobmods.enemies.electric_tint,
   tint2 = bobmods.enemies.leviathan_tint,
   damaged_trigger_effect = electric_reaction,
-  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit", },
+  trigger_target_mask = { "common", "ground-unit", "electric-unit", "not-fire-unit" },
 
   sticker_name = "enemy-electric-sticker",
 
@@ -946,7 +946,7 @@ bobmods.enemies.new_spitter({
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-electric-spitter", 0.9)
+    init = enemy_simulation("bob-leviathan-electric-spitter", 0.9),
   },
 })
 
@@ -1053,7 +1053,7 @@ local acid_reaction = function(inputs)
               {
                 type = "create-fire",
                 entity_name = inputs.fire_name,
-                tile_collision_mask = {layers={water_tile=true}},
+                tile_collision_mask = { layers = { water_tile = true } },
               },
             },
           },
@@ -1068,14 +1068,30 @@ local acid_reaction = function(inputs)
                 sound = {
                   category = "enemy",
                   variations = {
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 0.65, modifiers = volume_multiplier("main-menu", 0.9)},
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
+                    {
+                      filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg",
+                      volume = 0.65,
+                      modifiers = volume_multiplier("main-menu", 0.9),
+                    },
                   },
-                  aggregation = {max_count = 3, remove = true, count_already_playing = true}
-                }
-              }
+                  aggregation = { max_count = 3, remove = true, count_already_playing = true },
+                },
+              },
             },
           },
         },
@@ -1129,7 +1145,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-acid-spitter", 3.6)
+    init = enemy_simulation("bob-small-acid-spitter", 3.6),
   },
 })
 
@@ -1178,7 +1194,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-acid-spitter", 2.6)
+    init = enemy_simulation("bob-medium-acid-spitter", 2.6),
   },
 })
 
@@ -1227,7 +1243,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-acid-spitter", 1.8)
+    init = enemy_simulation("bob-big-acid-spitter", 1.8),
   },
 })
 
@@ -1277,7 +1293,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-acid-spitter", 1.5)
+    init = enemy_simulation("bob-huge-acid-spitter", 1.5),
   },
 })
 
@@ -1327,7 +1343,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-acid-spitter", 1.3)
+    init = enemy_simulation("bob-giant-acid-spitter", 1.3),
   },
 })
 
@@ -1377,7 +1393,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-acid-spitter", 1.15)
+    init = enemy_simulation("bob-titan-acid-spitter", 1.15),
   },
 })
 
@@ -1427,7 +1443,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-acid-spitter", 1)
+    init = enemy_simulation("bob-behemoth-acid-spitter", 1),
   },
 })
 
@@ -1477,7 +1493,7 @@ bobmods.enemies.new_spitter({
   fire_tint = { r = 1, g = 0.5, b = 1.0, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-acid-spitter", 0.9)
+    init = enemy_simulation("bob-leviathan-acid-spitter", 0.9),
   },
 })
 
@@ -1490,7 +1506,7 @@ local expl_attack = function(inputs)
   expl_action[2].ignore_collision_condition = false
   table.insert(expl_action[1].action_delivery.target_effects, {
     entity_name = "big-explosion",
-    type = "create-entity"
+    type = "create-entity",
   })
   table.insert(expl_action[1].action_delivery.target_effects, {
     type = "create-entity",
@@ -1509,9 +1525,9 @@ local expl_attack = function(inputs)
       target_effects = {
         {
           type = "damage",
-          damage = {amount = inputs.attack_damage2, type = "explosion"}
-        }
-      }
+          damage = { amount = inputs.attack_damage2, type = "explosion" },
+        },
+      },
     },
   }
   local expl_action3 = {
@@ -1559,9 +1575,9 @@ local expl_attack = function(inputs)
           },
         },
       },
-    }
+    },
   }
-  data:extend({delayed_action})
+  data:extend({ delayed_action })
   return expl_action
 end
 
@@ -1591,11 +1607,11 @@ local expl_dying_action = function(inputs)
                 target_effects = {
                   {
                     type = "damage",
-                    damage = {amount = inputs.attack_damage, type = "explosion"}
-                  }
-                }
+                    damage = { amount = inputs.attack_damage, type = "explosion" },
+                  },
+                },
               },
-            }
+            },
           },
         },
       },
@@ -1641,9 +1657,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 5,
   attack_stream_name = "explosion-stream-spitter-small",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 0.9 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-explosive-spitter", 3.6)
+    init = enemy_simulation("bob-small-explosive-spitter", 3.6),
   },
 })
 
@@ -1685,9 +1701,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 10,
   attack_stream_name = "explosion-stream-spitter-medium",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-explosive-spitter", 2.6)
+    init = enemy_simulation("bob-medium-explosive-spitter", 2.6),
   },
 })
 
@@ -1729,9 +1745,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 15,
   attack_stream_name = "explosion-stream-spitter-big",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-explosive-spitter", 1.8)
+    init = enemy_simulation("bob-big-explosive-spitter", 1.8),
   },
 })
 
@@ -1773,9 +1789,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 20,
   attack_stream_name = "explosion-stream-spitter-huge",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-explosive-spitter", 1.5)
+    init = enemy_simulation("bob-huge-explosive-spitter", 1.5),
   },
 })
 
@@ -1817,9 +1833,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 25,
   attack_stream_name = "explosion-stream-spitter-giant",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-explosive-spitter", 1.3)
+    init = enemy_simulation("bob-giant-explosive-spitter", 1.3),
   },
 })
 
@@ -1861,9 +1877,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 30,
   attack_stream_name = "explosion-stream-spitter-titan",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-explosive-spitter", 1.15)
+    init = enemy_simulation("bob-titan-explosive-spitter", 1.15),
   },
 })
 
@@ -1905,9 +1921,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 35,
   attack_stream_name = "explosion-stream-spitter-behemoth",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-explosive-spitter", 1)
+    init = enemy_simulation("bob-behemoth-explosive-spitter", 1),
   },
 })
 
@@ -1949,9 +1965,9 @@ bobmods.enemies.new_spitter({
   attack_damage_modifier = 50,
   attack_stream_name = "explosion-stream-spitter-leviathan",
   attack_tint = { r = 1.0, g = 1.0, b = 0.2, a = 1 },
-  
+
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-explosive-spitter", 1)
+    init = enemy_simulation("bob-leviathan-explosive-spitter", 1),
   },
 })
 
@@ -2079,7 +2095,7 @@ local poison_attack_action = function(radius, smoke_name, damage, healing)
     action_cooldown = 30,
   }
 
-  data:extend({attack_smoke})
+  data:extend({ attack_smoke })
 
   return attack_action
 end
@@ -2108,7 +2124,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-poison-spitter", 3.6)
+    init = enemy_simulation("bob-small-poison-spitter", 3.6),
   },
 })
 
@@ -2136,7 +2152,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-poison-spitter", 2.6)
+    init = enemy_simulation("bob-medium-poison-spitter", 2.6),
   },
 })
 
@@ -2164,7 +2180,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-poison-spitter", 1.8)
+    init = enemy_simulation("bob-big-poison-spitter", 1.8),
   },
 })
 
@@ -2192,7 +2208,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-poison-spitter", 1.5)
+    init = enemy_simulation("bob-huge-poison-spitter", 1.5),
   },
 })
 
@@ -2220,7 +2236,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-poison-spitter", 1.3)
+    init = enemy_simulation("bob-giant-poison-spitter", 1.3),
   },
 })
 
@@ -2248,7 +2264,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-poison-spitter", 1.15)
+    init = enemy_simulation("bob-titan-poison-spitter", 1.15),
   },
 })
 
@@ -2276,7 +2292,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-poison-spitter", 1)
+    init = enemy_simulation("bob-behemoth-poison-spitter", 1),
   },
 })
 
@@ -2304,7 +2320,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-poison-spitter", 0.9)
+    init = enemy_simulation("bob-leviathan-poison-spitter", 0.9),
   },
 })
 
@@ -2321,7 +2337,7 @@ local fire_attack_action = function(inputs)
   table.insert(attack_action[1].action_delivery.target_effects, {
     type = "create-fire",
     entity_name = "enemy-fire",
-    tile_collision_mask = {layers={water_tile=true}},
+    tile_collision_mask = { layers = { water_tile = true } },
     show_in_tooltip = true,
   })
 
@@ -2336,16 +2352,16 @@ local fire_attack_action = function(inputs)
         target_effects = {
           type = "create-fire",
           entity_name = "enemy-fire",
-          tile_collision_mask = {layers={water_tile=true}},
+          tile_collision_mask = { layers = { water_tile = true } },
           show_in_tooltip = false,
-        }
+        },
       },
     })
   end
 
   table.insert(attack_action[2].action_delivery.target_effects, {
     type = "damage",
-    damage = { amount = inputs.attack_damage, type = "acid" }
+    damage = { amount = inputs.attack_damage, type = "acid" },
   })
 
   return attack_action
@@ -2367,8 +2383,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.small_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1,
@@ -2380,7 +2403,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-small-fire-spitter", 3.6)
+    init = enemy_simulation("bob-small-fire-spitter", 3.6),
   },
 })
 
@@ -2400,8 +2423,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.medium_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.1,
@@ -2413,7 +2443,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-medium-fire-spitter", 2.6)
+    init = enemy_simulation("bob-medium-fire-spitter", 2.6),
   },
 })
 
@@ -2433,8 +2463,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.big_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.2,
@@ -2447,7 +2484,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-big-fire-spitter", 1.8)
+    init = enemy_simulation("bob-big-fire-spitter", 1.8),
   },
 })
 
@@ -2467,8 +2504,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.huge_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.35,
@@ -2481,7 +2525,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-huge-fire-spitter", 1.5)
+    init = enemy_simulation("bob-huge-fire-spitter", 1.5),
   },
 })
 
@@ -2501,8 +2545,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.giant_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 1.5,
@@ -2515,7 +2566,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-giant-fire-spitter", 1.3)
+    init = enemy_simulation("bob-giant-fire-spitter", 1.3),
   },
 })
 
@@ -2535,10 +2586,18 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.titan_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
-  sticker_name = "enemy-fire-sticker",  attack_action = fire_attack_action({
+  sticker_name = "enemy-fire-sticker",
+  attack_action = fire_attack_action({
     attack_spit_radius = 1.75,
     attack_damage = 8,
     cluster_count = 3,
@@ -2549,7 +2608,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-titan-fire-spitter", 1.15)
+    init = enemy_simulation("bob-titan-fire-spitter", 1.15),
   },
 })
 
@@ -2569,8 +2628,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   attack_action = fire_attack_action({
     attack_spit_radius = 2,
@@ -2583,7 +2649,7 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-behemoth-fire-spitter", 1)
+    init = enemy_simulation("bob-behemoth-fire-spitter", 1),
   },
 })
 
@@ -2603,8 +2669,15 @@ bobmods.enemies.new_spitter({
   impact_resist = "low",
   tint = bobmods.enemies.fire_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable", "not-flammable" },
-  trigger_target_mask = { "common", "ground-unit", "not-electric-unit", },
+  flags = {
+    "placeable-player",
+    "placeable-enemy",
+    "placeable-off-grid",
+    "breaths-air",
+    "not-repairable",
+    "not-flammable",
+  },
+  trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
   sticker_name = "enemy-fire-sticker",
   attack_action = fire_attack_action({
@@ -2618,6 +2691,6 @@ bobmods.enemies.new_spitter({
   attack_tint = { r = 1, g = 0.1, b = 0.1, a = 1 },
 
   factoriopedia_simulation = {
-    init = enemy_simulation("bob-leviathan-fire-spitter", 0.9)
+    init = enemy_simulation("bob-leviathan-fire-spitter", 0.9),
   },
 })

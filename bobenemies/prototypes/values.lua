@@ -47,7 +47,6 @@ bobmods.enemies.leviathan_biter_tint2 = { 0.8, 0.5, 0.5, 0.8 }
 bobmods.enemies.leviathan_spitter_tint1 = { 0.6, 0.35, 0.35, 1 }
 bobmods.enemies.leviathan_spitter_tint2 = { 0.7, 0.2, 0.2, 0.8 }
 
-
 --New biters/spitters 2
 bobmods.enemies.small_tint = { 0.6, 0.6, 0.3, 0.2 }
 bobmods.enemies.medium_tint = { 0.75, 0.45, 0.45, 0.6 }
@@ -64,7 +63,6 @@ bobmods.enemies.acid_tint = { 0.8, 0.2, 0.8, 1 }
 bobmods.enemies.explosive_tint = { 0.9, 0.9, 0.3, 1 }
 bobmods.enemies.poison_tint = { 0.2, 1, 0.6, 1 }
 bobmods.enemies.fire_tint = { 1, 0.35, 0.35, 1 }
-
 
 --Worms 1
 bobmods.enemies.small_worm_tint = { 0.95, 0.95, 0.3, 1 }
@@ -83,7 +81,6 @@ bobmods.enemies.explosive_worm_tint = { 0.5, 0.5, 0.2, 1 }
 bobmods.enemies.poison_worm_tint = { 0.05, 0.65, 0.3, 1 }
 bobmods.enemies.fire_worm_tint = { 1, 0.3, 0.05, 1 }
 
-
 --Spawners 1
 bobmods.enemies.biter_spawner_tint = { 0.6, 0.41, 0, 0.7 }
 bobmods.enemies.spitter_spawner_tint = { 0.68, 0.38, 0.38, 0.75 }
@@ -95,7 +92,6 @@ bobmods.enemies.acid_spawner_tint = { 0.8, 0.2, 0.8, 1 }
 bobmods.enemies.explosive_spawner_tint = { 0.9, 0.9, 0.5, 1 }
 bobmods.enemies.poison_spawner_tint = { 0.2, 1, 0.6, 1 }
 bobmods.enemies.fire_spawner_tint = { 1, 0.1, 0.1, 1 }
-
 
 --Map colors
 bobmods.enemies.basic_faction = { 1, 0.88, 1, 1 }
