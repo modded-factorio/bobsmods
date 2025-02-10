@@ -463,7 +463,6 @@ data:extend({
         filename = "__base__/sound/electric-furnace.ogg",
         volume = 0.7,
       },
-      apparent_volume = 1.5,
     },
     graphics_set = {
       animation = {
@@ -672,7 +671,6 @@ data:extend({
         filename = "__base__/sound/electric-furnace.ogg",
         volume = 0.7,
       },
-      apparent_volume = 1.5,
     },
     graphics_set = {
       animation = {
@@ -864,8 +862,7 @@ data:extend({
         volume = 0.8,
       },
       match_volume_to_activity = true,
-      apparent_volume = 1.5,
-      max_sounds_per_type = 3,
+      max_sounds_per_prototype = 3,
     },
     circuit_connector = circuit_connector_definitions["bob-small-storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
@@ -954,8 +951,7 @@ data:extend({
         volume = 0.8,
       },
       match_volume_to_activity = true,
-      apparent_volume = 1.5,
-      max_sounds_per_type = 3,
+      max_sounds_per_prototype = 3,
     },
     circuit_connector = circuit_connector_definitions["bob-small-storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,

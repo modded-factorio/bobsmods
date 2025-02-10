@@ -494,7 +494,7 @@ data:extend({
         filename = "__base__/sound/express-transport-belt.ogg",
         volume = 0.4,
       },
-      max_sounds_per_type = 3,
+      max_sounds_per_prototype = 3,
     },
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.green_belt_animation_set,

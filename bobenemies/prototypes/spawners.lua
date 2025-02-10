@@ -17,7 +17,6 @@ data:extend({
           volume = 1.0,
         },
       },
-      apparent_volume = 2,
     },
     dying_sound = {
       {
@@ -147,7 +146,6 @@ data:extend({
           volume = 1.0,
         },
       },
-      apparent_volume = 2,
     },
     dying_sound = {
       {
@@ -276,7 +274,6 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
             volume = 1.0,
           },
         },
-        apparent_volume = 2,
       },
       dying_sound = {
         {
