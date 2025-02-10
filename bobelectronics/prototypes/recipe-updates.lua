@@ -19,11 +19,11 @@ if data.raw.fluid["bob-hydrogen-chloride"] then
   bobmods.lib.recipe.replace_ingredient("bob-ferric-chloride-solution", "water", "bob-hydrogen-chloride")
 end
 
-if data.raw.item["tinned-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("insulated-cable", "copper-cable", "tinned-copper-cable")
-  bobmods.lib.recipe.replace_ingredient("basic-electronic-components", "copper-cable", "tinned-copper-cable")
-  bobmods.lib.recipe.replace_ingredient("electronic-components", "copper-cable", "tinned-copper-cable")
-  bobmods.lib.recipe.replace_ingredient("intergrated-electronics", "copper-cable", "tinned-copper-cable")
+if data.raw.item["bob-tinned-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("bob-insulated-cable", "copper-cable", "bob-tinned-copper-cable")
+  bobmods.lib.recipe.replace_ingredient("basic-electronic-components", "copper-cable", "bob-tinned-copper-cable")
+  bobmods.lib.recipe.replace_ingredient("electronic-components", "copper-cable", "bob-tinned-copper-cable")
+  bobmods.lib.recipe.replace_ingredient("intergrated-electronics", "copper-cable", "bob-tinned-copper-cable")
 end
 
 if data.raw.item["bob-carbon"] then
@@ -58,11 +58,11 @@ else
   end
 end
 
-if data.raw.item["gilded-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "gilded-copper-cable")
+if data.raw.item["bob-gilded-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "bob-gilded-copper-cable")
 else
-  if data.raw.item["tinned-copper-cable"] then
-    bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "tinned-copper-cable")
+  if data.raw.item["bob-tinned-copper-cable"] then
+    bobmods.lib.recipe.replace_ingredient("processing-electronics", "copper-cable", "bob-tinned-copper-cable")
   end
 end
 
@@ -109,6 +109,6 @@ if data.raw.item["solder"] then
   bobmods.lib.recipe.add_ingredient("bob-advanced-processing-unit", { type = "item", name = "solder", amount = 6 })
 end
 
-bobmods.lib.recipe.replace_ingredient("arithmetic-combinator", "copper-cable", "insulated-cable")
-bobmods.lib.recipe.replace_ingredient("decider-combinator", "copper-cable", "insulated-cable")
-bobmods.lib.recipe.replace_ingredient("constant-combinator", "copper-cable", "insulated-cable")
+bobmods.lib.recipe.replace_ingredient("arithmetic-combinator", "copper-cable", "bob-insulated-cable")
+bobmods.lib.recipe.replace_ingredient("decider-combinator", "copper-cable", "bob-insulated-cable")
+bobmods.lib.recipe.replace_ingredient("constant-combinator", "copper-cable", "bob-insulated-cable")

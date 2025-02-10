@@ -6,6 +6,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "gate",
+      "concrete",
     },
     effects = {
       {
@@ -25,6 +26,5 @@ data:extend({
       },
       time = 10,
     },
-    order = "a-k-b",
   },
 })

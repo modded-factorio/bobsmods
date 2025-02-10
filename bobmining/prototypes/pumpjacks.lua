@@ -221,7 +221,6 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
-        apparent_volume = 1.5,
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 10,
@@ -329,7 +328,6 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
-        apparent_volume = 1.5,
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 12.5,
@@ -438,7 +436,6 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       },
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
-        apparent_volume = 1.5,
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 15,

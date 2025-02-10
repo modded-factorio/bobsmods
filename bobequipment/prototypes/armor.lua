@@ -1,14 +1,100 @@
 --Remember when making any change to power armor to duplicate the edits in Bob's Warfare mod
 
-if not mods["bobwarfare"] then
-  data:extend({
+data.raw.armor["power-armor"].resistances = {
+  {
+    type = "physical",
+    decrease = 8,
+    percent = 30,
+  },
+  {
+    type = "acid",
+    decrease = 4,
+    percent = 60,
+  },
+  {
+    type = "explosion",
+    decrease = 40,
+    percent = 40,
+  },
+  {
+    type = "poison",
+    decrease = 2,
+    percent = 30,
+  },
+  {
+    type = "fire",
+    decrease = 2,
+    percent = 50,
+  },
+  {
+    type = "laser",
+    percent = 10,
+  },
+  {
+    type = "electric",
+    percent = 10,
+  },
+}
 
+data.raw.armor["power-armor-mk2"].resistances = {
+  {
+    type = "physical",
+    decrease = 10,
+    percent = 40,
+  },
+  {
+    type = "acid",
+    decrease = 6,
+    percent = 70,
+  },
+  {
+    type = "explosion",
+    decrease = 60,
+    percent = 50,
+  },
+  {
+    type = "poison",
+    decrease = 4,
+    percent = 40,
+  },
+  {
+    type = "fire",
+    decrease = 4,
+    percent = 60,
+  },
+  {
+    type = "laser",
+    decrease = 5,
+    percent = 20,
+  },
+  {
+    type = "electric",
+    decrease = 2,
+    percent = 20,
+  },
+  {
+    type = "bob-pierce",
+    percent = 20,
+  },
+}
+
+if not mods["bobwarfare"] then
+  local make_armor = function(name)
+    return [[
+      game.simulation.camera_zoom = 4
+      game.simulation.camera_position = {0.5, -0.25}
+      local character = game.surfaces[1].create_entity{name = "character", position = {0.5, 0.5}, force = "player", direction = defines.direction.south}
+      character.insert{name = "]] .. name .. [["}
+    ]]
+  end
+
+  data:extend({
     {
       type = "armor",
       name = "bob-power-armor-mk3",
       icon = "__bobequipment__/graphics/icons/power-armor-mk3.png",
       icon_size = 32,
-
+      factoriopedia_simulation = { init = make_armor("bob-power-armor-mk3") },
       resistances = {
         {
           type = "physical",
@@ -17,12 +103,12 @@ if not mods["bobwarfare"] then
         },
         {
           type = "acid",
-          decrease = 12,
-          percent = 45,
+          decrease = 8,
+          percent = 75,
         },
         {
           type = "explosion",
-          decrease = 20,
+          decrease = 60,
           percent = 50,
         },
         {
@@ -32,13 +118,13 @@ if not mods["bobwarfare"] then
         },
         {
           type = "poison",
-          decrease = 10,
-          percent = 30,
+          decrease = 6,
+          percent = 50,
         },
         {
           type = "fire",
-          decrease = 10,
-          percent = 30,
+          decrease = 6,
+          percent = 70,
         },
         {
           type = "laser",
@@ -52,12 +138,11 @@ if not mods["bobwarfare"] then
         },
         {
           type = "electric",
-          decrease = 10,
+          decrease = 5,
           percent = 30,
         },
         {
           type = "bob-pierce",
-          decrease = 10,
           percent = 30,
         },
       },
@@ -88,7 +173,7 @@ if not mods["bobwarfare"] then
       name = "bob-power-armor-mk4",
       icon = "__bobequipment__/graphics/icons/power-armor-mk4.png",
       icon_size = 32,
-
+      factoriopedia_simulation = { init = make_armor("bob-power-armor-mk4") },
       resistances = {
         {
           type = "physical",
@@ -97,12 +182,12 @@ if not mods["bobwarfare"] then
         },
         {
           type = "acid",
-          decrease = 15,
-          percent = 50,
+          decrease = 12,
+          percent = 80,
         },
         {
           type = "explosion",
-          decrease = 20,
+          decrease = 60,
           percent = 50,
         },
         {
@@ -112,13 +197,13 @@ if not mods["bobwarfare"] then
         },
         {
           type = "poison",
-          decrease = 15,
-          percent = 40,
+          decrease = 6,
+          percent = 60,
         },
         {
           type = "fire",
-          decrease = 15,
-          percent = 40,
+          decrease = 10,
+          percent = 80,
         },
         {
           type = "laser",
@@ -127,13 +212,12 @@ if not mods["bobwarfare"] then
         },
         {
           type = "electric",
-          decrease = 15,
+          decrease = 10,
           percent = 40,
         },
         {
           type = "bob-pierce",
-          decrease = 15,
-          percent = 40,
+          percent = 35,
         },
         {
           type = "plasma",
@@ -168,7 +252,7 @@ if not mods["bobwarfare"] then
       name = "bob-power-armor-mk5",
       icon = "__bobequipment__/graphics/icons/power-armor-mk5.png",
       icon_size = 32,
-
+      factoriopedia_simulation = { init = make_armor("bob-power-armor-mk5") },
       resistances = {
         {
           type = "physical",
@@ -177,12 +261,12 @@ if not mods["bobwarfare"] then
         },
         {
           type = "acid",
-          decrease = 20,
-          percent = 50,
+          decrease = 16,
+          percent = 85,
         },
         {
           type = "explosion",
-          decrease = 20,
+          decrease = 80,
           percent = 50,
         },
         {
@@ -192,13 +276,13 @@ if not mods["bobwarfare"] then
         },
         {
           type = "poison",
-          decrease = 20,
-          percent = 50,
+          decrease = 10,
+          percent = 70,
         },
         {
           type = "fire",
-          decrease = 20,
-          percent = 50,
+          decrease = 15,
+          percent = 90,
         },
         {
           type = "laser",
@@ -207,13 +291,12 @@ if not mods["bobwarfare"] then
         },
         {
           type = "electric",
-          decrease = 20,
+          decrease = 15,
           percent = 50,
         },
         {
           type = "bob-pierce",
-          decrease = 20,
-          percent = 50,
+          percent = 45,
         },
         {
           type = "plasma",

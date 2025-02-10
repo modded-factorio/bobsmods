@@ -1,10 +1,12 @@
 if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
+  local module_color_map = {
+    ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
+  }
   data:extend({
     {
       type = "module",
       name = "bob-green-module-1",
-      icon = "__bobmodules__/graphics/icons/green-module-1.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_01.png",
       subgroup = "green-module",
       category = "green",
       tier = 1,
@@ -14,10 +16,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         pollution = -1 * bobmods.modules.PollutionBonus,
         consumption = -1 * bobmods.modules.ConsumptionBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.8, g = 0.8, b = 0 },
-        secondary = { r = 1, g = 1, b = 0.37 },
-      },
+      beacon_tint = module_color_map["green"],
       art_style = "vanilla",
       requires_beacon_alt_mode = false,
     },
@@ -25,8 +24,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "module",
       name = "bob-green-module-2",
-      icon = "__bobmodules__/graphics/icons/green-module-2.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_02.png",
       subgroup = "green-module",
       category = "green",
       tier = 2,
@@ -36,10 +34,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
         consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.8, g = 0.8, b = 0 },
-        secondary = { r = 1, g = 1, b = 0.37 },
-      },
+      beacon_tint = module_color_map["green"],
       art_style = "vanilla",
       requires_beacon_alt_mode = false,
     },
@@ -47,8 +42,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "module",
       name = "bob-green-module-3",
-      icon = "__bobmodules__/graphics/icons/green-module-3.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_03.png",
       subgroup = "green-module",
       category = "green",
       tier = 3,
@@ -58,10 +52,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
         consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.8, g = 0.8, b = 0 },
-        secondary = { r = 1, g = 1, b = 0.37 },
-      },
+      beacon_tint = module_color_map["green"],
       art_style = "vanilla",
       requires_beacon_alt_mode = false,
     },
@@ -69,8 +60,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "module",
       name = "bob-green-module-4",
-      icon = "__bobmodules__/graphics/icons/green-module-4.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_04.png",
       subgroup = "green-module",
       category = "green",
       tier = 4,
@@ -80,10 +70,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
         consumption = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.8, g = 0.8, b = 0 },
-        secondary = { r = 1, g = 1, b = 0.37 },
-      },
+      beacon_tint = module_color_map["green"],
       art_style = "vanilla",
       requires_beacon_alt_mode = false,
     },
@@ -91,8 +78,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
     {
       type = "module",
       name = "bob-green-module-5",
-      icon = "__bobmodules__/graphics/icons/green-module-5.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/green/green_05.png",
       subgroup = "green-module",
       category = "green",
       tier = 5,
@@ -102,10 +88,7 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
         pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
         consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.8, g = 0.8, b = 0 },
-        secondary = { r = 1, g = 1, b = 0.37 },
-      },
+      beacon_tint = module_color_map["green"],
       art_style = "vanilla",
       requires_beacon_alt_mode = false,
     },

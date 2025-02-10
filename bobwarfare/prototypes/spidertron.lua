@@ -275,18 +275,50 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 data.raw["spider-vehicle"]["spidertron"].order = "b[personal-transport]-c[spidertron]-c[spidertron]"
 
+local factoriopedia_antron = {
+  init = [[
+    game.simulation.camera_zoom = 1.3
+    game.simulation.camera_position = { 0, -1 }
+    game.surfaces[1].create_entity({ name = "antron", position = { 0, 0 } })
+  ]],
+}
+local factoriopedia_tankotron = {
+  init = [[
+    game.simulation.camera_zoom = 1.3
+    game.simulation.camera_position = { 0, -1 }
+    game.surfaces[1].create_entity({ name = "tankotron", position = { 0, 0 } })
+  ]],
+}
+local factoriopedia_logistic_spidertron = {
+  init = [[
+    game.simulation.camera_zoom = 1.2
+    game.simulation.camera_position = { 0, -1 }
+    game.surfaces[1].create_entity({ name = "logistic-spidertron", position = { 0, 0 } })
+  ]],
+}
+local factoriopedia_heavy_spidertron = {
+  init = [[
+    game.simulation.camera_zoom = 0.8
+    game.simulation.camera_position = { 0, -2 }
+    game.surfaces[1].create_entity({ name = "heavy-spidertron", position = { 0, 0 } })
+  ]],
+}
+
 function bobmods.warfare.create_spidertron(arguments)
   local scale = arguments.scale
   local leg_scale = scale * arguments.leg_scale
-  local spidertron_leg_resistances = arguments.resistances or {}
+  local spidertron_leg_resistances = util.copy(arguments.resistances) or {}
   if arguments.resistances then
-    for i, resistances in pairs(arguments.resistances) do
+    for i, resistances in pairs(spidertron_leg_resistances) do
       if resistances.type == "explosion" then
         spidertron_leg_resistances[i] = { type = "explosion", percent = 100 }
       end
+      if resistances.type == "fire" then
+        spidertron_leg_resistances[i] = { type = "fire", percent = 100 }
+      end
     end
   else
-    spidertron_leg_resistances = { { type = "explosion", percent = 100 } }
+    spidertron_leg_resistances = { { type = "explosion", percent = 100 }, { type = "fire", percent = 100 } }
   end
   data:extend({
     {
@@ -318,11 +350,11 @@ function bobmods.warfare.create_spidertron(arguments)
       name = arguments.name,
       icon = "__base__/graphics/icons/spidertron.png",
       icon_size = 64,
+      factoriopedia_simulation = arguments.factoriopedia_simulation,
       collision_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
       drawing_box_vertical_extension = 3 * scale,
       minable = { mining_time = 1, result = arguments.name },
-
       max_health = arguments.max_health or 3000,
       resistances = arguments.resistances,
       guns = arguments.guns,
@@ -723,6 +755,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 1, -- relative to scale
   leg_thickness = 1.25, -- relative to leg_scale
   leg_movement_speed = 0.75, --1,
+  factoriopedia_simulation = factoriopedia_antron,
   order_letter = "a",
   guns = {
     "spidertron-gatling-gun",
@@ -742,10 +775,10 @@ bobmods.warfare.create_spidertron({
     { type = "impact", decrease = 30, percent = 50 },
     { type = "bob-pierce", decrease = 0, percent = 30 },
     { type = "electric", decrease = 0, percent = 50 },
-    { type = "explosion", decrease = 10, percent = 50 },
-    { type = "acid", decrease = 0, percent = 50 },
-    { type = "fire", decrease = 10, percent = 50 },
-    { type = "poison", decrease = 10, percent = 50 },
+    { type = "explosion", decrease = 15, percent = 50 },
+    { type = "acid", decrease = 5, percent = 50 },
+    { type = "fire", decrease = 15, percent = 60 },
+    { type = "poison", decrease = 8, percent = 50 },
     { type = "laser", decrease = 0, percent = 50 },
     { type = "plasma", decrease = 0, percent = 75 },
   },
@@ -758,6 +791,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 1.25, -- relative to scale
   leg_thickness = 1, -- relative to leg_scale
   leg_movement_speed = 1, --1,
+  factoriopedia_simulation = factoriopedia_tankotron,
   order_letter = "b",
   guns = {
     "spidertron-cannon-1",
@@ -777,10 +811,10 @@ bobmods.warfare.create_spidertron({
     { type = "impact", decrease = 30, percent = 60 },
     { type = "bob-pierce", decrease = 0, percent = 40 },
     { type = "electric", decrease = 0, percent = 60 },
-    { type = "explosion", decrease = 10, percent = 60 },
+    { type = "explosion", decrease = 20, percent = 60 },
     { type = "acid", decrease = 0, percent = 60 },
-    { type = "fire", decrease = 10, percent = 90 },
-    { type = "poison", decrease = 10, percent = 60 },
+    { type = "fire", decrease = 15, percent = 70 },
+    { type = "poison", decrease = 8, percent = 60 },
     { type = "laser", decrease = 0, percent = 60 },
     { type = "plasma", decrease = 0, percent = 90 },
   },
@@ -793,6 +827,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 0.8, -- relative to scale
   leg_thickness = 1, -- relative to leg_scale
   leg_movement_speed = 1, --1,
+  factoriopedia_simulation = factoriopedia_logistic_spidertron,
   order_letter = "d",
   guns = {
     "spidertron-gatling-gun",
@@ -811,10 +846,10 @@ bobmods.warfare.create_spidertron({
     { type = "impact", decrease = 30, percent = 50 },
     { type = "bob-pierce", decrease = 0, percent = 30 },
     { type = "electric", decrease = 0, percent = 50 },
-    { type = "explosion", decrease = 10, percent = 50 },
-    { type = "acid", decrease = 0, percent = 50 },
-    { type = "fire", decrease = 10, percent = 50 },
-    { type = "poison", decrease = 10, percent = 50 },
+    { type = "explosion", decrease = 15, percent = 50 },
+    { type = "acid", decrease = 5, percent = 50 },
+    { type = "fire", decrease = 15, percent = 60 },
+    { type = "poison", decrease = 8, percent = 50 },
     { type = "laser", decrease = 0, percent = 50 },
     { type = "plasma", decrease = 0, percent = 75 },
   },
@@ -827,6 +862,7 @@ bobmods.warfare.create_spidertron({
   leg_scale = 1.25, -- relative to scale
   leg_thickness = 1, -- relative to leg_scale
   leg_movement_speed = 1.5,
+  factoriopedia_simulation = factoriopedia_heavy_spidertron,
   order_letter = "e",
   guns = {
     "spidertron-rocket-launcher-1",
@@ -849,14 +885,14 @@ bobmods.warfare.create_spidertron({
   resistances = {
     { type = "physical", decrease = 25, percent = 75 },
     { type = "impact", decrease = 50, percent = 90 },
-    { type = "bob-pierce", decrease = 25, percent = 75 },
-    { type = "electric", decrease = 25, percent = 75 },
-    { type = "explosion", decrease = 25, percent = 75 },
+    { type = "bob-pierce", decrease = 0, percent = 60 },
+    { type = "electric", decrease = 10, percent = 75 },
+    { type = "explosion", decrease = 40, percent = 70 },
     { type = "acid", decrease = 25, percent = 75 },
-    { type = "fire", decrease = 25, percent = 75 },
-    { type = "poison", decrease = 25, percent = 80 },
+    { type = "fire", decrease = 25, percent = 90 },
+    { type = "poison", decrease = 12, percent = 80 },
     { type = "laser", decrease = 0, percent = 75 },
-    { type = "plasma", decrease = 0, percent = 100 },
+    { type = "plasma", decrease = 0, percent = 95 },
   },
 })
 

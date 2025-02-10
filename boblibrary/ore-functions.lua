@@ -242,7 +242,7 @@ function bobmods.lib.resource.effect(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
-    scale = inputs.scale,
+    scale = scale,
     blend_mode = "additive",
     flags = { "light" },
   }

@@ -23,8 +23,8 @@ if data.raw.item["bob-invar-alloy"] then
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-2", "bob-invar-processing")
 end
 
-if data.raw.item["tinned-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("roboport-antenna-2", "copper-cable", "tinned-copper-cable")
+if data.raw.item["bob-tinned-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("roboport-antenna-2", "copper-cable", "bob-tinned-copper-cable")
 end
 
 if data.raw.item["bob-steel-bearing"] then
@@ -45,8 +45,8 @@ if data.raw.item["bob-nickel-plate"] then
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-3", "bob-nickel-processing")
 end
 
-if data.raw.item["insulated-cable"] then
-  bobmods.lib.recipe.replace_ingredient("roboport-antenna-3", "copper-cable", "insulated-cable")
+if data.raw.item["bob-insulated-cable"] then
+  bobmods.lib.recipe.replace_ingredient("roboport-antenna-3", "copper-cable", "bob-insulated-cable")
 end
 
 if data.raw.item["bob-lithium-ion-battery"] then
@@ -88,8 +88,8 @@ if data.raw.item["bob-gold-plate"] then
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "bob-gold-processing")
 end
 
-if data.raw.item["gilded-copper-cable"] then
-  bobmods.lib.recipe.replace_ingredient("roboport-antenna-4", "copper-cable", "gilded-copper-cable")
+if data.raw.item["bob-gilded-copper-cable"] then
+  bobmods.lib.recipe.replace_ingredient("roboport-antenna-4", "copper-cable", "bob-gilded-copper-cable")
 end
 
 if data.raw.item["bob-advanced-processing-unit"] then

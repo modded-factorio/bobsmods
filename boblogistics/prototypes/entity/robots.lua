@@ -105,7 +105,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-2" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 4, percent = 85 },
+      { type = "electric", decrease = 6, percent = 60 },
+      { type = "acid", decrease = 4, percent = 60 },
+    },
     max_health = 125,
     max_payload_size = 3,
     speed = 0.07,
@@ -126,6 +130,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-2", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -135,7 +145,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-3" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 8, percent = 85 },
+      { type = "electric", decrease = 12, percent = 75 },
+      { type = "acid", decrease = 8, percent = 65 },
+    },
     max_health = 150,
     max_payload_size = 6,
     speed = 0.09,
@@ -156,6 +170,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-3", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -165,7 +185,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-4" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 175,
     max_payload_size = 11,
     speed = 0.12,
@@ -186,6 +210,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-4", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -195,7 +225,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-5" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 175,
     max_payload_size = 11,
     speed = 0.12,
@@ -216,6 +250,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-5", position = {0, 0}}
+      ]],
+    },
   },
 })
 
@@ -385,7 +425,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-2" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 4, percent = 85 },
+      { type = "electric", decrease = 6, percent = 60 },
+      { type = "acid", decrease = 4, percent = 60 },
+    },
     max_health = 225,
     max_payload_size = 2,
     speed = 0.09,
@@ -408,6 +452,12 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-2", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -417,7 +467,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-3" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 8, percent = 85 },
+      { type = "electric", decrease = 12, percent = 75 },
+      { type = "acid", decrease = 8, percent = 65 },
+    },
     max_health = 350,
     max_payload_size = 4,
     speed = 0.12,
@@ -440,6 +494,12 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-3", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -449,7 +509,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-4" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 500,
     max_payload_size = 6,
     speed = 0.15,
@@ -472,6 +536,12 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-4", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -481,7 +551,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-5" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 500,
     max_payload_size = 6,
     speed = 0.15,
@@ -504,5 +578,11 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-5", position = {0, 0}}
+      ]],
+    },
   },
 })

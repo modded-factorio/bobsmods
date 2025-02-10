@@ -10,7 +10,7 @@ local inserter = {
       drain = "0.4kW",
     },
     red = {
-      health = 150,
+      health = 250,
       rotation_speed = 0.04,
       extension_speed = 0.1,
       energy_per_movement = "6.25kJ",
@@ -23,7 +23,7 @@ local inserter = {
       },
     },
     blue = {
-      health = 175,
+      health = 375,
       rotation_speed = 0.06,
       extension_speed = 0.15,
       energy_per_movement = "7.5kJ",
@@ -36,7 +36,7 @@ local inserter = {
       },
     },
     purple = {
-      health = 200,
+      health = 400,
       rotation_speed = 0.08,
       extension_speed = 0.2,
       energy_per_movement = "8.75kJ",
@@ -49,7 +49,7 @@ local inserter = {
       },
     },
     green = {
-      health = 225,
+      health = 550,
       rotation_speed = 0.1,
       extension_speed = 0.25,
       energy_per_movement = "10kJ",

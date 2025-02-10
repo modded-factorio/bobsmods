@@ -5,6 +5,89 @@ if settings.startup["bobmods-colorupdate"].value == true then
   tank_mk3_tint = { r = 0.7, g = 1, b = 0.7 }
 end
 
+data.raw.car.car.resistances = {
+  {
+    type = "fire",
+    decrease = 2,
+    percent = 30,
+  },
+  {
+    type = "poison",
+    decrease = 3,
+    percent = 40,
+  },
+  {
+    type = "impact",
+    decrease = 50,
+    percent = 30,
+  },
+  {
+    type = "acid",
+    decrease = 3,
+    percent = 30,
+  },
+  {
+    type = "electric",
+    percent = 20,
+  },
+  {
+    type = "plasma",
+    decrease = 15,
+    percent = 50,
+  },
+}
+
+data.raw.car.tank.resistances = {
+  {
+    type = "fire",
+    decrease = 5,
+    percent = 40,
+  },
+  {
+    type = "poison",
+    decrease = 5,
+    percent = 50,
+  },
+  {
+    type = "physical",
+    decrease = 15,
+    percent = 45,
+  },
+  {
+    type = "impact",
+    decrease = 50,
+    percent = 70,
+  },
+  {
+    type = "explosion",
+    decrease = 20,
+    percent = 60,
+  },
+  {
+    type = "acid",
+    decrease = 5,
+    percent = 60,
+  },
+  {
+    type = "electric",
+    decrease = 10,
+    percent = 30,
+  },
+  {
+    type = "laser",
+    percent = 20,
+  },
+  {
+    type = "bob-pierce",
+    percent = 20,
+  },
+  {
+    type = "plasma",
+    decrease = 15,
+    percent = 50,
+  },
+}
+
 function bobmods.warfare.tank_animation(tint)
   return {
     layers = {
@@ -179,18 +262,18 @@ data:extend({
     resistances = {
       {
         type = "fire",
-        decrease = 25,
-        percent = 60,
+        decrease = 12,
+        percent = 55,
       },
       {
         type = "poison",
-        decrease = 25,
-        percent = 60,
+        decrease = 8,
+        percent = 50,
       },
       {
         type = "physical",
         decrease = 25,
-        percent = 45,
+        percent = 55,
       },
       {
         type = "impact",
@@ -199,13 +282,26 @@ data:extend({
       },
       {
         type = "explosion",
-        decrease = 25,
-        percent = 45,
+        decrease = 35,
+        percent = 70,
       },
       {
         type = "acid",
-        decrease = 25,
-        percent = 80,
+        decrease = 8,
+        percent = 70,
+      },
+      {
+        type = "electric",
+        decrease = 15,
+        percent = 40,
+      },
+      {
+        type = "laser",
+        percent = 30,
+      },
+      {
+        type = "bob-pierce",
+        percent = 20,
       },
       {
         type = "plasma",
@@ -352,18 +448,18 @@ data:extend({
     resistances = {
       {
         type = "fire",
-        decrease = 35,
+        decrease = 20,
         percent = 75,
       },
       {
         type = "poison",
-        decrease = 35,
-        percent = 75,
+        decrease = 10,
+        percent = 60,
       },
       {
         type = "physical",
         decrease = 35,
-        percent = 60,
+        percent = 65,
       },
       {
         type = "impact",
@@ -372,17 +468,30 @@ data:extend({
       },
       {
         type = "explosion",
-        decrease = 35,
-        percent = 60,
+        decrease = 60,
+        percent = 80,
       },
       {
         type = "acid",
-        decrease = 35,
-        percent = 90,
+        decrease = 12,
+        percent = 80,
+      },
+      {
+        type = "electric",
+        decrease = 20,
+        percent = 50,
+      },
+      {
+        type = "laser",
+        percent = 40,
+      },
+      {
+        type = "bob-pierce",
+        percent = 40,
       },
       {
         type = "plasma",
-        percent = 100,
+        percent = 90,
       },
     },
     impact_category = "metal-large",

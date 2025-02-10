@@ -75,6 +75,17 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       minable = { mining_time = 0.1, result = "basic-underground-belt" },
       max_health = 140,
       corpse = "small-remnants",
+      factoriopedia_simulation = {
+        init = [[
+          game.simulation.camera_position = {0, 0.5}
+          game.simulation.camera_zoom = 1.8
+          game.surfaces[1].create_entities_from_blueprint_string
+          {
+            string = "0eNqVkNsKwyAMht8l165Qp4P6KmOMHkIJtFE8jJXSd5+2sJtdlF2Jif/3Ja7QTQmdJ45gVqDecgBzXyHQyO1UatzOCAa6NlB/STygH73N56XDKcImgHLtDabeHgKQI0XCg7FflienuUOfH4gTlgBnQ45bLt6CrLSABYysdPYM5LE/ukpAXFxBEbtUpvixyb9t6txmU9x1eVOKOBf49/sEvNCHPaBvslFNo7XSsrnW2/YBe0R3xg==",
+            position = {0, 0}
+          }
+        ]],
+      },
       underground_sprite = {
         filename = "__core__/graphics/arrows/underground-lines.png",
         priority = "high",
@@ -285,6 +296,17 @@ data:extend({
     minable = { mining_time = 0.1, result = "turbo-underground-belt" },
     max_health = 180,
     corpse = "small-remnants",
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, 0.5}
+        game.simulation.camera_zoom = 1.6
+        game.surfaces[1].create_entities_from_blueprint_string
+        {
+          string = "0eNqVkMEKgzAMht8l5yrYWZl9lTGG1TACmkptx0T67mv1sMMOslPIn+T/kmxgxoCzI/agN6De8gL6tsFCT+7GrHE3IWjwwRlbBB7QPZ1NsTA4eogCKGlv0FW8C0D25AkPjz1ZHxwmgy41iBMvAbNd0rjlzE2WhSyVgBV0U6oEGshhf5RrAX6dsxfxHPIaPzj5N+56TrPB77h0KnmckvL9n4AXumUfUI1s67ZVqlayvVQxfgBNp3h+",
+          position = {0, 0}
+        }
+      ]],
+    },
     underground_sprite = {
       filename = "__core__/graphics/arrows/underground-lines.png",
       priority = "high",
@@ -472,7 +494,7 @@ data:extend({
         filename = "__base__/sound/express-transport-belt.ogg",
         volume = 0.4,
       },
-      max_sounds_per_type = 3,
+      max_sounds_per_prototype = 3,
     },
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.green_belt_animation_set,
@@ -493,6 +515,17 @@ data:extend({
     minable = { mining_time = 0.1, result = "ultimate-underground-belt" },
     max_health = 190,
     corpse = "small-remnants",
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, 0.5}
+        game.simulation.camera_zoom = 1.6
+        game.surfaces[1].create_entities_from_blueprint_string
+        {
+          string = "0eNqdkM8KgzAMh98l5yro7Eb7KmMM/wQJaCo1HRPx3dfqYYcdhJ1Cf0m/r80KzRBw8sQCdgVqHc9g7yvM1HM9pIzrEcFCGITGWjAL3KHvvYs1a3AQ2BRQzN5gi+2hAFlICA/MflieHMYGfRxQ5zgFk5sjwXGyR2p2ybWCBewt19HVkcf2aFcKZJkSjngK6SU/xvIfozkXuiC7MX6YBMeYfBep4IV+3i/oa2kqY7SudGkuxbZ9AEGPfC0=",
+          position = {0, 0}
+        }
+      ]],
+    },
     underground_sprite = {
       filename = "__core__/graphics/arrows/underground-lines.png",
       priority = "high",

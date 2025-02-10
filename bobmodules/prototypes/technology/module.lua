@@ -1,12 +1,12 @@
 bobmods.lib.tech.remove_prerequisite("modules", "advanced-circuit")
 bobmods.lib.tech.add_prerequisite("modules", "plastics")
 
-data.raw["technology"]["speed-module"].icon = "__bobmodules__/graphics/icons/speed-module-1.png"
-data.raw["technology"]["speed-module"].icon_size = 32
-data.raw["technology"]["speed-module-2"].icon = "__bobmodules__/graphics/icons/speed-module-2.png"
-data.raw["technology"]["speed-module-2"].icon_size = 32
-data.raw["technology"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/speed-module-3.png"
-data.raw["technology"]["speed-module-3"].icon_size = 32
+data.raw["technology"]["speed-module"].icon = "__bobmodules__/graphics/icons/blue/blue_01.png"
+data.raw["technology"]["speed-module"].icon_size = 64
+data.raw["technology"]["speed-module-2"].icon = "__bobmodules__/graphics/icons/blue/blue_02.png"
+data.raw["technology"]["speed-module-2"].icon_size = 64
+data.raw["technology"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/blue/blue_03.png"
+data.raw["technology"]["speed-module-3"].icon_size = 64
 
 bobmods.lib.tech.remove_prerequisite("speed-module-2", "processing-unit")
 bobmods.lib.tech.add_prerequisite("speed-module-2", "advanced-circuit")
@@ -24,8 +24,8 @@ data:extend({
     name = "bob-speed-module-4",
     localised_name = { "", { "technology-name.speed-module" }, " 4" },
     localised_description = { "technology-description.speed-module" },
-    icon = "__bobmodules__/graphics/icons/speed-module-4.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/blue/blue_04.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -57,8 +57,8 @@ data:extend({
     name = "bob-speed-module-5",
     localised_name = { "", { "technology-name.speed-module" }, " 5" },
     localised_description = { "technology-description.speed-module" },
-    icon = "__bobmodules__/graphics/icons/speed-module-5.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/blue/blue_05.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -84,13 +84,13 @@ data:extend({
   },
 })
 
-data.raw["technology"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/yellow-module-1.png"
-data.raw["technology"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/yellow-module-2.png"
-data.raw["technology"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/yellow-module-3.png"
+data.raw["technology"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/yellow/yellow_01.png"
+data.raw["technology"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/yellow/yellow_02.png"
+data.raw["technology"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/yellow/yellow_03.png"
 
-data.raw["technology"]["efficiency-module"].icon_size = 32
-data.raw["technology"]["efficiency-module-2"].icon_size = 32
-data.raw["technology"]["efficiency-module-3"].icon_size = 32
+data.raw["technology"]["efficiency-module"].icon_size = 64
+data.raw["technology"]["efficiency-module-2"].icon_size = 64
+data.raw["technology"]["efficiency-module-3"].icon_size = 64
 
 bobmods.lib.tech.remove_prerequisite("efficiency-module-2", "processing-unit")
 bobmods.lib.tech.add_prerequisite("efficiency-module-2", "advanced-circuit")
@@ -108,8 +108,8 @@ data:extend({
     name = "bob-efficiency-module-4",
     localised_name = { "", { "technology-name.efficiency-module" }, " 4" },
     localised_description = { "technology-description.efficiency-module" },
-    icon = "__bobmodules__/graphics/icons/yellow-module-4.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/yellow/yellow_04.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -141,8 +141,8 @@ data:extend({
     name = "bob-efficiency-module-5",
     localised_name = { "", { "technology-name.efficiency-module" }, " 5" },
     localised_description = { "technology-description.efficiency-module" },
-    icon = "__bobmodules__/graphics/icons/yellow-module-5.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/yellow/yellow_05.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -168,13 +168,13 @@ data:extend({
   },
 })
 
-data.raw["technology"]["productivity-module"].icon = "__bobmodules__/graphics/icons/red-module-1.png"
-data.raw["technology"]["productivity-module-2"].icon = "__bobmodules__/graphics/icons/red-module-2.png"
-data.raw["technology"]["productivity-module-3"].icon = "__bobmodules__/graphics/icons/red-module-3.png"
+data.raw["technology"]["productivity-module"].icon = "__bobmodules__/graphics/icons/red-yellow/red-yellow_01.png"
+data.raw["technology"]["productivity-module-2"].icon = "__bobmodules__/graphics/icons/red-yellow/red-yellow_02.png"
+data.raw["technology"]["productivity-module-3"].icon = "__bobmodules__/graphics/icons/red-yellow/red-yellow_03.png"
 
-data.raw["technology"]["productivity-module"].icon_size = 32
-data.raw["technology"]["productivity-module-2"].icon_size = 32
-data.raw["technology"]["productivity-module-3"].icon_size = 32
+data.raw["technology"]["productivity-module"].icon_size = 64
+data.raw["technology"]["productivity-module-2"].icon_size = 64
+data.raw["technology"]["productivity-module-3"].icon_size = 64
 
 bobmods.lib.tech.remove_prerequisite("productivity-module-2", "processing-unit")
 bobmods.lib.tech.add_prerequisite("productivity-module-2", "advanced-circuit")
@@ -192,8 +192,8 @@ data:extend({
     name = "bob-productivity-module-4",
     localised_name = { "", { "technology-name.productivity-module" }, " 4" },
     localised_description = { "technology-description.productivity-module" },
-    icon = "__bobmodules__/graphics/icons/red-module-4.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/red-yellow/red-yellow_04.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -225,8 +225,8 @@ data:extend({
     name = "bob-productivity-module-5",
     localised_name = { "", { "technology-name.productivity-module" }, " 5" },
     localised_description = { "technology-description.productivity-module" },
-    icon = "__bobmodules__/graphics/icons/red-module-5.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/red-yellow/red-yellow_05.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -256,8 +256,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-clean-module-1",
-    icon = "__bobmodules__/graphics/icons/pollution-clean-module-1.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/pine/pine_01.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -277,8 +277,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-clean-module-2",
-    icon = "__bobmodules__/graphics/icons/pollution-clean-module-2.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/pine/pine_02.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -306,8 +306,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-clean-module-3",
-    icon = "__bobmodules__/graphics/icons/pollution-clean-module-3.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/pine/pine_03.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -337,8 +337,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-clean-module-4",
-    icon = "__bobmodules__/graphics/icons/pollution-clean-module-4.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/pine/pine_04.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -368,8 +368,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-clean-module-5",
-    icon = "__bobmodules__/graphics/icons/pollution-clean-module-5.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/pine/pine_05.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -399,8 +399,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-create-module-1",
-    icon = "__bobmodules__/graphics/icons/pollution-create-module-1.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/brown/brown_01.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -420,8 +420,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-create-module-2",
-    icon = "__bobmodules__/graphics/icons/pollution-create-module-2.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/brown/brown_02.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -449,8 +449,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-create-module-3",
-    icon = "__bobmodules__/graphics/icons/pollution-create-module-3.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/brown/brown_03.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -480,8 +480,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-create-module-4",
-    icon = "__bobmodules__/graphics/icons/pollution-create-module-4.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/brown/brown_04.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -511,8 +511,8 @@ data:extend({
   {
     type = "technology",
     name = "bob-pollution-create-module-5",
-    icon = "__bobmodules__/graphics/icons/pollution-create-module-5.png",
-    icon_size = 32,
+    icon = "__bobmodules__/graphics/icons/brown/brown_05.png",
+    icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -551,9 +551,9 @@ if data.raw.technology["bob-advanced-processing-unit"] then
 end
 
 if mods["quality"] then
-  data.raw.technology["quality-module"].icon = "__bobmodules__/graphics/icons/quality-module-1.png"
-  data.raw.technology["quality-module-2"].icon = "__bobmodules__/graphics/icons/quality-module-2.png"
-  data.raw.technology["quality-module-3"].icon = "__bobmodules__/graphics/icons/quality-module-3.png"
+  data.raw.technology["quality-module"].icon = "__bobmodules__/graphics/icons/gray-red/gray-red_01.png"
+  data.raw.technology["quality-module-2"].icon = "__bobmodules__/graphics/icons/gray-red/gray-red_02.png"
+  data.raw.technology["quality-module-3"].icon = "__bobmodules__/graphics/icons/gray-red/gray-red_03.png"
 
   data.raw.technology["quality-module"].icon_size = 64
   data.raw.technology["quality-module-2"].icon_size = 64
@@ -576,7 +576,7 @@ if mods["quality"] then
       name = "bob-quality-module-4",
       localised_name = { "", { "technology-name.quality-module" }, " 4" },
       localised_description = { "technology-description.quality-module" },
-      icon = "__bobmodules__/graphics/icons/quality-module-4.png",
+      icon = "__bobmodules__/graphics/icons/gray-red/gray-red_04.png",
       icon_size = 64,
       effects = {
         {
@@ -609,7 +609,7 @@ if mods["quality"] then
       name = "bob-quality-module-5",
       localised_name = { "", { "technology-name.quality-module" }, " 5" },
       localised_description = { "technology-description.quality-module" },
-      icon = "__bobmodules__/graphics/icons/quality-module-5.png",
+      icon = "__bobmodules__/graphics/icons/gray-red/gray-red_05.png",
       icon_size = 64,
       effects = {
         {

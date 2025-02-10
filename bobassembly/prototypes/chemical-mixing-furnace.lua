@@ -196,7 +196,6 @@ then
           filename = "__base__/sound/electric-furnace.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1.5,
       },
       graphics_set = {
         animation = {
@@ -270,7 +269,6 @@ then
           filename = "__base__/sound/electric-furnace.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1.5,
       },
       graphics_set = {
         animation = {

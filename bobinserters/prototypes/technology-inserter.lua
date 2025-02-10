@@ -5,11 +5,11 @@ if
     and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
   )
 then
-  if not data.raw.technology["long-inserters-1"] then
+  if not data.raw.technology["bob-long-inserters-1"] then
     data:extend({
       {
         type = "technology",
-        name = "long-inserters-1",
+        name = "bob-long-inserters-1",
         icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
         icon_size = 128,
         effects = {},
@@ -28,11 +28,11 @@ then
     })
   end
 
-  if settings.startup["bobmods-inserters-long2"].value == true and not data.raw.technology["long-inserters-2"] then
+  if settings.startup["bobmods-inserters-long2"].value == true and not data.raw.technology["bob-long-inserters-2"] then
     data:extend({
       {
         type = "technology",
-        name = "long-inserters-1",
+        name = "bob-long-inserters-1",
         icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
         icon_size = 128,
         effects = {},
@@ -50,12 +50,12 @@ then
       },
       {
         type = "technology",
-        name = "long-inserters-2",
+        name = "bob-long-inserters-2",
         icon = "__bobinserters__/graphics/icons/technology/long-inserters.png",
         icon_size = 128,
         effects = {},
         prerequisites = {
-          "long-inserters-1",
+          "bob-long-inserters-1",
           "chemical-science-pack",
         },
         unit = {
@@ -73,11 +73,11 @@ then
   end
 end
 
-if not data.raw.technology["near-inserters"] then
+if not data.raw.technology["bob-near-inserters"] then
   data:extend({
     {
       type = "technology",
-      name = "near-inserters",
+      name = "bob-near-inserters",
       icon = "__bobinserters__/graphics/icons/technology/near-inserters.png",
       icon_size = 128,
       effects = {},
@@ -96,11 +96,11 @@ if not data.raw.technology["near-inserters"] then
   })
 end
 
-if not data.raw.technology["more-inserters-1"] then
+if not data.raw.technology["bob-more-inserters-1"] then
   data:extend({
     {
       type = "technology",
-      name = "more-inserters-1",
+      name = "bob-more-inserters-1",
       icon = "__bobinserters__/graphics/icons/technology/more-inserters.png",
       icon_size = 128,
       effects = {},
@@ -120,16 +120,16 @@ if not data.raw.technology["more-inserters-1"] then
   })
 end
 
-if settings.startup["bobmods-inserters-more2"].value == true and not data.raw.technology["more-inserters-2"] then
+if settings.startup["bobmods-inserters-more2"].value == true and not data.raw.technology["bob-more-inserters-2"] then
   data:extend({
     {
       type = "technology",
-      name = "more-inserters-2",
+      name = "bob-more-inserters-2",
       icon = "__bobinserters__/graphics/icons/technology/more-inserters.png",
       icon_size = 128,
       effects = {},
       prerequisites = {
-        "more-inserters-1",
+        "bob-more-inserters-1",
         "logistics-3",
       },
       unit = {

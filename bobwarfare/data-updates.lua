@@ -13,8 +13,6 @@ if settings.startup["bobmods-warfare-drainlesslaserturrets"].value == true then
   end
 end
 
-table.insert(data.raw.car.tank.resistances, { type = "plasma", decrease = 15, percent = 50 })
-
 if settings.startup["bobmods-warfare-vehicleflamethrowerstartsfires"].value == true then
   data.raw.ammo["flamethrower-ammo"].ammo_type = {
     {

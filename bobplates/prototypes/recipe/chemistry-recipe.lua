@@ -8,6 +8,7 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
       subgroup = "bob-fluid-pump",
       order = "b[fluid-chemistry]-b[bob-lithia-water]",
       category = "bob-water-pump",
+      enabled = false,
       energy_required = 1,
       ingredients = {},
       results = {
@@ -19,11 +20,13 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
     {
       type = "recipe",
       name = "bob-ground-water",
+      localised_name = { "fluid-name.water" },
       icon = "__base__/graphics/icons/fluid/water.png",
       icon_size = 64,
       subgroup = "bob-fluid-pump",
       order = "b[fluid-chemistry]-b[water]",
       category = "bob-water-pump",
+      enabled = false,
       energy_required = 1,
       ingredients = {},
       results = {
@@ -37,12 +40,14 @@ if settings.startup["bobmods-plates-groundwater"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "pure-water-pump",
+        name = "bob-pure-water-pump",
+        localised_name = { "fluid-name.bob-pure-water" },
         icon = "__bobplates__/graphics/icons/pure-water.png",
         icon_size = 64,
         subgroup = "bob-fluid-pump",
         order = "b[fluid-chemistry]-b[bob-pure-water]",
         category = "bob-water-pump",
+        enabled = false,
         energy_required = 1,
         ingredients = {},
         results = {

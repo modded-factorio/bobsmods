@@ -28,7 +28,7 @@ for index, force in pairs(game.forces) do
   end
 
   if force.technologies["electronics"].researched then
-    force.recipes["insulated-cable"].enabled = true
+    force.recipes["bob-insulated-cable"].enabled = true
     force.recipes["basic-electronic-components"].enabled = true
     force.recipes["electronic-circuit"].enabled = true
     if force.recipes["solder"] then
@@ -40,8 +40,8 @@ for index, force in pairs(game.forces) do
     if force.recipes["solder-alloy-lead"] then
       force.recipes["solder-alloy-lead"].enabled = true
     end
-    if force.recipes["tinned-copper-cable"] then
-      force.recipes["tinned-copper-cable"].enabled = true
+    if force.recipes["bob-tinned-copper-cable"] then
+      force.recipes["bob-tinned-copper-cable"].enabled = true
     end
   end
 
@@ -60,8 +60,8 @@ for index, force in pairs(game.forces) do
   end
 
   if force.technologies["bob-advanced-processing-unit"].researched then
-    if force.recipes["gilded-copper-cable"] then
-      force.recipes["gilded-copper-cable"].enabled = true
+    if force.recipes["bob-gilded-copper-cable"] then
+      force.recipes["bob-gilded-copper-cable"].enabled = true
     end
     force.recipes["processing-electronics"].enabled = true
     force.recipes["multi-layer-circuit-board"].enabled = true
