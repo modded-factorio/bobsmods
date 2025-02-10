@@ -2,6 +2,7 @@ data:extend({
   {
     type = "radar",
     name = "bob-artifact-radar",
+    factoriopedia_description = { "technology-description.bob-artifact-radar" },
     icon = "__bobenemies__/graphics/icons/radar.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "bob-artifact-radar" },
