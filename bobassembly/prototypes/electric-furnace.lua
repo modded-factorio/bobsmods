@@ -122,7 +122,6 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
           filename = "__base__/sound/electric-furnace.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1.5,
       },
       graphics_set = {
         animation = bob_electric_furnace_animation(input.tint),

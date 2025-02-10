@@ -149,8 +149,7 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       close_sound = sounds.machine_close,
       working_sound = {
         sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-        max_sounds_per_type = 3,
-        audible_distance_modifier = 0.75,
+        max_sounds_per_prototype = 3,
       },
       recharging_light = { intensity = 0.4, size = 5 },
       request_to_open_door_timeout = 15,
@@ -279,8 +278,7 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       close_sound = sounds.machine_close,
       working_sound = {
         sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-        max_sounds_per_type = 3,
-        audible_distance_modifier = 0.75,
+        max_sounds_per_prototype = 3,
       },
       recharging_light = { intensity = 0.4, size = 5 },
       request_to_open_door_timeout = 15,
@@ -409,8 +407,7 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       close_sound = sounds.machine_close,
       working_sound = {
         sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-        max_sounds_per_type = 3,
-        audible_distance_modifier = 0.75,
+        max_sounds_per_prototype = 3,
       },
       recharging_light = { intensity = 0.4, size = 5 },
       request_to_open_door_timeout = 15,
@@ -857,8 +854,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -940,8 +936,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1023,8 +1018,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1106,8 +1100,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 })
@@ -1226,8 +1219,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1344,8 +1336,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1462,8 +1453,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1579,8 +1569,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1747,8 +1736,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -1915,8 +1903,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -2083,8 +2070,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 
@@ -2250,8 +2236,7 @@ data:extend({
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
-      max_sounds_per_type = 3,
-      audible_distance_modifier = 0.75,
+      max_sounds_per_prototype = 3,
     },
   },
 })

@@ -91,7 +91,6 @@ data:extend({
       },
     },
     working_sound = {
-      audible_distance_modifier = 0.7,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
       sound = {
@@ -234,7 +233,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
       },
       working_sound = {
-        audible_distance_modifier = 0.7,
         fade_in_ticks = 4,
         fade_out_ticks = 20,
         sound = {

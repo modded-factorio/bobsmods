@@ -27,7 +27,7 @@ sounds.laserBeam = {
     volume = 0.75,
     modifiers = volume_multiplier("main-menu", 2.5),
   },
-  max_sounds_per_type = 1,
+  max_sounds_per_prototype = 1,
 }
 
 sounds.plasmaTurret = function(volume)
