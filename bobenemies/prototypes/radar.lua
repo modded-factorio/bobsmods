@@ -119,7 +119,6 @@ data:extend({
           filename = "__base__/sound/radar.ogg",
         },
       },
-      apparent_volume = 2,
     },
     radius_minimap_visualisation_color = { r = 0.235, g = 0.092, b = 0.059, a = 0.275 },
     is_military_target = false,

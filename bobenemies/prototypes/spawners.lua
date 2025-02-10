@@ -708,7 +708,7 @@ bobmods.enemies.new_spawner({
     { type = "explosion", decrease = 10, percent = 35 },
     { type = "laser", percent = 75 },
     { type = "fire", decrease = 10, percent = 80 },
-    { type = "acid", 10, percent = 50 },
+    { type = "acid", decrease = 10, percent = 50 },
     { type = "plasma", percent = 50 },
   },
 })
@@ -728,7 +728,7 @@ bobmods.enemies.new_spawner({
     { type = "explosion", decrease = 20, percent = 50 },
     { type = "laser", percent = 75 },
     { type = "fire", decrease = 10, percent = 80 },
-    { type = "acid", 10, percent = 50 },
+    { type = "acid", decrease = 10, percent = 50 },
     { type = "plasma", percent = 50 },
   },
 })

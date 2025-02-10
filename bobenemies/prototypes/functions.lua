@@ -629,7 +629,7 @@ function bobmods.enemies.acid_stream(inputs, scale_value)
             volume = 0.4,
           },
         },
-        max_sounds_per_type = 3,
+        max_sounds_per_prototype = 3,
       },
       initial_action = inputs.attack_action or basic_stream_attack(inputs, scale_value),
       particle = {
@@ -1442,7 +1442,6 @@ function bobmods.enemies.new_spawner(inputs)
           volume = 1.0,
         },
       },
-      apparent_volume = 2,
     },
     dying_sound = {
       {

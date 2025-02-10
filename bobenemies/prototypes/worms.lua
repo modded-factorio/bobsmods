@@ -344,7 +344,6 @@ local piercing_shot = function(attack_range)
         starting_speed = 2,
         max_range = 2 + attack_range,
         projectile = "bob-piercing-spine",
-        source_offset = {0.15, -0.5},
         direction_deviation = 0.3,
       },
     }

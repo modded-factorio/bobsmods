@@ -1006,7 +1006,6 @@ data:extend({
     beam = true,
     rotate = true,
     flags = { "not-on-map" },
-    animation_speed = 1,
     animations = {
       {
         filename = "__bobenemies__/graphics/entity/beams/beam-body-rotated-1.png",
