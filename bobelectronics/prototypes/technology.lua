@@ -19,7 +19,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "insulated-cable",
+        recipe = "bob-insulated-cable",
       },
     },
     unit = {
