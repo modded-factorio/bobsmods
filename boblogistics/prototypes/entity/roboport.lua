@@ -856,6 +856,17 @@ data:extend({
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
       max_sounds_per_prototype = 3,
     },
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.simulation.camera_zoom = 2.0
+        game.surfaces[1].create_entities_from_blueprint_string
+        {
+          string = "0eNqNj9EOgjAMRf+lzyMRAZX9ijGEYSVNRofbMCDZv7tBoq++tc3tOe0KSk84WmIPcgXqDDuQ1xUc9dzqNON2QJCgjMq06cl56rK3YcxwHlu+o4UggGIxg8zDTQCyJ0+4c7ZmaXgaVEzKXPzBEzAaFxGGkz9is1LAAvIQRRafEzrfPEh7tC4FHHYpu/t+h4R0C3kckuz7pIBXXNvQ1elYl3VdVcXlXNRFCB+52Fwa",
+          position = {0, 0}
+        }
+      ]],
+    },
   },
 
   {
@@ -937,6 +948,17 @@ data:extend({
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
       max_sounds_per_prototype = 3,
+    },
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.simulation.camera_zoom = 2.0
+        game.surfaces[1].create_entities_from_blueprint_string
+        {
+          string = "0eNqNj9EOgjAMRf+lzyNREIX9ijGEYSVNRofbMCDZv7tBoq++tc3tufeuoPSEoyX2IFegzrADeV3BUc+tTjduBwQJyqhMm56cpy57G8YM57HlO9oshyCA4jiDPIabAGRPnnAnbcvS8DQotFEg/iIKGI2LEMMpQwJXAhaQh2hl8Tmh882DtEfrksBhl7S74y9KSGnI45DsvkUFvOLbhi7PeX2q67IsqktRFyF8ANEdXOA=",
+          position = {0, 0}
+        }
+      ]],
     },
   },
 
@@ -1020,6 +1042,17 @@ data:extend({
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
       max_sounds_per_prototype = 3,
     },
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.simulation.camera_zoom = 2.0
+        game.surfaces[1].create_entities_from_blueprint_string
+        {
+          string = "0eNqNj9EOgjAMRf+lzyNRJwr7FWMIw2qajA63YUCyf3eDRF99a5vbc+9dQJsRB0ccQC1AnWUP6rKApwe3Jt+47REUaKsLYx/kA3XF2zIWOA0t39AVEqIASuMEah+vApADBcKNtC5zw2Ov0SWB+IsoYLA+QSznDAksKwEzqF2ycvgc0YfmTiag81ngscvazfEXJeY0FLDPdt+iAl7pbUWXp0N9rOuylNVZ1jLGD9MxXOQ=",
+          position = {0, 0}
+        }
+      ]],
+    },
   },
 
   {
@@ -1101,6 +1134,17 @@ data:extend({
     working_sound = {
       sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.4 },
       max_sounds_per_prototype = 3,
+    },
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.simulation.camera_zoom = 2.0
+        game.surfaces[1].create_entities_from_blueprint_string
+        {
+          string = "0eNqNj8EOgjAQRP9lz+0BAbX9FWMI4Go2KVtsiwFJ/90WEr16293MvplZoTMTjo44gF6Besse9GUFTw9uTb5xOyBo6GwnjX2QD9TLt2WUOI8t39DJCqIASuMMuohXAciBAuFO2pal4Wno0CWB+IsoYLQ+QSznDAlcVwIW0LJIXg6fE/rQ3MkEdD4rPPZZvFv+ssQchwIO2e/bVMArvW3s+nhQlVJ1XZ5PpSpj/AAh410S",
+          position = {0, 0}
+        }
+      ]],
     },
   },
 })
