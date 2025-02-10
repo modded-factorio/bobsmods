@@ -60,8 +60,8 @@ for index, force in pairs(game.forces) do
   end
 
   if force.technologies["bob-advanced-processing-unit"].researched then
-    if force.recipes["gilded-copper-cable"] then
-      force.recipes["gilded-copper-cable"].enabled = true
+    if force.recipes["bob-gilded-copper-cable"] then
+      force.recipes["bob-gilded-copper-cable"].enabled = true
     end
     force.recipes["processing-electronics"].enabled = true
     force.recipes["multi-layer-circuit-board"].enabled = true

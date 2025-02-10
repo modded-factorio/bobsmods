@@ -78,10 +78,10 @@ if data.raw.item["bob-gold-plate"] then
   data:extend({
     {
       type = "item",
-      name = "gilded-copper-cable",
+      name = "bob-gilded-copper-cable",
       icon = "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       subgroup = "bob-electronic-components",
-      order = "0-a3[gilded-copper-cable]",
+      order = "0-a3[bob-gilded-copper-cable]",
       stack_size = 200,
       drop_sound = electronic_part_drop_move,
       inventory_move_sound = electronic_part_drop_move,
@@ -90,14 +90,14 @@ if data.raw.item["bob-gold-plate"] then
 
     {
       type = "recipe",
-      name = "gilded-copper-cable",
+      name = "bob-gilded-copper-cable",
       category = "electronics-machine",
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
         { type = "item", name = "bob-gold-plate", amount = 1 },
       },
-      results = { { type = "item", name = "gilded-copper-cable", amount = 3 } },
+      results = { { type = "item", name = "bob-gilded-copper-cable", amount = 3 } },
       allow_decomposition = false,
       allow_productivity = true,
     },

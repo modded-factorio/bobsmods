@@ -76,8 +76,8 @@ bobmods.lib.tech.add_recipe_unlock("processing-unit", "fibreglass-board")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "superior-circuit-board")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "processing-unit")
 
-if data.raw.recipe["gilded-copper-cable"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "gilded-copper-cable")
+if data.raw.recipe["bob-gilded-copper-cable"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-gilded-copper-cable")
 end
 
 bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "processing-electronics")
