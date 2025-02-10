@@ -55,8 +55,8 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         {
           filename = "__base__/graphics/entity/accumulator/accumulator-discharge.png",
           priority = "high",
-          width = 170,
-          height = 210,
+          width = 174,
+          height = 214,
           line_length = 6,
           frame_count = 24,
           blend_mode = "additive",
