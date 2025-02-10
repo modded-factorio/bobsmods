@@ -243,8 +243,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.tech.add_prerequisite("walking-vehicle", "bob-nitinol-processing")
   end
 
-  if data.raw.item["insulated-cable"] then
-    bobmods.lib.recipe.replace_ingredient("mech-leg", "copper-cable", "insulated-cable")
+  if data.raw.item["bob-insulated-cable"] then
+    bobmods.lib.recipe.replace_ingredient("mech-leg", "copper-cable", "bob-insulated-cable")
   end
 
   if data.raw.item["bob-tungsten-carbide"] then

@@ -49,10 +49,10 @@ end
 data:extend({
   {
     type = "item",
-    name = "insulated-cable",
+    name = "bob-insulated-cable",
     icon = "__bobelectronics__/graphics/icons/insulated-cable.png",
     subgroup = "bob-electronic-components",
-    order = "0-a2[insulated-cable]",
+    order = "0-a2[bob-insulated-cable]",
     stack_size = 200,
     drop_sound = electronic_part_drop_move,
     inventory_move_sound = electronic_part_drop_move,
@@ -61,14 +61,14 @@ data:extend({
 
   {
     type = "recipe",
-    name = "insulated-cable",
+    name = "bob-insulated-cable",
     category = "electronics",
     enabled = false,
     ingredients = {
       { type = "item", name = "copper-cable", amount = 2 },
       { type = "item", name = "bob-rubber", amount = 1 },
     },
-    results = { { type = "item", name = "insulated-cable", amount = 2 } },
+    results = { { type = "item", name = "bob-insulated-cable", amount = 2 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
