@@ -113,11 +113,11 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.tech.add_prerequisite("solar-panel-equipment-2", "bob-aluminium-processing")
 end
 
-if data.raw.item["tinned-copper-cable"] then
+if data.raw.item["bob-tinned-copper-cable"] then
   bobmods.lib.recipe.remove_ingredient("solar-panel-equipment-2", "copper-cable")
   bobmods.lib.recipe.add_ingredient(
     "solar-panel-equipment-2",
-    { type = "item", name = "tinned-copper-cable", amount = 8 }
+    { type = "item", name = "bob-tinned-copper-cable", amount = 8 }
   )
 end
 
@@ -401,11 +401,11 @@ if data.raw.item["bob-gold-plate"] then
   bobmods.lib.tech.add_prerequisite("solar-panel-equipment-3", "bob-gold-processing")
 end
 
-if data.raw.item["gilded-copper-cable"] then
+if data.raw.item["bob-gilded-copper-cable"] then
   bobmods.lib.recipe.remove_ingredient("solar-panel-equipment-3", "copper-cable")
   bobmods.lib.recipe.add_ingredient(
     "solar-panel-equipment-3",
-    { type = "item", name = "gilded-copper-cable", amount = 8 }
+    { type = "item", name = "bob-gilded-copper-cable", amount = 8 }
   )
   bobmods.lib.tech.add_prerequisite("solar-panel-equipment-3", "bob-advanced-processing-unit")
 end
