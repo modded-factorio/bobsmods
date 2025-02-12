@@ -3,6 +3,7 @@ local warefareSounds = require("prototypes.entity.sounds")
 
 data.raw["ammo-turret"]["gun-turret"].fast_replaceable_group = "turret"
 data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "turret"
+data.raw["electric-turret"]["laser-turret"].drawing_box_vertical_extension = 0.7
 
 local black = { r = 0, g = 0, b = 0, a = 1 }
 local magenta = { r = 1, g = 0, b = 1, a = 1 }
@@ -549,7 +550,7 @@ local function bob_laser_turret(inputs)
     corpse = "laser-turret-remnants",
     collision_box = { { -0.7 * size, -0.7 * size }, { 0.7 * size, 0.7 * size } },
     selection_box = { { -1 * size, -1 * size }, { 1 * size, 1 * size } },
-    drawing_box_vertical_extension = 0.3 * size,
+    drawing_box_vertical_extension = 0.7 * size,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     dying_explosion = "medium-explosion",
     rotation_speed = inputs.rotation_speed or 0.01,
