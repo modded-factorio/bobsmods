@@ -333,7 +333,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       type = "recipe",
       name = "electric-mixing-furnace-from-electric-furnace",
       icons = {
-        { icon = "__base__/graphics/icons/electric-furnace.png", scale = 0.5, },
+        { icon = "__bobplates__/graphics/icons/electric-mixing-furnace.png", icon_size = 32, },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 }, },
         { icon = "__bobplates__/graphics/icons/m.png", icon_size = 28, scale = 0.5, shift = { -8, 8 }, },
       },
@@ -352,7 +352,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
       type = "recipe",
       name = "electric-chemical-furnace-from-electric-furnace",
       icons = {
-        { icon = "__base__/graphics/icons/electric-furnace.png", scale = 0.5, },
+        { icon = "__bobplates__/graphics/icons/chemical-furnace.png", icon_size = 32, },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 }, },
         { icon = "__bobplates__/graphics/icons/c.png", icon_size = 28, scale = 0.5, shift = { -8, 8 }, },
       },
