@@ -491,6 +491,7 @@ data:extend({
       },
       {
         type = "plasma",
+        decrease = 35,
         percent = 90,
       },
     },
