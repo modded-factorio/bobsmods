@@ -58,6 +58,7 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       fast_replaceable_group = "burner-generator",
       collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      drawing_box_vertical_extension = 0.8,
       energy_source = {
         type = "electric",
         usage_priority = "secondary-output",

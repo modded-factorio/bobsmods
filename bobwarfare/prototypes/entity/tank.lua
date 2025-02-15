@@ -312,6 +312,7 @@ data:extend({
     impact_category = "metal-large",
     collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
+    drawing_box_vertical_extension = 0.5,
     effectivity = 0.95,
     braking_power = "1000kW",
     energy_source = {
@@ -497,6 +498,7 @@ data:extend({
     impact_category = "metal-large",
     collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
+    drawing_box_vertical_extension = 0.5,
     effectivity = 1,
     braking_power = "1200kW",
     energy_source = {

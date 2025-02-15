@@ -11,6 +11,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
   data.raw["assembling-machine"]["chemical-plant"].order = "e[chemical-plant-1]"
   data.raw["assembling-machine"]["chemical-plant"].energy_usage = "160kW"
+  data.raw["assembling-machine"]["chemical-plant"].drawing_box_vertical_extension = 0.6
 
   data.raw.item["chemical-plant"].stack_size = 50
   data.raw.item["chemical-plant"].subgroup = "bob-chemical-machine"
@@ -231,6 +232,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      drawing_box_vertical_extension = 0.6,
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 4,
       icon_draw_specification = {
@@ -270,6 +272,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      drawing_box_vertical_extension = 0.6,
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 5,
       icons_positioning = {
@@ -317,6 +320,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       dying_explosion = "medium-explosion",
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      drawing_box_vertical_extension = 0.6,
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
       module_slots = 6,
       icons_positioning = {
