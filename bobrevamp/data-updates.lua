@@ -299,7 +299,6 @@ if feature_flags["quality"] then
     "low-density-structure",
     "heat-shield-tile",
     "rocket-silo",
-    "rocket-part",
     "satellite",
     "cargo-landing-pad",
   })
