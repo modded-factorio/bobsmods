@@ -204,7 +204,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         },
         time = 30,
       },
-      order = "c-i-a",
     },
 
     {
@@ -232,7 +231,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         },
         time = 30,
       },
-      order = "c-i-b",
     },
 
     {
@@ -261,7 +259,6 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         },
         time = 30,
       },
-      order = "c-i-c",
     },
   })
 end
@@ -322,11 +319,11 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
 
     {
       type = "item",
-      name = "bob-robot-tool",
-      icon = "__boblogistics__/graphics/icons/robot-tool.png",
+      name = "bob-robot-tool-construction",
+      icon = "__boblogistics__/graphics/icons/robot-tool-construction.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
-      order = "r[bob-robot-tool-1]",
+      order = "r[robot-tool-construction-1]",
       stack_size = 100,
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
@@ -335,11 +332,11 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
 
     {
       type = "item",
-      name = "bob-robot-tool-2",
-      icon = "__boblogistics__/graphics/icons/robot-tool.png",
+      name = "bob-robot-tool-construction-2",
+      icon = "__boblogistics__/graphics/icons/robot-tool-construction.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
-      order = "r[bob-robot-tool-2]",
+      order = "r[robot-tool-construction-2]",
       stack_size = 100,
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
@@ -348,11 +345,11 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
 
     {
       type = "item",
-      name = "bob-robot-tool-3",
-      icon = "__boblogistics__/graphics/icons/robot-tool.png",
+      name = "bob-robot-tool-construction-3",
+      icon = "__boblogistics__/graphics/icons/robot-tool-construction.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
-      order = "r[bob-robot-tool-3]",
+      order = "r[robot-tool-construction-3]",
       stack_size = 100,
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
@@ -361,11 +358,63 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
 
     {
       type = "item",
-      name = "bob-robot-tool-4",
-      icon = "__boblogistics__/graphics/icons/robot-tool.png",
+      name = "bob-robot-tool-construction-4",
+      icon = "__boblogistics__/graphics/icons/robot-tool-construction.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
-      order = "r[bob-robot-tool-4]",
+      order = "r[robot-tool-construction-4]",
+      stack_size = 100,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
+    },
+
+    {
+      type = "item",
+      name = "bob-robot-tool-logistic",
+      icon = "__boblogistics__/graphics/icons/robot-tool-logistic.png",
+      icon_size = 32,
+      subgroup = "bob-robot-parts",
+      order = "r[robot-tool-logistic-1]",
+      stack_size = 100,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
+    },
+
+    {
+      type = "item",
+      name = "bob-robot-tool-logistic-2",
+      icon = "__boblogistics__/graphics/icons/robot-tool-logistic.png",
+      icon_size = 32,
+      subgroup = "bob-robot-parts",
+      order = "r[robot-tool-logistic-2]",
+      stack_size = 100,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
+    },
+
+    {
+      type = "item",
+      name = "bob-robot-tool-logistic-3",
+      icon = "__boblogistics__/graphics/icons/robot-tool-logistic.png",
+      icon_size = 32,
+      subgroup = "bob-robot-parts",
+      order = "r[robot-tool-logistic-3]",
+      stack_size = 100,
+      drop_sound = tool_drop_move,
+      inventory_move_sound = tool_drop_move,
+      pick_sound = tool_pick,
+    },
+
+    {
+      type = "item",
+      name = "bob-robot-tool-logistic-4",
+      icon = "__boblogistics__/graphics/icons/robot-tool-logistic.png",
+      icon_size = 32,
+      subgroup = "bob-robot-parts",
+      order = "r[robot-tool-logistic-4]",
       stack_size = 100,
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
@@ -426,41 +475,81 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
 
     {
       type = "recipe",
-      name = "bob-robot-tool",
+      name = "bob-robot-tool-construction",
       energy_required = 1,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "bob-robot-tool", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-construction", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "bob-robot-tool-2",
+      name = "bob-robot-tool-construction-2",
       energy_required = 2,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "bob-robot-tool-2", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-construction-2", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "bob-robot-tool-3",
+      name = "bob-robot-tool-construction-3",
       energy_required = 3,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "bob-robot-tool-3", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-construction-3", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "bob-robot-tool-4",
+      name = "bob-robot-tool-construction-4",
       energy_required = 4,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "bob-robot-tool-4", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-construction-4", amount = 1 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-robot-tool-logistic",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {},
+      results = { { type = "item", name = "bob-robot-tool-logistic", amount = 1 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-robot-tool-logistic-2",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {},
+      results = { { type = "item", name = "bob-robot-tool-logistic-2", amount = 1 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-robot-tool-logistic-3",
+      energy_required = 3,
+      enabled = false,
+      ingredients = {},
+      results = { { type = "item", name = "bob-robot-tool-logistic-3", amount = 1 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-robot-tool-logistic-4",
+      energy_required = 4,
+      enabled = false,
+      ingredients = {},
+      results = { { type = "item", name = "bob-robot-tool-logistic-4", amount = 1 } },
       allow_productivity = true,
     },
   })
