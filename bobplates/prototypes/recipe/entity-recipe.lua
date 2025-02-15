@@ -254,7 +254,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
     {
       type = "recipe",
       name = "stone-mixing-furnace-from-stone-furnace",
-      localised_name = { "entity-name.stone-mixing-furnace" },
+      localised_name = { "entity-name.bob-stone-mixing-furnace" },
       energy_required = 0.1,
       enabled = false,
       subgroup = "bob-smelting-machine-convert",
