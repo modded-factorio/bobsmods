@@ -181,6 +181,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   })
 
   data.raw["cargo-wagon"]["cargo-wagon"].resistances = rolling_stock_resistances()
+  data.raw["cargo-wagon"]["cargo-wagon"].quality_affects_inventory_size = true
 
   data:extend({
     util.merge({
@@ -251,6 +252,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   })
 
   data.raw["fluid-wagon"]["fluid-wagon"].resistances = rolling_stock_resistances()
+  data.raw["fluid-wagon"]["fluid-wagon"].quality_affects_capacity = true
 
   local fluidwagonbase = settings.startup["bobmods-logistics-fluidwagonbase"].value * 1000
   data.raw["fluid-wagon"]["fluid-wagon"].capacity = fluidwagonbase
