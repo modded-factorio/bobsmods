@@ -49,6 +49,7 @@ end
 
 data.raw["assembling-machine"]["assembling-machine-3"].module_slots = 3
 data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
+data.raw["assembling-machine"]["assembling-machine-3"].drawing_box_vertical_extension = nil
 
 if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.recipe.replace_ingredient("assembling-machine-4", "steel-plate", "bob-aluminium-plate")

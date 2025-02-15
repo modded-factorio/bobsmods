@@ -56,6 +56,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "heat-exchanger-2-from-boiler-3",
+        icons = {
+          { icon = "__base__/graphics/icons/heat-boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.heat-exchanger-2" },
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
@@ -69,6 +73,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "heat-exchanger-3-from-boiler-4",
+        icons = {
+          { icon = "__base__/graphics/icons/heat-boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.heat-exchanger-3" },
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
@@ -83,6 +91,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "heat-exchanger-4-from-boiler-5",
+        icons = {
+          { icon = "__base__/graphics/icons/heat-boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.heat-exchanger-4" },
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
@@ -99,6 +111,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "boiler-2-from-heat-exchanger",
+        icons = {
+          { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.boiler-2" },
         subgroup = "bob-energy-boiler-convert",
         energy_required = 3,
@@ -117,6 +133,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "boiler-3-from-heat-exchanger-2",
+        icons = {
+          { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.boiler-3" },
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
@@ -134,6 +154,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "boiler-4-from-heat-exchanger-3",
+        icons = {
+          { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.boiler-4" },
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
@@ -151,6 +175,10 @@ if settings.startup["bobmods-power-steam"].value == true then
       {
         type = "recipe",
         name = "boiler-5-from-heat-exchanger-4",
+        icons = {
+          { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
+          { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
+        },
         localised_name = { "entity-name.boiler-5" },
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
