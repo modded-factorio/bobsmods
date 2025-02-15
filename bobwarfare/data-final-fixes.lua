@@ -1,7 +1,7 @@
 if mods["aai-programmable-vehicles"] then
   --Restore new spidertron armaments
-  data.raw["spider-vehicle"].tankotron.guns = { "spidertron-cannon-1", "spidertron-cannon-2", }
-  data.raw["spider-vehicle"]["heavy-spidertron"].guns = { 
+  data.raw["spider-vehicle"].tankotron.guns = { "spidertron-cannon-1", "spidertron-cannon-2" }
+  data.raw["spider-vehicle"]["heavy-spidertron"].guns = {
     "spidertron-rocket-launcher-1",
     "spidertron-rocket-launcher-2",
     "spidertron-rocket-launcher-3",
@@ -19,39 +19,39 @@ if mods["aai-programmable-vehicles"] then
       data.raw.technology.tank.effects = {
         {
           recipe = "tank",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "cannon-shell",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "explosive-cannon-shell",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "cannon-shell-precision",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "explosive-cannon-shell-precision",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-cannon",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-cannon-reverse",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-machine-gun",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-machine-gun-reverse",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
       }
     else
@@ -60,47 +60,47 @@ if mods["aai-programmable-vehicles"] then
       data.raw.technology.tank.effects = {
         {
           recipe = "tank",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "cannon-shell",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "explosive-cannon-shell",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "cannon-shell-precision",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "explosive-cannon-shell-precision",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-cannon",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-cannon-reverse",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-machine-gun",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-machine-gun-reverse",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-flamethrower",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
         {
           recipe = "tank-tank-flamethrower-reverse",
-          type = "unlock-recipe"
+          type = "unlock-recipe",
         },
       }
     end
