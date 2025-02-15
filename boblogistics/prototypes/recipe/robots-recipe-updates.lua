@@ -96,8 +96,8 @@ if data.raw.recipe["bob-robot-tool-construction"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction", { type = "item", name = "iron-gear-wheel", amount = 1 })
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic", { type = "item", name = "iron-gear-wheel", amount = 2 })
   end
-  if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic", { type = "item", name = "steel-bearing", amount = 1 })
+  if data.raw.item["bob-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic", { type = "item", name = "bob-steel-bearing", amount = 1 })
   end
 
   if data.raw.item["bob-aluminium-plate"] then
