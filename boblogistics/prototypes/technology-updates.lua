@@ -261,16 +261,20 @@ bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "roboport")
 
 if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("robotics", "bob-robot-brain")
-  bobmods.lib.tech.add_recipe_unlock("robotics", "bob-robot-tool")
+  bobmods.lib.tech.add_recipe_unlock("construction-robotics", "bob-robot-tool-construction")
+  bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "bob-robot-tool-logistic")
 
   bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-brain-2")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-construction-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-logistic-2")
 
   bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-brain-3")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-construction-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-logistic-3")
 
   bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-brain-4")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-4")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-construction-4")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-logistic-4")
 end
 
 bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe")
