@@ -33,10 +33,6 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "crafting-machine",
-  },
-  {
-    type = "recipe-category",
     name = "distillery",
   },
 

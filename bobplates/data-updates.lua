@@ -67,7 +67,6 @@ if mods["boblogistics"] then
 end
 
 -- add Assembling Machine catagory.
-bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "crafting-machine")
 bobmods.lib.machine.type_if_add_category("assembling-machine", "chemistry", "distillery") -- Adds distilling recipies to chemical plants
 if not data.raw.furnace["bob-distillery"] then
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "distillery") -- Adds distilling recipies to assembling machines that can handle fluids

@@ -324,7 +324,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     {
       type = "recipe",
       name = "rtg",
-      category = "crafting-machine",
+      category = "advanced-crafting",
       energy_required = 20,
       enabled = false,
       ingredients = {

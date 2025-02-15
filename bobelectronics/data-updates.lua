@@ -20,9 +20,6 @@ if data.raw["recipe-category"]["mixing-furnace"] then
   end
 end
 
--- add Assembling Machine catagory.
-bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "crafting-machine")
-
 -- add new electronics crafting categories
 bobmods.lib.machine.type_if_add_category("character", "crafting", "electronics")
 bobmods.lib.machine.type_if_add_category("god-controller", "crafting", "electronics")

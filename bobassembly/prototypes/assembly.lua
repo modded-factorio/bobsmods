@@ -9,13 +9,6 @@ data:extend({
 
 data:extend({
   {
-    type = "recipe-category",
-    name = "crafting-machine",
-  },
-})
-
-data:extend({
-  {
     type = "item",
     name = "assembling-machine-4",
     icon = "__bobassembly__/graphics/icons/assembling-machine-4.png",

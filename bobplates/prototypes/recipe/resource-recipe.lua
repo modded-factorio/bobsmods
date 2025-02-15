@@ -19,7 +19,7 @@ data:extend({
     type = "recipe",
     name = "bob-resin-wood",
     localised_name = { "item-name.bob-resin" },
-    category = "crafting-machine",
+    category = "advanced-crafting",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -84,7 +84,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-wafer",
-    category = "crafting-machine",
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -98,7 +98,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-powder",
-    category = "crafting-machine",
+    category = "advanced-crafting",
     subgroup = "bob-resource",
     enabled = false,
     energy_required = 5,

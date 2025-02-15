@@ -25,7 +25,7 @@ data:extend({
     type = "recipe",
     name = "bob-resin-wood",
     localised_name = { "item-name.bob-resin" },
-    category = "crafting-machine",
+    category = "advanced-crafting",
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
@@ -151,7 +151,7 @@ if not data.raw.item["bob-silicon-wafer"] and data.raw.item["bob-silicon-plate"]
     {
       type = "recipe",
       name = "bob-silicon-wafer",
-      category = "crafting-machine",
+      category = "advanced-crafting",
       enabled = false,
       energy_required = 5,
       ingredients = {
@@ -192,7 +192,7 @@ if data.raw.item["bob-tin-plate"] then
       name = "solder-alloy",
       energy_required = 7,
       enabled = false,
-      category = "crafting-machine",
+      category = "advanced-crafting",
       ingredients = {
         { type = "item", name = "bob-tin-plate", amount = 9 },
         { type = "item", name = "copper-plate", amount = 1 },
@@ -217,7 +217,7 @@ if data.raw.item["bob-tin-plate"] then
         localised_name = { "item-name.solder-alloy" },
         energy_required = 7,
         enabled = false,
-        category = "crafting-machine",
+        category = "advanced-crafting",
         ingredients = {
           { type = "item", name = "bob-tin-plate", amount = 4 },
           { type = "item", name = "bob-lead-plate", amount = 7 },
