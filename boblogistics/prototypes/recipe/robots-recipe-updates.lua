@@ -107,8 +107,8 @@ if data.raw.recipe["bob-robot-tool-construction"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-2", { type = "item", name = "steel-plate", amount = 1 })
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic-2", { type = "item", name = "steel-plate", amount = 1 })
   end
-  if data.raw.item["tinned-copper-cable"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-2", { type = "item", name = "tinned-copper-cable", amount = 6 })
+  if data.raw.item["bob-tinned-copper-cable"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-2", { type = "item", name = "bob-tinned-copper-cable", amount = 6 })
   else
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-2", { type = "item", name = "copper-cable", amount = 8 })
   end
@@ -132,8 +132,8 @@ if data.raw.recipe["bob-robot-tool-construction"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-3", { type = "item", name = "steel-plate", amount = 2 })
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic-3", { type = "item", name = "steel-plate", amount = 2 })
   end
-  if data.raw.item["insulated-cable"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-3", { type = "item", name = "insulated-cable", amount = 6 })
+  if data.raw.item["bob-insulated-cable"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-3", { type = "item", name = "bob-insulated-cable", amount = 6 })
   else
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-3", { type = "item", name = "copper-cable", amount = 10 })
   end
@@ -157,8 +157,8 @@ if data.raw.recipe["bob-robot-tool-construction"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-4", { type = "item", name = "steel-plate", amount = 2 })
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic-4", { type = "item", name = "steel-plate", amount = 2 })
   end
-  if data.raw.item["gilded-copper-cable"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-4", { type = "item", name = "gilded-copper-cable", amount = 9 })
+  if data.raw.item["bob-gilded-copper-cable"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-4", { type = "item", name = "bob-gilded-copper-cable", amount = 9 })
   else
     bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction-4", { type = "item", name = "copper-cable", amount = 15 })
   end
