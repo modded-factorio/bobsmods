@@ -301,7 +301,7 @@ data:extend({
       },
       {
         type = "bob-pierce",
-        percent = 20,
+        percent = 15,
       },
       {
         type = "plasma",
@@ -488,10 +488,11 @@ data:extend({
       },
       {
         type = "bob-pierce",
-        percent = 40,
+        percent = 30,
       },
       {
         type = "plasma",
+        decrease = 35,
         percent = 90,
       },
     },
