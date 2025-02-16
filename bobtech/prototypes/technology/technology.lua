@@ -28,6 +28,7 @@ data:extend({
   {
     type = "technology",
     name = "advanced-logistic-science-pack",
+    essential = true,
     icon = "__bobtech__/graphics/icons/logistic-science-pack-technology.png",
     icon_size = 256,
     effects = {
