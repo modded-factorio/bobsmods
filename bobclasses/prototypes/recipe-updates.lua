@@ -16,7 +16,10 @@ if data.raw.item["bob-rtg"] then
   bobmods.lib.recipe.add_ingredient("bob-player-power-core", { type = "item", name = "bob-rtg", amount = 1 })
   bobmods.lib.tech.add_prerequisite("bob-bodies", "bob-rtg")
 elseif data.raw.item["bob-alien-artifact"] then
-  bobmods.lib.recipe.add_ingredient("bob-player-power-core", { type = "item", name = "bob-alien-artifact", amount = 50 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-player-power-core",
+    { type = "item", name = "bob-alien-artifact", amount = 50 }
+  )
 end
 
 if data.raw.item["bob-module-case"] then
@@ -84,6 +87,10 @@ if data.raw.item["bob-electric-furnace-2"] then
 end
 
 if data.raw.item["bob-exoskeleton-equipment-2"] then
-  bobmods.lib.recipe.replace_ingredient("bob-character-fighter-2", "exoskeleton-equipment", "bob-exoskeleton-equipment-2")
+  bobmods.lib.recipe.replace_ingredient(
+    "bob-character-fighter-2",
+    "exoskeleton-equipment",
+    "bob-exoskeleton-equipment-2"
+  )
   bobmods.lib.tech.add_prerequisite("bob-fighter-body-2", "bob-exoskeleton-equipment-2")
 end

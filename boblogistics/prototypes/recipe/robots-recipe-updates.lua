@@ -497,9 +497,13 @@ for _, robot in pairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
     bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-rtg", amount = 1 })
     bobmods.lib.tech.add_prerequisite("bob-robots-4", "bob-rtg")
   elseif
-    data.raw.item["bob-vehicle-fission-cell-equipment-1"] and data.raw.technology["bob-vehicle-fission-cell-equipment-1"]
+    data.raw.item["bob-vehicle-fission-cell-equipment-1"]
+    and data.raw.technology["bob-vehicle-fission-cell-equipment-1"]
   then
-    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-vehicle-fission-cell-equipment-1", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      robot,
+      { type = "item", name = "bob-vehicle-fission-cell-equipment-1", amount = 1 }
+    )
     bobmods.lib.tech.add_prerequisite("bob-robots-4", "bob-vehicle-fission-cell-equipment-1")
   else
     bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "fission-reactor-equipment", amount = 1 })
@@ -570,7 +574,10 @@ else
     end
   end
 
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "bob-robot-tool-logistic-4", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-5",
+    { type = "item", name = "bob-robot-tool-logistic-4", amount = 1 }
+  )
   bobmods.lib.recipe.add_ingredient(
     "bob-construction-robot-5",
     { type = "item", name = "bob-robot-tool-construction-4", amount = 1 }

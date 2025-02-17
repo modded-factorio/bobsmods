@@ -5,7 +5,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
   data.raw.reactor["nuclear-reactor"].use_fuel_glow_color = true
   data.raw.reactor["nuclear-reactor"].default_fuel_glow_color = { 0, 1, 0, 1 } -- color used as working_light_picture tint for fuels that don't have glow color defined
   data.raw.reactor["nuclear-reactor"].localised_description =
-    { "", { "entity-description.nuclear-reactor" }, { "entity-description.bob-reactor-max-temperature", "1000" }, }
+    { "", { "entity-description.nuclear-reactor" }, { "entity-description.bob-reactor-max-temperature", "1000" } }
   data.raw.reactor["nuclear-reactor"].lower_layer_picture = {
     filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes.png",
     width = 320,

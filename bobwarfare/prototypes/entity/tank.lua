@@ -609,7 +609,13 @@ data:extend({
     weight = 20000,
     inventory_size = 100,
     track_particle_triggers = movement_triggers.tank,
-    guns = { "bob-tank-cannon-3", "bob-gatling-gun", "bob-tank-flamethrower-3", "bob-tank-artillery-2", "bob-tank-laser" },
+    guns = {
+      "bob-tank-cannon-3",
+      "bob-gatling-gun",
+      "bob-tank-flamethrower-3",
+      "bob-tank-artillery-2",
+      "bob-tank-laser",
+    },
     water_reflection = car_reflection(1.2),
   },
 })

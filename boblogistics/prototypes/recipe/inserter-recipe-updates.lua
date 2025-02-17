@@ -61,7 +61,10 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   end
 
   if data.raw.item["bob-titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-turbo-inserter", { type = "item", name = "bob-titanium-bearing", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-turbo-inserter",
+      { type = "item", name = "bob-titanium-bearing", amount = 1 }
+    )
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
       bobmods.lib.recipe.add_ingredient(
         "bob-turbo-bulk-inserter",
@@ -87,7 +90,10 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   end
 
   if data.raw.item["bob-nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-express-inserter", { type = "item", name = "bob-nitinol-bearing", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-express-inserter",
+      { type = "item", name = "bob-nitinol-bearing", amount = 1 }
+    )
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
       bobmods.lib.recipe.add_ingredient(
         "bob-express-bulk-inserter",
@@ -109,12 +115,19 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient("bob-express-inserter", "processing-unit", "bob-advanced-processing-unit")
     if settings.startup["bobmods-logistics-inserterrequireprevious"].value == true then
-      bobmods.lib.recipe.replace_ingredient("bob-express-bulk-inserter", "processing-unit", "bob-advanced-processing-unit")
+      bobmods.lib.recipe.replace_ingredient(
+        "bob-express-bulk-inserter",
+        "processing-unit",
+        "bob-advanced-processing-unit"
+      )
     end
   end
 else
   if data.raw.item["bob-titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-express-inserter", { type = "item", name = "bob-titanium-bearing", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-express-inserter",
+      { type = "item", name = "bob-titanium-bearing", amount = 1 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "bob-express-bulk-inserter",
       { type = "item", name = "bob-titanium-bearing", amount = 6 }

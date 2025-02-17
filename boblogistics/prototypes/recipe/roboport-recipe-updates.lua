@@ -68,7 +68,10 @@ if data.raw.item["bob-titanium-plate"] then
 end
 
 if data.raw.item["bob-titanium-bearing"] then
-  bobmods.lib.recipe.add_ingredient("bob-roboport-door-3", { type = "item", name = "bob-titanium-bearing", amount = 20 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-roboport-door-3",
+    { type = "item", name = "bob-titanium-bearing", amount = 20 }
+  )
 else
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-3", { type = "item", name = "iron-gear-wheel", amount = 20 })
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-3", { type = "fluid", name = "lubricant", amount = 10 })

@@ -25,7 +25,10 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-heat-exchanger-4", "bob-tungsten-alloy-processing")
   end
   if data.raw.item["bob-copper-tungsten-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-heat-exchanger-4", { type = "item", name = "bob-copper-tungsten-pipe", amount = 4 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-heat-exchanger-4",
+      { type = "item", name = "bob-copper-tungsten-pipe", amount = 4 }
+    )
   elseif data.raw.item["bob-tungsten-pipe"] then
     bobmods.lib.recipe.add_ingredient("bob-heat-exchanger-4", { type = "item", name = "bob-tungsten-pipe", amount = 4 })
   end

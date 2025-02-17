@@ -28,7 +28,8 @@ bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-
 bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "bob-electronics-with-fluid")
 
 if settings.startup["bobmods-colorupdate"].value == true then
-  data.raw.item["bob-basic-circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png"
+  data.raw.item["bob-basic-circuit-board"].icon =
+    "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png"
   data.raw.item["bob-circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/circuit-board.png"
   data.raw.item["bob-superior-circuit-board"].icon =
     "__bobelectronics__/graphics/icons/colour-coded/superior-circuit-board.png"

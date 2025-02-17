@@ -103,7 +103,10 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       "bob-ultimate-transport-belt",
       { type = "item", name = "bob-turbo-transport-belt", amount = 1 }
     )
-    bobmods.lib.recipe.add_ingredient("transport-belt", { type = "item", name = "bob-basic-transport-belt", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "transport-belt",
+      { type = "item", name = "bob-basic-transport-belt", amount = 1 }
+    )
 
     data:extend({
       {

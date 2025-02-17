@@ -227,7 +227,13 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         type = "recipe",
         name = "bob-alien-artifact-red",
         results = {
-          { type = "item", name = "bob-alien-artifact-red", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 },
+          {
+            type = "item",
+            name = "bob-alien-artifact-red",
+            amount = 5,
+            ignored_by_productivity = 1,
+            ignored_by_stats = 1,
+          },
         },
         ingredients = {
           { type = "item", name = "bob-alien-artifact-red", amount = 1, ignored_by_stats = 1 },

@@ -19,7 +19,10 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
     )
   else
-    bobmods.lib.recipe.add_ingredient("bob-electronics-machine-2", { type = "item", name = "iron-gear-wheel", amount = 3 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-electronics-machine-2",
+      { type = "item", name = "iron-gear-wheel", amount = 3 }
+    )
   end
 
   if data.raw.item["bob-aluminium-plate"] then
@@ -55,7 +58,10 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       { type = "item", name = "bob-nitinol-bearing", amount = 5 }
     )
   else
-    bobmods.lib.recipe.add_ingredient("bob-electronics-machine-3", { type = "item", name = "iron-gear-wheel", amount = 3 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-electronics-machine-3",
+      { type = "item", name = "iron-gear-wheel", amount = 3 }
+    )
   end
 
   if data.raw.item["bob-nitinol-gear-wheel"] then
@@ -92,7 +98,11 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     data.raw.recipe["bob-advanced-processing-unit"].category = "bob-electronics-machine"
   end
   if data.raw.item["bob-advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-3", "processing-unit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient(
+      "bob-electronics-machine-3",
+      "processing-unit",
+      "bob-advanced-processing-unit"
+    )
     bobmods.lib.tech.add_prerequisite("bob-electronics-machine-3", "bob-advanced-processing-unit")
   end
 
@@ -103,7 +113,8 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   if settings.startup["bobmods-colorupdate"].value == true then
-    data.raw.item["bob-electronics-machine-1"].icon = "__bobassembly__/graphics/icons/new-colors/electronics-machine-1.png"
+    data.raw.item["bob-electronics-machine-1"].icon =
+      "__bobassembly__/graphics/icons/new-colors/electronics-machine-1.png"
     data.raw.item["bob-electronics-machine-1"].icon_size = 32
     data.raw["assembling-machine"]["bob-electronics-machine-1"].icon =
       "__bobassembly__/graphics/icons/new-colors/electronics-machine-1.png"

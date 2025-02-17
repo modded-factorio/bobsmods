@@ -127,9 +127,15 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         "bob-turbo-underground-belt",
         { type = "item", name = "bob-titanium-bearing", amount = 20 }
       )
-      bobmods.lib.recipe.add_ingredient("bob-turbo-splitter", { type = "item", name = "bob-titanium-bearing", amount = 12 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-turbo-splitter",
+        { type = "item", name = "bob-titanium-bearing", amount = 12 }
+      )
     else
-      bobmods.lib.recipe.add_ingredient("bob-turbo-splitter", { type = "item", name = "bob-titanium-bearing", amount = 4 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-turbo-splitter",
+        { type = "item", name = "bob-titanium-bearing", amount = 4 }
+      )
     end
   end
 
@@ -183,10 +189,16 @@ else
       "bob-turbo-underground-belt",
       { type = "item", name = "bob-titanium-bearing", amount = 40 }
     )
-    bobmods.lib.recipe.add_ingredient("bob-turbo-splitter", { type = "item", name = "bob-titanium-bearing", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-turbo-splitter",
+      { type = "item", name = "bob-titanium-bearing", amount = 10 }
+    )
     bobmods.lib.tech.add_prerequisite("logistics-4", "bob-titanium-processing")
   else
-    bobmods.lib.recipe.add_ingredient("bob-turbo-transport-belt", { type = "item", name = "iron-gear-wheel", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-turbo-transport-belt",
+      { type = "item", name = "iron-gear-wheel", amount = 5 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "bob-turbo-underground-belt",
       { type = "item", name = "iron-gear-wheel", amount = 20 }
@@ -210,7 +222,10 @@ else
       "bob-ultimate-underground-belt",
       { type = "item", name = "bob-nitinol-bearing", amount = 60 }
     )
-    bobmods.lib.recipe.add_ingredient("bob-ultimate-splitter", { type = "item", name = "bob-nitinol-bearing", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-ultimate-splitter",
+      { type = "item", name = "bob-nitinol-bearing", amount = 10 }
+    )
     bobmods.lib.tech.add_prerequisite("logistics-5", "bob-nitinol-processing")
   else
     bobmods.lib.recipe.add_ingredient(

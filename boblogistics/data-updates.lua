@@ -81,10 +81,19 @@ if settings.startup["bobmods-logistics-trains"].value == true then
 
   if data.raw["damage-type"]["bob-plasma"] then
     table.insert(data.raw.locomotive["locomotive"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
-    table.insert(data.raw["cargo-wagon"]["cargo-wagon"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
-    table.insert(data.raw["fluid-wagon"]["fluid-wagon"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
+    table.insert(
+      data.raw["cargo-wagon"]["cargo-wagon"].resistances,
+      { type = "bob-plasma", decrease = 15, percent = 50 }
+    )
+    table.insert(
+      data.raw["fluid-wagon"]["fluid-wagon"].resistances,
+      { type = "bob-plasma", decrease = 15, percent = 50 }
+    )
 
-    table.insert(data.raw.locomotive["bob-locomotive-2"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
+    table.insert(
+      data.raw.locomotive["bob-locomotive-2"].resistances,
+      { type = "bob-plasma", decrease = 15, percent = 50 }
+    )
     table.insert(
       data.raw["cargo-wagon"]["bob-cargo-wagon-2"].resistances,
       { type = "bob-plasma", decrease = 15, percent = 50 }
@@ -94,7 +103,10 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       { type = "bob-plasma", decrease = 15, percent = 50 }
     )
 
-    table.insert(data.raw.locomotive["bob-locomotive-3"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
+    table.insert(
+      data.raw.locomotive["bob-locomotive-3"].resistances,
+      { type = "bob-plasma", decrease = 15, percent = 50 }
+    )
     table.insert(
       data.raw["cargo-wagon"]["bob-cargo-wagon-3"].resistances,
       { type = "bob-plasma", decrease = 15, percent = 50 }

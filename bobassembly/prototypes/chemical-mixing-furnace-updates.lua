@@ -7,7 +7,8 @@ if
   and data.raw.technology["bob-electric-chemical-furnace"]
 then
   if data.raw["assembling-machine"]["bob-electric-chemical-furnace"] then
-    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].next_upgrade = "bob-electric-chemical-mixing-furnace"
+    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].next_upgrade =
+      "bob-electric-chemical-mixing-furnace"
   end
 
   data.raw["assembling-machine"]["bob-electric-mixing-furnace"].next_upgrade = "bob-electric-chemical-mixing-furnace"
@@ -42,7 +43,11 @@ then
   end
 
   if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace-2", "stone-brick", "bob-tungsten-carbide")
+    bobmods.lib.recipe.replace_ingredient(
+      "bob-electric-chemical-mixing-furnace-2",
+      "stone-brick",
+      "bob-tungsten-carbide"
+    )
     bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-2", "bob-tungsten-alloy-processing")
   end
 

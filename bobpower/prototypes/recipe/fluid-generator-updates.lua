@@ -34,7 +34,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     )
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-cobalt-processing")
   elseif data.raw.item["bob-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "bob-steel-bearing", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-fluid-generator-2",
+      { type = "item", name = "bob-steel-bearing", amount = 10 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
@@ -77,7 +80,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       { type = "item", name = "bob-titanium-bearing", amount = 10 }
     )
   elseif data.raw.item["bob-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "bob-steel-bearing", amount = 10 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-fluid-generator-3",
+      { type = "item", name = "bob-steel-bearing", amount = 10 }
+    )
   else
     bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
@@ -120,7 +126,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         { type = "item", name = "bob-nitinol-bearing", amount = 10 }
       )
     else
-      bobmods.lib.recipe.add_ingredient("bob-hydrazine-generator", { type = "item", name = "iron-gear-wheel", amount = 10 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-hydrazine-generator",
+        { type = "item", name = "iron-gear-wheel", amount = 10 }
+      )
     end
 
     if data.raw.item["bob-nitinol-gear-wheel"] then
@@ -144,12 +153,19 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       )
       bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-alloy-processing")
     elseif data.raw.item["bob-tungsten-pipe"] then
-      bobmods.lib.recipe.add_ingredient("bob-hydrazine-generator", { type = "item", name = "bob-tungsten-pipe", amount = 5 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-hydrazine-generator",
+        { type = "item", name = "bob-tungsten-pipe", amount = 5 }
+      )
       bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-processing")
     end
 
     if data.raw.item["bob-advanced-processing-unit"] then
-      bobmods.lib.recipe.replace_ingredient("bob-hydrazine-generator", "processing-unit", "bob-advanced-processing-unit")
+      bobmods.lib.recipe.replace_ingredient(
+        "bob-hydrazine-generator",
+        "processing-unit",
+        "bob-advanced-processing-unit"
+      )
       bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-advanced-processing-unit")
     else
       bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "processing-unit")

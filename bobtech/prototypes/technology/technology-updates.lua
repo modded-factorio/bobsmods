@@ -8,16 +8,48 @@ if bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.add_science_pack("logistic-system", "bob-advanced-logistic-science-pack", 1)
   bobmods.lib.tech.add_prerequisite("logistic-system", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("braking-force-3", "production-science-pack", "bob-advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-4", "production-science-pack", "bob-advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-5", "production-science-pack", "bob-advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-6", "production-science-pack", "bob-advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-7", "production-science-pack", "bob-advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("braking-force-3", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack(
+    "braking-force-3",
+    "production-science-pack",
+    "bob-advanced-logistic-science-pack"
+  )
+  bobmods.lib.tech.replace_science_pack(
+    "braking-force-4",
+    "production-science-pack",
+    "bob-advanced-logistic-science-pack"
+  )
+  bobmods.lib.tech.replace_science_pack(
+    "braking-force-5",
+    "production-science-pack",
+    "bob-advanced-logistic-science-pack"
+  )
+  bobmods.lib.tech.replace_science_pack(
+    "braking-force-6",
+    "production-science-pack",
+    "bob-advanced-logistic-science-pack"
+  )
+  bobmods.lib.tech.replace_science_pack(
+    "braking-force-7",
+    "production-science-pack",
+    "bob-advanced-logistic-science-pack"
+  )
+  bobmods.lib.tech.replace_prerequisite(
+    "braking-force-3",
+    "production-science-pack",
+    "bob-advanced-logistic-science-pack"
+  )
 
   if data.raw.technology["elevated-rail"] then
-    bobmods.lib.tech.replace_science_pack("elevated-rail", "production-science-pack", "bob-advanced-logistic-science-pack")
-    bobmods.lib.tech.replace_prerequisite("elevated-rail", "production-science-pack", "bob-advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack(
+      "elevated-rail",
+      "production-science-pack",
+      "bob-advanced-logistic-science-pack"
+    )
+    bobmods.lib.tech.replace_prerequisite(
+      "elevated-rail",
+      "production-science-pack",
+      "bob-advanced-logistic-science-pack"
+    )
   end
 
   bobmods.lib.tech.replace_science_pack(
@@ -165,7 +197,11 @@ if bobmods.tech.advanced_logistic_science then
     bobmods.lib.tech.replace_science_pack("destroyer", "utility-science-pack", "bob-advanced-logistic-science-pack")
     bobmods.lib.tech.replace_prerequisite("destroyer", "military-4", "bob-advanced-logistic-science-pack")
     if settings.startup["bobmods-warfare-robotupdate"].value == true then
-      bobmods.lib.tech.replace_science_pack("bob-laser-robot", "utility-science-pack", "bob-advanced-logistic-science-pack")
+      bobmods.lib.tech.replace_science_pack(
+        "bob-laser-robot",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
     end
   end
 else

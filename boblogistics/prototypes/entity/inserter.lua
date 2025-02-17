@@ -152,7 +152,8 @@ data:extend({
   }),
 })
 data.raw.inserter["bob-express-bulk-inserter"].hand_base_picture = inserter.graphics.dark_green.hand_base_picture()
-data.raw.inserter["bob-express-bulk-inserter"].hand_closed_picture = inserter.graphics.dark_green.bulk.hand_closed_picture()
+data.raw.inserter["bob-express-bulk-inserter"].hand_closed_picture =
+  inserter.graphics.dark_green.bulk.hand_closed_picture()
 data.raw.inserter["bob-express-bulk-inserter"].hand_open_picture = inserter.graphics.dark_green.bulk.hand_open_picture()
 data.raw.inserter["bob-express-bulk-inserter"].platform_picture = inserter.graphics.dark_green.platform_picture()
 
@@ -307,7 +308,8 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["bob-express-inserter"].platform_picture = inserter.graphics.green.platform_picture()
 
   data.raw.inserter["bob-express-bulk-inserter"].localised_name = { "entity-name.bob-ultimate-bulk-inserter" }
-  data.raw.inserter["bob-express-bulk-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-bulk-inserter.png"
+  data.raw.inserter["bob-express-bulk-inserter"].icon =
+    "__boblogistics__/graphics/icons/inserter/green-bulk-inserter.png"
   data.raw.inserter["bob-express-bulk-inserter"].icon_size = 32
   data.raw.inserter["bob-express-bulk-inserter"].max_health = inserter.stats.green.health
   data.raw.inserter["bob-express-bulk-inserter"].extension_speed = inserter.stats.green.extension_speed
@@ -316,7 +318,8 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["bob-express-bulk-inserter"].energy_per_rotation = inserter.stats.green.bulk.energy_per_rotation
   data.raw.inserter["bob-express-bulk-inserter"].energy_source.drain = inserter.stats.green.bulk.drain
   data.raw.inserter["bob-express-bulk-inserter"].hand_base_picture = inserter.graphics.green.hand_base_picture()
-  data.raw.inserter["bob-express-bulk-inserter"].hand_closed_picture = inserter.graphics.green.bulk.hand_closed_picture()
+  data.raw.inserter["bob-express-bulk-inserter"].hand_closed_picture =
+    inserter.graphics.green.bulk.hand_closed_picture()
   data.raw.inserter["bob-express-bulk-inserter"].hand_open_picture = inserter.graphics.green.bulk.hand_open_picture()
   data.raw.inserter["bob-express-bulk-inserter"].platform_picture = inserter.graphics.green.platform_picture()
 end

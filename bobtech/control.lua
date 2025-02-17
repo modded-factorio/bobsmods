@@ -1,6 +1,11 @@
 function setup(event)
   if remote.interfaces["DiscoScience"] and remote.interfaces["DiscoScience"]["setIngredientColor"] then
-    remote.call("DiscoScience", "setIngredientColor", "bob-advanced-logistic-science-pack", { r = 1.0, g = 0.2, b = 0.6 })
+    remote.call(
+      "DiscoScience",
+      "setIngredientColor",
+      "bob-advanced-logistic-science-pack",
+      { r = 1.0, g = 0.2, b = 0.6 }
+    )
     if
       settings.startup["bobmods-enemies-enableartifacts"]
       and settings.startup["bobmods-enemies-enableartifacts"].value == true

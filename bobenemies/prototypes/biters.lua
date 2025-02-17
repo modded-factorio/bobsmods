@@ -2947,7 +2947,13 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.behemoth_tint,
   localised_description = { "entity-description.bob-poison-enemy-behemoth" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth", "bob-enemy-poison-smoke-behemoth", 42, -42, 6.4),
+  damaged_trigger_effect = poison_reaction(
+    "poison-rage-sticker-behemoth",
+    "bob-enemy-poison-smoke-behemoth",
+    42,
+    -42,
+    6.4
+  ),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3001,7 +3007,13 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.leviathan_tint,
   localised_description = { "entity-description.bob-poison-enemy-leviathan" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan", "bob-enemy-poison-smoke-leviathan", 60, -60, 7),
+  damaged_trigger_effect = poison_reaction(
+    "poison-rage-sticker-leviathan",
+    "bob-enemy-poison-smoke-leviathan",
+    60,
+    -60,
+    7
+  ),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",

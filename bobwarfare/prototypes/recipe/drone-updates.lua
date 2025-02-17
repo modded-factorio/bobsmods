@@ -2,8 +2,14 @@ bobmods.lib.tech.add_recipe_unlock("robotics", "bob-robot-drone-frame")
 bobmods.lib.tech.add_recipe_unlock("robotics", "bob-robot-drone-frame-large")
 
 if data.raw.item["bob-robot-brain-combat"] then
-  bobmods.lib.recipe.add_ingredient("bob-robot-gun-drone", { type = "item", name = "bob-robot-brain-combat", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-robot-laser-drone", { type = "item", name = "bob-robot-brain-combat", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-robot-gun-drone",
+    { type = "item", name = "bob-robot-brain-combat", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-robot-laser-drone",
+    { type = "item", name = "bob-robot-brain-combat", amount = 1 }
+  )
   bobmods.lib.recipe.add_ingredient(
     "bob-robot-flamethrower-drone",
     { type = "item", name = "bob-robot-brain-combat", amount = 1 }

@@ -22,7 +22,10 @@ end
 if settings.startup["bobmods-modules-enablegodmodules"].value == true then
   if data.raw.item["bob-solder"] then
     bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "bob-solder", amount = 15 })
-    bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-solder", amount = 15 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-god-module-productivity",
+      { type = "item", name = "bob-solder", amount = 15 }
+    )
   end
 
   if data.raw.item["bob-alien-artifact"] then
