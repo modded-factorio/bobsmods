@@ -13,15 +13,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle",
+        recipe = "bob-laser-rifle",
       },
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery",
+        recipe = "bob-laser-rifle-battery",
       },
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-case",
+        recipe = "bob-laser-rifle-battery-case",
       },
     },
     unit = {

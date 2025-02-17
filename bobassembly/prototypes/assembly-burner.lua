@@ -30,12 +30,12 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
   data:extend({
     {
       type = "item",
-      name = "burner-assembling-machine",
+      name = "bob-burner-assembling-machine",
       icon = "__bobassembly__/graphics/icons/burner-assembling-machine.png",
       icon_size = 32,
       subgroup = "bob-assembly-machine",
       order = "1[burner-assembling-machine]",
-      place_result = "burner-assembling-machine",
+      place_result = "bob-burner-assembling-machine",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -54,22 +54,22 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
 
     {
       type = "recipe",
-      name = "burner-assembling-machine",
+      name = "bob-burner-assembling-machine",
       enabled = true,
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 5 },
         { type = "item", name = "iron-plate", amount = 9 },
       },
-      results = { { type = "item", name = "burner-assembling-machine", amount = 1 } },
+      results = { { type = "item", name = "bob-burner-assembling-machine", amount = 1 } },
     },
 
     {
       type = "assembling-machine",
-      name = "burner-assembling-machine",
+      name = "bob-burner-assembling-machine",
       icon = "__bobassembly__/graphics/icons/burner-assembling-machine.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.2, result = "burner-assembling-machine" },
+      minable = { mining_time = 0.2, result = "bob-burner-assembling-machine" },
       max_health = 200,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["small-assembling-machine"],
@@ -166,12 +166,12 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
 
     {
       type = "item",
-      name = "steam-assembling-machine",
+      name = "bob-steam-assembling-machine",
       icon = "__bobassembly__/graphics/icons/steam-assembling-machine.png",
       icon_size = 32,
       subgroup = "bob-assembly-machine",
       order = "1[steam-assembling-machine]",
-      place_result = "steam-assembling-machine",
+      place_result = "bob-steam-assembling-machine",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -190,23 +190,23 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
 
     {
       type = "recipe",
-      name = "steam-assembling-machine",
+      name = "bob-steam-assembling-machine",
       enabled = false,
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },
         { type = "item", name = "iron-plate", amount = 10 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "steam-assembling-machine", amount = 1 } },
+      results = { { type = "item", name = "bob-steam-assembling-machine", amount = 1 } },
     },
 
     {
       type = "assembling-machine",
-      name = "steam-assembling-machine",
+      name = "bob-steam-assembling-machine",
       icon = "__bobassembly__/graphics/icons/steam-assembling-machine.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.2, result = "steam-assembling-machine" },
+      minable = { mining_time = 0.2, result = "bob-steam-assembling-machine" },
       max_health = 300,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["assembling-machine"],
@@ -335,7 +335,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
   bobmods.lib.tech.ignore_tech_cost_multiplier("automation", false)
 
   if settings.startup["bobmods-assembly-limits"].value == true then
-    data.raw["assembling-machine"]["burner-assembling-machine"].ingredient_count = 2
-    data.raw["assembling-machine"]["steam-assembling-machine"].ingredient_count = 4
+    data.raw["assembling-machine"]["bob-burner-assembling-machine"].ingredient_count = 2
+    data.raw["assembling-machine"]["bob-steam-assembling-machine"].ingredient_count = 4
   end
 end

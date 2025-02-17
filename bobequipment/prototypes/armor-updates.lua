@@ -42,99 +42,99 @@ if not mods["bobwarfare"] then
   bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
   bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
   bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "advanced-circuit", "advanced-processing-unit")
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "advanced-circuit", "advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "advanced-processing-unit")
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "advanced-circuit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "advanced-circuit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-advanced-processing-unit")
   end
 
   if (not mods["bobplates"]) and not mods["boblogistics"] then
     bobmods.lib.recipe.remove_ingredient("power-armor", "electric-engine-unit")
   end
 
-  if data.raw.item["alien-artifact-orange"] and data.raw.item["alien-artifact-blue"] then
+  if data.raw.item["bob-alien-artifact-orange"] and data.raw.item["bob-alien-artifact-blue"] then
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk3",
-      { type = "item", name = "alien-artifact-orange", amount = 25 }
+      { type = "item", name = "bob-alien-artifact-orange", amount = 25 }
     )
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk3",
-      { type = "item", name = "alien-artifact-blue", amount = 25 }
+      { type = "item", name = "bob-alien-artifact-blue", amount = 25 }
     )
-  elseif data.raw.item["alien-artifact"] then
+  elseif data.raw.item["bob-alien-artifact"] then
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk3",
-      { type = "item", name = "alien-artifact", amount = 70 }
+      { type = "item", name = "bob-alien-artifact", amount = 70 }
     )
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk3", { type = "item", name = "processing-unit", amount = 70 })
   end
-  if data.raw.item["alien-artifact-yellow"] and data.raw.item["alien-artifact-purple"] then
+  if data.raw.item["bob-alien-artifact-yellow"] and data.raw.item["bob-alien-artifact-purple"] then
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk4",
-      { type = "item", name = "alien-artifact-yellow", amount = 25 }
+      { type = "item", name = "bob-alien-artifact-yellow", amount = 25 }
     )
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk4",
-      { type = "item", name = "alien-artifact-purple", amount = 25 }
+      { type = "item", name = "bob-alien-artifact-purple", amount = 25 }
     )
-  elseif data.raw.item["alien-artifact"] then
+  elseif data.raw.item["bob-alien-artifact"] then
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk4",
-      { type = "item", name = "alien-artifact", amount = 90 }
+      { type = "item", name = "bob-alien-artifact", amount = 90 }
     )
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk4", { type = "item", name = "processing-unit", amount = 90 })
   end
-  if data.raw.item["alien-artifact-red"] and data.raw.item["alien-artifact-green"] then
+  if data.raw.item["bob-alien-artifact-red"] and data.raw.item["bob-alien-artifact-green"] then
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk5",
-      { type = "item", name = "alien-artifact-red", amount = 25 }
+      { type = "item", name = "bob-alien-artifact-red", amount = 25 }
     )
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk5",
-      { type = "item", name = "alien-artifact-green", amount = 25 }
+      { type = "item", name = "bob-alien-artifact-green", amount = 25 }
     )
-  elseif data.raw.item["alien-artifact"] then
+  elseif data.raw.item["bob-alien-artifact"] then
     bobmods.lib.recipe.add_new_ingredient(
       "bob-power-armor-mk5",
-      { type = "item", name = "alien-artifact", amount = 120 }
+      { type = "item", name = "bob-alien-artifact", amount = 120 }
     )
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk5", { type = "item", name = "processing-unit", amount = 120 })
   end
 
   if
-    data.raw.tool["science-pack-gold"]
-    and data.raw.tool["alien-science-pack-blue"]
-    and data.raw.tool["alien-science-pack-orange"]
-    and data.raw.tool["alien-science-pack-purple"]
-    and data.raw.tool["alien-science-pack-yellow"]
-    and data.raw.tool["alien-science-pack-green"]
-    and data.raw.tool["alien-science-pack-red"]
+    data.raw.tool["bob-science-pack-gold"]
+    and data.raw.tool["bob-alien-science-pack-blue"]
+    and data.raw.tool["bob-alien-science-pack-orange"]
+    and data.raw.tool["bob-alien-science-pack-purple"]
+    and data.raw.tool["bob-alien-science-pack-yellow"]
+    and data.raw.tool["bob-alien-science-pack-green"]
+    and data.raw.tool["bob-alien-science-pack-red"]
   then
     data.raw.technology["bob-power-armor-3"].unit.ingredients = {
-      { "science-pack-gold", 1 },
-      { "alien-science-pack", 1 },
-      { "alien-science-pack-blue", 1 },
-      { "alien-science-pack-orange", 1 },
+      { "bob-science-pack-gold", 1 },
+      { "bob-alien-science-pack", 1 },
+      { "bob-alien-science-pack-blue", 1 },
+      { "bob-alien-science-pack-orange", 1 },
     }
     data.raw.technology["bob-power-armor-4"].unit.ingredients = {
-      { "science-pack-gold", 1 },
-      { "alien-science-pack", 1 },
-      { "alien-science-pack-purple", 1 },
-      { "alien-science-pack-yellow", 1 },
+      { "bob-science-pack-gold", 1 },
+      { "bob-alien-science-pack", 1 },
+      { "bob-alien-science-pack-purple", 1 },
+      { "bob-alien-science-pack-yellow", 1 },
     }
     data.raw.technology["bob-power-armor-5"].unit.ingredients = {
-      { "science-pack-gold", 1 },
-      { "alien-science-pack", 1 },
-      { "alien-science-pack-green", 1 },
-      { "alien-science-pack-red", 1 },
+      { "bob-science-pack-gold", 1 },
+      { "bob-alien-science-pack", 1 },
+      { "bob-alien-science-pack-green", 1 },
+      { "bob-alien-science-pack-red", 1 },
     }
   end
 
-  if data.raw.technology["alien-research"] then
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "alien-research")
+  if data.raw.technology["bob-alien-research"] then
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-alien-research")
   end
 
   if mods["bobmodules"] then

@@ -13,7 +13,7 @@ data:extend({
           target_effects = {
             {
               type = "create-entity",
-              entity_name = "plasma-explosion",
+              entity_name = "bob-plasma-explosion",
             },
             {
               type = "create-entity",
@@ -31,7 +31,7 @@ data:extend({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 25, type = "plasma" },
+              damage = { amount = 25, type = "bob-plasma" },
             },
             {
               type = "damage",
@@ -43,7 +43,7 @@ data:extend({
             },
             {
               type = "create-sticker",
-              sticker = "plasma-sticker",
+              sticker = "bob-plasma-sticker",
             },
             {
               type = "create-entity",

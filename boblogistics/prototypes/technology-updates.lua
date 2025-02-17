@@ -33,101 +33,101 @@ bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
 
 if bobmods.tech and bobmods.tech.advanced_logistic_science then
-  bobmods.lib.tech.replace_science_pack("logistics-4", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("logistics-4", "production-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("logistics-4", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_prerequisite("logistics-4", "production-science-pack", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.add_science_pack("logistics-5", "advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_science_pack("logistics-5", "bob-advanced-logistic-science-pack", 1)
   bobmods.lib.tech.add_prerequisite("logistics-5", "production-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("bulk-inserter-2", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("bulk-inserter-2", "production-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("bulk-inserter-2", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_prerequisite("bulk-inserter-2", "production-science-pack", "bob-advanced-logistic-science-pack")
 
   if data.raw.technology["bob-robotics-3"] then
-    bobmods.lib.tech.replace_science_pack("bob-robotics-3", "utility-science-pack", "advanced-logistic-science-pack")
-    bobmods.lib.tech.replace_prerequisite("bob-robotics-3", "utility-science-pack", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack("bob-robotics-3", "utility-science-pack", "bob-advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_prerequisite("bob-robotics-3", "utility-science-pack", "bob-advanced-logistic-science-pack")
   end
   if data.raw.technology["bob-robotics-4"] then
-    bobmods.lib.tech.replace_science_pack("bob-robotics-4", "utility-science-pack", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack("bob-robotics-4", "utility-science-pack", "bob-advanced-logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-robotics-4", "utility-science-pack")
   end
 
-  bobmods.lib.tech.add_science_pack("bob-fluid-handling-4", "advanced-logistic-science-pack", 1)
-  bobmods.lib.tech.add_prerequisite("bob-fluid-handling-4", "advanced-logistic-science-pack")
+  bobmods.lib.tech.add_science_pack("bob-fluid-handling-4", "bob-advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_prerequisite("bob-fluid-handling-4", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.add_science_pack("bob-armoured-railway-2", "advanced-logistic-science-pack", 1)
-  bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "advanced-logistic-science-pack")
+  bobmods.lib.tech.add_science_pack("bob-armoured-railway-2", "bob-advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.add_science_pack("bob-armoured-fluid-wagon-2", "advanced-logistic-science-pack", 1)
-  bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "advanced-logistic-science-pack")
+  bobmods.lib.tech.add_science_pack("bob-armoured-fluid-wagon-2", "bob-advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("bob-robots-2", "utility-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("bob-robots-2", "utility-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("bob-robots-2", "utility-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_prerequisite("bob-robots-2", "utility-science-pack", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("bob-robots-3", "utility-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("bob-robots-3", "utility-science-pack", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.add_science_pack("bob-robots-4", "advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_science_pack("bob-robots-4", "bob-advanced-logistic-science-pack", 1)
   bobmods.lib.tech.add_prerequisite("bob-robots-4", "utility-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("bob-robo-modular-3", "utility-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("bob-robo-modular-3", "utility-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("bob-robo-modular-3", "utility-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_prerequisite("bob-robo-modular-3", "utility-science-pack", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("bob-robo-modular-4", "utility-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("bob-robo-modular-4", "utility-science-pack", "bob-advanced-logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("bob-robo-modular-4", "utility-science-pack")
 
-  bobmods.lib.tech.add_science_pack("logistic-system-2", "advanced-logistic-science-pack", 1)
-  bobmods.lib.tech.add_science_pack("logistic-system-3", "advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_science_pack("logistic-system-2", "bob-advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_science_pack("logistic-system-3", "bob-advanced-logistic-science-pack", 1)
 
   bobmods.lib.tech.replace_science_pack(
     "inserter-stack-size-bonus-3",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_prerequisite(
     "inserter-stack-size-bonus-3",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
 
   bobmods.lib.tech.replace_science_pack(
     "inserter-stack-size-bonus-4",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
 
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-8",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_prerequisite(
     "inserter-capacity-bonus-8",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
 
-  bobmods.lib.tech.replace_science_pack("toolbelt-3", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("toolbelt-3", "production-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("toolbelt-3", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_prerequisite("toolbelt-3", "production-science-pack", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("toolbelt-4", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("toolbelt-5", "production-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("toolbelt-4", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("toolbelt-5", "production-science-pack", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.add_science_pack("bob-infinite-worker-robots-storage-4", "advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_science_pack("bob-infinite-worker-robots-storage-4", "bob-advanced-logistic-science-pack", 1)
   bobmods.lib.tech.add_science_pack(
     "bob-infinite-character-logistic-trash-slots-1",
-    "advanced-logistic-science-pack",
+    "bob-advanced-logistic-science-pack",
     1
   )
 
   --balance
   --may have been replaced by tech mod
-  bobmods.lib.tech.remove_science_pack("inserter-capacity-bonus-4", "advanced-logistic-science-pack")
-  bobmods.lib.tech.remove_prerequisite("inserter-capacity-bonus-4", "advanced-logistic-science-pack")
+  bobmods.lib.tech.remove_science_pack("inserter-capacity-bonus-4", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.remove_prerequisite("inserter-capacity-bonus-4", "bob-advanced-logistic-science-pack")
 
   if data.raw.technology["bob-more-inserters-2"] then
     bobmods.lib.tech.replace_science_pack(
       "bob-more-inserters-2",
       "production-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
   end
 end
@@ -163,24 +163,24 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   bobmods.lib.tech.add_recipe_unlock("fast-inserter", "long-handed-inserter")
   bobmods.lib.tech.add_prerequisite("logistics-2", "electronics")
 
-  bobmods.lib.tech.add_recipe_unlock("bulk-inserter", "red-bulk-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bulk-inserter", "bob-red-bulk-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("express-inserters", "fast-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-express-inserters", "fast-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("turbo-inserter", "turbo-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-turbo-inserter", "bob-turbo-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("ultimate-inserter", "express-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-ultimate-inserter", "bob-express-inserter")
 
   bobmods.lib.tech.add_science_pack("fast-inserter", "logistic-science-pack", 1)
   if bobmods.tech and bobmods.tech.advanced_logistic_science then
-    bobmods.lib.tech.replace_science_pack("turbo-inserter", "production-science-pack", "advanced-logistic-science-pack")
-    bobmods.lib.tech.add_science_pack("ultimate-inserter", "advanced-logistic-science-pack", 1)
+    bobmods.lib.tech.replace_science_pack("bob-turbo-inserter", "production-science-pack", "bob-advanced-logistic-science-pack")
+    bobmods.lib.tech.add_science_pack("bob-ultimate-inserter", "bob-advanced-logistic-science-pack", 1)
     bobmods.lib.tech.replace_science_pack(
       "bulk-inserter-3",
       "production-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
-    bobmods.lib.tech.add_science_pack("bulk-inserter-4", "advanced-logistic-science-pack", 1)
+    bobmods.lib.tech.add_science_pack("bulk-inserter-4", "bob-advanced-logistic-science-pack", 1)
   end
   bobmods.lib.tech.set_science_pack_count("logistics-2", 70)
   bobmods.lib.tech.set_science_pack_count("logistics-3", 150)
@@ -277,53 +277,53 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-logistic-4")
 end
 
-bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe")
-bobmods.lib.tech.add_recipe_unlock("steam-power", "copper-pipe-to-ground")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe-to-ground")
 
-bobmods.lib.tech.add_recipe_unlock("steam-power", "stone-pipe")
-bobmods.lib.tech.add_recipe_unlock("steam-power", "stone-pipe-to-ground")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-stone-pipe")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-stone-pipe-to-ground")
 
-bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-pipe")
-bobmods.lib.tech.add_recipe_unlock("steel-processing", "steel-pipe-to-ground")
+bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe")
+bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe-to-ground")
 
-bobmods.lib.tech.add_recipe_unlock("plastics", "plastic-pipe")
-bobmods.lib.tech.add_recipe_unlock("plastics", "plastic-pipe-to-ground")
+bobmods.lib.tech.add_recipe_unlock("plastics", "bob-plastic-pipe")
+bobmods.lib.tech.add_recipe_unlock("plastics", "bob-plastic-pipe-to-ground")
 
 if data.raw.technology["bob-alloy-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bronze-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bronze-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bob-bronze-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bob-bronze-pipe-to-ground")
 end
 
 if data.raw.technology["bob-zinc-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "brass-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "brass-pipe-to-ground")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "brass-chest")
+  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-chest")
 end
 
 if data.raw.technology["bob-titanium-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "titanium-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "titanium-pipe-to-ground")
-  bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "titanium-chest")
+  bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-chest")
 end
 
 if data.raw.technology["bob-tungsten-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "tungsten-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe-to-ground")
 end
 
 if data.raw.technology["bob-ceramics"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "ceramic-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "ceramic-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe-to-ground")
 end
 
 if data.raw.technology["bob-tungsten-alloy-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "copper-tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "copper-tungsten-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
 if data.raw.technology["bob-nitinol-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "nitinol-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "nitinol-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe-to-ground")
 end
 
 local function remove_inserter_stack_size_bonus(technology)
@@ -363,14 +363,14 @@ bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 -- Old DyTech compatibillity bullshit
 if data.raw.technology["lava-smelting-05"] then
-  bobmods.lib.tech.add_recipe_unlock("lava-smelting-05", "tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("lava-smelting-05", "tungsten-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("lava-smelting-05", "bob-tungsten-pipe")
+  bobmods.lib.tech.add_recipe_unlock("lava-smelting-05", "bob-tungsten-pipe-to-ground")
 end
 
 if data.raw.technology["lava-smelting-06"] then
-  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "bronze-pipe")
-  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "bronze-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "bob-bronze-pipe")
+  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "bob-bronze-pipe-to-ground")
 
-  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "brass-pipe")
-  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "brass-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "bob-brass-pipe")
+  bobmods.lib.tech.add_recipe_unlock("lava-smelting-06", "bob-brass-pipe-to-ground")
 end

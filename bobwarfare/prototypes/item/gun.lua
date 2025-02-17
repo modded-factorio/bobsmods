@@ -4,7 +4,7 @@ local warefareSounds = require("prototypes.entity.sounds")
 data:extend({
   {
     type = "gun",
-    name = "rifle",
+    name = "bob-rifle",
     icon = "__bobwarfare__/graphics/icons/rifle.png",
     icon_size = 32,
     subgroup = "gun",
@@ -46,7 +46,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "sniper-rifle",
+    name = "bob-sniper-rifle",
     icon = "__bobwarfare__/graphics/icons/sniper-rifle.png",
     icon_size = 32,
     subgroup = "gun",
@@ -88,7 +88,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "laser-rifle",
+    name = "bob-laser-rifle",
     icon = "__bobwarfare__/graphics/icons/laser-rifle.png",
     icon_size = 32,
     subgroup = "gun",
@@ -96,7 +96,7 @@ data:extend({
     stack_size = 5,
     attack_parameters = {
       type = "beam",
-      ammo_category = "laser-rifle",
+      ammo_category = "bob-laser-rifle",
       cooldown = 20,
       movement_slow_down_factor = 0.5,
       damage_modifier = 1.2,
@@ -121,7 +121,7 @@ data:extend({
 data:extend({
   {
     type = "gun",
-    name = "gatling-gun",
+    name = "bob-gatling-gun",
     icon = "__bobwarfare__/graphics/icons/gatling-gun.png",
     icon_size = 32,
     hidden = true,
@@ -165,7 +165,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-cannon-2",
+    name = "bob-tank-cannon-2",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
     hidden = true,
@@ -187,7 +187,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-cannon-3",
+    name = "bob-tank-cannon-3",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
     hidden = true,
@@ -209,7 +209,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-artillery-1",
+    name = "bob-tank-artillery-1",
     icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
     icon_size = 32,
     hidden = true,
@@ -231,7 +231,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-artillery-2",
+    name = "bob-tank-artillery-2",
     icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
     icon_size = 32,
     hidden = true,
@@ -254,7 +254,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-laser",
+    name = "bob-tank-laser",
     icon = "__bobwarfare__/graphics/icons/tank-laser.png",
     icon_size = 32,
     hidden = true,
@@ -263,7 +263,7 @@ data:extend({
     stack_size = 5,
     attack_parameters = {
       type = "beam",
-      ammo_category = "laser-rifle",
+      ammo_category = "bob-laser-rifle",
       cooldown = 20,
       movement_slow_down_factor = 0,
       damage_modifier = 2,
@@ -273,7 +273,7 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-flamethrower-2",
+    name = "bob-tank-flamethrower-2",
     localised_name = { "item-name.tank-flamethrower" },
     icon = "__base__/graphics/icons/flamethrower.png",
     icon_size = 64,
@@ -314,7 +314,7 @@ data:extend({
   },
   {
     type = "gun",
-    name = "tank-flamethrower-3",
+    name = "bob-tank-flamethrower-3",
     icon = "__base__/graphics/icons/flamethrower.png",
     icon_size = 64,
     localised_name = { "item-name.tank-flamethrower" },

@@ -5,171 +5,171 @@ bobmods.lib.tech.add_prerequisite("logistics-3", "logistics-2")
 if bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.remove_science_pack("logistic-system", "utility-science-pack")
   bobmods.lib.tech.remove_prerequisite("logistic-system", "utility-science-pack")
-  bobmods.lib.tech.add_science_pack("logistic-system", "advanced-logistic-science-pack", 1)
-  bobmods.lib.tech.add_prerequisite("logistic-system", "advanced-logistic-science-pack")
+  bobmods.lib.tech.add_science_pack("logistic-system", "bob-advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.add_prerequisite("logistic-system", "bob-advanced-logistic-science-pack")
 
-  bobmods.lib.tech.replace_science_pack("braking-force-3", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-4", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-5", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-6", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_science_pack("braking-force-7", "production-science-pack", "advanced-logistic-science-pack")
-  bobmods.lib.tech.replace_prerequisite("braking-force-3", "production-science-pack", "advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("braking-force-3", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("braking-force-4", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("braking-force-5", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("braking-force-6", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_science_pack("braking-force-7", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.replace_prerequisite("braking-force-3", "production-science-pack", "bob-advanced-logistic-science-pack")
 
   if data.raw.technology["elevated-rail"] then
-    bobmods.lib.tech.replace_science_pack("elevated-rail", "production-science-pack", "advanced-logistic-science-pack")
-    bobmods.lib.tech.replace_prerequisite("elevated-rail", "production-science-pack", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack("elevated-rail", "production-science-pack", "bob-advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_prerequisite("elevated-rail", "production-science-pack", "bob-advanced-logistic-science-pack")
   end
 
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-4",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-5",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-6",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_science_pack(
     "inserter-capacity-bonus-7",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_prerequisite(
     "inserter-capacity-bonus-4",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
 
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-speed-3",
     "utility-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.remove_prerequisite("worker-robots-speed-3", "utility-science-pack")
-  bobmods.lib.tech.add_prerequisite("worker-robots-speed-3", "advanced-logistic-science-pack")
+  bobmods.lib.tech.add_prerequisite("worker-robots-speed-3", "bob-advanced-logistic-science-pack")
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-speed-4",
     "utility-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-speed-5",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.remove_prerequisite("worker-robots-speed-5", "production-science-pack")
   bobmods.lib.tech.add_prerequisite("worker-robots-speed-5", "utility-science-pack")
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-speed-6",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_prerequisite(
     "worker-robots-speed-3",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
 
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-storage-2",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_science_pack(
     "worker-robots-storage-3",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_prerequisite(
     "worker-robots-storage-2",
     "production-science-pack",
-    "advanced-logistic-science-pack"
+    "bob-advanced-logistic-science-pack"
   )
 
   if mods["bobequipment"] then
     bobmods.lib.tech.replace_science_pack(
-      "personal-roboport-mk3-equipment",
+      "bob-personal-roboport-mk3-equipment",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_prerequisite(
-      "personal-roboport-mk3-equipment",
+      "bob-personal-roboport-mk3-equipment",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_science_pack(
-      "personal-roboport-mk4-equipment",
+      "bob-personal-roboport-mk4-equipment",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
 
     bobmods.lib.tech.replace_science_pack(
-      "personal-roboport-modular-equipment-3",
+      "bob-personal-roboport-modular-equipment-3",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_science_pack(
-      "personal-roboport-modular-equipment-4",
+      "bob-personal-roboport-modular-equipment-4",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
   else
     bobmods.lib.tech.replace_prerequisite(
       "personal-roboport-mk2-equipment",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_science_pack(
       "personal-roboport-mk2-equipment",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "processing-unit")
     bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "low-density-structure")
   end
   if mods["bobvehicleequipment"] then
     bobmods.lib.tech.replace_science_pack(
-      "vehicle-roboport-equipment-3",
+      "bob-vehicle-roboport-equipment-3",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_prerequisite(
-      "vehicle-roboport-equipment-3",
+      "bob-vehicle-roboport-equipment-3",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_science_pack(
-      "vehicle-roboport-equipment-4",
+      "bob-vehicle-roboport-equipment-4",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
 
     bobmods.lib.tech.replace_science_pack(
-      "vehicle-roboport-modular-equipment-3",
+      "bob-vehicle-roboport-modular-equipment-3",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
     bobmods.lib.tech.replace_science_pack(
-      "vehicle-roboport-modular-equipment-4",
+      "bob-vehicle-roboport-modular-equipment-4",
       "utility-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
   end
   if mods["bobwarfare"] then
-    bobmods.lib.tech.replace_science_pack("destroyer", "utility-science-pack", "advanced-logistic-science-pack")
-    bobmods.lib.tech.replace_prerequisite("destroyer", "military-4", "advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_science_pack("destroyer", "utility-science-pack", "bob-advanced-logistic-science-pack")
+    bobmods.lib.tech.replace_prerequisite("destroyer", "military-4", "bob-advanced-logistic-science-pack")
     if settings.startup["bobmods-warfare-robotupdate"].value == true then
-      bobmods.lib.tech.replace_science_pack("bob-laser-robot", "utility-science-pack", "advanced-logistic-science-pack")
+      bobmods.lib.tech.replace_science_pack("bob-laser-robot", "utility-science-pack", "bob-advanced-logistic-science-pack")
     end
   end
 else
-  bobmods.lib.tech.hide("advanced-logistic-science-pack")
+  bobmods.lib.tech.hide("bob-advanced-logistic-science-pack")
 end
 
 if data.raw.item["bob-bronze-alloy"] then
@@ -179,8 +179,8 @@ bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-m
 bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
 if data.raw.technology["bob-electrolyser-3"] then
   bobmods.lib.tech.add_prerequisite("production-science-pack", "bob-electrolyser-3")
-elseif data.raw.technology["chemical-plant-2"] then
-  bobmods.lib.tech.add_prerequisite("production-science-pack", "chemical-plant-2")
+elseif data.raw.technology["bob-chemical-plant-2"] then
+  bobmods.lib.tech.add_prerequisite("production-science-pack", "bob-chemical-plant-2")
 end
 
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
@@ -197,17 +197,17 @@ if
   settings.startup["bobmods-logistics-inserteroverhaul"]
   and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
 then
-  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter-2")
-  bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "express-inserters")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-research", "bulk-inserter-2")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-express-inserters")
 else
-  bobmods.lib.tech.add_prerequisite("advanced-research", "bulk-inserter")
-  bobmods.lib.tech.add_prerequisite("advanced-logistic-science-pack", "fast-inserter")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-research", "bulk-inserter")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "fast-inserter")
 end
 
 if settings.startup["bobmods-burnerphase"].value == true then
-  bobmods.lib.tech.add_recipe_unlock("lab", "lab")
-  bobmods.lib.tech.add_prerequisite("logistic-science-pack", "lab")
-  bobmods.lib.tech.add_prerequisite("electronics", "electricity")
+  bobmods.lib.tech.add_recipe_unlock("bob-lab", "lab")
+  bobmods.lib.tech.add_prerequisite("logistic-science-pack", "bob-lab")
+  bobmods.lib.tech.add_prerequisite("electronics", "bob-electricity")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "copper-cable")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "lab")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "small-electric-pole")
@@ -223,16 +223,16 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.add_prerequisite("electronics", "automation-science-pack")
   data.raw.technology["automation-science-pack"].research_trigger = {
     type = "craft-item",
-    item = "burner-lab",
+    item = "bob-burner-lab",
   }
 
   if mods["bobgreenhouse"] then
-    bobmods.lib.tech.add_prerequisite("bob-greenhouse", "electricity")
+    bobmods.lib.tech.add_prerequisite("bob-greenhouse", "bob-electricity")
   end
   if mods["bobplates"] then
-    data.raw.recipe["burner-lab"].enabled = false
-    bobmods.lib.tech.add_prerequisite("automation-science-pack", "burner-lab")
-    bobmods.lib.recipe.add_ingredient("burner-lab", { type = "item", name = "bob-glass", amount = 5 })
+    data.raw.recipe["bob-burner-lab"].enabled = false
+    bobmods.lib.tech.add_prerequisite("automation-science-pack", "bob-burner-lab")
+    bobmods.lib.recipe.add_ingredient("bob-burner-lab", { type = "item", name = "bob-glass", amount = 5 })
     bobmods.lib.tech.remove_prerequisite("bob-gas-canisters", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-fluid-barrel-processing", "logistic-science-pack")
   end
@@ -252,8 +252,8 @@ if settings.startup["bobmods-burnerphase"].value == true then
     and settings.startup["bobmods-mining-waterminers"].value == true
     and data.raw["resource-category"]["water"]
   then
-    bobmods.lib.tech.add_prerequisite("water-miner-1", "electronics")
-    bobmods.lib.tech.remove_prerequisite("water-miner-2", "logistic-science-pack")
+    bobmods.lib.tech.add_prerequisite("bob-water-miner-1", "electronics")
+    bobmods.lib.tech.remove_prerequisite("bob-water-miner-2", "logistic-science-pack")
   end
   if mods["bobplates"] then
     bobmods.lib.tech.add_prerequisite("bob-electrolysis-1", "electronics")
@@ -263,16 +263,16 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if mods["bobelectronics"] then
     bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
     if mods["bobpower"] then
-      bobmods.lib.tech.remove_prerequisite("fluid-generator-1", "electronics")
+      bobmods.lib.tech.remove_prerequisite("bob-fluid-generator-1", "electronics")
     end
     if mods["bobmining"] then
-      bobmods.lib.tech.remove_prerequisite("water-miner-2", "electronics")
+      bobmods.lib.tech.remove_prerequisite("bob-water-miner-2", "electronics")
     end
     if mods["bobassembly"] then
       bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "electronics")
     end
-    if data.raw.technology["chemical-plant"] then
-      bobmods.lib.tech.remove_prerequisite("chemical-plant", "electronics")
+    if data.raw.technology["bob-chemical-plant"] then
+      bobmods.lib.tech.remove_prerequisite("bob-chemical-plant", "electronics")
     end
   else
   end
@@ -289,8 +289,8 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.remove_prerequisite("military-2", "logistic-science-pack")
   bobmods.lib.tech.remove_prerequisite("solar-energy", "logistic-science-pack")
   bobmods.lib.tech.add_science_pack("heavy-armor", "logistic-science-pack", 1)
-  if data.raw.technology["chemical-plant"] then
-    bobmods.lib.tech.remove_prerequisite("chemical-plant", "logistic-science-pack")
+  if data.raw.technology["bob-chemical-plant"] then
+    bobmods.lib.tech.remove_prerequisite("bob-chemical-plant", "logistic-science-pack")
   end
   if mods["bobassembly"] then
     bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "logistic-science-pack")
@@ -308,7 +308,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   end
 
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "steam-engine")
-  data.raw.technology["steam-power"].localised_description = { "technology-description.steam-power-alt" }
+  data.raw.technology["steam-power"].localised_description = { "technology-description.bob-steam-power-alt" }
 
   if mods["bobpower"] then
     bobmods.lib.recipe.enabled("bob-burner-generator", false)
@@ -318,7 +318,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
     end
     bobmods.lib.tech.remove_prerequisite("bob-steam-engine-2", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-boiler-2", "logistic-science-pack")
-    bobmods.lib.tech.remove_prerequisite("fluid-generator-1", "logistic-science-pack")
+    bobmods.lib.tech.remove_prerequisite("bob-fluid-generator-1", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-heat-pipe-1", "logistic-science-pack")
   end
 

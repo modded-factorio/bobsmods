@@ -11,14 +11,14 @@ end
 if mods["bobmining"] then
   bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")
   bobmods.lib.tech.add_prerequisite("bob-area-drills-2", "bob-electronics")
-  bobmods.lib.tech.add_prerequisite("water-miner-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-water-miner-2", "bob-electronics")
 end
 if mods["bobrevamp"] then
-  bobmods.lib.tech.add_prerequisite("chemical-plant", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-electronics")
 end
 if mods["bobwarfare"] then
   bobmods.lib.tech.add_prerequisite("modular-armor", "bob-electronics")
-  bobmods.lib.tech.add_prerequisite("radars-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-radar-2", "bob-electronics")
 end
 
 bobmods.lib.tech.add_prerequisite("advanced-circuit", "plastics")
@@ -30,20 +30,20 @@ bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 
 bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 
-if data.raw.recipe["solder"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "solder")
+if data.raw.recipe["bob-solder"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder")
 end
-if data.raw.recipe["solder-alloy"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "solder-alloy")
+if data.raw.recipe["bob-solder-alloy"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy")
 end
-if data.raw.recipe["solder-alloy-lead"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "solder-alloy-lead")
+if data.raw.recipe["bob-solder-alloy-lead"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-solder-alloy-lead")
 end
 if data.raw.recipe["bob-tinned-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")
 end
 
-bobmods.lib.tech.add_recipe_unlock("electronics", "basic-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("electronics", "bob-basic-circuit-board")
 bobmods.lib.tech.remove_recipe_unlock("electronics", "electronic-circuit")
 
 if mods["bobplates"] then
@@ -66,22 +66,22 @@ else
   end
 end
 
-bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "electronic-components")
-bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "phenolic-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "circuit-board")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-electronic-components")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-phenolic-board")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-circuit-board")
 bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "advanced-circuit") --to re-add if it was removed in previous mod
 
-bobmods.lib.tech.add_recipe_unlock("processing-unit", "intergrated-electronics")
-bobmods.lib.tech.add_recipe_unlock("processing-unit", "fibreglass-board")
-bobmods.lib.tech.add_recipe_unlock("processing-unit", "superior-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-integrated-electronics")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-fibreglass-board")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-superior-circuit-board")
 bobmods.lib.tech.add_recipe_unlock("processing-unit", "processing-unit")
 
 if data.raw.recipe["bob-gilded-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-gilded-copper-cable")
 end
 
-bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "processing-electronics")
-bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "multi-layer-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-processing-electronics")
+bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-multi-layer-circuit-board")
 
 data.raw.technology["electronics"].icon = "__bobelectronics__/graphics/icons/technology/electronics.png"
 data.raw.technology["advanced-circuit"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"

@@ -1,19 +1,19 @@
 if
-  data.raw.item["alien-artifact"]
-  and data.raw.item["alien-artifact-blue"]
-  and data.raw.item["alien-artifact-orange"]
-  and data.raw.item["alien-artifact-purple"]
-  and data.raw.item["alien-artifact-yellow"]
-  and data.raw.item["alien-artifact-green"]
-  and data.raw.item["alien-artifact-red"]
+  data.raw.item["bob-alien-artifact"]
+  and data.raw.item["bob-alien-artifact-blue"]
+  and data.raw.item["bob-alien-artifact-orange"]
+  and data.raw.item["bob-alien-artifact-purple"]
+  and data.raw.item["bob-alien-artifact-yellow"]
+  and data.raw.item["bob-alien-artifact-green"]
+  and data.raw.item["bob-alien-artifact-red"]
 then
   data:extend({
     {
       type = "lab",
-      name = "lab-alien",
+      name = "bob-lab-alien",
       icon = "__bobtech__/graphics/icons/lab-alien.png",
       flags = { "placeable-player", "player-creation" },
-      minable = { mining_time = 1, result = "lab-alien" },
+      minable = { mining_time = 1, result = "bob-lab-alien" },
       max_health = 200,
       corpse = "lab-remnants",
       dying_explosion = "medium-explosion",
@@ -131,14 +131,14 @@ then
       energy_usage = "75kW",
       researching_speed = 1.5,
       inputs = {
-        "science-pack-gold",
-        "alien-science-pack",
-        "alien-science-pack-blue",
-        "alien-science-pack-orange",
-        "alien-science-pack-purple",
-        "alien-science-pack-yellow",
-        "alien-science-pack-green",
-        "alien-science-pack-red",
+        "bob-science-pack-gold",
+        "bob-alien-science-pack",
+        "bob-alien-science-pack-blue",
+        "bob-alien-science-pack-orange",
+        "bob-alien-science-pack-purple",
+        "bob-alien-science-pack-yellow",
+        "bob-alien-science-pack-green",
+        "bob-alien-science-pack-red",
       },
       module_slots = 3,
       icons_positioning = {
@@ -158,6 +158,6 @@ then
   })
 
   if mods["DiscoScience"] and DiscoScience and DiscoScience.prepareLab then
-    DiscoScience.prepareLab(data.raw["lab"]["lab-alien"])
+    DiscoScience.prepareLab(data.raw["lab"]["bob-lab-alien"])
   end
 end

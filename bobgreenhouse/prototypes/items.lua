@@ -25,7 +25,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "fertiliser",
+    name = "bob-fertiliser",
     icon = "__bobgreenhouse__/graphics/icons/fertiliser.png",
     icon_size = 32,
     subgroup = "bob-greenhouse-items",
@@ -49,7 +49,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "seedling",
+    name = "bob-seedling",
     icon = "__bobgreenhouse__/graphics/icons/seedling.png",
     icon_size = 32,
     fuel_value = "100J",
@@ -75,7 +75,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "wood-pellets",
+    name = "bob-wood-pellets",
     icon = "__bobgreenhouse__/graphics/icons/wood-pellets.png",
     icon_size = 64,
     fuel_value = "10MJ",

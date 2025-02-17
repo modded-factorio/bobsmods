@@ -13,7 +13,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
   data:extend({
     {
       type = "item",
-      name = "sodium-carbonate",
+      name = "bob-sodium-carbonate",
       icon = "__bobrevamp__/graphics/icons/sodium-carbonate.png",
       icon_size = 32,
       subgroup = "bob-resource-chemical",
@@ -29,7 +29,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     data:extend({
       {
         type = "fluid",
-        name = "brine",
+        name = "bob-brine",
         icon = "__bobrevamp__/graphics/icons/brine.png",
         icon_size = 32,
         subgroup = "fluid",
@@ -43,7 +43,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       {
         type = "fluid",
-        name = "ammoniated-brine",
+        name = "bob-ammoniated-brine",
         icons = {
           {
             icon = "__bobrevamp__/graphics/icons/brine.png",
@@ -68,7 +68,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
 
       {
         type = "item",
-        name = "sodium-bicarbonate",
+        name = "bob-sodium-bicarbonate",
         icon = "__bobrevamp__/graphics/icons/sodium-bicarbonate.png",
         icon_size = 32,
         subgroup = "bob-resource-chemical",
@@ -80,7 +80,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       {
         type = "item",
-        name = "ammonium-chloride",
+        name = "bob-ammonium-chloride",
         icon = "__bobrevamp__/graphics/icons/ammonium-chloride.png",
         icon_size = 64,
         subgroup = "bob-resource-chemical",
@@ -93,7 +93,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
 
       {
         type = "recipe",
-        name = "brine",
+        name = "bob-brine",
         subgroup = "fluid-recipes",
         order = "f[brine]",
         category = "chemistry",
@@ -104,9 +104,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           { type = "fluid", name = "water", amount = 10 },
         },
         results = {
-          { type = "fluid", name = "brine", amount = 10 },
+          { type = "fluid", name = "bob-brine", amount = 10 },
         },
-        main_product = "brine",
+        main_product = "bob-brine",
         crafting_machine_tint = {
           primary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
@@ -115,20 +115,20 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       {
         type = "recipe",
-        name = "ammoniated-brine",
+        name = "bob-ammoniated-brine",
         subgroup = "fluid-recipes",
         order = "f[ammoniated-brine]",
         category = "chemistry",
         energy_required = 1,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "brine", amount = 10 },
-          { type = "fluid", name = "ammonia", amount = 25 },
+          { type = "fluid", name = "bob-brine", amount = 10 },
+          { type = "fluid", name = "bob-ammonia", amount = 25 },
         },
         results = {
-          { type = "fluid", name = "ammoniated-brine", amount = 10 },
+          { type = "fluid", name = "bob-ammoniated-brine", amount = 10 },
         },
-        main_product = "ammoniated-brine",
+        main_product = "bob-ammoniated-brine",
         crafting_machine_tint = {
           primary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },
           secondary = { r = 0.5, g = 0.5, b = 0.8, a = 0.000 },
@@ -137,7 +137,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       {
         type = "recipe",
-        name = "sodium-bicarbonate",
+        name = "bob-sodium-bicarbonate",
         icon = "__bobrevamp__/graphics/icons/sodium-bicarbonate.png",
         icon_size = 32,
         subgroup = "bob-resource-chemical",
@@ -146,14 +146,14 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         energy_required = 1,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "ammoniated-brine", amount = 10 },
-          { type = "fluid", name = "carbon-dioxide", amount = 25 },
+          { type = "fluid", name = "bob-ammoniated-brine", amount = 10 },
+          { type = "fluid", name = "bob-carbon-dioxide", amount = 25 },
         },
         results = {
-          { type = "item", name = "sodium-bicarbonate", amount = 1 },
-          { type = "item", name = "ammonium-chloride", amount = 1 },
+          { type = "item", name = "bob-sodium-bicarbonate", amount = 1 },
+          { type = "item", name = "bob-ammonium-chloride", amount = 1 },
         },
-        main_product = "sodium-bicarbonate",
+        main_product = "bob-sodium-bicarbonate",
         crafting_machine_tint = {
           primary = { r = 0.5, g = 0.5, b = 0.5, a = 0.000 },
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -162,7 +162,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       },
       {
         type = "recipe",
-        name = "sodium-carbonate",
+        name = "bob-sodium-carbonate",
         icon = "__bobrevamp__/graphics/icons/sodium-carbonate.png",
         icon_size = 32,
         subgroup = "bob-resource-chemical",
@@ -171,14 +171,14 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         energy_required = 1,
         enabled = false,
         ingredients = {
-          { type = "item", name = "sodium-bicarbonate", amount = 2 },
+          { type = "item", name = "bob-sodium-bicarbonate", amount = 2 },
         },
         results = {
-          { type = "item", name = "sodium-carbonate", amount = 1 },
+          { type = "item", name = "bob-sodium-carbonate", amount = 1 },
           { type = "fluid", name = "water", amount = 10, fluidbox_index = 1 },
-          { type = "fluid", name = "carbon-dioxide", amount = 25, fluidbox_index = 2 },
+          { type = "fluid", name = "bob-carbon-dioxide", amount = 25, fluidbox_index = 2 },
         },
-        main_product = "sodium-carbonate",
+        main_product = "bob-sodium-carbonate",
         crafting_machine_tint = {
           primary = { r = 0.5, g = 0.5, b = 0.5, a = 0.000 },
           secondary = { r = 0.0, g = 0.5, b = 0.8, a = 0.000 },
@@ -196,12 +196,12 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         energy_required = 2,
         enabled = false,
         ingredients = {
-          { type = "item", name = "ammonium-chloride", amount = 2 },
-          { type = "item", name = "limestone", amount = 1 },
+          { type = "item", name = "bob-ammonium-chloride", amount = 2 },
+          { type = "item", name = "bob-limestone", amount = 1 },
         },
         results = {
           { type = "item", name = "bob-calcium-chloride", amount = 1 },
-          { type = "fluid", name = "ammonia", amount = 50 },
+          { type = "fluid", name = "bob-ammonia", amount = 50 },
           { type = "fluid", name = "water", amount = 10 },
         },
         crafting_machine_tint = {
@@ -213,7 +213,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
 
       {
         type = "recipe",
-        name = "brine-electrolysis",
+        name = "bob-brine-electrolysis",
         icon = "__bobrevamp__/graphics/icons/brine-electrolysis.png",
         icon_size = 64,
         subgroup = "bob-fluid-electrolysis",
@@ -222,7 +222,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         enabled = false,
         energy_required = 1.5,
         ingredients = {
-          { type = "fluid", name = "brine", amount = 10 },
+          { type = "fluid", name = "bob-brine", amount = 10 },
         },
         results = {
           { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
@@ -236,7 +236,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "sodium-carbonate",
+        name = "bob-sodium-carbonate",
         icon = "__bobrevamp__/graphics/icons/sodium-carbonate.png",
         icon_size = 32,
         subgroup = "bob-resource-chemical",
@@ -249,10 +249,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
           { type = "item", name = "stone", amount = 1 },
         },
         results = {
-          { type = "item", name = "sodium-carbonate", amount = 1 },
+          { type = "item", name = "bob-sodium-carbonate", amount = 1 },
           { type = "item", name = "bob-calcium-chloride", amount = 1 },
         },
-        main_product = "sodium-carbonate",
+        main_product = "bob-sodium-carbonate",
         crafting_machine_tint = {
           primary = { r = 0.5, g = 0.5, b = 0.5, a = 0.000 },
           secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -265,7 +265,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
   data:extend({
     {
       type = "item",
-      name = "sodium-cobaltate",
+      name = "bob-sodium-cobaltate",
       icon = "__bobrevamp__/graphics/icons/sodium-cobaltate.png",
       icon_size = 32,
       subgroup = "bob-resource-chemical",
@@ -277,7 +277,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     },
     {
       type = "item",
-      name = "rtg",
+      name = "bob-rtg",
       icon = "__bobrevamp__/graphics/icons/technology/rtg.png",
       icon_size = 128,
       subgroup = "intermediate-product",
@@ -298,7 +298,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     },
     {
       type = "recipe",
-      name = "sodium-cobaltate",
+      name = "bob-sodium-cobaltate",
       icon = "__bobrevamp__/graphics/icons/sodium-cobaltate.png",
       icon_size = 32,
       subgroup = "bob-resource-chemical",
@@ -307,14 +307,14 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       energy_required = 12,
       enabled = false,
       ingredients = {
-        { type = "item", name = "sodium-carbonate", amount = 6 },
+        { type = "item", name = "bob-sodium-carbonate", amount = 6 },
         { type = "item", name = "bob-cobalt-oxide", amount = 5 },
       },
       results = {
-        { type = "item", name = "sodium-cobaltate", amount = 5 },
+        { type = "item", name = "bob-sodium-cobaltate", amount = 5 },
         { type = "fluid", name = "bob-oxygen", amount = 200 },
       },
-      main_product = "sodium-cobaltate",
+      main_product = "bob-sodium-cobaltate",
       crafting_machine_tint = {
         primary = { r = 0.3, g = 0.5, b = 1.0, a = 0.000 },
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -323,7 +323,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     },
     {
       type = "recipe",
-      name = "rtg",
+      name = "bob-rtg",
       category = "advanced-crafting",
       energy_required = 20,
       enabled = false,
@@ -331,20 +331,20 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         { type = "item", name = "bob-plutonium-239", amount = 1 },
         { type = "item", name = "bob-lead-plate", amount = 1 },
         { type = "item", name = "bob-aluminium-plate", amount = 5 },
-        { type = "item", name = "sodium-cobaltate", amount = 2 },
+        { type = "item", name = "bob-sodium-cobaltate", amount = 2 },
       },
-      results = { { type = "item", name = "rtg", amount = 1 } },
+      results = { { type = "item", name = "bob-rtg", amount = 1 } },
     },
   })
 
   if bobmods.plates.make_void_fluid_recipe then
-    bobmods.plates.make_void_fluid_recipe("carbon-dioxide", 25, 10)
+    bobmods.plates.make_void_fluid_recipe("bob-carbon-dioxide", 25, 10)
   end
 
   data:extend({
     {
       type = "technology",
-      name = "rtg",
+      name = "bob-rtg",
       icon = "__bobrevamp__/graphics/icons/technology/rtg.png",
       icon_size = 128,
       prerequisites = {
@@ -356,15 +356,15 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "sodium-carbonate",
+          recipe = "bob-sodium-carbonate",
         },
         {
           type = "unlock-recipe",
-          recipe = "sodium-cobaltate",
+          recipe = "bob-sodium-cobaltate",
         },
         {
           type = "unlock-recipe",
-          recipe = "rtg",
+          recipe = "bob-rtg",
         },
       },
       unit = {

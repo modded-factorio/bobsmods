@@ -625,7 +625,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 1.4,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -659,7 +659,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 1.6,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -693,7 +693,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 1.8,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -727,7 +727,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 2,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -761,7 +761,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 2.2,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -795,7 +795,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 2.4,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -829,7 +829,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 2.6,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -863,7 +863,7 @@ bobmods.enemies.new_worm({
   attack_spit_radius = 3,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -1438,7 +1438,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.4,
     secondary_probability2 = 0.15,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-small",
@@ -1477,7 +1477,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.45,
     secondary_probability2 = 0.2,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-medium",
@@ -1516,7 +1516,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.5,
     secondary_probability2 = 0.25,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-big",
@@ -1555,7 +1555,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.55,
     secondary_probability2 = 0.3,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-huge",
@@ -1594,7 +1594,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.6,
     secondary_probability2 = 0.35,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-giant",
@@ -1633,7 +1633,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.65,
     secondary_probability2 = 0.4,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-titan",
@@ -1672,7 +1672,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.7,
     secondary_probability2 = 0.45,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-behemoth",
@@ -1711,7 +1711,7 @@ bobmods.enemies.new_worm({
     attack_damage2 = 2,
     secondary_probability = 0.8,
     secondary_probability2 = 0.5,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-worm-leviathan",
@@ -1788,7 +1788,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
           target_effects = {
             type = "create-smoke",
             show_in_tooltip = false,
-            entity_name = "enemy-poison-smoke-visual-dummy",
+            entity_name = "bob-enemy-poison-smoke-visual-dummy",
             initial_height = 0,
           },
         },
@@ -1855,7 +1855,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-small" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-small" },
 
   attack_action = poison_attack_action(
     1.4,
@@ -1888,7 +1888,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.medium_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-medium" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-medium" },
 
   attack_action = poison_attack_action(
     1.6,
@@ -1921,7 +1921,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-big" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-big" },
 
   attack_action = poison_attack_action(1.8, "enemy-poison-attack-smoke-big", "enemy-poison-defense-smoke-big", 18, -6),
   attack_range = 35,
@@ -1948,7 +1948,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.huge_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-huge" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-huge" },
 
   attack_action = poison_attack_action(2, "enemy-poison-attack-smoke-huge", "enemy-poison-defense-smoke-huge", 24, -8),
   attack_range = 40,
@@ -1975,7 +1975,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.giant_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-giant" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-giant" },
 
   attack_action = poison_attack_action(
     2.2,
@@ -2008,7 +2008,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.titan_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-titan" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-titan" },
 
   attack_action = poison_attack_action(
     2.4,
@@ -2041,7 +2041,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.behemoth_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-behemoth" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-behemoth" },
 
   attack_action = poison_attack_action(
     2.6,
@@ -2074,7 +2074,7 @@ bobmods.enemies.new_worm({
   acid_resist = "high",
   tint = bobmods.enemies.leviathan_worm_tint,
   tint2 = bobmods.enemies.poison_worm_tint,
-  localised_description = { "entity-description.poison-enemy-worm-leviathan" },
+  localised_description = { "entity-description.bob-poison-enemy-worm-leviathan" },
 
   attack_action = poison_attack_action(
     3,
@@ -2099,13 +2099,13 @@ local fire_attack_action = function(inputs)
     attack_spit_radius = inputs.attack_spit_radius,
     attack_damage = inputs.attack_damage,
     attack_damage_type = "fire",
-    sticker_name = "enemy-fire-sticker",
+    sticker_name = "bob-enemy-fire-sticker",
     show_sticker_in_attack = true,
   })
 
   table.insert(attack_action[1].action_delivery.target_effects, {
     type = "create-fire",
-    entity_name = "enemy-fire",
+    entity_name = "bob-enemy-fire",
     tile_collision_mask = { layers = { water_tile = true } },
     show_in_tooltip = false,
   })
@@ -2119,7 +2119,7 @@ local fire_attack_action = function(inputs)
       type = "instant",
       target_effects = {
         type = "create-fire",
-        entity_name = "enemy-fire",
+        entity_name = "bob-enemy-fire",
         tile_collision_mask = { layers = { water_tile = true } },
         show_in_tooltip = true,
       },
@@ -2136,7 +2136,7 @@ local fire_attack_action = function(inputs)
         type = "instant",
         target_effects = {
           type = "create-fire",
-          entity_name = "enemy-fire-secondary",
+          entity_name = "bob-enemy-fire-secondary",
           tile_collision_mask = { layers = { water_tile = true } },
           show_in_tooltip = false,
         },

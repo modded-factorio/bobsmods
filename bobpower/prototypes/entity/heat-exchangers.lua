@@ -18,14 +18,14 @@ if settings.startup["bobmods-power-steam"].value == true then
     util.merge({
       data.raw.boiler["heat-exchanger"],
       {
-        name = "heat-exchanger-2",
+        name = "bob-heat-exchanger-2",
         icon = "__base__/graphics/icons/heat-boiler.png",
         localised_description = { "entity-description.heat-exchanger" },
-        minable = { mining_time = 0.5, result = "heat-exchanger-2" },
+        minable = { mining_time = 0.5, result = "bob-heat-exchanger-2" },
         max_health = 500,
         target_temperature = 465,
         energy_consumption = "10.8MW",
-        next_upgrade = "heat-exchanger-3",
+        next_upgrade = "bob-heat-exchanger-3",
         energy_source = {
           max_temperature = 1000,
           min_working_temperature = 465,
@@ -41,14 +41,14 @@ if settings.startup["bobmods-power-steam"].value == true then
     util.merge({
       data.raw.boiler["heat-exchanger"],
       {
-        name = "heat-exchanger-3",
+        name = "bob-heat-exchanger-3",
         icon = "__base__/graphics/icons/heat-boiler.png",
         localised_description = { "entity-description.heat-exchanger" },
-        minable = { mining_time = 0.5, result = "heat-exchanger-3" },
+        minable = { mining_time = 0.5, result = "bob-heat-exchanger-3" },
         max_health = 500,
         target_temperature = 615,
         energy_consumption = "14.4MW",
-        next_upgrade = "heat-exchanger-4",
+        next_upgrade = "bob-heat-exchanger-4",
         energy_source = {
           max_temperature = 1250,
           min_working_temperature = 615,
@@ -65,10 +65,10 @@ if settings.startup["bobmods-power-steam"].value == true then
     util.merge({
       data.raw.boiler["heat-exchanger"],
       {
-        name = "heat-exchanger-4",
+        name = "bob-heat-exchanger-4",
         icon = "__base__/graphics/icons/heat-boiler.png",
         localised_description = { "entity-description.heat-exchanger" },
-        minable = { mining_time = 0.5, result = "heat-exchanger-4" },
+        minable = { mining_time = 0.5, result = "bob-heat-exchanger-4" },
         max_health = 600,
         target_temperature = 765,
         energy_consumption = "18MW",
@@ -86,9 +86,9 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
   })
 
-  data.raw.boiler["heat-exchanger"].next_upgrade = "heat-exchanger-2" -- After as not to be part of the inherit
+  data.raw.boiler["heat-exchanger"].next_upgrade = "bob-heat-exchanger-2" -- After as not to be part of the inherit
 
-  table.insert(data.raw.boiler["heat-exchanger-2"].pictures.north.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-2"].pictures.north.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-2/heatex-north-pipe.png",
     width = 269,
     height = 221,
@@ -96,7 +96,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(-1.25, 5.25),
   })
-  table.insert(data.raw.boiler["heat-exchanger-2"].pictures.east.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-2"].pictures.east.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-2/heatex-east-pipe.png",
     width = 211,
     height = 301,
@@ -104,7 +104,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(-1.75, 1.25),
   })
-  table.insert(data.raw.boiler["heat-exchanger-2"].pictures.south.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-2"].pictures.south.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-2/heatex-south-pipe.png",
     width = 260,
     height = 201,
@@ -112,7 +112,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(4, 10.75),
   })
-  table.insert(data.raw.boiler["heat-exchanger-2"].pictures.west.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-2"].pictures.west.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-2/heatex-west-pipe.png",
     width = 196,
     height = 273,
@@ -121,7 +121,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     shift = util.by_pixel(1.5, 7.75),
   })
 
-  table.insert(data.raw.boiler["heat-exchanger-3"].pictures.north.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-3"].pictures.north.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-3/heatex-north-pipe.png",
     width = 269,
     height = 221,
@@ -129,7 +129,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(-1.25, 5.25),
   })
-  table.insert(data.raw.boiler["heat-exchanger-3"].pictures.east.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-3"].pictures.east.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-3/heatex-east-pipe.png",
     width = 211,
     height = 301,
@@ -137,7 +137,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(-1.75, 1.25),
   })
-  table.insert(data.raw.boiler["heat-exchanger-3"].pictures.south.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-3"].pictures.south.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-3/heatex-south-pipe.png",
     width = 260,
     height = 201,
@@ -145,7 +145,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(4, 10.75),
   })
-  table.insert(data.raw.boiler["heat-exchanger-3"].pictures.west.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-3"].pictures.west.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-3/heatex-west-pipe.png",
     width = 196,
     height = 273,
@@ -154,7 +154,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     shift = util.by_pixel(1.5, 7.75),
   })
 
-  table.insert(data.raw.boiler["heat-exchanger-4"].pictures.north.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-4"].pictures.north.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-4/heatex-north-pipe.png",
     width = 269,
     height = 221,
@@ -162,7 +162,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(-1.25, 5.25),
   })
-  table.insert(data.raw.boiler["heat-exchanger-4"].pictures.east.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-4"].pictures.east.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-4/heatex-east-pipe.png",
     width = 211,
     height = 301,
@@ -170,7 +170,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(-1.75, 1.25),
   })
-  table.insert(data.raw.boiler["heat-exchanger-4"].pictures.south.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-4"].pictures.south.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-4/heatex-south-pipe.png",
     width = 260,
     height = 201,
@@ -178,7 +178,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     scale = 0.5,
     shift = util.by_pixel(4, 10.75),
   })
-  table.insert(data.raw.boiler["heat-exchanger-4"].pictures.west.structure.layers, 2, {
+  table.insert(data.raw.boiler["bob-heat-exchanger-4"].pictures.west.structure.layers, 2, {
     filename = "__bobpower__/graphics/heat-pipe-4/heatex-west-pipe.png",
     width = 196,
     height = 273,

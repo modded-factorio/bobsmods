@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
@@ -13,7 +13,7 @@ data:extend({
         scale = 0.5,
       },
     },
-    place_as_equipment_result = "vehicle-belt-immunity-equipment",
+    place_as_equipment_result = "bob-vehicle-belt-immunity-equipment",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[belt-immunity]",
     stack_size = 20,
@@ -32,18 +32,18 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "vehicle-belt-immunity-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-vehicle-belt-immunity-equipment", amount = 1 } },
   },
   {
     type = "belt-immunity-equipment",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     sprite = {
       filename = "__base__/graphics/equipment/belt-immunity-equipment.png",
       width = 64,
@@ -67,19 +67,19 @@ data:extend({
   },
   {
     type = "technology",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/icons/belt-immunity-equipment.png",
       icon_size = 64,
     }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-solar-panel-equipment-1",
+      "bob-vehicle-solar-panel-equipment-1",
       "advanced-circuit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-belt-immunity-equipment",
+        recipe = "bob-vehicle-belt-immunity-equipment",
       },
     },
     unit = {

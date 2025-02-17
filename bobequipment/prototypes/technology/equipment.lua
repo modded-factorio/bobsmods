@@ -42,7 +42,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "energy-shield-mk3-equipment",
+        recipe = "bob-energy-shield-mk3-equipment",
       },
     },
   },
@@ -72,7 +72,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "energy-shield-mk4-equipment",
+        recipe = "bob-energy-shield-mk4-equipment",
       },
     },
   },
@@ -103,7 +103,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "energy-shield-mk5-equipment",
+        recipe = "bob-energy-shield-mk5-equipment",
       },
     },
   },
@@ -133,7 +133,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "energy-shield-mk6-equipment",
+        recipe = "bob-energy-shield-mk6-equipment",
       },
     },
   },
@@ -172,7 +172,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "battery-mk3-equipment",
+        recipe = "bob-battery-mk3-equipment",
       },
     },
   },
@@ -202,7 +202,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "battery-mk4-equipment",
+        recipe = "bob-battery-mk4-equipment",
       },
     },
   },
@@ -230,7 +230,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "battery-mk5-equipment",
+        recipe = "bob-battery-mk5-equipment",
       },
     },
   },
@@ -260,7 +260,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "battery-mk6-equipment",
+        recipe = "bob-battery-mk6-equipment",
       },
     },
   },
@@ -278,7 +278,7 @@ bobmods.lib.tech.add_prerequisite("fission-reactor-equipment", "production-scien
 data:extend({
   {
     type = "technology",
-    name = "fission-reactor-equipment-2",
+    name = "bob-fission-reactor-equipment-2",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
       icon_size = 256,
@@ -290,7 +290,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fission-reactor-equipment-2",
+        recipe = "bob-fission-reactor-equipment-2",
       },
     },
     unit = {
@@ -308,19 +308,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "fission-reactor-equipment-3",
+    name = "bob-fission-reactor-equipment-3",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
       icon_size = 256,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "fission-reactor-equipment-2",
+      "bob-fission-reactor-equipment-2",
       "utility-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fission-reactor-equipment-3",
+        recipe = "bob-fission-reactor-equipment-3",
       },
     },
     unit = {
@@ -339,19 +339,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "fission-reactor-equipment-4",
+    name = "bob-fission-reactor-equipment-4",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
       icon_size = 256,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "fission-reactor-equipment-3",
+      "bob-fission-reactor-equipment-3",
       "space-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fission-reactor-equipment-4",
+        recipe = "bob-fission-reactor-equipment-4",
       },
     },
     unit = {
@@ -378,7 +378,7 @@ data.raw["technology"]["night-vision-equipment"].icons = bobmods.lib.tech.techno
 data:extend({
   {
     type = "technology",
-    name = "night-vision-equipment-2",
+    name = "bob-night-vision-equipment-2",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
@@ -390,7 +390,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "night-vision-equipment-2",
+        recipe = "bob-night-vision-equipment-2",
       },
     },
     unit = {
@@ -406,20 +406,20 @@ data:extend({
 
   {
     type = "technology",
-    name = "night-vision-equipment-3",
+    name = "bob-night-vision-equipment-3",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
       "processing-unit",
-      "night-vision-equipment-2",
+      "bob-night-vision-equipment-2",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "night-vision-equipment-3",
+        recipe = "bob-night-vision-equipment-3",
       },
     },
     unit = {
@@ -443,7 +443,7 @@ data.raw.technology["solar-panel-equipment"].icons = bobmods.lib.tech.technology
 data:extend({
   {
     type = "technology",
-    name = "solar-panel-equipment-2",
+    name = "bob-solar-panel-equipment-2",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
@@ -455,7 +455,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solar-panel-equipment-2",
+        recipe = "bob-solar-panel-equipment-2",
       },
     },
     unit = {
@@ -471,20 +471,20 @@ data:extend({
 
   {
     type = "technology",
-    name = "solar-panel-equipment-3",
+    name = "bob-solar-panel-equipment-3",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "solar-panel-equipment-2",
+      "bob-solar-panel-equipment-2",
       "processing-unit",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solar-panel-equipment-3",
+        recipe = "bob-solar-panel-equipment-3",
       },
     },
     unit = {
@@ -500,23 +500,23 @@ data:extend({
   },
 })
 
-if data.raw.item["alien-artifact"] then
+if data.raw.item["bob-alien-artifact"] then
   data:extend({
     {
       type = "technology",
-      name = "solar-panel-equipment-4",
+      name = "bob-solar-panel-equipment-4",
       icons = bobmods.lib.tech.technology_icon_constant({
         icon = "__base__/graphics/technology/solar-panel-equipment.png",
         icon_size = 256,
       }, "__boblibrary__/graphics/constants/constant-equipment.png"),
       prerequisites = {
-        "solar-panel-equipment-3",
+        "bob-solar-panel-equipment-3",
         "utility-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-equipment-4",
+          recipe = "bob-solar-panel-equipment-4",
         },
       },
       unit = {
@@ -532,24 +532,24 @@ if data.raw.item["alien-artifact"] then
       },
     },
   })
-  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
     data:extend({
       {
         type = "technology",
-        name = "solar-panel-equipment-5",
+        name = "bob-solar-panel-equipment-5",
         icons = bobmods.lib.tech.technology_icon_constant({
           icon = "__base__/graphics/technology/solar-panel-equipment.png",
           icon_size = 256,
         }, "__boblibrary__/graphics/constants/constant-equipment.png"),
         prerequisites = {
-          "solar-panel-equipment-4",
-          "alien-orange-research",
-          "alien-purple-research",
+          "bob-solar-panel-equipment-4",
+          "bob-alien-orange-research",
+          "bob-alien-purple-research",
         },
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "solar-panel-equipment-5",
+            recipe = "bob-solar-panel-equipment-5",
           },
         },
         unit = {
@@ -591,7 +591,7 @@ bobmods.lib.tech.remove_science_pack("personal-laser-defense-equipment", "chemic
 data:extend({
   {
     type = "technology",
-    name = "personal-laser-defense-equipment-2",
+    name = "bob-personal-laser-defense-equipment-2",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
       icon_size = 128,
@@ -603,7 +603,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-laser-defense-equipment-2",
+        recipe = "bob-personal-laser-defense-equipment-2",
       },
     },
     unit = {
@@ -620,18 +620,18 @@ data:extend({
 
   {
     type = "technology",
-    name = "personal-laser-defense-equipment-3",
+    name = "bob-personal-laser-defense-equipment-3",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
       icon_size = 128,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "personal-laser-defense-equipment-2",
+      "bob-personal-laser-defense-equipment-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-laser-defense-equipment-3",
+        recipe = "bob-personal-laser-defense-equipment-3",
       },
     },
     unit = {
@@ -648,20 +648,20 @@ data:extend({
 
   {
     type = "technology",
-    name = "personal-laser-defense-equipment-4",
+    name = "bob-personal-laser-defense-equipment-4",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
       icon_size = 128,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "personal-laser-defense-equipment-3",
+      "bob-personal-laser-defense-equipment-3",
       "processing-unit",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-laser-defense-equipment-4",
+        recipe = "bob-personal-laser-defense-equipment-4",
       },
     },
     unit = {
@@ -679,19 +679,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "personal-laser-defense-equipment-5",
+    name = "bob-personal-laser-defense-equipment-5",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
       icon_size = 128,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "personal-laser-defense-equipment-4",
+      "bob-personal-laser-defense-equipment-4",
       "military-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-laser-defense-equipment-5",
+        recipe = "bob-personal-laser-defense-equipment-5",
       },
     },
     unit = {
@@ -710,20 +710,20 @@ data:extend({
 
   {
     type = "technology",
-    name = "personal-laser-defense-equipment-6",
+    name = "bob-personal-laser-defense-equipment-6",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
       icon_size = 128,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "personal-laser-defense-equipment-5",
+      "bob-personal-laser-defense-equipment-5",
       "speed-module-3",
       "efficiency-module-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-laser-defense-equipment-6",
+        recipe = "bob-personal-laser-defense-equipment-6",
       },
     },
     unit = {
@@ -751,7 +751,7 @@ data.raw.technology["exoskeleton-equipment"].icons = bobmods.lib.tech.technology
 data:extend({
   {
     type = "technology",
-    name = "exoskeleton-equipment-2",
+    name = "bob-exoskeleton-equipment-2",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
@@ -764,7 +764,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "exoskeleton-equipment-2",
+        recipe = "bob-exoskeleton-equipment-2",
       },
     },
     unit = {
@@ -779,19 +779,19 @@ data:extend({
   },
   {
     type = "technology",
-    name = "exoskeleton-equipment-3",
+    name = "bob-exoskeleton-equipment-3",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
-      "exoskeleton-equipment-2",
+      "bob-exoskeleton-equipment-2",
       "speed-module-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "exoskeleton-equipment-3",
+        recipe = "bob-exoskeleton-equipment-3",
       },
     },
     unit = {

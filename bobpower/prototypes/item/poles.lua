@@ -15,12 +15,12 @@ if settings.startup["bobmods-power-poles"].value == true then
   data:extend({
     {
       type = "item",
-      name = "medium-electric-pole-2",
+      name = "bob-medium-electric-pole-2",
       icon = "__base__/graphics/icons/medium-electric-pole.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-b[medium-electric-pole-2]",
-      place_result = "medium-electric-pole-2",
+      place_result = "bob-medium-electric-pole-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -29,12 +29,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "medium-electric-pole-3",
+      name = "bob-medium-electric-pole-3",
       icon = "__base__/graphics/icons/medium-electric-pole.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-b[medium-electric-pole-3]",
-      place_result = "medium-electric-pole-3",
+      place_result = "bob-medium-electric-pole-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -43,12 +43,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "medium-electric-pole-4",
+      name = "bob-medium-electric-pole-4",
       icon = "__base__/graphics/icons/medium-electric-pole.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-b[medium-electric-pole-4]",
-      place_result = "medium-electric-pole-4",
+      place_result = "bob-medium-electric-pole-4",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -57,12 +57,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "big-electric-pole-2",
+      name = "bob-big-electric-pole-2",
       icon = "__base__/graphics/icons/big-electric-pole.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-c[big-electric-pole-2]",
-      place_result = "big-electric-pole-2",
+      place_result = "bob-big-electric-pole-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -71,12 +71,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "big-electric-pole-3",
+      name = "bob-big-electric-pole-3",
       icon = "__base__/graphics/icons/big-electric-pole.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-c[big-electric-pole-3]",
-      place_result = "big-electric-pole-3",
+      place_result = "bob-big-electric-pole-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -85,12 +85,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "big-electric-pole-4",
+      name = "bob-big-electric-pole-4",
       icon = "__base__/graphics/icons/big-electric-pole.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-c[big-electric-pole-4]",
-      place_result = "big-electric-pole-4",
+      place_result = "bob-big-electric-pole-4",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -99,12 +99,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "substation-2",
+      name = "bob-substation-2",
       icon = "__base__/graphics/icons/substation.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-d[substation-2]",
-      place_result = "substation-2",
+      place_result = "bob-substation-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -113,12 +113,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "substation-3",
+      name = "bob-substation-3",
       icon = "__base__/graphics/icons/substation.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-d[substation-3]",
-      place_result = "substation-3",
+      place_result = "bob-substation-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -127,12 +127,12 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "item",
-      name = "substation-4",
+      name = "bob-substation-4",
       icon = "__base__/graphics/icons/substation.png",
       icon_size = 64,
       subgroup = "energy-pipe-distribution",
       order = "a[energy]-d[substation-4]",
-      place_result = "substation-4",
+      place_result = "bob-substation-4",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,

@@ -106,7 +106,7 @@ data:extend({
     icon = "__bobelectronics__/graphics/icons/synthetic-wood.png",
     icon_size = 32,
     subgroup = "bob-resource",
-    localised_name = { "recipe-name.synthetic-wood" },
+    localised_name = { "recipe-name.bob-synthetic-wood" },
     category = "chemistry",
     energy_required = 1,
     enabled = false,
@@ -167,7 +167,7 @@ if data.raw.item["bob-tin-plate"] then
   data:extend({
     {
       type = "item",
-      name = "solder-alloy",
+      name = "bob-solder-alloy",
       icon = "__bobelectronics__/graphics/icons/solder-plate.png",
       icon_size = 32,
       subgroup = "raw-material",
@@ -189,7 +189,7 @@ if data.raw.item["bob-tin-plate"] then
 
     {
       type = "recipe",
-      name = "solder-alloy",
+      name = "bob-solder-alloy",
       energy_required = 7,
       enabled = false,
       category = "advanced-crafting",
@@ -197,24 +197,24 @@ if data.raw.item["bob-tin-plate"] then
         { type = "item", name = "bob-tin-plate", amount = 9 },
         { type = "item", name = "copper-plate", amount = 1 },
       },
-      results = { { type = "item", name = "solder-alloy", amount = 11 } },
+      results = { { type = "item", name = "bob-solder-alloy", amount = 11 } },
       allow_decomposition = false,
       allow_productivity = true,
     },
   })
   if data.raw["item-subgroup"]["bob-alloy"] then
-    data.raw.item["solder-alloy"].subgroup = "bob-alloy"
+    data.raw.item["bob-solder-alloy"].subgroup = "bob-alloy"
   end
   if data.raw.item["bob-silver-plate"] then
-    table.insert(data.raw.recipe["solder-alloy"].ingredients, { type = "item", name = "bob-silver-plate", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-solder-alloy", { type = "item", name = "bob-silver-plate", amount = 1 })
   end
 
   if data.raw.item["bob-lead-plate"] then
     data:extend({
       {
         type = "recipe",
-        name = "solder-alloy-lead",
-        localised_name = { "item-name.solder-alloy" },
+        name = "bob-solder-alloy-lead",
+        localised_name = { "item-name.bob-solder-alloy" },
         energy_required = 7,
         enabled = false,
         category = "advanced-crafting",
@@ -222,7 +222,7 @@ if data.raw.item["bob-tin-plate"] then
           { type = "item", name = "bob-tin-plate", amount = 4 },
           { type = "item", name = "bob-lead-plate", amount = 7 },
         },
-        results = { { type = "item", name = "solder-alloy", amount = 11 } },
+        results = { { type = "item", name = "bob-solder-alloy", amount = 11 } },
         allow_decomposition = false,
         allow_productivity = true,
       },

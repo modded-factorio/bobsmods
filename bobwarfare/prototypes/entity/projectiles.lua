@@ -4,7 +4,7 @@ local nuke_shockwave_starting_speed_deviation = 0.075
 data:extend({
   {
     type = "projectile",
-    name = "better-shotgun-projectile",
+    name = "bob-better-shotgun-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.05, -1 }, { 0.05, 1 } },
     acceleration = 0,
@@ -32,7 +32,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-ap-projectile",
+    name = "bob-shotgun-ap-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.05, -1 }, { 0.05, 1 } },
     acceleration = 0,
@@ -60,7 +60,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-electric-projectile",
+    name = "bob-shotgun-electric-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.05, -1 }, { 0.05, 1 } },
     acceleration = 0,
@@ -88,7 +88,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-explosive-projectile",
+    name = "bob-shotgun-explosive-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     acceleration = 0,
@@ -144,7 +144,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-flame-projectile",
+    name = "bob-shotgun-flame-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     acceleration = 0,
@@ -196,7 +196,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-acid-projectile",
+    name = "bob-shotgun-acid-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     acceleration = 0,
@@ -248,7 +248,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-poison-projectile",
+    name = "bob-shotgun-poison-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     acceleration = 0,
@@ -300,7 +300,7 @@ data:extend({
 
   {
     type = "projectile",
-    name = "shotgun-uranium-projectile",
+    name = "bob-shotgun-uranium-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.05, -1 }, { 0.05, 1 } },
     acceleration = 0,
@@ -863,7 +863,7 @@ data:extend({
 data:extend({
   {
     type = "projectile",
-    name = "fire-capsule",
+    name = "bob-fire-capsule",
     flags = { "not-on-map" },
     acceleration = 0.005,
     action = {
@@ -957,7 +957,7 @@ data.raw.projectile["poison-capsule"].action = {
 data:extend({
   {
     type = "artillery-projectile",
-    name = "poison-artillery-projectile",
+    name = "bob-poison-artillery-projectile",
     flags = { "not-on-map" },
     reveal_map = true,
     map_color = { r = 0, g = 1, b = 0 },
@@ -1022,7 +1022,7 @@ data:extend({
 
   {
     type = "artillery-projectile",
-    name = "fire-artillery-projectile",
+    name = "bob-fire-artillery-projectile",
     flags = { "not-on-map" },
     reveal_map = true,
     map_color = { r = 1, g = 0, b = 0 },
@@ -1094,7 +1094,7 @@ data:extend({
 
   {
     type = "artillery-projectile",
-    name = "explosive-artillery-projectile",
+    name = "bob-explosive-artillery-projectile",
     flags = { "not-on-map" },
     reveal_map = true,
     map_color = { r = 0.2, g = 0.2, b = 0.2 },
@@ -1168,7 +1168,7 @@ data:extend({
 
   {
     type = "artillery-projectile",
-    name = "distractor-artillery-projectile",
+    name = "bob-distractor-artillery-projectile",
     flags = { "not-on-map" },
     reveal_map = true,
     map_color = { r = 0, g = 0.5, b = 1 },
@@ -1227,7 +1227,7 @@ data:extend({
   },
   {
     type = "artillery-projectile",
-    name = "atomic-artillery-projectile",
+    name = "bob-atomic-artillery-projectile",
     flags = { "not-on-map" },
     reveal_map = true,
     map_color = { r = 0, g = 1, b = 0 },
@@ -1487,7 +1487,7 @@ data:extend({
           target_effects = {
             {
               type = "create-entity",
-              entity_name = "plasma-explosion",
+              entity_name = "bob-plasma-explosion",
             },
             {
               type = "create-entity",
@@ -1505,7 +1505,7 @@ data:extend({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 25, type = "plasma" },
+              damage = { amount = 25, type = "bob-plasma" },
             },
             {
               type = "damage",
@@ -1517,7 +1517,7 @@ data:extend({
             },
             {
               type = "create-sticker",
-              sticker = "plasma-sticker",
+              sticker = "bob-plasma-sticker",
             },
             {
               type = "create-entity",
@@ -1561,7 +1561,7 @@ data:extend({
 data:extend({
   {
     type = "projectile",
-    name = "shotgun-plasma-projectile",
+    name = "bob-shotgun-plasma-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     acceleration = 0,
@@ -1581,11 +1581,11 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 15, type = "plasma" },
+                    damage = { amount = 15, type = "bob-plasma" },
                   },
                   {
                     type = "create-sticker",
-                    sticker = "plasma-sticker",
+                    sticker = "bob-plasma-sticker",
                   },
                 },
               },
@@ -1621,11 +1621,11 @@ data:extend({
         target_effects = {
           {
             type = "create-entity",
-            entity_name = "plasma-explosion",
+            entity_name = "bob-plasma-explosion",
           },
           {
             type = "damage",
-            damage = { amount = 120, type = "plasma" },
+            damage = { amount = 120, type = "bob-plasma" },
           },
           {
             type = "nested-result",
@@ -1637,11 +1637,11 @@ data:extend({
                 target_effects = {
                   {
                     type = "damage",
-                    damage = { amount = 180, type = "plasma" },
+                    damage = { amount = 180, type = "bob-plasma" },
                   },
                   {
                     type = "create-sticker",
-                    sticker = "plasma-sticker",
+                    sticker = "bob-plasma-sticker",
                     show_in_tooltip = true,
                   },
                 },
@@ -1686,32 +1686,32 @@ data:extend({
 })
 
 if
-  data.raw.item["alien-orange-alloy"]
-  and data.raw.item["alien-blue-alloy"]
-  and data.raw.fluid["alien-explosive"]
-  and data.raw.fluid["alien-acid"]
-  and data.raw.fluid["alien-fire"]
-  and data.raw.fluid["alien-poison"]
+  data.raw.item["bob-alien-orange-alloy"]
+  and data.raw.item["bob-alien-blue-alloy"]
+  and data.raw.fluid["bob-alien-explosive"]
+  and data.raw.fluid["bob-alien-acid"]
+  and data.raw.fluid["bob-alien-fire"]
+  and data.raw.fluid["bob-alien-poison"]
 then
-  data.raw.projectile["better-shotgun-projectile"].action.action_delivery.target_effects.damage.amount = 16
-  data.raw.projectile["shotgun-uranium-projectile"].action.action_delivery.target_effects.damage.amount = 24
-  data.raw.projectile["shotgun-ap-projectile"].action.action_delivery.target_effects.damage.amount = 27
-  data.raw.projectile["shotgun-electric-projectile"].action.action_delivery.target_effects.damage.amount = 27
-  data.raw.ammo["shotgun-acid-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.projectile["bob-better-shotgun-projectile"].action.action_delivery.target_effects.damage.amount = 16
+  data.raw.projectile["bob-shotgun-uranium-projectile"].action.action_delivery.target_effects.damage.amount = 24
+  data.raw.projectile["bob-shotgun-ap-projectile"].action.action_delivery.target_effects.damage.amount = 27
+  data.raw.projectile["bob-shotgun-electric-projectile"].action.action_delivery.target_effects.damage.amount = 27
+  data.raw.ammo["bob-shotgun-acid-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["bob-shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
     22
-  data.raw.ammo["shotgun-explosive-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-shotgun-explosive-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.action_delivery.target_effects[1].damage.amount =
     22
-  data.raw.ammo["shotgun-flame-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-shotgun-flame-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["bob-shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
     22
-  data.raw.ammo["shotgun-poison-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-shotgun-poison-shell"].ammo_type.action.repeat_count = 15
+  data.raw.projectile["bob-shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
     22
-  data.raw.ammo["shotgun-plasma-shell"].ammo_type.action.repeat_count = 15
-  data.raw.ammo["shotgun-plasma-shell"].ammo_type.action.repeat_count = 20
-  data.raw.projectile["shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-shotgun-plasma-shell"].ammo_type.action.repeat_count = 15
+  data.raw.ammo["bob-shotgun-plasma-shell"].ammo_type.action.repeat_count = 20
+  data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
     30
 
   data.raw.projectile["bob-piercing-rocket"].action.action_delivery.target_effects[2].damage.amount = 160

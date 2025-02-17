@@ -145,12 +145,12 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
   data:extend({
     {
       type = "item",
-      name = "electric-furnace-2",
+      name = "bob-electric-furnace-2",
       icon = "__bobassembly__/graphics/icons/electric-furnace-2.png",
       icon_size = 32,
       subgroup = "smelting-machine",
       order = "c[electric-furnace-2]",
-      place_result = "electric-furnace-2",
+      place_result = "bob-electric-furnace-2",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
@@ -169,12 +169,12 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
 
     {
       type = "item",
-      name = "electric-furnace-3",
+      name = "bob-electric-furnace-3",
       icon = "__bobassembly__/graphics/icons/electric-furnace-3.png",
       icon_size = 32,
       subgroup = "smelting-machine",
       order = "c[electric-furnace-3]",
-      place_result = "electric-furnace-3",
+      place_result = "bob-electric-furnace-3",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
@@ -193,34 +193,34 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
 
     {
       type = "recipe",
-      name = "electric-furnace-2",
+      name = "bob-electric-furnace-2",
       ingredients = {
         { type = "item", name = "electric-furnace", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "stone-brick", amount = 10 },
         { type = "item", name = "processing-unit", amount = 5 },
       },
-      results = { { type = "item", name = "electric-furnace-2", amount = 1 } },
+      results = { { type = "item", name = "bob-electric-furnace-2", amount = 1 } },
       energy_required = 5,
       enabled = false,
     },
 
     {
       type = "recipe",
-      name = "electric-furnace-3",
+      name = "bob-electric-furnace-3",
       ingredients = {
-        { type = "item", name = "electric-furnace-2", amount = 1 },
+        { type = "item", name = "bob-electric-furnace-2", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "stone-brick", amount = 10 },
         { type = "item", name = "processing-unit", amount = 5 },
       },
-      results = { { type = "item", name = "electric-furnace-3", amount = 1 } },
+      results = { { type = "item", name = "bob-electric-furnace-3", amount = 1 } },
       energy_required = 5,
       enabled = false,
     },
 
     bob_electric_furnace({
-      name = "electric-furnace-2",
+      name = "bob-electric-furnace-2",
       icon = "__bobassembly__/graphics/icons/electric-furnace-2.png",
       tint = { r = 0.6, g = 0.2, b = 0.8 },
       max_health = 450,
@@ -230,7 +230,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     }),
 
     bob_electric_furnace({
-      name = "electric-furnace-3",
+      name = "bob-electric-furnace-3",
       icon = "__bobassembly__/graphics/icons/electric-furnace-3.png",
       tint = { r = 0.2, g = 0.8, b = 0.2 },
       max_health = 550,
@@ -263,7 +263,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electric-furnace-2",
+          recipe = "bob-electric-furnace-2",
         },
       },
     },
@@ -292,7 +292,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electric-furnace-3",
+          recipe = "bob-electric-furnace-3",
         },
       },
     },

@@ -1,6 +1,6 @@
 data.raw["storage-tank"]["storage-tank"].icon = "__boblogistics__/graphics/icons/storage-tank-1.png"
 data.raw["storage-tank"]["storage-tank"].fast_replaceable_group = "pipe"
-data.raw["storage-tank"]["storage-tank"].next_upgrade = "storage-tank-2"
+data.raw["storage-tank"]["storage-tank"].next_upgrade = "bob-storage-tank-2"
 
 local storagetankbase = settings.startup["bobmods-logistics-storagetankbase"].value * 1000
 data.raw["storage-tank"]["storage-tank"].fluid_box.volume = storagetankbase
@@ -155,10 +155,10 @@ end
 data:extend({
   {
     type = "storage-tank",
-    name = "storage-tank-2",
+    name = "bob-storage-tank-2",
     icon = "__boblogistics__/graphics/icons/storage-tank-2.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "storage-tank-2" },
+    minable = { mining_time = 0.5, result = "bob-storage-tank-2" },
     max_health = 600,
     corpse = "medium-remnants",
     collision_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
@@ -176,7 +176,7 @@ data:extend({
     },
     two_direction_only = true,
     fast_replaceable_group = "pipe",
-    next_upgrade = "storage-tank-3",
+    next_upgrade = "bob-storage-tank-3",
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_pictures({ r = 0.25, g = 0.45, b = 0.6 }),
     flow_length_in_ticks = 360,
@@ -194,10 +194,10 @@ data:extend({
 
   {
     type = "storage-tank",
-    name = "storage-tank-3",
+    name = "bob-storage-tank-3",
     icon = "__boblogistics__/graphics/icons/storage-tank-3.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "storage-tank-3" },
+    minable = { mining_time = 0.5, result = "bob-storage-tank-3" },
     max_health = 700,
     corpse = "medium-remnants",
     collision_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
@@ -215,7 +215,7 @@ data:extend({
     },
     two_direction_only = true,
     fast_replaceable_group = "pipe",
-    next_upgrade = "storage-tank-4",
+    next_upgrade = "bob-storage-tank-4",
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     pictures = storage_tank_pictures({ r = 0.7, g = 0.3, b = 0.68 }),
     flow_length_in_ticks = 360,
@@ -233,10 +233,10 @@ data:extend({
 
   {
     type = "storage-tank",
-    name = "storage-tank-4",
+    name = "bob-storage-tank-4",
     icon = "__boblogistics__/graphics/icons/storage-tank-4.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "storage-tank-4" },
+    minable = { mining_time = 0.5, result = "bob-storage-tank-4" },
     max_health = 800,
     corpse = "medium-remnants",
     collision_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },

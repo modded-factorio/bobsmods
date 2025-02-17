@@ -10,7 +10,7 @@ local science_pick = {
 data:extend({
   {
     type = "tool",
-    name = "advanced-logistic-science-pack",
+    name = "bob-advanced-logistic-science-pack",
     icon = "__bobtech__/graphics/icons/logistic-science-pack.png",
     subgroup = "science-pack",
     order = "e[advanced-logistic-science-pack]",
@@ -24,11 +24,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "lab-2",
+    name = "bob-lab-2",
     icon = "__bobtech__/graphics/icons/lab2.png",
     subgroup = "production-machine",
     order = "z[lab]-2",
-    place_result = "lab-2",
+    place_result = "bob-lab-2",
     stack_size = 10,
     drop_sound = {
       filename = "__base__/sound/item/lab-inventory-move.ogg",
@@ -49,11 +49,11 @@ if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
     {
       type = "item",
-      name = "burner-lab",
+      name = "bob-burner-lab",
       icon = "__bobtech__/graphics/icons/lab-red.png",
       subgroup = "production-machine",
       order = "z",
-      place_result = "burner-lab",
+      place_result = "bob-burner-lab",
       stack_size = 10,
       drop_sound = {
         filename = "__base__/sound/item/lab-inventory-move.ogg",
@@ -77,7 +77,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         icon = "__bobtech__/graphics/icons/burner-generator.png",
         icon_size = 64,
         subgroup = "energy",
-        order = "burner-generator",
+        order = "bob-burner-generator",
         place_result = "bob-burner-generator",
         stack_size = 10,
         drop_sound = {

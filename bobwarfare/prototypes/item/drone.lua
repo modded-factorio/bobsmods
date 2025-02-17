@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "robot-drone-frame",
+    name = "bob-robot-drone-frame",
     icon = "__bobwarfare__/graphics/icons/drone-frame.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "robot-drone-frame-large",
+    name = "bob-robot-drone-frame-large",
     icon = "__bobwarfare__/graphics/icons/drone-frame.png",
     icon_size = 64,
     subgroup = "intermediate-product",

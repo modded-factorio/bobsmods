@@ -1,20 +1,20 @@
 if
-  data.raw.item["alien-artifact-blue"]
-  and data.raw.item["alien-artifact-orange"]
-  and data.raw.item["alien-artifact-purple"]
-  and data.raw.item["alien-artifact-yellow"]
-  and data.raw.item["alien-artifact-green"]
-  and data.raw.item["alien-artifact-red"]
+  data.raw.item["bob-alien-artifact-blue"]
+  and data.raw.item["bob-alien-artifact-orange"]
+  and data.raw.item["bob-alien-artifact-purple"]
+  and data.raw.item["bob-alien-artifact-yellow"]
+  and data.raw.item["bob-alien-artifact-green"]
+  and data.raw.item["bob-alien-artifact-red"]
 then
   data:extend({
     {
       type = "recipe",
       name = "bob-alien-blue-alloy",
-      category = "mixing-furnace",
+      category = "bob-mixing-furnace",
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "item", name = "alien-artifact-blue", amount = 1 },
+        { type = "item", name = "bob-alien-artifact-blue", amount = 1 },
         { type = "item", name = "bob-tungsten-plate", amount = 10 },
       },
       results = { { type = "item", name = "bob-alien-blue-alloy", amount = 10 } },
@@ -28,11 +28,11 @@ then
     {
       type = "recipe",
       name = "bob-alien-orange-alloy",
-      category = "mixing-furnace",
+      category = "bob-mixing-furnace",
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "item", name = "alien-artifact-orange", amount = 1 },
+        { type = "item", name = "bob-alien-artifact-orange", amount = 1 },
         { type = "item", name = "bob-gold-plate", amount = 10 },
       },
       results = { { type = "item", name = "bob-alien-orange-alloy", amount = 10 } },
@@ -50,7 +50,7 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "item", name = "alien-artifact-purple", amount = 1 },
+        { type = "item", name = "bob-alien-artifact-purple", amount = 1 },
         { type = "fluid", name = "sulfuric-acid", amount = 100 },
       },
       results = {
@@ -71,7 +71,7 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "item", name = "alien-artifact-yellow", amount = 1 },
+        { type = "item", name = "bob-alien-artifact-yellow", amount = 1 },
         { type = "item", name = "coal", amount = 6 },
         { type = "item", name = "sulfur", amount = 6 },
       },
@@ -93,7 +93,7 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "item", name = "alien-artifact-green", amount = 1 },
+        { type = "item", name = "bob-alien-artifact-green", amount = 1 },
         { type = "item", name = "coal", amount = 6 },
         { type = "fluid", name = "bob-nitric-acid", amount = 60 },
       },
@@ -115,7 +115,7 @@ then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "item", name = "alien-artifact-red", amount = 1 },
+        { type = "item", name = "bob-alien-artifact-red", amount = 1 },
         { type = "fluid", name = "heavy-oil", amount = 60 },
         { type = "fluid", name = "light-oil", amount = 60 },
       },

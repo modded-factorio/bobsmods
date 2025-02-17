@@ -39,7 +39,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-turbine-2",
+          recipe = "bob-steam-turbine-2",
         },
       },
       unit = {
@@ -66,7 +66,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-turbine-3",
+          recipe = "bob-steam-turbine-3",
         },
       },
       unit = {

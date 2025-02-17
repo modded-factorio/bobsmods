@@ -15,7 +15,7 @@ if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup[
   data:extend({
     {
       type = "technology",
-      name = "chemical-plant",
+      name = "bob-chemical-plant",
       icon = "__bobrevamp__/graphics/icons/technology/chemical-plant.png",
       icon_size = 128,
       order = "d-a-c",
@@ -48,7 +48,7 @@ then
   data:extend({
     {
       type = "recipe",
-      name = "oil-processing-with-sulfur",
+      name = "bob-oil-processing-with-sulfur",
       icon = "__bobrevamp__/graphics/icons/oil-processing-with-sulfur.png",
       icon_size = 64,
       category = "oil-processing",
@@ -73,7 +73,7 @@ then
     data:extend({
       {
         type = "recipe",
-        name = "oil-processing-with-sulfur-dioxide",
+        name = "bob-oil-processing-with-sulfur-dioxide",
         icon = "__bobrevamp__/graphics/icons/oil-processing-with-sulfur-dioxide-1.png",
         icon_size = 64,
         category = "oil-processing",
@@ -95,7 +95,7 @@ then
 
       {
         type = "recipe",
-        name = "oil-processing-with-sulfur-dioxide-2",
+        name = "bob-oil-processing-with-sulfur-dioxide-2",
         icon = "__bobrevamp__/graphics/icons/oil-processing-with-sulfur-dioxide-2.png",
         icon_size = 64,
         category = "oil-processing",
@@ -117,7 +117,7 @@ then
 
       {
         type = "recipe",
-        name = "oil-processing-with-sulfur-dioxide-3",
+        name = "bob-oil-processing-with-sulfur-dioxide-3",
         icon = "__bobrevamp__/graphics/icons/oil-processing-with-sulfur-dioxide-3.png",
         icon_size = 64,
         category = "oil-processing",
@@ -145,7 +145,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
   data:extend({
     {
       type = "fluid",
-      name = "sour-gas",
+      name = "bob-sour-gas",
       icon = "__bobrevamp__/graphics/icons/sour-gas.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -161,14 +161,14 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     },
     {
       type = "recipe",
-      name = "petroleum-gas-sweetening",
+      name = "bob-petroleum-gas-sweetening",
       category = "chemistry",
       subgroup = "fluid-recipes",
       order = "b[fluid-chemistry]-f[petroleum-gas-sweetening]",
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "sour-gas", amount = 20 },
+        { type = "fluid", name = "bob-sour-gas", amount = 20 },
       },
       results = {
         { type = "fluid", name = "petroleum-gas", amount = 20 },
@@ -182,7 +182,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     },
     {
       type = "recipe",
-      name = "solid-fuel-from-sour-gas",
+      name = "bob-solid-fuel-from-sour-gas",
       icons = {
         { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
         { icon = "__bobrevamp__/graphics/icons/sour-gas.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
@@ -194,7 +194,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       energy_required = 2,
       emissions_multiplier = 2,
       ingredients = {
-        { type = "fluid", name = "sour-gas", amount = 20 },
+        { type = "fluid", name = "bob-sour-gas", amount = 20 },
       },
       results = {
         { type = "item", name = "solid-fuel", amount = 1 },
@@ -209,12 +209,12 @@ if settings.startup["bobmods-revamp-oil"].value == true then
 
   if data.raw["recipe-category"]["bob-void-fluid"] then
     if bobmods.plates and bobmods.plates.make_void_fluid_recipe then
-      bobmods.plates.make_void_fluid_recipe("sour-gas", 25, 55)
+      bobmods.plates.make_void_fluid_recipe("bob-sour-gas", 25, 55)
     else
       data:extend({
         {
           type = "recipe",
-          name = "void-sour-gas",
+          name = "bob-void-sour-gas",
           icons = {
             {
               icon = "__bobrevamp__/graphics/icons/void.png",
@@ -228,12 +228,12 @@ if settings.startup["bobmods-revamp-oil"].value == true then
             },
           },
           subgroup = "bob-void",
-          order = "sour-gas",
+          order = "bob-sour-gas",
           category = "bob-void-fluid",
           hide_from_player_crafting = true,
           energy_required = 1,
           ingredients = {
-            { type = "fluid", name = "sour-gas", amount = 25 },
+            { type = "fluid", name = "bob-sour-gas", amount = 25 },
           },
           results = {},
           emissions_multiplier = 55,

@@ -3,8 +3,8 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     bobmods.lib.recipe.replace_ingredient("pumpjack", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
 
-  if data.raw.item["steel-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("pumpjack", "pipe", "steel-pipe")
+  if data.raw.item["bob-steel-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("pumpjack", "pipe", "bob-steel-pipe")
   end
 
   if data.raw.item["bob-aluminium-plate"] then
@@ -26,12 +26,12 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     end
   end
 
-  if data.raw.item["brass-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-1", "pipe", "brass-pipe")
+  if data.raw.item["bob-brass-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-1", "pipe", "bob-brass-pipe")
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-2", "bob-zinc-processing")
   else
-    if data.raw.item["plastic-pipe"] then
-      bobmods.lib.recipe.replace_ingredient("bob-pumpjack-1", "pipe", "plastic-pipe")
+    if data.raw.item["bob-plastic-pipe"] then
+      bobmods.lib.recipe.replace_ingredient("bob-pumpjack-1", "pipe", "bob-plastic-pipe")
       bobmods.lib.tech.add_prerequisite("bob-pumpjacks-2", "plastics")
     end
   end
@@ -56,12 +56,12 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     end
   end
 
-  if data.raw.item["titanium-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "pipe", "titanium-pipe")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "pipe", "bob-titanium-pipe")
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-3", "bob-titanium-processing")
   else
-    if data.raw.item["plastic-pipe"] then
-      bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "pipe", "plastic-pipe")
+    if data.raw.item["bob-plastic-pipe"] then
+      bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "pipe", "bob-plastic-pipe")
       bobmods.lib.tech.add_prerequisite("bob-pumpjacks-3", "plastics")
     end
   end
@@ -91,11 +91,11 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["nitinol-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-3", "pipe", "nitinol-pipe")
+  if data.raw.item["bob-nitinol-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-3", "pipe", "bob-nitinol-pipe")
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "bob-nitinol-processing")
-  elseif data.raw.item["tungsten-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-3", "pipe", "tungsten-pipe")
+  elseif data.raw.item["bob-tungsten-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-3", "pipe", "bob-tungsten-pipe")
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "bob-tungsten-processing")
   end
 

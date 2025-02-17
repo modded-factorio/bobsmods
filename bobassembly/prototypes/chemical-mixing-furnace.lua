@@ -1,8 +1,8 @@
 if
   settings.startup["bobmods-assembly-multipurposefurnaces"].value
   and data.raw["item-subgroup"]["bob-smelting-machine"]
-  and data.raw["recipe-category"]["chemical-furnace"]
-  and data.raw["recipe-category"]["mixing-furnace"]
+  and data.raw["recipe-category"]["bob-chemical-furnace"]
+  and data.raw["recipe-category"]["bob-mixing-furnace"]
   and (data.raw.technology["bob-alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
   and data.raw.technology["bob-electric-chemical-furnace"]
 then
@@ -67,12 +67,12 @@ then
   data:extend({
     {
       type = "item",
-      name = "electric-chemical-mixing-furnace",
+      name = "bob-electric-chemical-mixing-furnace",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace.png",
       icon_size = 32,
       subgroup = "bob-smelting-machine",
       order = "d[electric-chemical-mixing-furnace-1]",
-      place_result = "electric-chemical-mixing-furnace",
+      place_result = "bob-electric-chemical-mixing-furnace",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
@@ -90,12 +90,12 @@ then
     },
     {
       type = "item",
-      name = "electric-chemical-mixing-furnace-2",
+      name = "bob-electric-chemical-mixing-furnace-2",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace-2.png",
       icon_size = 32,
       subgroup = "bob-smelting-machine",
       order = "d[electric-chemical-mixing-furnace-2]",
-      place_result = "electric-chemical-mixing-furnace-2",
+      place_result = "bob-electric-chemical-mixing-furnace-2",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/electric-large-inventory-move.ogg",
@@ -114,7 +114,7 @@ then
 
     {
       type = "recipe",
-      name = "electric-chemical-mixing-furnace",
+      name = "bob-electric-chemical-mixing-furnace",
       energy_required = 5,
       enabled = false,
       ingredients = {
@@ -124,31 +124,31 @@ then
         { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "electric-chemical-mixing-furnace", amount = 1 } },
+      results = { { type = "item", name = "bob-electric-chemical-mixing-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "electric-chemical-mixing-furnace-2",
+      name = "bob-electric-chemical-mixing-furnace-2",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "electric-chemical-mixing-furnace", amount = 1 },
+        { type = "item", name = "bob-electric-chemical-mixing-furnace", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "stone-brick", amount = 10 },
         { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "electric-chemical-mixing-furnace-2", amount = 1 } },
+      results = { { type = "item", name = "bob-electric-chemical-mixing-furnace-2", amount = 1 } },
     },
 
     {
       type = "assembling-machine",
-      name = "electric-chemical-mixing-furnace",
+      name = "bob-electric-chemical-mixing-furnace",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 1, result = "electric-chemical-mixing-furnace" },
+      minable = { mining_time = 1, result = "bob-electric-chemical-mixing-furnace" },
       max_health = 450,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["electric-furnace"],
@@ -183,7 +183,7 @@ then
         shift = { 0, -0.1 },
       },
       crafting_speed = 3,
-      crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
+      crafting_categories = { "smelting", "bob-mixing-furnace", "bob-chemical-furnace" },
       energy_usage = "250kW",
       energy_source = {
         type = "electric",
@@ -209,17 +209,17 @@ then
         working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       },
       fast_replaceable_group = "furnace",
-      next_upgrade = "electric-chemical-mixing-furnace-2",
+      next_upgrade = "bob-electric-chemical-mixing-furnace-2",
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
 
     {
       type = "assembling-machine",
-      name = "electric-chemical-mixing-furnace-2",
+      name = "bob-electric-chemical-mixing-furnace-2",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace-2.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 1, result = "electric-chemical-mixing-furnace-2" },
+      minable = { mining_time = 1, result = "bob-electric-chemical-mixing-furnace-2" },
       max_health = 550,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["electric-furnace"],
@@ -256,7 +256,7 @@ then
         shift = { 0, -0.1 },
       },
       crafting_speed = 4,
-      crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
+      crafting_categories = { "smelting", "bob-mixing-furnace", "bob-chemical-furnace" },
       energy_usage = "300kW",
       energy_source = {
         type = "electric",
@@ -287,7 +287,7 @@ then
 
     {
       type = "technology",
-      name = "multi-purpose-furnace-1",
+      name = "bob-multi-purpose-furnace-1",
       icon_size = 128,
       icons = {
         {
@@ -326,14 +326,14 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electric-chemical-mixing-furnace",
+          recipe = "bob-electric-chemical-mixing-furnace",
         },
       },
     },
 
     {
       type = "technology",
-      name = "multi-purpose-furnace-2",
+      name = "bob-multi-purpose-furnace-2",
       icon_size = 128,
       icons = {
         {
@@ -356,7 +356,7 @@ then
       },
       order = "c-c-b-2",
       prerequisites = {
-        "multi-purpose-furnace-1",
+        "bob-multi-purpose-furnace-1",
         "utility-science-pack",
       },
       unit = {
@@ -373,17 +373,17 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electric-chemical-mixing-furnace-2",
+          recipe = "bob-electric-chemical-mixing-furnace-2",
         },
       },
     },
   })
   if data.raw.technology["bob-electric-chemical-furnace"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-electric-chemical-furnace")
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-electric-chemical-furnace")
   end
   if data.raw.technology["bob-electric-mixing-furnace"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-electric-mixing-furnace")
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-electric-mixing-furnace")
   elseif data.raw.technology["bob-alloy-processing-2"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "bob-alloy-processing-2")
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-alloy-processing-2")
   end
 end

@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "radar-2",
+    name = "bob-radar-2",
     enabled = false,
     ingredients = {
       { type = "item", name = "radar", amount = 1 },
@@ -9,45 +9,45 @@ data:extend({
       { type = "item", name = "iron-gear-wheel", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "radar-2", amount = 1 } },
+    results = { { type = "item", name = "bob-radar-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "radar-3",
+    name = "bob-radar-3",
     enabled = false,
     ingredients = {
-      { type = "item", name = "radar-2", amount = 1 },
+      { type = "item", name = "bob-radar-2", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "radar-3", amount = 1 } },
+    results = { { type = "item", name = "bob-radar-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "radar-4",
+    name = "bob-radar-4",
     enabled = false,
     ingredients = {
-      { type = "item", name = "radar-3", amount = 1 },
+      { type = "item", name = "bob-radar-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "radar-4", amount = 1 } },
+    results = { { type = "item", name = "bob-radar-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "radar-5",
+    name = "bob-radar-5",
     enabled = false,
     ingredients = {
-      { type = "item", name = "radar-4", amount = 1 },
+      { type = "item", name = "bob-radar-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "radar-5", amount = 1 } },
+    results = { { type = "item", name = "bob-radar-5", amount = 1 } },
   },
 })

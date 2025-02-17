@@ -1,13 +1,13 @@
 data:extend({
   {
     type = "item-subgroup",
-    name = "bodies",
+    name = "bob-bodies",
     group = "logistics",
     order = "aa",
   },
   {
     type = "item-subgroup",
-    name = "body-parts",
+    name = "bob-body-parts",
     group = "intermediate-products",
     order = "e-e2",
   },

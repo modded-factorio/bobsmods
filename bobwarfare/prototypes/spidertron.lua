@@ -2,10 +2,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   data:extend({
     {
       type = "item",
-      name = "mech-leg-segment",
+      name = "bob-mech-leg-segment",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-leg-segment.png",
       icon_size = 128,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-b[leg-segment]",
       stack_size = 100,
       drop_sound = {
@@ -23,10 +23,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-foot",
+      name = "bob-mech-foot",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-foot.png",
       icon_size = 64,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-b[foot]",
       stack_size = 100,
       drop_sound = {
@@ -44,10 +44,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-hip",
+      name = "bob-mech-hip",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-hip.png",
       icon_size = 64,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-b[hip]",
       stack_size = 100,
       drop_sound = {
@@ -65,10 +65,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-knee",
+      name = "bob-mech-knee",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-knee.png",
       icon_size = 128,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-b[knee]",
       stack_size = 100,
       drop_sound = {
@@ -86,10 +86,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-leg",
+      name = "bob-mech-leg",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-leg.png",
       icon_size = 256,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-a[leg]",
       stack_size = 20,
       drop_sound = {
@@ -107,10 +107,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-brain",
+      name = "bob-mech-brain",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-brain.png",
       icon_size = 32,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-a[brain]",
       stack_size = 100,
       drop_sound = {
@@ -128,10 +128,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-frame",
+      name = "bob-mech-frame",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-body.png",
       icon_size = 128,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-a[frame]",
       stack_size = 5,
       drop_sound = {
@@ -149,10 +149,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     },
     {
       type = "item",
-      name = "mech-armor-plate",
+      name = "bob-mech-armor-plate",
       icon = "__bobwarfare__/graphics/icons/spidertron/mech-armor-plate.png",
       icon_size = 128,
-      subgroup = "mech-parts",
+      subgroup = "bob-mech-parts",
       order = "s[mech]-a[armor-plate]",
       stack_size = 100,
       drop_sound = {
@@ -173,30 +173,30 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "mech-leg-segment",
+      name = "bob-mech-leg-segment",
       enabled = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "pipe", amount = 3 },
         { type = "item", name = "steel-plate", amount = 2 },
       },
-      results = { { type = "item", name = "mech-leg-segment", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-leg-segment", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "mech-foot",
+      name = "bob-mech-foot",
       enabled = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "low-density-structure", amount = 1 },
       },
-      results = { { type = "item", name = "mech-foot", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-foot", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "mech-hip",
+      name = "bob-mech-hip",
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -204,12 +204,12 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "electric-engine-unit", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 4 },
       },
-      results = { { type = "item", name = "mech-hip", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-hip", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "mech-knee",
+      name = "bob-mech-knee",
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -217,54 +217,54 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         { type = "item", name = "electric-engine-unit", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 8 },
       },
-      results = { { type = "item", name = "mech-knee", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-knee", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "mech-leg",
+      name = "bob-mech-leg",
       enabled = false,
       energy_required = 1,
       ingredients = {
-        { type = "item", name = "mech-leg-segment", amount = 2 },
-        { type = "item", name = "mech-foot", amount = 1 },
-        { type = "item", name = "mech-hip", amount = 1 },
-        { type = "item", name = "mech-knee", amount = 1 },
+        { type = "item", name = "bob-mech-leg-segment", amount = 2 },
+        { type = "item", name = "bob-mech-foot", amount = 1 },
+        { type = "item", name = "bob-mech-hip", amount = 1 },
+        { type = "item", name = "bob-mech-knee", amount = 1 },
         { type = "item", name = "copper-cable", amount = 4 },
       },
-      results = { { type = "item", name = "mech-leg", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-leg", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "mech-brain",
+      name = "bob-mech-brain",
       enabled = false,
       energy_required = 2,
       ingredients = {},
-      results = { { type = "item", name = "mech-brain", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-brain", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "mech-frame",
+      name = "bob-mech-frame",
       enabled = false,
       energy_required = 5,
       ingredients = {
         { type = "item", name = "low-density-structure", amount = 50 },
-        { type = "item", name = "mech-brain", amount = 1 },
+        { type = "item", name = "bob-mech-brain", amount = 1 },
       },
-      results = { { type = "item", name = "mech-frame", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-frame", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "mech-armor-plate",
+      name = "bob-mech-armor-plate",
       enabled = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "low-density-structure", amount = 5 },
         { type = "item", name = "steel-plate", amount = 2 },
       },
-      results = { { type = "item", name = "mech-armor-plate", amount = 1 } },
+      results = { { type = "item", name = "bob-mech-armor-plate", amount = 1 } },
       allow_productivity = true,
     },
   })
@@ -279,28 +279,28 @@ local factoriopedia_antron = {
   init = [[
     game.simulation.camera_zoom = 1.3
     game.simulation.camera_position = { 0, -1 }
-    game.surfaces[1].create_entity({ name = "antron", position = { 0, 0 } })
+    game.surfaces[1].create_entity({ name = "bob-antron", position = { 0, 0 } })
   ]],
 }
 local factoriopedia_tankotron = {
   init = [[
     game.simulation.camera_zoom = 1.3
     game.simulation.camera_position = { 0, -1 }
-    game.surfaces[1].create_entity({ name = "tankotron", position = { 0, 0 } })
+    game.surfaces[1].create_entity({ name = "bob-tankotron", position = { 0, 0 } })
   ]],
 }
 local factoriopedia_logistic_spidertron = {
   init = [[
     game.simulation.camera_zoom = 1.2
     game.simulation.camera_position = { 0, -1 }
-    game.surfaces[1].create_entity({ name = "logistic-spidertron", position = { 0, 0 } })
+    game.surfaces[1].create_entity({ name = "bob-logistic-spidertron", position = { 0, 0 } })
   ]],
 }
 local factoriopedia_heavy_spidertron = {
   init = [[
     game.simulation.camera_zoom = 0.8
     game.simulation.camera_position = { 0, -2 }
-    game.surfaces[1].create_entity({ name = "heavy-spidertron", position = { 0, 0 } })
+    game.surfaces[1].create_entity({ name = "bob-heavy-spidertron", position = { 0, 0 } })
   ]],
 }
 
@@ -601,7 +601,7 @@ end
 data:extend({
   {
     type = "gun",
-    name = "spidertron-gatling-gun",
+    name = "bob-spidertron-gatling-gun",
     icon = "__bobwarfare__/graphics/icons/gatling-gun.png",
     icon_size = 32,
     hidden = true,
@@ -632,8 +632,8 @@ data:extend({
   },
   {
     type = "gun",
-    name = "spidertron-cannon-1",
-    localised_name = { "item-name.spidertron-cannon" },
+    name = "bob-spidertron-cannon-1",
+    localised_name = { "item-name.bob-spidertron-cannon" },
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
     hidden = true,
@@ -659,8 +659,8 @@ data:extend({
   },
   {
     type = "gun",
-    name = "spidertron-cannon-2",
-    localised_name = { "item-name.spidertron-cannon" },
+    name = "bob-spidertron-cannon-2",
+    localised_name = { "item-name.bob-spidertron-cannon" },
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
     hidden = true,
@@ -686,7 +686,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "spidertron-cannon",
+    name = "bob-spidertron-cannon",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
     subgroup = "gun",
@@ -696,60 +696,60 @@ data:extend({
 
   {
     type = "recipe",
-    name = "spidertron-cannon",
+    name = "bob-spidertron-cannon",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 15 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
     },
-    results = { { type = "item", name = "spidertron-cannon", amount = 1 } },
+    results = { { type = "item", name = "bob-spidertron-cannon", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "antron",
+    name = "bob-antron",
     enabled = false,
     energy_required = 8,
     ingredients = {
       { type = "item", name = "gun-turret", amount = 2 },
     },
-    results = { { type = "item", name = "antron", amount = 1 } },
+    results = { { type = "item", name = "bob-antron", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "tankotron",
+    name = "bob-tankotron",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "spidertron-cannon", amount = 2 },
+      { type = "item", name = "bob-spidertron-cannon", amount = 2 },
     },
-    results = { { type = "item", name = "tankotron", amount = 1 } },
+    results = { { type = "item", name = "bob-tankotron", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "logistic-spidertron",
+    name = "bob-logistic-spidertron",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "gun-turret", amount = 2 },
       { type = "item", name = "steel-chest", amount = 1 },
     },
-    results = { { type = "item", name = "logistic-spidertron", amount = 1 } },
+    results = { { type = "item", name = "bob-logistic-spidertron", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "heavy-spidertron",
+    name = "bob-heavy-spidertron",
     enabled = false,
     energy_required = 12,
     ingredients = {
       { type = "item", name = "rocket-launcher", amount = 8 },
     },
-    results = { { type = "item", name = "heavy-spidertron", amount = 1 } },
+    results = { { type = "item", name = "bob-heavy-spidertron", amount = 1 } },
   },
 })
 
 bobmods.warfare.create_spidertron({
-  name = "antron",
+  name = "bob-antron",
   max_health = 1000,
   scale = 0.75, --1,
   leg_scale = 1, -- relative to scale
@@ -758,8 +758,8 @@ bobmods.warfare.create_spidertron({
   factoriopedia_simulation = factoriopedia_antron,
   order_letter = "a",
   guns = {
-    "spidertron-gatling-gun",
-    "spidertron-gatling-gun",
+    "bob-spidertron-gatling-gun",
+    "bob-spidertron-gatling-gun",
   },
   legs = 6,
   inventory_size = 80,
@@ -780,12 +780,12 @@ bobmods.warfare.create_spidertron({
     { type = "fire", decrease = 15, percent = 60 },
     { type = "poison", decrease = 8, percent = 50 },
     { type = "laser", decrease = 0, percent = 50 },
-    { type = "plasma", decrease = 0, percent = 75 },
+    { type = "bob-plasma", decrease = 0, percent = 75 },
   },
 })
 
 bobmods.warfare.create_spidertron({
-  name = "tankotron",
+  name = "bob-tankotron",
   max_health = 2000,
   scale = 0.8, --1,
   leg_scale = 1.25, -- relative to scale
@@ -794,8 +794,8 @@ bobmods.warfare.create_spidertron({
   factoriopedia_simulation = factoriopedia_tankotron,
   order_letter = "b",
   guns = {
-    "spidertron-cannon-1",
-    "spidertron-cannon-2",
+    "bob-spidertron-cannon-1",
+    "bob-spidertron-cannon-2",
   },
   legs = 6,
   inventory_size = 80,
@@ -816,12 +816,12 @@ bobmods.warfare.create_spidertron({
     { type = "fire", decrease = 15, percent = 70 },
     { type = "poison", decrease = 8, percent = 60 },
     { type = "laser", decrease = 0, percent = 60 },
-    { type = "plasma", decrease = 0, percent = 90 },
+    { type = "bob-plasma", decrease = 0, percent = 90 },
   },
 })
 
 bobmods.warfare.create_spidertron({
-  name = "logistic-spidertron",
+  name = "bob-logistic-spidertron",
   max_health = 1000,
   scale = 1.25, --1,
   leg_scale = 0.8, -- relative to scale
@@ -830,8 +830,8 @@ bobmods.warfare.create_spidertron({
   factoriopedia_simulation = factoriopedia_logistic_spidertron,
   order_letter = "d",
   guns = {
-    "spidertron-gatling-gun",
-    "spidertron-gatling-gun",
+    "bob-spidertron-gatling-gun",
+    "bob-spidertron-gatling-gun",
   },
   inventory_size = 160,
   equipment_grid = { width = 10, height = 8 },
@@ -851,12 +851,12 @@ bobmods.warfare.create_spidertron({
     { type = "fire", decrease = 15, percent = 60 },
     { type = "poison", decrease = 8, percent = 50 },
     { type = "laser", decrease = 0, percent = 50 },
-    { type = "plasma", decrease = 0, percent = 75 },
+    { type = "bob-plasma", decrease = 0, percent = 75 },
   },
 })
 
 bobmods.warfare.create_spidertron({
-  name = "heavy-spidertron",
+  name = "bob-heavy-spidertron",
   max_health = 5000,
   scale = 1.25,
   leg_scale = 1.25, -- relative to scale
@@ -892,7 +892,7 @@ bobmods.warfare.create_spidertron({
     { type = "fire", decrease = 25, percent = 90 },
     { type = "poison", decrease = 12, percent = 80 },
     { type = "laser", decrease = 0, percent = 75 },
-    { type = "plasma", decrease = 0, percent = 95 },
+    { type = "bob-plasma", decrease = 0, percent = 95 },
   },
 })
 
@@ -900,13 +900,13 @@ data.raw.technology.spidertron.order = "d-e-g-c"
 data:extend({
   {
     type = "technology",
-    name = "walking-vehicle",
+    name = "bob-walking-vehicle",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "antron",
+        recipe = "bob-antron",
       },
     },
     prerequisites = {
@@ -930,21 +930,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "tankotron",
+    name = "bob-tankotron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tankotron",
+        recipe = "bob-tankotron",
       },
       {
         type = "unlock-recipe",
-        recipe = "spidertron-cannon",
+        recipe = "bob-spidertron-cannon",
       },
     },
     prerequisites = {
-      "walking-vehicle",
+      "bob-walking-vehicle",
       "tank",
     },
     unit = {
@@ -962,18 +962,18 @@ data:extend({
   },
   {
     type = "technology",
-    name = "logistic-spidertron",
+    name = "bob-logistic-spidertron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "logistic-spidertron",
+        recipe = "bob-logistic-spidertron",
       },
     },
     prerequisites = {
       "logistics-3",
-      "walking-vehicle",
+      "bob-walking-vehicle",
       "utility-science-pack",
     },
     unit = {
@@ -992,13 +992,13 @@ data:extend({
   },
   {
     type = "technology",
-    name = "heavy-spidertron",
+    name = "bob-heavy-spidertron",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "heavy-spidertron",
+        recipe = "bob-heavy-spidertron",
       },
     },
     prerequisites = {

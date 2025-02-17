@@ -6,7 +6,7 @@ local smallammopartsound = {
 data:extend({
   {
     type = "item",
-    name = "petroleum-jelly",
+    name = "bob-petroleum-jelly",
     icon = "__bobwarfare__/graphics/icons/petroleum-jelly.png",
     icon_size = 32,
     subgroup = "bob-resource",
@@ -28,7 +28,7 @@ data:extend({
 
   {
     type = "item",
-    name = "gun-cotton",
+    name = "bob-gun-cotton",
     icon = "__bobwarfare__/graphics/icons/gun-cotton.png",
     icon_size = 32,
     subgroup = "bob-resource",
@@ -50,7 +50,7 @@ data:extend({
 
   {
     type = "item",
-    name = "cordite",
+    name = "bob-cordite",
     icon = "__bobwarfare__/graphics/icons/cordite.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -72,7 +72,7 @@ data:extend({
 
   {
     type = "item",
-    name = "bullet-casing",
+    name = "bob-bullet-casing",
     icon = "__bobwarfare__/graphics/icons/bullet-casing.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -85,7 +85,7 @@ data:extend({
 
   {
     type = "item",
-    name = "magazine",
+    name = "bob-magazine",
     icon = "__bobwarfare__/graphics/icons/magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -98,7 +98,7 @@ data:extend({
 
   {
     type = "item",
-    name = "bullet-projectile",
+    name = "bob-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -111,7 +111,7 @@ data:extend({
 
   {
     type = "item",
-    name = "bullet",
+    name = "bob-bullet",
     icon = "__bobwarfare__/graphics/icons/bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -124,7 +124,7 @@ data:extend({
 
   {
     type = "item",
-    name = "ap-bullet-projectile",
+    name = "bob-ap-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/ap-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -137,7 +137,7 @@ data:extend({
 
   {
     type = "item",
-    name = "ap-bullet",
+    name = "bob-ap-bullet",
     icon = "__bobwarfare__/graphics/icons/ap-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -150,7 +150,7 @@ data:extend({
 
   {
     type = "item",
-    name = "he-bullet-projectile",
+    name = "bob-he-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/he-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -163,7 +163,7 @@ data:extend({
 
   {
     type = "item",
-    name = "he-bullet",
+    name = "bob-he-bullet",
     icon = "__bobwarfare__/graphics/icons/he-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -176,7 +176,7 @@ data:extend({
 
   {
     type = "item",
-    name = "flame-bullet-projectile",
+    name = "bob-flame-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/flame-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -189,7 +189,7 @@ data:extend({
 
   {
     type = "item",
-    name = "flame-bullet",
+    name = "bob-flame-bullet",
     icon = "__bobwarfare__/graphics/icons/flame-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -202,7 +202,7 @@ data:extend({
 
   {
     type = "item",
-    name = "acid-bullet-projectile",
+    name = "bob-acid-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/acid-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -215,7 +215,7 @@ data:extend({
 
   {
     type = "item",
-    name = "acid-bullet",
+    name = "bob-acid-bullet",
     icon = "__bobwarfare__/graphics/icons/acid-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -228,7 +228,7 @@ data:extend({
 
   {
     type = "item",
-    name = "poison-bullet-projectile",
+    name = "bob-poison-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/poison-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -241,7 +241,7 @@ data:extend({
 
   {
     type = "item",
-    name = "poison-bullet",
+    name = "bob-poison-bullet",
     icon = "__bobwarfare__/graphics/icons/poison-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -251,7 +251,7 @@ data:extend({
 
   {
     type = "item",
-    name = "electric-bullet-projectile",
+    name = "bob-electric-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/electric-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -264,7 +264,7 @@ data:extend({
 
   {
     type = "item",
-    name = "electric-bullet",
+    name = "bob-electric-bullet",
     icon = "__bobwarfare__/graphics/icons/electric-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -277,7 +277,7 @@ data:extend({
 
   {
     type = "item",
-    name = "uranium-bullet-projectile",
+    name = "bob-uranium-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/uranium-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -290,7 +290,7 @@ data:extend({
 
   {
     type = "item",
-    name = "uranium-bullet",
+    name = "bob-uranium-bullet",
     icon = "__bobwarfare__/graphics/icons/uranium-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -303,7 +303,7 @@ data:extend({
 
   {
     type = "item",
-    name = "shotgun-shell-casing",
+    name = "bob-shotgun-shell-casing",
     icon = "__bobwarfare__/graphics/icons/shotgun-shell-casing.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -316,7 +316,7 @@ data:extend({
 
   {
     type = "item",
-    name = "shot",
+    name = "bob-shot",
     icon = "__bobwarfare__/graphics/icons/shot.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -329,7 +329,7 @@ data:extend({
 
   {
     type = "item",
-    name = "laser-rifle-battery-case",
+    name = "bob-laser-rifle-battery-case",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-case.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -351,7 +351,7 @@ data:extend({
 
   {
     type = "item",
-    name = "rocket-engine",
+    name = "bob-rocket-engine",
     icon = "__bobwarfare__/graphics/icons/rocket-engine.png",
     icon_size = 32,
     subgroup = "intermediate-product",
@@ -373,7 +373,7 @@ data:extend({
 
   {
     type = "item",
-    name = "rocket-body",
+    name = "bob-rocket-body",
     icon = "__bobwarfare__/graphics/icons/rocket-body.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -395,7 +395,7 @@ data:extend({
 
   {
     type = "item",
-    name = "rocket-warhead",
+    name = "bob-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -417,7 +417,7 @@ data:extend({
 
   {
     type = "item",
-    name = "piercing-rocket-warhead",
+    name = "bob-piercing-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-pierce.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -439,7 +439,7 @@ data:extend({
 
   {
     type = "item",
-    name = "electric-rocket-warhead",
+    name = "bob-electric-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-electric.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -461,7 +461,7 @@ data:extend({
 
   {
     type = "item",
-    name = "explosive-rocket-warhead",
+    name = "bob-explosive-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-explosive.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -483,7 +483,7 @@ data:extend({
 
   {
     type = "item",
-    name = "acid-rocket-warhead",
+    name = "bob-acid-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-acid.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -505,7 +505,7 @@ data:extend({
 
   {
     type = "item",
-    name = "flame-rocket-warhead",
+    name = "bob-flame-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-fire.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -527,7 +527,7 @@ data:extend({
 
   {
     type = "item",
-    name = "poison-rocket-warhead",
+    name = "bob-poison-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-poison.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -551,7 +551,7 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "plasma-bullet-projectile",
+    name = "bob-plasma-bullet-projectile",
     icon = "__bobwarfare__/graphics/icons/plasma-bullet-projectile.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -564,7 +564,7 @@ data:extend({
 
   {
     type = "item",
-    name = "plasma-bullet",
+    name = "bob-plasma-bullet",
     icon = "__bobwarfare__/graphics/icons/plasma-bullet.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",
@@ -577,7 +577,7 @@ data:extend({
 
   {
     type = "item",
-    name = "plasma-rocket-warhead",
+    name = "bob-plasma-rocket-warhead",
     icon = "__bobwarfare__/graphics/icons/missile-warhead-plasma.png",
     icon_size = 32,
     subgroup = "bob-ammo-parts",

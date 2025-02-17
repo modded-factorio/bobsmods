@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "advanced-research",
+    name = "bob-advanced-research",
     icon = "__bobtech__/graphics/icons/lab2-technology.png",
     icon_size = 128,
     prerequisites = {
@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lab-2",
+        recipe = "bob-lab-2",
       },
     },
     unit = {
@@ -27,13 +27,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "advanced-logistic-science-pack",
+    name = "bob-advanced-logistic-science-pack",
     icon = "__bobtech__/graphics/icons/logistic-science-pack-technology.png",
     icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "advanced-logistic-science-pack",
+        recipe = "bob-advanced-logistic-science-pack",
       },
     },
     unit = {
@@ -57,14 +57,14 @@ if settings.startup["bobmods-burnerphase"].value == true then
     data:extend({
       {
         type = "technology",
-        name = "burner-lab",
+        name = "bob-burner-lab",
         icon = "__bobtech__/graphics/icons/lab0-technology.png",
         icon_size = 128,
         prerequisites = {},
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "burner-lab",
+            recipe = "bob-burner-lab",
           },
         },
         research_trigger = {
@@ -81,7 +81,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
 
     {
       type = "technology",
-      name = "electricity",
+      name = "bob-electricity",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
       prerequisites = {},
@@ -109,7 +109,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
 
     {
       type = "technology",
-      name = "lab",
+      name = "bob-lab",
       icon = "__bobtech__/graphics/icons/lab-technology.png",
       icon_size = 128,
       prerequisites = {

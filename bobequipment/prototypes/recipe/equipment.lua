@@ -8,7 +8,7 @@ data.raw.recipe["energy-shield-mk2-equipment"].ingredients = {
 data:extend({
   {
     type = "recipe",
-    name = "energy-shield-mk3-equipment",
+    name = "bob-energy-shield-mk3-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -16,43 +16,43 @@ data:extend({
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "productivity-module-2", amount = 1 },
     },
-    results = { { type = "item", name = "energy-shield-mk3-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-energy-shield-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "energy-shield-mk4-equipment",
+    name = "bob-energy-shield-mk4-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "energy-shield-mk3-equipment", amount = 1 },
+      { type = "item", name = "bob-energy-shield-mk3-equipment", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-energy-shield-mk4-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "energy-shield-mk5-equipment",
+    name = "bob-energy-shield-mk5-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "energy-shield-mk4-equipment", amount = 1 },
+      { type = "item", name = "bob-energy-shield-mk4-equipment", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "energy-shield-mk5-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-energy-shield-mk5-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "energy-shield-mk6-equipment",
+    name = "bob-energy-shield-mk6-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "energy-shield-mk5-equipment", amount = 1 },
+      { type = "item", name = "bob-energy-shield-mk5-equipment", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "energy-shield-mk6-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-energy-shield-mk6-equipment", amount = 1 } },
   },
 })
 
@@ -67,47 +67,47 @@ data.raw.recipe["battery-mk2-equipment"].ingredients = {
 data:extend({
   {
     type = "recipe",
-    name = "battery-mk3-equipment",
+    name = "bob-battery-mk3-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "battery-mk2-equipment", amount = 2 },
       { type = "item", name = "battery", amount = 10 },
     },
-    results = { { type = "item", name = "battery-mk3-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-battery-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "battery-mk4-equipment",
+    name = "bob-battery-mk4-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "battery-mk3-equipment", amount = 2 },
+      { type = "item", name = "bob-battery-mk3-equipment", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
-    results = { { type = "item", name = "battery-mk4-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-battery-mk4-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "battery-mk5-equipment",
+    name = "bob-battery-mk5-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "battery-mk4-equipment", amount = 2 },
+      { type = "item", name = "bob-battery-mk4-equipment", amount = 2 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "battery-mk5-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-battery-mk5-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "battery-mk6-equipment",
+    name = "bob-battery-mk6-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "battery-mk5-equipment", amount = 2 },
+      { type = "item", name = "bob-battery-mk5-equipment", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
-    results = { { type = "item", name = "battery-mk6-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-battery-mk6-equipment", amount = 1 } },
   },
 })
 
@@ -120,7 +120,7 @@ data.raw.recipe["fission-reactor-equipment"].ingredients = {
 data:extend({
   {
     type = "recipe",
-    name = "fission-reactor-equipment-2",
+    name = "bob-fission-reactor-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -129,31 +129,31 @@ data:extend({
       { type = "item", name = "uranium-fuel-cell", amount = 36 },
       { type = "item", name = "low-density-structure", amount = 50 },
     },
-    results = { { type = "item", name = "fission-reactor-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-fission-reactor-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "fission-reactor-equipment-3",
+    name = "bob-fission-reactor-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "fission-reactor-equipment-2", amount = 1 },
+      { type = "item", name = "bob-fission-reactor-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 100 },
       { type = "item", name = "uranium-fuel-cell", amount = 48 },
     },
-    results = { { type = "item", name = "fission-reactor-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-fission-reactor-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "fission-reactor-equipment-4",
+    name = "bob-fission-reactor-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "fission-reactor-equipment-3", amount = 1 },
+      { type = "item", name = "bob-fission-reactor-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 100 },
       { type = "item", name = "uranium-fuel-cell", amount = 60 },
     },
-    results = { { type = "item", name = "fission-reactor-equipment-4", amount = 1 } },
+    results = { { type = "item", name = "bob-fission-reactor-equipment-4", amount = 1 } },
   },
 })
 
@@ -161,7 +161,7 @@ bobmods.lib.recipe.replace_ingredient("night-vision-equipment", "advanced-circui
 data:extend({
   {
     type = "recipe",
-    name = "night-vision-equipment-2",
+    name = "bob-night-vision-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -169,19 +169,19 @@ data:extend({
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "plastic-bar", amount = 2 },
     },
-    results = { { type = "item", name = "night-vision-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-night-vision-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "night-vision-equipment-3",
+    name = "bob-night-vision-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "night-vision-equipment-2", amount = 1 },
+      { type = "item", name = "bob-night-vision-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "plastic-bar", amount = 2 },
     },
-    results = { { type = "item", name = "night-vision-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-night-vision-equipment-3", amount = 1 } },
   },
 })
 
@@ -196,7 +196,7 @@ data.raw.recipe["solar-panel-equipment"].ingredients = {
 data:extend({
   {
     type = "recipe",
-    name = "solar-panel-equipment-2",
+    name = "bob-solar-panel-equipment-2",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -206,56 +206,56 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 8 },
       { type = "item", name = "copper-cable", amount = 16 },
     },
-    results = { { type = "item", name = "solar-panel-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-solar-panel-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "solar-panel-equipment-3",
+    name = "bob-solar-panel-equipment-3",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "solar-panel-equipment-2", amount = 1 },
+      { type = "item", name = "bob-solar-panel-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 4 },
       { type = "item", name = "steel-plate", amount = 12 },
       { type = "item", name = "copper-plate", amount = 12 },
       { type = "item", name = "copper-cable", amount = 24 },
     },
-    results = { { type = "item", name = "solar-panel-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-solar-panel-equipment-3", amount = 1 } },
   },
 })
 
-if data.raw.item["alien-artifact"] then
+if data.raw.item["bob-alien-artifact"] then
   data:extend({
     {
       type = "recipe",
-      name = "solar-panel-equipment-4",
+      name = "bob-solar-panel-equipment-4",
       enabled = false,
       energy_required = 7.5,
       ingredients = {
-        { type = "item", name = "solar-panel-equipment-3", amount = 1 },
+        { type = "item", name = "bob-solar-panel-equipment-3", amount = 1 },
         { type = "item", name = "processing-unit", amount = 6 },
-        { type = "item", name = "alien-artifact", amount = 5 },
+        { type = "item", name = "bob-alien-artifact", amount = 5 },
         { type = "item", name = "steel-plate", amount = 16 },
         { type = "item", name = "copper-plate", amount = 16 },
       },
-      results = { { type = "item", name = "solar-panel-equipment-4", amount = 1 } },
+      results = { { type = "item", name = "bob-solar-panel-equipment-4", amount = 1 } },
     },
   })
-  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
     data:extend({
       {
         type = "recipe",
-        name = "solar-panel-equipment-5",
+        name = "bob-solar-panel-equipment-5",
         category = "crafting-with-fluid",
         enabled = false,
         energy_required = 10,
         ingredients = {
-          { type = "item", name = "solar-panel-equipment-4", amount = 1 },
+          { type = "item", name = "bob-solar-panel-equipment-4", amount = 1 },
           { type = "item", name = "processing-unit", amount = 8 },
-          { type = "item", name = "alien-orange-alloy", amount = 10 },
-          { type = "fluid", name = "alien-acid", amount = 50 },
+          { type = "item", name = "bob-alien-orange-alloy", amount = 10 },
+          { type = "fluid", name = "bob-alien-acid", amount = 50 },
         },
-        results = { { type = "item", name = "solar-panel-equipment-5", amount = 1 } },
+        results = { { type = "item", name = "bob-solar-panel-equipment-5", amount = 1 } },
       },
     })
   end
@@ -270,7 +270,7 @@ data.raw.recipe["personal-laser-defense-equipment"].ingredients = {
 data:extend({
   {
     type = "recipe",
-    name = "personal-laser-defense-equipment-2",
+    name = "bob-personal-laser-defense-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -278,56 +278,56 @@ data:extend({
       { type = "item", name = "plastic-bar", amount = 5 },
       { type = "item", name = "advanced-circuit", amount = 5 },
     },
-    results = { { type = "item", name = "personal-laser-defense-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-laser-defense-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-laser-defense-equipment-3",
+    name = "bob-personal-laser-defense-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "personal-laser-defense-equipment-2", amount = 1 },
+      { type = "item", name = "bob-personal-laser-defense-equipment-2", amount = 1 },
       { type = "item", name = "steel-plate", amount = 8 },
       { type = "item", name = "battery", amount = 12 },
     },
-    results = { { type = "item", name = "personal-laser-defense-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-laser-defense-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-laser-defense-equipment-4",
+    name = "bob-personal-laser-defense-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "personal-laser-defense-equipment-3", amount = 1 },
+      { type = "item", name = "bob-personal-laser-defense-equipment-3", amount = 1 },
       { type = "item", name = "steel-plate", amount = 16 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
-    results = { { type = "item", name = "personal-laser-defense-equipment-4", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-laser-defense-equipment-4", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-laser-defense-equipment-5",
+    name = "bob-personal-laser-defense-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "personal-laser-defense-equipment-4", amount = 1 },
+      { type = "item", name = "bob-personal-laser-defense-equipment-4", amount = 1 },
       { type = "item", name = "steel-plate", amount = 24 },
       { type = "item", name = "battery", amount = 18 },
     },
-    results = { { type = "item", name = "personal-laser-defense-equipment-5", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-laser-defense-equipment-5", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-laser-defense-equipment-6",
+    name = "bob-personal-laser-defense-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "personal-laser-defense-equipment-5", amount = 1 },
+      { type = "item", name = "bob-personal-laser-defense-equipment-5", amount = 1 },
       { type = "item", name = "processing-unit", amount = 15 },
       { type = "item", name = "speed-module-3", amount = 1 },
       { type = "item", name = "efficiency-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "personal-laser-defense-equipment-6", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-laser-defense-equipment-6", amount = 1 } },
   },
 })
 
@@ -335,7 +335,7 @@ bobmods.lib.recipe.replace_ingredient("exoskeleton-equipment", "processing-unit"
 data:extend({
   {
     type = "recipe",
-    name = "exoskeleton-equipment-2",
+    name = "bob-exoskeleton-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -345,21 +345,21 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "speed-module-2", amount = 1 },
     },
-    results = { { type = "item", name = "exoskeleton-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-exoskeleton-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "exoskeleton-equipment-3",
+    name = "bob-exoskeleton-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "exoskeleton-equipment-2", amount = 1 },
+      { type = "item", name = "bob-exoskeleton-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
       { type = "item", name = "iron-gear-wheel", amount = 30 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "speed-module-3", amount = 1 },
     },
-    results = { { type = "item", name = "exoskeleton-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-exoskeleton-equipment-3", amount = 1 } },
   },
 })
 

@@ -79,55 +79,55 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     )
   end
 
-  if data.raw["damage-type"]["plasma"] then
-    table.insert(data.raw.locomotive["locomotive"].resistances, { type = "plasma", decrease = 15, percent = 50 })
-    table.insert(data.raw["cargo-wagon"]["cargo-wagon"].resistances, { type = "plasma", decrease = 15, percent = 50 })
-    table.insert(data.raw["fluid-wagon"]["fluid-wagon"].resistances, { type = "plasma", decrease = 15, percent = 50 })
+  if data.raw["damage-type"]["bob-plasma"] then
+    table.insert(data.raw.locomotive["locomotive"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
+    table.insert(data.raw["cargo-wagon"]["cargo-wagon"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
+    table.insert(data.raw["fluid-wagon"]["fluid-wagon"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
 
-    table.insert(data.raw.locomotive["bob-locomotive-2"].resistances, { type = "plasma", decrease = 15, percent = 50 })
+    table.insert(data.raw.locomotive["bob-locomotive-2"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
     table.insert(
       data.raw["cargo-wagon"]["bob-cargo-wagon-2"].resistances,
-      { type = "plasma", decrease = 15, percent = 50 }
+      { type = "bob-plasma", decrease = 15, percent = 50 }
     )
     table.insert(
       data.raw["fluid-wagon"]["bob-fluid-wagon-2"].resistances,
-      { type = "plasma", decrease = 15, percent = 50 }
+      { type = "bob-plasma", decrease = 15, percent = 50 }
     )
 
-    table.insert(data.raw.locomotive["bob-locomotive-3"].resistances, { type = "plasma", decrease = 15, percent = 50 })
+    table.insert(data.raw.locomotive["bob-locomotive-3"].resistances, { type = "bob-plasma", decrease = 15, percent = 50 })
     table.insert(
       data.raw["cargo-wagon"]["bob-cargo-wagon-3"].resistances,
-      { type = "plasma", decrease = 15, percent = 50 }
+      { type = "bob-plasma", decrease = 15, percent = 50 }
     )
     table.insert(
       data.raw["fluid-wagon"]["bob-fluid-wagon-3"].resistances,
-      { type = "plasma", decrease = 15, percent = 50 }
+      { type = "bob-plasma", decrease = 15, percent = 50 }
     )
 
     table.insert(
       data.raw.locomotive["bob-armoured-locomotive"].resistances,
-      { type = "plasma", decrease = 25, percent = 90 }
+      { type = "bob-plasma", decrease = 25, percent = 90 }
     )
     table.insert(
       data.raw["cargo-wagon"]["bob-armoured-cargo-wagon"].resistances,
-      { type = "plasma", decrease = 25, percent = 90 }
+      { type = "bob-plasma", decrease = 25, percent = 90 }
     )
     table.insert(
       data.raw["fluid-wagon"]["bob-armoured-fluid-wagon"].resistances,
-      { type = "plasma", decrease = 25, percent = 90 }
+      { type = "bob-plasma", decrease = 25, percent = 90 }
     )
 
     table.insert(
       data.raw.locomotive["bob-armoured-locomotive-2"].resistances,
-      { type = "plasma", decrease = 25, percent = 90 }
+      { type = "bob-plasma", decrease = 25, percent = 90 }
     )
     table.insert(
       data.raw["cargo-wagon"]["bob-armoured-cargo-wagon-2"].resistances,
-      { type = "plasma", decrease = 25, percent = 90 }
+      { type = "bob-plasma", decrease = 25, percent = 90 }
     )
     table.insert(
       data.raw["fluid-wagon"]["bob-armoured-fluid-wagon-2"].resistances,
-      { type = "plasma", decrease = 25, percent = 90 }
+      { type = "bob-plasma", decrease = 25, percent = 90 }
     )
   end
 end
@@ -171,33 +171,33 @@ if feature_flags["quality"] then
     "express-transport-belt",
     "express-underground-belt",
     "express-splitter",
-    "turbo-transport-belt",
-    "turbo-underground-belt",
-    "turbo-splitter",
-    "ultimate-transport-belt",
-    "ultimate-underground-belt",
-    "ultimate-splitter",
+    "bob-turbo-transport-belt",
+    "bob-turbo-underground-belt",
+    "bob-turbo-splitter",
+    "bob-ultimate-transport-belt",
+    "bob-ultimate-underground-belt",
+    "bob-ultimate-splitter",
     "inserter",
     "long-handed-inserter",
-    "red-bulk-inserter",
+    "bob-red-bulk-inserter",
     "fast-inserter",
     "bulk-inserter",
-    "turbo-inserter",
-    "turbo-bulk-inserter",
-    "express-inserter",
-    "express-bulk-inserter",
+    "bob-turbo-inserter",
+    "bob-turbo-bulk-inserter",
+    "bob-express-inserter",
+    "bob-express-bulk-inserter",
     "passive-provider-chest",
     "storage-chest",
-    "passive-provider-chest-2",
-    "active-provider-chest-2",
-    "storage-chest-2",
-    "buffer-chest-2",
-    "requester-chest-2",
-    "passive-provider-chest-3",
-    "active-provider-chest-3",
-    "storage-chest-3",
-    "buffer-chest-3",
-    "requester-chest-3",
+    "bob-passive-provider-chest-2",
+    "bob-active-provider-chest-2",
+    "bob-storage-chest-2",
+    "bob-buffer-chest-2",
+    "bob-requester-chest-2",
+    "bob-passive-provider-chest-3",
+    "bob-active-provider-chest-3",
+    "bob-storage-chest-3",
+    "bob-buffer-chest-3",
+    "bob-requester-chest-3",
     "pump",
     "bob-pump-2",
     "bob-pump-3",
@@ -229,9 +229,9 @@ if feature_flags["quality"] then
     "bob-construction-robot-4",
     "bob-construction-robot-5",
     "flying-robot-frame",
-    "flying-robot-frame-2",
-    "flying-robot-frame-3",
-    "flying-robot-frame-4",
+    "bob-flying-robot-frame-2",
+    "bob-flying-robot-frame-3",
+    "bob-flying-robot-frame-4",
     "bob-robot-brain",
     "bob-robot-brain-2",
     "bob-robot-brain-3",
@@ -244,17 +244,17 @@ if feature_flags["quality"] then
     "bob-robot-tool-logistic-2",
     "bob-robot-tool-logistic-3",
     "bob-robot-tool-logistic-4",
-    "storage-tank-2",
-    "storage-tank-3",
-    "storage-tank-4",
+    "bob-storage-tank-2",
+    "bob-storage-tank-3",
+    "bob-storage-tank-4",
     "bob-storage-tank-all-corners-2",
     "bob-storage-tank-all-corners-3",
     "bob-storage-tank-all-corners-4",
     "repair-pack",
-    "repair-pack-2",
-    "repair-pack-3",
-    "repair-pack-4",
-    "repair-pack-5",
+    "bob-repair-pack-2",
+    "bob-repair-pack-3",
+    "bob-repair-pack-4",
+    "bob-repair-pack-5",
     "bob-locomotive-2",
     "bob-locomotive-3",
     "bob-armoured-locomotive",

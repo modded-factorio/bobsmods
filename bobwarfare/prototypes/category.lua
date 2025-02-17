@@ -19,7 +19,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "mech-parts",
+    name = "bob-mech-parts",
     group = "intermediate-products",
     order = "e-f",
   },
@@ -71,7 +71,7 @@ data:extend({
 data:extend({
   {
     type = "ammo-category",
-    name = "laser-rifle",
+    name = "bob-laser-rifle",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-ammo-category.png",
     icon_size = 32,
     subgroup = "ammo-category",

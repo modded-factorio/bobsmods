@@ -68,7 +68,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       icon_size = 64,
       subgroup = "fluid-recipes",
       order = "b[fluid-chemistry]-b[pure-water-1]",
-      category = "distillery",
+      category = "bob-distillery",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -92,7 +92,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       icon_size = 64,
       subgroup = "fluid-recipes",
       order = "b[fluid-chemistry]-b[pure-water-2]",
-      category = "distillery",
+      category = "bob-distillery",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -493,7 +493,7 @@ data:extend({
     type = "recipe",
     name = "bob-salt",
     subgroup = "bob-material-chemical",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
@@ -507,7 +507,7 @@ data:extend({
     type = "recipe",
     name = "bob-lithium-chloride",
     subgroup = "bob-material-chemical",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
@@ -563,7 +563,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-alumina",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 2,
     enabled = false,
@@ -650,7 +650,7 @@ data:extend({
     type = "recipe",
     name = "bob-powdered-tungsten",
     subgroup = "bob-material-chemical",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 3.5,
     enabled = false,
     ingredients = {
@@ -665,7 +665,7 @@ data:extend({
     type = "recipe",
     name = "bob-cobalt-oxide",
     subgroup = "bob-material-chemical",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 7,
     enabled = false,
     ingredients = {
@@ -683,7 +683,7 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-material-chemical",
     order = "c-b[bob-cobalt-oxide-from-copper]",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 25,
     enabled = false,
     ingredients = {
@@ -708,7 +708,7 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-material-chemical",
     order = "c-b[silver-from-lead]",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 25,
     enabled = false,
     ingredients = {
@@ -728,7 +728,7 @@ data:extend({
     type = "recipe",
     name = "bob-silicon-carbide",
     subgroup = "bob-material-chemical",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 7,
     enabled = false,
     ingredients = {
@@ -918,7 +918,7 @@ data:extend({
     type = "recipe",
     name = "bob-tungsten-oxide",
     subgroup = "bob-material-chemical",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     energy_required = 2,
     enabled = false,
     ingredients = {

@@ -5,11 +5,11 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "chemical-furnace",
+    name = "bob-chemical-furnace",
   },
   {
     type = "recipe-category",
-    name = "mixing-furnace",
+    name = "bob-mixing-furnace",
   },
   {
     type = "recipe-category",
@@ -33,7 +33,7 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "distillery",
+    name = "bob-distillery",
   },
 
   {
@@ -64,13 +64,13 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "pipe",
+    name = "bob-pipe",
     group = "bob-logistics",
     order = "d-a-1",
   },
   {
     type = "item-subgroup",
-    name = "pipe-to-ground",
+    name = "bob-pipe-to-ground",
     group = "bob-logistics",
     order = "d-a-2",
   },

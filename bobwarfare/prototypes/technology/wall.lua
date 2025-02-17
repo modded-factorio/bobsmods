@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "reinforced-wall",
+    name = "bob-reinforced-wall",
     icon = "__base__/graphics/technology/stone-wall.png",
     icon_size = 256,
     prerequisites = {
@@ -11,11 +11,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "reinforced-wall",
+        recipe = "bob-reinforced-wall",
       },
       {
         type = "unlock-recipe",
-        recipe = "reinforced-gate",
+        recipe = "bob-reinforced-gate",
       },
     },
     unit = {

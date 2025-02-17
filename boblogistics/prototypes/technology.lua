@@ -10,7 +10,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "storage-tank-2",
+        recipe = "bob-storage-tank-2",
       },
       {
         type = "unlock-recipe",
@@ -44,7 +44,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "storage-tank-3",
+        recipe = "bob-storage-tank-3",
       },
       {
         type = "unlock-recipe",
@@ -79,7 +79,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "storage-tank-4",
+        recipe = "bob-storage-tank-4",
       },
       {
         type = "unlock-recipe",
@@ -510,15 +510,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-antenna-1",
+        recipe = "bob-roboport-antenna-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-chargepad-1",
+        recipe = "bob-roboport-chargepad-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-door-1",
+        recipe = "bob-roboport-door-1",
       },
     },
     prerequisites = {
@@ -563,15 +563,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-antenna-2",
+        recipe = "bob-roboport-antenna-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-chargepad-2",
+        recipe = "bob-roboport-chargepad-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-door-2",
+        recipe = "bob-roboport-door-2",
       },
     },
     prerequisites = {
@@ -618,15 +618,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-antenna-3",
+        recipe = "bob-roboport-antenna-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-chargepad-3",
+        recipe = "bob-roboport-chargepad-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-door-3",
+        recipe = "bob-roboport-door-3",
       },
     },
     prerequisites = {
@@ -674,15 +674,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-antenna-4",
+        recipe = "bob-roboport-antenna-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-chargepad-4",
+        recipe = "bob-roboport-chargepad-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "roboport-door-4",
+        recipe = "bob-roboport-door-4",
       },
     },
     prerequisites = {
@@ -711,23 +711,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "passive-provider-chest-2",
+        recipe = "bob-passive-provider-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "active-provider-chest-2",
+        recipe = "bob-active-provider-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "storage-chest-2",
+        recipe = "bob-storage-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "requester-chest-2",
+        recipe = "bob-requester-chest-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "buffer-chest-2",
+        recipe = "bob-buffer-chest-2",
       },
     },
     prerequisites = {
@@ -755,23 +755,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "passive-provider-chest-3",
+        recipe = "bob-passive-provider-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "active-provider-chest-3",
+        recipe = "bob-active-provider-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "storage-chest-3",
+        recipe = "bob-storage-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "requester-chest-3",
+        recipe = "bob-requester-chest-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "buffer-chest-3",
+        recipe = "bob-buffer-chest-3",
       },
     },
     prerequisites = {
@@ -804,7 +804,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "basic-underground-belt",
+          recipe = "bob-basic-underground-belt",
         },
         {
           type = "unlock-recipe",
@@ -812,7 +812,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         },
         {
           type = "unlock-recipe",
-          recipe = "basic-splitter",
+          recipe = "bob-basic-splitter",
         },
       },
       research_trigger = {
@@ -835,15 +835,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "turbo-transport-belt",
+        recipe = "bob-turbo-transport-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "turbo-underground-belt",
+        recipe = "bob-turbo-underground-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "turbo-splitter",
+        recipe = "bob-turbo-splitter",
       },
     },
     prerequisites = {
@@ -871,15 +871,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ultimate-transport-belt",
+        recipe = "bob-ultimate-transport-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "ultimate-underground-belt",
+        recipe = "bob-ultimate-underground-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "ultimate-splitter",
+        recipe = "bob-ultimate-splitter",
       },
     },
     prerequisites = {

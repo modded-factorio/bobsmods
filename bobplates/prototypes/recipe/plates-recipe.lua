@@ -39,7 +39,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-lead-plate-2",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 6.4,
     enabled = false,
@@ -55,7 +55,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-gold-plate",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
     enabled = false,
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-cobalt-plate",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
     enabled = false,
@@ -88,7 +88,7 @@ data:extend({
     type = "recipe",
     name = "bob-tungsten-plate",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     subgroup = "bob-alloy",
     energy_required = 16,
     ingredients = {

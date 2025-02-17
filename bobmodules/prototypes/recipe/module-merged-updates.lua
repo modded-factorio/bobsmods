@@ -1,10 +1,10 @@
 if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("bob-green-module-1", { type = "item", name = "solder", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("bob-green-module-2", { type = "item", name = "solder", amount = 2 })
-    bobmods.lib.recipe.add_ingredient("bob-green-module-3", { type = "item", name = "solder", amount = 3 })
-    bobmods.lib.recipe.add_ingredient("bob-green-module-4", { type = "item", name = "solder", amount = 4 })
-    bobmods.lib.recipe.add_ingredient("bob-green-module-5", { type = "item", name = "solder", amount = 5 })
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-green-module-1", { type = "item", name = "bob-solder", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-green-module-2", { type = "item", name = "bob-solder", amount = 2 })
+    bobmods.lib.recipe.add_ingredient("bob-green-module-3", { type = "item", name = "bob-solder", amount = 3 })
+    bobmods.lib.recipe.add_ingredient("bob-green-module-4", { type = "item", name = "bob-solder", amount = 4 })
+    bobmods.lib.recipe.add_ingredient("bob-green-module-5", { type = "item", name = "bob-solder", amount = 5 })
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
@@ -20,28 +20,28 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
 end
 
 if settings.startup["bobmods-modules-enablegodmodules"].value == true then
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "solder", amount = 15 })
-    bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "solder", amount = 15 })
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "bob-solder", amount = 15 })
+    bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-solder", amount = 15 })
   end
 
-  if data.raw.item["alien-artifact"] then
-    bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "alien-artifact", amount = 10 })
+  if data.raw.item["bob-alien-artifact"] then
+    bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "bob-alien-artifact", amount = 10 })
     bobmods.lib.recipe.add_ingredient(
       "bob-god-module-productivity",
-      { type = "item", name = "alien-artifact", amount = 10 }
+      { type = "item", name = "bob-alien-artifact", amount = 10 }
     )
   end
 
   if mods["quality"] then
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("bob-god-module-quality", { type = "item", name = "solder", amount = 15 })
+    if data.raw.item["bob-solder"] then
+      bobmods.lib.recipe.add_ingredient("bob-god-module-quality", { type = "item", name = "bob-solder", amount = 15 })
     end
 
-    if data.raw.item["alien-artifact"] then
+    if data.raw.item["bob-alien-artifact"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-god-module-quality",
-        { type = "item", name = "alien-artifact", amount = 10 }
+        { type = "item", name = "bob-alien-artifact", amount = 10 }
       )
     end
   end

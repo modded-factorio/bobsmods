@@ -209,7 +209,7 @@ data:extend({
       scale = 0.66,
       shift = { 0, -0.1 },
     },
-    crafting_categories = { "chemical-furnace" },
+    crafting_categories = { "bob-chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
       type = "burner",
@@ -385,7 +385,7 @@ data:extend({
       scale = 0.66,
       shift = { 0, -0.1 },
     },
-    crafting_categories = { "chemical-furnace" },
+    crafting_categories = { "bob-chemical-furnace" },
     energy_usage = "90kW",
     energy_source = {
       type = "burner",
@@ -450,7 +450,7 @@ data:extend({
       shift = { 0, -0.1 },
     },
     crafting_speed = 2,
-    crafting_categories = { "chemical-furnace" },
+    crafting_categories = { "bob-chemical-furnace" },
     energy_usage = "180kW",
     energy_source = {
       type = "electric",
@@ -530,7 +530,7 @@ data:extend({
       scale = 0.66,
       shift = { 0, -0.1 },
     },
-    crafting_categories = { "smelting", "mixing-furnace" },
+    crafting_categories = { "smelting", "bob-mixing-furnace" },
     energy_usage = "90kW",
     crafting_speed = 1,
     energy_source = {
@@ -603,7 +603,7 @@ data:extend({
       scale = 0.66,
       shift = { 0, -0.1 },
     },
-    crafting_categories = { "smelting", "mixing-furnace" },
+    crafting_categories = { "smelting", "bob-mixing-furnace" },
     energy_usage = "90kW",
     crafting_speed = 2,
     energy_source = {
@@ -657,7 +657,7 @@ data:extend({
       shift = { 0, -0.1 },
     },
     crafting_speed = 2,
-    crafting_categories = { "smelting", "mixing-furnace" },
+    crafting_categories = { "smelting", "bob-mixing-furnace" },
     energy_usage = "180kW",
 
     energy_source = {

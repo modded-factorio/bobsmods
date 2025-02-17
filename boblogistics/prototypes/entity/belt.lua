@@ -25,19 +25,19 @@ data.raw["transport-belt"]["transport-belt"].flags = { "placeable-neutral", "pla
 data.raw["transport-belt"]["fast-transport-belt"].flags = { "placeable-neutral", "player-creation" }
 data.raw["transport-belt"]["express-transport-belt"].flags = { "placeable-neutral", "player-creation" }
 
-data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "turbo-transport-belt"
-data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "turbo-underground-belt"
-data.raw["splitter"]["express-splitter"].next_upgrade = "turbo-splitter"
+data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "bob-turbo-transport-belt"
+data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "bob-turbo-underground-belt"
+data.raw["splitter"]["express-splitter"].next_upgrade = "bob-turbo-splitter"
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   data:extend({
     {
       type = "transport-belt",
-      name = "basic-transport-belt",
+      name = "bob-basic-transport-belt",
       icon = "__boblogistics__/graphics/icons/black-transport-belt.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.1, result = "basic-transport-belt" },
+      minable = { mining_time = 0.1, result = "bob-basic-transport-belt" },
       max_health = 140,
       corpse = "small-remnants",
       resistances = {
@@ -58,7 +58,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       animation_speed_coefficient = 32,
       belt_animation_set = bobmods.logistics.black_belt_animation_set,
       fast_replaceable_group = "transport-belt",
-      related_underground_belt = "basic-underground-belt",
+      related_underground_belt = "bob-basic-underground-belt",
       next_upgrade = "transport-belt",
       speed = 0.5 / 32,
       connector_frame_sprites = transport_belt_connector_frame_sprites,
@@ -68,11 +68,11 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
     {
       type = "underground-belt",
-      name = "basic-underground-belt",
+      name = "bob-basic-underground-belt",
       icon = "__boblogistics__/graphics/icons/black-underground-belt.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.1, result = "basic-underground-belt" },
+      minable = { mining_time = 0.1, result = "bob-basic-underground-belt" },
       max_health = 140,
       corpse = "small-remnants",
       factoriopedia_simulation = {
@@ -183,11 +183,11 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
     {
       type = "splitter",
-      name = "basic-splitter",
+      name = "bob-basic-splitter",
       icon = "__boblogistics__/graphics/icons/black-splitter.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.1, result = "basic-splitter" },
+      minable = { mining_time = 0.1, result = "bob-basic-splitter" },
       max_health = 160,
       corpse = "medium-remnants",
       resistances = {
@@ -254,11 +254,11 @@ end
 data:extend({
   {
     type = "transport-belt",
-    name = "turbo-transport-belt",
+    name = "bob-turbo-transport-belt",
     icon = "__boblogistics__/graphics/icons/purple-transport-belt.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "turbo-transport-belt" },
+    minable = { mining_time = 0.1, result = "bob-turbo-transport-belt" },
     max_health = 180,
     corpse = "small-remnants",
     resistances = {
@@ -279,8 +279,8 @@ data:extend({
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    related_underground_belt = "turbo-underground-belt",
-    next_upgrade = "ultimate-transport-belt",
+    related_underground_belt = "bob-turbo-underground-belt",
+    next_upgrade = "bob-ultimate-transport-belt",
     speed = 0.125,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
     circuit_connector = circuit_connector_definitions["belt"],
@@ -289,11 +289,11 @@ data:extend({
 
   {
     type = "underground-belt",
-    name = "turbo-underground-belt",
+    name = "bob-turbo-underground-belt",
     icon = "__boblogistics__/graphics/icons/purple-transport-belt-to-ground.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "turbo-underground-belt" },
+    minable = { mining_time = 0.1, result = "bob-turbo-underground-belt" },
     max_health = 180,
     corpse = "small-remnants",
     factoriopedia_simulation = {
@@ -338,7 +338,7 @@ data:extend({
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    next_upgrade = "ultimate-underground-belt",
+    next_upgrade = "bob-ultimate-underground-belt",
     speed = 0.125,
     max_distance = 20,
     structure = {
@@ -404,11 +404,11 @@ data:extend({
 
   {
     type = "splitter",
-    name = "turbo-splitter",
+    name = "bob-turbo-splitter",
     icon = "__boblogistics__/graphics/icons/purple-splitter.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "turbo-splitter" },
+    minable = { mining_time = 0.1, result = "bob-turbo-splitter" },
     max_health = 200,
     corpse = "medium-remnants",
     resistances = {
@@ -424,7 +424,7 @@ data:extend({
     structure_animation_movement_cooldown = 10,
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    next_upgrade = "ultimate-splitter",
+    next_upgrade = "bob-ultimate-splitter",
     speed = 0.125,
     structure = {
       north = {
@@ -474,11 +474,11 @@ data:extend({
 data:extend({
   {
     type = "transport-belt",
-    name = "ultimate-transport-belt",
+    name = "bob-ultimate-transport-belt",
     icon = "__boblogistics__/graphics/icons/green-transport-belt.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "ultimate-transport-belt" },
+    minable = { mining_time = 0.1, result = "bob-ultimate-transport-belt" },
     max_health = 190,
     corpse = "small-remnants",
     resistances = {
@@ -499,7 +499,7 @@ data:extend({
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    related_underground_belt = "ultimate-underground-belt",
+    related_underground_belt = "bob-ultimate-underground-belt",
     speed = 0.15625,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
     circuit_connector = circuit_connector_definitions["belt"],
@@ -508,11 +508,11 @@ data:extend({
 
   {
     type = "underground-belt",
-    name = "ultimate-underground-belt",
+    name = "bob-ultimate-underground-belt",
     icon = "__boblogistics__/graphics/icons/green-transport-belt-to-ground.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "ultimate-underground-belt" },
+    minable = { mining_time = 0.1, result = "bob-ultimate-underground-belt" },
     max_health = 190,
     corpse = "small-remnants",
     factoriopedia_simulation = {
@@ -622,11 +622,11 @@ data:extend({
 
   {
     type = "splitter",
-    name = "ultimate-splitter",
+    name = "bob-ultimate-splitter",
     icon = "__boblogistics__/graphics/icons/green-splitter.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "ultimate-splitter" },
+    minable = { mining_time = 0.1, result = "bob-ultimate-splitter" },
     max_health = 210,
     corpse = "medium-remnants",
     resistances = {
@@ -690,9 +690,9 @@ data:extend({
 
 if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
   if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
-    bobmods.logistics.set_belt_speed("splitter", "basic-splitter", 1)
-    bobmods.logistics.set_belt_speed("transport-belt", "basic-transport-belt", 1)
-    bobmods.logistics.set_belt_speed("underground-belt", "basic-underground-belt", 1)
+    bobmods.logistics.set_belt_speed("splitter", "bob-basic-splitter", 1)
+    bobmods.logistics.set_belt_speed("transport-belt", "bob-basic-transport-belt", 1)
+    bobmods.logistics.set_belt_speed("underground-belt", "bob-basic-underground-belt", 1)
 
     bobmods.logistics.set_belt_speed("splitter", "splitter", 2)
     bobmods.logistics.set_belt_speed("transport-belt", "transport-belt", 2)
@@ -706,13 +706,13 @@ if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
     bobmods.logistics.set_belt_speed("transport-belt", "express-transport-belt", 4)
     bobmods.logistics.set_belt_speed("underground-belt", "express-underground-belt", 4)
 
-    bobmods.logistics.set_belt_speed("splitter", "turbo-splitter", 5)
-    bobmods.logistics.set_belt_speed("transport-belt", "turbo-transport-belt", 5)
-    bobmods.logistics.set_belt_speed("underground-belt", "turbo-underground-belt", 5)
+    bobmods.logistics.set_belt_speed("splitter", "bob-turbo-splitter", 5)
+    bobmods.logistics.set_belt_speed("transport-belt", "bob-turbo-transport-belt", 5)
+    bobmods.logistics.set_belt_speed("underground-belt", "bob-turbo-underground-belt", 5)
 
-    bobmods.logistics.set_belt_speed("splitter", "ultimate-splitter", 6)
-    bobmods.logistics.set_belt_speed("transport-belt", "ultimate-transport-belt", 6)
-    bobmods.logistics.set_belt_speed("underground-belt", "ultimate-underground-belt", 6)
+    bobmods.logistics.set_belt_speed("splitter", "bob-ultimate-splitter", 6)
+    bobmods.logistics.set_belt_speed("transport-belt", "bob-ultimate-transport-belt", 6)
+    bobmods.logistics.set_belt_speed("underground-belt", "bob-ultimate-underground-belt", 6)
   else
     bobmods.logistics.set_belt_speed("splitter", "splitter", 1)
     bobmods.logistics.set_belt_speed("transport-belt", "transport-belt", 1)
@@ -726,30 +726,30 @@ if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
     bobmods.logistics.set_belt_speed("transport-belt", "express-transport-belt", 3)
     bobmods.logistics.set_belt_speed("underground-belt", "express-underground-belt", 3)
 
-    bobmods.logistics.set_belt_speed("splitter", "turbo-splitter", 4)
-    bobmods.logistics.set_belt_speed("transport-belt", "turbo-transport-belt", 4)
-    bobmods.logistics.set_belt_speed("underground-belt", "turbo-underground-belt", 4)
+    bobmods.logistics.set_belt_speed("splitter", "bob-turbo-splitter", 4)
+    bobmods.logistics.set_belt_speed("transport-belt", "bob-turbo-transport-belt", 4)
+    bobmods.logistics.set_belt_speed("underground-belt", "bob-turbo-underground-belt", 4)
 
-    bobmods.logistics.set_belt_speed("splitter", "ultimate-splitter", 5)
-    bobmods.logistics.set_belt_speed("transport-belt", "ultimate-transport-belt", 5)
-    bobmods.logistics.set_belt_speed("underground-belt", "ultimate-underground-belt", 5)
+    bobmods.logistics.set_belt_speed("splitter", "bob-ultimate-splitter", 5)
+    bobmods.logistics.set_belt_speed("transport-belt", "bob-ultimate-transport-belt", 5)
+    bobmods.logistics.set_belt_speed("underground-belt", "bob-ultimate-underground-belt", 5)
   end
 end
 
 if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
-    bobmods.logistics.set_belt_distance("basic-underground-belt", 1)
+    bobmods.logistics.set_belt_distance("bob-basic-underground-belt", 1)
     bobmods.logistics.set_belt_distance("underground-belt", 2)
     bobmods.logistics.set_belt_distance("fast-underground-belt", 3)
     bobmods.logistics.set_belt_distance("express-underground-belt", 4)
-    bobmods.logistics.set_belt_distance("turbo-underground-belt", 5)
-    bobmods.logistics.set_belt_distance("ultimate-underground-belt", 6)
+    bobmods.logistics.set_belt_distance("bob-turbo-underground-belt", 5)
+    bobmods.logistics.set_belt_distance("bob-ultimate-underground-belt", 6)
   else
     bobmods.logistics.set_belt_distance("underground-belt", 1)
     bobmods.logistics.set_belt_distance("fast-underground-belt", 2)
     bobmods.logistics.set_belt_distance("express-underground-belt", 3)
-    bobmods.logistics.set_belt_distance("turbo-underground-belt", 4)
-    bobmods.logistics.set_belt_distance("ultimate-underground-belt", 5)
+    bobmods.logistics.set_belt_distance("bob-turbo-underground-belt", 4)
+    bobmods.logistics.set_belt_distance("bob-ultimate-underground-belt", 5)
   end
 else
   data.raw["underground-belt"]["underground-belt"].max_distance = 5

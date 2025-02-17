@@ -31,7 +31,7 @@ data.raw.car.car.resistances = {
     percent = 20,
   },
   {
-    type = "plasma",
+    type = "bob-plasma",
     decrease = 15,
     percent = 50,
   },
@@ -82,7 +82,7 @@ data.raw.car.tank.resistances = {
     percent = 20,
   },
   {
-    type = "plasma",
+    type = "bob-plasma",
     decrease = 15,
     percent = 50,
   },
@@ -304,7 +304,7 @@ data:extend({
         percent = 15,
       },
       {
-        type = "plasma",
+        type = "bob-plasma",
         decrease = 25,
         percent = 75,
       },
@@ -422,7 +422,7 @@ data:extend({
     weight = 20000,
     inventory_size = 100,
     track_particle_triggers = movement_triggers.tank,
-    guns = { "tank-cannon-2", "gatling-gun", "tank-flamethrower-2", "tank-artillery-1" },
+    guns = { "bob-tank-cannon-2", "bob-gatling-gun", "bob-tank-flamethrower-2", "bob-tank-artillery-1" },
     water_reflection = car_reflection(1.2),
   },
 
@@ -491,7 +491,7 @@ data:extend({
         percent = 30,
       },
       {
-        type = "plasma",
+        type = "bob-plasma",
         decrease = 35,
         percent = 90,
       },
@@ -609,7 +609,7 @@ data:extend({
     weight = 20000,
     inventory_size = 100,
     track_particle_triggers = movement_triggers.tank,
-    guns = { "tank-cannon-3", "gatling-gun", "tank-flamethrower-3", "tank-artillery-2", "tank-laser" },
+    guns = { "bob-tank-cannon-3", "bob-gatling-gun", "bob-tank-flamethrower-3", "bob-tank-artillery-2", "bob-tank-laser" },
     water_reflection = car_reflection(1.2),
   },
 })

@@ -3,10 +3,10 @@ data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 data:extend({
   {
     type = "lab",
-    name = "lab-2",
+    name = "bob-lab-2",
     icon = "__bobtech__/graphics/icons/lab2.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "lab-2" },
+    minable = { mining_time = 0.2, result = "bob-lab-2" },
     max_health = 250,
     corpse = "lab-remnants",
     dying_explosion = "medium-explosion",
@@ -150,17 +150,17 @@ data:extend({
 })
 
 if mods["DiscoScience"] and DiscoScience and DiscoScience.prepareLab then
-  DiscoScience.prepareLab(data.raw["lab"]["lab-2"])
+  DiscoScience.prepareLab(data.raw["lab"]["bob-lab-2"])
 end
 
 if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
     {
       type = "lab",
-      name = "burner-lab",
+      name = "bob-burner-lab",
       icon = "__bobtech__/graphics/icons/lab-red.png",
       flags = { "placeable-player", "player-creation" },
-      minable = { mining_time = 0.1, result = "burner-lab" },
+      minable = { mining_time = 0.1, result = "bob-burner-lab" },
       max_health = 100,
       corpse = "lab-remnants",
       dying_explosion = "medium-explosion",
@@ -289,7 +289,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
   })
 
   if mods["DiscoScience"] and DiscoScience and DiscoScience.prepareLab then
-    DiscoScience.prepareLab(data.raw["lab"]["burner-lab"])
+    DiscoScience.prepareLab(data.raw["lab"]["bob-burner-lab"])
   end
 
   if not data.raw["burner-generator"]["bob-burner-generator"] then

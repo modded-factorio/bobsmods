@@ -1,7 +1,7 @@
 if mods["aai-programmable-vehicles"] then
   --Restore new spidertron armaments
-  data.raw["spider-vehicle"].tankotron.guns = { "spidertron-cannon-1", "spidertron-cannon-2" }
-  data.raw["spider-vehicle"]["heavy-spidertron"].guns = {
+  data.raw["spider-vehicle"].tankotron.guns = { "bob-spidertron-cannon-1", "bob-spidertron-cannon-2" }
+  data.raw["spider-vehicle"]["bob-heavy-spidertron"].guns = {
     "spidertron-rocket-launcher-1",
     "spidertron-rocket-launcher-2",
     "spidertron-rocket-launcher-3",

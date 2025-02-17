@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "poison-mine",
+    name = "bob-poison-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
     prerequisites = {
@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "poison-mine",
+        recipe = "bob-poison-mine",
       },
     },
     unit = {
@@ -29,7 +29,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "slowdown-mine",
+    name = "bob-slowdown-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
     prerequisites = {
@@ -39,7 +39,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "slowdown-mine",
+        recipe = "bob-slowdown-mine",
       },
     },
     unit = {
@@ -57,7 +57,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "distractor-mine",
+    name = "bob-distractor-mine",
     icon = "__base__/graphics/technology/land-mine.png",
     icon_size = 256,
     prerequisites = {
@@ -67,7 +67,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "distractor-mine",
+        recipe = "bob-distractor-mine",
       },
     },
     unit = {

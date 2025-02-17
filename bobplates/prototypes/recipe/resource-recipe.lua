@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-carbon",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 2,
     enabled = false,
@@ -112,7 +112,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-nitride",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     enabled = false,
     energy_required = 7.5,
@@ -128,7 +128,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-lithium-cobalt-oxide",
-    category = "chemical-furnace",
+    category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 7,
     enabled = false,

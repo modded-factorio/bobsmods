@@ -30,27 +30,27 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data:extend({
     {
       type = "recipe-category",
-      name = "electronics",
+      name = "bob-electronics",
     },
     {
       type = "recipe-category",
-      name = "electronics-machine",
+      name = "bob-electronics-machine",
     },
     {
       type = "recipe-category",
-      name = "electronics-with-fluid",
+      name = "bob-electronics-with-fluid",
     },
   })
 
   data:extend({
     {
       type = "item",
-      name = "electronics-machine-1",
+      name = "bob-electronics-machine-1",
       icon = "__bobassembly__/graphics/icons/electronics-machine-1.png",
       icon_size = 32,
       subgroup = "bob-assembly-machine",
       order = "d[electronics-machine-1]",
-      place_result = "electronics-machine-1",
+      place_result = "bob-electronics-machine-1",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -69,11 +69,11 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
 
     {
       type = "assembling-machine",
-      name = "electronics-machine-1",
+      name = "bob-electronics-machine-1",
       icon = "__bobassembly__/graphics/icons/electronics-machine-1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electronics-machine-1" },
+      minable = { mining_time = 0.5, result = "bob-electronics-machine-1" },
       max_health = 250,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["small-assembling-machine"],
@@ -102,7 +102,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
-      next_upgrade = "electronics-machine-2",
+      next_upgrade = "bob-electronics-machine-2",
       graphics_set = {
         animation = {
           layers = {
@@ -156,7 +156,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "electronics", "electronics-machine", "electronics-with-fluid" },
+      crafting_categories = { "bob-electronics", "bob-electronics-machine", "bob-electronics-with-fluid" },
       crafting_speed = 1,
       energy_source = {
         type = "electric",
@@ -182,25 +182,25 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
 
     {
       type = "recipe",
-      name = "electronics-machine-1",
+      name = "bob-electronics-machine-1",
       enabled = false,
       ingredients = {
         { type = "item", name = "electronic-circuit", amount = 5 },
         { type = "item", name = "steel-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      results = { { type = "item", name = "electronics-machine-1", amount = 1 } },
+      results = { { type = "item", name = "bob-electronics-machine-1", amount = 1 } },
     },
 
     {
       type = "technology",
-      name = "electronics-machine-1",
+      name = "bob-electronics-machine-1",
       icon = "__base__/graphics/technology/automation-1.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electronics-machine-1",
+          recipe = "bob-electronics-machine-1",
         },
       },
       prerequisites = {
@@ -221,12 +221,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data:extend({
     {
       type = "item",
-      name = "electronics-machine-2",
+      name = "bob-electronics-machine-2",
       icon = "__bobassembly__/graphics/icons/electronics-machine-2.png",
       icon_size = 32,
       subgroup = "bob-assembly-machine",
       order = "d[electronics-machine-2]",
-      place_result = "electronics-machine-2",
+      place_result = "bob-electronics-machine-2",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -245,11 +245,11 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
 
     {
       type = "assembling-machine",
-      name = "electronics-machine-2",
+      name = "bob-electronics-machine-2",
       icon = "__bobassembly__/graphics/icons/electronics-machine-2.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electronics-machine-2" },
+      minable = { mining_time = 0.5, result = "bob-electronics-machine-2" },
       max_health = 350,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["small-assembling-machine"],
@@ -278,7 +278,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
-      next_upgrade = "electronics-machine-3",
+      next_upgrade = "bob-electronics-machine-3",
       graphics_set = {
         animation = {
           layers = {
@@ -331,7 +331,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "electronics", "electronics-machine", "electronics-with-fluid" },
+      crafting_categories = { "bob-electronics", "bob-electronics-machine", "bob-electronics-with-fluid" },
       crafting_speed = 2.25,
       energy_source = {
         type = "electric",
@@ -358,30 +358,30 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
 
     {
       type = "recipe",
-      name = "electronics-machine-2",
+      name = "bob-electronics-machine-2",
       enabled = false,
       ingredients = {
-        { type = "item", name = "electronics-machine-1", amount = 1 },
+        { type = "item", name = "bob-electronics-machine-1", amount = 1 },
         { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "steel-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      results = { { type = "item", name = "electronics-machine-2", amount = 1 } },
+      results = { { type = "item", name = "bob-electronics-machine-2", amount = 1 } },
     },
 
     {
       type = "technology",
-      name = "electronics-machine-2",
+      name = "bob-electronics-machine-2",
       icon = "__base__/graphics/technology/automation-1.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electronics-machine-2",
+          recipe = "bob-electronics-machine-2",
         },
       },
       prerequisites = {
-        "electronics-machine-1",
+        "bob-electronics-machine-1",
         "steel-processing",
         "processing-unit",
         "production-science-pack",
@@ -403,12 +403,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data:extend({
     {
       type = "item",
-      name = "electronics-machine-3",
+      name = "bob-electronics-machine-3",
       icon = "__bobassembly__/graphics/icons/electronics-machine-3.png",
       icon_size = 32,
       subgroup = "bob-assembly-machine",
       order = "d[electronics-machine-3]",
-      place_result = "electronics-machine-3",
+      place_result = "bob-electronics-machine-3",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -427,11 +427,11 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
 
     {
       type = "assembling-machine",
-      name = "electronics-machine-3",
+      name = "bob-electronics-machine-3",
       icon = "__bobassembly__/graphics/icons/electronics-machine-3.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "electronics-machine-3" },
+      minable = { mining_time = 0.5, result = "bob-electronics-machine-3" },
       max_health = 450,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["small-assembling-machine"],
@@ -511,7 +511,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "electronics", "electronics-machine", "electronics-with-fluid" },
+      crafting_categories = { "bob-electronics", "bob-electronics-machine", "bob-electronics-with-fluid" },
       crafting_speed = 4,
       energy_source = {
         type = "electric",
@@ -538,31 +538,31 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
 
     {
       type = "recipe",
-      name = "electronics-machine-3",
+      name = "bob-electronics-machine-3",
       enabled = false,
       ingredients = {
-        { type = "item", name = "electronics-machine-2", amount = 1 },
+        { type = "item", name = "bob-electronics-machine-2", amount = 1 },
         { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "steel-plate", amount = 5 },
         { type = "item", name = "iron-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      results = { { type = "item", name = "electronics-machine-3", amount = 1 } },
+      results = { { type = "item", name = "bob-electronics-machine-3", amount = 1 } },
     },
 
     {
       type = "technology",
-      name = "electronics-machine-3",
+      name = "bob-electronics-machine-3",
       icon = "__base__/graphics/technology/automation-1.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electronics-machine-3",
+          recipe = "bob-electronics-machine-3",
         },
       },
       prerequisites = {
-        "electronics-machine-2",
+        "bob-electronics-machine-2",
         "processing-unit",
         "space-science-pack",
       },

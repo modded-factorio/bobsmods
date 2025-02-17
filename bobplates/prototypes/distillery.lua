@@ -414,7 +414,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       corpse = "medium-remnants",
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
-      crafting_categories = { "distillery" },
+      crafting_categories = { "bob-distillery" },
       crafting_speed = 1,
       source_inventory_size = 0,
       result_inventory_size = 0,
@@ -472,7 +472,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         max_sounds_per_prototype = 3,
       },
       impact_category = "metal",
-      fast_replaceable_group = "distillery",
+      fast_replaceable_group = "bob-distillery",
     },
   })
 end

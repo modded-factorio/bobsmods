@@ -4,7 +4,7 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup =
 data:extend({
   {
     type = "night-vision-equipment",
-    name = "night-vision-equipment-2",
+    name = "bob-night-vision-equipment-2",
     sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
       width = 128,
@@ -38,7 +38,7 @@ data:extend({
   },
   {
     type = "night-vision-equipment",
-    name = "night-vision-equipment-3",
+    name = "bob-night-vision-equipment-3",
     sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
       width = 128,
@@ -96,7 +96,7 @@ data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].sprite = {
 data:extend({
   {
     type = "energy-shield-equipment",
-    name = "energy-shield-mk3-equipment",
+    name = "bob-energy-shield-mk3-equipment",
     max_shield_value = 300,
     energy_per_shield = "20kJ",
     energy_source = {
@@ -121,7 +121,7 @@ data:extend({
 
   {
     type = "energy-shield-equipment",
-    name = "energy-shield-mk4-equipment",
+    name = "bob-energy-shield-mk4-equipment",
     max_shield_value = 500,
     energy_per_shield = "20kJ",
     energy_source = {
@@ -146,7 +146,7 @@ data:extend({
 
   {
     type = "energy-shield-equipment",
-    name = "energy-shield-mk5-equipment",
+    name = "bob-energy-shield-mk5-equipment",
     max_shield_value = 800,
     energy_per_shield = "20kJ",
     energy_source = {
@@ -171,7 +171,7 @@ data:extend({
 
   {
     type = "energy-shield-equipment",
-    name = "energy-shield-mk6-equipment",
+    name = "bob-energy-shield-mk6-equipment",
     max_shield_value = 1200,
     energy_per_shield = "20kJ",
     energy_source = {
@@ -211,7 +211,7 @@ data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.buffer_capa
 data:extend({
   {
     type = "battery-equipment",
-    name = "battery-mk3-equipment",
+    name = "bob-battery-mk3-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk3-equipment.png",
       width = 32,
@@ -232,7 +232,7 @@ data:extend({
   },
   {
     type = "battery-equipment",
-    name = "battery-mk4-equipment",
+    name = "bob-battery-mk4-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk4-equipment.png",
       width = 32,
@@ -253,7 +253,7 @@ data:extend({
   },
   {
     type = "battery-equipment",
-    name = "battery-mk5-equipment",
+    name = "bob-battery-mk5-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk5-equipment.png",
       width = 32,
@@ -274,7 +274,7 @@ data:extend({
   },
   {
     type = "battery-equipment",
-    name = "battery-mk6-equipment",
+    name = "bob-battery-mk6-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk6-equipment.png",
       width = 32,
@@ -305,7 +305,7 @@ data.raw["solar-panel-equipment"]["solar-panel-equipment"].sprite = {
 data:extend({
   {
     type = "solar-panel-equipment",
-    name = "solar-panel-equipment-2",
+    name = "bob-solar-panel-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/solar-panel-equipment-2.png",
       width = 32,
@@ -326,7 +326,7 @@ data:extend({
   },
   {
     type = "solar-panel-equipment",
-    name = "solar-panel-equipment-3",
+    name = "bob-solar-panel-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/solar-panel-equipment-3.png",
       width = 32,
@@ -347,11 +347,11 @@ data:extend({
   },
 })
 
-if data.raw.item["alien-artifact"] then
+if data.raw.item["bob-alien-artifact"] then
   data:extend({
     {
       type = "solar-panel-equipment",
-      name = "solar-panel-equipment-4",
+      name = "bob-solar-panel-equipment-4",
       sprite = {
         filename = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
         width = 32,
@@ -372,11 +372,11 @@ if data.raw.item["alien-artifact"] then
     },
   })
 
-  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
     data:extend({
       {
         type = "solar-panel-equipment",
-        name = "solar-panel-equipment-5",
+        name = "bob-solar-panel-equipment-5",
         sprite = {
           filename = "__bobequipment__/graphics/icons/solar-panel-equipment-5.png",
           width = 32,
@@ -410,7 +410,7 @@ data.raw["generator-equipment"]["fission-reactor-equipment"].power = "450kW"
 data:extend({
   {
     type = "generator-equipment",
-    name = "fission-reactor-equipment-2",
+    name = "bob-fission-reactor-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
       width = 256,
@@ -431,7 +431,7 @@ data:extend({
   },
   {
     type = "generator-equipment",
-    name = "fission-reactor-equipment-3",
+    name = "bob-fission-reactor-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
       width = 256,
@@ -452,7 +452,7 @@ data:extend({
   },
   {
     type = "generator-equipment",
-    name = "fission-reactor-equipment-4",
+    name = "bob-fission-reactor-equipment-4",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
       width = 256,
@@ -538,7 +538,7 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].sprite 
 data:extend({
   --  bob_personal_laser_defense_equipment(name, sprite, buffer_capacity, energy_consumption, projectile, damage_modifier, cooldown, range)
   bob_personal_laser_defense_equipment({
-    name = "personal-laser-defense-equipment-2",
+    name = "bob-personal-laser-defense-equipment-2",
     sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
     buffer_capacity = "380kJ",
     energy_consumption = "60kJ",
@@ -548,7 +548,7 @@ data:extend({
     range = 16,
   }),
   bob_personal_laser_defense_equipment({
-    name = "personal-laser-defense-equipment-3",
+    name = "bob-personal-laser-defense-equipment-3",
     sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
     buffer_capacity = "580kJ",
     energy_consumption = "70kJ",
@@ -558,7 +558,7 @@ data:extend({
     range = 17,
   }),
   bob_personal_laser_defense_equipment({
-    name = "personal-laser-defense-equipment-4",
+    name = "bob-personal-laser-defense-equipment-4",
     sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
     buffer_capacity = "820kJ",
     energy_consumption = "80kJ",
@@ -568,7 +568,7 @@ data:extend({
     range = 18,
   }),
   bob_personal_laser_defense_equipment({
-    name = "personal-laser-defense-equipment-5",
+    name = "bob-personal-laser-defense-equipment-5",
     sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
     buffer_capacity = "1100kJ",
     energy_consumption = "90kJ",
@@ -578,7 +578,7 @@ data:extend({
     range = 19,
   }),
   bob_personal_laser_defense_equipment({
-    name = "personal-laser-defense-equipment-6",
+    name = "bob-personal-laser-defense-equipment-6",
     sprite = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
     buffer_capacity = "1420kJ",
     energy_consumption = "100kJ",
@@ -592,7 +592,7 @@ data:extend({
 data:extend({
   {
     type = "movement-bonus-equipment",
-    name = "exoskeleton-equipment-2",
+    name = "bob-exoskeleton-equipment-2",
     sprite = {
       filename = "__base__/graphics/equipment/exoskeleton-equipment.png",
       width = 128,
@@ -615,7 +615,7 @@ data:extend({
   },
   {
     type = "movement-bonus-equipment",
-    name = "exoskeleton-equipment-3",
+    name = "bob-exoskeleton-equipment-3",
     sprite = {
       filename = "__base__/graphics/equipment/exoskeleton-equipment.png",
       width = 128,

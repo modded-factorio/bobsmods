@@ -5,7 +5,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
   data.raw.reactor["nuclear-reactor"].use_fuel_glow_color = true
   data.raw.reactor["nuclear-reactor"].default_fuel_glow_color = { 0, 1, 0, 1 } -- color used as working_light_picture tint for fuels that don't have glow color defined
   data.raw.reactor["nuclear-reactor"].localised_description =
-    { "", { "entity-description.nuclear-reactor" }, { "entity-description.reactor-max-temperature", "1000" } }
+    { "", { "entity-description.nuclear-reactor" }, { "entity-description.bob-reactor-max-temperature", "1000" }, }
   data.raw.reactor["nuclear-reactor"].lower_layer_picture = {
     filename = "__bobpower__/graphics/nuclear-reactor/reactor-pipes.png",
     width = 320,
@@ -46,15 +46,15 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     util.merge({
       data.raw.reactor["nuclear-reactor"],
       {
-        name = "nuclear-reactor-2",
+        name = "bob-nuclear-reactor-2",
         localised_description = {
           "",
           { "entity-description.nuclear-reactor" },
-          { "entity-description.reactor-max-temperature", "1250" },
+          { "entity-description.bob-reactor-max-temperature", "1250" },
         },
         icon = "__base__/graphics/icons/nuclear-reactor.png",
         icon_size = 64,
-        minable = { mining_time = 0.5, result = "nuclear-reactor-2" },
+        minable = { mining_time = 0.5, result = "bob-nuclear-reactor-2" },
         max_health = 750,
         consumption = "72MW",
         heat_buffer = {
@@ -95,15 +95,15 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     util.merge({
       data.raw.reactor["nuclear-reactor"],
       {
-        name = "nuclear-reactor-3",
+        name = "bob-nuclear-reactor-3",
         localised_description = {
           "",
           { "entity-description.nuclear-reactor" },
-          { "entity-description.reactor-max-temperature", "1500" },
+          { "entity-description.bob-reactor-max-temperature", "1500" },
         },
         icon = "__base__/graphics/icons/nuclear-reactor.png",
         icon_size = 64,
-        minable = { mining_time = 0.5, result = "nuclear-reactor-3" },
+        minable = { mining_time = 0.5, result = "bob-nuclear-reactor-3" },
         max_health = 1000,
         consumption = "90MW",
         heat_buffer = {
@@ -140,6 +140,6 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     }),
   })
 
-  data.raw.reactor["nuclear-reactor"].next_upgrade = "nuclear-reactor-2"
-  data.raw.reactor["nuclear-reactor-2"].next_upgrade = "nuclear-reactor-3"
+  data.raw.reactor["nuclear-reactor"].next_upgrade = "bob-nuclear-reactor-2"
+  data.raw.reactor["bob-nuclear-reactor-2"].next_upgrade = "bob-nuclear-reactor-3"
 end

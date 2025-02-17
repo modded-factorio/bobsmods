@@ -16,7 +16,7 @@ local chest_pick = {
 data:extend({
   {
     type = "item",
-    name = "passive-provider-chest-2",
+    name = "bob-passive-provider-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -34,7 +34,7 @@ data:extend({
     },
     subgroup = "logistic-chests-2",
     order = "b[storage]-[passive-provider-chest-2]",
-    place_result = "passive-provider-chest-2",
+    place_result = "bob-passive-provider-chest-2",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -42,7 +42,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "active-provider-chest-2",
+    name = "bob-active-provider-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -60,7 +60,7 @@ data:extend({
     },
     subgroup = "logistic-chests-2",
     order = "b[storage]-[active-provider-chest-2]",
-    place_result = "active-provider-chest-2",
+    place_result = "bob-active-provider-chest-2",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -68,7 +68,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "storage-chest-2",
+    name = "bob-storage-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -86,7 +86,7 @@ data:extend({
     },
     subgroup = "logistic-chests-2",
     order = "b[storage]-[storage-chest-2]",
-    place_result = "storage-chest-2",
+    place_result = "bob-storage-chest-2",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -94,7 +94,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "buffer-chest-2",
+    name = "bob-buffer-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -112,7 +112,7 @@ data:extend({
     },
     subgroup = "logistic-chests-2",
     order = "b[storage]-[buffer-chest-2]",
-    place_result = "buffer-chest-2",
+    place_result = "bob-buffer-chest-2",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -120,7 +120,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "requester-chest-2",
+    name = "bob-requester-chest-2",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/brass-chest.png",
@@ -138,7 +138,7 @@ data:extend({
     },
     subgroup = "logistic-chests-2",
     order = "b[storage]-[requester-chest-2]",
-    place_result = "requester-chest-2",
+    place_result = "bob-requester-chest-2",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -149,7 +149,7 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "passive-provider-chest-3",
+    name = "bob-passive-provider-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -167,7 +167,7 @@ data:extend({
     },
     subgroup = "logistic-chests-3",
     order = "b[storage]-[passive-provider-chest-3]",
-    place_result = "passive-provider-chest-3",
+    place_result = "bob-passive-provider-chest-3",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -175,7 +175,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "active-provider-chest-3",
+    name = "bob-active-provider-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -193,7 +193,7 @@ data:extend({
     },
     subgroup = "logistic-chests-3",
     order = "b[storage]-[active-provider-chest-3]",
-    place_result = "active-provider-chest-3",
+    place_result = "bob-active-provider-chest-3",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -201,7 +201,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "storage-chest-3",
+    name = "bob-storage-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -219,7 +219,7 @@ data:extend({
     },
     subgroup = "logistic-chests-3",
     order = "b[storage]-[storage-chest-3]",
-    place_result = "storage-chest-3",
+    place_result = "bob-storage-chest-3",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -227,7 +227,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "buffer-chest-3",
+    name = "bob-buffer-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -245,7 +245,7 @@ data:extend({
     },
     subgroup = "logistic-chests-3",
     order = "b[storage]-[buffer-chest-3]",
-    place_result = "buffer-chest-3",
+    place_result = "bob-buffer-chest-3",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
@@ -253,7 +253,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "requester-chest-3",
+    name = "bob-requester-chest-3",
     icons = {
       {
         icon = "__boblogistics__/graphics/icons/titanium-logistic-chest.png",
@@ -271,7 +271,7 @@ data:extend({
     },
     subgroup = "logistic-chests-3",
     order = "b[storage]-[requester-chest-3]",
-    place_result = "requester-chest-3",
+    place_result = "bob-requester-chest-3",
     stack_size = 50,
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,

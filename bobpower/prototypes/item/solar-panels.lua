@@ -14,12 +14,12 @@ if settings.startup["bobmods-power-solar"].value == true then
   data:extend({
     {
       type = "item",
-      name = "solar-panel-small",
+      name = "bob-solar-panel-small",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-1-a]",
-      place_result = "solar-panel-small",
+      place_result = "bob-solar-panel-small",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -28,12 +28,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-large",
+      name = "bob-solar-panel-large",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-1-c]",
-      place_result = "solar-panel-large",
+      place_result = "bob-solar-panel-large",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -42,12 +42,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-small-2",
+      name = "bob-solar-panel-small-2",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-2-a]",
-      place_result = "solar-panel-small-2",
+      place_result = "bob-solar-panel-small-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -56,12 +56,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-2",
+      name = "bob-solar-panel-2",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-2-b]",
-      place_result = "solar-panel-2",
+      place_result = "bob-solar-panel-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -70,12 +70,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-large-2",
+      name = "bob-solar-panel-large-2",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-2-c]",
-      place_result = "solar-panel-large-2",
+      place_result = "bob-solar-panel-large-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -84,12 +84,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-small-3",
+      name = "bob-solar-panel-small-3",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-3-a]",
-      place_result = "solar-panel-small-3",
+      place_result = "bob-solar-panel-small-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -98,12 +98,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-3",
+      name = "bob-solar-panel-3",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-3-b]",
-      place_result = "solar-panel-3",
+      place_result = "bob-solar-panel-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -112,12 +112,12 @@ if settings.startup["bobmods-power-solar"].value == true then
 
     {
       type = "item",
-      name = "solar-panel-large-3",
+      name = "bob-solar-panel-large-3",
       icon = "__base__/graphics/icons/solar-panel.png",
       icon_size = 64,
       subgroup = "bob-energy-solar-panel",
       order = "d[solar-panel]-a[solar-panel-3-c]",
-      place_result = "solar-panel-large-3",
+      place_result = "bob-solar-panel-large-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,

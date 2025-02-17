@@ -13,7 +13,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   data:extend({
     {
       type = "fluid",
-      name = "carbon-dioxide",
+      name = "bob-carbon-dioxide",
       icon = "__bobrevamp__/graphics/icons/carbon-dioxide.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -28,7 +28,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
     {
       type = "item",
-      name = "limestone",
+      name = "bob-limestone",
       icon = "__bobrevamp__/graphics/icons/limestone.png",
       icon_size = 64,
       subgroup = "bob-resource-chemical",
@@ -49,7 +49,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     },
     {
       type = "item",
-      name = "sodium-chlorate",
+      name = "bob-sodium-chlorate",
       icon = "__bobrevamp__/graphics/icons/sodium-chlorate.png",
       icon_size = 32,
       subgroup = "bob-resource-chemical",
@@ -61,7 +61,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     },
     {
       type = "item",
-      name = "sodium-perchlorate",
+      name = "bob-sodium-perchlorate",
       icon = "__bobrevamp__/graphics/icons/sodium-perchlorate.png",
       icon_size = 32,
       subgroup = "bob-resource-chemical",
@@ -74,7 +74,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
     {
       type = "recipe",
-      name = "limestone",
+      name = "bob-limestone",
       icon = "__bobrevamp__/graphics/icons/limestone.png",
       icon_size = 64,
       subgroup = "bob-resource-chemical",
@@ -86,10 +86,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         { type = "item", name = "stone", amount = 1 },
       },
       results = {
-        { type = "item", name = "limestone", amount = 1 },
-        { type = "fluid", name = "carbon-dioxide", amount = 25, ignored_by_productivity = 25 },
+        { type = "item", name = "bob-limestone", amount = 1 },
+        { type = "fluid", name = "bob-carbon-dioxide", amount = 25, ignored_by_productivity = 25 },
       },
-      main_product = "limestone",
+      main_product = "bob-limestone",
       crafting_machine_tint = {
         primary = { r = 0.7, g = 0.5, b = 0.3, a = 0.000 },
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -101,7 +101,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
     {
       type = "recipe",
-      name = "sodium-chlorate",
+      name = "bob-sodium-chlorate",
       icon = "__bobrevamp__/graphics/icons/sodium-chlorate.png",
       icon_size = 32,
       subgroup = "bob-fluid-electrolysis",
@@ -113,16 +113,16 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         { type = "item", name = "bob-salt", amount = 1 },
         { type = "fluid", name = "water", amount = 30 },
       },
-      main_product = "sodium-chlorate",
+      main_product = "bob-sodium-chlorate",
       results = {
-        { type = "item", name = "sodium-chlorate", amount = 1 },
+        { type = "item", name = "bob-sodium-chlorate", amount = 1 },
         { type = "fluid", name = "bob-hydrogen", amount = 60 },
       },
       allow_decomposition = false,
     },
     {
       type = "recipe",
-      name = "sodium-perchlorate",
+      name = "bob-sodium-perchlorate",
       icon = "__bobrevamp__/graphics/icons/sodium-perchlorate.png",
       icon_size = 32,
       subgroup = "bob-fluid-electrolysis",
@@ -131,12 +131,12 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       enabled = false,
       energy_required = 1,
       ingredients = {
-        { type = "item", name = "sodium-chlorate", amount = 1 },
+        { type = "item", name = "bob-sodium-chlorate", amount = 1 },
         { type = "fluid", name = "water", amount = 10 },
       },
-      main_product = "sodium-perchlorate",
+      main_product = "bob-sodium-perchlorate",
       results = {
-        { type = "item", name = "sodium-perchlorate", amount = 1 },
+        { type = "item", name = "bob-sodium-perchlorate", amount = 1 },
         { type = "fluid", name = "bob-hydrogen", amount = 20 },
       },
       allow_decomposition = false,
@@ -153,7 +153,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       energy_required = 1,
       ingredients = {
         { type = "item", name = "bob-lithium-chloride", amount = 1 },
-        { type = "item", name = "sodium-perchlorate", amount = 1 },
+        { type = "item", name = "bob-sodium-perchlorate", amount = 1 },
       },
       main_product = "bob-lithium-perchlorate",
       results = {
@@ -164,23 +164,23 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     },
     {
       type = "recipe",
-      name = "carbon-dioxide",
+      name = "bob-carbon-dioxide",
       category = "chemistry",
       subgroup = "fluid-recipes",
       enabled = false,
       energy_required = 1,
-      main_product = "carbon-dioxide",
+      main_product = "bob-carbon-dioxide",
       ingredients = {
         { type = "item", name = "bob-carbon", amount = 1 },
         { type = "fluid", name = "bob-oxygen", amount = 25 },
       },
       results = {
-        { type = "fluid", name = "carbon-dioxide", amount = 25 },
+        { type = "fluid", name = "bob-carbon-dioxide", amount = 25 },
       },
     },
     {
       type = "recipe",
-      name = "carbon-dioxide-oil-processing",
+      name = "bob-carbon-dioxide-oil-processing",
       icon = "__bobrevamp__/graphics/icons/carbon-dioxide-oil-processing.png",
       icon_size = 64,
       subgroup = "fluid-recipes",
@@ -189,7 +189,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       enabled = false,
       energy_required = 5,
       ingredients = {
-        { type = "fluid", name = "carbon-dioxide", amount = 50 },
+        { type = "fluid", name = "bob-carbon-dioxide", amount = 50 },
         { type = "fluid", name = "crude-oil", amount = 100 },
       },
       results = {
@@ -203,6 +203,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   })
 
   if bobmods.plates.make_void_fluid_recipe then
-    bobmods.plates.make_void_fluid_recipe("carbon-dioxide", 25, 10)
+    bobmods.plates.make_void_fluid_recipe("bob-carbon-dioxide", 25, 10)
   end
 end

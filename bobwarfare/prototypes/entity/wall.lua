@@ -71,7 +71,7 @@ local reinforced_wall_resistances = {
     percent = 70,
   },
   {
-    type = "plasma",
+    type = "bob-plasma",
     percent = 100,
   },
   {
@@ -93,14 +93,14 @@ local reinforced_wall_resistances = {
 data:extend({
   {
     type = "wall",
-    name = "reinforced-wall",
+    name = "bob-reinforced-wall",
     icon = "__bobwarfare__/graphics/icons/reinforced-wall.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     damaged_trigger_effect = hit_effects.wall(),
-    minable = { mining_time = 0.2, result = "reinforced-wall" },
+    minable = { mining_time = 0.2, result = "bob-reinforced-wall" },
     fast_replaceable_group = "wall",
     max_health = 1250,
     repair_speed_modifier = 2,
@@ -516,12 +516,12 @@ data:extend({
   util.merge({
     data.raw.gate.gate,
     {
-      name = "reinforced-gate",
-      minable = { mining_time = 0.1, result = "reinforced-gate" },
+      name = "bob-reinforced-gate",
+      minable = { mining_time = 0.1, result = "bob-reinforced-gate" },
       max_health = 750,
       opening_speed = 0.1,
     },
   }),
 })
 
-data.raw.gate["reinforced-gate"].resistances = reinforced_wall_resistances
+data.raw.gate["bob-reinforced-gate"].resistances = reinforced_wall_resistances

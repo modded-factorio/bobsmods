@@ -14,11 +14,11 @@ local storage_pick = {
 data:extend({
   {
     type = "item",
-    name = "storage-tank-2",
+    name = "bob-storage-tank-2",
     icon = "__boblogistics__/graphics/icons/storage-tank-2.png",
     subgroup = "bob-storage-tank",
     order = "b[fluid]-a[storage-tank-2a]",
-    place_result = "storage-tank-2",
+    place_result = "bob-storage-tank-2",
     stack_size = 50,
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
@@ -27,11 +27,11 @@ data:extend({
 
   {
     type = "item",
-    name = "storage-tank-3",
+    name = "bob-storage-tank-3",
     icon = "__boblogistics__/graphics/icons/storage-tank-3.png",
     subgroup = "bob-storage-tank",
     order = "b[fluid]-a[storage-tank-3a]",
-    place_result = "storage-tank-3",
+    place_result = "bob-storage-tank-3",
     stack_size = 50,
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
@@ -40,11 +40,11 @@ data:extend({
 
   {
     type = "item",
-    name = "storage-tank-4",
+    name = "bob-storage-tank-4",
     icon = "__boblogistics__/graphics/icons/storage-tank-4.png",
     subgroup = "bob-storage-tank",
     order = "b[fluid]-a[storage-tank-4a]",
-    place_result = "storage-tank-4",
+    place_result = "bob-storage-tank-4",
     stack_size = 50,
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,

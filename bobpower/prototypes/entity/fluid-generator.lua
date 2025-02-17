@@ -57,10 +57,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   data:extend({
     {
       type = "generator",
-      name = "fluid-generator",
+      name = "bob-fluid-generator",
       icon = "__bobpower__/graphics/icons/fluid-generator.png",
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "fluid-generator" },
+      minable = { mining_time = 1, result = "bob-fluid-generator" },
       max_health = 500,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -80,8 +80,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           percent = 30,
         },
       },
-      fast_replaceable_group = "fluid-generator",
-      next_upgrade = "fluid-generator-2",
+      fast_replaceable_group = "bob-fluid-generator",
+      next_upgrade = "bob-fluid-generator-2",
       collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       fluid_box = {
@@ -134,10 +134,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     {
       type = "generator",
-      name = "fluid-generator-2",
+      name = "bob-fluid-generator-2",
       icon = "__bobpower__/graphics/icons/fluid-generator.png",
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "fluid-generator-2" },
+      minable = { mining_time = 1, result = "bob-fluid-generator-2" },
       max_health = 650,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -157,8 +157,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           percent = 30,
         },
       },
-      fast_replaceable_group = "fluid-generator",
-      next_upgrade = "fluid-generator-3",
+      fast_replaceable_group = "bob-fluid-generator",
+      next_upgrade = "bob-fluid-generator-3",
       collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       fluid_box = {
@@ -211,10 +211,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     {
       type = "generator",
-      name = "fluid-generator-3",
+      name = "bob-fluid-generator-3",
       icon = "__bobpower__/graphics/icons/fluid-generator.png",
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "fluid-generator-3" },
+      minable = { mining_time = 1, result = "bob-fluid-generator-3" },
       max_health = 800,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -234,7 +234,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           percent = 30,
         },
       },
-      fast_replaceable_group = "fluid-generator",
+      fast_replaceable_group = "bob-fluid-generator",
       collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       fluid_box = {
@@ -295,10 +295,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     data:extend({
       {
         type = "generator",
-        name = "hydrazine-generator",
+        name = "bob-hydrazine-generator",
         icon = "__bobpower__/graphics/icons/fluid-generator.png",
         flags = { "placeable-neutral", "player-creation" },
-        minable = { mining_time = 1, result = "hydrazine-generator" },
+        minable = { mining_time = 1, result = "bob-hydrazine-generator" },
         max_health = 950,
         corpse = "big-remnants",
         dying_explosion = "medium-explosion",
@@ -316,7 +316,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             percent = 30,
           },
         },
-        fast_replaceable_group = "fluid-generator",
+        fast_replaceable_group = "bob-fluid-generator",
         collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
         selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
         fluid_box = {
@@ -329,7 +329,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
             { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
           },
           production_type = "input-output",
-          filter = "hydrazine",
+          filter = "bob-hydrazine",
         },
         energy_source = {
           type = "electric",

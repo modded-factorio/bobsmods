@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "basic-electronic-components",
+        recipe = "bob-basic-electronic-components",
       },
       {
         type = "unlock-recipe",

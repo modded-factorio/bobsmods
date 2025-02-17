@@ -1,10 +1,10 @@
 if
-  data.raw.item["alien-artifact-blue"]
-  and data.raw.item["alien-artifact-orange"]
-  and data.raw.item["alien-artifact-purple"]
-  and data.raw.item["alien-artifact-yellow"]
-  and data.raw.item["alien-artifact-green"]
-  and data.raw.item["alien-artifact-red"]
+  data.raw.item["bob-alien-artifact-blue"]
+  and data.raw.item["bob-alien-artifact-orange"]
+  and data.raw.item["bob-alien-artifact-purple"]
+  and data.raw.item["bob-alien-artifact-yellow"]
+  and data.raw.item["bob-alien-artifact-green"]
+  and data.raw.item["bob-alien-artifact-red"]
 then
   data:extend({
     {

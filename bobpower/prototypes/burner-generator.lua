@@ -6,7 +6,7 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       icon = "__bobpower__/graphics/icons/burner-generator.png",
       icon_size = 64,
       subgroup = "bob-energy-fluid-generator",
-      order = "burner-generator",
+      order = "bob-burner-generator",
       place_result = "bob-burner-generator",
       stack_size = 10,
       drop_sound = {

@@ -10,15 +10,15 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "large-accumulator-2",
+          recipe = "bob-large-accumulator-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "fast-accumulator-2",
+          recipe = "bob-fast-accumulator-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "slow-accumulator-2",
+          recipe = "bob-slow-accumulator-2",
         },
       },
       prerequisites = {
@@ -48,15 +48,15 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "large-accumulator-3",
+          recipe = "bob-large-accumulator-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "fast-accumulator-3",
+          recipe = "bob-fast-accumulator-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "slow-accumulator-3",
+          recipe = "bob-slow-accumulator-3",
         },
       },
       prerequisites = {

@@ -252,7 +252,7 @@ local piercing_reaction = {
   {
     type = "create-sticker",
     damage_type_filters = { "electric", "acid" },
-    sticker = "piercing-rage-sticker",
+    sticker = "bob-piercing-rage-sticker",
   },
 }
 local piercing_shot = function(attack_range)
@@ -601,7 +601,7 @@ local electric_reaction = {
   {
     type = "create-sticker",
     damage_type_filters = { whitelist = true, types = "electric" },
-    sticker = "electric-rage-sticker",
+    sticker = "bob-electric-rage-sticker",
   },
 }
 
@@ -654,8 +654,8 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 1,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
-  splash_localised_name = { "entity-name.enemy-electric-fire" },
+  splash_fire_name = "bob-enemy-electric-fire",
+  splash_localised_name = { "entity-name.bob-enemy-electric-fire" },
   fire_scale = 1.5,
   fire_initial_lifetime = 900,
   fire_maximum_lifetime = 900,
@@ -681,7 +681,7 @@ bobmods.enemies.new_spitter({
   },
 })
 
-table.insert(data.raw.fire["enemy-electric-fire"].on_damage_tick_effect, {
+table.insert(data.raw.fire["bob-enemy-electric-fire"].on_damage_tick_effect, {
   type = "direct",
   force = "all",
   filter_enabled = true,
@@ -691,7 +691,7 @@ table.insert(data.raw.fire["enemy-electric-fire"].on_damage_tick_effect, {
     target_effects = {
       {
         type = "create-sticker",
-        sticker = "electric-rage-sticker",
+        sticker = "bob-electric-rage-sticker",
         show_in_tooltip = false,
       },
     },
@@ -726,7 +726,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 1.1,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -762,7 +762,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 1.2,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -798,7 +798,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 1.35,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -834,7 +834,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 1.5,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -870,7 +870,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 1.75,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -906,7 +906,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 2,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -942,7 +942,7 @@ bobmods.enemies.new_spitter({
   attack_spit_radius = 2.5,
   attack_tint = { r = 1.0, g = 0.6, b = 0.2, a = 0.9 },
 
-  splash_fire_name = "enemy-electric-fire",
+  splash_fire_name = "bob-enemy-electric-fire",
   skip_generate_fire = true,
 
   factoriopedia_simulation = {
@@ -1648,7 +1648,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.1,
     secondary_probability2 = 0.1,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-small",
@@ -1692,7 +1692,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.15,
     secondary_probability2 = 0.12,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-medium",
@@ -1736,7 +1736,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.2,
     secondary_probability2 = 0.14,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-big",
@@ -1780,7 +1780,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.25,
     secondary_probability2 = 0.15,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-big",
@@ -1824,7 +1824,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.3,
     secondary_probability2 = 0.16,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-huge",
@@ -1868,7 +1868,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.35,
     secondary_probability2 = 0.17,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-titan",
@@ -1912,7 +1912,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.4,
     secondary_probability2 = 0.18,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-behemoth",
@@ -1956,7 +1956,7 @@ bobmods.enemies.new_spitter({
     attack_damage2 = 2,
     secondary_probability = 0.5,
     secondary_probability2 = 0.2,
-    splash_fire_name = "explosive-fire-blank",
+    splash_fire_name = "bob-explosive-fire-blank",
     skip_generate_fire = true,
     splash_fire_do_not_show_in_tooltip = true,
     delayed_action_name = "alien-waiting-explosion-leviathan",
@@ -2047,7 +2047,7 @@ local poison_attack_action = function(radius, smoke_name, damage, healing)
           target_effects = {
             type = "create-smoke",
             show_in_tooltip = false,
-            entity_name = "enemy-poison-smoke-visual-dummy",
+            entity_name = "bob-enemy-poison-smoke-visual-dummy",
             initial_height = 0,
           },
         },
@@ -2114,7 +2114,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.small_tint,
-  localised_description = { "entity-description.poison-enemy-small" },
+  localised_description = { "entity-description.bob-poison-enemy-small" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-small"),
 
   attack_action = poison_attack_action(1, "enemy-poison-attack-smoke-small", 6, -2),
@@ -2142,7 +2142,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.medium_tint,
-  localised_description = { "entity-description.poison-enemy-medium" },
+  localised_description = { "entity-description.bob-poison-enemy-medium" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium"),
 
   attack_action = poison_attack_action(1.1, "enemy-poison-attack-smoke-medium", 12, -4),
@@ -2170,7 +2170,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.big_tint,
-  localised_description = { "entity-description.poison-enemy-big" },
+  localised_description = { "entity-description.bob-poison-enemy-big" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-big"),
 
   attack_action = poison_attack_action(1.15, "enemy-poison-attack-smoke-big", 18, -6),
@@ -2198,7 +2198,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.huge_tint,
-  localised_description = { "entity-description.poison-enemy-huge" },
+  localised_description = { "entity-description.bob-poison-enemy-huge" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge"),
 
   attack_action = poison_attack_action(1.2, "enemy-poison-attack-smoke-huge", 24, -8),
@@ -2226,7 +2226,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.giant_tint,
-  localised_description = { "entity-description.poison-enemy-giant" },
+  localised_description = { "entity-description.bob-poison-enemy-giant" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant"),
 
   attack_action = poison_attack_action(1.35, "enemy-poison-attack-smoke-giant", 30, -20),
@@ -2254,7 +2254,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.titan_tint,
-  localised_description = { "entity-description.poison-enemy-titan" },
+  localised_description = { "entity-description.bob-poison-enemy-titan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan"),
 
   attack_action = poison_attack_action(1.5, "enemy-poison-attack-smoke-titan", 36, -24),
@@ -2282,7 +2282,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  localised_description = { "entity-description.poison-enemy-behemoth" },
+  localised_description = { "entity-description.bob-poison-enemy-behemoth" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth"),
 
   attack_action = poison_attack_action(1.65, "enemy-poison-attack-smoke-behemoth", 42, -42),
@@ -2310,7 +2310,7 @@ bobmods.enemies.new_spitter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  localised_description = { "entity-description.poison-enemy-leviathan" },
+  localised_description = { "entity-description.bob-poison-enemy-leviathan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan"),
 
   attack_action = poison_attack_action(1.75, "enemy-poison-attack-smoke-leviathan", 60, -60),
@@ -2330,13 +2330,13 @@ local fire_attack_action = function(inputs)
     attack_spit_radius = inputs.attack_spit_radius,
     attack_damage = inputs.attack_damage,
     attack_damage_type = "fire",
-    sticker_name = "enemy-fire-sticker",
+    sticker_name = "bob-enemy-fire-sticker",
     show_sticker_in_attack = true,
   })
 
   table.insert(attack_action[1].action_delivery.target_effects, {
     type = "create-fire",
-    entity_name = "enemy-fire",
+    entity_name = "bob-enemy-fire",
     tile_collision_mask = { layers = { water_tile = true } },
     show_in_tooltip = true,
   })
@@ -2351,7 +2351,7 @@ local fire_attack_action = function(inputs)
         type = "instant",
         target_effects = {
           type = "create-fire",
-          entity_name = "enemy-fire",
+          entity_name = "bob-enemy-fire",
           tile_collision_mask = { layers = { water_tile = true } },
           show_in_tooltip = false,
         },
@@ -2596,7 +2596,7 @@ bobmods.enemies.new_spitter({
   },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
-  sticker_name = "enemy-fire-sticker",
+  sticker_name = "bob-enemy-fire-sticker",
   attack_action = fire_attack_action({
     attack_spit_radius = 1.75,
     attack_damage = 8,
@@ -2679,7 +2679,7 @@ bobmods.enemies.new_spitter({
   },
   trigger_target_mask = { "common", "ground-unit", "not-electric-unit" },
 
-  sticker_name = "enemy-fire-sticker",
+  sticker_name = "bob-enemy-fire-sticker",
   attack_action = fire_attack_action({
     attack_spit_radius = 2.5,
     attack_damage = 8,

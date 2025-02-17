@@ -60,7 +60,7 @@ if data.raw.car["vehicle-hauler"] then
       percent = 25,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -87,7 +87,7 @@ if data.raw.car["vehicle-chaingunner"] then
       percent = 25,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -134,7 +134,7 @@ if data.raw.car["vehicle-warden"] then
       percent = 40,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -182,7 +182,7 @@ if data.raw.car["vehicle-laser-tank"] then
       percent = 20,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -229,7 +229,7 @@ if data.raw.car["vehicle-flame-tank"] then
       percent = 20,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -272,7 +272,7 @@ if data.raw.car["vehicle-flame-tumbler"] then
       percent = 20,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -311,7 +311,7 @@ if data.raw.car.ironclad then
       percent = 50,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -350,7 +350,7 @@ if data.raw.car["vehicle-miner-mk5"] then
       percent = 40,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -395,7 +395,7 @@ if data.raw.car["vehicle-miner-mk5"] then
       percent = 20,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -440,7 +440,7 @@ if data.raw.car["vehicle-miner-mk5"] then
       percent = 30,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -485,7 +485,7 @@ if data.raw.car["vehicle-miner-mk5"] then
       percent = 40,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -530,7 +530,7 @@ if data.raw.car["vehicle-miner-mk5"] then
       percent = 60,
     },
     {
-      type = "plasma",
+      type = "bob-plasma",
       decrease = 15,
       percent = 50,
     },
@@ -538,6 +538,6 @@ if data.raw.car["vehicle-miner-mk5"] then
 end
 if mods["aai-programmable-vehicles"] then
   --Temporarily change new spidertrons to only have one gun so that they don't generate an excessive number of essentially identical AI versions. Proper armaments will be restored in data-final-fixes.
-  data.raw["spider-vehicle"].tankotron.guns = { "spidertron-cannon-1" }
-  data.raw["spider-vehicle"]["heavy-spidertron"].guns = { "spidertron-rocket-launcher-1" }
+  data.raw["spider-vehicle"].tankotron.guns = { "bob-spidertron-cannon-1" }
+  data.raw["spider-vehicle"]["bob-heavy-spidertron"].guns = { "spidertron-rocket-launcher-1" }
 end

@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "advanced-logistic-science-pack",
+    name = "bob-advanced-logistic-science-pack",
     enabled = false,
     energy_required = 21,
     ingredients = {
@@ -10,13 +10,13 @@ data:extend({
       { type = "item", name = "flying-robot-frame", amount = 1 },
       { type = "item", name = "steel-chest", amount = 2 },
     },
-    results = { { type = "item", name = "advanced-logistic-science-pack", amount = 3 } },
+    results = { { type = "item", name = "bob-advanced-logistic-science-pack", amount = 3 } },
     allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "lab-2",
+    name = "bob-lab-2",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -25,7 +25,7 @@ data:extend({
       { type = "item", name = "bulk-inserter", amount = 4 },
       { type = "item", name = "express-transport-belt", amount = 4 },
     },
-    results = { { type = "item", name = "lab-2", amount = 1 } },
+    results = { { type = "item", name = "bob-lab-2", amount = 1 } },
   },
 })
 
@@ -33,14 +33,14 @@ if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "burner-lab",
+      name = "bob-burner-lab",
       energy_required = 1,
       ingredients = {
         { type = "item", name = "wood", amount = 10 },
         { type = "item", name = "iron-plate", amount = 2 },
         { type = "item", name = "stone", amount = 4 },
       },
-      results = { { type = "item", name = "burner-lab", amount = 1 } },
+      results = { { type = "item", name = "bob-burner-lab", amount = 1 } },
     },
   })
   if not data.raw.recipe["bob-burner-generator"] then

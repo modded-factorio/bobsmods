@@ -28,7 +28,7 @@ local charger_pick = {
 data:extend({
   {
     type = "item",
-    name = "roboport-antenna-1",
+    name = "bob-roboport-antenna-1",
     icon = "__boblogistics__/graphics/icons/roboport-antenna.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
@@ -40,7 +40,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-antenna-2",
+    name = "bob-roboport-antenna-2",
     icon = "__boblogistics__/graphics/icons/roboport-antenna-2.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
@@ -52,7 +52,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-antenna-3",
+    name = "bob-roboport-antenna-3",
     icon = "__boblogistics__/graphics/icons/roboport-antenna-3.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
@@ -64,7 +64,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-antenna-4",
+    name = "bob-roboport-antenna-4",
     icon = "__boblogistics__/graphics/icons/roboport-antenna-4.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-antenna",
@@ -79,7 +79,7 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "roboport-chargepad-1",
+    name = "bob-roboport-chargepad-1",
     icon = "__boblogistics__/graphics/icons/roboport-chargepad.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
@@ -91,7 +91,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-chargepad-2",
+    name = "bob-roboport-chargepad-2",
     icon = "__boblogistics__/graphics/icons/roboport-chargepad-2.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
@@ -103,7 +103,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-chargepad-3",
+    name = "bob-roboport-chargepad-3",
     icon = "__boblogistics__/graphics/icons/roboport-chargepad-3.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
@@ -115,7 +115,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-chargepad-4",
+    name = "bob-roboport-chargepad-4",
     icon = "__boblogistics__/graphics/icons/roboport-chargepad-4.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-charge",
@@ -130,7 +130,7 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "roboport-door-1",
+    name = "bob-roboport-door-1",
     icon = "__boblogistics__/graphics/icons/roboport-door.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
@@ -142,7 +142,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-door-2",
+    name = "bob-roboport-door-2",
     icon = "__boblogistics__/graphics/icons/roboport-door-2.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
@@ -154,7 +154,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-door-3",
+    name = "bob-roboport-door-3",
     icon = "__boblogistics__/graphics/icons/roboport-door-3.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",
@@ -166,7 +166,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "roboport-door-4",
+    name = "bob-roboport-door-4",
     icon = "__boblogistics__/graphics/icons/roboport-door-4.png",
     icon_size = 32,
     subgroup = "bob-roboport-parts-door",

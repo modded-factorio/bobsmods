@@ -38,9 +38,9 @@ if data.raw["recipe-category"]["machine-crafting"] then
 end
 
 --if mixing furnace category exists, add it to characters with smelting category
-if data.raw["recipe-category"]["mixing-furnace"] then
+if data.raw["recipe-category"]["bob-mixing-furnace"] then
   for index, character in pairs(bobmods.classes.characters) do
-    bobmods.lib.machine.type_if_add_category("character", "smelting", "mixing-furnace")
+    bobmods.lib.machine.type_if_add_category("character", "smelting", "bob-mixing-furnace")
   end
 end
 
@@ -51,16 +51,16 @@ if feature_flags["quality"] then
     "bob-character-miner-2",
     "bob-character-fighter-2",
     "bob-character-builder-2",
-    "player-brain",
-    "player-head",
-    "player-boots",
-    "player-gloves",
-    "player-power-core",
-    "player-frame",
-    "player-brain-2",
-    "player-head-2",
-    "player-boots-2",
-    "player-gloves-2",
-    "player-frame-2",
+    "bob-player-brain",
+    "bob-player-head",
+    "bob-player-boots",
+    "bob-player-gloves",
+    "bob-player-power-core",
+    "bob-player-frame",
+    "bob-player-brain-2",
+    "bob-player-head-2",
+    "bob-player-boots-2",
+    "bob-player-gloves-2",
+    "bob-player-frame-2",
   })
 end

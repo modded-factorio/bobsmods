@@ -1,38 +1,38 @@
 require("prototypes.recipe-updates")
 require("prototypes.technology-updates")
 
-data.raw.recipe["copper-cable"].category = "electronics"
+data.raw.recipe["copper-cable"].category = "bob-electronics"
 data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
 data.raw.item["copper-cable"].order = "0-a1"
 
-if data.raw["recipe-category"]["chemical-furnace"] then
+if data.raw["recipe-category"]["bob-chemical-furnace"] then
   if data.raw.recipe["bob-carbon"] then
-    data.raw.recipe["bob-carbon"].category = "chemical-furnace"
+    data.raw.recipe["bob-carbon"].category = "bob-chemical-furnace"
   end
 end
 
-if data.raw["recipe-category"]["mixing-furnace"] then
-  if data.raw.recipe["solder-alloy"] then
-    data.raw.recipe["solder-alloy"].category = "mixing-furnace"
+if data.raw["recipe-category"]["bob-mixing-furnace"] then
+  if data.raw.recipe["bob-solder-alloy"] then
+    data.raw.recipe["bob-solder-alloy"].category = "bob-mixing-furnace"
   end
-  if data.raw.recipe["solder-alloy-lead"] then
-    data.raw.recipe["solder-alloy-lead"].category = "mixing-furnace"
+  if data.raw.recipe["bob-solder-alloy-lead"] then
+    data.raw.recipe["bob-solder-alloy-lead"].category = "bob-mixing-furnace"
   end
 end
 
 -- add new electronics crafting categories
-bobmods.lib.machine.type_if_add_category("character", "crafting", "electronics")
-bobmods.lib.machine.type_if_add_category("god-controller", "crafting", "electronics")
-bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "electronics")
-bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "electronics-machine")
-bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "electronics-with-fluid")
+bobmods.lib.machine.type_if_add_category("character", "crafting", "bob-electronics")
+bobmods.lib.machine.type_if_add_category("god-controller", "crafting", "bob-electronics")
+bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-electronics")
+bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-electronics-machine")
+bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "bob-electronics-with-fluid")
 
 if settings.startup["bobmods-colorupdate"].value == true then
-  data.raw.item["basic-circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png"
-  data.raw.item["circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/circuit-board.png"
-  data.raw.item["superior-circuit-board"].icon =
+  data.raw.item["bob-basic-circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png"
+  data.raw.item["bob-circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/circuit-board.png"
+  data.raw.item["bob-superior-circuit-board"].icon =
     "__bobelectronics__/graphics/icons/colour-coded/superior-circuit-board.png"
-  data.raw.item["multi-layer-circuit-board"].icon =
+  data.raw.item["bob-multi-layer-circuit-board"].icon =
     "__bobelectronics__/graphics/icons/colour-coded/multi-layer-circuit-board.png"
   data.raw.item["electronic-circuit"].icon =
     "__bobelectronics__/graphics/icons/colour-coded/basic-electronic-circuit-board.png"
@@ -41,10 +41,10 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw.item["bob-advanced-processing-unit"].icon =
     "__bobelectronics__/graphics/icons/colour-coded/electronic-processing-board.png"
 
-  data.raw.item["basic-circuit-board"].icon_size = 128
-  data.raw.item["circuit-board"].icon_size = 128
-  data.raw.item["superior-circuit-board"].icon_size = 128
-  data.raw.item["multi-layer-circuit-board"].icon_size = 128
+  data.raw.item["bob-basic-circuit-board"].icon_size = 128
+  data.raw.item["bob-circuit-board"].icon_size = 128
+  data.raw.item["bob-superior-circuit-board"].icon_size = 128
+  data.raw.item["bob-multi-layer-circuit-board"].icon_size = 128
   data.raw.item["electronic-circuit"].icon_size = 128
   data.raw.item["advanced-circuit"].icon_size = 128
   data.raw.item["processing-unit"].icon_size = 128
@@ -53,29 +53,29 @@ end
 
 if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-resin", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("wooden-board", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("phenolic-board", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("fibreglass-board", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("solder-alloy", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-wooden-board", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-phenolic-board", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-fibreglass-board", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-solder-alloy", false)
   bobmods.lib.recipe.update_recycling_recipe({
-    "basic-electronic-components",
-    "electronic-components",
-    "intergrated-electronics",
-    "processing-electronics",
+    "bob-basic-electronic-components",
+    "bob-electronic-components",
+    "bob-integrated-electronics",
+    "bob-processing-electronics",
     "electronic-circuit",
     "advanced-circuit",
     "processing-unit",
     "bob-advanced-processing-unit",
-    "circuit-board",
-    "superior-circuit-board",
-    "multi-layer-circuit-board",
+    "bob-circuit-board",
+    "bob-superior-circuit-board",
+    "bob-multi-layer-circuit-board",
     "arithmetic-combinator",
     "decider-combinator",
     "constant-combinator",
   })
   if settings.startup["bobmods-colorupdate"].value == true then
     bobmods.lib.recipe.update_recycling_recipe_icon(
-      "basic-circuit-board-recycling",
+      "bob-basic-circuit-board-recycling",
       "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png",
       128
     )

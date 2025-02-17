@@ -26,44 +26,44 @@ if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
 end
 
 if data.raw.recipe["bob-robot-brain"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["bob-robot-brain"].category = "electronics"
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain"].category = "bob-electronics"
   end
-  if data.raw.item["basic-circuit-board"] then
+  if data.raw.item["bob-basic-circuit-board"] then
     data.raw.recipe["bob-robot-brain"].ingredients = {
-      { type = "item", name = "basic-circuit-board", amount = 2 },
+      { type = "item", name = "bob-basic-circuit-board", amount = 2 },
       { type = "item", name = "electronic-circuit", amount = 2 },
     }
   end
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "solder", amount = 5 })
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "bob-solder", amount = 5 })
   end
 end
 
 if data.raw.recipe["bob-robot-brain-2"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["bob-robot-brain-2"].category = "electronics"
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain-2"].category = "bob-electronics"
   end
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "solder", amount = 5 })
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "bob-solder", amount = 5 })
   end
 end
 
 if data.raw.recipe["bob-robot-brain-3"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["bob-robot-brain-3"].category = "electronics"
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain-3"].category = "bob-electronics"
   end
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "solder", amount = 5 })
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "bob-solder", amount = 5 })
   end
 end
 
 if data.raw.recipe["bob-robot-brain-4"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["bob-robot-brain-4"].category = "electronics"
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain-4"].category = "bob-electronics"
   end
-  if data.raw.item["solder"] then
-    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "solder", amount = 5 })
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "bob-solder", amount = 5 })
   end
   if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.set_ingredient("bob-robot-brain-4", { type = "item", name = "processing-unit", amount = 2 })
@@ -286,17 +286,17 @@ if data.raw.recipe["bob-robot-tool-construction"] then
   end
 end
 
-if data.raw.item["flying-robot-frame-2"] then
+if data.raw.item["bob-flying-robot-frame-2"] then
   if data.raw.item["bob-aluminium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-2", "steel-plate", "bob-aluminium-plate")
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-2", "steel-plate", "bob-aluminium-plate")
   end
   bobmods.lib.recipe.add_ingredient(
     "bob-logistic-robot-2",
-    { type = "item", name = "flying-robot-frame-2", amount = 1 }
+    { type = "item", name = "bob-flying-robot-frame-2", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-construction-robot-2",
-    { type = "item", name = "flying-robot-frame-2", amount = 1 }
+    { type = "item", name = "bob-flying-robot-frame-2", amount = 1 }
   )
 else
   for i, robot in ipairs({ "bob-logistic-robot-2", "bob-construction-robot-2" }) do
@@ -317,25 +317,25 @@ else
   end
 end
 
-if data.raw.item["flying-robot-frame-3"] then
+if data.raw.item["bob-flying-robot-frame-3"] then
   if data.raw.item["bob-lithium-ion-battery"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-3", "battery", "bob-lithium-ion-battery")
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-3", "battery", "bob-lithium-ion-battery")
   end
 
   if data.raw.item["bob-titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-3", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-3", "steel-plate", "bob-titanium-plate")
   end
 
   bobmods.lib.recipe.add_ingredient(
     "bob-logistic-robot-3",
-    { type = "item", name = "flying-robot-frame-3", amount = 1 }
+    { type = "item", name = "bob-flying-robot-frame-3", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-construction-robot-3",
-    { type = "item", name = "flying-robot-frame-3", amount = 1 }
+    { type = "item", name = "bob-flying-robot-frame-3", amount = 1 }
   )
 else
-  for i, robot in ipairs({ "bob-logistic-robot-3", "bob-construction-robot-3" }) do
+  for _, robot in pairs({ "bob-logistic-robot-3", "bob-construction-robot-3" }) do
     data.raw.recipe[robot].energy_required = 20
 
     if settings.startup["bobmods-logistics-robotrequireprevious"].value == false then
@@ -358,30 +358,30 @@ else
   end
 end
 
-if data.raw.item["flying-robot-frame-4"] then
+if data.raw.item["bob-flying-robot-frame-4"] then
   if data.raw.item["bob-silver-zinc-battery"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "battery", "bob-silver-zinc-battery")
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-silver-zinc-battery")
   else
     if data.raw.item["bob-lithium-ion-battery"] then
-      bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "battery", "bob-lithium-ion-battery")
+      bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-lithium-ion-battery")
     end
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("bob-robotics-4", "bob-nitinol-processing")
   end
 
   bobmods.lib.recipe.add_ingredient(
     "bob-logistic-robot-4",
-    { type = "item", name = "flying-robot-frame-4", amount = 1 }
+    { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-construction-robot-4",
-    { type = "item", name = "flying-robot-frame-4", amount = 1 }
+    { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
   )
 else
-  for i, robot in ipairs({ "bob-logistic-robot-4", "bob-construction-robot-4" }) do
+  for _, robot in pairs({ "bob-logistic-robot-4", "bob-construction-robot-4" }) do
     data.raw.recipe[robot].energy_required = 20
     if settings.startup["bobmods-logistics-robotrequireprevious"].value == false then
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
@@ -492,15 +492,15 @@ else
   end
 end
 
-for i, robot in ipairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
-  if data.raw.item["rtg"] and data.raw.technology["rtg"] then
-    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "rtg", amount = 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "rtg")
+for _, robot in pairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
+  if data.raw.item["bob-rtg"] and data.raw.technology["bob-rtg"] then
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-rtg", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "bob-rtg")
   elseif
-    data.raw.item["vehicle-fission-cell-equipment-1"] and data.raw.technology["vehicle-fission-cell-equipment-1"]
+    data.raw.item["bob-vehicle-fission-cell-equipment-1"] and data.raw.technology["bob-vehicle-fission-cell-equipment-1"]
   then
-    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "vehicle-fission-cell-equipment-1", amount = 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "vehicle-fission-cell-equipment-1")
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-vehicle-fission-cell-equipment-1", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "bob-vehicle-fission-cell-equipment-1")
   else
     bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "fission-reactor-equipment", amount = 1 })
     bobmods.lib.tech.add_prerequisite("bob-robots-4", "fission-reactor-equipment")
@@ -517,17 +517,17 @@ if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
     { type = "item", name = "bob-construction-robot-4", amount = 1 }
   )
 else
-  if data.raw.item["flying-robot-frame-4"] then
+  if data.raw.item["bob-flying-robot-frame-4"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-logistic-robot-5",
-      { type = "item", name = "flying-robot-frame-4", amount = 1 }
+      { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "bob-construction-robot-5",
-      { type = "item", name = "flying-robot-frame-4", amount = 1 }
+      { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
     )
   else
-    for i, robot in ipairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
+    for _, robot in pairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
       data.raw.recipe[robot].energy_required = 20
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
 
@@ -545,16 +545,11 @@ else
     end
   end
 
-  if data.raw.item["bob-robot-brain-4"] and data.raw.item["bob-robot-tool-4"] then
+  if data.raw.item["bob-robot-brain-4"] then
     bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "bob-robot-brain-4", amount = 1 })
-    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "bob-robot-tool-4", amount = 1 })
     bobmods.lib.recipe.add_ingredient(
       "bob-construction-robot-5",
       { type = "item", name = "bob-robot-brain-4", amount = 1 }
-    )
-    bobmods.lib.recipe.add_ingredient(
-      "bob-construction-robot-5",
-      { type = "item", name = "bob-robot-tool-4", amount = 1 }
     )
   else
     if data.raw.item["bob-advanced-processing-unit"] then
@@ -574,4 +569,10 @@ else
       )
     end
   end
+
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "bob-robot-tool-logistic-4", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-5",
+    { type = "item", name = "bob-robot-tool-construction-4", amount = 1 }
+  )
 end

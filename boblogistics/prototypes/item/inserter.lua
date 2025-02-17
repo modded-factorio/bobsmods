@@ -16,12 +16,12 @@ local inserter_pick = {
 data:extend({
   {
     type = "item",
-    name = "steam-inserter",
+    name = "bob-steam-inserter",
     icon = "__boblogistics__/graphics/icons/inserter/white-inserter.png",
     icon_size = 32,
     subgroup = "inserter",
     order = "e[inserter]-a[steam]",
-    place_result = "steam-inserter",
+    place_result = "bob-steam-inserter",
     stack_size = 50,
     drop_sound = inserter_drop_move,
     inventory_move_sound = inserter_drop_move,
@@ -29,12 +29,12 @@ data:extend({
   },
   {
     type = "item",
-    name = "express-inserter",
+    name = "bob-express-inserter",
     icon = "__boblogistics__/graphics/icons/inserter/cyan-inserter.png",
     icon_size = 32,
     subgroup = "inserter",
     order = "e[inserter]-f[ultimate]",
-    place_result = "express-inserter",
+    place_result = "bob-express-inserter",
     stack_size = 50,
     drop_sound = inserter_drop_move,
     inventory_move_sound = inserter_drop_move,
@@ -42,12 +42,12 @@ data:extend({
   },
   {
     type = "item",
-    name = "express-bulk-inserter",
+    name = "bob-express-bulk-inserter",
     icon = "__boblogistics__/graphics/icons/inserter/dark-green-inserter.png",
     icon_size = 32,
     subgroup = "inserter",
     order = "e[inserter]-f[ultimate]-c[bulk]",
-    place_result = "express-bulk-inserter",
+    place_result = "bob-express-bulk-inserter",
     stack_size = 50,
     drop_sound = inserter_drop_move,
     inventory_move_sound = inserter_drop_move,
@@ -58,7 +58,7 @@ data:extend({
 
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.item["burner-inserter"].subgroup = "bob-logistic-tier-0"
-  data.raw.item["steam-inserter"].subgroup = "bob-logistic-tier-0"
+  data.raw.item["bob-steam-inserter"].subgroup = "bob-logistic-tier-0"
   data.raw.item["inserter"].subgroup = "bob-logistic-tier-1"
 
   data:extend({
@@ -69,7 +69,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       icon_size = 32,
       subgroup = "bob-logistic-tier-2",
       order = "e[inserter]-c[fast]",
-      place_result = "red-inserter",
+      place_result = "bob-red-inserter",
       stack_size = 50,
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
@@ -77,12 +77,12 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
     {
       type = "item",
-      name = "red-bulk-inserter",
+      name = "bob-red-bulk-inserter",
       icon = "__boblogistics__/graphics/icons/inserter/red-bulk-inserter.png",
       icon_size = 32,
       subgroup = "bob-logistic-tier-2",
       order = "e[inserter]-c[fast]-c[bulk]",
-      place_result = "red-bulk-inserter",
+      place_result = "bob-red-bulk-inserter",
       stack_size = 50,
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
@@ -93,7 +93,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     {
       type = "item",
       name = "fast-inserter",
-      localised_name = { "entity-name.express-inserter" },
+      localised_name = { "entity-name.bob-express-inserter" },
       icon = "__boblogistics__/graphics/icons/inserter/blue-inserter.png",
       icon_size = 32,
       subgroup = "bob-logistic-tier-3",
@@ -107,7 +107,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     {
       type = "item",
       name = "bulk-inserter",
-      localised_name = { "entity-name.express-bulk-inserter" },
+      localised_name = { "entity-name.bob-express-bulk-inserter" },
       icon = "__boblogistics__/graphics/icons/inserter/blue-bulk-inserter.png",
       icon_size = 32,
       subgroup = "bob-logistic-tier-3",
@@ -122,12 +122,12 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
     {
       type = "item",
-      name = "turbo-inserter",
+      name = "bob-turbo-inserter",
       icon = "__boblogistics__/graphics/icons/inserter/purple-inserter.png",
       icon_size = 32,
       subgroup = "bob-logistic-tier-4",
       order = "e[inserter]-e[turbo]",
-      place_result = "turbo-inserter",
+      place_result = "bob-turbo-inserter",
       stack_size = 50,
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
@@ -135,12 +135,12 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
     {
       type = "item",
-      name = "turbo-bulk-inserter",
+      name = "bob-turbo-bulk-inserter",
       icon = "__boblogistics__/graphics/icons/inserter/purple-bulk-inserter.png",
       icon_size = 32,
       subgroup = "bob-logistic-tier-4",
       order = "e[inserter]-e[turbo]-c[bulk]",
-      place_result = "turbo-bulk-inserter",
+      place_result = "bob-turbo-bulk-inserter",
       stack_size = 50,
       drop_sound = inserter_drop_move,
       inventory_move_sound = inserter_drop_move,
@@ -149,11 +149,11 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
   })
 
-  data.raw.item["express-inserter"].localised_name = { "entity-name.ultimate-inserter" }
-  data.raw.item["express-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-inserter.png"
-  data.raw.item["express-inserter"].subgroup = "bob-logistic-tier-5"
+  data.raw.item["bob-express-inserter"].localised_name = { "entity-name.bob-ultimate-inserter" }
+  data.raw.item["bob-express-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-inserter.png"
+  data.raw.item["bob-express-inserter"].subgroup = "bob-logistic-tier-5"
 
-  data.raw.item["express-bulk-inserter"].localised_name = { "entity-name.ultimate-bulk-inserter" }
-  data.raw.item["express-bulk-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-bulk-inserter.png"
-  data.raw.item["express-bulk-inserter"].subgroup = "bob-logistic-tier-5"
+  data.raw.item["bob-express-bulk-inserter"].localised_name = { "entity-name.bob-ultimate-bulk-inserter" }
+  data.raw.item["bob-express-bulk-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-bulk-inserter.png"
+  data.raw.item["bob-express-bulk-inserter"].subgroup = "bob-logistic-tier-5"
 end

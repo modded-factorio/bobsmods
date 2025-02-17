@@ -10,12 +10,12 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "assembling-machine-4",
+    name = "bob-assembling-machine-4",
     icon = "__bobassembly__/graphics/icons/assembling-machine-4.png",
     icon_size = 32,
     subgroup = "bob-assembly-machine",
-    order = "c[assembling-machine-4]",
-    place_result = "assembling-machine-4",
+    order = "c[bob-assembling-machine-4]",
+    place_result = "bob-assembling-machine-4",
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -34,11 +34,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "assembling-machine-4",
+    name = "bob-assembling-machine-4",
     icon = "__bobassembly__/graphics/icons/assembling-machine-4.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "assembling-machine-4" },
+    minable = { mining_time = 0.5, result = "bob-assembling-machine-4" },
     max_health = 400,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["assembling-machine"],
@@ -70,7 +70,7 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     fast_replaceable_group = "assembling-machine",
-    next_upgrade = "assembling-machine-5",
+    next_upgrade = "bob-assembling-machine-5",
     graphics_set = {
       animation = {
         layers = {
@@ -141,7 +141,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "assembling-machine-4",
+    name = "bob-assembling-machine-4",
     enabled = false,
     ingredients = {
       { type = "item", name = "assembling-machine-3", amount = 1 },
@@ -149,7 +149,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 9 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
     },
-    results = { { type = "item", name = "assembling-machine-4", amount = 1 } },
+    results = { { type = "item", name = "bob-assembling-machine-4", amount = 1 } },
   },
 
   {
@@ -160,7 +160,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "assembling-machine-4",
+        recipe = "bob-assembling-machine-4",
       },
     },
     prerequisites = {
@@ -185,12 +185,12 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "assembling-machine-5",
+    name = "bob-assembling-machine-5",
     icon = "__bobassembly__/graphics/icons/assembling-machine-5.png",
     icon_size = 32,
     subgroup = "bob-assembly-machine",
-    order = "c[assembling-machine-5]",
-    place_result = "assembling-machine-5",
+    order = "c[bob-assembling-machine-5]",
+    place_result = "bob-assembling-machine-5",
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -209,11 +209,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "assembling-machine-5",
+    name = "bob-assembling-machine-5",
     icon = "__bobassembly__/graphics/icons/assembling-machine-5.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "assembling-machine-5" },
+    minable = { mining_time = 0.5, result = "bob-assembling-machine-5" },
     max_health = 500,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["assembling-machine"],
@@ -261,7 +261,7 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     fast_replaceable_group = "assembling-machine",
-    next_upgrade = "assembling-machine-6",
+    next_upgrade = "bob-assembling-machine-6",
     graphics_set = {
       animation = {
         layers = {
@@ -324,15 +324,15 @@ data:extend({
 
   {
     type = "recipe",
-    name = "assembling-machine-5",
+    name = "bob-assembling-machine-5",
     enabled = false,
     ingredients = {
-      { type = "item", name = "assembling-machine-4", amount = 1 },
+      { type = "item", name = "bob-assembling-machine-4", amount = 1 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "steel-plate", amount = 9 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
     },
-    results = { { type = "item", name = "assembling-machine-5", amount = 1 } },
+    results = { { type = "item", name = "bob-assembling-machine-5", amount = 1 } },
   },
 
   {
@@ -343,7 +343,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "assembling-machine-5",
+        recipe = "bob-assembling-machine-5",
       },
     },
     prerequisites = {
@@ -368,12 +368,12 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "assembling-machine-6",
+    name = "bob-assembling-machine-6",
     icon = "__bobassembly__/graphics/icons/assembling-machine-6.png",
     icon_size = 32,
     subgroup = "bob-assembly-machine",
-    order = "c[assembling-machine-6]",
-    place_result = "assembling-machine-6",
+    order = "c[bob-assembling-machine-6]",
+    place_result = "bob-assembling-machine-6",
     stack_size = 50,
     drop_sound = {
       filename = "__base__/sound/item/mechanical-inventory-move.ogg",
@@ -392,11 +392,11 @@ data:extend({
 
   {
     type = "assembling-machine",
-    name = "assembling-machine-6",
+    name = "bob-assembling-machine-6",
     icon = "__bobassembly__/graphics/icons/assembling-machine-6.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "assembling-machine-6" },
+    minable = { mining_time = 0.5, result = "bob-assembling-machine-6" },
     max_health = 600,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["assembling-machine"],
@@ -506,16 +506,16 @@ data:extend({
 
   {
     type = "recipe",
-    name = "assembling-machine-6",
+    name = "bob-assembling-machine-6",
     enabled = false,
     ingredients = {
-      { type = "item", name = "assembling-machine-5", amount = 1 },
+      { type = "item", name = "bob-assembling-machine-5", amount = 1 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "iron-plate", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 5 },
     },
-    results = { { type = "item", name = "assembling-machine-6", amount = 1 } },
+    results = { { type = "item", name = "bob-assembling-machine-6", amount = 1 } },
   },
 
   {
@@ -526,7 +526,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "assembling-machine-6",
+        recipe = "bob-assembling-machine-6",
       },
     },
     prerequisites = {

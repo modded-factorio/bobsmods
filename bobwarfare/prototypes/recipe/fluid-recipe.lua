@@ -2,7 +2,7 @@ if data.raw.fluid["bob-nitric-acid"] then
   data:extend({
     {
       type = "recipe",
-      name = "sulfuric-nitric-acid",
+      name = "bob-sulfuric-nitric-acid",
       category = "chemistry",
       enabled = false,
       energy_required = 0.5,
@@ -11,7 +11,7 @@ if data.raw.fluid["bob-nitric-acid"] then
         { type = "fluid", name = "bob-nitric-acid", amount = 10 },
       },
       results = {
-        { type = "fluid", name = "sulfuric-nitric-acid", amount = 20 },
+        { type = "fluid", name = "bob-sulfuric-nitric-acid", amount = 20 },
       },
       subgroup = "fluid-recipes",
       icon = "__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png",
@@ -24,7 +24,7 @@ end
 data:extend({
   {
     type = "recipe",
-    name = "glycerol",
+    name = "bob-glycerol",
     category = "chemistry",
     enabled = false,
     energy_required = 0.5,
@@ -32,7 +32,7 @@ data:extend({
       { type = "fluid", name = "light-oil", amount = 10 },
     },
     results = {
-      { type = "fluid", name = "glycerol", amount = 10 },
+      { type = "fluid", name = "bob-glycerol", amount = 10 },
     },
     subgroup = "fluid-recipes",
     icon = "__bobwarfare__/graphics/icons/glycerol.png",
@@ -42,16 +42,16 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nitroglycerin",
+    name = "bob-nitroglycerin",
     category = "chemistry",
     enabled = false,
     energy_required = 1.5,
     ingredients = {
-      { type = "fluid", name = "glycerol", amount = 10 },
+      { type = "fluid", name = "bob-glycerol", amount = 10 },
       { type = "fluid", name = "sulfuric-acid", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "nitroglycerin", amount = 10 },
+      { type = "fluid", name = "bob-nitroglycerin", amount = 10 },
     },
     subgroup = "fluid-recipes",
     icon = "__bobwarfare__/graphics/icons/nitroglycerin.png",

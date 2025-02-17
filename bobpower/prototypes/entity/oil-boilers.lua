@@ -3,18 +3,18 @@ if settings.startup["bobmods-power-steam"].value == true then
     util.merge({
       data.raw.boiler.boiler,
       {
-        name = "oil-boiler",
+        name = "bob-oil-boiler",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
-        minable = { mining_time = 0.5, result = "oil-boiler" },
+        minable = { mining_time = 0.5, result = "bob-oil-boiler" },
         max_health = 300,
         target_temperature = 315,
         energy_consumption = "5.4MW",
-        next_upgrade = "oil-boiler-2",
+        next_upgrade = "bob-oil-boiler-2",
       },
     }),
   })
 
-  data.raw.boiler["oil-boiler"].energy_source = {
+  data.raw.boiler["bob-oil-boiler"].energy_source = {
     type = "fluid",
     emissions_per_minute = { pollution = 22.5 },
     fluid_box = {
@@ -44,16 +44,16 @@ if settings.startup["bobmods-power-steam"].value == true then
 
   data:extend({
     util.merge({
-      data.raw.boiler["oil-boiler"],
+      data.raw.boiler["bob-oil-boiler"],
       {
-        name = "oil-boiler-2",
+        name = "bob-oil-boiler-2",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
-        localised_description = { "entity-description.oil-boiler" },
-        minable = { mining_time = 0.5, result = "oil-boiler-2" },
+        localised_description = { "entity-description.bob-oil-boiler" },
+        minable = { mining_time = 0.5, result = "bob-oil-boiler-2" },
         max_health = 375,
         target_temperature = 465,
         energy_consumption = "8.1MW",
-        next_upgrade = "oil-boiler-3",
+        next_upgrade = "bob-oil-boiler-3",
         energy_source = {
           emissions_per_minute = { pollution = 16.875 },
         },
@@ -61,16 +61,16 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
 
     util.merge({
-      data.raw.boiler["oil-boiler"],
+      data.raw.boiler["bob-oil-boiler"],
       {
-        name = "oil-boiler-3",
+        name = "bob-oil-boiler-3",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
-        localised_description = { "entity-description.oil-boiler" },
-        minable = { mining_time = 0.5, result = "oil-boiler-3" },
+        localised_description = { "entity-description.bob-oil-boiler" },
+        minable = { mining_time = 0.5, result = "bob-oil-boiler-3" },
         max_health = 450,
         target_temperature = 615,
         energy_consumption = "10.8MW",
-        next_upgrade = "oil-boiler-4",
+        next_upgrade = "bob-oil-boiler-4",
         energy_source = {
           emissions_per_minute = { pollution = 11.25 },
         },
@@ -78,12 +78,12 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
 
     util.merge({
-      data.raw.boiler["oil-boiler"],
+      data.raw.boiler["bob-oil-boiler"],
       {
-        name = "oil-boiler-4",
+        name = "bob-oil-boiler-4",
         icon = "__bobpower__/graphics/icons/oil-boiler.png",
-        localised_description = { "entity-description.oil-boiler" },
-        minable = { mining_time = 0.5, result = "oil-boiler-4" },
+        localised_description = { "entity-description.bob-oil-boiler" },
+        minable = { mining_time = 0.5, result = "bob-oil-boiler-4" },
         max_health = 525,
         target_temperature = 765,
         energy_consumption = "13.5MW",
@@ -94,5 +94,5 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
   })
 
-  data.raw.boiler["oil-boiler-4"].next_upgrade = nil -- a copy of oil boiler, which has upgrade set to 2 already. (would still need to be cleared even without this because oil boiler is a copy of boiler, which upgrades to boiler 2)
+  data.raw.boiler["bob-oil-boiler-4"].next_upgrade = nil -- a copy of oil boiler, which has upgrade set to 2 already. (would still need to be cleared even without this because oil boiler is a copy of boiler, which upgrades to boiler 2)
 end

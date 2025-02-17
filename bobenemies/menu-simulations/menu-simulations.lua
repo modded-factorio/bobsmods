@@ -19,15 +19,15 @@ if mods["bobequipment"] then
       local character = game.surfaces[1].create_entity{name = "character", position = {center[1] - 40, center[2] + 20}, force = "player"}
       character.insert{name = "bob-power-armor-mk5"}
       local grid = character.get_inventory(defines.inventory.character_armor)[1].grid
-      grid.put{name = "exoskeleton-equipment-3"}
-      grid.put{name = "fission-reactor-equipment-4"}
-      grid.put{name = "fission-reactor-equipment-4"}
-      grid.put{name = "fission-reactor-equipment-4"}
-      grid.put{name = "fission-reactor-equipment-4"}
+      grid.put{name = "bob-exoskeleton-equipment-3"}
+      grid.put{name = "bob-fission-reactor-equipment-4"}
+      grid.put{name = "bob-fission-reactor-equipment-4"}
+      grid.put{name = "bob-fission-reactor-equipment-4"}
+      grid.put{name = "bob-fission-reactor-equipment-4"}
       for k = 1, 4 do
-        grid.put{name = "personal-laser-defense-equipment-6"}
-        grid.put{name = "energy-shield-mk6-equipment"}
-        grid.put{name = "battery-mk6-equipment"}
+        grid.put{name = "bob-personal-laser-defense-equipment-6"}
+        grid.put{name = "bob-energy-shield-mk6-equipment"}
+        grid.put{name = "bob-battery-mk6-equipment"}
       end
 
       for k, equipment in pairs(grid.equipment) do
@@ -374,14 +374,14 @@ if mods["bobvehicleequipment"] then
       spider = surface.create_entity{name = "spidertron", position = {logo.position.x - 30, logo.position.y + 60}, force = "player"}
       spider.force.research_all_technologies()
       local grid = spider.grid
-      grid.put{name = "vehicle-fission-reactor-equipment-6"}
-      grid.put{name = "vehicle-fission-reactor-equipment-6"}
-      grid.put{name = "vehicle-laser-defense-equipment-1"}
-      grid.put{name = "vehicle-laser-defense-equipment-2"}
-      grid.put{name = "vehicle-laser-defense-equipment-3"}
-      grid.put{name = "vehicle-laser-defense-equipment-4"}
-      grid.put{name = "vehicle-laser-defense-equipment-5"}
-      grid.put{name = "vehicle-laser-defense-equipment-6"}
+      grid.put{name = "bob-vehicle-fission-reactor-equipment-6"}
+      grid.put{name = "bob-vehicle-fission-reactor-equipment-6"}
+      grid.put{name = "bob-vehicle-laser-defense-equipment-1"}
+      grid.put{name = "bob-vehicle-laser-defense-equipment-2"}
+      grid.put{name = "bob-vehicle-laser-defense-equipment-3"}
+      grid.put{name = "bob-vehicle-laser-defense-equipment-4"}
+      grid.put{name = "bob-vehicle-laser-defense-equipment-5"}
+      grid.put{name = "bob-vehicle-laser-defense-equipment-6"}
 
       spider.insert({name = "rocket", count = 800})
 

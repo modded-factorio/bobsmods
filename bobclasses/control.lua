@@ -278,13 +278,13 @@ function init()
     storage.respawn_inventory = {}
   end
 
-  storage.classes["ballanced"] = nil
-  storage.classes["balanced"] = nil
-  storage.classes["miner"] = nil
-  storage.classes["fighter"] = nil
-  storage.classes["builder"] = nil
+  storage.classes["bob-ballanced"] = nil
+  storage.classes["bob-balanced"] = nil
+  storage.classes["bob-miner"] = nil
+  storage.classes["bob-fighter"] = nil
+  storage.classes["bob-builder"] = nil
 
-  add_class("balanced", {
+  add_class("bob-balanced", {
     entity_name = "character",
     button = {
       name = "bob_class_balanced",
@@ -304,7 +304,7 @@ function init()
     },
   })
 
-  add_class("miner", {
+  add_class("bob-miner", {
     entity_name = "bob-character-miner",
     button = {
       name = "bob_class_miner",
@@ -327,7 +327,7 @@ function init()
     },
   })
 
-  add_class("fighter", {
+  add_class("bob-fighter", {
     entity_name = "bob-character-fighter",
     button = {
       name = "bob_class_fighter",
@@ -359,7 +359,7 @@ function init()
     },
   })
 
-  add_class("builder", {
+  add_class("bob-builder", {
     entity_name = "bob-character-builder",
     button = {
       name = "bob_class_builder",
@@ -382,7 +382,7 @@ function init()
     },
   })
 
-  add_class("balanced-2", {
+  add_class("bob-balanced-2", {
     entity_name = "bob-character-balanced-2",
     button = {
       name = "bob_class_balanced_2",
@@ -390,7 +390,7 @@ function init()
       sprite = "class-balanced-2-button",
       group = "t2",
     },
-    prerequisites = { "bodies-2" },
+    prerequisites = { "bob-bodies-2" },
     bonuses = {
       character_crafting_speed_modifier = 2,
     },
@@ -403,7 +403,7 @@ function init()
     },
   })
 
-  add_class("miner-2", {
+  add_class("bob-miner-2", {
     entity_name = "bob-character-miner-2",
     button = {
       name = "bob_class_miner_2",
@@ -411,7 +411,7 @@ function init()
       sprite = "class-miner-2-button",
       group = "t2",
     },
-    prerequisites = { "miner-body-2" },
+    prerequisites = { "bob-miner-body-2" },
     bonuses = {
       character_crafting_speed_modifier = 3,
     },
@@ -427,7 +427,7 @@ function init()
     },
   })
 
-  add_class("fighter-2", {
+  add_class("bob-fighter-2", {
     entity_name = "bob-character-fighter-2",
     button = {
       name = "bob_class_fighter_2",
@@ -435,7 +435,7 @@ function init()
       sprite = "class-fighter-2-button",
       group = "t2",
     },
-    prerequisites = { "fighter-body-2" },
+    prerequisites = { "bob-fighter-body-2" },
     bonuses = {
       character_maximum_following_robot_count_bonus = 20,
     },
@@ -460,7 +460,7 @@ function init()
     },
   })
 
-  add_class("builder-2", {
+  add_class("bob-builder-2", {
     entity_name = "bob-character-builder-2",
     button = {
       name = "bob_class_builder_2",
@@ -468,7 +468,7 @@ function init()
       sprite = "class-builder-2-button",
       group = "t2",
     },
-    prerequisites = { "builder-body-2" },
+    prerequisites = { "bob-builder-body-2" },
     bonuses = {
       character_crafting_speed_modifier = 2,
     },
@@ -486,7 +486,7 @@ function init()
     },
   })
 
-  add_class("engineer", {
+  add_class("bob-engineer", {
     entity_name = "bob-character-engineer",
     button = {
       name = "bob_class_engineer",
@@ -494,7 +494,7 @@ function init()
       sprite = "class-engineer-button",
       group = "t2_advanced",
     },
-    prerequisites = { "engineer-body" },
+    prerequisites = { "bob-engineer-body" },
     bonuses = {
       character_crafting_speed_modifier = 2,
     },
@@ -513,7 +513,7 @@ function init()
     },
   })
 
-  add_class("prospector", {
+  add_class("bob-prospector", {
     entity_name = "bob-character-prospector",
     button = {
       name = "bob_class_prospector",
@@ -521,7 +521,7 @@ function init()
       sprite = "class-prospector-button",
       group = "t2_advanced",
     },
-    prerequisites = { "prospector-body" },
+    prerequisites = { "bob-prospector-body" },
     bonuses = {
       character_maximum_following_robot_count_bonus = 10,
     },
@@ -1028,7 +1028,7 @@ function draw_current_character_info(player_index)
         end
       end
     elseif player.controller_type ~= defines.controllers.character then
-      gui.add({ type = "label", name = "bob_avatar_current_character_name", caption = { "gui.no-character" } })
+      gui.add({ type = "label", name = "bob_avatar_current_character_name", caption = { "gui.bob-no-character" } })
       if player.controller_type == defines.controllers.god then
         gui.bob_avatar_current_character_name.caption = { "gui.bob-avatar-god-mode" }
       elseif player.controller_type == defines.controllers.editor then
@@ -1104,7 +1104,7 @@ function draw_characters_list(player_index)
     gui.clear()
 
     if table_size(characters) == 0 then
-      gui.add({ type = "label", name = "bob_avatar_no_list", caption = { "gui.no-avatars" } })
+      gui.add({ type = "label", name = "bob_avatar_no_list", caption = { "gui.bob-no-avatars" } })
       return
     end
 

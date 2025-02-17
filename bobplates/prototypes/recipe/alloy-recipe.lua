@@ -3,7 +3,7 @@ data:extend({
     type = "recipe",
     name = "bob-bronze-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 3 },
@@ -19,7 +19,7 @@ data:extend({
     type = "recipe",
     name = "bob-brass-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 3 },
@@ -35,7 +35,7 @@ data:extend({
     type = "recipe",
     name = "bob-copper-tungsten-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 2 },
@@ -51,7 +51,7 @@ data:extend({
     type = "recipe",
     name = "bob-tungsten-carbide",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 6.4,
     ingredients = {
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -68,7 +68,7 @@ data:extend({
     name = "bob-tungsten-carbide-2",
     localised_name = { "item-name.bob-tungsten-carbide" },
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 12.8,
     ingredients = {
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -84,7 +84,7 @@ data:extend({
     type = "recipe",
     name = "bob-gunmetal-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 32,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 8 },
@@ -102,7 +102,7 @@ data:extend({
     type = "recipe",
     name = "bob-invar-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
       { type = "item", name = "bob-nickel-plate", amount = 2 },
@@ -118,7 +118,7 @@ data:extend({
     type = "recipe",
     name = "bob-nitinol-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
       { type = "item", name = "bob-nickel-plate", amount = 3 },
@@ -135,7 +135,7 @@ data:extend({
     type = "recipe",
     name = "bob-cobalt-steel-alloy",
     enabled = false,
-    category = "mixing-furnace",
+    category = "bob-mixing-furnace",
     energy_required = 32,
     ingredients = {
       { type = "item", name = "iron-plate", amount = 14 },

@@ -27,11 +27,11 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-2", "plastics")
   end
 
-  if data.raw.item["bronze-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-2", "pipe", "bronze-pipe")
+  if data.raw.item["bob-bronze-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-2", "pipe", "bob-bronze-pipe")
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-2", "bob-alloy-processing")
-  elseif data.raw.item["steel-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-2", "pipe", "steel-pipe")
+  elseif data.raw.item["bob-steel-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-2", "pipe", "bob-steel-pipe")
   end
 
   if data.raw.item["bob-invar-alloy"] then
@@ -44,8 +44,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-3", "bob-aluminium-processing")
   end
 
-  if data.raw.item["plastic-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "pipe", "plastic-pipe")
+  if data.raw.item["bob-plastic-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "pipe", "bob-plastic-pipe")
   end
 
   if data.raw.item["bob-silicon-nitride"] then
@@ -63,8 +63,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-tungsten-processing")
   end
 
-  if data.raw.item["ceramic-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "ceramic-pipe")
+  if data.raw.item["bob-ceramic-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-ceramic-pipe")
   end
 
   if data.raw.item["bob-tungsten-carbide"] then
@@ -86,8 +86,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["copper-tungsten-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "pipe", "copper-tungsten-pipe")
+  if data.raw.item["bob-copper-tungsten-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "pipe", "bob-copper-tungsten-pipe")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then

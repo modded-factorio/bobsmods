@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "express-inserters",
+    name = "bob-express-inserters",
     icon = "__boblogistics__/graphics/icons/technology/express-inserter.png",
     icon_size = 128,
     effects = {},
@@ -27,7 +27,7 @@ data:extend({
     effects = {},
     prerequisites = {
       "bulk-inserter",
-      "express-inserters",
+      "bob-express-inserters",
     },
     unit = {
       count = 250,
@@ -45,30 +45,30 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.technology["fast-inserter"].icon = "__boblogistics__/graphics/icons/technology/long-inserters.png"
   data.raw.technology["fast-inserter"].icon_size = 128
 
-  data.raw.technology["express-inserters"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
-  data.raw.technology["express-inserters"].icon_size = 128
+  data.raw.technology["bob-express-inserters"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
+  data.raw.technology["bob-express-inserters"].icon_size = 128
 
   bobmods.lib.tech.remove_prerequisite("fast-inserter", "electronics")
   bobmods.lib.tech.add_prerequisite("fast-inserter", "logistics-2")
   bobmods.lib.tech.remove_prerequisite("bulk-inserter", "advanced-circuit")
 
   bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bulk-inserter")
-  bobmods.lib.tech.add_prerequisite("express-inserters", "logistics-3")
+  bobmods.lib.tech.add_prerequisite("bob-express-inserters", "logistics-3")
 
   data:extend({
     {
       type = "technology",
-      name = "turbo-inserter",
+      name = "bob-turbo-inserter",
       icon = "__boblogistics__/graphics/icons/technology/magenta-inserters.png",
       icon_size = 128,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "turbo-inserter",
+          recipe = "bob-turbo-inserter",
         },
       },
       prerequisites = {
-        "express-inserters",
+        "bob-express-inserters",
         "logistics-4",
       },
       unit = {
@@ -84,17 +84,17 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
     {
       type = "technology",
-      name = "ultimate-inserter",
+      name = "bob-ultimate-inserter",
       icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
       icon_size = 128,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "express-inserter",
+          recipe = "bob-express-inserter",
         },
       },
       prerequisites = {
-        "turbo-inserter",
+        "bob-turbo-inserter",
         "logistics-5",
       },
       unit = {
@@ -117,11 +117,11 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "turbo-bulk-inserter",
+          recipe = "bob-turbo-bulk-inserter",
         },
       },
       prerequisites = {
-        "turbo-inserter",
+        "bob-turbo-inserter",
         "bulk-inserter-2",
       },
       unit = {
@@ -144,11 +144,11 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "express-bulk-inserter",
+          recipe = "bob-express-bulk-inserter",
         },
       },
       prerequisites = {
-        "ultimate-inserter",
+        "bob-ultimate-inserter",
         "bulk-inserter-3",
       },
       unit = {
@@ -165,10 +165,10 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
   })
 else
-  bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "express-bulk-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bob-express-bulk-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("express-inserters", "express-inserter")
-  bobmods.lib.tech.add_prerequisite("express-inserters", "advanced-circuit")
+  bobmods.lib.tech.add_recipe_unlock("bob-express-inserters", "bob-express-inserter")
+  bobmods.lib.tech.add_prerequisite("bob-express-inserters", "advanced-circuit")
 end
 
 data:extend({

@@ -116,7 +116,7 @@ if bobmods.ores.settings.UnsortedGemOre == true then
 end
 
 -- Water mining category, add to pumpjacks
-if not data.raw["mining-drill"]["water-miner-1"] then
+if not data.raw["mining-drill"]["bob-water-miner-1"] then
   bobmods.lib.machine.type_if_add_resource_category("mining-drill", "basic-fluid", "water")
 end
 

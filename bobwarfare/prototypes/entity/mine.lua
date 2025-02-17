@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "land-mine",
-    name = "poison-mine",
+    name = "bob-poison-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
     flags = {
@@ -10,7 +10,7 @@ data:extend({
       "player-creation",
       "placeable-off-grid",
     },
-    minable = { mining_time = 1, result = "poison-mine" },
+    minable = { mining_time = 1, result = "bob-poison-mine" },
     max_health = 15,
     corpse = "small-remnants",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
@@ -73,7 +73,7 @@ data:extend({
 
   {
     type = "land-mine",
-    name = "distractor-mine",
+    name = "bob-distractor-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
     flags = {
@@ -82,7 +82,7 @@ data:extend({
       "player-creation",
       "placeable-off-grid",
     },
-    minable = { mining_time = 1, result = "distractor-mine" },
+    minable = { mining_time = 1, result = "bob-distractor-mine" },
     max_health = 15,
     corpse = "small-remnants",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
@@ -131,7 +131,7 @@ data:extend({
 
   {
     type = "land-mine",
-    name = "slowdown-mine",
+    name = "bob-slowdown-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
     flags = {
@@ -140,7 +140,7 @@ data:extend({
       "player-creation",
       "placeable-off-grid",
     },
-    minable = { mining_time = 1, result = "slowdown-mine" },
+    minable = { mining_time = 1, result = "bob-slowdown-mine" },
     max_health = 15,
     corpse = "small-remnants",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },

@@ -2,7 +2,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   data:extend({
     {
       type = "fluid",
-      name = "ammonia",
+      name = "bob-ammonia",
       icon = "__bobrevamp__/graphics/icons/ammonia.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -17,7 +17,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
     {
       type = "fluid",
-      name = "dinitrogen-tetroxide",
+      name = "bob-dinitrogen-tetroxide",
       icon = "__bobrevamp__/graphics/icons/dinitrogen-tetroxide.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -32,7 +32,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
     {
       type = "fluid",
-      name = "hydrazine",
+      name = "bob-hydrazine",
       icon = "__bobrevamp__/graphics/icons/hydrazine.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -49,7 +49,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
     {
       type = "fluid",
-      name = "hydrogen-peroxide",
+      name = "bob-hydrogen-peroxide",
       icon = "__bobrevamp__/graphics/icons/hydrogen-peroxide.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -85,7 +85,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   data:extend({
     {
       type = "recipe",
-      name = "ammonia",
+      name = "bob-ammonia",
       icon = "__bobrevamp__/graphics/icons/ammonia.png",
       icon_size = 64,
       order = "b[fluid-chemistry]-b[ammonia]",
@@ -98,9 +98,9 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         { type = "fluid", name = "bob-hydrogen", amount = 24 },
       },
       results = {
-        { type = "fluid", name = "ammonia", amount = 20 },
+        { type = "fluid", name = "bob-ammonia", amount = 20 },
       },
-      main_product = "ammonia",
+      main_product = "bob-ammonia",
       crafting_machine_tint = {
         primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -110,7 +110,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
     {
       type = "recipe",
-      name = "hydrogen-peroxide",
+      name = "bob-hydrogen-peroxide",
       icon = "__bobrevamp__/graphics/icons/hydrogen-peroxide.png",
       icon_size = 64,
       order = "b[fluid-chemistry]-b[hydrogen-peroxide]",
@@ -123,9 +123,9 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         { type = "fluid", name = "bob-oxygen", amount = 20 },
       },
       results = {
-        { type = "fluid", name = "hydrogen-peroxide", amount = 8 },
+        { type = "fluid", name = "bob-hydrogen-peroxide", amount = 8 },
       },
-      main_product = "hydrogen-peroxide",
+      main_product = "bob-hydrogen-peroxide",
       crafting_machine_tint = {
         primary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
         secondary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
@@ -135,7 +135,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
     {
       type = "recipe",
-      name = "hydrazine",
+      name = "bob-hydrazine",
       icon = "__bobrevamp__/graphics/icons/hydrazine.png",
       icon_size = 64,
       order = "b[fluid-chemistry]-b[hydrazine]",
@@ -144,14 +144,14 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "ammonia", amount = 20 },
-        { type = "fluid", name = "hydrogen-peroxide", amount = 4 },
+        { type = "fluid", name = "bob-ammonia", amount = 20 },
+        { type = "fluid", name = "bob-hydrogen-peroxide", amount = 4 },
       },
       results = {
-        { type = "fluid", name = "hydrazine", amount = 8 },
+        { type = "fluid", name = "bob-hydrazine", amount = 8 },
         { type = "fluid", name = "water", amount = 4 },
       },
-      main_product = "hydrazine",
+      main_product = "bob-hydrazine",
       crafting_machine_tint = {
         primary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },
         secondary = { r = 0.0, g = 0.5, b = 1.0, a = 0.000 },
@@ -186,7 +186,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
     {
       type = "recipe",
-      name = "dinitrogen-tetroxide",
+      name = "bob-dinitrogen-tetroxide",
       icon = "__bobrevamp__/graphics/icons/dinitrogen-tetroxide.png",
       icon_size = 64,
       order = "b[fluid-chemistry]-b[dinitrogen-tetroxide]",
@@ -198,9 +198,9 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         { type = "fluid", name = "bob-nitrogen-dioxide", amount = 20 },
       },
       results = {
-        { type = "fluid", name = "dinitrogen-tetroxide", amount = 8 },
+        { type = "fluid", name = "bob-dinitrogen-tetroxide", amount = 8 },
       },
-      main_product = "dinitrogen-tetroxide",
+      main_product = "bob-dinitrogen-tetroxide",
       crafting_machine_tint = {
         primary = { r = 0.8, g = 0.0, b = 1.0, a = 0.000 },
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -210,14 +210,14 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   })
 
   if bobmods.plates.make_void_fluid_recipe then
-    bobmods.plates.make_void_fluid_recipe("ammonia", 25, 15)
+    bobmods.plates.make_void_fluid_recipe("bob-ammonia", 25, 15)
   end
 
   if settings.startup["bobmods-revamp-hardmode"].value == true then
     data:extend({
       {
         type = "fluid",
-        name = "nitric-oxide",
+        name = "bob-nitric-oxide",
         icon = "__bobrevamp__/graphics/icons/nitric-oxide.png",
         icon_size = 64,
         subgroup = "fluid",
@@ -232,7 +232,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
 
       {
         type = "recipe",
-        name = "nitric-oxide",
+        name = "bob-nitric-oxide",
         icon = "__bobrevamp__/graphics/icons/nitric-oxide.png",
         icon_size = 64,
         order = "b[fluid-chemistry]-b[nitric-oxide]",
@@ -241,14 +241,14 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "ammonia", amount = 20 },
+          { type = "fluid", name = "bob-ammonia", amount = 20 },
           { type = "fluid", name = "bob-oxygen", amount = 25 },
         },
         results = {
-          { type = "fluid", name = "nitric-oxide", amount = 20 },
+          { type = "fluid", name = "bob-nitric-oxide", amount = 20 },
           { type = "fluid", name = "water", amount = 12 },
         },
-        main_product = "nitric-oxide",
+        main_product = "bob-nitric-oxide",
         crafting_machine_tint = {
           primary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },
           secondary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
@@ -267,7 +267,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "nitric-oxide", amount = 20 },
+          { type = "fluid", name = "bob-nitric-oxide", amount = 20 },
           { type = "fluid", name = "bob-oxygen", amount = 10 },
         },
         results = {
@@ -287,12 +287,12 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
     data:extend({
       {
         type = "recipe",
-        name = "enriched-fuel-from-hydrazine",
+        name = "bob-enriched-fuel-from-hydrazine",
         category = "chemistry",
         enabled = false,
         energy_required = 12,
         ingredients = {
-          { type = "fluid", name = "hydrazine", amount = 100 },
+          { type = "fluid", name = "bob-hydrazine", amount = 100 },
           { type = "item", name = "solid-fuel", amount = 1 },
         },
         results = { { type = "item", name = "bob-enriched-fuel", amount = 1 } },
@@ -310,18 +310,18 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   data:extend({
     {
       type = "technology",
-      name = "hydrazine",
+      name = "bob-hydrazine",
       icon = "__bobrevamp__/graphics/icons/technology/hydrazine.png",
       icon_size = 128,
       prerequisites = {},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "hydrazine",
+          recipe = "bob-hydrazine",
         },
         {
           type = "unlock-recipe",
-          recipe = "hydrogen-peroxide",
+          recipe = "bob-hydrogen-peroxide",
         },
       },
       unit = {
@@ -333,37 +333,6 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         time = 30,
       },
       order = "d-b-b6",
-    },
-    {
-      type = "technology",
-      name = "rocket-fuel",
-      icon = "__base__/graphics/technology/rocket-fuel.png",
-      icon_size = 256,
-      prerequisites = {
-        "flammables",
-        "hydrazine",
-        "chemical-science-pack",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "rocket-fuel",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "dinitrogen-tetroxide",
-        },
-      },
-      unit = {
-        count = 300,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
-        },
-        time = 30,
-      },
-      order = "k-a",
     },
   })
 end

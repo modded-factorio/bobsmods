@@ -14,12 +14,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   data:extend({
     {
       type = "item",
-      name = "fast-accumulator",
+      name = "bob-fast-accumulator",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-a-f",
-      place_result = "fast-accumulator",
+      place_result = "bob-fast-accumulator",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -28,12 +28,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "slow-accumulator",
+      name = "bob-slow-accumulator",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-a-s",
-      place_result = "slow-accumulator",
+      place_result = "bob-slow-accumulator",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -42,12 +42,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "large-accumulator-2",
+      name = "bob-large-accumulator-2",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-b-l",
-      place_result = "large-accumulator-2",
+      place_result = "bob-large-accumulator-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -56,12 +56,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "fast-accumulator-2",
+      name = "bob-fast-accumulator-2",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-b-f",
-      place_result = "fast-accumulator-2",
+      place_result = "bob-fast-accumulator-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -70,12 +70,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "slow-accumulator-2",
+      name = "bob-slow-accumulator-2",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-b-s",
-      place_result = "slow-accumulator-2",
+      place_result = "bob-slow-accumulator-2",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -84,12 +84,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "large-accumulator-3",
+      name = "bob-large-accumulator-3",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-c-l",
-      place_result = "large-accumulator-3",
+      place_result = "bob-large-accumulator-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -98,12 +98,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "fast-accumulator-3",
+      name = "bob-fast-accumulator-3",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-c-f",
-      place_result = "fast-accumulator-3",
+      place_result = "bob-fast-accumulator-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
@@ -112,12 +112,12 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "item",
-      name = "slow-accumulator-3",
+      name = "bob-slow-accumulator-3",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       subgroup = "bob-energy-accumulator",
       order = "e[accumulator]-a[accumulator]-c-s",
-      place_result = "slow-accumulator-3",
+      place_result = "bob-slow-accumulator-3",
       stack_size = 50,
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,

@@ -102,7 +102,7 @@ bobmods.classes.characters["bob-character-fighter"].tool_attack_result = {
 }
 if mods["bobwarfare"] then
   bobmods.classes.characters["bob-character-fighter"].tool_attack_result.action_delivery.target_effects[1].damage.type =
-    "plasma"
+    "bob-plasma"
 end
 
 bobmods.classes.characters["bob-character-builder"] = util.merge({
@@ -291,7 +291,7 @@ bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result = {
 }
 if mods["bobwarfare"] then
   bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result[1].action_delivery.target_effects[1].damage.type =
-    "plasma"
+    "bob-plasma"
 end
 
 bobmods.classes.characters["bob-character-builder-2"] = util.merge({
@@ -446,7 +446,7 @@ bobmods.classes.characters["bob-character-prospector"].tool_attack_result = {
 }
 if mods["bobwarfare"] then
   bobmods.classes.characters["bob-character-prospector"].tool_attack_result[1].action_delivery.target_effects[1].damage.type =
-    "plasma"
+    "bob-plasma"
 end
 
 for index, character in pairs(bobmods.classes.characters) do

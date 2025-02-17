@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "radars-2",
+    name = "bob-radar-2",
     icon = "__base__/graphics/technology/radar.png",
     icon_size = 256,
     prerequisites = {
@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-2",
+        recipe = "bob-radar-2",
       },
     },
     unit = {
@@ -26,17 +26,17 @@ data:extend({
 
   {
     type = "technology",
-    name = "radars-3",
+    name = "bob-radar-3",
     icon = "__base__/graphics/technology/radar.png",
     icon_size = 256,
     prerequisites = {
-      "radars-2",
+      "bob-radar-2",
       "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-3",
+        recipe = "bob-radar-3",
       },
     },
     unit = {
@@ -52,18 +52,18 @@ data:extend({
 
   {
     type = "technology",
-    name = "radars-4",
+    name = "bob-radar-4",
     icon = "__base__/graphics/technology/radar.png",
     icon_size = 256,
     prerequisites = {
-      "radars-3",
+      "bob-radar-3",
       "production-science-pack",
       "processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-4",
+        recipe = "bob-radar-4",
       },
     },
     unit = {
@@ -80,17 +80,17 @@ data:extend({
 
   {
     type = "technology",
-    name = "radars-5",
+    name = "bob-radar-5",
     icon = "__base__/graphics/technology/radar.png",
     icon_size = 256,
     prerequisites = {
-      "radars-4",
+      "bob-radar-4",
       "military-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-5",
+        recipe = "bob-radar-5",
       },
     },
     unit = {

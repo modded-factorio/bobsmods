@@ -1,11 +1,11 @@
 if
-  data.raw.item["alien-artifact"]
-  and data.raw.item["alien-artifact-blue"]
-  and data.raw.item["alien-artifact-orange"]
-  and data.raw.item["alien-artifact-purple"]
-  and data.raw.item["alien-artifact-yellow"]
-  and data.raw.item["alien-artifact-green"]
-  and data.raw.item["alien-artifact-red"]
+  data.raw.item["bob-alien-artifact"]
+  and data.raw.item["bob-alien-artifact-blue"]
+  and data.raw.item["bob-alien-artifact-orange"]
+  and data.raw.item["bob-alien-artifact-purple"]
+  and data.raw.item["bob-alien-artifact-yellow"]
+  and data.raw.item["bob-alien-artifact-green"]
+  and data.raw.item["bob-alien-artifact-red"]
 then
   local science_drop_move = {
     filename = "__base__/sound/item/science-inventory-move.ogg",
@@ -19,7 +19,7 @@ then
   data:extend({
     {
       type = "tool",
-      name = "science-pack-gold",
+      name = "bob-science-pack-gold",
       icon = "__bobtech__/graphics/icons/science-pack-gold.png",
       subgroup = "science-pack",
       order = "g[science-pack-5-a]",
@@ -33,7 +33,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack",
+      name = "bob-alien-science-pack",
       icon = "__bobtech__/graphics/icons/alien-science-pack.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-a]",
@@ -47,7 +47,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack-blue",
+      name = "bob-alien-science-pack-blue",
       icon = "__bobtech__/graphics/icons/alien-science-pack-blue.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-b]",
@@ -61,7 +61,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack-orange",
+      name = "bob-alien-science-pack-orange",
       icon = "__bobtech__/graphics/icons/alien-science-pack-orange.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-c]",
@@ -75,7 +75,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack-purple",
+      name = "bob-alien-science-pack-purple",
       icon = "__bobtech__/graphics/icons/alien-science-pack-purple.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-d]",
@@ -89,7 +89,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack-yellow",
+      name = "bob-alien-science-pack-yellow",
       icon = "__bobtech__/graphics/icons/alien-science-pack-yellow.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-e]",
@@ -103,7 +103,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack-green",
+      name = "bob-alien-science-pack-green",
       icon = "__bobtech__/graphics/icons/alien-science-pack-green.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-f]",
@@ -117,7 +117,7 @@ then
     },
     {
       type = "tool",
-      name = "alien-science-pack-red",
+      name = "bob-alien-science-pack-red",
       icon = "__bobtech__/graphics/icons/alien-science-pack-red.png",
       subgroup = "science-pack",
       order = "g[science-pack-6-g]",
@@ -132,11 +132,11 @@ then
 
     {
       type = "item",
-      name = "lab-alien",
+      name = "bob-lab-alien",
       icon = "__bobtech__/graphics/icons/lab-alien.png",
       subgroup = "production-machine",
       order = "z[lab]-alien",
-      place_result = "lab-alien",
+      place_result = "bob-lab-alien",
       stack_size = 10,
       drop_sound = {
         filename = "__base__/sound/item/lab-inventory-move.ogg",

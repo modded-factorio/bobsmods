@@ -1,15 +1,15 @@
 data:extend({
   {
     type = "recipe-category",
-    name = "electronics",
+    name = "bob-electronics",
   },
   {
     type = "recipe-category",
-    name = "electronics-machine",
+    name = "bob-electronics-machine",
   },
   {
     type = "recipe-category",
-    name = "electronics-with-fluid",
+    name = "bob-electronics-with-fluid",
   },
   {
     type = "item-subgroup",

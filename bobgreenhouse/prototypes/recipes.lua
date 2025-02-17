@@ -10,21 +10,21 @@ data:extend({
       { type = "item", name = "sulfur", amount = 1 },
       { type = "item", name = "stone", amount = 1 },
     },
-    results = { { type = "item", name = "fertiliser", amount = 1 } },
+    results = { { type = "item", name = "bob-fertiliser", amount = 1 } },
     allow_productivity = true,
   },
 
   {
     type = "recipe",
     name = "bob-seedling",
-    main_product = "seedling",
+    main_product = "bob-seedling",
     enabled = false,
     always_show_products = true,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
     results = {
-      { type = "item", name = "seedling", amount_min = 1, amount_max = 9 },
+      { type = "item", name = "bob-seedling", amount_min = 1, amount_max = 9 },
     },
     allow_productivity = true,
   },
@@ -52,7 +52,7 @@ data:extend({
     enabled = false,
     always_show_products = true,
     ingredients = {
-      { type = "item", name = "seedling", amount = 10 },
+      { type = "item", name = "bob-seedling", amount = 10 },
       { type = "fluid", name = "water", amount = 20 },
     },
     results = {
@@ -71,9 +71,9 @@ data:extend({
     enabled = false,
     always_show_products = true,
     ingredients = {
-      { type = "item", name = "seedling", amount = 10 },
+      { type = "item", name = "bob-seedling", amount = 10 },
       { type = "fluid", name = "water", amount = 20 },
-      { type = "item", name = "fertiliser", amount = 5 },
+      { type = "item", name = "bob-fertiliser", amount = 5 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 10, amount_max = 50 },
@@ -83,10 +83,10 @@ data:extend({
 
   {
     type = "recipe",
-    name = "wood-pellets",
+    name = "bob-wood-pellets",
     ingredients = {
       { type = "item", name = "wood", amount = 5 },
     },
-    results = { { type = "item", name = "wood-pellets", amount = 1 } },
+    results = { { type = "item", name = "bob-wood-pellets", amount = 1 } },
   },
 })

@@ -1,38 +1,38 @@
 data:extend({
   {
     type = "recipe",
-    name = "storage-tank-2",
+    name = "bob-storage-tank-2",
     energy_required = 4,
     enabled = false,
     ingredients = {
       { type = "item", name = "storage-tank", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
     },
-    results = { { type = "item", name = "storage-tank-2", amount = 1 } },
+    results = { { type = "item", name = "bob-storage-tank-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "storage-tank-3",
+    name = "bob-storage-tank-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "storage-tank-2", amount = 1 },
+      { type = "item", name = "bob-storage-tank-2", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
     },
-    results = { { type = "item", name = "storage-tank-3", amount = 1 } },
+    results = { { type = "item", name = "bob-storage-tank-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "storage-tank-4",
+    name = "bob-storage-tank-4",
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "item", name = "storage-tank-3", amount = 1 },
+      { type = "item", name = "bob-storage-tank-3", amount = 1 },
       { type = "item", name = "steel-plate", amount = 20 },
     },
-    results = { { type = "item", name = "storage-tank-4", amount = 1 } },
+    results = { { type = "item", name = "bob-storage-tank-4", amount = 1 } },
   },
 })
 

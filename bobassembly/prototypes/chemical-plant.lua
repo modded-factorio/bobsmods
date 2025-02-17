@@ -108,12 +108,12 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   data:extend({
     {
       type = "item",
-      name = "chemical-plant-2",
+      name = "bob-chemical-plant-2",
       icon = "__bobassembly__/graphics/icons/chemical-plant-2.png",
       icon_size = 32,
       subgroup = "bob-chemical-machine",
       order = "e[chemical-plant-2]",
-      place_result = "chemical-plant-2",
+      place_result = "bob-chemical-plant-2",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -130,12 +130,12 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     },
     {
       type = "item",
-      name = "chemical-plant-3",
+      name = "bob-chemical-plant-3",
       icon = "__bobassembly__/graphics/icons/chemical-plant-3.png",
       icon_size = 32,
       subgroup = "bob-chemical-machine",
       order = "e[chemical-plant-3]",
-      place_result = "chemical-plant-3",
+      place_result = "bob-chemical-plant-3",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -152,12 +152,12 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     },
     {
       type = "item",
-      name = "chemical-plant-4",
+      name = "bob-chemical-plant-4",
       icon = "__bobassembly__/graphics/icons/chemical-plant-4.png",
       icon_size = 32,
       subgroup = "bob-chemical-machine",
       order = "e[chemical-plant-4]",
-      place_result = "chemical-plant-4",
+      place_result = "bob-chemical-plant-4",
       stack_size = 50,
       drop_sound = {
         filename = "__base__/sound/item/fluid-inventory-move.ogg",
@@ -175,7 +175,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
     {
       type = "recipe",
-      name = "chemical-plant-2",
+      name = "bob-chemical-plant-2",
       energy_required = 5,
       enabled = false,
       ingredients = {
@@ -185,46 +185,46 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         { type = "item", name = "advanced-circuit", amount = 5 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "chemical-plant-2", amount = 1 } },
+      results = { { type = "item", name = "bob-chemical-plant-2", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "chemical-plant-3",
+      name = "bob-chemical-plant-3",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "chemical-plant-2", amount = 1 },
+        { type = "item", name = "bob-chemical-plant-2", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
         { type = "item", name = "processing-unit", amount = 10 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "chemical-plant-3", amount = 1 } },
+      results = { { type = "item", name = "bob-chemical-plant-3", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "chemical-plant-4",
+      name = "bob-chemical-plant-4",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "chemical-plant-3", amount = 1 },
+        { type = "item", name = "bob-chemical-plant-3", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
         { type = "item", name = "processing-unit", amount = 10 },
         { type = "item", name = "pipe", amount = 5 },
       },
-      results = { { type = "item", name = "chemical-plant-4", amount = 1 } },
+      results = { { type = "item", name = "bob-chemical-plant-4", amount = 1 } },
     },
 
     {
       type = "assembling-machine",
-      name = "chemical-plant-2",
+      name = "bob-chemical-plant-2",
       icon = "__bobassembly__/graphics/icons/chemical-plant-2.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "chemical-plant-2" },
+      minable = { mining_time = 0.5, result = "bob-chemical-plant-2" },
       max_health = 350,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["chemical-plant"],
@@ -254,17 +254,17 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       impact_category = "metal-large",
       fast_replaceable_group = "chemical-plant",
-      next_upgrade = "chemical-plant-3",
+      next_upgrade = "bob-chemical-plant-3",
       water_reflection = data.raw["assembling-machine"]["chemical-plant"].water_reflection,
     },
 
     {
       type = "assembling-machine",
-      name = "chemical-plant-3",
+      name = "bob-chemical-plant-3",
       icon = "__bobassembly__/graphics/icons/chemical-plant-3.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "chemical-plant-3" },
+      minable = { mining_time = 0.5, result = "bob-chemical-plant-3" },
       max_health = 400,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["chemical-plant"],
@@ -302,17 +302,17 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
       impact_category = "metal-large",
       fast_replaceable_group = "chemical-plant",
-      next_upgrade = "chemical-plant-4",
+      next_upgrade = "bob-chemical-plant-4",
       water_reflection = data.raw["assembling-machine"]["chemical-plant"].water_reflection,
     },
 
     {
       type = "assembling-machine",
-      name = "chemical-plant-4",
+      name = "bob-chemical-plant-4",
       icon = "__bobassembly__/graphics/icons/chemical-plant-4.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 0.5, result = "chemical-plant-4" },
+      minable = { mining_time = 0.5, result = "bob-chemical-plant-4" },
       max_health = 500,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
       circuit_connector = circuit_connector_definitions["chemical-plant"],
@@ -355,7 +355,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
     {
       type = "technology",
-      name = "chemical-plant-2",
+      name = "bob-chemical-plant-2",
       icon = "__bobassembly__/graphics/icons/technology/chemical-plant-2.png",
       icon_size = 128,
       prerequisites = {
@@ -365,7 +365,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "chemical-plant-2",
+          recipe = "bob-chemical-plant-2",
         },
       },
       unit = {
@@ -382,18 +382,18 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
     {
       type = "technology",
-      name = "chemical-plant-3",
+      name = "bob-chemical-plant-3",
       icon = "__bobassembly__/graphics/icons/technology/chemical-plant-3.png",
       icon_size = 128,
       prerequisites = {
-        "chemical-plant-2",
+        "bob-chemical-plant-2",
         "processing-unit",
         "production-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "chemical-plant-3",
+          recipe = "bob-chemical-plant-3",
         },
       },
       unit = {
@@ -411,17 +411,17 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
     {
       type = "technology",
-      name = "chemical-plant-4",
+      name = "bob-chemical-plant-4",
       icon = "__bobassembly__/graphics/icons/technology/chemical-plant-4.png",
       icon_size = 128,
       prerequisites = {
-        "chemical-plant-3",
+        "bob-chemical-plant-3",
         "utility-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "chemical-plant-4",
+          recipe = "bob-chemical-plant-4",
         },
       },
       unit = {

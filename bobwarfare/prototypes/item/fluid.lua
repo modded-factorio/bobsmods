@@ -2,7 +2,7 @@ if data.raw.fluid["bob-nitric-acid"] then
   data:extend({
     {
       type = "fluid",
-      name = "sulfuric-nitric-acid",
+      name = "bob-sulfuric-nitric-acid",
       default_temperature = 25,
       heat_capacity = "1kJ",
       base_color = { r = 0.0, g = 0.0, b = 1.0 },
@@ -19,7 +19,7 @@ end
 data:extend({
   {
     type = "fluid",
-    name = "nitroglycerin",
+    name = "bob-nitroglycerin",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 0.3, g = 0.3, b = 1.0 },
@@ -33,7 +33,7 @@ data:extend({
 
   {
     type = "fluid",
-    name = "glycerol",
+    name = "bob-glycerol",
     default_temperature = 25,
     heat_capacity = "1kJ",
     base_color = { r = 1.0, g = 1.0, b = 0.5 },

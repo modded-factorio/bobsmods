@@ -11,7 +11,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "nuclear-reactor-2",
+          recipe = "bob-nuclear-reactor-2",
         },
       },
       prerequisites = {
@@ -40,7 +40,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "nuclear-reactor-3",
+          recipe = "bob-nuclear-reactor-3",
         },
       },
       prerequisites = {

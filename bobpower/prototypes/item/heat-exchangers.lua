@@ -14,12 +14,12 @@ if settings.startup["bobmods-power-steam"].value == true then
   data:extend({
     {
       type = "item",
-      name = "heat-exchanger-2",
+      name = "bob-heat-exchanger-2",
       icon = "__base__/graphics/icons/heat-boiler.png",
       icon_size = 64,
       subgroup = "bob-energy-heat-exchanger",
       order = "f[nuclear-energy]-b[heat-exchanger-2]",
-      place_result = "heat-exchanger-2",
+      place_result = "bob-heat-exchanger-2",
       stack_size = 50,
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
@@ -28,12 +28,12 @@ if settings.startup["bobmods-power-steam"].value == true then
 
     {
       type = "item",
-      name = "heat-exchanger-3",
+      name = "bob-heat-exchanger-3",
       icon = "__base__/graphics/icons/heat-boiler.png",
       icon_size = 64,
       subgroup = "bob-energy-heat-exchanger",
       order = "f[nuclear-energy]-b[heat-exchanger-3]",
-      place_result = "heat-exchanger-3",
+      place_result = "bob-heat-exchanger-3",
       stack_size = 50,
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
@@ -42,12 +42,12 @@ if settings.startup["bobmods-power-steam"].value == true then
 
     {
       type = "item",
-      name = "heat-exchanger-4",
+      name = "bob-heat-exchanger-4",
       icon = "__base__/graphics/icons/heat-boiler.png",
       icon_size = 64,
       subgroup = "bob-energy-heat-exchanger",
       order = "f[nuclear-energy]-b[heat-exchanger-4]",
-      place_result = "heat-exchanger-4",
+      place_result = "bob-heat-exchanger-4",
       stack_size = 50,
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,

@@ -26,7 +26,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   data:extend({
     {
       type = "item",
-      name = "defender-robot",
+      name = "bob-defender-robot",
       icon = "__bobwarfare__/graphics/icons/defender.png",
       icon_size = 32,
       subgroup = "bob-combat-robots",
@@ -47,16 +47,16 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     },
     {
       type = "recipe",
-      name = "defender-robot",
+      name = "bob-defender-robot",
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      results = { { type = "item", name = "defender-robot", amount = 1 } },
+      results = { { type = "item", name = "bob-defender-robot", amount = 1 } },
     },
 
     {
       type = "item",
-      name = "distractor-robot",
+      name = "bob-distractor-robot",
       icon = "__bobwarfare__/graphics/icons/distractor.png",
       icon_size = 32,
       subgroup = "bob-combat-robots",
@@ -77,16 +77,16 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     },
     {
       type = "recipe",
-      name = "distractor-robot",
+      name = "bob-distractor-robot",
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      results = { { type = "item", name = "distractor-robot", amount = 1 } },
+      results = { { type = "item", name = "bob-distractor-robot", amount = 1 } },
     },
 
     {
       type = "item",
-      name = "destroyer-robot",
+      name = "bob-destroyer-robot",
       icon = "__bobwarfare__/graphics/icons/destroyer.png",
       icon_size = 32,
       subgroup = "bob-combat-robots",
@@ -107,11 +107,11 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     },
     {
       type = "recipe",
-      name = "destroyer-robot",
+      name = "bob-destroyer-robot",
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      results = { { type = "item", name = "destroyer-robot", amount = 1 } },
+      results = { { type = "item", name = "bob-destroyer-robot", amount = 1 } },
     },
   })
 

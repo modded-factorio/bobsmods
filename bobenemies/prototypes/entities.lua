@@ -110,7 +110,7 @@ data:extend({
 
   {
     type = "smoke-with-trigger",
-    name = "small-poison-cloud",
+    name = "bob-small-poison-cloud",
     localised_name = { "entity-name.poison-cloud" },
     flags = { "not-on-map" },
     hidden = true,
@@ -183,7 +183,7 @@ data:extend({
 
   {
     type = "sticker",
-    name = "poison-sticker",
+    name = "bob-poison-sticker",
     flags = { "not-on-map" },
     hidden = true,
     animation = {
@@ -205,7 +205,7 @@ data:extend({
 
   {
     type = "sticker",
-    name = "enemy-poison-sticker",
+    name = "bob-enemy-poison-sticker",
     flags = { "not-on-map" },
     hidden = true,
     animation = {
@@ -227,7 +227,7 @@ data:extend({
 
   {
     type = "sticker",
-    name = "enemy-fire-sticker",
+    name = "bob-enemy-fire-sticker",
     flags = { "not-on-map" },
     hidden = true,
     animation = {
@@ -241,7 +241,7 @@ data:extend({
       scale = 0.4,
       tint = { r = 1, g = 0.1, b = 0.1 },
     },
-    spread_fire_entity = "enemy-fire",
+    spread_fire_entity = "bob-enemy-fire",
     fire_spread_cooldown = 30,
     fire_spread_radius = 0.75,
     duration_in_ticks = 30 * 60,
@@ -252,7 +252,7 @@ data:extend({
 
   {
     type = "sticker",
-    name = "piercing-rage-sticker",
+    name = "bob-piercing-rage-sticker",
     flags = { "not-on-map" },
     hidden = true,
     force_visibility = "ally",
@@ -273,7 +273,7 @@ data:extend({
 
   {
     type = "sticker",
-    name = "electric-rage-sticker",
+    name = "bob-electric-rage-sticker",
     flags = { "not-on-map" },
     hidden = true,
     force_visibility = "ally",
@@ -293,7 +293,7 @@ data:extend({
 
   {
     type = "fire",
-    name = "acid-splash-fire-blank",
+    name = "bob-acid-splash-fire-blank",
     localised_name = { "entity-name.acid-splash" },
     flags = { "placeable-off-grid", "not-on-map" },
     hidden = true,
@@ -537,7 +537,7 @@ data:extend({
 
   {
     type = "fire",
-    name = "explosive-fire-blank",
+    name = "bob-explosive-fire-blank",
     localised_name = { "entity-name.acid-splash" },
     flags = { "placeable-off-grid", "not-on-map" },
     hidden = true,
@@ -978,7 +978,7 @@ data:extend({
 
   {
     type = "explosion",
-    name = "biter-electric-beam-explosion",
+    name = "bob-biter-electric-beam-explosion",
     hidden = true,
     beam = true,
     rotate = true,
@@ -1068,8 +1068,8 @@ data:extend({
 })
 
 local alienpoisonvisual = util.table.deepcopy(data.raw["smoke-with-trigger"]["poison-cloud-visual-dummy"])
-alienpoisonvisual.name = "enemy-poison-smoke-visual-dummy"
-alienpoisonvisual.localised_name = { "entity-name.enemy-poison-smoke" }
+alienpoisonvisual.name = "bob-enemy-poison-smoke-visual-dummy"
+alienpoisonvisual.localised_name = { "entity-name.bob-enemy-poison-smoke" }
 alienpoisonvisual.color = { r = 0.15, g = 1, b = 0.15, a = 0.250 }
 alienpoisonvisual.duration = 300
 alienpoisonvisual.fade_away_duration = 60
@@ -1077,7 +1077,7 @@ alienpoisonvisual.particle_count = 9
 alienpoisonvisual.particle_duration_variation = 60
 
 local alienfire = util.table.deepcopy(data.raw.fire["fire-flame"])
-alienfire.name = "enemy-fire"
+alienfire.name = "bob-enemy-fire"
 alienfire.initial_lifetime = 300
 alienfire.maximum_lifetime = 300
 alienfire.lifetime_increase_by = 90
@@ -1120,7 +1120,7 @@ alienfire.on_damage_tick_effect = {
       target_effects = {
         {
           type = "create-fire",
-          entity_name = "enemy-fire-secondary",
+          entity_name = "bob-enemy-fire-secondary",
           show_in_tooltip = false,
         },
       },
@@ -1129,8 +1129,8 @@ alienfire.on_damage_tick_effect = {
 }
 
 local alienfire2 = util.table.deepcopy(alienfire)
-alienfire2.name = "enemy-fire-secondary"
-alienfire2.localised_name = { "entity-name.enemy-fire" }
+alienfire2.name = "bob-enemy-fire-secondary"
+alienfire2.localised_name = { "entity-name.bob-enemy-fire" }
 alienfire2.on_damage_tick_effect = {
   {
     type = "direct",

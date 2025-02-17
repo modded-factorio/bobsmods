@@ -14,7 +14,7 @@ local repair_pick = {
 data:extend({
   {
     type = "repair-tool",
-    name = "repair-pack-2",
+    name = "bob-repair-pack-2",
     icon = "__boblogistics__/graphics/icons/repair-pack-2.png",
     icon_size = 32,
     subgroup = "tool",
@@ -28,7 +28,7 @@ data:extend({
   },
   {
     type = "repair-tool",
-    name = "repair-pack-3",
+    name = "bob-repair-pack-3",
     icon = "__boblogistics__/graphics/icons/repair-pack-3.png",
     icon_size = 32,
     subgroup = "tool",
@@ -42,7 +42,7 @@ data:extend({
   },
   {
     type = "repair-tool",
-    name = "repair-pack-4",
+    name = "bob-repair-pack-4",
     icon = "__boblogistics__/graphics/icons/repair-pack-4.png",
     icon_size = 32,
     subgroup = "tool",
@@ -56,7 +56,7 @@ data:extend({
   },
   {
     type = "repair-tool",
-    name = "repair-pack-5",
+    name = "bob-repair-pack-5",
     icon = "__boblogistics__/graphics/icons/repair-pack-5.png",
     icon_size = 32,
     subgroup = "tool",
@@ -73,46 +73,46 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "repair-pack-2",
+    name = "bob-repair-pack-2",
     enabled = false,
     ingredients = {
       { type = "item", name = "electronic-circuit", amount = 2 },
       { type = "item", name = "iron-gear-wheel", amount = 2 },
     },
-    results = { { type = "item", name = "repair-pack-2", amount = 1 } },
+    results = { { type = "item", name = "bob-repair-pack-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "repair-pack-3",
+    name = "bob-repair-pack-3",
     enabled = false,
     ingredients = {
       { type = "item", name = "advanced-circuit", amount = 2 },
       { type = "item", name = "iron-gear-wheel", amount = 2 },
       { type = "item", name = "steel-plate", amount = 2 },
     },
-    results = { { type = "item", name = "repair-pack-3", amount = 1 } },
+    results = { { type = "item", name = "bob-repair-pack-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "repair-pack-4",
+    name = "bob-repair-pack-4",
     enabled = false,
     ingredients = {
       { type = "item", name = "processing-unit", amount = 2 },
       { type = "item", name = "iron-gear-wheel", amount = 2 },
       { type = "item", name = "steel-plate", amount = 2 },
     },
-    results = { { type = "item", name = "repair-pack-4", amount = 1 } },
+    results = { { type = "item", name = "bob-repair-pack-4", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "repair-pack-5",
+    name = "bob-repair-pack-5",
     enabled = false,
     ingredients = {
       { type = "item", name = "processing-unit", amount = 2 },
       { type = "item", name = "iron-gear-wheel", amount = 2 },
       { type = "item", name = "steel-plate", amount = 2 },
     },
-    results = { { type = "item", name = "repair-pack-5", amount = 1 } },
+    results = { { type = "item", name = "bob-repair-pack-5", amount = 1 } },
   },
 })
 
@@ -131,7 +131,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "repair-pack-2",
+        recipe = "bob-repair-pack-2",
       },
     },
     unit = {
@@ -156,7 +156,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "repair-pack-3",
+        recipe = "bob-repair-pack-3",
       },
     },
     unit = {
@@ -182,7 +182,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "repair-pack-4",
+        recipe = "bob-repair-pack-4",
       },
     },
     unit = {
@@ -209,7 +209,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "repair-pack-5",
+        recipe = "bob-repair-pack-5",
       },
     },
     unit = {

@@ -135,7 +135,7 @@ bobmods.enemies.new_spawner({
     { type = "fire", decrease = 4, percent = 60 },
     { type = "acid", decrease = 10, percent = 50 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
   result_units = biter_spawn,
 })
@@ -154,7 +154,7 @@ bobmods.enemies.new_spawner({
     { type = "fire", decrease = 4, percent = 60 },
     { type = "acid", decrease = 10, percent = 50 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
   result_units = spitter_spawn,
 })
@@ -217,7 +217,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", percent = -20 },
     { type = "acid", percent = 20 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -240,7 +240,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", percent = -20 },
     { type = "acid", percent = 20 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -297,7 +297,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", decrease = 10, percent = 50 },
     { type = "acid", percent = 20 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -319,7 +319,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", decrease = 10, percent = 50 },
     { type = "acid", percent = 20 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -490,7 +490,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", percent = -20 },
     { type = "acid", decrease = 15, percent = 65 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -516,7 +516,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", percent = -20 },
     { type = "acid", decrease = 15, percent = 65 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -571,7 +571,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", percent = -20 },
     { type = "acid", decrease = 15, percent = 65 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -593,7 +593,7 @@ bobmods.enemies.new_spawner({
     { type = "electric", percent = -20 },
     { type = "acid", decrease = 15, percent = 65 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -653,7 +653,7 @@ bobmods.enemies.new_spawner({
     { type = "poison", decrease = 10, percent = 50 },
     { type = "acid", decrease = 15, percent = 65 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -675,7 +675,7 @@ bobmods.enemies.new_spawner({
     { type = "poison", decrease = 10, percent = 50 },
     { type = "acid", decrease = 15, percent = 65 },
     { type = "impact", decrease = 10, percent = 20 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -728,7 +728,7 @@ bobmods.enemies.new_spawner({
     { type = "laser", percent = 75 },
     { type = "fire", decrease = 10, percent = 80 },
     { type = "acid", decrease = 10, percent = 50 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -748,7 +748,7 @@ bobmods.enemies.new_spawner({
     { type = "laser", percent = 75 },
     { type = "fire", decrease = 10, percent = 80 },
     { type = "acid", decrease = 10, percent = 50 },
-    { type = "plasma", percent = 50 },
+    { type = "bob-plasma", percent = 50 },
   },
 })
 
@@ -803,7 +803,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "electric", percent = 20 },
       { type = "acid", decrease = 20, percent = 75 },
       { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
     result_units = super_spawn,
   })
@@ -826,7 +826,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "fire", decrease = 10, percent = 90 },
       { type = "acid", percent = 40 },
       { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
   })
 
@@ -848,7 +848,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "electric", decrease = 20, percent = 75 },
       { type = "acid", percent = 40 },
       { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
   })
 
@@ -889,7 +889,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "poison", decrease = 20, percent = 75 },
       { type = "acid", decrease = 25, percent = 90 },
       { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
   })
 
@@ -911,7 +911,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "poison", percent = 20 },
       { type = "acid", decrease = 25, percent = 90 },
       { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
   })
 
@@ -939,7 +939,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "electric", percent = 20 },
       { type = "acid", decrease = 25, percent = 90 },
       { type = "impact", decrease = 100, percent = 35 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
   })
 
@@ -962,7 +962,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "poison", percent = 20 },
       { type = "electric", percent = 20 },
       { type = "acid", decrease = 20, percent = 75 },
-      { type = "plasma", percent = 50 },
+      { type = "bob-plasma", percent = 50 },
     },
   })
 

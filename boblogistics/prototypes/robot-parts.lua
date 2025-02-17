@@ -52,7 +52,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
   data:extend({
     {
       type = "item",
-      name = "flying-robot-frame-2",
+      name = "bob-flying-robot-frame-2",
       icons = {
         {
           icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
@@ -81,7 +81,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
     },
     {
       type = "item",
-      name = "flying-robot-frame-3",
+      name = "bob-flying-robot-frame-3",
       icons = {
         {
           icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
@@ -110,7 +110,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
     },
     {
       type = "item",
-      name = "flying-robot-frame-4",
+      name = "bob-flying-robot-frame-4",
       icons = {
         {
           icon = "__boblogistics__/graphics/icons/flying-robot-frame/flying-robot-frame-icon-base.png",
@@ -140,7 +140,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
 
     {
       type = "recipe",
-      name = "flying-robot-frame-2",
+      name = "bob-flying-robot-frame-2",
       enabled = false,
       energy_required = 20,
       ingredients = {
@@ -148,12 +148,12 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { type = "item", name = "battery", amount = 2 },
         { type = "item", name = "steel-plate", amount = 1 },
       },
-      results = { { type = "item", name = "flying-robot-frame-2", amount = 1 } },
+      results = { { type = "item", name = "bob-flying-robot-frame-2", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "flying-robot-frame-3",
+      name = "bob-flying-robot-frame-3",
       enabled = false,
       energy_required = 20,
       ingredients = {
@@ -161,12 +161,12 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { type = "item", name = "battery", amount = 2 },
         { type = "item", name = "steel-plate", amount = 1 },
       },
-      results = { { type = "item", name = "flying-robot-frame-3", amount = 1 } },
+      results = { { type = "item", name = "bob-flying-robot-frame-3", amount = 1 } },
       allow_productivity = true,
     },
     {
       type = "recipe",
-      name = "flying-robot-frame-4",
+      name = "bob-flying-robot-frame-4",
       enabled = false,
       energy_required = 20,
       ingredients = {
@@ -174,7 +174,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
         { type = "item", name = "battery", amount = 2 },
         { type = "item", name = "steel-plate", amount = 1 },
       },
-      results = { { type = "item", name = "flying-robot-frame-4", amount = 1 } },
+      results = { { type = "item", name = "bob-flying-robot-frame-4", amount = 1 } },
       allow_productivity = true,
     },
   })
@@ -188,7 +188,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "flying-robot-frame-2",
+          recipe = "bob-flying-robot-frame-2",
         },
       },
       prerequisites = {
@@ -214,7 +214,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "flying-robot-frame-3",
+          recipe = "bob-flying-robot-frame-3",
         },
       },
       prerequisites = {
@@ -241,7 +241,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "flying-robot-frame-4",
+          recipe = "bob-flying-robot-frame-4",
         },
       },
       prerequisites = {

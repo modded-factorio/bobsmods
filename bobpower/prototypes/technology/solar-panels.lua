@@ -10,15 +10,15 @@ if settings.startup["bobmods-power-solar"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-small-2",
+          recipe = "bob-solar-panel-small-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-2",
+          recipe = "bob-solar-panel-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-large-2",
+          recipe = "bob-solar-panel-large-2",
         },
       },
       prerequisites = {
@@ -48,15 +48,15 @@ if settings.startup["bobmods-power-solar"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-small-3",
+          recipe = "bob-solar-panel-small-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-3",
+          recipe = "bob-solar-panel-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-large-3",
+          recipe = "bob-solar-panel-large-3",
         },
       },
       prerequisites = {

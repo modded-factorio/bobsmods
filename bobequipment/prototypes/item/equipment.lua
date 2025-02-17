@@ -16,10 +16,10 @@ data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
 data:extend({
   {
     type = "item",
-    name = "energy-shield-mk3-equipment",
+    name = "bob-energy-shield-mk3-equipment",
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "energy-shield-mk3-equipment",
+    place_as_equipment_result = "bob-energy-shield-mk3-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-c[energy-shield-equipment-mk3]",
     stack_size = 50,
@@ -39,10 +39,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "energy-shield-mk4-equipment",
+    name = "bob-energy-shield-mk4-equipment",
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "energy-shield-mk4-equipment",
+    place_as_equipment_result = "bob-energy-shield-mk4-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-d[energy-shield-equipment-mk4]",
     stack_size = 50,
@@ -62,10 +62,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "energy-shield-mk5-equipment",
+    name = "bob-energy-shield-mk5-equipment",
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "energy-shield-mk5-equipment",
+    place_as_equipment_result = "bob-energy-shield-mk5-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-e[energy-shield-equipment-mk5]",
     stack_size = 50,
@@ -85,10 +85,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "energy-shield-mk6-equipment",
+    name = "bob-energy-shield-mk6-equipment",
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "energy-shield-mk6-equipment",
+    place_as_equipment_result = "bob-energy-shield-mk6-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-f[energy-shield-equipment-mk6]",
     stack_size = 50,
@@ -116,10 +116,10 @@ data.raw.item["battery-mk2-equipment"].icon_size = 64
 data:extend({
   {
     type = "item",
-    name = "battery-mk3-equipment",
+    name = "bob-battery-mk3-equipment",
     icon = "__bobequipment__/graphics/icons/technology/battery-mk3-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "battery-mk3-equipment",
+    place_as_equipment_result = "bob-battery-mk3-equipment",
     subgroup = "equipment",
     order = "c[battery]-c[battery-mk3-equipment]",
     stack_size = 50,
@@ -139,10 +139,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "battery-mk4-equipment",
+    name = "bob-battery-mk4-equipment",
     icon = "__bobequipment__/graphics/icons/technology/battery-mk4-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "battery-mk4-equipment",
+    place_as_equipment_result = "bob-battery-mk4-equipment",
     subgroup = "equipment",
     order = "c[battery]-d[battery-mk4-equipment]",
     stack_size = 50,
@@ -162,10 +162,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "battery-mk5-equipment",
+    name = "bob-battery-mk5-equipment",
     icon = "__bobequipment__/graphics/icons/technology/battery-mk5-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "battery-mk5-equipment",
+    place_as_equipment_result = "bob-battery-mk5-equipment",
     subgroup = "equipment",
     order = "c[battery]-e[battery-mk5-equipment]",
     stack_size = 50,
@@ -185,10 +185,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "battery-mk6-equipment",
+    name = "bob-battery-mk6-equipment",
     icon = "__bobequipment__/graphics/icons/technology/battery-mk6-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "battery-mk6-equipment",
+    place_as_equipment_result = "bob-battery-mk6-equipment",
     subgroup = "equipment",
     order = "c[battery]-f[battery-mk6-equipment]",
     stack_size = 50,
@@ -213,9 +213,9 @@ data.raw.item["fission-reactor-equipment"].icon = "__bobequipment__/graphics/ico
 data:extend({
   {
     type = "item",
-    name = "fission-reactor-equipment-2",
+    name = "bob-fission-reactor-equipment-2",
     icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-2.png",
-    place_as_equipment_result = "fission-reactor-equipment-2",
+    place_as_equipment_result = "bob-fission-reactor-equipment-2",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-2]",
     stack_size = 20,
@@ -235,9 +235,9 @@ data:extend({
   },
   {
     type = "item",
-    name = "fission-reactor-equipment-3",
+    name = "bob-fission-reactor-equipment-3",
     icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-3.png",
-    place_as_equipment_result = "fission-reactor-equipment-3",
+    place_as_equipment_result = "bob-fission-reactor-equipment-3",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-3]",
     stack_size = 20,
@@ -257,9 +257,9 @@ data:extend({
   },
   {
     type = "item",
-    name = "fission-reactor-equipment-4",
+    name = "bob-fission-reactor-equipment-4",
     icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-4.png",
-    place_as_equipment_result = "fission-reactor-equipment-4",
+    place_as_equipment_result = "bob-fission-reactor-equipment-4",
     subgroup = "equipment",
     order = "a[energy-source]-b[fission-reactor-4]",
     stack_size = 20,
@@ -280,10 +280,10 @@ data:extend({
 
   {
     type = "item",
-    name = "night-vision-equipment-2",
+    name = "bob-night-vision-equipment-2",
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "night-vision-equipment-2",
+    place_as_equipment_result = "bob-night-vision-equipment-2",
     subgroup = "equipment",
     order = "f[night-vision]-b[night-vision-equipment-2]",
     stack_size = 20,
@@ -302,10 +302,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "night-vision-equipment-3",
+    name = "bob-night-vision-equipment-3",
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "night-vision-equipment-3",
+    place_as_equipment_result = "bob-night-vision-equipment-3",
     subgroup = "equipment",
     order = "f[night-vision]-c[night-vision-equipment-3]",
     stack_size = 20,
@@ -330,10 +330,10 @@ data.raw.item["solar-panel-equipment"].icon_size = 32
 data:extend({
   {
     type = "item",
-    name = "solar-panel-equipment-2",
+    name = "bob-solar-panel-equipment-2",
     icon = "__bobequipment__/graphics/icons/solar-panel-equipment-2.png",
     icon_size = 32,
-    place_as_equipment_result = "solar-panel-equipment-2",
+    place_as_equipment_result = "bob-solar-panel-equipment-2",
     subgroup = "equipment",
     order = "a[energy-source]-a[solar-panel-2]",
     stack_size = 20,
@@ -352,10 +352,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "solar-panel-equipment-3",
+    name = "bob-solar-panel-equipment-3",
     icon = "__bobequipment__/graphics/icons/solar-panel-equipment-3.png",
     icon_size = 32,
-    place_as_equipment_result = "solar-panel-equipment-3",
+    place_as_equipment_result = "bob-solar-panel-equipment-3",
     subgroup = "equipment",
     order = "a[energy-source]-a[solar-panel-3]",
     stack_size = 20,
@@ -374,14 +374,14 @@ data:extend({
   },
 })
 
-if data.raw.item["alien-artifact"] then
+if data.raw.item["bob-alien-artifact"] then
   data:extend({
     {
       type = "item",
-      name = "solar-panel-equipment-4",
+      name = "bob-solar-panel-equipment-4",
       icon = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
       icon_size = 32,
-      place_as_equipment_result = "solar-panel-equipment-4",
+      place_as_equipment_result = "bob-solar-panel-equipment-4",
       subgroup = "equipment",
       order = "a[energy-source]-a[solar-panel-4]",
       stack_size = 20,
@@ -399,14 +399,14 @@ if data.raw.item["alien-artifact"] then
       },
     },
   })
-  if data.raw.item["alien-orange-alloy"] and data.raw.fluid["alien-acid"] then
+  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
     data:extend({
       {
         type = "item",
-        name = "solar-panel-equipment-5",
+        name = "bob-solar-panel-equipment-5",
         icon = "__bobequipment__/graphics/icons/solar-panel-equipment-5.png",
         icon_size = 32,
-        place_as_equipment_result = "solar-panel-equipment-5",
+        place_as_equipment_result = "bob-solar-panel-equipment-5",
         subgroup = "equipment",
         order = "a[energy-source]-a[solar-panel-5]",
         stack_size = 20,
@@ -434,10 +434,10 @@ data.raw.item["personal-laser-defense-equipment"].icon_size = 128
 data:extend({
   {
     type = "item",
-    name = "personal-laser-defense-equipment-2",
+    name = "bob-personal-laser-defense-equipment-2",
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-laser-defense-equipment-2",
+    place_as_equipment_result = "bob-personal-laser-defense-equipment-2",
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-2]",
     stack_size = 20,
@@ -457,10 +457,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-laser-defense-equipment-3",
+    name = "bob-personal-laser-defense-equipment-3",
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-laser-defense-equipment-3",
+    place_as_equipment_result = "bob-personal-laser-defense-equipment-3",
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-3]",
     stack_size = 20,
@@ -480,10 +480,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-laser-defense-equipment-4",
+    name = "bob-personal-laser-defense-equipment-4",
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-laser-defense-equipment-4",
+    place_as_equipment_result = "bob-personal-laser-defense-equipment-4",
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-4]",
     stack_size = 20,
@@ -503,10 +503,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-laser-defense-equipment-5",
+    name = "bob-personal-laser-defense-equipment-5",
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-laser-defense-equipment-5",
+    place_as_equipment_result = "bob-personal-laser-defense-equipment-5",
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-5]",
     stack_size = 20,
@@ -526,10 +526,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-laser-defense-equipment-6",
+    name = "bob-personal-laser-defense-equipment-6",
     icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-laser-defense-equipment-6",
+    place_as_equipment_result = "bob-personal-laser-defense-equipment-6",
     subgroup = "military-equipment",
     order = "d[active-defense]-a[personal-laser-defense-equipment-6]",
     stack_size = 20,
@@ -550,10 +550,10 @@ data:extend({
 
   {
     type = "item",
-    name = "exoskeleton-equipment-2",
+    name = "bob-exoskeleton-equipment-2",
     icon = "__base__/graphics/icons/exoskeleton-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "exoskeleton-equipment-2",
+    place_as_equipment_result = "bob-exoskeleton-equipment-2",
     subgroup = "equipment",
     order = "e[exoskeleton]-a[exoskeleton-equipment-2]",
     stack_size = 20,
@@ -572,10 +572,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "exoskeleton-equipment-3",
+    name = "bob-exoskeleton-equipment-3",
     icon = "__base__/graphics/icons/exoskeleton-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "exoskeleton-equipment-3",
+    place_as_equipment_result = "bob-exoskeleton-equipment-3",
     subgroup = "equipment",
     order = "e[exoskeleton]-a[exoskeleton-equipment-3]",
     stack_size = 20,

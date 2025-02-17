@@ -1,10 +1,10 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-motor-equipment",
+    name = "bob-vehicle-motor-equipment",
     icon = "__bobvehicleequipment__/graphics/equipment/vehicle-motor-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-motor-equipment",
+    place_as_equipment_result = "bob-vehicle-motor-equipment",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-e[vehicle-motor-1]",
     stack_size = 50,
@@ -24,7 +24,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-motor-equipment",
+    name = "bob-vehicle-motor-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -32,12 +32,12 @@ data:extend({
       { type = "item", name = "electric-engine-unit", amount = 30 },
       { type = "item", name = "steel-plate", amount = 20 },
     },
-    results = { { type = "item", name = "vehicle-motor-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-vehicle-motor-equipment", amount = 1 } },
   },
 
   {
     type = "movement-bonus-equipment",
-    name = "vehicle-motor-equipment",
+    name = "bob-vehicle-motor-equipment",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-motor-equipment.png",
       width = 64,
@@ -62,13 +62,13 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-motor-equipment",
+    name = "bob-vehicle-motor-equipment",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-motor-equipment.png",
       icon_size = 128,
     }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-solar-panel-equipment-1",
+      "bob-vehicle-solar-panel-equipment-1",
       "electric-engine",
       "processing-unit",
     },
@@ -84,7 +84,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-motor-equipment",
+        recipe = "bob-vehicle-motor-equipment",
       },
     },
   },
@@ -93,10 +93,10 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-engine-equipment",
+    name = "bob-vehicle-engine-equipment",
     icon = "__bobvehicleequipment__/graphics/equipment/vehicle-engine-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "vehicle-engine-equipment",
+    place_as_equipment_result = "bob-vehicle-engine-equipment",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-e[vehicle-motor-2]",
     stack_size = 50,
@@ -116,22 +116,22 @@ data:extend({
 
   {
     type = "recipe",
-    name = "vehicle-engine-equipment",
+    name = "bob-vehicle-engine-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "vehicle-motor-equipment", amount = 1 },
+      { type = "item", name = "bob-vehicle-motor-equipment", amount = 1 },
       --      { type = "item", name = "electric-engine-unit", amount = 30},
       { type = "item", name = "processing-unit", amount = 10 },
       { type = "item", name = "iron-gear-wheel", amount = 30 },
       { type = "item", name = "steel-plate", amount = 20 },
     },
-    results = { { type = "item", name = "vehicle-engine-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-vehicle-engine-equipment", amount = 1 } },
   },
 
   {
     type = "movement-bonus-equipment",
-    name = "vehicle-engine-equipment",
+    name = "bob-vehicle-engine-equipment",
     sprite = {
       filename = "__bobvehicleequipment__/graphics/equipment/vehicle-engine-equipment.png",
       width = 64,
@@ -156,14 +156,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "vehicle-engine-equipment",
+    name = "bob-vehicle-engine-equipment",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobvehicleequipment__/graphics/technology/vehicle-engine-equipment.png",
       icon_size = 128,
     }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "production-science-pack",
-      "vehicle-motor-equipment",
+      "bob-vehicle-motor-equipment",
     },
     unit = {
       count = 100,
@@ -178,7 +178,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-engine-equipment",
+        recipe = "bob-vehicle-engine-equipment",
       },
     },
   },

@@ -108,36 +108,36 @@ bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-gear-w
 bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-bearing-ball")
 bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-bearing")
 
-if data.raw.technology["alien-research"] then
-  bobmods.lib.tech.add_prerequisite("bob-alien-blue-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("bob-alien-orange-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("bob-alien-purple-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("bob-alien-yellow-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("bob-alien-green-research", "alien-research")
-  bobmods.lib.tech.add_prerequisite("bob-alien-red-research", "alien-research")
+if data.raw.technology["bob-alien-research"] then
+  bobmods.lib.tech.add_prerequisite("bob-alien-blue-research", "bob-alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-orange-research", "bob-alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-purple-research", "bob-alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-yellow-research", "bob-alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-green-research", "bob-alien-research")
+  bobmods.lib.tech.add_prerequisite("bob-alien-red-research", "bob-alien-research")
 end
 
 if
-  data.raw.tool["science-pack-gold"]
-  and data.raw.tool["alien-science-pack-blue"]
-  and data.raw.tool["alien-science-pack-orange"]
-  and data.raw.tool["alien-science-pack-purple"]
-  and data.raw.tool["alien-science-pack-yellow"]
-  and data.raw.tool["alien-science-pack-green"]
-  and data.raw.tool["alien-science-pack-red"]
+  data.raw.tool["bob-science-pack-gold"]
+  and data.raw.tool["bob-alien-science-pack-blue"]
+  and data.raw.tool["bob-alien-science-pack-orange"]
+  and data.raw.tool["bob-alien-science-pack-purple"]
+  and data.raw.tool["bob-alien-science-pack-yellow"]
+  and data.raw.tool["bob-alien-science-pack-green"]
+  and data.raw.tool["bob-alien-science-pack-red"]
 then
   data.raw.technology["bob-alien-blue-research"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack-blue", 1 } }
+    { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-blue", 1 } }
   data.raw.technology["bob-alien-orange-research"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack-orange", 1 } }
+    { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-orange", 1 } }
   data.raw.technology["bob-alien-purple-research"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack-purple", 1 } }
+    { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-purple", 1 } }
   data.raw.technology["bob-alien-yellow-research"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack-yellow", 1 } }
+    { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-yellow", 1 } }
   data.raw.technology["bob-alien-green-research"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack-green", 1 } }
+    { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-green", 1 } }
   data.raw.technology["bob-alien-red-research"].unit.ingredients =
-    { { "science-pack-gold", 1 }, { "alien-science-pack-red", 1 } }
+    { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-red", 1 } }
 end
 
 bobmods.lib.tech.remove_science_pack("nuclear-fuel-reprocessing", "production-science-pack")

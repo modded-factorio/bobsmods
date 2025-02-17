@@ -131,7 +131,7 @@ data:extend({
         percent = 30,
       },
       {
-        type = "plasma",
+        type = "bob-plasma",
         decrease = 20,
         percent = 50,
       },
@@ -219,7 +219,7 @@ data:extend({
         percent = 35,
       },
       {
-        type = "plasma",
+        type = "bob-plasma",
         decrease = 25,
         percent = 75,
       },
@@ -298,7 +298,7 @@ data:extend({
         percent = 45,
       },
       {
-        type = "plasma",
+        type = "bob-plasma",
         percent = 100,
       },
     },

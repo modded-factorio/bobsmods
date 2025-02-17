@@ -30,11 +30,11 @@ data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 
 data:extend({
   {
     type = "item",
-    name = "personal-roboport-mk3-equipment",
+    name = "bob-personal-roboport-mk3-equipment",
     localised_description = { "item-description.personal-roboport-equipment" },
     icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-roboport-mk3-equipment",
+    place_as_equipment_result = "bob-personal-roboport-mk3-equipment",
     subgroup = "utility-equipment",
     order = "e[robotics]-b[personal-roboport-mk3-equipment]",
     stack_size = 20,
@@ -53,11 +53,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-mk4-equipment",
+    name = "bob-personal-roboport-mk4-equipment",
     localised_description = { "item-description.personal-roboport-equipment" },
     icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
     icon_size = 128,
-    place_as_equipment_result = "personal-roboport-mk4-equipment",
+    place_as_equipment_result = "bob-personal-roboport-mk4-equipment",
     subgroup = "utility-equipment",
     order = "e[robotics]-b[personal-roboport-mk4-equipment]",
     stack_size = 20,
@@ -77,7 +77,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "personal-roboport-mk3-equipment",
+    name = "bob-personal-roboport-mk3-equipment",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -87,27 +87,27 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "personal-roboport-mk3-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-mk4-equipment",
+    name = "bob-personal-roboport-mk4-equipment",
     enabled = false,
     energy_required = 40,
     ingredients = {
-      { type = "item", name = "personal-roboport-mk3-equipment", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-mk3-equipment", amount = 1 },
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "iron-gear-wheel", amount = 40 },
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "personal-roboport-mk4-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-mk4-equipment", amount = 1 } },
   },
 
   {
     type = "roboport-equipment",
-    name = "personal-roboport-mk3-equipment",
-    take_result = "personal-roboport-mk3-equipment",
+    name = "bob-personal-roboport-mk3-equipment",
+    take_result = "bob-personal-roboport-mk3-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
       width = 128,
@@ -149,8 +149,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-mk4-equipment",
-    take_result = "personal-roboport-mk4-equipment",
+    name = "bob-personal-roboport-mk4-equipment",
+    take_result = "bob-personal-roboport-mk4-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
       width = 128,
@@ -193,7 +193,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "personal-roboport-mk3-equipment",
+    name = "bob-personal-roboport-mk3-equipment",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
       icon_size = 128,
@@ -201,7 +201,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-mk3-equipment",
+        recipe = "bob-personal-roboport-mk3-equipment",
       },
     },
     prerequisites = {
@@ -222,7 +222,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "personal-roboport-mk4-equipment",
+    name = "bob-personal-roboport-mk4-equipment",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
       icon_size = 128,
@@ -230,11 +230,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-mk4-equipment",
+        recipe = "bob-personal-roboport-mk4-equipment",
       },
     },
     prerequisites = {
-      "personal-roboport-mk3-equipment",
+      "bob-personal-roboport-mk3-equipment",
       "production-science-pack",
     },
     unit = {
@@ -254,7 +254,7 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "personal-roboport-antenna-equipment",
+    name = "bob-personal-roboport-antenna-equipment",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -265,7 +265,7 @@ data:extend({
         icon_size = 32,
       },
     },
-    place_as_equipment_result = "personal-roboport-antenna-equipment",
+    place_as_equipment_result = "bob-personal-roboport-antenna-equipment",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-1]",
     stack_size = 20,
@@ -285,7 +285,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-antenna-equipment-2",
+    name = "bob-personal-roboport-antenna-equipment-2",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -296,7 +296,7 @@ data:extend({
         icon_size = 32,
       },
     },
-    place_as_equipment_result = "personal-roboport-antenna-equipment-2",
+    place_as_equipment_result = "bob-personal-roboport-antenna-equipment-2",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-2]",
     stack_size = 20,
@@ -316,7 +316,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-antenna-equipment-3",
+    name = "bob-personal-roboport-antenna-equipment-3",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -327,7 +327,7 @@ data:extend({
         icon_size = 32,
       },
     },
-    place_as_equipment_result = "personal-roboport-antenna-equipment-3",
+    place_as_equipment_result = "bob-personal-roboport-antenna-equipment-3",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-3]",
     stack_size = 20,
@@ -347,7 +347,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-antenna-equipment-4",
+    name = "bob-personal-roboport-antenna-equipment-4",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -358,7 +358,7 @@ data:extend({
         icon_size = 32,
       },
     },
-    place_as_equipment_result = "personal-roboport-antenna-equipment-4",
+    place_as_equipment_result = "bob-personal-roboport-antenna-equipment-4",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-antenna-4]",
     stack_size = 20,
@@ -379,7 +379,7 @@ data:extend({
 
   {
     type = "item",
-    name = "personal-roboport-chargepad-equipment",
+    name = "bob-personal-roboport-chargepad-equipment",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -391,7 +391,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-chargepad-equipment",
+    place_as_equipment_result = "bob-personal-roboport-chargepad-equipment",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-1]",
     stack_size = 20,
@@ -411,7 +411,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-chargepad-equipment-2",
+    name = "bob-personal-roboport-chargepad-equipment-2",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -423,7 +423,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-chargepad-equipment-2",
+    place_as_equipment_result = "bob-personal-roboport-chargepad-equipment-2",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-2]",
     stack_size = 20,
@@ -443,7 +443,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-chargepad-equipment-3",
+    name = "bob-personal-roboport-chargepad-equipment-3",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -455,7 +455,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-chargepad-equipment-3",
+    place_as_equipment_result = "bob-personal-roboport-chargepad-equipment-3",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-3]",
     stack_size = 20,
@@ -475,7 +475,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-chargepad-equipment-4",
+    name = "bob-personal-roboport-chargepad-equipment-4",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -487,7 +487,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-chargepad-equipment-4",
+    place_as_equipment_result = "bob-personal-roboport-chargepad-equipment-4",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-chargepad-4]",
     stack_size = 20,
@@ -508,7 +508,7 @@ data:extend({
 
   {
     type = "item",
-    name = "personal-roboport-robot-equipment",
+    name = "bob-personal-roboport-robot-equipment",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -520,7 +520,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-robot-equipment",
+    place_as_equipment_result = "bob-personal-roboport-robot-equipment",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-1]",
     stack_size = 20,
@@ -540,7 +540,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-robot-equipment-2",
+    name = "bob-personal-roboport-robot-equipment-2",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -552,7 +552,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-robot-equipment-2",
+    place_as_equipment_result = "bob-personal-roboport-robot-equipment-2",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-2]",
     stack_size = 20,
@@ -572,7 +572,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-robot-equipment-3",
+    name = "bob-personal-roboport-robot-equipment-3",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -584,7 +584,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-robot-equipment-3",
+    place_as_equipment_result = "bob-personal-roboport-robot-equipment-3",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-3]",
     stack_size = 20,
@@ -604,7 +604,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "personal-roboport-robot-equipment-4",
+    name = "bob-personal-roboport-robot-equipment-4",
     icons = {
       {
         icon = "__bobequipment__/graphics/icons/personal-roboport-equipment-base.png",
@@ -616,7 +616,7 @@ data:extend({
         scale = 0.75,
       },
     },
-    place_as_equipment_result = "personal-roboport-robot-equipment-4",
+    place_as_equipment_result = "bob-personal-roboport-robot-equipment-4",
     subgroup = "utility-equipment",
     order = "e[robotics]-a[personal-roboport-equipment-robot-4]",
     stack_size = 20,
@@ -637,8 +637,8 @@ data:extend({
 
   {
     type = "roboport-equipment",
-    name = "personal-roboport-antenna-equipment",
-    take_result = "personal-roboport-antenna-equipment",
+    name = "bob-personal-roboport-antenna-equipment",
+    take_result = "bob-personal-roboport-antenna-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-antenna.png",
       width = 32,
@@ -681,8 +681,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-antenna-equipment-2",
-    take_result = "personal-roboport-antenna-equipment-2",
+    name = "bob-personal-roboport-antenna-equipment-2",
+    take_result = "bob-personal-roboport-antenna-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-antenna-2.png",
       width = 32,
@@ -725,8 +725,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-antenna-equipment-3",
-    take_result = "personal-roboport-antenna-equipment-3",
+    name = "bob-personal-roboport-antenna-equipment-3",
+    take_result = "bob-personal-roboport-antenna-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-antenna-3.png",
       width = 32,
@@ -769,8 +769,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-antenna-equipment-4",
-    take_result = "personal-roboport-antenna-equipment-4",
+    name = "bob-personal-roboport-antenna-equipment-4",
+    take_result = "bob-personal-roboport-antenna-equipment-4",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-antenna-4.png",
       width = 32,
@@ -814,8 +814,8 @@ data:extend({
 
   {
     type = "roboport-equipment",
-    name = "personal-roboport-chargepad-equipment",
-    take_result = "personal-roboport-chargepad-equipment",
+    name = "bob-personal-roboport-chargepad-equipment",
+    take_result = "bob-personal-roboport-chargepad-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-chargepad.png",
       width = 32,
@@ -857,8 +857,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-chargepad-equipment-2",
-    take_result = "personal-roboport-chargepad-equipment-2",
+    name = "bob-personal-roboport-chargepad-equipment-2",
+    take_result = "bob-personal-roboport-chargepad-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-chargepad-2.png",
       width = 32,
@@ -900,8 +900,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-chargepad-equipment-3",
-    take_result = "personal-roboport-chargepad-equipment-3",
+    name = "bob-personal-roboport-chargepad-equipment-3",
+    take_result = "bob-personal-roboport-chargepad-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-chargepad-3.png",
       width = 32,
@@ -943,8 +943,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-chargepad-equipment-4",
-    take_result = "personal-roboport-chargepad-equipment-4",
+    name = "bob-personal-roboport-chargepad-equipment-4",
+    take_result = "bob-personal-roboport-chargepad-equipment-4",
     sprite = {
       filename = "__bobequipment__/graphics/icons/roboport-chargepad-4.png",
       width = 32,
@@ -987,8 +987,8 @@ data:extend({
 
   {
     type = "roboport-equipment",
-    name = "personal-roboport-robot-equipment",
-    take_result = "personal-roboport-robot-equipment",
+    name = "bob-personal-roboport-robot-equipment",
+    take_result = "bob-personal-roboport-robot-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/icons/construction-robot-1.png",
       width = 32,
@@ -1031,8 +1031,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-robot-equipment-2",
-    take_result = "personal-roboport-robot-equipment-2",
+    name = "bob-personal-roboport-robot-equipment-2",
+    take_result = "bob-personal-roboport-robot-equipment-2",
     sprite = {
       filename = "__bobequipment__/graphics/icons/construction-robot-2.png",
       width = 32,
@@ -1075,8 +1075,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-robot-equipment-3",
-    take_result = "personal-roboport-robot-equipment-3",
+    name = "bob-personal-roboport-robot-equipment-3",
+    take_result = "bob-personal-roboport-robot-equipment-3",
     sprite = {
       filename = "__bobequipment__/graphics/icons/construction-robot-3.png",
       width = 32,
@@ -1119,8 +1119,8 @@ data:extend({
   },
   {
     type = "roboport-equipment",
-    name = "personal-roboport-robot-equipment-4",
-    take_result = "personal-roboport-robot-equipment-4",
+    name = "bob-personal-roboport-robot-equipment-4",
+    take_result = "bob-personal-roboport-robot-equipment-4",
     sprite = {
       filename = "__bobequipment__/graphics/icons/construction-robot-4.png",
       width = 32,
@@ -1164,7 +1164,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "personal-roboport-antenna-equipment",
+    name = "bob-personal-roboport-antenna-equipment",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -1172,51 +1172,51 @@ data:extend({
       { type = "item", name = "iron-gear-wheel", amount = 20 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-antenna-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-antenna-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-antenna-equipment-2",
+    name = "bob-personal-roboport-antenna-equipment-2",
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { type = "item", name = "personal-roboport-antenna-equipment", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-antenna-equipment", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 20 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-antenna-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-antenna-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-antenna-equipment-3",
+    name = "bob-personal-roboport-antenna-equipment-3",
     enabled = false,
     energy_required = 12,
     ingredients = {
-      { type = "item", name = "personal-roboport-antenna-equipment-2", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-antenna-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 20 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-antenna-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-antenna-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-antenna-equipment-4",
+    name = "bob-personal-roboport-antenna-equipment-4",
     enabled = false,
     energy_required = 16,
     ingredients = {
-      { type = "item", name = "personal-roboport-antenna-equipment-3", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-antenna-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "iron-gear-wheel", amount = 20 },
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-antenna-equipment-4", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-antenna-equipment-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "personal-roboport-chargepad-equipment",
+    name = "bob-personal-roboport-chargepad-equipment",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -1224,95 +1224,95 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "personal-roboport-chargepad-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-chargepad-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-chargepad-equipment-2",
+    name = "bob-personal-roboport-chargepad-equipment-2",
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { type = "item", name = "personal-roboport-chargepad-equipment", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-chargepad-equipment", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "personal-roboport-chargepad-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-chargepad-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-chargepad-equipment-3",
+    name = "bob-personal-roboport-chargepad-equipment-3",
     enabled = false,
     energy_required = 12,
     ingredients = {
-      { type = "item", name = "personal-roboport-chargepad-equipment-2", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-chargepad-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "personal-roboport-chargepad-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-chargepad-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-chargepad-equipment-4",
+    name = "bob-personal-roboport-chargepad-equipment-4",
     enabled = false,
     energy_required = 16,
     ingredients = {
-      { type = "item", name = "personal-roboport-chargepad-equipment-3", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-chargepad-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "battery", amount = 20 },
     },
-    results = { { type = "item", name = "personal-roboport-chargepad-equipment-4", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-chargepad-equipment-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "personal-roboport-robot-equipment",
+    name = "bob-personal-roboport-robot-equipment",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "electronic-circuit", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-robot-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-robot-equipment", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-robot-equipment-2",
+    name = "bob-personal-roboport-robot-equipment-2",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "personal-roboport-robot-equipment", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-robot-equipment", amount = 1 },
       { type = "item", name = "advanced-circuit", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-robot-equipment-2", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-robot-equipment-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-robot-equipment-3",
+    name = "bob-personal-roboport-robot-equipment-3",
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { type = "item", name = "personal-roboport-robot-equipment-2", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-robot-equipment-2", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-robot-equipment-3", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-robot-equipment-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "personal-roboport-robot-equipment-4",
+    name = "bob-personal-roboport-robot-equipment-4",
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { type = "item", name = "personal-roboport-robot-equipment-3", amount = 1 },
+      { type = "item", name = "bob-personal-roboport-robot-equipment-3", amount = 1 },
       { type = "item", name = "processing-unit", amount = 10 },
     },
-    results = { { type = "item", name = "personal-roboport-robot-equipment-4", amount = 1 } },
+    results = { { type = "item", name = "bob-personal-roboport-robot-equipment-4", amount = 1 } },
   },
 
   {
     type = "technology",
-    name = "personal-roboport-modular-equipment-1",
+    name = "bob-personal-roboport-modular-equipment-1",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
@@ -1320,15 +1320,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-antenna-equipment",
+        recipe = "bob-personal-roboport-antenna-equipment",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-chargepad-equipment",
+        recipe = "bob-personal-roboport-chargepad-equipment",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-robot-equipment",
+        recipe = "bob-personal-roboport-robot-equipment",
       },
     },
     prerequisites = {
@@ -1346,7 +1346,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "personal-roboport-modular-equipment-2",
+    name = "bob-personal-roboport-modular-equipment-2",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
@@ -1354,19 +1354,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-antenna-equipment-2",
+        recipe = "bob-personal-roboport-antenna-equipment-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-chargepad-equipment-2",
+        recipe = "bob-personal-roboport-chargepad-equipment-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-robot-equipment-2",
+        recipe = "bob-personal-roboport-robot-equipment-2",
       },
     },
     prerequisites = {
-      "personal-roboport-modular-equipment-1",
+      "bob-personal-roboport-modular-equipment-1",
       "personal-roboport-mk2-equipment",
     },
     unit = {
@@ -1381,7 +1381,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "personal-roboport-modular-equipment-3",
+    name = "bob-personal-roboport-modular-equipment-3",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
@@ -1389,20 +1389,20 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-antenna-equipment-3",
+        recipe = "bob-personal-roboport-antenna-equipment-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-chargepad-equipment-3",
+        recipe = "bob-personal-roboport-chargepad-equipment-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-robot-equipment-3",
+        recipe = "bob-personal-roboport-robot-equipment-3",
       },
     },
     prerequisites = {
-      "personal-roboport-modular-equipment-2",
-      "personal-roboport-mk3-equipment",
+      "bob-personal-roboport-modular-equipment-2",
+      "bob-personal-roboport-mk3-equipment",
     },
     unit = {
       count = 150,
@@ -1417,7 +1417,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "personal-roboport-modular-equipment-4",
+    name = "bob-personal-roboport-modular-equipment-4",
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
@@ -1425,20 +1425,20 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-antenna-equipment-4",
+        recipe = "bob-personal-roboport-antenna-equipment-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-chargepad-equipment-4",
+        recipe = "bob-personal-roboport-chargepad-equipment-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "personal-roboport-robot-equipment-4",
+        recipe = "bob-personal-roboport-robot-equipment-4",
       },
     },
     prerequisites = {
-      "personal-roboport-modular-equipment-3",
-      "personal-roboport-mk4-equipment",
+      "bob-personal-roboport-modular-equipment-3",
+      "bob-personal-roboport-mk4-equipment",
     },
     unit = {
       count = 200,

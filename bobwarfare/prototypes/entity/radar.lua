@@ -3,10 +3,10 @@ data.raw["radar"]["radar"].fast_replaceable_group = "radar"
 data:extend({
   {
     type = "radar",
-    name = "radar-2",
+    name = "bob-radar-2",
     icon = "__base__/graphics/icons/radar.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "radar-2" },
+    minable = { mining_time = 0.5, result = "bob-radar-2" },
     fast_replaceable_group = "radar",
     max_health = 300,
     corpse = "big-remnants",
@@ -108,10 +108,10 @@ data:extend({
 
   {
     type = "radar",
-    name = "radar-3",
+    name = "bob-radar-3",
     icon = "__base__/graphics/icons/radar.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "radar-3" },
+    minable = { mining_time = 0.5, result = "bob-radar-3" },
     fast_replaceable_group = "radar",
     max_health = 350,
     corpse = "big-remnants",
@@ -213,10 +213,10 @@ data:extend({
 
   {
     type = "radar",
-    name = "radar-4",
+    name = "bob-radar-4",
     icon = "__base__/graphics/icons/radar.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "radar-4" },
+    minable = { mining_time = 0.5, result = "bob-radar-4" },
     fast_replaceable_group = "radar",
     max_health = 400,
     corpse = "big-remnants",
@@ -318,10 +318,10 @@ data:extend({
 
   {
     type = "radar",
-    name = "radar-5",
+    name = "bob-radar-5",
     icon = "__base__/graphics/icons/radar.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "radar-5" },
+    minable = { mining_time = 0.5, result = "bob-radar-5" },
     fast_replaceable_group = "radar",
     max_health = 450,
     corpse = "big-remnants",

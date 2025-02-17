@@ -11,23 +11,23 @@ local chest_pick = {
 }
 
 if data.raw.item["bob-brass-alloy"] then
-  data.raw.container["steel-chest"].next_upgrade = "brass-chest"
+  data.raw.container["steel-chest"].next_upgrade = "bob-brass-chest"
   data:extend({
     {
       type = "recipe",
-      name = "brass-chest",
+      name = "bob-brass-chest",
       enabled = false,
       ingredients = { { type = "item", name = "bob-brass-alloy", amount = 8 } },
-      results = { { type = "item", name = "brass-chest", amount = 1 } },
+      results = { { type = "item", name = "bob-brass-chest", amount = 1 } },
     },
     {
       type = "item",
-      name = "brass-chest",
+      name = "bob-brass-chest",
       icon = "__boblogistics__/graphics/icons/brass-chest.png",
       icon_size = 32,
       subgroup = "storage",
       order = "a[items]-d[brass-chest]",
-      place_result = "brass-chest",
+      place_result = "bob-brass-chest",
       stack_size = 50,
       drop_sound = chest_drop_move,
       inventory_move_sound = chest_drop_move,
@@ -35,11 +35,11 @@ if data.raw.item["bob-brass-alloy"] then
     },
     {
       type = "container",
-      name = "brass-chest",
+      name = "bob-brass-chest",
       icon = "__boblogistics__/graphics/icons/brass-chest.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "brass-chest" },
+      minable = { mining_time = 1, result = "bob-brass-chest" },
       max_health = 500,
       corpse = "small-remnants",
       open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
@@ -57,7 +57,7 @@ if data.raw.item["bob-brass-alloy"] then
       collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fast_replaceable_group = "container",
-      next_upgrade = "titanium-chest",
+      next_upgrade = "bob-titanium-chest",
       inventory_size = 64,
       impact_category = "metal",
       picture = {
@@ -77,19 +77,19 @@ if data.raw.item["bob-titanium-plate"] then
   data:extend({
     {
       type = "recipe",
-      name = "titanium-chest",
+      name = "bob-titanium-chest",
       enabled = false,
       ingredients = { { type = "item", name = "bob-titanium-plate", amount = 8 } },
-      results = { { type = "item", name = "titanium-chest", amount = 1 } },
+      results = { { type = "item", name = "bob-titanium-chest", amount = 1 } },
     },
     {
       type = "item",
-      name = "titanium-chest",
+      name = "bob-titanium-chest",
       icon = "__boblogistics__/graphics/icons/titanium-chest.png",
       icon_size = 64,
       subgroup = "storage",
       order = "a[items]-e[titanium-chest]",
-      place_result = "titanium-chest",
+      place_result = "bob-titanium-chest",
       stack_size = 50,
       drop_sound = chest_drop_move,
       inventory_move_sound = chest_drop_move,
@@ -97,11 +97,11 @@ if data.raw.item["bob-titanium-plate"] then
     },
     {
       type = "container",
-      name = "titanium-chest",
+      name = "bob-titanium-chest",
       icon = "__boblogistics__/graphics/icons/titanium-chest.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "titanium-chest" },
+      minable = { mining_time = 1, result = "bob-titanium-chest" },
       max_health = 650,
       corpse = "small-remnants",
       open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },

@@ -459,7 +459,7 @@ script.on_event(defines.events.on_built_entity, function(event)
     and entity.name == "long-handed-inserter"
   then
     entity.surface.create_entity({
-      name = "red-inserter",
+      name = "bob-red-inserter",
       position = entity.position,
       force = entity.force,
       direction = entity.direction,
@@ -477,7 +477,7 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
     and entity.name == "long-handed-inserter"
   then
     entity.surface.create_entity({
-      name = "red-inserter",
+      name = "bob-red-inserter",
       position = entity.position,
       force = entity.force,
       direction = entity.direction,

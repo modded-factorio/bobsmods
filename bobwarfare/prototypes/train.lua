@@ -45,7 +45,7 @@ data.raw["artillery-wagon"]["artillery-wagon"].resistances = {
     percent = 90,
   },
   {
-    type = "plasma",
+    type = "bob-plasma",
     decrease = 25,
     percent = 90,
   },

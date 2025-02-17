@@ -19,7 +19,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
   data:extend({
     {
       type = "item",
-      name = "robot-brain-combat",
+      name = "bob-robot-brain-combat",
       icon = "__bobwarfare__/graphics/icons/robot-brain-combat.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -32,7 +32,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-brain-combat-2",
+      name = "bob-robot-brain-combat-2",
       icon = "__bobwarfare__/graphics/icons/robot-brain-combat-2.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -45,7 +45,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-brain-combat-3",
+      name = "bob-robot-brain-combat-3",
       icon = "__bobwarfare__/graphics/icons/robot-brain-combat-3.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -58,7 +58,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-brain-combat-4",
+      name = "bob-robot-brain-combat-4",
       icon = "__bobwarfare__/graphics/icons/robot-brain-combat-4.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -71,7 +71,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-tool-combat",
+      name = "bob-robot-tool-combat",
       icon = "__bobwarfare__/graphics/icons/robot-tool-combat.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -84,7 +84,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-tool-combat-2",
+      name = "bob-robot-tool-combat-2",
       icon = "__bobwarfare__/graphics/icons/robot-tool-combat.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -97,7 +97,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-tool-combat-3",
+      name = "bob-robot-tool-combat-3",
       icon = "__bobwarfare__/graphics/icons/robot-tool-combat.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -110,7 +110,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
 
     {
       type = "item",
-      name = "robot-tool-combat-4",
+      name = "bob-robot-tool-combat-4",
       icon = "__bobwarfare__/graphics/icons/robot-tool-combat.png",
       icon_size = 32,
       subgroup = "bob-robot-parts",
@@ -125,91 +125,91 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
   data:extend({
     {
       type = "recipe",
-      name = "robot-brain-combat",
+      name = "bob-robot-brain-combat",
       energy_required = 5,
       enabled = false,
       ingredients = {
         { type = "item", name = "electronic-circuit", amount = 2 },
       },
-      results = { { type = "item", name = "robot-brain-combat", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-brain-combat", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-brain-combat-2",
+      name = "bob-robot-brain-combat-2",
       energy_required = 10,
       enabled = false,
       ingredients = {
         { type = "item", name = "electronic-circuit", amount = 1 },
         { type = "item", name = "advanced-circuit", amount = 1 },
       },
-      results = { { type = "item", name = "robot-brain-combat-2", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-brain-combat-2", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-brain-combat-3",
+      name = "bob-robot-brain-combat-3",
       energy_required = 15,
       enabled = false,
       ingredients = {
         { type = "item", name = "advanced-circuit", amount = 1 },
         { type = "item", name = "processing-unit", amount = 1 },
       },
-      results = { { type = "item", name = "robot-brain-combat-3", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-brain-combat-3", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-brain-combat-4",
+      name = "bob-robot-brain-combat-4",
       energy_required = 20,
       enabled = false,
       ingredients = {
         { type = "item", name = "processing-unit", amount = 2 },
       },
-      results = { { type = "item", name = "robot-brain-combat-4", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-brain-combat-4", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-tool-combat",
+      name = "bob-robot-tool-combat",
       energy_required = 1,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "robot-tool-combat", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-combat", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-tool-combat-2",
+      name = "bob-robot-tool-combat-2",
       energy_required = 2,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "robot-tool-combat-2", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-combat-2", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-tool-combat-3",
+      name = "bob-robot-tool-combat-3",
       energy_required = 3,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "robot-tool-combat-3", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-combat-3", amount = 1 } },
       allow_productivity = true,
     },
 
     {
       type = "recipe",
-      name = "robot-tool-combat-4",
+      name = "bob-robot-tool-combat-4",
       energy_required = 4,
       enabled = false,
       ingredients = {},
-      results = { { type = "item", name = "robot-tool-combat-4", amount = 1 } },
+      results = { { type = "item", name = "bob-robot-tool-combat-4", amount = 1 } },
       allow_productivity = true,
     },
   })

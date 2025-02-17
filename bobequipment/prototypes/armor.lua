@@ -132,7 +132,7 @@ if not mods["bobwarfare"] then
           percent = 30,
         },
         {
-          type = "plasma",
+          type = "bob-plasma",
           decrease = 20,
           percent = 50,
         },
@@ -220,7 +220,7 @@ if not mods["bobwarfare"] then
           percent = 35,
         },
         {
-          type = "plasma",
+          type = "bob-plasma",
           decrease = 25,
           percent = 75,
         },
@@ -299,7 +299,7 @@ if not mods["bobwarfare"] then
           percent = 45,
         },
         {
-          type = "plasma",
+          type = "bob-plasma",
           percent = 100,
         },
       },

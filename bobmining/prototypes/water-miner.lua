@@ -2,12 +2,12 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
   data:extend({
     {
       type = "item",
-      name = "water-miner-1",
+      name = "bob-water-miner-1",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       subgroup = "extraction-machine",
       order = "b[fluids]-c[water-miner-1]",
-      place_result = "water-miner-1",
+      place_result = "bob-water-miner-1",
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
@@ -24,12 +24,12 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     },
     {
       type = "item",
-      name = "water-miner-2",
+      name = "bob-water-miner-2",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       subgroup = "extraction-machine",
       order = "b[fluids]-c[water-miner-2]",
-      place_result = "water-miner-2",
+      place_result = "bob-water-miner-2",
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
@@ -46,12 +46,12 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     },
     {
       type = "item",
-      name = "water-miner-3",
+      name = "bob-water-miner-3",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       subgroup = "extraction-machine",
       order = "b[fluids]-c[water-miner-3]",
-      place_result = "water-miner-3",
+      place_result = "bob-water-miner-3",
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
@@ -68,12 +68,12 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     },
     {
       type = "item",
-      name = "water-miner-4",
+      name = "bob-water-miner-4",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       subgroup = "extraction-machine",
       order = "b[fluids]-c[water-miner-4]",
-      place_result = "water-miner-4",
+      place_result = "bob-water-miner-4",
       stack_size = 20,
       drop_sound = {
         filename = "__base__/sound/item/pumpjack-inventory-move.ogg",
@@ -93,7 +93,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
   data:extend({
     {
       type = "recipe",
-      name = "water-miner-1",
+      name = "bob-water-miner-1",
       energy_required = 2,
       ingredients = {
         { type = "item", name = "iron-plate", amount = 10 },
@@ -101,49 +101,49 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         { type = "item", name = "electronic-circuit", amount = 5 },
         { type = "item", name = "pipe", amount = 10 },
       },
-      results = { { type = "item", name = "water-miner-1", amount = 1 } },
+      results = { { type = "item", name = "bob-water-miner-1", amount = 1 } },
       enabled = false,
     },
     {
       type = "recipe",
-      name = "water-miner-2",
+      name = "bob-water-miner-2",
       energy_required = 2,
       ingredients = {
-        { type = "item", name = "water-miner-1", amount = 1 },
+        { type = "item", name = "bob-water-miner-1", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
         { type = "item", name = "electronic-circuit", amount = 5 },
         { type = "item", name = "pipe", amount = 10 },
       },
-      results = { { type = "item", name = "water-miner-2", amount = 1 } },
+      results = { { type = "item", name = "bob-water-miner-2", amount = 1 } },
       enabled = false,
     },
     {
       type = "recipe",
-      name = "water-miner-3",
+      name = "bob-water-miner-3",
       energy_required = 2,
       ingredients = {
-        { type = "item", name = "water-miner-2", amount = 1 },
+        { type = "item", name = "bob-water-miner-2", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
         { type = "item", name = "advanced-circuit", amount = 5 },
         { type = "item", name = "pipe", amount = 10 },
       },
-      results = { { type = "item", name = "water-miner-3", amount = 1 } },
+      results = { { type = "item", name = "bob-water-miner-3", amount = 1 } },
       enabled = false,
     },
     {
       type = "recipe",
-      name = "water-miner-4",
+      name = "bob-water-miner-4",
       energy_required = 2,
       ingredients = {
-        { type = "item", name = "water-miner-3", amount = 1 },
+        { type = "item", name = "bob-water-miner-3", amount = 1 },
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
         { type = "item", name = "processing-unit", amount = 5 },
         { type = "item", name = "pipe", amount = 10 },
       },
-      results = { { type = "item", name = "water-miner-4", amount = 1 } },
+      results = { { type = "item", name = "bob-water-miner-4", amount = 1 } },
       enabled = false,
     },
   })
@@ -151,11 +151,11 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
   data:extend({
     {
       type = "mining-drill",
-      name = "water-miner-1",
+      name = "bob-water-miner-1",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "water-miner-1" },
+      minable = { mining_time = 1, result = "bob-water-miner-1" },
       resource_categories = { "water" },
       max_health = 100,
       corpse = "big-remnants",
@@ -219,15 +219,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       fast_replaceable_group = "pumpjack",
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 7.5,
-      next_upgrade = "water-miner-2",
+      next_upgrade = "bob-water-miner-2",
     },
     {
       type = "mining-drill",
-      name = "water-miner-2",
+      name = "bob-water-miner-2",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "water-miner-2" },
+      minable = { mining_time = 1, result = "bob-water-miner-2" },
       resource_categories = { "water" },
       max_health = 150,
       corpse = "big-remnants",
@@ -291,15 +291,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 10,
-      next_upgrade = "water-miner-3",
+      next_upgrade = "bob-water-miner-3",
     },
     {
       type = "mining-drill",
-      name = "water-miner-3",
+      name = "bob-water-miner-3",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "water-miner-3" },
+      minable = { mining_time = 1, result = "bob-water-miner-3" },
       resource_categories = { "water" },
       max_health = 200,
       corpse = "big-remnants",
@@ -363,15 +363,15 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       },
       circuit_connector = circuit_connector_definitions["pumpjack"],
       circuit_wire_max_distance = 12.5,
-      next_upgrade = "water-miner-4",
+      next_upgrade = "bob-water-miner-4",
     },
     {
       type = "mining-drill",
-      name = "water-miner-4",
+      name = "bob-water-miner-4",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "water-miner-4" },
+      minable = { mining_time = 1, result = "bob-water-miner-4" },
       resource_categories = { "water" },
       max_health = 250,
       corpse = "big-remnants",
@@ -441,7 +441,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
   data:extend({
     {
       type = "technology",
-      name = "water-miner-1",
+      name = "bob-water-miner-1",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       prerequisites = {
@@ -457,17 +457,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "water-miner-1",
+          recipe = "bob-water-miner-1",
         },
       },
     },
     {
       type = "technology",
-      name = "water-miner-2",
+      name = "bob-water-miner-2",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       prerequisites = {
-        "water-miner-1",
+        "bob-water-miner-1",
         "fluid-handling",
       },
       unit = {
@@ -481,17 +481,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "water-miner-2",
+          recipe = "bob-water-miner-2",
         },
       },
     },
     {
       type = "technology",
-      name = "water-miner-3",
+      name = "bob-water-miner-3",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       prerequisites = {
-        "water-miner-2",
+        "bob-water-miner-2",
         "chemical-science-pack",
       },
       unit = {
@@ -506,17 +506,17 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "water-miner-3",
+          recipe = "bob-water-miner-3",
         },
       },
     },
     {
       type = "technology",
-      name = "water-miner-4",
+      name = "bob-water-miner-4",
       icon = "__bobmining__/graphics/icons/waterdrill.png",
       icon_size = 128,
       prerequisites = {
-        "water-miner-3",
+        "bob-water-miner-3",
         "processing-unit",
         "production-science-pack",
       },
@@ -533,7 +533,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "water-miner-4",
+          recipe = "bob-water-miner-4",
         },
       },
     },

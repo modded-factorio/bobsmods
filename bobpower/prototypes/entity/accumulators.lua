@@ -69,7 +69,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
   local accumulator = data.raw["accumulator"]["accumulator"]
   accumulator.fast_replaceable_group = "accumulator"
-  accumulator.next_upgrade = "large-accumulator-2"
+  accumulator.next_upgrade = "bob-large-accumulator-2"
   accumulator.energy_source = {
     type = "electric",
     buffer_capacity = "10MJ",
@@ -77,8 +77,8 @@ if settings.startup["bobmods-power-accumulators"].value == true then
     input_flow_limit = "600kW",
     output_flow_limit = "600kW",
   }
-  accumulator.localised_name = { "entity-name.large-accumulator" }
-  accumulator.localised_description = { "entity-description.large-accumulator" }
+  accumulator.localised_name = { "entity-name.bob-large-accumulator" }
+  accumulator.localised_description = { "entity-description.bob-large-accumulator" }
   accumulator.drawing_box_vertical_extension = 1
   accumulator.chargable_graphics.picture = bobmods.power.large_accumulator_picture()
   accumulator.chargable_graphics.charge_animation = bobmods.power.large_accumulator_charge()
@@ -89,11 +89,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   data:extend({
     {
       type = "accumulator",
-      name = "fast-accumulator",
+      name = "bob-fast-accumulator",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "fast-accumulator" },
+      minable = { mining_time = 0.5, result = "bob-fast-accumulator" },
       max_health = 150,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -159,7 +159,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         max_sounds_per_prototype = 3,
       },
       fast_replaceable_group = "accumulator",
-      next_upgrade = "fast-accumulator-2",
+      next_upgrade = "bob-fast-accumulator-2",
       circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 9,
       default_output_signal = { type = "virtual", name = "signal-A" },
@@ -167,11 +167,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "slow-accumulator",
+      name = "bob-slow-accumulator",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "slow-accumulator" },
+      minable = { mining_time = 0.5, result = "bob-slow-accumulator" },
       max_health = 150,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -213,7 +213,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      next_upgrade = "slow-accumulator-2",
+      next_upgrade = "bob-slow-accumulator-2",
       circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 9,
       default_output_signal = { type = "virtual", name = "signal-A" },
@@ -221,11 +221,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "large-accumulator-2",
+      name = "bob-large-accumulator-2",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "large-accumulator-2" },
+      minable = { mining_time = 0.5, result = "bob-large-accumulator-2" },
       max_health = 250,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -267,7 +267,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      next_upgrade = "large-accumulator-3",
+      next_upgrade = "bob-large-accumulator-3",
       circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 10,
       default_output_signal = { type = "virtual", name = "signal-A" },
@@ -275,11 +275,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "fast-accumulator-2",
+      name = "bob-fast-accumulator-2",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "fast-accumulator-2" },
+      minable = { mining_time = 0.5, result = "bob-fast-accumulator-2" },
       max_health = 250,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -321,7 +321,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      next_upgrade = "fast-accumulator-3",
+      next_upgrade = "bob-fast-accumulator-3",
       circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 10,
       default_output_signal = { type = "virtual", name = "signal-A" },
@@ -329,11 +329,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "slow-accumulator-2",
+      name = "bob-slow-accumulator-2",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "slow-accumulator-2" },
+      minable = { mining_time = 0.5, result = "bob-slow-accumulator-2" },
       max_health = 250,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -375,7 +375,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
         fade_out_ticks = 30,
       },
       fast_replaceable_group = "accumulator",
-      next_upgrade = "slow-accumulator-3",
+      next_upgrade = "bob-slow-accumulator-3",
       circuit_connector = circuit_connector_definitions["accumulator"],
       circuit_wire_max_distance = 10,
       default_output_signal = { type = "virtual", name = "signal-A" },
@@ -383,11 +383,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "large-accumulator-3",
+      name = "bob-large-accumulator-3",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "large-accumulator-3" },
+      minable = { mining_time = 0.5, result = "bob-large-accumulator-3" },
       max_health = 350,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -436,11 +436,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "fast-accumulator-3",
+      name = "bob-fast-accumulator-3",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "fast-accumulator-3" },
+      minable = { mining_time = 0.5, result = "bob-fast-accumulator-3" },
       max_health = 350,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",
@@ -489,11 +489,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
 
     {
       type = "accumulator",
-      name = "slow-accumulator-3",
+      name = "bob-slow-accumulator-3",
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "slow-accumulator-3" },
+      minable = { mining_time = 0.5, result = "bob-slow-accumulator-3" },
       max_health = 350,
       corpse = "accumulator-remnants",
       dying_explosion = "accumulator-explosion",

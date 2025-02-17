@@ -15,7 +15,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
   data:extend({
     {
       type = "item",
-      name = "alien-artifact",
+      name = "bob-alien-artifact",
       icon = "__bobenemies__/graphics/icons/alien-artifact.png",
       icon_size = 64,
       subgroup = "raw-material",
@@ -43,55 +43,55 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact",
+            recipe = "bob-alien-artifact",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-red",
+            recipe = "bob-alien-artifact-red",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-red-from-small",
+            recipe = "bob-alien-artifact-red-from-small",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-orange",
+            recipe = "bob-alien-artifact-orange",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-orange-from-small",
+            recipe = "bob-alien-artifact-orange-from-small",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-yellow",
+            recipe = "bob-alien-artifact-yellow",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-yellow-from-small",
+            recipe = "bob-alien-artifact-yellow-from-small",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-green",
+            recipe = "bob-alien-artifact-green",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-green-from-small",
+            recipe = "bob-alien-artifact-green-from-small",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-blue",
+            recipe = "bob-alien-artifact-blue",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-blue-from-small",
+            recipe = "bob-alien-artifact-blue-from-small",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-purple",
+            recipe = "bob-alien-artifact-purple",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-purple-from-small",
+            recipe = "bob-alien-artifact-purple-from-small",
           },
         },
         unit = {
@@ -118,7 +118,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact",
+            recipe = "bob-alien-artifact",
           },
         },
         unit = {
@@ -145,27 +145,27 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-red",
+            recipe = "bob-alien-artifact-red",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-orange",
+            recipe = "bob-alien-artifact-orange",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-yellow",
+            recipe = "bob-alien-artifact-yellow",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-green",
+            recipe = "bob-alien-artifact-green",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-blue",
+            recipe = "bob-alien-artifact-blue",
           },
           {
             type = "unlock-recipe",
-            recipe = "alien-artifact-purple",
+            recipe = "bob-alien-artifact-purple",
           },
         },
         unit = {
@@ -185,7 +185,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     data:extend({
       {
         type = "item",
-        name = "small-alien-artifact",
+        name = "bob-small-alien-artifact",
         icon = "__bobenemies__/graphics/icons/small-alien-artifact.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -197,10 +197,10 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact",
-        results = { { type = "item", name = "alien-artifact", amount = 1 } },
+        name = "bob-alien-artifact",
+        results = { { type = "item", name = "bob-alien-artifact", amount = 1 } },
         ingredients = {
-          { type = "item", name = "small-alien-artifact", amount = 25 },
+          { type = "item", name = "bob-small-alien-artifact", amount = 25 },
         },
         energy_required = 1,
         enabled = false,
@@ -213,7 +213,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     data:extend({
       {
         type = "item",
-        name = "alien-artifact-red",
+        name = "bob-alien-artifact-red",
         icon = "__bobenemies__/graphics/icons/alien-artifact-red.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -225,13 +225,13 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact-red",
+        name = "bob-alien-artifact-red",
         results = {
-          { type = "item", name = "alien-artifact-red", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact-red", amount = 5, ignored_by_productivity = 1, ignored_by_stats = 1 },
         },
         ingredients = {
-          { type = "item", name = "alien-artifact-red", amount = 1, ignored_by_stats = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact-red", amount = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         energy_required = 1,
         enabled = false,
@@ -240,7 +240,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
       {
         type = "item",
-        name = "alien-artifact-orange",
+        name = "bob-alien-artifact-orange",
         icon = "__bobenemies__/graphics/icons/alien-artifact-orange.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -252,19 +252,19 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact-orange",
+        name = "bob-alien-artifact-orange",
         results = {
           {
             type = "item",
-            name = "alien-artifact-orange",
+            name = "bob-alien-artifact-orange",
             amount = 5,
             ignored_by_productivity = 1,
             ignored_by_stats = 1,
           },
         },
         ingredients = {
-          { type = "item", name = "alien-artifact-orange", amount = 1, ignored_by_stats = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact-orange", amount = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         energy_required = 1,
         enabled = false,
@@ -273,7 +273,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
       {
         type = "item",
-        name = "alien-artifact-yellow",
+        name = "bob-alien-artifact-yellow",
         icon = "__bobenemies__/graphics/icons/alien-artifact-yellow.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -285,19 +285,19 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact-yellow",
+        name = "bob-alien-artifact-yellow",
         results = {
           {
             type = "item",
-            name = "alien-artifact-yellow",
+            name = "bob-alien-artifact-yellow",
             amount = 5,
             ignored_by_productivity = 1,
             ignored_by_stats = 1,
           },
         },
         ingredients = {
-          { type = "item", name = "alien-artifact-yellow", amount = 1, ignored_by_stats = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact-yellow", amount = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         energy_required = 1,
         enabled = false,
@@ -306,7 +306,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
       {
         type = "item",
-        name = "alien-artifact-green",
+        name = "bob-alien-artifact-green",
         icon = "__bobenemies__/graphics/icons/alien-artifact-green.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -318,19 +318,19 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact-green",
+        name = "bob-alien-artifact-green",
         results = {
           {
             type = "item",
-            name = "alien-artifact-green",
+            name = "bob-alien-artifact-green",
             amount = 5,
             ignored_by_productivity = 1,
             ignored_by_stats = 1,
           },
         },
         ingredients = {
-          { type = "item", name = "alien-artifact-green", amount = 1, ignored_by_stats = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact-green", amount = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         energy_required = 1,
         enabled = false,
@@ -339,7 +339,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
       {
         type = "item",
-        name = "alien-artifact-blue",
+        name = "bob-alien-artifact-blue",
         icon = "__bobenemies__/graphics/icons/alien-artifact-blue.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -351,19 +351,19 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact-blue",
+        name = "bob-alien-artifact-blue",
         results = {
           {
             type = "item",
-            name = "alien-artifact-blue",
+            name = "bob-alien-artifact-blue",
             amount = 5,
             ignored_by_productivity = 1,
             ignored_by_stats = 1,
           },
         },
         ingredients = {
-          { type = "item", name = "alien-artifact-blue", amount = 1, ignored_by_stats = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact-blue", amount = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         energy_required = 1,
         enabled = false,
@@ -372,7 +372,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
       {
         type = "item",
-        name = "alien-artifact-purple",
+        name = "bob-alien-artifact-purple",
         icon = "__bobenemies__/graphics/icons/alien-artifact-purple.png",
         icon_size = 64,
         subgroup = "raw-material",
@@ -384,19 +384,19 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       },
       {
         type = "recipe",
-        name = "alien-artifact-purple",
+        name = "bob-alien-artifact-purple",
         results = {
           {
             type = "item",
-            name = "alien-artifact-purple",
+            name = "bob-alien-artifact-purple",
             amount = 5,
             ignored_by_productivity = 1,
             ignored_by_stats = 1,
           },
         },
         ingredients = {
-          { type = "item", name = "alien-artifact-purple", amount = 1, ignored_by_stats = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact-purple", amount = 1, ignored_by_stats = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         energy_required = 1,
         enabled = false,
@@ -408,7 +408,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data:extend({
         {
           type = "item",
-          name = "small-alien-artifact-red",
+          name = "bob-small-alien-artifact-red",
           icon = "__bobenemies__/graphics/icons/small-alien-artifact-red.png",
           icon_size = 64,
           subgroup = "raw-material",
@@ -420,11 +420,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         },
         {
           type = "recipe",
-          name = "alien-artifact-red-from-small",
-          localised_name = { "item-name.alien-artifact-red" },
-          results = { { type = "item", name = "alien-artifact-red", amount = 1 } },
+          name = "bob-alien-artifact-red-from-small",
+          localised_name = { "item-name.bob-alien-artifact-red" },
+          results = { { type = "item", name = "bob-alien-artifact-red", amount = 1 } },
           ingredients = {
-            { type = "item", name = "small-alien-artifact-red", amount = 25 },
+            { type = "item", name = "bob-small-alien-artifact-red", amount = 25 },
           },
           energy_required = 1,
           enabled = false,
@@ -435,7 +435,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data:extend({
         {
           type = "item",
-          name = "small-alien-artifact-orange",
+          name = "bob-small-alien-artifact-orange",
           icon = "__bobenemies__/graphics/icons/small-alien-artifact-orange.png",
           icon_size = 64,
           subgroup = "raw-material",
@@ -447,11 +447,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         },
         {
           type = "recipe",
-          name = "alien-artifact-orange-from-small",
-          localised_name = { "item-name.alien-artifact-orange" },
-          results = { { type = "item", name = "alien-artifact-orange", amount = 1 } },
+          name = "bob-alien-artifact-orange-from-small",
+          localised_name = { "item-name.bob-alien-artifact-orange" },
+          results = { { type = "item", name = "bob-alien-artifact-orange", amount = 1 } },
           ingredients = {
-            { type = "item", name = "small-alien-artifact-orange", amount = 25 },
+            { type = "item", name = "bob-small-alien-artifact-orange", amount = 25 },
           },
           energy_required = 1,
           enabled = false,
@@ -462,7 +462,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data:extend({
         {
           type = "item",
-          name = "small-alien-artifact-yellow",
+          name = "bob-small-alien-artifact-yellow",
           icon = "__bobenemies__/graphics/icons/small-alien-artifact-yellow.png",
           icon_size = 64,
           subgroup = "raw-material",
@@ -474,11 +474,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         },
         {
           type = "recipe",
-          name = "alien-artifact-yellow-from-small",
-          localised_name = { "item-name.alien-artifact-yellow" },
-          results = { { type = "item", name = "alien-artifact-yellow", amount = 1 } },
+          name = "bob-alien-artifact-yellow-from-small",
+          localised_name = { "item-name.bob-alien-artifact-yellow" },
+          results = { { type = "item", name = "bob-alien-artifact-yellow", amount = 1 } },
           ingredients = {
-            { type = "item", name = "small-alien-artifact-yellow", amount = 25 },
+            { type = "item", name = "bob-small-alien-artifact-yellow", amount = 25 },
           },
           energy_required = 1,
           enabled = false,
@@ -489,7 +489,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data:extend({
         {
           type = "item",
-          name = "small-alien-artifact-green",
+          name = "bob-small-alien-artifact-green",
           icon = "__bobenemies__/graphics/icons/small-alien-artifact-green.png",
           icon_size = 64,
           subgroup = "raw-material",
@@ -501,11 +501,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         },
         {
           type = "recipe",
-          name = "alien-artifact-green-from-small",
-          localised_name = { "item-name.alien-artifact-green" },
-          results = { { type = "item", name = "alien-artifact-green", amount = 1 } },
+          name = "bob-alien-artifact-green-from-small",
+          localised_name = { "item-name.bob-alien-artifact-green" },
+          results = { { type = "item", name = "bob-alien-artifact-green", amount = 1 } },
           ingredients = {
-            { type = "item", name = "small-alien-artifact-green", amount = 25 },
+            { type = "item", name = "bob-small-alien-artifact-green", amount = 25 },
           },
           energy_required = 1,
           enabled = false,
@@ -516,7 +516,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data:extend({
         {
           type = "item",
-          name = "small-alien-artifact-blue",
+          name = "bob-small-alien-artifact-blue",
           icon = "__bobenemies__/graphics/icons/small-alien-artifact-blue.png",
           icon_size = 64,
           subgroup = "raw-material",
@@ -528,11 +528,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         },
         {
           type = "recipe",
-          name = "alien-artifact-blue-from-small",
-          localised_name = { "item-name.alien-artifact-blue" },
-          results = { { type = "item", name = "alien-artifact-blue", amount = 1 } },
+          name = "bob-alien-artifact-blue-from-small",
+          localised_name = { "item-name.bob-alien-artifact-blue" },
+          results = { { type = "item", name = "bob-alien-artifact-blue", amount = 1 } },
           ingredients = {
-            { type = "item", name = "small-alien-artifact-blue", amount = 25 },
+            { type = "item", name = "bob-small-alien-artifact-blue", amount = 25 },
           },
           energy_required = 1,
           enabled = false,
@@ -543,7 +543,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       data:extend({
         {
           type = "item",
-          name = "small-alien-artifact-purple",
+          name = "bob-small-alien-artifact-purple",
           icon = "__bobenemies__/graphics/icons/small-alien-artifact-purple.png",
           icon_size = 64,
           subgroup = "raw-material",
@@ -555,11 +555,11 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         },
         {
           type = "recipe",
-          name = "alien-artifact-purple-from-small",
-          localised_name = { "item-name.alien-artifact-purple" },
-          results = { { type = "item", name = "alien-artifact-purple", amount = 1 } },
+          name = "bob-alien-artifact-purple-from-small",
+          localised_name = { "item-name.bob-alien-artifact-purple" },
+          results = { { type = "item", name = "bob-alien-artifact-purple", amount = 1 } },
           ingredients = {
-            { type = "item", name = "small-alien-artifact-purple", amount = 25 },
+            { type = "item", name = "bob-small-alien-artifact-purple", amount = 25 },
           },
           energy_required = 1,
           enabled = false,

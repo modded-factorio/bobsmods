@@ -53,7 +53,7 @@ local largeammopickup = {
 data:extend({
   {
     type = "ammo",
-    name = "bullet-magazine",
+    name = "bob-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -101,7 +101,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "ap-bullet-magazine",
+    name = "bob-ap-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/ap-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -147,7 +147,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "he-bullet-magazine",
+    name = "bob-he-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/he-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -205,7 +205,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "flame-bullet-magazine",
+    name = "bob-flame-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/flame-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -259,7 +259,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "acid-bullet-magazine",
+    name = "bob-acid-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/acid-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -317,7 +317,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "poison-bullet-magazine",
+    name = "bob-poison-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/poison-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -375,7 +375,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "electric-bullet-magazine",
+    name = "bob-electric-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/electric-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -421,7 +421,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "better-shotgun-shell",
+    name = "bob-better-shotgun-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -436,7 +436,7 @@ data:extend({
         repeat_count = 20,
         action_delivery = {
           type = "projectile",
-          projectile = "better-shotgun-projectile",
+          projectile = "bob-better-shotgun-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -456,7 +456,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-ap-shell",
+    name = "bob-shotgun-ap-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-ap-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -471,7 +471,7 @@ data:extend({
         repeat_count = 20,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-ap-projectile",
+          projectile = "bob-shotgun-ap-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -491,7 +491,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-electric-shell",
+    name = "bob-shotgun-electric-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-electric-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -506,7 +506,7 @@ data:extend({
         repeat_count = 20,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-electric-projectile",
+          projectile = "bob-shotgun-electric-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -526,7 +526,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-explosive-shell",
+    name = "bob-shotgun-explosive-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-explosive-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -541,7 +541,7 @@ data:extend({
         repeat_count = 10,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-explosive-projectile",
+          projectile = "bob-shotgun-explosive-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -561,7 +561,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-flame-shell",
+    name = "bob-shotgun-flame-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-flame-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -576,7 +576,7 @@ data:extend({
         repeat_count = 10,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-flame-projectile",
+          projectile = "bob-shotgun-flame-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -596,7 +596,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-acid-shell",
+    name = "bob-shotgun-acid-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-acid-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -611,7 +611,7 @@ data:extend({
         repeat_count = 10,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-acid-projectile",
+          projectile = "bob-shotgun-acid-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -631,7 +631,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-poison-shell",
+    name = "bob-shotgun-poison-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-poison-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -646,7 +646,7 @@ data:extend({
         repeat_count = 10,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-poison-projectile",
+          projectile = "bob-shotgun-poison-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -666,7 +666,7 @@ data:extend({
 
   {
     type = "ammo",
-    name = "shotgun-uranium-shell",
+    name = "bob-shotgun-uranium-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-uranium-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -681,7 +681,7 @@ data:extend({
         repeat_count = 20,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-uranium-projectile",
+          projectile = "bob-shotgun-uranium-projectile",
           starting_speed = 1,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -701,14 +701,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery",
+    name = "bob-laser-rifle-battery",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-glass.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-0",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-glass-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -727,14 +727,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery-ruby",
+    name = "bob-laser-rifle-battery-ruby",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-ruby.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-1",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-ruby-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -753,14 +753,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery-sapphire",
+    name = "bob-laser-rifle-battery-sapphire",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-sapphire.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-2",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-sapphire-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -779,14 +779,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery-emerald",
+    name = "bob-laser-rifle-battery-emerald",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-emerald.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-3",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-emerald-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -805,14 +805,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery-amethyst",
+    name = "bob-laser-rifle-battery-amethyst",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-amethyst.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-4",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-amethyst-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -831,14 +831,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery-topaz",
+    name = "bob-laser-rifle-battery-topaz",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-topaz.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-5",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-topaz-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -857,14 +857,14 @@ data:extend({
 
   {
     type = "ammo",
-    name = "laser-rifle-battery-diamond",
+    name = "bob-laser-rifle-battery-diamond",
     icon = "__bobwarfare__/graphics/icons/laser-rifle-battery-diamond.png",
     icon_size = 32,
     subgroup = "bob-ammo",
     order = "f[laser-rifle-battery]-6",
     stack_size = 200,
     magazine_size = 50,
-    ammo_category = "laser-rifle",
+    ammo_category = "bob-laser-rifle",
     ammo_type = boblaserammo("bob-laser-beam-diamond-ammo"),
     drop_sound = {
       filename = "__base__/sound/item/weapon-small-inventory-move.ogg",
@@ -997,7 +997,7 @@ data:extend({
 data:extend({
   {
     type = "ammo",
-    name = "scatter-cannon-shell",
+    name = "bob-scatter-cannon-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
@@ -1043,7 +1043,7 @@ data:extend({
 data:extend({
   {
     type = "capsule",
-    name = "fire-capsule",
+    name = "bob-fire-capsule",
     icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
     icon_size = 32,
     capsule_action = {
@@ -1061,7 +1061,7 @@ data:extend({
             type = "direct",
             action_delivery = {
               type = "projectile",
-              projectile = "fire-capsule",
+              projectile = "bob-fire-capsule",
               starting_speed = 0.3,
             },
           },
@@ -1090,7 +1090,7 @@ data:extend({
 data:extend({
   {
     type = "ammo",
-    name = "poison-artillery-shell",
+    name = "bob-poison-artillery-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
@@ -1112,7 +1112,7 @@ data:extend({
         type = "direct",
         action_delivery = {
           type = "artillery",
-          projectile = "poison-artillery-projectile",
+          projectile = "bob-poison-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
@@ -1142,7 +1142,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "fire-artillery-shell",
+    name = "bob-fire-artillery-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
@@ -1164,7 +1164,7 @@ data:extend({
         type = "direct",
         action_delivery = {
           type = "artillery",
-          projectile = "fire-artillery-projectile",
+          projectile = "bob-fire-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
@@ -1194,7 +1194,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "explosive-artillery-shell",
+    name = "bob-explosive-artillery-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
@@ -1216,7 +1216,7 @@ data:extend({
         type = "direct",
         action_delivery = {
           type = "artillery",
-          projectile = "explosive-artillery-projectile",
+          projectile = "bob-explosive-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
@@ -1246,7 +1246,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "distractor-artillery-shell",
+    name = "bob-distractor-artillery-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
@@ -1268,7 +1268,7 @@ data:extend({
         type = "direct",
         action_delivery = {
           type = "artillery",
-          projectile = "distractor-artillery-projectile",
+          projectile = "bob-distractor-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
@@ -1298,7 +1298,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "atomic-artillery-shell",
+    name = "bob-atomic-artillery-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
@@ -1321,7 +1321,7 @@ data:extend({
         type = "direct",
         action_delivery = {
           type = "artillery",
-          projectile = "atomic-artillery-projectile",
+          projectile = "bob-atomic-artillery-projectile",
           starting_speed = 1,
           direction_deviation = 0,
           range_deviation = 0,
@@ -1356,7 +1356,7 @@ data.raw.ammo["artillery-shell"].order = "e[artillery-shell]"
 data:extend({
   {
     type = "ammo",
-    name = "plasma-bullet-magazine",
+    name = "bob-plasma-bullet-magazine",
     icon = "__bobwarfare__/graphics/icons/plasma-bullet-magazine.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -1392,7 +1392,7 @@ data:extend({
                   target_effects = {
                     {
                       type = "damage",
-                      damage = { amount = 8, type = "plasma" },
+                      damage = { amount = 8, type = "bob-plasma" },
                     },
                   },
                 },
@@ -1413,7 +1413,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "shotgun-plasma-shell",
+    name = "bob-shotgun-plasma-shell",
     icon = "__bobwarfare__/graphics/icons/shotgun-plasma-shell.png",
     icon_size = 32,
     subgroup = "bob-ammo",
@@ -1428,7 +1428,7 @@ data:extend({
         repeat_count = 10,
         action_delivery = {
           type = "projectile",
-          projectile = "shotgun-plasma-projectile",
+          projectile = "bob-shotgun-plasma-projectile",
           starting_speed = 0.5,
           direction_deviation = 0.4,
           range_deviation = 0.4,
@@ -1470,25 +1470,25 @@ if
   and data.raw.fluid["bob-alien-fire"]
   and data.raw.fluid["bob-alien-poison"]
 then
-  data.raw.ammo["bullet-magazine"].ammo_type.action[1].action_delivery[1].target_effects[2].damage.amount = 20
+  data.raw.ammo["bob-bullet-magazine"].ammo_type.action[1].action_delivery[1].target_effects[2].damage.amount = 20
   data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 30
-  data.raw.ammo["ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 24
-  data.raw.ammo["ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 12
-  data.raw.ammo["electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 18
-  data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 24
+  data.raw.ammo["bob-ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 12
+  data.raw.ammo["bob-electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["bob-electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 18
+  data.raw.ammo["bob-he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["bob-he-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
     12
-  data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["bob-flame-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
     12
-  data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["bob-poison-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
     12
-  data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["bob-acid-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
     12
-  data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
-  data.raw.ammo["plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.ammo["bob-plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
+  data.raw.ammo["bob-plasma-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].action.action_delivery.target_effects[1].damage.amount =
     24
 end

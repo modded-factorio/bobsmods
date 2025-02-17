@@ -14,7 +14,7 @@ data:extend({
     name = "character",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1",
     place_result = "character",
     stack_size = 1,
@@ -38,7 +38,7 @@ data:extend({
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1-crafter",
     place_result = "bob-character-miner",
     stack_size = 1,
@@ -62,7 +62,7 @@ data:extend({
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1-fighter",
     place_result = "bob-character-fighter",
     stack_size = 1,
@@ -86,7 +86,7 @@ data:extend({
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1-builder",
     place_result = "bob-character-builder",
     stack_size = 1,
@@ -111,7 +111,7 @@ data:extend({
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2",
     place_result = "bob-character-balanced-2",
     stack_size = 1,
@@ -141,7 +141,7 @@ data:extend({
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-crafter",
     place_result = "bob-character-miner-2",
     stack_size = 1,
@@ -171,7 +171,7 @@ data:extend({
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-fighter",
     place_result = "bob-character-fighter-2",
     stack_size = 1,
@@ -201,7 +201,7 @@ data:extend({
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-builder",
     place_result = "bob-character-builder-2",
     stack_size = 1,
@@ -226,7 +226,7 @@ data:extend({
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-engineer",
     place_result = "bob-character-engineer",
     stack_size = 1,
@@ -250,7 +250,7 @@ data:extend({
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-sapper",
     place_result = "bob-character-prospector",
     stack_size = 1,
@@ -267,7 +267,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame", amount = 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
       { type = "item", name = "assembling-machine-2", amount = 1 },
     },
     results = { { type = "item", name = "character", amount = 1 } },
@@ -278,7 +278,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame", amount = 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
       { type = "item", name = "assembling-machine-2", amount = 1 },
       { type = "item", name = "electric-furnace", amount = 1 },
     },
@@ -290,7 +290,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame", amount = 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
       { type = "item", name = "assembling-machine-2", amount = 1 },
       { type = "item", name = "exoskeleton-equipment", amount = 1 },
     },
@@ -302,7 +302,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame", amount = 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
       { type = "item", name = "assembling-machine-2", amount = 1 },
       { type = "item", name = "fast-inserter", amount = 2 },
     },
@@ -315,7 +315,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame-2", amount = 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
       { type = "item", name = "assembling-machine-3", amount = 1 },
     },
     results = { { type = "item", name = "bob-character-balanced-2", amount = 1 } },
@@ -326,7 +326,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame-2", amount = 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
       { type = "item", name = "assembling-machine-3", amount = 1 },
       { type = "item", name = "electric-furnace", amount = 1 },
     },
@@ -338,7 +338,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame-2", amount = 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
       { type = "item", name = "assembling-machine-2", amount = 1 },
       { type = "item", name = "exoskeleton-equipment", amount = 1 },
     },
@@ -350,7 +350,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame-2", amount = 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
       { type = "item", name = "assembling-machine-3", amount = 1 },
       { type = "item", name = "bulk-inserter", amount = 2 },
     },
@@ -363,7 +363,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame-2", amount = 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
       { type = "item", name = "assembling-machine-3", amount = 1 },
       { type = "item", name = "electric-furnace", amount = 1 },
       { type = "item", name = "fast-inserter", amount = 2 },
@@ -376,7 +376,7 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "player-frame-2", amount = 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
       { type = "item", name = "assembling-machine-2", amount = 1 },
       { type = "item", name = "fast-inserter", amount = 2 },
       { type = "item", name = "exoskeleton-equipment", amount = 1 },
@@ -388,7 +388,7 @@ data:extend({
 data:extend({
   {
     type = "technology",
-    name = "bodies",
+    name = "bob-bodies",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
     effects = {
@@ -398,27 +398,27 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "player-brain",
+        recipe = "bob-player-brain",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-head",
+        recipe = "bob-player-head",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-boots",
+        recipe = "bob-player-boots",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-gloves",
+        recipe = "bob-player-gloves",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-power-core",
+        recipe = "bob-player-power-core",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-frame",
+        recipe = "bob-player-frame",
       },
     },
     prerequisites = {
@@ -438,7 +438,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "miner-body",
+    name = "bob-miner-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -459,7 +459,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
       "automation-2",
       "advanced-material-processing-2",
     },
@@ -475,7 +475,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "fighter-body",
+    name = "bob-fighter-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -496,7 +496,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
       "exoskeleton-equipment",
     },
     unit = {
@@ -511,7 +511,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "builder-body",
+    name = "bob-builder-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -532,7 +532,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
       "fast-inserter",
     },
     unit = {
@@ -548,8 +548,8 @@ data:extend({
 
   {
     type = "technology",
-    name = "bodies-2",
-    localised_description = { "technology-description.bodies2" },
+    name = "bob-bodies-2",
+    localised_description = { "technology-description.bob-bodies2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -569,27 +569,27 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "player-brain-2",
+        recipe = "bob-player-brain-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-head-2",
+        recipe = "bob-player-head-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-boots-2",
+        recipe = "bob-player-boots-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-gloves-2",
+        recipe = "bob-player-gloves-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-frame-2",
+        recipe = "bob-player-frame-2",
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
       "production-science-pack",
       "processing-unit",
       "automation-3",
@@ -607,8 +607,8 @@ data:extend({
   },
   {
     type = "technology",
-    name = "miner-body-2",
-    localised_description = { "technology-description.miner-body2" },
+    name = "bob-miner-body-2",
+    localised_description = { "technology-description.bob-miner-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -629,8 +629,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies-2",
-      "miner-body",
+      "bob-bodies-2",
+      "bob-miner-body",
     },
     unit = {
       count = 150,
@@ -645,8 +645,8 @@ data:extend({
   },
   {
     type = "technology",
-    name = "fighter-body-2",
-    localised_description = { "technology-description.fighter-body2" },
+    name = "bob-fighter-body-2",
+    localised_description = { "technology-description.bob-fighter-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -667,8 +667,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies-2",
-      "fighter-body",
+      "bob-bodies-2",
+      "bob-fighter-body",
     },
     unit = {
       count = 150,
@@ -683,8 +683,8 @@ data:extend({
   },
   {
     type = "technology",
-    name = "builder-body-2",
-    localised_description = { "technology-description.builder-body2" },
+    name = "bob-builder-body-2",
+    localised_description = { "technology-description.bob-builder-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -705,8 +705,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies-2",
-      "builder-body",
+      "bob-bodies-2",
+      "bob-builder-body",
       "bulk-inserter",
     },
     unit = {
@@ -723,7 +723,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "engineer-body",
+    name = "bob-engineer-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -744,9 +744,9 @@ data:extend({
       },
     },
     prerequisites = {
-      "miner-body",
-      "builder-body",
-      "bodies-2",
+      "bob-miner-body",
+      "bob-builder-body",
+      "bob-bodies-2",
     },
     unit = {
       count = 150,
@@ -761,7 +761,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "prospector-body",
+    name = "bob-prospector-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
@@ -782,9 +782,9 @@ data:extend({
       },
     },
     prerequisites = {
-      "builder-body",
-      "fighter-body",
-      "bodies-2",
+      "bob-builder-body",
+      "bob-fighter-body",
+      "bob-bodies-2",
     },
     unit = {
       count = 150,

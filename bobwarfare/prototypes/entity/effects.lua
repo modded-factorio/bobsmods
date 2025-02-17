@@ -273,7 +273,7 @@ data:extend({
 data:extend({
   {
     type = "explosion",
-    name = "plasma-explosion",
+    name = "bob-plasma-explosion",
     flags = { "not-on-map" },
     animations = {
       {
@@ -393,7 +393,7 @@ data:extend({
 data:extend({
   {
     type = "sticker",
-    name = "plasma-sticker",
+    name = "bob-plasma-sticker",
     flags = { "not-on-map" },
 
     animation = {
@@ -412,6 +412,6 @@ data:extend({
     duration_in_ticks = 30 * 60,
     damage_interval = 10,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 8, type = "plasma" },
+    damage_per_tick = { amount = 8, type = "bob-plasma" },
   },
 })

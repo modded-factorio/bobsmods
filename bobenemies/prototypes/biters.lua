@@ -323,7 +323,7 @@ local piercing_reaction = {
   {
     type = "create-sticker",
     damage_type_filters = { "electric", "acid" },
-    sticker = "piercing-rage-sticker",
+    sticker = "bob-piercing-rage-sticker",
   },
 }
 
@@ -762,7 +762,7 @@ local electric_reaction = {
   {
     type = "create-sticker",
     damage_type_filters = { whitelist = true, types = "electric" },
-    sticker = "electric-rage-sticker",
+    sticker = "bob-electric-rage-sticker",
   },
 }
 
@@ -822,7 +822,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -890,7 +890,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -958,7 +958,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -1026,7 +1026,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -1094,7 +1094,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -1162,7 +1162,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -1230,7 +1230,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -1298,7 +1298,7 @@ bobmods.enemies.new_biter({
           range_effects = {
             {
               type = "create-explosion",
-              entity_name = "biter-electric-beam-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
             },
           },
         },
@@ -2526,7 +2526,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
 
   local alienpoisonvisual = util.table.deepcopy(data.raw["smoke-with-trigger"]["poison-cloud-visual-dummy"])
   alienpoisonvisual.name = smoke_name .. "-visual-dummy"
-  alienpoisonvisual.localised_name = { "entity-name.enemy-poison-smoke" }
+  alienpoisonvisual.localised_name = { "entity-name.bob-enemy-poison-smoke" }
   alienpoisonvisual.color = { r = 0.15, g = 1, b = 0.15, a = 0.250 }
   alienpoisonvisual.attach_to_target = true
   alienpoisonvisual.duration = 360
@@ -2538,7 +2538,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
   local smoke = {
     type = "smoke-with-trigger",
     name = smoke_name,
-    localised_name = { "entity-name.enemy-poison-smoke" },
+    localised_name = { "entity-name.bob-enemy-poison-smoke" },
     flags = { "not-on-map" },
     hidden = true,
     show_when_smoke_off = true,
@@ -2622,8 +2622,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.small_tint,
-  localised_description = { "entity-description.poison-enemy-small" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "enemy-poison-smoke-small", 6, -2, 2),
+  localised_description = { "entity-description.bob-poison-enemy-small" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "bob-enemy-poison-smoke-small", 6, -2, 2),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2676,8 +2676,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.medium_tint,
-  localised_description = { "entity-description.poison-enemy-medium" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "enemy-poison-smoke-medium", 12, -4, 3),
+  localised_description = { "entity-description.bob-poison-enemy-medium" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "bob-enemy-poison-smoke-medium", 12, -4, 3),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2730,8 +2730,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.big_tint,
-  localised_description = { "entity-description.poison-enemy-big" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "enemy-poison-smoke-big", 18, -6, 4),
+  localised_description = { "entity-description.bob-poison-enemy-big" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "bob-enemy-poison-smoke-big", 18, -6, 4),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2784,8 +2784,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.huge_tint,
-  localised_description = { "entity-description.poison-enemy-huge" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "enemy-poison-smoke-huge", 24, -8, 4.6),
+  localised_description = { "entity-description.bob-poison-enemy-huge" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "bob-enemy-poison-smoke-huge", 24, -8, 4.6),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2838,8 +2838,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.giant_tint,
-  localised_description = { "entity-description.poison-enemy-giant" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "enemy-poison-smoke-giant", 30, -20, 5.2),
+  localised_description = { "entity-description.bob-poison-enemy-giant" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "bob-enemy-poison-smoke-giant", 30, -20, 5.2),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2892,8 +2892,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.titan_tint,
-  localised_description = { "entity-description.poison-enemy-titan" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "enemy-poison-smoke-titan", 36, -24, 5.8),
+  localised_description = { "entity-description.bob-poison-enemy-titan" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "bob-enemy-poison-smoke-titan", 36, -24, 5.8),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2946,8 +2946,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.behemoth_tint,
-  localised_description = { "entity-description.poison-enemy-behemoth" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth", "enemy-poison-smoke-behemoth", 42, -42, 6.4),
+  localised_description = { "entity-description.bob-poison-enemy-behemoth" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth", "bob-enemy-poison-smoke-behemoth", 42, -42, 6.4),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3000,8 +3000,8 @@ bobmods.enemies.new_biter({
   acid_resist = "high",
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.leviathan_tint,
-  localised_description = { "entity-description.poison-enemy-leviathan" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan", "enemy-poison-smoke-leviathan", 60, -60, 7),
+  localised_description = { "entity-description.bob-poison-enemy-leviathan" },
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan", "bob-enemy-poison-smoke-leviathan", 60, -60, 7),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -3087,12 +3087,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3151,12 +3151,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3215,12 +3215,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3279,12 +3279,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3343,12 +3343,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3407,12 +3407,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3471,12 +3471,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
@@ -3535,12 +3535,12 @@ bobmods.enemies.new_biter({
             },
             {
               type = "create-sticker",
-              sticker = "enemy-fire-sticker",
+              sticker = "bob-enemy-fire-sticker",
               show_in_tooltip = true,
             },
             {
               type = "create-fire",
-              entity_name = "enemy-fire",
+              entity_name = "bob-enemy-fire",
               show_in_tooltip = true,
             },
           },
