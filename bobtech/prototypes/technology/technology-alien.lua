@@ -11,6 +11,7 @@ then
     {
       type = "technology",
       name = "bob-alien-research",
+      essential = true,
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
