@@ -253,7 +253,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "stone-mixing-furnace-from-stone-furnace",
+      name = "bob-stone-mixing-furnace-from-stone-furnace",
       icons = {
         { icon = "__bobplates__/graphics/icons/stone-mixing-furnace.png", icon_size = 32 },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -272,7 +272,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "stone-chemical-furnace-from-stone-furnace",
+      name = "bob-stone-chemical-furnace-from-stone-furnace",
       icons = {
         { icon = "__bobplates__/graphics/icons/stone-chemical-furnace.png", icon_size = 32 },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -292,7 +292,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "steel-mixing-furnace-from-steel-furnace",
+      name = "bob-steel-mixing-furnace-from-steel-furnace",
       icons = {
         { icon = "__base__/graphics/icons/steel-furnace.png", scale = 0.5 },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -311,7 +311,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "steel-chemical-furnace-from-steel-furnace",
+      name = "bob-steel-chemical-furnace-from-steel-furnace",
       icons = {
         { icon = "__base__/graphics/icons/steel-furnace.png", scale = 0.5 },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -331,7 +331,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "electric-mixing-furnace-from-electric-furnace",
+      name = "bob-electric-mixing-furnace-from-electric-furnace",
       icons = {
         { icon = "__bobplates__/graphics/icons/electric-mixing-furnace.png", icon_size = 32 },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -350,7 +350,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "electric-chemical-furnace-from-electric-furnace",
+      name = "bob-electric-chemical-furnace-from-electric-furnace",
       icons = {
         { icon = "__bobplates__/graphics/icons/chemical-furnace.png", icon_size = 32 },
         { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -370,7 +370,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "stone-furnace-from-stone-mixing-furnace",
+      name = "bob-stone-furnace-from-stone-mixing-furnace",
       icons = {
         { icon = "__base__/graphics/icons/stone-furnace.png", scale = 0.5 },
         { icon = "__bobplates__/graphics/icons/m.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -389,7 +389,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "stone-furnace-from-stone-chemical-furnace",
+      name = "bob-stone-furnace-from-stone-chemical-furnace",
       icons = {
         { icon = "__base__/graphics/icons/stone-furnace.png", scale = 0.5 },
         { icon = "__bobplates__/graphics/icons/c.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -412,7 +412,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "steel-furnace-from-steel-mixing-furnace",
+      name = "bob-steel-furnace-from-steel-mixing-furnace",
       icons = {
         { icon = "__base__/graphics/icons/steel-furnace.png", scale = 0.5 },
         { icon = "__bobplates__/graphics/icons/m.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
@@ -431,7 +431,7 @@ if settings.startup["bobmods-plates-convert-recipes"].value == true then
 
     {
       type = "recipe",
-      name = "steel-furnace-from-steel-chemical-furnace",
+      name = "bob-steel-furnace-from-steel-chemical-furnace",
       icons = {
         { icon = "__base__/graphics/icons/steel-furnace.png", scale = 0.5 },
         { icon = "__bobplates__/graphics/icons/c.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
