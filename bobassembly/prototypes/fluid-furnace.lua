@@ -76,33 +76,9 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       },
       results = { { type = "item", name = "bob-fluid-furnace", amount = 1 } },
     },
-    {
-      type = "technology",
-      name = "bob-fluid-furnace",
-      icon_size = 256,
-      icon = "__base__/graphics/technology/advanced-material-processing.png",
-      prerequisites = {
-        "advanced-material-processing",
-        "oil-processing",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "bob-fluid-furnace",
-        },
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-        },
-        time = 30,
-      },
-      order = "c-c-a",
-    },
   })
   data.raw.furnace["bob-fluid-furnace"].energy_source = fluid_energy_source()
+  bobmods.lib.tech.add_recipe_unlock("advanced-material-processing", "bob-fluid-furnace")
 
   if
     settings.startup["bobmods-plates-convert-recipes"]
@@ -139,7 +115,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       },
     })
 
-    bobmods.lib.tech.add_recipe_unlock("bob-fluid-furnace", "steel-furnace-from-fluid-furnace")
+    bobmods.lib.tech.add_recipe_unlock("advanced-material-processing", "steel-furnace-from-fluid-furnace")
     if data.raw["item-subgroup"]["bob-base-smelting-machine-convert"] then
       data.raw.recipe["steel-furnace-from-fluid-furnace"].subgroup = "bob-base-smelting-machine-convert"
     end
@@ -196,7 +172,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           },
         },
         prerequisites = {
-          "oil-processing",
           "bob-steel-mixing-furnace",
         },
         effects = {
@@ -365,7 +340,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           },
         },
         prerequisites = {
-          "oil-processing",
+          "advanced-material-processing",
         },
         effects = {
           {
