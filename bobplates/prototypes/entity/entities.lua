@@ -1128,7 +1128,7 @@ data:extend({
         south = {
           filename = "__bobplates__/graphics/entity/small-pump/small-pump-down.png",
           width = 61,
-          height = 58,
+          height = 62,
           frame_count = 8,
           shift = { 0.421875, -0.125 },
           animation_speed = 0.5,
