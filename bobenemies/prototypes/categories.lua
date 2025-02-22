@@ -91,5 +91,5 @@ data.raw["utility-constants"].default.default_trigger_target_mask_by_type["spide
   "common",
   "ground-unit",
   "not-electric-unit",
-  "not-fire-unit"
+  "not-fire-unit",
 }
