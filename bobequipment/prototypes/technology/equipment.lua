@@ -279,6 +279,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-fission-reactor-equipment-2",
+    localised_name = { "", { "technology-name.fission-reactor-equipment" }, " 2" },
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-2.png",
       icon_size = 256,
@@ -309,6 +310,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-fission-reactor-equipment-3",
+    localised_name = { "", { "technology-name.fission-reactor-equipment" }, " 3" },
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-3.png",
       icon_size = 256,
@@ -340,6 +342,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-fission-reactor-equipment-4",
+    localised_name = { "", { "technology-name.fission-reactor-equipment" }, " 4" },
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-4.png",
       icon_size = 256,
@@ -379,6 +382,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-night-vision-equipment-2",
+    localised_name = { "", { "technology-name.night-vision-equipment" }, " 2"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
@@ -407,6 +411,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-night-vision-equipment-3",
+    localised_name = { "", { "technology-name.night-vision-equipment" }, " 3"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/night-vision-equipment.png",
       icon_size = 256,
@@ -444,6 +449,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-solar-panel-equipment-2",
+    localised_name = { "", { "technology-name.solar-panel-equipment" }, " 2"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
@@ -472,6 +478,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-solar-panel-equipment-3",
+    localised_name = { "", { "technology-name.solar-panel-equipment" }, " 3"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
       icon_size = 256,
@@ -505,6 +512,7 @@ if data.raw.item["bob-alien-artifact"] then
     {
       type = "technology",
       name = "bob-solar-panel-equipment-4",
+      localised_name = { "", { "technology-name.solar-panel-equipment" }, " 4"},
       icons = bobmods.lib.tech.technology_icon_constant({
         icon = "__base__/graphics/technology/solar-panel-equipment.png",
         icon_size = 256,
@@ -537,6 +545,7 @@ if data.raw.item["bob-alien-artifact"] then
       {
         type = "technology",
         name = "bob-solar-panel-equipment-5",
+        localised_name = { "", { "technology-name.solar-panel-equipment" }, " 5"},
         icons = bobmods.lib.tech.technology_icon_constant({
           icon = "__base__/graphics/technology/solar-panel-equipment.png",
           icon_size = 256,
@@ -592,6 +601,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-personal-laser-defense-equipment-2",
+    localised_name = { "", { "technology-name.personal-laser-defense-equipment" }, " 2"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-2.png",
       icon_size = 128,
@@ -621,6 +631,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-personal-laser-defense-equipment-3",
+    localised_name = { "", { "technology-name.personal-laser-defense-equipment" }, " 3"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-3.png",
       icon_size = 128,
@@ -649,6 +660,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-personal-laser-defense-equipment-4",
+    localised_name = { "", { "technology-name.personal-laser-defense-equipment" }, " 4"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-4.png",
       icon_size = 128,
@@ -680,6 +692,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-personal-laser-defense-equipment-5",
+    localised_name = { "", { "technology-name.personal-laser-defense-equipment" }, " 5"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-5.png",
       icon_size = 128,
@@ -711,6 +724,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-personal-laser-defense-equipment-6",
+    localised_name = { "", { "technology-name.personal-laser-defense-equipment" }, " 6"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-6.png",
       icon_size = 128,
@@ -752,6 +766,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-exoskeleton-equipment-2",
+    localised_name = { "", { "technology-name.exoskeleton-equipment" }, " 2"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
@@ -780,6 +795,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-exoskeleton-equipment-3",
+    localised_name = { "", { "technology-name.exoskeleton-equipment" }, " 3"},
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
       icon_size = 256,
