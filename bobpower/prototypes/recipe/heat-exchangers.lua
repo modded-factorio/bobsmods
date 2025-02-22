@@ -60,7 +60,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/heat-boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.heat-exchanger-2" },
+        localised_name = { "entity-name.bob-heat-exchanger-2" },
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
         ingredients = {
@@ -77,7 +77,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/heat-boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.heat-exchanger-3" },
+        localised_name = { "entity-name.bob-heat-exchanger-3" },
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
         ingredients = {
@@ -95,7 +95,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/heat-boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/b.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.heat-exchanger-4" },
+        localised_name = { "entity-name.bob-heat-exchanger-4" },
         subgroup = "bob-energy-heat-exchanger-convert",
         enabled = false,
         ingredients = {
@@ -115,7 +115,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.boiler-2" },
+        localised_name = { "entity-name.bob-boiler-2" },
         subgroup = "bob-energy-boiler-convert",
         energy_required = 3,
         enabled = false,
@@ -137,7 +137,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.boiler-3" },
+        localised_name = { "entity-name.bob-boiler-3" },
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {
@@ -158,7 +158,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.boiler-4" },
+        localised_name = { "entity-name.bob-boiler-4" },
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {
@@ -179,7 +179,7 @@ if settings.startup["bobmods-power-steam"].value == true then
           { icon = "__base__/graphics/icons/boiler.png", scale = 0.5 },
           { icon = "__bobplates__/graphics/icons/h.png", icon_size = 28, scale = 0.5, shift = { -8, -8 } },
         },
-        localised_name = { "entity-name.boiler-5" },
+        localised_name = { "entity-name.bob-boiler-5" },
         subgroup = "bob-energy-boiler-convert",
         enabled = false,
         ingredients = {

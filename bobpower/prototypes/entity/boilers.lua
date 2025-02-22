@@ -8,11 +8,11 @@ B5: E = 0.9, T =  765, P =  9000kW
 --
 
 if settings.startup["bobmods-power-steam"].value == true then
-  data.raw.boiler.boiler.fast_replaceable_group = "boiler"
+  data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
 
   data:extend({
     util.merge({
-      data.raw.boiler.boiler,
+      data.raw.boiler["boiler"],
       {
         name = "bob-boiler-2",
         icon = "__base__/graphics/icons/boiler.png",
@@ -30,7 +30,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
 
     util.merge({
-      data.raw.boiler.boiler,
+      data.raw.boiler["boiler"],
       {
         name = "bob-boiler-3",
         icon = "__base__/graphics/icons/boiler.png",
@@ -48,7 +48,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
 
     util.merge({
-      data.raw.boiler.boiler,
+      data.raw.boiler["boiler"],
       {
         name = "bob-boiler-4",
         icon = "__base__/graphics/icons/boiler.png",
@@ -66,7 +66,7 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
 
     util.merge({
-      data.raw.boiler.boiler,
+      data.raw.boiler["boiler"],
       {
         name = "bob-boiler-5",
         icon = "__base__/graphics/icons/boiler.png",
@@ -83,5 +83,5 @@ if settings.startup["bobmods-power-steam"].value == true then
     }),
   })
 
-  data.raw.boiler.boiler.next_upgrade = "bob-boiler-2" -- After as not to be part of the inherit
+  data.raw.boiler["boiler"].next_upgrade = "bob-boiler-2" -- After as not to be part of the inherit
 end

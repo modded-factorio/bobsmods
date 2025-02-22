@@ -139,6 +139,7 @@ then
         "bob-alien-science-pack-yellow",
         "bob-alien-science-pack-green",
         "bob-alien-science-pack-red",
+        "space-science-pack",
       },
       module_slots = 3,
       icons_positioning = {
