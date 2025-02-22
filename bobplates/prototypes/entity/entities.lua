@@ -85,60 +85,105 @@ circuit_connector_definitions["bob-electrolyser"] =
     },
   })
 
-circuit_connector_definitions["bob-stone-furnace"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
-    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
-    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
-    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
-    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false }
-  }
-)
+circuit_connector_definitions["bob-stone-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 18,
+      main_offset = util.by_pixel(1, -9),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(1, -9),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(1, -9),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(1, -9),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+  })
 
-circuit_connector_definitions["bob-steel-furnace"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
+circuit_connector_definitions["bob-steel-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
     { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
     { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true }
-  }
-)
+    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
+  })
 
-circuit_connector_definitions["bob-electric-furnace"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
+circuit_connector_definitions["bob-electric-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
     { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
     { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
-    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false }
-  }
-)
+    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+  })
 
-circuit_connector_definitions["bob-electric-chemical-furnace"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
-    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
-    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
-    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
-    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false }
-  }
-)
+circuit_connector_definitions["bob-electric-chemical-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 25,
+      main_offset = util.by_pixel(2, -16),
+      shadow_offset = util.by_pixel(25.5, 30),
+      show_shadow = false,
+    },
+    {
+      variation = 25,
+      main_offset = util.by_pixel(2, -16),
+      shadow_offset = util.by_pixel(25.5, 30),
+      show_shadow = false,
+    },
+    {
+      variation = 25,
+      main_offset = util.by_pixel(2, -16),
+      shadow_offset = util.by_pixel(25.5, 30),
+      show_shadow = false,
+    },
+    {
+      variation = 25,
+      main_offset = util.by_pixel(2, -16),
+      shadow_offset = util.by_pixel(25.5, 30),
+      show_shadow = false,
+    },
+  })
 
-circuit_connector_definitions["bob-void-pump"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
-    { variation = 31, main_offset = util.by_pixel(10, -3), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
-    { variation = 30, main_offset = util.by_pixel(-4, 0), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
-    { variation = 31, main_offset = util.by_pixel(11, -6), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
-    { variation = 30, main_offset = util.by_pixel(-2, 0), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false }
-  }
-)
+circuit_connector_definitions["bob-void-pump"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 31,
+      main_offset = util.by_pixel(10, -3),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+    {
+      variation = 30,
+      main_offset = util.by_pixel(-4, 0),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+    {
+      variation = 31,
+      main_offset = util.by_pixel(11, -6),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+    {
+      variation = 30,
+      main_offset = util.by_pixel(-2, 0),
+      shadow_offset = util.by_pixel(27.5, 13),
+      show_shadow = false,
+    },
+  })
 
 data.raw.furnace["steel-furnace"].circuit_connector = circuit_connector_definitions["bob-steel-furnace"]
 data.raw.furnace["electric-furnace"].circuit_connector = circuit_connector_definitions["bob-electric-furnace"]

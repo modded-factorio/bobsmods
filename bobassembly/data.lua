@@ -5,27 +5,41 @@ if not bobmods.assembly then
   bobmods.assembly = {}
 end
 
-circuit_connector_definitions["bob-steel-furnace"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
-    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(20.5, 20), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(20.5, 20), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(20.5, 20), show_shadow = true },
-    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(20.5, 20), show_shadow = true }
-  }
-)
+circuit_connector_definitions["bob-steel-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 17,
+      main_offset = util.by_pixel(14, -6),
+      shadow_offset = util.by_pixel(20.5, 20),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(14, -6),
+      shadow_offset = util.by_pixel(20.5, 20),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(14, -6),
+      shadow_offset = util.by_pixel(20.5, 20),
+      show_shadow = true,
+    },
+    {
+      variation = 17,
+      main_offset = util.by_pixel(14, -6),
+      shadow_offset = util.by_pixel(20.5, 20),
+      show_shadow = true,
+    },
+  })
 
-circuit_connector_definitions["bob-electric-furnace"] = circuit_connector_definitions.create_vector
-(
-  universal_connector_template,
-  {
+circuit_connector_definitions["bob-electric-furnace"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
     { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
     { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
-    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false }
-  }
-)
+    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+  })
 
 require("prototypes.assembly")
 require("prototypes.assembly-electronics")

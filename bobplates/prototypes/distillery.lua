@@ -371,12 +371,22 @@ circuit_connector_definitions["bob-distillery"] =
     { variation = 0, main_offset = util.by_pixel(21, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
     { variation = 6, main_offset = util.by_pixel(-24, 15), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
     { variation = 0, main_offset = util.by_pixel(-11, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
-    { variation = 6, main_offset = util.by_pixel(-24, -17.5), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    {
+      variation = 6,
+      main_offset = util.by_pixel(-24, -17.5),
+      shadow_offset = util.by_pixel(0, 0),
+      show_shadow = false,
+    },
   })
 circuit_connector_definitions["bob-distillery-flipped"] =
   circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 0, main_offset = util.by_pixel(-11, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
-    { variation = 6, main_offset = util.by_pixel(-24, -17.5), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    {
+      variation = 6,
+      main_offset = util.by_pixel(-24, -17.5),
+      shadow_offset = util.by_pixel(0, 0),
+      show_shadow = false,
+    },
     { variation = 0, main_offset = util.by_pixel(21, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
     { variation = 6, main_offset = util.by_pixel(-24, 15), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
   })
