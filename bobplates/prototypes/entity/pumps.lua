@@ -76,10 +76,17 @@ local fluid_pump_graphics_set_flipped = {
 
 circuit_connector_definitions["fluid-pump"] =
   circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 0, main_offset = util.by_pixel(3, 0), shadow_offset = util.by_pixel(9, 9), show_shadow = true },
-    { variation = 6, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
-    { variation = 0, main_offset = util.by_pixel(3, 0), shadow_offset = util.by_pixel(9, 9), show_shadow = true },
-    { variation = 6, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(21, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, 12), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(-11, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, -18), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+  })
+circuit_connector_definitions["fluid-pump-flipped"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 0, main_offset = util.by_pixel(-11, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, -20), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(21, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, 12), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
   })
 
 data:extend({
@@ -92,6 +99,7 @@ data:extend({
     minable = { mining_time = 1, result = "bob-air-pump" },
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     max_health = 150,
     crafting_categories = { "bob-air-pump" },
     crafting_speed = 1,
@@ -159,6 +167,7 @@ data:extend({
     max_health = 180,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-air-pump" },
     crafting_speed = 2,
     module_slots = 2,
@@ -225,6 +234,7 @@ data:extend({
     max_health = 230,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-air-pump" },
     crafting_speed = 3.5,
     module_slots = 4,
@@ -292,6 +302,7 @@ data:extend({
     max_health = 300,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-air-pump" },
     crafting_speed = 5,
     module_slots = 6,
@@ -358,6 +369,7 @@ data:extend({
     max_health = 120,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 1,
     module_slots = 1,
@@ -424,6 +436,7 @@ data:extend({
     max_health = 180,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 2,
     module_slots = 2,
@@ -490,6 +503,7 @@ data:extend({
     max_health = 230,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 3.5,
     module_slots = 4,
@@ -557,6 +571,7 @@ data:extend({
     max_health = 300,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["fluid-pump"],
+    circuit_connector_flipped = circuit_connector_definitions["fluid-pump-flipped"],
     crafting_categories = { "bob-water-pump", "barrelling" },
     crafting_speed = 5,
     module_slots = 6,

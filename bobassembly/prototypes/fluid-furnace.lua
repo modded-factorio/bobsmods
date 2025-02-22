@@ -78,6 +78,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     },
   })
   data.raw.furnace["bob-fluid-furnace"].energy_source = fluid_energy_source()
+  data.raw.furnace["bob-fluid-furnace"].circuit_connector = circuit_connector_definitions["bob-steel-furnace"]
   bobmods.lib.tech.add_recipe_unlock("advanced-material-processing", "bob-fluid-furnace")
 
   if
@@ -203,6 +204,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     })
 
     data.raw["assembling-machine"]["bob-fluid-mixing-furnace"].energy_source = fluid_energy_source()
+    data.raw["assembling-machine"]["bob-fluid-mixing-furnace"].circuit_connector = circuit_connector_definitions["bob-steel-furnace"]
 
     if
       settings.startup["bobmods-plates-convert-recipes"]
@@ -377,6 +379,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
     end
 
     data.raw["assembling-machine"]["bob-fluid-chemical-furnace"].energy_source = fluid_energy_source()
+    data.raw["assembling-machine"]["bob-fluid-chemical-furnace"].circuit_connector = circuit_connector_definitions["bob-steel-furnace"]
 
     if
       settings.startup["bobmods-plates-convert-recipes"]

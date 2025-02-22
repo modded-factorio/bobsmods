@@ -366,6 +366,21 @@ function bobmods.plates.distillery_working_visualisations_flipped(speed)
   }
 end
 
+circuit_connector_definitions["bob-distillery"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 0, main_offset = util.by_pixel(21, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, 15), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(-11, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, -17.5), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+  })
+circuit_connector_definitions["bob-distillery-flipped"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 0, main_offset = util.by_pixel(-11, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, -17.5), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(21, 14), shadow_offset = util.by_pixel(9, 9), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-24, 15), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+  })
+
 if settings.startup["bobmods-plates-purewater"].value == true then
   data:extend({
     {
@@ -411,6 +426,9 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.2, result = "bob-distillery" },
       max_health = 200,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["bob-distillery"],
+      circuit_connector_flipped = circuit_connector_definitions["bob-distillery-flipped"],
       corpse = "medium-remnants",
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },

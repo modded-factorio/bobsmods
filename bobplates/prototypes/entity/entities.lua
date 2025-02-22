@@ -85,13 +85,63 @@ circuit_connector_definitions["bob-electrolyser"] =
     },
   })
 
-circuit_connector_definitions["electric-furnace"] =
-  circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
-    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
-    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
-    { variation = 18, main_offset = util.by_pixel(28, 25), shadow_offset = util.by_pixel(39, 31), show_shadow = true },
-  })
+circuit_connector_definitions["bob-stone-furnace"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
+    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
+    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
+    { variation = 18, main_offset = util.by_pixel(1, -9), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false }
+  }
+)
+
+circuit_connector_definitions["bob-steel-furnace"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true },
+    { variation = 17, main_offset = util.by_pixel(14, -6), shadow_offset = util.by_pixel(40, 21), show_shadow = true }
+  }
+)
+
+circuit_connector_definitions["bob-electric-furnace"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(7, 2), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false }
+  }
+)
+
+circuit_connector_definitions["bob-electric-chemical-furnace"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false },
+    { variation = 25, main_offset = util.by_pixel(2, -16), shadow_offset = util.by_pixel(25.5, 30), show_shadow = false }
+  }
+)
+
+circuit_connector_definitions["bob-void-pump"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation = 31, main_offset = util.by_pixel(10, -3), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
+    { variation = 30, main_offset = util.by_pixel(-4, 0), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
+    { variation = 31, main_offset = util.by_pixel(11, -6), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false },
+    { variation = 30, main_offset = util.by_pixel(-2, 0), shadow_offset = util.by_pixel(27.5, 13), show_shadow = false }
+  }
+)
+
+data.raw.furnace["steel-furnace"].circuit_connector = circuit_connector_definitions["bob-steel-furnace"]
+data.raw.furnace["electric-furnace"].circuit_connector = circuit_connector_definitions["bob-electric-furnace"]
 
 data:extend({
   {
@@ -172,6 +222,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "bob-stone-chemical-furnace" },
     max_health = 200,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["bob-stone-furnace"],
     crafting_speed = 1,
     corpse = "medium-remnants",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
@@ -347,6 +399,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "bob-steel-chemical-furnace" },
     max_health = 300,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["bob-steel-furnace"],
     crafting_speed = 2,
     corpse = "medium-remnants",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
@@ -419,7 +473,7 @@ data:extend({
     minable = { mining_time = 0.2, result = "bob-electric-chemical-furnace" },
     max_health = 350,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-    circuit_connector = circuit_connector_definitions["electric-furnace"],
+    circuit_connector = circuit_connector_definitions["bob-electric-chemical-furnace"],
     corpse = "big-remnants",
     resistances = {
       {
@@ -513,6 +567,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "bob-stone-mixing-furnace" },
     max_health = 200,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["bob-stone-furnace"],
     corpse = "medium-remnants",
     impact_category = "stone",
     working_sound = {
@@ -586,6 +642,8 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "bob-steel-mixing-furnace" },
     max_health = 300,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["bob-steel-furnace"],
     corpse = "medium-remnants",
     impact_category = "metal",
     working_sound = {
@@ -635,7 +693,7 @@ data:extend({
     minable = { mining_time = 1, result = "bob-electric-mixing-furnace" },
     max_health = 350,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-    circuit_connector = circuit_connector_definitions["electric-furnace"],
+    circuit_connector = circuit_connector_definitions["bob-electric-furnace"],
     corpse = "big-remnants",
     resistances = {
       {
@@ -966,6 +1024,8 @@ data:extend({
     minable = { mining_time = 1, result = "bob-void-pump" },
     allowed_effects = { "consumption", "speed", "pollution" },
     max_health = 100,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["bob-void-pump"],
     fast_replaceable_group = "pipe",
     corpse = "small-remnants",
     resistances = {
