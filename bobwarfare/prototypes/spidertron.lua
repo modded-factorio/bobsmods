@@ -369,6 +369,7 @@ function bobmods.warfare.create_spidertron(arguments)
       torso_rotation_speed = arguments.torso_rotation_speed or 0.005,
 
       flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
+      is_military_target = true,
       mined_sound = { filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8 },
       open_sound = { filename = "__base__/sound/spidertron/spidertron-door-open.ogg", volume = 0.45 },
       close_sound = { filename = "__base__/sound/spidertron/spidertron-door-close.ogg", volume = 0.4 },
