@@ -67,6 +67,7 @@ then
     { "bob-alien-science-pack", 1 },
     { "bob-alien-science-pack-green", 1 },
     { "bob-alien-science-pack-red", 1 },
+    { "space-science-pack", 1 },
   }
   data.raw.technology["bob-battery-equipment-6"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },
@@ -80,6 +81,7 @@ then
     { "bob-alien-science-pack", 1 },
     { "bob-alien-science-pack-blue", 1 },
     { "bob-alien-science-pack-red", 1 },
+    { "space-science-pack", 1 },
   }
   data.raw.technology["bob-personal-laser-defense-equipment-6"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },

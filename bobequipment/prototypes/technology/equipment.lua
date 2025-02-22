@@ -117,6 +117,7 @@ data:extend({
     }, "__boblibrary__/graphics/constants/constant-equipment.png"),
     prerequisites = {
       "bob-energy-shield-equipment-5",
+      "space-science-pack",
     },
     unit = {
       count = 400,
@@ -128,6 +129,7 @@ data:extend({
         { "military-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
     effects = {
