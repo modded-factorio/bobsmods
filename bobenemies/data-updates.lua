@@ -2952,6 +2952,21 @@ end
 data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_parameters.ammo_type.action[1].trigger_target_mask =
   { "not-electric-unit" }
 
+if mods["combat-mechanics-overhaul"] then
+  for _, mask in pairs({ "ammo-turret", "artillery-turret", "capture-robot", "car", "character", "combat-robot", "construction-robot", "electric-turret", "fluid-turret", "gate", "logistic-robot", "turret", "unit", "unit-spawner", "wall" }) do
+  log(mask)
+    local prototype_table = data.raw[mask]
+    local mask_table = data.raw["utility-constants"].default.default_trigger_target_mask_by_type[mask]
+    if prototype_table and mask_table then
+      for _, prototype in pairs(prototype_table) do
+        if not prototype.trigger_target_mask then
+          prototype.trigger_target_mask = mask_table
+        end
+      end
+    end
+  end
+end
+
 if bobmods.enemies.small_alien_artifacts ~= true then
   -- hide items
   for _, item_name in pairs({
