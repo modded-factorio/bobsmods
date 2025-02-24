@@ -103,10 +103,6 @@ end
 
 if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
-    "bob-vehicle-roboport-equipment-1",
-    "bob-vehicle-roboport-equipment-2",
-    "bob-vehicle-roboport-equipment-3",
-    "bob-vehicle-roboport-equipment-4",
     "bob-vehicle-roboport-antenna-equipment",
     "bob-vehicle-roboport-antenna-equipment-2",
     "bob-vehicle-roboport-antenna-equipment-3",
@@ -159,5 +155,13 @@ if feature_flags["quality"] then
   end
   if data.raw.recipe["bob-vehicle-solar-panel-equipment-5"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-vehicle-solar-panel-equipment-5", false)
+  end
+  if data.raw.recipe["bob-vehicle-roboport-equipment-1"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-vehicle-roboport-equipment-1",
+      "bob-vehicle-roboport-equipment-2",
+      "bob-vehicle-roboport-equipment-3",
+      "bob-vehicle-roboport-equipment-4",
+    })
   end
 end
