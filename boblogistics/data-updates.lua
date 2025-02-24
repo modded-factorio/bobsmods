@@ -215,9 +215,6 @@ if feature_flags["quality"] then
     "bob-pump-3",
     "bob-pump-4",
     "roboport",
-    "bob-roboport-2",
-    "bob-roboport-3",
-    "bob-roboport-4",
     "bob-robochest-2",
     "bob-robochest-3",
     "bob-robochest-4",
@@ -280,4 +277,11 @@ if feature_flags["quality"] then
     "bob-armoured-fluid-wagon",
     "bob-armoured-fluid-wagon-2",
   })
+  if data.raw.recipe["bob-roboport-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-roboport-2",
+      "bob-roboport-3",
+      "bob-roboport-4",
+    })
+  end
 end
