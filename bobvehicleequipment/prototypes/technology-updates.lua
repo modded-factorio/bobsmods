@@ -112,7 +112,8 @@ end
 
 if mods["boblogistics"] then
   -- Bob's Logistics mod removes blue science from Electric engine and Robotics
-
-  bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-equipment-1", "chemical-science-pack")
+  if data.raw.technology["bob-vehicle-roboport-equipment-1"] then
+    bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-equipment-1", "chemical-science-pack")
+  end
   bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-modular-equipment-1", "chemical-science-pack")
 end
