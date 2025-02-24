@@ -205,4 +205,9 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   if bobmods.plates.make_void_fluid_recipe then
     bobmods.plates.make_void_fluid_recipe("bob-carbon-dioxide", 25, 10)
   end
+
+  bobmods.lib.recipe.replace_ingredient("concrete", "iron-ore", "bob-quartz")
+  bobmods.lib.recipe.replace_ingredient("concrete", "stone-brick", "bob-limestone")
+  bobmods.lib.tech.add_prerequisite("concrete", "bob-chemical-processing-2")
+
 end
