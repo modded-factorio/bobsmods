@@ -280,4 +280,11 @@ if feature_flags["quality"] then
     "bob-armoured-fluid-wagon",
     "bob-armoured-fluid-wagon-2",
   })
+
+  data.raw.recipe["long-handed-inserter-recycling"].localised_name = {
+    "recipe-name.recycling",
+    {
+      "entity-name.bob-red-inserter"
+    }
+  }
 end
