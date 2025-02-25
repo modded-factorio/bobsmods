@@ -198,8 +198,7 @@ if mods["quality"] then
     {
       type = "item",
       name = "bob-quality-processor",
-      --icon = "__bobmodules__/graphics/icons/quality-processor.png",
-      icon = "__bobmodules__/graphics/icons/module-processor-board.png",
+      icon = "__bobmodules__/graphics/icons/quality-processor.png",
       icon_size = 32,
       subgroup = "module-intermediates",
       order = "c-c9[bob-quality-processor-1]",
@@ -208,8 +207,7 @@ if mods["quality"] then
     {
       type = "item",
       name = "bob-quality-processor-2",
-      --icon = "__bobmodules__/graphics/icons/quality-processor-2.png",
-      icon = "__bobmodules__/graphics/icons/module-processor-board.png",
+      icon = "__bobmodules__/graphics/icons/quality-processor-2.png",
       icon_size = 32,
       subgroup = "module-intermediates",
       order = "c-c9[bob-quality-processor-2]",
@@ -218,8 +216,7 @@ if mods["quality"] then
     {
       type = "item",
       name = "bob-quality-processor-3",
-      --icon = "__bobmodules__/graphics/icons/quality-processor-3.png",
-      icon = "__bobmodules__/graphics/icons/module-processor-board.png",
+      icon = "__bobmodules__/graphics/icons/quality-processor-3.png",
       icon_size = 32,
       subgroup = "module-intermediates",
       order = "c-c9[bob-quality-processor-3]",
