@@ -33,11 +33,11 @@ bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 if data.raw.recipe["bob-solder"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder")
 end
+if data.raw.recipe["bob-solder-alloy-lead"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy-lead")
+end
 if data.raw.recipe["bob-solder-alloy"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy")
-end
-if data.raw.recipe["bob-solder-alloy-lead"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-solder-alloy-lead")
 end
 if data.raw.recipe["bob-tinned-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")
