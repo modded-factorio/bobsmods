@@ -1,0 +1,12 @@
+{
+  "item":
+  [
+    ["amethyst-ore", "bob-amethyst-ore"],
+    ["diamond-ore", "bob-diamond-ore"],
+    ["emerald-ore", "bob-emerald-ore"],
+    ["ruby-ore", "bob-ruby-ore"],
+    ["sapphire-ore", "bob-sapphire-ore"],
+    ["thorium-ore", "bob-thorium-ore"],
+    ["topaz-ore", "bob-topaz-ore"]
+  ]
+}

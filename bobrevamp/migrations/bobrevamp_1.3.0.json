@@ -1,4 +1,25 @@
 {
+  "item":
+  [
+    ["ammonia-barrel", "bob-ammonia-barrel"],
+    ["ammoniated-brine-barrel", "bob-ammoniated-brine-barrel"],
+    ["ammonium-chloride", "bob-ammonium-chloride"],
+    ["brine-barrel", "bob-brine-barrel"],
+    ["carbon-dioxide-barrel", "bob-carbon-dioxide-barrel"],
+    ["dinitrogen-tetroxide-barrel", "bob-dinitrogen-tetroxide-barrel"],
+    ["heat-shield-tile", "bob-heat-shield-tile"],
+    ["hydrazine-barrel", "bob-hydrazine-barrel"],
+    ["hydrogen-peroxide-barrel", "bob-hydrogen-peroxide-barrel"],
+    ["limestone", "bob-limestone"],
+    ["nitric-oxide-barrel", "bob-nitric-oxide-barrel"],
+    ["rtg", "bob-rtg"],
+    ["sodium-bicarbonate", "bob-sodium-bicarbonate"],
+    ["sodium-carbonate", "bob-sodium-carbonate"],
+    ["sodium-chlorate", "bob-sodium-chlorate"],
+    ["sodium-cobaltate", "bob-sodium-cobaltate"],
+    ["sodium-perchlorate", "bob-sodium-perchlorate"],
+    ["sour-gas-barrel", "bob-sour-gas-barrel"]
+  ],
   "recipe":
   [
     ["ammonium-chloride-recycling", "bob-ammonium-chloride-recycling"]
