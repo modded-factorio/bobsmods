@@ -1,3 +1,12 @@
+local electronic_board_drop_move = {
+  filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+  volume = 1,
+}
+local electronic_board_pick = {
+  filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+  volume = 0.7,
+}
+
 data:extend({
   {
     type = "item",
@@ -7,6 +16,18 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-0[bob-module-case]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+      volume = 0.8,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+      volume = 0.8,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
   {
     type = "item",
@@ -16,6 +37,21 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-b4[bob-module-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
+    },
   },
   {
     type = "item",
@@ -25,6 +61,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c4[bob-speed-processor-1]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -34,6 +73,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c5[bob-efficiency-processor-1]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -43,6 +85,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c6[bob-productivity-processor-1]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -52,6 +97,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c7[bob-pollution-clean-processor-1]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -61,6 +109,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c8[bob-pollution-create-processor-1]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 })
 
@@ -73,6 +124,18 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-1[bob-module-contact]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+      volume = 0.8,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+      volume = 0.8,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
   {
     type = "item",
@@ -82,6 +145,21 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-b5[bob-module-processor-board-1]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
+    },
   },
   {
     type = "item",
@@ -91,6 +169,21 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-b6[bob-module-processor-board-2]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
   {
     type = "item",
@@ -100,6 +193,21 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-b7[bob-module-processor-board-3]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
   {
     type = "item",
@@ -109,6 +217,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c4[bob-speed-processor-2]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -118,6 +229,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c4[bob-speed-processor-3]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -127,6 +241,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c5[bob-efficiency-processor-2]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -136,6 +253,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c5[bob-efficiency-processor-3]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -145,6 +265,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c6[bob-productivity-processor-2]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -154,6 +277,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c6[bob-productivity-processor-3]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -163,6 +289,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c7[bob-pollution-clean-processor-2]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -172,6 +301,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c7[bob-pollution-clean-processor-3]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -181,6 +313,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c8[bob-pollution-create-processor-2]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
   {
     type = "item",
@@ -190,6 +325,9 @@ data:extend({
     subgroup = "module-intermediates",
     order = "c-c8[bob-pollution-create-processor-3]",
     stack_size = 100,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 })
 
@@ -203,6 +341,9 @@ if mods["quality"] then
       subgroup = "module-intermediates",
       order = "c-c9[bob-quality-processor-1]",
       stack_size = 100,
+      drop_sound = electronic_board_drop_move,
+      inventory_move_sound = electronic_board_drop_move,
+      pick_sound = electronic_board_pick,
     },
     {
       type = "item",
@@ -212,6 +353,9 @@ if mods["quality"] then
       subgroup = "module-intermediates",
       order = "c-c9[bob-quality-processor-2]",
       stack_size = 100,
+      drop_sound = electronic_board_drop_move,
+      inventory_move_sound = electronic_board_drop_move,
+      pick_sound = electronic_board_pick,
     },
     {
       type = "item",
@@ -221,6 +365,9 @@ if mods["quality"] then
       subgroup = "module-intermediates",
       order = "c-c9[bob-quality-processor-3]",
       stack_size = 100,
+      drop_sound = electronic_board_drop_move,
+      inventory_move_sound = electronic_board_drop_move,
+      pick_sound = electronic_board_pick,
     },
   })
 end
