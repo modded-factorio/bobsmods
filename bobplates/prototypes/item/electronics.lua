@@ -24,4 +24,32 @@ data:extend({
       volume = 0.7,
     },
   },
+
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-1",
+    icon = "__bobplates__/graphics/icons/achievement/bob-computer-age-1.png",
+    icon_size = 128,
+    item_product = "advanced-circuit",
+    amount = 250,
+    order = "d[production]-e[advanced-processing-unit-production]-a",
+  },
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-2",
+    icon = "__bobplates__/graphics/icons/achievement/bob-computer-age-2.png",
+    icon_size = 128,
+    item_product = "advanced-circuit",
+    amount = 500,
+    order = "d[production]-e[advanced-processing-unit-production]-b",
+  },
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-3",
+    icon = "__bobplates__/graphics/icons/achievement/bob-computer-age-3.png",
+    icon_size = 128,
+    item_product = "advanced-circuit",
+    amount = 2500,
+    order = "d[production]-e[advanced-processing-unit-production]-c",
+  },
 })
