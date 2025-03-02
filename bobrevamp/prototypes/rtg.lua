@@ -217,7 +217,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon = "__bobrevamp__/graphics/icons/brine-electrolysis.png",
         icon_size = 64,
         subgroup = "bob-fluid-electrolysis",
-        order = "b[fluid-chemistry]-b[salt-water-electrolysis]",
+        order = "b[fluid-chemistry]-b[brine-electrolysis]",
         category = "bob-electrolysis",
         enabled = false,
         energy_required = 1.5,
