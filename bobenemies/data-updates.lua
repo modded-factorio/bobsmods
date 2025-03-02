@@ -2953,7 +2953,23 @@ data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_param
   { "not-electric-unit" }
 
 if mods["combat-mechanics-overhaul"] then
-  for _, mask in pairs({ "ammo-turret", "artillery-turret", "capture-robot", "car", "character", "combat-robot", "construction-robot", "electric-turret", "fluid-turret", "gate", "logistic-robot", "turret", "unit", "unit-spawner", "wall" }) do
+  for _, mask in pairs({
+    "ammo-turret",
+    "artillery-turret",
+    "capture-robot",
+    "car",
+    "character",
+    "combat-robot",
+    "construction-robot",
+    "electric-turret",
+    "fluid-turret",
+    "gate",
+    "logistic-robot",
+    "turret",
+    "unit",
+    "unit-spawner",
+    "wall",
+  }) do
     local prototype_table = data.raw[mask]
     local mask_table = data.raw["utility-constants"].default.default_trigger_target_mask_by_type[mask]
     if prototype_table and mask_table then

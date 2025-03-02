@@ -111,17 +111,22 @@ if mods["combat-mechanics-overhaul"] then
   if not settings.startup["shotguns-hit-friendly"].value == true then
     data.raw.projectile["bob-better-shotgun-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-acid-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.force = "not-same"
+    data.raw.projectile["bob-shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.force =
+      "not-same"
     data.raw.projectile["bob-shotgun-ap-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-electric-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-explosive-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.force = "not-same"
+    data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.force =
+      "not-same"
     data.raw.projectile["bob-shotgun-flame-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.force = "not-same"
+    data.raw.projectile["bob-shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.force =
+      "not-same"
     data.raw.projectile["bob-shotgun-plasma-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.force = "not-same"
+    data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.force =
+      "not-same"
     data.raw.projectile["bob-shotgun-poison-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.force = "not-same"
+    data.raw.projectile["bob-shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.force =
+      "not-same"
     data.raw.projectile["bob-shotgun-uranium-projectile"].force_condition = "not-same"
   end
 end
