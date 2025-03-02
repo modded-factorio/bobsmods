@@ -61,3 +61,5 @@ require("prototypes.chests")
 require("prototypes.repair-pack")
 
 require("prototypes.aai-loaders")
+
+require("prototypes.tips-and-tricks")
