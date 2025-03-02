@@ -21,8 +21,11 @@ if data.raw.item["bob-tinned-copper-cable"] then
   bobmods.lib.recipe.replace_ingredient("bob-module-contact", "copper-cable", "bob-tinned-copper-cable")
 end
 
+if data.raw.item["bob-wooden-board"] then
+  bobmods.lib.recipe.replace_ingredient("bob-module-circuit-board", "plastic-bar", "bob-wooden-board")
+end
+
 if data.raw.item["bob-phenolic-board"] then
-  bobmods.lib.recipe.replace_ingredient("bob-module-circuit-board", "plastic-bar", "bob-phenolic-board")
   bobmods.lib.recipe.replace_ingredient("bob-module-processor-board", "plastic-bar", "bob-phenolic-board")
 end
 
