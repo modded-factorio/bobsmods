@@ -1,9 +1,6 @@
-
-data.raw["tips-and-tricks-item"].splitters.simulation =
-{
+data.raw["tips-and-tricks-item"].splitters.simulation = {
   init_update_count = 800,
-  init =
-  [[
+  init = [[
     require("__core__/lualib/story")
     player = game.simulation.create_test_player{name = "big k"}
     player.teleport({0, 0.5})
@@ -144,5 +141,5 @@ data.raw["tips-and-tricks-item"].splitters.simulation =
     }
     tip_story_init(story_table)
 
-  ]]
+  ]],
 }

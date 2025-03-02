@@ -1,7 +1,5 @@
-data.raw["tips-and-tricks-item"]["clear-cursor"].simulation =
-{
-  init =
-  [[
+data.raw["tips-and-tricks-item"]["clear-cursor"].simulation = {
+  init = [[
     require("__core__/lualib/story")
     player = game.simulation.create_test_player{name = "big k"}
     player.teleport({0, 4.5})
@@ -40,12 +38,11 @@ data.raw["tips-and-tricks-item"]["clear-cursor"].simulation =
       }
     }
     tip_story_init(story_table)
-  ]]
+  ]],
 }
 
 data.raw["tips-and-tricks-item"]["circuit-network"].simulation = {
-  init =
-  [[
+  init = [[
     require("__core__/lualib/story")
     player = game.simulation.create_test_player{name = "cable-guy"}
     player.teleport({0.5, -7})
@@ -558,5 +555,5 @@ data.raw["tips-and-tricks-item"]["circuit-network"].simulation = {
       }
     }
     tip_story_init(story_table)
-  ]]
+  ]],
 }

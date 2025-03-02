@@ -1,10 +1,7 @@
 if mods["quality"] then
-
-  data.raw["tips-and-tricks-item"]["quality-probabilities"].simulation =
-  {
+  data.raw["tips-and-tricks-item"]["quality-probabilities"].simulation = {
     init_update_count = 120,
-    init =
-    [[
+    init = [[
       player = game.simulation.create_test_player{name = "Quality Manager"}
       player.teleport({-7.5, 0})
       game.simulation.camera_player = player
@@ -68,6 +65,6 @@ if mods["quality"] then
       end
 
       show_probabilities()
-    ]]
+    ]],
   }
 end

@@ -1,7 +1,5 @@
-data.raw["tips-and-tricks-item"]["e-confirm"].simulation =
-{
-  init =
-  [[
+data.raw["tips-and-tricks-item"]["e-confirm"].simulation = {
+  init = [[
     require("__core__/lualib/story")
     player = game.simulation.create_test_player{name = "big k"}
     player.teleport({-8.5, -1.5})
@@ -108,14 +106,17 @@ data.raw["tips-and-tricks-item"]["e-confirm"].simulation =
       }
     }
     tip_story_init(story_table)
-  ]]
+  ]],
 }
 
-data.raw["tips-and-tricks-item"]["pipette"].simulation =
-{
-  game_view_settings = { default_show_value = false, show_controller_gui = true, show_quickbar = true, update_entity_selection = true },
-  init =
-  [[
+data.raw["tips-and-tricks-item"]["pipette"].simulation = {
+  game_view_settings = {
+    default_show_value = false,
+    show_controller_gui = true,
+    show_quickbar = true,
+    update_entity_selection = true,
+  },
+  init = [[
     require("__core__/lualib/story")
     game.simulation.active_quickbars = 1
     player = game.simulation.create_test_player{name = "big K"}
@@ -285,14 +286,12 @@ data.raw["tips-and-tricks-item"]["pipette"].simulation =
       }
     }
     tip_story_init(story_table)
-  ]]
+  ]],
 }
 
-data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation =
-{
+data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation = {
   game_view_settings = { default_show_value = false, show_controller_gui = true, show_crafting_queue = true },
-  init =
-  [[
+  init = [[
     require("__core__/lualib/story")
     player = game.simulation.create_test_player{name = "big k"}
     player.teleport({0, 4.5})
@@ -376,5 +375,5 @@ data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation =
       }
     }
     tip_story_init(story_table)
-  ]]
+  ]],
 }
