@@ -1063,7 +1063,7 @@ data:extend({
         recipe = "bob-vehicle-roboport-robot-equipment",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 50,
       ingredients = {
@@ -1095,7 +1095,7 @@ data:extend({
         recipe = "bob-vehicle-roboport-robot-equipment-2",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 100,
       ingredients = {
@@ -1127,7 +1127,7 @@ data:extend({
         recipe = "bob-vehicle-roboport-robot-equipment-3",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 150,
       ingredients = {
@@ -1160,7 +1160,7 @@ data:extend({
         recipe = "bob-vehicle-roboport-robot-equipment-4",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 200,
       ingredients = {
@@ -1176,7 +1176,6 @@ data:extend({
 })
 
 if combined_roboports == true then
-
   data:extend({
     {
       type = "item",
@@ -1652,9 +1651,7 @@ if combined_roboports == true then
     bobmods.lib.tech.add_recipe_unlock("bob-vehicle-roboport-equipment-4", "bob-roboport-chargepad-4")
     bobmods.lib.tech.add_recipe_unlock("bob-vehicle-roboport-equipment-4", "bob-roboport-door-4")
   end
-
 else
-
   data.raw.technology["bob-vehicle-roboport-modular-equipment-1"].prerequisites = {
     "construction-robotics",
     "bob-vehicle-solar-panel-equipment-1",
@@ -1685,5 +1682,4 @@ else
   bobmods.lib.tech.add_recipe_unlock("bob-vehicle-roboport-modular-equipment-4", "bob-roboport-antenna-4")
   bobmods.lib.tech.add_recipe_unlock("bob-vehicle-roboport-modular-equipment-4", "bob-roboport-chargepad-4")
   bobmods.lib.tech.add_recipe_unlock("bob-vehicle-roboport-modular-equipment-4", "bob-roboport-door-4")
-
 end

@@ -203,7 +203,6 @@ if bobmods.tech.advanced_logistic_science then
       )
     end
 
-
     bobmods.lib.tech.replace_science_pack(
       "bob-vehicle-roboport-modular-equipment-3",
       "utility-science-pack",

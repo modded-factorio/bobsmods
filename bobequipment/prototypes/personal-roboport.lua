@@ -1083,7 +1083,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 50,
       ingredients = {
@@ -1115,7 +1115,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment-2",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 100,
       ingredients = {
@@ -1147,7 +1147,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment-3",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 150,
       ingredients = {
@@ -1180,7 +1180,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment-4",
       },
     },
-    prerequisites = { },
+    prerequisites = {},
     unit = {
       count = 200,
       ingredients = {
@@ -1196,7 +1196,6 @@ data:extend({
 })
 
 if combined_roboports == true then
-
   data.raw.item["personal-roboport-equipment"].icon =
     "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
   data.raw.item["personal-roboport-equipment"].icon_size = 128
@@ -1480,9 +1479,7 @@ if combined_roboports == true then
     bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk4-equipment", "bob-roboport-chargepad-4")
     bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk4-equipment", "bob-roboport-door-4")
   end
-
 else
-
   data.raw.technology["personal-roboport-equipment"].hidden = true
   data.raw.technology["personal-roboport-mk2-equipment"].hidden = true
   data.raw.technology["personal-roboport-equipment"].enabled = false
@@ -1494,7 +1491,7 @@ else
 
   data.raw.technology["bob-personal-roboport-modular-equipment-1"].prerequisites = {
     "construction-robotics",
-    "solar-panel-equipment"
+    "solar-panel-equipment",
   }
   data.raw.technology["bob-personal-roboport-modular-equipment-2"].prerequisites = {
     "bob-personal-roboport-modular-equipment-1",
@@ -1522,5 +1519,4 @@ else
   bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-4", "bob-roboport-antenna-4")
   bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-4", "bob-roboport-chargepad-4")
   bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-4", "bob-roboport-door-4")
-
 end

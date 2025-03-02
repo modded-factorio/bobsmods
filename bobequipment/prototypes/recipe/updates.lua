@@ -25,7 +25,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-1", amount = 2 },
     { type = "item", name = "steel-plate", amount = 2 },
   }
-
 else
   bobmods.lib.recipe.remove_ingredient("personal-roboport-equipment", "battery")
   bobmods.lib.recipe.add_ingredient("personal-roboport-equipment", { type = "item", name = "battery", amount = 20 })
@@ -62,7 +61,8 @@ then
       bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "bob-zinc-processing")
       bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "bob-invar-processing")
     else
-      bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-zinc-processing")bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2" , "bob-invar-processing")
+      bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-zinc-processing")
+      bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-invar-processing")
     end
   end
 else
@@ -80,7 +80,11 @@ else
         "personal-roboport-mk2-equipment",
         { type = "item", name = "bob-steel-bearing", amount = 5 }
       )
-      bobmods.lib.recipe.replace_ingredient("personal-roboport-mk2-equipment", "iron-gear-wheel", "bob-steel-gear-wheel")
+      bobmods.lib.recipe.replace_ingredient(
+        "personal-roboport-mk2-equipment",
+        "iron-gear-wheel",
+        "bob-steel-gear-wheel"
+      )
     end
     bobmods.lib.recipe.replace_ingredient(
       "bob-personal-roboport-antenna-equipment-2",
@@ -92,7 +96,7 @@ else
       "steel-plate",
       "bob-invar-alloy"
     )
-    bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2" , "bob-invar-processing")
+    bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-invar-processing")
     bobmods.lib.recipe.add_ingredient(
       "bob-personal-roboport-antenna-equipment-2",
       { type = "item", name = "bob-steel-bearing", amount = 5 }
@@ -165,7 +169,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-3", amount = 6 },
     { type = "item", name = "steel-plate", amount = 2 },
   }
-
 else
   if mods["bobplates"] then
     if combined_roboports == true then
@@ -261,7 +264,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-4", amount = 8 },
     { type = "item", name = "steel-plate", amount = 2 },
   }
-
 else
   if mods["bobplates"] then
     if combined_roboports == true then

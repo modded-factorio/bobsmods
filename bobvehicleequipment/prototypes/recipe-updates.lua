@@ -27,7 +27,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-1", amount = 4 },
     { type = "item", name = "steel-plate", amount = 4 },
   }
-
 else
   bobmods.lib.recipe.remove_ingredient("bob-vehicle-roboport-equipment-1", "battery")
   bobmods.lib.recipe.add_ingredient(
@@ -88,7 +87,11 @@ else
         "bob-vehicle-roboport-equipment-2",
         { type = "item", name = "bob-steel-bearing", amount = 10 }
       )
-      bobmods.lib.recipe.replace_ingredient("bob-vehicle-roboport-equipment-2", "iron-gear-wheel", "bob-steel-gear-wheel")
+      bobmods.lib.recipe.replace_ingredient(
+        "bob-vehicle-roboport-equipment-2",
+        "iron-gear-wheel",
+        "bob-steel-gear-wheel"
+      )
     end
     bobmods.lib.recipe.replace_ingredient(
       "bob-vehicle-roboport-antenna-equipment-2",
@@ -173,7 +176,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-3", amount = 12 },
     { type = "item", name = "steel-plate", amount = 4 },
   }
-
 else
   if mods["bobplates"] then
     if combined_roboports == true then
@@ -265,7 +267,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-4", amount = 16 },
     { type = "item", name = "steel-plate", amount = 4 },
   }
-
 else
   if data.raw.item["bob-advanced-processing-unit"] then
     if combined_roboports == true then
