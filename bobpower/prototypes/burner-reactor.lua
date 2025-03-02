@@ -456,6 +456,5 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     })
 
     bobmods.lib.tech.add_recipe_unlock("bob-burner-reactor-1", "bob-fluid-reactor-from-fluid-furnace")
-    bobmods.lib.tech.add_prerequisite("bob-burner-reactor-1", "bob-fluid-furnace")
   end
 end

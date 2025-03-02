@@ -36,34 +36,6 @@ then
     }
   end
 
-  circuit_connector_definitions["electric-furnace"] =
-    circuit_connector_definitions.create_vector(universal_connector_template, {
-      {
-        variation = 18,
-        main_offset = util.by_pixel(28, 25),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = true,
-      },
-      {
-        variation = 18,
-        main_offset = util.by_pixel(28, 25),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = true,
-      },
-      {
-        variation = 18,
-        main_offset = util.by_pixel(28, 25),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = true,
-      },
-      {
-        variation = 18,
-        main_offset = util.by_pixel(28, 25),
-        shadow_offset = util.by_pixel(39, 31),
-        show_shadow = true,
-      },
-    })
-
   data:extend({
     {
       type = "item",
@@ -151,7 +123,7 @@ then
       minable = { mining_time = 1, result = "bob-electric-chemical-mixing-furnace" },
       max_health = 450,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-      circuit_connector = circuit_connector_definitions["electric-furnace"],
+      circuit_connector = circuit_connector_definitions["bob-electric-chemical-furnace"],
       corpse = "big-remnants",
       resistances = {
         {
@@ -222,7 +194,7 @@ then
       minable = { mining_time = 1, result = "bob-electric-chemical-mixing-furnace-2" },
       max_health = 550,
       circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-      circuit_connector = circuit_connector_definitions["electric-furnace"],
+      circuit_connector = circuit_connector_definitions["bob-electric-chemical-furnace"],
       corpse = "big-remnants",
       resistances = {
         {

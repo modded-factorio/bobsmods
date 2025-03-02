@@ -20,20 +20,23 @@ then
     { "bob-alien-science-pack", 1 },
     { "bob-alien-science-pack-yellow", 1 },
     { "bob-alien-science-pack-orange", 1 },
+    { "space-science-pack", 1 },
   }
 
-  data.raw.technology["bob-vehicle-fission-cell-equipment-5"].unit.ingredients = {
+  data.raw.technology["bob-vehicle-fission-cell-equipment-6"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },
     { "bob-alien-science-pack", 1 },
     { "bob-alien-science-pack-blue", 1 },
     { "bob-alien-science-pack-red", 1 },
+    { "space-science-pack", 1 },
   }
 
-  data.raw.technology["bob-vehicle-fission-reactor-equipment-5"].unit.ingredients = {
+  data.raw.technology["bob-vehicle-fission-reactor-equipment-6"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },
     { "bob-alien-science-pack", 1 },
     { "bob-alien-science-pack-blue", 1 },
     { "bob-alien-science-pack-red", 1 },
+    { "space-science-pack", 1 },
   }
 
   data.raw.technology["bob-vehicle-shield-equipment-4"].unit.ingredients = {
@@ -56,6 +59,7 @@ then
       "bob-alien-science-pack-red",
       1,
     },
+    { "space-science-pack", 1 },
   }
 
   data.raw.technology["bob-vehicle-battery-equipment-4"].unit.ingredients = {
@@ -108,7 +112,8 @@ end
 
 if mods["boblogistics"] then
   -- Bob's Logistics mod removes blue science from Electric engine and Robotics
-
-  bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-equipment-1", "chemical-science-pack")
+  if data.raw.technology["bob-vehicle-roboport-equipment-1"] then
+    bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-equipment-1", "chemical-science-pack")
+  end
   bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-modular-equipment-1", "chemical-science-pack")
 end

@@ -85,6 +85,8 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 1, result = input.name },
       max_health = input.max_health or 150,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["bob-electric-furnace"],
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
       resistances = {
@@ -141,6 +143,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
   end
 
   data.raw.item["electric-furnace"].order = "c[electric-furnace-1]"
+  data.raw.furnace["electric-furnace"].circuit_connector = circuit_connector_definitions["bob-electric-furnace"]
 
   data:extend({
     {

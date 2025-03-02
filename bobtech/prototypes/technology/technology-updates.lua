@@ -124,22 +124,35 @@ if bobmods.tech.advanced_logistic_science then
     "bob-advanced-logistic-science-pack"
   )
 
+  local combined_roboports = true
+  if mods["boblogistics"] and settings.startup["bobmods-logistics-disableroboports"].value == true then
+    combined_roboports = false
+  end
+
   if mods["bobequipment"] then
-    bobmods.lib.tech.replace_science_pack(
-      "bob-personal-roboport-mk3-equipment",
-      "utility-science-pack",
-      "bob-advanced-logistic-science-pack"
-    )
-    bobmods.lib.tech.replace_prerequisite(
-      "bob-personal-roboport-mk3-equipment",
-      "utility-science-pack",
-      "bob-advanced-logistic-science-pack"
-    )
-    bobmods.lib.tech.replace_science_pack(
-      "bob-personal-roboport-mk4-equipment",
-      "utility-science-pack",
-      "bob-advanced-logistic-science-pack"
-    )
+    if combined_roboports == true then
+      bobmods.lib.tech.replace_science_pack(
+        "bob-personal-roboport-mk3-equipment",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+      bobmods.lib.tech.replace_prerequisite(
+        "bob-personal-roboport-mk3-equipment",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+      bobmods.lib.tech.replace_science_pack(
+        "bob-personal-roboport-mk4-equipment",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+    else
+      bobmods.lib.tech.replace_prerequisite(
+        "bob-personal-roboport-modular-equipment-3",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+    end
 
     bobmods.lib.tech.replace_science_pack(
       "bob-personal-roboport-modular-equipment-3",
@@ -166,21 +179,29 @@ if bobmods.tech.advanced_logistic_science then
     bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "low-density-structure")
   end
   if mods["bobvehicleequipment"] then
-    bobmods.lib.tech.replace_science_pack(
-      "bob-vehicle-roboport-equipment-3",
-      "utility-science-pack",
-      "bob-advanced-logistic-science-pack"
-    )
-    bobmods.lib.tech.replace_prerequisite(
-      "bob-vehicle-roboport-equipment-3",
-      "utility-science-pack",
-      "bob-advanced-logistic-science-pack"
-    )
-    bobmods.lib.tech.replace_science_pack(
-      "bob-vehicle-roboport-equipment-4",
-      "utility-science-pack",
-      "bob-advanced-logistic-science-pack"
-    )
+    if combined_roboports == true then
+      bobmods.lib.tech.replace_science_pack(
+        "bob-vehicle-roboport-equipment-3",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+      bobmods.lib.tech.replace_prerequisite(
+        "bob-vehicle-roboport-equipment-3",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+      bobmods.lib.tech.replace_science_pack(
+        "bob-vehicle-roboport-equipment-4",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+    else
+      bobmods.lib.tech.replace_prerequisite(
+        "bob-vehicle-roboport-modular-equipment-3",
+        "utility-science-pack",
+        "bob-advanced-logistic-science-pack"
+      )
+    end
 
     bobmods.lib.tech.replace_science_pack(
       "bob-vehicle-roboport-modular-equipment-3",
@@ -234,7 +255,7 @@ if
   and settings.startup["bobmods-logistics-inserteroverhaul"].value == true
 then
   bobmods.lib.tech.add_prerequisite("bob-advanced-research", "bulk-inserter-2")
-  bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-express-inserters")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-express-inserter")
 else
   bobmods.lib.tech.add_prerequisite("bob-advanced-research", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "fast-inserter")
