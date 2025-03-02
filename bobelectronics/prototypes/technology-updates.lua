@@ -10,7 +10,7 @@ if mods["bobassembly"] then
 end
 if mods["bobmining"] then
   bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")
-  bobmods.lib.tech.add_prerequisite("bob-area-drills-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-area-drills-1", "bob-electronics")
   bobmods.lib.tech.add_prerequisite("bob-water-miner-2", "bob-electronics")
 end
 if mods["bobrevamp"] then

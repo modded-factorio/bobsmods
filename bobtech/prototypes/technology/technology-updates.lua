@@ -360,8 +360,8 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if data.raw.technology["bob-drills-2"] then
     bobmods.lib.tech.remove_prerequisite("bob-drills-2", "logistic-science-pack")
   end
-  if data.raw.technology["bob-area-drills-2"] then
-    bobmods.lib.tech.remove_prerequisite("bob-area-drills-2", "logistic-science-pack")
+  if data.raw.technology["bob-area-drills-1"] then
+    bobmods.lib.tech.remove_prerequisite("bob-area-drills-1", "logistic-science-pack")
   end
 
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "steam-engine")
