@@ -39,7 +39,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "bob-alien-artifact-yellow", amount = 7 })
     bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "bob-alien-artifact-green", amount = 7 })
     bobmods.lib.recipe.add_ingredient("bob-god-module", { type = "item", name = "bob-alien-artifact-red", amount = 7 })
-    bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-alien-artifact-blue", amount = 7 })
+    bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-alien-artifact", amount = 7 })
     bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-alien-artifact-blue", amount = 7 })
     bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-alien-artifact-orange", amount = 7 })
     bobmods.lib.recipe.add_ingredient("bob-god-module-productivity", { type = "item", name = "bob-alien-artifact-purple", amount = 7 })
