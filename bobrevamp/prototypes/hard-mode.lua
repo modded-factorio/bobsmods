@@ -209,5 +209,4 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   bobmods.lib.recipe.replace_ingredient("concrete", "iron-ore", "bob-quartz")
   bobmods.lib.recipe.replace_ingredient("concrete", "stone-brick", "bob-limestone")
   bobmods.lib.tech.add_prerequisite("concrete", "bob-chemical-processing-2")
-
 end
