@@ -1,5 +1,7 @@
 local electronics_amount = 4
-if mods["bobelectronics"] then electronics_amount = 10 end
+if mods["bobelectronics"] then
+  electronics_amount = 10
+end
 
 --[[Speed Modules]]
 

@@ -176,7 +176,10 @@ if mods["bobelectronics"] then
     bobmods.lib.recipe.add_ingredient("bob-speed-processor", { type = "item", name = "bob-solder", amount = 6 })
     bobmods.lib.recipe.add_ingredient("bob-efficiency-processor", { type = "item", name = "bob-solder", amount = 6 })
     bobmods.lib.recipe.add_ingredient("bob-productivity-processor", { type = "item", name = "bob-solder", amount = 7 })
-    bobmods.lib.recipe.add_ingredient("bob-pollution-clean-processor", { type = "item", name = "bob-solder", amount = 4 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-pollution-clean-processor",
+      { type = "item", name = "bob-solder", amount = 4 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "bob-pollution-create-processor",
       { type = "item", name = "bob-solder", amount = 4 }
@@ -184,7 +187,10 @@ if mods["bobelectronics"] then
 
     bobmods.lib.recipe.add_ingredient("bob-speed-processor-2", { type = "item", name = "bob-solder", amount = 7 })
     bobmods.lib.recipe.add_ingredient("bob-efficiency-processor-2", { type = "item", name = "bob-solder", amount = 7 })
-    bobmods.lib.recipe.add_ingredient("bob-productivity-processor-2", { type = "item", name = "bob-solder", amount = 8 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-productivity-processor-2",
+      { type = "item", name = "bob-solder", amount = 8 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "bob-pollution-clean-processor-2",
       { type = "item", name = "bob-solder", amount = 5 }
@@ -196,7 +202,10 @@ if mods["bobelectronics"] then
 
     bobmods.lib.recipe.add_ingredient("bob-speed-processor-3", { type = "item", name = "bob-solder", amount = 8 })
     bobmods.lib.recipe.add_ingredient("bob-efficiency-processor-3", { type = "item", name = "bob-solder", amount = 8 })
-    bobmods.lib.recipe.add_ingredient("bob-productivity-processor-3", { type = "item", name = "bob-solder", amount = 11 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-productivity-processor-3",
+      { type = "item", name = "bob-solder", amount = 11 }
+    )
     bobmods.lib.recipe.add_ingredient(
       "bob-pollution-clean-processor-3",
       { type = "item", name = "bob-solder", amount = 7 }
@@ -267,7 +276,6 @@ else
   end
 end
 
-
 bobmods.lib.tech.add_recipe_unlock("modules", "bob-module-case")
 bobmods.lib.tech.add_recipe_unlock("modules", "bob-module-circuit-board")
 bobmods.lib.tech.add_recipe_unlock("modules", "bob-module-contact")
@@ -306,24 +314,53 @@ if data.raw.item["bob-ruby-5"] then
     bobmods.lib.recipe.add_ingredient("bob-quality-processor-3", { type = "item", name = "bob-diamond-5", amount = 3 })
   end
 
-  bobmods.lib.recipe.add_ingredient("bob-productivity-processor", { type = "item", name = "bob-sapphire-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-productivity-processor-2", { type = "item", name = "bob-amethyst-5", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("bob-productivity-processor-3", { type = "item", name = "bob-diamond-5", amount = 3 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-productivity-processor",
+    { type = "item", name = "bob-sapphire-5", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-productivity-processor-2",
+    { type = "item", name = "bob-amethyst-5", amount = 2 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-productivity-processor-3",
+    { type = "item", name = "bob-diamond-5", amount = 3 }
+  )
 
   bobmods.lib.recipe.add_ingredient("bob-speed-processor", { type = "item", name = "bob-ruby-5", amount = 1 })
   bobmods.lib.recipe.add_ingredient("bob-speed-processor-2", { type = "item", name = "bob-emerald-5", amount = 2 })
   bobmods.lib.recipe.add_ingredient("bob-speed-processor-3", { type = "item", name = "bob-topaz-5", amount = 3 })
 
   bobmods.lib.recipe.add_ingredient("bob-efficiency-processor", { type = "item", name = "bob-ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-efficiency-processor-2", { type = "item", name = "bob-sapphire-5", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("bob-efficiency-processor-3", { type = "item", name = "bob-amethyst-5", amount = 3 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-efficiency-processor-2",
+    { type = "item", name = "bob-sapphire-5", amount = 2 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-efficiency-processor-3",
+    { type = "item", name = "bob-amethyst-5", amount = 3 }
+  )
 
   bobmods.lib.recipe.add_ingredient("bob-pollution-clean-processor", { type = "item", name = "bob-ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-pollution-clean-processor-2", { type = "item", name = "bob-sapphire-5", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("bob-pollution-clean-processor-3", { type = "item", name = "bob-emerald-5", amount = 3 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-pollution-clean-processor-2",
+    { type = "item", name = "bob-sapphire-5", amount = 2 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-pollution-clean-processor-3",
+    { type = "item", name = "bob-emerald-5", amount = 3 }
+  )
 
-  bobmods.lib.recipe.add_ingredient("bob-pollution-create-processor", { type = "item", name = "bob-ruby-5", amount = 1 })
-  bobmods.lib.recipe.add_ingredient("bob-pollution-create-processor-2", { type = "item", name = "bob-sapphire-5", amount = 2 })
-  bobmods.lib.recipe.add_ingredient("bob-pollution-create-processor-3", { type = "item", name = "bob-emerald-5", amount = 3 })
-
+  bobmods.lib.recipe.add_ingredient(
+    "bob-pollution-create-processor",
+    { type = "item", name = "bob-ruby-5", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-pollution-create-processor-2",
+    { type = "item", name = "bob-sapphire-5", amount = 2 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-pollution-create-processor-3",
+    { type = "item", name = "bob-emerald-5", amount = 3 }
+  )
 end

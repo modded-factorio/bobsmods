@@ -1,5 +1,7 @@
 local electronics_amount = 4
-if mods["bobelectronics"] then electronics_amount = 10 end
+if mods["bobelectronics"] then
+  electronics_amount = 10
+end
 
 if data.raw.item["bob-advanced-processing-unit"] then
   bobmods.lib.recipe.remove_ingredient("bob-speed-module-4", "processing-unit")
@@ -60,8 +62,14 @@ if data.raw.item["bob-advanced-processing-unit"] then
     )
   end
 else
-  bobmods.lib.recipe.add_ingredient("bob-speed-module-4", { type = "item", name = "advanced-circuit", amount = electronics_amount })
-  bobmods.lib.recipe.add_ingredient("bob-efficiency-module-4", { type = "item", name = "advanced-circuit", amount = electronics_amount })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-speed-module-4",
+    { type = "item", name = "advanced-circuit", amount = electronics_amount }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-efficiency-module-4",
+    { type = "item", name = "advanced-circuit", amount = electronics_amount }
+  )
   bobmods.lib.recipe.add_ingredient(
     "bob-productivity-module-4",
     { type = "item", name = "advanced-circuit", amount = electronics_amount }
@@ -89,7 +97,10 @@ else
     { type = "item", name = "processing-unit", amount = 4 }
   )
   if mods["quality"] then
-    bobmods.lib.recipe.add_ingredient("bob-quality-module-4", { type = "item", name = "advanced-circuit", amount = electronics_amount })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-quality-module-4",
+      { type = "item", name = "advanced-circuit", amount = electronics_amount }
+    )
     bobmods.lib.recipe.add_ingredient("bob-quality-module-5", { type = "item", name = "processing-unit", amount = 4 })
   end
 end
