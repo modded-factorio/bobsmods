@@ -111,7 +111,7 @@ data.raw["tips-and-tricks-item"]["e-confirm"].simulation =
   ]]
 }
 
-data.raw["tips-and-tricks-item"].pipette.simulation =
+data.raw["tips-and-tricks-item"]["pipette"].simulation =
 {
   game_view_settings = { default_show_value = false, show_controller_gui = true, show_quickbar = true, update_entity_selection = true },
   init =
