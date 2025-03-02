@@ -66,5 +66,20 @@
     ["stone-furnace-from-stone-chemical-furnace", "bob-stone-furnace-from-stone-chemical-furnace"],
     ["stone-furnace-from-stone-mixing-furnace", "bob-stone-furnace-from-stone-mixing-furnace"],
     ["stone-mixing-furnace-from-stone-furnace", "bob-stone-mixing-furnace-from-stone-furnace"]
+  ],
+  "technology":
+  [
+    ["centrifuge-2", "bob-centrifuge-2"],
+    ["centrifuge-3", "bob-centrifuge-3"],
+    ["chemical-plant-2", "bob-chemical-plant-2"],
+    ["chemical-plant-3", "bob-chemical-plant-3"],
+    ["chemical-plant-4", "bob-chemical-plant-4"],
+    ["electronics-machine-1", "bob-electronics-machine-1"],
+    ["electronics-machine-2", "bob-electronics-machine-2"],
+    ["electronics-machine-3", "bob-electronics-machine-3"],
+    ["fluid-chemical-furnace", "bob-fluid-chemical-furnace"],
+    ["fluid-mixing-furnace", "bob-fluid-mixing-furnace"],
+    ["multi-purpose-furnace-1", "bob-multi-purpose-furnace-1"],
+    ["multi-purpose-furnace-2", "bob-multi-purpose-furnace-2"]
   ]
 }

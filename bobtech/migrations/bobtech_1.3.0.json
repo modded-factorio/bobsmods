@@ -29,5 +29,19 @@
     ["lab-2", "bob-lab-2"],
     ["lab-alien", "bob-lab-alien"],
     ["science-pack-gold", "bob-science-pack-gold"]
+  ],
+  "technology":
+  [
+    ["advanced-logistic-science-pack", "bob-advanced-logistic-science-pack"],
+    ["advanced-research", "bob-advanced-research"],
+    ["alien-blue-research", "bob-alien-blue-research"],
+    ["alien-green-research", "bob-alien-green-research"],
+    ["alien-orange-research", "bob-alien-orange-research"],
+    ["alien-purple-research", "bob-alien-purple-research"],
+    ["alien-red-research", "bob-alien-red-research"],
+    ["alien-research", "bob-alien-research"],
+    ["alien-yellow-research", "bob-alien-yellow-research"],
+    ["electricity", "bob-electricity"],
+    ["lab", "bob-lab"]
   ]
 }

@@ -65,5 +65,12 @@
     ["void-ammonia", "void-bob-ammonia"],
     ["void-carbon-dioxide", "void-bob-carbon-dioxide"],
     ["void-sour-gas", "void-bob-sour-gas"]
+  ],
+  "technology":
+  [
+    ["chemical-plant", "bob-chemical-plant"],
+    ["heat-shield", "bob-heat-shield"],
+    ["hydrazine", "bob-hydrazine"],
+    ["rtg", "bob-rtg"]
   ]
 }

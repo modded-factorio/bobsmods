@@ -245,8 +245,16 @@
   ],
   "technology":
   [
+    ["express-inserters", "bob-express-inserter"],
+    ["long-inserters-1", "bob-long-inserters-1"],
+    ["long-inserters-2", "bob-long-inserters-2"],
+    ["more-inserters-1", "bob-more-inserters-1"],
+    ["more-inserters-2", "bob-more-inserters-2"],
+    ["near-inserters", "bob-near-inserters"],
     ["stack-inserter-2", "bulk-inserter-2"],
     ["stack-inserter-3", "bulk-inserter-3"],
-    ["stack-inserter-4", "bulk-inserter-4"]
+    ["stack-inserter-4", "bulk-inserter-4"],
+    ["turbo-inserter", "bob-turbo-inserter"],
+    ["ultimate-inserter", "bob-ultimate-inserter"]
   ]
 }

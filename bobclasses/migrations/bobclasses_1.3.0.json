@@ -26,5 +26,18 @@
     ["player-head", "bob-player-head"],
     ["player-head-2", "bob-player-head-2"],
     ["player-power-core", "bob-player-power-core"]
+  ],
+  "technology":
+  [
+    ["bodies", "bob-bodies"],
+    ["bodies-2", "bob-bodies-2"],
+    ["builder-body", "bob-builder-body"],
+    ["builder-body-2", "bob-builder-body-2"],
+    ["engineer-body", "bob-engineer-body"],
+    ["fighter-body", "bob-fighter-body"],
+    ["fighter-body-2", "bob-fighter-body-2"],
+    ["miner-body", "bob-miner-body"],
+    ["miner-body-2", "bob-miner-body-2"],
+    ["prospector-body", "bob-prospector-body"]
   ]
 }

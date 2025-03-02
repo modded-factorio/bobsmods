@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "bob-express-inserters",
+    name = "bob-express-inserter",
     icon = "__boblogistics__/graphics/icons/technology/express-inserter.png",
     icon_size = 128,
     effects = {},
@@ -27,7 +27,7 @@ data:extend({
     effects = {},
     prerequisites = {
       "bulk-inserter",
-      "bob-express-inserters",
+      "bob-express-inserter",
     },
     unit = {
       count = 250,
@@ -45,15 +45,15 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.technology["fast-inserter"].icon = "__boblogistics__/graphics/icons/technology/long-inserters.png"
   data.raw.technology["fast-inserter"].icon_size = 128
 
-  data.raw.technology["bob-express-inserters"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
-  data.raw.technology["bob-express-inserters"].icon_size = 128
+  data.raw.technology["bob-express-inserter"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
+  data.raw.technology["bob-express-inserter"].icon_size = 128
 
   bobmods.lib.tech.remove_prerequisite("fast-inserter", "electronics")
   bobmods.lib.tech.add_prerequisite("fast-inserter", "logistics-2")
   bobmods.lib.tech.remove_prerequisite("bulk-inserter", "advanced-circuit")
 
   bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bulk-inserter")
-  bobmods.lib.tech.add_prerequisite("bob-express-inserters", "logistics-3")
+  bobmods.lib.tech.add_prerequisite("bob-express-inserter", "logistics-3")
 
   data:extend({
     {
@@ -68,7 +68,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
       },
       prerequisites = {
-        "bob-express-inserters",
+        "bob-express-inserter",
         "logistics-4",
       },
       unit = {
@@ -167,8 +167,8 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 else
   bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bob-express-bulk-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("bob-express-inserters", "bob-express-inserter")
-  bobmods.lib.tech.add_prerequisite("bob-express-inserters", "advanced-circuit")
+  bobmods.lib.tech.add_recipe_unlock("bob-express-inserter", "bob-express-inserter")
+  bobmods.lib.tech.add_prerequisite("bob-express-inserter", "advanced-circuit")
 end
 
 data:extend({

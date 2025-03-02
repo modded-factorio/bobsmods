@@ -129,5 +129,20 @@
     ["substation-2", "bob-substation-2"],
     ["substation-3", "bob-substation-3"],
     ["substation-4", "bob-substation-4"]
+  ],
+  "technology":
+  [
+    ["burner-reactor-1", "bob-burner-reactor-1"],
+    ["burner-reactor-2", "bob-burner-reactor-2"],
+    ["electric-pole-2", "bob-electric-pole-2"],
+    ["electric-pole-3", "bob-electric-pole-3"],
+    ["electric-pole-4", "bob-electric-pole-4"],
+    ["electric-substation-2", "bob-electric-substation-2"],
+    ["electric-substation-3", "bob-electric-substation-3"],
+    ["electric-substation-4", "bob-electric-substation-4"],
+    ["fluid-generator-1", "bob-fluid-generator-1"],
+    ["fluid-generator-2", "bob-fluid-generator-2"],
+    ["fluid-generator-3", "bob-fluid-generator-3"],
+    ["hydrazine-generator", "bob-hydrazine-generator"]
   ]
 }
