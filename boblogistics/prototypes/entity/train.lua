@@ -329,7 +329,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       "bob-cargo-wagon-2",
       "bob-cargo-wagon-3",
       "bob-armoured-cargo-wagon",
-      "bob-armoured-cargo-wagon-2"
+      "bob-armoured-cargo-wagon-2",
     }) do
       data.raw["cargo-wagon"][wagon].quality_affects_inventory_size = true
     end
@@ -338,7 +338,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       "bob-fluid-wagon-2",
       "bob-fluid-wagon-3",
       "bob-armoured-fluid-wagon",
-      "bob-armoured-fluid-wagon-2"
+      "bob-armoured-fluid-wagon-2",
     }) do
       data.raw["fluid-wagon"][wagon].quality_affects_capacity = true
     end
