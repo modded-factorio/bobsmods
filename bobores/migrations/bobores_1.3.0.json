@@ -1,0 +1,26 @@
+{
+  "item":
+  [
+    ["amethyst-ore", "bob-amethyst-ore"],
+    ["diamond-ore", "bob-diamond-ore"],
+    ["emerald-ore", "bob-emerald-ore"],
+    ["ruby-ore", "bob-ruby-ore"],
+    ["sapphire-ore", "bob-sapphire-ore"],
+    ["thorium-ore", "bob-thorium-ore"],
+    ["topaz-ore", "bob-topaz-ore"]
+  ],
+  "entity":
+  [
+    ["cobalt-ore", "bob-cobalt-ore"],
+    ["lead-ore", "bob-lead-ore"],
+    ["nickel-ore", "bob-nickel-ore"],
+    ["quartz", "bob-quartz"],
+    ["silver-ore", "bob-silver-ore"],
+    ["tin-ore", "bob-tin-ore"],
+    ["tungsten-ore", "bob-tungsten-ore"]
+  ],
+  "recipe":
+  [
+    ["sort-gem-ore", "bob-sort-gem-ore"]
+  ]
+}

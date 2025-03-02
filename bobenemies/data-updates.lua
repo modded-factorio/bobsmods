@@ -2996,3 +2996,7 @@ if bobmods.enemies.small_alien_artifacts ~= true then
     end
   end
 end
+
+if feature_flags["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_single("bob-artifact-radar", false)
+end

@@ -1,3 +1,4 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
 if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
   local module_color_map = {
     ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
@@ -11,6 +12,9 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       category = "green",
       tier = 1,
       order = "m-g-1",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         pollution = -1 * bobmods.modules.PollutionBonus,
@@ -29,6 +33,9 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       category = "green",
       tier = 2,
       order = "m-g-2",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
@@ -47,6 +54,9 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       category = "green",
       tier = 3,
       order = "m-g-3",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
@@ -65,6 +75,9 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       category = "green",
       tier = 4,
       order = "m-g-4",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
@@ -83,6 +96,9 @@ if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
       category = "green",
       tier = 5,
       order = "m-g-5",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
@@ -106,6 +122,9 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       category = "god",
       tier = 1,
       order = "m-x-1",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
@@ -128,6 +147,9 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       category = "god",
       tier = 1,
       order = "m-x-2",
+      inventory_move_sound = item_sounds.module_inventory_move,
+      pick_sound = item_sounds.module_inventory_pickup,
+      drop_sound = item_sounds.module_inventory_move,
       stack_size = 50,
       effect = {
         productivity = 4 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus,
@@ -154,6 +176,9 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         category = "god",
         tier = 1,
         order = "m-x-3",
+        inventory_move_sound = item_sounds.module_inventory_move,
+        pick_sound = item_sounds.module_inventory_pickup,
+        drop_sound = item_sounds.module_inventory_move,
         stack_size = 50,
         effect = {
           quality = 4 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus,

@@ -69,7 +69,7 @@ if data.raw.item["bob-titanium-chest"] then
 end
 
 if data.raw.item["bob-turbo-inserter"] then
-  bobmods.lib.tech.replace_prerequisite("bob-builder-body", "fast-inserter", "bob-express-inserters")
+  bobmods.lib.tech.replace_prerequisite("bob-builder-body", "fast-inserter", "bob-express-inserter")
   bobmods.lib.recipe.replace_ingredient("bob-character-builder-2", "bulk-inserter", "bob-turbo-inserter")
   bobmods.lib.tech.replace_prerequisite("bob-builder-body-2", "bulk-inserter", "bob-turbo-inserter")
 end
