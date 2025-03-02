@@ -181,7 +181,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   })
 
   data.raw["cargo-wagon"]["cargo-wagon"].resistances = rolling_stock_resistances()
-  data.raw["cargo-wagon"]["cargo-wagon"].quality_affects_inventory_size = true
 
   data:extend({
     util.merge({
@@ -252,7 +251,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   })
 
   data.raw["fluid-wagon"]["fluid-wagon"].resistances = rolling_stock_resistances()
-  data.raw["fluid-wagon"]["fluid-wagon"].quality_affects_capacity = true
 
   local fluidwagonbase = settings.startup["bobmods-logistics-fluidwagonbase"].value * 1000
   data.raw["fluid-wagon"]["fluid-wagon"].capacity = fluidwagonbase
@@ -324,4 +322,25 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
     }),
   })
+
+  if feature_flags["quality"] then
+    for _, wagon in pairs({
+      "cargo-wagon",
+      "bob-cargo-wagon-2",
+      "bob-cargo-wagon-3",
+      "bob-armoured-cargo-wagon",
+      "bob-armoured-cargo-wagon-2"
+    }) do
+      data.raw["cargo-wagon"][wagon].quality_affects_inventory_size = true
+    end
+    for _, wagon in pairs({
+      "fluid-wagon",
+      "bob-fluid-wagon-2",
+      "bob-fluid-wagon-3",
+      "bob-armoured-fluid-wagon",
+      "bob-armoured-fluid-wagon-2"
+    }) do
+      data.raw["fluid-wagon"][wagon].quality_affects_capacity = true
+    end
+  end
 end
