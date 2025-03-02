@@ -1,3 +1,12 @@
+local beacon_drop_move = {
+  filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+  volume = 0.7,
+}
+local beacon_pick = {
+  filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+  volume = 0.8,
+}
+
 data.raw.item["beacon"].subgroup = "module-beacon"
 
 data.raw.beacon["beacon"].fast_replaceable_group = "beacon"
@@ -8,22 +17,26 @@ data:extend({
     type = "item",
     name = "bob-beacon-2",
     icon = "__base__/graphics/icons/beacon.png",
-    icon_size = 64,
     subgroup = "module-beacon",
     order = "a[bob-beacon]-2",
     place_result = "bob-beacon-2",
     stack_size = 10,
+    drop_sound = beacon_drop_move,
+    inventory_move_sound = beacon_drop_move,
+    pick_sound = beacon_pick,
   },
 
   {
     type = "item",
     name = "bob-beacon-3",
     icon = "__base__/graphics/icons/beacon.png",
-    icon_size = 64,
     subgroup = "module-beacon",
     order = "a[bob-beacon]-3",
     place_result = "bob-beacon-3",
     stack_size = 10,
+    drop_sound = beacon_drop_move,
+    inventory_move_sound = beacon_drop_move,
+    pick_sound = beacon_pick,
   },
 
   util.merge({
