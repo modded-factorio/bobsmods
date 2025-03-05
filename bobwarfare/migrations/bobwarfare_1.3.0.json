@@ -172,6 +172,12 @@
     ["tankotron-leg-7", "bob-tankotron-leg-7"],
     ["tankotron-leg-8", "bob-tankotron-leg-8"]
   ],
+  "fluid":
+  [
+    ["glycerol", "bob-glycerol"],
+    ["nitroglycerin", "bob-nitroglycerin"],
+    ["sulfuric-nitric-acid", "bob-sulfuric-nitric-acid"]
+  ],
   "recipe":
   [
     ["acid-bullet", "bob-acid-bullet"],

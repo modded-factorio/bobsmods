@@ -1,4 +1,16 @@
 {
+  "fluid":
+  [
+    ["ammonia", "bob-ammonia"],
+    ["ammoniated-brine", "bob-ammoniated-brine"],
+    ["brine", "bob-brine"],
+    ["carbon-dioxide", "bob-carbon-dioxide"],
+    ["dinitrogen-tetroxide", "bob-dinitrogen-tetroxide"],
+    ["hydrazine", "bob-hydrazine"],
+    ["hydrogen-peroxide", "bob-hydrogen-peroxide"],
+    ["nitric-oxide", "bob-nitric-oxide"],
+    ["sour-gas", "bob-sour-gas"]
+  ],
   "item":
   [
     ["ammonia-barrel", "bob-ammonia-barrel"],
