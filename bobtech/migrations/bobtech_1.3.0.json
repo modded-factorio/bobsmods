@@ -1,4 +1,10 @@
 {
+  "entity":
+  [
+    ["burner-lab", "bob-burner-lab"],
+    ["lab-2", "bob-lab-2"],
+    ["lab-alien", "bob-lab-alien"]
+  ],
   "item":
   [
     ["advanced-logistic-science-pack", "bob-advanced-logistic-science-pack"],

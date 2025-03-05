@@ -11,13 +11,21 @@
   ],
   "entity":
   [
+    ["bauxite-ore", "bob-bauxite-ore"],
     ["cobalt-ore", "bob-cobalt-ore"],
+    ["gold-ore", "bob-gold-ore"],
+    ["ground-water", "bob-ground-water"],
     ["lead-ore", "bob-lead-ore"],
+    ["lithia-water", "bob-lithia-water"],
     ["nickel-ore", "bob-nickel-ore"],
     ["quartz", "bob-quartz"],
+    ["rutile-ore", "bob-rutile-ore"],
     ["silver-ore", "bob-silver-ore"],
+    ["sulfur", "bob-sulfur"],
+    ["thorium-ore", "bob-thorium-ore"],
     ["tin-ore", "bob-tin-ore"],
-    ["tungsten-ore", "bob-tungsten-ore"]
+    ["tungsten-ore", "bob-tungsten-ore"],
+    ["zinc-ore", "bob-zinc-ore"]
   ],
   "recipe":
   [

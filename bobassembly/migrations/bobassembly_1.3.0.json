@@ -1,4 +1,30 @@
 {
+  "entity":
+  [
+    ["assembling-machine-4", "bob-assembling-machine-4"],
+    ["assembling-machine-5", "bob-assembling-machine-5"],
+    ["assembling-machine-6", "bob-assembling-machine-6"],
+    ["burner-assembling-machine", "bob-burner-assembling-machine"],
+    ["centrifuge-2", "bob-centrifuge-2"],
+    ["centrifuge-3", "bob-centrifuge-3"],
+    ["chemical-plant-2", "bob-chemical-plant-2"],
+    ["chemical-plant-3", "bob-chemical-plant-3"],
+    ["chemical-plant-4", "bob-chemical-plant-4"],
+    ["electric-chemical-mixing-furnace", "bob-electric-chemical-mixing-furnace"],
+    ["electric-chemical-mixing-furnace-2", "bob-electric-chemical-mixing-furnace-2"],
+    ["electric-furnace-2", "bob-electric-furnace-2"],
+    ["electric-furnace-3", "bob-electric-furnace-3"],
+    ["electronics-machine-1", "bob-electronics-machine-1"],
+    ["electronics-machine-2", "bob-electronics-machine-2"],
+    ["electronics-machine-3", "bob-electronics-machine-3"],
+    ["fluid-chemical-furnace", "bob-fluid-chemical-furnace"],
+    ["fluid-furnace", "bob-fluid-furnace"],
+    ["fluid-mixing-furnace", "bob-fluid-mixing-furnace"],
+    ["oil-refinery-2", "bob-oil-refinery-2"],
+    ["oil-refinery-3", "bob-oil-refinery-3"],
+    ["oil-refinery-4", "bob-oil-refinery-4"],
+    ["steam-assembling-machine", "bob-steam-assembling-machine"]
+  ],
   "item":
   [
     ["assembling-machine-4", "bob-assembling-machine-4"],

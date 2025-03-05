@@ -264,7 +264,7 @@
   ],
   "entity":
   [
-    ["beacon-2", "bob-bob-beacon-2"],
+    ["beacon-2", "bob-beacon-2"],
     ["beacon-3", "bob-beacon-3"]
   ]
 }
