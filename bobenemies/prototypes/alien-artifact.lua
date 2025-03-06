@@ -434,6 +434,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           },
           energy_required = 1,
           enabled = false,
+          auto_recycle = false,
           category = "crafting",
         },
       })
@@ -461,6 +462,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           },
           energy_required = 1,
           enabled = false,
+          auto_recycle = false,
           category = "crafting",
         },
       })
@@ -488,6 +490,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           },
           energy_required = 1,
           enabled = false,
+          auto_recycle = false,
           category = "crafting",
         },
       })
@@ -515,6 +518,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           },
           energy_required = 1,
           enabled = false,
+          auto_recycle = false,
           category = "crafting",
         },
       })
@@ -542,6 +546,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           },
           energy_required = 1,
           enabled = false,
+          auto_recycle = false,
           category = "crafting",
         },
       })
@@ -569,6 +574,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           },
           energy_required = 1,
           enabled = false,
+          auto_recycle = false,
           category = "crafting",
         },
       })
