@@ -585,7 +585,7 @@ else
     log("Improper function call. Cannot update recycling without Quality mod.")
   end
 
-  function bobmods.lib.recipe.update_recycling_recipe_self_recipe()
+  function bobmods.lib.recipe.update_recycling_recipe_to_self_recipe()
     log(debug.traceback())
     log("Improper function call. Cannot update recycling without Quality mod.")
   end
