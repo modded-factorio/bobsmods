@@ -2,7 +2,7 @@ require("prototypes.recipe.updates")
 require("prototypes.technology.technology-updates")
 require("prototypes.armor-updates")
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "energy-shield-mk2-equipment",
     "bob-energy-shield-mk3-equipment",
