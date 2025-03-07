@@ -101,7 +101,7 @@ if data.raw.car["vehicle-miner-mk5"] then
   data.raw.car["vehicle-miner-mk5"].equipment_grid = "bob-tank-3"
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-vehicle-roboport-antenna-equipment",
     "bob-vehicle-roboport-antenna-equipment-2",
