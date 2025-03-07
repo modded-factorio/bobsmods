@@ -23,35 +23,73 @@ if mods["quality"] then
     "bob-assembling-machine-4",
     "bob-assembling-machine-5",
     "bob-assembling-machine-6",
-    "bob-electronics-machine-1",
-    "bob-electronics-machine-2",
-    "bob-electronics-machine-3",
-    "bob-centrifuge-2",
-    "bob-centrifuge-3",
-    "bob-electric-chemical-mixing-furnace",
-    "bob-electric-chemical-mixing-furnace-2",
     "chemical-plant",
-    "bob-chemical-plant-2",
-    "bob-chemical-plant-3",
-    "bob-chemical-plant-4",
-    "bob-distillery",
-    "bob-distillery-2",
-    "bob-distillery-3",
-    "bob-distillery-4",
-    "bob-distillery-5",
-    "bob-electric-furnace-2",
-    "bob-electric-furnace-3",
-    "bob-electrolyser-2",
-    "bob-electrolyser-3",
-    "bob-electrolyser-4",
-    "bob-electrolyser-5",
-    "bob-fluid-furnace",
-    "bob-fluid-mixing-furnace",
-    "bob-fluid-chemical-furnace",
-    "bob-oil-refinery-2",
-    "bob-oil-refinery-3",
-    "bob-oil-refinery-4",
   })
+  if data.raw.recipe["bob-fluid-furnace"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("bob-fluid-furnace", false)
+  end
+  if data.raw.recipe["bob-fluid-mixing-furnace"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-fluid-mixing-furnace",
+      "bob-fluid-chemical-furnace",
+    })
+  end
+  if data.raw.recipe["bob-electric-furnace-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-electric-furnace-2",
+      "bob-electric-furnace-3",
+    })
+  end
+  if data.raw.recipe["bob-electric-chemical-mixing-furnace"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-electric-chemical-mixing-furnace",
+      "bob-electric-chemical-mixing-furnace-2",
+    })
+  end
+  if data.raw.recipe["bob-electronics-machine-1"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-electronics-machine-1",
+      "bob-electronics-machine-2",
+      "bob-electronics-machine-3",
+    })
+  end
+  if data.raw.recipe["bob-centrifuge-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-centrifuge-2",
+      "bob-centrifuge-3",
+    })
+  end
+  if data.raw.recipe["bob-chemical-plant-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-chemical-plant-2",
+      "bob-chemical-plant-3",
+      "bob-chemical-plant-4",
+    })
+  end
+  if data.raw.recipe["bob-distillery-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-distillery",
+      "bob-distillery-2",
+      "bob-distillery-3",
+      "bob-distillery-4",
+      "bob-distillery-5",
+    })
+  end
+  if data.raw.recipe["bob-electrolyser-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-electrolyser-2",
+      "bob-electrolyser-3",
+      "bob-electrolyser-4",
+      "bob-electrolyser-5",
+    })
+  end
+  if data.raw.recipe["bob-oil-refinery-2"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-oil-refinery-2",
+      "bob-oil-refinery-3",
+      "bob-oil-refinery-4",
+    })
+  end
   if
     settings.startup["bobmods-plates-convert-recipes"]
     and settings.startup["bobmods-plates-convert-recipes"].value == true
