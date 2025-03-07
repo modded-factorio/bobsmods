@@ -52,7 +52,7 @@ if settings.startup["bobmods-colorupdate"].value == true then
   data.raw.item["bob-advanced-processing-unit"].icon_size = 128
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-resin", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-wooden-board", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-phenolic-board", false)
@@ -73,6 +73,15 @@ if feature_flags["quality"] then
     "arithmetic-combinator",
     "decider-combinator",
     "constant-combinator",
+    "bob-insulated-cable",
+    "assembling-machine-1",
+    "splitter",
+    "inserter",
+    "lab",
+    "small-lamp",
+    "repair-pack",
+    "electric-mining-drill",
+    "radar",
   })
   if settings.startup["bobmods-colorupdate"].value == true then
     bobmods.lib.recipe.update_recycling_recipe_icon(
