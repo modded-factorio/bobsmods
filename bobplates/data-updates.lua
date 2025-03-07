@@ -348,7 +348,7 @@ for _, recipe_name in pairs({
   end
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   if data.raw.item["bob-alien-blue-alloy"] then
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-blue-alloy", false)
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-orange-alloy", false)
@@ -395,6 +395,7 @@ if feature_flags["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-plate", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-lithium", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-cobalt-plate", false)
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-tungsten-carbide", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-carbon", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-resin", false)
   bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-silicon-wafer", false)
@@ -422,5 +423,26 @@ if feature_flags["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "uranium-fuel-cell",
+    "bob-polishing-wheel",
+    "bob-hydrogen-barrel",
+    "bob-oxygen-barrel",
+    "bob-nitrogen-barrel",
+    "bob-chlorine-barrel",
+    "bob-hydrogen-chloride-barrel",
+    "bob-nitrogen-dioxide-barrel",
+    "bob-sulfur-dioxide-barrel",
+    "bob-deuterium-barrel",
+    "bob-hydrogen-sulfide-barrel",
+    "petroleum-gas-barrel",
+    "bob-liquid-fuel-barrel",
+    "bob-ferric-chloride-solution-barrel",
+    "sulfuric-acid-barrel",
+    "bob-nitric-acid-barrel",
+    "bob-sulfuric-nitric-acid-barrel",
+    "bob-alien-acid-barrel",
+    "bob-alien-explosive-barrel",
+    "bob-alien-poison-barrel",
+    "bob-alien-fire-barrel",
+    "bob-tungstic-acid-barrel",
   })
 end
