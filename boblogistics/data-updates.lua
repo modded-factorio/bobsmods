@@ -172,7 +172,7 @@ bobmods.lib.item.set_subgroup("express-splitter", "bob-logistic-tier-3")
 -- because there's no specific section for it.
 data.raw["pump"]["pump"].next_upgrade = "bob-pump-2"
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "transport-belt",
     "underground-belt",
@@ -214,6 +214,15 @@ if feature_flags["quality"] then
     "bob-pump-2",
     "bob-pump-3",
     "bob-pump-4",
+    "bob-roboport-antenna-2",
+    "bob-roboport-antenna-3",
+    "bob-roboport-antenna-4",
+    "bob-roboport-chargepad-2",
+    "bob-roboport-chargepad-3",
+    "bob-roboport-chargepad-4",
+    "bob-roboport-door-2",
+    "bob-roboport-door-3",
+    "bob-roboport-door-4",
     "roboport",
     "bob-robochest-2",
     "bob-robochest-3",
@@ -282,6 +291,12 @@ if feature_flags["quality"] then
       "bob-roboport-2",
       "bob-roboport-3",
       "bob-roboport-4",
+    })
+  end
+  if data.raw.recipe["bob-basic-underground-belt"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-basic-underground-belt",
+      "bob-basic-splitter",
     })
   end
 end
