@@ -210,7 +210,7 @@ then
     "bob-nuclear-power-2"
   )
 
-  if feature_flags["quality"] then
+  if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-2", true)
   end
 end
@@ -279,12 +279,12 @@ then
       "__bobrevamp__/graphics/icons/technology/deuterium-nuclear-power.png"
   end
 
-  if feature_flags["quality"] then
+  if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-3", true)
   end
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   if data.raw.recipe["bob-sodium-chlorate"] then
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-chlorate", false)
     bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-perchlorate", false)
@@ -296,5 +296,11 @@ if feature_flags["quality"] then
     "rocket-silo",
     "satellite",
     "cargo-landing-pad",
+    "bob-sour-gas-barrel",
+    "bob-carbon-dioxide-barrel",
+    "bob-ammonia-barrel",
+    "bob-nitrogen-dioxide-barrel",
+    "bob-nitric-oxide-barrel",
   })
+  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("rocket-fuel", false)
 end
