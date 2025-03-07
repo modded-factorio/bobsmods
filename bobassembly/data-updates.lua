@@ -17,7 +17,7 @@ data.raw.fluid["light-oil"].fuel_value = "1.5MJ"
 data.raw.fluid["light-oil"].emissions_multiplier = 2
 data.raw.fluid["petroleum-gas"].fuel_value = "2.3MJ"
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "assembling-machine-3",
     "bob-assembling-machine-4",
@@ -30,6 +30,7 @@ if feature_flags["quality"] then
     "bob-centrifuge-3",
     "bob-electric-chemical-mixing-furnace",
     "bob-electric-chemical-mixing-furnace-2",
+    "chemical-plant",
     "bob-chemical-plant-2",
     "bob-chemical-plant-3",
     "bob-chemical-plant-4",
