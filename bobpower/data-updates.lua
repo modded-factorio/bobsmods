@@ -27,7 +27,7 @@ data.raw.item["solid-fuel"].fuel_emissions_multiplier = 0.8
 data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1.2
 data.raw.item["nuclear-fuel"].fuel_emissions_multiplier = 5
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-burner-reactor-2",
     "bob-fluid-reactor",
@@ -69,6 +69,9 @@ if feature_flags["quality"] then
     "bob-substation-2",
     "bob-substation-3",
     "bob-substation-4",
+    "bob-solar-panel-small",
+    "solar-panel",
+    "bob-solar-panel-large",
     "bob-solar-panel-small-2",
     "bob-solar-panel-2",
     "bob-solar-panel-large-2",
