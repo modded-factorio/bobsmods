@@ -451,6 +451,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           pipe_connections = {
             { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
           },
+          secondary_draw_orders = { north = -1 },
           volume = 1000,
         },
       },
