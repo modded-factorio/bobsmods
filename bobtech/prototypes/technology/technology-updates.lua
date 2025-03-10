@@ -50,6 +50,7 @@ if bobmods.tech.advanced_logistic_science then
       "production-science-pack",
       "bob-advanced-logistic-science-pack"
     )
+    bobmods.lib.tech.add_prerequisite("elevated-rail", "railway")
   end
 
   bobmods.lib.tech.replace_science_pack(
