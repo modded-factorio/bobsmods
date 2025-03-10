@@ -299,4 +299,11 @@ if mods["quality"] then
       "bob-basic-splitter",
     })
   end
+
+  data.raw.recipe["long-handed-inserter-recycling"].localised_name = {
+    "recipe-name.recycling",
+    {
+      "entity-name.bob-red-inserter"
+    }
+  }
 end

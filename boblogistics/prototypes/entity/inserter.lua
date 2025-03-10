@@ -183,6 +183,8 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         next_upgrade = "fast-inserter",
         pickup_position = { 0, -1 },
         insert_position = { 0, 1.2 },
+        starting_distance = 0.7,
+        hidden_in_factoriopedia = true,
       },
     }),
   })
