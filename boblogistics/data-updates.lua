@@ -285,6 +285,7 @@ if mods["quality"] then
     "bob-fluid-wagon-3",
     "bob-armoured-fluid-wagon",
     "bob-armoured-fluid-wagon-2",
+    "lab",
   })
   if data.raw.recipe["bob-roboport-2"] then
     bobmods.lib.recipe.update_recycling_recipe({
