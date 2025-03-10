@@ -130,6 +130,7 @@ if not mods["bobwarfare"] then
       { "bob-alien-science-pack", 1 },
       { "bob-alien-science-pack-green", 1 },
       { "bob-alien-science-pack-red", 1 },
+      { "space-science-pack", 1 },
     }
   end
 
@@ -181,6 +182,7 @@ if not mods["bobwarfare"] then
   bobmods.lib.tech.add_prerequisite("power-armor", "military-science-pack")
   bobmods.lib.tech.add_prerequisite("power-armor", "advanced-circuit")
 
+  -- By default, electric engines are Blue Science
   if (not mods["bobplates"]) and not mods["boblogistics"] then
     bobmods.lib.tech.remove_prerequisite("power-armor", "electric-engine")
     bobmods.lib.tech.add_prerequisite("power-armor-mk2", "electric-engine")
