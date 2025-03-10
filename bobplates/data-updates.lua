@@ -86,6 +86,7 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
       },
       results = { { type = "item", name = "steel-plate", amount = 1 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 else
@@ -102,6 +103,7 @@ else
       },
       results = { { type = "item", name = "steel-plate", amount = 2 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
