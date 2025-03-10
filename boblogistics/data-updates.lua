@@ -303,7 +303,7 @@ if mods["quality"] then
   data.raw.recipe["long-handed-inserter-recycling"].localised_name = {
     "recipe-name.recycling",
     {
-      "entity-name.bob-red-inserter"
-    }
+      "entity-name.bob-red-inserter",
+    },
   }
 end
