@@ -8,7 +8,7 @@ if bobmods.tech.advanced_logistic_science then
 end
 
 if mods["quality"] then
-  bobmods.lib.recipe.update_recycling_recipe_single("lab")  
+  bobmods.lib.recipe.update_recycling_recipe_single("lab")
   if data.raw.recipe["bob-burner-lab"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-burner-lab")
   end
