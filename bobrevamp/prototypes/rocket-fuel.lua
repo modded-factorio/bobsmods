@@ -335,4 +335,8 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       order = "d-b-b6",
     },
   })
+
+  if data.raw.recipe["rocket-fuel"] then
+    data.raw.recipe["rocket-fuel"].auto_recycle = false
+  end
 end
