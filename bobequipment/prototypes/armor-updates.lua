@@ -2,19 +2,19 @@
 
 if not mods["bobwarfare"] then
   if mods["bobplates"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "iron-plate", "invar-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "invar-processing")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "iron-plate", "bob-invar-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-invar-processing")
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "steel-plate", "bob-aluminium-plate")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "aluminium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-aluminium-processing")
     if mods["bobrevamp"] then
       bobmods.lib.recipe.remove_ingredient("power-armor-mk2", "low-density-structure")
       bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "low-density-structure")
-      if data.raw.item["cobalt-steel-alloy"] then
+      if data.raw.item["bob-cobalt-steel-alloy"] then
         bobmods.lib.recipe.add_ingredient(
           "power-armor-mk2",
-          { type = "item", name = "cobalt-steel-alloy", amount = 50 }
+          { type = "item", name = "bob-cobalt-steel-alloy", amount = 50 }
         )
-        bobmods.lib.tech.add_prerequisite("power-armor-mk2", "cobalt-processing")
+        bobmods.lib.tech.add_prerequisite("power-armor-mk2", "bob-cobalt-processing")
       else
         bobmods.lib.recipe.add_ingredient("power-armor-mk2", { type = "item", name = "steel-plate", amount = 60 })
       end
@@ -26,14 +26,14 @@ if not mods["bobwarfare"] then
       bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "low-density-structure")
     else
       bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "steel-plate", "bob-titanium-plate")
-      bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "titanium-processing")
+      bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-titanium-processing")
     end
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "plastic-bar", "silicon-nitride")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "ceramics")
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "plastic-bar", "nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "nitinol-processing")
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "tungsten-alloy-processing")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "plastic-bar", "bob-silicon-nitride")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-ceramics")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "plastic-bar", "bob-nitinol-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-nitinol-processing")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "bob-tungsten-carbide")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-alloy-processing")
   end
 
   bobmods.lib.recipe.add_new_ingredient("power-armor", { type = "item", name = "modular-armor", amount = 1 })

@@ -699,12 +699,12 @@ if data.raw.item["bob-nitinol-bearing"] then
   )
 end
 
-if data.raw.item["copper-tungsten-alloy"] then
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-3", "tungsten-alloy-processing")
+if data.raw.item["bob-copper-tungsten-alloy"] then
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-3", "bob-tungsten-alloy-processing")
   bobmods.lib.recipe.remove_ingredient("bob-vehicle-big-turret-equipment-3", "steel-plate")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-big-turret-equipment-3",
-    { type = "item", name = "copper-tungsten-alloy", amount = 50 }
+    { type = "item", name = "bob-copper-tungsten-alloy", amount = 50 }
   )
 end
 
@@ -732,30 +732,30 @@ if data.raw.fluid["hydrogen-chloride"] then
   end
 end
 
-if data.raw.item.carbon then
+if data.raw.item["bob-carbon"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-1",
-    { type = "item", name = "carbon", amount = 40 }
+    { type = "item", name = "bob-carbon", amount = 40 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-1",
-    { type = "item", name = "carbon", amount = 20 }
+    { type = "item", name = "bob-carbon", amount = 20 }
   )
 end
 
-if data.raw.fluid["heavy-water"] then
+if data.raw.fluid["bob-heavy-water"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-2",
-    { type = "fluid", name = "heavy-water", amount = 50 }
+    { type = "fluid", name = "bob-heavy-water", amount = 50 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-2",
-    { type = "fluid", name = "heavy-water", amount = 25 }
+    { type = "fluid", name = "bob-heavy-water", amount = 25 }
   )
   data.raw.recipe["bob-vehicle-fission-reactor-equipment-2"].category = "crafting-with-fluid"
   data.raw.recipe["bob-vehicle-fission-cell-equipment-2"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-2", "heavy-water-processing")
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-2", "heavy-water-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-2", "bob-heavy-water-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-2", "bob-heavy-water-processing")
 end
 
 if data.raw.item["bob-tungsten-plate"] then
@@ -780,17 +780,17 @@ if data.raw.item["bob-tungsten-plate"] then
   bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-2", "bob-tungsten-processing")
 end
 
-if data.raw.item["tungsten-carbide"] then
+if data.raw.item["bob-tungsten-carbide"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-4",
-    { type = "item", name = "tungsten-carbide", amount = 80 }
+    { type = "item", name = "bob-tungsten-carbide", amount = 80 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-tungsten-alloy-processing")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-4",
-    { type = "item", name = "tungsten-carbide", amount = 40 }
+    { type = "item", name = "bob-tungsten-carbide", amount = 40 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-tungsten-alloy-processing")
 end
 
 if data.raw.item["bob-heat-shield-tile"] then
@@ -800,17 +800,17 @@ if data.raw.item["bob-heat-shield-tile"] then
   )
 end
 
-if data.raw.item.lithium then
+if data.raw.item["bob-lithium"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-4",
-    { type = "item", name = "lithium", amount = 40 }
+    { type = "item", name = "bob-lithium", amount = 40 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-4",
-    { type = "item", name = "lithium", amount = 20 }
+    { type = "item", name = "bob-lithium", amount = 20 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "lithium-processing")
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "lithium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-lithium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-lithium-processing")
 end
 
 if data.raw.module["bob-speed-module-5"] then
