@@ -68,6 +68,7 @@ data:extend({
     name = "bob-tungsten-carbide-2",
     localised_name = { "item-name.bob-tungsten-carbide" },
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 12.8,
     ingredients = {
