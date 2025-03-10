@@ -84,6 +84,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-wood-pellets",
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 5 },
     },

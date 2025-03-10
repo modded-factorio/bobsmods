@@ -6,6 +6,7 @@ data:extend({
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
@@ -20,6 +21,7 @@ data:extend({
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
       { type = "item", name = "plastic-bar", amount = 1 },
@@ -35,6 +37,7 @@ data:extend({
     subgroup = "bob-ammo-parts",
     energy_required = 10,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "bob-nitroglycerin", amount = 60 },
       { type = "item", name = "bob-gun-cotton", amount = 13 },

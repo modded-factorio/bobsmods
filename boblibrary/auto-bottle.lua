@@ -118,6 +118,7 @@ local function create_fill_gas_bottle_recipe(fluid)
     energy_required = 0.2,
     order = "b[fill-" .. fluid.name .. "-barrel" .. "]",
     enabled = false,
+    auto_recycle = false,
     icons = generate_fill_gas_bottle_icons(fluid),
     ingredients = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
@@ -144,6 +145,7 @@ local function create_fill_fluid_canister_recipe(fluid)
     energy_required = 0.2,
     order = "b[fill-" .. fluid.name .. "-barrel" .. "]",
     enabled = false,
+    auto_recycle = false,
     icons = generate_fill_fluid_canister_icons(fluid),
     ingredients = {
       { type = "fluid", name = fluid.name, amount = 50, ignored_by_stats = 50 },
@@ -173,6 +175,7 @@ local function create_empty_gas_bottle_recipe(fluid)
     energy_required = 0.2,
     order = "c[empty-" .. fluid.name .. "-barrel" .. "]",
     enabled = false,
+    auto_recycle = false,
     icons = generate_empty_gas_bottle_icons(fluid),
     ingredients = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -199,6 +202,7 @@ local function create_empty_fluid_canister_recipe(fluid)
     energy_required = 0.2,
     order = "c[empty-" .. fluid.name .. "-barrel" .. "]",
     enabled = false,
+    auto_recycle = false,
     icons = generate_empty_fluid_canister_icons(fluid),
     ingredients = {
       { type = "item", name = fluid.name .. "-barrel", amount = 1 },
@@ -260,6 +264,7 @@ function bobmods.lib.create_gas_bottle(fluid)
       bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-gas-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", empty_recipe.name)
+      bobmods.lib.recipe.update_recycling_recipe(barrel_item.name)
     else
       empty_recipe = create_empty_gas_bottle_recipe(fluid)
     end
@@ -300,6 +305,7 @@ function bobmods.lib.create_fluid_canister(fluid)
       bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-empty-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", fill_recipe.name)
+      bobmods.lib.recipe.update_recycling_recipe(barrel_item.name)
     else
       fill_recipe = create_fill_fluid_canister_recipe(fluid)
     end

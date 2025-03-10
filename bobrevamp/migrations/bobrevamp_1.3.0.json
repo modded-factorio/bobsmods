@@ -36,7 +36,7 @@
   [
     ["ammonia", "bob-ammonia"],
     ["ammoniated-brine", "bob-ammoniated-brine"],
-    ["ammonium-chloride-recycling", "bob-ammonium-chloride-recycling"],
+    ["ammonium-chloride-recycling", "bob-ammonium-chloride-reprocessing"],
     ["brine", "bob-brine"],
     ["brine-electrolysis", "bob-brine-electrolysis"],
     ["carbon-dioxide", "bob-carbon-dioxide"],

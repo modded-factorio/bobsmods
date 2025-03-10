@@ -29,6 +29,5 @@ end
 
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-greenhouse", false)
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-wood-pellets", false)
   bobmods.lib.recipe.update_recycling_recipe_single("rail", false)
 end
