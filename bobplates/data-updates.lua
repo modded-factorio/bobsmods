@@ -351,25 +351,6 @@ for _, recipe_name in pairs({
 end
 
 if mods["quality"] then
-  if settings.startup["bobmods-colorupdate"].value == true then
-    bobmods.lib.recipe.update_recycling_recipe_icon(
-      "battery-recycling",
-      "__bobplates__/graphics/icons/battery-red.png",
-      64
-    )
-    bobmods.lib.recipe.update_recycling_recipe_icon(
-      "bob-lithium-ion-battery-recycling",
-      "__bobplates__/graphics/icons/battery-blue.png",
-      64
-    )
-    bobmods.lib.recipe.update_recycling_recipe_icon(
-      "bob-silver-zinc-battery-recycling",
-      "__bobplates__/graphics/icons/battery-purple.png",
-      64
-    )
-  else
-    bobmods.lib.recipe.update_recycling_recipe_icon("battery-recycling", "__bobplates__/graphics/icons/battery.png", 64)
-  end
 
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-air-pump",
@@ -394,5 +375,8 @@ if mods["quality"] then
     "bob-electric-chemical-furnace",
     "uranium-fuel-cell",
     "bob-polishing-wheel",
+    "bob-lithium-ion-battery",
+    "bob-silver-zinc-battery",
+    "battery",
   })
 end
