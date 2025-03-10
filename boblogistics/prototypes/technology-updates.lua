@@ -231,6 +231,7 @@ end
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   bobmods.lib.tech.add_prerequisite("logistics", "logistics-0")
   bobmods.lib.tech.add_recipe_unlock("logistics", "transport-belt")
+  bobmods.lib.tech.add_prerequisite("logistic-science-pack", "logistics")
 end
 
 if data.raw.technology["bob-robotics-2"] then
