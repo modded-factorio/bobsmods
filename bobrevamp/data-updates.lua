@@ -285,11 +285,6 @@ then
 end
 
 if feature_flags["quality"] then
-  if data.raw.recipe["bob-sodium-chlorate"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-chlorate", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-perchlorate", false)
-  end
-
   bobmods.lib.recipe.update_recycling_recipe({
     "low-density-structure",
     "bob-heat-shield-tile",

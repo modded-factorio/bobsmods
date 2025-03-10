@@ -29,6 +29,7 @@ data:extend({
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
@@ -45,6 +46,7 @@ data:extend({
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
@@ -90,6 +92,7 @@ data:extend({
     category = "smelting",
     energy_required = 3.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-resin", amount = 1 },
     },
@@ -192,6 +195,7 @@ if data.raw.item["bob-tin-plate"] then
       name = "bob-solder-alloy",
       energy_required = 7,
       enabled = false,
+      auto_recycle = false,
       category = "advanced-crafting",
       ingredients = {
         { type = "item", name = "bob-tin-plate", amount = 9 },
@@ -217,6 +221,7 @@ if data.raw.item["bob-tin-plate"] then
         localised_name = { "item-name.bob-solder-alloy" },
         energy_required = 7,
         enabled = false,
+        auto_recycle = false,
         category = "advanced-crafting",
         ingredients = {
           { type = "item", name = "bob-tin-plate", amount = 4 },

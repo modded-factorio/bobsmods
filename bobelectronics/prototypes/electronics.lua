@@ -125,6 +125,7 @@ if data.raw.item["bob-solder-alloy"] then
       category = "bob-electronics",
       energy_required = 2,
       enabled = false,
+      auto_recycle = false,
       ingredients = {
         { type = "item", name = "bob-solder-alloy", amount = 4 },
         { type = "item", name = "bob-resin", amount = 1 },
@@ -284,6 +285,7 @@ data:extend({
     type = "recipe",
     name = "bob-wooden-board",
     category = "bob-electronics",
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
@@ -323,6 +325,7 @@ data:extend({
     name = "bob-phenolic-board",
     category = "bob-electronics-machine",
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
       { type = "item", name = "bob-resin", amount = 1 },
@@ -363,6 +366,7 @@ data:extend({
     name = "bob-fibreglass-board",
     category = "bob-electronics-machine",
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "plastic-bar", amount = 1 },
     },

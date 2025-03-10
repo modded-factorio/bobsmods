@@ -13,6 +13,7 @@ then
       category = "bob-mixing-furnace",
       energy_required = 1,
       enabled = false,
+      auto_recycle = false,
       ingredients = {
         { type = "item", name = "bob-alien-artifact-blue", amount = 1 },
         { type = "item", name = "bob-tungsten-plate", amount = 10 },
@@ -31,6 +32,7 @@ then
       category = "bob-mixing-furnace",
       energy_required = 1,
       enabled = false,
+      auto_recycle = false,
       ingredients = {
         { type = "item", name = "bob-alien-artifact-orange", amount = 1 },
         { type = "item", name = "bob-gold-plate", amount = 10 },

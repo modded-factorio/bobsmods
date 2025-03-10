@@ -155,6 +155,4 @@ if feature_flags["quality"] then
     "bob-logistic-spidertron",
     "bob-heavy-spidertron",
   })
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-gun-cotton")
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-cordite")
 end

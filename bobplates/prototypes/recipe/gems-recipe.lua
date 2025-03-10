@@ -4,6 +4,7 @@ data:extend({
     name = "bob-ruby-3",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-ruby-ore", amount = 1 },
@@ -16,6 +17,7 @@ data:extend({
     name = "bob-sapphire-3",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-sapphire-ore", amount = 1 },
@@ -28,6 +30,7 @@ data:extend({
     name = "bob-emerald-3",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-emerald-ore", amount = 1 },
@@ -40,6 +43,7 @@ data:extend({
     name = "bob-amethyst-3",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-amethyst-ore", amount = 1 },
@@ -52,6 +56,7 @@ data:extend({
     name = "bob-topaz-3",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-topaz-ore", amount = 1 },
@@ -64,6 +69,7 @@ data:extend({
     name = "bob-diamond-3",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-diamond-ore", amount = 1 },
@@ -77,6 +83,7 @@ data:extend({
     name = "bob-ruby-4",
     category = "crafting-with-fluid",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.5,
     ingredients = {
       { type = "item", name = "bob-ruby-3", amount = 1 },
@@ -91,6 +98,7 @@ data:extend({
     name = "bob-sapphire-4",
     category = "crafting-with-fluid",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.5,
     ingredients = {
       { type = "item", name = "bob-sapphire-3", amount = 1 },
@@ -105,6 +113,7 @@ data:extend({
     name = "bob-emerald-4",
     category = "crafting-with-fluid",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.5,
     ingredients = {
       { type = "item", name = "bob-emerald-3", amount = 1 },
@@ -119,6 +128,7 @@ data:extend({
     name = "bob-amethyst-4",
     category = "crafting-with-fluid",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.5,
     ingredients = {
       { type = "item", name = "bob-amethyst-3", amount = 1 },
@@ -133,6 +143,7 @@ data:extend({
     name = "bob-topaz-4",
     category = "crafting-with-fluid",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.5,
     ingredients = {
       { type = "item", name = "bob-topaz-3", amount = 1 },
@@ -147,6 +158,7 @@ data:extend({
     name = "bob-diamond-4",
     category = "crafting-with-fluid",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.5,
     ingredients = {
       { type = "item", name = "bob-diamond-3", amount = 1 },
@@ -162,6 +174,7 @@ data:extend({
     name = "bob-ruby-5",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 17.5,
     ingredients = {
       { type = "item", name = "bob-ruby-4", amount = 1 },
@@ -175,6 +188,7 @@ data:extend({
     name = "bob-sapphire-5",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 17.5,
     ingredients = {
       { type = "item", name = "bob-sapphire-4", amount = 1 },
@@ -188,6 +202,7 @@ data:extend({
     name = "bob-emerald-5",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 17.5,
     ingredients = {
       { type = "item", name = "bob-emerald-4", amount = 1 },
@@ -201,6 +216,7 @@ data:extend({
     name = "bob-amethyst-5",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 17.5,
     ingredients = {
       { type = "item", name = "bob-amethyst-4", amount = 1 },
@@ -214,6 +230,7 @@ data:extend({
     name = "bob-topaz-5",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 17.5,
     ingredients = {
       { type = "item", name = "bob-topaz-4", amount = 1 },
@@ -227,6 +244,7 @@ data:extend({
     name = "bob-diamond-5",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 17.5,
     ingredients = {
       { type = "item", name = "bob-diamond-4", amount = 1 },
