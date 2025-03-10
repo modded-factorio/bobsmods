@@ -3,33 +3,6 @@ require("prototypes.rocket-parts-updates")
 require("prototypes.hard-mode-updates")
 require("prototypes.rtg-updates")
 
--- Rocket silo overhaul
-
-bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "steel-plate", amount = 500 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "concrete", amount = 200 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "pipe", amount = 50 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "processing-unit", amount = 50 })
-bobmods.lib.recipe.set_ingredient("rocket-silo", { type = "item", name = "electric-engine-unit", amount = 100 })
-
-if data.raw.item["bob-titanium-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("rocket-silo", "pipe", "bob-titanium-pipe")
-end
-if data.raw.item["bob-advanced-processing-unit"] then
-  bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "bob-advanced-processing-unit")
-end
-if data.raw.item["bob-nitinol-alloy"] then
-  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-nitinol-processing")
-  bobmods.lib.recipe.replace_ingredient("rocket-silo", "steel-plate", "bob-nitinol-alloy")
-end
-
-bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "low-density-structure", amount = 50 })
-bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "bob-heat-shield-tile", amount = 100 })
-bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "bob-heat-shield-tile", amount = 100 })
-bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "electric-engine-unit", amount = 40 })
-
 -- oil overhaul
 if settings.startup["bobmods-revamp-old-oil"].value == true or settings.startup["bobmods-revamp-oil"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("oil-processing", "chemical-plant")
@@ -282,14 +255,4 @@ then
   if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-3", true)
   end
-end
-
-if mods["quality"] then
-  bobmods.lib.recipe.update_recycling_recipe({
-    "low-density-structure",
-    "bob-heat-shield-tile",
-    "rocket-silo",
-    "satellite",
-    "cargo-landing-pad",
-  })
 end
