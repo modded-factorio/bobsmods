@@ -3,6 +3,7 @@ data:extend({
     type = "recipe",
     name = "bob-bronze-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
@@ -19,6 +20,7 @@ data:extend({
     type = "recipe",
     name = "bob-brass-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
@@ -35,6 +37,7 @@ data:extend({
     type = "recipe",
     name = "bob-copper-tungsten-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
@@ -51,6 +54,7 @@ data:extend({
     type = "recipe",
     name = "bob-tungsten-carbide",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 6.4,
     ingredients = {
@@ -68,6 +72,7 @@ data:extend({
     name = "bob-tungsten-carbide-2",
     localised_name = { "item-name.bob-tungsten-carbide" },
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 12.8,
     ingredients = {
@@ -84,6 +89,7 @@ data:extend({
     type = "recipe",
     name = "bob-gunmetal-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 32,
     ingredients = {
@@ -102,6 +108,7 @@ data:extend({
     type = "recipe",
     name = "bob-invar-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
@@ -118,6 +125,7 @@ data:extend({
     type = "recipe",
     name = "bob-nitinol-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 16,
     ingredients = {
@@ -135,6 +143,7 @@ data:extend({
     type = "recipe",
     name = "bob-cobalt-steel-alloy",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     energy_required = 32,
     ingredients = {

@@ -29,6 +29,7 @@ data:extend({
     order = "s[plutonium-processing]-c[bobingabout-enrichment-process]",
     energy_required = 60,
     enabled = false,
+    auto_recycle = false,
     category = "centrifuging",
     ingredients = {
       { type = "item", name = "bob-plutonium-239", amount = 40, ignored_by_stats = 40 },
@@ -59,6 +60,7 @@ if data.raw.item["bob-thorium-ore"] then
       order = "l[thorium-processing]",
       energy_required = 12,
       enabled = false,
+      auto_recycle = false,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "bob-thorium-ore", amount = 10 },
@@ -113,6 +115,7 @@ if data.raw.item["bob-thorium-ore"] then
         order = "s[thorium-processing]-b[thorium-fuel-reprocessing]",
         energy_required = 120,
         enabled = false,
+        auto_recycle = false,
         category = "centrifuging",
         ingredients = {
           { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 10 },
@@ -161,6 +164,7 @@ if data.raw.item["bob-thorium-ore"] then
         order = "s[thorium-processing]-b[bob-thorium-fuel-reprocessing]",
         energy_required = 60,
         enabled = false,
+        auto_recycle = false,
         category = "centrifuging",
         ingredients = {
           { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 5 },
@@ -218,6 +222,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       order = "s[plutonium-processing]-d[plutonium-nucleosynthesis]",
       energy_required = 60,
       enabled = false,
+      auto_recycle = false,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "uranium-235", amount = 5, ignored_by_stats = 3 },
@@ -321,6 +326,7 @@ else
       order = "t[deuterium-processing]-b[deuterium-fuel-reprocessing]",
       energy_required = 60,
       enabled = false,
+      auto_recycle = false,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 5 },

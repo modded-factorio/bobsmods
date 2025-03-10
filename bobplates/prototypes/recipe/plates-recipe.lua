@@ -6,6 +6,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     emissions_multiplier = 10,
+    auto_recycle = false,
     ingredients = { { type = "item", name = "bob-lead-ore", amount = 1 } },
     results = { { type = "item", name = "bob-lead-plate", amount = 1 } },
     allow_decomposition = false,
@@ -18,6 +19,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
+    auto_recycle = false,
     ingredients = { { type = "item", name = "bob-silver-ore", amount = 1 } },
     results = { { type = "item", name = "bob-silver-plate", amount = 1 } },
     allow_decomposition = false,
@@ -30,6 +32,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
+    auto_recycle = false,
     ingredients = { { type = "item", name = "bob-tin-ore", amount = 1 } },
     results = { { type = "item", name = "bob-tin-plate", amount = 1 } },
     allow_decomposition = false,
@@ -43,6 +46,7 @@ data:extend({
     subgroup = "bob-material-chemical",
     energy_required = 6.4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lead-oxide", amount = 2 },
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -59,6 +63,7 @@ data:extend({
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-gold-ore", amount = 1 },
       { type = "fluid", name = "bob-chlorine", amount = 3 },
@@ -75,6 +80,7 @@ data:extend({
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-cobalt-oxide", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
@@ -88,6 +94,7 @@ data:extend({
     type = "recipe",
     name = "bob-tungsten-plate",
     enabled = false,
+    auto_recycle = false,
     category = "bob-mixing-furnace",
     subgroup = "bob-alloy",
     energy_required = 16,
@@ -107,6 +114,7 @@ data:extend({
     subgroup = "bob-material-electrolysis",
     energy_required = 3.2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-zinc-ore", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
@@ -125,6 +133,7 @@ data:extend({
     order = "c-a-f[nickel-plate]",
     category = "bob-electrolysis",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3.2,
     ingredients = {
       { type = "item", name = "bob-nickel-ore", amount = 1 },
@@ -146,6 +155,7 @@ data:extend({
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-alumina", amount = 2 },
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -162,6 +172,7 @@ data:extend({
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -179,6 +190,7 @@ data:extend({
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -196,6 +208,7 @@ data:extend({
     subgroup = "bob-material-electrolysis",
     energy_required = 3.2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lithium-chloride", amount = 1 },
     },

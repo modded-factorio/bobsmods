@@ -82,6 +82,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       category = "chemistry",
       energy_required = 2,
       enabled = false,
+      auto_recycle = false,
       ingredients = {
         { type = "item", name = "stone", amount = 1 },
       },
@@ -108,6 +109,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       order = "b[fluid-chemistry]-b[sodium-chlorate]",
       category = "bob-electrolysis",
       enabled = false,
+      auto_recycle = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "bob-salt", amount = 1 },
@@ -129,6 +131,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       order = "b[fluid-chemistry]-b[sodium-perchlorate]",
       category = "bob-electrolysis",
       enabled = false,
+      auto_recycle = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "bob-sodium-chlorate", amount = 1 },
@@ -150,6 +153,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       order = "b[fluid-chemistry]-b[bob-lithium-perchlorate]",
       category = "bob-electrolysis",
       enabled = false,
+      auto_recycle = false,
       energy_required = 1,
       ingredients = {
         { type = "item", name = "bob-lithium-chloride", amount = 1 },
