@@ -24,6 +24,6 @@ hide_setting("bool-setting", "bobmods-ores-enabletungstenore")
 hide_setting("bool-setting", "bobmods-ores-enablezincore")
 hide_setting("bool-setting", "bobmods-ores-enablethoriumore")
 
-if feature_flags["quality"] then
+if mods["quality"] then
   hide_setting("bool-setting", "bobmods-plates-convert-recipes", false)
 end

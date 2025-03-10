@@ -210,7 +210,7 @@ then
     "bob-nuclear-power-2"
   )
 
-  if feature_flags["quality"] then
+  if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-2", true)
   end
 end
@@ -279,12 +279,12 @@ then
       "__bobrevamp__/graphics/icons/technology/deuterium-nuclear-power.png"
   end
 
-  if feature_flags["quality"] then
+  if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-3", true)
   end
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "low-density-structure",
     "bob-heat-shield-tile",

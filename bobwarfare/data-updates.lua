@@ -45,7 +45,7 @@ if settings.startup["bobmods-warfare-vehicleflamethrowerstartsfires"].value == t
   }
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "modular-armor",
     "power-armor",
@@ -59,6 +59,7 @@ if feature_flags["quality"] then
     "tank",
     "bob-tank-2",
     "bob-tank-3",
+    "artillery-wagon",
     "bob-artillery-wagon-2",
     "bob-artillery-wagon-3",
     "bob-robot-drone-frame",
@@ -102,6 +103,7 @@ if feature_flags["quality"] then
     "bob-laser-rifle-battery-amethyst",
     "bob-laser-rifle-battery-topaz",
     "bob-laser-rifle-battery-diamond",
+    "artillery-shell",
     "bob-poison-artillery-shell",
     "bob-fire-artillery-shell",
     "bob-explosive-artillery-shell",

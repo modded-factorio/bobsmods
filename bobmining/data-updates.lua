@@ -6,7 +6,7 @@ require("prototypes.water-miner-updates")
 data.raw.item["electric-mining-drill"].icon = "__bobmining__/graphics/icons/electric-mining-drill-1.png"
 data.raw["mining-drill"]["electric-mining-drill"].icon = "__bobmining__/graphics/icons/electric-mining-drill-1.png"
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-area-mining-drill-1",
     "bob-area-mining-drill-2",
@@ -17,6 +17,7 @@ if feature_flags["quality"] then
     "bob-mining-drill-2",
     "bob-mining-drill-3",
     "bob-mining-drill-4",
+    "pumpjack",
     "bob-pumpjack-1",
     "bob-pumpjack-2",
     "bob-pumpjack-3",

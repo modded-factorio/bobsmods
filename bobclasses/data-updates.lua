@@ -46,8 +46,9 @@ end
 
 require("prototypes.recipe-updates")
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
+    "bob-character-miner",
     "bob-character-miner-2",
     "bob-character-fighter-2",
     "bob-character-builder-2",

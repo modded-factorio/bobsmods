@@ -356,7 +356,7 @@ function bobmods.lib.recipe.disallow_productivity(recipe_name)
   end
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   function bobmods.lib.recipe.update_recycling_recipe_icon(recipe_name, icon_name, size)
     --Does not handle multiple icons
     local target_recipe = data.raw.recipe[recipe_name]

@@ -348,7 +348,7 @@ for _, recipe_name in pairs({
   end
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   if settings.startup["bobmods-colorupdate"].value == true then
     bobmods.lib.recipe.update_recycling_recipe_icon(
       "battery-recycling",
@@ -391,5 +391,6 @@ if feature_flags["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "uranium-fuel-cell",
+    "bob-polishing-wheel",
   })
 end

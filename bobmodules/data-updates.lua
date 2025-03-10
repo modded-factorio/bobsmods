@@ -39,7 +39,7 @@ if data.raw["recipe-category"]["bob-electronics-machine"] then
   end
 end
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-module-contact",
     "bob-module-circuit-board",
@@ -76,15 +76,23 @@ if feature_flags["quality"] then
     "bob-pollution-create-module-5",
     "bob-quality-module-4",
     "bob-quality-module-5",
-    "bob-green-module-1",
-    "bob-green-module-2",
-    "bob-green-module-3",
-    "bob-green-module-4",
-    "bob-green-module-5",
-    "bob-god-module",
-    "bob-god-module-productivity",
-    "bob-god-module-quality",
     "bob-beacon-2",
     "bob-beacon-3",
   })
+  if data.raw.recipe["bob-green-module-1"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-green-module-1",
+      "bob-green-module-2",
+      "bob-green-module-3",
+      "bob-green-module-4",
+      "bob-green-module-5",
+    })
+  end
+  if data.raw.recipe["bob-god-module"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-god-module",
+      "bob-god-module-productivity",
+      "bob-god-module-quality",
+    })
+  end
 end
