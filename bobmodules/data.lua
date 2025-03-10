@@ -48,3 +48,5 @@ require("prototypes.recipe.electronics")
 
 require("prototypes.technology.module")
 require("prototypes.technology.module-merged")
+
+require("prototypes.tips-and-tricks")

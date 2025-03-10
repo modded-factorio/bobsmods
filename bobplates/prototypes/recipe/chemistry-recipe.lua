@@ -184,6 +184,7 @@ data:extend({
     order = "b[fluid-chemistry]-b[bob-salt-water-electrolysis]",
     category = "bob-electrolysis",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "bob-salt", amount = 1 },
@@ -232,6 +233,7 @@ data:extend({
     order = "b[fluid-chemistry]-b[bob-lithium-water-electrolysis]",
     category = "bob-electrolysis",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bob-lithium-chloride", amount = 1 },
@@ -548,6 +550,7 @@ data:extend({
     category = "chemistry",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "stone", amount = 1 },
       { type = "fluid", name = "bob-hydrogen-chloride", amount = 10 },
@@ -567,6 +570,7 @@ data:extend({
     subgroup = "bob-material-chemical",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
       { type = "item", name = "bob-bauxite-ore", amount = 1 },
@@ -585,6 +589,7 @@ data:extend({
     order = "f[bob-lead-oxide]",
     category = "chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     emissions_multiplier = 0.25,
     ingredients = {
@@ -611,6 +616,7 @@ data:extend({
     order = "f[bob-silver-nitrate]",
     category = "chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "bob-silver-plate", amount = 1 },
@@ -632,6 +638,7 @@ data:extend({
     order = "f[bob-silver-oxide]",
     category = "chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "bob-silver-nitrate", amount = 1 },
@@ -653,6 +660,7 @@ data:extend({
     category = "bob-chemical-furnace",
     energy_required = 3.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-tungsten-oxide", amount = 1 },
       { type = "fluid", name = "bob-hydrogen", amount = 15 },
@@ -668,6 +676,7 @@ data:extend({
     category = "bob-chemical-furnace",
     energy_required = 7,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-cobalt-ore", amount = 2 },
       { type = "item", name = "stone", amount = 1 },
@@ -686,6 +695,7 @@ data:extend({
     category = "bob-chemical-furnace",
     energy_required = 25,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "copper-ore", amount = 7 },
       { type = "item", name = "stone", amount = 1 },
@@ -711,6 +721,7 @@ data:extend({
     category = "bob-chemical-furnace",
     energy_required = 25,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lead-oxide", amount = 7 },
       { type = "item", name = "bob-carbon", amount = 3 },
@@ -731,6 +742,7 @@ data:extend({
     category = "bob-chemical-furnace",
     energy_required = 7,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-silicon-powder", amount = 1 },
       { type = "item", name = "bob-carbon", amount = 1 },
@@ -750,6 +762,7 @@ data:extend({
     order = "f[bob-lead-oxide-2]",
     category = "chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     emissions_multiplier = 0.25,
     ingredients = {

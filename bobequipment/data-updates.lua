@@ -2,7 +2,7 @@ require("prototypes.recipe.updates")
 require("prototypes.technology.technology-updates")
 require("prototypes.armor-updates")
 
-if feature_flags["quality"] then
+if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "energy-shield-mk2-equipment",
     "bob-energy-shield-mk3-equipment",
@@ -36,8 +36,6 @@ if feature_flags["quality"] then
     "bob-exoskeleton-equipment-3",
     "personal-roboport-equipment",
     "personal-roboport-mk2-equipment",
-    "bob-personal-roboport-mk3-equipment",
-    "bob-personal-roboport-mk4-equipment",
     "bob-personal-roboport-antenna-equipment",
     "bob-personal-roboport-antenna-equipment-2",
     "bob-personal-roboport-antenna-equipment-3",
@@ -62,5 +60,11 @@ if feature_flags["quality"] then
   end
   if data.raw.recipe["bob-solar-panel-equipment-5"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-solar-panel-equipment-5", false)
+  end
+  if data.raw.recipe["bob-personal-roboport-mk3-equipment"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-personal-roboport-mk3-equipment",
+      "bob-personal-roboport-mk4-equipment",
+    })
   end
 end

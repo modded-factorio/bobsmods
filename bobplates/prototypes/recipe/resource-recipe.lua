@@ -6,6 +6,7 @@ data:extend({
     subgroup = "bob-material-chemical",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 5 },
       { type = "item", name = "coal", amount = 1 },
@@ -22,6 +23,7 @@ data:extend({
     category = "advanced-crafting",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
@@ -38,6 +40,7 @@ data:extend({
     subgroup = "bob-resource-chemical",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
@@ -59,6 +62,7 @@ data:extend({
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-resin", amount = 1 },
     },
@@ -73,6 +77,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-quartz", amount = 1 },
     },
@@ -86,6 +91,7 @@ data:extend({
     name = "bob-silicon-wafer",
     category = "advanced-crafting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "bob-silicon-plate", amount = 1 },
@@ -101,6 +107,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "bob-resource",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "bob-silicon-plate", amount = 1 },
@@ -115,6 +122,7 @@ data:extend({
     category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "bob-silicon-powder", amount = 1 },
@@ -132,6 +140,7 @@ data:extend({
     subgroup = "bob-material-chemical",
     energy_required = 7,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lithium", amount = 1 },
       { type = "item", name = "bob-cobalt-oxide", amount = 1 },
@@ -149,6 +158,7 @@ data:extend({
     subgroup = "bob-resource-chemical",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "heavy-oil", amount = 10 },
     },
@@ -195,6 +205,7 @@ data:extend({
     category = "chemistry",
     subgroup = "bob-gems-support",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "bob-alumina", amount = 1 },
@@ -214,6 +225,7 @@ data:extend({
     name = "bob-carbon-from-wood",
     localised_name = { "item-name.bob-carbon" },
     category = "smelting",
+    auto_recycle = false,
     energy_required = 1.6,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
@@ -228,6 +240,7 @@ data:extend({
     type = "recipe",
     name = "bob-solid-fuel-from-hydrogen",
     category = "chemistry",
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "fluid", name = "bob-hydrogen", amount = 175 },
@@ -257,6 +270,7 @@ data:extend({
     icon_size = 32,
     category = "chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 12,
     ingredients = {
       { type = "fluid", name = "bob-liquid-fuel", amount = 20 },

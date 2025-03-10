@@ -125,6 +125,7 @@ if data.raw.item["bob-solder-alloy"] then
       category = "bob-electronics",
       energy_required = 2,
       enabled = false,
+      auto_recycle = false,
       ingredients = {
         { type = "item", name = "bob-solder-alloy", amount = 4 },
         { type = "item", name = "bob-resin", amount = 1 },
@@ -284,6 +285,7 @@ data:extend({
     type = "recipe",
     name = "bob-wooden-board",
     category = "bob-electronics",
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
@@ -323,6 +325,7 @@ data:extend({
     name = "bob-phenolic-board",
     category = "bob-electronics-machine",
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
       { type = "item", name = "bob-resin", amount = 1 },
@@ -363,6 +366,7 @@ data:extend({
     name = "bob-fibreglass-board",
     category = "bob-electronics-machine",
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "plastic-bar", amount = 1 },
     },
@@ -659,4 +663,36 @@ data:extend({
     results = { { type = "item", name = "bob-advanced-processing-unit", amount = 1 } },
     allow_decomposition = false,
   },
+
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-1",
+    icon = "__bobelectronics__/graphics/icons/achievement/bob-computer-age-1.png",
+    icon_size = 128,
+    item_product = "advanced-circuit",
+    amount = 1000,
+    order = "d[production]-e[advanced-processing-unit-production]-a",
+  },
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-2",
+    icon = "__bobelectronics__/graphics/icons/achievement/bob-computer-age-2.png",
+    icon_size = 128,
+    item_product = "advanced-circuit",
+    amount = 3000,
+    order = "d[production]-e[advanced-processing-unit-production]-b",
+  },
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-3",
+    icon = "__bobelectronics__/graphics/icons/achievement/bob-computer-age-3.png",
+    icon_size = 128,
+    item_product = "advanced-circuit",
+    amount = 10000,
+    order = "d[production]-e[advanced-processing-unit-production]-c",
+  },
 })
+
+data.raw["produce-per-hour-achievement"]["computer-age-1"].amount = 1000
+data.raw["produce-per-hour-achievement"]["computer-age-2"].amount = 5000
+data.raw["produce-per-hour-achievement"]["computer-age-3"].amount = 15000

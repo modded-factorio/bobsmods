@@ -10,7 +10,7 @@ if mods["bobassembly"] then
 end
 if mods["bobmining"] then
   bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")
-  bobmods.lib.tech.add_prerequisite("bob-area-drills-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-area-drills-1", "bob-electronics")
   bobmods.lib.tech.add_prerequisite("bob-water-miner-2", "bob-electronics")
 end
 if mods["bobrevamp"] then
@@ -33,11 +33,11 @@ bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 if data.raw.recipe["bob-solder"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder")
 end
+if data.raw.recipe["bob-solder-alloy-lead"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy-lead")
+end
 if data.raw.recipe["bob-solder-alloy"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy")
-end
-if data.raw.recipe["bob-solder-alloy-lead"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-solder-alloy-lead")
 end
 if data.raw.recipe["bob-tinned-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")

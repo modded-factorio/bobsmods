@@ -197,7 +197,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
   bobmods.lib.tech.add_recipe_unlock("bulk-inserter", "bob-red-bulk-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("bob-express-inserters", "fast-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-express-inserter", "fast-inserter")
 
   bobmods.lib.tech.add_recipe_unlock("bob-turbo-inserter", "bob-turbo-inserter")
 

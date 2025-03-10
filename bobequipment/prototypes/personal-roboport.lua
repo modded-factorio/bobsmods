@@ -1,255 +1,7 @@
-data.raw.item["personal-roboport-equipment"].icon =
-  "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
-data.raw.item["personal-roboport-equipment"].icon_size = 128
-data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.filename =
-  "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
-data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.width = 128
-data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.height = 128
-data.raw.technology["personal-roboport-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
-  icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png",
-  icon_size = 128,
-}, "__boblibrary__/graphics/constants/constant-equipment.png")
-
-data.raw.item["personal-roboport-mk2-equipment"].icon =
-  "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
-data.raw.item["personal-roboport-mk2-equipment"].icon_size = 128
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.filename =
-  "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.width = 128
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.height = 128
-data.raw.technology["personal-roboport-mk2-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
-  icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png",
-  icon_size = 128,
-}, "__boblibrary__/graphics/constants/constant-equipment.png")
-
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.buffer_capacity = "75MJ"
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.input_flow_limit = "7500kW"
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].charging_energy = "1500kW"
-data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 20
-
-data:extend({
-  {
-    type = "item",
-    name = "bob-personal-roboport-mk3-equipment",
-    localised_description = { "item-description.personal-roboport-equipment" },
-    icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
-    icon_size = 128,
-    place_as_equipment_result = "bob-personal-roboport-mk3-equipment",
-    subgroup = "utility-equipment",
-    order = "e[robotics]-b[personal-roboport-mk3-equipment]",
-    stack_size = 20,
-    drop_sound = {
-      filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35,
-    },
-  },
-  {
-    type = "item",
-    name = "bob-personal-roboport-mk4-equipment",
-    localised_description = { "item-description.personal-roboport-equipment" },
-    icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
-    icon_size = 128,
-    place_as_equipment_result = "bob-personal-roboport-mk4-equipment",
-    subgroup = "utility-equipment",
-    order = "e[robotics]-b[personal-roboport-mk4-equipment]",
-    stack_size = 20,
-    drop_sound = {
-      filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/roboport-inventory-move.ogg",
-      volume = 0.45,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
-      volume = 0.35,
-    },
-  },
-
-  {
-    type = "recipe",
-    name = "bob-personal-roboport-mk3-equipment",
-    enabled = false,
-    energy_required = 30,
-    ingredients = {
-      { type = "item", name = "personal-roboport-mk2-equipment", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 20 },
-      { type = "item", name = "iron-gear-wheel", amount = 40 },
-      { type = "item", name = "steel-plate", amount = 20 },
-      { type = "item", name = "battery", amount = 20 },
-    },
-    results = { { type = "item", name = "bob-personal-roboport-mk3-equipment", amount = 1 } },
-  },
-  {
-    type = "recipe",
-    name = "bob-personal-roboport-mk4-equipment",
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-      { type = "item", name = "bob-personal-roboport-mk3-equipment", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 20 },
-      { type = "item", name = "iron-gear-wheel", amount = 40 },
-      { type = "item", name = "steel-plate", amount = 20 },
-      { type = "item", name = "battery", amount = 20 },
-    },
-    results = { { type = "item", name = "bob-personal-roboport-mk4-equipment", amount = 1 } },
-  },
-
-  {
-    type = "roboport-equipment",
-    name = "bob-personal-roboport-mk3-equipment",
-    take_result = "bob-personal-roboport-mk3-equipment",
-    sprite = {
-      filename = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
-      width = 128,
-      height = 128,
-      priority = "medium",
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "135MJ",
-      input_flow_limit = "13500kW",
-      usage_priority = "secondary-input",
-    },
-    charging_energy = "2000kW",
-    robot_limit = 30,
-    construction_radius = 25,
-    spawn_and_station_height = 0.4,
-    charge_approach_distance = 2.6,
-    recharging_animation = {
-      filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
-      priority = "high",
-      width = 37,
-      height = 35,
-      frame_count = 16,
-      scale = 1.5,
-      animation_speed = 0.5,
-    },
-    recharging_light = { intensity = 0.4, size = 5 },
-    stationing_offset = { 0, -0.6 },
-    charging_station_shift = { 0, 0.5 },
-    charging_station_count = 6,
-    charging_distance = 1.6,
-    charging_threshold_distance = 5,
-    categories = { "armor" },
-  },
-  {
-    type = "roboport-equipment",
-    name = "bob-personal-roboport-mk4-equipment",
-    take_result = "bob-personal-roboport-mk4-equipment",
-    sprite = {
-      filename = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
-      width = 128,
-      height = 128,
-      priority = "medium",
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "215MJ",
-      input_flow_limit = "21500kW",
-      usage_priority = "secondary-input",
-    },
-    charging_energy = "2500kW",
-    robot_limit = 40,
-    construction_radius = 30,
-    spawn_and_station_height = 0.4,
-    charge_approach_distance = 2.6,
-    recharging_animation = {
-      filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
-      priority = "high",
-      width = 37,
-      height = 35,
-      frame_count = 16,
-      scale = 1.5,
-      animation_speed = 0.5,
-    },
-    recharging_light = { intensity = 0.4, size = 5 },
-    stationing_offset = { 0, -0.6 },
-    charging_station_shift = { 0, 0.5 },
-    charging_station_count = 8,
-    charging_distance = 1.6,
-    charging_threshold_distance = 5,
-    categories = { "armor" },
-  },
-
-  {
-    type = "technology",
-    name = "bob-personal-roboport-mk3-equipment",
-    icons = bobmods.lib.tech.technology_icon_constant({
-      icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
-      icon_size = 128,
-    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "bob-personal-roboport-mk3-equipment",
-      },
-    },
-    prerequisites = {
-      "personal-roboport-mk2-equipment",
-      "processing-unit",
-      "utility-science-pack",
-    },
-    unit = {
-      count = 150,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "utility-science-pack", 1 },
-      },
-      time = 30,
-    },
-  },
-  {
-    type = "technology",
-    name = "bob-personal-roboport-mk4-equipment",
-    icons = bobmods.lib.tech.technology_icon_constant({
-      icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
-      icon_size = 128,
-    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "bob-personal-roboport-mk4-equipment",
-      },
-    },
-    prerequisites = {
-      "bob-personal-roboport-mk3-equipment",
-      "production-science-pack",
-    },
-    unit = {
-      count = 200,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-      },
-      time = 30,
-    },
-  },
-})
+local combined_roboports = true
+if mods["boblogistics"] and settings.startup["bobmods-logistics-disableroboports"].value == true then
+  combined_roboports = false
+end
 
 data:extend({
   {
@@ -1331,9 +1083,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment",
       },
     },
-    prerequisites = {
-      "personal-roboport-equipment",
-    },
+    prerequisites = {},
     unit = {
       count = 50,
       ingredients = {
@@ -1365,10 +1115,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment-2",
       },
     },
-    prerequisites = {
-      "bob-personal-roboport-modular-equipment-1",
-      "personal-roboport-mk2-equipment",
-    },
+    prerequisites = {},
     unit = {
       count = 100,
       ingredients = {
@@ -1400,10 +1147,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment-3",
       },
     },
-    prerequisites = {
-      "bob-personal-roboport-modular-equipment-2",
-      "bob-personal-roboport-mk3-equipment",
-    },
+    prerequisites = {},
     unit = {
       count = 150,
       ingredients = {
@@ -1436,10 +1180,7 @@ data:extend({
         recipe = "bob-personal-roboport-robot-equipment-4",
       },
     },
-    prerequisites = {
-      "bob-personal-roboport-modular-equipment-3",
-      "bob-personal-roboport-mk4-equipment",
-    },
+    prerequisites = {},
     unit = {
       count = 200,
       ingredients = {
@@ -1453,3 +1194,329 @@ data:extend({
     },
   },
 })
+
+if combined_roboports == true then
+  data.raw.item["personal-roboport-equipment"].icon =
+    "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
+  data.raw.item["personal-roboport-equipment"].icon_size = 128
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.filename =
+    "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.width = 128
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.height = 128
+  data.raw.technology["personal-roboport-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
+    icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png",
+    icon_size = 128,
+  }, "__boblibrary__/graphics/constants/constant-equipment.png")
+
+  data.raw.item["personal-roboport-mk2-equipment"].icon =
+    "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
+  data.raw.item["personal-roboport-mk2-equipment"].icon_size = 128
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.filename =
+    "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.width = 128
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.height = 128
+  data.raw.technology["personal-roboport-mk2-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
+    icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png",
+    icon_size = 128,
+  }, "__boblibrary__/graphics/constants/constant-equipment.png")
+
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.buffer_capacity = "75MJ"
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.input_flow_limit = "7500kW"
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].charging_energy = "1500kW"
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 20
+
+  data:extend({
+    {
+      type = "item",
+      name = "bob-personal-roboport-mk3-equipment",
+      localised_description = { "item-description.personal-roboport-equipment" },
+      icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
+      icon_size = 128,
+      place_as_equipment_result = "bob-personal-roboport-mk3-equipment",
+      subgroup = "utility-equipment",
+      order = "e[robotics]-b[personal-roboport-mk3-equipment]",
+      stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/roboport-inventory-move.ogg",
+        volume = 0.45,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/roboport-inventory-move.ogg",
+        volume = 0.45,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+        volume = 0.35,
+      },
+    },
+    {
+      type = "item",
+      name = "bob-personal-roboport-mk4-equipment",
+      localised_description = { "item-description.personal-roboport-equipment" },
+      icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
+      icon_size = 128,
+      place_as_equipment_result = "bob-personal-roboport-mk4-equipment",
+      subgroup = "utility-equipment",
+      order = "e[robotics]-b[personal-roboport-mk4-equipment]",
+      stack_size = 20,
+      drop_sound = {
+        filename = "__base__/sound/item/roboport-inventory-move.ogg",
+        volume = 0.45,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/roboport-inventory-move.ogg",
+        volume = 0.45,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
+        volume = 0.35,
+      },
+    },
+
+    {
+      type = "recipe",
+      name = "bob-personal-roboport-mk3-equipment",
+      enabled = false,
+      energy_required = 30,
+      ingredients = {
+        { type = "item", name = "personal-roboport-mk2-equipment", amount = 1 },
+        { type = "item", name = "processing-unit", amount = 20 },
+        { type = "item", name = "iron-gear-wheel", amount = 40 },
+        { type = "item", name = "steel-plate", amount = 20 },
+        { type = "item", name = "battery", amount = 20 },
+      },
+      results = { { type = "item", name = "bob-personal-roboport-mk3-equipment", amount = 1 } },
+    },
+    {
+      type = "recipe",
+      name = "bob-personal-roboport-mk4-equipment",
+      enabled = false,
+      energy_required = 40,
+      ingredients = {
+        { type = "item", name = "bob-personal-roboport-mk3-equipment", amount = 1 },
+        { type = "item", name = "processing-unit", amount = 20 },
+        { type = "item", name = "iron-gear-wheel", amount = 40 },
+        { type = "item", name = "steel-plate", amount = 20 },
+        { type = "item", name = "battery", amount = 20 },
+      },
+      results = { { type = "item", name = "bob-personal-roboport-mk4-equipment", amount = 1 } },
+    },
+
+    {
+      type = "roboport-equipment",
+      name = "bob-personal-roboport-mk3-equipment",
+      take_result = "bob-personal-roboport-mk3-equipment",
+      sprite = {
+        filename = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
+        width = 128,
+        height = 128,
+        priority = "medium",
+      },
+      shape = {
+        width = 2,
+        height = 2,
+        type = "full",
+      },
+      energy_source = {
+        type = "electric",
+        buffer_capacity = "135MJ",
+        input_flow_limit = "13500kW",
+        usage_priority = "secondary-input",
+      },
+      charging_energy = "2000kW",
+      robot_limit = 30,
+      construction_radius = 25,
+      spawn_and_station_height = 0.4,
+      charge_approach_distance = 2.6,
+      recharging_animation = {
+        filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
+        priority = "high",
+        width = 37,
+        height = 35,
+        frame_count = 16,
+        scale = 1.5,
+        animation_speed = 0.5,
+      },
+      recharging_light = { intensity = 0.4, size = 5 },
+      stationing_offset = { 0, -0.6 },
+      charging_station_shift = { 0, 0.5 },
+      charging_station_count = 6,
+      charging_distance = 1.6,
+      charging_threshold_distance = 5,
+      categories = { "armor" },
+    },
+    {
+      type = "roboport-equipment",
+      name = "bob-personal-roboport-mk4-equipment",
+      take_result = "bob-personal-roboport-mk4-equipment",
+      sprite = {
+        filename = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
+        width = 128,
+        height = 128,
+        priority = "medium",
+      },
+      shape = {
+        width = 2,
+        height = 2,
+        type = "full",
+      },
+      energy_source = {
+        type = "electric",
+        buffer_capacity = "215MJ",
+        input_flow_limit = "21500kW",
+        usage_priority = "secondary-input",
+      },
+      charging_energy = "2500kW",
+      robot_limit = 40,
+      construction_radius = 30,
+      spawn_and_station_height = 0.4,
+      charge_approach_distance = 2.6,
+      recharging_animation = {
+        filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
+        priority = "high",
+        width = 37,
+        height = 35,
+        frame_count = 16,
+        scale = 1.5,
+        animation_speed = 0.5,
+      },
+      recharging_light = { intensity = 0.4, size = 5 },
+      stationing_offset = { 0, -0.6 },
+      charging_station_shift = { 0, 0.5 },
+      charging_station_count = 8,
+      charging_distance = 1.6,
+      charging_threshold_distance = 5,
+      categories = { "armor" },
+    },
+
+    {
+      type = "technology",
+      name = "bob-personal-roboport-mk3-equipment",
+      icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
+        icon_size = 128,
+      }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "bob-personal-roboport-mk3-equipment",
+        },
+      },
+      prerequisites = {
+        "personal-roboport-mk2-equipment",
+        "processing-unit",
+        "utility-science-pack",
+      },
+      unit = {
+        count = 150,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "utility-science-pack", 1 },
+        },
+        time = 30,
+      },
+    },
+    {
+      type = "technology",
+      name = "bob-personal-roboport-mk4-equipment",
+      icons = bobmods.lib.tech.technology_icon_constant({
+        icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
+        icon_size = 128,
+      }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "bob-personal-roboport-mk4-equipment",
+        },
+      },
+      prerequisites = {
+        "bob-personal-roboport-mk3-equipment",
+        "production-science-pack",
+      },
+      unit = {
+        count = 200,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+        },
+        time = 30,
+      },
+    },
+  })
+
+  data.raw.technology["bob-personal-roboport-modular-equipment-1"].prerequisites = {
+    "personal-roboport-equipment",
+  }
+  data.raw.technology["bob-personal-roboport-modular-equipment-2"].prerequisites = {
+    "bob-personal-roboport-modular-equipment-1",
+    "personal-roboport-mk2-equipment",
+  }
+  data.raw.technology["bob-personal-roboport-modular-equipment-3"].prerequisites = {
+    "bob-personal-roboport-modular-equipment-2",
+    "bob-personal-roboport-mk3-equipment",
+  }
+  data.raw.technology["bob-personal-roboport-modular-equipment-4"].prerequisites = {
+    "bob-personal-roboport-modular-equipment-3",
+    "bob-personal-roboport-mk4-equipment",
+  }
+
+  if mods["boblogistics"] then
+    bobmods.lib.tech.add_recipe_unlock("personal-roboport-equipment", "bob-roboport-antenna-1")
+    bobmods.lib.tech.add_recipe_unlock("personal-roboport-equipment", "bob-roboport-chargepad-1")
+    bobmods.lib.tech.add_recipe_unlock("personal-roboport-equipment", "bob-roboport-door-1")
+    bobmods.lib.tech.add_recipe_unlock("personal-roboport-mk2-equipment", "bob-roboport-antenna-2")
+    bobmods.lib.tech.add_recipe_unlock("personal-roboport-mk2-equipment", "bob-roboport-chargepad-2")
+    bobmods.lib.tech.add_recipe_unlock("personal-roboport-mk2-equipment", "bob-roboport-door-2")
+    bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk3-equipment", "bob-roboport-antenna-3")
+    bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk3-equipment", "bob-roboport-chargepad-3")
+    bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk3-equipment", "bob-roboport-door-3")
+    bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk4-equipment", "bob-roboport-antenna-4")
+    bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk4-equipment", "bob-roboport-chargepad-4")
+    bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-mk4-equipment", "bob-roboport-door-4")
+  end
+else
+  data.raw.technology["personal-roboport-equipment"].hidden = true
+  data.raw.technology["personal-roboport-mk2-equipment"].hidden = true
+  data.raw.technology["personal-roboport-equipment"].enabled = false
+  data.raw.technology["personal-roboport-mk2-equipment"].enabled = false
+  data.raw.recipe["personal-roboport-equipment"].hidden = true
+  data.raw.recipe["personal-roboport-mk2-equipment"].hidden = true
+  data.raw.item["personal-roboport-equipment"].hidden = true
+  data.raw.item["personal-roboport-mk2-equipment"].hidden = true
+
+  data.raw.technology["bob-personal-roboport-modular-equipment-1"].prerequisites = {
+    "construction-robotics",
+    "solar-panel-equipment",
+  }
+  data.raw.technology["bob-personal-roboport-modular-equipment-2"].prerequisites = {
+    "bob-personal-roboport-modular-equipment-1",
+    "chemical-science-pack",
+  }
+  data.raw.technology["bob-personal-roboport-modular-equipment-3"].prerequisites = {
+    "bob-personal-roboport-modular-equipment-2",
+    "processing-unit",
+    "utility-science-pack",
+  }
+  data.raw.technology["bob-personal-roboport-modular-equipment-4"].prerequisites = {
+    "bob-personal-roboport-modular-equipment-3",
+    "production-science-pack",
+  }
+
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-1", "bob-roboport-antenna-1")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-1", "bob-roboport-chargepad-1")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-1", "bob-roboport-door-1")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-2", "bob-roboport-antenna-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-2", "bob-roboport-chargepad-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-2", "bob-roboport-door-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-3", "bob-roboport-antenna-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-3", "bob-roboport-chargepad-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-3", "bob-roboport-door-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-4", "bob-roboport-antenna-4")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-4", "bob-roboport-chargepad-4")
+  bobmods.lib.tech.add_recipe_unlock("bob-personal-roboport-modular-equipment-4", "bob-roboport-door-4")
+end

@@ -137,6 +137,6 @@ else
   if data.raw.item["bob-titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-express-inserter", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.recipe.replace_ingredient("bob-express-bulk-inserter", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-express-inserters", "bob-titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-express-inserter", "bob-titanium-processing")
   end
 end

@@ -472,7 +472,7 @@ if not mods["bobwarfare"] then
   data.raw["character-corpse"]["character-corpse"].armor_picture_mapping["bob-power-armor-mk4"] = 3
   data.raw["character-corpse"]["character-corpse"].armor_picture_mapping["bob-power-armor-mk5"] = 3
 
-  if feature_flags["quality"] then
+  if mods["quality"] then
     data.raw["equipment-grid"]["large-equipment-grid"].width = 8
     data.raw["equipment-grid"]["large-equipment-grid"].height = 9
     data:extend({

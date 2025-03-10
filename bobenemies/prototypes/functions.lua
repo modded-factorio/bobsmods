@@ -25,6 +25,7 @@ local sounds = require("__base__.prototypes.entity.sounds")
 local health_increase = settings.startup["bobmods-enemies-healthincrease"].value
 local bigger_spawns = settings.startup["bobmods-enemies-biggersooner"].value
 local leviathanfrequency = settings.startup["bobmods-enemies-leviathanfrequency"].value
+local default_ai = { destroy_when_commands_fail = true, allow_try_return_to_spawner = true }
 
 local biter_resistances = {
   {
@@ -643,7 +644,7 @@ function bobmods.enemies.new_biter(inputs)
     walking_sound = biter_stats[tier].walking_sound,
     run_animation = biterrunanimation(final_scale, inputs.tint, inputs.tint2),
     running_sound_animation_positions = { 2 },
-    ai_settings = biter_ai_settings,
+    ai_settings = inputs.ai_settings or default_ai,
     water_reflection = biter_water_reflection(final_scale),
   }
   if inputs.icons then
@@ -1298,7 +1299,7 @@ function bobmods.enemies.new_spitter(inputs)
     walking_sound = spitter_stats[tier].walking_sound,
     run_animation = spitterrunanimation(final_scale, inputs.tint, inputs.tint2),
     running_sound_animation_positions = { 2 },
-    ai_settings = biter_ai_settings,
+    ai_settings = inputs.ai_settings or default_ai,
     water_reflection = spitter_water_reflection(final_scale),
   }
   if inputs.icons then
