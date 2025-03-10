@@ -264,7 +264,9 @@ function bobmods.lib.create_gas_bottle(fluid)
       bobmods.lib.recipe.set_result(empty_recipe.name, { type = "item", name = "bob-gas-canister", amount = 1 })
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", empty_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", empty_recipe.name)
-      bobmods.lib.recipe.update_recycling_recipe(barrel_item.name)
+      if mods["quality"] then
+        bobmods.lib.recipe.update_recycling_recipe(barrel_item.name)
+      end
     else
       empty_recipe = create_empty_gas_bottle_recipe(fluid)
     end
@@ -305,7 +307,9 @@ function bobmods.lib.create_fluid_canister(fluid)
       bobmods.lib.recipe.replace_ingredient(fill_recipe.name, "barrel", "bob-empty-canister")
       bobmods.lib.tech.remove_recipe_unlock("fluid-handling", fill_recipe.name)
       bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", fill_recipe.name)
-      bobmods.lib.recipe.update_recycling_recipe(barrel_item.name)
+      if mods["quality"] then
+        bobmods.lib.recipe.update_recycling_recipe(barrel_item.name)
+      end
     else
       fill_recipe = create_fill_fluid_canister_recipe(fluid)
     end
