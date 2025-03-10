@@ -16,8 +16,10 @@ end
 if mods["bobrevamp"] then
   bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-electronics")
 end
-if mods["bobwarfare"] then
+if mods["bobwarfare"] or mods["bobequipment"] then
   bobmods.lib.tech.add_prerequisite("modular-armor", "bob-electronics")
+end
+if mods["bobwarfare"] then
   bobmods.lib.tech.add_prerequisite("bob-radar-2", "bob-electronics")
 end
 

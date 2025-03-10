@@ -1,11 +1,23 @@
 --Remember when making any change to power armor to duplicate the edits in Bob's Warfare mod
 
 if not mods["bobwarfare"] then
-  if mods["bobplates"] then
+  if data.raw.item["bob-invar-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "iron-plate", "bob-invar-alloy")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-invar-processing")
+  end
+
+  if data.raw.item["bob-aluminium-plate"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk3", "steel-plate", "bob-aluminium-plate")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-3", "bob-aluminium-processing")
+  end
+
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "advanced-circuit", "bob-advanced-processing-unit")
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "advanced-circuit", "bob-advanced-processing-unit")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-advanced-processing-unit")
+  end
+
+  if data.raw.item["bob-titanium-plate"] then
     if mods["bobrevamp"] then
       bobmods.lib.recipe.remove_ingredient("power-armor-mk2", "low-density-structure")
       bobmods.lib.tech.remove_prerequisite("power-armor-mk2", "low-density-structure")
@@ -28,28 +40,20 @@ if not mods["bobwarfare"] then
       bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "steel-plate", "bob-titanium-plate")
       bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-titanium-processing")
     end
+  end
+
+  if data.raw.item["bob-silicon-nitride"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "plastic-bar", "bob-silicon-nitride")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-ceramics")
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "plastic-bar", "bob-nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-nitinol-processing")
+  end
+  if data.raw.item["bob-tungsten-carbide"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "bob-tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-alloy-processing")
   end
 
-  bobmods.lib.recipe.add_new_ingredient("power-armor", { type = "item", name = "modular-armor", amount = 1 })
-  bobmods.lib.recipe.add_new_ingredient("power-armor-mk2", { type = "item", name = "power-armor", amount = 1 })
-
-  bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
-  bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
-  bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
-  if data.raw.item["bob-advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "advanced-circuit", "bob-advanced-processing-unit")
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "advanced-circuit", "bob-advanced-processing-unit")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-advanced-processing-unit")
-  end
-
-  if (not mods["bobplates"]) and not mods["boblogistics"] then
-    bobmods.lib.recipe.remove_ingredient("power-armor", "electric-engine-unit")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "plastic-bar", "bob-nitinol-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-nitinol-processing")
   end
 
   if data.raw.item["bob-alien-artifact-orange"] and data.raw.item["bob-alien-artifact-blue"] then
@@ -103,6 +107,18 @@ if not mods["bobwarfare"] then
   else
     bobmods.lib.recipe.add_ingredient("bob-power-armor-mk5", { type = "item", name = "processing-unit", amount = 120 })
   end
+
+  bobmods.lib.recipe.replace_ingredient("modular-armor", "advanced-circuit", "electronic-circuit")
+
+  bobmods.lib.recipe.replace_ingredient("power-armor", "processing-unit", "advanced-circuit")
+  bobmods.lib.recipe.add_new_ingredient("power-armor", { type = "item", name = "modular-armor", amount = 1 })
+  -- By default, electric engines are Blue Science
+  if (not mods["bobplates"]) and not mods["boblogistics"] then
+    bobmods.lib.recipe.remove_ingredient("power-armor", "electric-engine-unit")
+  end
+
+  bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "advanced-circuit")
+  bobmods.lib.recipe.add_new_ingredient("power-armor-mk2", { type = "item", name = "power-armor", amount = 1 })
 
   if
     data.raw.tool["bob-science-pack-gold"]
