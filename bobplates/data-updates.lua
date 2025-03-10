@@ -391,5 +391,6 @@ if mods["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "uranium-fuel-cell",
+    "bob-polishing-wheel",
   })
 end
