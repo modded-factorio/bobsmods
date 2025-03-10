@@ -1,16 +1,16 @@
-for i, recipe in pairs(data.raw.recipe) do
-  if
-    recipe.name == "offshore-pump"
-    or recipe.name == "inserter"
-    or recipe.name == "electric-mining-drill"
-    or recipe.name == "lab"
-    or recipe.name == "radar"
-    or recipe.name == "repair-pack"
-    or recipe.name == "assembling-machine-1"
-    or recipe.name == "splitter"
-    or recipe.name == "small-lamp"
-  then
-    bobmods.lib.recipe.replace_ingredient(recipe.name, "electronic-circuit", "bob-basic-circuit-board")
+for _, recipe_name in pairs({
+  "offshore-pump",
+  "inserter",
+  "electric-mining-drill",
+  "lab",
+  "radar",
+  "repair-pack",
+  "assembling-machine-1",
+  "splitter",
+  "small-lamp",
+}) do
+  if data.raw.recipe[recipe_name] then
+    bobmods.lib.recipe.replace_ingredient(recipe_name, "electronic-circuit", "bob-basic-circuit-board")
   end
 end
 
