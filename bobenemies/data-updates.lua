@@ -3015,26 +3015,4 @@ end
 
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-artifact-radar", false)
-  if data.raw.item["bob-alien-artifact"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact")
-  end
-  if data.raw.item["bob-alien-artifact-red"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact-red")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact-orange")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact-yellow")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact-green")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact-blue")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-alien-artifact-purple")
-  end
-  if data.raw.item["bob-small-alien-artifact"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact")
-  end
-  if data.raw.item["bob-small-alien-artifact-red"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact-red")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact-orange")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact-yellow")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact-green")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact-blue")
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-small-alien-artifact-purple")
-  end
 end

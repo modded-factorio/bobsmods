@@ -285,11 +285,6 @@ then
 end
 
 if mods["quality"] then
-  if data.raw.recipe["bob-sodium-chlorate"] then
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-chlorate", false)
-    bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("bob-sodium-perchlorate", false)
-  end
-
   bobmods.lib.recipe.update_recycling_recipe({
     "low-density-structure",
     "bob-heat-shield-tile",
@@ -297,18 +292,4 @@ if mods["quality"] then
     "satellite",
     "cargo-landing-pad",
   })
-  bobmods.lib.recipe.update_recycling_recipe_to_self_recipe("rocket-fuel", false)
-  if data.raw.recipe["bob-sour-gas-barrel"] then
-    bobmods.lib.recipe.update_recycling_recipe_single("bob-sour-gas-barrel", true)
-  end
-  if data.raw.recipe["bob-carbon-dioxide-barrel"] then
-    bobmods.lib.recipe.update_recycling_recipe_single("bob-carbon-dioxide-barrel", true)
-  end
-  if data.raw.recipe["bob-ammonia-barrel"] then
-    bobmods.lib.recipe.update_recycling_recipe_single("bob-ammonia-barrel", true)
-    bobmods.lib.recipe.update_recycling_recipe_single("bob-nitrogen-dioxide-barrel", true)
-  end
-  if data.raw.recipe["bob-nitric-oxide-barrel"] then
-    bobmods.lib.recipe.update_recycling_recipe_single("bob-nitric-oxide-barrel", true)
-  end
 end
