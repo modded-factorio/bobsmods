@@ -2,6 +2,7 @@ require("prototypes.overides")
 require("prototypes.recipe.recipe-updates")
 require("prototypes.technology.technology-updates")
 
+require("prototypes.armor-updates")
 require("prototypes.robots-updates")
 require("prototypes.train-updates")
 require("prototypes.recipe.drone-updates")
