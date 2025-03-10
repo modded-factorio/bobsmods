@@ -351,7 +351,6 @@ for _, recipe_name in pairs({
 end
 
 if mods["quality"] then
-
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-air-pump",
     "bob-air-pump-2",
