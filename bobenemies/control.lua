@@ -1003,20 +1003,20 @@ end
 
 --Radar section
 script.on_event(defines.events.on_sector_scanned, function(event)
-  --Convert radar position to origin point of a target chunk
-  local target_x = math.floor(event.radar.position.x / 32)
-  local target_y = math.floor(event.radar.position.y / 32)
-  target_x = (target_x + math.random(9) - 5) * 32
-  target_y = (target_y + math.random(9) - 5) * 32
+  --Convert radar position to top left coverage limit
+  local target_x = math.floor(event.radar.position.x / 32) * 32 - 128
+  local target_y = math.floor(event.radar.position.y / 32) * 32 - 128
+  target_x = target_x + ((math.random(6) - 1) * 48)
+  target_y = target_y + ((math.random(6) - 1) * 48)
   --Do not order_deconstruction when enemies are nearby to keep bots from being targeted, and to make it less likely that they will be too busy to repair
   local found_enemies = game.surfaces[event.radar.surface_index].count_entities_filtered({
-    area = { { target_x - 16, target_y - 16 }, { target_x + 48, target_y + 48 } },
+    area = { { target_x - 1, target_y - 1 }, { target_x + 49, target_y + 49 } },
     force = "enemy",
     limit = 1,
   })
   if found_enemies == 0 then
     local found_items = game.surfaces[event.radar.surface_index].find_entities_filtered({
-      area = { { target_x - 1, target_y - 1 }, { target_x + 32, target_y + 32 } },
+      area = { { target_x - 1, target_y - 1 }, { target_x + 49, target_y + 49 } },
       type = "item-entity",
       limit = bobmods.enemies.radar_scan_limit,
     })
