@@ -64,7 +64,8 @@ function bobmods.ores.water.create_autoplace()
       regular_rq_factor_multiplier = 1,
     }
   end
-  data.raw.resource["bob-ground-water"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings(ground_water_parameters)
+  data.raw.resource["bob-ground-water"].autoplace =
+    bobmods.lib.resource_autoplace.resource_autoplace_settings(ground_water_parameters)
   bobmods.ores.water.enabled = true
 end
 
