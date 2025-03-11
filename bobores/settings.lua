@@ -197,4 +197,10 @@ data:extend({
     setting_type = "startup",
     default_value = false,
   },
+  {
+    type = "bool-setting",
+    name = "bobmods-ores-startinggroundwater",
+    setting_type = "startup",
+    default_value = false,
+  },
 })
