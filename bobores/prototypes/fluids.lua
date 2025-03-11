@@ -35,18 +35,36 @@ bobmods.ores.water = {
 }
 
 function bobmods.ores.water.create_autoplace()
-  data.raw.resource["bob-ground-water"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "bob-ground-water",
-    order = "c",
-    base_density = 8.2,
-    base_spots_per_km2 = 1.8,
-    random_probability = 1 / 48,
-    random_spot_size_minimum = 1,
-    random_spot_size_maximum = 1,
-    additional_richness = 1000000,
-    has_starting_area_placement = false,
-    regular_rq_factor_multiplier = 1,
-  })
+  local ground_water_parameters
+  if settings.startup["bobmods-ores-startinggroundwater"].value == true then
+    ground_water_parameters = {
+      name = "bob-ground-water",
+      order = "c",
+      base_density = 8.2,
+      base_spots_per_km2 = 1.8,
+      random_probability = 1 / 48,
+      random_spot_size_minimum = 1,
+      random_spot_size_maximum = 1,
+      additional_richness = 1000000,
+      has_starting_area_placement = true,
+      regular_rq_factor_multiplier = 1,
+      starting_rq_factor_multiplier = 2,
+    }
+  else
+    ground_water_parameters = {
+      name = "bob-ground-water",
+      order = "c",
+      base_density = 8.2,
+      base_spots_per_km2 = 1.8,
+      random_probability = 1 / 48,
+      random_spot_size_minimum = 1,
+      random_spot_size_maximum = 1,
+      additional_richness = 1000000,
+      has_starting_area_placement = false,
+      regular_rq_factor_multiplier = 1,
+    }
+  end
+  data.raw.resource["bob-ground-water"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings(ground_water_parameters)
   bobmods.ores.water.enabled = true
 end
 

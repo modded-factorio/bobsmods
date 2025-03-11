@@ -243,12 +243,6 @@ if bobmods.greenhouse then
 end
 
 if settings.startup["bobmods-plates-purewater"].value == true then
-  bobmods.lib.resource.remove_result("bob-ground-water", "water")
-  bobmods.lib.resource.add_result(
-    "bob-ground-water",
-    { type = "fluid", name = "bob-pure-water", amount = 10, probability = 1 }
-  )
-
   bobmods.lib.recipe.replace_ingredient("bob-water-electrolysis", "water", "bob-pure-water")
   bobmods.lib.recipe.replace_ingredient("bob-salt-water-electrolysis", "water", "bob-pure-water")
   bobmods.lib.recipe.replace_ingredient("bob-lithium-water-electrolysis", "water", "bob-pure-water")
