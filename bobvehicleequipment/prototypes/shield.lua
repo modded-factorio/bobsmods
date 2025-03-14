@@ -540,6 +540,7 @@ data:extend({
     }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "bob-vehicle-shield-equipment-5",
+      "space-science-pack",
     },
     unit = {
       count = 400,

@@ -112,7 +112,8 @@ data:extend({
     }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "bob-vehicle-solar-panel-equipment-1",
-      "laser-turret",
+      "laser",
+      "military-science-pack",
     },
     unit = {
       count = 100,

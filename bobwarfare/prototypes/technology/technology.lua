@@ -38,6 +38,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-nitroglycerin-processing",
+      "plastics",
     },
     effects = {
       {

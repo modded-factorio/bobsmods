@@ -164,7 +164,7 @@ elseif data.raw.technology["bob-alien-research"] then
   bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "bob-alien-research")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "bob-alien-research")
   bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "bob-alien-research")
-else
+elseif data.raw.technology["bob-gold-processing"] then
   bobmods.lib.tech.add_prerequisite("bob-electric-bullets", "bob-gold-processing")
   bobmods.lib.tech.add_prerequisite("bob-shotgun-electric-shells", "bob-gold-processing")
   bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "bob-gold-processing")
@@ -499,7 +499,6 @@ table.insert(
   { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.5 }
 )
 
---0.17.60
 bobmods.lib.tech.remove_science_pack("laser-weapons-damage-1", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-weapons-damage-2", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-weapons-damage-3", "chemical-science-pack")
@@ -508,6 +507,8 @@ bobmods.lib.tech.remove_science_pack("laser-shooting-speed-2", "chemical-science
 bobmods.lib.tech.remove_science_pack("laser", "chemical-science-pack")
 bobmods.lib.tech.remove_prerequisite("laser", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-turret", "chemical-science-pack")
+-- Remove chemical-science-pack prerequisite in case vehicle equipment or some other mod has added it
+bobmods.lib.tech.remove_prerequisite("laser-turret", "chemical-science-pack")
 bobmods.lib.tech.set_science_pack_count("laser-turret", 100)
 
 if mods["boblogistics"] then

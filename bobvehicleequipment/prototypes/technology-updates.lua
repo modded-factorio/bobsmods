@@ -117,3 +117,10 @@ if mods["boblogistics"] then
   end
   bobmods.lib.tech.remove_science_pack("bob-vehicle-roboport-modular-equipment-1", "chemical-science-pack")
 end
+
+bobmods.lib.tech.remove_prerequisite("laser", "chemical-science-pack")
+bobmods.lib.tech.remove_science_pack("laser", "chemical-science-pack")
+bobmods.lib.tech.add_prerequisite("laser", "battery")
+if not mods["bobwarfare"] then
+  bobmods.lib.tech.add_prerequisite("laser-turret", "chemical-science-pack")
+end

@@ -520,6 +520,7 @@ data:extend({
     }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
       "bob-vehicle-fission-cell-equipment-5",
+      "efficiency-module-3",
       "space-science-pack",
     },
     unit = {
