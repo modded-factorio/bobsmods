@@ -32,7 +32,6 @@ require("prototypes.category")
 
 require("prototypes.distillery")
 
-require("prototypes.item.ores")
 require("prototypes.item.gems")
 require("prototypes.item.chemicals")
 require("prototypes.item.resource")
