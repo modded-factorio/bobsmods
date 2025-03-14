@@ -20,6 +20,7 @@ if bobmods.electronics then
   bobmods.lib.tech.add_prerequisite("bob-water-bore-1", "electronics")
 end
 
+bobmods.lib.tech.remove_recipe_unlock("oil-processing", "chemical-plant")
 bobmods.lib.tech.remove_prerequisite("sulfur-processing", "oil-processing")
 bobmods.lib.tech.add_prerequisite("oil-processing", "sulfur-processing")
 bobmods.lib.tech.add_prerequisite("sulfur-processing", "bob-chemical-processing-2")
