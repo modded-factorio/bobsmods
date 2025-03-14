@@ -72,11 +72,18 @@ data.raw.armor["power-armor-mk2"].resistances = {
     decrease = 2,
     percent = 20,
   },
-  {
-    type = "bob-pierce",
-    percent = 20,
-  },
 }
+
+if data.raw["damage-type"]["bob-pierce"] then
+  table.insert(
+    data.raw.armor["power-armor-mk2"].resistances,
+    {
+      type = "bob-pierce",
+      percent = 20,
+    }
+  )
+end
+
 
 if not mods["bobwarfare"] then
   local make_armor = function(name)
@@ -132,17 +139,8 @@ if not mods["bobwarfare"] then
           percent = 30,
         },
         {
-          type = "bob-plasma",
-          decrease = 20,
-          percent = 50,
-        },
-        {
           type = "electric",
           decrease = 5,
-          percent = 30,
-        },
-        {
-          type = "bob-pierce",
           percent = 30,
         },
       },
@@ -215,15 +213,6 @@ if not mods["bobwarfare"] then
           decrease = 10,
           percent = 40,
         },
-        {
-          type = "bob-pierce",
-          percent = 35,
-        },
-        {
-          type = "bob-plasma",
-          decrease = 25,
-          percent = 75,
-        },
       },
       subgroup = "armor",
       infinite = true,
@@ -293,14 +282,6 @@ if not mods["bobwarfare"] then
           type = "electric",
           decrease = 15,
           percent = 50,
-        },
-        {
-          type = "bob-pierce",
-          percent = 45,
-        },
-        {
-          type = "bob-plasma",
-          percent = 100,
         },
       },
       subgroup = "armor",
@@ -463,6 +444,56 @@ if not mods["bobwarfare"] then
       },
     },
   })
+
+  if data.raw["damage-type"]["bob-pierce"] then
+    table.insert(
+      data.raw.armor["bob-power-armor-mk3"].resistances,
+      {
+        type = "bob-pierce",
+        percent = 30,
+      }
+    )
+    table.insert(
+      data.raw.armor["bob-power-armor-mk4"].resistances,
+      {
+        type = "bob-pierce",
+        percent = 35,
+      }
+    )
+    table.insert(
+      data.raw.armor["bob-power-armor-mk5"].resistances,
+      {
+        type = "bob-pierce",
+        percent = 40,
+      }
+    )
+  end
+
+  if data.raw["damage-type"]["bob-plasma"] then
+    table.insert(
+      data.raw.armor["bob-power-armor-mk3"].resistances,
+      {
+        type = "bob-plasma",
+        decrease = 20,
+        percent = 50,
+      }
+    )
+    table.insert(
+      data.raw.armor["bob-power-armor-mk4"].resistances,
+      {
+        type = "bob-plasma",
+        decrease = 25,
+        percent = 75,
+      }
+    )
+    table.insert(
+      data.raw.armor["bob-power-armor-mk5"].resistances,
+      {
+        type = "bob-plasma",
+        percent = 100
+      }
+    )
+  end
 
   table.insert(data.raw.character.character.animations[3].armors, "bob-power-armor-mk3")
   table.insert(data.raw.character.character.animations[3].armors, "bob-power-armor-mk4")

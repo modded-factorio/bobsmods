@@ -100,7 +100,7 @@ bobmods.classes.characters["bob-character-fighter"].tool_attack_result = {
     },
   },
 }
-if mods["bobwarfare"] then
+if data.raw["damage-type"]["bob-plasma"] then
   bobmods.classes.characters["bob-character-fighter"].tool_attack_result.action_delivery.target_effects[1].damage.type =
     "bob-plasma"
 end
@@ -289,7 +289,7 @@ bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result = {
     },
   },
 }
-if mods["bobwarfare"] then
+if data.raw["damage-type"]["bob-plasma"] then
   bobmods.classes.characters["bob-character-fighter-2"].tool_attack_result[1].action_delivery.target_effects[1].damage.type =
     "bob-plasma"
 end
@@ -444,7 +444,7 @@ bobmods.classes.characters["bob-character-prospector"].tool_attack_result = {
     },
   },
 }
-if mods["bobwarfare"] then
+if data.raw["damage-type"]["bob-plasma"] then
   bobmods.classes.characters["bob-character-prospector"].tool_attack_result[1].action_delivery.target_effects[1].damage.type =
     "bob-plasma"
 end
