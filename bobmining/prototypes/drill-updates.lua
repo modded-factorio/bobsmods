@@ -1,4 +1,7 @@
 if settings.startup["bobmods-mining-miningdrills"].value == true then
+  data.raw.item["electric-mining-drill"].icon = "__bobmining__/graphics/icons/electric-mining-drill-1.png"
+  data.raw["mining-drill"]["electric-mining-drill"].icon = "__bobmining__/graphics/icons/electric-mining-drill-1.png"
+
   if data.raw.item["bob-steel-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-mining-drill-1", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
