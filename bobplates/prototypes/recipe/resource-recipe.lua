@@ -225,6 +225,7 @@ data:extend({
     name = "bob-carbon-from-wood",
     localised_name = { "item-name.bob-carbon" },
     category = "smelting",
+    enabled = false,
     auto_recycle = false,
     energy_required = 1.6,
     ingredients = {
