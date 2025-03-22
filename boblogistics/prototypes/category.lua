@@ -8,7 +8,7 @@ data:extend({
     name = "bob-logistics",
     order = "aaa-a",
     icon = "__boblogistics__/graphics/icons/technology/logistics.png",
-    icon_size = 64,
+    icon_size = 128,
   },
 
   {
