@@ -21,7 +21,8 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bulk-inserter-2",
+    name = "bob-bulk-inserter-2",
+    localised_name = { "", { "technology-name.bulk-inserter" }, " 2"},
     icon = "__base__/graphics/technology/bulk-inserter.png",
     icon_size = 256,
     effects = {},
@@ -52,7 +53,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   bobmods.lib.tech.add_prerequisite("fast-inserter", "logistics-2")
   bobmods.lib.tech.remove_prerequisite("bulk-inserter", "advanced-circuit")
 
-  bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bulk-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-bulk-inserter-2", "bulk-inserter")
   bobmods.lib.tech.add_prerequisite("bob-express-inserter", "logistics-3")
 
   data:extend({
@@ -111,7 +112,8 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
     {
       type = "technology",
-      name = "bulk-inserter-3",
+      name = "bob-bulk-inserter-3",
+      localised_name = { "", { "technology-name.bulk-inserter" }, " 3"},
       icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
       effects = {
@@ -122,7 +124,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
       prerequisites = {
         "bob-turbo-inserter",
-        "bulk-inserter-2",
+        "bob-bulk-inserter-2",
       },
       unit = {
         count = 350,
@@ -138,7 +140,8 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 
     {
       type = "technology",
-      name = "bulk-inserter-4",
+      name = "bob-bulk-inserter-4",
+      localised_name = { "", { "technology-name.bulk-inserter" }, " 4"},
       icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
       effects = {
@@ -149,7 +152,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       },
       prerequisites = {
         "bob-ultimate-inserter",
-        "bulk-inserter-3",
+        "bob-bulk-inserter-3",
       },
       unit = {
         count = 450,
@@ -165,7 +168,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     },
   })
 else
-  bobmods.lib.tech.add_recipe_unlock("bulk-inserter-2", "bob-express-bulk-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-bulk-inserter-2", "bob-express-bulk-inserter")
 
   bobmods.lib.tech.add_recipe_unlock("bob-express-inserter", "bob-express-inserter")
   bobmods.lib.tech.add_prerequisite("bob-express-inserter", "advanced-circuit")

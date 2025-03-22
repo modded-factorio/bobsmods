@@ -115,6 +115,7 @@ if mods["aai-loaders"] then
       fluid_per_minute = 1,
       technology = {
         prerequisites = {
+          "automation-science-pack",
           "logistics-0",
         },
         unit = {

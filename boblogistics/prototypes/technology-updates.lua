@@ -40,12 +40,12 @@ if bobmods.tech and bobmods.tech.advanced_logistic_science then
   bobmods.lib.tech.add_prerequisite("logistics-5", "production-science-pack")
 
   bobmods.lib.tech.replace_science_pack(
-    "bulk-inserter-2",
+    "bob-bulk-inserter-2",
     "production-science-pack",
     "bob-advanced-logistic-science-pack"
   )
   bobmods.lib.tech.replace_prerequisite(
-    "bulk-inserter-2",
+    "bob-bulk-inserter-2",
     "production-science-pack",
     "bob-advanced-logistic-science-pack"
   )
@@ -212,11 +212,11 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     )
     bobmods.lib.tech.add_science_pack("bob-ultimate-inserter", "bob-advanced-logistic-science-pack", 1)
     bobmods.lib.tech.replace_science_pack(
-      "bulk-inserter-3",
+      "bob-bulk-inserter-3",
       "production-science-pack",
       "bob-advanced-logistic-science-pack"
     )
-    bobmods.lib.tech.add_science_pack("bulk-inserter-4", "bob-advanced-logistic-science-pack", 1)
+    bobmods.lib.tech.add_science_pack("bob-bulk-inserter-4", "bob-advanced-logistic-science-pack", 1)
   end
   bobmods.lib.tech.set_science_pack_count("logistics-2", 70)
   bobmods.lib.tech.set_science_pack_count("logistics-3", 150)
