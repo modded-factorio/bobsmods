@@ -4,7 +4,7 @@ local module_color_map = {
   ["brown"] = { primary = util.color("9c7c60"), secondary = util.color("fff0d9") },
   ["pine"] = { primary = util.color("7a9e96"), secondary = util.color("bfffd2") },
   ["red-yellow"] = { primary = util.color("f27c52"), secondary = util.color("ffe27c") },
-  ["yellow"] = { primary = util.color("ffdd45"), secondary = util.color("ffed66") },
+  ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
 }
 
 --[[Speed Modules]]
@@ -89,26 +89,26 @@ data:extend({
 
 --[[Efficiency Modules]]
 
-data.raw["module"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/yellow/yellow_01.png"
+data.raw["module"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/green/green_01.png"
 data.raw["module"]["efficiency-module"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module"].order = "m-e-1"
-data.raw["module"]["efficiency-module"].beacon_tint = module_color_map["yellow"]
+data.raw["module"]["efficiency-module"].beacon_tint = module_color_map["green"]
 data.raw["module"]["efficiency-module"].effect = {
   consumption = -1 * bobmods.modules.ConsumptionBonus,
 }
 
-data.raw["module"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/yellow/yellow_02.png"
+data.raw["module"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/green/green_02.png"
 data.raw["module"]["efficiency-module-2"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-2"].order = "m-e-2"
-data.raw["module"]["efficiency-module-2"].beacon_tint = module_color_map["yellow"]
+data.raw["module"]["efficiency-module-2"].beacon_tint = module_color_map["green"]
 data.raw["module"]["efficiency-module-2"].effect = {
   consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
 }
 
-data.raw["module"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/yellow/yellow_03.png"
+data.raw["module"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/green/green_03.png"
 data.raw["module"]["efficiency-module-3"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-3"].order = "m-e-3"
-data.raw["module"]["efficiency-module-3"].beacon_tint = module_color_map["yellow"]
+data.raw["module"]["efficiency-module-3"].beacon_tint = module_color_map["green"]
 data.raw["module"]["efficiency-module-3"].effect = {
   consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
 }
@@ -118,7 +118,7 @@ data:extend({
     type = "module",
     name = "bob-efficiency-module-4",
     localised_name = { "", { "item-name.efficiency-module" }, " 4" },
-    icon = "__bobmodules__/graphics/icons/yellow/yellow_04.png",
+    icon = "__bobmodules__/graphics/icons/green/green_04.png",
     subgroup = "efficiency-module",
     category = "efficiency",
     tier = 4,
@@ -130,7 +130,7 @@ data:extend({
     effect = {
       consumption = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
     },
-    beacon_tint = module_color_map["yellow"],
+    beacon_tint = module_color_map["green"],
     art_style = "vanilla",
     requires_beacon_alt_mode = false,
   },
@@ -139,7 +139,7 @@ data:extend({
     type = "module",
     name = "bob-efficiency-module-5",
     localised_name = { "", { "item-name.efficiency-module" }, " 5" },
-    icon = "__bobmodules__/graphics/icons/yellow/yellow_05.png",
+    icon = "__bobmodules__/graphics/icons/green/green_05.png",
     subgroup = "efficiency-module",
     category = "efficiency",
     tier = 5,
@@ -151,7 +151,7 @@ data:extend({
     effect = {
       consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
     },
-    beacon_tint = module_color_map["yellow"],
+    beacon_tint = module_color_map["green"],
     art_style = "vanilla",
     requires_beacon_alt_mode = false,
   },
@@ -441,7 +441,7 @@ data:extend({
 })
 
 if mods["quality"] then
-  data.raw["module"]["quality-module"].icon = "__bobmodules__/graphics/icons/gray-red/gray-red_01.png"
+  data.raw["module"]["quality-module"].icon = "__bobmodules__/graphics/icons/quality/gray-red_01.png"
   data.raw["module"]["quality-module"].beacon_tint = module_color_map["gray-red"]
   data.raw["module"]["quality-module"].effect = {
     quality = bobmods.modules.QualityBonus,
@@ -450,7 +450,7 @@ if mods["quality"] then
   data.raw["module"]["quality-module"].subgroup = "quality-module"
   --data.raw["module"]["quality-module"].order = "m-q-1"
 
-  data.raw["module"]["quality-module-2"].icon = "__bobmodules__/graphics/icons/gray-red/gray-red_02.png"
+  data.raw["module"]["quality-module-2"].icon = "__bobmodules__/graphics/icons/quality/gray-red_02.png"
   data.raw["module"]["quality-module-2"].beacon_tint = module_color_map["gray-red"]
   data.raw["module"]["quality-module-2"].effect = {
     quality = bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus,
@@ -460,7 +460,7 @@ if mods["quality"] then
   data.raw["module"]["quality-module-2"].subgroup = "quality-module"
   --data.raw["module"]["quality-module-2"].order = "m-q-2"
 
-  data.raw["module"]["quality-module-3"].icon = "__bobmodules__/graphics/icons/gray-red/gray-red_03.png"
+  data.raw["module"]["quality-module-3"].icon = "__bobmodules__/graphics/icons/quality/gray-red_03.png"
   data.raw["module"]["quality-module-3"].beacon_tint = module_color_map["gray-red"]
   data.raw["module"]["quality-module-3"].effect = {
     quality = 2 * bobmods.modules.QualityPerLevel + bobmods.modules.QualityBonus,
@@ -475,7 +475,7 @@ if mods["quality"] then
       name = "bob-quality-module-4",
       localised_name = { "", { "item-name.quality-module" }, " 4" },
       localised_description = { "item-description.quality-module" },
-      icon = "__bobmodules__/graphics/icons/gray-red/gray-red_04.png",
+      icon = "__bobmodules__/graphics/icons/quality/gray-red_04.png",
       subgroup = "quality-module",
       color_hint = { text = "Q" },
       category = "quality",
@@ -497,7 +497,7 @@ if mods["quality"] then
       name = "bob-quality-module-5",
       localised_name = { "", { "item-name.quality-module" }, " 5" },
       localised_description = { "item-description.quality-module" },
-      icon = "__bobmodules__/graphics/icons/gray-red/gray-red_05.png",
+      icon = "__bobmodules__/graphics/icons/quality/gray-red_05.png",
       subgroup = "quality-module",
       color_hint = { text = "Q" },
       category = "quality",

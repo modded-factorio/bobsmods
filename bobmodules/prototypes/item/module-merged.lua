@@ -1,123 +1,12 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
-if settings.startup["bobmods-modules-enablegreenmodules"].value == true then
-  local module_color_map = {
-    ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
-  }
-  data:extend({
-    {
-      type = "module",
-      name = "bob-green-module-1",
-      icon = "__bobmodules__/graphics/icons/green/green_01.png",
-      subgroup = "green-module",
-      category = "green",
-      tier = 1,
-      order = "m-g-1",
-      inventory_move_sound = item_sounds.module_inventory_move,
-      pick_sound = item_sounds.module_inventory_pickup,
-      drop_sound = item_sounds.module_inventory_move,
-      stack_size = 50,
-      effect = {
-        pollution = -1 * bobmods.modules.PollutionBonus,
-        consumption = -1 * bobmods.modules.ConsumptionBonus,
-      },
-      beacon_tint = module_color_map["green"],
-      art_style = "vanilla",
-      requires_beacon_alt_mode = false,
-    },
-
-    {
-      type = "module",
-      name = "bob-green-module-2",
-      icon = "__bobmodules__/graphics/icons/green/green_02.png",
-      subgroup = "green-module",
-      category = "green",
-      tier = 2,
-      order = "m-g-2",
-      inventory_move_sound = item_sounds.module_inventory_move,
-      pick_sound = item_sounds.module_inventory_pickup,
-      drop_sound = item_sounds.module_inventory_move,
-      stack_size = 50,
-      effect = {
-        pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-        consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
-      },
-      beacon_tint = module_color_map["green"],
-      art_style = "vanilla",
-      requires_beacon_alt_mode = false,
-    },
-
-    {
-      type = "module",
-      name = "bob-green-module-3",
-      icon = "__bobmodules__/graphics/icons/green/green_03.png",
-      subgroup = "green-module",
-      category = "green",
-      tier = 3,
-      order = "m-g-3",
-      inventory_move_sound = item_sounds.module_inventory_move,
-      pick_sound = item_sounds.module_inventory_pickup,
-      drop_sound = item_sounds.module_inventory_move,
-      stack_size = 50,
-      effect = {
-        pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-        consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
-      },
-      beacon_tint = module_color_map["green"],
-      art_style = "vanilla",
-      requires_beacon_alt_mode = false,
-    },
-
-    {
-      type = "module",
-      name = "bob-green-module-4",
-      icon = "__bobmodules__/graphics/icons/green/green_04.png",
-      subgroup = "green-module",
-      category = "green",
-      tier = 4,
-      order = "m-g-4",
-      inventory_move_sound = item_sounds.module_inventory_move,
-      pick_sound = item_sounds.module_inventory_pickup,
-      drop_sound = item_sounds.module_inventory_move,
-      stack_size = 50,
-      effect = {
-        pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-        consumption = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
-      },
-      beacon_tint = module_color_map["green"],
-      art_style = "vanilla",
-      requires_beacon_alt_mode = false,
-    },
-
-    {
-      type = "module",
-      name = "bob-green-module-5",
-      icon = "__bobmodules__/graphics/icons/green/green_05.png",
-      subgroup = "green-module",
-      category = "green",
-      tier = 5,
-      order = "m-g-5",
-      inventory_move_sound = item_sounds.module_inventory_move,
-      pick_sound = item_sounds.module_inventory_pickup,
-      drop_sound = item_sounds.module_inventory_move,
-      stack_size = 50,
-      effect = {
-        pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus,
-        consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
-      },
-      beacon_tint = module_color_map["green"],
-      art_style = "vanilla",
-      requires_beacon_alt_mode = false,
-    },
-  })
-end
 
 if settings.startup["bobmods-modules-enablegodmodules"].value == true then
   data:extend({
     {
       type = "module",
       name = "bob-god-module",
-      icon = "__bobmodules__/graphics/icons/god-module.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/god-module/god-module.png",
+      icon_size = 64,
       subgroup = "god-module",
       category = "god",
       tier = 1,
@@ -141,8 +30,8 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     {
       type = "module",
       name = "bob-god-module-productivity",
-      icon = "__bobmodules__/graphics/icons/god-module.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/god-module/god-module-productivity.png",
+      icon_size = 64,
       subgroup = "god-module",
       category = "god",
       tier = 1,
@@ -170,8 +59,8 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       {
         type = "module",
         name = "bob-god-module-quality",
-        icon = "__bobmodules__/graphics/icons/god-module.png",
-        icon_size = 32,
+        icon = "__bobmodules__/graphics/icons/god-module/god-module-quality.png",
+        icon_size = 64,
         subgroup = "god-module",
         category = "god",
         tier = 1,

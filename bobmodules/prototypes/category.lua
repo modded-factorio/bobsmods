@@ -64,12 +64,6 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "green-module",
-    group = "bobmodules",
-    order = "f-7",
-  },
-  {
-    type = "item-subgroup",
     name = "god-module",
     group = "bobmodules",
     order = "f-9",
