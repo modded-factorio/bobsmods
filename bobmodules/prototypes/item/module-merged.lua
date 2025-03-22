@@ -5,8 +5,8 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     {
       type = "module",
       name = "bob-god-module",
-      icon = "__bobmodules__/graphics/icons/god-module.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/god-module/god-module.png",
+      icon_size = 64,
       subgroup = "god-module",
       category = "god",
       tier = 1,
@@ -30,8 +30,8 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     {
       type = "module",
       name = "bob-god-module-productivity",
-      icon = "__bobmodules__/graphics/icons/god-module.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/icons/god-module/god-module-productivity.png",
+      icon_size = 64,
       subgroup = "god-module",
       category = "god",
       tier = 1,
@@ -59,8 +59,8 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       {
         type = "module",
         name = "bob-god-module-quality",
-        icon = "__bobmodules__/graphics/icons/god-module.png",
-        icon_size = 32,
+        icon = "__bobmodules__/graphics/icons/god-module/god-module-quality.png",
+        icon_size = 64,
         subgroup = "god-module",
         category = "god",
         tier = 1,

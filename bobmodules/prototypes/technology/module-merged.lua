@@ -3,8 +3,8 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     {
       type = "technology",
       name = "bob-god-module",
-      icon = "__bobmodules__/graphics/icons/god-module.png",
-      icon_size = 32,
+      icon = "__bobmodules__/graphics/technology/god-module/god-module_01.png",
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
