@@ -203,7 +203,6 @@ data:extend({
     type = "recipe",
     name = "bob-polishing-compound",
     category = "chemistry",
-    subgroup = "bob-gems-support",
     enabled = false,
     auto_recycle = false,
     energy_required = 2,

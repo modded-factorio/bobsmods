@@ -1,3 +1,7 @@
+data.raw["item-subgroup"]["logistic-network"].group = "bob-logistics"
+data.raw["item-subgroup"]["train-transport"].group = "bob-logistics"
+data.raw["item-subgroup"]["transport"].group = "bob-logistics"
+
 data:extend({
   {
     type = "item-group",
@@ -9,118 +13,86 @@ data:extend({
 
   {
     type = "item-subgroup",
-    name = "bob-storage",
-    group = "bob-logistics",
-    order = "a-a",
-  },
-  {
-    type = "item-subgroup",
     name = "bob-storage-tank",
     group = "logistics",
-    order = "a-a",
+    order = "e-3",
   },
-  {
-    type = "item-subgroup",
-    name = "bob-belt",
-    group = "bob-logistics",
-    order = "b-a",
-  },
-
   {
     type = "item-subgroup",
     name = "bob-logistic-tier-0",
-    group = "bob-logistics",
+    group = "logistics",
     order = "b-0",
   },
   {
     type = "item-subgroup",
     name = "bob-logistic-tier-1",
-    group = "bob-logistics",
+    group = "logistics",
     order = "b-1",
   },
   {
     type = "item-subgroup",
     name = "bob-logistic-tier-2",
-    group = "bob-logistics",
+    group = "logistics",
     order = "b-2",
   },
   {
     type = "item-subgroup",
     name = "bob-logistic-tier-3",
-    group = "bob-logistics",
+    group = "logistics",
     order = "b-3",
   },
   {
     type = "item-subgroup",
     name = "bob-logistic-tier-4",
-    group = "bob-logistics",
+    group = "logistics",
     order = "b-4",
   },
   {
     type = "item-subgroup",
     name = "bob-logistic-tier-5",
-    group = "bob-logistics",
+    group = "logistics",
     order = "b-5",
   },
-
   {
     type = "item-subgroup",
-    name = "bob-smart-inserter",
-    group = "bob-logistics",
-    order = "c-a",
+    name = "bob-pipe",
+    group = "logistics",
+    order = "e-1",
   },
   {
     type = "item-subgroup",
-    name = "bob-purple-inserter",
-    group = "bob-logistics",
-    order = "c-c",
-  },
-  {
-    type = "item-subgroup",
-    name = "pipe",
-    group = "bob-logistics",
-    order = "d-a-1",
-  },
-  {
-    type = "item-subgroup",
-    name = "pipe-to-ground",
-    group = "bob-logistics",
-    order = "d-a-2",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-transport",
-    group = "bob-logistics",
-    order = "e-a",
+    name = "bob-pipe-to-ground",
+    group = "logistics",
+    order = "e-2",
   },
   {
     type = "item-subgroup",
     name = "bob-locomotive",
-    group = "logistics",
+    group = "bob-logistics",
     order = "e-a1",
   },
   {
     type = "item-subgroup",
     name = "bob-cargo-wagon",
-    group = "logistics",
+    group = "bob-logistics",
     order = "e-a2",
   },
   {
     type = "item-subgroup",
     name = "bob-fluid-wagon",
-    group = "logistics",
+    group = "bob-logistics",
     order = "e-a3",
   },
   {
     type = "item-subgroup",
-    name = "logistic-chests-2",
-    group = "logistics",
+    name = "bob-logistic-chests-2",
+    group = "bob-logistics",
     order = "g-2",
   },
   {
     type = "item-subgroup",
-    name = "logistic-chests-3",
-    group = "logistics",
+    name = "bob-logistic-chests-3",
+    group = "bob-logistics",
     order = "g-3",
   },
   {

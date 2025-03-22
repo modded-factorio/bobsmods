@@ -43,43 +43,6 @@ data:extend({
     icon = "__bobplates__/graphics/icons/technology/logistics.png",
     icon_size = 64,
   },
-
-  {
-    type = "item-subgroup",
-    name = "bob-belt",
-    group = "bob-logistics",
-    order = "b-a",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-smart-inserter",
-    group = "bob-logistics",
-    order = "c-a",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-purple-inserter",
-    group = "bob-logistics",
-    order = "c-c",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-pipe",
-    group = "bob-logistics",
-    order = "d-a-1",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-pipe-to-ground",
-    group = "bob-logistics",
-    order = "d-a-2",
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-transport",
-    group = "bob-logistics",
-    order = "e-a",
-  },
   {
     type = "item-subgroup",
     name = "bob-logistic-robots",
@@ -91,13 +54,6 @@ data:extend({
     name = "bob-logistic-roboport",
     group = "bob-logistics",
     order = "f-b",
-  },
-
-  {
-    type = "item-subgroup",
-    name = "bob-tool",
-    group = "production",
-    order = "a-1",
   },
   {
     type = "item-subgroup",
@@ -310,7 +266,7 @@ data:extend({
     type = "item-subgroup",
     name = "bob-nuclear",
     group = "bob-resource-products",
-    order = "c-d",
+    order = "c-h",
   },
 
   {
@@ -361,40 +317,27 @@ data:extend({
 
 data:extend({
   {
-    type = "item-group",
-    name = "bob-gems",
-    order = "d-g",
-    icon = "__bobplates__/graphics/icons/technology/gems.png",
-    icon_size = 64,
-  },
-  {
-    type = "item-subgroup",
-    name = "bob-gems-support",
-    group = "bob-gems",
-    order = "1",
-  },
-  {
     type = "item-subgroup",
     name = "bob-gems-ore",
-    group = "bob-gems",
-    order = "2",
+    group = "bob-resource-products",
+    order = "c-d",
   },
   {
     type = "item-subgroup",
     name = "bob-gems-raw",
-    group = "bob-gems",
-    order = "4",
+    group = "bob-resource-products",
+    order = "c-e",
   },
   {
     type = "item-subgroup",
     name = "bob-gems-cut",
-    group = "bob-gems",
-    order = "5",
+    group = "bob-resource-products",
+    order = "c-f",
   },
   {
     type = "item-subgroup",
     name = "bob-gems-polished",
-    group = "bob-gems",
-    order = "6",
+    group = "bob-resource-products",
+    order = "c-g",
   },
 })

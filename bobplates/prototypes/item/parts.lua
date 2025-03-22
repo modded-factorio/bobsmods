@@ -285,7 +285,7 @@ data:extend({
     name = "bob-grinding-wheel",
     icon = "__bobplates__/graphics/icons/grinding-wheel.png",
     icon_size = 32,
-    subgroup = "bob-gems-support",
+    subgroup = "intermediate-product",
     order = "f-cca[bob-grinding-wheel]",
     stack_size = 100,
     drop_sound = {
@@ -309,7 +309,7 @@ data:extend({
     name = "bob-polishing-wheel",
     icon = "__bobplates__/graphics/icons/polishing-wheel.png",
     icon_size = 32,
-    subgroup = "bob-gems-support",
+    subgroup = "intermediate-product",
     order = "f-ccb[bob-polishing-wheel]",
     stack_size = 100,
     drop_sound = {

@@ -108,13 +108,6 @@ if not bobmods.ores.cobalt.enabled then
   bobmods.lib.item.hide_entity("resource", "bob-cobalt-ore")
 end
 
-if bobmods.ores.settings.UnsortedGemOre == true then
-  if data.raw["item-subgroup"]["bob-gems-support"] then
-    data.raw.recipe["bob-sort-gem-ore"].subgroup = "bob-gems-support"
-    data.raw.item["bob-gem-ore"].subgroup = "bob-gems-support"
-  end
-end
-
 -- Water mining category, add to pumpjacks
 if not data.raw["mining-drill"]["bob-water-miner-1"] then
   bobmods.lib.machine.type_if_add_resource_category("mining-drill", "basic-fluid", "water")

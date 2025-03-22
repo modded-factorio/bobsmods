@@ -198,6 +198,10 @@ data.raw["item-subgroup"]["fill-barrel"].group = "fluids"
 data.raw["item-subgroup"]["empty-barrel"].group = "fluids"
 data.raw["item-subgroup"]["barrel"].group = "fluids"
 
+if data.raw["item-subgroup"]["bob-alien-artifact"] then
+  data.raw["item-subgroup"]["bob-alien-artifact"].group = "bob-resource-products"
+end
+
 bobmods.lib.create_gas_bottle(data.raw.fluid["bob-hydrogen"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["bob-oxygen"])
 bobmods.lib.create_gas_bottle(data.raw.fluid["bob-nitrogen"])

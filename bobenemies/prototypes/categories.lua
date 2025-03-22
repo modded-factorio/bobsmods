@@ -8,6 +8,12 @@ data:extend({
     order = "a",
   },
   {
+    type = "item-subgroup",
+    group = "intermediate-products",
+    name = "bob-alien-artifact",
+    order = "d",
+  },
+  {
     type = "damage-type",
     name = "bob-pierce",
   },
