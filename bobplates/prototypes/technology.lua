@@ -82,6 +82,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "bob-carbon",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-carbon-from-wood",
+      },
     },
     unit = {
       count = 25,
