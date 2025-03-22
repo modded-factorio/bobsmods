@@ -22,7 +22,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-bulk-inserter-2",
-    localised_name = { "", { "technology-name.bulk-inserter" }, " 2"},
+    localised_name = { "", { "technology-name.bulk-inserter" }, " 2" },
     icon = "__base__/graphics/technology/bulk-inserter.png",
     icon_size = 256,
     effects = {},
@@ -113,7 +113,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     {
       type = "technology",
       name = "bob-bulk-inserter-3",
-      localised_name = { "", { "technology-name.bulk-inserter" }, " 3"},
+      localised_name = { "", { "technology-name.bulk-inserter" }, " 3" },
       icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
       effects = {
@@ -141,7 +141,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     {
       type = "technology",
       name = "bob-bulk-inserter-4",
-      localised_name = { "", { "technology-name.bulk-inserter" }, " 4"},
+      localised_name = { "", { "technology-name.bulk-inserter" }, " 4" },
       icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
       effects = {
