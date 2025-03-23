@@ -38,6 +38,9 @@ bobmods.modules.QualityBonus = 10
 require("prototypes.category")
 require("prototypes.beacon")
 
+require("prototypes.entity.beacon")
+require("prototypes.entity.beacon-module-slots")
+
 require("prototypes.item.module")
 require("prototypes.item.module-merged")
 require("prototypes.item.electronics")

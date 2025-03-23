@@ -5,6 +5,7 @@ local module_color_map = {
   ["pine"] = { primary = util.color("7a9e96"), secondary = util.color("bfffd2") },
   ["red-yellow"] = { primary = util.color("f27c52"), secondary = util.color("ffe27c") },
   ["green"] = { primary = util.color("95e26c"), secondary = util.color("2bff2b") },
+  ["gray-red"] = { primary = util.color("b7b7b7"), secondary = util.color("ff5959") },
 }
 
 --[[Speed Modules]]
@@ -13,6 +14,7 @@ data.raw["module"]["speed-module"].icon = "__bobmodules__/graphics/icons/blue/bl
 data.raw["module"]["speed-module"].subgroup = "speed-module"
 data.raw["module"]["speed-module"].order = "m-s-1"
 data.raw["module"]["speed-module"].beacon_tint = module_color_map["blue"]
+data.raw["module"]["speed-module"].art_style = "bob-5-lights"
 data.raw["module"]["speed-module"].effect = {
   speed = bobmods.modules.SpeedBonus,
   consumption = bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty,
@@ -23,6 +25,7 @@ data.raw["module"]["speed-module-2"].icon = "__bobmodules__/graphics/icons/blue/
 data.raw["module"]["speed-module-2"].subgroup = "speed-module"
 data.raw["module"]["speed-module-2"].order = "m-s-2"
 data.raw["module"]["speed-module-2"].beacon_tint = module_color_map["blue"]
+data.raw["module"]["speed-module-2"].art_style = "bob-5-lights"
 data.raw["module"]["speed-module-2"].effect = {
   speed = bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
   consumption = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty,
@@ -33,6 +36,7 @@ data.raw["module"]["speed-module-3"].icon = "__bobmodules__/graphics/icons/blue/
 data.raw["module"]["speed-module-3"].subgroup = "speed-module"
 data.raw["module"]["speed-module-3"].order = "m-s-3"
 data.raw["module"]["speed-module-3"].beacon_tint = module_color_map["blue"]
+data.raw["module"]["speed-module-3"].art_style = "bob-5-lights"
 data.raw["module"]["speed-module-3"].effect = {
   speed = 2 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
   consumption = 3 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty,
@@ -59,7 +63,7 @@ data:extend({
       quality = -3 * bobmods.modules.QualityPerLevel - bobmods.modules.QualityBonus,
     },
     beacon_tint = module_color_map["blue"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -82,7 +86,7 @@ data:extend({
       quality = -4 * bobmods.modules.QualityPerLevel - bobmods.modules.QualityBonus,
     },
     beacon_tint = module_color_map["blue"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 })
@@ -93,6 +97,7 @@ data.raw["module"]["efficiency-module"].icon = "__bobmodules__/graphics/icons/gr
 data.raw["module"]["efficiency-module"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module"].order = "m-e-1"
 data.raw["module"]["efficiency-module"].beacon_tint = module_color_map["green"]
+data.raw["module"]["efficiency-module"].art_style = "bob-5-lights"
 data.raw["module"]["efficiency-module"].effect = {
   consumption = -1 * bobmods.modules.ConsumptionBonus,
 }
@@ -101,6 +106,7 @@ data.raw["module"]["efficiency-module-2"].icon = "__bobmodules__/graphics/icons/
 data.raw["module"]["efficiency-module-2"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-2"].order = "m-e-2"
 data.raw["module"]["efficiency-module-2"].beacon_tint = module_color_map["green"]
+data.raw["module"]["efficiency-module-2"].art_style = "bob-5-lights"
 data.raw["module"]["efficiency-module-2"].effect = {
   consumption = -1 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
 }
@@ -109,6 +115,7 @@ data.raw["module"]["efficiency-module-3"].icon = "__bobmodules__/graphics/icons/
 data.raw["module"]["efficiency-module-3"].subgroup = "efficiency-module"
 data.raw["module"]["efficiency-module-3"].order = "m-e-3"
 data.raw["module"]["efficiency-module-3"].beacon_tint = module_color_map["green"]
+data.raw["module"]["efficiency-module-3"].art_style = "bob-5-lights"
 data.raw["module"]["efficiency-module-3"].effect = {
   consumption = -2 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
 }
@@ -131,7 +138,7 @@ data:extend({
       consumption = -3 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
     },
     beacon_tint = module_color_map["green"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -152,7 +159,7 @@ data:extend({
       consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
     },
     beacon_tint = module_color_map["green"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 })
@@ -163,6 +170,7 @@ data.raw["module"]["productivity-module"].icon = "__bobmodules__/graphics/icons/
 data.raw["module"]["productivity-module"].subgroup = "productivity-module"
 data.raw["module"]["productivity-module"].order = "m-p-1"
 data.raw["module"]["productivity-module"].beacon_tint = module_color_map["red-yellow"]
+data.raw["module"]["productivity-module"].art_style = "bob-5-lights"
 data.raw["module"]["productivity-module"].effect = {
   productivity = bobmods.modules.ProductivityBonus,
   consumption = bobmods.modules.ConsumptionPenalty,
@@ -174,6 +182,7 @@ data.raw["module"]["productivity-module-2"].icon = "__bobmodules__/graphics/icon
 data.raw["module"]["productivity-module-2"].subgroup = "productivity-module"
 data.raw["module"]["productivity-module-2"].order = "m-p-2"
 data.raw["module"]["productivity-module-2"].beacon_tint = module_color_map["red-yellow"]
+data.raw["module"]["productivity-module-2"].art_style = "bob-5-lights"
 data.raw["module"]["productivity-module-2"].effect = {
   productivity = bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus,
   consumption = 2 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty,
@@ -185,6 +194,7 @@ data.raw["module"]["productivity-module-3"].icon = "__bobmodules__/graphics/icon
 data.raw["module"]["productivity-module-3"].subgroup = "productivity-module"
 data.raw["module"]["productivity-module-3"].order = "m-p-3"
 data.raw["module"]["productivity-module-3"].beacon_tint = module_color_map["red-yellow"]
+data.raw["module"]["productivity-module-3"].art_style = "bob-5-lights"
 data.raw["module"]["productivity-module-3"].effect = {
   productivity = 2 * bobmods.modules.ProductivityPerLevel + bobmods.modules.ProductivityBonus,
   consumption = 4 * bobmods.modules.ConsumptionPenaltyPerLevel + bobmods.modules.ConsumptionPenalty,
@@ -213,7 +223,7 @@ data:extend({
       speed = -3 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty,
     },
     beacon_tint = module_color_map["red-yellow"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -237,7 +247,7 @@ data:extend({
       speed = -4 * bobmods.modules.SpeedPenaltyPerLevel - bobmods.modules.SpeedPenalty,
     },
     beacon_tint = module_color_map["red-yellow"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 })
@@ -259,7 +269,7 @@ data:extend({
     stack_size = 50,
     effect = { pollution = -1 * bobmods.modules.PollutionBonus },
     beacon_tint = module_color_map["pine"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -277,7 +287,7 @@ data:extend({
     stack_size = 50,
     effect = { pollution = -1 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus },
     beacon_tint = module_color_map["pine"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -295,7 +305,7 @@ data:extend({
     stack_size = 50,
     effect = { pollution = -2 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus },
     beacon_tint = module_color_map["pine"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -313,7 +323,7 @@ data:extend({
     stack_size = 50,
     effect = { pollution = -3 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus },
     beacon_tint = module_color_map["pine"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -331,7 +341,7 @@ data:extend({
     stack_size = 50,
     effect = { pollution = -4 * bobmods.modules.PollutionPerLevel - bobmods.modules.PollutionBonus },
     beacon_tint = module_color_map["pine"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 })
@@ -355,7 +365,7 @@ data:extend({
       pollution = bobmods.modules.PollutionCreateBonus,
     },
     beacon_tint = module_color_map["brown"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -375,7 +385,7 @@ data:extend({
       pollution = bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus,
     },
     beacon_tint = module_color_map["brown"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -395,7 +405,7 @@ data:extend({
       pollution = 2 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus,
     },
     beacon_tint = module_color_map["brown"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -415,7 +425,7 @@ data:extend({
       pollution = 3 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus,
     },
     beacon_tint = module_color_map["brown"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 
@@ -435,7 +445,7 @@ data:extend({
       pollution = 4 * bobmods.modules.PollutionCreatePerLevel + bobmods.modules.PollutionCreateBonus,
     },
     beacon_tint = module_color_map["brown"],
-    art_style = "vanilla",
+    art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
   },
 })
@@ -449,6 +459,7 @@ if mods["quality"] then
   }
   data.raw["module"]["quality-module"].subgroup = "quality-module"
   --data.raw["module"]["quality-module"].order = "m-q-1"
+  data.raw["module"]["quality-module"].art_style = "bob-5-lights"
 
   data.raw["module"]["quality-module-2"].icon = "__bobmodules__/graphics/icons/quality/gray-red_02.png"
   data.raw["module"]["quality-module-2"].beacon_tint = module_color_map["gray-red"]
@@ -459,6 +470,7 @@ if mods["quality"] then
 
   data.raw["module"]["quality-module-2"].subgroup = "quality-module"
   --data.raw["module"]["quality-module-2"].order = "m-q-2"
+  data.raw["module"]["quality-module-2"].art_style = "bob-5-lights"
 
   data.raw["module"]["quality-module-3"].icon = "__bobmodules__/graphics/icons/quality/gray-red_03.png"
   data.raw["module"]["quality-module-3"].beacon_tint = module_color_map["gray-red"]
@@ -468,6 +480,7 @@ if mods["quality"] then
   }
   data.raw["module"]["quality-module-3"].subgroup = "quality-module"
   --data.raw["module"]["quality-module-3"].order = "m-q-3"
+  data.raw["module"]["quality-module-3"].art_style = "bob-5-lights"
 
   data:extend({
     {
@@ -491,6 +504,8 @@ if mods["quality"] then
         speed = -bobmods.modules.SpeedPenalty,
       },
       beacon_tint = module_color_map["gray-red"],
+      art_style = "bob-5-lights",
+      requires_beacon_alt_mode = false,
     },
     {
       type = "module",
@@ -513,6 +528,8 @@ if mods["quality"] then
         speed = -bobmods.modules.SpeedPenalty,
       },
       beacon_tint = module_color_map["gray-red"],
+      art_style = "bob-5-lights",
+      requires_beacon_alt_mode = false,
     },
   })
 end

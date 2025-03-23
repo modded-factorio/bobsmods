@@ -20,11 +20,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
         speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.5, g = 0.5, b = 0.5 },
-        secondary = { r = 1, g = 1, b = 1 },
-      },
-      art_style = "vanilla",
+      art_style = "bob-god-base",
       requires_beacon_alt_mode = false,
     },
     {
@@ -46,11 +42,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
         speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
       },
-      beacon_tint = {
-        primary = { r = 0.5, g = 0.5, b = 0.5 },
-        secondary = { r = 1, g = 1, b = 1 },
-      },
-      art_style = "vanilla",
+      art_style = "bob-god-productivity",
       requires_beacon_alt_mode = false,
     },
   })
@@ -75,11 +67,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
           consumption = -4 * bobmods.modules.ConsumptionPerLevel - bobmods.modules.ConsumptionBonus,
           speed = 4 * bobmods.modules.SpeedPerLevel + bobmods.modules.SpeedBonus,
         },
-        beacon_tint = {
-          primary = { r = 0.5, g = 0.5, b = 0.5 },
-          secondary = { r = 1, g = 1, b = 1 },
-        },
-        art_style = "vanilla",
+        art_style = "bob-god-quality",
         requires_beacon_alt_mode = false,
       },
     })
