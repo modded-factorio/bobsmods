@@ -7,7 +7,7 @@ Date: ???
     - Rebalanced all of Bob's Modules, making it less over powered with default settings #269
       - Reduced number of module tiers from 8 down to 5
       - Added Quality modules
-      - Removed pure speed and pure productivity modules
+      - Removed pure speed, pure productivity, and green modules
       - Changed god modules to have a single tier (down from 5 tiers)
       - Added god module variants:
         - God module

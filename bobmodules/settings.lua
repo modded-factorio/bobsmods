@@ -1,18 +1,10 @@
 data:extend({
   {
     type = "bool-setting",
-    name = "bobmods-modules-enablegreenmodules",
-    setting_type = "startup",
-    default_value = true,
-  },
-
-  {
-    type = "bool-setting",
     name = "bobmods-modules-enablegodmodules",
     setting_type = "startup",
     default_value = false,
   },
-
   {
     type = "double-setting",
     name = "bobmods-modules-perlevel-bonus-speed-",
