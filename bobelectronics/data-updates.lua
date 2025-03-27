@@ -27,31 +27,6 @@ bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-
 bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-electronics-machine")
 bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "bob-electronics-with-fluid")
 
-if settings.startup["bobmods-colorupdate"].value == true then
-  data.raw.item["bob-basic-circuit-board"].icon =
-    "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png"
-  data.raw.item["bob-circuit-board"].icon = "__bobelectronics__/graphics/icons/colour-coded/circuit-board.png"
-  data.raw.item["bob-superior-circuit-board"].icon =
-    "__bobelectronics__/graphics/icons/colour-coded/superior-circuit-board.png"
-  data.raw.item["bob-multi-layer-circuit-board"].icon =
-    "__bobelectronics__/graphics/icons/colour-coded/multi-layer-circuit-board.png"
-  data.raw.item["electronic-circuit"].icon =
-    "__bobelectronics__/graphics/icons/colour-coded/basic-electronic-circuit-board.png"
-  data.raw.item["advanced-circuit"].icon = "__bobelectronics__/graphics/icons/colour-coded/electronic-circuit-board.png"
-  data.raw.item["processing-unit"].icon = "__bobelectronics__/graphics/icons/colour-coded/electronic-logic-board.png"
-  data.raw.item["bob-advanced-processing-unit"].icon =
-    "__bobelectronics__/graphics/icons/colour-coded/electronic-processing-board.png"
-
-  data.raw.item["bob-basic-circuit-board"].icon_size = 128
-  data.raw.item["bob-circuit-board"].icon_size = 128
-  data.raw.item["bob-superior-circuit-board"].icon_size = 128
-  data.raw.item["bob-multi-layer-circuit-board"].icon_size = 128
-  data.raw.item["electronic-circuit"].icon_size = 128
-  data.raw.item["advanced-circuit"].icon_size = 128
-  data.raw.item["processing-unit"].icon_size = 128
-  data.raw.item["bob-advanced-processing-unit"].icon_size = 128
-end
-
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-basic-electronic-components",
@@ -78,11 +53,4 @@ if mods["quality"] then
     "electric-mining-drill",
     "radar",
   })
-  if settings.startup["bobmods-colorupdate"].value == true then
-    bobmods.lib.recipe.update_recycling_recipe_icon(
-      "bob-basic-circuit-board-recycling",
-      "__bobelectronics__/graphics/icons/colour-coded/basic-circuit-board.png",
-      128
-    )
-  end
 end
