@@ -72,7 +72,7 @@ data:extend({
     type = "item",
     name = "bob-glass",
     icon = "__bobplates__/graphics/icons/glass.png",
-    icon_size = 32,
+    icon_size = 64,
     subgroup = "bob-resource",
     order = "f[bob-glass]",
     stack_size = 100,

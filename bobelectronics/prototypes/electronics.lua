@@ -110,7 +110,7 @@ if data.raw.item["bob-solder-alloy"] then
       type = "item",
       name = "bob-solder",
       icon = "__bobelectronics__/graphics/icons/solder.png",
-      icon_size = 32,
+      icon_size = 64,
       subgroup = "bob-electronic-components",
       order = "0-a4[solder]",
       stack_size = 200,
