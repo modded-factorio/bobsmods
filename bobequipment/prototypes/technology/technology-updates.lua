@@ -90,14 +90,6 @@ then
     { "bob-alien-science-pack-orange", 1 },
     { "bob-alien-science-pack-green", 1 },
   }
-  if data.raw.technology["bob-solar-panel-equipment-5"] then
-    data.raw.technology["bob-solar-panel-equipment-5"].unit.ingredients = {
-      { "bob-science-pack-gold", 1 },
-      { "bob-alien-science-pack", 1 },
-      { "bob-alien-science-pack-orange", 1 },
-      { "bob-alien-science-pack-purple", 1 },
-    }
-  end
   if data.raw.technology["bob-alien-research"] then
     bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "bob-alien-research")
     bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "bob-alien-research")

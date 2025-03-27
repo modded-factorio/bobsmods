@@ -372,60 +372,29 @@ data:extend({
       volume = 0.7,
     },
   },
-})
-
-if data.raw.item["bob-alien-artifact"] then
-  data:extend({
-    {
-      type = "item",
-      name = "bob-solar-panel-equipment-4",
-      icon = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
-      icon_size = 32,
-      place_as_equipment_result = "bob-solar-panel-equipment-4",
-      subgroup = "equipment",
-      order = "a[energy-source]-a[solar-panel-4]",
-      stack_size = 20,
-      drop_sound = {
-        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-        volume = 0.7,
-      },
-      inventory_move_sound = {
-        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-        volume = 0.7,
-      },
-      pick_sound = {
-        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-        volume = 0.7,
-      },
+  {
+    type = "item",
+    name = "bob-solar-panel-equipment-4",
+    icon = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
+    icon_size = 32,
+    place_as_equipment_result = "bob-solar-panel-equipment-4",
+    subgroup = "equipment",
+    order = "a[energy-source]-a[solar-panel-4]",
+    stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
     },
-  })
-  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
-    data:extend({
-      {
-        type = "item",
-        name = "bob-solar-panel-equipment-5",
-        icon = "__bobequipment__/graphics/icons/solar-panel-equipment-5.png",
-        icon_size = 32,
-        place_as_equipment_result = "bob-solar-panel-equipment-5",
-        subgroup = "equipment",
-        order = "a[energy-source]-a[solar-panel-5]",
-        stack_size = 20,
-        drop_sound = {
-          filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-          volume = 0.7,
-        },
-        inventory_move_sound = {
-          filename = "__base__/sound/item/electric-large-inventory-move.ogg",
-          volume = 0.7,
-        },
-        pick_sound = {
-          filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
-          volume = 0.7,
-        },
-      },
-    })
-  end
-end
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+  },
+})
 
 data.raw.item["personal-laser-defense-equipment"].icon =
   "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png"

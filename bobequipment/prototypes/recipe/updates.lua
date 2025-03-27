@@ -517,21 +517,12 @@ if data.raw.item["bob-advanced-processing-unit"] then
     "bob-advanced-processing-unit"
   )
   bobmods.lib.tech.add_prerequisite("bob-night-vision-equipment-3", "bob-advanced-processing-unit")
-  if data.raw.recipe["bob-solar-panel-equipment-4"] then
-    bobmods.lib.recipe.replace_ingredient(
-      "bob-solar-panel-equipment-4",
-      "processing-unit",
-      "bob-advanced-processing-unit"
-    )
-    bobmods.lib.tech.add_prerequisite("bob-solar-panel-equipment-4", "bob-advanced-processing-unit")
-    if data.raw.recipe["bob-solar-panel-equipment-5"] then
-      bobmods.lib.recipe.replace_ingredient(
-        "bob-solar-panel-equipment-5",
-        "processing-unit",
-        "bob-advanced-processing-unit"
-      )
-    end
-  end
+  bobmods.lib.recipe.replace_ingredient(
+    "bob-solar-panel-equipment-4",
+    "processing-unit",
+    "bob-advanced-processing-unit"
+  )
+  bobmods.lib.tech.add_prerequisite("bob-solar-panel-equipment-4", "bob-advanced-processing-unit")
   bobmods.lib.recipe.remove_ingredient("bob-personal-laser-defense-equipment-6", "processing-unit")
   bobmods.lib.recipe.add_ingredient(
     "bob-personal-laser-defense-equipment-6",

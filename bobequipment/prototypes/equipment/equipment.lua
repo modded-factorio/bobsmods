@@ -345,59 +345,28 @@ data:extend({
     power = "67.5kW",
     categories = { "armor" },
   },
-})
-
-if data.raw.item["bob-alien-artifact"] then
-  data:extend({
-    {
-      type = "solar-panel-equipment",
-      name = "bob-solar-panel-equipment-4",
-      sprite = {
-        filename = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
-        width = 32,
-        height = 32,
-        priority = "medium",
-      },
-      shape = {
-        width = 1,
-        height = 1,
-        type = "full",
-      },
-      energy_source = {
-        type = "electric",
-        usage_priority = "primary-output",
-      },
-      power = "100kW",
-      categories = { "armor" },
+  {
+    type = "solar-panel-equipment",
+    name = "bob-solar-panel-equipment-4",
+    sprite = {
+      filename = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
+      width = 32,
+      height = 32,
+      priority = "medium",
     },
-  })
-
-  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
-    data:extend({
-      {
-        type = "solar-panel-equipment",
-        name = "bob-solar-panel-equipment-5",
-        sprite = {
-          filename = "__bobequipment__/graphics/icons/solar-panel-equipment-5.png",
-          width = 32,
-          height = 32,
-          priority = "medium",
-        },
-        shape = {
-          width = 1,
-          height = 1,
-          type = "full",
-        },
-        energy_source = {
-          type = "electric",
-          usage_priority = "primary-output",
-        },
-        power = "150kW",
-        categories = { "armor" },
-      },
-    })
-  end
-end
+    shape = {
+      width = 1,
+      height = 1,
+      type = "full",
+    },
+    energy_source = {
+      type = "electric",
+      usage_priority = "primary-output",
+    },
+    power = "100kW",
+    categories = { "armor" },
+  },
+})
 
 data.raw["generator-equipment"]["fission-reactor-equipment"].sprite = {
   filename = "__bobequipment__/graphics/icons/technology/fission-reactor-equipment-1.png",

@@ -507,77 +507,37 @@ data:extend({
       },
     },
   },
-})
-
-if data.raw.item["bob-alien-artifact"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "bob-solar-panel-equipment-4",
-      localised_name = { "", { "technology-name.solar-panel-equipment" }, " 4" },
-      icons = bobmods.lib.tech.technology_icon_constant({
-        icon = "__base__/graphics/technology/solar-panel-equipment.png",
-        icon_size = 256,
-      }, "__boblibrary__/graphics/constants/constant-equipment.png"),
-      prerequisites = {
-        "bob-solar-panel-equipment-3",
-        "utility-science-pack",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "bob-solar-panel-equipment-4",
-        },
-      },
-      unit = {
-        count = 100,
-        time = 45,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "chemical-science-pack", 1 },
-          { "production-science-pack", 1 },
-          { "utility-science-pack", 1 },
-        },
+  {
+    type = "technology",
+    name = "bob-solar-panel-equipment-4",
+    localised_name = { "", { "technology-name.solar-panel-equipment" }, " 4" },
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__base__/graphics/technology/solar-panel-equipment.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+    prerequisites = {
+      "bob-solar-panel-equipment-3",
+      "utility-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-solar-panel-equipment-4",
       },
     },
-  })
-  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
-    data:extend({
-      {
-        type = "technology",
-        name = "bob-solar-panel-equipment-5",
-        localised_name = { "", { "technology-name.solar-panel-equipment" }, " 5" },
-        icons = bobmods.lib.tech.technology_icon_constant({
-          icon = "__base__/graphics/technology/solar-panel-equipment.png",
-          icon_size = 256,
-        }, "__boblibrary__/graphics/constants/constant-equipment.png"),
-        prerequisites = {
-          "bob-solar-panel-equipment-4",
-          "bob-alien-orange-research",
-          "bob-alien-purple-research",
-        },
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "bob-solar-panel-equipment-5",
-          },
-        },
-        unit = {
-          count = 200,
-          time = 45,
-          ingredients = {
-            { "automation-science-pack", 1 },
-            { "logistic-science-pack", 1 },
-            { "chemical-science-pack", 1 },
-            { "production-science-pack", 1 },
-            { "utility-science-pack", 1 },
-          },
-        },
+    unit = {
+      count = 100,
+      time = 45,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
-    })
-  end
-end
+    },
+  },
+})
 
 data.raw["technology"]["personal-laser-defense-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
   icon = "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png",

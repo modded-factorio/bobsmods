@@ -222,43 +222,26 @@ data:extend({
     },
     results = { { type = "item", name = "bob-solar-panel-equipment-3", amount = 1 } },
   },
+  {
+    type = "recipe",
+    name = "bob-solar-panel-equipment-4",
+    enabled = false,
+    energy_required = 7.5,
+    ingredients = {
+      { type = "item", name = "bob-solar-panel-equipment-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 6 },
+      { type = "item", name = "steel-plate", amount = 16 },
+      { type = "item", name = "copper-plate", amount = 16 },
+    },
+    results = { { type = "item", name = "bob-solar-panel-equipment-4", amount = 1 } },
+  },
 })
 
 if data.raw.item["bob-alien-artifact"] then
-  data:extend({
-    {
-      type = "recipe",
-      name = "bob-solar-panel-equipment-4",
-      enabled = false,
-      energy_required = 7.5,
-      ingredients = {
-        { type = "item", name = "bob-solar-panel-equipment-3", amount = 1 },
-        { type = "item", name = "processing-unit", amount = 6 },
-        { type = "item", name = "bob-alien-artifact", amount = 5 },
-        { type = "item", name = "steel-plate", amount = 16 },
-        { type = "item", name = "copper-plate", amount = 16 },
-      },
-      results = { { type = "item", name = "bob-solar-panel-equipment-4", amount = 1 } },
-    },
-  })
-  if data.raw.item["bob-alien-orange-alloy"] and data.raw.fluid["bob-alien-acid"] then
-    data:extend({
-      {
-        type = "recipe",
-        name = "bob-solar-panel-equipment-5",
-        category = "crafting-with-fluid",
-        enabled = false,
-        energy_required = 10,
-        ingredients = {
-          { type = "item", name = "bob-solar-panel-equipment-4", amount = 1 },
-          { type = "item", name = "processing-unit", amount = 8 },
-          { type = "item", name = "bob-alien-orange-alloy", amount = 10 },
-          { type = "fluid", name = "bob-alien-acid", amount = 50 },
-        },
-        results = { { type = "item", name = "bob-solar-panel-equipment-5", amount = 1 } },
-      },
-    })
-  end
+  bobmods.lib.recipe.add_ingredient(
+    "bob-solar-panel-equipment-4", 
+    { type = "item", name = "bob-alien-artifact", amount = 5 }
+  )
 end
 
 data.raw.recipe["personal-laser-defense-equipment"].ingredients = {

@@ -58,9 +58,6 @@ if mods["quality"] then
   if data.raw.recipe["bob-solar-panel-equipment-4"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-solar-panel-equipment-4", false)
   end
-  if data.raw.recipe["bob-solar-panel-equipment-5"] then
-    bobmods.lib.recipe.update_recycling_recipe_single("bob-solar-panel-equipment-5", false)
-  end
   if data.raw.recipe["bob-personal-roboport-mk3-equipment"] then
     bobmods.lib.recipe.update_recycling_recipe({
       "bob-personal-roboport-mk3-equipment",
