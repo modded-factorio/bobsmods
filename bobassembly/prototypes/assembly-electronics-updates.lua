@@ -111,23 +111,4 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     data.raw["assembling-machine"]["bob-electronics-machine-2"].ingredient_count = 4
     data.raw["assembling-machine"]["bob-electronics-machine-3"].ingredient_count = 6
   end
-
-  if settings.startup["bobmods-colorupdate"].value == true then
-    data.raw.item["bob-electronics-machine-1"].icon =
-      "__bobassembly__/graphics/icons/new-colors/electronics-machine-1.png"
-    data.raw.item["bob-electronics-machine-1"].icon_size = 32
-    data.raw["assembling-machine"]["bob-electronics-machine-1"].icon =
-      "__bobassembly__/graphics/icons/new-colors/electronics-machine-1.png"
-    data.raw["assembling-machine"]["bob-electronics-machine-1"].icon_size = 32
-    data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.animation.layers[2].tint =
-      { r = 0.7, g = 0.7, b = 0.1 }
-
-    data.raw.item["bob-electronics-machine-2"].icon = "__bobassembly__/graphics/icons/electronics-machine-1.png"
-    data.raw.item["bob-electronics-machine-2"].icon_size = 32
-    data.raw["assembling-machine"]["bob-electronics-machine-2"].icon =
-      "__bobassembly__/graphics/icons/electronics-machine-1.png"
-    data.raw["assembling-machine"]["bob-electronics-machine-2"].icon_size = 32
-    data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.animation.layers[2].tint =
-      { r = 0.1, g = 0.5, b = 0.7 }
-  end
 end

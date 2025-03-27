@@ -37,28 +37,8 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   end
 end
 
---change icons.
-if settings.startup["bobmods-colorupdate"].value == true then
-  data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery-red.png"
-  data.raw.item["battery"].icon_size = 64
-  data.raw.recipe["battery"].crafting_machine_tint = data.raw.recipe["battery"].crafting_machine_tint or {}
-  data.raw.recipe["battery"].crafting_machine_tint.primary = { r = 1.0, g = 0.2, b = 0.1, a = 1.000 }
-
-  data.raw.item["bob-lithium-ion-battery"].icon = "__bobplates__/graphics/icons/battery-blue.png"
-  data.raw.item["bob-lithium-ion-battery"].icon_size = 64
-  data.raw.recipe["bob-lithium-ion-battery"].crafting_machine_tint = data.raw.recipe["bob-lithium-ion-battery"].crafting_machine_tint
-    or {}
-  data.raw.recipe["bob-lithium-ion-battery"].crafting_machine_tint.primary = { r = 0.1, g = 0.5, b = 1.0, a = 1.000 }
-
-  data.raw.item["bob-silver-zinc-battery"].icon = "__bobplates__/graphics/icons/battery-purple.png"
-  data.raw.item["bob-silver-zinc-battery"].icon_size = 64
-  data.raw.recipe["bob-silver-zinc-battery"].crafting_machine_tint = data.raw.recipe["bob-silver-zinc-battery"].crafting_machine_tint
-    or {}
-  data.raw.recipe["bob-silver-zinc-battery"].crafting_machine_tint.primary = { r = 0.7, g = 0.9, b = 1.0, a = 1.000 }
-else
-  data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
-  data.raw.item["battery"].icon_size = 64
-end
+data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
+data.raw.item["battery"].icon_size = 64
 
 -- small storage tank recipe move.
 if mods["boblogistics"] then

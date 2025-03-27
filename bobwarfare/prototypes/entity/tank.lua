@@ -1,9 +1,5 @@
 local tank_mk2_tint = { r = 0.7, g = 0.8, b = 1 }
 local tank_mk3_tint = { r = 1, g = 0.8, b = 0.7 }
-if settings.startup["bobmods-colorupdate"].value == true then
-  tank_mk2_tint = { r = 1, g = 0.7, b = 1 }
-  tank_mk3_tint = { r = 0.7, g = 1, b = 0.7 }
-end
 
 data.raw.car.car.resistances = {
   {

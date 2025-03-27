@@ -156,66 +156,6 @@ if settings.startup["bobmods-assembly-limits"].value == true then
   data.raw["assembling-machine"]["bob-assembling-machine-6"].ingredient_count = 12
 end
 
---        tint = {r = 0.7, g = 0.7, b = 0.1},
---        tint = {r = 0.7, g = 0.2, b = 0.1},
---        tint = {r = 0.1, g = 0.5, b = 0.7},
---        tint = {r = 0.7, g = 0.1, b = 0.7},
---        tint = {r = 0.1, g = 0.7, b = 0.1},
-
-if settings.startup["bobmods-colorupdate"].value == true then
-  data.raw.item["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/new-colors/assembling-machine-2.png"
-  data.raw.item["assembling-machine-2"].icon_size = 32
-  data.raw["assembling-machine"]["assembling-machine-2"].icon =
-    "__bobassembly__/graphics/icons/new-colors/assembling-machine-2.png"
-  data.raw["assembling-machine"]["assembling-machine-2"].icon_size = 32
-  table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
-    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-    priority = "high",
-    width = 214,
-    height = 237,
-    repeat_count = 32,
-    shift = util.by_pixel(0, -0.75),
-    scale = 0.5,
-    tint = { r = 0.7, g = 0.7, b = 0.1 },
-  })
-  data.raw.item["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/new-colors/assembling-machine-3.png"
-  data.raw.item["assembling-machine-3"].icon_size = 32
-  data.raw["assembling-machine"]["assembling-machine-3"].icon =
-    "__bobassembly__/graphics/icons/new-colors/assembling-machine-3.png"
-  data.raw["assembling-machine"]["assembling-machine-3"].icon_size = 32
-  table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
-    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-    priority = "high",
-    width = 214,
-    height = 237,
-    repeat_count = 32,
-    shift = util.by_pixel(0, -0.75),
-    scale = 0.5,
-    tint = { r = 0.7, g = 0.2, b = 0.1 },
-  })
-
-  data.raw.item["bob-assembling-machine-4"].icon = "__bobassembly__/graphics/icons/new-colors/assembling-machine-4.png"
-  data.raw.item["bob-assembling-machine-4"].icon_size = 32
-  data.raw["assembling-machine"]["bob-assembling-machine-4"].icon =
-    "__bobassembly__/graphics/icons/new-colors/assembling-machine-4.png"
-  data.raw["assembling-machine"]["bob-assembling-machine-4"].icon_size = 32
-  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.animation.layers[2].tint =
-    { r = 0.1, g = 0.5, b = 0.7 }
-
-  data.raw.item["bob-assembling-machine-5"].icon = "__bobassembly__/graphics/icons/new-colors/assembling-machine-5.png"
-  data.raw.item["bob-assembling-machine-5"].icon_size = 32
-  data.raw["assembling-machine"]["bob-assembling-machine-5"].icon =
-    "__bobassembly__/graphics/icons/new-colors/assembling-machine-5.png"
-  data.raw["assembling-machine"]["bob-assembling-machine-5"].icon_size = 32
-  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.animation.layers[2].tint =
-    { r = 0.7, g = 0.1, b = 0.7 }
-
-  if aailoaderssize == true then
-    data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[3].scale = 0.58
-    data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[3].scale = 0.58
-  end
-end
-
 if aailoaderssize == true then
   data.raw["assembling-machine"]["assembling-machine-1"].graphics_set.animation.layers[1].scale = 0.58
   data.raw["assembling-machine"]["assembling-machine-1"].graphics_set.animation.layers[2].scale = 0.58
