@@ -69,23 +69,23 @@ data.raw["tips-and-tricks-item"]["e-confirm"].simulation = {
             if button == "5" then button = "6" end
             if button == "4" then
               button = "5"
-              slot_data = "storage-chest"
+              slot_data = "pipe"
             end
             if button == "3" then
               button = "4"
-              slot_data = "passive-provider-chest"
+              slot_data = "small-electric-pole"
             end
             if button == "2" then
               button = "3"
-              slot_data = "requester-chest"
+              slot_data = "inserter"
             end
             if button == "1" then
               button = "2"
-              slot_data = "storage-tank"
+              slot_data = "splitter"
             end
             if button == "0" then
               button = "1"
-              slot_data = "small-electric-pole"
+              slot_data = "underground-belt"
             end
             if button < "6" then story_jump_to(storage.story, "continue") end
           end
@@ -168,7 +168,7 @@ data.raw["tips-and-tricks-item"]["pipette"].simulation = {
             end
           end
         },
-        -- controller branch
+        --controller branch
         {
           action = function() player.opened = player end
         },
@@ -184,7 +184,7 @@ data.raw["tips-and-tricks-item"]["pipette"].simulation = {
             story_jump_to(storage.story, "inserter-pipette")
           end
         },
-        -- mouse branch
+        --mouse branch
         { action = function() end }, --called by story_jump_to(storage.story, "inserter-mouse-branch")
         {
           name = "inserter-mouse-branch",
@@ -194,7 +194,7 @@ data.raw["tips-and-tricks-item"]["pipette"].simulation = {
           end
         },
         { condition = story_elapsed_check(0.25) },
-        -- branch join
+        --branch join
         {
           name = "inserter-pipette",
           action = function()
@@ -224,21 +224,6 @@ data.raw["tips-and-tricks-item"]["pipette"].simulation = {
         {
           condition = story_elapsed_check(0.25),
           action = function() player.opened = player end
-        },
-        { condition = story_elapsed_check(0.25) },
-        {
-          condition = function()
-            local target = game.simulation.get_widget_position({type = "item-group-tab", data = "bob-logistics"})
-            return game.simulation.move_cursor({position = target})
-          end
-        },
-        {
-          condition = story_elapsed_check(0.25),
-          action = function() game.simulation.mouse_down() end
-        },
-        {
-          condition = story_elapsed_check(0.25),
-          action = function() game.simulation.mouse_up() end
         },
         { condition = story_elapsed_check(0.25) },
         {
@@ -298,9 +283,10 @@ data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation = {
     game.simulation.camera_player = player
     game.simulation.camera_position = {0, 0.5}
     game.simulation.camera_player_cursor_position = player.position
+    game.forces.player.technologies.logistics.researched = true
 
-    player.insert{name = "iron-plate", count = 20}
-    player.insert{name = "iron-gear-wheel", count = 20}
+    player.insert{name = "iron-plate", count = 200}
+    player.insert{name = "iron-gear-wheel", count = 200}
     player.clear_inventory_highlights()
     player.opened = player
 
@@ -310,26 +296,9 @@ data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation = {
         {
           name = "start",
           condition = function()
-            local target = game.simulation.get_widget_position({type = "item-group-tab", data = "bob-logistics"})
-            return game.simulation.move_cursor({position = target})
-          end
-        },
-        {
-          condition = story_elapsed_check(0.25),
-          action = function() game.simulation.mouse_down() end
-        },
-        {
-          condition = story_elapsed_check(0.25),
-          action = function() game.simulation.mouse_up() end
-        },
-        { condition = story_elapsed_check(0.25) },
-
-        {
-          condition = function()
             local target = game.simulation.get_widget_position({type = "recipe-slot", data = "burner-inserter"})
             return game.simulation.move_cursor({position = target})
-          end,
-          action = function() player.clear_inventory_highlights() end
+          end
         },
         { condition = story_elapsed_check(1) },
         {
@@ -351,6 +320,24 @@ data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation = {
         },
         { condition = story_elapsed_check(1) },
         {
+          init = function() game.simulation.control_down{control = "craft-5", notify = true} end,
+          condition = story_elapsed_check(0.25)
+        },
+        {
+          init = function() game.simulation.control_up{control = "craft-5"} end,
+          condition = function() return game.simulation.move_cursor({position = player.position}) end
+        },
+        { condition = story_elapsed_check(3) },
+
+        {
+          condition = function()
+            local target = game.simulation.get_widget_position({type = "recipe-slot", data = "iron-chest"})
+            return game.simulation.move_cursor({position = target})
+          end,
+          action = function() player.clear_inventory_highlights() end
+        },
+        { condition = story_elapsed_check(1) },
+        {
           init = function() game.simulation.control_down{control = "craft-all", notify = true} end,
           condition = story_elapsed_check(0.25)
         },
@@ -363,8 +350,10 @@ data.raw["tips-and-tricks-item"]["bulk-crafting"].simulation = {
           condition = story_elapsed_check(15),
           action = function()
             player.clear_items_inside()
-            player.insert{name = "iron-plate", count = 20}
-            player.insert{name = "iron-gear-wheel", count = 20}
+            player.insert{name = "iron-plate", count = 100}
+            player.insert{name = "iron-plate", count = 100}
+            player.insert{name = "iron-gear-wheel", count = 100}
+            player.insert{name = "iron-gear-wheel", count = 100}
             player.clear_inventory_highlights()
           end
         },
