@@ -34,27 +34,33 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "speed-module",
+    name = "module-boards",
     group = "bobmodules",
     order = "f-1",
   },
   {
     type = "item-subgroup",
-    name = "efficiency-module",
+    name = "speed-module",
     group = "bobmodules",
     order = "f-2",
   },
   {
     type = "item-subgroup",
-    name = "productivity-module",
+    name = "efficiency-module",
     group = "bobmodules",
     order = "f-3",
   },
   {
     type = "item-subgroup",
-    name = "pollution-create-module",
+    name = "productivity-module",
     group = "bobmodules",
     order = "f-4",
+  },
+  {
+    type = "item-subgroup",
+    name = "pollution-create-module",
+    group = "bobmodules",
+    order = "f-6",
   },
   {
     type = "item-subgroup",
@@ -82,7 +88,7 @@ if mods["quality"] then
       type = "item-subgroup",
       name = "quality-module",
       group = "bobmodules",
-      order = "f-6",
+      order = "f-7",
     },
   })
 end
