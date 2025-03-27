@@ -87,5 +87,4 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     data.raw["assembling-machine"]["bob-chemical-plant-3"].ingredient_count = 8
     data.raw["assembling-machine"]["bob-chemical-plant-4"].ingredient_count = 10
   end
-
 end
