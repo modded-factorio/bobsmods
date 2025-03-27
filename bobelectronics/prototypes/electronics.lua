@@ -564,7 +564,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "item", name = "bob-basic-circuit-board", amount = 1 },
+      { type = "item", name = "bob-wooden-board", amount = 1 },
       { type = "item", name = "bob-basic-electronic-components", amount = 4 },
     },
     results = { { type = "item", name = "electronic-circuit", amount = 1 } },
