@@ -1,3 +1,6 @@
+The license below covers these graphics file:
+- glass
+
 MIT License
 
 Copyright (c) 2023 Max
