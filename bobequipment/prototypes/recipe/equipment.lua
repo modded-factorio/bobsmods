@@ -239,7 +239,7 @@ data:extend({
 
 if data.raw.item["bob-alien-artifact"] then
   bobmods.lib.recipe.add_ingredient(
-    "bob-solar-panel-equipment-4", 
+    "bob-solar-panel-equipment-4",
     { type = "item", name = "bob-alien-artifact", amount = 5 }
   )
 end
