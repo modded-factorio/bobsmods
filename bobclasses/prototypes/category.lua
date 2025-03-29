@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item-subgroup",
     name = "bob-bodies",
-    group = "logistics",
+    group = "bob-logistics",
     order = "aa",
   },
   {
