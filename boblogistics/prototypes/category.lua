@@ -1,4 +1,5 @@
-data.raw["item-subgroup"]["logistic-network"].group = "bob-logistics"
+data.raw["item-subgroup"]["logistic-network"].order = "a-1"
+data.raw["item-subgroup"]["circuit-network"].group = "bob-logistics"
 data.raw["item-subgroup"]["train-transport"].group = "bob-logistics"
 data.raw["item-subgroup"]["transport"].group = "bob-logistics"
 
@@ -86,14 +87,14 @@ data:extend({
   {
     type = "item-subgroup",
     name = "bob-logistic-chests-2",
-    group = "bob-logistics",
-    order = "g-2",
+    group = "logistics",
+    order = "a-2",
   },
   {
     type = "item-subgroup",
     name = "bob-logistic-chests-3",
-    group = "bob-logistics",
-    order = "g-3",
+    group = "logistics",
+    order = "a-3",
   },
   {
     type = "item-subgroup",
