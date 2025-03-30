@@ -352,8 +352,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
   end
   if mods["bobassembly"] then
     bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "logistic-science-pack")
-    bobmods.lib.tech.remove_prerequisite("bob-distillery-2", "logistic-science-pack")
-    bobmods.lib.tech.remove_prerequisite("bob-distillery-2", "bob-alloy-processing")
+    if data.raw.technology["bob-distillery-2"] then
+      bobmods.lib.tech.remove_prerequisite("bob-distillery-2", "logistic-science-pack")
+      bobmods.lib.tech.remove_prerequisite("bob-distillery-2", "bob-alloy-processing")
+    end
   end
   if mods["boblogistics"] then
     bobmods.lib.tech.remove_prerequisite("bob-repair-pack-2", "logistic-science-pack")
