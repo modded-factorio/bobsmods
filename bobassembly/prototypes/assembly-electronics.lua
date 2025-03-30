@@ -123,7 +123,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               height = 237,
               repeat_count = 32,
               scale = 1 / 3,
-              tint = { r = 0.1, g = 0.5, b = 0.7 },
+              tint = { r = 0.7, g = 0.7, b = 0.1 },
             },
             {
               filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-1-shadow.png",
@@ -299,7 +299,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               height = 237,
               repeat_count = 32,
               scale = 1 / 3,
-              tint = { r = 0.7, g = 0.2, b = 0.1 },
+              tint = { r = 0.1, g = 0.5, b = 0.7 },
             },
             {
               filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-shadow.png",

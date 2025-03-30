@@ -8,15 +8,6 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     },
   })
 
-  data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-  data.raw["assembling-machine"]["chemical-plant"].order = "e[chemical-plant-1]"
-  data.raw["assembling-machine"]["chemical-plant"].energy_usage = "160kW"
-  data.raw["assembling-machine"]["chemical-plant"].drawing_box_vertical_extension = 0.6
-
-  data.raw.item["chemical-plant"].stack_size = 50
-  data.raw.item["chemical-plant"].subgroup = "bob-chemical-machine"
-  data.raw.item["chemical-plant"].order = "e[chemical-plant-1]"
-
   local function bob_chemical_plant_fluid_boxes()
     return {
       {
@@ -104,6 +95,27 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       west = bob_chemical_plant_facing(tint, 3),
     }
   end
+
+  -- tint = {r = 0.7, g = 0.7, b = 0.1},
+  -- tint = {r = 0.7, g = 0.2, b = 0.1},
+  -- tint = {r = 0.1, g = 0.5, b = 0.7},
+  -- tint = {r = 0.7, g = 0.1, b = 0.7},
+  -- tint = {r = 0.1, g = 0.7, b = 0.1},
+
+  data.raw["assembling-machine"]["chemical-plant"].icon = "__bobassembly__/graphics/icons/chemical-plant-1.png"
+  data.raw["assembling-machine"]["chemical-plant"].icon_size = 32
+  data.raw["assembling-machine"]["chemical-plant"].graphics_set.animation =
+    bobmods.bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 })
+  data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+  data.raw["assembling-machine"]["chemical-plant"].order = "e[chemical-plant-1]"
+  data.raw["assembling-machine"]["chemical-plant"].energy_usage = "160kW"
+  data.raw["assembling-machine"]["chemical-plant"].drawing_box_vertical_extension = 0.6
+
+  data.raw.item["chemical-plant"].icon = "__bobassembly__/graphics/icons/chemical-plant-1.png"
+  data.raw.item["chemical-plant"].icon_size = 32
+  data.raw.item["chemical-plant"].stack_size = 50
+  data.raw.item["chemical-plant"].subgroup = "bob-chemical-machine"
+  data.raw.item["chemical-plant"].order = "e[chemical-plant-1]"
 
   data:extend({
     {
@@ -248,7 +260,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
       graphics_set = {
-        animation = bobmods.bob_chemical_plant_animation({ r = 0.5, g = 0.1, b = 0.7 }),
+        animation = bobmods.bob_chemical_plant_animation({ r = 0.1, g = 0.5, b = 0.7 }),
         working_visualisations = data.raw["assembling-machine"]["chemical-plant"].graphics_set.working_visualisations,
       },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
@@ -296,7 +308,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
       crafting_categories = { "chemistry" },
       fluid_boxes = bob_chemical_plant_fluid_boxes(),
       graphics_set = {
-        animation = bobmods.bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 }),
+        animation = bobmods.bob_chemical_plant_animation({ r = 0.7, g = 0.1, b = 0.7 }),
         working_visualisations = data.raw["assembling-machine"]["chemical-plant"].graphics_set.working_visualisations,
       },
       working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
