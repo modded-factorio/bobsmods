@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.3.0
-Date: ???
+Version: 2.0.0
+Date: 30. 03. 2025
   Changes:
     - Reduced the tier of electronics required for Vehicle roboport robot control #180
     - Changed vehicle roboport robot controls to use circuits rather than circuit components #184
