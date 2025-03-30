@@ -41,7 +41,7 @@ bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-liquid-fuel")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-enriched-fuel")
 
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-petroleum-gas-cracking")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking")
 
 bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 

@@ -27,7 +27,7 @@ bobmods.lib.tech.add_prerequisite("advanced-circuit", "plastics")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 
 bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")

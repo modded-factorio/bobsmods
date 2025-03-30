@@ -42,7 +42,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "coal-cracking",
+    name = "bob-coal-cracking",
     icon = "__bobelectronics__/graphics/icons/coal-cracking.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
