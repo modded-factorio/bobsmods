@@ -94,7 +94,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "bob-steel-axe-2",
-        localised_name = { "", { "technology-name.steel-axe" }, " 2"},
+        localised_name = { "", { "technology-name.steel-axe" }, " 2" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -117,7 +117,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "bob-steel-axe-3",
-        localised_name = { "", { "technology-name.steel-axe" }, " 3"},
+        localised_name = { "", { "technology-name.steel-axe" }, " 3" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -140,7 +140,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "bob-steel-axe-4",
-        localised_name = { "", { "technology-name.steel-axe" }, " 4"},
+        localised_name = { "", { "technology-name.steel-axe" }, " 4" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -164,7 +164,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "bob-steel-axe-5",
-        localised_name = { "", { "technology-name.steel-axe" }, " 5"},
+        localised_name = { "", { "technology-name.steel-axe" }, " 5" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -189,7 +189,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "bob-steel-axe-6",
-        localised_name = { "", { "technology-name.steel-axe" }, " 6"},
+        localised_name = { "", { "technology-name.steel-axe" }, " 6" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
