@@ -23,7 +23,6 @@ then
           },
           time = 15,
         },
-        order = "a-f-a-1",
       },
     })
   end
@@ -46,7 +45,6 @@ then
           },
           time = 15,
         },
-        order = "a-f-a-1",
       },
       {
         type = "technology",
@@ -67,7 +65,6 @@ then
           },
           time = 15,
         },
-        order = "a-f-a-2",
       },
     })
   end
@@ -91,7 +88,6 @@ if not data.raw.technology["bob-near-inserters"] then
         },
         time = 15,
       },
-      order = "a-f-b-1",
     },
   })
 end
@@ -115,7 +111,6 @@ if not data.raw.technology["bob-more-inserters-1"] then
         },
         time = 15,
       },
-      order = "a-f-c-1",
     },
   })
 end
@@ -142,7 +137,6 @@ if settings.startup["bobmods-inserters-more2"].value == true and not data.raw.te
         },
         time = 15,
       },
-      order = "a-f-c-2",
     },
   })
 end
