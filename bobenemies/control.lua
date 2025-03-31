@@ -17,6 +17,9 @@ end
 if script.active_mods["RampantFixed"] and settings.startup["rampantFixed--newEnemies"].value == true then
   bobmods.enemies.stop_all = true
 end
+if script.active_mods["enemyracemanager"] then
+  bobmods.enemies.stop_all = true
+end
 
 if not storage.bobmods then
   storage.bobmods = {}
