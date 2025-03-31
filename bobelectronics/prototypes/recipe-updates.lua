@@ -94,7 +94,10 @@ else
 end
 
 if data.raw.item["bob-silver-plate"] then
-  bobmods.lib.recipe.add_ingredient("bob-superior-circuit-board", { type = "item", name = "bob-silver-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-superior-circuit-board",
+    { type = "item", name = "bob-silver-plate", amount = 1 }
+  )
 end
 
 if data.raw.item["bob-gold-plate"] then
