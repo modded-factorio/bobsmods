@@ -5,7 +5,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
-    emissions_multiplier = 5,
+    emissions_multiplier = 6,
     auto_recycle = false,
     ingredients = { { type = "item", name = "bob-lead-ore", amount = 1 } },
     results = { { type = "item", name = "bob-lead-plate", amount = 1 } },
