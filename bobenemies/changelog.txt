@@ -3,6 +3,7 @@ Version: 2.0.1
 Date: ???
   Changes:
     - Minor mod compatibility changes #368
+    - Revised pollution settings for easier early game.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 30. 03. 2025
