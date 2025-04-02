@@ -1260,8 +1260,8 @@ function set_character_icon(player_index, entity)
     and player.cursor_stack.name
   then
     hand_item = player.cursor_stack.name
-  elseif player.cursor_ghost and player.cursor_ghost.valid and player.cursor_ghost.name then
-    hand_item = player.cursor_ghost.name
+  elseif player.cursor_ghost and player.cursor_ghost.name and player.cursor_ghost.name.valid then
+    hand_item = player.cursor_ghost.name.name
   end
   if hand_item then
     storage.sprite[entity.unit_number] = "item/" .. hand_item

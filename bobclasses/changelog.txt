@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: ???
+  Changes:
+    - Allow ghosts to be used to set character icons #382
   Bugfixes:
     - Fixed crash when Bob's Logistics mod was not enabled #384
 ---------------------------------------------------------------------------------------------------
