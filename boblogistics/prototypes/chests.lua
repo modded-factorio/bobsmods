@@ -60,7 +60,7 @@ if data.raw.item["bob-brass-alloy"] then
       next_upgrade = "bob-titanium-chest",
       inventory_size = 64,
       icon_draw_specification = {
-        scale = 0.7
+        scale = 0.7,
       },
       impact_category = "metal",
       picture = {
@@ -124,7 +124,7 @@ if data.raw.item["bob-titanium-plate"] then
       fast_replaceable_group = "container",
       inventory_size = 80,
       icon_draw_specification = {
-        scale = 0.7
+        scale = 0.7,
       },
       impact_category = "metal",
       picture = {
