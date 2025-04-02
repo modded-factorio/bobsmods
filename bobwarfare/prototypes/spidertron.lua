@@ -650,7 +650,7 @@ data:extend({
       movement_slow_down_factor = 0,
       projectile_creation_distance = 0,
       projectile_center = { 0, 1.5 },
-      range = 25,
+      range = 36,
       damage_modifier = 1.5,
       sound = {
         {
@@ -678,7 +678,7 @@ data:extend({
       movement_slow_down_factor = 0,
       projectile_creation_distance = 0,
       projectile_center = { 0, 1.5 },
-      range = 25,
+      range = 36,
       damage_modifier = 1.5,
       sound = {
         {
