@@ -7,6 +7,7 @@ data:extend({
     prerequisites = {
       "automation-science-pack",
       "bob-wood-processing",
+      "electronics"
     },
     effects = {
       {

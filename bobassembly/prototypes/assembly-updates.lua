@@ -3,7 +3,7 @@ if mods["aai-loaders"] and settings.startup["aai-loaders-fit-assemblers"].value 
   aailoaderssize = true
 end
 
-if settings.startup["bobmods-assembly-burner"].value == true then
+if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].value == true then
   bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-steam-assembling-machine")
 end
 

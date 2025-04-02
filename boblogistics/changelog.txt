@@ -3,6 +3,7 @@ Version: 2.0.1
 Date: ???
   Bugfixes:
     - Fixed chest Alt icon size #380
+    - Basic fixes for AAI Industry Compatibility Issues #388
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 30. 03. 2025
