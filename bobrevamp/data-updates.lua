@@ -100,6 +100,9 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       if recipe.results then
         change_pg_to_sg(recipe.results)
       end
+      if recipe.main_product == "petroleum-gas" then
+        recipe.main_product = "bob-sour-gas"
+      end
     end
   end
 
