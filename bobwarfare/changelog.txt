@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: ???
+  Bugfixes:
+    - Fixed crash with AAI Programmable Vehicles #390
   Changes:
     - Increased the range of tank 2 & 3 and spidertron cannons #386
 ---------------------------------------------------------------------------------------------------
