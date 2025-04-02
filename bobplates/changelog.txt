@@ -2,7 +2,7 @@
 Version: 2.0.1
 Date: ???
   Changes:
-    - Reduced pollution from initial lead plate recipe
+    - Reduced pollution from initial lead plate recipe #379
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 30. 03. 2025
