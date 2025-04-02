@@ -16,6 +16,9 @@ function bobmods.logistics.logistic_container(inputs)
     inventory_size = inputs.inventory_size or 48,
     logistic_mode = inputs.logistic_mode or "passive-provider",
     max_logistic_slots = inputs.logistic_slots_count,
+    icon_draw_specification = {
+      scale = 0.7 or inputs.inventory_icon_scale,
+    },
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     impact_category = "metal",

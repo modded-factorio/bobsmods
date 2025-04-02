@@ -59,6 +59,9 @@ if data.raw.item["bob-brass-alloy"] then
       fast_replaceable_group = "container",
       next_upgrade = "bob-titanium-chest",
       inventory_size = 64,
+      icon_draw_specification = {
+        scale = 0.7
+      },
       impact_category = "metal",
       picture = {
         filename = "__boblogistics__/graphics/entity/chest/brass-chest.png",
@@ -120,6 +123,9 @@ if data.raw.item["bob-titanium-plate"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fast_replaceable_group = "container",
       inventory_size = 80,
+      icon_draw_specification = {
+        scale = 0.7
+      },
       impact_category = "metal",
       picture = {
         layers = {
