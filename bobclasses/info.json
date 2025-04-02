@@ -1,6 +1,6 @@
 {
   "name": "bobclasses",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "factorio_version": "2.0",
   "title": "Bob's Classes and Multiple characters mod",
   "author": "Bobingabout",
@@ -9,7 +9,8 @@
   "dependencies": [
     "base >= 1.2.0",
     "boblibrary >= 2.0.0",
-    "? bobplates >= 2.0.0"
+    "? bobplates >= 2.0.0",
+    "? boblogistics >= 2.0.0"
   ],
   "description": "Adds 3 new starting character classes to the game and 6 late-game classes. These have various bonuses and disadvantages, including changes to initial equipment.\n\nFighter: Has various combat bonuses, high speed, rapid healing, short reach, poor crafting and inventory.\nCrafter: Can hand smelt. Has fast crafting speed and more inventory, but is slow and poor in combat.\nBuilder: Has very long reach for easy factory building, and increased inventory, but is middling in combat.\n\nThis mod also allows multiple bodies to be placed in the game world, and free switching between them.\nWhen dying, if you own multiple bodies, instead of respawning you will automatically switch to the first body in the list."
 }

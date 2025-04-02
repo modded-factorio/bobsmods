@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item-subgroup",
     name = "bob-bodies",
-    group = "bob-logistics",
+    group = "logistics",
     order = "aa",
   },
   {
@@ -12,3 +12,7 @@ data:extend({
     order = "e-e2",
   },
 })
+
+if data.raw["item-group"]["bob-logistics"] then
+  data.raw["item-subgroup"]["bob-bodies"].group = "bob-logistics"
+end
