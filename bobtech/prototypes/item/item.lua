@@ -25,7 +25,7 @@ data:extend({
   {
     type = "research-with-science-pack-achievement",
     name = "research-with-transport",
-    icon = "__bobtech__/graphics/achievement/research-with-transport.png",
+    icon = "__bobtech__/graphics/icons/research-with-transport.png",
     icon_size = 128,
     order = "e[research]-a[research-with]-e[transport]",
     science_pack = "bob-advanced-logistic-science-pack",
