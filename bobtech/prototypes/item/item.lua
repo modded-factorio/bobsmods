@@ -23,6 +23,14 @@ data:extend({
     pick_sound = science_pick,
   },
   {
+    type = "research-with-science-pack-achievement",
+    name = "research-with-transport",
+    icon = "__bobtech__/graphics/achievement/research-with-transport.png",
+    icon_size = 128,
+    order = "e[research]-a[research-with]-e[transport]",
+    science_pack = "bob-advanced-logistic-science-pack",
+  },
+  {
     type = "item",
     name = "bob-lab-2",
     icon = "__bobtech__/graphics/icons/lab2.png",
