@@ -1,13 +1,13 @@
 {
   "name": "clock",
-  "version": "1.1.0",
-  "factorio_version": "1.1",
+  "version": "2.0.0",
+  "factorio_version": "2.0",
   "title": "Clock",
   "author": "Dentatus and Bobingabout",
-  "contact": "Private",
+  "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
-    "base >= 1.1.0"
+    "base >= 2.0.0"
   ],
   "description": "Adds a clock to the top left corner of the screen that tells you the game world's time.\nClick the clock for a panel with more information about the world.\n\nOriginal clock by Dentatus\nAdditional features inspired by tungsten33"
 }
