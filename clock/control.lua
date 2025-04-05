@@ -42,19 +42,12 @@ function clock_to_string_12(hour, min)
 end
 
 function update_time()
-	local time
-	local next_update
-	if remote.interfaces.MoWeather then
-		time = remote.call("MoWeather","getdaytime")
-		next_update = game.ticks_played +5
-	else
-		time = game.surfaces[1].daytime
-		local ticks_per_day = game.surfaces[1].ticks_per_day
-		local current_time_tick = math.floor(ticks_per_day * time) --floor current time
-		local next_min_time = (math.floor(1440 * time) +1) / 1440
-		local next_min_tick = math.ceil(ticks_per_day * next_min_time) --ceil next min time
-		next_update = game.ticks_played + next_min_tick - current_time_tick --Estimated next time might overshoot by a tick or two due to the rounding, but will be consistantly just after a minute change.
-	end
+  local time = game.surfaces[1].daytime
+  local ticks_per_day = game.surfaces[1].ticks_per_day
+  local current_time_tick = math.floor(ticks_per_day * time) --floor current time
+  local next_min_time = (math.floor(1440 * time) +1) / 1440
+  local next_min_tick = math.ceil(ticks_per_day * next_min_time) --ceil next min time
+  local next_update = game.ticks_played + next_min_tick - current_time_tick --Estimated next time might overshoot by a tick or two due to the rounding, but will be consistantly just after a minute change.
 	local hour, min = time_to_clock(time)
 	storage.minute = min
 	storage.time24 = clock_to_string(hour, min)
@@ -71,10 +64,6 @@ function update_info()
 	storage.time_played = string.format("%d:%02d:%02d", played_hour, played_min, played_sec)
 	storage.evolution_factor = string.format("%.2f%%", game.forces["enemy"].get_evolution_factor() * 100)
 	storage.speed = string.format("%d%%", math.floor(game.speed * 100))
-	if game.forces["robot-enemy"] then
-		storage.robot_evolution_factor = string.format("%.2f%%", game.forces["robot-enemy"].evolution_factor * 100)
-	else
-	end
 end
 
 
@@ -106,9 +95,6 @@ function on_tick(event)
 				gui.time_played.val.caption = storage.time_played
 				gui.speed.val.caption = storage.speed
 				gui.evolution_factor.val.caption = storage.evolution_factor
-				if gui.robot_evolution_factor then
-					gui.robot_evolution_factor.val.caption = storage.robot_evolution_factor
-				end
 			end
 			local show_on_button = settings.get_player_settings(player)["bobmods-clock-showonbutton"].value
 			if show_on_button == "time_played" then
@@ -389,13 +375,6 @@ function draw_info_pane(gui)
 		gui.add{type = "flow", name = "evolution_factor", style = "horizontal_flow"}
 		gui.evolution_factor.add({type = "label", name = "desc", style = "bold_label", caption = {"gui.clock-evolution-factor", ": "}})
 		gui.evolution_factor.add({type = "label", name = "val", caption = storage.evolution_factor })
-		if game.forces["robot-enemy"] then
-			gui.evolution_factor.desc.caption = {"gui.clock-enemy-evolution-factor", ": "}
-
-			gui.add{type = "flow", name = "robot_evolution_factor", style = "horizontal_flow"}
-			gui.robot_evolution_factor.add({type = "label", name = "desc", style = "bold_label", caption = {"gui.clock-robot-evolution-factor", ": " }})
-			gui.robot_evolution_factor.add({type = "label", name = "val", caption = storage.robot_evolution_factor })
-		end
 
 		gui.add{type = "flow", name = "speed", style = "horizontal_flow"}
 		gui.speed.add({type = "label", name = "desc", caption = {"gui.clock-game-speed", ": " }, style = "bold_label"})
