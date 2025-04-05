@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
-Date: ???
+Date: 05. 04. 2025
   Changes:
     - Allow ghosts to be used to set character icons #382
   Bugfixes:
