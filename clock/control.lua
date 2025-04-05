@@ -488,7 +488,12 @@ function draw_admin_pane(gui)
 
     gui.add({ type = "table", name = "day_phases", column_count = 3 })
 
-    gui.day_phases.add({ type = "label", name = "dawn_name", style = "bold_label", caption = { "gui.bobmods-clock-dawn" } })
+    gui.day_phases.add({
+      type = "label",
+      name = "dawn_name",
+      style = "bold_label",
+      caption = { "gui.bobmods-clock-dawn" },
+    })
     gui.day_phases.add({
       type = "label",
       name = "dawn_clock",
@@ -546,7 +551,12 @@ function draw_admin_pane(gui)
       value = (game.surfaces[1].dusk + 0.5) % 1,
     })
 
-    gui.day_phases.add({ type = "label", name = "dusk_name", style = "bold_label", caption = { "gui.bobmods-clock-dusk" } })
+    gui.day_phases.add({
+      type = "label",
+      name = "dusk_name",
+      style = "bold_label",
+      caption = { "gui.bobmods-clock-dusk" },
+    })
     gui.day_phases.add({
       type = "label",
       name = "dusk_clock",
