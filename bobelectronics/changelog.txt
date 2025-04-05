@@ -3,6 +3,8 @@ Version: 2.0.1
 Date: ???
   Bugfixes:
     - Superior circuit board recipe missing silver plate #371
+  Changes:
+    - Added preset for Milestones mod #389
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 30. 03. 2025

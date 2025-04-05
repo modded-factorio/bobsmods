@@ -1,3 +1,5 @@
+require("remote")
+
 function setup(event)
   if remote.interfaces["DiscoScience"] and remote.interfaces["DiscoScience"]["setIngredientColor"] then
     remote.call(

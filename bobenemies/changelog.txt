@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Minor mod compatibility changes #368
     - Revised pollution settings for easier early game #379
+    - Added preset for Milestones mod #389
   Bugfixes:
     - Fixed typo "Elecrtic breed" #376
 ---------------------------------------------------------------------------------------------------
