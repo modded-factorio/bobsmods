@@ -13,13 +13,16 @@ local function milestones_preset_addons()
     { type = "item", name = "bob-productivity-module-5", quantity = 100, next = "x10", hidden = true },
   }
   if prototypes.item["bob-god-module"] then
-    table.insert(grouped_milestones["modules"],
-      { type = "item", name = "bob-god-module", quantity = 1 })
-    table.insert(grouped_milestones["modules"],
-      { type = "alias", name = "bob-god-module-productivity", equals = "bob-god-module", quantity = 1 })
+    table.insert(grouped_milestones["modules"], { type = "item", name = "bob-god-module", quantity = 1 })
+    table.insert(
+      grouped_milestones["modules"],
+      { type = "alias", name = "bob-god-module-productivity", equals = "bob-god-module", quantity = 1 }
+    )
     if script.active_mods["quality"] then
-      table.insert(grouped_milestones["modules"],
-        { type = "alias", name = "bob-god-module-quality", equals = "bob-god-module", quantity = 1 })
+      table.insert(
+        grouped_milestones["modules"],
+        { type = "alias", name = "bob-god-module-quality", equals = "bob-god-module", quantity = 1 }
+      )
     end
   end
 
@@ -33,7 +36,7 @@ local function milestones_preset_addons()
   return {
     ["Bob's Modules"] = {
       required_mods = { "bobmodules" },
-      forbidden_mods = { },
+      forbidden_mods = {},
       milestones = milestones,
     },
   }

@@ -4,28 +4,26 @@ local function milestones_presets()
 
   -- Resources
   grouped_milestones["resorces"] = {
-    { type="group",      name = "Science"},
-    { type="item",       name = "automation-science-pack",            quantity = 1 },
-    { type="item",       name = "logistic-science-pack",              quantity = 1 },
-    { type="item",       name = "military-science-pack",              quantity = 1 },
-    { type="item",       name = "chemical-science-pack",              quantity = 1 },
-    { type="item",       name = "production-science-pack",            quantity = 1 },
-    { type="item",       name = "utility-science-pack",               quantity = 1 },
-    { type="item",       name = "space-science-pack",                 quantity = 1 },
-    { type="item",       name = "automation-science-pack",            quantity = 1000, next = "x10" },
-    { type="item",       name = "logistic-science-pack",              quantity = 1000, next = "x10" },
-    { type="item",       name = "military-science-pack",              quantity = 1000, next = "x10" },
-    { type="item",       name = "chemical-science-pack",              quantity = 1000, next = "x10" },
-    { type="item",       name = "production-science-pack",            quantity = 1000, next = "x10" },
-    { type="item",       name = "utility-science-pack",               quantity = 1000, next = "x10" },
-    { type="item",       name = "space-science-pack",                 quantity = 10000, next = "x10" },
+    { type = "group", name = "Science" },
+    { type = "item", name = "automation-science-pack", quantity = 1 },
+    { type = "item", name = "logistic-science-pack", quantity = 1 },
+    { type = "item", name = "military-science-pack", quantity = 1 },
+    { type = "item", name = "chemical-science-pack", quantity = 1 },
+    { type = "item", name = "production-science-pack", quantity = 1 },
+    { type = "item", name = "utility-science-pack", quantity = 1 },
+    { type = "item", name = "space-science-pack", quantity = 1 },
+    { type = "item", name = "automation-science-pack", quantity = 1000, next = "x10" },
+    { type = "item", name = "logistic-science-pack", quantity = 1000, next = "x10" },
+    { type = "item", name = "military-science-pack", quantity = 1000, next = "x10" },
+    { type = "item", name = "chemical-science-pack", quantity = 1000, next = "x10" },
+    { type = "item", name = "production-science-pack", quantity = 1000, next = "x10" },
+    { type = "item", name = "utility-science-pack", quantity = 1000, next = "x10" },
+    { type = "item", name = "space-science-pack", quantity = 10000, next = "x10" },
 
     { type = "group", name = "Resources" },
-    script.active_mods["bobelectronics"] and
-        { type = "item", name = "bob-basic-circuit-board", quantity = 1 }
-      or nil,
-    script.active_mods["bobelectronics"] and
-        { type = "item", name = "bob-basic-circuit-board", quantity = 1000, next = "x10", hidden = true }
+    script.active_mods["bobelectronics"] and { type = "item", name = "bob-basic-circuit-board", quantity = 1 } or nil,
+    script.active_mods["bobelectronics"]
+        and { type = "item", name = "bob-basic-circuit-board", quantity = 1000, next = "x10", hidden = true }
       or nil,
     { type = "item", name = "electronic-circuit", quantity = 1 },
     { type = "item", name = "electronic-circuit", quantity = 1000, next = "x10", hidden = true },
@@ -80,13 +78,9 @@ local function milestones_presets()
     { type = "item", name = "bob-invar-alloy", quantity = 1000, next = "x10" },
     { type = "item", name = "bob-nitinol-alloy", quantity = 1 },
     { type = "item", name = "bob-nitinol-alloy", quantity = 1000, next = "x10" },
-    script.active_mods["bobelectronics"] and
-        { type = "item", name = "bob-solder-alloy", quantity = 1 }
-      or nil,
+    script.active_mods["bobelectronics"] and { type = "item", name = "bob-solder-alloy", quantity = 1 } or nil,
     { type = "item", name = "bob-cobalt-steel-alloy", quantity = 1 },
-    script.active_mods["bobgreenhouse"] and
-        { type = "item", name = "wood", quantity = 100, next = "x10" }
-      or nil,
+    script.active_mods["bobgreenhouse"] and { type = "item", name = "wood", quantity = 100, next = "x10" } or nil,
     { type = "item", name = "plastic-bar", quantity = 1 },
     { type = "item", name = "plastic-bar", quantity = 1000, next = "x10" },
     { type = "item", name = "bob-rubber", quantity = 1 },
