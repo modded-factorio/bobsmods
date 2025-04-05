@@ -1,3 +1,5 @@
+require("remote")
+
 if not bobmods then
   bobmods = {}
 end
