@@ -5,24 +5,13 @@ function bobmods.logistics.logistic_robot_idle(level)
     filename = "__boblogistics__/graphics/entity/robots/logistic-robot-" .. level .. ".png",
     priority = "high",
     line_length = 16,
-    width = 41,
-    height = 42,
+    width = 80,
+    height = 84,
     frame_count = 1,
-    shift = { 0.015625, -0.09375 },
+    shift = util.by_pixel(0, -3),
     direction_count = 16,
-    y = 42,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-logistic-robot-" .. level .. ".png",
-      priority = "high",
-      line_length = 16,
-      width = 80,
-      height = 84,
-      frame_count = 1,
-      shift = util.by_pixel(0, -3),
-      direction_count = 16,
-      y = 84,
-      scale = 0.5,
-    },
+    y = 84,
+    scale = 0.5,
   }
 end
 
@@ -31,22 +20,12 @@ function bobmods.logistics.logistic_robot_idle_with_cargo(level)
     filename = "__boblogistics__/graphics/entity/robots/logistic-robot-" .. level .. ".png",
     priority = "high",
     line_length = 16,
-    width = 41,
-    height = 42,
+    width = 80,
+    height = 84,
     frame_count = 1,
-    shift = { 0.015625, -0.09375 },
+    shift = util.by_pixel(0, -3),
     direction_count = 16,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-logistic-robot-" .. level .. ".png",
-      priority = "high",
-      line_length = 16,
-      width = 80,
-      height = 84,
-      frame_count = 1,
-      shift = util.by_pixel(0, -3),
-      direction_count = 16,
-      scale = 0.5,
-    },
+    scale = 0.5,
   }
 end
 
@@ -55,24 +34,13 @@ function bobmods.logistics.logistic_robot_in_motion(level)
     filename = "__boblogistics__/graphics/entity/robots/logistic-robot-" .. level .. ".png",
     priority = "high",
     line_length = 16,
-    width = 41,
-    height = 42,
+    width = 80,
+    height = 84,
     frame_count = 1,
-    shift = { 0.015625, -0.09375 },
+    shift = util.by_pixel(0, -3),
     direction_count = 16,
-    y = 126,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-logistic-robot-" .. level .. ".png",
-      priority = "high",
-      line_length = 16,
-      width = 80,
-      height = 84,
-      frame_count = 1,
-      shift = util.by_pixel(0, -3),
-      direction_count = 16,
-      y = 252,
-      scale = 0.5,
-    },
+    y = 252,
+    scale = 0.5,
   }
 end
 
@@ -81,24 +49,13 @@ function bobmods.logistics.logistic_robot_in_motion_with_cargo(level)
     filename = "__boblogistics__/graphics/entity/robots/logistic-robot-" .. level .. ".png",
     priority = "high",
     line_length = 16,
-    width = 41,
-    height = 42,
+    width = 80,
+    height = 84,
     frame_count = 1,
-    shift = { 0.015625, -0.09375 },
+    shift = util.by_pixel(0, -3),
     direction_count = 16,
-    y = 84,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-logistic-robot-" .. level .. ".png",
-      priority = "high",
-      line_length = 16,
-      width = 80,
-      height = 84,
-      frame_count = 1,
-      shift = util.by_pixel(0, -3),
-      direction_count = 16,
-      y = 168,
-      scale = 0.5,
-    },
+    y = 168,
+    scale = 0.5,
   }
 end
 
@@ -106,51 +63,29 @@ bobmods.logistics.logistic_robot_shadow = {
   filename = "__boblogistics__/graphics/entity/robots/logistic-robot-shadow.png",
   priority = "high",
   line_length = 16,
-  width = 59,
-  height = 23,
+  width = 115,
+  height = 57,
   frame_count = 1,
-  shift = { 0.96875, 0.609375 },
+  shift = util.by_pixel(31.75, 19.75),
   direction_count = 16,
-  y = 23,
-  hr_version = {
-    filename = "__boblogistics__/graphics/entity/robots/hr-logistic-robot-shadow.png",
-    priority = "high",
-    line_length = 16,
-    width = 115,
-    height = 57,
-    frame_count = 1,
-    shift = util.by_pixel(31.75, 19.75),
-    direction_count = 16,
-    y = 57,
-    scale = 0.5,
-  },
+  y = 57,
+  scale = 0.5,
 }
 
 bobmods.logistics.logistic_robot_shadow_with_cargo = {
   filename = "__boblogistics__/graphics/entity/robots/logistic-robot-shadow.png",
   priority = "high",
   line_length = 16,
-  width = 59,
-  height = 23,
+  width = 115,
+  height = 57,
   frame_count = 1,
-  shift = { 0.96875, 0.609375 },
+  shift = util.by_pixel(31.75, 19.75),
   direction_count = 16,
-  hr_version = {
-    filename = "__boblogistics__/graphics/entity/robots/hr-logistic-robot-shadow.png",
-    priority = "high",
-    line_length = 16,
-    width = 115,
-    height = 57,
-    frame_count = 1,
-    shift = util.by_pixel(31.75, 19.75),
-    direction_count = 16,
-    scale = 0.5,
-  },
+  scale = 0.5,
 }
 
 data.raw["logistic-robot"]["logistic-robot"].icon = "__boblogistics__/graphics/icons/robots/logistic-robot-1.png"
 data.raw["logistic-robot"]["logistic-robot"].icon_size = 32
-data.raw["logistic-robot"]["logistic-robot"].icon_mipmaps = nil
 data.raw["logistic-robot"]["logistic-robot"].idle = bobmods.logistics.logistic_robot_idle(1)
 data.raw["logistic-robot"]["logistic-robot"].idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(1)
 data.raw["logistic-robot"]["logistic-robot"].in_motion = bobmods.logistics.logistic_robot_in_motion(1)
@@ -170,7 +105,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-2" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 4, percent = 85 },
+      { type = "electric", decrease = 6, percent = 60 },
+      { type = "acid", decrease = 4, percent = 60 },
+    },
     max_health = 125,
     max_payload_size = 3,
     speed = 0.07,
@@ -183,7 +122,6 @@ data:extend({
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
-    cargo_centered = { 0.0, 0.2 },
     idle = bobmods.logistics.logistic_robot_idle(2),
     idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(2),
     in_motion = bobmods.logistics.logistic_robot_in_motion(2),
@@ -192,6 +130,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-2", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -201,7 +145,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-3" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 8, percent = 85 },
+      { type = "electric", decrease = 12, percent = 75 },
+      { type = "acid", decrease = 8, percent = 65 },
+    },
     max_health = 150,
     max_payload_size = 6,
     speed = 0.09,
@@ -214,7 +162,6 @@ data:extend({
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
-    cargo_centered = { 0.0, 0.2 },
     idle = bobmods.logistics.logistic_robot_idle(3),
     idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(3),
     in_motion = bobmods.logistics.logistic_robot_in_motion(3),
@@ -223,6 +170,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-3", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -232,7 +185,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-4" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 175,
     max_payload_size = 11,
     speed = 0.12,
@@ -245,7 +202,6 @@ data:extend({
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
-    cargo_centered = { 0.0, 0.2 },
     idle = bobmods.logistics.logistic_robot_idle(4),
     idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(4),
     in_motion = bobmods.logistics.logistic_robot_in_motion(4),
@@ -254,6 +210,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-4", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -263,7 +225,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-5" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 175,
     max_payload_size = 11,
     speed = 0.12,
@@ -276,7 +242,6 @@ data:extend({
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
-    cargo_centered = { 0.0, 0.2 },
     idle = bobmods.logistics.logistic_robot_idle(5),
     idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(5),
     in_motion = bobmods.logistics.logistic_robot_in_motion(5),
@@ -285,6 +250,12 @@ data:extend({
     shadow_in_motion = bobmods.logistics.logistic_robot_shadow,
     shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
     shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_with_cargo,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-logistic-robot-5", position = {0, 0}}
+      ]],
+    },
   },
 })
 
@@ -293,22 +264,12 @@ function bobmods.logistics.construction_robot_idle(level)
     filename = "__boblogistics__/graphics/entity/robots/construction-robot-" .. level .. ".png",
     priority = "high",
     line_length = 16,
-    width = 32,
-    height = 36,
+    width = 66,
+    height = 76,
     frame_count = 1,
-    shift = { 0, -0.15625 },
+    shift = util.by_pixel(0, -4.5),
     direction_count = 16,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-construction-robot-" .. level .. ".png",
-      priority = "high",
-      line_length = 16,
-      width = 66,
-      height = 76,
-      frame_count = 1,
-      shift = util.by_pixel(0, -4.5),
-      direction_count = 16,
-      scale = 0.5,
-    },
+    scale = 0.5,
   }
 end
 
@@ -317,24 +278,13 @@ function bobmods.logistics.construction_robot_in_motion(level)
     filename = "__boblogistics__/graphics/entity/robots/construction-robot-" .. level .. ".png",
     priority = "high",
     line_length = 16,
-    width = 32,
-    height = 36,
+    width = 66,
+    height = 76,
     frame_count = 1,
-    shift = { 0, -0.15625 },
+    shift = util.by_pixel(0, -4.5),
     direction_count = 16,
-    y = 36,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-construction-robot-" .. level .. ".png",
-      priority = "high",
-      line_length = 16,
-      width = 66,
-      height = 76,
-      frame_count = 1,
-      shift = util.by_pixel(0, -4.5),
-      direction_count = 16,
-      y = 76,
-      scale = 0.5,
-    },
+    y = 76,
+    scale = 0.5,
   }
 end
 
@@ -343,24 +293,13 @@ function bobmods.logistics.construction_robot_working(level)
     filename = "__boblogistics__/graphics/entity/robots/construction-robot-working-" .. level .. ".png",
     priority = "high",
     line_length = 2,
-    width = 28,
-    height = 36,
+    width = 57,
+    height = 74,
     frame_count = 2,
-    shift = { 0, -0.15625 },
+    shift = util.by_pixel(-0.25, -5),
     direction_count = 16,
     animation_speed = 0.3,
-    hr_version = {
-      filename = "__boblogistics__/graphics/entity/robots/hr-construction-robot-working-" .. level .. ".png",
-      priority = "high",
-      line_length = 2,
-      width = 57,
-      height = 74,
-      frame_count = 2,
-      shift = util.by_pixel(-0.25, -5),
-      direction_count = 16,
-      animation_speed = 0.3,
-      scale = 0.5,
-    },
+    scale = 0.5,
   }
 end
 
@@ -368,22 +307,12 @@ bobmods.logistics.construction_robot_shadow = {
   filename = "__boblogistics__/graphics/entity/robots/construction-robot-shadow.png",
   priority = "high",
   line_length = 16,
-  width = 50,
-  height = 24,
+  width = 104,
+  height = 49,
   frame_count = 1,
-  shift = { 1.09375, 0.59375 },
+  shift = util.by_pixel(33.5, 18.75),
   direction_count = 16,
-  hr_version = {
-    filename = "__boblogistics__/graphics/entity/robots/hr-construction-robot-shadow.png",
-    priority = "high",
-    line_length = 16,
-    width = 104,
-    height = 49,
-    frame_count = 1,
-    shift = util.by_pixel(33.5, 18.75),
-    direction_count = 16,
-    scale = 0.5,
-  },
+  scale = 0.5,
 }
 
 bobmods.logistics.construction_robot_shadow_working = {
@@ -396,28 +325,12 @@ bobmods.logistics.construction_robot_shadow_working = {
   }),
   priority = "high",
   line_length = 16,
-  width = 50,
-  height = 24,
+  width = 104,
+  height = 49,
   frame_count = 2,
-  shift = { 1.09375, 0.59375 },
+  shift = util.by_pixel(33.5, 18.75),
   direction_count = 16,
-  hr_version = {
-    stripes = util.multiplystripes(2, {
-      {
-        filename = "__boblogistics__/graphics/entity/robots/hr-construction-robot-shadow.png",
-        width_in_frames = 16,
-        height_in_frames = 1,
-      },
-    }),
-    priority = "high",
-    line_length = 16,
-    width = 104,
-    height = 49,
-    frame_count = 2,
-    shift = util.by_pixel(33.5, 18.75),
-    direction_count = 16,
-    scale = 0.5,
-  },
+  scale = 0.5,
 }
 
 bobmods.logistics.robot_smoke = {
@@ -496,7 +409,6 @@ bobmods.logistics.robot_sparks = {
 data.raw["construction-robot"]["construction-robot"].icon =
   "__boblogistics__/graphics/icons/robots/construction-robot-1.png"
 data.raw["construction-robot"]["construction-robot"].icon_size = 32
-data.raw["construction-robot"]["construction-robot"].icon_mipmaps = nil
 data.raw["construction-robot"]["construction-robot"].idle = bobmods.logistics.construction_robot_idle(1)
 data.raw["construction-robot"]["construction-robot"].in_motion = bobmods.logistics.construction_robot_in_motion(1)
 data.raw["construction-robot"]["construction-robot"].working = bobmods.logistics.construction_robot_working(1)
@@ -513,7 +425,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-2" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 4, percent = 85 },
+      { type = "electric", decrease = 6, percent = 60 },
+      { type = "acid", decrease = 4, percent = 60 },
+    },
     max_health = 225,
     max_payload_size = 2,
     speed = 0.09,
@@ -527,7 +443,6 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
     working_light = { intensity = 0.8, size = 3 },
-    cargo_centered = { 0.0, 0.2 },
     construction_vector = { 0.30, 0.22 },
     idle = bobmods.logistics.construction_robot_idle(2),
     in_motion = bobmods.logistics.construction_robot_in_motion(2),
@@ -537,6 +452,12 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-2", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -546,7 +467,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-3" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 8, percent = 85 },
+      { type = "electric", decrease = 12, percent = 75 },
+      { type = "acid", decrease = 8, percent = 65 },
+    },
     max_health = 350,
     max_payload_size = 4,
     speed = 0.12,
@@ -560,7 +485,6 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
     working_light = { intensity = 0.8, size = 3 },
-    cargo_centered = { 0.0, 0.2 },
     construction_vector = { 0.30, 0.22 },
     idle = bobmods.logistics.construction_robot_idle(3),
     in_motion = bobmods.logistics.construction_robot_in_motion(3),
@@ -570,6 +494,12 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-3", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -579,7 +509,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-4" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 500,
     max_payload_size = 6,
     speed = 0.15,
@@ -593,7 +527,6 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
     working_light = { intensity = 0.8, size = 3 },
-    cargo_centered = { 0.0, 0.2 },
     construction_vector = { 0.30, 0.22 },
     idle = bobmods.logistics.construction_robot_idle(4),
     in_motion = bobmods.logistics.construction_robot_in_motion(4),
@@ -603,6 +536,12 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-4", position = {0, 0}}
+      ]],
+    },
   },
 
   {
@@ -612,7 +551,11 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-5" },
-    resistances = { { type = "fire", percent = 85 } },
+    resistances = {
+      { type = "fire", decrease = 12, percent = 90 },
+      { type = "electric", decrease = 20, percent = 90 },
+      { type = "acid", decrease = 12, percent = 70 },
+    },
     max_health = 500,
     max_payload_size = 6,
     speed = 0.15,
@@ -626,7 +569,6 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = sounds.flying_robot(),
     working_light = { intensity = 0.8, size = 3 },
-    cargo_centered = { 0.0, 0.2 },
     construction_vector = { 0.30, 0.22 },
     idle = bobmods.logistics.construction_robot_idle(5),
     in_motion = bobmods.logistics.construction_robot_in_motion(5),
@@ -636,5 +578,11 @@ data:extend({
     shadow_working = bobmods.logistics.construction_robot_shadow_working,
     smoke = bobmods.logistics.robot_smoke,
     sparks = bobmods.logistics.robot_sparks,
+    factoriopedia_simulation = {
+      init = [[
+        game.simulation.camera_position = {0, -1}
+        game.surfaces[1].create_entity{name = "bob-construction-robot-5", position = {0, 0}}
+      ]],
+    },
   },
 })

@@ -1,33 +1,45 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-1",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-1.png",
+    name = "bob-vehicle-battery-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-1.png",
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-battery-1",
+    place_as_equipment_result = "bob-vehicle-battery-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-1",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-battery-1",
+    name = "bob-vehicle-battery-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "battery", 5 },
-      { "steel-plate", 10 },
+      { type = "item", name = "battery", amount = 5 },
+      { type = "item", name = "electronic-circuit", amount = 5 },
     },
-    result = "vehicle-battery-1",
+    results = { { type = "item", name = "bob-vehicle-battery-equipment-1", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-1",
+    name = "bob-vehicle-battery-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-1.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-1.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -39,25 +51,21 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "75MJ", --"20MJ",
-      input_flow_limit = "750MW",
-      output_flow_limit = "750MW",
+      buffer_capacity = "20MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-battery-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+    name = "bob-vehicle-battery-equipment-1",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-i-a",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-solar-panel-equipment-1",
+      "bob-vehicle-solar-panel-equipment-1",
       "battery",
     },
     unit = {
@@ -71,7 +79,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-1",
+        recipe = "bob-vehicle-battery-equipment-1",
       },
     },
   },
@@ -80,33 +88,45 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-2.png",
+    name = "bob-vehicle-battery-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-2.png",
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-battery-2",
+    place_as_equipment_result = "bob-vehicle-battery-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-2",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-battery-2",
+    name = "bob-vehicle-battery-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-battery-1", 2 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-vehicle-battery-equipment-1", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
     },
-    result = "vehicle-battery-2",
+    results = { { type = "item", name = "bob-vehicle-battery-equipment-2", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-2",
+    name = "bob-vehicle-battery-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-2.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-2.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -118,26 +138,22 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "120MJ",
-      input_flow_limit = "1200MW",
-      output_flow_limit = "1200MW",
+      buffer_capacity = "50MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-battery-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+    name = "bob-vehicle-battery-equipment-2",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-i-b",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-battery-equipment-1",
-      "advanced-electronics-2",
+      "bob-vehicle-battery-equipment-1",
+      "chemical-science-pack",
     },
     unit = {
       count = 100,
@@ -151,7 +167,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-2",
+        recipe = "bob-vehicle-battery-equipment-2",
       },
     },
   },
@@ -160,33 +176,45 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-3.png",
+    name = "bob-vehicle-battery-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-3.png",
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-battery-3",
+    place_as_equipment_result = "bob-vehicle-battery-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-3",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-battery-3",
+    name = "bob-vehicle-battery-equipment-3",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-battery-2", 2 },
-      { "battery", 5 },
+      { type = "item", name = "bob-vehicle-battery-equipment-2", amount = 2 },
+      { type = "item", name = "battery", amount = 10 },
     },
-    result = "vehicle-battery-3",
+    results = { { type = "item", name = "bob-vehicle-battery-equipment-3", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-3",
+    name = "bob-vehicle-battery-equipment-3",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-3.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-3.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -198,25 +226,21 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "210MJ",
-      input_flow_limit = "2100MW",
-      output_flow_limit = "2100MW",
+      buffer_capacity = "120MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-battery-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+    name = "bob-vehicle-battery-equipment-3",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-i-c",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-battery-equipment-2",
+      "bob-vehicle-battery-equipment-2",
     },
     unit = {
       count = 150,
@@ -230,7 +254,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-3",
+        recipe = "bob-vehicle-battery-equipment-3",
       },
     },
   },
@@ -239,33 +263,45 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-4.png",
+    name = "bob-vehicle-battery-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-4.png",
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-battery-4",
+    place_as_equipment_result = "bob-vehicle-battery-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-4",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-battery-4",
+    name = "bob-vehicle-battery-equipment-4",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-battery-3", 2 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-vehicle-battery-equipment-3", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
     },
-    result = "vehicle-battery-4",
+    results = { { type = "item", name = "bob-vehicle-battery-equipment-4", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-4",
+    name = "bob-vehicle-battery-equipment-4",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-4.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-4.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -277,26 +313,23 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "360MJ",
-      input_flow_limit = "3600MW",
-      output_flow_limit = "3600MW",
+      buffer_capacity = "300MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-battery-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+    name = "bob-vehicle-battery-equipment-4",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-i-d",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-battery-equipment-3",
+      "bob-vehicle-battery-equipment-3",
       "production-science-pack",
+      "processing-unit",
     },
     unit = {
       count = 200,
@@ -311,7 +344,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-4",
+        recipe = "bob-vehicle-battery-equipment-4",
       },
     },
   },
@@ -320,33 +353,45 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-5",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-5.png",
+    name = "bob-vehicle-battery-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-5.png",
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-battery-5",
+    place_as_equipment_result = "bob-vehicle-battery-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-5",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-battery-5",
+    name = "bob-vehicle-battery-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-battery-4", 2 },
-      { "battery", 5 },
+      { type = "item", name = "bob-vehicle-battery-equipment-4", amount = 2 },
+      { type = "item", name = "battery", amount = 20 },
     },
-    result = "vehicle-battery-5",
+    results = { { type = "item", name = "bob-vehicle-battery-equipment-5", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-5",
+    name = "bob-vehicle-battery-equipment-5",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-5.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-5.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -358,25 +403,21 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "600MJ",
-      input_flow_limit = "6000MW",
-      output_flow_limit = "6000MW",
+      buffer_capacity = "750MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-battery-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+    name = "bob-vehicle-battery-equipment-5",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-i-e",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-battery-equipment-4",
+      "bob-vehicle-battery-equipment-4",
     },
     unit = {
       count = 250,
@@ -391,7 +432,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-5",
+        recipe = "bob-vehicle-battery-equipment-5",
       },
     },
   },
@@ -400,33 +441,45 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-battery-6",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-6.png",
+    name = "bob-vehicle-battery-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-6.png",
     icon_size = 32,
-    placed_as_equipment_result = "vehicle-battery-6",
+    place_as_equipment_result = "bob-vehicle-battery-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-c[battery]-6",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+      volume = 1,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+      volume = 0.7,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-battery-6",
+    name = "bob-vehicle-battery-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-battery-5", 2 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-vehicle-battery-equipment-5", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
     },
-    result = "vehicle-battery-6",
+    results = { { type = "item", name = "bob-vehicle-battery-equipment-6", amount = 1 } },
   },
 
   {
     type = "battery-equipment",
-    name = "vehicle-battery-6",
+    name = "bob-vehicle-battery-equipment-6",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-6.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-battery-equipment-6.png",
       width = 32,
       height = 32,
       priority = "medium",
@@ -438,25 +491,21 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "1000MJ",
-      input_flow_limit = "10000MW",
-      output_flow_limit = "10000MW",
+      buffer_capacity = "1800MJ",
       usage_priority = "tertiary",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-battery-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery.png",
+    name = "bob-vehicle-battery-equipment-6",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-battery-equipment.png",
       icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-i-f",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-battery-equipment-5",
+      "bob-vehicle-battery-equipment-5",
       "utility-science-pack",
     },
     unit = {
@@ -473,7 +522,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-battery-6",
+        recipe = "bob-vehicle-battery-equipment-6",
       },
     },
   },

@@ -1,93 +1,101 @@
+if mods["bobplates"] then
+  data.raw.recipe["firearm-magazine"].ingredients = {
+    { type = "item", name = "iron-plate", amount = 1 },
+    { type = "item", name = "coal", amount = 1 },
+    { type = "item", name = "bob-lead-plate", amount = 1 },
+  }
+end
+
 data:extend({
   {
     type = "recipe",
-    name = "bullet-magazine",
+    name = "bob-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { "bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "bullet-magazine",
+    results = { { type = "item", name = "bob-bullet-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "ap-bullet-magazine",
+    name = "bob-ap-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "ap-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-ap-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "ap-bullet-magazine",
+    results = { { type = "item", name = "bob-ap-bullet-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "he-bullet-magazine",
+    name = "bob-he-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "he-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-he-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "he-bullet-magazine",
+    results = { { type = "item", name = "bob-he-bullet-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "flame-bullet-magazine",
+    name = "bob-flame-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "flame-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-flame-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "flame-bullet-magazine",
+    results = { { type = "item", name = "bob-flame-bullet-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "acid-bullet-magazine",
+    name = "bob-acid-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "acid-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-acid-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "acid-bullet-magazine",
+    results = { { type = "item", name = "bob-acid-bullet-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "poison-bullet-magazine",
+    name = "bob-poison-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "poison-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-poison-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "poison-bullet-magazine",
+    results = { { type = "item", name = "bob-poison-bullet-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "electric-bullet-magazine",
+    name = "bob-electric-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "electric-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-electric-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "electric-bullet-magazine",
+    results = { { type = "item", name = "bob-electric-bullet-magazine", amount = 1 } },
   },
 
   {
@@ -96,231 +104,216 @@ data:extend({
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "uranium-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-uranium-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "uranium-rounds-magazine",
+    results = { { type = "item", name = "uranium-rounds-magazine", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "better-shotgun-shell",
+    name = "bob-better-shotgun-shell",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
-      { "shot", 1 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
+      { type = "item", name = "bob-shot", amount = 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "better-shotgun-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-better-shotgun-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-ap-shell",
+    name = "bob-shotgun-ap-shell",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
-      { "steel-plate", 1 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-ap-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-ap-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-electric-shell",
+    name = "bob-shotgun-electric-shell",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
-      { "copper-plate", 1 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
+      { type = "item", name = "copper-plate", amount = 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-electric-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-electric-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-explosive-shell",
+    name = "bob-shotgun-explosive-shell",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
-      { "explosives", 1 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
+      { type = "item", name = "explosives", amount = 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-explosive-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-explosive-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-flame-shell",
+    name = "bob-shotgun-flame-shell",
     category = "chemistry",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
       { type = "fluid", name = "light-oil", amount = 5 },
       { type = "fluid", name = "heavy-oil", amount = 5 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-flame-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-flame-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-acid-shell",
+    name = "bob-shotgun-acid-shell",
     category = "crafting-with-fluid",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-acid-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-acid-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-poison-shell",
+    name = "bob-shotgun-poison-shell",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
-      { "coal", 1 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
+      { type = "item", name = "coal", amount = 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-poison-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-poison-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "shotgun-uranium-shell",
+    name = "bob-shotgun-uranium-shell",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "shotgun-shell-casing", 1 },
-      { "uranium-238", 1 },
-      { "cordite", 1 },
+      { type = "item", name = "bob-shotgun-shell-casing", amount = 1 },
+      { type = "item", name = "uranium-238", amount = 1 },
+      { type = "item", name = "bob-cordite", amount = 1 },
     },
-    result = "shotgun-uranium-shell",
-    result_count = 1,
+    results = { { type = "item", name = "bob-shotgun-uranium-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery",
+    name = "bob-laser-rifle-battery",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery-case", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery-case", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery-ruby",
+    name = "bob-laser-rifle-battery-ruby",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery-ruby",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery-ruby", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery-sapphire",
+    name = "bob-laser-rifle-battery-sapphire",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery-ruby", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery-ruby", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery-sapphire",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery-sapphire", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery-emerald",
+    name = "bob-laser-rifle-battery-emerald",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery-sapphire", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery-sapphire", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery-emerald",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery-emerald", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery-amethyst",
+    name = "bob-laser-rifle-battery-amethyst",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery-emerald", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery-emerald", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery-amethyst",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery-amethyst", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery-topaz",
+    name = "bob-laser-rifle-battery-topaz",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery-amethyst", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery-amethyst", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery-topaz",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery-topaz", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle-battery-diamond",
+    name = "bob-laser-rifle-battery-diamond",
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
     ingredients = {
-      { "laser-rifle-battery-topaz", 1 },
-      { "battery", 4 },
+      { type = "item", name = "bob-laser-rifle-battery-topaz", amount = 1 },
+      { type = "item", name = "battery", amount = 4 },
     },
-    result = "laser-rifle-battery-diamond",
-    result_count = 1,
+    results = { { type = "item", name = "bob-laser-rifle-battery-diamond", amount = 1 } },
   },
 
   {
@@ -329,10 +322,10 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-rocket-warhead", amount = 1 },
     },
-    result = "bob-rocket",
+    results = { { type = "item", name = "bob-rocket", amount = 1 } },
   },
 
   {
@@ -341,10 +334,10 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "piercing-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-piercing-rocket-warhead", amount = 1 },
     },
-    result = "bob-piercing-rocket",
+    results = { { type = "item", name = "bob-piercing-rocket", amount = 1 } },
   },
 
   {
@@ -353,10 +346,10 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "electric-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-electric-rocket-warhead", amount = 1 },
     },
-    result = "bob-electric-rocket",
+    results = { { type = "item", name = "bob-electric-rocket", amount = 1 } },
   },
 
   {
@@ -365,10 +358,10 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "explosive-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-explosive-rocket-warhead", amount = 1 },
     },
-    result = "bob-explosive-rocket",
+    results = { { type = "item", name = "bob-explosive-rocket", amount = 1 } },
   },
 
   {
@@ -377,10 +370,10 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "acid-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-acid-rocket-warhead", amount = 1 },
     },
-    result = "bob-acid-rocket",
+    results = { { type = "item", name = "bob-acid-rocket", amount = 1 } },
   },
 
   {
@@ -389,10 +382,10 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "flame-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-flame-rocket-warhead", amount = 1 },
     },
-    result = "bob-flame-rocket",
+    results = { { type = "item", name = "bob-flame-rocket", amount = 1 } },
   },
 
   {
@@ -401,216 +394,138 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "poison-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-poison-rocket-warhead", amount = 1 },
     },
-    result = "bob-poison-rocket",
+    results = { { type = "item", name = "bob-poison-rocket", amount = 1 } },
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "scatter-cannon-shell",
-    normal = {
-      enabled = false,
-      energy_required = 8,
-      ingredients = {
-        { "steel-plate", 2 },
-        { "plastic-bar", 2 },
-        { "explosives", 1 },
-        { "shot", 5 },
-      },
-      result = "scatter-cannon-shell",
+    name = "bob-scatter-cannon-shell",
+    enabled = false,
+    energy_required = 8,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 2 },
+      { type = "item", name = "plastic-bar", amount = 2 },
+      { type = "item", name = "explosives", amount = 1 },
+      { type = "item", name = "bob-shot", amount = 5 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 8,
-      ingredients = {
-        { "steel-plate", 4 },
-        { "plastic-bar", 4 },
-        { "explosives", 1 },
-        { "shot", 5 },
-      },
-      result = "scatter-cannon-shell",
-    },
+    results = { { type = "item", name = "bob-scatter-cannon-shell", amount = 1 } },
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "fire-capsule",
+    name = "bob-fire-capsule",
     category = "crafting-with-fluid",
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "steel-plate", 3 },
-      { "electronic-circuit", 3 },
+      { type = "item", name = "steel-plate", amount = 3 },
+      { type = "item", name = "electronic-circuit", amount = 3 },
       { type = "fluid", name = "light-oil", amount = 100 },
     },
-    result = "fire-capsule",
+    results = { { type = "item", name = "bob-fire-capsule", amount = 1 } },
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "poison-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "coal", 15 },
-        { "explosives", 3 },
-      },
-      result = "poison-artillery-shell",
+    name = "bob-poison-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 6 },
+      { type = "item", name = "plastic-bar", amount = 6 },
+      { type = "item", name = "coal", amount = 15 },
+      { type = "item", name = "explosives", amount = 3 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "coal", 15 },
-        { "explosives", 3 },
-      },
-      result = "poison-artillery-shell",
-    },
+    results = { { type = "item", name = "bob-poison-artillery-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "fire-artillery-shell",
+    name = "bob-fire-artillery-shell",
     category = "crafting-with-fluid",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 3 },
-        { type = "fluid", name = "light-oil", amount = 150 },
-      },
-      result = "fire-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 6 },
+      { type = "item", name = "plastic-bar", amount = 6 },
+      { type = "item", name = "explosives", amount = 3 },
+      { type = "fluid", name = "light-oil", amount = 150 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 3 },
-        { type = "fluid", name = "light-oil", amount = 150 },
-      },
-      result = "fire-artillery-shell",
-    },
+    results = { { type = "item", name = "bob-fire-artillery-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "explosive-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 18 },
-      },
-      result = "explosive-artillery-shell",
+    name = "bob-explosive-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 6 },
+      { type = "item", name = "plastic-bar", amount = 6 },
+      { type = "item", name = "explosives", amount = 18 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 18 },
-      },
-      result = "explosive-artillery-shell",
-    },
+    results = { { type = "item", name = "bob-explosive-artillery-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "distractor-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 3 },
-        { "distractor-capsule", 5 },
-      },
-      result = "distractor-artillery-shell",
+    name = "bob-distractor-artillery-shell",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 6 },
+      { type = "item", name = "plastic-bar", amount = 6 },
+      { type = "item", name = "explosives", amount = 3 },
+      { type = "item", name = "distractor-capsule", amount = 5 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 3 },
-        { "distractor-capsule", 5 },
-      },
-      result = "distractor-artillery-shell",
-    },
+    results = { { type = "item", name = "bob-distractor-artillery-shell", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "atomic-artillery-shell",
-    normal = {
-      enabled = false,
-      energy_required = 50,
-      ingredients = {
-        { "steel-plate", 6 },
-        { "plastic-bar", 6 },
-        { "explosives", 15 },
-        { "uranium-235", 30 },
-      },
-      result = "atomic-artillery-shell",
+    name = "bob-atomic-artillery-shell",
+    enabled = false,
+    energy_required = 50,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 6 },
+      { type = "item", name = "plastic-bar", amount = 6 },
+      { type = "item", name = "explosives", amount = 15 },
+      { type = "item", name = "uranium-235", amount = 30 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 50,
-      ingredients = {
-        { "steel-plate", 12 },
-        { "plastic-bar", 12 },
-        { "explosives", 15 },
-        { "uranium-235", 30 },
-      },
-      result = "atomic-artillery-shell",
-    },
+    results = { { type = "item", name = "bob-atomic-artillery-shell", amount = 1 } },
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "plasma-bullet-magazine",
+    name = "bob-plasma-bullet-magazine",
     subgroup = "bob-ammo",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { "plasma-bullet", 5 },
-      { "magazine", 1 },
+      { type = "item", name = "bob-plasma-bullet", amount = 5 },
+      { type = "item", name = "bob-magazine", amount = 1 },
     },
-    result = "plasma-bullet-magazine",
+    results = { { type = "item", name = "bob-plasma-bullet-magazine", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "shotgun-plasma-shell",
+    name = "bob-shotgun-plasma-shell",
     subgroup = "bob-ammo",
     energy_required = 0.6,
     enabled = false,
     ingredients = {},
-    result = "shotgun-plasma-shell",
-    result_count = 6,
+    results = { { type = "item", name = "bob-shotgun-plasma-shell", amount = 6 } },
   },
 
   {
@@ -619,9 +534,9 @@ data:extend({
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { "rocket-body", 1 },
-      { "plasma-rocket-warhead", 1 },
+      { type = "item", name = "bob-rocket-body", amount = 1 },
+      { type = "item", name = "bob-plasma-rocket-warhead", amount = 1 },
     },
-    result = "bob-plasma-rocket",
+    results = { { type = "item", name = "bob-plasma-rocket", amount = 1 } },
   },
 })

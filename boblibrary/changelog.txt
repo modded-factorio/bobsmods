@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Changes:
+    - Update for Factorio 2.0 #189, #208
+      - Removed difficulty functions
+      - Removed bobmods.lib.module
+      - Added function bobmods.lib.recipe.allow_productivity
+      - Added function bobmods.lib.recipe.disallow_productivity
+      - Removed redundant prerequisites check
+      - Added function bobmods.lib.recipe.update_recycling_recipe_icon
+      - Added function bobmods.lib.recipe.update_recycling_recipe_single
+      - Added function bobmods.lib.recipe.update_recycling_recipe
+      - Added function bobmods.lib.recipe.update_recycling_recipe_self_recipe
+      - Added function bobmods.lib.recipe.update_recycling_recipe_from_recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023
   Changes:

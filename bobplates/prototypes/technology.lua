@@ -1,18 +1,20 @@
 data:extend({
   {
     type = "technology",
-    name = "electrolysis-1",
+    name = "bob-electrolysis-1",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electrolyser",
+        recipe = "bob-electrolyser",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-electrolysis",
+        recipe = "bob-water-electrolysis",
       },
       {
         type = "unlock-recipe",
@@ -35,21 +37,17 @@ data:extend({
 
   {
     type = "technology",
-    name = "electrolysis-2",
+    name = "bob-electrolysis-2",
     icon = "__bobplates__/graphics/icons/technology/electrolysis.png",
     icon_size = 128,
     prerequisites = {
-      "steel-processing",
-      "logistic-science-pack",
+      "bob-chemical-processing-1",
+      "fluid-handling",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "salt-water-electrolysis",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "storage-tank",
+        recipe = "bob-salt-water-electrolysis",
       },
     },
     unit = {
@@ -65,22 +63,28 @@ data:extend({
 
   {
     type = "technology",
-    name = "chemical-processing-1",
+    name = "bob-chemical-processing-1",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "stone-chemical-furnace",
+        recipe = "bob-stone-chemical-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "salt",
+        recipe = "bob-salt",
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon",
+        recipe = "bob-carbon",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bob-carbon-from-wood",
       },
     },
     unit = {
@@ -95,12 +99,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "chemical-processing-2",
+    name = "bob-chemical-processing-2",
     icon = "__bobplates__/graphics/icons/technology/chemical-processing.png",
     icon_size = 128,
     prerequisites = {
-      "electrolysis-2",
-      "chemical-processing-1",
+      "bob-electrolysis-2",
+      "bob-chemical-processing-1",
     },
     effects = {
       {
@@ -109,19 +113,19 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "hydrogen-chloride",
+        recipe = "bob-hydrogen-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "calcium-chloride",
+        recipe = "bob-calcium-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "ferric-chloride-solution",
+        recipe = "bob-ferric-chloride-solution",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-from-hydrogen",
+        recipe = "bob-solid-fuel-from-hydrogen",
       },
     },
     unit = {
@@ -137,28 +141,27 @@ data:extend({
 
   {
     type = "technology",
-    name = "steel-chemical-furnace",
+    name = "bob-steel-chemical-furnace",
     icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
         icon_size = 64,
-        scale = 2,
-        shift = { -64, -64 },
+        scale = 1,
+        shift = { -48, -48 },
       },
     },
     prerequisites = {
-      "chemical-processing-1",
+      "bob-chemical-processing-1",
       "advanced-material-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "steel-chemical-furnace",
+        recipe = "bob-steel-chemical-furnace",
       },
     },
     unit = {
@@ -174,28 +177,27 @@ data:extend({
 
   {
     type = "technology",
-    name = "electric-chemical-furnace",
+    name = "bob-electric-chemical-furnace",
     icons = {
       {
-        icon = "__base__/graphics/technology/advanced-material-processing.png",
+        icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/chemistry.png",
         icon_size = 64,
-        scale = 2,
-        shift = { -64, -64 },
+        scale = 1,
+        shift = { -32, -32 },
       },
     },
     prerequisites = {
-      "chemical-processing-1",
+      "bob-chemical-processing-1",
       "advanced-material-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-chemical-furnace",
+        recipe = "bob-electric-chemical-furnace",
       },
     },
     unit = {
@@ -212,18 +214,20 @@ data:extend({
 
   {
     type = "technology",
-    name = "alloy-processing",
+    name = "bob-alloy-processing",
     icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
     icon_size = 128,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "stone-mixing-furnace",
+        recipe = "bob-stone-mixing-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "bronze-alloy",
+        recipe = "bob-bronze-alloy",
       },
     },
     unit = {
@@ -238,27 +242,27 @@ data:extend({
 
   {
     type = "technology",
-    name = "steel-mixing-furnace",
+    name = "bob-steel-mixing-furnace",
     icons = {
       {
         icon = "__base__/graphics/technology/advanced-material-processing.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
         icon_size = 128,
-        shift = { -64, -64 },
+        scale = 0.5,
+        shift = { -48, -48 },
       },
     },
     prerequisites = {
-      "alloy-processing",
+      "bob-alloy-processing",
       "advanced-material-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "steel-mixing-furnace",
+        recipe = "bob-steel-mixing-furnace",
       },
     },
     unit = {
@@ -274,27 +278,27 @@ data:extend({
 
   {
     type = "technology",
-    name = "electric-mixing-furnace",
+    name = "bob-electric-mixing-furnace",
     icons = {
       {
-        icon = "__base__/graphics/technology/advanced-material-processing.png",
+        icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         icon_size = 256,
-        icon_mipmaps = 4,
       },
       {
         icon = "__bobplates__/graphics/icons/technology/alloy-processing.png",
         icon_size = 128,
-        shift = { -64, -64 },
+        scale = 0.5,
+        shift = { -32, -32 },
       },
     },
     prerequisites = {
-      "alloy-processing",
+      "bob-alloy-processing",
       "advanced-material-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-mixing-furnace",
+        recipe = "bob-electric-mixing-furnace",
       },
     },
     unit = {
@@ -311,25 +315,25 @@ data:extend({
 
   {
     type = "technology",
-    name = "nitrogen-processing",
+    name = "bob-nitrogen-processing",
     icon = "__bobplates__/graphics/icons/technology/nitrogen-processing.png",
     icon_size = 128,
     prerequisites = {
-      "chemical-processing-2",
-      "air-compressor-1",
+      "bob-chemical-processing-2",
+      "bob-air-compressor-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nitrogen",
+        recipe = "bob-nitrogen",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitrogen-dioxide",
+        recipe = "bob-nitrogen-dioxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitric-acid",
+        recipe = "bob-nitric-acid",
       },
     },
     unit = {
@@ -345,27 +349,27 @@ data:extend({
 
   {
     type = "technology",
-    name = "ceramics",
+    name = "bob-ceramics",
     icon = "__bobplates__/graphics/icons/technology/ceramics.png",
     icon_size = 64,
     prerequisites = {
-      "nitrogen-processing",
-      "silicon-processing",
+      "bob-nitrogen-processing",
+      "bob-silicon-processing",
       "chemical-science-pack",
       "lubricant",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-nitride",
+        recipe = "bob-silicon-nitride",
       },
       {
         type = "unlock-recipe",
-        recipe = "ceramic-bearing-ball",
+        recipe = "bob-ceramic-bearing-ball",
       },
       {
         type = "unlock-recipe",
-        recipe = "ceramic-bearing",
+        recipe = "bob-ceramic-bearing",
       },
     },
     unit = {
@@ -382,14 +386,16 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-1",
+    name = "bob-air-compressor-1",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump",
+        recipe = "bob-air-pump",
       },
       {
         type = "unlock-recipe",
@@ -408,19 +414,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-2",
+    name = "bob-air-compressor-2",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
-      "air-compressor-1",
+      "bob-air-compressor-1",
       "steel-processing",
-      "alloy-processing",
-      "advanced-electronics",
+      "bob-alloy-processing",
+      "advanced-circuit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-2",
+        recipe = "bob-air-pump-2",
       },
     },
     unit = {
@@ -436,19 +442,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-3",
+    name = "bob-air-compressor-3",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
-      "air-compressor-2",
-      "zinc-processing",
-      "titanium-processing",
-      "advanced-electronics-2",
+      "bob-air-compressor-2",
+      "bob-zinc-processing",
+      "bob-titanium-processing",
+      "processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-3",
+        recipe = "bob-air-pump-3",
       },
     },
     unit = {
@@ -465,19 +471,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "air-compressor-4",
+    name = "bob-air-compressor-4",
     icon = "__bobplates__/graphics/icons/liquid-air.png",
     icon_size = 32,
     prerequisites = {
-      "air-compressor-3",
-      "nitinol-processing",
+      "bob-air-compressor-3",
+      "bob-nitinol-processing",
       "electric-engine",
-      "advanced-electronics-3",
+      "bob-advanced-processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "air-pump-4",
+        recipe = "bob-air-pump-4",
       },
     },
     unit = {
@@ -495,15 +501,16 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-1",
+    name = "bob-water-bore-1",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
-    prerequisites = {},
+    prerequisites = {
+      "automation-science-pack",
+    },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump",
+        recipe = "bob-water-pump",
       },
     },
     unit = {
@@ -518,20 +525,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-2",
+    name = "bob-water-bore-2",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {
-      "water-bore-1",
+      "bob-water-bore-1",
       "steel-processing",
-      "alloy-processing",
-      "advanced-electronics",
+      "bob-alloy-processing",
+      "advanced-circuit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-2",
+        recipe = "bob-water-pump-2",
       },
     },
     unit = {
@@ -547,20 +553,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-3",
+    name = "bob-water-bore-3",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {
-      "water-bore-2",
-      "zinc-processing",
-      "titanium-processing",
-      "advanced-electronics-2",
+      "bob-water-bore-2",
+      "bob-zinc-processing",
+      "bob-titanium-processing",
+      "processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-3",
+        recipe = "bob-water-pump-3",
       },
     },
     unit = {
@@ -577,20 +582,19 @@ data:extend({
 
   {
     type = "technology",
-    name = "water-bore-4",
+    name = "bob-water-bore-4",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     prerequisites = {
-      "water-bore-3",
-      "nitinol-processing",
+      "bob-water-bore-3",
+      "bob-nitinol-processing",
       "electric-engine",
-      "advanced-electronics-3",
+      "bob-advanced-processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-pump-4",
+        recipe = "bob-water-pump-4",
       },
     },
     unit = {
@@ -608,18 +612,18 @@ data:extend({
 
   {
     type = "technology",
-    name = "gas-canisters",
+    name = "bob-gas-canisters",
     icon = "__bobplates__/graphics/icons/technology/gas-canister.png",
     icon_size = 64,
     prerequisites = {
-      "air-compressor-1",
+      "bob-air-compressor-1",
       "logistic-science-pack",
       "steel-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-canister",
+        recipe = "bob-gas-canister",
       },
     },
     unit = {
@@ -635,18 +639,18 @@ data:extend({
 
   {
     type = "technology",
-    name = "fluid-barrel-processing",
+    name = "bob-fluid-barrel-processing",
     icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
     icon_size = 64,
     prerequisites = {
-      "water-bore-1",
+      "bob-water-bore-1",
       "logistic-science-pack",
       "steel-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "empty-barrel",
+        recipe = "barrel",
       },
     },
     unit = {
@@ -662,17 +666,17 @@ data:extend({
 
   {
     type = "technology",
-    name = "fluid-canister-processing",
+    name = "bob-fluid-canister-processing",
     icon = "__bobplates__/graphics/icons/technology/fluid-canister.png",
     icon_size = 720,
     prerequisites = {
-      "water-bore-1",
+      "bob-water-bore-1",
       "plastics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "empty-canister",
+        recipe = "bob-empty-canister",
       },
     },
     unit = {
@@ -688,12 +692,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "grinding",
+    name = "bob-grinding",
     icon = "__bobplates__/graphics/icons/technology/grinding.png",
     icon_size = 64,
     prerequisites = {
-      "chemical-processing-1",
-      "silicon-processing",
+      "bob-chemical-processing-1",
+      "bob-silicon-processing",
     },
     unit = {
       count = 50,
@@ -706,11 +710,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-carbide",
+        recipe = "bob-silicon-carbide",
       },
       {
         type = "unlock-recipe",
-        recipe = "grinding-wheel",
+        recipe = "bob-grinding-wheel",
       },
     },
     order = "b-c-b",
@@ -718,12 +722,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "polishing",
+    name = "bob-polishing",
     icon = "__bobplates__/graphics/icons/technology/polishing.png",
     icon_size = 64,
     prerequisites = {
-      "oil-processing",
-      "aluminium-processing",
+      "bob-aluminium-processing",
+      "plastics",
     },
     unit = {
       count = 75,
@@ -736,11 +740,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "polishing-compound",
+        recipe = "bob-polishing-compound",
       },
       {
         type = "unlock-recipe",
-        recipe = "polishing-wheel",
+        recipe = "bob-polishing-wheel",
       },
     },
     order = "b-c-c",
@@ -748,7 +752,7 @@ data:extend({
 
   {
     type = "technology",
-    name = "gem-processing-1",
+    name = "bob-gem-processing-1",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
@@ -792,12 +796,12 @@ data:extend({
 
   {
     type = "technology",
-    name = "gem-processing-2",
+    name = "bob-gem-processing-2",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
-      "gem-processing-1",
-      "grinding",
+      "bob-gem-processing-1",
+      "bob-grinding",
       "automation-2",
     },
     unit = {
@@ -839,20 +843,18 @@ data:extend({
 
   {
     type = "technology",
-    name = "gem-processing-3",
+    name = "bob-gem-processing-3",
     icon = "__bobplates__/graphics/icons/technology/gems.png",
     icon_size = 64,
     prerequisites = {
-      "gem-processing-2",
-      "polishing",
-      --      "chemical-science-pack", --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
+      "bob-gem-processing-2",
+      "bob-polishing",
     },
     unit = {
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        --        {"chemical-science-pack", 1}, --removed for balance, to allow lowest tier laser weapons to not be locked behind chemical science.
       },
       time = 30,
     },
@@ -887,11 +889,11 @@ data:extend({
 
   {
     type = "technology",
-    name = "void-fluid",
+    name = "bob-void-fluid",
     icon = "__bobplates__/graphics/icons/technology/void.png",
     icon_size = 128,
     prerequisites = {
-      "air-compressor-1",
+      "bob-air-compressor-1",
     },
     unit = {
       count = 30,
@@ -903,25 +905,24 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "void-pump",
+        recipe = "bob-void-pump",
       },
     },
-    order = "void-fluid",
   },
 
   {
     type = "technology",
-    name = "advanced-electronics-3",
+    name = "bob-advanced-processing-unit",
     icon = "__bobplates__/graphics/icons/technology/advanced-electronics-3.png",
     icon_size = 128,
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "advanced-processing-unit",
+        recipe = "bob-advanced-processing-unit",
       },
     },
     unit = {
@@ -939,14 +940,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "battery-2",
+    name = "bob-battery-2",
+    localised_name = { "", { "technology-name.battery" }, " 2" },
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "battery",
-      "lithium-processing",
-      "cobalt-processing",
+      "bob-lithium-processing",
+      "bob-cobalt-processing",
       "chemical-science-pack",
     },
     unit = {
@@ -961,11 +962,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lithium-cobalt-oxide",
+        recipe = "bob-lithium-cobalt-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "lithium-ion-battery",
+        recipe = "bob-lithium-ion-battery",
       },
     },
     order = "b-c-a",
@@ -973,15 +974,15 @@ data:extend({
 
   {
     type = "technology",
-    name = "battery-3",
+    name = "bob-battery-3",
+    localised_name = { "", { "technology-name.battery" }, " 3" },
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "battery-2",
-      "nitrogen-processing",
-      "electrolysis-2",
-      "zinc-processing",
+      "bob-battery-2",
+      "bob-nitrogen-processing",
+      "bob-electrolysis-2",
+      "bob-zinc-processing",
       "production-science-pack",
     },
     unit = {
@@ -997,15 +998,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-oxide",
+        recipe = "bob-silver-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "silver-nitrate",
+        recipe = "bob-silver-nitrate",
       },
       {
         type = "unlock-recipe",
-        recipe = "silver-zinc-battery",
+        recipe = "bob-silver-zinc-battery",
       },
     },
     order = "b-c-b",

@@ -1,27 +1,16 @@
 data:extend({
   {
     type = "recipe",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     category = "crafting-with-fluid",
-    normal = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "advanced-circuit", 20 },
-        { "processing-unit", 2 },
-        { type = "fluid", name = "sulfuric-acid", amount = 20 },
-      },
-      result = "advanced-processing-unit",
+    enabled = false,
+    energy_required = 15,
+    ingredients = {
+      { type = "item", name = "advanced-circuit", amount = 20 },
+      { type = "item", name = "processing-unit", amount = 2 },
+      { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 15,
-      ingredients = {
-        { "advanced-circuit", 20 },
-        { "processing-unit", 2 },
-        { type = "fluid", name = "sulfuric-acid", amount = 40 },
-      },
-      result = "advanced-processing-unit",
-    },
+    results = { { type = "item", name = "bob-advanced-processing-unit", amount = 1 } },
+    allow_productivity = true,
   },
 })

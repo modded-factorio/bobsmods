@@ -3,6 +3,47 @@ if not bobmods.lib.resource then
 end
 
 bobmods.lib.resource_autoplace = require("resource-autoplace")
+local sounds = require("__base__.prototypes.entity.sounds")
+
+local stone_driving_sound = {
+  sound = {
+    filename = "__base__/sound/driving/vehicle-surface-stone.ogg",
+    volume = 0.8,
+    advanced_volume_control = {
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = { control = 0.5, volume_percentage = 0.0 },
+          to = {
+            1.5,
+            100.0,
+          },
+        },
+      },
+    },
+  },
+  fade_ticks = 6,
+}
+
+local oil_driving_sound = {
+  sound = {
+    filename = "__base__/sound/driving/vehicle-surface-oil.ogg",
+    volume = 0.8,
+    advanced_volume_control = {
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = { control = 0.5, volume_percentage = 0.0 },
+          to = {
+            1.5,
+            100.0,
+          },
+        },
+      },
+    },
+  },
+  fade_ticks = 6,
+}
 
 function bobmods.lib.resource.create_autoplace(inputs)
   local autoplace = { control = inputs.control or inputs.name }
@@ -63,7 +104,7 @@ end
 function bobmods.lib.resource.add_result(resource, item_in)
   local item = bobmods.lib.item.result(item_in)
   if item and type(resource) == "string" and data.raw.resource[resource] and bobmods.lib.item.get_type(item.name) then
-    bobmods.lib.result_check(data.raw.resource[resource].minable)
+    bobmods.lib.minable_result_check(data.raw.resource[resource].minable)
     bobmods.lib.item.add_new(data.raw.resource[resource].minable.results, item)
   else
     log(debug.traceback())
@@ -73,7 +114,7 @@ end
 
 function bobmods.lib.resource.remove_result(resource, item)
   if type(resource) == "string" and type(item) == "string" and data.raw.resource[resource] then
-    bobmods.lib.result_check(data.raw.resource[resource].minable)
+    bobmods.lib.minable_result_check(data.raw.resource[resource].minable)
     bobmods.lib.item.remove(data.raw.resource[resource].minable.results, item)
   else
     log(debug.traceback())
@@ -94,11 +135,11 @@ end
 
 function bobmods.lib.resource.sprite(inputs)
   local filename
-  local width = 38
-  local height = 38
-  local frame_count = 4
+  local width = 128
+  local height = 128
+  local frame_count = 8
   local variation_count = 8
-  local hr_version = nil
+  local scale = 0.5
   if inputs.width then
     width = inputs.width
   end
@@ -111,29 +152,26 @@ function bobmods.lib.resource.sprite(inputs)
   if inputs.variation_count then
     variation_count = inputs.variation_count
   end
-  if inputs.hr_version then
-    hr_version = bobmods.lib.resource.hr_sprite(inputs.hr_version)
+  if inputs.scale then
+    scale = inputs.scale
   end
   if inputs.filename then
     filename = inputs.filename
   else
     filename = "__boblibrary__/graphics/entity/ores/ore-1.png"
-    width = 64
-    height = 64
+    width = 128
+    height = 128
     frame_count = 8
     variation_count = 8
-    hr_version = bobmods.lib.resource.hr_sprite({ sheet = 1, tint = inputs.tint })
+    scale = 0.5
     if inputs.sheet == 2 then
       filename = "__boblibrary__/graphics/entity/ores/ore-2.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 2, tint = inputs.tint })
     end
     if inputs.sheet == 3 then
       filename = "__boblibrary__/graphics/entity/ores/ore-3.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 3, tint = inputs.tint })
     end
     if inputs.sheet == 4 then
       filename = "__boblibrary__/graphics/entity/ores/ore-4.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 4, tint = inputs.tint })
     end
     if inputs.sheet == 5 then
       filename = "__boblibrary__/graphics/entity/liquid.png"
@@ -141,11 +179,9 @@ function bobmods.lib.resource.sprite(inputs)
       height = 61
       frame_count = 4
       variation_count = 1
-      hr_version = nil
     end
     if inputs.sheet == 6 then
       filename = "__boblibrary__/graphics/entity/ores/ore-5.png"
-      hr_version = bobmods.lib.resource.hr_sprite({ sheet = 5, tint = inputs.tint })
     end
   end
 
@@ -157,130 +193,16 @@ function bobmods.lib.resource.sprite(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
-    scale = inputs.scale or 1,
+    scale = scale,
   }
-  if hr_version then
-    sheet.hr_version = hr_version
-  end
 
   return {
     sheet = sheet,
-  }
-end
-
-function bobmods.lib.resource.hr_sprite(inputs)
-  local filename
-  local width = 128
-  local height = 128
-  local frame_count = 8
-  local variation_count = 8
-  local scale = 0.5
-  if inputs.width then
-    width = inputs.width
-  end
-  if inputs.height then
-    height = inputs.height
-  end
-  if inputs.frame_count then
-    frame_count = inputs.frame_count
-  end
-  if inputs.variation_count then
-    variation_count = inputs.variation_count
-  end
-  if inputs.scale then
-    scale = inputs.scale
-  end
-  if inputs.filename then
-    filename = inputs.filename
-  else
-    filename = "__boblibrary__/graphics/entity/ores/hr-ore-1.png"
-    width = 128
-    height = 128
-    frame_count = 8
-    variation_count = 8
-    scale = 0.5
-    if inputs.sheet == 2 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-2.png"
-    end
-    if inputs.sheet == 3 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-3.png"
-    end
-    if inputs.sheet == 4 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-4.png"
-    end
-    if inputs.sheet == 5 then
-      filename = "__boblibrary__/graphics/entity/ores/hr-ore-5.png"
-    end
-  end
-
-  return {
-    filename = filename,
-    priority = "extra-high",
-    width = width,
-    height = height,
-    frame_count = frame_count,
-    variation_count = variation_count,
-    tint = inputs.tint,
-    scale = scale,
   }
 end
 
 function bobmods.lib.resource.effect(inputs)
   local filename
-  local width = 64
-  local height = 64
-  local frame_count = 8
-  local variation_count = 8
-  local hr_version = nil
-  if inputs.width then
-    width = inputs.width
-  end
-  if inputs.height then
-    height = inputs.height
-  end
-  if inputs.frame_count then
-    frame_count = inputs.frame_count
-  end
-  if inputs.variation_count then
-    variation_count = inputs.variation_count
-  end
-  if inputs.hr_version then
-    hr_version = bobmods.lib.resource.hr_effect(inputs.hr_version)
-  end
-  if inputs.filename then
-    filename = inputs.filename
-  else
-    filename = "__boblibrary__/graphics/entity/ores/ore-5-glow.png"
-    width = 64
-    height = 64
-    frame_count = 8
-    variation_count = 8
-    hr_version = bobmods.lib.resource.hr_effect({ sheet = 5, tint = inputs.tint })
-  end
-
-  local sheet = {
-    filename = filename,
-    priority = "extra-high",
-    width = width,
-    height = height,
-    frame_count = frame_count,
-    variation_count = variation_count,
-    tint = inputs.tint,
-    scale = inputs.scale or 1,
-    blend_mode = "additive",
-    flags = { "light" },
-  }
-  if hr_version then
-    sheet.hr_version = hr_version
-  end
-
-  return {
-    sheet = sheet,
-  }
-end
-
-function bobmods.lib.resource.hr_effect(inputs)
-  local filename
   local width = 128
   local height = 128
   local frame_count = 8
@@ -304,7 +226,7 @@ function bobmods.lib.resource.hr_effect(inputs)
   if inputs.filename then
     filename = inputs.filename
   else
-    filename = "__boblibrary__/graphics/entity/ores/hr-ore-5-glow.png"
+    filename = "__boblibrary__/graphics/entity/ores/ore-5-glow.png"
     width = 128
     height = 128
     frame_count = 8
@@ -312,7 +234,7 @@ function bobmods.lib.resource.hr_effect(inputs)
     scale = 0.5
   end
 
-  return {
+  local sheet = {
     filename = filename,
     priority = "extra-high",
     width = width,
@@ -320,9 +242,13 @@ function bobmods.lib.resource.hr_effect(inputs)
     frame_count = frame_count,
     variation_count = variation_count,
     tint = inputs.tint,
+    scale = scale,
     blend_mode = "additive",
     flags = { "light" },
-    scale = scale,
+  }
+
+  return {
+    sheet = sheet,
   }
 end
 
@@ -334,12 +260,14 @@ function bobmods.lib.resource.create_item(inputs)
       subgroup = inputs.subgroup or "raw-resource",
       order = "b-d[" .. inputs.name .. "]",
       stack_size = inputs.stack_size or 200,
+      drop_sound = inputs.drop_sound,
+      inventory_move_sound = inputs.inventory_move_sound,
+      pick_sound = inputs.pick_sound,
     },
   })
   if inputs.icon then
     data.raw.item[inputs.name].icon = inputs.icon
     data.raw.item[inputs.name].icon_size = inputs.icon_size or 32
-    data.raw.item[inputs.name].icon_mipmaps = inputs.icon_mipmaps
   elseif inputs.icons then
     data.raw.item[inputs.name].icon = inputs.icons
   else
@@ -398,9 +326,11 @@ function bobmods.lib.resource.create(inputs)
       name = inputs.name,
       flags = { "placeable-neutral" },
       category = inputs.category,
+      subgroup = inputs.subgroup,
       order = "b-d-" .. inputs.name,
       minimum = minimum,
       normal = normal,
+      highlight = inputs.highlight,
       resource_patch_search_radius = inputs.resource_patch_search_radius,
       infinite = inputs.infinite,
       collision_box = inputs.collision_box or { { -0.1, -0.1 }, { 0.1, 0.1 } },
@@ -413,8 +343,19 @@ function bobmods.lib.resource.create(inputs)
         mining_particle = inputs.particle,
         mining_time = inputs.mining_time or 2,
       },
+      factoriopedia_simulation = { init = make_resource(inputs.name) },
     },
   })
+  if inputs.walking_sound == "oil" then
+    data.raw.resource[inputs.name].walking_sound = sounds.oil
+  else
+    data.raw.resource[inputs.name].walking_sound = sounds.ore
+  end
+  if inputs.driving_sound == "oil" then
+    data.raw.resource[inputs.name].driving_sound = oil_driving_sound
+  else
+    data.raw.resource[inputs.name].driving_sound = stone_driving_sound
+  end
   if inputs.disable_map_grid then
     data.raw.resource[inputs.name].map_grid = false
   end
@@ -425,7 +366,6 @@ function bobmods.lib.resource.create(inputs)
   if inputs.icon then
     data.raw.resource[inputs.name].icon = inputs.icon
     data.raw.resource[inputs.name].icon_size = inputs.icon_size or 32
-    data.raw.resource[inputs.name].icon_mipmaps = inputs.icon_mipmaps
   else
     data.raw.resource[inputs.name].icons = bobmods.lib.resource.create_icon(inputs)
   end
@@ -622,11 +562,38 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         tint = inputs.tint,
         create_variations = inputs.item.create_variations,
       }
+      if inputs.drop_sound then
+        if inputs.drop_sound.filename and inputs.drop_sound.volume then
+          item.drop_sound = inputs.drop_sound
+        else
+          log(inputs.name .. " has incorrectly formatted sound specifications")
+        end
+      else
+        item.drop_sound = { filename = "__base__/sound/item/resource-inventory-move.ogg", volume = 0.8 }
+      end
+      if inputs.inventory_move_sound then
+        if inputs.inventory_move_sound.filename and inputs.inventory_move_sound.volume then
+          item.inventory_move_sound = inputs.inventory_move_sound
+        else
+          log(inputs.name .. " has incorrectly formatted sound specifications")
+        end
+      else
+        item.inventory_move_sound = { filename = "__base__/sound/item/resource-inventory-move.ogg", volume = 0.8 }
+      end
+      if inputs.pick_sound then
+        if inputs.pick_sound.filename and inputs.pick_sound.volume then
+          item.pick_sound = inputs.pick_sound
+        else
+          log(inputs.name .. " has incorrectly formatted sound specifications")
+        end
+      else
+        item.pick_sound = { filename = "__base__/sound/item/resource-inventory-pickup.ogg", volume = 0.6 }
+      end
       if inputs.sprite then
         item.sprite = inputs.sprite
       end
       bobmods.lib.resource.create_item(item)
-      table.insert(inputs.items, { name = inputs.name })
+      table.insert(inputs.items, { name = inputs.name, amount = 1 })
     end
 
     if inputs.autoplace == nil then
@@ -690,16 +657,27 @@ function bobmods.lib.resource.generate_updates_stage(inputs)
     bobmods.lib.resource.generate_autoplace_control(control)
     data.raw["autoplace-control"][control].localised_name =
       { "", "[entity=" .. inputs.name .. "] ", { "entity-name." .. inputs.name } }
-    if not data.raw["noise-layer"][inputs.name] and inputs.autoplace ~= "control-only" then
-      data:extend({
-        {
-          type = "noise-layer",
-          name = inputs.name,
-        },
-      })
-    end
+
     if inputs.autoplace ~= "control-only" then
       data.raw.resource[inputs.name].autoplace = inputs.autoplace
+    end
+
+    if data.raw["autoplace-control"][inputs.name] then
+      if inputs.planets and type(inputs.planets) == "table" then
+        for i, world in pairs(inputs.planets) do
+          if type(world) == "string" and data.raw.planet[world] then
+            data.raw.planet[world].map_gen_settings.autoplace_controls[inputs.name] = {}
+            data.raw.planet[world].map_gen_settings.autoplace_settings.entity.settings[inputs.name] = {}
+            --log(inputs.name .. " added to planet " .. world)
+          end
+        end
+      else
+        log(inputs.name .. " default add to base planet")
+        data.raw.planet.nauvis.map_gen_settings.autoplace_controls[inputs.name] = {}
+        data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings[inputs.name] = {}
+      end
+    else
+      log(inputs.name .. " autoplace control not found")
     end
   end
 end

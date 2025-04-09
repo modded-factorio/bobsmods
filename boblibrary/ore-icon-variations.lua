@@ -410,7 +410,7 @@ function bobmods.lib.resource.get_icon_variation_single(type, tint)
   local piece = math.random(icon_piece_counts[type])
   local width = icon_piece_sizes[type][piece].width
   local height = icon_piece_sizes[type][piece].height
-  local scale = 0.5 * math.min(32.0 / width, 32.0 / height, 1.0)
+  local scale = math.min(32.0 / width, 32.0 / height, 1.0)
   --  if width > 32 or height > 32 then
   --  end
   return {

@@ -7,24 +7,23 @@ if settings.startup["bobmods-power-solar"].value == true then
       localised_description = { "technology-description.solar-energy" },
       icon = "__base__/graphics/technology/solar-energy.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-small-2",
+          recipe = "bob-solar-panel-small-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-2",
+          recipe = "bob-solar-panel-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-large-2",
+          recipe = "bob-solar-panel-large-2",
         },
       },
       prerequisites = {
         "solar-energy",
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       unit = {
@@ -46,24 +45,23 @@ if settings.startup["bobmods-power-solar"].value == true then
       localised_description = { "technology-description.solar-energy" },
       icon = "__base__/graphics/technology/solar-energy.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-small-3",
+          recipe = "bob-solar-panel-small-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-3",
+          recipe = "bob-solar-panel-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "solar-panel-large-3",
+          recipe = "bob-solar-panel-large-3",
         },
       },
       prerequisites = {
         "bob-solar-energy-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {

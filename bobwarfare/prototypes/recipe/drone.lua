@@ -1,31 +1,31 @@
 data:extend({
   {
     type = "recipe",
-    name = "robot-drone-frame",
+    name = "bob-robot-drone-frame",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { "electric-engine-unit", 2 },
-      { "steel-plate", 10 },
-      { "iron-gear-wheel", 10 },
-      { "battery", 6 },
-      { "electronic-circuit", 10 },
+      { type = "item", name = "electric-engine-unit", amount = 2 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
+      { type = "item", name = "battery", amount = 6 },
+      { type = "item", name = "electronic-circuit", amount = 10 },
     },
-    result = "robot-drone-frame",
+    results = { { type = "item", name = "bob-robot-drone-frame", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "robot-drone-frame-large",
+    name = "bob-robot-drone-frame-large",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { "electric-engine-unit", 2 },
-      { "steel-plate", 20 },
-      { "iron-gear-wheel", 10 },
-      { "battery", 12 },
-      { "electronic-circuit", 10 },
+      { type = "item", name = "electric-engine-unit", amount = 2 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
+      { type = "item", name = "battery", amount = 12 },
+      { type = "item", name = "electronic-circuit", amount = 10 },
     },
-    result = "robot-drone-frame-large",
+    results = { { type = "item", name = "bob-robot-drone-frame-large", amount = 1 } },
   },
 })
 
@@ -35,10 +35,10 @@ data:extend({
     name = "bob-robot-gun-drone",
     enabled = false,
     ingredients = {
-      { "robot-drone-frame", 1 },
-      { "gun-turret", 1 },
+      { type = "item", name = "bob-robot-drone-frame", amount = 1 },
+      { type = "item", name = "gun-turret", amount = 1 },
     },
-    result = "bob-robot-gun-drone",
+    results = { { type = "item", name = "bob-robot-gun-drone", amount = 1 } },
   },
 })
 
@@ -48,10 +48,10 @@ data:extend({
     name = "bob-robot-laser-drone",
     enabled = false,
     ingredients = {
-      { "robot-drone-frame", 1 },
-      { "laser-turret", 1 },
+      { type = "item", name = "bob-robot-drone-frame", amount = 1 },
+      { type = "item", name = "laser-turret", amount = 1 },
     },
-    result = "bob-robot-laser-drone",
+    results = { { type = "item", name = "bob-robot-laser-drone", amount = 1 } },
   },
 })
 
@@ -61,10 +61,10 @@ data:extend({
     name = "bob-robot-flamethrower-drone",
     enabled = false,
     ingredients = {
-      { "robot-drone-frame", 1 },
-      { "flamethrower-turret", 1 },
+      { type = "item", name = "bob-robot-drone-frame", amount = 1 },
+      { type = "item", name = "flamethrower-turret", amount = 1 },
     },
-    result = "bob-robot-flamethrower-drone",
+    results = { { type = "item", name = "bob-robot-flamethrower-drone", amount = 1 } },
   },
 })
 
@@ -74,9 +74,9 @@ data:extend({
     name = "bob-robot-plasma-drone",
     enabled = false,
     ingredients = {
-      { "robot-drone-frame-large", 1 },
-      { "bob-plasma-turret-1", 1 },
+      { type = "item", name = "bob-robot-drone-frame-large", amount = 1 },
+      { type = "item", name = "bob-plasma-turret-1", amount = 1 },
     },
-    result = "bob-robot-plasma-drone",
+    results = { { type = "item", name = "bob-robot-plasma-drone", amount = 1 } },
   },
 })

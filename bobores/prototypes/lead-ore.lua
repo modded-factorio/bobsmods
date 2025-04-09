@@ -1,5 +1,5 @@
 bobmods.ores.lead = {
-  name = "lead-ore",
+  name = "bob-lead-ore",
   icon = "__bobores__/graphics/icons/lead-ore.png",
   mining_time = 0.75,
   tint = { r = 0.5, g = 0.5, b = 0.5 },
@@ -15,22 +15,14 @@ bobmods.ores.lead = {
     sheet = 1,
   },
   enabled = false,
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = true,
-    richness = 1.2,
-    size = 1
-  }
-]]
-  --
   autoplace = "control-only",
+  planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.lead.create_autoplace()
-  data.raw.resource["lead-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "lead-ore",
+  data.raw.resource["bob-lead-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-lead-ore",
     order = "c",
     base_density = 8,
     has_starting_area_placement = true,

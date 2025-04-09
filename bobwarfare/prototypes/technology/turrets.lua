@@ -4,8 +4,6 @@ data:extend({
     name = "bob-turrets-2",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-a-2",
     prerequisites = {
       "gun-turret",
       "military-2",
@@ -31,8 +29,6 @@ data:extend({
     name = "bob-turrets-3",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-a-3",
     prerequisites = {
       "bob-turrets-2",
       "military-science-pack",
@@ -59,8 +55,6 @@ data:extend({
     name = "bob-turrets-4",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-a-4",
     prerequisites = {
       "bob-turrets-3",
       "military-3",
@@ -88,8 +82,6 @@ data:extend({
     name = "bob-turrets-5",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-a-5",
     prerequisites = {
       "bob-turrets-4",
       "production-science-pack",
@@ -118,11 +110,9 @@ data:extend({
     name = "bob-laser-turrets-2",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-b-2",
     prerequisites = {
       "laser-turret",
-      "advanced-electronics",
+      "advanced-circuit",
     },
     effects = {
       {
@@ -146,8 +136,6 @@ data:extend({
     name = "bob-laser-turrets-3",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-b-3",
     prerequisites = {
       "bob-laser-turrets-2",
       "military-3",
@@ -175,11 +163,9 @@ data:extend({
     name = "bob-laser-turrets-4",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-b-4",
     prerequisites = {
       "bob-laser-turrets-3",
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
     },
     unit = {
@@ -206,8 +192,6 @@ data:extend({
     name = "bob-laser-turrets-5",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-b-5",
     prerequisites = {
       "bob-laser-turrets-4",
       "military-4",
@@ -237,11 +221,8 @@ data:extend({
     name = "bob-sniper-turrets-1",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-c-1",
     prerequisites = {
       "gun-turret",
-      "logistic-science-pack",
       "military-science-pack",
     },
     effects = {
@@ -265,8 +246,6 @@ data:extend({
     name = "bob-sniper-turrets-2",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-c-2",
     prerequisites = {
       "bob-sniper-turrets-1",
       "military-3",
@@ -293,8 +272,6 @@ data:extend({
     name = "bob-sniper-turrets-3",
     icon = "__base__/graphics/technology/gun-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
-    order = "a-j-c-3",
     prerequisites = {
       "bob-sniper-turrets-2",
       "military-4",
@@ -326,9 +303,9 @@ data:extend({
     name = "bob-plasma-turrets-1",
     icon = "__bobwarfare__/graphics/icons/technology/plasma-turrets.png",
     icon_size = 128,
-    order = "a-j-c-1",
     prerequisites = {
       "laser-turret",
+      "military-3",
     },
     effects = {
       {
@@ -337,12 +314,13 @@ data:extend({
       },
     },
     unit = {
-      count = 100,
+      count = 500,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
   },
@@ -352,10 +330,10 @@ data:extend({
     name = "bob-plasma-turrets-2",
     icon = "__bobwarfare__/graphics/icons/technology/plasma-turrets.png",
     icon_size = 128,
-    order = "a-j-c-2",
     prerequisites = {
       "bob-plasma-turrets-1",
-      "advanced-electronics",
+      "processing-unit",
+      "production-science-pack",
     },
     effects = {
       {
@@ -364,12 +342,14 @@ data:extend({
       },
     },
     unit = {
-      count = 200,
+      count = 600,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
     },
   },
@@ -379,19 +359,20 @@ data:extend({
     name = "bob-plasma-turrets-3",
     icon = "__bobwarfare__/graphics/icons/technology/plasma-turrets.png",
     icon_size = 128,
-    order = "a-j-c-3",
     prerequisites = {
       "bob-plasma-turrets-2",
-      "military-3",
+      "military-4",
     },
     unit = {
-      count = 300,
+      count = 700,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
     },
     effects = {
@@ -407,57 +388,28 @@ data:extend({
     name = "bob-plasma-turrets-4",
     icon = "__bobwarfare__/graphics/icons/technology/plasma-turrets.png",
     icon_size = 128,
-    order = "a-j-c-4",
     prerequisites = {
       "bob-plasma-turrets-3",
-      "advanced-electronics-2",
-      "production-science-pack",
+      "space-science-pack",
+      "efficiency-module-3",
     },
     unit = {
-      count = 400,
+      count = 800,
       time = 30,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "bob-plasma-turret-4",
-      },
-    },
-  },
-
-  {
-    type = "technology",
-    name = "bob-plasma-turrets-5",
-    icon = "__bobwarfare__/graphics/icons/technology/plasma-turrets.png",
-    icon_size = 128,
-    order = "a-j-c-5",
-    prerequisites = {
-      "bob-plasma-turrets-4",
-      "military-4",
-    },
-    unit = {
-      count = 500,
-      time = 30,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "military-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-      },
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "bob-plasma-turret-5",
       },
     },
   },
@@ -468,7 +420,6 @@ data:extend({
     type = "technology",
     name = "bob-artillery-turret-2",
     icon_size = 256,
-    icon_mipmaps = 4,
     icon = "__base__/graphics/technology/artillery.png",
     effects = {
       {
@@ -491,14 +442,12 @@ data:extend({
         { "utility-science-pack", 1 },
       },
     },
-    order = "d-e-f-2",
   },
 
   {
     type = "technology",
     name = "bob-artillery-turret-3",
     icon_size = 256,
-    icon_mipmaps = 4,
     icon = "__base__/graphics/technology/artillery.png",
     effects = {
       {
@@ -521,6 +470,5 @@ data:extend({
         { "utility-science-pack", 1 },
       },
     },
-    order = "d-e-f-3",
   },
 })

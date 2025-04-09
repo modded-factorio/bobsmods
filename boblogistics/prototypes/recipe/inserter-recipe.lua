@@ -1,96 +1,54 @@
 data:extend({
   {
     type = "recipe",
-    name = "steam-inserter",
+    name = "bob-steam-inserter",
+    enabled = false,
     ingredients = {
-      { "burner-inserter", 1 },
-      { "pipe", 1 },
+      { type = "item", name = "burner-inserter", amount = 1 },
+      { type = "item", name = "pipe", amount = 1 },
     },
-    result = "steam-inserter",
+    results = { { type = "item", name = "bob-steam-inserter", amount = 1 } },
     requester_paste_multiplier = 4,
   },
   {
     type = "recipe",
-    name = "express-inserter",
+    name = "bob-express-inserter",
     enabled = false,
     ingredients = {
-      { "fast-inserter", 1 },
-      { "iron-gear-wheel", 2 },
-      { "advanced-circuit", 2 },
+      { type = "item", name = "fast-inserter", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    result = "express-inserter",
+    results = { { type = "item", name = "bob-express-inserter", amount = 1 } },
     requester_paste_multiplier = 4,
   },
   {
     type = "recipe",
-    name = "express-filter-inserter",
+    name = "bob-express-bulk-inserter",
     enabled = false,
     ingredients = {
-      { "filter-inserter", 1 },
-      { "iron-gear-wheel", 2 },
-      { "advanced-circuit", 4 },
+      { type = "item", name = "bulk-inserter", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 15 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
     },
-    result = "express-filter-inserter",
-    requester_paste_multiplier = 4,
-  },
-  {
-    type = "recipe",
-    name = "express-stack-inserter",
-    enabled = false,
-    ingredients = {
-      { "stack-inserter", 1 },
-      { "iron-gear-wheel", 15 },
-      { "advanced-circuit", 5 },
-    },
-    result = "express-stack-inserter",
-    requester_paste_multiplier = 4,
-  },
-  {
-    type = "recipe",
-    name = "express-stack-filter-inserter",
-    enabled = false,
-    ingredients = {
-      { "stack-filter-inserter", 1 },
-      { "iron-gear-wheel", 15 },
-      { "advanced-circuit", 5 },
-    },
-    result = "express-stack-filter-inserter",
+    results = { { type = "item", name = "bob-express-bulk-inserter", amount = 1 } },
     requester_paste_multiplier = 4,
   },
 })
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-steam-inserter")
 
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "yellow-filter-inserter", --standard
+      name = "bob-red-bulk-inserter", --fast
       enabled = false,
       ingredients = {
-        { "inserter", 1 },
-        { "electronic-circuit", 4 },
+        { type = "item", name = "long-handed-inserter", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 3 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 }, -- replace brass -- add in steel bearings if they and brass exist
       },
-      result = "yellow-filter-inserter",
-    },
-    {
-      type = "recipe",
-      name = "red-stack-inserter", --fast
-      enabled = false,
-      ingredients = {
-        { "long-handed-inserter", 1 },
-        { "steel-plate", 3 },
-        { "iron-gear-wheel", 5 }, -- replace brass -- add in steel bearings if they and brass exist
-      },
-      result = "red-stack-inserter",
-    },
-    {
-      type = "recipe",
-      name = "red-stack-filter-inserter", --fast
-      enabled = false,
-      ingredients = {
-        { "red-stack-inserter", 1 },
-        { "electronic-circuit", 5 },
-      },
-      result = "red-stack-filter-inserter",
+      results = { { type = "item", name = "bob-red-bulk-inserter", amount = 1 } },
     },
   })
 
@@ -101,24 +59,12 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         name = "long-handed-inserter", --fast inserter
         enabled = false,
         ingredients = {
-          { "inserter", 1 }, --optional
-          { "steel-plate", 1 },
-          { "iron-gear-wheel", 1 }, -- replace steel gear wheel -- add in steel bearings if they and brass exist
-          { "electronic-circuit", 1 },
+          { type = "item", name = "inserter", amount = 1 }, --optional
+          { type = "item", name = "steel-plate", amount = 1 },
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, -- replace steel gear wheel -- add in steel bearings if they and brass exist
+          { type = "item", name = "electronic-circuit", amount = 1 },
         },
-        result = "long-handed-inserter",
-      },
-      {
-        type = "recipe",
-        name = "red-filter-inserter", --fast
-        enabled = false,
-        ingredients = {
-          { "yellow-filter-inserter", 1 },
-          { "steel-plate", 1 },
-          { "iron-gear-wheel", 1 }, -- replace steel gear wheel -- add in steel bearings if they and brass exist
-          { "electronic-circuit", 1 },
-        },
-        result = "red-filter-inserter",
+        results = { { type = "item", name = "long-handed-inserter", amount = 1 } },
       },
 
       {
@@ -126,155 +72,79 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         name = "fast-inserter", --express
         enabled = false,
         ingredients = {
-          { "long-handed-inserter", 1 }, --optional
-          { "steel-plate", 1 }, -- replace aluminium
-          { "iron-gear-wheel", 1 }, -- replace brass -- add steel bearings, or brass if it exists.
-          { "advanced-circuit", 1 },
+          { type = "item", name = "long-handed-inserter", amount = 1 }, --optional
+          { type = "item", name = "steel-plate", amount = 1 }, -- replace aluminium
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, -- replace brass -- add steel bearings, or brass if it exists.
+          { type = "item", name = "advanced-circuit", amount = 1 },
         },
-        result = "fast-inserter",
+        results = { { type = "item", name = "fast-inserter", amount = 1 } },
       },
       {
         type = "recipe",
-        name = "filter-inserter", --express
+        name = "bulk-inserter", --express
         enabled = false,
         ingredients = {
-          { "red-filter-inserter", 1 },
-          { "steel-plate", 1 }, -- replace aluminium
-          { "iron-gear-wheel", 1 }, -- replace brass -- add steel bearings, or brass if it exists.
-          { "advanced-circuit", 5 },
+          { type = "item", name = "bob-red-bulk-inserter", amount = 1 },
+          { type = "item", name = "steel-plate", amount = 4 }, -- replace aluminium
+          { type = "item", name = "iron-gear-wheel", amount = 6 }, -- replace brass -- add steel bearings, or brass if it exists.
+          { type = "item", name = "advanced-circuit", amount = 1 },
         },
-        result = "filter-inserter",
-      },
-      {
-        type = "recipe",
-        name = "stack-inserter", --express
-        enabled = false,
-        ingredients = {
-          { "red-stack-inserter", 1 },
-          { "steel-plate", 4 }, -- replace aluminium
-          { "iron-gear-wheel", 6 }, -- replace brass -- add steel bearings, or brass if it exists.
-          { "advanced-circuit", 1 },
-        },
-        result = "stack-inserter",
-      },
-      {
-        type = "recipe",
-        name = "stack-filter-inserter", --express
-        enabled = false,
-        ingredients = {
-          { "red-stack-filter-inserter", 1 },
-          { "steel-plate", 4 }, -- replace aluminium
-          { "iron-gear-wheel", 6 }, -- replace brass -- add steel bearings, or brass if it exists.
-          { "advanced-circuit", 6 },
-        },
-        result = "stack-filter-inserter",
+        results = { { type = "item", name = "bulk-inserter", amount = 1 } },
       },
 
       {
         type = "recipe",
-        name = "turbo-inserter", --turbo
+        name = "bob-turbo-inserter", --turbo
         enabled = false,
         ingredients = {
-          { "fast-inserter", 1 }, --optional
-          { "steel-plate", 1 }, -- replace titanium
-          { "iron-gear-wheel", 1 }, --replace titanium -- add titanium bearing
-          { "processing-unit", 1 },
+          { type = "item", name = "fast-inserter", amount = 1 }, --optional
+          { type = "item", name = "steel-plate", amount = 1 }, -- replace titanium
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, --replace titanium -- add titanium bearing
+          { type = "item", name = "processing-unit", amount = 1 },
         },
-        result = "turbo-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "turbo-filter-inserter", --turbo
-        enabled = false,
-        ingredients = {
-          { "filter-inserter", 1 },
-          { "steel-plate", 1 }, -- replace titanium
-          { "iron-gear-wheel", 1 }, -- replace titanium -- add titanium bearing
-          { "processing-unit", 5 },
-        },
-        result = "turbo-filter-inserter",
+        results = { { type = "item", name = "bob-turbo-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
 
       {
         type = "recipe",
-        name = "turbo-stack-inserter", --turbo
+        name = "bob-turbo-bulk-inserter", --turbo
         enabled = false,
         ingredients = {
-          { "stack-inserter", 1 },
-          { "steel-plate", 4 }, -- replace titanium
-          { "iron-gear-wheel", 6 }, -- replace titanium--add titanium bearing
-          { "processing-unit", 1 },
+          { type = "item", name = "bulk-inserter", amount = 1 },
+          { type = "item", name = "steel-plate", amount = 4 }, -- replace titanium
+          { type = "item", name = "iron-gear-wheel", amount = 6 }, -- replace titanium--add titanium bearing
+          { type = "item", name = "processing-unit", amount = 1 },
         },
-        result = "turbo-stack-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "turbo-stack-filter-inserter", --turbo
-        enabled = false,
-        ingredients = {
-          { "stack-filter-inserter", 1 },
-          { "steel-plate", 4 }, -- replace titanium
-          { "iron-gear-wheel", 6 }, -- replace titanium--add titanium bearing
-          { "processing-unit", 6 },
-        },
-        result = "turbo-stack-filter-inserter",
+        results = { { type = "item", name = "bob-turbo-bulk-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
 
       {
         type = "recipe",
-        name = "express-inserter", --ultimate
+        name = "bob-express-inserter", --ultimate
         enabled = false,
         ingredients = {
-          { "turbo-inserter", 1 }, --optional
-          { "steel-plate", 1 }, -- replace nitinol
-          { "iron-gear-wheel", 1 }, --replace nitinol -- add nitinol bearing
-          { "processing-unit", 1 }, --replace advanced processing unit
+          { type = "item", name = "bob-turbo-inserter", amount = 1 }, --optional
+          { type = "item", name = "steel-plate", amount = 1 }, -- replace nitinol
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, --replace nitinol -- add nitinol bearing
+          { type = "item", name = "processing-unit", amount = 1 }, --replace advanced processing unit
         },
-        result = "express-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "express-filter-inserter", --ultimate
-        enabled = false,
-        ingredients = {
-          { "turbo-filter-inserter", 1 },
-          { "steel-plate", 1 }, -- replace nitinol
-          { "iron-gear-wheel", 1 }, -- replace nitinol -- add nitinol bearing
-          { "processing-unit", 5 }, --replace advanced processing unit
-        },
-        result = "express-filter-inserter",
+        results = { { type = "item", name = "bob-express-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
 
       {
         type = "recipe",
-        name = "express-stack-inserter", --ultimate
+        name = "bob-express-bulk-inserter", --ultimate
         enabled = false,
         ingredients = {
-          { "turbo-stack-inserter", 1 },
-          { "steel-plate", 4 }, -- replace nitinol
-          { "iron-gear-wheel", 6 }, -- replace nitinol -- add nitinol bearing
-          { "processing-unit", 1 }, --replace advanced processing unit
+          { type = "item", name = "bob-turbo-bulk-inserter", amount = 1 },
+          { type = "item", name = "steel-plate", amount = 4 }, -- replace nitinol
+          { type = "item", name = "iron-gear-wheel", amount = 6 }, -- replace nitinol -- add nitinol bearing
+          { type = "item", name = "processing-unit", amount = 1 }, --replace advanced processing unit
         },
-        result = "express-stack-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "express-stack-filter-inserter", --ultimate
-        enabled = false,
-        ingredients = {
-          { "turbo-stack-filter-inserter", 1 },
-          { "steel-plate", 4 }, -- replace nitinol
-          { "iron-gear-wheel", 6 }, -- replace nitinol -- add nitinol bearing
-          { "processing-unit", 6 }, --replace advanced processing unit
-        },
-        result = "express-stack-filter-inserter",
+        results = { { type = "item", name = "bob-express-bulk-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
     })
@@ -285,21 +155,11 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         name = "long-handed-inserter", --fast inserter
         enabled = false,
         ingredients = {
-          { "steel-plate", 1 },
-          { "iron-gear-wheel", 1 }, -- replace steel gear wheel -- add in steel bearings if they and brass exist
-          { "electronic-circuit", 1 },
+          { type = "item", name = "steel-plate", amount = 1 },
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, -- replace steel gear wheel -- add in steel bearings if they and brass exist
+          { type = "item", name = "electronic-circuit", amount = 1 },
         },
-        result = "long-handed-inserter",
-      },
-      {
-        type = "recipe",
-        name = "red-filter-inserter", --fast
-        enabled = false,
-        ingredients = {
-          { "long-handed-inserter", 1 },
-          { "electronic-circuit", 4 },
-        },
-        result = "red-filter-inserter",
+        results = { { type = "item", name = "long-handed-inserter", amount = 1 } },
       },
 
       {
@@ -307,137 +167,73 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         name = "fast-inserter", --express
         enabled = false,
         ingredients = {
-          { "steel-plate", 1 }, -- replace aluminium
-          { "iron-gear-wheel", 1 }, -- replace brass -- add steel bearings, or brass if it exists.
-          { "advanced-circuit", 1 },
+          { type = "item", name = "steel-plate", amount = 1 }, -- replace aluminium
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, -- replace brass -- add steel bearings, or brass if it exists.
+          { type = "item", name = "advanced-circuit", amount = 1 },
         },
-        result = "fast-inserter",
+        results = { { type = "item", name = "fast-inserter", amount = 1 } },
       },
       {
         type = "recipe",
-        name = "filter-inserter", --express
+        name = "bulk-inserter", --express
         enabled = false,
         ingredients = {
-          { "fast-inserter", 1 },
-          { "advanced-circuit", 4 },
+          { type = "item", name = "fast-inserter", amount = 1 },
+          { type = "item", name = "steel-plate", amount = 3 }, -- replace aluminium
+          { type = "item", name = "iron-gear-wheel", amount = 5 }, -- replace brass -- add steel bearings, or brass if it exists.
         },
-        result = "filter-inserter",
-      },
-      {
-        type = "recipe",
-        name = "stack-inserter", --express
-        enabled = false,
-        ingredients = {
-          { "fast-inserter", 1 },
-          { "steel-plate", 3 }, -- replace aluminium
-          { "iron-gear-wheel", 5 }, -- replace brass -- add steel bearings, or brass if it exists.
-        },
-        result = "stack-inserter",
-      },
-      {
-        type = "recipe",
-        name = "stack-filter-inserter", --express
-        enabled = false,
-        ingredients = {
-          { "stack-inserter", 1 },
-          { "advanced-circuit", 5 },
-        },
-        result = "stack-filter-inserter",
+        results = { { type = "item", name = "bulk-inserter", amount = 1 } },
       },
 
       {
         type = "recipe",
-        name = "turbo-inserter", --turbo
+        name = "bob-turbo-inserter", --turbo
         enabled = false,
         ingredients = {
-          { "steel-plate", 1 }, -- replace titanium
-          { "iron-gear-wheel", 1 }, --replace titanium -- add titanium bearing
-          { "processing-unit", 1 },
+          { type = "item", name = "steel-plate", amount = 1 }, -- replace titanium
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, --replace titanium -- add titanium bearing
+          { type = "item", name = "processing-unit", amount = 1 },
         },
-        result = "turbo-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "turbo-filter-inserter", --turbo
-        enabled = false,
-        ingredients = {
-          { "turbo-inserter", 1 },
-          { "processing-unit", 4 },
-        },
-        result = "turbo-filter-inserter",
+        results = { { type = "item", name = "bob-turbo-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
 
       {
         type = "recipe",
-        name = "turbo-stack-inserter", --turbo
+        name = "bob-turbo-bulk-inserter", --turbo
         enabled = false,
         ingredients = {
-          { "turbo-inserter", 1 },
-          { "steel-plate", 3 }, -- replace titanium
-          { "iron-gear-wheel", 5 }, -- replace titanium--add titanium bearing
+          { type = "item", name = "bob-turbo-inserter", amount = 1 },
+          { type = "item", name = "steel-plate", amount = 3 }, -- replace titanium
+          { type = "item", name = "iron-gear-wheel", amount = 5 }, -- replace titanium--add titanium bearing
         },
-        result = "turbo-stack-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "turbo-stack-filter-inserter", --turbo
-        enabled = false,
-        ingredients = {
-          { "turbo-stack-inserter", 1 },
-          { "processing-unit", 5 },
-        },
-        result = "turbo-stack-filter-inserter",
+        results = { { type = "item", name = "bob-turbo-bulk-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
 
       {
         type = "recipe",
-        name = "express-inserter", --ultimate
+        name = "bob-express-inserter", --ultimate
         enabled = false,
         ingredients = {
-          { "steel-plate", 1 }, -- replace nitinol
-          { "iron-gear-wheel", 1 }, --replace nitinol -- add nitinol bearing
-          { "processing-unit", 1 }, --replace advanced processing unit
+          { type = "item", name = "steel-plate", amount = 1 }, -- replace nitinol
+          { type = "item", name = "iron-gear-wheel", amount = 1 }, --replace nitinol -- add nitinol bearing
+          { type = "item", name = "processing-unit", amount = 1 }, --replace advanced processing unit
         },
-        result = "express-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "express-filter-inserter", --ultimate
-        enabled = false,
-        ingredients = {
-          { "express-inserter", 1 },
-          { "processing-unit", 4 }, --replace advanced processing unit
-        },
-        result = "express-filter-inserter",
+        results = { { type = "item", name = "bob-express-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
 
       {
         type = "recipe",
-        name = "express-stack-inserter", --ultimate
+        name = "bob-express-bulk-inserter", --ultimate
         enabled = false,
         ingredients = {
-          { "express-inserter", 1 },
-          { "steel-plate", 3 }, -- replace nitinol
-          { "iron-gear-wheel", 5 }, -- replace nitinol -- add nitinol bearing
+          { type = "item", name = "bob-express-inserter", amount = 1 },
+          { type = "item", name = "steel-plate", amount = 3 }, -- replace nitinol
+          { type = "item", name = "iron-gear-wheel", amount = 5 }, -- replace nitinol -- add nitinol bearing
         },
-        result = "express-stack-inserter",
-        requester_paste_multiplier = 4,
-      },
-      {
-        type = "recipe",
-        name = "express-stack-filter-inserter", --ultimate
-        enabled = false,
-        ingredients = {
-          { "express-stack-inserter", 1 },
-          { "processing-unit", 5 }, --replace advanced processing unit
-        },
-        result = "express-stack-filter-inserter",
+        results = { { type = "item", name = "bob-express-bulk-inserter", amount = 1 } },
         requester_paste_multiplier = 4,
       },
     })

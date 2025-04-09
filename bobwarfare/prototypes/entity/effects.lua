@@ -18,6 +18,7 @@ data:extend({
   {
     type = "smoke-with-trigger",
     name = "small-poison-cloud",
+    localised_name = { "entity-name.poison-cloud" },
     flags = { "not-on-map" },
     show_when_smoke_off = true,
     animation = {
@@ -84,11 +85,13 @@ data:extend({
       },
     },
     action_cooldown = 30,
+    hidden = true,
   },
 
   {
     type = "smoke-with-trigger",
     name = "poison-artillery-cloud",
+    localised_name = { "entity-name.poison-cloud" },
     flags = { "not-on-map" },
     show_when_smoke_off = true,
     particle_count = 16,
@@ -179,31 +182,8 @@ data:extend({
       },
     },
     action_cooldown = 30,
+    hidden = true,
   },
-
-  --[[
-  {
-    type = "flame-thrower-explosion",
-    name = "flame-thrower-acid-mist",
-    flags = {"not-on-map"},
-    animation_speed = 1,
-    animations =
-    {
-      {
-        filename = "__base__/graphics/entity/flame-thrower-explosion/flame-thrower-explosion.png",
-        priority = "extra-high",
-        width = 64,
-        height = 64,
-        frame_count = 64,
-        line_length = 8
-      }
-    },
-    light = {intensity = 0.2, size = 20},
-    slow_down_factor = 0.98,
-    damage = {amount = 2, type = "acid"}
-  },
-]]
-  --
 
   {
     type = "explosion",
@@ -214,6 +194,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 
   {
@@ -225,6 +206,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 
   {
@@ -236,6 +218,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 
   {
@@ -247,6 +230,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 
   {
@@ -258,6 +242,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 
   {
@@ -269,6 +254,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 
   {
@@ -280,13 +266,14 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 2,
     smoke_slow_down_factor = 1,
+    hidden = true,
   },
 })
 
 data:extend({
   {
     type = "explosion",
-    name = "plasma-explosion",
+    name = "bob-plasma-explosion",
     flags = { "not-on-map" },
     animations = {
       {
@@ -298,8 +285,6 @@ data:extend({
         frame_count = 64,
         line_length = 8,
         scale = 4,
-        axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.5,
       },
     },
@@ -330,6 +315,7 @@ data:extend({
         },
       },
     },
+    hidden = true,
   },
   {
     type = "explosion",
@@ -345,8 +331,6 @@ data:extend({
         frame_count = 64,
         line_length = 8,
         scale = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.5,
       },
     },
@@ -377,6 +361,7 @@ data:extend({
         },
       },
     },
+    hidden = true,
   },
 })
 
@@ -387,15 +372,14 @@ data:extend({
     flags = { "not-on-map" },
 
     animation = {
-      filename = "__base__/graphics/entity/fire-flame/fire-flame-13.png",
-      line_length = 8,
-      width = 60,
-      height = 118,
-      frame_count = 25,
-      direction_count = 1,
-      blend_mode = "additive",
-      animation_speed = 1,
-      scale = 0.4,
+      filename = "__base__/graphics/entity/acid-sticker/acid-sticker.png",
+      draw_as_glow = true,
+      line_length = 5,
+      frame_count = 50,
+      width = 30,
+      height = 34,
+      animation_speed = 0.5,
+      scale = 0.5,
       tint = { r = 0.1, g = 0.5, b = 0.1 },
     },
 
@@ -409,16 +393,16 @@ data:extend({
 data:extend({
   {
     type = "sticker",
-    name = "plasma-sticker",
+    name = "bob-plasma-sticker",
     flags = { "not-on-map" },
 
     animation = {
-      filename = "__base__/graphics/entity/fire-flame/fire-flame-13.png",
-      line_length = 8,
-      width = 60,
-      height = 118,
-      frame_count = 25,
-      direction_count = 1,
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-02.png",
+      draw_as_glow = true,
+      line_length = 10,
+      frame_count = 90,
+      width = 82,
+      height = 106,
       blend_mode = "additive",
       animation_speed = 1,
       scale = 0.4,
@@ -428,6 +412,6 @@ data:extend({
     duration_in_ticks = 30 * 60,
     damage_interval = 10,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 8, type = "plasma" },
+    damage_per_tick = { amount = 8, type = "bob-plasma" },
   },
 })

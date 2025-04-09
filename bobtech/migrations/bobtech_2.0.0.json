@@ -1,0 +1,53 @@
+{
+  "entity":
+  [
+    ["burner-lab", "bob-burner-lab"],
+    ["lab-2", "bob-lab-2"],
+    ["lab-alien", "bob-lab-alien"]
+  ],
+  "item":
+  [
+    ["advanced-logistic-science-pack", "bob-advanced-logistic-science-pack"],
+    ["alien-science-pack", "bob-alien-science-pack"],
+    ["alien-science-pack-blue", "bob-alien-science-pack-blue"],
+    ["alien-science-pack-green", "bob-alien-science-pack-green"],
+    ["alien-science-pack-orange", "bob-alien-science-pack-orange"],
+    ["alien-science-pack-purple", "bob-alien-science-pack-purple"],
+    ["alien-science-pack-red", "bob-alien-science-pack-red"],
+    ["alien-science-pack-yellow", "bob-alien-science-pack-yellow"],
+    ["burner-lab", "bob-burner-lab"],
+    ["lab-2", "bob-lab-2"],
+    ["lab-alien", "bob-lab-alien"],
+    ["science-pack-gold", "bob-science-pack-gold"],
+    ["steam-science-pack", "automation-science-pack"]
+  ],
+  "recipe":
+  [
+    ["advanced-logistic-science-pack", "bob-advanced-logistic-science-pack"],
+    ["alien-science-pack", "bob-alien-science-pack"],
+    ["alien-science-pack-blue", "bob-alien-science-pack-blue"],
+    ["alien-science-pack-green", "bob-alien-science-pack-green"],
+    ["alien-science-pack-orange", "bob-alien-science-pack-orange"],
+    ["alien-science-pack-purple", "bob-alien-science-pack-purple"],
+    ["alien-science-pack-red", "bob-alien-science-pack-red"],
+    ["alien-science-pack-yellow", "bob-alien-science-pack-yellow"],
+    ["burner-lab", "bob-burner-lab"],
+    ["lab-2", "bob-lab-2"],
+    ["lab-alien", "bob-lab-alien"],
+    ["science-pack-gold", "bob-science-pack-gold"]
+  ],
+  "technology":
+  [
+    ["advanced-logistic-science-pack", "bob-advanced-logistic-science-pack"],
+    ["advanced-research", "bob-advanced-research"],
+    ["alien-blue-research", "bob-alien-blue-research"],
+    ["alien-green-research", "bob-alien-green-research"],
+    ["alien-orange-research", "bob-alien-orange-research"],
+    ["alien-purple-research", "bob-alien-purple-research"],
+    ["alien-red-research", "bob-alien-red-research"],
+    ["alien-research", "bob-alien-research"],
+    ["alien-yellow-research", "bob-alien-yellow-research"],
+    ["electricity", "bob-electricity"],
+    ["lab", "bob-lab"]
+  ]
+}

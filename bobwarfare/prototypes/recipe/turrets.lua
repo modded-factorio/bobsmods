@@ -5,11 +5,11 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "gun-turret", 1 },
-      { "iron-gear-wheel", 10 },
-      { "steel-plate", 20 },
+      { type = "item", name = "gun-turret", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "bob-gun-turret-2",
+    results = { { type = "item", name = "bob-gun-turret-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -17,11 +17,11 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "bob-gun-turret-2", 1 },
-      { "iron-gear-wheel", 10 },
-      { "steel-plate", 20 },
+      { type = "item", name = "bob-gun-turret-2", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "bob-gun-turret-3",
+    results = { { type = "item", name = "bob-gun-turret-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -29,11 +29,11 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "bob-gun-turret-3", 1 },
-      { "iron-gear-wheel", 10 },
-      { "steel-plate", 20 },
+      { type = "item", name = "bob-gun-turret-3", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "bob-gun-turret-4",
+    results = { { type = "item", name = "bob-gun-turret-4", amount = 1 } },
   },
   {
     type = "recipe",
@@ -41,11 +41,11 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "bob-gun-turret-4", 1 },
-      { "iron-gear-wheel", 10 },
-      { "steel-plate", 20 },
+      { type = "item", name = "bob-gun-turret-4", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "bob-gun-turret-5",
+    results = { { type = "item", name = "bob-gun-turret-5", amount = 1 } },
   },
 
   {
@@ -54,11 +54,11 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "iron-gear-wheel", 20 },
-      { "copper-plate", 20 },
-      { "iron-plate", 20 },
+      { type = "item", name = "iron-gear-wheel", amount = 20 },
+      { type = "item", name = "copper-plate", amount = 20 },
+      { type = "item", name = "iron-plate", amount = 20 },
     },
-    result = "bob-sniper-turret-1",
+    results = { { type = "item", name = "bob-sniper-turret-1", amount = 1 } },
   },
   {
     type = "recipe",
@@ -66,12 +66,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-sniper-turret-1", 1 },
-      { "iron-gear-wheel", 20 },
-      { "steel-plate", 20 },
-      { "iron-plate", 20 },
+      { type = "item", name = "bob-sniper-turret-1", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 20 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "iron-plate", amount = 20 },
     },
-    result = "bob-sniper-turret-2",
+    results = { { type = "item", name = "bob-sniper-turret-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -79,12 +79,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-sniper-turret-2", 1 },
-      { "iron-gear-wheel", 20 },
-      { "steel-plate", 20 },
-      { "plastic-bar", 20 },
+      { type = "item", name = "bob-sniper-turret-2", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 20 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "plastic-bar", amount = 20 },
     },
-    result = "bob-sniper-turret-3",
+    results = { { type = "item", name = "bob-sniper-turret-3", amount = 1 } },
   },
 
   {
@@ -93,11 +93,11 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "laser-turret", 1 },
-      { "steel-plate", 20 },
-      { "advanced-circuit", 20 },
+      { type = "item", name = "laser-turret", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "advanced-circuit", amount = 20 },
     },
-    result = "bob-laser-turret-2",
+    results = { { type = "item", name = "bob-laser-turret-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -105,11 +105,11 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-laser-turret-2", 1 },
-      { "steel-plate", 20 },
-      { "battery", 12 },
+      { type = "item", name = "bob-laser-turret-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "battery", amount = 12 },
     },
-    result = "bob-laser-turret-3",
+    results = { { type = "item", name = "bob-laser-turret-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -117,12 +117,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-laser-turret-3", 1 },
-      { "steel-plate", 20 },
-      { "processing-unit", 20 },
-      { "battery", 12 },
+      { type = "item", name = "bob-laser-turret-3", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "processing-unit", amount = 20 },
+      { type = "item", name = "battery", amount = 12 },
     },
-    result = "bob-laser-turret-4",
+    results = { { type = "item", name = "bob-laser-turret-4", amount = 1 } },
   },
   {
     type = "recipe",
@@ -130,12 +130,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-laser-turret-4", 1 },
-      { "steel-plate", 20 },
-      { "processing-unit", 20 },
-      { "battery", 12 },
+      { type = "item", name = "bob-laser-turret-4", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "processing-unit", amount = 20 },
+      { type = "item", name = "battery", amount = 12 },
     },
-    result = "bob-laser-turret-5",
+    results = { { type = "item", name = "bob-laser-turret-5", amount = 1 } },
   },
 
   {
@@ -144,11 +144,11 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "steel-plate", 80 },
-      { "electronic-circuit", 80 },
-      { "battery", 48 },
+      { type = "item", name = "steel-plate", amount = 100 },
+      { type = "item", name = "advanced-circuit", amount = 25 },
+      { type = "item", name = "battery", amount = 80 },
     },
-    result = "bob-plasma-turret-1",
+    results = { { type = "item", name = "bob-plasma-turret-1", amount = 1 } },
   },
   {
     type = "recipe",
@@ -156,12 +156,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-plasma-turret-1", 1 },
-      { "steel-plate", 80 },
-      { "advanced-circuit", 80 },
-      { "battery", 48 },
+      { type = "item", name = "bob-plasma-turret-1", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 200 },
+      { type = "item", name = "processing-unit", amount = 25 },
+      { type = "item", name = "battery", amount = 100 },
     },
-    result = "bob-plasma-turret-2",
+    results = { { type = "item", name = "bob-plasma-turret-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -169,12 +169,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-plasma-turret-2", 1 },
-      { "steel-plate", 80 },
-      { "advanced-circuit", 80 },
-      { "battery", 48 },
+      { type = "item", name = "bob-plasma-turret-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 350 },
+      { type = "item", name = "processing-unit", amount = 40 },
+      { type = "item", name = "battery", amount = 120 },
     },
-    result = "bob-plasma-turret-3",
+    results = { { type = "item", name = "bob-plasma-turret-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -182,25 +182,12 @@ data:extend({
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { "bob-plasma-turret-3", 1 },
-      { "steel-plate", 80 },
-      { "processing-unit", 80 },
-      { "battery", 48 },
+      { type = "item", name = "bob-plasma-turret-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 50 },
+      { type = "item", name = "low-density-structure", amount = 15 },
+      { type = "item", name = "efficiency-module-3", amount = 3 },
     },
-    result = "bob-plasma-turret-4",
-  },
-  {
-    type = "recipe",
-    name = "bob-plasma-turret-5",
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-      { "bob-plasma-turret-4", 1 },
-      { "steel-plate", 80 },
-      { "processing-unit", 80 },
-      { "battery", 48 },
-    },
-    result = "bob-plasma-turret-5",
+    results = { { type = "item", name = "bob-plasma-turret-4", amount = 1 } },
   },
 
   {
@@ -209,13 +196,13 @@ data:extend({
     enabled = false,
     energy_required = 40,
     ingredients = {
-      { "artillery-turret", 1 },
-      { "steel-plate", 60 }, --titanium plate
-      { "concrete", 60 }, --silicon nitride
-      { "iron-gear-wheel", 40 }, --titanium gear wheel
-      { "processing-unit", 20 },
+      { type = "item", name = "artillery-turret", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 60 }, --titanium plate
+      { type = "item", name = "concrete", amount = 60 }, --silicon nitride
+      { type = "item", name = "iron-gear-wheel", amount = 40 }, --titanium gear wheel
+      { type = "item", name = "processing-unit", amount = 20 },
     },
-    result = "bob-artillery-turret-2",
+    results = { { type = "item", name = "bob-artillery-turret-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -223,12 +210,12 @@ data:extend({
     enabled = false,
     energy_required = 40,
     ingredients = {
-      { "bob-artillery-turret-2", 1 },
-      { "steel-plate", 60 }, --nitinol alloy
-      { "concrete", 60 }, --tungsten carbide
-      { "iron-gear-wheel", 40 }, --nitinol gear wheel
-      { "processing-unit", 20 }, --advanced processing unit
+      { type = "item", name = "bob-artillery-turret-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 60 }, --nitinol alloy
+      { type = "item", name = "concrete", amount = 60 }, --tungsten carbide
+      { type = "item", name = "iron-gear-wheel", amount = 40 }, --nitinol gear wheel
+      { type = "item", name = "processing-unit", amount = 20 }, --advanced processing unit
     },
-    result = "bob-artillery-turret-3",
+    results = { { type = "item", name = "bob-artillery-turret-3", amount = 1 } },
   },
 })

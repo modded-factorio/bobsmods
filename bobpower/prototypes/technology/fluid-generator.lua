@@ -2,18 +2,18 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "fluid-generator-1",
+      name = "bob-fluid-generator-1",
       prerequisites = {
         "steel-processing",
         "electronics",
         "logistic-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "fluid-generator",
+          recipe = "bob-fluid-generator",
         },
       },
       unit = {
@@ -29,17 +29,17 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     {
       type = "technology",
-      name = "fluid-generator-2",
+      name = "bob-fluid-generator-2",
       prerequisites = {
-        "fluid-generator-1",
+        "bob-fluid-generator-1",
         "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "fluid-generator-2",
+          recipe = "bob-fluid-generator-2",
         },
       },
       unit = {
@@ -56,17 +56,17 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     {
       type = "technology",
-      name = "fluid-generator-3",
+      name = "bob-fluid-generator-3",
       prerequisites = {
-        "fluid-generator-2",
+        "bob-fluid-generator-2",
         "production-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "fluid-generator-3",
+          recipe = "bob-fluid-generator-3",
         },
       },
       unit = {
@@ -83,23 +83,28 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     },
   })
 
-  if mods["bobrevamp"] and data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
+  if
+    mods["bobrevamp"]
+    and data.raw.fluid["bob-hydrogen"]
+    and data.raw.fluid["bob-oxygen"]
+    and data.raw.fluid["bob-nitrogen"]
+  then
     data:extend({
       {
         type = "technology",
-        name = "hydrazine-generator",
+        name = "bob-hydrazine-generator",
         prerequisites = {
-          "fluid-generator-3",
-          "hydrazine",
-          "advanced-electronics-2",
+          "bob-fluid-generator-3",
+          "bob-hydrazine",
+          "processing-unit",
           "utility-science-pack",
         },
         icon = "__bobpower__/graphics/icons/technology/fluid-generator.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "hydrazine-generator",
+            recipe = "bob-hydrazine-generator",
           },
         },
         unit = {

@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Changes:
+    - Allow ghosts to be used to set character icons #382
+  Bugfixes:
+    - Fixed crash when Bob's Logistics mod was not enabled #384
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Changes:
+    - Reduced the tier of electronics required for player brains #180
+    - Changed player brains to use circuits rather than circuit components #184
+    - Update for Factorio 2.0 #189
+    - Rebalanced classes #235
+      - Miner class has been replaced by Crafter class
+      - Builder class has been modified to lose its crafting speed bonus
+      - Balanced class has been strengthened a bit
+      - Fighter class has been buffed considerably in various combat-related ways
+      - Prospector class has been replaced with the Sapper class, a combination of Fighter + Builder instead of Fighter + Miner or Crafter
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
   Changes:

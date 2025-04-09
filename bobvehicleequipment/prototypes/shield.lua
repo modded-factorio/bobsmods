@@ -1,33 +1,45 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-shield-1",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-1.png",
+    name = "bob-vehicle-shield-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-1.png",
     icon_size = 64,
-    placed_as_equipment_result = "vehicle-shield-1",
+    place_as_equipment_result = "bob-vehicle-shield-equipment-1",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-1",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-shield-1",
+    name = "bob-vehicle-shield-equipment-1",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { "advanced-circuit", 5 },
-      { "steel-plate", 10 },
+      { type = "item", name = "electronic-circuit", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "vehicle-shield-1",
+    results = { { type = "item", name = "bob-vehicle-shield-equipment-1", amount = 1 } },
   },
 
   {
     type = "energy-shield-equipment",
-    name = "vehicle-shield-1",
+    name = "bob-vehicle-shield-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-1.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-1.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -37,29 +49,27 @@ data:extend({
       height = 2,
       type = "full",
     },
-    max_shield_value = 100,
+    max_shield_value = 90,
     energy_source = {
       type = "electric",
-      buffer_capacity = "1500kJ",
+      buffer_capacity = "240kJ",
       input_flow_limit = "300kW",
       usage_priority = "primary-input",
     },
     energy_per_shield = "20kJ",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-energy-shield-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield.png",
+    name = "bob-vehicle-shield-equipment-1",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
       icon_size = 64,
-    }),
-    order = "v-g-e-a",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-solar-panel-equipment-1",
+      "bob-vehicle-solar-panel-equipment-1",
       "military-science-pack",
-      "advanced-electronics",
     },
     unit = {
       count = 150,
@@ -73,7 +83,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-shield-1",
+        recipe = "bob-vehicle-shield-equipment-1",
       },
     },
   },
@@ -82,33 +92,46 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-shield-2",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-2.png",
+    name = "bob-vehicle-shield-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-2.png",
     icon_size = 64,
-    placed_as_equipment_result = "vehicle-shield-2",
+    place_as_equipment_result = "bob-vehicle-shield-equipment-2",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-2",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-shield-2",
+    name = "bob-vehicle-shield-equipment-2",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { "vehicle-shield-1", 2 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-vehicle-shield-equipment-1", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "productivity-module", amount = 1 },
     },
-    result = "vehicle-shield-2",
+    results = { { type = "item", name = "bob-vehicle-shield-equipment-2", amount = 1 } },
   },
 
   {
     type = "energy-shield-equipment",
-    name = "vehicle-shield-2",
+    name = "bob-vehicle-shield-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-2.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-2.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -118,28 +141,27 @@ data:extend({
       height = 2,
       type = "full",
     },
-    max_shield_value = 160,
+    max_shield_value = 180,
     energy_source = {
       type = "electric",
-      buffer_capacity = "2250kJ",
+      buffer_capacity = "360kJ",
       input_flow_limit = "450kW",
       usage_priority = "primary-input",
     },
     energy_per_shield = "20kJ",
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-energy-shield-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield.png",
+    name = "bob-vehicle-shield-equipment-2",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
       icon_size = 64,
-    }),
-    order = "v-g-e-b",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-energy-shield-equipment-1",
-      "advanced-electronics-2",
+      "bob-vehicle-shield-equipment-1",
+      "productivity-module",
       "military-3",
     },
     unit = {
@@ -148,14 +170,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
         { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-shield-2",
+        recipe = "bob-vehicle-shield-equipment-2",
       },
     },
   },
@@ -164,37 +186,49 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-shield-3",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-3.png",
+    name = "bob-vehicle-shield-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-3.png",
     icon_size = 64,
-    placed_as_equipment_result = "vehicle-shield-3",
+    place_as_equipment_result = "bob-vehicle-shield-equipment-3",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-3",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-shield-3",
+    name = "bob-vehicle-shield-equipment-3",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { "vehicle-shield-2", 2 },
-      { "processing-unit", 5 },
-      { "productivity-module-2", 1 },
+      { type = "item", name = "bob-vehicle-shield-equipment-2", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "productivity-module-2", amount = 1 },
     },
-    result = "vehicle-shield-3",
+    results = { { type = "item", name = "bob-vehicle-shield-equipment-3", amount = 1 } },
   },
 
   {
     type = "energy-shield-equipment",
-    name = "vehicle-shield-3",
-    max_shield_value = 240,
+    name = "bob-vehicle-shield-equipment-3",
+    max_shield_value = 360,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
-      buffer_capacity = "3000kJ",
+      buffer_capacity = "480kJ",
       input_flow_limit = "600kW",
       usage_priority = "primary-input",
     },
@@ -204,26 +238,26 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-3.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-3.png",
       width = 64,
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-energy-shield-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield.png",
+    name = "bob-vehicle-shield-equipment-3",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
       icon_size = 64,
-    }),
-    order = "v-g-e-c",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-energy-shield-equipment-2",
+      "bob-vehicle-shield-equipment-2",
       "productivity-module-2",
       "production-science-pack",
+      "processing-unit",
     },
     unit = {
       count = 250,
@@ -239,7 +273,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-shield-3",
+        recipe = "bob-vehicle-shield-equipment-3",
       },
     },
   },
@@ -248,38 +282,49 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-shield-4",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-4.png",
+    name = "bob-vehicle-shield-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-4.png",
     icon_size = 64,
-    placed_as_equipment_result = "vehicle-shield-4",
+    place_as_equipment_result = "bob-vehicle-shield-equipment-4",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-4",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-shield-4",
+    name = "bob-vehicle-shield-equipment-4",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { "vehicle-shield-3", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+      { type = "item", name = "bob-vehicle-shield-equipment-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    result = "vehicle-shield-4",
+    results = { { type = "item", name = "bob-vehicle-shield-equipment-4", amount = 1 } },
   },
 
   {
     type = "energy-shield-equipment",
-    name = "vehicle-shield-4",
-    max_shield_value = 400,
+    name = "bob-vehicle-shield-equipment-4",
+    max_shield_value = 600,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
-      buffer_capacity = "3750kJ",
+      buffer_capacity = "600kJ",
       input_flow_limit = "750kW",
       usage_priority = "primary-input",
     },
@@ -289,24 +334,24 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-4.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-4.png",
       width = 64,
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-energy-shield-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield.png",
+    name = "bob-vehicle-shield-equipment-4",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
       icon_size = 64,
-    }),
-    order = "v-g-e-d",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-energy-shield-equipment-3",
+      "bob-vehicle-shield-equipment-3",
+      "productivity-module-3",
     },
     unit = {
       count = 300,
@@ -322,7 +367,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-shield-4",
+        recipe = "bob-vehicle-shield-equipment-4",
       },
     },
   },
@@ -331,38 +376,49 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-shield-5",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-5.png",
+    name = "bob-vehicle-shield-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-5.png",
     icon_size = 64,
-    placed_as_equipment_result = "vehicle-shield-5",
+    place_as_equipment_result = "bob-vehicle-shield-equipment-5",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-5",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-shield-5",
+    name = "bob-vehicle-shield-equipment-5",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { "vehicle-shield-4", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+      { type = "item", name = "bob-vehicle-shield-equipment-4", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    result = "vehicle-shield-5",
+    results = { { type = "item", name = "bob-vehicle-shield-equipment-5", amount = 1 } },
   },
 
   {
     type = "energy-shield-equipment",
-    name = "vehicle-shield-5",
-    max_shield_value = 640,
+    name = "bob-vehicle-shield-equipment-5",
+    max_shield_value = 960,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
-      buffer_capacity = "4500kJ",
+      buffer_capacity = "720kJ",
       input_flow_limit = "900kW",
       usage_priority = "primary-input",
     },
@@ -372,24 +428,23 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-5.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-5.png",
       width = 64,
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-energy-shield-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield.png",
+    name = "bob-vehicle-shield-equipment-5",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
       icon_size = 64,
-    }),
-    order = "v-g-e-e",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-energy-shield-equipment-4",
+      "bob-vehicle-shield-equipment-4",
       "utility-science-pack",
     },
     unit = {
@@ -407,7 +462,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-shield-5",
+        recipe = "bob-vehicle-shield-equipment-5",
       },
     },
   },
@@ -416,38 +471,49 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-shield-6",
-    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-6.png",
+    name = "bob-vehicle-shield-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-6.png",
     icon_size = 64,
-    placed_as_equipment_result = "vehicle-shield-6",
+    place_as_equipment_result = "bob-vehicle-shield-equipment-6",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-b[shield]-6",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
+      volume = 0.4,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
+      volume = 0.4,
+    },
+    weight = 100000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-shield-6",
+    name = "bob-vehicle-shield-equipment-6",
     enabled = false,
-    energy_required = 10,
+    energy_required = 20,
     ingredients = {
-      { "vehicle-shield-5", 2 },
-      { "processing-unit", 5 },
-      { "effectivity-module-3", 1 },
-      { "productivity-module-3", 1 },
+      { type = "item", name = "bob-vehicle-shield-equipment-5", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
     },
-    result = "vehicle-shield-6",
+    results = { { type = "item", name = "bob-vehicle-shield-equipment-6", amount = 1 } },
   },
 
   {
     type = "energy-shield-equipment",
-    name = "vehicle-shield-6",
-    max_shield_value = 1000,
+    name = "bob-vehicle-shield-equipment-6",
+    max_shield_value = 1440,
     energy_per_shield = "20kJ",
     energy_source = {
       type = "electric",
-      buffer_capacity = "5250kJ",
+      buffer_capacity = "840kJ",
       input_flow_limit = "1050kW",
       usage_priority = "primary-input",
     },
@@ -457,24 +523,24 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-6.png",
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-shield-equipment-6.png",
       width = 64,
       height = 64,
       priority = "medium",
     },
-    categories = { "vehicle" },
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-energy-shield-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield.png",
+    name = "bob-vehicle-shield-equipment-6",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-shield-equipment.png",
       icon_size = 64,
-    }),
-    order = "v-g-e-f",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-energy-shield-equipment-5",
+      "bob-vehicle-shield-equipment-5",
+      "space-science-pack",
     },
     unit = {
       count = 400,
@@ -486,12 +552,13 @@ data:extend({
         { "military-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-shield-6",
+        recipe = "bob-vehicle-shield-equipment-6",
       },
     },
   },

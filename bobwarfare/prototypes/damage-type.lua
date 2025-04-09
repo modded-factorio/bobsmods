@@ -5,6 +5,6 @@ data:extend({
   },
   {
     type = "damage-type",
-    name = "plasma",
+    name = "bob-plasma",
   },
 })

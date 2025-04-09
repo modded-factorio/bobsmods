@@ -42,13 +42,6 @@ data:extend({
     setting_type = "startup",
     default_value = false,
   },
-
-  {
-    type = "bool-setting",
-    name = "bobmods-colorupdate",
-    setting_type = "startup",
-    default_value = true,
-  },
   {
     type = "bool-setting",
     name = "bobmods-plates-bluedeuterium",
@@ -66,12 +59,12 @@ data:extend({
     type = "bool-setting",
     name = "bobmods-plates-convert-recipes",
     setting_type = "startup",
-    default_value = true,
+    default_value = false,
   },
   {
     type = "bool-setting",
     name = "bobmods-plates-expensive-electrolysis",
     setting_type = "startup",
-    default_value = false,
+    default_value = true,
   },
 })

@@ -1,0 +1,49 @@
+{
+  "item":
+  [
+    ["basic-circuit-board", "bob-basic-circuit-board"],
+    ["basic-electronic-components", "bob-basic-electronic-components"],
+    ["circuit-board", "bob-circuit-board"],
+    ["electronic-components", "bob-electronic-components"],
+    ["fibreglass-board", "bob-fibreglass-board"],
+    ["gilded-copper-cable", "bob-gilded-copper-cable"],
+    ["insulated-cable", "bob-insulated-cable"],
+    ["intergrated-electronics", "bob-integrated-electronics"],
+    ["multi-layer-circuit-board", "bob-multi-layer-circuit-board"],
+    ["phenolic-board", "bob-phenolic-board"],
+    ["processing-electronics", "bob-processing-electronics"],
+    ["rocket-control-unit", "bob-advanced-processing-unit"],
+    ["rubber", "bob-rubber"],
+    ["solder", "bob-solder"],
+    ["solder-alloy", "bob-solder-alloy"],
+    ["superior-circuit-board", "bob-superior-circuit-board"],
+    ["tinned-copper-cable", "bob-tinned-copper-cable"],
+    ["wooden-board", "bob-wooden-board"]
+  ],
+  "recipe":
+  [
+    ["basic-circuit-board", "bob-basic-circuit-board"],
+    ["basic-electronic-components", "bob-basic-electronic-components"],
+    ["circuit-board", "bob-circuit-board"],
+    ["coal-cracking", "bob-coal-cracking"],
+    ["electronic-components", "bob-electronic-components"],
+    ["fibreglass-board", "bob-fibreglass-board"],
+    ["gilded-copper-cable", "bob-gilded-copper-cable"],
+    ["insulated-cable", "bob-insulated-cable"],
+    ["intergrated-electronics", "bob-integrated-electronics"],
+    ["multi-layer-circuit-board", "bob-multi-layer-circuit-board"],
+    ["phenolic-board", "bob-phenolic-board"],
+    ["processing-electronics", "bob-processing-electronics"],
+    ["solder", "bob-solder"],
+    ["solder-alloy", "bob-solder-alloy"],
+    ["solder-alloy-lead", "bob-solder-alloy-lead"],
+    ["superior-circuit-board", "bob-superior-circuit-board"],
+    ["synthetic-wood", "bob-synthetic-wood"],
+    ["tinned-copper-cable", "bob-tinned-copper-cable"],
+    ["wooden-board", "bob-wooden-board"]
+  ],
+  "technology":
+  [
+    ["advanced-electronics-3", "bob-advanced-processing-unit"]
+  ]
+}

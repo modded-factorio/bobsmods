@@ -12,49 +12,66 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
   data.raw.item["oil-refinery"].subgroup = "bob-refinery-machine"
   data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
+  data.raw["assembling-machine"]["oil-refinery"].icons_positioning = {
+    {
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = { 0, 1 },
+    },
+  }
+
   data:extend({
     {
       type = "item",
-      name = "oil-refinery-2",
+      name = "bob-oil-refinery-2",
       icon = "__base__/graphics/icons/oil-refinery.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "bob-refinery-machine",
       order = "d[refinery-2]",
-      place_result = "oil-refinery-2",
+      place_result = "bob-oil-refinery-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
       type = "recipe",
-      name = "oil-refinery-2",
+      name = "bob-oil-refinery-2",
       energy_required = 10,
       ingredients = {
-        { "oil-refinery", 1 },
-        { "steel-plate", 15 },
-        { "iron-gear-wheel", 10 },
-        { "stone-brick", 10 },
-        { "advanced-circuit", 10 },
-        { "pipe", 10 },
+        { type = "item", name = "oil-refinery", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 15 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "stone-brick", amount = 10 },
+        { type = "item", name = "advanced-circuit", amount = 10 },
+        { type = "item", name = "pipe", amount = 10 },
       },
-      result = "oil-refinery-2",
+      results = { { type = "item", name = "bob-oil-refinery-2", amount = 1 } },
       enabled = false,
     },
 
     util.merge({
       data.raw["assembling-machine"]["oil-refinery"],
       {
-        name = "oil-refinery-2",
+        name = "bob-oil-refinery-2",
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { result = "oil-refinery-2" },
-        next_upgrade = "oil-refinery-3",
+        minable = { result = "bob-oil-refinery-2" },
+        next_upgrade = "bob-oil-refinery-3",
         max_health = 400,
-        module_specification = { module_slots = 4 },
+        module_slots = 4,
         crafting_speed = 1.75,
         energy_usage = "720kW",
-        energy_source = { emissions_per_minute = 5 },
+        energy_source = { emissions_per_minute = { pollution = 5 } },
       },
     }),
 
@@ -63,10 +80,9 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       name = "oil-processing-2",
       icon = "__base__/graphics/technology/oil-processing.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "oil-processing",
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       order = "d-a2",
@@ -82,7 +98,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "oil-refinery-2",
+          recipe = "bob-oil-refinery-2",
         },
       },
     },
@@ -91,46 +107,56 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
   data:extend({
     {
       type = "item",
-      name = "oil-refinery-3",
+      name = "bob-oil-refinery-3",
       icon = "__base__/graphics/icons/oil-refinery.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "bob-refinery-machine",
       order = "d[refinery-3]",
-      place_result = "oil-refinery-3",
+      place_result = "bob-oil-refinery-3",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
       type = "recipe",
-      name = "oil-refinery-3",
+      name = "bob-oil-refinery-3",
       energy_required = 10,
       ingredients = {
-        { "oil-refinery-2", 1 },
-        { "steel-plate", 15 },
-        { "iron-gear-wheel", 10 },
-        { "stone-brick", 10 },
-        { "processing-unit", 10 },
-        { "pipe", 10 },
+        { type = "item", name = "bob-oil-refinery-2", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 15 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "stone-brick", amount = 10 },
+        { type = "item", name = "processing-unit", amount = 10 },
+        { type = "item", name = "pipe", amount = 10 },
       },
-      result = "oil-refinery-3",
+      results = { { type = "item", name = "bob-oil-refinery-3", amount = 1 } },
       enabled = false,
     },
 
     util.merge({
       data.raw["assembling-machine"]["oil-refinery"],
       {
-        name = "oil-refinery-3",
+        name = "bob-oil-refinery-3",
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { result = "oil-refinery-3" },
-        next_upgrade = "oil-refinery-4",
+        minable = { result = "bob-oil-refinery-3" },
+        next_upgrade = "bob-oil-refinery-4",
         max_health = 500,
-        module_specification = { module_slots = 5 },
+        module_slots = 5,
         crafting_speed = 2.5,
         energy_usage = "1MW",
-        energy_source = { emissions_per_minute = 4 },
+        energy_source = { emissions_per_minute = { pollution = 4 } },
       },
     }),
 
@@ -139,10 +165,9 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       name = "oil-processing-3",
       icon = "__base__/graphics/technology/oil-processing.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "oil-processing-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       order = "d-a3",
@@ -159,7 +184,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "oil-refinery-3",
+          recipe = "bob-oil-refinery-3",
         },
       },
     },
@@ -168,45 +193,55 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
   data:extend({
     {
       type = "item",
-      name = "oil-refinery-4",
+      name = "bob-oil-refinery-4",
       icon = "__base__/graphics/icons/oil-refinery.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "bob-refinery-machine",
       order = "d[refinery-4]",
-      place_result = "oil-refinery-4",
+      place_result = "bob-oil-refinery-4",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/fluid-inventory-move.ogg",
+        volume = 0.6,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
       type = "recipe",
-      name = "oil-refinery-4",
+      name = "bob-oil-refinery-4",
       energy_required = 10,
       ingredients = {
-        { "oil-refinery-3", 1 },
-        { "steel-plate", 15 },
-        { "iron-gear-wheel", 10 },
-        { "stone-brick", 10 },
-        { "processing-unit", 10 },
-        { "pipe", 10 },
+        { type = "item", name = "bob-oil-refinery-3", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 15 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "stone-brick", amount = 10 },
+        { type = "item", name = "processing-unit", amount = 10 },
+        { type = "item", name = "pipe", amount = 10 },
       },
-      result = "oil-refinery-4",
+      results = { { type = "item", name = "bob-oil-refinery-4", amount = 1 } },
       enabled = false,
     },
 
     util.merge({
       data.raw["assembling-machine"]["oil-refinery"],
       {
-        name = "oil-refinery-4",
+        name = "bob-oil-refinery-4",
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { result = "oil-refinery-4" },
+        minable = { result = "bob-oil-refinery-4" },
         max_health = 600,
-        module_specification = { module_slots = 6 },
+        module_slots = 6,
         crafting_speed = 3.5,
         energy_usage = "1.35MW",
-        energy_source = { emissions_per_minute = 3 },
+        energy_source = { emissions_per_minute = { pollution = 3 } },
       },
     }),
 
@@ -215,7 +250,6 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       name = "oil-processing-4",
       icon = "__base__/graphics/technology/oil-processing.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "oil-processing-3",
         "utility-science-pack",
@@ -235,7 +269,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "oil-refinery-4",
+          recipe = "bob-oil-refinery-4",
         },
       },
     },

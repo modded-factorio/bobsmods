@@ -1,10 +1,10 @@
 if
   settings.startup["bobmods-assembly-multipurposefurnaces"].value
   and data.raw["item-subgroup"]["bob-smelting-machine"]
-  and data.raw["recipe-category"]["chemical-furnace"]
-  and data.raw["recipe-category"]["mixing-furnace"]
-  and (data.raw.technology["alloy-processing-2"] or data.raw.technology["electric-mixing-furnace"])
-  and data.raw.technology["electric-chemical-furnace"]
+  and data.raw["recipe-category"]["bob-chemical-furnace"]
+  and data.raw["recipe-category"]["bob-mixing-furnace"]
+  and (data.raw.technology["bob-alloy-processing-2"] or data.raw.technology["bob-electric-mixing-furnace"])
+  and data.raw.technology["bob-electric-chemical-furnace"]
 then
   local function bob_electric_multipurpose_furnace_working_visualisations()
     return {
@@ -12,21 +12,12 @@ then
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
           priority = "high",
-          width = 25,
-          height = 15,
+          width = 60,
+          height = 56,
           frame_count = 12,
           animation_speed = 0.5,
-          shift = { 0.015625, 0.890625 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-            priority = "high",
-            width = 60,
-            height = 56,
-            frame_count = 12,
-            animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(1.75, 32.75),
+          scale = 0.5,
         },
         light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
       },
@@ -34,21 +25,12 @@ then
         animation = {
           filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
           priority = "high",
-          width = 19,
-          height = 13,
+          width = 37,
+          height = 25,
           frame_count = 4,
           animation_speed = 0.5,
-          shift = { -0.671875, -0.640625 },
-          hr_version = {
-            filename = "__bobassembly__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-            priority = "high",
-            width = 37,
-            height = 25,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
-            scale = 0.5,
-          },
+          shift = util.by_pixel(-20.5, -18.5),
+          scale = 0.5,
         },
       },
     }
@@ -57,63 +39,91 @@ then
   data:extend({
     {
       type = "item",
-      name = "electric-chemical-mixing-furnace",
+      name = "bob-electric-chemical-mixing-furnace",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace.png",
       icon_size = 32,
       subgroup = "bob-smelting-machine",
       order = "d[electric-chemical-mixing-furnace-1]",
-      place_result = "electric-chemical-mixing-furnace",
+      place_result = "bob-electric-chemical-mixing-furnace",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7,
+      },
+      weight = 20000,
     },
     {
       type = "item",
-      name = "electric-chemical-mixing-furnace-2",
+      name = "bob-electric-chemical-mixing-furnace-2",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace-2.png",
       icon_size = 32,
       subgroup = "bob-smelting-machine",
       order = "d[electric-chemical-mixing-furnace-2]",
-      place_result = "electric-chemical-mixing-furnace-2",
+      place_result = "bob-electric-chemical-mixing-furnace-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
+        volume = 0.7,
+      },
+      weight = 20000,
     },
 
     {
       type = "recipe",
-      name = "electric-chemical-mixing-furnace",
+      name = "bob-electric-chemical-mixing-furnace",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { "electric-chemical-furnace", 1 },
-        { "steel-plate", 10 },
-        { "stone-brick", 10 },
-        { "processing-unit", 5 },
-        { "pipe", 5 },
+        { type = "item", name = "bob-electric-chemical-furnace", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "stone-brick", amount = 10 },
+        { type = "item", name = "processing-unit", amount = 5 },
+        { type = "item", name = "pipe", amount = 5 },
       },
-      result = "electric-chemical-mixing-furnace",
+      results = { { type = "item", name = "bob-electric-chemical-mixing-furnace", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "electric-chemical-mixing-furnace-2",
+      name = "bob-electric-chemical-mixing-furnace-2",
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { "electric-chemical-mixing-furnace", 1 },
-        { "steel-plate", 10 },
-        { "stone-brick", 10 },
-        { "processing-unit", 5 },
-        { "pipe", 5 },
+        { type = "item", name = "bob-electric-chemical-mixing-furnace", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "stone-brick", amount = 10 },
+        { type = "item", name = "processing-unit", amount = 5 },
+        { type = "item", name = "pipe", amount = 5 },
       },
-      result = "electric-chemical-mixing-furnace-2",
+      results = { { type = "item", name = "bob-electric-chemical-mixing-furnace-2", amount = 1 } },
     },
 
     {
       type = "assembling-machine",
-      name = "electric-chemical-mixing-furnace",
+      name = "bob-electric-chemical-mixing-furnace",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 1, result = "electric-chemical-mixing-furnace" },
+      minable = { mining_time = 1, result = "bob-electric-chemical-mixing-furnace" },
       max_health = 450,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["bob-electric-chemical-furnace"],
       corpse = "big-remnants",
       resistances = {
         {
@@ -126,60 +136,65 @@ then
           production_type = "input",
           pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {
-            { type = "input", position = { 0, -2 } },
-            --          { type="input", position = {0, 2} },
-          },
+          pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
+          volume = 1000,
         },
-        off_when_no_fluid_recipe = true,
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
-      module_specification = {
-        module_slots = 4,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 4,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.1 },
       },
       crafting_speed = 3,
-      crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
+      crafting_categories = { "smelting", "bob-mixing-furnace", "bob-chemical-furnace" },
       energy_usage = "250kW",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = { pollution = 1 },
       },
+      impact_category = "metal",
       working_sound = {
         sound = {
           filename = "__base__/sound/electric-furnace.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1.5,
       },
-      animation = {
-        filename = "__bobassembly__/graphics/entity/electric-furnace/electric-chemical-mixing-furnace.png",
-        priority = "high",
-        width = 129,
-        height = 100,
-        frame_count = 1,
-        shift = { 0.46875, 0 },
+      graphics_set = {
+        animation = {
+          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-chemical-mixing-furnace.png",
+          priority = "high",
+          width = 129,
+          height = 100,
+          frame_count = 1,
+          shift = { 0.46875, 0 },
+        },
+        working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       },
-      working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       fast_replaceable_group = "furnace",
-      next_upgrade = "electric-chemical-mixing-furnace-2",
+      next_upgrade = "bob-electric-chemical-mixing-furnace-2",
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
 
     {
       type = "assembling-machine",
-      name = "electric-chemical-mixing-furnace-2",
+      name = "bob-electric-chemical-mixing-furnace-2",
       icon = "__bobassembly__/graphics/icons/electric-chemical-mixing-furnace-2.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
-      minable = { mining_time = 1, result = "electric-chemical-mixing-furnace-2" },
+      minable = { mining_time = 1, result = "bob-electric-chemical-mixing-furnace-2" },
       max_health = 550,
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["bob-electric-chemical-furnace"],
       corpse = "big-remnants",
       resistances = {
         {
@@ -192,79 +207,82 @@ then
           production_type = "input",
           pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {
-            { type = "input", position = { 0, -2 } },
-            --          { type="input", position = {0, 2} },
-          },
+          pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
+          volume = 1000,
         },
-        off_when_no_fluid_recipe = true,
       },
+      fluid_boxes_off_when_no_fluid_recipe = true,
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
-      module_specification = {
-        module_slots = 6,
-        module_info_icon_shift = { 0, 0.5 },
-        module_info_multi_row_initial_height_modifier = -0.3,
+      module_slots = 6,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.assembling_machine_modules,
+          shift = { 0, 0.8 },
+          multi_row_initial_height_modifier = -0.3,
+          max_icons_per_row = 3,
+        },
+      },
+      icon_draw_specification = {
+        shift = { 0, -0.1 },
       },
       crafting_speed = 4,
-      crafting_categories = { "smelting", "mixing-furnace", "chemical-furnace" },
+      crafting_categories = { "smelting", "bob-mixing-furnace", "bob-chemical-furnace" },
       energy_usage = "300kW",
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 1,
+        emissions_per_minute = { pollution = 1 },
       },
+      impact_category = "metal",
       working_sound = {
         sound = {
           filename = "__base__/sound/electric-furnace.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1.5,
       },
-      animation = {
-        filename = "__bobassembly__/graphics/entity/electric-furnace/electric-chemical-mixing-furnace-2.png",
-        priority = "high",
-        width = 129,
-        height = 100,
-        frame_count = 1,
-        shift = { 0.46875, 0 },
+      graphics_set = {
+        animation = {
+          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-chemical-mixing-furnace-2.png",
+          priority = "high",
+          width = 129,
+          height = 100,
+          frame_count = 1,
+          shift = { 0.46875, 0 },
+        },
+        working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       },
-      working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       fast_replaceable_group = "furnace",
       allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     },
 
     {
       type = "technology",
-      name = "multi-purpose-furnace-1",
+      name = "bob-multi-purpose-furnace-1",
       icon_size = 128,
-      --    icon = "__bobassembly__/graphics/icons/technology/multi-purpose-furnace.png",
       icons = {
         {
           icon_size = 256,
-          icon_mipmaps = 4,
-          scale = 0.25,
-          icon = "__base__/graphics/technology/advanced-material-processing.png",
+          scale = 0.5,
+          icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
           icon_size = 64,
-          scale = 0.5,
-          shift = { -16, -16 },
+          scale = 1,
+          shift = { -32, -32 },
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
           icon_size = 128,
-          scale = 0.25,
-          shift = { 16, -16 },
+          scale = 0.5,
+          shift = { 32, -32 },
         },
       },
       order = "c-c-b-1",
       prerequisites = {
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {
@@ -280,37 +298,37 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electric-chemical-mixing-furnace",
+          recipe = "bob-electric-chemical-mixing-furnace",
         },
       },
     },
 
     {
       type = "technology",
-      name = "multi-purpose-furnace-2",
+      name = "bob-multi-purpose-furnace-2",
       icon_size = 128,
-      --    icon = "__bobassembly__/graphics/icons/technology/multi-purpose-furnace.png",
       icons = {
         {
           icon_size = 256,
-          icon_mipmaps = 4,
-          icon = "__base__/graphics/technology/advanced-material-processing.png",
+          scale = 0.5,
+          icon = "__base__/graphics/technology/advanced-material-processing-2.png",
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/chemistry.png",
           icon_size = 64,
-          scale = 2,
-          shift = { -64, -64 },
+          scale = 1,
+          shift = { -32, -32 },
         },
         {
           icon = "__bobassembly__/graphics/icons/technology/alloy-processing.png",
           icon_size = 128,
-          shift = { 64, -64 },
+          scale = 0.5,
+          shift = { 32, -32 },
         },
       },
       order = "c-c-b-2",
       prerequisites = {
-        "multi-purpose-furnace-1",
+        "bob-multi-purpose-furnace-1",
         "utility-science-pack",
       },
       unit = {
@@ -327,17 +345,17 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "electric-chemical-mixing-furnace-2",
+          recipe = "bob-electric-chemical-mixing-furnace-2",
         },
       },
     },
   })
-  if data.raw.technology["electric-chemical-furnace"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "electric-chemical-furnace")
+  if data.raw.technology["bob-electric-chemical-furnace"] then
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-electric-chemical-furnace")
   end
-  if data.raw.technology["electric-mixing-furnace"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "electric-mixing-furnace")
-  elseif data.raw.technology["alloy-processing-2"] then
-    bobmods.lib.tech.add_prerequisite("multi-purpose-furnace-1", "alloy-processing-2")
+  if data.raw.technology["bob-electric-mixing-furnace"] then
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-electric-mixing-furnace")
+  elseif data.raw.technology["bob-alloy-processing-2"] then
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-alloy-processing-2")
   end
 end

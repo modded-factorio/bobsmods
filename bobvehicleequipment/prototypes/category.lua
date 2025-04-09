@@ -3,13 +3,19 @@ data:extend({
     type = "item-subgroup",
     name = "vehicle-equipment",
     group = "combat",
-    order = "e-v",
+    order = "g-2",
   },
 
   {
     type = "equipment-category",
     name = "vehicle",
   },
+
+  {
+    type = "equipment-category",
+    name = "unarmed-vehicle",
+  },
+
   {
     type = "equipment-category",
     name = "armoured-vehicle",

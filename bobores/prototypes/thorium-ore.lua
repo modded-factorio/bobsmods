@@ -1,5 +1,5 @@
 bobmods.ores.thorium = {
-  name = "thorium-ore",
+  name = "bob-thorium-ore",
   tint = { r = 1, g = 1, b = 0.25 },
   map_color = { r = 0.75, g = 1, b = 0.25 },
   mining_time = 2.5,
@@ -28,22 +28,16 @@ bobmods.ores.thorium = {
     min_alpha = 0.2,
     max_alpha = 0.3,
   },
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = false,
-    richness = 0.5,
-    size = 0.8
-  }
-]]
-  --
   autoplace = "control-only",
+  drop_sound = { filename = "__base__/sound/item/nuclear-inventory-move.ogg", volume = 0.6 },
+  inventory_move_sound = { filename = "__base__/sound/item/nuclear-inventory-move.ogg", volume = 0.6 },
+  pick_sound = { filename = "__base__/sound/item/nuclear-inventory-pickup.ogg", volume = 0.6 },
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.thorium.create_autoplace()
-  data.raw.resource["thorium-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "thorium-ore",
+  data.raw.resource["bob-thorium-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-thorium-ore",
     order = "c",
     base_density = 0.9,
     base_spots_per_km2 = 1.25,

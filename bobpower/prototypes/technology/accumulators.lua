@@ -7,24 +7,23 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       localised_description = { "technology-description.electric-energy-accumulators" },
       icon = "__base__/graphics/technology/electric-energy-acumulators.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "large-accumulator-2",
+          recipe = "bob-large-accumulator-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "fast-accumulator-2",
+          recipe = "bob-fast-accumulator-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "slow-accumulator-2",
+          recipe = "bob-slow-accumulator-2",
         },
       },
       prerequisites = {
         "electric-energy-accumulators",
-        "advanced-electronics",
+        "advanced-circuit",
         "chemical-science-pack",
       },
       unit = {
@@ -46,24 +45,23 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       localised_description = { "technology-description.electric-energy-accumulators" },
       icon = "__base__/graphics/technology/electric-energy-acumulators.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "large-accumulator-3",
+          recipe = "bob-large-accumulator-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "fast-accumulator-3",
+          recipe = "bob-fast-accumulator-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "slow-accumulator-3",
+          recipe = "bob-slow-accumulator-3",
         },
       },
       prerequisites = {
         "bob-electric-energy-accumulators-2",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
       },
       unit = {

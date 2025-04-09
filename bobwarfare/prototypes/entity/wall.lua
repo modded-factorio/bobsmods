@@ -1,20 +1,20 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
-local reinforced_wall_resistances = {
+local wall_resistances = {
   {
     type = "physical",
-    decrease = 10,
-    percent = 50,
+    decrease = 3,
+    percent = 40,
   },
   {
     type = "impact",
-    decrease = 50,
+    decrease = 45,
     percent = 60,
   },
   {
     type = "explosion",
-    decrease = 10,
-    percent = 50,
+    decrease = 20,
+    percent = 40,
   },
   {
     type = "fire",
@@ -22,54 +22,96 @@ local reinforced_wall_resistances = {
   },
   {
     type = "laser",
+    percent = 70,
+  },
+  {
+    type = "poison",
+    decrease = 6,
+    percent = 60,
+  },
+  {
+    type = "acid",
+    decrease = 5,
+    percent = 40,
+  },
+  {
+    type = "electric",
+    percent = 40,
+  },
+}
+
+data.raw.wall["stone-wall"].max_health = 450
+data.raw.wall["stone-wall"].resistances = wall_resistances
+data.raw.gate.gate.resistances = wall_resistances
+data.raw.wall["stone-wall"].is_military_target = true
+data.raw.gate.gate.is_military_target = true
+
+local reinforced_wall_resistances = {
+  {
+    type = "physical",
+    decrease = 6,
+    percent = 50,
+  },
+  {
+    type = "impact",
+    decrease = 80,
+    percent = 80,
+  },
+  {
+    type = "explosion",
+    decrease = 30,
+    percent = 60,
+  },
+  {
+    type = "fire",
     percent = 100,
   },
   {
-    type = "plasma",
+    type = "laser",
+    percent = 70,
+  },
+  {
+    type = "bob-plasma",
     percent = 100,
   },
   {
     type = "poison",
-    decrease = 10,
-    percent = 50,
+    decrease = 12,
+    percent = 75,
   },
   {
     type = "acid",
-    decrease = 10,
-    percent = 25,
+    decrease = 20,
+    percent = 80,
   },
   {
     type = "electric",
-    percent = 50,
-  },
-  {
-    type = "bob-pierce",
-    decrease = 20,
-    percent = 25,
+    percent = 60,
   },
 }
 
 data:extend({
   {
     type = "wall",
-    name = "reinforced-wall",
+    name = "bob-reinforced-wall",
     icon = "__bobwarfare__/graphics/icons/reinforced-wall.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     damaged_trigger_effect = hit_effects.wall(),
-    minable = { mining_time = 0.2, result = "reinforced-wall" },
+    minable = { mining_time = 0.2, result = "bob-reinforced-wall" },
     fast_replaceable_group = "wall",
-    max_health = 750,
+    max_health = 1250,
     repair_speed_modifier = 2,
+    is_military_target = true,
     corpse = "wall-remnants",
     dying_explosion = "wall-explosion",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg" },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.5 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
+    impact_category = "stone",
     -- this kind of code can be used for having walls mirror the effect
     -- there can be multiple reaction items
     --attack_reaction =
@@ -345,38 +387,21 @@ data:extend({
           {
             filename = "__base__/graphics/entity/wall/wall-patch.png",
             priority = "extra-high",
-            width = 58,
-            height = 64,
+            width = 116,
+            height = 128,
             line_length = 4,
             shift = util.by_pixel(0, -2),
-            hr_version = {
-              filename = "__base__/graphics/entity/wall/hr-wall-patch.png",
-              priority = "extra-high",
-              width = 116,
-              height = 128,
-              line_length = 4,
-              shift = util.by_pixel(0, -2),
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           {
             filename = "__base__/graphics/entity/wall/wall-patch-shadow.png",
             priority = "extra-high",
-            width = 74,
-            height = 52,
+            width = 144,
+            height = 100,
             line_length = 4,
-            shift = util.by_pixel(8, 14),
+            shift = util.by_pixel(9, 15),
             draw_as_shadow = true,
-            hr_version = {
-              filename = "__base__/graphics/entity/wall/hr-wall-patch-shadow.png",
-              priority = "extra-high",
-              width = 144,
-              height = 100,
-              line_length = 4,
-              shift = util.by_pixel(9, 15),
-              draw_as_shadow = true,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
       },
@@ -385,34 +410,19 @@ data:extend({
           {
             filename = "__base__/graphics/entity/wall/wall-gate.png",
             priority = "extra-high",
-            width = 42,
-            height = 56,
-            shift = util.by_pixel(0, -8),
-            hr_version = {
-              filename = "__base__/graphics/entity/wall/hr-wall-gate.png",
-              priority = "extra-high",
-              width = 82,
-              height = 108,
-              shift = util.by_pixel(0, -7),
-              scale = 0.5,
-            },
+            width = 82,
+            height = 108,
+            shift = util.by_pixel(0, -7),
+            scale = 0.5,
           },
           {
             filename = "__base__/graphics/entity/wall/wall-gate-shadow.png",
             priority = "extra-high",
-            width = 66,
-            height = 40,
+            width = 130,
+            height = 78,
             shift = util.by_pixel(14, 18),
             draw_as_shadow = true,
-            hr_version = {
-              filename = "__base__/graphics/entity/wall/hr-wall-gate-shadow.png",
-              priority = "extra-high",
-              width = 130,
-              height = 78,
-              shift = util.by_pixel(14, 18),
-              draw_as_shadow = true,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
       },
@@ -421,23 +431,12 @@ data:extend({
       sheet = {
         filename = "__base__/graphics/entity/wall/wall-diode-green.png",
         priority = "extra-high",
-        width = 38,
-        height = 24,
+        width = 72,
+        height = 44,
         draw_as_glow = true,
-        --frames = 4, -- this is optional, it will default to 4 for Sprite4Way
         line_length = 4,
-        shift = util.by_pixel(-2, -24),
-        hr_version = {
-          filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
-          priority = "extra-high",
-          width = 72,
-          height = 44,
-          draw_as_glow = true,
-          --frames = 4,
-          line_length = 4,
-          shift = util.by_pixel(-1, -23),
-          scale = 0.5,
-        },
+        shift = util.by_pixel(-1, -23),
+        scale = 0.5,
       },
     },
     wall_diode_green_light_top = {
@@ -473,23 +472,12 @@ data:extend({
       sheet = {
         filename = "__base__/graphics/entity/wall/wall-diode-red.png",
         priority = "extra-high",
-        width = 38,
-        height = 24,
+        width = 72,
+        height = 44,
         draw_as_glow = true,
-        --frames = 4, -- this is optional, it will default to 4 for Sprite4Way
         line_length = 4,
-        shift = util.by_pixel(-2, -24),
-        hr_version = {
-          filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
-          priority = "extra-high",
-          width = 72,
-          height = 44,
-          draw_as_glow = true,
-          --frames = 4,
-          line_length = 4,
-          shift = util.by_pixel(-1, -23),
-          scale = 0.5,
-        },
+        shift = util.by_pixel(-1, -23),
+        scale = 0.5,
       },
     },
     wall_diode_red_light_top = {
@@ -520,22 +508,20 @@ data:extend({
       size = 1,
       intensity = 0.3,
     },
-
-    circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-    circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
-    circuit_wire_max_distance = 9,
+    circuit_connector = circuit_connector_definitions["wall"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_output_signal = { type = "virtual", name = "signal-G" },
   },
 
   util.merge({
     data.raw.gate.gate,
     {
-      name = "reinforced-gate",
-      minable = { mining_time = 0.1, result = "reinforced-gate" },
+      name = "bob-reinforced-gate",
+      minable = { mining_time = 0.1, result = "bob-reinforced-gate" },
       max_health = 750,
       opening_speed = 0.1,
     },
   }),
 })
 
-data.raw.gate["reinforced-gate"].resistances = reinforced_wall_resistances
+data.raw.gate["bob-reinforced-gate"].resistances = reinforced_wall_resistances

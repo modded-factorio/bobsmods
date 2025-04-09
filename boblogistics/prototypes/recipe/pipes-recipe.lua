@@ -1,364 +1,260 @@
 data:extend({
   {
     type = "recipe",
-    name = "stone-pipe",
-    normal = {
-      ingredients = {
-        { "stone-brick", 1 },
-      },
-      result = "stone-pipe",
-    },
-    expensive = {
-      ingredients = {
-        { "stone-brick", 2 },
-      },
-      result = "stone-pipe",
-    },
-  },
-
-  {
-    type = "recipe",
-    name = "stone-pipe-to-ground",
-    ingredients = {
-      { "stone-pipe", 10 },
-      { "stone-brick", 5 },
-    },
-    result_count = 2,
-    result = "stone-pipe-to-ground",
-  },
-
-  {
-    type = "recipe",
-    name = "copper-pipe",
-    normal = {
-      ingredients = {
-        { "copper-plate", 1 },
-      },
-      result = "copper-pipe",
-    },
-    expensive = {
-      ingredients = {
-        { "copper-plate", 2 },
-      },
-      result = "copper-pipe",
-    },
-  },
-
-  {
-    type = "recipe",
-    name = "copper-pipe-to-ground",
-    ingredients = {
-      { "copper-pipe", 10 },
-      { "copper-plate", 5 },
-    },
-    result_count = 2,
-    result = "copper-pipe-to-ground",
-  },
-
-  {
-    type = "recipe",
-    name = "steel-pipe",
-    normal = {
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 1 },
-      },
-      result = "steel-pipe",
-    },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 2 },
-      },
-      result = "steel-pipe",
-    },
-  },
-
-  {
-    type = "recipe",
-    name = "steel-pipe-to-ground",
+    name = "bob-stone-pipe",
     enabled = false,
     ingredients = {
-      { "steel-pipe", 12 },
-      { "steel-plate", 5 },
+      { type = "item", name = "stone-brick", amount = 1 },
     },
-    result_count = 2,
-    result = "steel-pipe-to-ground",
+    results = { { type = "item", name = "bob-stone-pipe", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "plastic-pipe",
-    normal = {
-      enabled = false,
-      ingredients = {
-        { "plastic-bar", 1 },
-      },
-      result = "plastic-pipe",
-    },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { "plastic-bar", 2 },
-      },
-      result = "plastic-pipe",
-    },
-  },
-
-  {
-    type = "recipe",
-    name = "plastic-pipe-to-ground",
+    name = "bob-stone-pipe-to-ground",
     enabled = false,
     ingredients = {
-      { "plastic-pipe", 14 },
-      { "plastic-bar", 5 },
+      { type = "item", name = "bob-stone-pipe", amount = 10 },
+      { type = "item", name = "stone-brick", amount = 5 },
     },
-    result_count = 2,
-    result = "plastic-pipe-to-ground",
+    results = { { type = "item", name = "bob-stone-pipe-to-ground", amount = 2 } },
+  },
+
+  {
+    type = "recipe",
+    name = "bob-copper-pipe",
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-plate", amount = 1 },
+    },
+    results = { { type = "item", name = "bob-copper-pipe", amount = 1 } },
+  },
+
+  {
+    type = "recipe",
+    name = "bob-copper-pipe-to-ground",
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-copper-pipe", amount = 10 },
+      { type = "item", name = "copper-plate", amount = 5 },
+    },
+    results = { { type = "item", name = "bob-copper-pipe-to-ground", amount = 2 } },
+  },
+
+  {
+    type = "recipe",
+    name = "bob-steel-pipe",
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 1 },
+    },
+    results = { { type = "item", name = "bob-steel-pipe", amount = 1 } },
+  },
+
+  {
+    type = "recipe",
+    name = "bob-steel-pipe-to-ground",
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-steel-pipe", amount = 12 },
+      { type = "item", name = "steel-plate", amount = 5 },
+    },
+    results = { { type = "item", name = "bob-steel-pipe-to-ground", amount = 2 } },
+  },
+
+  {
+    type = "recipe",
+    name = "bob-plastic-pipe",
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "plastic-bar", amount = 1 },
+    },
+    results = { { type = "item", name = "bob-plastic-pipe", amount = 1 } },
+  },
+
+  {
+    type = "recipe",
+    name = "bob-plastic-pipe-to-ground",
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-plastic-pipe", amount = 14 },
+      { type = "item", name = "plastic-bar", amount = 5 },
+    },
+    results = { { type = "item", name = "bob-plastic-pipe-to-ground", amount = 2 } },
   },
 })
 
-if data.raw.item["bronze-alloy"] then
+if data.raw.item["bob-bronze-alloy"] then
   data:extend({
     {
       type = "recipe",
-      name = "bronze-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "bronze-alloy", 1 },
-        },
-        result = "bronze-pipe",
+      name = "bob-bronze-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-bronze-alloy", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "bronze-alloy", 2 },
-        },
-        result = "bronze-pipe",
-      },
+      results = { { type = "item", name = "bob-bronze-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "bronze-pipe-to-ground",
+      name = "bob-bronze-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "bronze-pipe", 12 },
-        { "bronze-alloy", 5 },
+        { type = "item", name = "bob-bronze-pipe", amount = 12 },
+        { type = "item", name = "bob-bronze-alloy", amount = 5 },
       },
-      result_count = 2,
-      result = "bronze-pipe-to-ground",
+      results = { { type = "item", name = "bob-bronze-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["brass-alloy"] then
+if data.raw.item["bob-brass-alloy"] then
   data:extend({
     {
       type = "recipe",
-      name = "brass-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "brass-alloy", 1 },
-        },
-        result = "brass-pipe",
+      name = "bob-brass-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-brass-alloy", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "brass-alloy", 2 },
-        },
-        result = "brass-pipe",
-      },
+      results = { { type = "item", name = "bob-brass-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "brass-pipe-to-ground",
+      name = "bob-brass-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "brass-pipe", 14 },
-        { "brass-alloy", 5 },
+        { type = "item", name = "bob-brass-pipe", amount = 14 },
+        { type = "item", name = "bob-brass-alloy", amount = 5 },
       },
-      result_count = 2,
-      result = "brass-pipe-to-ground",
+      results = { { type = "item", name = "bob-brass-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["silicon-nitride"] then
+if data.raw.item["bob-silicon-nitride"] then
   data:extend({
     {
       type = "recipe",
-      name = "ceramic-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "silicon-nitride", 1 },
-        },
-        result = "ceramic-pipe",
+      name = "bob-ceramic-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-silicon-nitride", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "silicon-nitride", 2 },
-        },
-        result = "ceramic-pipe",
-      },
+      results = { { type = "item", name = "bob-ceramic-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "ceramic-pipe-to-ground",
+      name = "bob-ceramic-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "ceramic-pipe", 16 },
-        { "silicon-nitride", 5 },
+        { type = "item", name = "bob-ceramic-pipe", amount = 16 },
+        { type = "item", name = "bob-silicon-nitride", amount = 5 },
       },
-      result_count = 2,
-      result = "ceramic-pipe-to-ground",
+      results = { { type = "item", name = "bob-ceramic-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["titanium-plate"] then
+if data.raw.item["bob-titanium-plate"] then
   data:extend({
     {
       type = "recipe",
-      name = "titanium-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "titanium-plate", 1 },
-        },
-        result = "titanium-pipe",
+      name = "bob-titanium-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-titanium-plate", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "titanium-plate", 2 },
-        },
-        result = "titanium-pipe",
-      },
+      results = { { type = "item", name = "bob-titanium-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "titanium-pipe-to-ground",
+      name = "bob-titanium-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "titanium-pipe", 16 },
-        { "titanium-plate", 5 },
+        { type = "item", name = "bob-titanium-pipe", amount = 16 },
+        { type = "item", name = "bob-titanium-plate", amount = 5 },
       },
-      result_count = 2,
-      result = "titanium-pipe-to-ground",
+      results = { { type = "item", name = "bob-titanium-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["tungsten-plate"] then
+if data.raw.item["bob-tungsten-plate"] then
   data:extend({
     {
       type = "recipe",
-      name = "tungsten-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "tungsten-plate", 1 },
-        },
-        result = "tungsten-pipe",
+      name = "bob-tungsten-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-tungsten-plate", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "tungsten-plate", 2 },
-        },
-        result = "tungsten-pipe",
-      },
+      results = { { type = "item", name = "bob-tungsten-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "tungsten-pipe-to-ground",
+      name = "bob-tungsten-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "tungsten-pipe", 16 },
-        { "tungsten-plate", 5 },
+        { type = "item", name = "bob-tungsten-pipe", amount = 16 },
+        { type = "item", name = "bob-tungsten-plate", amount = 5 },
       },
-      result_count = 2,
-      result = "tungsten-pipe-to-ground",
+      results = { { type = "item", name = "bob-tungsten-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["nitinol-alloy"] then
+if data.raw.item["bob-nitinol-alloy"] then
   data:extend({
     {
       type = "recipe",
-      name = "nitinol-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "nitinol-alloy", 1 },
-        },
-        result = "nitinol-pipe",
+      name = "bob-nitinol-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-nitinol-alloy", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "nitinol-alloy", 2 },
-        },
-        result = "nitinol-pipe",
-      },
+      results = { { type = "item", name = "bob-nitinol-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "nitinol-pipe-to-ground",
+      name = "bob-nitinol-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "nitinol-pipe", 18 },
-        { "nitinol-alloy", 5 },
+        { type = "item", name = "bob-nitinol-pipe", amount = 18 },
+        { type = "item", name = "bob-nitinol-alloy", amount = 5 },
       },
-      result_count = 2,
-      result = "nitinol-pipe-to-ground",
+      results = { { type = "item", name = "bob-nitinol-pipe-to-ground", amount = 2 } },
     },
   })
 end
 
-if data.raw.item["copper-tungsten-alloy"] then
+if data.raw.item["bob-copper-tungsten-alloy"] then
   data:extend({
     {
       type = "recipe",
-      name = "copper-tungsten-pipe",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "copper-tungsten-alloy", 1 },
-        },
-        result = "copper-tungsten-pipe",
+      name = "bob-copper-tungsten-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-copper-tungsten-alloy", amount = 1 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "copper-tungsten-alloy", 2 },
-        },
-        result = "copper-tungsten-pipe",
-      },
+      results = { { type = "item", name = "bob-copper-tungsten-pipe", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "copper-tungsten-pipe-to-ground",
+      name = "bob-copper-tungsten-pipe-to-ground",
       enabled = false,
       ingredients = {
-        { "copper-tungsten-pipe", 18 },
-        { "copper-tungsten-alloy", 5 },
+        { type = "item", name = "bob-copper-tungsten-pipe", amount = 18 },
+        { type = "item", name = "bob-copper-tungsten-alloy", amount = 5 },
       },
-      result_count = 2,
-      result = "copper-tungsten-pipe-to-ground",
+      results = { { type = "item", name = "bob-copper-tungsten-pipe-to-ground", amount = 2 } },
     },
   })
 end

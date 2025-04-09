@@ -5,7 +5,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/technology/laser-rifle.png",
     icon_size = 64,
     prerequisites = {
-      "advanced-electronics",
+      "advanced-circuit",
       "military-science-pack",
       "laser",
       "battery",
@@ -13,15 +13,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle",
+        recipe = "bob-laser-rifle",
       },
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery",
+        recipe = "bob-laser-rifle-battery",
       },
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-case",
+        recipe = "bob-laser-rifle-battery-case",
       },
     },
     unit = {

@@ -5,28 +5,28 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/bullet-magazine.png",
     icon_size = 32,
     prerequisites = {
-      "cordite-processing",
+      "bob-cordite-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bullet-casing",
+        recipe = "bob-bullet-casing",
       },
       {
         type = "unlock-recipe",
-        recipe = "magazine",
+        recipe = "bob-magazine",
       },
       {
         type = "unlock-recipe",
-        recipe = "bullet-projectile",
+        recipe = "bob-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "bullet",
+        recipe = "bob-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "bullet-magazine",
+        recipe = "bob-bullet-magazine",
       },
     },
     unit = {
@@ -38,7 +38,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-a",
   },
 
   {
@@ -48,20 +47,20 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ap-bullet-projectile",
+        recipe = "bob-ap-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "ap-bullet",
+        recipe = "bob-ap-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "ap-bullet-magazine",
+        recipe = "bob-ap-bullet-magazine",
       },
     },
     unit = {
@@ -74,7 +73,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-b",
   },
 
   {
@@ -84,20 +82,20 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electric-bullet-projectile",
+        recipe = "bob-electric-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "electric-bullet",
+        recipe = "bob-electric-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "electric-bullet-magazine",
+        recipe = "bob-electric-bullet-magazine",
       },
     },
     unit = {
@@ -110,7 +108,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-c",
   },
 
   {
@@ -120,20 +117,20 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "he-bullet-projectile",
+        recipe = "bob-he-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "he-bullet",
+        recipe = "bob-he-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "he-bullet-magazine",
+        recipe = "bob-he-bullet-magazine",
       },
     },
     unit = {
@@ -146,7 +143,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-d",
   },
 
   {
@@ -156,20 +152,20 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "flame-bullet-projectile",
+        recipe = "bob-flame-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "flame-bullet",
+        recipe = "bob-flame-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "flame-bullet-magazine",
+        recipe = "bob-flame-bullet-magazine",
       },
     },
     unit = {
@@ -182,7 +178,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-e",
   },
 
   {
@@ -192,20 +187,20 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "acid-bullet-projectile",
+        recipe = "bob-acid-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "acid-bullet",
+        recipe = "bob-acid-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "acid-bullet-magazine",
+        recipe = "bob-acid-bullet-magazine",
       },
     },
     unit = {
@@ -218,7 +213,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-f",
   },
 
   {
@@ -228,20 +222,20 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-bullets",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "poison-bullet-projectile",
+        recipe = "bob-poison-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "poison-bullet",
+        recipe = "bob-poison-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "poison-bullet-magazine",
+        recipe = "bob-poison-bullet-magazine",
       },
     },
     unit = {
@@ -254,7 +248,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-g",
   },
 
   {
@@ -263,20 +256,20 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-shell.png",
     icon_size = 32,
     prerequisites = {
-      "cordite-processing",
+      "bob-cordite-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-shell-casing",
+        recipe = "bob-shotgun-shell-casing",
       },
       {
         type = "unlock-recipe",
-        recipe = "shot",
+        recipe = "bob-shot",
       },
       {
         type = "unlock-recipe",
-        recipe = "better-shotgun-shell",
+        recipe = "bob-better-shotgun-shell",
       },
     },
     unit = {
@@ -288,7 +281,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-a",
   },
 
   {
@@ -298,12 +290,12 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-ap-shell",
+        recipe = "bob-shotgun-ap-shell",
       },
     },
     unit = {
@@ -316,7 +308,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-b",
   },
 
   {
@@ -326,12 +317,12 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-electric-shell",
+        recipe = "bob-shotgun-electric-shell",
       },
     },
     unit = {
@@ -344,7 +335,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-c",
   },
 
   {
@@ -354,12 +344,12 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-explosive-shell",
+        recipe = "bob-shotgun-explosive-shell",
       },
     },
     unit = {
@@ -372,7 +362,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-d",
   },
 
   {
@@ -382,12 +371,12 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-flame-shell",
+        recipe = "bob-shotgun-flame-shell",
       },
     },
     unit = {
@@ -400,7 +389,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-e",
   },
 
   {
@@ -410,12 +398,12 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-acid-shell",
+        recipe = "bob-shotgun-acid-shell",
       },
     },
     unit = {
@@ -428,7 +416,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-f",
   },
 
   {
@@ -438,12 +425,12 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-shotgun-shells",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-poison-shell",
+        recipe = "bob-shotgun-poison-shell",
       },
     },
     unit = {
@@ -456,7 +443,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-g",
   },
 
   {
@@ -470,7 +456,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-ruby",
+        recipe = "bob-laser-rifle-battery-ruby",
       },
     },
     unit = {
@@ -482,7 +468,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a1",
   },
 
   {
@@ -496,7 +481,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-sapphire",
+        recipe = "bob-laser-rifle-battery-sapphire",
       },
     },
     unit = {
@@ -508,7 +493,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a2",
   },
 
   {
@@ -518,12 +502,12 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-laser-rifle-ammo-2",
-      "chemical-science-pack",
+      "military-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-emerald",
+        recipe = "bob-laser-rifle-battery-emerald",
       },
     },
     unit = {
@@ -536,7 +520,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a3",
   },
 
   {
@@ -550,7 +533,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-amethyst",
+        recipe = "bob-laser-rifle-battery-amethyst",
       },
     },
     unit = {
@@ -563,7 +546,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a4",
   },
 
   {
@@ -578,7 +560,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-topaz",
+        recipe = "bob-laser-rifle-battery-topaz",
       },
     },
     unit = {
@@ -592,7 +574,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a5",
   },
 
   {
@@ -606,7 +587,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "laser-rifle-battery-diamond",
+        recipe = "bob-laser-rifle-battery-diamond",
       },
     },
     unit = {
@@ -620,7 +601,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-c-a6",
   },
 
   {
@@ -631,7 +611,7 @@ data:extend({
     prerequisites = {
       "oil-processing",
       "rocketry",
-      "advanced-electronics-2",
+      "processing-unit",
       "military-3",
     },
     effects = {
@@ -641,15 +621,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "rocket-body",
+        recipe = "bob-rocket-body",
       },
       {
         type = "unlock-recipe",
-        recipe = "rocket-warhead",
+        recipe = "bob-rocket-warhead",
       },
       {
         type = "unlock-recipe",
-        recipe = "rocket-engine",
+        recipe = "bob-rocket-engine",
       },
     },
     unit = {
@@ -662,7 +642,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-a",
   },
 
   {
@@ -680,7 +659,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "piercing-rocket-warhead",
+        recipe = "bob-piercing-rocket-warhead",
       },
     },
     unit = {
@@ -693,7 +672,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-b",
   },
 
   {
@@ -711,7 +689,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "electric-rocket-warhead",
+        recipe = "bob-electric-rocket-warhead",
       },
     },
     unit = {
@@ -724,7 +702,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-c",
   },
 
   {
@@ -742,7 +719,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "explosive-rocket-warhead",
+        recipe = "bob-explosive-rocket-warhead",
       },
     },
     unit = {
@@ -755,7 +732,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-d",
   },
 
   {
@@ -773,7 +749,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "acid-rocket-warhead",
+        recipe = "bob-acid-rocket-warhead",
       },
     },
     unit = {
@@ -786,7 +762,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-e",
   },
 
   {
@@ -804,7 +779,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "flame-rocket-warhead",
+        recipe = "bob-flame-rocket-warhead",
       },
     },
     unit = {
@@ -817,7 +792,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-f",
   },
 
   {
@@ -835,7 +809,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "poison-rocket-warhead",
+        recipe = "bob-poison-rocket-warhead",
       },
     },
     unit = {
@@ -848,7 +822,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-g",
   },
 })
 
@@ -856,17 +829,15 @@ data:extend({
   {
     type = "technology",
     name = "bob-scatter-cannon-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/icons/shotgun-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
         shift = { -16, -16 },
       },
@@ -878,7 +849,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "scatter-cannon-shell",
+        recipe = "bob-scatter-cannon-shell",
       },
     },
     unit = {
@@ -891,23 +862,20 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-c-c-a",
   },
 
   {
     type = "technology",
     name = "bob-poison-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/icons/poison-capsule.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
         shift = { -16, -16 },
       },
@@ -918,7 +886,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "poison-artillery-shell",
+        recipe = "bob-poison-artillery-shell",
       },
     },
     unit = {
@@ -931,21 +899,20 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-a",
   },
   {
     type = "technology",
     name = "bob-fire-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 1,
       },
       {
         icon = "__bobwarfare__/graphics/icons/fire-capsule.png",
         icon_size = 32,
+        scale = 1,
         shift = { -16, -16 },
       },
     },
@@ -955,7 +922,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fire-artillery-shell",
+        recipe = "bob-fire-artillery-shell",
       },
     },
     unit = {
@@ -968,22 +935,19 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-b",
   },
   {
     type = "technology",
     name = "bob-explosive-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/icons/grenade.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
         shift = { -16, -16 },
       },
@@ -994,7 +958,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "explosive-artillery-shell",
+        recipe = "bob-explosive-artillery-shell",
       },
     },
     unit = {
@@ -1007,21 +971,20 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-c",
   },
   {
     type = "technology",
     name = "bob-distractor-artillery-shells",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 1,
       },
       {
         icon = "__bobwarfare__/graphics/icons/distractor.png",
         icon_size = 32,
+        scale = 1,
         shift = { -16, -16 },
       },
     },
@@ -1032,7 +995,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "distractor-artillery-shell",
+        recipe = "bob-distractor-artillery-shell",
       },
     },
     unit = {
@@ -1045,23 +1008,20 @@ data:extend({
       },
       time = 30,
     },
-    order = "d-e-f-d",
   },
 
   {
     type = "technology",
     name = "bob-atomic-artillery-shell",
-    icon_size = 64,
     icons = {
       {
         icon = "__base__/graphics/icons/artillery-shell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 1,
       },
       {
         icon = "__base__/graphics/technology/atomic-bomb.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         scale = 0.125,
         shift = { -16, -16 },
       },
@@ -1073,7 +1033,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "atomic-artillery-shell",
+        recipe = "bob-atomic-artillery-shell",
       },
     },
     unit = {
@@ -1088,7 +1048,6 @@ data:extend({
       },
       time = 45,
     },
-    order = "d-e-f-e",
   },
 })
 
@@ -1099,20 +1058,20 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/plasma-bullet-magazine.png",
     icon_size = 32,
     prerequisites = {
-      "utility-science-pack",
+      "military-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "plasma-bullet-projectile",
+        recipe = "bob-plasma-bullet-projectile",
       },
       {
         type = "unlock-recipe",
-        recipe = "plasma-bullet",
+        recipe = "bob-plasma-bullet",
       },
       {
         type = "unlock-recipe",
-        recipe = "plasma-bullet-magazine",
+        recipe = "bob-plasma-bullet-magazine",
       },
     },
     unit = {
@@ -1126,7 +1085,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-a-h",
   },
   {
     type = "technology",
@@ -1134,12 +1092,12 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/shotgun-plasma-shell.png",
     icon_size = 32,
     prerequisites = {
-      "utility-science-pack",
+      "military-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "shotgun-plasma-shell",
+        recipe = "bob-shotgun-plasma-shell",
       },
     },
     unit = {
@@ -1153,7 +1111,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-b-h",
   },
   {
     type = "technology",
@@ -1161,7 +1118,7 @@ data:extend({
     icon = "__bobwarfare__/graphics/icons/plasma-rocket.png",
     icon_size = 32,
     prerequisites = {
-      "utility-science-pack",
+      "military-4",
     },
     effects = {
       {
@@ -1170,7 +1127,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "plasma-rocket-warhead",
+        recipe = "bob-plasma-rocket-warhead",
       },
     },
     unit = {
@@ -1184,6 +1141,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-a-d-g",
   },
 })

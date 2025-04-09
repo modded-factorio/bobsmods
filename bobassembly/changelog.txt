@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Info:
+    - Update for Factorio 2.0 #189
+  Changes:
+    - Code tidy: Remove unnecessary global variables #178
+    - Improved Assembling Machine tier progression #179
+    - Updated fluid boxes so that various 2x2-sized machines can be mirrored freely #166
+    - Removed some old low-resolution graphics #200
+    - Updated Assembling Machine color mask #200
+    - Added circuit connections to relevant machines #200
+  Bugfixes:
+    - Fixed Assembling Machine scaling with AAI loaders' rescale setting #167
+---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 21. 02. 2024
   Changes:

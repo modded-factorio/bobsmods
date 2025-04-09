@@ -1,13 +1,13 @@
 {
   "name": "boblibrary",
-  "version": "1.2.0",
-  "factorio_version": "1.1",
+  "version": "2.0.0",
+  "factorio_version": "2.0",
   "title": "Bob's Functions Library mod",
   "author": "Bobingabout",
-  "contact": "robertagius@hotmail.com",
+  "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
-    "base >= 1.1.0"
+    "base >= 1.2.0"
   ],
   "description": "Adds a series of useful functions used by Bob's Mods. These can easilly be used by other mods too."
 }

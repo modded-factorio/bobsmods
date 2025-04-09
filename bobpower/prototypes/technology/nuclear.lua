@@ -7,17 +7,16 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       type = "technology",
       name = "bob-nuclear-power-2",
       icon_size = 256,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/technology/nuclear-power.png",
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "nuclear-reactor-2",
+          recipe = "bob-nuclear-reactor-2",
         },
       },
       prerequisites = {
         "nuclear-power",
-        "advanced-electronics-2",
+        "processing-unit",
         "production-science-pack",
         "bob-heat-pipe-3",
       },
@@ -37,12 +36,11 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       type = "technology",
       name = "bob-nuclear-power-3",
       icon_size = 256,
-      icon_mipmaps = 4,
       icon = "__base__/graphics/technology/nuclear-power.png",
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "nuclear-reactor-3",
+          recipe = "bob-nuclear-reactor-3",
         },
       },
       prerequisites = {
@@ -68,12 +66,9 @@ if settings.startup["bobmods-power-nuclear"].value == true then
   if settings.startup["bobmods-power-steam"].value == true then
     data.raw.technology["nuclear-power"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
     data.raw.technology["nuclear-power"].icon_size = 128
-    data.raw.technology["nuclear-power"].icon_mipmaps = nil
     data.raw.technology["bob-nuclear-power-2"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
     data.raw.technology["bob-nuclear-power-2"].icon_size = 128
-    data.raw.technology["bob-nuclear-power-2"].icon_mipmaps = nil
     data.raw.technology["bob-nuclear-power-3"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
     data.raw.technology["bob-nuclear-power-3"].icon_size = 128
-    data.raw.technology["bob-nuclear-power-3"].icon_mipmaps = nil
   end
 end

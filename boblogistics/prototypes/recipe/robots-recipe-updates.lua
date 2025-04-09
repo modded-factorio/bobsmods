@@ -1,512 +1,585 @@
+bobmods.lib.recipe.remove_ingredient("passive-provider-chest", "advanced-circuit")
+bobmods.lib.recipe.remove_ingredient("storage-chest", "advanced-circuit")
+
 if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { "logistic-robot", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-2", { "construction-robot", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { "bob-logistic-robot-2", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-3", { "bob-construction-robot-2", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { "bob-logistic-robot-3", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "bob-construction-robot-3", 1 })
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { type = "item", name = "logistic-robot", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-2",
+    { type = "item", name = "construction-robot", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-3",
+    { type = "item", name = "bob-logistic-robot-2", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-3",
+    { type = "item", name = "bob-construction-robot-2", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-4",
+    { type = "item", name = "bob-logistic-robot-3", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-4",
+    { type = "item", name = "bob-construction-robot-3", amount = 1 }
+  )
 end
 
-if data.raw.recipe["robot-brain-logistic"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-logistic"].category = "electronics"
+if data.raw.recipe["bob-robot-brain"] then
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain"].category = "bob-electronics"
   end
-  if
-    data.raw.item["circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "basic-electronic-components", 6 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "electronic-components", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "solder", 5 })
-    end
+  if data.raw.item["bob-basic-circuit-board"] then
+    data.raw.recipe["bob-robot-brain"].ingredients = {
+      { type = "item", name = "bob-basic-circuit-board", amount = 2 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+    }
+  end
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "bob-solder", amount = 5 })
+  end
+end
+
+if data.raw.recipe["bob-robot-brain-2"] then
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain-2"].category = "bob-electronics"
+  end
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "bob-solder", amount = 5 })
+  end
+end
+
+if data.raw.recipe["bob-robot-brain-3"] then
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain-3"].category = "bob-electronics"
+  end
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "bob-solder", amount = 5 })
+  end
+end
+
+if data.raw.recipe["bob-robot-brain-4"] then
+  if data.raw["recipe-category"]["bob-electronics"] then
+    data.raw.recipe["bob-robot-brain-4"].category = "bob-electronics"
+  end
+  if data.raw.item["bob-solder"] then
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "bob-solder", amount = 5 })
+  end
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.set_ingredient("bob-robot-brain-4", { type = "item", name = "processing-unit", amount = 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-brain-4",
+      { type = "item", name = "bob-advanced-processing-unit", amount = 2 }
+    )
+  end
+end
+
+if data.raw.item["bob-module-case"] then
+  if data.raw.recipe["bob-robot-brain"] then
+    bobmods.lib.tech.add_recipe_unlock("robotics", "bob-module-case")
+    bobmods.lib.tech.add_prerequisite("robotics", "plastics")
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain", { type = "item", name = "bob-module-case", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "bob-module-case", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "bob-module-case", amount = 1 })
+    bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "bob-module-case", amount = 1 })
+  end
+end
+
+if data.raw.recipe["bob-robot-tool-construction"] then
+  bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction", { type = "item", name = "steel-plate", amount = 2 })
+  bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic", { type = "item", name = "steel-plate", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("bob-robot-tool-construction", { type = "item", name = "copper-cable", amount = 6 })
+  if data.raw.item["bob-steel-gear-wheel"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction",
+      { type = "item", name = "bob-steel-gear-wheel", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic",
+      { type = "item", name = "bob-steel-gear-wheel", amount = 2 }
+    )
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "electronic-circuit", 2 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic", { "advanced-circuit", 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction",
+      { type = "item", name = "iron-gear-wheel", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic",
+      { type = "item", name = "iron-gear-wheel", amount = 2 }
+    )
   end
-end
+  if data.raw.item["bob-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic",
+      { type = "item", name = "bob-steel-bearing", amount = 1 }
+    )
+  end
 
-if data.raw.recipe["robot-brain-construction"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-construction"].category = "electronics"
-  end
-  if
-    data.raw.item["circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "basic-electronic-components", 8 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "electronic-components", 3 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "solder", 5 })
-    end
+  if data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-2",
+      { type = "item", name = "bob-aluminium-plate", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-2",
+      { type = "item", name = "bob-aluminium-plate", amount = 1 }
+    )
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "electronic-circuit", 3 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction", { "advanced-circuit", 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-2",
+      { type = "item", name = "steel-plate", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic-2", { type = "item", name = "steel-plate", amount = 1 })
   end
-end
-
-if data.raw.recipe["robot-brain-logistic-2"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-logistic-2"].category = "electronics"
-  end
-  if
-    data.raw.item["circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-2", { "circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-2", { "basic-electronic-components", 10 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-2", { "electronic-components", 6 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic-2", { "solder", 5 })
-    end
+  if data.raw.item["bob-tinned-copper-cable"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-2",
+      { type = "item", name = "bob-tinned-copper-cable", amount = 6 }
+    )
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-2", { "advanced-circuit", 4 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-2",
+      { type = "item", name = "copper-cable", amount = 8 }
+    )
   end
-end
-
-if data.raw.recipe["robot-brain-construction-2"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-construction-2"].category = "electronics"
-  end
-  if
-    data.raw.item["circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-2", { "circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-2", { "basic-electronic-components", 12 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-2", { "electronic-components", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-2", { "solder", 5 })
-    end
+  if data.raw.item["bob-brass-gear-wheel"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-2",
+      { type = "item", name = "bob-brass-gear-wheel", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-2",
+      { type = "item", name = "bob-brass-gear-wheel", amount = 2 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-robots-1", "bob-zinc-processing")
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-2", { "electronic-circuit", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-2", { "advanced-circuit", 3 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-2",
+      { type = "item", name = "iron-gear-wheel", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-2",
+      { type = "item", name = "iron-gear-wheel", amount = 3 }
+    )
   end
-end
+  if data.raw.item["bob-cobalt-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-2",
+      { type = "item", name = "bob-cobalt-steel-bearing", amount = 2 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-robots-1", "bob-cobalt-processing")
+  end
 
-if data.raw.recipe["robot-brain-logistic-3"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-logistic-3"].category = "electronics"
-  end
-  if
-    data.raw.item["superior-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "superior-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "basic-electronic-components", 4 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "electronic-components", 6 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "intergrated-electronics", 6 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "solder", 5 })
-    end
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-3",
+      { type = "item", name = "bob-titanium-plate", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-3",
+      { type = "item", name = "bob-titanium-plate", amount = 1 }
+    )
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "advanced-circuit", 2 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-3", { "processing-unit", 2 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-3",
+      { type = "item", name = "steel-plate", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic-3", { type = "item", name = "steel-plate", amount = 2 })
   end
-end
-
-if data.raw.recipe["robot-brain-construction-3"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-construction-3"].category = "electronics"
-  end
-  if
-    data.raw.item["superior-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "superior-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "basic-electronic-components", 4 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "electronic-components", 8 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "intergrated-electronics", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "solder", 5 })
-    end
+  if data.raw.item["bob-insulated-cable"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-3",
+      { type = "item", name = "bob-insulated-cable", amount = 6 }
+    )
   else
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "advanced-circuit", 3 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-3", { "processing-unit", 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-3",
+      { type = "item", name = "copper-cable", amount = 10 }
+    )
   end
-end
-
-if data.raw.recipe["robot-brain-logistic-4"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-logistic-4"].category = "electronics"
-  end
-  if
-    data.raw.item["multi-layer-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-    and data.raw.item["processing-electronics"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "multi-layer-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "basic-electronic-components", 2 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "electronic-components", 4 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "intergrated-electronics", 8 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "processing-electronics", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "solder", 5 })
-    end
+  if data.raw.item["bob-titanium-gear-wheel"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-3",
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-3",
+      { type = "item", name = "bob-titanium-gear-wheel", amount = 2 }
+    )
   else
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "processing-unit", 2 })
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "advanced-processing-unit", 2 })
-    else
-      bobmods.lib.recipe.add_ingredient("robot-brain-logistic-4", { "processing-unit", 4 })
-    end
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-3",
+      { type = "item", name = "iron-gear-wheel", amount = 3 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-3",
+      { type = "item", name = "iron-gear-wheel", amount = 4 }
+    )
   end
-end
+  if data.raw.item["bob-ceramic-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-3",
+      { type = "item", name = "bob-ceramic-bearing", amount = 2 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-robots-2", "bob-ceramics")
+  end
 
-if data.raw.recipe["robot-brain-construction-4"] then
-  if data.raw["recipe-category"]["electronics"] then
-    data.raw.recipe["robot-brain-construction-4"].category = "electronics"
-  end
-  if
-    data.raw.item["multi-layer-circuit-board"]
-    and data.raw.item["basic-electronic-components"]
-    and data.raw.item["electronic-components"]
-    and data.raw.item["intergrated-electronics"]
-    and data.raw.item["processing-electronics"]
-  then
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "multi-layer-circuit-board", 1 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "basic-electronic-components", 2 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "electronic-components", 6 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "intergrated-electronics", 6 })
-    bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "processing-electronics", 4 })
-    if data.raw.item["solder"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "solder", 5 })
-    end
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-4",
+      { type = "item", name = "bob-nitinol-alloy", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-4",
+      { type = "item", name = "bob-nitinol-alloy", amount = 1 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-nitinol-processing")
   else
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "processing-unit", 3 })
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "advanced-processing-unit", 1 })
-    else
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "advanced-circuit", 1 })
-      bobmods.lib.recipe.add_ingredient("robot-brain-construction-4", { "processing-unit", 3 })
-    end
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-4",
+      { type = "item", name = "steel-plate", amount = 2 }
+    )
+    bobmods.lib.recipe.add_ingredient("bob-robot-tool-logistic-4", { type = "item", name = "steel-plate", amount = 2 })
+  end
+  if data.raw.item["bob-gilded-copper-cable"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-4",
+      { type = "item", name = "bob-gilded-copper-cable", amount = 9 }
+    )
+  else
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-4",
+      { type = "item", name = "copper-cable", amount = 15 }
+    )
+  end
+  if data.raw.item["bob-nitinol-gear-wheel"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-4",
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-4",
+      { type = "item", name = "bob-nitinol-gear-wheel", amount = 2 }
+    )
+  else
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-construction-4",
+      { type = "item", name = "iron-gear-wheel", amount = 4 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-4",
+      { type = "item", name = "iron-gear-wheel", amount = 5 }
+    )
+  end
+  if data.raw.item["bob-nitinol-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-4",
+      { type = "item", name = "bob-nitinol-bearing", amount = 1 }
+    )
+  end
+  if data.raw.item["bob-tungsten-carbide"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-robot-tool-logistic-4",
+      { type = "item", name = "bob-tungsten-carbide", amount = 1 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-tungsten-alloy-processing")
   end
 end
 
-for i, tool in ipairs({ "robot-tool-logistic", "robot-tool-construction" }) do
-  if data.raw.recipe[tool] then
-    bobmods.lib.recipe.add_ingredient(tool, { "steel-plate", 1 })
-    if data.raw.item["steel-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "steel-gear-wheel", 2 })
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "iron-gear-wheel", 2 })
-    end
+if data.raw.item["bob-flying-robot-frame-2"] then
+  if data.raw.item["bob-aluminium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-2", "steel-plate", "bob-aluminium-plate")
   end
-end
-
-for i, tool in ipairs({ "robot-tool-logistic-2", "robot-tool-construction-2" }) do
-  if data.raw.recipe[tool] then
-    if data.raw.item["aluminium-plate"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "aluminium-plate", 1 })
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "steel-plate", 1 })
-    end
-    if data.raw.item["brass-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "brass-gear-wheel", 2 })
-      bobmods.lib.tech.add_prerequisite("bob-robots-1", "zinc-processing")
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "iron-gear-wheel", 2 })
-    end
-    if data.raw.item["steel-bearing"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "steel-bearing", 2 })
-    end
-  end
-end
-
-for i, tool in ipairs({ "robot-tool-logistic-3", "robot-tool-construction-3" }) do
-  if data.raw.recipe[tool] then
-    if data.raw.item["titanium-plate"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "titanium-plate", 1 })
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "steel-plate", 1 })
-    end
-    if data.raw.item["titanium-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "titanium-gear-wheel", 2 })
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "iron-gear-wheel", 2 })
-    end
-    if data.raw.item["titanium-bearing"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "titanium-bearing", 2 })
-    end
-  end
-end
-
-for i, tool in ipairs({ "robot-tool-logistic-4", "robot-tool-construction-4" }) do
-  if data.raw.recipe[tool] then
-    if data.raw.item["silicon-nitride"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "silicon-nitride", 1 })
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "steel-plate", 1 })
-    end
-    if data.raw.item["nitinol-gear-wheel"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "nitinol-gear-wheel", 2 })
-      bobmods.lib.tech.add_prerequisite("bob-robots-3", "nitinol-processing")
-    else
-      bobmods.lib.recipe.add_ingredient(tool, { "iron-gear-wheel", 2 })
-    end
-    if data.raw.item["ceramic-bearing"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "ceramic-bearing", 2 })
-    end
-    if tool == "robot-tool-construction-4" and data.raw.item["tungsten-carbide"] then
-      bobmods.lib.recipe.add_ingredient(tool, { "tungsten-carbide", 1 })
-      bobmods.lib.tech.add_prerequisite("bob-robots-3", "tungsten-alloy-processing")
-    end
-  end
-end
-
-if data.raw.item["flying-robot-frame-2"] then
-  if data.raw.item["aluminium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-2", "steel-plate", "aluminium-plate")
-  end
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { "flying-robot-frame-2", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-2", { "flying-robot-frame-2", 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-2",
+    { type = "item", name = "bob-flying-robot-frame-2", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-2",
+    { type = "item", name = "bob-flying-robot-frame-2", amount = 1 }
+  )
 else
   for i, robot in ipairs({ "bob-logistic-robot-2", "bob-construction-robot-2" }) do
     data.raw.recipe[robot].energy_required = 20
 
     if settings.startup["bobmods-logistics-robotrequireprevious"].value == false then
-      bobmods.lib.recipe.add_ingredient(robot, { "electric-engine-unit", 1 })
-      bobmods.lib.recipe.add_ingredient(robot, { "battery", 2 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "battery", amount = 2 })
     end
 
-    if data.raw.item["aluminium-plate"] then
-      bobmods.lib.recipe.add_ingredient(robot, { "aluminium-plate", 1 })
+    if data.raw.item["bob-aluminium-plate"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-aluminium-plate", amount = 1 })
     else
-      bobmods.lib.recipe.add_ingredient(robot, { "steel-plate", 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
     end
 
-    bobmods.lib.recipe.add_ingredient(robot, { "advanced-circuit", 3 })
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "advanced-circuit", amount = 3 })
   end
 end
 
-if data.raw.item["flying-robot-frame-3"] then
-  if data.raw.item["lithium-ion-battery"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-3", "battery", "lithium-ion-battery")
+if data.raw.item["bob-flying-robot-frame-3"] then
+  if data.raw.item["bob-lithium-ion-battery"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-3", "battery", "bob-lithium-ion-battery")
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-3", "steel-plate", "titanium-plate")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-3", "steel-plate", "bob-titanium-plate")
   end
 
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { "flying-robot-frame-3", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-3", { "flying-robot-frame-3", 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-3",
+    { type = "item", name = "bob-flying-robot-frame-3", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-3",
+    { type = "item", name = "bob-flying-robot-frame-3", amount = 1 }
+  )
 else
-  for i, robot in ipairs({ "bob-logistic-robot-3", "bob-construction-robot-3" }) do
+  for _, robot in pairs({ "bob-logistic-robot-3", "bob-construction-robot-3" }) do
     data.raw.recipe[robot].energy_required = 20
 
     if settings.startup["bobmods-logistics-robotrequireprevious"].value == false then
-      bobmods.lib.recipe.add_ingredient(robot, { "electric-engine-unit", 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
     end
 
-    if data.raw.item["lithium-ion-battery"] then
-      bobmods.lib.recipe.add_ingredient(robot, { "lithium-ion-battery", 2 })
+    if data.raw.item["bob-lithium-ion-battery"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-lithium-ion-battery", amount = 2 })
     else
-      bobmods.lib.recipe.add_ingredient(robot, { "battery", 2 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "battery", amount = 2 })
     end
 
-    if data.raw.item["titanium-plate"] then
-      bobmods.lib.recipe.add_ingredient(robot, { "titanium-plate", 1 })
+    if data.raw.item["bob-titanium-plate"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-titanium-plate", amount = 1 })
     else
-      bobmods.lib.recipe.add_ingredient(robot, { "steel-plate", 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
     end
 
-    bobmods.lib.recipe.add_ingredient(robot, { "processing-unit", 3 })
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "processing-unit", amount = 3 })
   end
 end
 
-if data.raw.item["flying-robot-frame-4"] then
-  if data.raw.item["silver-zinc-battery"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "battery", "silver-zinc-battery")
+if data.raw.item["bob-flying-robot-frame-4"] then
+  if data.raw.item["bob-silver-zinc-battery"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-silver-zinc-battery")
   else
-    if data.raw.item["lithium-ion-battery"] then
-      bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "battery", "lithium-ion-battery")
+    if data.raw.item["bob-lithium-ion-battery"] then
+      bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-lithium-ion-battery")
     end
   end
 
-  if data.raw.item["silicon-nitride"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "steel-plate", "silicon-nitride")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-robotics-4", "bob-nitinol-processing")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("flying-robot-frame-4", "processing-unit", "advanced-processing-unit")
-  end
-
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { "flying-robot-frame-4", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "flying-robot-frame-4", 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-4",
+    { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-4",
+    { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
+  )
 else
-  for i, robot in ipairs({ "bob-logistic-robot-4", "bob-construction-robot-4" }) do
+  for _, robot in pairs({ "bob-logistic-robot-4", "bob-construction-robot-4" }) do
     data.raw.recipe[robot].energy_required = 20
     if settings.startup["bobmods-logistics-robotrequireprevious"].value == false then
-      bobmods.lib.recipe.add_ingredient(robot, { "electric-engine-unit", 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
     end
 
-    if data.raw.item["silver-zinc-battery"] then
-      bobmods.lib.recipe.add_ingredient(robot, { "silver-zinc-battery", 2 })
+    if data.raw.item["bob-silver-zinc-battery"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-silver-zinc-battery", amount = 2 })
     else
-      if data.raw.item["lithium-ion-battery"] then
-        bobmods.lib.recipe.add_ingredient(robot, { "lithium-ion-battery", 2 })
+      if data.raw.item["bob-lithium-ion-battery"] then
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-lithium-ion-battery", amount = 2 })
       else
-        bobmods.lib.recipe.add_ingredient(robot, { "battery", 2 })
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "battery", amount = 2 })
       end
     end
 
-    if data.raw.item["silicon-nitride"] then
-      bobmods.lib.recipe.add_ingredient(robot, { "silicon-nitride", 1 })
+    if data.raw.item["bob-silicon-nitride"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-silicon-nitride", amount = 1 })
     else
-      bobmods.lib.recipe.add_ingredient(robot, { "steel-plate", 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
     end
 
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient(robot, { "advanced-processing-unit", 3 })
+    if data.raw.item["bob-advanced-processing-unit"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-advanced-processing-unit", amount = 3 })
     else
-      bobmods.lib.recipe.add_ingredient(robot, { "processing-unit", 3 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "processing-unit", amount = 3 })
     end
   end
 end
 
-if data.raw.item["robot-brain-logistic"] and data.raw.item["robot-tool-logistic"] then
-  if bobmods.lib.recipe.set_ingredients then
-    bobmods.lib.recipe.set_ingredients(
-      "logistic-robot",
-      { { "flying-robot-frame", 1 }, { "robot-brain-logistic", 1 }, { "robot-tool-logistic", 1 } }
+if data.raw.item["bob-robot-brain"] then
+  bobmods.lib.recipe.set_ingredients("logistic-robot", {
+    { type = "item", name = "flying-robot-frame", amount = 1 },
+    { type = "item", name = "bob-robot-brain", amount = 1 },
+    { type = "item", name = "bob-robot-tool-logistic", amount = 1 },
+  })
+  bobmods.lib.recipe.set_ingredients("construction-robot", {
+    { type = "item", name = "flying-robot-frame", amount = 1 },
+    { type = "item", name = "bob-robot-brain", amount = 1 },
+    { type = "item", name = "bob-robot-tool-construction", amount = 1 },
+  })
+
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { type = "item", name = "bob-robot-brain-2", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-2",
+    { type = "item", name = "bob-robot-tool-logistic-2", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-2",
+    { type = "item", name = "bob-robot-brain-2", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-2",
+    { type = "item", name = "bob-robot-tool-construction-2", amount = 1 }
+  )
+
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { type = "item", name = "bob-robot-brain-3", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-3",
+    { type = "item", name = "bob-robot-tool-logistic-3", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-3",
+    { type = "item", name = "bob-robot-brain-3", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-3",
+    { type = "item", name = "bob-robot-tool-construction-3", amount = 1 }
+  )
+
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { type = "item", name = "bob-robot-brain-4", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-4",
+    { type = "item", name = "bob-robot-tool-logistic-4", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-4",
+    { type = "item", name = "bob-robot-brain-4", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-4",
+    { type = "item", name = "bob-robot-tool-construction-4", amount = 1 }
+  )
+else
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { type = "item", name = "advanced-circuit", amount = 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-2",
+    { type = "item", name = "advanced-circuit", amount = 1 }
+  )
+
+  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { type = "item", name = "processing-unit", amount = 1 })
+  bobmods.lib.recipe.add_ingredient("bob-construction-robot-3", { type = "item", name = "processing-unit", amount = 1 })
+
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-logistic-robot-4",
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-construction-robot-4",
+      { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
     )
   else
-    data.raw.recipe["logistic-robot"].ingredients =
-      { { "flying-robot-frame", 1 }, { "robot-brain-logistic", 1 }, { "robot-tool-logistic", 1 } }
-  end
-end
-if data.raw.item["robot-brain-construction"] and data.raw.item["robot-tool-construction"] then
-  if bobmods.lib.recipe.set_ingredients then
-    bobmods.lib.recipe.set_ingredients(
-      "construction-robot",
-      { { "flying-robot-frame", 1 }, { "robot-brain-construction", 1 }, { "robot-tool-construction", 1 } }
+    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { type = "item", name = "processing-unit", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-construction-robot-4",
+      { type = "item", name = "processing-unit", amount = 1 }
     )
-  else
-    data.raw.recipe["construction-robot"].ingredients =
-      { { "flying-robot-frame", 1 }, { "robot-brain-construction", 1 }, { "robot-tool-construction", 1 } }
   end
 end
 
-if data.raw.item["robot-brain-logistic-2"] and data.raw.item["robot-tool-logistic-2"] then
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { "robot-brain-logistic-2", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { "robot-tool-logistic-2", 1 })
-else
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { "advanced-circuit", 1 })
-end
-
-if data.raw.item["robot-brain-construction-2"] and data.raw.item["robot-tool-construction-2"] then
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-2", { "robot-brain-construction-2", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-2", { "robot-tool-construction-2", 1 })
-else
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-2", { "advanced-circuit", 1 })
-end
-
-if data.raw.item["robot-brain-logistic-3"] and data.raw.item["robot-tool-logistic-3"] then
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { "robot-brain-logistic-3", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { "robot-tool-logistic-3", 1 })
-else
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-3", { "processing-unit", 1 })
-end
-
-if data.raw.item["robot-brain-construction-3"] and data.raw.item["robot-tool-construction-3"] then
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-3", { "robot-brain-construction-3", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-3", { "robot-tool-construction-3", 1 })
-else
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-3", { "processing-unit", 1 })
-end
-
-if data.raw.item["robot-brain-logistic-4"] and data.raw.item["robot-tool-logistic-4"] then
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { "robot-brain-logistic-4", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { "robot-tool-logistic-4", 1 })
-else
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { "advanced-processing-unit", 1 })
+for _, robot in pairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
+  if data.raw.item["bob-rtg"] and data.raw.technology["bob-rtg"] then
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-rtg", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "bob-rtg")
+  elseif
+    data.raw.item["bob-vehicle-fission-cell-equipment-1"]
+    and data.raw.technology["bob-vehicle-fission-cell-equipment-1"]
+  then
+    bobmods.lib.recipe.add_ingredient(
+      robot,
+      { type = "item", name = "bob-vehicle-fission-cell-equipment-1", amount = 1 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "bob-vehicle-fission-cell-equipment-1")
   else
-    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-4", { "processing-unit", 1 })
-  end
-end
-
-if data.raw.item["robot-brain-construction-4"] and data.raw.item["robot-tool-construction-4"] then
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "robot-brain-construction-4", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "robot-tool-construction-4", 1 })
-else
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "advanced-processing-unit", 1 })
-  else
-    bobmods.lib.recipe.add_ingredient("bob-construction-robot-4", { "processing-unit", 1 })
-  end
-end
-
-for i, robot in ipairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
-  if data.raw.item["rtg"] and data.raw.technology["rtg"] then
-    bobmods.lib.recipe.add_ingredient(robot, { "rtg", 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "rtg")
-  elseif data.raw.item["vehicle-fusion-cell-1"] and data.raw.technology["vehicle-fusion-cell-equipment-1"] then
-    bobmods.lib.recipe.add_ingredient(robot, { "vehicle-fusion-cell-1", 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "vehicle-fusion-cell-equipment-1")
-  else
-    bobmods.lib.recipe.add_ingredient(robot, { "fusion-reactor-equipment", 1 })
-    bobmods.lib.tech.add_prerequisite("bob-robots-4", "fusion-reactor-equipment")
+    bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "fission-reactor-equipment", amount = 1 })
+    bobmods.lib.tech.add_prerequisite("bob-robots-4", "fission-reactor-equipment")
   end
 end
 
 if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { "bob-logistic-robot-4", 1 })
-  bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "bob-construction-robot-4", 1 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-5",
+    { type = "item", name = "bob-logistic-robot-4", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-5",
+    { type = "item", name = "bob-construction-robot-4", amount = 1 }
+  )
 else
-  if data.raw.item["flying-robot-frame-4"] then
-    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { "flying-robot-frame-4", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "flying-robot-frame-4", 1 })
+  if data.raw.item["bob-flying-robot-frame-4"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-logistic-robot-5",
+      { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-construction-robot-5",
+      { type = "item", name = "bob-flying-robot-frame-4", amount = 1 }
+    )
   else
-    for i, robot in ipairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
+    for _, robot in pairs({ "bob-logistic-robot-5", "bob-construction-robot-5" }) do
       data.raw.recipe[robot].energy_required = 20
-      bobmods.lib.recipe.add_ingredient(robot, { "electric-engine-unit", 1 })
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
 
-      if data.raw.item["silicon-nitride"] then
-        bobmods.lib.recipe.add_ingredient(robot, { "silicon-nitride", 1 })
+      if data.raw.item["bob-silicon-nitride"] then
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-silicon-nitride", amount = 1 })
       else
-        bobmods.lib.recipe.add_ingredient(robot, { "steel-plate", 1 })
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "steel-plate", amount = 1 })
       end
 
-      if data.raw.item["advanced-processing-unit"] then
-        bobmods.lib.recipe.add_ingredient(robot, { "advanced-processing-unit", 3 })
+      if data.raw.item["bob-advanced-processing-unit"] then
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-advanced-processing-unit", amount = 3 })
       else
-        bobmods.lib.recipe.add_ingredient(robot, { "processing-unit", 3 })
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "processing-unit", amount = 3 })
       end
     end
   end
 
-  if data.raw.item["robot-brain-logistic-4"] and data.raw.item["robot-tool-logistic-4"] then
-    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { "robot-brain-logistic-4", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { "robot-tool-logistic-4", 1 })
+  if data.raw.item["bob-robot-brain-4"] then
+    bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "bob-robot-brain-4", amount = 1 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-construction-robot-5",
+      { type = "item", name = "bob-robot-brain-4", amount = 1 }
+    )
   else
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { "advanced-processing-unit", 1 })
+    if data.raw.item["bob-advanced-processing-unit"] then
+      bobmods.lib.recipe.add_ingredient(
+        "bob-logistic-robot-5",
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
+      )
+      bobmods.lib.recipe.add_ingredient(
+        "bob-construction-robot-5",
+        { type = "item", name = "bob-advanced-processing-unit", amount = 1 }
+      )
     else
-      bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { "processing-unit", 1 })
+      bobmods.lib.recipe.add_ingredient("bob-logistic-robot-5", { type = "item", name = "processing-unit", amount = 1 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-construction-robot-5",
+        { type = "item", name = "processing-unit", amount = 1 }
+      )
     end
   end
 
-  if data.raw.item["robot-brain-construction-4"] and data.raw.item["robot-tool-construction-4"] then
-    bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "robot-brain-construction-4", 1 })
-    bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "robot-tool-construction-4", 1 })
-  else
-    if data.raw.item["advanced-processing-unit"] then
-      bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "advanced-processing-unit", 1 })
-    else
-      bobmods.lib.recipe.add_ingredient("bob-construction-robot-5", { "processing-unit", 1 })
-    end
-  end
+  bobmods.lib.recipe.add_ingredient(
+    "bob-logistic-robot-5",
+    { type = "item", name = "bob-robot-tool-logistic-4", amount = 1 }
+  )
+  bobmods.lib.recipe.add_ingredient(
+    "bob-construction-robot-5",
+    { type = "item", name = "bob-robot-tool-construction-4", amount = 1 }
+  )
 end

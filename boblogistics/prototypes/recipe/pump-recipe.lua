@@ -5,11 +5,11 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { "pump", 1 },
-      { "steel-plate", 1 },
-      { "copper-pipe", 1 },
+      { type = "item", name = "pump", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "bob-copper-pipe", amount = 1 },
     },
-    result = "bob-pump-2",
+    results = { { type = "item", name = "bob-pump-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -17,11 +17,11 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { "bob-pump-2", 1 },
-      { "steel-plate", 1 },
-      { "copper-pipe", 1 },
+      { type = "item", name = "bob-pump-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "bob-copper-pipe", amount = 1 },
     },
-    result = "bob-pump-3",
+    results = { { type = "item", name = "bob-pump-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -29,10 +29,10 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { "bob-pump-3", 1 },
-      { "steel-plate", 1 },
-      { "copper-pipe", 1 },
+      { type = "item", name = "bob-pump-3", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "bob-copper-pipe", amount = 1 },
     },
-    result = "bob-pump-4",
+    results = { { type = "item", name = "bob-pump-4", amount = 1 } },
   },
 })

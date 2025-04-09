@@ -2,18 +2,17 @@ if settings.startup["bobmods-power-poles"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "electric-pole-2",
+      name = "bob-electric-pole-2",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "medium-electric-pole-2",
+          recipe = "bob-medium-electric-pole-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "big-electric-pole-2",
+          recipe = "bob-big-electric-pole-2",
         },
       },
       prerequisites = {
@@ -32,22 +31,21 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "technology",
-      name = "electric-pole-3",
+      name = "bob-electric-pole-3",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "medium-electric-pole-3",
+          recipe = "bob-medium-electric-pole-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "big-electric-pole-3",
+          recipe = "bob-big-electric-pole-3",
         },
       },
       prerequisites = {
-        "electric-pole-2",
+        "bob-electric-pole-2",
         "chemical-science-pack",
       },
       unit = {
@@ -64,22 +62,21 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "technology",
-      name = "electric-pole-4",
+      name = "bob-electric-pole-4",
       icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "medium-electric-pole-4",
+          recipe = "bob-medium-electric-pole-4",
         },
         {
           type = "unlock-recipe",
-          recipe = "big-electric-pole-4",
+          recipe = "bob-big-electric-pole-4",
         },
       },
       prerequisites = {
-        "electric-pole-3",
+        "bob-electric-pole-3",
         "production-science-pack",
       },
       unit = {
@@ -97,19 +94,18 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "technology",
-      name = "electric-substation-2",
+      name = "bob-electric-substation-2",
       icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "substation-2",
+          recipe = "bob-substation-2",
         },
       },
       prerequisites = {
         "electric-energy-distribution-2",
-        "advanced-electronics",
+        "advanced-circuit",
       },
       unit = {
         count = 300,
@@ -125,19 +121,18 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "technology",
-      name = "electric-substation-3",
+      name = "bob-electric-substation-3",
       icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "substation-3",
+          recipe = "bob-substation-3",
         },
       },
       prerequisites = {
-        "electric-substation-2",
-        "advanced-electronics-2",
+        "bob-electric-substation-2",
+        "processing-unit",
       },
       unit = {
         count = 350,
@@ -153,18 +148,17 @@ if settings.startup["bobmods-power-poles"].value == true then
 
     {
       type = "technology",
-      name = "electric-substation-4",
+      name = "bob-electric-substation-4",
       icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "substation-4",
+          recipe = "bob-substation-4",
         },
       },
       prerequisites = {
-        "electric-substation-3",
+        "bob-electric-substation-3",
         "production-science-pack",
       },
       unit = {

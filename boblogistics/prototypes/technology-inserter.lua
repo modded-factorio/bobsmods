@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "express-inserters",
+    name = "bob-express-inserter",
     icon = "__boblogistics__/graphics/icons/technology/express-inserter.png",
     icon_size = 128,
     effects = {},
@@ -18,18 +18,17 @@ data:extend({
       },
       time = 30,
     },
-    order = "a-d-b",
   },
   {
     type = "technology",
-    name = "stack-inserter-2",
-    icon = "__base__/graphics/technology/stack-inserter.png",
+    name = "bob-bulk-inserter-2",
+    localised_name = { "", { "technology-name.bulk-inserter" }, " 2" },
+    icon = "__base__/graphics/technology/bulk-inserter.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {},
     prerequisites = {
-      "stack-inserter",
-      "express-inserters",
+      "bulk-inserter",
+      "bob-express-inserter",
     },
     unit = {
       count = 250,
@@ -40,45 +39,37 @@ data:extend({
       },
       time = 30,
     },
-    order = "c-o-a2",
   },
 })
 
 if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.technology["fast-inserter"].icon = "__boblogistics__/graphics/icons/technology/long-inserters.png"
   data.raw.technology["fast-inserter"].icon_size = 128
-  data.raw.technology["fast-inserter"].icon_mipmaps = nil
 
-  data.raw.technology["express-inserters"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
-  data.raw.technology["express-inserters"].icon_size = 128
-  data.raw.technology["express-inserters"].icon_mipmaps = nil
+  data.raw.technology["bob-express-inserter"].icon = "__boblogistics__/graphics/icons/technology/blue-inserter.png"
+  data.raw.technology["bob-express-inserter"].icon_size = 128
 
   bobmods.lib.tech.remove_prerequisite("fast-inserter", "electronics")
   bobmods.lib.tech.add_prerequisite("fast-inserter", "logistics-2")
-  bobmods.lib.tech.remove_prerequisite("stack-inserter", "advanced-electronics")
+  bobmods.lib.tech.remove_prerequisite("bulk-inserter", "advanced-circuit")
 
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "stack-inserter")
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "stack-filter-inserter")
-  bobmods.lib.tech.add_prerequisite("express-inserters", "logistics-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-bulk-inserter-2", "bulk-inserter")
+  bobmods.lib.tech.add_prerequisite("bob-express-inserter", "logistics-3")
 
   data:extend({
     {
       type = "technology",
-      name = "turbo-inserter",
+      name = "bob-turbo-inserter",
       icon = "__boblogistics__/graphics/icons/technology/magenta-inserters.png",
       icon_size = 128,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "turbo-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "turbo-filter-inserter",
+          recipe = "bob-turbo-inserter",
         },
       },
       prerequisites = {
-        "express-inserters",
+        "bob-express-inserter",
         "logistics-4",
       },
       unit = {
@@ -91,25 +82,20 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "a-d-c",
     },
     {
       type = "technology",
-      name = "ultimate-inserter",
+      name = "bob-ultimate-inserter",
       icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
       icon_size = 128,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "express-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "express-filter-inserter",
+          recipe = "bob-express-inserter",
         },
       },
       prerequisites = {
-        "turbo-inserter",
+        "bob-turbo-inserter",
         "logistics-5",
       },
       unit = {
@@ -123,27 +109,22 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "a-d-d",
     },
     {
       type = "technology",
-      name = "stack-inserter-3",
-      icon = "__base__/graphics/technology/stack-inserter.png",
+      name = "bob-bulk-inserter-3",
+      localised_name = { "", { "technology-name.bulk-inserter" }, " 3" },
+      icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "turbo-stack-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "turbo-stack-filter-inserter",
+          recipe = "bob-turbo-bulk-inserter",
         },
       },
       prerequisites = {
-        "turbo-inserter",
-        "stack-inserter-2",
+        "bob-turbo-inserter",
+        "bob-bulk-inserter-2",
       },
       unit = {
         count = 350,
@@ -155,28 +136,23 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "c-o-a3",
     },
 
     {
       type = "technology",
-      name = "stack-inserter-4",
-      icon = "__base__/graphics/technology/stack-inserter.png",
+      name = "bob-bulk-inserter-4",
+      localised_name = { "", { "technology-name.bulk-inserter" }, " 4" },
+      icon = "__base__/graphics/technology/bulk-inserter.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "express-stack-inserter",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "express-stack-filter-inserter",
+          recipe = "bob-express-bulk-inserter",
         },
       },
       prerequisites = {
-        "ultimate-inserter",
-        "stack-inserter-3",
+        "bob-ultimate-inserter",
+        "bob-bulk-inserter-3",
       },
       unit = {
         count = 450,
@@ -189,25 +165,23 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
         },
         time = 30,
       },
-      order = "c-o-a4",
     },
   })
 else
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "express-stack-inserter")
-  bobmods.lib.tech.add_recipe_unlock("stack-inserter-2", "express-stack-filter-inserter")
+  bobmods.lib.tech.add_recipe_unlock("bob-bulk-inserter-2", "bob-express-bulk-inserter")
 
-  bobmods.lib.tech.add_recipe_unlock("express-inserters", "express-inserter")
-  bobmods.lib.tech.add_recipe_unlock("express-inserters", "express-filter-inserter")
-  bobmods.lib.tech.add_prerequisite("express-inserters", "advanced-electronics")
+  bobmods.lib.tech.add_recipe_unlock("bob-express-inserter", "bob-express-inserter")
+  bobmods.lib.tech.add_prerequisite("bob-express-inserter", "advanced-circuit")
 end
 
 data:extend({
   {
     type = "technology",
     name = "inserter-stack-size-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
-    icon_mipmaps = 4,
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -227,14 +201,14 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-a",
   },
   {
     type = "technology",
     name = "inserter-stack-size-bonus-2",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
-    icon_mipmaps = 4,
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -252,14 +226,14 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-b",
   },
   {
     type = "technology",
     name = "inserter-stack-size-bonus-3",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
-    icon_mipmaps = 4,
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -278,14 +252,14 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-c",
   },
   {
     type = "technology",
     name = "inserter-stack-size-bonus-4",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
-    icon_size = 256,
-    icon_mipmaps = 4,
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__base__/graphics/technology/inserter-capacity.png", icon_size = 256 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     effects = {
       {
         type = "inserter-stack-size-bonus",
@@ -305,7 +279,6 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "c-o-d",
   },
 })
 
@@ -313,19 +286,10 @@ data:extend({
   {
     type = "technology",
     name = "inserter-capacity-bonus-8",
-    icons = {
-      {
-        icon = "__boblogistics__/graphics/icons/technology/green-inserter.png",
-        icon_size = 128,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
-        icon_size = 128,
-        icon_mipmaps = 3,
-        shift = { 50, 50 },
-        scale = 0.5,
-      },
-    },
+    icons = bobmods.lib.tech.technology_icon_constant(
+      { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
+      "__boblibrary__/graphics/constants/constant-capacity.png"
+    ),
     icon_size = 128,
     effects = {
       {
@@ -333,7 +297,7 @@ data:extend({
         modifier = 1,
       },
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 3,
       },
     },
@@ -356,15 +320,14 @@ data:extend({
     },
     max_level = "infinite",
     upgrade = true,
-    order = "c-o-i",
   },
 })
 
-if not data.raw.technology["long-inserters-1"] then
+if not data.raw.technology["bob-long-inserters-1"] then
   data:extend({
     {
       type = "technology",
-      name = "long-inserters-1",
+      name = "bob-long-inserters-1",
       icon = "__boblogistics__/graphics/icons/technology/long-inserters.png",
       icon_size = 128,
       effects = {},
@@ -378,7 +341,6 @@ if not data.raw.technology["long-inserters-1"] then
         },
         time = 15,
       },
-      order = "a-f-a-1",
     },
   })
 end

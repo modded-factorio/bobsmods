@@ -1,515 +1,348 @@
 data:extend({
   {
     type = "recipe",
-    name = "module-case",
-    normal = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "plastic-bar", 2 },
-        { "iron-plate", 5 },
-      },
-      result = "module-case",
+    name = "bob-module-case",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "plastic-bar", amount = 2 },
+      { type = "item", name = "steel-plate", amount = 1 },
     },
-    expensive = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "plastic-bar", 5 },
-        { "iron-plate", 10 },
-      },
-      result = "module-case",
-    },
+    results = { { type = "item", name = "bob-module-case", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "module-contact",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 1 },
-      },
-      result = "module-contact",
-      result_count = 5,
+    name = "bob-module-contact",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-plate", amount = 1 },
+      { type = "item", name = "copper-cable", amount = 5 },
     },
-    expensive = {
-      energy_required = 6,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 1 },
-      },
-      result = "module-contact",
-      result_count = 3,
-    },
+    results = { { type = "item", name = "bob-module-contact", amount = 5 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "module-circuit-board",
+    name = "bob-module-circuit-board",
     category = "crafting-with-fluid",
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "copper-plate", 1 },
-      { "plastic-bar", 1 },
+      { type = "item", name = "copper-plate", amount = 3 },
+      { type = "item", name = "plastic-bar", amount = 3 },
     },
-    result = "module-circuit-board",
+    results = { { type = "item", name = "bob-module-circuit-board", amount = 1 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "module-processor-board",
+    name = "bob-module-processor-board",
     category = "crafting-with-fluid",
-    normal = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "module-processor-board",
-      result_count = 4,
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-plate", amount = 4 },
+      { type = "item", name = "plastic-bar", amount = 4 },
+      { type = "item", name = "bob-module-contact", amount = 8 },
     },
-    expensive = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "module-processor-board",
-      result_count = 2,
-    },
+    results = { { type = "item", name = "bob-module-processor-board", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "module-processor-board-2",
+    name = "bob-module-processor-board-2",
     category = "crafting-with-fluid",
-    normal = {
-      energy_required = 20,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "module-processor-board-2",
-      result_count = 4,
+    energy_required = 15,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-plate", amount = 4 },
+      { type = "item", name = "plastic-bar", amount = 4 },
+      { type = "item", name = "bob-module-contact", amount = 12 },
     },
-    expensive = {
-      energy_required = 20,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "module-processor-board-2",
-      result_count = 2,
-    },
+    results = { { type = "item", name = "bob-module-processor-board-2", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "module-processor-board-3",
+    name = "bob-module-processor-board-3",
     category = "crafting-with-fluid",
-    normal = {
-      energy_required = 30,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 2 },
-        { "plastic-bar", 1 },
-      },
-      result = "module-processor-board-3",
-      result_count = 4,
+    energy_required = 20,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-plate", amount = 8 },
+      { type = "item", name = "plastic-bar", amount = 4 },
+      { type = "item", name = "bob-module-contact", amount = 16 },
     },
-    expensive = {
-      energy_required = 30,
-      enabled = false,
-      ingredients = {
-        { "copper-plate", 2 },
-        { "plastic-bar", 1 },
-      },
-      result = "module-processor-board-3",
-      result_count = 2,
-    },
+    results = { { type = "item", name = "bob-module-processor-board-3", amount = 1 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "speed-processor",
-    normal = {
-      energy_required = 2.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 2 },
-        { "advanced-circuit", 2 },
-      },
-      result = "speed-processor",
+    name = "bob-speed-processor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board", amount = 1 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    expensive = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 3 },
-        { "advanced-circuit", 3 },
-      },
-      result = "speed-processor",
-    },
+    results = { { type = "item", name = "bob-speed-processor", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "speed-processor-2",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 2 },
-        { "processing-unit", 2 },
-      },
-      result = "speed-processor-2",
+    name = "bob-speed-processor-2",
+    energy_required = 7.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-2", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    expensive = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 3 },
-        { "processing-unit", 3 },
-      },
-      result = "speed-processor-2",
-    },
+    results = { { type = "item", name = "bob-speed-processor-2", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "speed-processor-3",
-    normal = {
-      energy_required = 7.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 2 },
-      },
-      result = "speed-processor-3",
+    name = "bob-speed-processor-3",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 4 },
     },
-    expensive = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 3 },
-      },
-      result = "speed-processor-3",
-    },
+    results = { { type = "item", name = "bob-speed-processor-3", amount = 1 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "effectivity-processor",
-    normal = {
-      energy_required = 2.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 2 },
-        { "advanced-circuit", 2 },
-      },
-      result = "effectivity-processor",
+    name = "bob-efficiency-processor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board", amount = 1 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    expensive = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 3 },
-        { "advanced-circuit", 3 },
-      },
-      result = "effectivity-processor",
-    },
+    results = { { type = "item", name = "bob-efficiency-processor", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "effectivity-processor-2",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 2 },
-        { "processing-unit", 2 },
-      },
-      result = "effectivity-processor-2",
+    name = "bob-efficiency-processor-2",
+    energy_required = 7.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-2", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    expensive = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 3 },
-        { "processing-unit", 3 },
-      },
-      result = "effectivity-processor-2",
-    },
+    results = { { type = "item", name = "bob-efficiency-processor-2", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "effectivity-processor-3",
-    normal = {
-      energy_required = 7.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 2 },
-      },
-      result = "effectivity-processor-3",
+    name = "bob-efficiency-processor-3",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 4 },
     },
-    expensive = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 3 },
-      },
-      result = "effectivity-processor-3",
-    },
+    results = { { type = "item", name = "bob-efficiency-processor-3", amount = 1 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "productivity-processor",
-    normal = {
-      energy_required = 2.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 2 },
-        { "advanced-circuit", 2 },
-      },
-      result = "productivity-processor",
+    name = "bob-productivity-processor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board", amount = 1 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    expensive = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 3 },
-        { "advanced-circuit", 3 },
-      },
-      result = "productivity-processor",
-    },
+    results = { { type = "item", name = "bob-productivity-processor", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "productivity-processor-2",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 2 },
-        { "processing-unit", 2 },
-      },
-      result = "productivity-processor-2",
+    name = "bob-productivity-processor-2",
+    energy_required = 7.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-2", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    expensive = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 3 },
-        { "processing-unit", 3 },
-      },
-      result = "productivity-processor-2",
-    },
+    results = { { type = "item", name = "bob-productivity-processor-2", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "productivity-processor-3",
-    normal = {
-      energy_required = 7.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 2 },
-      },
-      result = "productivity-processor-3",
+    name = "bob-productivity-processor-3",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 4 },
     },
-    expensive = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 3 },
-      },
-      result = "productivity-processor-3",
-    },
+    results = { { type = "item", name = "bob-productivity-processor-3", amount = 1 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "pollution-clean-processor",
-    normal = {
-      energy_required = 2.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 2 },
-        { "advanced-circuit", 2 },
-      },
-      result = "pollution-clean-processor",
+    name = "bob-pollution-clean-processor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board", amount = 1 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    expensive = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 3 },
-        { "advanced-circuit", 3 },
-      },
-      result = "pollution-clean-processor",
-    },
+    results = { { type = "item", name = "bob-pollution-clean-processor", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "pollution-clean-processor-2",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 2 },
-        { "processing-unit", 2 },
-      },
-      result = "pollution-clean-processor-2",
+    name = "bob-pollution-clean-processor-2",
+    energy_required = 7.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-2", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    expensive = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 3 },
-        { "processing-unit", 3 },
-      },
-      result = "pollution-clean-processor-2",
-    },
+    results = { { type = "item", name = "bob-pollution-clean-processor-2", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "pollution-clean-processor-3",
-    normal = {
-      energy_required = 7.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 2 },
-      },
-      result = "pollution-clean-processor-3",
+    name = "bob-pollution-clean-processor-3",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 4 },
     },
-    expensive = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 3 },
-      },
-      result = "pollution-clean-processor-3",
-    },
+    results = { { type = "item", name = "bob-pollution-clean-processor-3", amount = 1 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "recipe",
-    name = "pollution-create-processor",
-    normal = {
-      energy_required = 2.5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 2 },
-        { "advanced-circuit", 2 },
-      },
-      result = "pollution-create-processor",
+    name = "bob-pollution-create-processor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board", amount = 1 },
+      { type = "item", name = "electronic-circuit", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    expensive = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board", 1 },
-        { "electronic-circuit", 3 },
-        { "advanced-circuit", 3 },
-      },
-      result = "pollution-create-processor",
-    },
+    results = { { type = "item", name = "bob-pollution-create-processor", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "pollution-create-processor-2",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 2 },
-        { "processing-unit", 2 },
-      },
-      result = "pollution-create-processor-2",
+    name = "bob-pollution-create-processor-2",
+    energy_required = 7.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-2", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    expensive = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "module-processor-board-2", 1 },
-        { "advanced-circuit", 3 },
-        { "processing-unit", 3 },
-      },
-      result = "pollution-create-processor-2",
-    },
+    results = { { type = "item", name = "bob-pollution-create-processor-2", amount = 1 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "pollution-create-processor-3",
-    normal = {
+    name = "bob-pollution-create-processor-3",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-module-processor-board-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 4 },
+    },
+    results = { { type = "item", name = "bob-pollution-create-processor-3", amount = 1 } },
+    allow_productivity = true,
+  },
+})
+
+if mods["quality"] then
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-quality-processor",
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-module-processor-board", amount = 1 },
+        { type = "item", name = "electronic-circuit", amount = 2 },
+        { type = "item", name = "advanced-circuit", amount = 2 },
+      },
+      results = { { type = "item", name = "bob-quality-processor", amount = 1 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-quality-processor-2",
       energy_required = 7.5,
       enabled = false,
       ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 2 },
+        { type = "item", name = "bob-module-processor-board-2", amount = 1 },
+        { type = "item", name = "advanced-circuit", amount = 2 },
+        { type = "item", name = "processing-unit", amount = 2 },
       },
-      result = "pollution-create-processor-3",
+      results = { { type = "item", name = "bob-quality-processor-2", amount = 1 } },
+      allow_productivity = true,
     },
-    expensive = {
-      energy_required = 15,
+
+    {
+      type = "recipe",
+      name = "bob-quality-processor-3",
+      energy_required = 10,
       enabled = false,
       ingredients = {
-        { "module-processor-board-3", 1 },
-        { "processing-unit", 3 },
+        { type = "item", name = "bob-module-processor-board-3", amount = 1 },
+        { type = "item", name = "processing-unit", amount = 4 },
       },
-      result = "pollution-create-processor-3",
+      results = { { type = "item", name = "bob-quality-processor-3", amount = 1 } },
+      allow_productivity = true,
     },
-  },
-})
+  })
+end

@@ -1,31 +1,31 @@
 data:extend({
   {
     type = "recipe",
-    name = "advanced-logistic-science-pack",
+    name = "bob-advanced-logistic-science-pack",
     enabled = false,
     energy_required = 21,
     ingredients = {
-      { "filter-inserter", 1 },
-      { "express-transport-belt", 1 },
-      { "flying-robot-frame", 1 },
-      { "steel-chest", 2 },
+      { type = "item", name = "fast-inserter", amount = 4 },
+      { type = "item", name = "express-transport-belt", amount = 2 },
+      { type = "item", name = "flying-robot-frame", amount = 1 },
+      { type = "item", name = "steel-chest", amount = 2 },
     },
-    result_count = 3,
-    result = "advanced-logistic-science-pack",
+    results = { { type = "item", name = "bob-advanced-logistic-science-pack", amount = 3 } },
+    allow_productivity = true,
   },
 
   {
     type = "recipe",
-    name = "lab-2",
+    name = "bob-lab-2",
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { "lab", 1 },
-      { "advanced-circuit", 10 },
-      { "filter-inserter", 4 },
-      { "express-transport-belt", 4 },
+      { type = "item", name = "lab", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "bulk-inserter", amount = 4 },
+      { type = "item", name = "express-transport-belt", amount = 4 },
     },
-    result = "lab-2",
+    results = { { type = "item", name = "bob-lab-2", amount = 1 } },
   },
 })
 
@@ -33,26 +33,29 @@ if settings.startup["bobmods-burnerphase"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "steam-science-pack",
-      energy_required = 2.5,
-      ingredients = {
-        { "coal", 1 },
-        { "stone", 1 },
-      },
-      result_count = 1,
-      result = "steam-science-pack",
-    },
-
-    {
-      type = "recipe",
-      name = "burner-lab",
+      name = "bob-burner-lab",
       energy_required = 1,
       ingredients = {
-        { "wood", 10 },
-        { "iron-plate", 2 },
-        { "stone", 4 },
+        { type = "item", name = "wood", amount = 10 },
+        { type = "item", name = "iron-plate", amount = 2 },
+        { type = "item", name = "stone", amount = 4 },
       },
-      result = "burner-lab",
+      results = { { type = "item", name = "bob-burner-lab", amount = 1 } },
     },
   })
+  if not data.raw.recipe["bob-burner-generator"] then
+    data:extend({
+      {
+        type = "recipe",
+        name = "bob-burner-generator",
+        enabled = false,
+        ingredients = {
+          { type = "item", name = "stone-furnace", amount = 1 },
+          { type = "item", name = "iron-plate", amount = 8 },
+          { type = "item", name = "iron-gear-wheel", amount = 5 },
+        },
+        results = { { type = "item", name = "bob-burner-generator", amount = 1 } },
+      },
+    })
+  end
 end

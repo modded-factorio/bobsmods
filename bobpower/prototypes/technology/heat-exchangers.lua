@@ -40,7 +40,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heat-exchanger-2",
+          recipe = "bob-heat-exchanger-2",
         },
       },
       unit = {
@@ -66,7 +66,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heat-exchanger-3",
+          recipe = "bob-heat-exchanger-3",
         },
       },
       unit = {
@@ -93,7 +93,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heat-exchanger-4",
+          recipe = "bob-heat-exchanger-4",
         },
       },
       unit = {

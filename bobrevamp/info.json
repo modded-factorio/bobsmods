@@ -1,15 +1,15 @@
 {
   "name": "bobrevamp",
-  "version": "1.2.1",
-  "factorio_version": "1.1",
+  "version": "2.0.1",
+  "factorio_version": "2.0",
   "title": "Bob's Revamp mod",
   "author": "Bobingabout",
-  "contact": "robertagius@hotmail.com",
+  "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
-    "base >= 1.1.0",
-    "boblibrary >= 1.2.0",
-    "? bobplates >= 1.2.0"
+    "base >= 1.2.0",
+    "boblibrary >= 2.0.0",
+    "? bobplates >= 2.0.0"
   ],
   "description": "Requires Bob's functions library mod.\n\nThis mod changes some base game areas to better fit with Bob's Mods.\nRocket fuel has been changed to be based on Hydrazine.\nReworked all the rocket based recipes\nA rework to how you get Sulfur and Sulfuric acid.\nSplits up the oil chain a little, Pumpjack, Chemical plant and Oil refinery are on their own technologies, instead of all in one go.\n\nIntended to be used with the full Bob's Mods set."
 }

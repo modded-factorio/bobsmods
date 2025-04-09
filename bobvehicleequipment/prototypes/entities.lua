@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "explosion",
-    name = "plasma-explosion",
+    name = "bob-plasma-explosion",
     flags = { "not-on-map" },
     animations = {
       {
@@ -13,8 +13,6 @@ data:extend({
         frame_count = 64,
         line_length = 8,
         scale = 4,
-        axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.5,
       },
     },
@@ -54,22 +52,23 @@ data:extend({
         },
       },
     },
+    hidden = true,
   },
 })
 
 data:extend({
   {
     type = "sticker",
-    name = "plasma-sticker",
+    name = "bob-plasma-sticker",
     flags = { "not-on-map" },
 
     animation = {
-      filename = "__base__/graphics/entity/fire-flame/fire-flame-13.png",
-      line_length = 8,
-      width = 60,
-      height = 118,
-      frame_count = 25,
-      direction_count = 1,
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-02.png",
+      draw_as_glow = true,
+      line_length = 10,
+      frame_count = 90,
+      width = 82,
+      height = 106,
       blend_mode = "additive",
       animation_speed = 1,
       scale = 0.4,
@@ -77,7 +76,8 @@ data:extend({
     },
 
     duration_in_ticks = 30 * 60,
+    damage_interval = 10,
     target_movement_modifier = 0.8,
-    damage_per_tick = { amount = 1, type = "plasma" },
+    damage_per_tick = { amount = 8, type = "bob-plasma" },
   },
 })

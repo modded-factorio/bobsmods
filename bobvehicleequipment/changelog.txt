@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Bugfixes:
+    - Fixing ru localisation #392
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Changes:
+    - Reduced the tier of electronics required for Vehicle roboport robot control #180
+    - Changed vehicle roboport robot controls to use circuits rather than circuit components #184
+    - Update for Factorio 2.0 #189
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023
   Changes:

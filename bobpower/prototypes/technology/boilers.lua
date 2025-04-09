@@ -12,7 +12,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "boiler-2",
+          recipe = "bob-boiler-2",
         },
       },
       unit = {
@@ -38,7 +38,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "boiler-3",
+          recipe = "bob-boiler-3",
         },
       },
       unit = {
@@ -65,7 +65,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "boiler-4",
+          recipe = "bob-boiler-4",
         },
       },
       unit = {
@@ -93,7 +93,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "boiler-5",
+          recipe = "bob-boiler-5",
         },
       },
       unit = {

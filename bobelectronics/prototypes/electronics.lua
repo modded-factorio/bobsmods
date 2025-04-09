@@ -1,27 +1,47 @@
-if data.raw.item["tin-plate"] then
+local electronic_part_drop_move = {
+  filename = "__base__/sound/item/wire-inventory-move.ogg",
+  volume = 0.8,
+}
+local electronic_part_pick = {
+  filename = "__base__/sound/item/wire-inventory-pickup.ogg",
+  volume = 0.6,
+}
+
+local electronic_board_drop_move = {
+  filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+  volume = 1,
+}
+local electronic_board_pick = {
+  filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+  volume = 0.7,
+}
+
+if data.raw.item["bob-tin-plate"] then
   data:extend({
     {
       type = "item",
-      name = "tinned-copper-cable",
+      name = "bob-tinned-copper-cable",
       icon = "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
-      icon_size = 32,
       subgroup = "bob-electronic-components",
-      order = "0-a1[tinned-copper-cable]",
+      order = "0-a1[bob-tinned-copper-cable]",
       stack_size = 200,
+      drop_sound = electronic_part_drop_move,
+      inventory_move_sound = electronic_part_drop_move,
+      pick_sound = electronic_part_pick,
     },
 
     {
       type = "recipe",
-      name = "tinned-copper-cable",
-      category = "electronics",
+      name = "bob-tinned-copper-cable",
+      category = "bob-electronics",
       enabled = false,
       ingredients = {
-        { "copper-cable", 3 },
-        { "tin-plate", 1 },
+        { type = "item", name = "copper-cable", amount = 3 },
+        { type = "item", name = "bob-tin-plate", amount = 1 },
       },
-      result = "tinned-copper-cable",
-      result_count = 3,
+      results = { { type = "item", name = "bob-tinned-copper-cable", amount = 3 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
@@ -29,82 +49,90 @@ end
 data:extend({
   {
     type = "item",
-    name = "insulated-cable",
+    name = "bob-insulated-cable",
     icon = "__bobelectronics__/graphics/icons/insulated-cable.png",
-    icon_size = 32,
     subgroup = "bob-electronic-components",
-    order = "0-a2[insulated-cable]",
+    order = "0-a2[bob-insulated-cable]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
     type = "recipe",
-    name = "insulated-cable",
-    category = "electronics",
+    name = "bob-insulated-cable",
+    category = "bob-electronics",
     enabled = false,
     ingredients = {
-      { "copper-cable", 2 },
-      { "rubber", 1 },
+      { type = "item", name = "copper-cable", amount = 2 },
+      { type = "item", name = "bob-rubber", amount = 1 },
     },
-    result = "insulated-cable",
-    result_count = 2,
+    results = { { type = "item", name = "bob-insulated-cable", amount = 2 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
-if data.raw.item["gold-plate"] then
+if data.raw.item["bob-gold-plate"] then
   data:extend({
     {
       type = "item",
-      name = "gilded-copper-cable",
+      name = "bob-gilded-copper-cable",
       icon = "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
-      icon_size = 32,
       subgroup = "bob-electronic-components",
-      order = "0-a3[gilded-copper-cable]",
+      order = "0-a3[bob-gilded-copper-cable]",
       stack_size = 200,
+      drop_sound = electronic_part_drop_move,
+      inventory_move_sound = electronic_part_drop_move,
+      pick_sound = electronic_part_pick,
     },
 
     {
       type = "recipe",
-      name = "gilded-copper-cable",
-      category = "electronics-machine",
+      name = "bob-gilded-copper-cable",
+      category = "bob-electronics-machine",
       enabled = false,
       ingredients = {
-        { "copper-cable", 3 },
-        { "gold-plate", 1 },
+        { type = "item", name = "copper-cable", amount = 3 },
+        { type = "item", name = "bob-gold-plate", amount = 1 },
       },
-      result = "gilded-copper-cable",
-      result_count = 3,
+      results = { { type = "item", name = "bob-gilded-copper-cable", amount = 3 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
 
-if data.raw.item["solder-alloy"] then
+if data.raw.item["bob-solder-alloy"] then
   data:extend({
     {
       type = "item",
-      name = "solder",
+      name = "bob-solder",
       icon = "__bobelectronics__/graphics/icons/solder.png",
-      icon_size = 32,
+      icon_size = 64,
       subgroup = "bob-electronic-components",
       order = "0-a4[solder]",
       stack_size = 200,
+      drop_sound = electronic_part_drop_move,
+      inventory_move_sound = electronic_part_drop_move,
+      pick_sound = electronic_part_pick,
     },
 
     {
       type = "recipe",
-      name = "solder",
-      category = "electronics",
+      name = "bob-solder",
+      category = "bob-electronics",
       energy_required = 2,
       enabled = false,
+      auto_recycle = false,
       ingredients = {
-        { "solder-alloy", 4 },
-        { "resin", 1 },
+        { type = "item", name = "bob-solder-alloy", amount = 4 },
+        { type = "item", name = "bob-resin", amount = 1 },
       },
-      result = "solder",
-      result_count = 8,
+      results = { { type = "item", name = "bob-solder", amount = 5 } },
       allow_decomposition = false,
+      allow_productivity = true,
     },
   })
 end
@@ -112,344 +140,406 @@ end
 data:extend({
   {
     type = "item",
-    name = "basic-electronic-components",
+    name = "bob-basic-electronic-components",
     icon = "__bobelectronics__/graphics/icons/basic-electronic-components.png",
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b1[basic-electronic-components]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
     type = "recipe",
-    name = "basic-electronic-components",
-    category = "electronics-machine",
-    normal = {
-      energy_required = 2,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "coal", 1 },
-      },
-      result = "basic-electronic-components",
-      result_count = 5,
-      allow_decomposition = false,
+    name = "bob-basic-electronic-components",
+    category = "bob-electronics-machine",
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-cable", amount = 2 },
+      { type = "item", name = "coal", amount = 1 },
     },
-    expensive = {
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "coal", 1 },
-      },
-      result = "basic-electronic-components",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "bob-basic-electronic-components", amount = 5 } },
+    allow_decomposition = false,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "electronic-components",
+    name = "bob-electronic-components",
     icon = "__bobelectronics__/graphics/icons/electronic-components.png",
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b2[electronic-components]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
     type = "recipe",
-    name = "electronic-components",
-    category = "electronics-machine",
-    normal = {
-      energy_required = 3.5,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "electronic-components",
-      result_count = 5,
-      allow_decomposition = false,
+    name = "bob-electronic-components",
+    category = "bob-electronics-machine",
+    energy_required = 3.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-cable", amount = 3 },
+      { type = "item", name = "plastic-bar", amount = 1 },
     },
-    expensive = {
-      energy_required = 6,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-      },
-      result = "electronic-components",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "bob-electronic-components", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "intergrated-electronics",
+    name = "bob-integrated-electronics",
     icon = "__bobelectronics__/graphics/icons/integrated-electronics.png",
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b3[integrated-electronics]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
     type = "recipe",
-    name = "intergrated-electronics",
-    category = "electronics-with-fluid",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 5 },
-      },
-      result = "intergrated-electronics",
-      result_count = 5,
-      allow_decomposition = false,
+    name = "bob-integrated-electronics",
+    category = "bob-electronics-with-fluid",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-cable", amount = 4 },
+      { type = "item", name = "plastic-bar", amount = 1 },
+      { type = "fluid", name = "sulfuric-acid", amount = 5 },
     },
-    expensive = {
-      energy_required = 9,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 1 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 5 },
-      },
-      result = "intergrated-electronics",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "bob-integrated-electronics", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "processing-electronics",
+    name = "bob-processing-electronics",
     icon = "__bobelectronics__/graphics/icons/cpu.png",
     icon_size = 128,
     subgroup = "bob-electronic-components",
     order = "0-b4[cpu]",
     stack_size = 200,
+    drop_sound = electronic_part_drop_move,
+    inventory_move_sound = electronic_part_drop_move,
+    pick_sound = electronic_part_pick,
   },
 
   {
     type = "recipe",
-    name = "processing-electronics",
-    category = "electronics-with-fluid",
-    normal = {
-      energy_required = 7,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 2 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 5 },
-      },
-      result = "processing-electronics",
-      result_count = 5,
-      allow_decomposition = false,
+    name = "bob-processing-electronics",
+    category = "bob-electronics-with-fluid",
+    energy_required = 7,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "copper-cable", amount = 5 },
+      { type = "item", name = "plastic-bar", amount = 1 },
+      { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
-    expensive = {
-      energy_required = 12,
-      enabled = false,
-      ingredients = {
-        { "copper-cable", 2 },
-        { "plastic-bar", 1 },
-        { type = "fluid", name = "sulfuric-acid", amount = 10 },
-      },
-      result = "processing-electronics",
-      result_count = 3,
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "bob-processing-electronics", amount = 5 } },
+    allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "wooden-board",
+    name = "bob-wooden-board",
     icon = "__bobelectronics__/graphics/icons/wooden-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-boards",
     order = "c-a1[wooden-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
 
   {
     type = "recipe",
-    name = "wooden-board",
-    category = "electronics",
+    name = "bob-wooden-board",
+    category = "bob-electronics",
+    auto_recycle = false,
     ingredients = {
-      { "wood", 1 },
+      { type = "item", name = "wood", amount = 1 },
     },
-    result = "wooden-board",
-    result_count = 2,
+    results = { { type = "item", name = "bob-wooden-board", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "phenolic-board",
+    name = "bob-phenolic-board",
     icon = "__bobelectronics__/graphics/icons/phenolic-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-boards",
     order = "c-a2[phenolic-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
+    },
   },
 
   {
     type = "recipe",
-    name = "phenolic-board",
-    category = "electronics-machine",
+    name = "bob-phenolic-board",
+    category = "bob-electronics-machine",
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { "wood", 1 },
-      { "resin", 1 },
+      { type = "item", name = "wood", amount = 1 },
+      { type = "item", name = "bob-resin", amount = 1 },
     },
-    result = "phenolic-board",
-    result_count = 2,
+    results = { { type = "item", name = "bob-phenolic-board", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "fibreglass-board",
+    name = "bob-fibreglass-board",
     icon = "__bobelectronics__/graphics/icons/fibreglass-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-boards",
     order = "c-a3[fibreglass-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
     type = "recipe",
-    name = "fibreglass-board",
-    category = "electronics-machine",
+    name = "bob-fibreglass-board",
+    category = "bob-electronics-machine",
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { "plastic-bar", 1 },
+      { type = "item", name = "plastic-bar", amount = 1 },
     },
-    result = "fibreglass-board",
-    result_count = 2,
+    results = { { type = "item", name = "bob-fibreglass-board", amount = 2 } },
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "basic-circuit-board",
+    name = "bob-basic-circuit-board",
     icon = "__bobelectronics__/graphics/icons/basic-circuit-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-electronic-boards",
     order = "c-b1[basic-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
 
   {
     type = "recipe",
-    name = "basic-circuit-board",
-    category = "electronics",
+    name = "bob-basic-circuit-board",
+    category = "bob-electronics",
+    enabled = false,
     energy_required = 1,
     ingredients = {
-      { "wooden-board", 1 },
-      { "copper-cable", 3 },
+      { type = "item", name = "bob-wooden-board", amount = 1 },
+      { type = "item", name = "copper-cable", amount = 3 },
     },
-    result = "basic-circuit-board",
+    results = { { type = "item", name = "bob-basic-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "circuit-board",
+    name = "bob-circuit-board",
     icon = "__bobelectronics__/graphics/icons/circuit-board.png",
-    icon_size = 128,
-    subgroup = "bob-electronic-boards",
+    icon_size = 64,
+    subgroup = "bob-boards",
     order = "c-b2[circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.7,
+      speed = 0.85,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.8,
+      speed = 0.85,
+    },
   },
 
   {
     type = "recipe",
-    name = "circuit-board",
-    category = "electronics-with-fluid",
+    name = "bob-circuit-board",
+    category = "bob-electronics-with-fluid",
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { "phenolic-board", 1 },
-      { "copper-plate", 1 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
+      { type = "item", name = "bob-phenolic-board", amount = 1 },
+      { type = "item", name = "copper-plate", amount = 1 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 },
     },
-    result = "circuit-board",
+    results = { { type = "item", name = "bob-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "superior-circuit-board",
+    name = "bob-superior-circuit-board",
     icon = "__bobelectronics__/graphics/icons/superior-circuit-board.png",
-    icon_size = 128,
-    subgroup = "bob-electronic-boards",
+    icon_size = 64,
+    subgroup = "bob-boards",
     order = "c-b3[superior-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
     type = "recipe",
-    name = "superior-circuit-board",
-    category = "electronics-with-fluid",
+    name = "bob-superior-circuit-board",
+    category = "bob-electronics-with-fluid",
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "fibreglass-board", 1 },
-      { "copper-plate", 1 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 5 },
+      { type = "item", name = "bob-fibreglass-board", amount = 1 },
+      { type = "item", name = "copper-plate", amount = 1 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 5 },
     },
-    result = "superior-circuit-board",
+    results = { { type = "item", name = "bob-superior-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "multi-layer-circuit-board",
+    name = "bob-multi-layer-circuit-board",
     icon = "__bobelectronics__/graphics/icons/multi-layer-circuit-board.png",
-    icon_size = 128,
-    subgroup = "bob-electronic-boards",
+    icon_size = 64,
+    subgroup = "bob-boards",
     order = "c-b4[multi-layer-circuit-board]",
     stack_size = 200,
+    drop_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/wood-inventory-move.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/wood-inventory-pickup.ogg",
+      volume = 0.85,
+      speed = 1.6,
+    },
   },
 
   {
     type = "recipe",
-    name = "multi-layer-circuit-board",
-    category = "electronics-with-fluid",
+    name = "bob-multi-layer-circuit-board",
+    category = "bob-electronics-with-fluid",
     energy_required = 15,
     enabled = false,
     ingredients = {
-      { "fibreglass-board", 1 },
-      { "copper-plate", 2 },
-      { type = "fluid", name = "ferric-chloride-solution", amount = 10 },
+      { type = "item", name = "bob-fibreglass-board", amount = 1 },
+      { type = "item", name = "copper-plate", amount = 2 },
+      { type = "fluid", name = "bob-ferric-chloride-solution", amount = 10 },
     },
-    result = "multi-layer-circuit-board",
+    results = { { type = "item", name = "bob-multi-layer-circuit-board", amount = 1 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -458,36 +548,27 @@ data:extend({
     type = "item",
     name = "electronic-circuit",
     icon = "__bobelectronics__/graphics/icons/basic-electronic-circuit-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-electronic-boards",
-    order = "c-c1[basic-electronic-circuit-board]",
+    order = "c-c1[electronic-circuit]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
     type = "recipe",
     name = "electronic-circuit",
-    category = "electronics",
-    normal = {
-      energy_required = 1,
-      enabled = false,
-      ingredients = {
-        { "basic-circuit-board", 1 },
-        { "basic-electronic-components", 5 },
-      },
-      result = "electronic-circuit",
-      allow_decomposition = false,
+    category = "bob-electronics",
+    energy_required = 1,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-wooden-board", amount = 1 },
+      { type = "item", name = "bob-basic-electronic-components", amount = 4 },
     },
-    expensive = {
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        { "basic-circuit-board", 1 },
-        { "basic-electronic-components", 6 },
-      },
-      result = "electronic-circuit",
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "electronic-circuit", amount = 1 } },
+    allow_decomposition = false,
   },
 })
 
@@ -496,38 +577,28 @@ data:extend({
     type = "item",
     name = "advanced-circuit",
     icon = "__bobelectronics__/graphics/icons/electronic-circuit-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-electronic-boards",
-    order = "c-c2[electronic-circuit-board]",
+    order = "c-c2[advanced-circuit]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
     type = "recipe",
     name = "advanced-circuit",
-    category = "electronics",
-    normal = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { "circuit-board", 1 },
-        { "basic-electronic-components", 4 },
-        { "electronic-components", 4 },
-      },
-      result = "advanced-circuit",
-      allow_decomposition = false,
+    category = "bob-electronics",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-circuit-board", amount = 1 },
+      { type = "item", name = "bob-basic-electronic-components", amount = 4 },
+      { type = "item", name = "bob-electronic-components", amount = 4 },
     },
-    expensive = {
-      energy_required = 8,
-      enabled = false,
-      ingredients = {
-        { "circuit-board", 1 },
-        { "basic-electronic-components", 6 },
-        { "electronic-components", 6 },
-      },
-      result = "advanced-circuit",
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "advanced-circuit", amount = 1 } },
+    allow_decomposition = false,
   },
 })
 
@@ -536,83 +607,92 @@ data:extend({
     type = "item",
     name = "processing-unit",
     icon = "__bobelectronics__/graphics/icons/electronic-logic-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-electronic-boards",
     order = "c-c3[electronic-logic-board]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
     type = "recipe",
     name = "processing-unit",
-    category = "electronics",
-    normal = {
-      energy_required = 10,
-      enabled = false,
-      ingredients = {
-        { "superior-circuit-board", 1 },
-        { "basic-electronic-components", 2 },
-        { "electronic-components", 4 },
-        { "intergrated-electronics", 2 },
-      },
-      result = "processing-unit",
-      allow_decomposition = false,
+    category = "bob-electronics",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-superior-circuit-board", amount = 1 },
+      { type = "item", name = "bob-basic-electronic-components", amount = 4 },
+      { type = "item", name = "bob-electronic-components", amount = 8 },
+      { type = "item", name = "bob-integrated-electronics", amount = 6 },
     },
-    expensive = {
-      energy_required = 16,
-      enabled = false,
-      ingredients = {
-        { "superior-circuit-board", 1 },
-        { "basic-electronic-components", 3 },
-        { "electronic-components", 6 },
-        { "intergrated-electronics", 3 },
-      },
-      result = "processing-unit",
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "processing-unit", amount = 1 } },
+    allow_decomposition = false,
   },
 })
 
 data:extend({
   {
     type = "item",
-    name = "advanced-processing-unit",
+    name = "bob-advanced-processing-unit",
     icon = "__bobelectronics__/graphics/icons/electronic-processing-board.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "bob-electronic-boards",
-    order = "c-c4[electronic-processing-board]",
+    order = "c-c4[bob-advanced-processing-unit]",
     stack_size = 200,
+    drop_sound = electronic_board_drop_move,
+    inventory_move_sound = electronic_board_drop_move,
+    pick_sound = electronic_board_pick,
   },
 
   {
     type = "recipe",
-    name = "advanced-processing-unit",
-    category = "electronics",
-    normal = {
-      energy_required = 15,
-      enabled = false,
-      ingredients = {
-        { "multi-layer-circuit-board", 1 },
-        { "basic-electronic-components", 1 },
-        { "electronic-components", 2 },
-        { "intergrated-electronics", 4 },
-        { "processing-electronics", 1 },
-      },
-      result = "advanced-processing-unit",
-      allow_decomposition = false,
+    name = "bob-advanced-processing-unit",
+    category = "bob-electronics",
+    energy_required = 15,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "bob-multi-layer-circuit-board", amount = 1 },
+      { type = "item", name = "bob-basic-electronic-components", amount = 6 },
+      { type = "item", name = "bob-electronic-components", amount = 6 },
+      { type = "item", name = "bob-integrated-electronics", amount = 8 },
+      { type = "item", name = "bob-processing-electronics", amount = 4 },
     },
-    expensive = {
-      energy_required = 24,
-      enabled = false,
-      ingredients = {
-        { "multi-layer-circuit-board", 1 },
-        { "basic-electronic-components", 3 },
-        { "electronic-components", 3 },
-        { "intergrated-electronics", 6 },
-        { "processing-electronics", 3 },
-      },
-      result = "advanced-processing-unit",
-      allow_decomposition = false,
-    },
+    results = { { type = "item", name = "bob-advanced-processing-unit", amount = 1 } },
+    allow_decomposition = false,
+  },
+
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-1",
+    icon = "__bobelectronics__/graphics/icons/achievement/bob-computer-age-1.png",
+    icon_size = 128,
+    item_product = "bob-advanced-processing-unit",
+    amount = 1000,
+    order = "d[production]-e[advanced-processing-unit-production]-a",
+  },
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-2",
+    icon = "__bobelectronics__/graphics/icons/achievement/bob-computer-age-2.png",
+    icon_size = 128,
+    item_product = "bob-advanced-processing-unit",
+    amount = 3000,
+    order = "d[production]-e[advanced-processing-unit-production]-b",
+  },
+  {
+    type = "produce-per-hour-achievement",
+    name = "bob-computer-age-3",
+    icon = "__bobelectronics__/graphics/icons/achievement/bob-computer-age-3.png",
+    icon_size = 128,
+    item_product = "bob-advanced-processing-unit",
+    amount = 10000,
+    order = "d[production]-e[advanced-processing-unit-production]-c",
   },
 })
+
+data.raw["produce-per-hour-achievement"]["computer-age-1"].amount = 1000
+data.raw["produce-per-hour-achievement"]["computer-age-2"].amount = 5000
+data.raw["produce-per-hour-achievement"]["computer-age-3"].amount = 15000

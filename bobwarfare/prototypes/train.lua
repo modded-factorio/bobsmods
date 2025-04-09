@@ -45,7 +45,7 @@ data.raw["artillery-wagon"]["artillery-wagon"].resistances = {
     percent = 90,
   },
   {
-    type = "plasma",
+    type = "bob-plasma",
     decrease = 25,
     percent = 90,
   },
@@ -87,9 +87,8 @@ data:extend({
     name = "bob-artillery-wagon-2",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "train-transport",
-    order = "a[train-system]-i[artillery-wagon]-2",
+    order = "c[rolling-stock]-d[artillery-wagon]-2",
     place_result = "bob-artillery-wagon-2",
     stack_size = 5,
   },
@@ -98,9 +97,8 @@ data:extend({
     name = "bob-artillery-wagon-3",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "train-transport",
-    order = "a[train-system]-i[artillery-wagon]-3",
+    order = "c[rolling-stock]-d[artillery-wagon]-3",
     place_result = "bob-artillery-wagon-3",
     stack_size = 5,
   },
@@ -113,13 +111,13 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { "artillery-wagon", 1 },
-      { "iron-gear-wheel", 12 },
-      { "steel-plate", 40 },
-      { "pipe", 16 },
-      { "processing-unit", 20 },
+      { type = "item", name = "artillery-wagon", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 12 },
+      { type = "item", name = "steel-plate", amount = 40 },
+      { type = "item", name = "pipe", amount = 16 },
+      { type = "item", name = "processing-unit", amount = 20 },
     },
-    result = "bob-artillery-wagon-2",
+    results = { { type = "item", name = "bob-artillery-wagon-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -127,13 +125,13 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { "bob-artillery-wagon-2", 1 },
-      { "iron-gear-wheel", 12 },
-      { "steel-plate", 20 },
-      { "pipe", 16 },
-      { "processing-unit", 20 },
+      { type = "item", name = "bob-artillery-wagon-2", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 12 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "pipe", amount = 16 },
+      { type = "item", name = "processing-unit", amount = 20 },
     },
-    result = "bob-artillery-wagon-3",
+    results = { { type = "item", name = "bob-artillery-wagon-3", amount = 1 } },
   },
 })
 
@@ -143,7 +141,6 @@ data:extend({
     name = "bob-artillery-wagon-2",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -172,7 +169,6 @@ data:extend({
     name = "bob-artillery-wagon-3",
     icon = "__base__/graphics/icons/artillery-wagon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",

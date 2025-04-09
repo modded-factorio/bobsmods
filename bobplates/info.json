@@ -1,16 +1,16 @@
 {
   "name": "bobplates",
-  "version": "1.2.1",
-  "factorio_version": "1.1",
+  "version": "2.0.1",
+  "factorio_version": "2.0",
   "title": "Bob's Metals, Chemicals and Intermediates mod",
   "author": "Bobingabout",
-  "contact": "robertagius@hotmail.com",
+  "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
-    "base >= 1.1.0",
-    "boblibrary >= 1.2.0",
-    "bobores >= 1.2.0",
-    "? bobenemies >= 1.2.0"
+    "base >= 2.0.33",
+    "boblibrary >= 2.0.0",
+    "bobores >= 2.0.0",
+    "? bobenemies >= 2.0.0"
   ],
   "description": "Requires Bob's functions library mod.\nDesigned to make use of resources provided by Bob's Ores mod to function as intended\nOther mods may provide an alternate method to obtain the required resources.\n\nThis mod is designed as a base to be used with the full Bob's Mods set.\n\nThis mod adds new production processes including:\n  Electrolysis: Seperation of a liquid using electricity.\n  Chemical furnace: Heat and a Fluid.\n  Mixing furnace: Heat with more than 1 ingredient.\n  Liquid pump: Mostly used for Barrelling.\n  Gas pump: Used for Bottling, a Barrelling alternative, but also produces the resource Compressed air.\n  Gas vent: Disposes of unwanted gasses into the void.\n\nThis mod adds a method to produce a metals from resource of the following:\nAluminium, Cobalt, Gold, Lead, Nickel, Glass, Silicon, Titanium, Silver, Tin, Tungsten, Lithium and Zinc.\nAlloys of the following:\nBronze, Brass, Gunmetal, Copper-tungsten, Tungsten carbide, Invar, Nitinol and Cobalt-steel.\nAlso adds a wide array of other materials including Ceramics, Gem processing, and a large array of Liquid and Gas chemicals.\nThis mod also provides intermediate products including Gear wheels and bearings of multiple materials, Advanced processing units, and 2 tiers of batteries."
 }

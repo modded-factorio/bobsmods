@@ -1,42 +1,53 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     icons = {
       {
         icon = "__bobvehicleequipment__/graphics/icons/vehicle-roboport-equipment-base.png",
+        icon_size = 32,
       },
       {
         icon = "__base__/graphics/icons/belt-immunity-equipment.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        scale = 0.5,
       },
     },
-    icon_size = 32,
-    placed_as_equipment_result = "vehicle-belt-immunity-equipment",
+    place_as_equipment_result = "bob-vehicle-belt-immunity-equipment",
     subgroup = "vehicle-equipment",
     order = "v[vehicle-equipment]-a[belt-immunity]",
-    default_request_amount = 1,
     stack_size = 20,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
   },
   {
     type = "recipe",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "advanced-circuit", 5 },
-      { "steel-plate", 10 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 10 },
     },
-    result = "vehicle-belt-immunity-equipment",
+    results = { { type = "item", name = "bob-vehicle-belt-immunity-equipment", amount = 1 } },
   },
   {
     type = "belt-immunity-equipment",
-    name = "vehicle-belt-immunity-equipment",
+    name = "bob-vehicle-belt-immunity-equipment",
     sprite = {
       filename = "__base__/graphics/equipment/belt-immunity-equipment.png",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
       priority = "medium",
     },
     shape = {
@@ -56,21 +67,19 @@ data:extend({
   },
   {
     type = "technology",
-    name = "vehicle-belt-immunity-equipment",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
+    name = "bob-vehicle-belt-immunity-equipment",
+    icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__base__/graphics/icons/belt-immunity-equipment.png",
       icon_size = 64,
-      icon_mipmaps = 4,
-    }),
-    order = "g-g-g",
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-solar-panel-equipment-1",
-      "advanced-electronics",
+      "bob-vehicle-solar-panel-equipment-1",
+      "advanced-circuit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-belt-immunity-equipment",
+        recipe = "bob-vehicle-belt-immunity-equipment",
       },
     },
     unit = {

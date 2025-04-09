@@ -1,34 +1,47 @@
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-reactor-1",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fusion-reactor-1.png",
-    icon_size = 64,
-    placed_as_equipment_result = "vehicle-fusion-reactor-1",
+    name = "bob-vehicle-fission-reactor-equipment-1",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-1.png",
+    place_as_equipment_result = "bob-vehicle-fission-reactor-equipment-1",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-reactor]-1",
+    order = "v[vehicle-equipment]-b[fission-reactor]-1",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-reactor-1",
+    name = "bob-vehicle-fission-reactor-equipment-1",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "processing-unit", 250 },
+      { type = "item", name = "advanced-circuit", amount = 60 },
+      { type = "item", name = "steel-plate", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 12 },
     },
-    result = "vehicle-fusion-reactor-1",
+    results = { { type = "item", name = "bob-vehicle-fission-reactor-equipment-1", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-reactor-1",
+    name = "bob-vehicle-fission-reactor-equipment-1",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-1.png",
-      width = 64,
-      height = 128,
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-1.png",
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -40,103 +53,21 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "500kW",
-    categories = { "vehicle" },
+    power = "225kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-fusion-reactor-equipment-1",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
-      icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-l-a",
+    name = "bob-vehicle-fission-reactor-equipment-1",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-1.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-solar-panel-equipment-1",
-      "advanced-electronics-2",
-    },
-    unit = {
-      count = 200,
-      time = 30,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-      },
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-1",
-      },
-    },
-  },
-})
-
-data:extend({
-  {
-    type = "item",
-    name = "vehicle-fusion-reactor-2",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fusion-reactor-2.png",
-    icon_size = 64,
-    placed_as_equipment_result = "vehicle-fusion-reactor-2",
-    subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-reactor]-2",
-    stack_size = 50,
-    default_request_amount = 10,
-  },
-
-  {
-    type = "recipe",
-    name = "vehicle-fusion-reactor-2",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { "vehicle-fusion-reactor-1", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-2", 2 },
-      { "speed-module-2", 2 },
-      { "productivity-module-2", 2 },
-    },
-    result = "vehicle-fusion-reactor-2",
-  },
-
-  {
-    type = "generator-equipment",
-    name = "vehicle-fusion-reactor-2",
-    sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-2.png",
-      width = 64,
-      height = 128,
-      priority = "medium",
-    },
-    shape = {
-      width = 2,
-      height = 4,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "primary-output",
-    },
-    power = "750kW",
-    categories = { "vehicle" },
-  },
-
-  {
-    type = "technology",
-    name = "vehicle-fusion-reactor-equipment-2",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
-      icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-l-b",
-    prerequisites = {
-      "vehicle-fusion-reactor-equipment-1",
-      "utility-science-pack",
+      "bob-vehicle-solar-panel-equipment-1",
+      "nuclear-power",
+      "military-3",
     },
     unit = {
       count = 150,
@@ -144,14 +75,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "utility-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-2",
+        recipe = "bob-vehicle-fission-reactor-equipment-1",
       },
     },
   },
@@ -160,38 +91,48 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-reactor-3",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fusion-reactor-3.png",
-    icon_size = 64,
-    placed_as_equipment_result = "vehicle-fusion-reactor-3",
+    name = "bob-vehicle-fission-reactor-equipment-2",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-2.png",
+    place_as_equipment_result = "bob-vehicle-fission-reactor-equipment-2",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-reactor]-3",
+    order = "v[vehicle-equipment]-b[fission-reactor]-2",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-reactor-3",
+    name = "bob-vehicle-fission-reactor-equipment-2",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-fusion-reactor-2", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
+      { type = "item", name = "bob-vehicle-fission-reactor-equipment-1", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 60 },
+      { type = "item", name = "steel-plate", amount = 150 },
+      { type = "item", name = "uranium-fuel-cell", amount = 12 },
     },
-    result = "vehicle-fusion-reactor-3",
+    results = { { type = "item", name = "bob-vehicle-fission-reactor-equipment-2", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-reactor-3",
+    name = "bob-vehicle-fission-reactor-equipment-2",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-3.png",
-      width = 64,
-      height = 128,
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-2.png",
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -203,22 +144,202 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "1250kW",
-    categories = { "vehicle" },
+    power = "450kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-fusion-reactor-equipment-3",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
-      icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-l-c",
+    name = "bob-vehicle-fission-reactor-equipment-2",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-2.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-fusion-reactor-equipment-2",
+      "bob-vehicle-fission-reactor-equipment-1",
       "production-science-pack",
+    },
+    unit = {
+      count = 200,
+      time = 30,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+      },
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-vehicle-fission-reactor-equipment-2",
+      },
+    },
+  },
+})
+
+data:extend({
+  {
+    type = "item",
+    name = "bob-vehicle-fission-reactor-equipment-3",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-3.png",
+    place_as_equipment_result = "bob-vehicle-fission-reactor-equipment-3",
+    subgroup = "vehicle-equipment",
+    order = "v[vehicle-equipment]-b[fission-reactor]-3",
+    stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
+  },
+
+  {
+    type = "recipe",
+    name = "bob-vehicle-fission-reactor-equipment-3",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+      { type = "item", name = "bob-vehicle-fission-reactor-equipment-2", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 36 },
+      { type = "item", name = "low-density-structure", amount = 50 },
+    },
+    results = { { type = "item", name = "bob-vehicle-fission-reactor-equipment-3", amount = 1 } },
+  },
+
+  {
+    type = "generator-equipment",
+    name = "bob-vehicle-fission-reactor-equipment-3",
+    sprite = {
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-3.png",
+      width = 128,
+      height = 256,
+      priority = "medium",
+    },
+    shape = {
+      width = 2,
+      height = 4,
+      type = "full",
+    },
+    energy_source = {
+      type = "electric",
+      usage_priority = "primary-output",
+    },
+    power = "1000kW",
+    categories = { "vehicle", "unarmed-vehicle" },
+  },
+
+  {
+    type = "technology",
+    name = "bob-vehicle-fission-reactor-equipment-3",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-3.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
+    prerequisites = {
+      "bob-vehicle-fission-reactor-equipment-2",
+      "low-density-structure",
+      "processing-unit",
+    },
+    unit = {
+      count = 250,
+      time = 45,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+      },
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-vehicle-fission-reactor-equipment-3",
+      },
+    },
+  },
+})
+
+data:extend({
+  {
+    type = "item",
+    name = "bob-vehicle-fission-reactor-equipment-4",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-4.png",
+    place_as_equipment_result = "bob-vehicle-fission-reactor-equipment-4",
+    subgroup = "vehicle-equipment",
+    order = "v[vehicle-equipment]-b[fission-reactor]-4",
+    stack_size = 50,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
+  },
+
+  {
+    type = "recipe",
+    name = "bob-vehicle-fission-reactor-equipment-4",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+      { type = "item", name = "bob-vehicle-fission-reactor-equipment-3", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 48 },
+    },
+    results = { { type = "item", name = "bob-vehicle-fission-reactor-equipment-4", amount = 1 } },
+  },
+
+  {
+    type = "generator-equipment",
+    name = "bob-vehicle-fission-reactor-equipment-4",
+    sprite = {
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-4.png",
+      width = 128,
+      height = 256,
+      priority = "medium",
+    },
+    shape = {
+      width = 2,
+      height = 4,
+      type = "full",
+    },
+    energy_source = {
+      type = "electric",
+      usage_priority = "primary-output",
+    },
+    power = "1600kW",
+    categories = { "vehicle", "unarmed-vehicle" },
+  },
+
+  {
+    type = "technology",
+    name = "bob-vehicle-fission-reactor-equipment-4",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-4.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
+    prerequisites = {
+      "bob-vehicle-fission-reactor-equipment-3",
+      "utility-science-pack",
     },
     unit = {
       count = 300,
@@ -226,6 +347,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -234,7 +356,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-3",
+        recipe = "bob-vehicle-fission-reactor-equipment-4",
       },
     },
   },
@@ -243,38 +365,47 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-reactor-4",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fusion-reactor-4.png",
-    icon_size = 64,
-    placed_as_equipment_result = "vehicle-fusion-reactor-4",
+    name = "bob-vehicle-fission-reactor-equipment-5",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-5.png",
+    place_as_equipment_result = "bob-vehicle-fission-reactor-equipment-5",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-reactor]-4",
+    order = "v[vehicle-equipment]-b[fission-reactor]-5",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-reactor-4",
+    name = "bob-vehicle-fission-reactor-equipment-5",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-fusion-reactor-3", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
+      { type = "item", name = "bob-vehicle-fission-reactor-equipment-4", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 100 },
+      { type = "item", name = "uranium-fuel-cell", amount = 60 },
     },
-    result = "vehicle-fusion-reactor-4",
+    results = { { type = "item", name = "bob-vehicle-fission-reactor-equipment-5", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-reactor-4",
+    name = "bob-vehicle-fission-reactor-equipment-5",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-4.png",
-      width = 64,
-      height = 128,
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-5.png",
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -286,21 +417,19 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "2000kW",
-    categories = { "vehicle" },
+    power = "2400kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-fusion-reactor-equipment-4",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
-      icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-l-d",
+    name = "bob-vehicle-fission-reactor-equipment-5",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-5.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-fusion-reactor-equipment-3",
+      "bob-vehicle-fission-reactor-equipment-4",
     },
     unit = {
       count = 350,
@@ -308,6 +437,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -316,7 +446,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-4",
+        recipe = "bob-vehicle-fission-reactor-equipment-5",
       },
     },
   },
@@ -325,38 +455,47 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "vehicle-fusion-reactor-5",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fusion-reactor-5.png",
-    icon_size = 64,
-    placed_as_equipment_result = "vehicle-fusion-reactor-5",
+    name = "bob-vehicle-fission-reactor-equipment-6",
+    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fission-reactor-equipment-6.png",
+    place_as_equipment_result = "bob-vehicle-fission-reactor-equipment-6",
     subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-reactor]-5",
+    order = "v[vehicle-equipment]-b[fission-reactor]-6",
     stack_size = 50,
-    default_request_amount = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/reactor-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
+      volume = 0.6,
+    },
+    weight = 250000,
   },
 
   {
     type = "recipe",
-    name = "vehicle-fusion-reactor-5",
+    name = "bob-vehicle-fission-reactor-equipment-6",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "vehicle-fusion-reactor-4", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
+      { type = "item", name = "bob-vehicle-fission-reactor-equipment-5", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 150 },
+      { type = "item", name = "uranium-fuel-cell", amount = 96 },
     },
-    result = "vehicle-fusion-reactor-5",
+    results = { { type = "item", name = "bob-vehicle-fission-reactor-equipment-6", amount = 1 } },
   },
 
   {
     type = "generator-equipment",
-    name = "vehicle-fusion-reactor-5",
+    name = "bob-vehicle-fission-reactor-equipment-6",
     sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-5.png",
-      width = 64,
-      height = 128,
+      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fission-reactor-equipment-6.png",
+      width = 128,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -368,21 +507,20 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "3000kW",
-    categories = { "vehicle" },
+    power = "3600kW",
+    categories = { "vehicle", "unarmed-vehicle" },
   },
 
   {
     type = "technology",
-    name = "vehicle-fusion-reactor-equipment-5",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
-      icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-l-e",
+    name = "bob-vehicle-fission-reactor-equipment-6",
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fission-reactor-equipment-6.png",
+      icon_size = 256,
+    }, "__boblibrary__/graphics/constants/constant-vehicle-equipment.png", 56, 64),
     prerequisites = {
-      "vehicle-fusion-reactor-equipment-4",
+      "bob-vehicle-fission-reactor-equipment-5",
+      "space-science-pack",
     },
     unit = {
       count = 400,
@@ -390,97 +528,17 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-5",
-      },
-    },
-  },
-})
-
-data:extend({
-  {
-    type = "item",
-    name = "vehicle-fusion-reactor-6",
-    icon = "__bobvehicleequipment__/graphics/icons/vehicle-fusion-reactor-6.png",
-    icon_size = 64,
-    placed_as_equipment_result = "vehicle-fusion-reactor-6",
-    subgroup = "vehicle-equipment",
-    order = "v[vehicle-equipment]-b[fusion-reactor]-6",
-    stack_size = 50,
-    default_request_amount = 10,
-  },
-
-  {
-    type = "recipe",
-    name = "vehicle-fusion-reactor-6",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { "vehicle-fusion-reactor-5", 1 },
-      { "processing-unit", 50 },
-      { "effectivity-module-3", 2 },
-      { "speed-module-3", 2 },
-      { "productivity-module-3", 2 },
-    },
-    result = "vehicle-fusion-reactor-6",
-  },
-
-  {
-    type = "generator-equipment",
-    name = "vehicle-fusion-reactor-6",
-    sprite = {
-      filename = "__bobvehicleequipment__/graphics/equipment/vehicle-fusion-reactor-6.png",
-      width = 64,
-      height = 128,
-      priority = "medium",
-    },
-    shape = {
-      width = 2,
-      height = 4,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "primary-output",
-    },
-    power = "4250kW",
-    categories = { "vehicle" },
-  },
-
-  {
-    type = "technology",
-    name = "vehicle-fusion-reactor-equipment-6",
-    icons = bobmods.equipment.technology_icon_constant_vehicle_equipment({
-      icon = "__bobvehicleequipment__/graphics/technology/vehicle-fusion-reactor.png",
-      icon_size = 128,
-      icon_mipmaps = 3,
-    }),
-    order = "v-g-l-f",
-    prerequisites = {
-      "vehicle-fusion-reactor-equipment-5",
-    },
-    unit = {
-      count = 450,
-      time = 45,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-      },
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "vehicle-fusion-reactor-6",
+        recipe = "bob-vehicle-fission-reactor-equipment-6",
       },
     },
   },

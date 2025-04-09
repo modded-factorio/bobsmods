@@ -18,62 +18,58 @@ if settings.startup["bobmods-power-steam"].value == true then
     util.merge({
       data.raw.generator["steam-engine"],
       {
-        name = "steam-engine-2",
+        name = "bob-steam-engine-2",
         icon = "__base__/graphics/icons/steam-engine.png",
         localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { mining_time = 1, result = "steam-engine-2" },
+        minable = { mining_time = 1, result = "bob-steam-engine-2" },
         max_health = 500,
         maximum_temperature = 315,
-        next_upgrade = "steam-engine-3",
+        next_upgrade = "bob-steam-engine-3",
       },
     }),
 
     util.merge({
       data.raw.generator["steam-engine"],
       {
-        name = "steam-engine-3",
+        name = "bob-steam-engine-3",
         icon = "__base__/graphics/icons/steam-engine.png",
         localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { mining_time = 1, result = "steam-engine-3" },
+        minable = { mining_time = 1, result = "bob-steam-engine-3" },
         max_health = 600,
         maximum_temperature = 465,
-        next_upgrade = "steam-engine-4",
+        next_upgrade = "bob-steam-engine-4",
       },
     }),
 
     util.merge({
       data.raw.generator["steam-engine"],
       {
-        name = "steam-engine-4",
+        name = "bob-steam-engine-4",
         icon = "__base__/graphics/icons/steam-engine.png",
         localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { mining_time = 1, result = "steam-engine-4" },
+        minable = { mining_time = 1, result = "bob-steam-engine-4" },
         max_health = 700,
         maximum_temperature = 615,
-        next_upgrade = "steam-engine-5",
+        next_upgrade = "bob-steam-engine-5",
       },
     }),
 
     util.merge({
       data.raw.generator["steam-engine"],
       {
-        name = "steam-engine-5",
+        name = "bob-steam-engine-5",
         icon = "__base__/graphics/icons/steam-engine.png",
         localised_description = { "entity-description.steam-engine" },
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { mining_time = 1, result = "steam-engine-5" },
+        minable = { mining_time = 1, result = "bob-steam-engine-5" },
         max_health = 800,
         maximum_temperature = 765,
       },
     }),
   })
 
-  data.raw.generator["steam-engine"].next_upgrade = "steam-engine-2"
+  data.raw.generator["steam-engine"].next_upgrade = "bob-steam-engine-2"
 end
