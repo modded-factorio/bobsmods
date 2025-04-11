@@ -163,6 +163,7 @@ data:extend({
     },
     results = { { type = "item", name = "bob-basic-electronic-components", amount = 5 } },
     allow_decomposition = false,
+    allow_productivity = true,
   },
 })
 
@@ -410,7 +411,6 @@ data:extend({
     },
     results = { { type = "item", name = "bob-basic-circuit-board", amount = 1 } },
     allow_decomposition = false,
-    allow_productivity = true,
   },
 })
 
