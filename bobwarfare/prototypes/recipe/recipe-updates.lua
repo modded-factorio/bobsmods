@@ -322,7 +322,7 @@ end
 if data.raw.item["bob-topaz-5"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-laser-rifle-battery-topaz",
-    { type = "item", name = "tbob-opaz-5", amount = 1 }
+    { type = "item", name = "bob-topaz-5", amount = 1 }
   )
   bobmods.lib.recipe.replace_ingredient(
     "bob-laser-rifle-battery-topaz",
