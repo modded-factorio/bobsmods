@@ -1,5 +1,3 @@
-local sounds = require("__base__.prototypes.entity.sounds")
-
 function bobmods.logistics.logistic_robot_idle(level)
   return {
     filename = "__boblogistics__/graphics/entity/robots/logistic-robot-" .. level .. ".png",
