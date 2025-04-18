@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ???
+  Bugfixes:
+    - Fixed flying robot draw issues #404
+    - Fixed bots getting stuck at unpowered charging ports #408
+    - Fixed missing belt hold graphics #409
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 05. 04. 2025
   Bugfixes:

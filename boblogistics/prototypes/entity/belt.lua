@@ -1,3 +1,5 @@
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 require("prototypes.transport-belt-pictures")
 
 function bobmods.logistics.belt_speed(level)
@@ -40,6 +42,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       minable = { mining_time = 0.1, result = "bob-basic-transport-belt" },
       max_health = 140,
       corpse = "small-remnants",
+      damaged_trigger_effect = hit_effects.entity(),
       resistances = {
         {
           type = "fire",
@@ -48,10 +51,12 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       },
       collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      open_sound = sounds.transport_belt_open,
+      close_sound = sounds.transport_belt_close,
       working_sound = {
         sound = {
-          filename = "__base__/sound/express-transport-belt.ogg",
-          volume = 0.4,
+          filename = "__base__/sound/transport-belt.ogg",
+          volume = 0.17,
         },
         persistent = true,
       },
@@ -75,6 +80,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       minable = { mining_time = 0.1, result = "bob-basic-underground-belt" },
       max_health = 140,
       corpse = "small-remnants",
+      damaged_trigger_effect = hit_effects.entity(),
       factoriopedia_simulation = {
         init = [[
           game.simulation.camera_position = {0, 0.5}
@@ -114,6 +120,8 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       },
       collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+      open_sound = sounds.machine_open,
+      close_sound = sounds.machine_close,
       animation_speed_coefficient = 32,
       belt_animation_set = bobmods.logistics.black_belt_animation_set,
       fast_replaceable_group = "transport-belt",
@@ -190,6 +198,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       minable = { mining_time = 0.1, result = "bob-basic-splitter" },
       max_health = 160,
       corpse = "medium-remnants",
+      damaged_trigger_effect = hit_effects.entity(),
       resistances = {
         {
           type = "fire",
@@ -198,6 +207,8 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       },
       collision_box = { { -0.9, -0.4 }, { 0.9, 0.4 } },
       selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
+      open_sound = sounds.machine_open,
+      close_sound = sounds.machine_close,
       animation_speed_coefficient = 32,
       structure_animation_speed_coefficient = 0.7,
       structure_animation_movement_cooldown = 10,
@@ -261,6 +272,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-turbo-transport-belt" },
     max_health = 180,
     corpse = "small-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
     resistances = {
       {
         type = "fire",
@@ -269,6 +281,8 @@ data:extend({
     },
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    open_sound = sounds.transport_belt_open,
+    close_sound = sounds.transport_belt_close,
     working_sound = {
       sound = {
         filename = "__base__/sound/express-transport-belt.ogg",
@@ -296,6 +310,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-turbo-underground-belt" },
     max_health = 180,
     corpse = "small-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
     factoriopedia_simulation = {
       init = [[
         game.simulation.camera_position = {0, 0.5}
@@ -335,6 +350,8 @@ data:extend({
     },
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
@@ -411,6 +428,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-turbo-splitter" },
     max_health = 200,
     corpse = "medium-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
     resistances = {
       {
         type = "fire",
@@ -419,6 +437,8 @@ data:extend({
     },
     collision_box = { { -0.9, -0.4 }, { 0.9, 0.4 } },
     selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
@@ -481,6 +501,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-ultimate-transport-belt" },
     max_health = 190,
     corpse = "small-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
     resistances = {
       {
         type = "fire",
@@ -489,6 +510,8 @@ data:extend({
     },
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    open_sound = sounds.transport_belt_open,
+    close_sound = sounds.transport_belt_close,
     working_sound = {
       sound = {
         filename = "__base__/sound/express-transport-belt.ogg",
@@ -515,6 +538,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-ultimate-underground-belt" },
     max_health = 190,
     corpse = "small-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
     factoriopedia_simulation = {
       init = [[
         game.simulation.camera_position = {0, 0.5}
@@ -554,6 +578,8 @@ data:extend({
     },
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
@@ -629,6 +655,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-ultimate-splitter" },
     max_health = 210,
     corpse = "medium-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
     resistances = {
       {
         type = "fire",
@@ -637,6 +664,8 @@ data:extend({
     },
     collision_box = { { -0.9, -0.4 }, { 0.9, 0.4 } },
     selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
