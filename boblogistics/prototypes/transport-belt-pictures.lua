@@ -21,10 +21,10 @@ bobmods.logistics.black_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "transport-belt-reader",
@@ -38,10 +38,10 @@ bobmods.logistics.black_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor-mechanics",
@@ -55,10 +55,10 @@ bobmods.logistics.black_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "transport-belt-endings",
@@ -72,10 +72,10 @@ bobmods.logistics.black_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor",
@@ -89,10 +89,10 @@ bobmods.logistics.black_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0
+          0,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor",
@@ -106,12 +106,12 @@ bobmods.logistics.black_belt_animation_set = {
         scale = 0.5,
         shift = {
           1,
-          0.5
+          0.5,
         },
-        width = 64
-      }
-    }
-  }
+        width = 64,
+      },
+    },
+  },
 }
 
 bobmods.logistics.purple_belt_animation_set = {
@@ -137,10 +137,10 @@ bobmods.logistics.purple_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "transport-belt-reader",
@@ -154,10 +154,10 @@ bobmods.logistics.purple_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor-mechanics",
@@ -171,10 +171,10 @@ bobmods.logistics.purple_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "transport-belt-endings",
@@ -188,10 +188,10 @@ bobmods.logistics.purple_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor",
@@ -205,10 +205,10 @@ bobmods.logistics.purple_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0
+          0,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor",
@@ -222,12 +222,12 @@ bobmods.logistics.purple_belt_animation_set = {
         scale = 0.5,
         shift = {
           1,
-          0.5
+          0.5,
         },
-        width = 64
-      }
-    }
-  }
+        width = 64,
+      },
+    },
+  },
 }
 
 bobmods.logistics.green_belt_animation_set = {
@@ -253,10 +253,10 @@ bobmods.logistics.green_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "transport-belt-reader",
@@ -270,10 +270,10 @@ bobmods.logistics.green_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor-mechanics",
@@ -287,10 +287,10 @@ bobmods.logistics.green_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "transport-belt-endings",
@@ -304,10 +304,10 @@ bobmods.logistics.green_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0.5
+          0.5,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor",
@@ -321,10 +321,10 @@ bobmods.logistics.green_belt_animation_set = {
         scale = 0.5,
         shift = {
           0,
-          0
+          0,
         },
-        width = 64
-      }
+        width = 64,
+      },
     },
     {
       render_layer = "floor",
@@ -338,10 +338,10 @@ bobmods.logistics.green_belt_animation_set = {
         scale = 0.5,
         shift = {
           1,
-          0.5
+          0.5,
         },
-        width = 64
-      }
-    }
-  }
+        width = 64,
+      },
+    },
+  },
 }
