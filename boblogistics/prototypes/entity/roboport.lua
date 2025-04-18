@@ -1131,7 +1131,7 @@ data:extend({
       buffer_capacity = "100MJ",
     },
     recharge_minimum = "20MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "1250kW",
     logistics_radius = 1,
@@ -1248,7 +1248,7 @@ data:extend({
       buffer_capacity = "200MJ",
     },
     recharge_minimum = "40MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "3125kW",
     logistics_radius = 1,
@@ -1365,7 +1365,7 @@ data:extend({
       buffer_capacity = "300MJ",
     },
     recharge_minimum = "60MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "5000kW",
     logistics_radius = 1,
@@ -1481,7 +1481,7 @@ data:extend({
       buffer_capacity = "400MJ",
     },
     recharge_minimum = "80MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "7500kW",
     logistics_radius = 1,
@@ -1598,7 +1598,7 @@ data:extend({
       buffer_capacity = "100MJ",
     },
     recharge_minimum = "20MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "1250kW",
     logistics_radius = 1,
@@ -1765,7 +1765,7 @@ data:extend({
       buffer_capacity = "200MJ",
     },
     recharge_minimum = "40MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "3125kW",
     logistics_radius = 1,
@@ -1932,7 +1932,7 @@ data:extend({
       buffer_capacity = "300MJ",
     },
     recharge_minimum = "60MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "5000kW",
     logistics_radius = 1,
@@ -2098,7 +2098,7 @@ data:extend({
       buffer_capacity = "400MJ",
     },
     recharge_minimum = "80MJ",
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     -- per one charge slot
     charging_energy = "7500kW",
     logistics_radius = 1,
