@@ -66,7 +66,7 @@ bobmods.logistics.logistic_robot_shadow_idle = {
   direction_count = 16,
   y = 57,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.logistic_robot_shadow_idle_with_cargo = {
@@ -78,7 +78,7 @@ bobmods.logistics.logistic_robot_shadow_idle_with_cargo = {
   shift = util.by_pixel(31.75, 19.75),
   direction_count = 16,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.logistic_robot_shadow_in_motion = {
@@ -91,7 +91,7 @@ bobmods.logistics.logistic_robot_shadow_in_motion = {
   direction_count = 16,
   y = 171,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.logistic_robot_shadow_in_motion_with_cargo = {
@@ -104,13 +104,13 @@ bobmods.logistics.logistic_robot_shadow_in_motion_with_cargo = {
   direction_count = 16,
   y = 114,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.robot_icon_draw_specification = {
   shift = util.by_pixel(0, -6.4),
   scale = 0.5,
-  render_layer = "air-entity-info-icon"
+  render_layer = "air-entity-info-icon",
 }
 
 data.raw["logistic-robot"]["logistic-robot"].icon = "__boblogistics__/graphics/icons/robots/logistic-robot-1.png"
@@ -119,13 +119,13 @@ data.raw["logistic-robot"]["logistic-robot"].idle = bobmods.logistics.logistic_r
 data.raw["logistic-robot"]["logistic-robot"].idle_with_cargo = bobmods.logistics.logistic_robot_idle_with_cargo(1)
 data.raw["logistic-robot"]["logistic-robot"].in_motion = bobmods.logistics.logistic_robot_in_motion(1)
 data.raw["logistic-robot"]["logistic-robot"].in_motion_with_cargo =
-    bobmods.logistics.logistic_robot_in_motion_with_cargo(1)
+  bobmods.logistics.logistic_robot_in_motion_with_cargo(1)
 data.raw["logistic-robot"]["logistic-robot"].shadow_idle = bobmods.logistics.logistic_robot_shadow_idle
 data.raw["logistic-robot"]["logistic-robot"].shadow_in_motion = bobmods.logistics.logistic_robot_shadow_in_motion
-data.raw["logistic-robot"]["logistic-robot"].shadow_idle_with_cargo = bobmods.logistics
-    .logistic_robot_shadow_idle_with_cargo
+data.raw["logistic-robot"]["logistic-robot"].shadow_idle_with_cargo =
+  bobmods.logistics.logistic_robot_shadow_idle_with_cargo
 data.raw["logistic-robot"]["logistic-robot"].shadow_in_motion_with_cargo =
-    bobmods.logistics.logistic_robot_shadow_in_motion_with_cargo
+  bobmods.logistics.logistic_robot_shadow_in_motion_with_cargo
 
 data:extend({
   {
@@ -136,9 +136,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-2" },
     resistances = {
-      { type = "fire",     decrease = 4, percent = 85 },
+      { type = "fire", decrease = 4, percent = 85 },
       { type = "electric", decrease = 6, percent = 60 },
-      { type = "acid",     decrease = 4, percent = 60 },
+      { type = "acid", decrease = 4, percent = 60 },
     },
     max_health = 125,
     max_payload_size = 3,
@@ -177,9 +177,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-3" },
     resistances = {
-      { type = "fire",     decrease = 8,  percent = 85 },
+      { type = "fire", decrease = 8, percent = 85 },
       { type = "electric", decrease = 12, percent = 75 },
-      { type = "acid",     decrease = 8,  percent = 65 },
+      { type = "acid", decrease = 8, percent = 65 },
     },
     max_health = 150,
     max_payload_size = 6,
@@ -208,7 +208,6 @@ data:extend({
       ]],
     },
     icon_draw_specification = bobmods.logistics.robot_icon_draw_specification,
-
   },
 
   {
@@ -219,9 +218,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-4" },
     resistances = {
-      { type = "fire",     decrease = 12, percent = 90 },
+      { type = "fire", decrease = 12, percent = 90 },
       { type = "electric", decrease = 20, percent = 90 },
-      { type = "acid",     decrease = 12, percent = 70 },
+      { type = "acid", decrease = 12, percent = 70 },
     },
     max_health = 175,
     max_payload_size = 11,
@@ -250,7 +249,6 @@ data:extend({
       ]],
     },
     icon_draw_specification = bobmods.logistics.robot_icon_draw_specification,
-
   },
 
   {
@@ -261,9 +259,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-logistic-robot-5" },
     resistances = {
-      { type = "fire",     decrease = 12, percent = 90 },
+      { type = "fire", decrease = 12, percent = 90 },
       { type = "electric", decrease = 20, percent = 90 },
-      { type = "acid",     decrease = 12, percent = 70 },
+      { type = "acid", decrease = 12, percent = 70 },
     },
     max_health = 175,
     max_payload_size = 11,
@@ -292,7 +290,6 @@ data:extend({
       ]],
     },
     icon_draw_specification = bobmods.logistics.robot_icon_draw_specification,
-
   },
 })
 
@@ -347,7 +344,7 @@ bobmods.logistics.construction_robot_shadow_idle = {
   shift = util.by_pixel(33.5, 18.75),
   direction_count = 16,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.construction_robot_shadow_in_motion = {
@@ -359,7 +356,7 @@ bobmods.logistics.construction_robot_shadow_in_motion = {
   shift = util.by_pixel(33.5, 18.75),
   direction_count = 16,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.construction_robot_shadow_working = {
@@ -378,7 +375,7 @@ bobmods.logistics.construction_robot_shadow_working = {
   shift = util.by_pixel(33.5, 18.75),
   direction_count = 16,
   scale = 0.5,
-  draw_as_shadow = true
+  draw_as_shadow = true,
 }
 
 bobmods.logistics.construction_robot_smoke = {
@@ -455,16 +452,16 @@ bobmods.logistics.construction_robot_sparks = {
 }
 
 data.raw["construction-robot"]["construction-robot"].icon =
-"__boblogistics__/graphics/icons/robots/construction-robot-1.png"
+  "__boblogistics__/graphics/icons/robots/construction-robot-1.png"
 data.raw["construction-robot"]["construction-robot"].icon_size = 32
 data.raw["construction-robot"]["construction-robot"].idle = bobmods.logistics.construction_robot_idle(1)
 data.raw["construction-robot"]["construction-robot"].in_motion = bobmods.logistics.construction_robot_in_motion(1)
 data.raw["construction-robot"]["construction-robot"].working = bobmods.logistics.construction_robot_working(1)
 data.raw["construction-robot"]["construction-robot"].shadow_idle = bobmods.logistics.construction_robot_shadow_idle
-data.raw["construction-robot"]["construction-robot"].shadow_in_motion = bobmods.logistics
-    .construction_robot_shadow_in_motion
+data.raw["construction-robot"]["construction-robot"].shadow_in_motion =
+  bobmods.logistics.construction_robot_shadow_in_motion
 data.raw["construction-robot"]["construction-robot"].shadow_working =
-    bobmods.logistics.construction_robot_shadow_working
+  bobmods.logistics.construction_robot_shadow_working
 
 data:extend({
   {
@@ -475,9 +472,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-2" },
     resistances = {
-      { type = "fire",     decrease = 4, percent = 85 },
+      { type = "fire", decrease = 4, percent = 85 },
       { type = "electric", decrease = 6, percent = 60 },
-      { type = "acid",     decrease = 4, percent = 60 },
+      { type = "acid", decrease = 4, percent = 60 },
     },
     max_health = 225,
     max_payload_size = 2,
@@ -518,9 +515,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-3" },
     resistances = {
-      { type = "fire",     decrease = 8,  percent = 85 },
+      { type = "fire", decrease = 8, percent = 85 },
       { type = "electric", decrease = 12, percent = 75 },
-      { type = "acid",     decrease = 8,  percent = 65 },
+      { type = "acid", decrease = 8, percent = 65 },
     },
     max_health = 350,
     max_payload_size = 4,
@@ -561,9 +558,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-4" },
     resistances = {
-      { type = "fire",     decrease = 12, percent = 90 },
+      { type = "fire", decrease = 12, percent = 90 },
       { type = "electric", decrease = 20, percent = 90 },
-      { type = "acid",     decrease = 12, percent = 70 },
+      { type = "acid", decrease = 12, percent = 70 },
     },
     max_health = 500,
     max_payload_size = 6,
@@ -604,9 +601,9 @@ data:extend({
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "bob-construction-robot-5" },
     resistances = {
-      { type = "fire",     decrease = 12, percent = 90 },
+      { type = "fire", decrease = 12, percent = 90 },
       { type = "electric", decrease = 20, percent = 90 },
-      { type = "acid",     decrease = 12, percent = 70 },
+      { type = "acid", decrease = 12, percent = 70 },
     },
     max_health = 500,
     max_payload_size = 6,
