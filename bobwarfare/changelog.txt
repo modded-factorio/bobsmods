@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
-Date: ???
+Date: 20. 04. 2025
   Bugfixes:
     - Fixed topaz laser rifle battery missing topaz (with Bob's MCI mod) #400
     - Fixed startup crash with mods that are overwriting base game functions #402
