@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 if settings.startup["bobmods-warfare-robotupdate"].value == true then
   function bobmods.warfare.robot_shadow()
