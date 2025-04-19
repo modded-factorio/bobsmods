@@ -982,11 +982,11 @@ data:extend({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 750, type = "poison" },
+              damage = { amount = 1500, type = "poison" },
             },
             {
               type = "damage",
-              damage = { amount = 250, type = "explosion" },
+              damage = { amount = 500, type = "explosion" },
             },
             {
               type = "create-sticker",
@@ -1048,12 +1048,12 @@ data:extend({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 750, type = "fire" },
+              damage = { amount = 1500, type = "fire" },
               apply_damage_to_trees = false,
             },
             {
               type = "damage",
-              damage = { amount = 250, type = "explosion" },
+              damage = { amount = 500, type = "explosion" },
               apply_damage_to_trees = false,
             },
             {
@@ -1138,7 +1138,7 @@ data:extend({
           target_effects = {
             {
               type = "damage",
-              damage = { amount = 1000, type = "explosion" },
+              damage = { amount = 2000, type = "explosion" },
             },
             {
               type = "create-entity",
@@ -1237,16 +1237,16 @@ data:extend({
         type = "instant",
         target_effects = {
           {
+            type = "destroy-cliffs",
+            radius = 9,
+            explosion_at_trigger = "explosion",
+          },
+          {
             type = "set-tile",
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
             tile_collision_mask = { layers = { water_tile = true } },
-          },
-          {
-            type = "destroy-cliffs",
-            radius = 9,
-            explosion_at_trigger = "explosion",
           },
           {
             type = "create-entity",
@@ -1276,7 +1276,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 400, type = "explosion" },
+            damage = { amount = 1000, type = "explosion" },
           },
           {
             type = "create-entity",
