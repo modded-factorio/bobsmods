@@ -73,7 +73,18 @@ circuit_connector_definitions["8-way-laser-turret"] =
 local function bob_gun_turret_extension(inputs)
   return {
     layers = {
-      gun_turret_extension(inputs),
+      {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-raising.png",
+        priority = "medium",
+        width = 130,
+        height = 126,
+        direction_count = 4,
+        frame_count = inputs.frame_count or 5,
+        line_length = inputs.line_length or 0,
+        run_mode = inputs.run_mode or "forward",
+        shift = util.by_pixel(0, -26.5),
+        scale = 0.5
+      },
       {
         filename = "__base__/graphics/entity/gun-turret/gun-turret-raising-mask.png",
         flags = { "mask" },
@@ -87,7 +98,18 @@ local function bob_gun_turret_extension(inputs)
         tint = inputs.tint or white,
         scale = 0.5,
       },
-      gun_turret_extension_shadow(inputs),
+      {
+        filename = "__base__/graphics/entity/gun-turret/gun-turret-raising-shadow.png",
+        width = 250,
+        height = 124,
+        direction_count = 4,
+        frame_count = inputs.frame_count or 5,
+        line_length = inputs.line_length or 0,
+        run_mode = inputs.run_mode or "forward",
+        shift = util.by_pixel(19, 2.5),
+        draw_as_shadow = true,
+        scale = 0.5
+      },
     },
   }
 end
