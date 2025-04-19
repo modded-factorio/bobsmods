@@ -1471,7 +1471,14 @@ if
   and data.raw.fluid["bob-alien-poison"]
 then
   data.raw.ammo["bob-bullet-magazine"].ammo_type.action[1].action_delivery[1].target_effects[2].damage.amount = 20
-  data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 30
+  -- Other mods may have messed with uranium ammo
+  if data.raw.ammo["uranium-rounds-magazine"].ammo_type.action and
+    data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery and
+    data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects and
+    data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2] and
+    data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2].damage then
+    data.raw.ammo["uranium-rounds-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 30
+  end
   data.raw.ammo["bob-ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 24
   data.raw.ammo["bob-ap-bullet-magazine"].ammo_type.action.action_delivery.target_effects[3].damage.amount = 12
   data.raw.ammo["bob-electric-bullet-magazine"].ammo_type.action.action_delivery.target_effects[2].damage.amount = 18
