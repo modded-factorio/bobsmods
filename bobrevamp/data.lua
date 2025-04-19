@@ -191,7 +191,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
       subgroup = "fluid-recipes",
       order = "b[fluid-chemistry]-c[solid-fuel-from-i-sour-gas]",
       enabled = false,
-      energy_required = 2,
+      energy_required = 1,
       emissions_multiplier = 2,
       ingredients = {
         { type = "fluid", name = "bob-sour-gas", amount = 20 },
