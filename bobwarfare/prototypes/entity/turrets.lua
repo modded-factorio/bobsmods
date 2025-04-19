@@ -83,7 +83,7 @@ local function bob_gun_turret_extension(inputs)
         line_length = inputs.line_length or 0,
         run_mode = inputs.run_mode or "forward",
         shift = util.by_pixel(0, -26.5),
-        scale = 0.5
+        scale = 0.5,
       },
       {
         filename = "__base__/graphics/entity/gun-turret/gun-turret-raising-mask.png",
@@ -108,7 +108,7 @@ local function bob_gun_turret_extension(inputs)
         run_mode = inputs.run_mode or "forward",
         shift = util.by_pixel(19, 2.5),
         draw_as_shadow = true,
-        scale = 0.5
+        scale = 0.5,
       },
     },
   }
