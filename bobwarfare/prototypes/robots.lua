@@ -292,18 +292,32 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       icon = "__bobwarfare__/graphics/icons/laser-robot.png",
       icon_size = 32,
       flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map", "not-repairable" },
-      minable = { mining_time = 0.1, result = "bob-laser-robot" },
+      resistances = {
+        {
+          type = "fire",
+          percent = 95
+        },
+        {
+          type = "acid",
+          decrease = 0,
+          percent = 90
+        }
+      },
       subgroup = "capsule",
       order = "e-a-d",
       max_health = 100,
+      alert_when_damaged = false,
       collision_box = { { 0, 0 }, { 0, 0 } },
       selection_box = { { -0.5, -1.5 }, { 0.5, -0.5 } },
+      hit_visualization_box = { { -0.1, -1.4 }, { 0.1, -1.3 } },
+      damaged_trigger_effect = hit_effects.flying_robot(),
+      dying_explosion = "explosion",
+      time_to_live = 60 * 60 * 10, -- 10 mins
       speed = 0.05,
       follows_player = true,
       friction = 0.01,
       range_from_player = 6.0,
-      time_to_live = 60 * 60 * 10, -- 10 mins
-
+      working_sound = sounds.flying_robot(),
       destroy_action = {
         type = "direct",
         action_delivery = {
@@ -328,18 +342,17 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
             action_delivery = {
               type = "beam",
               beam = "bob-laser-beam-sapphire",
-              max_length = 15,
+              max_length = 25,
               duration = 20,
               source_offset = { 0.15, -0.5 },
             },
           },
         },
       },
-
-      working_sound = sounds.flying_robot(),
+      water_reflection = robot_reflection(1.2),
       idle = bobmods.warfare.robot_picture("__bobwarfare__/graphics/entities/robots/laser-robot.png"),
-      shadow_idle = bobmods.warfare.robot_shadow(),
       in_motion = bobmods.warfare.robot_picture("__bobwarfare__/graphics/entities/robots/laser-robot.png"),
+      shadow_idle = bobmods.warfare.robot_shadow(),
       shadow_in_motion = bobmods.warfare.robot_shadow(),
     },
 
