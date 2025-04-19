@@ -296,13 +296,13 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       resistances = {
         {
           type = "fire",
-          percent = 95
+          percent = 95,
         },
         {
           type = "acid",
           decrease = 0,
-          percent = 90
-        }
+          percent = 90,
+        },
       },
       subgroup = "capsule",
       order = "e-a-d",
