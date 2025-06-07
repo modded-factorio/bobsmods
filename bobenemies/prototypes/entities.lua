@@ -103,21 +103,35 @@ data:extend({
 })
 
 if data.raw.item["bob-alien-artifact-red"] then
-  data.raw["simple-entity"]["bob-basic-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-basic-enemy-1" },{ "factoriopedia-description.bob-basic-enemy-2" } }
-  data.raw["simple-entity"]["bob-piercing-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-piercing-enemy-1" },{ "factoriopedia-description.bob-piercing-enemy-2" } }
-  data.raw["simple-entity"]["bob-electric-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-electric-enemy-1" },{ "factoriopedia-description.bob-electric-enemy-2" } }
-  data.raw["simple-entity"]["bob-acid-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-acid-enemy-1" },{ "factoriopedia-description.bob-acid-enemy-2" } }
-  data.raw["simple-entity"]["bob-explosive-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-explosive-enemy-1" },{ "factoriopedia-description.bob-explosive-enemy-2" } }
-  data.raw["simple-entity"]["bob-poison-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-poison-enemy-1" },{ "factoriopedia-description.bob-poison-enemy-2" } }
-  data.raw["simple-entity"]["bob-fire-enemy"].factoriopedia_description = { "", { "factoriopedia-description.bob-fire-enemy-1" },{ "factoriopedia-description.bob-fire-enemy-2" } }
+  data.raw["simple-entity"]["bob-basic-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-basic-enemy-1" }, { "factoriopedia-description.bob-basic-enemy-2" } }
+  data.raw["simple-entity"]["bob-piercing-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-piercing-enemy-1" }, { "factoriopedia-description.bob-piercing-enemy-2" } }
+  data.raw["simple-entity"]["bob-electric-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-electric-enemy-1" }, { "factoriopedia-description.bob-electric-enemy-2" } }
+  data.raw["simple-entity"]["bob-acid-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-acid-enemy-1" }, { "factoriopedia-description.bob-acid-enemy-2" } }
+  data.raw["simple-entity"]["bob-explosive-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-explosive-enemy-1" }, { "factoriopedia-description.bob-explosive-enemy-2" } }
+  data.raw["simple-entity"]["bob-poison-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-poison-enemy-1" }, { "factoriopedia-description.bob-poison-enemy-2" } }
+  data.raw["simple-entity"]["bob-fire-enemy"].factoriopedia_description =
+    { "", { "factoriopedia-description.bob-fire-enemy-1" }, { "factoriopedia-description.bob-fire-enemy-2" } }
 else
-  data.raw["simple-entity"]["bob-basic-enemy"].factoriopedia_description = { "factoriopedia-description.bob-basic-enemy-2" }
-  data.raw["simple-entity"]["bob-piercing-enemy"].factoriopedia_description = { "factoriopedia-description.bob-piercing-enemy-2" }
-  data.raw["simple-entity"]["bob-electric-enemy"].factoriopedia_description = { "factoriopedia-description.bob-electric-enemy-2" }
-  data.raw["simple-entity"]["bob-acid-enemy"].factoriopedia_description = { "factoriopedia-description.bob-acid-enemy-2" }
-  data.raw["simple-entity"]["bob-explosive-enemy"].factoriopedia_description = { "factoriopedia-description.bob-explosive-enemy-2" }
-  data.raw["simple-entity"]["bob-poison-enemy"].factoriopedia_description = { "factoriopedia-description.bob-poison-enemy-2" }
-  data.raw["simple-entity"]["bob-fire-enemy"].factoriopedia_description = { "factoriopedia-description.bob-fire-enemy-2" }
+  data.raw["simple-entity"]["bob-basic-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-basic-enemy-2" }
+  data.raw["simple-entity"]["bob-piercing-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-piercing-enemy-2" }
+  data.raw["simple-entity"]["bob-electric-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-electric-enemy-2" }
+  data.raw["simple-entity"]["bob-acid-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-acid-enemy-2" }
+  data.raw["simple-entity"]["bob-explosive-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-explosive-enemy-2" }
+  data.raw["simple-entity"]["bob-poison-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-poison-enemy-2" }
+  data.raw["simple-entity"]["bob-fire-enemy"].factoriopedia_description =
+    { "factoriopedia-description.bob-fire-enemy-2" }
 end
 
 data:extend({
