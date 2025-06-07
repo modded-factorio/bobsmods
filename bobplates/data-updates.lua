@@ -129,7 +129,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
 
   -- #427 Since we initialize crafting_machine_tint in the earlier data stage, another mod may have modified the recipe in between.
   if data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint then
-     data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
+    data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
   end
 
   data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
