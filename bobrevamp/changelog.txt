@@ -3,6 +3,7 @@ Version: 2.0.3
 Date: ???
   Changes:
     - Add tungsten pipe to rocket part recipe (when available) rather than the military rocket engines from Bob's Warfare #428
+    - Added zh-TW locale #432
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 20. 04. 2025
