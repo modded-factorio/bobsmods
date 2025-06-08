@@ -359,7 +359,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "solid-fuel", amount = 1 },
       { type = "item", name = "bob-rocket-engine", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 1 },
+      { type = "item", name = "advanced-circuit", amount = 1 },
       { type = "item", name = "steel-plate", amount = 1 },
     },
     results = { { type = "item", name = "bob-rocket-body", amount = 1 } },

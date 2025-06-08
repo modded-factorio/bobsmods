@@ -24,9 +24,8 @@ bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "bob-he
 bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "bob-heat-shield-tile", amount = 100 })
 bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "electric-engine-unit", amount = 40 })
 
-if data.raw.item["bob-rocket-engine"] then
-  bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "bob-rocket-engine", amount = 10 })
-  bobmods.lib.tech.add_recipe_unlock("rocket-silo", "bob-rocket-engine")
+if data.raw.item["bob-tungsten-pipe"] then
+  bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "bob-tungsten-pipe", amount = 30 })
 end
 
 bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-heat-shield")

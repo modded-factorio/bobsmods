@@ -13,7 +13,7 @@ then
       icon = "__bobplates__/graphics/icons/technology/alien-blue-alloy.png",
       icon_size = 64,
       prerequisites = {
-        "bob-tungsten-processing",
+        "bob-cobalt-processing",
         "military-3",
       },
       effects = {

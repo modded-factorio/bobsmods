@@ -16,7 +16,7 @@ then
       auto_recycle = false,
       ingredients = {
         { type = "item", name = "bob-alien-artifact-blue", amount = 1 },
-        { type = "item", name = "bob-tungsten-plate", amount = 10 },
+        { type = "item", name = "bob-cobalt-steel-alloy", amount = 10 },
       },
       results = { { type = "item", name = "bob-alien-blue-alloy", amount = 10 } },
       crafting_machine_tint = {
