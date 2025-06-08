@@ -39,8 +39,8 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "fluid", name = "bob-nitroglycerin", amount = 60 },
-      { type = "item", name = "bob-gun-cotton", amount = 13 },
+      { type = "fluid", name = "bob-nitroglycerin", amount = 20 },
+      { type = "item", name = "bob-gun-cotton", amount = 5 },
       { type = "item", name = "bob-petroleum-jelly", amount = 1 },
     },
     results = { { type = "item", name = "bob-cordite", amount = 5 } },
