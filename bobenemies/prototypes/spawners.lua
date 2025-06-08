@@ -116,6 +116,10 @@ local new_spitter_spawner = table.deepcopy(data.raw["unit-spawner"]["spitter-spa
 new_spitter_spawner.name = "bob-0-spitter-spawner"
 new_spitter_spawner.order = "a-a-b"
 new_spitter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
+if mods["space-age"] then
+  new_biter_spawner.captured_spawner_entity = "captive-biter-spawner"
+  new_spitter_spawner.captured_spawner_entity = "captive-biter-spawner"
+end
 data:extend({ new_biter_spawner, new_spitter_spawner })
 data.raw["unit-spawner"]["biter-spawner"].hidden = true
 data.raw["unit-spawner"]["spitter-spawner"].hidden = true

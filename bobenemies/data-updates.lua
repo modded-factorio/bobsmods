@@ -3016,3 +3016,15 @@ end
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-artifact-radar", false)
 end
+
+if mods["space-age"] then
+  data.raw.ammo["capture-robot-rocket"].localised_description = { "item-description.capture-robot-rocket-alt" }
+  data.raw["unit-spawner"]["biter-spawner"].captured_spawner_entity = nil
+  data.raw["unit-spawner"]["spitter-spawner"].captured_spawner_entity = nil
+  data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter = {}
+  for _, spawner in pairs(data.raw["unit-spawner"]) do
+    if spawner.captured_spawner_entity then
+      table.insert(data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter, spawner.name)
+    end
+  end
+end
