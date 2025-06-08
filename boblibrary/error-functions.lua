@@ -121,6 +121,7 @@ function bobmods.lib.error.result(result, name)
   end
   if result == nil then
     log(name .. " variable not passed")
+    return
   elseif not (type(result == "table")) then
     log(name .. " variable not a table")
   elseif not (type(result.name) == "string") then
@@ -146,24 +147,6 @@ function bobmods.lib.error.result(result, name)
     end
   end
   if not (result.type == "item" or result.type == "fluid") then
-    log(name .. ".type not a valid ingredient item type")
-  end
-end
-
-function bobmods.lib.error.difficulty(difficulty, name, desc)
-  if name == nil then
-    name = "Difficulty"
-  end
-  if desc == nil then
-    desc = name
-  end
-  if difficulty == nil then
-    log(name .. " variable not passed")
-  elseif type(difficulty) == "table" then
-    log(name .. " variable is a table.")
-  elseif not (type(difficulty) == "string") then
-    log(name .. " variable not a string.")
-  elseif not (difficulty == "normal" or difficulty == "expensive") then
-    log(desc .. " " .. difficulty .. " is invalid.")
+    log(name .. ".type not a valid result item type")
   end
 end

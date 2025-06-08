@@ -2,119 +2,69 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "fluid-generator",
-      normal = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {
-          { "iron-gear-wheel", 10 },
-          { "iron-plate", 5 },
-          { "steel-plate", 10 },
-          { "pipe", 5 },
-        },
-        result = "fluid-generator",
+      name = "bob-fluid-generator",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "iron-plate", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "pipe", amount = 5 },
       },
-      expensive = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {
-          { "iron-gear-wheel", 20 },
-          { "iron-plate", 20 },
-          { "steel-plate", 30 },
-          { "pipe", 5 },
-        },
-        result = "fluid-generator",
-      },
+      results = { { type = "item", name = "bob-fluid-generator", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "fluid-generator-2",
-      normal = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {
-          { "fluid-generator", 1 },
-          { "iron-plate", 5 },
-          { "steel-plate", 10 },
-          { "iron-gear-wheel", 10 },
-          { "electronic-circuit", 5 },
-        },
-        result = "fluid-generator-2",
+      name = "bob-fluid-generator-2",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-fluid-generator", amount = 1 },
+        { type = "item", name = "iron-plate", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "electronic-circuit", amount = 5 },
       },
-      expensive = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {
-          { "fluid-generator", 1 },
-          { "iron-plate", 20 },
-          { "steel-plate", 30 },
-          { "iron-gear-wheel", 20 },
-          { "electronic-circuit", 10 },
-        },
-        result = "fluid-generator-2",
-      },
+      results = { { type = "item", name = "bob-fluid-generator-2", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "fluid-generator-3",
-      normal = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {
-          { "fluid-generator-2", 1 },
-          { "advanced-circuit", 5 },
-          { "iron-plate", 5 },
-          { "steel-plate", 10 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "fluid-generator-3",
+      name = "bob-fluid-generator-3",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-fluid-generator-2", amount = 1 },
+        { type = "item", name = "advanced-circuit", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
       },
-      expensive = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {
-          { "fluid-generator-2", 1 },
-          { "advanced-circuit", 10 },
-          { "iron-plate", 20 },
-          { "steel-plate", 30 },
-          { "iron-gear-wheel", 20 },
-        },
-        result = "fluid-generator-3",
-      },
+      results = { { type = "item", name = "bob-fluid-generator-3", amount = 1 } },
     },
   })
 
-  if mods["bobrevamp"] and data.raw.fluid.hydrogen and data.raw.fluid.oxygen and data.raw.fluid.nitrogen then
+  if
+    mods["bobrevamp"]
+    and data.raw.fluid["bob-hydrogen"]
+    and data.raw.fluid["bob-oxygen"]
+    and data.raw.fluid["bob-nitrogen"]
+  then
     data:extend({
       {
         type = "recipe",
-        name = "hydrazine-generator",
-        normal = {
-          energy_required = 2,
-          enabled = false,
-          ingredients = {
-            { "fluid-generator-3", 1 },
-            { "processing-unit", 5 },
-            { "iron-plate", 5 },
-            { "steel-plate", 10 },
-            { "iron-gear-wheel", 10 },
-          },
-          result = "hydrazine-generator",
+        name = "bob-hydrazine-generator",
+        energy_required = 2,
+        enabled = false,
+        ingredients = {
+          { type = "item", name = "bob-fluid-generator-3", amount = 1 },
+          { type = "item", name = "processing-unit", amount = 5 },
+          { type = "item", name = "iron-plate", amount = 5 },
+          { type = "item", name = "steel-plate", amount = 10 },
+          { type = "item", name = "iron-gear-wheel", amount = 10 },
         },
-        expensive = {
-          energy_required = 2,
-          enabled = false,
-          ingredients = {
-            { "fluid-generator-3", 1 },
-            { "processing-unit", 10 },
-            { "iron-plate", 20 },
-            { "steel-plate", 30 },
-            { "iron-gear-wheel", 20 },
-          },
-          result = "hydrazine-generator",
-        },
+        results = { { type = "item", name = "bob-hydrazine-generator", amount = 1 } },
       },
     })
   end

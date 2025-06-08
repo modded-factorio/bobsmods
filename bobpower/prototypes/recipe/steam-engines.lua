@@ -2,99 +2,51 @@ if settings.startup["bobmods-power-steam"].value == true then
   data:extend({
     {
       type = "recipe",
-      name = "steam-engine-2",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine", 1 },
-          { "steel-plate", 5 },
-          { "pipe", 5 },
-          { "iron-gear-wheel", 5 },
-        },
-        result = "steam-engine-2",
+      name = "bob-steam-engine-2",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "steam-engine", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "pipe", amount = 5 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine", 1 },
-          { "steel-plate", 25 },
-          { "pipe", 5 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "steam-engine-2",
-      },
+      results = { { type = "item", name = "bob-steam-engine-2", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "steam-engine-3",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine-2", 1 },
-          { "pipe", 5 },
-          { "steel-plate", 5 },
-          { "iron-gear-wheel", 5 },
-        },
-        result = "steam-engine-3",
+      name = "bob-steam-engine-3",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-steam-engine-2", amount = 1 },
+        { type = "item", name = "pipe", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine-2", 1 },
-          { "pipe", 5 },
-          { "steel-plate", 25 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "steam-engine-3",
-      },
+      results = { { type = "item", name = "bob-steam-engine-3", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "steam-engine-4",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine-3", 1 },
-          { "pipe", 5 },
-          { "steel-plate", 5 },
-          { "iron-gear-wheel", 5 },
-        },
-        result = "steam-engine-4",
+      name = "bob-steam-engine-4",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-steam-engine-3", amount = 1 },
+        { type = "item", name = "pipe", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine-3", 1 },
-          { "pipe", 5 },
-          { "steel-plate", 25 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "steam-engine-4",
-      },
+      results = { { type = "item", name = "bob-steam-engine-4", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "steam-engine-5",
-      normal = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine-4", 1 },
-          { "pipe", 5 },
-          { "steel-plate", 5 },
-          { "iron-gear-wheel", 5 },
-        },
-        result = "steam-engine-5",
+      name = "bob-steam-engine-5",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-steam-engine-4", amount = 1 },
+        { type = "item", name = "pipe", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      expensive = {
-        enabled = false,
-        ingredients = {
-          { "steam-engine-4", 1 },
-          { "pipe", 5 },
-          { "steel-plate", 25 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "steam-engine-5",
-      },
+      results = { { type = "item", name = "bob-steam-engine-5", amount = 1 } },
     },
   })
 end

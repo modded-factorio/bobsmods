@@ -1,0 +1,10 @@
+{
+  "technology":
+  [
+    ["long-inserters-1", "bob-long-inserters-1"],
+    ["long-inserters-2", "bob-long-inserters-2"],
+    ["more-inserters-1", "bob-more-inserters-1"],
+    ["more-inserters-2", "bob-more-inserters-2"],
+    ["near-inserters", "bob-near-inserters"]
+  ]
+}

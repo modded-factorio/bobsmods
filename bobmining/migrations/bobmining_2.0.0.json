@@ -1,0 +1,42 @@
+{
+  "item":
+  [
+    ["bob-pumpjack-4", "bob-pumpjack-3"],
+    ["steam-mining-drill", "bob-steam-mining-drill"],
+    ["water-miner-1", "bob-water-miner-1"],
+    ["water-miner-2", "bob-water-miner-2"],
+    ["water-miner-3", "bob-water-miner-3"],
+    ["water-miner-4", "bob-water-miner-4"],
+    ["water-miner-5", "bob-water-miner-4"]
+  ],
+  "recipe":
+  [
+    ["steam-mining-drill", "bob-steam-mining-drill"],
+    ["water-miner-1", "bob-water-miner-1"],
+    ["water-miner-2", "bob-water-miner-2"],
+    ["water-miner-3", "bob-water-miner-3"],
+    ["water-miner-4", "bob-water-miner-4"]
+  ],
+  "entity":
+  [
+    ["bob-pumpjack-4", "bob-pumpjack-3"],
+    ["steam-mining-drill", "bob-steam-mining-drill"],
+    ["water-miner-1", "bob-water-miner-1"],
+    ["water-miner-2", "bob-water-miner-2"],
+    ["water-miner-3", "bob-water-miner-3"],
+    ["water-miner-4", "bob-water-miner-4"],
+    ["water-miner-5", "bob-water-miner-4"]
+  ],
+  "technology":
+  [
+    ["steel-axe-2", "bob-steel-axe-2"],
+    ["steel-axe-3", "bob-steel-axe-3"],
+    ["steel-axe-4", "bob-steel-axe-4"],
+    ["steel-axe-5", "bob-steel-axe-5"],
+    ["steel-axe-6", "bob-steel-axe-6"],
+    ["water-miner-1", "bob-water-miner-1"],
+    ["water-miner-2", "bob-water-miner-2"],
+    ["water-miner-3", "bob-water-miner-3"],
+    ["water-miner-4", "bob-water-miner-4"]
+  ]
+}

@@ -1,21 +1,47 @@
 data:extend({
   {
     type = "item",
-    name = "robot-drone-frame",
+    name = "bob-robot-drone-frame",
     icon = "__bobwarfare__/graphics/icons/drone-frame.png",
     icon_size = 64,
     subgroup = "intermediate-product",
     order = "l[robot-drone-frame-a-1]",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
+    weight = 10000,
   },
   {
     type = "item",
-    name = "robot-drone-frame-large",
+    name = "bob-robot-drone-frame-large",
     icon = "__bobwarfare__/graphics/icons/drone-frame.png",
     icon_size = 64,
     subgroup = "intermediate-product",
     order = "l[robot-drone-frame-b-1]",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
+    weight = 20000,
   },
 })
 
@@ -29,6 +55,19 @@ data:extend({
     order = "b[drone]-a[gun-1]",
     place_result = "bob-robot-gun-drone",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
+    weight = 10000,
   },
 })
 
@@ -42,6 +81,19 @@ data:extend({
     order = "b[drone]-b[laser-1]",
     place_result = "bob-robot-laser-drone",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
+    weight = 10000,
   },
 })
 
@@ -55,6 +107,19 @@ data:extend({
     order = "b[drone]-c[flamethrower-1]",
     place_result = "bob-robot-flamethrower-drone",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
+    weight = 10000,
   },
 })
 
@@ -68,5 +133,18 @@ data:extend({
     order = "b[drone]-d[plasma-1]",
     place_result = "bob-robot-plasma-drone",
     stack_size = 10,
+    drop_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+      volume = 0.8,
+    },
+    weight = 20000,
   },
 })

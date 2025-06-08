@@ -20,6 +20,16 @@ sounds.laser = {
   },
 }
 
+sounds.laserBeam = {
+  sound = {
+    category = "weapon",
+    filename = "__base__/sound/fight/laser-beam.ogg",
+    volume = 0.75,
+    modifiers = volume_multiplier("main-menu", 2.5),
+  },
+  max_sounds_per_prototype = 1,
+}
+
 sounds.plasmaTurret = function(volume)
   return {
     {
@@ -111,4 +121,20 @@ sounds.plasmaExplosion = {
     volume = 1.0,
   },
 }
+
+sounds.deconstruct_large = function(volume)
+  return {
+    switch_vibration_data = {
+      filename = "__core__/sound/deconstruct-large.bnvib",
+      gain = 0.25,
+    },
+    variations = {
+      {
+        filename = "__core__/sound/deconstruct-large.ogg",
+        volume = volume,
+      },
+    },
+  }
+end
+
 return sounds

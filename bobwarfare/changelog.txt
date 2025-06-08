@@ -1,4 +1,40 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: ???
+  Changes:
+    - Reduce the cost of Rockets #428
+    - Blue Alien Alloy takes Cobalt Steel instead of Tungsten #429
+    - Added zh-TW locale #432
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 20. 04. 2025
+  Bugfixes:
+    - Fixed topaz laser rifle battery missing topaz (with Bob's MCI mod) #400
+    - Fixed startup crash with mods that are overwriting base game functions #402
+  Changes:
+    - Reduced ammo stack sizes to match base game #406
+    - Increased the damage of poison, explosive, napalm and atomic artillery shells #406
+    - Increased the range of laser robots #406
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Bugfixes:
+    - Fixed crash with AAI Programmable Vehicles #390
+  Changes:
+    - Increased the range of tank 2 & 3 and spidertron cannons #386
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Bugfixes:
+    - Fixed missing poison cloud localisation #195
+  Changes:
+    - Spread out the armor techs more evenly between tech tiers #180
+    - Changed combat robot and mech brains to use circuits rather than circuit components #184
+    - Update for Factorio 2.0 #189
+    - Added significant power drain to plasma turrets #212
+    - General rebalancing #280
+    - Removed Invar Cobalt-steel armor and Titanium-Ceramic armor #292
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
   Bugfixes:

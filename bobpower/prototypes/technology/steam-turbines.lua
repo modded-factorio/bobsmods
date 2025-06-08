@@ -10,7 +10,7 @@ if settings.startup["bobmods-power-steam"].value == true then
         "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-turbine.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
@@ -26,13 +26,12 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         time = 30,
       },
-      order = "[steam-turbine]-1",
     },
     {
       type = "technology",
       name = "bob-steam-turbine-2",
       icon = "__bobpower__/graphics/icons/technology/steam-turbine.png",
-      icon_size = 128,
+      icon_size = 256,
       prerequisites = {
         "bob-steam-turbine-1",
         "production-science-pack",
@@ -40,7 +39,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-turbine-2",
+          recipe = "bob-steam-turbine-2",
         },
       },
       unit = {
@@ -53,14 +52,13 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "production-science-pack", 1 },
         },
       },
-      order = "[steam-turbine]-2",
     },
 
     {
       type = "technology",
       name = "bob-steam-turbine-3",
       icon = "__bobpower__/graphics/icons/technology/steam-turbine.png",
-      icon_size = 128,
+      icon_size = 256,
       prerequisites = {
         "bob-steam-turbine-2",
         "utility-science-pack",
@@ -68,7 +66,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-turbine-3",
+          recipe = "bob-steam-turbine-3",
         },
       },
       unit = {
@@ -82,7 +80,6 @@ if settings.startup["bobmods-power-steam"].value == true then
           { "utility-science-pack", 1 },
         },
       },
-      order = "[steam-turbine]-3",
     },
   })
 end

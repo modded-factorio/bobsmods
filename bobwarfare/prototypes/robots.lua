@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 if settings.startup["bobmods-warfare-robotupdate"].value == true then
   function bobmods.warfare.robot_shadow()
@@ -26,56 +27,92 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   data:extend({
     {
       type = "item",
-      name = "defender-robot",
+      name = "bob-defender-robot",
       icon = "__bobwarfare__/graphics/icons/defender.png",
       icon_size = 32,
       subgroup = "bob-combat-robots",
       order = "e-a-a",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
     {
       type = "recipe",
-      name = "defender-robot",
+      name = "bob-defender-robot",
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "defender-robot",
+      results = { { type = "item", name = "bob-defender-robot", amount = 1 } },
     },
 
     {
       type = "item",
-      name = "distractor-robot",
+      name = "bob-distractor-robot",
       icon = "__bobwarfare__/graphics/icons/distractor.png",
       icon_size = 32,
       subgroup = "bob-combat-robots",
       order = "e-a-b",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
     {
       type = "recipe",
-      name = "distractor-robot",
+      name = "bob-distractor-robot",
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "distractor-robot",
+      results = { { type = "item", name = "bob-distractor-robot", amount = 1 } },
     },
 
     {
       type = "item",
-      name = "destroyer-robot",
+      name = "bob-destroyer-robot",
       icon = "__bobwarfare__/graphics/icons/destroyer.png",
       icon_size = 32,
       subgroup = "bob-combat-robots",
       order = "e-a-c",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
     {
       type = "recipe",
-      name = "destroyer-robot",
+      name = "bob-destroyer-robot",
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "destroyer-robot",
+      results = { { type = "item", name = "bob-destroyer-robot", amount = 1 } },
     },
   })
 
@@ -124,8 +161,19 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       icon_size = 32,
       subgroup = "bob-combat-robots",
       order = "e-a-d",
-      --    place_result = "bob-laser-robot",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -134,7 +182,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 3,
       ingredients = {},
-      result = "bob-laser-robot",
+      results = { { type = "item", name = "bob-laser-robot", amount = 1 } },
     },
 
     {
@@ -143,9 +191,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       enabled = false,
       energy_required = 1,
       ingredients = {
-        { "bob-laser-robot", 5 },
+        { type = "item", name = "bob-laser-robot", amount = 5 },
       },
-      result = "bob-laser-robot-capsule",
+      results = { { type = "item", name = "bob-laser-robot-capsule", amount = 1 } },
     },
 
     {
@@ -173,7 +221,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
           projectile_creation_distance = 0.6,
           range = 25,
           ammo_type = {
-            category = "capsule",
             target_type = "position",
             action = {
               type = "direct",
@@ -189,6 +236,18 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       subgroup = "capsule",
       order = "g[laser-robot-capsule]",
       stack_size = 100,
+      drop_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/robotic-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
+        volume = 0.5,
+      },
     },
 
     {
@@ -203,7 +262,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
           target_effects = {
             type = "create-entity",
             show_in_tooltip = true,
-            entity_name = "bob-laser-robot",
+            entity_name = "bob-laser-robot-entity",
             offsets = { { -0.7, -0.7 }, { -0.7, 0.7 }, { 0.7, -0.7 }, { 0.7, 0.7 }, { 0, 0 } },
           },
         },
@@ -224,28 +283,42 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         priority = "high",
       },
       smoke = capsule_smoke,
+      hidden = true,
     },
 
     {
       type = "combat-robot",
-      name = "bob-laser-robot",
+      name = "bob-laser-robot-entity",
+      localised_name = { "item-name.bob-laser-robot" },
       icon = "__bobwarfare__/graphics/icons/laser-robot.png",
       icon_size = 32,
       flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map", "not-repairable" },
-      minable = { mining_time = 0.1, result = "bob-laser-robot" },
+      resistances = {
+        {
+          type = "fire",
+          percent = 95,
+        },
+        {
+          type = "acid",
+          decrease = 0,
+          percent = 90,
+        },
+      },
       subgroup = "capsule",
       order = "e-a-d",
       max_health = 100,
+      alert_when_damaged = false,
       collision_box = { { 0, 0 }, { 0, 0 } },
       selection_box = { { -0.5, -1.5 }, { 0.5, -0.5 } },
+      hit_visualization_box = { { -0.1, -1.4 }, { 0.1, -1.3 } },
+      damaged_trigger_effect = hit_effects.flying_robot(),
+      dying_explosion = "explosion",
+      time_to_live = 60 * 60 * 10, -- 10 mins
       speed = 0.05,
       follows_player = true,
       friction = 0.01,
       range_from_player = 6.0,
-
-      --    time_to_live = 60 * 60 * 60 * 24, -- 1 day
-      time_to_live = 60 * 60 * 10, -- 10 mins
-
+      working_sound = sounds.flying_robot(),
       destroy_action = {
         type = "direct",
         action_delivery = {
@@ -261,28 +334,26 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         type = "beam",
         ammo_category = "laser",
         cooldown = 20,
-        range = 15,
+        range = 20,
         damage_modifier = 2.5,
         sound = make_laser_sounds(),
         ammo_type = {
-          category = "laser",
           action = {
             type = "direct",
             action_delivery = {
               type = "beam",
               beam = "bob-laser-beam-sapphire",
-              max_length = 15,
+              max_length = 25,
               duration = 20,
               source_offset = { 0.15, -0.5 },
             },
           },
         },
       },
-
-      working_sound = sounds.flying_robot(),
+      water_reflection = robot_reflection(1.2),
       idle = bobmods.warfare.robot_picture("__bobwarfare__/graphics/entities/robots/laser-robot.png"),
-      shadow_idle = bobmods.warfare.robot_shadow(),
       in_motion = bobmods.warfare.robot_picture("__bobwarfare__/graphics/entities/robots/laser-robot.png"),
+      shadow_idle = bobmods.warfare.robot_shadow(),
       shadow_in_motion = bobmods.warfare.robot_shadow(),
     },
 

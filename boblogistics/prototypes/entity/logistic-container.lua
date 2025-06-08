@@ -4,7 +4,6 @@ function bobmods.logistics.logistic_container(inputs)
     type = "logistic-container",
     name = inputs.name,
     icons = inputs.icons,
-    icon_size = inputs.icon_size or 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = inputs.name },
     max_health = inputs.max_health or 150,
@@ -15,15 +14,18 @@ function bobmods.logistics.logistic_container(inputs)
     fast_replaceable_group = "container",
     next_upgrade = inputs.next_upgrade,
     inventory_size = inputs.inventory_size or 48,
+    trash_inventory_size = inputs.trash_inventory_size,
     logistic_mode = inputs.logistic_mode or "passive-provider",
     max_logistic_slots = inputs.logistic_slots_count,
+    icon_draw_specification = {
+      scale = 0.7 or inputs.inventory_icon_scale,
+    },
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = inputs.picture,
     animation = inputs.animation,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = inputs.circuit_wire_max_distance or 7.5,
   }
 end
@@ -110,40 +112,40 @@ function bobmods.logistics.logistic_container_3_picture(tint)
   }
 end
 
-data.raw["logistic-container"]["logistic-chest-passive-provider"].next_upgrade = "logistic-chest-passive-provider-2"
-data.raw["logistic-container"]["logistic-chest-active-provider"].next_upgrade = "logistic-chest-active-provider-2"
-data.raw["logistic-container"]["logistic-chest-storage"].next_upgrade = "logistic-chest-storage-2"
-data.raw["logistic-container"]["logistic-chest-buffer"].next_upgrade = "logistic-chest-buffer-2"
-data.raw["logistic-container"]["logistic-chest-requester"].next_upgrade = "logistic-chest-requester-2"
+data.raw["logistic-container"]["passive-provider-chest"].next_upgrade = "bob-passive-provider-chest-2"
+data.raw["logistic-container"]["active-provider-chest"].next_upgrade = "bob-active-provider-chest-2"
+data.raw["logistic-container"]["storage-chest"].next_upgrade = "bob-storage-chest-2"
+data.raw["logistic-container"]["buffer-chest"].next_upgrade = "bob-buffer-chest-2"
+data.raw["logistic-container"]["requester-chest"].next_upgrade = "bob-requester-chest-2"
 
 data:extend({
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-passive-provider-2",
-    icons = data.raw.item["logistic-chest-passive-provider-2"].icons,
+    name = "bob-passive-provider-chest-2",
+    icons = data.raw.item["bob-passive-provider-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
     logistic_mode = "passive-provider",
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.9, g = 0.2, b = 0.1, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-passive-provider-3",
+    next_upgrade = "bob-passive-provider-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-active-provider-2",
-    icons = data.raw.item["logistic-chest-active-provider-2"].icons,
+    name = "bob-active-provider-chest-2",
+    icons = data.raw.item["bob-active-provider-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
     logistic_mode = "active-provider",
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.7, g = 0.1, b = 0.9, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-active-provider-3",
+    next_upgrade = "bob-active-provider-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-storage-2",
-    icons = data.raw.item["logistic-chest-storage-2"].icons,
+    name = "bob-storage-chest-2",
+    icons = data.raw.item["bob-storage-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
@@ -151,40 +153,42 @@ data:extend({
     logistic_slots_count = 1,
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.9, g = 0.75, b = 0.1, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-storage-3",
+    next_upgrade = "bob-storage-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-buffer-2",
-    icons = data.raw.item["logistic-chest-buffer-2"].icons,
+    name = "bob-buffer-chest-2",
+    icons = data.raw.item["bob-buffer-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
+    trash_inventory_size = 20,
     logistic_mode = "buffer",
     logistic_slots_count = 18,
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.2, g = 0.9, b = 0.1, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-buffer-3",
+    next_upgrade = "bob-buffer-chest-3",
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-requester-2",
-    icons = data.raw.item["logistic-chest-requester-2"].icons,
+    name = "bob-requester-chest-2",
+    icons = data.raw.item["bob-requester-chest-2"].icons,
     max_health = 500,
     resistances = { { type = "fire", percent = 80 }, { type = "impact", percent = 70 } },
     inventory_size = 64,
+    trash_inventory_size = 20,
     logistic_mode = "requester",
     logistic_slots_count = 18,
     animation = bobmods.logistics.logistic_container_2_picture({ r = 0.1, g = 0.4, b = 0.9, a = 1 }),
     circuit_wire_max_distance = 10,
-    next_upgrade = "logistic-chest-requester-3",
+    next_upgrade = "bob-requester-chest-3",
   }),
 })
 
 data:extend({
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-passive-provider-3",
-    icons = data.raw.item["logistic-chest-passive-provider-3"].icons,
+    name = "bob-passive-provider-chest-3",
+    icons = data.raw.item["bob-passive-provider-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -194,8 +198,8 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-active-provider-3",
-    icons = data.raw.item["logistic-chest-active-provider-3"].icons,
+    name = "bob-active-provider-chest-3",
+    icons = data.raw.item["bob-active-provider-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -205,8 +209,8 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-storage-3",
-    icons = data.raw.item["logistic-chest-storage-3"].icons,
+    name = "bob-storage-chest-3",
+    icons = data.raw.item["bob-storage-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
@@ -217,11 +221,12 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-buffer-3",
-    icons = data.raw.item["logistic-chest-buffer-3"].icons,
+    name = "bob-buffer-chest-3",
+    icons = data.raw.item["bob-buffer-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
+    trash_inventory_size = 20,
     logistic_mode = "buffer",
     logistic_slots_count = 24,
     animation = bobmods.logistics.logistic_container_3_picture({ r = 0.2, g = 0.9, b = 0.1, a = 1 }),
@@ -229,11 +234,12 @@ data:extend({
   }),
 
   bobmods.logistics.logistic_container({
-    name = "logistic-chest-requester-3",
-    icons = data.raw.item["logistic-chest-requester-3"].icons,
+    name = "bob-requester-chest-3",
+    icons = data.raw.item["bob-requester-chest-3"].icons,
     max_health = 650,
     resistances = { { type = "fire", percent = 90 }, { type = "impact", percent = 90 } },
     inventory_size = 80,
+    trash_inventory_size = 20,
     logistic_mode = "requester",
     logistic_slots_count = 24,
     animation = bobmods.logistics.logistic_container_3_picture({ r = 0.1, g = 0.4, b = 0.9, a = 1 }),

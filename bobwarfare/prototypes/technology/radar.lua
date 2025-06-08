@@ -1,46 +1,17 @@
-if not mods["aai-industry"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "radars-1",
-      icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-      icon_size = 128,
-      prerequisites = {
-        "military",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "radar",
-        },
-      },
-      unit = {
-        count = 25,
-        ingredients = {
-          { "automation-science-pack", 1 },
-        },
-        time = 30,
-      },
-      order = "e-b-a",
-    },
-  })
-end
-
 data:extend({
   {
     type = "technology",
-    name = "radars-2",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    name = "bob-radar-2",
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
       "military-2",
-      "steel-processing",
-      "electronics",
+      "radar",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-2",
+        recipe = "bob-radar-2",
       },
     },
     unit = {
@@ -51,23 +22,21 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-b",
   },
 
   {
     type = "technology",
-    name = "radars-3",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    name = "bob-radar-3",
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
-      "radars-2",
+      "bob-radar-2",
       "military-3",
-      "advanced-electronics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-3",
+        recipe = "bob-radar-3",
       },
     },
     unit = {
@@ -79,23 +48,22 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-c",
   },
 
   {
     type = "technology",
-    name = "radars-4",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    name = "bob-radar-4",
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
-      "radars-3",
+      "bob-radar-3",
       "production-science-pack",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-4",
+        recipe = "bob-radar-4",
       },
     },
     unit = {
@@ -108,22 +76,21 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-d",
   },
 
   {
     type = "technology",
-    name = "radars-5",
-    icon = "__bobwarfare__/graphics/icons/technology/radars.png",
-    icon_size = 128,
+    name = "bob-radar-5",
+    icon = "__base__/graphics/technology/radar.png",
+    icon_size = 256,
     prerequisites = {
-      "radars-4",
+      "bob-radar-4",
       "military-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "radar-5",
+        recipe = "bob-radar-5",
       },
     },
     unit = {
@@ -137,10 +104,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "e-b-e",
   },
 })
-
-if not mods["aai-industry"] then
-  bobmods.lib.tech.add_prerequisite("radars-2", "radars-1")
-end

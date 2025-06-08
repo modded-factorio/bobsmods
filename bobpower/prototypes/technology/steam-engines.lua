@@ -8,11 +8,11 @@ if settings.startup["bobmods-power-steam"].value == true then
         "logistic-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-engine-2",
+          recipe = "bob-steam-engine-2",
         },
       },
       unit = {
@@ -23,7 +23,6 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         time = 30,
       },
-      order = "[steam-engine]-2",
     },
 
     {
@@ -34,11 +33,11 @@ if settings.startup["bobmods-power-steam"].value == true then
         "chemical-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-engine-3",
+          recipe = "bob-steam-engine-3",
         },
       },
       unit = {
@@ -50,7 +49,6 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         time = 30,
       },
-      order = "[steam-engine]-3",
     },
 
     {
@@ -61,11 +59,11 @@ if settings.startup["bobmods-power-steam"].value == true then
         "production-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-engine-4",
+          recipe = "bob-steam-engine-4",
         },
       },
       unit = {
@@ -78,7 +76,6 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         time = 30,
       },
-      order = "[steam-engine]-4",
     },
 
     {
@@ -89,11 +86,11 @@ if settings.startup["bobmods-power-steam"].value == true then
         "utility-science-pack",
       },
       icon = "__bobpower__/graphics/icons/technology/steam-engine.png",
-      icon_size = 128,
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "steam-engine-5",
+          recipe = "bob-steam-engine-5",
         },
       },
       unit = {
@@ -107,7 +104,6 @@ if settings.startup["bobmods-power-steam"].value == true then
         },
         time = 30,
       },
-      order = "[steam-engine]-5",
     },
   })
 end

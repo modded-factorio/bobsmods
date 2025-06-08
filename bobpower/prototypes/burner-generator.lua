@@ -6,30 +6,32 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       icon = "__bobpower__/graphics/icons/burner-generator.png",
       icon_size = 64,
       subgroup = "bob-energy-fluid-generator",
-      order = "burner-generator",
+      order = "bob-burner-generator",
       place_result = "bob-burner-generator",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
       type = "recipe",
       name = "bob-burner-generator",
-      normal = {
-        ingredients = {
-          { "stone-furnace", 1 },
-          { "iron-plate", 8 },
-          { "iron-gear-wheel", 5 },
-        },
-        result = "bob-burner-generator",
+      ingredients = {
+        { type = "item", name = "stone-furnace", amount = 1 },
+        { type = "item", name = "iron-plate", amount = 8 },
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
       },
-      expensive = {
-        ingredients = {
-          { "stone-furnace", 1 },
-          { "iron-plate", 15 },
-          { "iron-gear-wheel", 10 },
-        },
-        result = "bob-burner-generator",
-      },
+      results = { { type = "item", name = "bob-burner-generator", amount = 1 } },
     },
 
     {
@@ -56,15 +58,17 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       fast_replaceable_group = "burner-generator",
       collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      drawing_box_vertical_extension = 0.8,
       energy_source = {
         type = "electric",
         usage_priority = "secondary-output",
       },
       burner = {
-        fuel_category = "chemical",
+        type = "burner",
+        fuel_categories = { "chemical" },
         effectivity = 0.75,
         fuel_inventory_size = 1,
-        emissions_per_minute = 15,
+        emissions_per_minute = { pollution = 15 },
         smoke = {
           {
             name = "smoke",
@@ -101,12 +105,11 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
             width = 36,
             height = 19,
             frame_count = 12,
-            direction_count = 1,
             shift = util.by_pixel(2, 37.5),
           },
         },
       },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal-large",
       working_sound = {
         sound = {
           filename = "__base__/sound/steam-engine-90bpm.ogg",
@@ -114,8 +117,10 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         },
         match_speed_to_activity = true,
       },
-      min_perceived_performance = 0.25,
-      performance_to_sound_speedup = 0.5,
+      perceived_performance = {
+        minimum = 0.25,
+        performance_to_activity_rate = 2,
+      },
     },
   })
 end

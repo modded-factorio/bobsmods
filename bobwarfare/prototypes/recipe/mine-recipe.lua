@@ -1,40 +1,37 @@
 data:extend({
   {
     type = "recipe",
-    name = "poison-mine",
+    name = "bob-poison-mine",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "steel-plate", 1 },
-      { "poison-capsule", 4 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "poison-capsule", amount = 4 },
     },
-    result = "poison-mine",
-    result_count = 4,
+    results = { { type = "item", name = "bob-poison-mine", amount = 4 } },
   },
 
   {
     type = "recipe",
-    name = "slowdown-mine",
+    name = "bob-slowdown-mine",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "steel-plate", 1 },
-      { "slowdown-capsule", 4 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "slowdown-capsule", amount = 4 },
     },
-    result = "slowdown-mine",
-    result_count = 4,
+    results = { { type = "item", name = "bob-slowdown-mine", amount = 4 } },
   },
 
   {
     type = "recipe",
-    name = "distractor-mine",
+    name = "bob-distractor-mine",
     enabled = false,
     energy_required = 3.75,
     ingredients = {
-      { "steel-plate", 1 },
-      { "distractor-capsule", 1 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "distractor-capsule", amount = 1 },
     },
-    result = "distractor-mine",
-    result_count = 3,
+    results = { { type = "item", name = "bob-distractor-mine", amount = 3 } },
   },
 })

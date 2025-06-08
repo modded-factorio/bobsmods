@@ -1,38 +1,38 @@
 data:extend({
   {
     type = "recipe",
-    name = "storage-tank-2",
+    name = "bob-storage-tank-2",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { "storage-tank", 1 },
-      { "steel-plate", 20 },
+      { type = "item", name = "storage-tank", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "storage-tank-2",
+    results = { { type = "item", name = "bob-storage-tank-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "storage-tank-3",
+    name = "bob-storage-tank-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { "storage-tank-2", 1 },
-      { "steel-plate", 20 },
+      { type = "item", name = "bob-storage-tank-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "storage-tank-3",
+    results = { { type = "item", name = "bob-storage-tank-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "storage-tank-4",
+    name = "bob-storage-tank-4",
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { "storage-tank-3", 1 },
-      { "steel-plate", 20 },
+      { type = "item", name = "bob-storage-tank-3", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
     },
-    result = "storage-tank-4",
+    results = { { type = "item", name = "bob-storage-tank-4", amount = 1 } },
   },
 })
 
@@ -43,11 +43,11 @@ data:extend({
     energy_required = 3,
     enabled = false,
     ingredients = {
-      { "iron-plate", 20 },
-      { "steel-plate", 5 },
-      { "pipe", 4 },
+      { type = "item", name = "iron-plate", amount = 20 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "pipe", amount = 4 },
     },
-    result = "bob-storage-tank-all-corners",
+    results = { { type = "item", name = "bob-storage-tank-all-corners", amount = 1 } },
   },
   {
     type = "recipe",
@@ -55,11 +55,11 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { "bob-storage-tank-all-corners", 1 },
-      { "steel-plate", 20 },
-      { "pipe", 4 },
+      { type = "item", name = "bob-storage-tank-all-corners", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "pipe", amount = 4 },
     },
-    result = "bob-storage-tank-all-corners-2",
+    results = { { type = "item", name = "bob-storage-tank-all-corners-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -67,11 +67,11 @@ data:extend({
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { "bob-storage-tank-all-corners-2", 1 },
-      { "steel-plate", 20 },
-      { "pipe", 4 },
+      { type = "item", name = "bob-storage-tank-all-corners-2", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "pipe", amount = 4 },
     },
-    result = "bob-storage-tank-all-corners-3",
+    results = { { type = "item", name = "bob-storage-tank-all-corners-3", amount = 1 } },
   },
   {
     type = "recipe",
@@ -79,10 +79,10 @@ data:extend({
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { "bob-storage-tank-all-corners-3", 1 },
-      { "steel-plate", 20 },
-      { "pipe", 4 },
+      { type = "item", name = "bob-storage-tank-all-corners-3", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "pipe", amount = 4 },
     },
-    result = "bob-storage-tank-all-corners-4",
+    results = { { type = "item", name = "bob-storage-tank-all-corners-4", amount = 1 } },
   },
 })

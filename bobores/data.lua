@@ -19,6 +19,12 @@ data:extend({
     order = "b-a",
   },
   {
+    type = "item-subgroup",
+    name = "bob-gems-ore",
+    group = "intermediate-products",
+    order = "2",
+  },
+  {
     type = "resource-category",
     name = "water",
   },
@@ -26,6 +32,9 @@ data:extend({
 
 bobmods.ores.settings.UnsortedGemOre = settings.startup["bobmods-ores-unsortedgemore"].value
 bobmods.ores.settings.GemsFromOtherOres = settings.startup["bobmods-ores-gemsfromotherores"].value
+if bobmods.ores.settings.GemsFromOtherOres == true then
+  bobmods.ores.settings.UnsortedGemOre = false
+end
 bobmods.ores.settings.GemProbability = settings.startup["bobmods-ores-gemprobability"].value
 
 bobmods.ores.settings.LeadGivesNickel = settings.startup["bobmods-ores-leadgivesnickel"].value
@@ -52,7 +61,6 @@ require("prototypes.bauxite")
 require("prototypes.rutile")
 require("prototypes.tungsten-ore")
 require("prototypes.thorium-ore")
-
 require("prototypes.nickel-ore")
 require("prototypes.cobalt-ore")
 require("prototypes.sulfur")

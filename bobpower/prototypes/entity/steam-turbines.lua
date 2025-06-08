@@ -10,6 +10,7 @@ ST2: 0.2kW * 60 * 1.0 * ( 615 -15) =  7200kW
 ST3: 0.2kW * 60 * 1.0 * ( 765 -15) =  9000kW
 ]]
 --
+data.raw.generator["steam-turbine"].energy_source.usage_priority = "primary-output"
 
 if settings.startup["bobmods-power-steam"].value == true then
   data.raw.generator["steam-turbine"].max_health = 750
@@ -19,32 +20,30 @@ if settings.startup["bobmods-power-steam"].value == true then
     util.merge({
       data.raw.generator["steam-turbine"],
       {
-        name = "steam-turbine-2",
+        name = "bob-steam-turbine-2",
         icon = "__base__/graphics/icons/steam-turbine.png",
         localised_description = { "entity-description.steam-turbine" },
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { mining_time = 1, result = "steam-turbine-2" },
+        minable = { mining_time = 1, result = "bob-steam-turbine-2" },
         max_health = 1000,
         maximum_temperature = 615,
-        next_upgrade = "steam-turbine-3",
+        next_upgrade = "bob-steam-turbine-3",
       },
     }),
 
     util.merge({
       data.raw.generator["steam-turbine"],
       {
-        name = "steam-turbine-3",
+        name = "bob-steam-turbine-3",
         icon = "__base__/graphics/icons/steam-turbine.png",
         localised_description = { "entity-description.steam-turbine" },
         icon_size = 64,
-        icon_mipmaps = 4,
-        minable = { mining_time = 1, result = "steam-turbine-3" },
+        minable = { mining_time = 1, result = "bob-steam-turbine-3" },
         max_health = 1250,
         maximum_temperature = 765,
       },
     }),
   })
 
-  data.raw.generator["steam-turbine"].next_upgrade = "steam-turbine-2"
+  data.raw.generator["steam-turbine"].next_upgrade = "bob-steam-turbine-2"
 end

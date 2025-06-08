@@ -6,93 +6,129 @@ then
   data.raw.item["heat-pipe"].order = "f[nuclear-energy]-c[heat-pipe-1]"
   data.raw["heat-pipe"]["heat-pipe"].fast_replaceable_group = "heat-pipe"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.minimum_glow_temperature = 300
-  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "1GW"
+  data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "2GW"
   data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_temperature = 750
-  data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.heat-pipe", 750 }
-  bobmods.lib.recipe.set_ingredients("heat-pipe", { { "steel-plate", 5 }, { "copper-plate", 10 } })
+  data.raw["heat-pipe"]["heat-pipe"].next_upgrade = "bob-heat-pipe-2"
+  data.raw["heat-pipe"]["heat-pipe"].localised_description = { "entity-description.bob-heat-pipe", "750" }
+  bobmods.lib.recipe.set_ingredients(
+    "heat-pipe",
+    { { type = "item", name = "steel-plate", amount = 5 }, { type = "item", name = "copper-plate", amount = 10 } }
+  )
 
   data:extend({
     {
       type = "item",
-      name = "heat-pipe-2",
+      name = "bob-heat-pipe-2",
       icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[nuclear-energy]-c[heat-pipe-2]",
-      place_result = "heat-pipe-2",
+      place_result = "bob-heat-pipe-2",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "item",
-      name = "heat-pipe-3",
+      name = "bob-heat-pipe-3",
       icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[nuclear-energy]-c[heat-pipe-3]",
-      place_result = "heat-pipe-3",
+      place_result = "bob-heat-pipe-3",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "item",
-      name = "heat-pipe-4",
+      name = "bob-heat-pipe-4",
       icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[nuclear-energy]-c[heat-pipe-4]",
-      place_result = "heat-pipe-4",
+      place_result = "bob-heat-pipe-4",
       stack_size = 50,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-move.ogg",
+        volume = 0.8,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
 
     {
       type = "recipe",
-      name = "heat-pipe-2",
+      name = "bob-heat-pipe-2",
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "steel-plate", 5 },
-        { "copper-plate", 10 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "copper-plate", amount = 10 },
       },
-      result = "heat-pipe-2",
+      results = { { type = "item", name = "bob-heat-pipe-2", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "heat-pipe-3",
+      name = "bob-heat-pipe-3",
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "steel-plate", 5 },
-        { "copper-plate", 10 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "copper-plate", amount = 10 },
       },
-      result = "heat-pipe-3",
+      results = { { type = "item", name = "bob-heat-pipe-3", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "heat-pipe-4",
+      name = "bob-heat-pipe-4",
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "steel-plate", 5 },
-        { "copper-plate", 10 },
+        { type = "item", name = "steel-plate", amount = 5 },
+        { type = "item", name = "copper-plate", amount = 10 },
       },
-      result = "heat-pipe-4",
+      results = { { type = "item", name = "bob-heat-pipe-4", amount = 1 } },
     },
 
     util.merge({
       data.raw["heat-pipe"]["heat-pipe"],
       {
-        name = "heat-pipe-2",
-        localised_description = { "entity-description.heat-pipe", 1000 },
+        name = "bob-heat-pipe-2",
+        localised_description = { "entity-description.bob-heat-pipe", "1000" },
         icon = "__bobpower__/graphics/icons/heat-pipe-2.png",
-        icon_size = 32,
-        icon_mipmaps = 1,
-        minable = { mining_time = 0.1, result = "heat-pipe-2" },
+        minable = { mining_time = 0.1, result = "bob-heat-pipe-2" },
         max_health = 300,
         heat_buffer = {
-          max_transfer = "1.666GW",
+          max_transfer = "4GW",
           max_temperature = 1000,
           minimum_glow_temperature = 400,
         },
         fast_replaceable_group = "heat-pipe",
+        next_upgrade = "bob-heat-pipe-3",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-2/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
@@ -116,19 +152,18 @@ then
     util.merge({
       data.raw["heat-pipe"]["heat-pipe"],
       {
-        name = "heat-pipe-3",
-        localised_description = { "entity-description.heat-pipe", 1250 },
+        name = "bob-heat-pipe-3",
+        localised_description = { "entity-description.bob-heat-pipe", "1250" },
         icon = "__bobpower__/graphics/icons/heat-pipe-3.png",
-        icon_size = 32,
-        icon_mipmaps = 1,
-        minable = { mining_time = 0.1, result = "heat-pipe-3" },
+        minable = { mining_time = 0.1, result = "bob-heat-pipe-3" },
         max_health = 300,
         heat_buffer = {
-          max_transfer = "3GW",
+          max_transfer = "7GW",
           max_temperature = 1250,
           minimum_glow_temperature = 400,
         },
         fast_replaceable_group = "heat-pipe",
+        next_upgrade = "bob-heat-pipe-4",
         connection_sprites = make_heat_pipe_pictures("__bobpower__/graphics/heat-pipe-3/", "heat-pipe", {
           single = { name = "straight-vertical-single", ommit_number = true },
           straight_vertical = { variations = 6 },
@@ -152,15 +187,13 @@ then
     util.merge({
       data.raw["heat-pipe"]["heat-pipe"],
       {
-        name = "heat-pipe-4",
-        localised_description = { "entity-description.heat-pipe", 1500 },
+        name = "bob-heat-pipe-4",
+        localised_description = { "entity-description.bob-heat-pipe", "1500" },
         icon = "__bobpower__/graphics/icons/heat-pipe-4.png",
-        icon_size = 32,
-        icon_mipmaps = 1,
-        minable = { mining_time = 0.1, result = "heat-pipe-4" },
+        minable = { mining_time = 0.1, result = "bob-heat-pipe-4" },
         max_health = 400,
         heat_buffer = {
-          max_transfer = "5GW",
+          max_transfer = "10GW",
           max_temperature = 1500,
           minimum_glow_temperature = 450,
         },
@@ -223,7 +256,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heat-pipe-2",
+          recipe = "bob-heat-pipe-2",
         },
       },
       unit = {
@@ -249,7 +282,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heat-pipe-3",
+          recipe = "bob-heat-pipe-3",
         },
       },
       unit = {
@@ -276,7 +309,7 @@ then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heat-pipe-4",
+          recipe = "bob-heat-pipe-4",
         },
       },
       unit = {

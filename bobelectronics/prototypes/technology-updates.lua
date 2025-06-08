@@ -1,98 +1,95 @@
-bobmods.lib.tech.add_prerequisite("logistic-science-pack", "electronics")
-bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
-bobmods.lib.tech.remove_prerequisite("circuit-network", "electronics")
-bobmods.lib.tech.remove_prerequisite("solar-energy", "electronics")
-bobmods.lib.tech.remove_prerequisite("electric-energy-distribution-1", "electronics")
+bobmods.lib.tech.add_prerequisite("automation-2", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("logistics-2", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("circuit-network", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("solar-energy", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("gate", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("defender", "bob-electronics")
+bobmods.lib.tech.replace_prerequisite("fast-inserter", "automation-science-pack", "bob-electronics")
+if data.raw.technology["bob-electrolyser-2"] then
+  bobmods.lib.tech.add_prerequisite("bob-electrolyser-2", "bob-electronics")
+end
+if mods["bobmining"] then
+  bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-area-drills-1", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("bob-water-miner-2", "bob-electronics")
+end
+if mods["bobrevamp"] then
+  bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-electronics")
+end
+if mods["bobwarfare"] or mods["bobequipment"] then
+  bobmods.lib.tech.add_prerequisite("modular-armor", "bob-electronics")
+end
+if mods["bobwarfare"] then
+  bobmods.lib.tech.add_prerequisite("bob-radar-2", "bob-electronics")
+end
 
-bobmods.lib.tech.add_prerequisite("advanced-electronics", "plastics")
+bobmods.lib.tech.add_prerequisite("advanced-circuit", "plastics")
 
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "coal-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-oil-processing")
 
-bobmods.lib.tech.add_recipe_unlock("plastics", "synthetic-wood")
+bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 
-if data.raw.technology["chemical-processing-2"] then
-  bobmods.lib.tech.add_recipe_unlock("chemical-processing-2", "ferric-chloride-solution")
-  bobmods.lib.tech.add_prerequisite("advanced-electronics", "chemical-processing-2")
-else
-  bobmods.lib.tech.add_recipe_unlock("oil-processing", "ferric-chloride-solution")
-  bobmods.lib.tech.add_prerequisite("advanced-electronics", "oil-processing")
+if data.raw.recipe["bob-solder"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder")
+end
+if data.raw.recipe["bob-solder-alloy-lead"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy-lead")
+end
+if data.raw.recipe["bob-solder-alloy"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-solder-alloy")
+end
+if data.raw.recipe["bob-tinned-copper-cable"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")
 end
 
-if data.raw.recipe["silicon-wafer"] then
-  if data.raw.technology["silicon-processing"] then
-    bobmods.lib.tech.add_recipe_unlock("silicon-processing", "silicon-wafer")
-  else
-    data.raw.recipe["silicon-wafer"].enabled = true
+bobmods.lib.tech.add_recipe_unlock("electronics", "bob-basic-circuit-board")
+bobmods.lib.tech.remove_recipe_unlock("electronics", "electronic-circuit")
+
+if mods["bobplates"] then
+  bobmods.lib.tech.add_prerequisite("bob-electronics", "bob-chemical-processing-1")
+  bobmods.lib.tech.add_prerequisite("bob-electronics", "bob-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("advanced-circuit", "bob-silicon-processing")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-processing-unit", "bob-gold-processing")
+  bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-ferric-chloride-solution")
+  bobmods.lib.tech.add_prerequisite("bob-chemical-processing-2", "bob-electronics")
+  bobmods.lib.tech.add_prerequisite("advanced-circuit", "bob-chemical-processing-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-wafer")
+  bobmods.lib.tech.add_prerequisite("bob-advanced-processing-unit", "bob-ceramics")
+  bobmods.lib.tech.replace_prerequisite("bob-air-compressor-1", "electronics", "bob-electronics")
+  bobmods.lib.tech.replace_prerequisite("bob-water-bore-1", "electronics", "bob-electronics")
+else
+  bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-ferric-chloride-solution")
+  bobmods.lib.tech.add_prerequisite("advanced-circuit", "oil-processing")
+  if data.raw.recipe["bob-silicon-wafer"] then
+    data.raw.recipe["bob-silicon-wafer"].enabled = true
   end
 end
 
-if data.raw.recipe["solder"] then
-  bobmods.lib.tech.add_recipe_unlock("electronics", "solder")
-end
-if data.raw.recipe["solder-alloy"] then
-  bobmods.lib.tech.add_recipe_unlock("electronics", "solder-alloy")
-end
-if data.raw.recipe["solder-alloy-lead"] then
-  bobmods.lib.tech.add_recipe_unlock("electronics", "solder-alloy-lead")
-end
-if data.raw.recipe["tinned-copper-cable"] then
-  bobmods.lib.tech.add_recipe_unlock("electronics", "tinned-copper-cable")
-end
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-electronic-components")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-phenolic-board")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "advanced-circuit") --to re-add if it was removed in previous mod
 
-bobmods.lib.tech.add_recipe_unlock("electronics", "insulated-cable")
-bobmods.lib.tech.add_recipe_unlock("electronics", "basic-electronic-components")
-bobmods.lib.tech.add_recipe_unlock("electronics", "electronic-circuit")
-bobmods.lib.tech.remove_prerequisite("electronics", "automation")
-bobmods.lib.tech.add_prerequisite("electronics", "bob-wood-processing")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-integrated-electronics")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-fibreglass-board")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-superior-circuit-board")
+bobmods.lib.tech.add_recipe_unlock("processing-unit", "processing-unit")
 
-if data.raw.technology["chemical-processing-1"] and data.raw.technology["alloy-processing"] then
-  bobmods.lib.tech.add_prerequisite("electronics", "chemical-processing-1")
-  bobmods.lib.tech.add_prerequisite("electronics", "alloy-processing")
+if data.raw.recipe["bob-gilded-copper-cable"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-gilded-copper-cable")
 end
 
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "electronic-components")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "phenolic-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "circuit-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics", "advanced-circuit") --to re-add if it was removed in previous mod
-if data.raw.technology["silicon-processing"] then
-  bobmods.lib.tech.add_prerequisite("advanced-electronics", "silicon-processing")
-end
+bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-processing-electronics")
+bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-multi-layer-circuit-board")
 
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "intergrated-electronics")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "fibreglass-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "superior-circuit-board")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-2", "processing-unit")
-if data.raw.technology["gold-processing"] then
-  bobmods.lib.tech.add_prerequisite("advanced-electronics-2", "gold-processing")
-end
+data.raw.technology["advanced-circuit"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
+data.raw.technology["processing-unit"].icon = "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
 
-if data.raw.recipe["gilded-copper-cable"] then
-  bobmods.lib.tech.add_recipe_unlock("advanced-electronics-3", "gilded-copper-cable")
-end
-
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-3", "processing-electronics")
-bobmods.lib.tech.add_recipe_unlock("advanced-electronics-3", "multi-layer-circuit-board")
-
-if data.raw.technology["ceramics"] then
-  bobmods.lib.tech.add_prerequisite("advanced-electronics-3", "ceramics")
-end
-
-data.raw.technology["electronics"].icon = "__bobelectronics__/graphics/icons/technology/electronics.png"
-data.raw.technology["advanced-electronics"].icon =
-  "__bobelectronics__/graphics/icons/technology/advanced-electronics.png"
-data.raw.technology["advanced-electronics-2"].icon =
-  "__bobelectronics__/graphics/icons/technology/advanced-electronics-2.png"
-
-data.raw.technology["electronics"].icon_size = 128
-data.raw.technology["advanced-electronics"].icon_size = 128
-data.raw.technology["advanced-electronics-2"].icon_size = 128
-
-data.raw.technology["electronics"].icon_mipmaps = 0
-data.raw.technology["advanced-electronics"].icon_mipmaps = 0
-data.raw.technology["advanced-electronics-2"].icon_mipmaps = 0
+data.raw.technology["advanced-circuit"].icon_size = 128
+data.raw.technology["processing-unit"].icon_size = 128
 
 bobmods.lib.tech.remove_recipe_unlock("oil-processing", "solid-fuel-from-petroleum-gas")
 bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-from-light-oil")

@@ -107,7 +107,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         friction_force = 0.375,
         air_resistance = 0.005625, -- this is a percentage of current speed that will be subtracted
         resistances = rolling_stock_resistances(),
-        burner = {
+        energy_source = {
           effectivity = 1.2,
           fuel_inventory_size = 4,
         },
@@ -128,7 +128,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         friction_force = 0.25, --0.0005,
         air_resistance = 0.004, --0.001, -- this is a percentage of current speed that will be subtracted
         resistances = rolling_stock_resistances(),
-        burner = {
+        energy_source = {
           effectivity = 1.4,
           fuel_inventory_size = 5,
         },
@@ -150,7 +150,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         friction_force = 0.5,
         air_resistance = 0.0075,
         resistances = rolling_stock_armor_resistances(),
-        burner = {
+        energy_source = {
           effectivity = 1,
           fuel_inventory_size = 3,
         },
@@ -171,7 +171,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         friction_force = 0.5,
         air_resistance = 0.006,
         resistances = rolling_stock_armor_resistances(),
-        burner = {
+        energy_source = {
           effectivity = 1.2,
           fuel_inventory_size = 4,
         },
@@ -322,4 +322,25 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
     }),
   })
+
+  if feature_flags["quality"] then
+    for _, wagon in pairs({
+      "cargo-wagon",
+      "bob-cargo-wagon-2",
+      "bob-cargo-wagon-3",
+      "bob-armoured-cargo-wagon",
+      "bob-armoured-cargo-wagon-2",
+    }) do
+      data.raw["cargo-wagon"][wagon].quality_affects_inventory_size = true
+    end
+    for _, wagon in pairs({
+      "fluid-wagon",
+      "bob-fluid-wagon-2",
+      "bob-fluid-wagon-3",
+      "bob-armoured-fluid-wagon",
+      "bob-armoured-fluid-wagon-2",
+    }) do
+      data.raw["fluid-wagon"][wagon].quality_affects_capacity = true
+    end
+  end
 end

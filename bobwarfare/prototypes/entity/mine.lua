@@ -1,17 +1,16 @@
 data:extend({
   {
     type = "land-mine",
-    name = "poison-mine",
+    name = "bob-poison-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {
       "placeable-player",
       "placeable-enemy",
       "player-creation",
       "placeable-off-grid",
     },
-    minable = { mining_time = 1, result = "poison-mine" },
+    minable = { mining_time = 1, result = "bob-poison-mine" },
     max_health = 15,
     corpse = "small-remnants",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
@@ -20,11 +19,19 @@ data:extend({
     picture_safe = {
       filename = "__base__/graphics/entity/land-mine/land-mine.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5,
     },
     picture_set = {
       filename = "__base__/graphics/entity/land-mine/land-mine-set.png",
+      priority = "medium",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+    },
+    picture_set_enemy = {
+      filename = "__base__/graphics/entity/land-mine/land-mine-set-enemy.png",
       priority = "medium",
       width = 32,
       height = 32,
@@ -41,7 +48,7 @@ data:extend({
             action = {
               type = "area",
               radius = 6,
-              collision_mask = { "player-layer" },
+              collision_mask = { layers = { player = true } },
               action_delivery = {
                 type = "instant",
                 target_effects = {
@@ -66,17 +73,16 @@ data:extend({
 
   {
     type = "land-mine",
-    name = "distractor-mine",
+    name = "bob-distractor-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {
       "placeable-player",
       "placeable-enemy",
       "player-creation",
       "placeable-off-grid",
     },
-    minable = { mining_time = 1, result = "distractor-mine" },
+    minable = { mining_time = 1, result = "bob-distractor-mine" },
     max_health = 15,
     corpse = "small-remnants",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
@@ -85,11 +91,19 @@ data:extend({
     picture_safe = {
       filename = "__base__/graphics/entity/land-mine/land-mine.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5,
     },
     picture_set = {
       filename = "__base__/graphics/entity/land-mine/land-mine-set.png",
+      priority = "medium",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+    },
+    picture_set_enemy = {
+      filename = "__base__/graphics/entity/land-mine/land-mine-set-enemy.png",
       priority = "medium",
       width = 32,
       height = 32,
@@ -117,17 +131,16 @@ data:extend({
 
   {
     type = "land-mine",
-    name = "slowdown-mine",
+    name = "bob-slowdown-mine",
     icon = "__base__/graphics/icons/land-mine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {
       "placeable-player",
       "placeable-enemy",
       "player-creation",
       "placeable-off-grid",
     },
-    minable = { mining_time = 1, result = "slowdown-mine" },
+    minable = { mining_time = 1, result = "bob-slowdown-mine" },
     max_health = 15,
     corpse = "small-remnants",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
@@ -136,11 +149,19 @@ data:extend({
     picture_safe = {
       filename = "__base__/graphics/entity/land-mine/land-mine.png",
       priority = "medium",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
+      scale = 0.5,
     },
     picture_set = {
       filename = "__base__/graphics/entity/land-mine/land-mine-set.png",
+      priority = "medium",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+    },
+    picture_set_enemy = {
+      filename = "__base__/graphics/entity/land-mine/land-mine-set-enemy.png",
       priority = "medium",
       width = 32,
       height = 32,

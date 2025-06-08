@@ -2,16 +2,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   local function lower_layer_picture(suffix)
     return {
       filename = "__bobpower__/graphics/burner-reactor/reactor-pipes" .. suffix .. ".png",
-      width = 96,
-      height = 96,
+      width = 192,
+      height = 192,
+      scale = 0.5,
       shift = { -0.03125, -0.1875 },
-      hr_version = {
-        filename = "__bobpower__/graphics/burner-reactor/hr-reactor-pipes" .. suffix .. ".png",
-        width = 192,
-        height = 192,
-        scale = 0.5,
-        shift = { -0.03125, -0.1875 },
-      },
     }
   end
 
@@ -19,16 +13,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
-        width = 32,
-        height = 32,
+        width = 64,
+        height = 64,
         variation_count = 12,
-        hr_version = {
-          filename = "__bobpower__/graphics/burner-reactor/hr-reactor-connect-patches" .. suffix .. ".png",
-          width = 64,
-          height = 64,
-          variation_count = 12,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
     }
   end
@@ -37,73 +25,81 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     return {
       sheet = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-connect-patches" .. suffix .. ".png",
-        width = 32,
-        height = 32,
+        width = 64,
+        height = 64,
         variation_count = 12,
-        y = 32,
-        hr_version = {
-          filename = "__bobpower__/graphics/burner-reactor/hr-reactor-connect-patches" .. suffix .. ".png",
-          width = 64,
-          height = 64,
-          variation_count = 12,
-          y = 64,
-          scale = 0.5,
-        },
+        y = 64,
+        scale = 0.5,
       },
     }
   end
 
+  circuit_connector_definitions["bob-burner-reactor"] = circuit_connector_definitions.create_single(
+    universal_connector_template,
+    { variation = 26, main_offset = util.by_pixel(10, -20), shadow_offset = util.by_pixel(32, 0), show_shadow = false }
+  )
+
   data:extend({
     {
       type = "item",
-      name = "burner-reactor",
+      name = "bob-burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-a[burner-reactor-1]",
-      place_result = "burner-reactor",
+      place_result = "bob-burner-reactor",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
-      name = "burner-reactor",
+      name = "bob-burner-reactor",
       energy_required = 2,
       enabled = false,
       ingredients = {
-        { "steel-furnace", 1 },
-        { "heat-pipe", 8 },
-        { "steel-plate", 6 },
+        { type = "item", name = "steel-furnace", amount = 1 },
+        { type = "item", name = "heat-pipe", amount = 8 },
+        { type = "item", name = "steel-plate", amount = 6 },
       },
-      result = "burner-reactor",
+      results = { { type = "item", name = "bob-burner-reactor", amount = 1 } },
     },
     {
       type = "reactor",
-      name = "burner-reactor",
+      name = "bob-burner-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
-      localised_description = { "entity-description.burner-reactor", 750 },
+      localised_description = { "entity-description.bob-burner-reactor", "750" },
       max_health = 300,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.3, result = "burner-reactor" },
+      minable = { mining_time = 0.3, result = "bob-burner-reactor" },
       collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       corpse = "medium-remnants",
-      fast_replaceable_group = "burner-reactor",
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      fast_replaceable_group = "bob-burner-reactor",
+      impact_category = "metal-large",
       resistances = {
         {
           type = "fire",
           percent = 90,
         },
       },
-      consumption = "5.4MW",
-      neighbour_bonus = 0.5,
-      scale_energy_usage = true,
+      consumption = "0.6MW",
+      neighbour_bonus = 0.25,
+      scale_energy_usage = false,
       energy_source = {
         type = "burner",
-        fuel_category = "chemical",
-        effectivity = 1,
-        emissions_per_minute = 15,
+        fuel_categories = { "chemical" },
+        effectivity = 0.60,
+        emissions_per_minute = { pollution = 15 },
         fuel_inventory_size = 1,
         smoke = {
           {
@@ -177,41 +173,58 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       lower_layer_picture = lower_layer_picture(""),
       connection_patches_connected = connection_patches_connected(""),
       connection_patches_disconnected = connection_patches_disconnected(""),
+      circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["bob-burner-reactor"],
     },
   })
   data:extend({
     {
       type = "item",
-      name = "burner-reactor-2",
+      name = "bob-burner-reactor-2",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-a[burner-reactor-2]",
-      place_result = "burner-reactor-2",
+      place_result = "bob-burner-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
-      name = "burner-reactor-2",
+      name = "bob-burner-reactor-2",
       energy_required = 3,
       enabled = false,
       ingredients = {
-        { "burner-reactor", 1 },
-        { "heat-pipe-2", 8 },
-        { "steel-plate", 6 },
-        { "concrete", 10 },
+        { type = "item", name = "bob-burner-reactor", amount = 1 },
+        { type = "item", name = "bob-heat-pipe-2", amount = 8 },
+        { type = "item", name = "steel-plate", amount = 6 },
+        { type = "item", name = "concrete", amount = 10 },
       },
-      result = "burner-reactor-2",
+      results = { { type = "item", name = "bob-burner-reactor-2", amount = 1 } },
     },
     util.merge({
-      data.raw.reactor["burner-reactor"],
+      data.raw.reactor["bob-burner-reactor"],
       {
-        name = "burner-reactor-2",
-        localised_description = { "entity-description.burner-reactor", 1000 },
-        minable = { result = "burner-reactor-2" },
+        name = "bob-burner-reactor-2",
+        localised_description = { "entity-description.bob-burner-reactor", "1000" },
+        minable = { result = "bob-burner-reactor-2" },
         max_health = 500,
-        consumption = "9MW",
-        neighbour_bonus = 1,
+        consumption = "1.4MW",
+        neighbour_bonus = 0.25,
+        energy_source = {
+          effectivity = 0.7,
+          emissions_per_minute = { pollution = 20 },
+        },
         lower_layer_picture = lower_layer_picture("-2"),
         connection_patches_connected = connection_patches_connected("-2"),
         connection_patches_disconnected = connection_patches_disconnected("-2"),
@@ -227,32 +240,43 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   data:extend({
     {
       type = "item",
-      name = "fluid-reactor",
+      name = "bob-fluid-reactor",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-b[fluid-reactor-1]",
-      place_result = "fluid-reactor",
+      place_result = "bob-fluid-reactor",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
-      name = "fluid-reactor",
+      name = "bob-fluid-reactor",
       energy_required = 2,
       enabled = false,
       ingredients = {
-        { "burner-reactor", 1 },
-        { "pipe", 5 },
+        { type = "item", name = "bob-burner-reactor", amount = 1 },
+        { type = "item", name = "pipe", amount = 5 },
       },
-      result = "fluid-reactor",
+      results = { { type = "item", name = "bob-fluid-reactor", amount = 1 } },
     },
     util.merge({
-      data.raw.reactor["burner-reactor"],
+      data.raw.reactor["bob-burner-reactor"],
       {
-        name = "fluid-reactor",
-        minable = { result = "fluid-reactor" },
-        next_upgrade = "fluid-reactor-2",
-        localised_description = { "entity-description.fluid-reactor", 750 },
+        name = "bob-fluid-reactor",
+        minable = { result = "bob-fluid-reactor" },
+        next_upgrade = "bob-fluid-reactor-2",
+        localised_description = { "entity-description.bob-fluid-reactor", "750" },
       },
     }),
   })
@@ -260,34 +284,45 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   data:extend({
     {
       type = "item",
-      name = "fluid-reactor-2",
+      name = "bob-fluid-reactor-2",
       icon = "__bobpower__/graphics/icons/burner-reactor.png",
-      icon_size = 32,
       subgroup = "energy",
       order = "f[heat-energy]-b[fluid-reactor-2]",
-      place_result = "fluid-reactor-2",
+      place_result = "bob-fluid-reactor-2",
       stack_size = 10,
+      drop_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      inventory_move_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+        volume = 0.7,
+      },
+      pick_sound = {
+        filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+        volume = 0.8,
+      },
     },
     {
       type = "recipe",
-      name = "fluid-reactor-2",
+      name = "bob-fluid-reactor-2",
       energy_required = 3,
       enabled = false,
       ingredients = {
-        { "fluid-reactor", 1 },
-        { "heat-pipe-2", 8 },
-        { "steel-plate", 6 },
-        { "concrete", 10 },
-        { "pipe", 5 },
+        { type = "item", name = "bob-fluid-reactor", amount = 1 },
+        { type = "item", name = "bob-heat-pipe-2", amount = 8 },
+        { type = "item", name = "steel-plate", amount = 6 },
+        { type = "item", name = "concrete", amount = 10 },
+        { type = "item", name = "pipe", amount = 5 },
       },
-      result = "fluid-reactor-2",
+      results = { { type = "item", name = "bob-fluid-reactor-2", amount = 1 } },
     },
     util.merge({
-      data.raw.reactor["burner-reactor-2"],
+      data.raw.reactor["bob-burner-reactor-2"],
       {
-        name = "fluid-reactor-2",
-        minable = { result = "fluid-reactor-2" },
-        localised_description = { "entity-description.fluid-reactor", 1000 },
+        name = "bob-fluid-reactor-2",
+        minable = { result = "bob-fluid-reactor-2" },
+        localised_description = { "entity-description.bob-fluid-reactor", "1000" },
       },
     }),
   })
@@ -295,7 +330,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   data:extend({
     {
       type = "technology",
-      name = "burner-reactor-1",
+      name = "bob-burner-reactor-1",
       icon = "__bobpower__/graphics/icons/technology/heat-power.png",
       icon_size = 128,
       prerequisites = {
@@ -305,11 +340,11 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "burner-reactor",
+          recipe = "bob-burner-reactor",
         },
         {
           type = "unlock-recipe",
-          recipe = "fluid-reactor",
+          recipe = "bob-fluid-reactor",
         },
       },
       unit = {
@@ -324,22 +359,22 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     },
     {
       type = "technology",
-      name = "burner-reactor-2",
+      name = "bob-burner-reactor-2",
       icon = "__bobpower__/graphics/icons/technology/heat-power.png",
       icon_size = 128,
       prerequisites = {
-        "burner-reactor-1",
+        "bob-burner-reactor-1",
         "bob-heat-pipe-2",
         "concrete",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "burner-reactor-2",
+          recipe = "bob-burner-reactor-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "fluid-reactor-2",
+          recipe = "bob-fluid-reactor-2",
         },
       },
       unit = {
@@ -356,22 +391,20 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   })
 
   --Since the burner reactor is a base for the others, add next_upgrade to it after all the cloning.
-  data.raw.reactor["burner-reactor"].next_upgrade = "burner-reactor-2"
+  data.raw.reactor["bob-burner-reactor"].next_upgrade = "bob-burner-reactor-2"
 
   --Change the energy_source on the fluid reactors from burner to fluid.
   local fluid_reactor_energy_source = {
     type = "fluid",
     effectivity = 1,
-    emissions_per_minute = 10,
+    emissions_per_minute = { pollution = 15 },
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_connections = {
-        { type = "input-output", position = { 0, 2 } },
-        { type = "input-output", position = { 0, -2 } },
-        { type = "input-output", position = { 2, 0 } },
-        { type = "input-output", position = { -2, 0 } },
+        { flow_direction = "input-output", position = { 0, 1 }, direction = defines.direction.south },
+        { flow_direction = "input-output", position = { 0, -1 }, direction = defines.direction.north },
+        { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
+        { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
       pipe_picture = assembler2pipepictures(),
@@ -390,8 +423,15 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     },
   }
 
-  data.raw.reactor["fluid-reactor"].energy_source = fluid_reactor_energy_source
-  data.raw.reactor["fluid-reactor-2"].energy_source = fluid_reactor_energy_source
+  data.raw.reactor["bob-fluid-reactor"].energy_source = util.copy(fluid_reactor_energy_source)
+  data.raw.reactor["bob-fluid-reactor-2"].energy_source = util.copy(fluid_reactor_energy_source)
+  data.raw.reactor["bob-fluid-reactor"].consumption = "0.8MW"
+  data.raw.reactor["bob-fluid-reactor-2"].consumption = "1.8MW"
+  data.raw.reactor["bob-fluid-reactor"].energy_source.effectivity = 0.8
+  data.raw.reactor["bob-fluid-reactor-2"].energy_source.effectivity = 0.9
+  data.raw.reactor["bob-fluid-reactor"].neighbour_bonus = 0.1
+  data.raw.reactor["bob-fluid-reactor-2"].neighbour_bonus = 0.1
+  data.raw.reactor["bob-fluid-reactor-2"].energy_source.emissions_per_minute = { pollution = 25 }
 
   --If the oil burning steel furnace exists, add a new alternate recipe to craft the fluid reactor from it.
   if
@@ -401,20 +441,20 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "fluid-reactor-from-fluid-furnace",
+        name = "bob-fluid-reactor-from-fluid-furnace",
+        localised_name = { "entity-name.bob-fluid-reactor" },
         energy_required = 2,
         enabled = false,
         ingredients = {
-          { "fluid-furnace", 1 },
-          { "heat-pipe", 8 },
-          { "steel-plate", 6 },
-          { "pipe", 3 },
+          { type = "item", name = "bob-fluid-furnace", amount = 1 },
+          { type = "item", name = "heat-pipe", amount = 8 },
+          { type = "item", name = "steel-plate", amount = 6 },
+          { type = "item", name = "pipe", amount = 3 },
         },
-        result = "fluid-reactor",
+        results = { { type = "item", name = "bob-fluid-reactor", amount = 1 } },
       },
     })
 
-    bobmods.lib.tech.add_recipe_unlock("burner-reactor-1", "fluid-reactor-from-fluid-furnace")
-    bobmods.lib.tech.add_prerequisite("burner-reactor-1", "fluid-furnace")
+    bobmods.lib.tech.add_recipe_unlock("bob-burner-reactor-1", "bob-fluid-reactor-from-fluid-furnace")
   end
 end

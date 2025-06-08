@@ -1,5 +1,5 @@
 bobmods.ores.tungsten = {
-  name = "tungsten-ore",
+  name = "bob-tungsten-ore",
   tint = { r = 0.75, g = 0.5, b = 0.25 },
   map_color = { r = 0.5, g = 0.0, b = 0.0 },
   mining_time = 3,
@@ -24,11 +24,12 @@ bobmods.ores.tungsten = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.tungsten.create_autoplace()
-  data.raw.resource["tungsten-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "tungsten-ore",
+  data.raw.resource["bob-tungsten-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-tungsten-ore",
     order = "c",
     base_density = 8,
     has_starting_area_placement = false,

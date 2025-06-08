@@ -1,39 +1,41 @@
 data:extend({
   {
     type = "item",
-    name = "heat-shield-tile",
+    name = "bob-heat-shield-tile",
     icon = "__bobrevamp__/graphics/icons/heat-shield-tile.png",
     icon_size = 32,
     subgroup = "intermediate-product",
     order = "m[heat-shield-tile]",
     stack_size = 100,
+    drop_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
   {
     type = "recipe",
-    name = "heat-shield-tile",
-    category = "crafting-with-fluid",
-    normal = {
-      energy_required = 30,
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 10 },
-        { "plastic-bar", 5 },
-      },
-      result = "heat-shield-tile",
+    name = "bob-heat-shield-tile",
+    category = "advanced-crafting",
+    energy_required = 30,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "plastic-bar", amount = 5 },
     },
-    expensive = {
-      energy_required = 30,
-      enabled = false,
-      ingredients = {
-        { "steel-plate", 10 },
-        { "plastic-bar", 10 },
-      },
-      result = "heat-shield-tile",
-    },
+    results = { { type = "item", name = "bob-heat-shield-tile", amount = 1 } },
+    allow_productivity = true,
   },
   {
     type = "technology",
-    name = "heat-shield",
+    name = "bob-heat-shield",
     icon = "__bobrevamp__/graphics/icons/technology/heat-shield.png",
     icon_size = 128,
     order = "k",
@@ -55,7 +57,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "heat-shield-tile",
+        recipe = "bob-heat-shield-tile",
       },
     },
   },

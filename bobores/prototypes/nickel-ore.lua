@@ -1,5 +1,5 @@
 bobmods.ores.nickel = {
-  name = "nickel-ore",
+  name = "bob-nickel-ore",
   tint = { r = 0.54, g = 0.8, b = 0.75 },
   map_color = { r = 0.4, g = 0.8, b = 0.6 },
   mining_time = 1.5,
@@ -25,11 +25,12 @@ bobmods.ores.nickel = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.nickel.create_autoplace()
-  data.raw.resource["nickel-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "nickel-ore",
+  data.raw.resource["bob-nickel-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-nickel-ore",
     order = "c",
     base_density = 5,
     has_starting_area_placement = false,

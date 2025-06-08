@@ -1,4 +1,36 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ???
+  Changes:
+    - Added zh-TW locale #432
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Changes:
+    - Minor mod compatibility changes #368
+    - Revised pollution settings for easier early game #379
+    - Added preset for Milestones mod #389
+  Bugfixes:
+    - Fixed typo "Elecrtic breed" #376
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Info:
+    - Update for Factorio 2.0 #189
+  Features:
+    - Enemies have been fleshed out into 7 complete factions, each with 8 tiers of mobs. Detailed information on each faction is available in the Factoriopedia.
+    - The basic faction emphasizes acid with slowing effects, and later on will generate extra obstacles that can't easily be removed by robots.
+    - The piercing faction features ranged attacks that use high-speed projectiles, and will speed up when damaged.
+    - The electric faction uses paralyzing acid that will slow you down greatly, but only briefly. Electricity speeds them up, but some of their attacks inflict friendly fire.
+    - The explosive faction is able to create a minefield with attacks that may randomly explode more than once.
+    - The acid faction uses long-lived acid to inflict potent damage over time and spews acid upon death.
+    - The poison faction generates clouds of smoke that follow them around, damaging enemies and healing allies.
+    - The fire faction's damage is initially relatively low, but grows over time as more fuel is added to the blazes they set.
+    - A new base spawning system has been implemented, which will cause nearby bases to share the same faction, creating distinct territories.
+    - Enemies bases may spawn with quality boosts. This may be disabled in Mod Settings.
+  Bugfixes:
+    - Fixed missing poison cloud localisation #195
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 22. 12. 2023
   Bugfixes:

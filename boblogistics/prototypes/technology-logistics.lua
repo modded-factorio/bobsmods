@@ -1,4 +1,4 @@
-data.raw.technology["toolbelt"].upgrade = "true"
+data.raw.technology["toolbelt"].upgrade = true
 
 data:extend({
   {
@@ -6,7 +6,6 @@ data:extend({
     name = "toolbelt-2",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -25,7 +24,7 @@ data:extend({
       },
       time = 30,
     },
-    upgrade = "true",
+    upgrade = true,
     order = "c-k-m-a",
   },
 
@@ -34,7 +33,6 @@ data:extend({
     name = "toolbelt-3",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -54,7 +52,7 @@ data:extend({
       },
       time = 30,
     },
-    upgrade = "true",
+    upgrade = true,
     order = "c-k-m-b",
   },
   {
@@ -62,7 +60,6 @@ data:extend({
     name = "toolbelt-4",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -83,7 +80,7 @@ data:extend({
       },
       time = 30,
     },
-    upgrade = "true",
+    upgrade = true,
     order = "c-k-m-c",
   },
   {
@@ -91,7 +88,6 @@ data:extend({
     name = "toolbelt-5",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -114,8 +110,8 @@ data:extend({
       },
       time = 30,
     },
-    upgrade = "true",
-    max_level = "13",
+    upgrade = true,
+    max_level = 13,
     order = "c-k-m-d",
   },
 })
@@ -161,8 +157,6 @@ data:extend({
     localised_name = { "technology-name.worker-robots-storage" },
     localised_description = { "technology-description.worker-robots-storage" },
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
-    icon_size = 256,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "worker-robot-storage",

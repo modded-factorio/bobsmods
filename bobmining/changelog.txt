@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ???
+  Changes:
+    - Added de locale #415
+    - Added zh-TW locale #432
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Bugfixes:
+    - Fix missing locale key for steel axe techs (without Bob's MCI mod) #369
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Changes:
+    - Update for Factorio 2.0 #189
+    - Changed axe techs to be unlocked via trigger rather than via science packs (when Bob's MCI mod is enabled) #240
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
   Changes:

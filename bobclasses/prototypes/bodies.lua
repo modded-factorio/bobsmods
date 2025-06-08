@@ -1,14 +1,26 @@
+local body_drop_move = {
+  filename = "__base__/sound/item/armor-large-inventory-move.ogg",
+  volume = 0.7,
+}
+
+local body_pick = {
+  filename = "__base__/sound/item/armor-large-inventory-pickup.ogg",
+  volume = 0.7,
+}
+
 data:extend({
   {
     type = "item",
     name = "character",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    icon_mipmaps = 4,
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1",
     place_result = "character",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -17,20 +29,22 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
-        icon = "__bobclasses__/icons/miner.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon = "__bobclasses__/icons/crafter.png",
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
-    order = "a[character]-1-miner",
+    subgroup = "bob-bodies",
+    order = "a[character]-1-crafter",
     place_result = "bob-character-miner",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -39,20 +53,22 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/fighter.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1-fighter",
     place_result = "bob-character-fighter",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -61,20 +77,22 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/builder.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-1-builder",
     place_result = "bob-character-builder",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
 
   {
@@ -84,21 +102,22 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2",
     place_result = "bob-character-balanced-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -107,27 +126,28 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
-        icon = "__bobclasses__/icons/miner.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon = "__bobclasses__/icons/crafter.png",
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, -8 },
       },
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
-    order = "a[character]-2-miner",
+    subgroup = "bob-bodies",
+    order = "a[character]-2-crafter",
     place_result = "bob-character-miner-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -136,27 +156,28 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/fighter.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, -8 },
       },
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-fighter",
     place_result = "bob-character-fighter-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -165,27 +186,28 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/builder.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, -8 },
       },
       {
         icon = "__bobclasses__/icons/2.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.25,
         shift = { 8, 8 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-builder",
     place_result = "bob-character-builder-2",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
 
   {
@@ -195,20 +217,22 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
         icon = "__bobclasses__/icons/engineer.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
+    subgroup = "bob-bodies",
     order = "a[character]-2-engineer",
     place_result = "bob-character-engineer",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
   {
     type = "item",
@@ -217,20 +241,22 @@ data:extend({
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -5, 0 },
       },
       {
-        icon = "__bobclasses__/icons/prospector.png",
-        icon_size = 32,
-        scale = 0.5,
+        icon = "__bobclasses__/icons/sapper.png",
+        icon_size = 64,
+        scale = 0.25,
         shift = { 8, 0 },
       },
     },
-    subgroup = "bodies",
-    order = "a[character]-2-prospector",
+    subgroup = "bob-bodies",
+    order = "a[character]-2-sapper",
     place_result = "bob-character-prospector",
-    stack_size = 10,
+    stack_size = 1,
+    drop_sound = body_drop_move,
+    inventory_move_sound = body_drop_move,
+    pick_sound = body_pick,
   },
 })
 
@@ -241,10 +267,10 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame", 1 },
-      { "assembling-machine-2", 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
     },
-    result = "character",
+    results = { { type = "item", name = "character", amount = 1 } },
   },
   {
     type = "recipe",
@@ -252,11 +278,11 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame", 1 },
-      { "assembling-machine-2", 1 },
-      { "electric-furnace", 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
+      { type = "item", name = "electric-furnace", amount = 1 },
     },
-    result = "bob-character-miner",
+    results = { { type = "item", name = "bob-character-miner", amount = 1 } },
   },
   {
     type = "recipe",
@@ -264,11 +290,11 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame", 1 },
-      { "assembling-machine-2", 1 },
-      { "exoskeleton-equipment", 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
+      { type = "item", name = "exoskeleton-equipment", amount = 1 },
     },
-    result = "bob-character-fighter",
+    results = { { type = "item", name = "bob-character-fighter", amount = 1 } },
   },
   {
     type = "recipe",
@@ -276,10 +302,11 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame", 1 },
-      { "assembling-machine-3", 1 },
+      { type = "item", name = "bob-player-frame", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
+      { type = "item", name = "fast-inserter", amount = 2 },
     },
-    result = "bob-character-builder",
+    results = { { type = "item", name = "bob-character-builder", amount = 1 } },
   },
 
   {
@@ -288,10 +315,10 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame-2", 1 },
-      { "assembling-machine-2", 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
+      { type = "item", name = "assembling-machine-3", amount = 1 },
     },
-    result = "bob-character-balanced-2",
+    results = { { type = "item", name = "bob-character-balanced-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -299,11 +326,11 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame-2", 1 },
-      { "assembling-machine-2", 1 },
-      { "electric-furnace", 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
+      { type = "item", name = "assembling-machine-3", amount = 1 },
+      { type = "item", name = "electric-furnace", amount = 1 },
     },
-    result = "bob-character-miner-2",
+    results = { { type = "item", name = "bob-character-miner-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -311,11 +338,11 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame-2", 1 },
-      { "assembling-machine-2", 1 },
-      { "exoskeleton-equipment", 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
+      { type = "item", name = "exoskeleton-equipment", amount = 1 },
     },
-    result = "bob-character-fighter-2",
+    results = { { type = "item", name = "bob-character-fighter-2", amount = 1 } },
   },
   {
     type = "recipe",
@@ -323,10 +350,11 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame-2", 1 },
-      { "assembling-machine-3", 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
+      { type = "item", name = "assembling-machine-3", amount = 1 },
+      { type = "item", name = "bulk-inserter", amount = 2 },
     },
-    result = "bob-character-builder-2",
+    results = { { type = "item", name = "bob-character-builder-2", amount = 1 } },
   },
 
   {
@@ -335,11 +363,12 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame-2", 1 },
-      { "assembling-machine-3", 1 },
-      { "electric-furnace", 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
+      { type = "item", name = "assembling-machine-3", amount = 1 },
+      { type = "item", name = "electric-furnace", amount = 1 },
+      { type = "item", name = "fast-inserter", amount = 2 },
     },
-    result = "bob-character-engineer",
+    results = { { type = "item", name = "bob-character-engineer", amount = 1 } },
   },
   {
     type = "recipe",
@@ -347,22 +376,21 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "player-frame-2", 1 },
-      { "assembling-machine-2", 1 },
-      { "electric-furnace", 1 },
-      { "exoskeleton-equipment", 1 },
+      { type = "item", name = "bob-player-frame-2", amount = 1 },
+      { type = "item", name = "assembling-machine-2", amount = 1 },
+      { type = "item", name = "fast-inserter", amount = 2 },
+      { type = "item", name = "exoskeleton-equipment", amount = 1 },
     },
-    result = "bob-character-prospector",
+    results = { { type = "item", name = "bob-character-prospector", amount = 1 } },
   },
 })
 
 data:extend({
   {
     type = "technology",
-    name = "bodies",
+    name = "bob-bodies",
     icon = "__bobclasses__/icons/character.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -370,32 +398,32 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "player-brain",
+        recipe = "bob-player-brain",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-head",
+        recipe = "bob-player-head",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-boots",
+        recipe = "bob-player-boots",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-gloves",
+        recipe = "bob-player-gloves",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-power-core",
+        recipe = "bob-player-power-core",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-frame",
+        recipe = "bob-player-frame",
       },
     },
     prerequisites = {
       "robotics",
-      "advanced-electronics-2",
+      "advanced-circuit",
       "automation-2",
     },
     unit = {
@@ -407,23 +435,21 @@ data:extend({
       },
       time = 60,
     },
-    order = "bodies",
   },
   {
     type = "technology",
-    name = "miner-body",
+    name = "bob-miner-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
-        icon = "__bobclasses__/icons/miner.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon = "__bobclasses__/icons/crafter.png",
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -433,7 +459,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
+      "automation-2",
       "advanced-material-processing-2",
     },
     unit = {
@@ -445,23 +472,21 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-miner",
   },
   {
     type = "technology",
-    name = "fighter-body",
+    name = "bob-fighter-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
         icon = "__bobclasses__/icons/fighter.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -471,7 +496,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
       "exoskeleton-equipment",
     },
     unit = {
@@ -483,23 +508,21 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-fighter",
   },
   {
     type = "technology",
-    name = "builder-body",
+    name = "bob-builder-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
         icon = "__bobclasses__/icons/builder.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -509,8 +532,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies",
-      "automation-3",
+      "bob-bodies",
+      "fast-inserter",
     },
     unit = {
       count = 150,
@@ -521,15 +544,24 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-builder",
   },
 
   {
     type = "technology",
-    name = "bodies-2",
-    icon = "__bobclasses__/icons/character.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
+    name = "bob-bodies-2",
+    localised_description = { "technology-description.bob-bodies2" },
+    icons = {
+      {
+        icon = "__bobclasses__/icons/character.png",
+        icon_size = 128,
+      },
+      {
+        icon = "__bobclasses__/icons/2.png",
+        icon_size = 64,
+        scale = 1,
+        shift = { 32, 32 },
+      },
+    },
     effects = {
       {
         type = "unlock-recipe",
@@ -537,28 +569,30 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "player-brain-2",
+        recipe = "bob-player-brain-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-head-2",
+        recipe = "bob-player-head-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-boots-2",
+        recipe = "bob-player-boots-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-gloves-2",
+        recipe = "bob-player-gloves-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "player-frame-2",
+        recipe = "bob-player-frame-2",
       },
     },
     prerequisites = {
-      "bodies",
+      "bob-bodies",
       "production-science-pack",
+      "processing-unit",
+      "automation-3",
     },
     unit = {
       count = 250,
@@ -570,23 +604,22 @@ data:extend({
       },
       time = 60,
     },
-    order = "bodies-2",
   },
   {
     type = "technology",
-    name = "miner-body-2",
+    name = "bob-miner-body-2",
+    localised_description = { "technology-description.bob-miner-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
-        icon = "__bobclasses__/icons/miner.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon = "__bobclasses__/icons/crafter.png",
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -596,8 +629,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies-2",
-      "miner-body",
+      "bob-bodies-2",
+      "bob-miner-body",
     },
     unit = {
       count = 150,
@@ -609,23 +642,22 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-2-miner",
   },
   {
     type = "technology",
-    name = "fighter-body-2",
+    name = "bob-fighter-body-2",
+    localised_description = { "technology-description.bob-fighter-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
         icon = "__bobclasses__/icons/fighter.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -635,8 +667,8 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies-2",
-      "fighter-body",
+      "bob-bodies-2",
+      "bob-fighter-body",
     },
     unit = {
       count = 150,
@@ -648,23 +680,22 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-2-fighter",
   },
   {
     type = "technology",
-    name = "builder-body-2",
+    name = "bob-builder-body-2",
+    localised_description = { "technology-description.bob-builder-body2" },
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
         icon = "__bobclasses__/icons/builder.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -674,8 +705,9 @@ data:extend({
       },
     },
     prerequisites = {
-      "bodies-2",
-      "builder-body",
+      "bob-bodies-2",
+      "bob-builder-body",
+      "bulk-inserter",
     },
     unit = {
       count = 150,
@@ -687,24 +719,22 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-2-builder",
   },
 
   {
     type = "technology",
-    name = "engineer-body",
+    name = "bob-engineer-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
         icon = "__bobclasses__/icons/engineer.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -714,9 +744,9 @@ data:extend({
       },
     },
     prerequisites = {
-      "miner-body",
-      "builder-body",
-      "bodies-2",
+      "bob-miner-body",
+      "bob-builder-body",
+      "bob-bodies-2",
     },
     unit = {
       count = 150,
@@ -728,23 +758,21 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-2-engineer",
   },
   {
     type = "technology",
-    name = "prospector-body",
+    name = "bob-prospector-body",
     icons = {
       {
         icon = "__bobclasses__/icons/character.png",
         icon_size = 128,
-        icon_mipmaps = 4,
         shift = { -20, 0 },
       },
       {
-        icon = "__bobclasses__/icons/prospector.png",
-        icon_size = 32,
-        scale = 2,
-        shift = { 32, 0 },
+        icon = "__bobclasses__/icons/sapper.png",
+        icon_size = 64,
+        scale = 0.8,
+        shift = { 40, 0 },
       },
     },
     effects = {
@@ -754,9 +782,9 @@ data:extend({
       },
     },
     prerequisites = {
-      "miner-body",
-      "fighter-body",
-      "bodies-2",
+      "bob-builder-body",
+      "bob-fighter-body",
+      "bob-bodies-2",
     },
     unit = {
       count = 150,
@@ -768,6 +796,5 @@ data:extend({
       },
       time = 30,
     },
-    order = "bodies-2-prospector",
   },
 })

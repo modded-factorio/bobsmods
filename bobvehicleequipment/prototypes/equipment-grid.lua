@@ -9,22 +9,22 @@ data:extend({
   {
     type = "equipment-grid",
     name = "bob-tank",
-    width = 10,
-    height = 2,
+    width = 6,
+    height = 8,
     equipment_categories = { "tank", "vehicle", "armoured-vehicle" },
   },
   {
     type = "equipment-grid",
     name = "bob-tank-2",
-    width = 10,
-    height = 4,
+    width = 6,
+    height = 10,
     equipment_categories = { "tank", "vehicle", "armoured-vehicle" },
   },
   {
     type = "equipment-grid",
     name = "bob-tank-3",
-    width = 10,
-    height = 6,
+    width = 6,
+    height = 12,
     equipment_categories = { "tank", "vehicle", "armoured-vehicle" },
   },
 
@@ -168,5 +168,21 @@ data:extend({
     width = 10,
     height = 8,
     equipment_categories = { "train", "vehicle", "armoured-vehicle", "armoured-train" },
+  },
+
+  {
+    type = "equipment-grid",
+    name = "unarmed-grid",
+    width = 5,
+    height = 10,
+    equipment_categories = { "car", "unarmed-vehicle" },
+  },
+
+  {
+    type = "equipment-grid",
+    name = "boat-grid",
+    width = 6,
+    height = 12,
+    equipment_categories = { "vehicle", "armoured-vehicle", "cargo-wagon" },
   },
 })

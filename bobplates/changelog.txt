@@ -1,4 +1,34 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: ???
+  Bugfixes:
+    - Fixed crafting_machine_tint startup error when using other mods that also modify the nuclear fuel reprocessing recipe #427
+  Changes:
+    - Added de locale #415
+    - Added zh-TW locale #432
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 20. 04. 2025
+  Bugfixes:
+    - Fixed missing message when attempting to insert efficiency modules into electrolysers #399
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Changes:
+    - Reduced pollution from initial lead plate recipe #379
+    - Added preset for Milestones mod #389
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Info:
+    - Update for Factorio 2.0 #189
+  Changes:
+    - Added sodium hydroxide sink recipe #145
+    - New lead oxide graphics #191
+    - Removed some old low-resolution graphics #200
+    - Added circuit connections to relevant machines #200
+    - Replaced wood -> coal recipe with wood -> carbon recipe to prevent looping #267
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
   Bugfixes:

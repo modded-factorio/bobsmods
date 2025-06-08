@@ -1,489 +1,366 @@
+local electronics_amount = 4
+if mods["bobelectronics"] then
+  electronics_amount = 10
+end
+
 --[[Speed Modules]]
---
-data.raw["recipe"]["speed-module"].ingredients =
-  { { "speed-processor", 1 }, { "module-case", 1 }, { "module-circuit-board", 1 }, { "module-contact", 4 } }
+
+data.raw["recipe"]["speed-module"].ingredients = {
+  { type = "item", name = "electronic-circuit", amount = electronics_amount },
+  { type = "item", name = "bob-module-case", amount = 1 },
+  { type = "item", name = "bob-module-circuit-board", amount = 1 },
+  { type = "item", name = "bob-module-contact", amount = 5 },
+}
 data.raw["recipe"]["speed-module"].energy_required = 10
 
-data.raw["recipe"]["speed-module-2"].ingredients =
-  { { "speed-module", 1 }, { "speed-processor", 2 }, { "module-contact", 5 } }
+data.raw["recipe"]["speed-module-2"].ingredients = {
+  { type = "item", name = "speed-module", amount = 1 },
+  { type = "item", name = "bob-speed-processor", amount = 3 },
+  { type = "item", name = "advanced-circuit", amount = electronics_amount },
+}
 data.raw["recipe"]["speed-module-2"].energy_required = 20
 
-data.raw["recipe"]["speed-module-3"].ingredients =
-  { { "speed-module-2", 1 }, { "speed-processor-2", 3 }, { "advanced-circuit", 5 } }
+data.raw["recipe"]["speed-module-3"].ingredients = {
+  { type = "item", name = "speed-module-2", amount = 1 },
+  { type = "item", name = "bob-speed-processor-2", amount = 4 },
+  { type = "item", name = "processing-unit", amount = electronics_amount },
+}
 data.raw["recipe"]["speed-module-3"].energy_required = 30
 
 data:extend({
   {
     type = "recipe",
-    name = "speed-module-4",
+    name = "bob-speed-module-4",
     enabled = false,
     ingredients = {
-      { "speed-module-3", 1 },
-      { "speed-processor-2", 4 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "speed-module-3", amount = 1 },
+      { type = "item", name = "bob-speed-processor-3", amount = 5 },
+      { type = "item", name = "processing-unit", amount = electronics_amount * 2 },
     },
     energy_required = 40,
-    result = "speed-module-4",
+    results = { { type = "item", name = "bob-speed-module-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "speed-module-5",
+    name = "bob-speed-module-5",
     enabled = false,
     ingredients = {
-      { "speed-module-4", 1 },
-      { "speed-processor-2", 5 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-speed-module-4", amount = 1 },
+      { type = "item", name = "bob-speed-processor-3", amount = 6 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 50,
-    result = "speed-module-5",
-  },
-
-  {
-    type = "recipe",
-    name = "speed-module-6",
-    enabled = false,
-    ingredients = {
-      { "speed-module-5", 1 },
-      { "speed-processor-3", 6 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 60,
-    result = "speed-module-6",
-  },
-
-  {
-    type = "recipe",
-    name = "speed-module-7",
-    enabled = false,
-    ingredients = {
-      { "speed-module-6", 1 },
-      { "speed-processor-3", 8 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 70,
-    result = "speed-module-7",
-  },
-
-  {
-    type = "recipe",
-    name = "speed-module-8",
-    enabled = false,
-    ingredients = {
-      { "speed-module-7", 1 },
-      { "speed-processor-3", 10 },
-      { "module-contact", 5 },
-      { "advanced-circuit", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 80,
-    result = "speed-module-8",
+    results = { { type = "item", name = "bob-speed-module-5", amount = 1 } },
   },
 })
 
---[[Effectivity Modules]]
---
-data.raw["recipe"]["effectivity-module"].ingredients =
-  { { "effectivity-processor", 1 }, { "module-case", 1 }, { "module-circuit-board", 1 }, { "module-contact", 4 } }
-data.raw["recipe"]["effectivity-module"].energy_required = 10
+--[[Efficiency Modules]]
 
-data.raw["recipe"]["effectivity-module-2"].ingredients =
-  { { "effectivity-module", 1 }, { "effectivity-processor", 2 }, { "module-contact", 5 } }
-data.raw["recipe"]["effectivity-module-2"].energy_required = 20
+data.raw["recipe"]["efficiency-module"].ingredients = {
+  { type = "item", name = "electronic-circuit", amount = electronics_amount },
+  { type = "item", name = "bob-module-case", amount = 1 },
+  { type = "item", name = "bob-module-circuit-board", amount = 1 },
+  { type = "item", name = "bob-module-contact", amount = 5 },
+}
+data.raw["recipe"]["efficiency-module"].energy_required = 10
 
-data.raw["recipe"]["effectivity-module-3"].ingredients =
-  { { "effectivity-module-2", 1 }, { "effectivity-processor-2", 3 }, { "advanced-circuit", 5 } }
-data.raw["recipe"]["effectivity-module-3"].energy_required = 30
+data.raw["recipe"]["efficiency-module-2"].ingredients = {
+  { type = "item", name = "efficiency-module", amount = 1 },
+  { type = "item", name = "bob-efficiency-processor", amount = 3 },
+  { type = "item", name = "advanced-circuit", amount = electronics_amount },
+}
+data.raw["recipe"]["efficiency-module-2"].energy_required = 20
+
+data.raw["recipe"]["efficiency-module-3"].ingredients = {
+  { type = "item", name = "efficiency-module-2", amount = 1 },
+  { type = "item", name = "bob-efficiency-processor-2", amount = 4 },
+  { type = "item", name = "processing-unit", amount = electronics_amount },
+}
+data.raw["recipe"]["efficiency-module-3"].energy_required = 30
 
 data:extend({
   {
     type = "recipe",
-    name = "effectivity-module-4",
+    name = "bob-efficiency-module-4",
     enabled = false,
     ingredients = {
-      { "effectivity-module-3", 1 },
-      { "effectivity-processor-2", 4 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "efficiency-module-3", amount = 1 },
+      { type = "item", name = "bob-efficiency-processor-3", amount = 5 },
+      { type = "item", name = "processing-unit", amount = electronics_amount * 2 },
     },
     energy_required = 40,
-    result = "effectivity-module-4",
+    results = { { type = "item", name = "bob-efficiency-module-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "effectivity-module-5",
+    name = "bob-efficiency-module-5",
     enabled = false,
     ingredients = {
-      { "effectivity-module-4", 1 },
-      { "effectivity-processor-2", 5 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-efficiency-module-4", amount = 1 },
+      { type = "item", name = "bob-efficiency-processor-3", amount = 6 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 50,
-    result = "effectivity-module-5",
-  },
-
-  {
-    type = "recipe",
-    name = "effectivity-module-6",
-    enabled = false,
-    ingredients = {
-      { "effectivity-module-5", 1 },
-      { "effectivity-processor-3", 6 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 60,
-    result = "effectivity-module-6",
-  },
-
-  {
-    type = "recipe",
-    name = "effectivity-module-7",
-    enabled = false,
-    ingredients = {
-      { "effectivity-module-6", 1 },
-      { "effectivity-processor-3", 8 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 70,
-    result = "effectivity-module-7",
-  },
-
-  {
-    type = "recipe",
-    name = "effectivity-module-8",
-    enabled = false,
-    ingredients = {
-      { "effectivity-module-7", 1 },
-      { "effectivity-processor-3", 10 },
-      { "module-contact", 5 },
-      { "advanced-circuit", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 80,
-    result = "effectivity-module-8",
+    results = { { type = "item", name = "bob-efficiency-module-5", amount = 1 } },
   },
 })
 
 --[[Productivity Modules]]
---
-data.raw["recipe"]["productivity-module"].ingredients =
-  { { "productivity-processor", 1 }, { "module-case", 1 }, { "module-circuit-board", 1 }, { "module-contact", 4 } }
+
+data.raw["recipe"]["productivity-module"].ingredients = {
+  { type = "item", name = "electronic-circuit", amount = electronics_amount },
+  { type = "item", name = "bob-module-case", amount = 1 },
+  { type = "item", name = "bob-module-circuit-board", amount = 1 },
+  { type = "item", name = "bob-module-contact", amount = 5 },
+}
 data.raw["recipe"]["productivity-module"].energy_required = 10
 
-data.raw["recipe"]["productivity-module-2"].ingredients =
-  { { "productivity-module", 1 }, { "productivity-processor", 2 }, { "module-contact", 5 } }
+data.raw["recipe"]["productivity-module-2"].ingredients = {
+  { type = "item", name = "productivity-module", amount = 1 },
+  { type = "item", name = "bob-productivity-processor", amount = 3 },
+  { type = "item", name = "advanced-circuit", amount = electronics_amount },
+}
 data.raw["recipe"]["productivity-module-2"].energy_required = 20
 
-data.raw["recipe"]["productivity-module-3"].ingredients =
-  { { "productivity-module-2", 1 }, { "productivity-processor-2", 3 }, { "advanced-circuit", 5 } }
+data.raw["recipe"]["productivity-module-3"].ingredients = {
+  { type = "item", name = "productivity-module-2", amount = 1 },
+  { type = "item", name = "bob-productivity-processor-2", amount = 4 },
+  { type = "item", name = "processing-unit", amount = electronics_amount },
+}
 data.raw["recipe"]["productivity-module-3"].energy_required = 30
 
 data:extend({
   {
     type = "recipe",
-    name = "productivity-module-4",
+    name = "bob-productivity-module-4",
     enabled = false,
     ingredients = {
-      { "productivity-module-3", 1 },
-      { "productivity-processor-2", 4 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "productivity-module-3", amount = 1 },
+      { type = "item", name = "bob-productivity-processor-3", amount = 5 },
+      { type = "item", name = "processing-unit", amount = electronics_amount * 2 },
     },
     energy_required = 40,
-    result = "productivity-module-4",
+    results = { { type = "item", name = "bob-productivity-module-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "productivity-module-5",
+    name = "bob-productivity-module-5",
     enabled = false,
     ingredients = {
-      { "productivity-module-4", 1 },
-      { "productivity-processor-2", 5 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-productivity-module-4", amount = 1 },
+      { type = "item", name = "bob-productivity-processor-3", amount = 6 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 50,
-    result = "productivity-module-5",
-  },
-
-  {
-    type = "recipe",
-    name = "productivity-module-6",
-    enabled = false,
-    ingredients = {
-      { "productivity-module-5", 1 },
-      { "productivity-processor-3", 6 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 60,
-    result = "productivity-module-6",
-  },
-
-  {
-    type = "recipe",
-    name = "productivity-module-7",
-    enabled = false,
-    ingredients = {
-      { "productivity-module-6", 1 },
-      { "productivity-processor-3", 8 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 70,
-    result = "productivity-module-7",
-  },
-
-  {
-    type = "recipe",
-    name = "productivity-module-8",
-    enabled = false,
-    ingredients = {
-      { "productivity-module-7", 1 },
-      { "productivity-processor-3", 10 },
-      { "module-contact", 5 },
-      { "advanced-circuit", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 80,
-    result = "productivity-module-8",
+    results = { { type = "item", name = "bob-productivity-module-5", amount = 1 } },
   },
 })
 
 --[[Pollution Cleaning Modules]]
+
 data:extend({
   {
     type = "recipe",
-    name = "pollution-clean-module-1",
+    name = "bob-pollution-clean-module-1",
     enabled = false,
     ingredients = {
-      { "pollution-clean-processor", 1 },
-      { "module-case", 1 },
-      { "module-circuit-board", 1 },
-      { "module-contact", 4 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "bob-module-case", amount = 1 },
+      { type = "item", name = "bob-module-circuit-board", amount = 1 },
+      { type = "item", name = "bob-module-contact", amount = 5 },
     },
     energy_required = 10,
-    result = "pollution-clean-module-1",
+    results = { { type = "item", name = "bob-pollution-clean-module-1", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-clean-module-2",
+    name = "bob-pollution-clean-module-2",
     enabled = false,
     ingredients = {
-      { "pollution-clean-module-1", 1 },
-      { "pollution-clean-processor", 2 },
-      { "module-contact", 5 },
+      { type = "item", name = "bob-pollution-clean-module-1", amount = 1 },
+      { type = "item", name = "bob-pollution-clean-processor", amount = 3 },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
     },
     energy_required = 20,
-    result = "pollution-clean-module-2",
+    results = { { type = "item", name = "bob-pollution-clean-module-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-clean-module-3",
+    name = "bob-pollution-clean-module-3",
     enabled = false,
     ingredients = {
-      { "pollution-clean-module-2", 1 },
-      { "pollution-clean-processor-2", 3 },
-      { "advanced-circuit", 5 },
+      { type = "item", name = "bob-pollution-clean-module-2", amount = 1 },
+      { type = "item", name = "bob-pollution-clean-processor-2", amount = 4 },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 30,
-    result = "pollution-clean-module-3",
+    results = { { type = "item", name = "bob-pollution-clean-module-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-clean-module-4",
+    name = "bob-pollution-clean-module-4",
     enabled = false,
     ingredients = {
-      { "pollution-clean-module-3", 1 },
-      { "pollution-clean-processor-2", 4 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-pollution-clean-module-3", amount = 1 },
+      { type = "item", name = "bob-pollution-clean-processor-3", amount = 5 },
+      { type = "item", name = "processing-unit", amount = electronics_amount * 2 },
     },
     energy_required = 40,
-    result = "pollution-clean-module-4",
+    results = { { type = "item", name = "bob-pollution-clean-module-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-clean-module-5",
+    name = "bob-pollution-clean-module-5",
     enabled = false,
     ingredients = {
-      { "pollution-clean-module-4", 1 },
-      { "pollution-clean-processor-2", 5 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-pollution-clean-module-4", amount = 1 },
+      { type = "item", name = "bob-pollution-clean-processor-3", amount = 6 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 50,
-    result = "pollution-clean-module-5",
-  },
-
-  {
-    type = "recipe",
-    name = "pollution-clean-module-6",
-    enabled = false,
-    ingredients = {
-      { "pollution-clean-module-5", 1 },
-      { "pollution-clean-processor-3", 6 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 60,
-    result = "pollution-clean-module-6",
-  },
-
-  {
-    type = "recipe",
-    name = "pollution-clean-module-7",
-    enabled = false,
-    ingredients = {
-      { "pollution-clean-module-6", 1 },
-      { "pollution-clean-processor-3", 8 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 70,
-    result = "pollution-clean-module-7",
-  },
-
-  {
-    type = "recipe",
-    name = "pollution-clean-module-8",
-    enabled = false,
-    ingredients = {
-      { "pollution-clean-module-7", 1 },
-      { "pollution-clean-processor-3", 10 },
-      { "module-contact", 5 },
-      { "advanced-circuit", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 80,
-    result = "pollution-clean-module-8",
+    results = { { type = "item", name = "bob-pollution-clean-module-5", amount = 1 } },
   },
 })
 
 --[[Pollution Producing Modules]]
---
+
 data:extend({
   {
     type = "recipe",
-    name = "pollution-create-module-1",
+    name = "bob-pollution-create-module-1",
     enabled = false,
     ingredients = {
-      { "pollution-create-processor", 1 },
-      { "module-case", 1 },
-      { "module-circuit-board", 1 },
-      { "module-contact", 4 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "bob-module-case", amount = 1 },
+      { type = "item", name = "bob-module-circuit-board", amount = 1 },
+      { type = "item", name = "bob-module-contact", amount = 5 },
     },
     energy_required = 10,
-    result = "pollution-create-module-1",
+    results = { { type = "item", name = "bob-pollution-create-module-1", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-create-module-2",
+    name = "bob-pollution-create-module-2",
     enabled = false,
     ingredients = {
-      { "pollution-create-module-1", 1 },
-      { "pollution-create-processor", 2 },
-      { "module-contact", 5 },
+      { type = "item", name = "bob-pollution-create-module-1", amount = 1 },
+      { type = "item", name = "bob-pollution-create-processor", amount = 3 },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
     },
     energy_required = 20,
-    result = "pollution-create-module-2",
+    results = { { type = "item", name = "bob-pollution-create-module-2", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-create-module-3",
+    name = "bob-pollution-create-module-3",
     enabled = false,
     ingredients = {
-      { "pollution-create-module-2", 1 },
-      { "pollution-create-processor-2", 3 },
-      { "advanced-circuit", 5 },
+      { type = "item", name = "bob-pollution-create-module-2", amount = 1 },
+      { type = "item", name = "bob-pollution-create-processor-2", amount = 4 },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 30,
-    result = "pollution-create-module-3",
+    results = { { type = "item", name = "bob-pollution-create-module-3", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-create-module-4",
+    name = "bob-pollution-create-module-4",
     enabled = false,
     ingredients = {
-      { "pollution-create-module-3", 1 },
-      { "pollution-create-processor-2", 4 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-pollution-create-module-3", amount = 1 },
+      { type = "item", name = "bob-pollution-create-processor-3", amount = 5 },
+      { type = "item", name = "processing-unit", amount = electronics_amount * 2 },
     },
     energy_required = 40,
-    result = "pollution-create-module-4",
+    results = { { type = "item", name = "bob-pollution-create-module-4", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "pollution-create-module-5",
+    name = "bob-pollution-create-module-5",
     enabled = false,
     ingredients = {
-      { "pollution-create-module-4", 1 },
-      { "pollution-create-processor-2", 5 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "bob-pollution-create-module-4", amount = 1 },
+      { type = "item", name = "bob-pollution-create-processor-3", amount = 6 },
+      { type = "item", name = "electronic-circuit", amount = electronics_amount },
+      { type = "item", name = "advanced-circuit", amount = electronics_amount },
+      { type = "item", name = "processing-unit", amount = electronics_amount },
     },
     energy_required = 50,
-    result = "pollution-create-module-5",
-  },
-
-  {
-    type = "recipe",
-    name = "pollution-create-module-6",
-    enabled = false,
-    ingredients = {
-      { "pollution-create-module-5", 1 },
-      { "pollution-create-processor-3", 6 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 60,
-    result = "pollution-create-module-6",
-  },
-
-  {
-    type = "recipe",
-    name = "pollution-create-module-7",
-    enabled = false,
-    ingredients = {
-      { "pollution-create-module-6", 1 },
-      { "pollution-create-processor-3", 8 },
-      { "module-contact", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 70,
-    result = "pollution-create-module-7",
-  },
-
-  {
-    type = "recipe",
-    name = "pollution-create-module-8",
-    enabled = false,
-    ingredients = {
-      { "pollution-create-module-7", 1 },
-      { "pollution-create-processor-3", 10 },
-      { "module-contact", 5 },
-      { "advanced-circuit", 5 },
-      { "processing-unit", 5 },
-    },
-    energy_required = 80,
-    result = "pollution-create-module-8",
+    results = { { type = "item", name = "bob-pollution-create-module-5", amount = 1 } },
   },
 })
+
+if mods["quality"] then
+  --[[Quality Modules]]
+
+  data.raw["recipe"]["quality-module"].ingredients = {
+    { type = "item", name = "electronic-circuit", amount = electronics_amount },
+    { type = "item", name = "bob-module-case", amount = 1 },
+    { type = "item", name = "bob-module-circuit-board", amount = 1 },
+    { type = "item", name = "bob-module-contact", amount = 5 },
+  }
+  data.raw["recipe"]["quality-module"].energy_required = 10
+
+  data.raw["recipe"]["quality-module-2"].ingredients = {
+    { type = "item", name = "quality-module", amount = 1 },
+    { type = "item", name = "bob-quality-processor", amount = 3 },
+    { type = "item", name = "advanced-circuit", amount = electronics_amount },
+  }
+  data.raw["recipe"]["quality-module-2"].energy_required = 20
+
+  data.raw["recipe"]["quality-module-3"].ingredients = {
+    { type = "item", name = "quality-module-2", amount = 1 },
+    { type = "item", name = "bob-quality-processor-2", amount = 4 },
+    { type = "item", name = "processing-unit", amount = electronics_amount },
+  }
+  data.raw["recipe"]["quality-module-3"].energy_required = 30
+
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-quality-module-4",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "quality-module-3", amount = 1 },
+        { type = "item", name = "bob-quality-processor-3", amount = 5 },
+        { type = "item", name = "processing-unit", amount = electronics_amount * 2 },
+      },
+      energy_required = 40,
+      results = { { type = "item", name = "bob-quality-module-4", amount = 1 } },
+    },
+
+    {
+      type = "recipe",
+      name = "bob-quality-module-5",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-quality-module-4", amount = 1 },
+        { type = "item", name = "bob-quality-processor-3", amount = 6 },
+        { type = "item", name = "electronic-circuit", amount = electronics_amount },
+        { type = "item", name = "advanced-circuit", amount = electronics_amount },
+        { type = "item", name = "processing-unit", amount = electronics_amount },
+      },
+      energy_required = 50,
+      results = { { type = "item", name = "bob-quality-module-5", amount = 1 } },
+    },
+  })
+end

@@ -75,7 +75,7 @@ function gui_add_title(gui, title, button_name, drag_target)
     type = "sprite-button",
     name = button_name,
     style = "frame_action_button",
-    sprite = "utility/close_white",
+    sprite = "utility/close",
   })
   if drag_target then
     gui.title_flow.title.drag_target = gui
@@ -95,21 +95,21 @@ remote.add_interface("bobclasses", {
 
   add_starting_inventory = function(data)
     for i, item in pairs(data) do
-      table.insert(global.starting_inventory, item)
+      table.insert(storage.starting_inventory, item)
     end
   end,
 
   add_respawn_inventory = function(data)
     for i, item in pairs(data) do
-      table.insert(global.respawn_inventory, item)
+      table.insert(storage.respawn_inventory, item)
     end
   end,
 
   -- Added by Pi-C (2021-10-28)
   get_classes = function()
     wlog("Entered remote function get_classes!")
-    wlog("next(global.classes): " .. tostring(global.classes and next(global.classes) and true or false))
-    return global.classes
+    wlog("next(storage.classes): " .. tostring(storage.classes and next(storage.classes) and true or false))
+    return storage.classes
   end,
 
   -- Jetpack expects this function on other mods' remote interfaces to inform them
@@ -118,7 +118,7 @@ remote.add_interface("bobclasses", {
   --  new_character = luaEntity, old_character = luaEntity}
   on_character_swapped = function(event)
     wlog("Entered remote function get_classes!")
-    wlog("next(global.classes): " .. tostring(global.classes and next(global.classes) and true or false))
+    wlog("next(storage.classes): " .. tostring(storage.classes and next(storage.classes) and true or false))
     local new, old = event.new_character, event.old_character
     local player = (new and new.valid and new.player or new.associated_player)
       or (old and old.valid and old.player or old.associated_player)
@@ -134,11 +134,11 @@ function add_class(name, class)
   -- "class" must be a table so we can add class_name
   --~ if name and class then
   if name and type(class) == "table" then
-    -- "name" won't be available when global.classes[name] is passed on to a
+    -- "name" won't be available when storage.classes[name] is passed on to a
     -- function. That is a problem when remote functions from other mods are
     -- called with just the class data, so better store the name with the data!
     class.class_name = name
-    global.classes[name] = class
+    storage.classes[name] = class
   end
 end
 
@@ -152,18 +152,15 @@ function add_classes()
         tooltip = { "gui.bob-class-builder" },
         sprite = "class-builder-button",
       },
-      bonuses = {
-        character_crafting_speed_modifier = 1,
-      },
+      bonuses = {},
       starting_inventory = {
         add = {
           { name = "burner-inserter", count = 2 },
-          { name = "transport-belt", count = 10 },
+          { name = "transport-belt", count = 45 },
+          { name = "burner-inserter", count = 10 },
         },
         replace = {
-          { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-          { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-          { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+          { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
         },
       },
       respawn_inventory = {
@@ -262,32 +259,32 @@ end
 
 function init()
   wlog("Entered function init()")
-  if not global.players then
-    global.players = {}
+  if not storage.players then
+    storage.players = {}
   end
-  if not global.names then
-    global.names = {}
+  if not storage.names then
+    storage.names = {}
   end
-  if not global.sprite then
-    global.sprite = {}
+  if not storage.sprite then
+    storage.sprite = {}
   end
-  if not global.classes then
-    global.classes = {}
+  if not storage.classes then
+    storage.classes = {}
   end
-  if not global.starting_inventory then
-    global.starting_inventory = {}
+  if not storage.starting_inventory then
+    storage.starting_inventory = {}
   end
-  if not global.respawn_inventory then
-    global.respawn_inventory = {}
+  if not storage.respawn_inventory then
+    storage.respawn_inventory = {}
   end
 
-  global.classes["ballanced"] = nil
-  global.classes["balanced"] = nil
-  global.classes["miner"] = nil
-  global.classes["fighter"] = nil
-  global.classes["builder"] = nil
+  storage.classes["bob-ballanced"] = nil
+  storage.classes["bob-balanced"] = nil
+  storage.classes["bob-miner"] = nil
+  storage.classes["bob-fighter"] = nil
+  storage.classes["bob-builder"] = nil
 
-  add_class("balanced", {
+  add_class("bob-balanced", {
     entity_name = "character",
     button = {
       name = "bob_class_balanced",
@@ -295,7 +292,9 @@ function init()
       sprite = "class-balanced-button",
       group = "t1",
     },
-    bonuses = {},
+    bonuses = {
+      character_crafting_speed_modifier = 1,
+    },
     starting_inventory = {
       add = {},
       replace = {},
@@ -305,7 +304,7 @@ function init()
     },
   })
 
-  add_class("miner", {
+  add_class("bob-miner", {
     entity_name = "bob-character-miner",
     button = {
       name = "bob_class_miner",
@@ -313,19 +312,22 @@ function init()
       sprite = "class-miner-button",
       group = "t1",
     },
-    bonuses = {},
+    bonuses = {
+      character_crafting_speed_modifier = 2,
+    },
     starting_inventory = {
-      add = {},
-      replace = {
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "burner-mining-drill", count = 1 } },
+      add = {
+        { name = "burner-mining-drill", count = 1 },
+        { name = "stone-furnace", count = 1 },
       },
+      replace = {},
     },
     respawn_inventory = {
       add = {},
     },
   })
 
-  add_class("fighter", {
+  add_class("bob-fighter", {
     entity_name = "bob-character-fighter",
     button = {
       name = "bob_class_fighter",
@@ -333,11 +335,17 @@ function init()
       sprite = "class-fighter-button",
       group = "t1",
     },
-    bonuses = {},
+    bonuses = {
+      character_maximum_following_robot_count_bonus = 10,
+    },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "modular-armor", count = 1 },
+        { name = "personal-laser-defense-equipment", count = 1 },
+        { name = "battery-equipment", count = 2 },
+        { name = "solar-panel-equipment", count = 6 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "heavy-armor", count = 1 } },
         { remove = { name = "pistol", count = 1 }, add = { name = "submachine-gun", count = 1 } },
         { remove = { name = "burner-mining-drill", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
         { remove = { name = "stone-furnace", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
@@ -351,7 +359,7 @@ function init()
     },
   })
 
-  add_class("builder", {
+  add_class("bob-builder", {
     entity_name = "bob-character-builder",
     button = {
       name = "bob_class_builder",
@@ -359,15 +367,14 @@ function init()
       sprite = "class-builder-button",
       group = "t1",
     },
-    bonuses = {
-      character_crafting_speed_modifier = 1,
-    },
+    bonuses = {},
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "burner-inserter", count = 6 },
+        { name = "transport-belt", count = 20 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-        { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-        { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+        { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
       },
     },
     respawn_inventory = {
@@ -375,7 +382,7 @@ function init()
     },
   })
 
-  add_class("balanced-2", {
+  add_class("bob-balanced-2", {
     entity_name = "bob-character-balanced-2",
     button = {
       name = "bob_class_balanced_2",
@@ -383,8 +390,10 @@ function init()
       sprite = "class-balanced-2-button",
       group = "t2",
     },
-    prerequisites = { "bodies-2" },
-    bonuses = {},
+    prerequisites = { "bob-bodies-2" },
+    bonuses = {
+      character_crafting_speed_modifier = 2,
+    },
     starting_inventory = {
       add = {},
       replace = {},
@@ -394,7 +403,7 @@ function init()
     },
   })
 
-  add_class("miner-2", {
+  add_class("bob-miner-2", {
     entity_name = "bob-character-miner-2",
     button = {
       name = "bob_class_miner_2",
@@ -402,20 +411,23 @@ function init()
       sprite = "class-miner-2-button",
       group = "t2",
     },
-    prerequisites = { "miner-body-2" },
-    bonuses = {},
+    prerequisites = { "bob-miner-body-2" },
+    bonuses = {
+      character_crafting_speed_modifier = 3,
+    },
     starting_inventory = {
-      add = {},
-      replace = {
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "burner-mining-drill", count = 1 } },
+      add = {
+        { name = "burner-mining-drill", count = 1 },
+        { name = "stone-furnace", count = 1 },
       },
+      replace = {},
     },
     respawn_inventory = {
       add = {},
     },
   })
 
-  add_class("fighter-2", {
+  add_class("bob-fighter-2", {
     entity_name = "bob-character-fighter-2",
     button = {
       name = "bob_class_fighter_2",
@@ -423,12 +435,18 @@ function init()
       sprite = "class-fighter-2-button",
       group = "t2",
     },
-    prerequisites = { "fighter-body-2" },
-    bonuses = {},
+    prerequisites = { "bob-fighter-body-2" },
+    bonuses = {
+      character_maximum_following_robot_count_bonus = 20,
+    },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "modular-armor", count = 1 },
+        { name = "personal-laser-defense-equipment", count = 1 },
+        { name = "battery-equipment", count = 2 },
+        { name = "solar-panel-equipment", count = 6 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "heavy-armor", count = 1 } },
         { remove = { name = "pistol", count = 1 }, add = { name = "submachine-gun", count = 1 } },
         { remove = { name = "burner-mining-drill", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
         { remove = { name = "stone-furnace", count = 1 }, add = { name = "firearm-magazine", count = 45 } },
@@ -442,7 +460,7 @@ function init()
     },
   })
 
-  add_class("builder-2", {
+  add_class("bob-builder-2", {
     entity_name = "bob-character-builder-2",
     button = {
       name = "bob_class_builder_2",
@@ -450,16 +468,17 @@ function init()
       sprite = "class-builder-2-button",
       group = "t2",
     },
-    prerequisites = { "builder-body-2" },
+    prerequisites = { "bob-builder-body-2" },
     bonuses = {
       character_crafting_speed_modifier = 2,
     },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "burner-inserter", count = 6 },
+        { name = "transport-belt", count = 20 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-        { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-        { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+        { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
       },
     },
     respawn_inventory = {
@@ -467,7 +486,7 @@ function init()
     },
   })
 
-  add_class("engineer", {
+  add_class("bob-engineer", {
     entity_name = "bob-character-engineer",
     button = {
       name = "bob_class_engineer",
@@ -475,17 +494,18 @@ function init()
       sprite = "class-engineer-button",
       group = "t2_advanced",
     },
-    prerequisites = { "engineer-body" },
+    prerequisites = { "bob-engineer-body" },
     bonuses = {
-      character_crafting_speed_modifier = 1,
+      character_crafting_speed_modifier = 2,
     },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "burner-mining-drill", count = 1 },
+        { name = "burner-inserter", count = 4 },
+        { name = "transport-belt", count = 10 },
+      },
       replace = {
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "burner-mining-drill", count = 1 } },
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "burner-inserter", count = 2 } },
-        { remove = { name = "pistol", count = 1 }, add = { name = "transport-belt", count = 5 } },
-        { remove = { name = "firearm-magazine", count = 10 }, add = { name = "transport-belt", count = 5 } },
+        { remove = { name = "firearm-magazine", count = 2 }, add = { name = "transport-belt", count = 5 } },
       },
     },
     respawn_inventory = {
@@ -493,7 +513,7 @@ function init()
     },
   })
 
-  add_class("prospector", {
+  add_class("bob-prospector", {
     entity_name = "bob-character-prospector",
     button = {
       name = "bob_class_prospector",
@@ -501,14 +521,20 @@ function init()
       sprite = "class-prospector-button",
       group = "t2_advanced",
     },
-    prerequisites = { "prospector-body" },
-    bonuses = {},
+    prerequisites = { "bob-prospector-body" },
+    bonuses = {
+      character_maximum_following_robot_count_bonus = 10,
+    },
     starting_inventory = {
-      add = {},
+      add = {
+        { name = "modular-armor", count = 1 },
+        { name = "energy-shield-equipment", count = 1 },
+        { name = "battery-equipment", count = 2 },
+        { name = "solar-panel-equipment", count = 6 },
+      },
       replace = {
-        { remove = { name = "iron-plate", count = 4 }, add = { name = "heavy-armor", count = 1 } },
         { remove = { name = "pistol", count = 1 }, add = { name = "submachine-gun", count = 1 } },
-        { remove = { name = "stone-furnace", count = 1 }, add = { name = "firearm-magazine", count = 40 } },
+        { remove = { name = "burner-mining-drill", count = 1 }, add = { name = "firearm-magazine", count = 50 } },
       },
     },
     respawn_inventory = {
@@ -521,12 +547,12 @@ function init()
 
   for i, player in pairs(game.players) do
     create_button(i)
-    if not global.players[i] then
-      global.players[i] = { respawn = false, first_character = true }
+    if not storage.players[i] then
+      storage.players[i] = { respawn = false, first_character = true }
     end
 
     -- reset class bonuses
-    for _, class in pairs(global.classes) do
+    for _, class in pairs(storage.classes) do
       if player.character and player.character.name == class.entity_name then
         for i, bonus in pairs(class.bonuses) do
           player.character[i] = bonus
@@ -535,7 +561,7 @@ function init()
     end
     local characters = player.get_associated_characters()
     for _, character in pairs(characters) do
-      for _, class in pairs(global.classes) do
+      for _, class in pairs(storage.classes) do
         if character.name == class.entity_name then
           for i, bonus in pairs(class.bonuses) do
             character[i] = bonus
@@ -567,7 +593,7 @@ end)
 script.on_event(defines.events.on_player_created, function(event)
   wlog("Entered event handler on_player_created(" .. serpent.line(event) .. ")")
   create_button(event.player_index)
-  global.players[event.player_index] = { respawn = false, first_character = true }
+  storage.players[event.player_index] = { respawn = false, first_character = true }
   class_select(event.player_index)
 end)
 
@@ -575,33 +601,33 @@ script.on_event(defines.events.on_player_respawned, function(event)
   wlog("Entered event handler on_player_respawned(" .. serpent.line(event) .. ")")
   --player_index :: uint
   --player_port :: LuaEntity (optional): The player port used to respawn if one was used.
-  if not global.players[event.player_index] then
-    global.players[event.player_index] = {}
+  if not storage.players[event.player_index] then
+    storage.players[event.player_index] = {}
   end
-  global.players[event.player_index].respawn = true
-  global.players[event.player_index].first_character = false
+  storage.players[event.player_index].respawn = true
+  storage.players[event.player_index].first_character = false
   class_select(event.player_index)
 end)
 
 script.on_event(defines.events.on_built_entity, function(event)
   wlog("Entered event handler on_built_entity(" .. serpent.line(event) .. ")")
-  if event.created_entity.type == "character" then
+  if event.entity.type == "character" then
     -- when a player builds a character entity, it gets associated to them.
-    game.players[event.player_index].associate_character(event.created_entity)
-    --    event.created_entity.associated_player = game.players[event.player_index] -- an alternate that should do the same thing as above.
+    game.players[event.player_index].associate_character(event.entity)
+    --    event.entity.associated_player = game.players[event.player_index] -- an alternate that should do the same thing as above.
     refresh_avatar_gui(event.player_index)
 
-    for i, class in pairs(global.classes) do
-      if event.created_entity.name == class.entity_name then
+    for i, class in pairs(storage.classes) do
+      if event.entity.name == class.entity_name then
         for i, bonus in pairs(class.bonuses) do
-          event.created_entity[i] = bonus
+          event.entity[i] = bonus
         end
       end
     end
   end
   -- due to how I want this to work, character entities can't have ghosts.
-  if event.created_entity.type == "entity-ghost" and event.created_entity.ghost_type == "character" then
-    event.created_entity.destroy()
+  if event.entity.type == "entity-ghost" and event.entity.ghost_type == "character" then
+    event.entity.destroy()
   end
 end)
 
@@ -631,8 +657,8 @@ script.on_event(defines.events.on_entity_died, function(event)
       --      event.entity.associated_player = nil --alternate method
       refresh_avatar_gui(player.index)
     end
-    global.names[event.entity.unit_number] = nil --character name cleanup
-    global.sprite[event.entity.unit_number] = nil --character icon cleanup
+    storage.names[event.entity.unit_number] = nil --character name cleanup
+    storage.sprite[event.entity.unit_number] = nil --character icon cleanup
   end
   --~ end)
 end, { { filter = "type", type = "character" } })
@@ -678,10 +704,10 @@ script.on_event(defines.events.on_gui_click, function(event)
       wlog("Calling switch_character for player " .. event.player_index .. "!")
       -- Must call switch_character AFTER delete_minimap_gui!
       --~ switch_character(event.player_index, character)
-      --~ if character.unit_number == global.players[event.player_index].minimap_unit then
+      --~ if character.unit_number == storage.players[event.player_index].minimap_unit then
       --~ delete_minimap_gui(event.player_index)
       --~ end
-      if character.unit_number == global.players[event.player_index].minimap_unit then
+      if character.unit_number == storage.players[event.player_index].minimap_unit then
         delete_minimap_gui(event.player_index)
       end
       switch_character(event.player_index, character)
@@ -703,7 +729,11 @@ script.on_event(defines.events.on_gui_click, function(event)
     local characters = game.players[event.player_index].get_associated_characters()
     local character = characters[i]
     if character then
-      player.open_map(character.position)
+      player.set_controller({
+        type = defines.controllers.remote,
+        position = character.position,
+        surface = character.surface,
+      })
     end
   end
 
@@ -734,18 +764,18 @@ script.on_event(defines.events.on_gui_click, function(event)
     draw_class_gui(event.player_index)
   end
   if event.element.valid and event.element.name == "bob_avatar_rename" then
-    global.players[event.player_index].rename_mode = not global.players[event.player_index].rename_mode
+    storage.players[event.player_index].rename_mode = not storage.players[event.player_index].rename_mode
     refresh_avatar_gui(event.player_index)
     refresh_buttons_row(event.player_index)
   end
 
   wlog("Checking class buttons")
-  for i, class in pairs(global.classes) do
+  for i, class in pairs(storage.classes) do
     if event.element.valid and event.element.name == class.button.name then
       wlog("Must create character of class " .. class.button.name .. "!")
       create_character(event.player_index, class)
-      global.players[event.player_index].respawn = false
-      global.players[event.player_index].first_character = false
+      storage.players[event.player_index].respawn = false
+      storage.players[event.player_index].first_character = false
       close_class_gui(event.player_index)
     end
   end
@@ -755,8 +785,8 @@ script.on_event(defines.events.on_gui_click, function(event)
   end
   if event.element.valid and event.element.name == "bob_class_gui_close" then
     close_class_gui(event.player_index)
-    global.players[event.player_index].respawn = false
-    global.players[event.player_index].first_character = false
+    storage.players[event.player_index].respawn = false
+    storage.players[event.player_index].first_character = false
   end
 end)
 
@@ -766,13 +796,13 @@ script.on_event(defines.events.on_gui_text_changed, function(event)
     local characters = game.players[event.player_index].get_associated_characters()
     local i = tonumber(string.match(event.element.name, "%d+"))
     local character = characters[i]
-    global.names[character.unit_number] = event.element.text
+    storage.names[character.unit_number] = event.element.text
   end
 
   if event.element.valid and event.element.name == "bob_avatar_current_character_textfield" then
     local player = game.players[event.player_index]
     if player.character then
-      global.names[player.character.unit_number] = event.element.text
+      storage.names[player.character.unit_number] = event.element.text
     end
   end
 end)
@@ -781,7 +811,7 @@ function try_to_reopen_class_select(event)
   wlog("Entered function try_to_reopen_class_select(" .. serpent.line(event) .. ")")
   local player = game.players[event.player_index]
   if
-    global.players[event.player_index].first_character
+    storage.players[event.player_index].first_character
     and player.controller_type == defines.controllers.character
     and player.character
     and player.character.valid
@@ -836,7 +866,7 @@ function add_class_gui_classes(gui, player_index)
   gui.table.add({ type = "table", name = "t3", column_count = 5 })
   gui.table.add({ type = "table", name = "t3_advanced", column_count = 5 })
   gui.add({ type = "table", name = "other", column_count = 5 })
-  for i, class in pairs(global.classes) do
+  for i, class in pairs(storage.classes) do
     local add_it = true
     if class.prerequisites then
       for i, technology in pairs(class.prerequisites) do
@@ -899,7 +929,7 @@ function close_avatar_gui(player_index)
   local player = game.players[player_index]
   if player.gui.left.bob_avatar_gui then
     player.gui.left.bob_avatar_gui.destroy()
-    local globtable = global.players[player_index]
+    local globtable = storage.players[player_index]
     globtable.rename_mode = nil
     globtable.minimap_unit = nil
 
@@ -914,7 +944,7 @@ end
 function draw_avatar_gui(player_index)
   wlog("Entered function draw_avatar_gui(" .. player_index .. ")")
   close_avatar_gui(player_index)
-  local globtable = global.players[player_index]
+  local globtable = storage.players[player_index]
 
   local player = game.players[player_index]
   local gui = player.gui.left.add({ type = "frame", name = "bob_avatar_gui", direction = "vertical" }) --, caption = {"gui.bob-avatar-gui"}
@@ -960,22 +990,22 @@ end
 function draw_current_character_info(player_index)
   wlog("Entered function draw_current_character_info(" .. player_index .. ")")
   local player = game.players[player_index]
-  local gui = global.players[player_index].current_character
+  local gui = storage.players[player_index].current_character
   if gui then
     gui.clear()
     if player.character then
       local entity = player.character
-      if not global.sprite[entity.unit_number] then
+      if not storage.sprite[entity.unit_number] then
         reset_character_icon(entity)
       end
       gui.add({ type = "label", name = "current", caption = { "gui.bob-current-character" } })
       gui.add({
         type = "sprite-button",
         name = "bob_avatar_current_character",
-        sprite = global.sprite[entity.unit_number],
+        sprite = storage.sprite[entity.unit_number],
         style = "transparent_slot",
       })
-      if global.players[player_index].rename_mode then
+      if storage.players[player_index].rename_mode then
         gui.add({
           type = "sprite-button",
           name = "bob_avatar_current_character_seticon",
@@ -984,8 +1014,8 @@ function draw_current_character_info(player_index)
           tooltip = { "gui.bob-avatar-seticon" },
         })
         gui.add({ type = "textfield", name = "bob_avatar_current_character_textfield" })
-        if global.names[entity.unit_number] then
-          gui["bob_avatar_current_character_textfield"].text = global.names[entity.unit_number]
+        if storage.names[entity.unit_number] then
+          gui["bob_avatar_current_character_textfield"].text = storage.names[entity.unit_number]
         end
       else
         gui.add({
@@ -993,12 +1023,12 @@ function draw_current_character_info(player_index)
           name = "bob_avatar_current_character_name",
           caption = entity.prototype.localised_name,
         })
-        if global.names[entity.unit_number] then
-          gui["bob_avatar_current_character_name"].caption = global.names[entity.unit_number]
+        if storage.names[entity.unit_number] then
+          gui["bob_avatar_current_character_name"].caption = storage.names[entity.unit_number]
         end
       end
     elseif player.controller_type ~= defines.controllers.character then
-      gui.add({ type = "label", name = "bob_avatar_current_character_name", caption = { "gui.no-character" } })
+      gui.add({ type = "label", name = "bob_avatar_current_character_name", caption = { "gui.bob-no-character" } })
       if player.controller_type == defines.controllers.god then
         gui.bob_avatar_current_character_name.caption = { "gui.bob-avatar-god-mode" }
       elseif player.controller_type == defines.controllers.editor then
@@ -1011,19 +1041,19 @@ end
 function draw_buttons_row(player_index)
   wlog("Entered function draw_buttons_row(" .. player_index .. ")")
   local player = game.players[player_index]
-  local gui = global.players[player_index].buttons_row
+  local gui = storage.players[player_index].buttons_row
   if gui then
     gui.clear()
 
     gui.add({
       type = "sprite-button",
       name = "bob_avatar_rename",
-      sprite = "utility/rename_icon_normal",
+      sprite = "utility/rename_icon",
       style = "mod_gui_button_28",
     })
     gui.add({ type = "empty-widget", name = "filler", style = "bob_draggable_footer" })
     gui.filler.style.height = 28
-    if global.players[player_index].rename_mode then
+    if storage.players[player_index].rename_mode then
       gui.bob_avatar_rename.style = "selected_mod_gui_button_28"
     end
 
@@ -1064,21 +1094,21 @@ end
 
 function draw_characters_list(player_index)
   wlog("Entered function draw_characters_list(" .. player_index .. ")")
-  if not global.players[player_index] then -- If this doesn't exist, something went wrong.
-    global.players[player_index] = { respawn = false, rename_mode = false } --so we'll attempt to fix it
+  if not storage.players[player_index] then -- If this doesn't exist, something went wrong.
+    storage.players[player_index] = { respawn = false, rename_mode = false } --so we'll attempt to fix it
   end
 
-  local gui = global.players[player_index].characters_list
+  local gui = storage.players[player_index].characters_list
   local characters = game.players[player_index].get_associated_characters()
   if gui then
     gui.clear()
 
     if table_size(characters) == 0 then
-      gui.add({ type = "label", name = "bob_avatar_no_list", caption = { "gui.no-avatars" } })
+      gui.add({ type = "label", name = "bob_avatar_no_list", caption = { "gui.bob-no-avatars" } })
       return
     end
 
-    if global.players[player_index].rename_mode then
+    if storage.players[player_index].rename_mode then
       gui.add({
         type = "table",
         column_count = 6,
@@ -1099,17 +1129,17 @@ function draw_characters_list(player_index)
     end
     for i, entity in pairs(characters) do
       gui.table.add({ type = "label", name = "bob_avatar_list_number_" .. i, caption = string.format("#%d ", i) })
-      if not global.sprite[entity.unit_number] then
+      if not storage.sprite[entity.unit_number] then
         reset_character_icon(entity)
       end
       gui.table.add({
         type = "sprite-button",
         name = "bob_avatar_list_character_" .. i,
-        sprite = global.sprite[entity.unit_number],
+        sprite = storage.sprite[entity.unit_number],
         style = "mod_gui_item_button",
         tooltip = { "gui.bob-avatar-switch" },
       })
-      if global.players[player_index].rename_mode then
+      if storage.players[player_index].rename_mode then
         gui.table.add({
           type = "sprite-button",
           name = "bob_avatar_list_seticon_" .. i,
@@ -1119,13 +1149,13 @@ function draw_characters_list(player_index)
         })
 
         gui.table.add({ type = "textfield", name = "bob_avatar_list_textfield_" .. i })
-        if global.names[entity.unit_number] then
-          gui.table["bob_avatar_list_textfield_" .. i].text = global.names[entity.unit_number]
+        if storage.names[entity.unit_number] then
+          gui.table["bob_avatar_list_textfield_" .. i].text = storage.names[entity.unit_number]
         end
       else
         gui.table.add({ type = "label", name = "bob_avatar_list_name_" .. i, caption = entity.prototype.localised_name })
-        if global.names[entity.unit_number] then
-          gui.table["bob_avatar_list_name_" .. i].caption = global.names[entity.unit_number]
+        if storage.names[entity.unit_number] then
+          gui.table["bob_avatar_list_name_" .. i].caption = storage.names[entity.unit_number]
         end
       end
       gui.table.add({
@@ -1142,7 +1172,7 @@ function draw_characters_list(player_index)
         style = "mod_gui_button_28",
         tooltip = { "gui.bob-avatar-minimap" },
       })
-      if entity.unit_number == global.players[player_index].minimap_unit then
+      if entity.unit_number == storage.players[player_index].minimap_unit then
         gui.table["bob_avatar_list_minimap_" .. i].style = "selected_mod_gui_button_28"
       end
     end
@@ -1163,11 +1193,11 @@ end
 function refresh_minimap_buttons(player_index)
   wlog("Entered function refresh_minimap_buttons(" .. player_index .. ")")
   local characters = game.players[player_index].get_associated_characters()
-  local gui = global.players[player_index].characters_list
+  local gui = storage.players[player_index].characters_list
   if gui and gui.table then
     for i, entity in pairs(characters) do
       if gui.table["bob_avatar_list_minimap_" .. i] then
-        if characters[i].unit_number == global.players[player_index].minimap_unit then
+        if characters[i].unit_number == storage.players[player_index].minimap_unit then
           gui.table["bob_avatar_list_minimap_" .. i].style = "selected_mod_gui_button_28"
         else
           gui.table["bob_avatar_list_minimap_" .. i].style = "mod_gui_button_28"
@@ -1181,19 +1211,19 @@ function draw_minimap_gui(player_index, entity)
   wlog("Entered function draw_minimap_gui(" .. player_index .. ")")
 
   local player = game.players[player_index]
-  local gui = global.players[player_index].minimap_gui
+  local gui = storage.players[player_index].minimap_gui
 
-  if global.players[player_index].minimap_unit == entity.unit_number then
+  if storage.players[player_index].minimap_unit == entity.unit_number then
     delete_minimap_gui(player_index)
   else
-    if not gui and global.players[player_index].gui and global.players[player_index].gui.main_flow then
-      gui = global.players[player_index].gui.main_flow.add({ type = "flow", name = "minimap_flow" })
+    if not gui and storage.players[player_index].gui and storage.players[player_index].gui.main_flow then
+      gui = storage.players[player_index].gui.main_flow.add({ type = "flow", name = "minimap_flow" })
       gui.style.padding = 4
-      global.players[player_index].minimap_gui = gui
+      storage.players[player_index].minimap_gui = gui
     end
     if gui then
       gui.clear()
-      global.players[player_index].minimap_unit = entity.unit_number
+      storage.players[player_index].minimap_unit = entity.unit_number
       gui.add({
         type = "minimap",
         name = "bob_avatar_minimap",
@@ -1209,11 +1239,11 @@ end
 
 function delete_minimap_gui(player_index)
   wlog("Entered function delete_minimap_gui(" .. player_index .. ")")
-  local gui = global.players[player_index].minimap_gui
+  local gui = storage.players[player_index].minimap_gui
   if gui then
     gui.destroy()
-    global.players[player_index].minimap_unit = nil
-    global.players[player_index].minimap_gui = nil
+    storage.players[player_index].minimap_unit = nil
+    storage.players[player_index].minimap_gui = nil
     refresh_minimap_buttons(player_index)
   end
 end
@@ -1230,11 +1260,11 @@ function set_character_icon(player_index, entity)
     and player.cursor_stack.name
   then
     hand_item = player.cursor_stack.name
-  elseif player.cursor_ghost and player.cursor_ghost.valid and player.cursor_ghost.name then
-    hand_item = player.cursor_ghost.name
+  elseif player.cursor_ghost and player.cursor_ghost.name and player.cursor_ghost.name.valid then
+    hand_item = player.cursor_ghost.name.name
   end
   if hand_item then
-    global.sprite[entity.unit_number] = "item/" .. hand_item
+    storage.sprite[entity.unit_number] = "item/" .. hand_item
   else
     reset_character_icon(entity)
   end
@@ -1243,12 +1273,12 @@ end
 function reset_character_icon(entity)
   wlog("Entered function reset_character_icon(" .. entity.name .. ")")
   local sprite = "entity/" .. entity.name
-  for i, class in pairs(global.classes) do
+  for i, class in pairs(storage.classes) do
     if entity.name == class.entity_name then
       sprite = class.button.sprite
     end
   end
-  global.sprite[entity.unit_number] = sprite
+  storage.sprite[entity.unit_number] = sprite
 end
 
 function create_character(player_index, class)
@@ -1290,13 +1320,13 @@ function create_character(player_index, class)
       end
       wlog("Old entity still exists after call to minime: " .. tostring(old and old.valid))
       -- For some reason, "minime" could have returned nil!
-      if not (skin and game.entity_prototypes[skin]) then
+      if not (skin and prototypes.entity[skin]) then
         -- Basic compatibility with "jetpack". This assumes that "jetpack" will be the
         -- last mod creating new character versions, so that the names of flying
         -- characters will always end with "-jetpack". This may or may not be true.
         local flying = old.name:match("^(.+)%-jetpack")
         local new = class.entity_name .. "-jetpack"
-        if flying and game.entity_prototypes[new] then
+        if flying and prototypes.entity[new] then
           wlog(new .. " is a flying prototype!")
           skin = new
         else
@@ -1354,12 +1384,12 @@ function create_character(player_index, class)
         player.character[i] = bonus
       end
 
-      if not global.players[player_index] then -- If this doesn't exist, something went wrong.
-        global.players[player_index] = { respawn = false, first_character = true } --so we'll attempt to fix it
+      if not storage.players[player_index] then -- If this doesn't exist, something went wrong.
+        storage.players[player_index] = { respawn = false, first_character = true } --so we'll attempt to fix it
       end
 
-      if global.players[player_index].first_character then
-        for i, item in pairs(global.starting_inventory) do
+      if storage.players[player_index].first_character then
+        for i, item in pairs(storage.starting_inventory) do
           player.insert(item)
         end
         if class.starting_inventory then
@@ -1373,9 +1403,9 @@ function create_character(player_index, class)
             end
           end
         end
-        global.players[player_index].first_character = false
-      elseif global.players[player_index].respawn then
-        for i, item in pairs(global.respawn_inventory) do
+        storage.players[player_index].first_character = false
+      elseif storage.players[player_index].respawn then
+        for i, item in pairs(storage.respawn_inventory) do
           player.insert(item)
         end
         if class.respawn_inventory.replace then
@@ -1389,7 +1419,7 @@ function create_character(player_index, class)
             end
           end
         end
-        global.players[player_index].respawn = false
+        storage.players[player_index].respawn = false
       end
       refresh_avatar_gui(player_index)
     end
@@ -1477,8 +1507,8 @@ function switch_character(player_index, new_character)
     end
   end
 
-  global.players[player_index].respawn = false
-  global.players[player_index].first_character = false
+  storage.players[player_index].respawn = false
+  storage.players[player_index].first_character = false
   refresh_avatar_gui(player_index)
 end
 

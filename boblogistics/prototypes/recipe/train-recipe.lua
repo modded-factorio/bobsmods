@@ -5,12 +5,12 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-locomotive-2",
       enabled = false,
       ingredients = {
-        { "locomotive", 1 },
-        { "advanced-circuit", 5 },
-        { "steel-plate", 10 },
-        { "iron-gear-wheel", 20 },
+        { type = "item", name = "locomotive", amount = 1 },
+        { type = "item", name = "advanced-circuit", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "iron-gear-wheel", amount = 20 },
       },
-      result = "bob-locomotive-2",
+      results = { { type = "item", name = "bob-locomotive-2", amount = 1 } },
     },
 
     {
@@ -18,12 +18,12 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-locomotive-3",
       enabled = false,
       ingredients = {
-        { "bob-locomotive-2", 1 },
-        { "processing-unit", 5 },
-        { "steel-plate", 10 },
-        { "iron-gear-wheel", 20 },
+        { type = "item", name = "bob-locomotive-2", amount = 1 },
+        { type = "item", name = "processing-unit", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 10 },
+        { type = "item", name = "iron-gear-wheel", amount = 20 },
       },
-      result = "bob-locomotive-3",
+      results = { { type = "item", name = "bob-locomotive-3", amount = 1 } },
     },
 
     {
@@ -31,10 +31,10 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-locomotive",
       enabled = false,
       ingredients = {
-        { "locomotive", 1 },
-        { "steel-plate", 25 },
+        { type = "item", name = "locomotive", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 25 },
       },
-      result = "bob-armoured-locomotive",
+      results = { { type = "item", name = "bob-armoured-locomotive", amount = 1 } },
     },
 
     {
@@ -42,12 +42,12 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-locomotive-2",
       enabled = false,
       ingredients = {
-        { "bob-armoured-locomotive", 1 },
-        { "steel-plate", 25 },
-        { "processing-unit", 5 },
-        { "iron-gear-wheel", 20 },
+        { type = "item", name = "bob-armoured-locomotive", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 25 },
+        { type = "item", name = "processing-unit", amount = 5 },
+        { type = "item", name = "iron-gear-wheel", amount = 20 },
       },
-      result = "bob-armoured-locomotive-2",
+      results = { { type = "item", name = "bob-armoured-locomotive-2", amount = 1 } },
     },
 
     {
@@ -55,11 +55,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-cargo-wagon-2",
       enabled = false,
       ingredients = {
-        { "cargo-wagon", 1 },
-        { "steel-plate", 20 },
-        { "iron-gear-wheel", 12 },
+        { type = "item", name = "cargo-wagon", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 20 },
+        { type = "item", name = "iron-gear-wheel", amount = 12 },
       },
-      result = "bob-cargo-wagon-2",
+      results = { { type = "item", name = "bob-cargo-wagon-2", amount = 1 } },
     },
 
     {
@@ -67,11 +67,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-cargo-wagon-3",
       enabled = false,
       ingredients = {
-        { "bob-cargo-wagon-2", 1 },
-        { "steel-plate", 20 },
-        { "iron-gear-wheel", 12 },
+        { type = "item", name = "bob-cargo-wagon-2", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 20 },
+        { type = "item", name = "iron-gear-wheel", amount = 12 },
       },
-      result = "bob-cargo-wagon-3",
+      results = { { type = "item", name = "bob-cargo-wagon-3", amount = 1 } },
     },
 
     {
@@ -79,10 +79,10 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-cargo-wagon",
       enabled = false,
       ingredients = {
-        { "cargo-wagon", 1 },
-        { "steel-plate", 25 },
+        { type = "item", name = "cargo-wagon", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 25 },
       },
-      result = "bob-armoured-cargo-wagon",
+      results = { { type = "item", name = "bob-armoured-cargo-wagon", amount = 1 } },
     },
 
     {
@@ -90,11 +90,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       name = "bob-armoured-cargo-wagon-2",
       enabled = false,
       ingredients = {
-        { "bob-armoured-cargo-wagon", 1 },
-        { "steel-plate", 25 },
-        { "iron-gear-wheel", 12 },
+        { type = "item", name = "bob-armoured-cargo-wagon", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 25 },
+        { type = "item", name = "iron-gear-wheel", amount = 12 },
       },
-      result = "bob-armoured-cargo-wagon-2",
+      results = { { type = "item", name = "bob-armoured-cargo-wagon-2", amount = 1 } },
     },
 
     {
@@ -103,12 +103,12 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       enabled = false,
       energy_required = 1.5,
       ingredients = {
-        { "fluid-wagon", 1 },
-        { "iron-gear-wheel", 12 },
-        { "steel-plate", 16 },
-        { "storage-tank-2", 1 },
+        { type = "item", name = "fluid-wagon", amount = 1 },
+        { type = "item", name = "iron-gear-wheel", amount = 12 },
+        { type = "item", name = "steel-plate", amount = 16 },
+        { type = "item", name = "bob-storage-tank-2", amount = 1 },
       },
-      result = "bob-fluid-wagon-2",
+      results = { { type = "item", name = "bob-fluid-wagon-2", amount = 1 } },
     },
 
     {
@@ -117,12 +117,12 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       enabled = false,
       energy_required = 1.5,
       ingredients = {
-        { "bob-fluid-wagon-2", 1 },
-        { "iron-gear-wheel", 12 },
-        { "steel-plate", 16 },
-        { "storage-tank-3", 1 },
+        { type = "item", name = "bob-fluid-wagon-2", amount = 1 },
+        { type = "item", name = "iron-gear-wheel", amount = 12 },
+        { type = "item", name = "steel-plate", amount = 16 },
+        { type = "item", name = "bob-storage-tank-3", amount = 1 },
       },
-      result = "bob-fluid-wagon-3",
+      results = { { type = "item", name = "bob-fluid-wagon-3", amount = 1 } },
     },
 
     {
@@ -131,10 +131,10 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       enabled = false,
       energy_required = 1.5,
       ingredients = {
-        { "fluid-wagon", 1 },
-        { "steel-plate", 25 },
+        { type = "item", name = "fluid-wagon", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 25 },
       },
-      result = "bob-armoured-fluid-wagon",
+      results = { { type = "item", name = "bob-armoured-fluid-wagon", amount = 1 } },
     },
 
     {
@@ -143,12 +143,12 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       enabled = false,
       energy_required = 1.5,
       ingredients = {
-        { "bob-armoured-fluid-wagon", 1 },
-        { "iron-gear-wheel", 12 },
-        { "steel-plate", 25 },
-        { "storage-tank-3", 1 },
+        { type = "item", name = "bob-armoured-fluid-wagon", amount = 1 },
+        { type = "item", name = "iron-gear-wheel", amount = 12 },
+        { type = "item", name = "steel-plate", amount = 25 },
+        { type = "item", name = "bob-storage-tank-3", amount = 1 },
       },
-      result = "bob-armoured-fluid-wagon-2",
+      results = { { type = "item", name = "bob-armoured-fluid-wagon-2", amount = 1 } },
     },
   })
 end

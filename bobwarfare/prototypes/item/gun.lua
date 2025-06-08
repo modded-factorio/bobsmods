@@ -4,7 +4,7 @@ local warefareSounds = require("prototypes.entity.sounds")
 data:extend({
   {
     type = "gun",
-    name = "rifle",
+    name = "bob-rifle",
     icon = "__bobwarfare__/graphics/icons/rifle.png",
     icon_size = 32,
     subgroup = "gun",
@@ -30,11 +30,23 @@ data:extend({
         starting_frame_speed_deviation = 0.1,
       },
     },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "gun",
-    name = "sniper-rifle",
+    name = "bob-sniper-rifle",
     icon = "__bobwarfare__/graphics/icons/sniper-rifle.png",
     icon_size = 32,
     subgroup = "gun",
@@ -60,11 +72,23 @@ data:extend({
         starting_frame_speed_deviation = 0.1,
       },
     },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "gun",
-    name = "laser-rifle",
+    name = "bob-laser-rifle",
     icon = "__bobwarfare__/graphics/icons/laser-rifle.png",
     icon_size = 32,
     subgroup = "gun",
@@ -72,11 +96,23 @@ data:extend({
     stack_size = 5,
     attack_parameters = {
       type = "beam",
-      ammo_category = "laser-rifle",
+      ammo_category = "bob-laser-rifle",
       cooldown = 20,
       movement_slow_down_factor = 0.5,
       damage_modifier = 1.2,
       range = 20,
+    },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
     },
   },
 })
@@ -85,10 +121,11 @@ data:extend({
 data:extend({
   {
     type = "gun",
-    name = "gatling-gun",
+    name = "bob-gatling-gun",
     icon = "__bobwarfare__/graphics/icons/gatling-gun.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "a[basic-clips]-e[gatling-gun]",
     stack_size = 5,
@@ -113,15 +150,27 @@ data:extend({
         starting_frame_speed_deviation = 0.1,
       },
     },
+    drop_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    inventory_move_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-move.ogg",
+      volume = 0.7,
+    },
+    pick_sound = {
+      filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
+      volume = 0.7,
+    },
   },
 
   {
     type = "gun",
-    name = "tank-cannon-2",
+    name = "bob-tank-cannon-2",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "z[tank]-a[cannon-2]",
     stack_size = 5,
@@ -132,7 +181,7 @@ data:extend({
       movement_slow_down_factor = 0,
       projectile_creation_distance = 1.6,
       projectile_center = { -0.15625, -0.07812 },
-      range = 25,
+      range = 32,
       damage_modifier = 1.5,
       sound = warefareSounds.tankTurret,
     },
@@ -140,11 +189,11 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-cannon-3",
+    name = "bob-tank-cannon-3",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "z[tank]-a[cannon-3]",
     stack_size = 5,
@@ -155,7 +204,7 @@ data:extend({
       movement_slow_down_factor = 0,
       projectile_creation_distance = 1.6,
       projectile_center = { -0.15625, -0.07812 },
-      range = 25,
+      range = 34,
       damage_modifier = 2,
       sound = warefareSounds.tankTurret,
     },
@@ -163,10 +212,11 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-artillery-1",
+    name = "bob-tank-artillery-1",
     icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "z[tank]-b[artillery-1]",
     stack_size = 5,
@@ -185,10 +235,11 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-artillery-2",
+    name = "bob-tank-artillery-2",
     icon = "__bobwarfare__/graphics/icons/tank-artillery.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "z[tank]-b[artillery-2]",
     stack_size = 5,
@@ -208,16 +259,17 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-laser",
+    name = "bob-tank-laser",
     icon = "__bobwarfare__/graphics/icons/tank-laser.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "z[tank]-c[laser]",
     stack_size = 5,
     attack_parameters = {
       type = "beam",
-      ammo_category = "laser-rifle",
+      ammo_category = "bob-laser-rifle",
       cooldown = 20,
       movement_slow_down_factor = 0,
       damage_modifier = 2,
@@ -227,12 +279,12 @@ data:extend({
 
   {
     type = "gun",
-    name = "tank-flamethrower-2",
+    name = "bob-tank-flamethrower-2",
     localised_name = { "item-name.tank-flamethrower" },
     icon = "__base__/graphics/icons/flamethrower.png",
     icon_size = 64,
-    icon_mipmaps = 4,
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "b[flamethrower]-b[tank-flamethrower]2",
     attack_parameters = {
@@ -269,12 +321,12 @@ data:extend({
   },
   {
     type = "gun",
-    name = "tank-flamethrower-3",
+    name = "bob-tank-flamethrower-3",
     icon = "__base__/graphics/icons/flamethrower.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     localised_name = { "item-name.tank-flamethrower" },
-    flags = { "hidden" },
+    hidden = true,
+    auto_recycle = false,
     subgroup = "gun",
     order = "b[flamethrower]-b[tank-flamethrower]3",
     attack_parameters = {

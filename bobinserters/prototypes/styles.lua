@@ -1,5 +1,5 @@
 local blank32 = {
-  filename = "__bobinserters__/graphics/gui/hr-gui.png",
+  filename = "__bobinserters__/graphics/gui/gui.png",
   priority = "extra-high-no-scale",
   scale = 1,
   position = { 192, 32 },
@@ -7,7 +7,7 @@ local blank32 = {
 }
 
 local inserter_middle = {
-  filename = "__bobinserters__/graphics/gui/hr-gui.png",
+  filename = "__bobinserters__/graphics/gui/gui.png",
   priority = "extra-high-no-scale",
   scale = 0.5,
   position = { 0, 0 },
@@ -15,7 +15,7 @@ local inserter_middle = {
 }
 
 local inserter_checkmark_pickup = {
-  filename = "__bobinserters__/graphics/gui/hr-gui.png",
+  filename = "__bobinserters__/graphics/gui/gui.png",
   priority = "extra-high-no-scale",
   scale = 0.5,
   position = { 64, 0 },
@@ -23,7 +23,7 @@ local inserter_checkmark_pickup = {
 }
 
 local inserter_checkmark_drop = {
-  filename = "__bobinserters__/graphics/gui/hr-gui.png",
+  filename = "__bobinserters__/graphics/gui/gui.png",
   priority = "extra-high-no-scale",
   scale = 0.5,
   position = { 128, 0 },
@@ -31,14 +31,14 @@ local inserter_checkmark_drop = {
 }
 
 local checkmark = {
-  filename = "__bobinserters__/graphics/gui/hr-gui.png",
+  filename = "__bobinserters__/graphics/gui/gui.png",
   position = { 192, 0 },
   size = { 32, 32 },
   scale = 1,
 }
 
 local checkmark_small = {
-  filename = "__bobinserters__/graphics/gui/hr-gui.png",
+  filename = "__bobinserters__/graphics/gui/gui.png",
   position = { 192, 0 },
   size = { 32, 32 },
   scale = 0.5,
@@ -91,7 +91,6 @@ local blue_clicked_graphical_set = {
 
 data.raw["gui-style"].default.bob_table = {
   type = "table_style",
-  cell_spacing = 0,
   horizontal_spacing = 2,
   vertical_spacing = 2,
 }

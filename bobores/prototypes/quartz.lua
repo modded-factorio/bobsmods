@@ -1,5 +1,5 @@
 bobmods.ores.quartz = {
-  name = "quartz",
+  name = "bob-quartz",
   tint = { r = 1, g = 1, b = 1 },
   map_color = { r = 1, g = 1, b = 1 },
   mining_time = 0.625,
@@ -14,22 +14,14 @@ bobmods.ores.quartz = {
   sprite = {
     sheet = 3,
   },
-  --[[
-  autoplace = 
-  {
-    create = true,
-    starting_area = true,
-    richness = 1,
-    size = 1
-  }
-]]
-  --
   autoplace = "control-only",
+  planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.quartz.create_autoplace()
-  data.raw.resource["quartz"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "quartz",
+  data.raw.resource["bob-quartz"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-quartz",
     order = "c",
     base_density = 4,
     has_starting_area_placement = true,

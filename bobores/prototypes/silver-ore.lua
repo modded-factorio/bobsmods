@@ -1,5 +1,5 @@
 bobmods.ores.silver = {
-  name = "silver-ore",
+  name = "bob-silver-ore",
   tint = { r = 0.875, g = 0.975, b = 1 },
   map_color = { r = 0.7, g = 0.9, b = 0.9 },
   mining_time = 0.625,
@@ -25,11 +25,12 @@ bobmods.ores.silver = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.silver.create_autoplace()
-  data.raw.resource["silver-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "silver-ore",
+  data.raw.resource["bob-silver-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-silver-ore",
     order = "c",
     base_density = 4,
     has_starting_area_placement = false,

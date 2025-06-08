@@ -1,13 +1,6 @@
 data:extend({
   {
     type = "bool-setting",
-    name = "bobmods-logistics-roboportrecipeupdate",
-    setting_type = "startup",
-    default_value = true,
-  },
-
-  {
-    type = "bool-setting",
     name = "bobmods-logistics-flyingrobotframes",
     setting_type = "startup",
     default_value = true,
@@ -129,7 +122,7 @@ data:extend({
     type = "int-setting",
     name = "bobmods-logistics-fluidwagonbase",
     setting_type = "startup",
-    default_value = 25,
+    default_value = 50,
     minimum_value = 10,
     maximum_value = 1000,
   },
@@ -140,12 +133,5 @@ data:extend({
     default_value = 25,
     minimum_value = 10,
     maximum_value = 1000,
-  },
-
-  {
-    type = "bool-setting",
-    name = "bobmods-logistics-highpipes",
-    setting_type = "startup",
-    default_value = false,
   },
 })

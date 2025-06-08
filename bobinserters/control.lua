@@ -8,7 +8,7 @@ function gui_add_title(gui, title, button_name, drag_target)
     type = "sprite-button",
     name = button_name,
     style = "frame_action_button",
-    sprite = "utility/close_white",
+    sprite = "utility/close",
   })
   if drag_target then
     gui.title_flow.title.drag_target = gui
@@ -79,11 +79,11 @@ function bobmods.math.offset(number)
   end
 end
 
-bobmods.inserters.long_technology = "long-inserters-1"
-bobmods.inserters.long2_technology = "long-inserters-2"
-bobmods.inserters.near_technology = "near-inserters"
-bobmods.inserters.more_technology = "more-inserters-1"
-bobmods.inserters.more2_technology = "more-inserters-2"
+bobmods.inserters.long_technology = "bob-long-inserters-1"
+bobmods.inserters.long2_technology = "bob-long-inserters-2"
+bobmods.inserters.near_technology = "bob-near-inserters"
+bobmods.inserters.more_technology = "bob-more-inserters-1"
+bobmods.inserters.more2_technology = "bob-more-inserters-2"
 bobmods.inserters.offset = 0.2
 changed_position_event = script.generate_event_name()
 
@@ -334,60 +334,57 @@ bobmods.logistics.inserters.offset_positions = {
 }
 
 function bobmods.inserters.create_global_table_basic()
-  if not global then
-    global = {}
+  if not storage.bobmods then
+    storage.bobmods = {}
   end
-  if not global.bobmods then
-    global.bobmods = {}
+  if not storage.bobmods.inserters then
+    storage.bobmods.inserters = {}
   end
-  if not global.bobmods.inserters then
-    global.bobmods.inserters = {}
-  end
-  if not global.bobmods.inserters.blacklist then
-    global.bobmods.inserters.blacklist = {}
+  if not storage.bobmods.inserters.blacklist then
+    storage.bobmods.inserters.blacklist = {}
   end
 end
 
 function bobmods.inserters.create_global_table(player_index)
   bobmods.inserters.create_global_table_basic()
-  if not global.bobmods.inserters[player_index] then
-    global.bobmods.inserters[player_index] = {}
+  if not storage.bobmods.inserters[player_index] then
+    storage.bobmods.inserters[player_index] = {}
   end
 
-  if not global.bobmods.logistics then
-    global.bobmods.logistics = {}
+  if not storage.bobmods.logistics then
+    storage.bobmods.logistics = {}
   end
-  if not global.bobmods.logistics[player_index] then
-    global.bobmods.logistics[player_index] = {}
-  end
-
-  if not global.bobmods.logistics[player_index].enabled then
-    global.bobmods.logistics[player_index].enabled = false
-  end
-  if not global.bobmods.logistics[player_index].long_in then
-    global.bobmods.logistics[player_index].long_in = false
-  end
-  if not global.bobmods.logistics[player_index].long_out then
-    global.bobmods.logistics[player_index].long_out = false
-  end
-  if not global.bobmods.logistics[player_index].near then
-    global.bobmods.logistics[player_index].near = false
-  end
-  if not global.bobmods.logistics[player_index].show then
-    global.bobmods.logistics[player_index].show = false
+  if not storage.bobmods.logistics[player_index] then
+    storage.bobmods.logistics[player_index] = {}
   end
 
-  if not global.bobmods.logistics[player_index].enabled2 then
-    global.bobmods.logistics[player_index].enabled2 = false
+  if not storage.bobmods.logistics[player_index].enabled then
+    storage.bobmods.logistics[player_index].enabled = false
   end
-  if not global.bobmods.logistics[player_index].pickup then
-    global.bobmods.logistics[player_index].pickup = 18
+  if not storage.bobmods.logistics[player_index].long_in then
+    storage.bobmods.logistics[player_index].long_in = false
   end
-  if not global.bobmods.logistics[player_index].drop then
-    global.bobmods.logistics[player_index].drop = 8
+  if not storage.bobmods.logistics[player_index].long_out then
+    storage.bobmods.logistics[player_index].long_out = false
   end
-  if not global.bobmods.logistics[player_index].offset then
-    global.bobmods.logistics[player_index].offset = 2
+  if not storage.bobmods.logistics[player_index].near then
+    storage.bobmods.logistics[player_index].near = false
+  end
+  if not storage.bobmods.logistics[player_index].show then
+    storage.bobmods.logistics[player_index].show = false
+  end
+
+  if not storage.bobmods.logistics[player_index].enabled2 then
+    storage.bobmods.logistics[player_index].enabled2 = false
+  end
+  if not storage.bobmods.logistics[player_index].pickup then
+    storage.bobmods.logistics[player_index].pickup = 18
+  end
+  if not storage.bobmods.logistics[player_index].drop then
+    storage.bobmods.logistics[player_index].drop = 8
+  end
+  if not storage.bobmods.logistics[player_index].offset then
+    storage.bobmods.logistics[player_index].offset = 2
   end
 end
 
@@ -396,9 +393,9 @@ script.on_event("bob-inserter-pickup-rotate", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
     bobmods.inserters.rotate_pickup(entity, player)
   end
@@ -409,9 +406,9 @@ script.on_event("bob-inserter-drop-rotate", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
     bobmods.inserters.rotate_drop(entity, player)
   end
@@ -422,9 +419,9 @@ script.on_event("bob-inserter-pickup-range", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
     bobmods.inserters.pickup_range(entity, player)
   end
@@ -435,9 +432,9 @@ script.on_event("bob-inserter-drop-range", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
     bobmods.inserters.drop_range(entity, player)
   end
@@ -448,9 +445,9 @@ script.on_event("bob-inserter-long", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
     bobmods.inserters.long_range(entity, player)
   end
@@ -461,9 +458,9 @@ script.on_event("bob-inserter-near", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
     bobmods.inserters.near_range(entity, player)
   end
@@ -474,11 +471,11 @@ script.on_event("bob-inserter-open-gui", function(event)
   local entity = player.selected
   if
     entity
-    and entity.type == "inserter"
+    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not global.bobmods.inserters.blacklist[entity.name]
+    and not storage.bobmods.inserters.blacklist[entity.name]
   then
-    global.bobmods.inserters[event.player_index].position = "center"
+    storage.bobmods.inserters[event.player_index].position = "center"
     bobmods.inserters.open_gui(entity, player)
   else
     bobmods.inserters.delete_gui(event.player_index)
@@ -487,13 +484,21 @@ end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
   local player = game.players[event.player_index]
-  if event.gui_type == defines.gui_type.entity and event.entity and event.entity.type == "inserter" then
+  if event.gui_type == defines.gui_type.entity and event.entity then
+    local prototype
+    if event.entity.type == "inserter" then
+      prototype = event.entity.prototype
+    elseif event.entity.type == "entity-ghost" and event.entity.ghost_type == "inserter" then
+      prototype = event.entity.ghost_prototype
+    end
+
     if
-      event.entity.prototype.allow_custom_vectors
-      and not global.bobmods.inserters.blacklist[event.entity.name]
+      prototype
+      and prototype.allow_custom_vectors
+      and not storage.bobmods.inserters.blacklist[event.entity.name]
       and settings.get_player_settings(player)["bobmods-inserters-gui-position"].value ~= "off"
     then
-      global.bobmods.inserters[event.player_index].position = "left"
+      storage.bobmods.inserters[event.player_index].position = "left"
       bobmods.inserters.open_gui(event.entity, player)
     else
       bobmods.inserters.delete_gui(event.player_index)
@@ -504,7 +509,7 @@ end)
 script.on_event(defines.events.on_gui_closed, function(event)
   -- this is checking for what GUI was just told to close. as we want to delete only when closing my GUI, or when closing the inserters GUI IF not opening mine.
   if
-    global.bobmods.inserters[event.player_index].position == "center"
+    storage.bobmods.inserters[event.player_index].position == "center"
     and event.gui_type == defines.gui_type.custom
     and event.element
     and event.element.valid --the GUI actually exists.
@@ -516,25 +521,25 @@ end)
 
 script.on_event(defines.events.on_gui_checked_state_changed, function(event)
   local player = game.players[event.player_index]
-  local entity = global.bobmods.inserters[event.player_index].entity
+  local entity = storage.bobmods.inserters[event.player_index].entity
 
   if event.element.valid then
     if event.element.name == "bob_logistics_inserter_enabled" then
-      global.bobmods.logistics[event.player_index].enabled = event.element.state
+      storage.bobmods.logistics[event.player_index].enabled = event.element.state
       if event.element.state then
-        global.bobmods.logistics[event.player_index].enabled2 = false
+        storage.bobmods.logistics[event.player_index].enabled2 = false
       end
       bobmods.logistics.create_gui(event.player_index)
     elseif event.element.name == "bob_logistics_inserter_long_in" then
-      global.bobmods.logistics[event.player_index].long_in = event.element.state
+      storage.bobmods.logistics[event.player_index].long_in = event.element.state
     elseif event.element.name == "bob_logistics_inserter_long_out" then
-      global.bobmods.logistics[event.player_index].long_out = event.element.state
+      storage.bobmods.logistics[event.player_index].long_out = event.element.state
     elseif event.element.name == "bob_logistics_inserter_near" then
-      global.bobmods.logistics[event.player_index].near = event.element.state
+      storage.bobmods.logistics[event.player_index].near = event.element.state
     elseif event.element.name == "bob_logistics_inserter_enabled2" then
-      global.bobmods.logistics[event.player_index].enabled2 = event.element.state
+      storage.bobmods.logistics[event.player_index].enabled2 = event.element.state
       if event.element.state then
-        global.bobmods.logistics[event.player_index].enabled = false
+        storage.bobmods.logistics[event.player_index].enabled = false
       end
       bobmods.logistics.create_gui(event.player_index)
     elseif string.sub(event.element.name, 1, 6) == "button" then
@@ -542,13 +547,13 @@ script.on_event(defines.events.on_gui_checked_state_changed, function(event)
 
       if event.element.parent.name == "bob_logistics_pickup" then
         remote.call("bobinserters", "draw_button_position_check", { gui = event.element.parent, position = i })
-        global.bobmods.logistics[event.player_index].pickup = i
+        storage.bobmods.logistics[event.player_index].pickup = i
       elseif event.element.parent.name == "bob_logistics_drop" then
         remote.call("bobinserters", "draw_button_position_check", { gui = event.element.parent, position = i })
-        global.bobmods.logistics[event.player_index].drop = i
+        storage.bobmods.logistics[event.player_index].drop = i
       elseif event.element.parent.name == "bob_logistics_offset" then
         remote.call("bobinserters", "draw_button_offset_check", { gui = event.element.parent, position = i })
-        global.bobmods.logistics[event.player_index].offset = i
+        storage.bobmods.logistics[event.player_index].offset = i
       elseif entity and entity.valid and player.can_reach_entity(entity) then
         if event.element.parent.name == "bob_inserter_gui_pickup" then
           bobmods.inserters.gui_pickup_click(entity, event.element)
@@ -566,7 +571,7 @@ end)
 
 script.on_event(defines.events.on_gui_click, function(event)
   local player = game.players[event.player_index]
-  local entity = global.bobmods.inserters[event.player_index].entity
+  local entity = storage.bobmods.inserters[event.player_index].entity
   if event.element.valid then
     if entity and entity.valid and player.can_reach_entity(entity) then
       if event.element.name == "bob_inserter_gui_close" then
@@ -578,10 +583,10 @@ script.on_event(defines.events.on_gui_click, function(event)
   end
 
   if event.element.valid and event.element.name == "bob_logistics_inserter_button" then
-    if global.bobmods.logistics[event.player_index].show then
-      global.bobmods.logistics[event.player_index].show = false
+    if storage.bobmods.logistics[event.player_index].show then
+      storage.bobmods.logistics[event.player_index].show = false
     else
-      global.bobmods.logistics[event.player_index].show = true
+      storage.bobmods.logistics[event.player_index].show = true
     end
     bobmods.logistics.show_gui_options(event.player_index)
   end
@@ -589,9 +594,9 @@ end)
 
 script.on_event(defines.events.on_player_rotated_entity, function(event)
   local player = game.players[event.player_index]
-  local entity = global.bobmods.inserters[event.player_index].entity
+  local entity = storage.bobmods.inserters[event.player_index].entity
   if entity == event.entity and player.can_reach_entity(entity) then
-    if global.bobmods.inserters[player.index].gui and global.bobmods.inserters[player.index].gui.valid then
+    if storage.bobmods.inserters[player.index].gui and storage.bobmods.inserters[player.index].gui.valid then
       bobmods.inserters.refresh_position_checkboxes(entity, player)
     end
   end
@@ -599,10 +604,10 @@ end)
 
 script.on_event(defines.events.on_tick, function(event)
   if game.tick % 20 == 0 then
-    if global and global.bobmods and global.bobmods.inserters then
+    if storage and storage.bobmods and storage.bobmods.inserters then
       for i, player in pairs(game.connected_players) do
-        if global.bobmods.inserters[player.index] then
-          local entity = global.bobmods.inserters[player.index].entity
+        if storage.bobmods.inserters[player.index] then
+          local entity = storage.bobmods.inserters[player.index].entity
           if entity and (not entity.valid or not player.can_reach_entity(entity)) then
             bobmods.inserters.delete_gui(player.index)
           end
@@ -656,7 +661,7 @@ script.on_event(defines.events.on_research_finished, function(event)
     or event.research.name == bobmods.inserters.more2_technology
   then
     for i, player in pairs(event.research.force.players) do
-      local entity = global.bobmods.inserters[player.index].entity
+      local entity = storage.bobmods.inserters[player.index].entity
       if entity and entity.valid and player.can_reach_entity(entity) then
         bobmods.inserters.open_gui(entity, player)
       end
@@ -667,7 +672,7 @@ end)
 
 script.on_event(defines.events.on_built_entity, function(event)
   local player = game.players[event.player_index]
-  local entity = event.created_entity
+  local entity = event.entity
 
   local entity_name = entity.name
   if entity.type == "entity-ghost" then
@@ -675,12 +680,8 @@ script.on_event(defines.events.on_built_entity, function(event)
   end
 
   if
-    event.item
-    and event.item.place_result
-    and event.item.place_result.type == "inserter"
-    and (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
-    and event.item.place_result.name == entity_name --probably don't even need this line anymore.
-    and not global.bobmods.inserters.blacklist[entity_name]
+    (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
+    and not storage.bobmods.inserters.blacklist[entity_name]
   then
     bobmods.logistics.set_positions(entity, event.player_index)
   end
@@ -918,17 +919,16 @@ function calculate_new_drop_offset(drop_position, drop_offset, new_position)
 end
 
 function bobmods.logistics.set_positions(entity, player_index)
-  if global.bobmods.logistics[player_index].enabled then
+  if storage.bobmods.logistics[player_index].enabled then
     local force = game.players[player_index].force
-    local direction = (entity.direction / 2) + 1
 
     local long_unlocked = tech_unlocked(force, bobmods.inserters.long_technology)
     local more_unlocked = tech_unlocked(force, bobmods.inserters.more_technology)
     local near_unlocked = tech_unlocked(force, bobmods.inserters.near_technology)
 
-    local long_in = global.bobmods.logistics[player_index].long_in
-    local long_out = global.bobmods.logistics[player_index].long_out
-    local near = global.bobmods.logistics[player_index].near
+    local long_in = storage.bobmods.logistics[player_index].long_in
+    local long_out = storage.bobmods.logistics[player_index].long_out
+    local near = storage.bobmods.logistics[player_index].near
 
     local pickup_position = get_pickup_position(entity)
     local drop_position, drop_offset = get_split_drop_position(entity)
@@ -967,28 +967,32 @@ function bobmods.logistics.set_positions(entity, player_index)
     set_both_positions(entity, pickup_position, full_drop_position)
   end
 
-  if global.bobmods.logistics[player_index].enabled2 and remote.interfaces.bobinserters then
+  if
+    not game.players[player_index].is_cursor_blueprint()
+    and storage.bobmods.logistics[player_index].enabled2
+    and remote.interfaces.bobinserters
+  then
     local pickup_position =
-      remote.call("bobinserters", "get_position", { position = global.bobmods.logistics[player_index].pickup })
+      remote.call("bobinserters", "get_position", { position = storage.bobmods.logistics[player_index].pickup })
     local drop_position =
-      remote.call("bobinserters", "get_position", { position = global.bobmods.logistics[player_index].drop })
+      remote.call("bobinserters", "get_position", { position = storage.bobmods.logistics[player_index].drop })
     local drop_offset =
-      remote.call("bobinserters", "get_offset", { position = global.bobmods.logistics[player_index].offset })
+      remote.call("bobinserters", "get_offset", { position = storage.bobmods.logistics[player_index].offset })
 
-    local direction = (entity.direction / 2)
-    if direction == 2 then -- 2 is up, because inserters are backwards.
+    -- treat south as up, because inserters are backwards.
+    if entity.direction == defines.direction.south then
       pickup_position = pickup_position
       drop_position = drop_position
       drop_offset = drop_offset
-    elseif direction == 3 then -- right
+    elseif entity.direction == defines.direction.west then
       pickup_position = { x = -pickup_position.y, y = pickup_position.x }
       drop_position = { x = -drop_position.y, y = drop_position.x }
       drop_offset = { x = -drop_offset.y, y = drop_offset.x }
-    elseif direction == 0 then -- down
+    elseif entity.direction == defines.direction.north then
       pickup_position = { x = -pickup_position.x, y = -pickup_position.y }
       drop_position = { x = -drop_position.x, y = -drop_position.y }
       drop_offset = { x = -drop_offset.x, y = -drop_offset.y }
-    elseif direction == 1 then -- left
+    elseif entity.direction == defines.direction.east then
       pickup_position = { x = pickup_position.y, y = -pickup_position.x }
       drop_position = { x = drop_position.y, y = -drop_position.x }
       drop_offset = { x = drop_offset.y, y = -drop_offset.x }
@@ -1081,7 +1085,7 @@ function bobmods.inserters.rotate_pickup(entity, player)
   local pickup_position = get_pickup_position(entity)
   pickup_position = bobmods.inserters.rotate_position(player.force, pickup_position)
   set_pickup_position(entity, pickup_position)
-  if entity == global.bobmods.inserters[player.index].entity then
+  if entity == storage.bobmods.inserters[player.index].entity then
     bobmods.inserters.refresh_position_checkboxes(entity, player)
   end
 end
@@ -1091,7 +1095,7 @@ function bobmods.inserters.rotate_drop(entity, player)
   local new_position = bobmods.inserters.rotate_position(player.force, drop_position)
   local new_offset = calculate_new_drop_offset(drop_position, drop_offset, new_position)
   set_split_drop_position(entity, new_position, new_offset)
-  if entity == global.bobmods.inserters[player.index].entity then
+  if entity == storage.bobmods.inserters[player.index].entity then
     bobmods.inserters.refresh_position_checkboxes(entity, player)
   end
 end
@@ -1122,7 +1126,7 @@ function bobmods.inserters.pickup_range(entity, player)
       pickup_position = bobmods.logistics.set_range(pickup_position, 2)
     end
     set_pickup_position(entity, pickup_position)
-    if entity == global.bobmods.inserters[player.index].entity then
+    if entity == storage.bobmods.inserters[player.index].entity then
       bobmods.inserters.refresh_position_checkboxes(entity, player)
     end
   end
@@ -1156,7 +1160,7 @@ function bobmods.inserters.drop_range(entity, player)
   end
 
   set_split_drop_position(entity, drop_position, drop_offset)
-  if entity == global.bobmods.inserters[player.index].entity then
+  if entity == storage.bobmods.inserters[player.index].entity then
     bobmods.inserters.refresh_position_checkboxes(entity, player)
   end
 end
@@ -1198,7 +1202,7 @@ function bobmods.inserters.long_range(entity, player)
   local full_drop_position = combine_drop_position(drop_position, drop_offset)
   set_both_positions(entity, pickup_position, full_drop_position)
 
-  if entity == global.bobmods.inserters[player.index].entity then
+  if entity == storage.bobmods.inserters[player.index].entity then
     bobmods.inserters.refresh_position_checkboxes(entity, player)
   end
 end
@@ -1242,7 +1246,7 @@ function bobmods.inserters.near_range(entity, player)
   end
 
   set_split_drop_position(entity, drop_position, drop_offset)
-  if entity == global.bobmods.inserters[player.index].entity then
+  if entity == storage.bobmods.inserters[player.index].entity then
     bobmods.inserters.refresh_position_checkboxes(entity, player)
   end
 end
@@ -1302,7 +1306,7 @@ function bobmods.logistics.show_gui_options(player_index)
     player.gui.left.bob_logistics_inserter_gui.destroy()
   end
 
-  if global.bobmods.logistics[player_index].show then
+  if storage.bobmods.logistics[player_index].show then
     bobmods.logistics.create_gui(player_index)
   end
 end
@@ -1332,30 +1336,30 @@ function bobmods.logistics.create_gui(player_index)
     gui.table.add({
       type = "checkbox",
       name = "bob_logistics_inserter_enabled",
-      state = global.bobmods.logistics[player_index].enabled,
+      state = storage.bobmods.logistics[player_index].enabled,
       caption = { "gui.bob-logistics-enabled" },
     })
   end
-  if global.bobmods.logistics[player_index].enabled then
+  if storage.bobmods.logistics[player_index].enabled then
     if long_unlocked then
       if more_unlocked then
         gui.table.add({
           type = "checkbox",
           name = "bob_logistics_inserter_long_in",
-          state = global.bobmods.logistics[player_index].long_in,
+          state = storage.bobmods.logistics[player_index].long_in,
           caption = { "gui.bob-logistics-pickup" },
         })
         gui.table.add({
           type = "checkbox",
           name = "bob_logistics_inserter_long_out",
-          state = global.bobmods.logistics[player_index].long_out,
+          state = storage.bobmods.logistics[player_index].long_out,
           caption = { "gui.bob-logistics-drop" },
         })
       else
         gui.table.add({
           type = "checkbox",
           name = "bob_logistics_inserter_long_in",
-          state = global.bobmods.logistics[player_index].long_in,
+          state = storage.bobmods.logistics[player_index].long_in,
           caption = { "gui.bob-logistics-long" },
         })
       end
@@ -1364,7 +1368,7 @@ function bobmods.logistics.create_gui(player_index)
       gui.table.add({
         type = "checkbox",
         name = "bob_logistics_inserter_near",
-        state = global.bobmods.logistics[player_index].near,
+        state = storage.bobmods.logistics[player_index].near,
         caption = { "gui.bob-logistics-near" },
       })
     end
@@ -1374,24 +1378,24 @@ function bobmods.logistics.create_gui(player_index)
     gui.table.add({
       type = "checkbox",
       name = "bob_logistics_inserter_enabled2",
-      state = global.bobmods.logistics[player_index].enabled2,
+      state = storage.bobmods.logistics[player_index].enabled2,
       caption = { "gui.bob-logistics-enabled2" },
     })
-    if global.bobmods.logistics[player_index].enabled2 then
+    if storage.bobmods.logistics[player_index].enabled2 then
       remote.call("bobinserters", "draw_gui", {
         player_index = player_index,
         gui = gui,
         name = "bob_logistics",
-        pickup = global.bobmods.logistics[player_index].pickup,
-        drop = global.bobmods.logistics[player_index].drop,
-        offset = global.bobmods.logistics[player_index].offset,
+        pickup = storage.bobmods.logistics[player_index].pickup,
+        drop = storage.bobmods.logistics[player_index].drop,
+        offset = storage.bobmods.logistics[player_index].offset,
       })
     end
   end
 end
 
 function bobmods.inserters.delete_gui(player_index)
-  local globtable = global.bobmods.inserters[player_index]
+  local globtable = storage.bobmods.inserters[player_index]
   if globtable then
     if globtable.gui and globtable.gui.valid then
       globtable.gui.destroy()
@@ -1407,7 +1411,7 @@ end
 function bobmods.inserters.open_gui(entity, player)
   bobmods.inserters.delete_gui(player.index)
 
-  local globtable = global.bobmods.inserters[player.index]
+  local globtable = storage.bobmods.inserters[player.index]
   globtable.entity = entity
 
   local long_unlocked = tech_unlocked(player.force, bobmods.inserters.long_technology)
@@ -1481,7 +1485,7 @@ function bobmods.inserters.open_gui(entity, player)
       entity_flow.add({ type = "frame", name = "entity_frame", style = "inside_shallow_frame" })
       entity_flow.entity_frame.style.width = frame_width
       entity_flow.entity_frame.style.height = 148
-      entity_flow.entity_frame.style.horizontally_stretchable = "off"
+      entity_flow.entity_frame.style.horizontally_stretchable = false
       entity_flow.entity_frame.add({ type = "entity-preview", name = "entity_preview", style = "entity_button_base" })
       entity_flow.entity_frame.entity_preview.style.width = frame_width
       entity_flow.entity_frame.entity_preview.style.height = 148
@@ -1947,14 +1951,14 @@ function bobmods.inserters.refresh_position_checkboxes(entity, player)
   local pickup_position = get_pickup_position(entity)
   local drop_position, drop_offset = get_split_drop_position(entity)
 
-  if global.bobmods.inserters[player.index].pickup then
-    bobmods.inserters.draw_button_position_check(global.bobmods.inserters[player.index].pickup, pickup_position)
+  if storage.bobmods.inserters[player.index].pickup then
+    bobmods.inserters.draw_button_position_check(storage.bobmods.inserters[player.index].pickup, pickup_position)
   end
-  if global.bobmods.inserters[player.index].drop then
-    bobmods.inserters.draw_button_position_check(global.bobmods.inserters[player.index].drop, drop_position)
+  if storage.bobmods.inserters[player.index].drop then
+    bobmods.inserters.draw_button_position_check(storage.bobmods.inserters[player.index].drop, drop_position)
   end
-  if global.bobmods.inserters[player.index].offset then
-    bobmods.inserters.draw_button_offset_check(global.bobmods.inserters[player.index].offset, drop_offset)
+  if storage.bobmods.inserters[player.index].offset then
+    bobmods.inserters.draw_button_offset_check(storage.bobmods.inserters[player.index].offset, drop_offset)
   end
 end
 
@@ -2031,7 +2035,7 @@ EG: remote.call("bobinserters", "blacklist_inserter", "burner-inserter") will bl
   --
   blacklist_inserter = function(data)
     bobmods.inserters.create_global_table_basic()
-    global.bobmods.inserters.blacklist[data] = true
+    storage.bobmods.inserters.blacklist[data] = true
   end,
   --[[
 Pass this function a table of names of inserters, and they will be ignored.
@@ -2041,7 +2045,7 @@ EG: remote.call("bobinserters", "blacklist_inserters", {"burner-inserter"}) will
   blacklist_inserters = function(data)
     bobmods.inserters.create_global_table_basic()
     for i, inserter in pairs(data) do
-      global.bobmods.inserters.blacklist[inserter] = true
+      storage.bobmods.inserters.blacklist[inserter] = true
     end
   end,
   --[[

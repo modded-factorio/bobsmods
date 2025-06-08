@@ -1,5 +1,5 @@
 bobmods.ores.bauxite = {
-  name = "bauxite-ore",
+  name = "bob-bauxite-ore",
   tint = { r = 0.777, g = 0.7, b = 0.333 },
   map_color = { r = 0.777, g = 0.7, b = 0.333 },
   mining_time = 1.5,
@@ -14,21 +14,14 @@ bobmods.ores.bauxite = {
   sprite = {
     sheet = 1,
   },
-  --[[  autoplace = 
-  {
-    create = true,
-    starting_area = false,
-    richness = 0.8,
-    size = 1.5
-  }
-]]
-  --
   autoplace = "control-only",
+  planets = { "nauvis" },
+  subgroup = "bob-ores",
 }
 
 function bobmods.ores.bauxite.create_autoplace()
-  data.raw.resource["bauxite-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "bauxite-ore",
+  data.raw.resource["bob-bauxite-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-bauxite-ore",
     order = "c",
     base_density = 8,
     has_starting_area_placement = false,

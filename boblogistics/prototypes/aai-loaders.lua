@@ -1,28 +1,28 @@
 if mods["aai-loaders"] then
   local ingredients = {
-    basic = { { type = "item", name = "basic-transport-belt", amount = 1 } },
+    basic = { { type = "item", name = "bob-basic-transport-belt", amount = 1 } },
     regular = { { type = "item", name = "transport-belt", amount = 1 } },
     fast = { { type = "item", name = "fast-transport-belt", amount = 1 } },
     express = { { type = "item", name = "express-transport-belt", amount = 1 } },
-    turbo = { { type = "item", name = "turbo-transport-belt", amount = 1 } },
-    ultimate = { { type = "item", name = "ultimate-transport-belt", amount = 1 } },
+    turbo = { { type = "item", name = "bob-turbo-transport-belt", amount = 1 } },
+    ultimate = { { type = "item", name = "bob-ultimate-transport-belt", amount = 1 } },
   }
   if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     -- Inserters
-    table.insert(ingredients.basic, { type = "item", name = "steam-inserter", amount = 2 })
+    table.insert(ingredients.basic, { type = "item", name = "bob-steam-inserter", amount = 2 })
     table.insert(ingredients.regular, { type = "item", name = "inserter", amount = 2 })
-    table.insert(ingredients.fast, { type = "item", name = "red-stack-inserter", amount = 2 })
-    table.insert(ingredients.express, { type = "item", name = "stack-inserter", amount = 2 })
-    table.insert(ingredients.turbo, { type = "item", name = "turbo-stack-inserter", amount = 2 })
-    table.insert(ingredients.ultimate, { type = "item", name = "express-stack-inserter", amount = 2 })
+    table.insert(ingredients.fast, { type = "item", name = "bob-red-bulk-inserter", amount = 2 })
+    table.insert(ingredients.express, { type = "item", name = "bulk-inserter", amount = 2 })
+    table.insert(ingredients.turbo, { type = "item", name = "bob-turbo-bulk-inserter", amount = 2 })
+    table.insert(ingredients.ultimate, { type = "item", name = "bob-express-bulk-inserter", amount = 2 })
     -- Plates
     if mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 2 })
-      table.insert(ingredients.regular, { type = "item", name = "tin-plate", amount = 2 })
-      table.insert(ingredients.fast, { type = "item", name = "bronze-alloy", amount = 2 })
-      table.insert(ingredients.express, { type = "item", name = "aluminium-plate", amount = 2 })
-      table.insert(ingredients.turbo, { type = "item", name = "titanium-plate", amount = 2 })
-      table.insert(ingredients.ultimate, { type = "item", name = "nitinol-alloy", amount = 2 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-tin-plate", amount = 2 })
+      table.insert(ingredients.fast, { type = "item", name = "bob-bronze-alloy", amount = 2 })
+      table.insert(ingredients.express, { type = "item", name = "bob-aluminium-plate", amount = 2 })
+      table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-plate", amount = 2 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-nitinol-alloy", amount = 2 })
     else
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "iron-plate", amount = 10 })
@@ -35,18 +35,18 @@ if mods["aai-loaders"] then
     -- Circuits
     if mods["bobelectronics"] then
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
-      table.insert(ingredients.regular, { type = "item", name = "basic-circuit-board", amount = 5 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-basic-circuit-board", amount = 5 })
       table.insert(ingredients.fast, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.express, { type = "item", name = "advanced-circuit", amount = 5 })
       table.insert(ingredients.turbo, { type = "item", name = "processing-unit", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "advanced-processing-unit", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-advanced-processing-unit", amount = 5 })
     elseif mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.fast, { type = "item", name = "electronic-circuit", amount = 5 })
       table.insert(ingredients.express, { type = "item", name = "advanced-circuit", amount = 5 })
       table.insert(ingredients.turbo, { type = "item", name = "processing-unit", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "advanced-processing-unit", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-advanced-processing-unit", amount = 5 })
     else
       table.insert(ingredients.basic, { type = "item", name = "copper-cable", amount = 5 })
       table.insert(ingredients.regular, { type = "item", name = "electronic-circuit", amount = 5 })
@@ -58,16 +58,16 @@ if mods["aai-loaders"] then
     -- Intermediates
     if mods["bobplates"] then
       table.insert(ingredients.basic, { type = "item", name = "iron-gear-wheel", amount = 5 })
-      table.insert(ingredients.regular, { type = "item", name = "steel-gear-wheel", amount = 5 })
-      table.insert(ingredients.regular, { type = "item", name = "steel-bearing", amount = 5 })
-      table.insert(ingredients.fast, { type = "item", name = "brass-gear-wheel", amount = 5 })
-      table.insert(ingredients.fast, { type = "item", name = "steel-bearing", amount = 5 })
-      table.insert(ingredients.express, { type = "item", name = "cobalt-steel-gear-wheel", amount = 5 })
-      table.insert(ingredients.express, { type = "item", name = "cobalt-steel-bearing", amount = 5 })
-      table.insert(ingredients.turbo, { type = "item", name = "titanium-gear-wheel", amount = 5 })
-      table.insert(ingredients.turbo, { type = "item", name = "titanium-bearing", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "nitinol-gear-wheel", amount = 5 })
-      table.insert(ingredients.ultimate, { type = "item", name = "nitinol-bearing", amount = 5 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-steel-gear-wheel", amount = 5 })
+      table.insert(ingredients.regular, { type = "item", name = "bob-steel-bearing", amount = 5 })
+      table.insert(ingredients.fast, { type = "item", name = "bob-brass-gear-wheel", amount = 5 })
+      table.insert(ingredients.fast, { type = "item", name = "bob-steel-bearing", amount = 5 })
+      table.insert(ingredients.express, { type = "item", name = "bob-cobalt-steel-gear-wheel", amount = 5 })
+      table.insert(ingredients.express, { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 })
+      table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-gear-wheel", amount = 5 })
+      table.insert(ingredients.turbo, { type = "item", name = "bob-titanium-bearing", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-nitinol-gear-wheel", amount = 5 })
+      table.insert(ingredients.ultimate, { type = "item", name = "bob-nitinol-bearing", amount = 5 })
     else
       table.insert(ingredients.basic, { type = "item", name = "iron-gear-wheel", amount = 5 })
       table.insert(ingredients.basic, { type = "item", name = "iron-plate", amount = 5 })
@@ -109,12 +109,13 @@ if mods["aai-loaders"] then
   if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     AAILoaders.make_tier({
       name = "basic",
-      transport_belt = "basic-transport-belt",
+      transport_belt = "bob-basic-transport-belt",
       color = { 255, 255, 255 },
       fluid = "steam",
       fluid_per_minute = 1,
       technology = {
         prerequisites = {
+          "automation-science-pack",
           "logistics-0",
         },
         unit = {
@@ -142,7 +143,7 @@ if mods["aai-loaders"] then
   end
   AAILoaders.make_tier({
     name = "turbo",
-    transport_belt = "turbo-transport-belt",
+    transport_belt = "bob-turbo-transport-belt",
     color = { 180, 89, 255 },
     fluid = "lubricant",
     fluid_per_minute = 0.25,
@@ -151,7 +152,7 @@ if mods["aai-loaders"] then
         "logistics-4",
         "aai-express-loader",
         "utility-science-pack",
-        data.raw.item["advanced-processing-unit"] and "advanced-electronics-3" or nil,
+        data.raw.technology["bob-advanced-processing-unit"] and "bob-advanced-processing-unit" or nil,
       },
       unit = {
         count = 400,
@@ -159,7 +160,7 @@ if mods["aai-loaders"] then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
-          bobmods.tech and bobmods.tech.advanced_logistic_science and { "advanced-logistic-science-pack", 1 }
+          bobmods.tech and bobmods.tech.advanced_logistic_science and { "bob-advanced-logistic-science-pack", 1 }
             or { "production-science-pack", 1 },
           { "utility-science-pack", 1 },
         },
@@ -188,11 +189,11 @@ if mods["aai-loaders"] then
     { "space-science-pack", 1 },
   }
   if bobmods.tech and bobmods.tech.advanced_logistic_science then
-    table.insert(ultimate_ingredients, { "advanced-logistic-science-pack", 1 })
+    table.insert(ultimate_ingredients, { "bob-advanced-logistic-science-pack", 1 })
   end
   AAILoaders.make_tier({
     name = "ultimate",
-    transport_belt = "ultimate-transport-belt",
+    transport_belt = "bob-ultimate-transport-belt",
     color = { 46, 229, 92 },
     fluid = "lubricant",
     fluid_per_minute = 0.3,
@@ -255,20 +256,20 @@ if mods["aai-loaders"] then
   -- Add prerequisites
 
   if bobmods.tech and bobmods.tech.advanced_logistic_science then
-    bobmods.lib.tech.add_prerequisite("aai-express-loader", "advanced-logistic-science-pack")
+    bobmods.lib.tech.add_prerequisite("aai-express-loader", "bob-advanced-logistic-science-pack")
     bobmods.lib.tech.replace_science_pack(
       "aai-express-loader",
       "production-science-pack",
-      "advanced-logistic-science-pack"
+      "bob-advanced-logistic-science-pack"
     )
   else
     bobmods.lib.tech.add_prerequisite("aai-express-loader", "production-science-pack")
   end
   if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
-    bobmods.lib.tech.add_prerequisite("aai-fast-loader", "stack-inserter")
-    bobmods.lib.tech.add_prerequisite("aai-express-loader", "stack-inserter-2")
-    bobmods.lib.tech.add_prerequisite("aai-turbo-loader", "stack-inserter-3")
-    bobmods.lib.tech.add_prerequisite("aai-ultimate-loader", "stack-inserter-4")
+    bobmods.lib.tech.add_prerequisite("aai-fast-loader", "bulk-inserter")
+    bobmods.lib.tech.add_prerequisite("aai-express-loader", "bob-bulk-inserter-2")
+    bobmods.lib.tech.add_prerequisite("aai-turbo-loader", "bob-bulk-inserter-3")
+    bobmods.lib.tech.add_prerequisite("aai-ultimate-loader", "bob-bulk-inserter-4")
   end
 
   -- Update recipe of vanilla tier loaders

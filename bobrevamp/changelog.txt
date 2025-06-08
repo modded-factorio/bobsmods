@@ -1,4 +1,26 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: ???
+  Changes:
+    - Added de locale #415
+    - Add tungsten pipe to rocket part recipe (when available) rather than the military rocket engines from Bob's Warfare #428
+    - Added zh-TW locale #432
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 20. 04. 2025
+  Changes:
+    - Reduced crafting time of solid fuel from sour gas to match base game #406
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Bugfixes:
+    - Fixed startup crash with moshine planet #377
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Changes:
+    - Update for Factorio 2.0 #189
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
   Bugfixes:

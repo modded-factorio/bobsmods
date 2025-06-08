@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "nitroglycerin-processing",
+    name = "bob-nitroglycerin-processing",
     icon = "__bobwarfare__/graphics/icons/technology/nitroglycerin.png",
     icon_size = 128,
     prerequisites = {
@@ -12,11 +12,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "glycerol",
+        recipe = "bob-glycerol",
       },
       {
         type = "unlock-recipe",
-        recipe = "nitroglycerin",
+        recipe = "bob-nitroglycerin",
       },
     },
     unit = {
@@ -33,24 +33,25 @@ data:extend({
 
   {
     type = "technology",
-    name = "cordite-processing",
+    name = "bob-cordite-processing",
     icon = "__bobwarfare__/graphics/icons/technology/cordite.png",
     icon_size = 64,
     prerequisites = {
-      "nitroglycerin-processing",
+      "bob-nitroglycerin-processing",
+      "plastics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "petroleum-jelly",
+        recipe = "bob-petroleum-jelly",
       },
       {
         type = "unlock-recipe",
-        recipe = "gun-cotton",
+        recipe = "bob-gun-cotton",
       },
       {
         type = "unlock-recipe",
-        recipe = "cordite",
+        recipe = "bob-cordite",
       },
     },
     unit = {

@@ -3,81 +3,42 @@ if settings.startup["bobmods-power-steam"].value == true then
     {
       type = "recipe",
       name = "steam-turbine",
-      normal = {
-        enabled = false,
-        energy_required = 3,
-        ingredients = {
-          { "steam-engine-3", 1 },
-          { "electronic-circuit", 5 },
-          { "copper-plate", 25 },
-          { "iron-gear-wheel", 20 },
-        },
-        result = "steam-turbine",
+      enabled = false,
+      energy_required = 3,
+      ingredients = {
+        { type = "item", name = "bob-steam-engine-3", amount = 1 },
+        { type = "item", name = "electronic-circuit", amount = 5 },
+        { type = "item", name = "copper-plate", amount = 25 },
+        { type = "item", name = "iron-gear-wheel", amount = 20 },
       },
-      expensive = {
-        enabled = false,
-        energy_required = 3,
-        ingredients = {
-          { "steam-engine-3", 1 },
-          { "electronic-circuit", 10 },
-          { "copper-plate", 75 },
-          { "iron-gear-wheel", 65 },
-        },
-        result = "steam-turbine",
-      },
+      results = { { type = "item", name = "steam-turbine", amount = 1 } },
     },
 
     {
       type = "recipe",
-      name = "steam-turbine-2",
-      normal = {
-        enabled = false,
-        energy_required = 3,
-        ingredients = {
-          { "steam-turbine", 1 },
-          { "advanced-circuit", 5 },
-          { "steel-plate", 25 },
-          { "iron-gear-wheel", 25 },
-        },
-        result = "steam-turbine-2",
+      name = "bob-steam-turbine-2",
+      enabled = false,
+      energy_required = 3,
+      ingredients = {
+        { type = "item", name = "steam-turbine", amount = 1 },
+        { type = "item", name = "advanced-circuit", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 25 },
+        { type = "item", name = "iron-gear-wheel", amount = 25 },
       },
-      expensive = {
-        enabled = false,
-        energy_required = 4,
-        ingredients = {
-          { "steam-turbine", 1 },
-          { "advanced-circuit", 10 },
-          { "steel-plate", 75 },
-          { "iron-gear-wheel", 75 },
-        },
-        result = "steam-turbine-2",
-      },
+      results = { { type = "item", name = "bob-steam-turbine-2", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "steam-turbine-3",
-      normal = {
-        enabled = false,
-        energy_required = 3,
-        ingredients = {
-          { "steam-turbine-2", 1 },
-          { "processing-unit", 5 },
-          { "steel-plate", 25 },
-          { "iron-gear-wheel", 25 },
-        },
-        result = "steam-turbine-3",
+      name = "bob-steam-turbine-3",
+      enabled = false,
+      energy_required = 3,
+      ingredients = {
+        { type = "item", name = "bob-steam-turbine-2", amount = 1 },
+        { type = "item", name = "processing-unit", amount = 5 },
+        { type = "item", name = "steel-plate", amount = 25 },
+        { type = "item", name = "iron-gear-wheel", amount = 25 },
       },
-      expensive = {
-        enabled = false,
-        energy_required = 5,
-        ingredients = {
-          { "steam-turbine-2", 1 },
-          { "processing-unit", 10 },
-          { "steel-plate", 75 },
-          { "iron-gear-wheel", 75 },
-        },
-        result = "steam-turbine-3",
-      },
+      results = { { type = "item", name = "bob-steam-turbine-3", amount = 1 } },
     },
   })
 end

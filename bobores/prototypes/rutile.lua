@@ -1,5 +1,5 @@
 bobmods.ores.rutile = {
-  name = "rutile-ore",
+  name = "bob-rutile-ore",
   tint = { r = 0.8, g = 0.55, b = 0.7 },
   map_color = { r = 0.610, g = 0.325, b = 0.500 },
   mining_time = 2.75,
@@ -25,11 +25,12 @@ bobmods.ores.rutile = {
 ]]
   --
   autoplace = "control-only",
+  planets = { "nauvis" },
 }
 
 function bobmods.ores.rutile.create_autoplace()
-  data.raw.resource["rutile-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "rutile-ore",
+  data.raw.resource["bob-rutile-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+    name = "bob-rutile-ore",
     order = "c",
     base_density = 8,
     has_starting_area_placement = false,

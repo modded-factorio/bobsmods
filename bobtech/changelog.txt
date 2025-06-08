@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ???
+  Changes:
+    - Added de locale #415
+    - Added zh-TW locale #432
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 05. 04. 2025
+  Changes:
+    - Added preset for Milestones mod #389
+    - Added Transport science achievement #391
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 30. 03. 2025
+  Changes:
+    - Updated science pack recipes #69
+    - Update for Factorio 2.0 #189
+    - Overhauled Burner Phase, removing Steam Science Pack #256
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 21. 02. 2024
   Changes:

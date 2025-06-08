@@ -1,112 +1,90 @@
 if settings.startup["bobmods-assembly-chemicalplants"].value == true then
-  data.raw["assembling-machine"]["chemical-plant"].next_upgrade = "chemical-plant-2"
+  data.raw["assembling-machine"]["chemical-plant"].next_upgrade = "bob-chemical-plant-2"
 
-  if data.raw.technology["chemical-plant"] then
-    bobmods.lib.tech.add_prerequisite("chemical-plant-2", "chemical-plant")
-  elseif data.raw.technology["chemical-processing-2"] then
-    bobmods.lib.tech.add_prerequisite("chemical-plant-2", "chemical-processing-2")
+  if data.raw.technology["bob-chemical-plant"] then
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-2", "bob-chemical-plant")
+  elseif data.raw.technology["bob-chemical-processing-2"] then
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-2", "bob-chemical-processing-2")
   else
-    bobmods.lib.tech.add_prerequisite("chemical-plant-2", "oil-processing")
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-2", "oil-processing")
   end
 
-  if data.raw.item["steel-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-2", "pipe", "steel-pipe")
+  if data.raw.item["bob-steel-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-2", "pipe", "bob-steel-pipe")
   end
 
-  if data.raw.item["glass"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-2", "steel-plate", "glass")
+  if data.raw.item["bob-glass"] then
+    bobmods.lib.recipe.add_ingredient("chemical-plant", { type = "item", name = "bob-glass", amount = 5 })
   end
 
-  if data.raw.item["steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-2", "iron-gear-wheel", "steel-gear-wheel")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-2", "steel-plate", "bob-invar-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-2", "bob-invar-processing")
   end
 
-  if data.raw.item["steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("chemical-plant-2", { "steel-bearing", 5 })
+  if data.raw.item["bob-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-2", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
 
-  if data.raw.item["titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-3", "steel-plate", "titanium-plate")
-    bobmods.lib.tech.add_prerequisite("chemical-plant-3", "titanium-processing")
+  if data.raw.item["bob-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient("bob-chemical-plant-2", { type = "item", name = "bob-steel-bearing", amount = 5 })
   end
 
-  if data.raw.item["titanium-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-3", "pipe", "titanium-pipe")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-3", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-3", "bob-titanium-processing")
   end
 
-  if data.raw.item["titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-3", "iron-gear-wheel", "titanium-gear-wheel")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-3", "pipe", "bob-titanium-pipe")
   end
 
-  if data.raw.item["titanium-bearing"] then
-    bobmods.lib.recipe.add_ingredient("chemical-plant-3", { "titanium-bearing", 5 })
+  if data.raw.item["bob-titanium-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
-  if data.raw.item["nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "steel-plate", "nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "nitinol-processing")
+  if data.raw.item["bob-titanium-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-chemical-plant-3",
+      { type = "item", name = "bob-titanium-bearing", amount = 5 }
+    )
   end
 
-  if data.raw.item["nitinol-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "pipe", "nitinol-pipe")
-  elseif data.raw.item["tungsten-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "pipe", "tungsten-pipe")
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "tungsten-processing")
+  if data.raw.item["bob-nitinol-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "steel-plate", "bob-nitinol-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-4", "bob-nitinol-processing")
   end
 
-  if data.raw.item["nitinol-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "iron-gear-wheel", "nitinol-gear-wheel")
+  if data.raw.item["bob-nitinol-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "pipe", "bob-nitinol-pipe")
+  elseif data.raw.item["bob-tungsten-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "pipe", "bob-tungsten-pipe")
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-4", "bob-tungsten-processing")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.recipe.replace_ingredient("chemical-plant-4", "processing-unit", "advanced-processing-unit")
+  if data.raw.item["bob-nitinol-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "iron-gear-wheel", "bob-nitinol-gear-wheel")
   end
 
-  if data.raw.item["nitinol-bearing"] then
-    bobmods.lib.recipe.add_ingredient("chemical-plant-4", { "nitinol-bearing", 5 })
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "processing-unit", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("chemical-plant-4", "advanced-electronics-3")
+  if data.raw.item["bob-nitinol-bearing"] then
+    bobmods.lib.recipe.add_ingredient(
+      "bob-chemical-plant-4",
+      { type = "item", name = "bob-nitinol-bearing", amount = 5 }
+    )
+  end
+
+  if data.raw.item["bob-advanced-processing-unit"] then
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-4", "bob-advanced-processing-unit")
   end
 
   if settings.startup["bobmods-assembly-limits"].value == true then
     data.raw["assembling-machine"]["chemical-plant"].ingredient_count = 4
-    data.raw["assembling-machine"]["chemical-plant-2"].ingredient_count = 6
-    data.raw["assembling-machine"]["chemical-plant-3"].ingredient_count = 8
-    data.raw["assembling-machine"]["chemical-plant-4"].ingredient_count = 10
-  end
-
-  --        tint = {r = 0.7, g = 0.7, b = 0.1},
-  --        tint = {r = 0.7, g = 0.2, b = 0.1},
-  --        tint = {r = 0.1, g = 0.5, b = 0.7},
-  --        tint = {r = 0.7, g = 0.1, b = 0.7},
-  --        tint = {r = 0.1, g = 0.7, b = 0.1},
-
-  if settings.startup["bobmods-colorupdate"].value == true then
-    data.raw.item["chemical-plant"].icon = "__bobassembly__/graphics/icons/chemical-plant-3.png"
-    data.raw.item["chemical-plant"].icon_size = 32
-    data.raw.item["chemical-plant"].icon_mipmaps = nil
-    data.raw["assembling-machine"]["chemical-plant"].icon = "__bobassembly__/graphics/icons/chemical-plant-3.png"
-    data.raw["assembling-machine"]["chemical-plant"].icon_size = 32
-    data.raw["assembling-machine"]["chemical-plant"].icon_mipmaps = nil
-    data.raw["assembling-machine"]["chemical-plant"].animation =
-      bob_chemical_plant_animation({ r = 0.7, g = 0.2, b = 0.1 })
-    --  data.raw["assembling-machine"]["chemical-plant"].working_visualisations = bob_chemical_plant_working_visualisations()
-
-    data.raw.item["chemical-plant-2"].icon = "__bobassembly__/graphics/icons/new-colors/chemical-plant-2.png"
-    data.raw.item["chemical-plant-2"].icon_size = 32
-    data.raw["assembling-machine"]["chemical-plant-2"].icon =
-      "__bobassembly__/graphics/icons/new-colors/chemical-plant-2.png"
-    data.raw["assembling-machine"]["chemical-plant-2"].icon_size = 32
-    data.raw["assembling-machine"]["chemical-plant-2"].animation =
-      bob_chemical_plant_animation({ r = 0.1, g = 0.5, b = 0.7 })
-
-    data.raw.item["chemical-plant-3"].icon = "__bobassembly__/graphics/icons/chemical-plant-2.png"
-    data.raw.item["chemical-plant-3"].icon_size = 32
-    data.raw["assembling-machine"]["chemical-plant-3"].icon = "__bobassembly__/graphics/icons/chemical-plant-2.png"
-    data.raw["assembling-machine"]["chemical-plant-3"].icon_size = 32
-    data.raw["assembling-machine"]["chemical-plant-3"].animation =
-      bob_chemical_plant_animation({ r = 0.7, g = 0.1, b = 0.7 })
+    data.raw["assembling-machine"]["bob-chemical-plant-2"].ingredient_count = 6
+    data.raw["assembling-machine"]["bob-chemical-plant-3"].ingredient_count = 8
+    data.raw["assembling-machine"]["bob-chemical-plant-4"].ingredient_count = 10
   end
 end

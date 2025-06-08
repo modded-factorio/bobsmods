@@ -5,15 +5,6 @@ if not bobmods.mining then
   bobmods.mining = {}
 end
 
-data:extend({
-  {
-    type = "item-subgroup",
-    name = "bob-tool",
-    group = "production",
-    order = "a-1",
-  },
-})
-
 require("prototypes.drill-functions")
 
 require("prototypes.drills")

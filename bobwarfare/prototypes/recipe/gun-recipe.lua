@@ -1,41 +1,41 @@
 data:extend({
   {
     type = "recipe",
-    name = "rifle",
+    name = "bob-rifle",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "steel-plate", 10 },
-      { "copper-plate", 5 },
-      { "iron-gear-wheel", 10 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "copper-plate", amount = 5 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
     },
-    result = "rifle",
+    results = { { type = "item", name = "bob-rifle", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "sniper-rifle",
+    name = "bob-sniper-rifle",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "steel-plate", 10 },
-      { "wood", 10 },
-      { "iron-gear-wheel", 10 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "wood", amount = 10 },
+      { type = "item", name = "iron-gear-wheel", amount = 10 },
     },
-    result = "sniper-rifle",
+    results = { { type = "item", name = "bob-sniper-rifle", amount = 1 } },
   },
 
   {
     type = "recipe",
-    name = "laser-rifle",
+    name = "bob-laser-rifle",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "steel-plate", 10 },
-      { "advanced-circuit", 5 },
-      { "iron-gear-wheel", 5 },
-      { "plastic-bar", 3 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
+      { type = "item", name = "iron-gear-wheel", amount = 5 },
+      { type = "item", name = "plastic-bar", amount = 3 },
     },
-    result = "laser-rifle",
+    results = { { type = "item", name = "bob-laser-rifle", amount = 1 } },
   },
 })
