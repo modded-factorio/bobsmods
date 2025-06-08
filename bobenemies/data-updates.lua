@@ -3016,3 +3016,7 @@ end
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-artifact-radar", false)
 end
+
+if mods["space-age"] then
+  data.raw.ammo["capture-robot-rocket"].localised_description = { "item-description.capture-robot-rocket-alt" }
+end
