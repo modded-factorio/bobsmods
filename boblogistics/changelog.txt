@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed fluid icon scale on pipes #417
   Changes:
+    - Added zh-TW locale #432
     - Added trash inventory to higher tier logistic chests #433
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2

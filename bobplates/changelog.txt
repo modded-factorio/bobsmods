@@ -3,6 +3,8 @@ Version: 2.0.3
 Date: ???
   Bugfixes:
     - Fixed crafting_machine_tint startup error when using other mods that also modify the nuclear fuel reprocessing recipe #427
+  Changes:
+    - Added zh-TW locale #432
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 20. 04. 2025
