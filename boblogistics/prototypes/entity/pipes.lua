@@ -323,6 +323,7 @@ data:extend({
     minable = { mining_time = 0.3, result = "bob-stone-pipe" },
     max_health = 100,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -366,6 +367,7 @@ data:extend({
     minable = { mining_time = 0.3, result = "bob-stone-pipe-to-ground" },
     max_health = 150,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -401,6 +403,7 @@ data:extend({
     minable = { mining_time = 0.3, result = "bob-copper-pipe" },
     max_health = 100,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -444,6 +447,7 @@ data:extend({
     minable = { mining_time = 0.3, result = "bob-copper-pipe-to-ground" },
     max_health = 150,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -479,6 +483,7 @@ data:extend({
     minable = { mining_time = 0.3, result = "bob-steel-pipe" },
     max_health = 150,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -522,6 +527,7 @@ data:extend({
     minable = { mining_time = 0.3, result = "bob-steel-pipe-to-ground" },
     max_health = 200,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -557,6 +563,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-plastic-pipe" },
     max_health = 200,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -600,6 +607,7 @@ data:extend({
     minable = { mining_time = 0.1, result = "bob-plastic-pipe-to-ground" },
     max_health = 250,
     corpse = "small-remnants",
+    icon_draw_specification = { scale = 0.5 },
     resistances = {
       {
         type = "fire",
@@ -638,6 +646,7 @@ if data.raw.item["bob-bronze-alloy"] then
       minable = { mining_time = 0.3, result = "bob-bronze-pipe" },
       max_health = 150,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -681,6 +690,7 @@ if data.raw.item["bob-bronze-alloy"] then
       minable = { mining_time = 0.3, result = "bob-bronze-pipe-to-ground" },
       max_health = 200,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -720,6 +730,7 @@ if data.raw.item["bob-brass-alloy"] then
       minable = { mining_time = 0.1, result = "bob-brass-pipe" },
       max_health = 200,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -763,6 +774,7 @@ if data.raw.item["bob-brass-alloy"] then
       minable = { mining_time = 0.1, result = "bob-brass-pipe-to-ground" },
       max_health = 250,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -802,6 +814,7 @@ if data.raw.item["bob-silicon-nitride"] then
       minable = { mining_time = 0.2, result = "bob-ceramic-pipe" },
       max_health = 250,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -845,6 +858,7 @@ if data.raw.item["bob-silicon-nitride"] then
       minable = { mining_time = 0.2, result = "bob-ceramic-pipe-to-ground" },
       max_health = 300,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -884,6 +898,7 @@ if data.raw.item["bob-titanium-plate"] then
       minable = { mining_time = 0.4, result = "bob-titanium-pipe" },
       max_health = 250,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -927,6 +942,7 @@ if data.raw.item["bob-titanium-plate"] then
       minable = { mining_time = 0.4, result = "bob-titanium-pipe-to-ground" },
       max_health = 300,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -966,6 +982,7 @@ if data.raw.item["bob-tungsten-plate"] then
       minable = { mining_time = 0.4, result = "bob-tungsten-pipe" },
       max_health = 250,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -1009,6 +1026,7 @@ if data.raw.item["bob-tungsten-plate"] then
       minable = { mining_time = 0.4, result = "bob-tungsten-pipe-to-ground" },
       max_health = 300,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -1048,6 +1066,7 @@ if data.raw.item["bob-nitinol-alloy"] then
       minable = { mining_time = 0.5, result = "bob-nitinol-pipe" },
       max_health = 300,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -1091,6 +1110,7 @@ if data.raw.item["bob-nitinol-alloy"] then
       minable = { mining_time = 0.5, result = "bob-nitinol-pipe-to-ground" },
       max_health = 350,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -1130,6 +1150,7 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
       minable = { mining_time = 0.5, result = "bob-copper-tungsten-pipe" },
       max_health = 300,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",
@@ -1173,6 +1194,7 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
       minable = { mining_time = 0.4, result = "bob-copper-tungsten-pipe-to-ground" },
       max_health = 350,
       corpse = "small-remnants",
+      icon_draw_specification = { scale = 0.5 },
       resistances = {
         {
           type = "fire",

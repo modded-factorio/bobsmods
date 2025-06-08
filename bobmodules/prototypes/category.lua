@@ -9,10 +9,6 @@ data:extend({
   },
   {
     type = "module-category",
-    name = "green",
-  },
-  {
-    type = "module-category",
     name = "god",
   },
 })
