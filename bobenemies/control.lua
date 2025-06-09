@@ -6,11 +6,7 @@ end
 if not bobmods.enemies then
   bobmods.enemies = {}
 end
-if script.active_mods["quality"] then
-  bobmods.enemies.quality_enemies = settings.startup["bobmods-enemies-qualityenemies"].value
-else
-  bobmods.enemies.quality_enemies = false
-end
+bobmods.enemies.quality_enemies = settings.startup["bobmods-enemies-qualityenemies"].value
 if settings.startup["bobmods-enemies-radarscanlimit"].value == 0 then
   bobmods.enemies.radar_scan_limit = nil
 else
