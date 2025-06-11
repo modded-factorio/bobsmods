@@ -3,7 +3,7 @@ if not bobmods.lib.resource then
 end
 
 bobmods.lib.resource_autoplace = require("resource-autoplace")
-local sounds = require("__base__.prototypes.entity.sounds")
+local tile_sounds = require("__base__.prototypes.tile.tile-sounds")
 
 local stone_driving_sound = {
   sound = {
@@ -347,9 +347,9 @@ function bobmods.lib.resource.create(inputs)
     },
   })
   if inputs.walking_sound == "oil" then
-    data.raw.resource[inputs.name].walking_sound = sounds.oil
+    data.raw.resource[inputs.name].walking_sound = tile_sounds.walking.oil({})
   else
-    data.raw.resource[inputs.name].walking_sound = sounds.ore
+    data.raw.resource[inputs.name].walking_sound = tile_sounds.walking.ore
   end
   if inputs.driving_sound == "oil" then
     data.raw.resource[inputs.name].driving_sound = oil_driving_sound
