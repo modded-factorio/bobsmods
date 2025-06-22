@@ -76,26 +76,13 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   -- add new electronics crafting categories
-  if data.raw.player then
-    bobmods.lib.machine.type_if_add_category("player", "crafting", "bob-electronics")
-  elseif data.raw.character then
-    bobmods.lib.machine.type_if_add_category("character", "crafting", "bob-electronics")
-  end
-  if data.raw["god-controller"] then
-    bobmods.lib.machine.type_if_add_category("god-controller", "crafting", "bob-electronics")
-  end
-  bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-electronics")
-  bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting", "bob-electronics-machine")
-  bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "bob-electronics-with-fluid")
-
-  data.raw.recipe["copper-cable"].category = "bob-electronics"
-
-  data.raw.recipe["electronic-circuit"].category = "bob-electronics"
-  data.raw.recipe["advanced-circuit"].category = "bob-electronics"
-  data.raw.recipe["processing-unit"].category = "bob-electronics-machine"
+  bobmods.lib.recipe.add_additional_category("copper-cable", "electronics")
+  bobmods.lib.recipe.add_additional_category("electronic-circuit", "electronics")
+  bobmods.lib.recipe.add_additional_category("advanced-circuit", "electronics")
+  bobmods.lib.recipe.add_additional_category("processing-unit", "electronics")
 
   if data.raw.recipe["bob-advanced-processing-unit"] then
-    data.raw.recipe["bob-advanced-processing-unit"].category = "bob-electronics-machine"
+    bobmods.lib.recipe.add_additional_category("bob-advanced-processing-unit", "electronics")
   end
   if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient(

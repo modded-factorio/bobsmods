@@ -30,15 +30,11 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   data:extend({
     {
       type = "recipe-category",
-      name = "bob-electronics",
+      name = "electronics",
     },
     {
       type = "recipe-category",
-      name = "bob-electronics-machine",
-    },
-    {
-      type = "recipe-category",
-      name = "bob-electronics-with-fluid",
+      name = "electronics-with-fluid",
     },
   })
 
@@ -156,7 +152,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "bob-electronics", "bob-electronics-machine", "bob-electronics-with-fluid" },
+      crafting_categories = { "electronics", "electronics-with-fluid" },
       crafting_speed = 1,
       energy_source = {
         type = "electric",
@@ -331,7 +327,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "bob-electronics", "bob-electronics-machine", "bob-electronics-with-fluid" },
+      crafting_categories = { "electronics", "electronics-with-fluid" },
       crafting_speed = 2.25,
       energy_source = {
         type = "electric",
@@ -512,7 +508,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "bob-electronics", "bob-electronics-machine", "bob-electronics-with-fluid" },
+      crafting_categories = { "electronics", "electronics-with-fluid" },
       crafting_speed = 4,
       energy_source = {
         type = "electric",

@@ -356,6 +356,15 @@ function bobmods.lib.recipe.disallow_productivity(recipe_name)
   end
 end
 
+function bobmods.lib.recipe.add_additional_category(recipe_name, category_name)
+  local recipe = data.raw.recipe[recipe_name]
+  local category = data.raw["recipe-category"][category_name]
+  if recipe and category then
+    recipe.additional_categories = recipe.additional_categories or {}
+    bobmods.lib.safe_insert(recipe.additional_categories, category_name)
+  end
+end
+
 if mods["quality"] then
   function bobmods.lib.recipe.update_recycling_recipe_icon(recipe_name, icon_name, size)
     --Does not handle multiple icons

@@ -132,36 +132,28 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   end
 
   if data.raw.recipe["bob-robot-brain-combat"] then
-    if data.raw["recipe-category"]["bob-electronics"] then
-      data.raw.recipe["bob-robot-brain-combat"].category = "bob-electronics"
-    end
+    bobmods.lib.recipe.add_additional_category("bob-robot-brain-combat", "electronics")
     if data.raw.item["bob-solder"] then
       bobmods.lib.recipe.add_ingredient("bob-robot-brain-combat", { type = "item", name = "bob-solder", amount = 5 })
     end
   end
 
   if data.raw.recipe["bob-robot-brain-combat-2"] then
-    if data.raw["recipe-category"]["bob-electronics"] then
-      data.raw.recipe["bob-robot-brain-combat-2"].category = "bob-electronics"
-    end
+    bobmods.lib.recipe.add_additional_category("bob-robot-brain-combat-2", "electronics")
     if data.raw.item["bob-solder"] then
       bobmods.lib.recipe.add_ingredient("bob-robot-brain-combat-2", { type = "item", name = "bob-solder", amount = 5 })
     end
   end
 
   if data.raw.recipe["bob-robot-brain-combat-3"] then
-    if data.raw["recipe-category"]["bob-electronics"] then
-      data.raw.recipe["bob-robot-brain-combat-3"].category = "bob-electronics"
-    end
+    bobmods.lib.recipe.add_additional_category("bob-robot-brain-combat-3", "electronics")
     if data.raw.item["bob-solder"] then
       bobmods.lib.recipe.add_ingredient("bob-robot-brain-combat-3", { type = "item", name = "bob-solder", amount = 5 })
     end
   end
 
   if data.raw.recipe["bob-robot-brain-combat-4"] then
-    if data.raw["recipe-category"]["bob-electronics"] then
-      data.raw.recipe["bob-robot-brain-combat-4"].category = "bob-electronics"
-    end
+    bobmods.lib.recipe.add_additional_category("bob-robot-brain-combat-4", "electronics")
     if data.raw.item["bob-solder"] then
       bobmods.lib.recipe.add_ingredient("bob-robot-brain-combat-4", { type = "item", name = "bob-solder", amount = 5 })
     end

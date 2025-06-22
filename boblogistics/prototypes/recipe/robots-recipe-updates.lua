@@ -26,9 +26,7 @@ if settings.startup["bobmods-logistics-robotrequireprevious"].value == true then
 end
 
 if data.raw.recipe["bob-robot-brain"] then
-  if data.raw["recipe-category"]["bob-electronics"] then
-    data.raw.recipe["bob-robot-brain"].category = "bob-electronics"
-  end
+  bobmods.lib.recipe.add_additional_category("bob-robot-brain", "electronics")
   if data.raw.item["bob-basic-circuit-board"] then
     data.raw.recipe["bob-robot-brain"].ingredients = {
       { type = "item", name = "bob-basic-circuit-board", amount = 2 },
@@ -41,27 +39,21 @@ if data.raw.recipe["bob-robot-brain"] then
 end
 
 if data.raw.recipe["bob-robot-brain-2"] then
-  if data.raw["recipe-category"]["bob-electronics"] then
-    data.raw.recipe["bob-robot-brain-2"].category = "bob-electronics"
-  end
+  bobmods.lib.recipe.add_additional_category("bob-robot-brain-2", "electronics")
   if data.raw.item["bob-solder"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-brain-2", { type = "item", name = "bob-solder", amount = 5 })
   end
 end
 
 if data.raw.recipe["bob-robot-brain-3"] then
-  if data.raw["recipe-category"]["bob-electronics"] then
-    data.raw.recipe["bob-robot-brain-3"].category = "bob-electronics"
-  end
+  bobmods.lib.recipe.add_additional_category("bob-robot-brain-3", "electronics")
   if data.raw.item["bob-solder"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-brain-3", { type = "item", name = "bob-solder", amount = 5 })
   end
 end
 
 if data.raw.recipe["bob-robot-brain-4"] then
-  if data.raw["recipe-category"]["bob-electronics"] then
-    data.raw.recipe["bob-robot-brain-4"].category = "bob-electronics"
-  end
+  bobmods.lib.recipe.add_additional_category("bob-robot-brain-4", "electronics")
   if data.raw.item["bob-solder"] then
     bobmods.lib.recipe.add_ingredient("bob-robot-brain-4", { type = "item", name = "bob-solder", amount = 5 })
   end

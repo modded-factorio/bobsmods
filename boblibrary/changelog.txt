@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Added uk locale #176
     - Added de locale #415
+    - Added function bobmods.lib.recipe.add_additional_category #424
     - Added zh-TW locale #432
   Bugfixes:
     - Fixed ore walking_sound #442

@@ -7,8 +7,8 @@
   "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
-    "base >= 2.0.33",
-    "boblibrary >= 2.0.0",
+    "base >= 2.0.49",
+    "boblibrary >= 2.0.1",
     "? bobplates >= 2.0.0",
     "? bobinserters >= 1.3.2",
     "? valves",
