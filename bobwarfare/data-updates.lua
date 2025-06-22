@@ -46,6 +46,27 @@ if settings.startup["bobmods-warfare-vehicleflamethrowerstartsfires"].value == t
   }
 end
 
+if mods["space-age"] then
+  for _, spacerock in pairs(data.raw.asteroid) do
+    local has_acid = false
+    local has_poison = false
+    for _, resist in pairs(spacerock.resistances) do
+      if resist.type == "acid" then
+        has_acid = true
+      end
+      if resist.type == "poison" then
+        has_poison = true
+      end
+    end
+    if has_acid == false then
+      table.insert(spacerock.resistances, { type = "acid", percent = 99 })
+    end
+    if has_poison == false then
+      table.insert(spacerock.resistances, { type = "poison", percent = 100 })
+    end
+  end
+end
+
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "modular-armor",

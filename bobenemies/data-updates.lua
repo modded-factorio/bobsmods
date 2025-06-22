@@ -1778,19 +1778,19 @@ end
 -- end of enemies drop artifacts here.
 
 if settings.startup["bobmods-enemies-enableartifacts"].value == true then
-  if data.raw["unit-spawner"]["biter-spawner"].loot == nil then
-    data.raw["unit-spawner"]["biter-spawner"].loot = {}
+  if data.raw["unit-spawner"]["bob-0-biter-spawner"].loot == nil then
+    data.raw["unit-spawner"]["bob-0-biter-spawner"].loot = {}
   end
   table.insert(
-    data.raw["unit-spawner"]["biter-spawner"].loot,
+    data.raw["unit-spawner"]["bob-0-biter-spawner"].loot,
     { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
   )
 
-  if data.raw["unit-spawner"]["spitter-spawner"].loot == nil then
-    data.raw["unit-spawner"]["spitter-spawner"].loot = {}
+  if data.raw["unit-spawner"]["bob-0-spitter-spawner"].loot == nil then
+    data.raw["unit-spawner"]["bob-0-spitter-spawner"].loot = {}
   end
   table.insert(
-    data.raw["unit-spawner"]["spitter-spawner"].loot,
+    data.raw["unit-spawner"]["bob-0-spitter-spawner"].loot,
     { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
   )
 
@@ -1805,12 +1805,28 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
 
   if settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
     table.insert(
+      data.raw["unit-spawner"]["bob-0-piercing-biter-spawner"].loot,
+      { item = "bob-alien-artifact-blue", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-piercing-spitter-spawner"].loot,
+      { item = "bob-alien-artifact-blue", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
       data.raw["unit-spawner"]["bob-piercing-biter-spawner"].loot,
       { item = "bob-alien-artifact-blue", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-piercing-spitter-spawner"].loot,
       { item = "bob-alien-artifact-blue", count_min = 8, count_max = 22, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-electric-biter-spawner"].loot,
+      { item = "bob-alien-artifact-orange", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-electric-spitter-spawner"].loot,
+      { item = "bob-alien-artifact-orange", count_min = 5, count_max = 15, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-electric-biter-spawner"].loot,
@@ -1821,12 +1837,28 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       { item = "bob-alien-artifact-orange", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
+      data.raw["unit-spawner"]["bob-0-acid-biter-spawner"].loot,
+      { item = "bob-alien-artifact-purple", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-acid-spitter-spawner"].loot,
+      { item = "bob-alien-artifact-purple", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
       data.raw["unit-spawner"]["bob-acid-biter-spawner"].loot,
       { item = "bob-alien-artifact-purple", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-acid-spitter-spawner"].loot,
       { item = "bob-alien-artifact-purple", count_min = 8, count_max = 22, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-explosive-biter-spawner"].loot,
+      { item = "bob-alien-artifact-yellow", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-explosive-spitter-spawner"].loot,
+      { item = "bob-alien-artifact-yellow", count_min = 5, count_max = 15, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-explosive-biter-spawner"].loot,
@@ -1837,12 +1869,28 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       { item = "bob-alien-artifact-yellow", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
+      data.raw["unit-spawner"]["bob-0-poison-biter-spawner"].loot,
+      { item = "bob-alien-artifact-green", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-poison-spitter-spawner"].loot,
+      { item = "bob-alien-artifact-green", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
       data.raw["unit-spawner"]["bob-poison-biter-spawner"].loot,
       { item = "bob-alien-artifact-green", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-poison-spitter-spawner"].loot,
       { item = "bob-alien-artifact-green", count_min = 8, count_max = 22, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-fire-biter-spawner"].loot,
+      { item = "bob-alien-artifact-red", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-fire-spitter-spawner"].loot,
+      { item = "bob-alien-artifact-red", count_min = 5, count_max = 15, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-fire-biter-spawner"].loot,
@@ -2059,12 +2107,28 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
     end
   else
     table.insert(
+      data.raw["unit-spawner"]["bob-0-piercing-biter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-piercing-spitter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
       data.raw["unit-spawner"]["bob-piercing-biter-spawner"].loot,
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-piercing-spitter-spawner"].loot,
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-electric-biter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-electric-spitter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-electric-biter-spawner"].loot,
@@ -2075,12 +2139,28 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
+      data.raw["unit-spawner"]["bob-0-acid-biter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-acid-spitter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
       data.raw["unit-spawner"]["bob-acid-biter-spawner"].loot,
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-acid-spitter-spawner"].loot,
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-explosive-biter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-explosive-spitter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-explosive-biter-spawner"].loot,
@@ -2091,12 +2171,28 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
+      data.raw["unit-spawner"]["bob-0-poison-biter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-poison-spitter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
       data.raw["unit-spawner"]["bob-poison-biter-spawner"].loot,
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-poison-spitter-spawner"].loot,
       { item = "bob-alien-artifact", count_min = 8, count_max = 22, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-fire-biter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
+    )
+    table.insert(
+      data.raw["unit-spawner"]["bob-0-fire-spitter-spawner"].loot,
+      { item = "bob-alien-artifact", count_min = 5, count_max = 15, probability = 1 }
     )
     table.insert(
       data.raw["unit-spawner"]["bob-fire-biter-spawner"].loot,
@@ -3015,4 +3111,14 @@ end
 
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-artifact-radar", false)
+end
+
+if mods["space-age"] then
+  data.raw.ammo["capture-robot-rocket"].localised_description = { "item-description.capture-robot-rocket-alt" }
+  data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter = {}
+  for _, spawner in pairs(data.raw["unit-spawner"]) do
+    if spawner.captured_spawner_entity then
+      table.insert(data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter, spawner.name)
+    end
+  end
 end
