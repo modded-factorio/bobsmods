@@ -5,6 +5,7 @@ Date: ???
     - Added uk locale #176
     - Added zh-TW locale #432
   Bugfixes:
+    - Fixed crash with enable-all-features mod without Quality mod #416
     - Fixed Capture bot rocket #419
     - Fixed spawners not dropping artifacts #438
 ---------------------------------------------------------------------------------------------------

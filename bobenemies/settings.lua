@@ -80,7 +80,7 @@ data:extend({
   },
 })
 
-if feature_flags["quality"] then
+if mods["quality"] then
   data.raw["bool-setting"]["bobmods-enemies-qualityenemies"].hidden = false
   data.raw["bool-setting"]["bobmods-enemies-qualityenemies"].forced_value = nil
   data.raw["bool-setting"]["bobmods-enemies-qualityenemies"].default_value = true
