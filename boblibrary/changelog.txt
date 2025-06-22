@@ -5,6 +5,8 @@ Date: ???
     - Added uk locale #176
     - Added de locale #415
     - Added zh-TW locale #432
+  Bugfixes:
+    - Fixed ore walking_sound #442
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 30. 03. 2025
