@@ -3119,6 +3119,12 @@ function bobmods.enemies.new_spawner(inputs)
     spawner_prototype.icon = "__base__/graphics/icons/biter-spawner.png"
   end
 
+  if inputs.captured_spawner_entity then
+    spawner_prototype.captured_spawner_entity = inputs.captured_spawner_entity
+  elseif mods["space-age"] then
+    spawner_prototype.captured_spawner_entity = "captive-biter-spawner"
+  end
+
   local spawner_corpse = {
     type = "corpse",
     name = inputs.name .. "-corpse",

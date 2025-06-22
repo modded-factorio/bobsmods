@@ -5,6 +5,7 @@ Date: ???
     - Added uk locale #176
     - Added zh-TW locale #432
   Bugfixes:
+    - Fixed Capture bot rocket #419
     - Fixed spawners not dropping artifacts #438
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
