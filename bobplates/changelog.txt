@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ???
+Date: 22. 06. 2025
   Bugfixes:
     - Fixed crafting_machine_tint startup error when using other mods that also modify the nuclear fuel reprocessing recipe #427
   Changes:

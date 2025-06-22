@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ???
+Date: 22. 06. 2025
   Changes:
     - Added poison and acid resistance to asteroids #423
     - Reduce the cost of Rockets #428

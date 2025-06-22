@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ???
+Date: 22. 06. 2025
   Changes:
     - Added de locale #415
     - Add tungsten pipe to rocket part recipe (when available) rather than the military rocket engines from Bob's Warfare #428
