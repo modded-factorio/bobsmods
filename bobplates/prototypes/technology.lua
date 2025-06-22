@@ -727,6 +727,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-aluminium-processing",
+      "oil-processing",
       "plastics",
     },
     unit = {

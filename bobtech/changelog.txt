@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Added de locale #415
     - Added zh-TW locale #432
+    - Added Transport Science Pack to Biolab #443
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 05. 04. 2025
