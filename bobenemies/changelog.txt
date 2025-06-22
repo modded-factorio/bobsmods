@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Added uk locale #176
     - Added zh-TW locale #432
+  Bugfixes:
+    - Fixed spawners not dropping artifacts #438
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 05. 04. 2025
