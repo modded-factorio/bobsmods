@@ -250,6 +250,9 @@ end
 if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "bob-ceramics")
 end
+if data.raw.item["bob-titanium-bearing"] then
+  bobmods.lib.tech.add_prerequisite("utility-science-pack", "bob-titanium-processing")
+end
 
 if
   settings.startup["bobmods-logistics-inserteroverhaul"]
@@ -332,7 +335,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
     if data.raw.technology["bob-chemical-plant"] then
       bobmods.lib.tech.remove_prerequisite("bob-chemical-plant", "electronics")
     end
-  else
   end
 
   bobmods.lib.tech.add_science_pack("steel-processing", "logistic-science-pack", 1)

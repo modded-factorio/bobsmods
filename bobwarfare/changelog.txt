@@ -2,9 +2,11 @@
 Version: 2.0.3
 Date: ???
   Changes:
+    - Added poison and acid resistance to asteroids #423
     - Reduce the cost of Rockets #428
     - Blue Alien Alloy takes Cobalt Steel instead of Tungsten #429
     - Added zh-TW locale #432
+    - Reduce the cost of Cordite #437
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 20. 04. 2025
