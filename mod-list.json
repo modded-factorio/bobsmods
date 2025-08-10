@@ -1,0 +1,109 @@
+{
+  "mods": [
+    {
+      "name": "base",
+      "enabled": true
+    },
+    {
+      "name": "elevated-rails",
+      "enabled": false
+    },
+    {
+      "name": "quality",
+      "enabled": false
+    },
+    {
+      "name": "space-age",
+      "enabled": false
+    },
+    {
+      "name": "bobassembly",
+      "enabled": false
+    },
+    {
+      "name": "bobclasses",
+      "enabled": false
+    },
+    {
+      "name": "bobelectronics",
+      "enabled": false
+    },
+    {
+      "name": "bobenemies",
+      "enabled": false
+    },
+    {
+      "name": "bobequipment",
+      "enabled": false
+    },
+    {
+      "name": "bobgreenhouse",
+      "enabled": false
+    },
+    {
+      "name": "bobinserters",
+      "enabled": false
+    },
+    {
+      "name": "boblibrary",
+      "enabled": true
+    },
+    {
+      "name": "boblogistics",
+      "enabled": false
+    },
+    {
+      "name": "bobmining",
+      "enabled": false
+    },
+    {
+      "name": "bobmodules",
+      "enabled": false
+    },
+    {
+      "name": "bobores",
+      "enabled": false
+    },
+    {
+      "name": "bobplates",
+      "enabled": false
+    },
+    {
+      "name": "bobpower",
+      "enabled": true
+    },
+    {
+      "name": "bobrevamp",
+      "enabled": false
+    },
+    {
+      "name": "bobtech",
+      "enabled": false
+    },
+    {
+      "name": "bobvehicleequipment",
+      "enabled": false
+    },
+    {
+      "name": "bobwarfare",
+      "enabled": false
+    },
+    {
+      "name": "clock",
+      "enabled": false
+    },
+    {
+      "name": "debugadapter",
+      "enabled": true,
+      "version": "2.0.8"
+    },
+    {
+      "name": "coverage",
+      "enabled": false
+    },
+    {
+      "name": "profiler",
+      "enabled": false
+    }
+  ]
+}
