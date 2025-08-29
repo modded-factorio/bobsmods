@@ -19,28 +19,26 @@ end
 
 --- @param i integer
 local function make_visualization(i)
-  return
-    {
-      filename = "__base__/graphics/entity/pipe/visualization.png",
-      priority = "extra-high",
-      x = i * 64,
-      size = 64,
-      scale = 0.5,
-      flags = {"icon"},
-    }
+  return {
+    filename = "__base__/graphics/entity/pipe/visualization.png",
+    priority = "extra-high",
+    x = i * 64,
+    size = 64,
+    scale = 0.5,
+    flags = { "icon" },
+  }
 end
 
 --- @param i integer
 local function make_disabled_visualization(i)
-  return
-    {
-      filename = "__base__/graphics/entity/pipe/disabled-visualization.png",
-      priority = "extra-high",
-      x = i * 64,
-      size = 64,
-      scale = 0.5,
-      flags = {"icon"},
-    }
+  return {
+    filename = "__base__/graphics/entity/pipe/disabled-visualization.png",
+    priority = "extra-high",
+    x = i * 64,
+    size = 64,
+    scale = 0.5,
+    flags = { "icon" },
+  }
 end
 
 local function bob_pipepictures(pipe_type)
@@ -372,87 +370,77 @@ local function bob_pipecoverspictures(pipe_type)
 end
 
 function bob_pipetoground_visualizaton()
-  return
-    {
-      north =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-        priority = "extra-high",
-        x = 64,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-      south =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-        priority = "extra-high",
-        x = 192,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-      west =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-        priority = "extra-high",
-        x = 256,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-      east =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-        priority = "extra-high",
-        x = 128,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-    }
+  return {
+    north = {
+      filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
+      priority = "extra-high",
+      x = 64,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+    south = {
+      filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
+      priority = "extra-high",
+      x = 192,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+    west = {
+      filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
+      priority = "extra-high",
+      x = 256,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+    east = {
+      filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
+      priority = "extra-high",
+      x = 128,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+  }
 end
 
 function bob_pipetoground_disabled_visualizaton()
-  return
-    {
-      north =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-        priority = "extra-high",
-        x = 64,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-      south =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-        priority = "extra-high",
-        x = 192,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-      west =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-        priority = "extra-high",
-        x = 256,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-      east =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-        priority = "extra-high",
-        x = 128,
-        size = 64,
-        scale = 0.5,
-        flags = {"icon"}
-      },
-    }
+  return {
+    north = {
+      filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
+      priority = "extra-high",
+      x = 64,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+    south = {
+      filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
+      priority = "extra-high",
+      x = 192,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+    west = {
+      filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
+      priority = "extra-high",
+      x = 256,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+    east = {
+      filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
+      priority = "extra-high",
+      x = 128,
+      size = 64,
+      scale = 0.5,
+      flags = { "icon" },
+    },
+  }
 end
 
 data.raw["pipe"]["pipe"].pictures = bob_pipepictures("iron")
