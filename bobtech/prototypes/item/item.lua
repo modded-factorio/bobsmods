@@ -11,7 +11,7 @@ data:extend({
   {
     type = "tool",
     name = "bob-advanced-logistic-science-pack",
-    localised_description = {"item-description.science-pack"},
+    localised_description = { "item-description.science-pack" },
     icon = "__bobtech__/graphics/icons/logistic-science-pack.png",
     subgroup = "science-pack",
     color_hint = { text = "T" },
