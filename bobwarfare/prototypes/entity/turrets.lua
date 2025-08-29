@@ -649,19 +649,17 @@ local function bob_laser_turret(inputs)
         energy_consumption = inputs.energy_consumption or "800kJ",
         clamp_position = inputs.clamp_position or nil,
         action = {
-          {
-            type = "direct",
-            action_delivery = {
-              {
-                type = "projectile",
-                projectile = inputs.projectile or "laser",
-                starting_speed = inputs.starting_speed or 0.28,
+          type = "direct",
+          action_delivery = {
+            {
+              type = "projectile",
+              projectile = inputs.projectile or "laser",
+              starting_speed = inputs.starting_speed or 0.28,
 
-                direction_deviation = inputs.direction_deviation or nil,
-                range_deviation = inputs.range_deviation or nil,
+              direction_deviation = inputs.direction_deviation or nil,
+              range_deviation = inputs.range_deviation or nil,
 
-                max_range = (inputs.range * 2) or 50,
-              },
+              max_range = (inputs.range * 2) or 50,
             },
           },
         },
@@ -680,6 +678,7 @@ local function bob_laser_turret(inputs)
       damage_modifier = inputs.damage_modifier or 2,
       turn_range = inputs.turn_range,
       ammo_type = {
+        type = "beam",
         energy_consumption = inputs.energy_consumption or "800kJ",
         action = {
           type = "direct",
