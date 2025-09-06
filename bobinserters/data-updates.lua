@@ -7,7 +7,7 @@ for _, inserter in pairs(data.raw.inserter) do
   end
 end
 
-data:extend{{
+data:extend({ {
   type = "custom-event",
-  name = "on_bobs_inserter_adjusted"
-}}
+  name = "on_bobs_inserter_adjusted",
+} })
