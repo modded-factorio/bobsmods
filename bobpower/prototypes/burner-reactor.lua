@@ -160,13 +160,12 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       },
       working_light_picture = {
         filename = "__bobpower__/graphics/burner-reactor/reactor-fire.png",
-        blend_mode = "additive",
+        priority = "high",
         width = 36,
         height = 19,
         frame_count = 12,
-        draw_as_glow = true,
         scale = 1.5,
-        shift = { 0, -135/128 },
+        shift = { -0.03125 * 1.5, 0.671875 * 1.5 },
       },
       light = { intensity = 0.3, size = 3, shift = { 0.0, 0.0 }, color = { r = 1.0, g = 0.9, b = 0.7 } },
       use_fuel_glow_color = true, -- should use glow color from fuel item prototype as light color and tint for working_light_picture
