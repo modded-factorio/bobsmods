@@ -98,7 +98,11 @@ data:extend({
         secondary_draw_orders = { north = -1 },
       },
     },
-    allowed_effects = {},
+    effect_receiver = {
+      uses_beacon_effects = false,
+    },
+    allowed_effects = { "pollution" },
+    module_slots = mods["bobmodules"] and 2 or 0,
     graphics_set = {
       animation = {
         layers = {

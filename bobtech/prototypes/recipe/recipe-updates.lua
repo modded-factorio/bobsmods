@@ -90,3 +90,10 @@ bobmods.lib.recipe.set_result("utility-science-pack", { type = "item", name = "u
 if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.recipe.add_new_ingredient("lab", { type = "item", name = "bob-burner-lab", amount = 1 })
 end
+
+if mods["quality"] then
+  bobmods.lib.recipe.update_recycling_recipe_single("lab")
+  if data.raw.recipe["bob-burner-lab"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("bob-burner-lab")
+  end
+end

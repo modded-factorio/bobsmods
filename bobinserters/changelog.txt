@@ -2,7 +2,10 @@
 Version: 2.0.2
 Date: ???
   Changes:
+    - Integrate Bob's Locale Translations mod #445
     - Added custom event "on_bobs_inserter_adjusted" #457
+  Bugfixes:
+    - Fixed missing long inserters tech description #426
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 22. 06. 2025
