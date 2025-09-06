@@ -6,3 +6,8 @@ for _, inserter in pairs(data.raw.inserter) do
     end
   end
 end
+
+data:extend{{
+  type = "custom-event",
+  name = "on_bobs_inserter_adjusted"
+}}

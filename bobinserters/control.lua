@@ -788,6 +788,10 @@ function set_pickup_position(entity, newpos)
     changed_position_event,
     { entity = entity, new_positions = new_positions, original_positions = original_positions }
   ) -- Raise positions changed event.
+  script.raise_event(
+    defines.events.on_bobs_inserter_adjusted,
+    { entity = entity, new_positions = new_positions, original_positions = original_positions }
+  ) -- Raise positions changed event.
 end
 
 function set_drop_position(entity, newpos)
@@ -804,6 +808,10 @@ function set_drop_position(entity, newpos)
   entity.direction = entity.direction -- set direction to force update
   script.raise_event(
     changed_position_event,
+    { entity = entity, new_positions = new_positions, original_positions = original_positions }
+  ) -- Raise positions changed event.
+  script.raise_event(
+    defines.events.on_bobs_inserter_adjusted,
     { entity = entity, new_positions = new_positions, original_positions = original_positions }
   ) -- Raise positions changed event.
 end
@@ -831,6 +839,10 @@ function set_both_positions(entity, newpickup, newdrop)
   entity.direction = entity.direction -- set direction to force update
   script.raise_event(
     changed_position_event,
+    { entity = entity, new_positions = new_positions, original_positions = original_positions }
+  ) -- Raise positions changed event.
+  script.raise_event(
+    defines.events.on_bobs_inserter_adjusted,
     { entity = entity, new_positions = new_positions, original_positions = original_positions }
   ) -- Raise positions changed event.
 end
