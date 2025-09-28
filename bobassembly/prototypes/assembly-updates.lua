@@ -157,38 +157,31 @@ if settings.startup["bobmods-assembly-limits"].value == true then
 end
 
 if aailoaderssize == true then
-  data.raw["assembling-machine"]["assembling-machine-1"].graphics_set.animation.layers[1].scale = 0.58
-  data.raw["assembling-machine"]["assembling-machine-1"].graphics_set.animation.layers[2].scale = 0.58
-  data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[1].scale = 0.58
-  data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[2].scale = 0.58
-  data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[1].scale = 0.58
-  data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[2].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.animation.layers[1].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.animation.layers[2].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.animation.layers[3].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.animation.layers[1].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.animation.layers[2].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.animation.layers[3].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.animation.layers[1].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.animation.layers[2].scale = 0.58
-  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.animation.layers[3].scale = 0.58
-  if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].value == true then
-    data.raw["assembling-machine"]["bob-burner-assembling-machine"].graphics_set.animation.layers[1].scale = 0.38
-    data.raw["assembling-machine"]["bob-burner-assembling-machine"].graphics_set.animation.layers[2].scale = 0.38
-    data.raw["assembling-machine"]["bob-burner-assembling-machine"].graphics_set.animation.layers[3].scale = 0.38
-    data.raw["assembling-machine"]["bob-steam-assembling-machine"].graphics_set.animation.layers[1].scale = 0.56
-    data.raw["assembling-machine"]["bob-steam-assembling-machine"].graphics_set.animation.layers[2].scale = 0.56
-    data.raw["assembling-machine"]["bob-steam-assembling-machine"].graphics_set.animation.layers[3].scale = 0.56
-  end
-  if settings.startup["bobmods-assembly-electronicmachines"].value == true then
-    data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.animation.layers[1].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.animation.layers[2].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.animation.layers[3].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.animation.layers[1].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.animation.layers[2].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.animation.layers[3].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-3"].graphics_set.animation.layers[1].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-3"].graphics_set.animation.layers[2].scale = 0.38
-    data.raw["assembling-machine"]["bob-electronics-machine-3"].graphics_set.animation.layers[3].scale = 0.38
+  for new_scale, machines in pairs({
+    [0.58] = {
+      "bob-steam-assembling-machine",
+      "assembling-machine-1",
+      "assembling-machine-2",
+      "assembling-machine-3",
+      "bob-assembling-machine-4",
+      "bob-assembling-machine-5",
+      "bob-assembling-machine-6",
+    },
+    [0.38] = {
+      "bob-burner-assembling-machine",
+      "bob-electronics-machine-1",
+      "bob-electronics-machine-2",
+      "bob-electronics-machine-3",
+    },
+  }) do
+    for _, machine_name in pairs(machines) do
+      local machine = data.raw["assembling-machine"][machine_name]
+      if machine then
+        local layers = machine.graphics_set.animation.layers
+        for _, layer in pairs(layers) do
+          layer.scale = new_scale
+        end
+      end
+    end
   end
 end
