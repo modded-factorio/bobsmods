@@ -24,8 +24,8 @@ local function storage_tank_pictures(tint)
           priority = "extra-high",
           frames = 2,
           width = 219,
-          height = 215,
-          shift = util.by_pixel(-0.25, 3.75),
+          height = 235,
+          shift = util.by_pixel(-0.25, -1.25),
           scale = 0.5,
         },
         {
