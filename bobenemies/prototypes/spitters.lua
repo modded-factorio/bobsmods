@@ -1935,7 +1935,7 @@ bobmods.enemies.new_spitter({
   },
   order = "e-d-h",
   tier = 8,
-  max_health = 45000,
+  max_health = 25000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1976,7 +1976,7 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.unit["bob-giant-explosive-spitter"].max_health = 4500
   data.raw.unit["bob-titan-explosive-spitter"].max_health = 13000
   data.raw.unit["bob-behemoth-explosive-spitter"].max_health = 45000
-  data.raw.unit["bob-leviathan-explosive-spitter"].max_health = 200000
+  data.raw.unit["bob-leviathan-explosive-spitter"].max_health = 140000
 end
 
 --Poison
