@@ -544,7 +544,7 @@ local biter_stats = {
   },
 
   {
-    max_health = 80000,
+    max_health = 60000,
     healing_per_tick = 0.5,
     movement_speed = 0.32,
     scale = 2.5,
@@ -564,7 +564,7 @@ if health_increase == true then
   biter_stats[5].max_health = 8000
   biter_stats[6].max_health = 22000
   biter_stats[7].max_health = 72000
-  biter_stats[8].max_health = 300000
+  biter_stats[8].max_health = 240000
 end
 
 function bobmods.enemies.new_biter(inputs)
@@ -1196,7 +1196,7 @@ local spitter_stats = {
   },
 
   {
-    max_health = 60000,
+    max_health = 30000,
     healing_per_tick = 5,
     movement_speed = 0.22,
     scale = 2.5,
@@ -1217,7 +1217,7 @@ if health_increase == true then
   spitter_stats[5].max_health = 6000
   spitter_stats[6].max_health = 18000
   spitter_stats[7].max_health = 60000
-  spitter_stats[8].max_health = 240000
+  spitter_stats[8].max_health = 180000
 end
 
 function bobmods.enemies.new_spitter(inputs)
@@ -2603,7 +2603,7 @@ local worm_stats = {
   },
 
   {
-    max_health = 100000,
+    max_health = 60000,
     healing_per_tick = 1.5,
     scale = 1.5,
     dying_explosion = "behemoth-worm-die",
@@ -2636,7 +2636,7 @@ if health_increase == true then
   worm_stats[5].max_health = 9000
   worm_stats[6].max_health = 27000
   worm_stats[7].max_health = 80000
-  worm_stats[8].max_health = 320000
+  worm_stats[8].max_health = 280000
 end
 
 local end_attack_speed_multiplier_when_killed = 2
