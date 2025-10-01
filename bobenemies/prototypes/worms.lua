@@ -333,6 +333,19 @@ bobmods.enemies.new_worm({
   },
 })
 
+local bile_gen = {
+  type = "create-entity",
+  entity_name = "bob-hardened-bile",
+  probability = 0.5,
+  check_buildability = true,
+}
+
+table.insert(data.raw.stream["acid-stream-worm-giant"].initial_action[1].action_delivery.target_effects, bile_gen)
+table.insert(data.raw.stream["acid-stream-worm-titan"].initial_action[1].action_delivery.target_effects, bile_gen)
+table.insert(data.raw.stream["acid-stream-worm-behemoth"].initial_action[1].action_delivery.target_effects, bile_gen)
+table.insert(data.raw.stream["acid-stream-worm-leviathan"].initial_action[1].action_delivery.target_effects, bile_gen)
+
+
 --Piercing
 local piercing_shot = function(attack_range)
   return {
@@ -1695,7 +1708,7 @@ bobmods.enemies.new_worm({
   },
   order = "e-b-h",
   tier = 8,
-  max_health = 80000,
+  max_health = 50000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1731,7 +1744,7 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.turret["bob-giant-explosive-worm-turret"].max_health = 7200
   data.raw.turret["bob-titan-explosive-worm-turret"].max_health = 23000
   data.raw.turret["bob-behemoth-explosive-worm-turret"].max_health = 64000
-  data.raw.turret["bob-leviathan-explosive-worm-turret"].max_health = 270000
+  data.raw.turret["bob-leviathan-explosive-worm-turret"].max_health = 240000
 end
 
 --Poison
