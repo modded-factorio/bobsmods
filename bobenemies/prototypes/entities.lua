@@ -803,7 +803,7 @@ data:extend({
   {
     name = "bob-hardened-bile",
     type = "simple-entity",
-    flags = { "placeable-neutral", "placeable-off-grid", "not-deconstructable" },
+    flags = { "placeable-neutral", "placeable-off-grid" },
     icon = "__bobenemies__/graphics/icons/hardened-bile.png",
     subgroup = "grass",
     order = "b[decorative]-l[rock]-b[big]",
