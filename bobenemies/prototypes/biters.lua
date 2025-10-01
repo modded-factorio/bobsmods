@@ -2423,7 +2423,7 @@ bobmods.enemies.new_biter({
   },
   order = "e-c-h",
   tier = 8,
-  max_health = 60000,
+  max_health = 40000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -2486,7 +2486,7 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.unit["bob-giant-explosive-biter"].max_health = 6000
   data.raw.unit["bob-titan-explosive-biter"].max_health = 19000
   data.raw.unit["bob-behemoth-explosive-biter"].max_health = 60000
-  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 250000
+  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 180000
 end
 
 --Poison
