@@ -51,6 +51,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "speed-module-4",
   },
   {
     type = "technology",
@@ -81,6 +82,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "speed-module-5",
   },
 })
 
@@ -135,6 +137,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "efficiency-module-4",
   },
   {
     type = "technology",
@@ -165,6 +168,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "efficiency-module-5",
   },
 })
 
@@ -219,6 +223,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "productivity-module-4",
   },
   {
     type = "technology",
@@ -249,6 +254,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "productivity-module-5",
   },
 })
 
@@ -603,6 +609,7 @@ if mods["quality"] then
         },
         time = 60,
       },
+      order = "quality-module-4",
     },
     {
       type = "technology",
@@ -633,6 +640,7 @@ if mods["quality"] then
         },
         time = 60,
       },
+      order = "quality-module-5",
     },
   })
 
