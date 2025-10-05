@@ -54,6 +54,7 @@ if mods["bobplates"] then
   bobmods.lib.tech.add_prerequisite("bob-electronics", "bob-chemical-processing-1")
   bobmods.lib.tech.add_prerequisite("bob-electronics", "bob-alloy-processing")
   bobmods.lib.tech.add_prerequisite("advanced-circuit", "bob-silicon-processing")
+  bobmods.lib.tech.add_prerequisite("processing-unit", "bob-lead-processing")
   bobmods.lib.tech.add_prerequisite("bob-advanced-processing-unit", "bob-gold-processing")
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-ferric-chloride-solution")
   bobmods.lib.tech.add_prerequisite("bob-chemical-processing-2", "bob-electronics")
