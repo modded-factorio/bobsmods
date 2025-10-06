@@ -38,12 +38,6 @@ end
 if not storage.bobmods.enemies.nauvis_faction_table then
   storage.bobmods.enemies.nauvis_faction_table = {
     basic = 0,
-    piercing = 0,
-    electric = 0,
-    acid = 0,
-    explosive = 0,
-    poison = 0,
-    fire = 0,
   }
 end
 if not storage.bobmods.enemies.nauvis_spawners then
@@ -52,13 +46,43 @@ end
 if not storage.bobmods.enemies.nauvis_faction_unlock_table then
   storage.bobmods.enemies.nauvis_faction_unlock_table = { "basic" }
 end
+if not storage.bobmods.enemies.nauvis_faction_unlock_order then
+  storage.bobmods.enemies.nauvis_faction_unlock_order = {}
+end
 if not storage.bobmods.enemies.faction_flags then
   storage.bobmods.enemies.faction_flags = {}
 end
 
+
 script.on_init(function()
   --Set factions_appear once to prevent issues from cropping up if it is changed mid-game
   storage.bobmods.enemies.factions_appear = settings.startup["bobmods-enemies-factionsappear"].value
+
+  local factionstring = settings.startup["bobmods-enemies-factionlist"].value
+
+  --Convert string of faction names stored in settings to a table. To avoid issues, this can only be done once. Remote factions cannot be added mid-game.
+  for factionname_for_unlock in string.gmatch(factionstring, "([^" .. "," .. "]+)") do
+    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_order, factionname_for_unlock)
+    log(factionname_for_unlock .. " added to unlock order")
+  end
+
+  --Make sure all factions exist on the faction table
+  for factionname_for_count in string.gmatch(factionstring, "([^" .. "," .. "]+)") do
+    if not storage.bobmods.enemies.nauvis_faction_table[factionname_for_count] then
+      storage.bobmods.enemies.nauvis_faction_table[factionname_for_count] = 0
+      log(factionname_for_count .. " added to faction table")
+    end
+  end
+
+  --Randomize unlock order if setting enabled
+  if settings.startup["bobmods-enemies-randomizeenemies"].value == true and #storage.bobmods.enemies.nauvis_faction_unlock_order > 1 then
+    for i = #storage.bobmods.enemies.nauvis_faction_unlock_order, 2, -1 do
+      local shuffle_from = math.random(i)
+      log("shuffling " .. storage.bobmods.enemies.nauvis_faction_unlock_order[shuffle_from] .. " to position " .. tostring(i))
+      storage.bobmods.enemies.nauvis_faction_unlock_order[i], storage.bobmods.enemies.nauvis_faction_unlock_order[shuffle_from] = storage.bobmods.enemies.nauvis_faction_unlock_order[shuffle_from], storage.bobmods.enemies.nauvis_faction_unlock_order[i]
+    end
+  end
+
   if bobmods.enemies.stop_all ~= true then
     if game.tick > 1800 then
       --If loading into existing game, register all spawners that already exist. Do not count spawners at game start to prevent double counting, as they will be registered as their chunks are generated. Checking for pre-existing Bob's Enemies spawners from previous versions is a must. Keep it simple and don't generate flags or faction spawners at this stage.
@@ -72,6 +96,7 @@ script.on_init(function()
             position = original_position,
             force = "enemy",
             spawn_decorations = false,
+            raise_built = true,
           })
 
           table.insert(storage.bobmods.enemies.nauvis_spawners, {
@@ -88,6 +113,7 @@ script.on_init(function()
             position = original_position,
             force = "enemy",
             spawn_decorations = false,
+            raise_built = true,
           })
 
           table.insert(storage.bobmods.enemies.nauvis_spawners, {
@@ -113,7 +139,79 @@ script.on_init(function()
   end
 end)
 
-script.on_nth_tick(600, function(current_tick)
+script.on_configuration_changed(function()
+
+  --Check if any previously existing factions have been removed and delete them from faction lists where necessary. 
+  local factionstring = settings.startup["bobmods-enemies-factionlist"].value
+
+  for _, factionname_for_verification in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
+    if not string.find(factionstring, factionname_for_verification) then
+      log("removing " .. factionname_for_verification)
+      --Set to 0 instead of nil so that identify_faction still works properly. Other functions will ignore this 0-value so long as the matching faction isn't unlocked.
+      storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification] = 0
+      for i, faction_name2 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
+        if faction_name2 == factionname_for_verification then
+          log("unlock table, removing " .. storage.bobmods.enemies.nauvis_faction_unlock_table[i])
+          table.remove(storage.bobmods.enemies.nauvis_faction_unlock_table, i)
+        end
+      end
+      for i, faction_name3 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
+        if faction_name3 == factionname_for_verification then
+          log("unlock order list, removing " .. storage.bobmods.enemies.nauvis_faction_unlock_order[i])
+          table.remove(storage.bobmods.enemies.nauvis_faction_unlock_order, i)
+        end
+      end
+
+      log(tostring(storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification]))
+      for i, faction_name2 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
+        log("unlock table list: " .. faction_name2)
+      end
+      for i, faction_name3 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
+        log("unlock order list: " .. faction_name3)
+      end
+
+      --Then remove spawners from record table
+      if storage.bobmods.enemies.nauvis_spawners[1] then
+        local remove_index = {}
+        for i = 1, #storage.bobmods.enemies.nauvis_spawners do
+          if storage.bobmods.enemies.nauvis_spawners[i].faction == factionname_for_verification then
+            table.insert(remove_index, i)
+          end
+        end
+        --Remove spawners in reverse order so that when the indexes are shifted, the next part of the remove_index will still point to the correct target
+        if remove_index[1] then
+          local remove_log = #remove_index
+          for i = #remove_index, 1, -1 do
+            table.remove(storage.bobmods.enemies.nauvis_spawners, remove_index[i])
+            log("Removing spawner from records at index " .. tostring(remove_index[i]))
+          end
+        end
+      end
+
+      --Then remove flags from records
+      if storage.bobmods.enemies.faction_flags[1] then
+        local remove_index = {}
+        for i = 1, #storage.bobmods.enemies.faction_flags do
+          if storage.bobmods.enemies.faction_flags[i].factions[1] == factionname_for_verification or storage.bobmods.enemies.faction_flags[i].factions[2] == factionname_for_verification or storage.bobmods.enemies.faction_flags[i].factions[3] == factionname_for_verification then
+            table.insert(remove_index, i)
+          end
+        end
+        --Remove flags in reverse order so that when the indexes are shifted, the next part of the remove_index will still point to the correct target
+        if remove_index[1] then
+          local remove_log = #remove_index
+          for i = #remove_index, 1, -1 do
+            table.remove(storage.bobmods.enemies.faction_flags, remove_index[i])
+            log("Removing flag from records at index " .. tostring(remove_index[i]))
+          end
+        end
+      end
+
+    end
+  end
+
+end)
+
+script.on_nth_tick(60, function(current_tick) --600, function(current_tick)
   if bobmods.enemies.stop_all ~= true then
     if storage.bobmods.enemies.n_cycle == 0 then
       --Delete flags from table if all nearby spawners are destroyed, to reduce clutter
@@ -127,23 +225,23 @@ script.on_nth_tick(600, function(current_tick)
             game.surfaces.nauvis.count_entities_filtered({
                 area = {
                   {
-                    storage.bobmods.enemies.faction_flags[test_index].x - 48,
-                    storage.bobmods.enemies.faction_flags[test_index].y - 48,
+                    storage.bobmods.enemies.faction_flags[test_index].x - 32,
+                    storage.bobmods.enemies.faction_flags[test_index].y - 32,
                   },
                   {
-                    storage.bobmods.enemies.faction_flags[test_index].x + 48,
-                    storage.bobmods.enemies.faction_flags[test_index].y + 48,
+                    storage.bobmods.enemies.faction_flags[test_index].x + 32,
+                    storage.bobmods.enemies.faction_flags[test_index].y + 32,
                   },
                 },
                 type = "unit-spawner",
               })
               == 0
-            and current_tick.tick - storage.bobmods.enemies.faction_flags[test_index].tick > 108000
+            and current_tick.tick - storage.bobmods.enemies.faction_flags[test_index].tick > 108000 --Prevents flags from being removed during the enemy base spawning process
           then
             table.insert(remove_index, test_index)
           end
         else
-          test_index = 1
+          test_index = 0
           break
         end
       end
@@ -151,12 +249,17 @@ script.on_nth_tick(600, function(current_tick)
       if remove_index[1] then
         local remove_log = #remove_index
         for i = #remove_index, 1, -1 do
+          local v = remove_index[i] --for log
+          log("removing dead flag for faction " .. tostring(storage.bobmods.enemies.faction_flags[v].factions[1]) .. " at " .. tostring(storage.bobmods.enemies.faction_flags[v].x) .. ", " .. tostring(storage.bobmods.enemies.faction_flags[v].y))
           table.remove(storage.bobmods.enemies.faction_flags, remove_index[i])
           remove_count = remove_count + 1
         end
       end
       --Update to last tested index minus number of flags removed to prevent jumping over some flags on the next cycle
       storage.bobmods.enemies.flag_check = test_index - remove_count
+      if storage.bobmods.enemies.flag_check < 0 then
+        storage.bobmods.enemies.flag_check = 0
+      end
     elseif storage.bobmods.enemies.n_cycle == 1 then
       --Backup check to ensure that all registered spawners still exist
       if storage.bobmods.enemies.nauvis_spawners[1] then
@@ -202,52 +305,24 @@ script.on_nth_tick(600, function(current_tick)
         end
       end
     elseif storage.bobmods.enemies.n_cycle == 2 then
-      local local_basic_faction = 0
-      local local_piercing_faction = 0
-      local local_electric_faction = 0
-      local local_acid_faction = 0
-      local local_explosive_faction = 0
-      local local_poison_faction = 0
-      local local_fire_faction = 0
+      local local_nauvis_faction_table = storage.bobmods.enemies.nauvis_faction_table
+
+      for factionname_for_recheck in pairs(local_nauvis_faction_table) do
+        local_nauvis_faction_table[factionname_for_recheck] = 0
+      end
+
       for _, registered_spawner in pairs(storage.bobmods.enemies.nauvis_spawners) do
-        if registered_spawner.faction == "basic" then
-          local_basic_faction = local_basic_faction + 1
-        elseif registered_spawner.faction == "piercing" then
-          local_piercing_faction = local_piercing_faction + 1
-        elseif registered_spawner.faction == "electric" then
-          local_electric_faction = local_electric_faction + 1
-        elseif registered_spawner.faction == "acid" then
-          local_acid_faction = local_acid_faction + 1
-        elseif registered_spawner.faction == "explosive" then
-          local_explosive_faction = local_explosive_faction + 1
-        elseif registered_spawner.faction == "poison" then
-          local_poison_faction = local_poison_faction + 1
-        elseif registered_spawner.faction == "fire" then
-          local_fire_faction = local_fire_faction + 1
+        local factionname2 = registered_spawner.faction
+        local_nauvis_faction_table[factionname2] = local_nauvis_faction_table[factionname2] + 1
+      end
+
+      for faction_final in pairs(local_nauvis_faction_table) do
+        if local_nauvis_faction_table.faction_final == 0 and storage.bobmods.enemies.nauvis_faction_table.faction_final ~= 0 then
+          storage.bobmods.enemies.nauvis_faction_table.faction_final = 0
+          log("Error in faction table detected")
         end
       end
-      if local_basic_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.basic ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.basic = 0
-        log("Error in faction table detected")
-      elseif local_piercing_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.piercing ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.piercing = 0
-        log("Error in faction table detected")
-      elseif local_electric_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.electric ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.electric = 0
-        log("Error in faction table detected")
-      elseif local_acid_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.acid ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.acid = 0
-        log("Error in faction table detected")
-      elseif local_explosive_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.explosive ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.explosive = 0
-        log("Error in faction table detected")
-      elseif local_poison_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.poison ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.poison = 0
-        log("Error in faction table detected")
-      elseif local_fire_faction == 0 and storage.bobmods.enemies.nauvis_faction_table.fire ~= 0 then
-        storage.bobmods.enemies.nauvis_faction_table.fire = 0
-        log("Error in faction table detected")
-      end
+
     end
     if storage.bobmods.enemies.n_cycle == 0 then
       storage.bobmods.enemies.n_cycle = 1
@@ -262,47 +337,71 @@ end)
 function bobmods.enemies.unlock_factions()
   --Unlock new factions at appropriate evolution level
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
+  local faction_count = #storage.bobmods.enemies.nauvis_faction_unlock_order
+  local faction_unlock_count_1
+  local faction_unlock_count_2
+  local faction_unlock_count_3
+
+  if faction_count % 3 == 1 then
+    faction_unlock_count_1 = math.floor(faction_count / 3)
+    faction_unlock_count_2 = faction_unlock_count_1
+    faction_unlock_count_3 = math.ceil(faction_count / 3)
+  elseif faction_count % 3 == 2 then
+    faction_unlock_count_1 = math.floor(faction_count / 3)
+    faction_unlock_count_2 = math.ceil(faction_count / 3)
+    faction_unlock_count_3 = faction_unlock_count_2
+  else
+    faction_unlock_count_1 = math.floor(faction_count / 3)
+    faction_unlock_count_2 = faction_unlock_count_1
+    faction_unlock_count_3 = faction_unlock_count_1
+  end
+
+  local faction_unlock_count_final = 0
 
   if
     evo_level >= storage.bobmods.enemies.factions_appear
-    and not storage.bobmods.enemies.nauvis_faction_unlock_table[3]
   then
-    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_table, "piercing")
-    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_table, "electric")
+    faction_unlock_count_final = faction_unlock_count_1
   end
   --If factions_appear is set to the highest or lowest settings, unlock timing will be adjusted a bit to not be either too close together or too late to have time to make an impression
   if
     evo_level >= math.max(0.25, (storage.bobmods.enemies.factions_appear + 0.1))
-    and not storage.bobmods.enemies.nauvis_faction_unlock_table[5]
   then
-    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_table, "acid")
-    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_table, "explosive")
+    faction_unlock_count_final = faction_unlock_count_final + faction_unlock_count_2
   end
   if
     evo_level >= math.min(0.75, math.max(0.35, (storage.bobmods.enemies.factions_appear + 0.2)))
-    and not storage.bobmods.enemies.nauvis_faction_unlock_table[7]
   then
-    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_table, "poison")
-    table.insert(storage.bobmods.enemies.nauvis_faction_unlock_table, "fire")
+    faction_unlock_count_final = faction_unlock_count_final + faction_unlock_count_3
   end
+
+  for i = 1, faction_unlock_count_final do
+    local v = i + 1
+    if storage.bobmods.enemies.nauvis_faction_unlock_table[v] ~= storage.bobmods.enemies.nauvis_faction_unlock_order[i] then
+      storage.bobmods.enemies.nauvis_faction_unlock_table[v] = storage.bobmods.enemies.nauvis_faction_unlock_order[i]
+    end
+  end
+
 end
 
 function bobmods.enemies.determine_faction_flag(x_coord, y_coord, call_tick)
-  if (not storage.bobmods.enemies.nauvis_faction_unlock_table[7]) and bobmods.enemies.stop_all ~= true then
+  local faction_count = #storage.bobmods.enemies.nauvis_faction_unlock_order + 1
+  if (not storage.bobmods.enemies.nauvis_faction_unlock_table[faction_count]) and bobmods.enemies.stop_all ~= true then
     bobmods.enemies.unlock_factions()
   end
 
   --Check if any new faction is unlocked, otherwise return unplanted basic flag to avoid boxing in new factions when they develop
-  if storage.bobmods.enemies.nauvis_faction_unlock_table[3] then
+  if #storage.bobmods.enemies.nauvis_faction_unlock_table > 1 then
     --First check if any unlocked faction is extinct
     for _, checking_faction in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
       if storage.bobmods.enemies.nauvis_faction_table[checking_faction] == 0 then
         local new_flag = bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { checking_faction })
+        game.print("flag planted due to extinction at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
         return new_flag
       end
     end
     --Detect nearest flag if any are close enough, and match. Creates territories belonging to factions. Going backwards and starting with most recent flags saves a small amount of time when generating chunks in quick succession.
-    local nearest_flag = { distance = (game.map_settings.enemy_expansion.max_expansion_distance + 2) * 32 }
+    local nearest_flag = { distance = (game.map_settings.enemy_expansion.max_expansion_distance + 3) * 32 }
     for i = #storage.bobmods.enemies.faction_flags, 1, -1 do
       local test_flag = storage.bobmods.enemies.faction_flags[i]
       local flag_distance = math.sqrt(((test_flag.x - x_coord) ^ 2) + ((test_flag.y - y_coord) ^ 2))
@@ -317,96 +416,20 @@ function bobmods.enemies.determine_faction_flag(x_coord, y_coord, call_tick)
     local random_faction = math.random(20)
     if nearest_flag.flag and (random_faction < 20) then
       local new_flag = bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, nearest_flag.flag.factions)
+      game.print("flag planted based on nearby flags at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
       return new_flag
     elseif nearest_flag.flag and random_faction == 20 then
       --5% chance to disregard nearby flags and pick randomly
       local new_flag =
         bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { bobmods.enemies.pick_random_faction() })
+      game.print("flag planted with randomly changed faction at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
       return new_flag
     else
-      if random_faction < 17 then
-        --If no flags are close enough, choose based on spawners in immediate area. Only check every third spawner to save time. This is fine since they always appear in groups
-        local local_basic_faction = { 0, "basic" }
-        local local_piercing_faction = { 0, "piercing" }
-        local local_electric_faction = { 0, "electric" }
-        local local_acid_faction = { 0, "acid" }
-        local local_explosive_faction = { 0, "explosive" }
-        local local_poison_faction = { 0, "poison" }
-        local local_fire_faction = { 0, "fire" }
-        for i = #storage.bobmods.enemies.nauvis_spawners, 1, -3 do
-          local near_spawner = storage.bobmods.enemies.nauvis_spawners[i]
-          local spawner_distance =
-            math.sqrt(((near_spawner.position.x - x_coord) ^ 2) + ((near_spawner.position.y - y_coord) ^ 2))
-          if spawner_distance <= game.map_settings.enemy_expansion.max_expansion_distance * 32 then
-            if near_spawner.faction == "basic" then
-              local_basic_faction[1] = local_basic_faction[1] + 1
-            elseif near_spawner.faction == "piercing" then
-              local_piercing_faction[1] = local_piercing_faction[1] + 1
-            elseif near_spawner.faction == "electric" then
-              local_electric_faction[1] = local_electric_faction[1] + 1
-            elseif near_spawner.faction == "acid" then
-              local_acid_faction[1] = local_acid_faction[1] + 1
-            elseif near_spawner.faction == "explosive" then
-              local_explosive_faction[1] = local_explosive_faction[1] + 1
-            elseif near_spawner.faction == "poison" then
-              local_poison_faction[1] = local_poison_faction[1] + 1
-            elseif near_spawner.faction == "fire" then
-              local_fire_faction[1] = local_fire_faction[1] + 1
-            end
-          end
-        end
-        local final_factions = {}
-        local biggest_faction = { 0, "basic" }
-        for _, faction in pairs({
-          local_basic_faction,
-          local_piercing_faction,
-          local_electric_faction,
-          local_acid_faction,
-          local_explosive_faction,
-          local_poison_faction,
-          local_fire_faction,
-        }) do
-          if biggest_faction[1] < faction[1] then
-            biggest_faction = faction
-          end
-        end
-        if biggest_faction[1] > 0 then
-          final_factions[1] = biggest_faction[2]
-          --Add second at late evo
-          local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-          if evo_level >= 0.9 then
-            local biggest_faction2 = { 0 }
-            for _, faction in pairs({
-              local_basic_faction,
-              local_piercing_faction,
-              local_electric_faction,
-              local_acid_faction,
-              local_explosive_faction,
-              local_poison_faction,
-              local_fire_faction,
-            }) do
-              --Block first faction from being picked again
-              if biggest_faction[1] < faction[1] and faction[2] ~= final_factions[1] then
-                biggest_faction = faction
-              end
-            end
-            if biggest_faction2[1] > 0 then
-              final_factions[2] = biggest_faction2[2]
-            end
-          end
-          local new_flag = bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_factions)
-          return new_flag
-        else
-          local new_flag =
-            bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { bobmods.enemies.pick_random_faction() })
-          return new_flag
-        end
-      else
-        --20% chance to disregard nearby spawners and pick randomly
-        local new_flag =
-          bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { bobmods.enemies.pick_random_faction() })
-        return new_flag
-      end
+      --If there are no valid nearby flags, pick randomly
+      local new_flag =
+        bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { bobmods.enemies.pick_random_faction() })
+        game.print("random flag planted due to no flags nearby at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
+      return new_flag
     end
   else
     --This is a pseudo-flag that will give other functions the parameters they need to work before factions are unlocked. It is not added to the flag table, so it will not persist
@@ -480,11 +503,11 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
     end
   else
     if quality_random == 1 then
-      quality_dist = { 0, 0, 2, 2, 1, 5 }
+      quality_dist = { 0, 0, 3, 2, 1, 6 }
     elseif quality_random <= 5 then
-      quality_dist = { 0, 2, 3, 2, 1, 8 }
+      quality_dist = { 0, 3, 4, 2, 1, 10 }
     else
-      quality_dist = { 2, 3, 4, 2, 1, 12 }
+      quality_dist = { 3, 4, 5, 3, 0, 15 }
     end
   end
 
@@ -501,171 +524,53 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
 end
 
 function bobmods.enemies.pick_random_faction()
-  --Randomly pick a faction depending on how many are available
-  local final_faction
-  if storage.bobmods.enemies.nauvis_faction_unlock_table[7] then
-    local local_basic_faction = storage.bobmods.enemies.nauvis_faction_table.basic
-    local local_piercing_faction = storage.bobmods.enemies.nauvis_faction_table.piercing
-    local local_electric_faction = storage.bobmods.enemies.nauvis_faction_table.electric
-    local local_acid_faction = storage.bobmods.enemies.nauvis_faction_table.acid
-    local local_explosive_faction = storage.bobmods.enemies.nauvis_faction_table.explosive
-    local local_poison_faction = storage.bobmods.enemies.nauvis_faction_table.poison
-    local local_fire_faction = storage.bobmods.enemies.nauvis_faction_table.fire
-    local faction_range = local_basic_faction
-      + local_piercing_faction
-      + local_electric_faction
-      + local_acid_faction
-      + local_explosive_faction
-      + local_poison_faction
-      + local_fire_faction
-    --Multiply to add weight, and subtract to make small values big
-    local_basic_faction = math.max(0, (faction_range - (4 * local_basic_faction)))
-    local_piercing_faction = math.max(0, (faction_range - (4 * local_piercing_faction)))
-    local_electric_faction = math.max(0, (faction_range - (4 * local_electric_faction)))
-    local_acid_faction = math.max(0, (faction_range - (4 * local_acid_faction)))
-    local_explosive_faction = math.max(0, (faction_range - (4 * local_explosive_faction)))
-    local_poison_faction = math.max(0, (faction_range - (4 * local_poison_faction)))
-    local_fire_faction = math.max(0, (faction_range - (4 * local_fire_faction)))
-    faction_range = local_basic_faction
-      + local_piercing_faction
-      + local_electric_faction
-      + local_acid_faction
-      + local_explosive_faction
-      + local_poison_faction
-      + local_fire_faction
-    if faction_range == 0 then
-      faction_range = 1
-    end
+  --Randomly pick a faction, weighted toward scarcer ones
+  local final_faction = "basic"
+  local local_faction_counts = {}
+  local faction_range = 0
 
-    local faction_random = math.random(faction_range)
-    if faction_random <= local_basic_faction then
-      final_faction = "basic"
-    elseif faction_random <= (local_basic_faction + local_piercing_faction) then
-      final_faction = "piercing"
-    elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction) then
-      final_faction = "electric"
-    elseif
-      faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction)
-    then
-      final_faction = "acid"
-    elseif
-      faction_random
-      <= (
-        local_basic_faction
-        + local_piercing_faction
-        + local_electric_faction
-        + local_acid_faction
-        + local_explosive_faction
-      )
-    then
-      final_faction = "explosive"
-    elseif
-      faction_random
-      <= (
-        local_basic_faction
-        + local_piercing_faction
-        + local_electric_faction
-        + local_acid_faction
-        + local_explosive_faction
-        + local_poison_faction
-      )
-    then
-      final_faction = "poison"
-    elseif
-      faction_random
-      <= (
-        local_basic_faction
-        + local_piercing_faction
-        + local_electric_faction
-        + local_acid_faction
-        + local_explosive_faction
-        + local_poison_faction
-        + local_fire_faction
-      )
-    then
-      final_faction = "fire"
-    else
-      final_faction = "basic"
+  for faction_name, faction_count in pairs(storage.bobmods.enemies.nauvis_faction_table) do
+    --Only count factions that currently have spawners in play. Any that do not will be covered by the extinct faction check
+    log("detecting factions " .. tostring(faction_name) .. " " .. tostring(faction_count))
+    if faction_count ~= 0 then
+      local_faction_counts[faction_name] = faction_count
     end
-  elseif storage.bobmods.enemies.nauvis_faction_unlock_table[5] then
-    local local_basic_faction = storage.bobmods.enemies.nauvis_faction_table.basic
-    local local_piercing_faction = storage.bobmods.enemies.nauvis_faction_table.piercing
-    local local_electric_faction = storage.bobmods.enemies.nauvis_faction_table.electric
-    local local_acid_faction = storage.bobmods.enemies.nauvis_faction_table.acid
-    local local_explosive_faction = storage.bobmods.enemies.nauvis_faction_table.explosive
-    local faction_range = local_basic_faction
-      + local_piercing_faction
-      + local_electric_faction
-      + local_acid_faction
-      + local_explosive_faction
-    --Multiply to add weight, and subtract to make small values big
-    local_basic_faction = math.max(0, (faction_range - (3 * local_basic_faction)))
-    local_piercing_faction = math.max(0, (faction_range - (3 * local_piercing_faction)))
-    local_electric_faction = math.max(0, (faction_range - (3 * local_electric_faction)))
-    local_acid_faction = math.max(0, (faction_range - (3 * local_acid_faction)))
-    local_explosive_faction = math.max(0, (faction_range - (3 * local_explosive_faction)))
-    faction_range = local_basic_faction
-      + local_piercing_faction
-      + local_electric_faction
-      + local_acid_faction
-      + local_explosive_faction
-    if faction_range == 0 then
-      faction_range = 1
-    end
-
-    local faction_random = math.random(faction_range)
-    if faction_random <= local_basic_faction then
-      final_faction = "basic"
-    elseif faction_random <= (local_basic_faction + local_piercing_faction) then
-      final_faction = "piercing"
-    elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction) then
-      final_faction = "electric"
-    elseif
-      faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction + local_acid_faction)
-    then
-      final_faction = "acid"
-    elseif
-      faction_random
-      <= (
-        local_basic_faction
-        + local_piercing_faction
-        + local_electric_faction
-        + local_acid_faction
-        + local_explosive_faction
-      )
-    then
-      final_faction = "explosive"
-    else
-      final_faction = "basic"
-    end
-  elseif storage.bobmods.enemies.nauvis_faction_unlock_table[3] then
-    local local_basic_faction = storage.bobmods.enemies.nauvis_faction_table.basic
-    local local_piercing_faction = storage.bobmods.enemies.nauvis_faction_table.piercing
-    local local_electric_faction = storage.bobmods.enemies.nauvis_faction_table.electric
-    local faction_range = local_basic_faction + local_piercing_faction + local_electric_faction
-    --Multiply to add weight, and subtract to make small values big
-    local_basic_faction = math.max(0, (faction_range - (2 * local_basic_faction)))
-    local_piercing_faction = math.max(0, (faction_range - (2 * local_piercing_faction)))
-    local_electric_faction = math.max(0, (faction_range - (2 * local_electric_faction)))
-    faction_range = local_basic_faction + local_piercing_faction + local_electric_faction
-    if faction_range == 0 then
-      faction_range = 1
-    end
-
-    local faction_random = math.random(faction_range)
-    if faction_random <= local_basic_faction then
-      final_faction = "basic"
-    elseif faction_random <= (local_basic_faction + local_piercing_faction) then
-      final_faction = "piercing"
-    elseif faction_random <= (local_basic_faction + local_piercing_faction + local_electric_faction) then
-      final_faction = "electric"
-    else
-      final_faction = "basic"
-    end
-  else
-    --Just-in-case fallback. This function should never be called with only one faction unlocked
-    final_faction = "basic"
   end
+
+  for faction_name2, faction_count2 in pairs(local_faction_counts) do
+    faction_range = faction_range + faction_count2
+  end
+
+  local local_faction_counts2 = local_faction_counts
+
+  for faction_name3, faction_count3 in pairs(local_faction_counts) do
+    --Multiply to add weight, and subtract to make small values big
+    local_faction_counts2[faction_name3] = math.max(0, (faction_range - (4 * faction_count3)))
+    log("random weighting " .. tostring(faction_name3) .. " " .. tostring(local_faction_counts2[faction_name3]))
+  end
+
+  faction_range = 0
+
+  for faction_name4, faction_count4 in pairs(local_faction_counts2) do
+    faction_range = faction_range + faction_count4
+  end
+
+  if faction_range == 0 then
+    faction_range = 1
+  end
+
+  local faction_random = math.random(faction_range)
+  local local_faction_count_total = 0
+
+  for faction_name5, faction_count5 in pairs(local_faction_counts2) do
+    local_faction_count_total = local_faction_count_total + faction_count5
+    if faction_random <= local_faction_count_total then
+      final_faction = tostring(faction_name5)
+      log("faction randomly chosen: " .. tostring(faction_name5))
+      break
+    end
+  end
+
   return final_faction
 end
 
@@ -737,6 +642,7 @@ script.on_event(defines.events.on_build_base_arrived, function(event)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
   if bobmods.enemies.stop_all ~= true and evo_level >= storage.bobmods.enemies.factions_appear then
     bobmods.enemies.determine_faction_flag(event.group.position.x, event.group.position.y, event.tick)
+    game.print("base building at " .. tostring(event.group.position.x) .. "," .. tostring(event.group.position.y))
   end
 end)
 
@@ -840,6 +746,8 @@ function bobmods.enemies.replace_spawner(original_spawner, flag)
       force = "enemy",
       quality = final_quality,
       spawn_decorations = false,
+      move_stuck_players = true,
+      raise_built = true,
     })
 
     table.insert(storage.bobmods.enemies.nauvis_spawners, {
@@ -847,8 +755,7 @@ function bobmods.enemies.replace_spawner(original_spawner, flag)
       position = new_spawner.position,
       unit_number = new_spawner.unit_number,
     })
-    storage.bobmods.enemies.nauvis_faction_table[faction_name] = storage.bobmods.enemies.nauvis_faction_table[faction_name]
-      + 1
+    storage.bobmods.enemies.nauvis_faction_table[faction_name] = storage.bobmods.enemies.nauvis_faction_table[faction_name] + 1
   else
     --If factions are not unlocked, replace with appropriate basic spawner. Always replacing autoplaced spawners removes all need for checks to avoid double counting, since the functions that call this one all check for only those specific autoplaced entities
     local original_position = original_spawner.position
@@ -874,6 +781,8 @@ function bobmods.enemies.replace_spawner(original_spawner, flag)
       position = original_position,
       force = "enemy",
       spawn_decorations = false,
+      move_stuck_players = true,
+      raise_built = true,
     })
 
     table.insert(storage.bobmods.enemies.nauvis_spawners, {
@@ -898,15 +807,15 @@ function bobmods.enemies.replace_worm(original_worm, flag)
     end
 
     local worm_tier
-    if evo_level >= 0.9 then
+    if evo_level >= 0.95 then
       worm_tier = 9 - math.random(4)
-    elseif evo_level >= 0.85 then
+    elseif evo_level >= 0.9 then
       worm_tier = 8 - math.random(4)
-    elseif evo_level >= 0.75 then
+    elseif evo_level >= 0.8 then
       worm_tier = 7 - math.random(4)
-    elseif evo_level >= 0.65 then
+    elseif evo_level >= 0.7 then
       worm_tier = 6 - math.random(4)
-    elseif evo_level >= 0.55 then
+    elseif evo_level >= 0.6 then
       worm_tier = 5 - math.random(4)
     elseif evo_level >= 0.45 then
       worm_tier = 4 - math.random(3)
@@ -966,6 +875,8 @@ function bobmods.enemies.replace_worm(original_worm, flag)
         force = "enemy",
         quality = final_quality,
         spawn_decorations = false,
+        move_stuck_players = true,
+        raise_built = true,
       })
     end
   end
@@ -975,11 +886,14 @@ script.on_event(defines.events.on_entity_died, function(event)
   if bobmods.enemies.stop_all ~= true then
     --Remove/subtract spawner from tables when one is killed
     local spawner_faction = bobmods.enemies.identify_faction(event.entity.name)
+    game.print("dead spawner removal " .. tostring(spawner_faction) .. " " .. storage.bobmods.enemies.nauvis_faction_table[spawner_faction])
     storage.bobmods.enemies.nauvis_faction_table[spawner_faction] =
       math.max(0, storage.bobmods.enemies.nauvis_faction_table[spawner_faction] - 1)
+    game.print("complete. " .. tostring(spawner_faction) .. " " .. storage.bobmods.enemies.nauvis_faction_table[spawner_faction])
     for i, old_spawner in pairs(storage.bobmods.enemies.nauvis_spawners) do
       if old_spawner.unit_number == event.entity.unit_number then
         table.remove(storage.bobmods.enemies.nauvis_spawners, i)
+        game.print("spawner data removed at index " .. tostring(i))
         break
       end
     end
@@ -987,22 +901,14 @@ script.on_event(defines.events.on_entity_died, function(event)
 end, { { filter = "type", type = "unit-spawner" } })
 
 function bobmods.enemies.identify_faction(test_string)
-  local spawner_faction
-  if string.find(test_string, "piercing") then
-    spawner_faction = "piercing"
-  elseif string.find(test_string, "electric") then
-    spawner_faction = "electric"
-  elseif string.find(test_string, "acid") then
-    spawner_faction = "acid"
-  elseif string.find(test_string, "explosive") then
-    spawner_faction = "explosive"
-  elseif string.find(test_string, "poison") then
-    spawner_faction = "poison"
-  elseif string.find(test_string, "fire") then
-    spawner_faction = "fire"
-  else
-    spawner_faction = "basic"
+  local spawner_faction = "basic"
+
+  for factionname_for_dead in pairs(storage.bobmods.enemies.nauvis_faction_table) do
+    if string.find(test_string, tostring(factionname_for_dead)) then
+      spawner_faction = tostring(factionname_for_dead)
+    end
   end
+
   return spawner_faction
 end
 
