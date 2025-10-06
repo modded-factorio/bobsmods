@@ -1,3 +1,8 @@
+--When adding new factions:
+-- Naming conventions must be the same as for the factions added by this mod. You should be able to have any number of Biter/Spawner tiers, but there must be 8 tiers of Worms (small, medium, large, huge, giant, titan, behemoth, leviathan) and 3 tiers of Spawners (bob-0-, bob-, and bob-super).
+-- Faction names must not be a word that would be used elsewhere in any enemy names. For example, "spawner" would cause problems because that word appears in unit-spawner names. Words like "giant" or "titan" also cannot be used.
+-- The setting "bobmods-enemies-factionlist" must be modified to add your faction to it. This can be done in settings-updates. Default is "piercing,electric,acid,explosive,poison,fire". Factions are separated by commas with no spaces.
+
 --Biters:
 -- Needed: name, order, tint, tint2, full attack_parameters except for attack sound and animation
 -- Optional: icon, icon_size, flags, max_health, healing_per_tick, factoriopedia_simulation, resistances, impact_category, spawning_time_modifier, distraction_cooldown, min_pursue_time, max_pursue_distance, damaged_trigger_effect, absorptions_to_join_attack, movement_speed, distance_per_frame, range, vision_distance
