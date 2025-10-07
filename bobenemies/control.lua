@@ -63,14 +63,12 @@ script.on_init(function()
   --Convert string of faction names stored in settings to a table. To avoid issues, this can only be done once. Remote factions cannot be added mid-game.
   for factionname_for_unlock in string.gmatch(factionstring, "([^" .. "," .. "]+)") do
     table.insert(storage.bobmods.enemies.nauvis_faction_unlock_order, factionname_for_unlock)
-    log(factionname_for_unlock .. " added to unlock order")
   end
 
   --Make sure all factions exist on the faction table
   for factionname_for_count in string.gmatch(factionstring, "([^" .. "," .. "]+)") do
     if not storage.bobmods.enemies.nauvis_faction_table[factionname_for_count] then
       storage.bobmods.enemies.nauvis_faction_table[factionname_for_count] = 0
-      log(factionname_for_count .. " added to faction table")
     end
   end
 
@@ -78,7 +76,6 @@ script.on_init(function()
   if settings.startup["bobmods-enemies-randomizeenemies"].value == true and #storage.bobmods.enemies.nauvis_faction_unlock_order > 1 then
     for i = #storage.bobmods.enemies.nauvis_faction_unlock_order, 2, -1 do
       local shuffle_from = math.random(i)
-      log("shuffling " .. storage.bobmods.enemies.nauvis_faction_unlock_order[shuffle_from] .. " to position " .. tostring(i))
       storage.bobmods.enemies.nauvis_faction_unlock_order[i], storage.bobmods.enemies.nauvis_faction_unlock_order[shuffle_from] = storage.bobmods.enemies.nauvis_faction_unlock_order[shuffle_from], storage.bobmods.enemies.nauvis_faction_unlock_order[i]
     end
   end
@@ -146,28 +143,18 @@ script.on_configuration_changed(function()
 
   for _, factionname_for_verification in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
     if not string.find(factionstring, factionname_for_verification) then
-      log("removing " .. factionname_for_verification)
+      log("Removing faction: " .. factionname_for_verification)
       --Set to 0 instead of nil so that identify_faction still works properly. Other functions will ignore this 0-value so long as the matching faction isn't unlocked.
       storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification] = 0
       for i, faction_name2 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
         if faction_name2 == factionname_for_verification then
-          log("unlock table, removing " .. storage.bobmods.enemies.nauvis_faction_unlock_table[i])
           table.remove(storage.bobmods.enemies.nauvis_faction_unlock_table, i)
         end
       end
       for i, faction_name3 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
         if faction_name3 == factionname_for_verification then
-          log("unlock order list, removing " .. storage.bobmods.enemies.nauvis_faction_unlock_order[i])
           table.remove(storage.bobmods.enemies.nauvis_faction_unlock_order, i)
         end
-      end
-
-      log(tostring(storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification]))
-      for i, faction_name2 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
-        log("unlock table list: " .. faction_name2)
-      end
-      for i, faction_name3 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
-        log("unlock order list: " .. faction_name3)
       end
 
       --Then remove spawners from record table
@@ -183,7 +170,6 @@ script.on_configuration_changed(function()
           local remove_log = #remove_index
           for i = #remove_index, 1, -1 do
             table.remove(storage.bobmods.enemies.nauvis_spawners, remove_index[i])
-            log("Removing spawner from records at index " .. tostring(remove_index[i]))
           end
         end
       end
@@ -201,7 +187,6 @@ script.on_configuration_changed(function()
           local remove_log = #remove_index
           for i = #remove_index, 1, -1 do
             table.remove(storage.bobmods.enemies.faction_flags, remove_index[i])
-            log("Removing flag from records at index " .. tostring(remove_index[i]))
           end
         end
       end
@@ -211,7 +196,7 @@ script.on_configuration_changed(function()
 
 end)
 
-script.on_nth_tick(60, function(current_tick) --600, function(current_tick)
+script.on_nth_tick(60, function(current_tick)
   if bobmods.enemies.stop_all ~= true then
     if storage.bobmods.enemies.n_cycle == 0 then
       --Delete flags from table if all nearby spawners are destroyed, to reduce clutter
@@ -249,8 +234,6 @@ script.on_nth_tick(60, function(current_tick) --600, function(current_tick)
       if remove_index[1] then
         local remove_log = #remove_index
         for i = #remove_index, 1, -1 do
-          local v = remove_index[i] --for log
-          log("removing dead flag for faction " .. tostring(storage.bobmods.enemies.faction_flags[v].factions[1]) .. " at " .. tostring(storage.bobmods.enemies.faction_flags[v].x) .. ", " .. tostring(storage.bobmods.enemies.faction_flags[v].y))
           table.remove(storage.bobmods.enemies.faction_flags, remove_index[i])
           remove_count = remove_count + 1
         end
@@ -396,7 +379,6 @@ function bobmods.enemies.determine_faction_flag(x_coord, y_coord, call_tick)
     for _, checking_faction in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
       if storage.bobmods.enemies.nauvis_faction_table[checking_faction] == 0 then
         local new_flag = bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { checking_faction })
-        game.print("flag planted due to extinction at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
         return new_flag
       end
     end
@@ -416,19 +398,16 @@ function bobmods.enemies.determine_faction_flag(x_coord, y_coord, call_tick)
     local random_faction = math.random(20)
     if nearest_flag.flag and (random_faction < 20) then
       local new_flag = bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, nearest_flag.flag.factions)
-      game.print("flag planted based on nearby flags at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
       return new_flag
     elseif nearest_flag.flag and random_faction == 20 then
       --5% chance to disregard nearby flags and pick randomly
       local new_flag =
         bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { bobmods.enemies.pick_random_faction() })
-      game.print("flag planted with randomly changed faction at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
       return new_flag
     else
       --If there are no valid nearby flags, pick randomly
       local new_flag =
         bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, { bobmods.enemies.pick_random_faction() })
-        game.print("random flag planted due to no flags nearby at " .. tostring(x_coord) .. ", " .. tostring(y_coord) .. " for " .. new_flag.factions[1] )
       return new_flag
     end
   else
@@ -531,7 +510,6 @@ function bobmods.enemies.pick_random_faction()
 
   for faction_name, faction_count in pairs(storage.bobmods.enemies.nauvis_faction_table) do
     --Only count factions that currently have spawners in play. Any that do not will be covered by the extinct faction check
-    log("detecting factions " .. tostring(faction_name) .. " " .. tostring(faction_count))
     if faction_count ~= 0 then
       local_faction_counts[faction_name] = faction_count
     end
@@ -546,7 +524,6 @@ function bobmods.enemies.pick_random_faction()
   for faction_name3, faction_count3 in pairs(local_faction_counts) do
     --Multiply to add weight, and subtract to make small values big
     local_faction_counts2[faction_name3] = math.max(0, (faction_range - (4 * faction_count3)))
-    log("random weighting " .. tostring(faction_name3) .. " " .. tostring(local_faction_counts2[faction_name3]))
   end
 
   faction_range = 0
@@ -566,7 +543,6 @@ function bobmods.enemies.pick_random_faction()
     local_faction_count_total = local_faction_count_total + faction_count5
     if faction_random <= local_faction_count_total then
       final_faction = tostring(faction_name5)
-      log("faction randomly chosen: " .. tostring(faction_name5))
       break
     end
   end
@@ -642,7 +618,6 @@ script.on_event(defines.events.on_build_base_arrived, function(event)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
   if bobmods.enemies.stop_all ~= true and evo_level >= storage.bobmods.enemies.factions_appear then
     bobmods.enemies.determine_faction_flag(event.group.position.x, event.group.position.y, event.tick)
-    game.print("base building at " .. tostring(event.group.position.x) .. "," .. tostring(event.group.position.y))
   end
 end)
 
@@ -886,14 +861,11 @@ script.on_event(defines.events.on_entity_died, function(event)
   if bobmods.enemies.stop_all ~= true then
     --Remove/subtract spawner from tables when one is killed
     local spawner_faction = bobmods.enemies.identify_faction(event.entity.name)
-    game.print("dead spawner removal " .. tostring(spawner_faction) .. " " .. storage.bobmods.enemies.nauvis_faction_table[spawner_faction])
     storage.bobmods.enemies.nauvis_faction_table[spawner_faction] =
       math.max(0, storage.bobmods.enemies.nauvis_faction_table[spawner_faction] - 1)
-    game.print("complete. " .. tostring(spawner_faction) .. " " .. storage.bobmods.enemies.nauvis_faction_table[spawner_faction])
     for i, old_spawner in pairs(storage.bobmods.enemies.nauvis_spawners) do
       if old_spawner.unit_number == event.entity.unit_number then
         table.remove(storage.bobmods.enemies.nauvis_spawners, i)
-        game.print("spawner data removed at index " .. tostring(i))
         break
       end
     end
@@ -936,3 +908,62 @@ script.on_event(defines.events.on_sector_scanned, function(event)
     end
   end
 end, { { filter = "name", name = "bob-artifact-radar" } })
+
+commands.add_command("bob-enemies-unlocks-check", nil, function(command)
+  game.print("Faction unlock order: ")
+  for _, faction_name in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
+    game.print("Unlock: " .. faction_name)
+  end
+
+  game.print("Unlocked factions: ")
+  for _, faction_name2 in pairs(storage.bobmods.enemies.nauvis_faction_unlock_table) do
+    game.print("Unlocked: " .. faction_name2)
+  end
+end)
+
+commands.add_command("bob-enemies-faction-counts-check", nil, function(command)
+  game.print("Faction table check: ")
+  for faction_name, faction_count in pairs(storage.bobmods.enemies.nauvis_faction_table) do
+    game.print("Table: " .. tostring(faction_name) .. " " .. tostring(faction_count))
+  end
+
+  game.print("Spawner table check: ")
+  local local_nauvis_faction_table = storage.bobmods.enemies.nauvis_faction_table
+
+  for factionname_for_recheck in pairs(local_nauvis_faction_table) do
+    local_nauvis_faction_table[factionname_for_recheck] = 0
+  end
+
+  for _, registered_spawner in pairs(storage.bobmods.enemies.nauvis_spawners) do
+    local factionname2 = registered_spawner.faction
+    local_nauvis_faction_table[factionname2] = local_nauvis_faction_table[factionname2] + 1
+  end
+
+  for faction_name2, faction_count2 in pairs(local_nauvis_faction_table) do
+    game.print("Spawners: " .. tostring(faction_name2) .. " " .. tostring(faction_count2))
+  end
+end)
+
+commands.add_command("bob-enemies-flag-check", nil, function(command)
+  local check_index = tonumber(command.parameter)
+  if check_index and storage.bobmods.enemies.faction_flags[check_index] then
+    local check_flag = storage.bobmods.enemies.faction_flags[check_index]
+    game.print("Flag check: " .. check_index)
+    if check_flag.factions[1] then
+      game.print("Factions: " .. check_flag.factions[1])
+    end
+    if check_flag.factions[2] then
+      game.print("Factions: " .. check_flag.factions[2])
+    end
+    if check_flag.factions[3] then
+      game.print("Factions: " .. check_flag.factions[3])
+    end
+    game.print("Quality limit: " .. check_flag.quality_limit)
+    game.print("Quality table: " .. check_flag.quality_values[1] .. " " .. check_flag.quality_values[2] .. " " .. check_flag.quality_values[3] .. " " .. check_flag.quality_values[4] .. " " .. check_flag.quality_values[5] .. " Total: " .. check_flag.quality_values[6])
+    game.print("X: " .. check_flag.x .. ", Y: " .. check_flag.y)
+    game.print("Tick: " .. check_flag.tick)
+  else
+    game.print("Need valid numerical index")
+  end
+  
+end)
