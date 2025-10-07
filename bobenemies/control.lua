@@ -141,6 +141,18 @@ script.on_configuration_changed(function()
   --Check if any previously existing factions have been removed and delete them from faction lists where necessary. 
   local factionstring = settings.startup["bobmods-enemies-factionlist"].value
 
+  --Set unlock order list to default order if the table is empty so that everything still works when this mod is updated from a previous version
+  if storage.bobmods.enemies.nauvis_faction_unlock_order == nil then
+    storage.bobmods.enemies.nauvis_faction_unlock_order = {
+      "piercing",
+      "electric",
+      "acid",
+      "explosive",
+      "poison",
+      "fire",
+    }
+  end
+
   for _, factionname_for_verification in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
     if not string.find(factionstring, factionname_for_verification) then
       log("Removing faction: " .. factionname_for_verification)
