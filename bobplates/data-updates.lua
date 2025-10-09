@@ -16,6 +16,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   if feature_flags["quality"] then
     data.raw.fluid["bob-hydrogen"].fuel_value = "25kJ"
     data.raw.fluid["bob-deuterium"].fuel_value = "25kJ"
+    data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 250
     data.raw.recipe["bob-water-electrolysis"].energy_required = 2
     data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
     if data.raw.recipe["bob-sodium-chlorate"] then
@@ -27,6 +28,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   else
     data.raw.fluid["bob-hydrogen"].fuel_value = "35kJ"
     data.raw.fluid["bob-deuterium"].fuel_value = "35kJ"
+    data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 180
   end
   data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "960kW"
   data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "11kW"
@@ -266,7 +268,7 @@ data.raw.fluid["light-oil"].fuel_value = "1.5MJ" --"3MJ"
 data.raw.fluid["light-oil"].emissions_multiplier = 2
 data.raw.fluid["heavy-oil"].fuel_value = "1MJ" --"2MJ"
 data.raw.fluid["heavy-oil"].emissions_multiplier = 3
-data.raw.fluid["petroleum-gas"].fuel_value = "2.3MJ" --"4.6MJ"
+data.raw.fluid["petroleum-gas"].fuel_value = "1.2MJ" --"4.6MJ"
 
 data.raw.item["coal"].fuel_emissions_multiplier = 2
 data.raw.item["solid-fuel"].fuel_emissions_multiplier = 0.8
