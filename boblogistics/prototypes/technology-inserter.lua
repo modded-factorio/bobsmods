@@ -215,7 +215,7 @@ data:extend({
         modifier = 1,
       },
     },
-    prerequisites = { "inserter-stack-size-bonus-1" },
+    prerequisites = { "inserter-stack-size-bonus-1", "chemical-science-pack" },
     unit = {
       count = 100,
       ingredients = {
@@ -240,7 +240,7 @@ data:extend({
         modifier = 1,
       },
     },
-    prerequisites = { "inserter-stack-size-bonus-2" },
+    prerequisites = { "inserter-stack-size-bonus-2", "production-science-pack" },
     unit = {
       count = 200,
       ingredients = {
@@ -266,7 +266,7 @@ data:extend({
         modifier = 1,
       },
     },
-    prerequisites = { "inserter-stack-size-bonus-3" },
+    prerequisites = { "inserter-stack-size-bonus-3", "utility-science-pack" },
     unit = {
       count = 300,
       ingredients = {
