@@ -1,3 +1,10 @@
+if mods["aai-industry"] then
+  if data.raw.technology["logistics-0"] then
+    data.raw.technology["logistics-0"].localised_name = { "", { "technology-name.logistics" }, " 0" }
+    bobmods.lib.tech.remove_prerequisite("logistics-0", "basic-logistics")
+    bobmods.lib.tech.hide("basic-logistics")
+  end
+end
 if mods["aai-containers"] then
   bobmods.lib.tech.add_prerequisite("aai-strongbox-storage", "advanced-circuit")
   data.raw.item["passive-provider-chest"].order = "b[storage]-b"
