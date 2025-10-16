@@ -1,5 +1,6 @@
 require("prototypes.recipe.entity-recipe-updates")
 require("prototypes.technology-updates")
+require("prototypes.aai-integration")
 
 data.raw.character.character.inventory_size = settings.startup["bobmods-plates-inventorysize"].value
 
