@@ -1,5 +1,6 @@
 require("prototypes.recipe-updates")
 require("prototypes.technology-updates")
+require("prototypes.aai-integration")
 
 data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
 data.raw.item["copper-cable"].order = "0-a1"
