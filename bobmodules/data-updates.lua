@@ -4,6 +4,12 @@ require("prototypes.recipe.module-updates")
 require("prototypes.recipe.module-merged-updates")
 require("prototypes.technology.module-updates")
 
+if mods["aai-industry"] then
+  if not mods["bobgreenhouse"] then
+    bobmods.lib.recipe.replace_ingredient("bob-module-circuit-board", "bob-wooden-board", "bob-phenolic-board")
+  end
+end
+
 bobmods.lib.recipe.add_additional_category("bob-module-circuit-board", "electronics-with-fluid")
 bobmods.lib.recipe.add_additional_category("bob-module-processor-board", "electronics-with-fluid")
 bobmods.lib.recipe.add_additional_category("bob-module-processor-board-2", "electronics-with-fluid")
