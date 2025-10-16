@@ -35,3 +35,11 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   bobmods.lib.tech.add_recipe_unlock("electric-energy-accumulators", "bob-fast-accumulator")
   bobmods.lib.tech.add_recipe_unlock("electric-energy-accumulators", "bob-slow-accumulator")
 end
+
+if settings.startup["bobmods-power-steam"].value == true then
+  if mods["aai-industry"] then
+    bobmods.lib.tech.remove_prerequisite("steam-power", "fluid-handling")
+    bobmods.lib.tech.add_prerequisite("steam-power", "basic-fluid-handling")
+    bobmods.lib.tech.add_prerequisite("steam-power", "logistic-science-pack")
+  end
+end
