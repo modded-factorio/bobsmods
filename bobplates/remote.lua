@@ -131,4 +131,5 @@ end
 
 remote.add_interface("bobplates", {
   milestones_presets = milestones_presets,
+  jetpack_fuels = function() return { ["bob-enriched-fuel"] = 0.8 } end
 })
