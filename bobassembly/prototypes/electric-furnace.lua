@@ -3,7 +3,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     return {
       layers = {
         {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace.png",
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
           priority = "high",
           width = 239,
           height = 219,
@@ -21,7 +21,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
           shift = util.by_pixel(7.5, 12),
         },
         {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
           priority = "high",
           width = 227,
           height = 171,
@@ -38,41 +38,68 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     return {
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-          priority = "high",
-          width = 60,
-          height = 56,
-          frame_count = 12,
-          animation_speed = 0.5,
-          shift = util.by_pixel(1.75, 32.75),
-          scale = 0.5,
+          layers = {
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+              frame_count = 12,
+              animation_speed = 0.5,
+              draw_as_glow = true,
+              width = 60,
+              height = 56,
+              priority = "high",
+              scale = 0.5,
+              shift = { 0.0546875, 1.0234375 },
+            },
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-light.png",
+              repeat_count = 12,
+              blend_mode = "additive",
+              draw_as_glow = true,
+              width = 202,
+              height = 202,
+              scale = 0.5,
+              shift = { 0.03125, 0 },
+            }
+          }
         },
-        light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        fadeout = true
       },
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-          priority = "high",
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-ground-light.png",
+          blend_mode = "additive",
+          draw_as_light = true,
+          width = 166,
+          height = 124,
+          scale = 0.5,
+          shift = { 0.09375, 2.15625 },
+        },
+        fadeout = true
+      },
+      {
+        animation = {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          animation_speed = 0.5,
+          frame_count = 4,
           width = 37,
           height = 25,
-          frame_count = 4,
-          animation_speed = 0.5,
-          shift = util.by_pixel(-20.5, -18.5),
+          priority = "high",
           scale = 0.5,
-        },
+          shift = { -0.640625, -0.578125 },
+        }
       },
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
-          priority = "high",
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+          animation_speed = 0.5,
+          frame_count = 4,
           width = 23,
           height = 15,
-          frame_count = 4,
-          animation_speed = 0.5,
-          shift = util.by_pixel(3.5, -38),
+          priority = "high",
           scale = 0.5,
-        },
-      },
+          shift = { 0.109375, -1.1875 },
+        }
+      }
     }
   end
 
@@ -137,6 +164,17 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     end
     if input.module_slots > 4 then
       prototype.icons_positioning[1].multi_row_initial_height_modifier = -0.3
+    end
+
+    if feature_flags["freezing"] and mods["space-age"] then
+      prototype.heating_energy = input.heating_energy or "100kW"
+      prototype.graphics_set.frozen_patch = {
+        filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+        width = 239,
+        height = 219,
+        scale = 0.5,
+        shift = { 0.0234375, 0.1796875 },
+      }
     end
 
     return prototype
