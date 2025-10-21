@@ -181,6 +181,9 @@ if aailoaderssize == true then
         for _, layer in pairs(layers) do
           layer.scale = new_scale
         end
+        if feature_flags["freezing"] and mods["space-age"] and machine.graphics_set.frozen_patch then
+          machine.graphics_set.frozen_patch.scale = new_scale
+        end
       end
     end
   end
