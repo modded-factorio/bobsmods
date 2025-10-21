@@ -376,4 +376,21 @@ then
       order = "d-f-5",
     },
   })
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    data.raw.furnace["bob-distillery-2"].heating_energy = "50kW"
+    data.raw.furnace["bob-distillery-3"].heating_energy = "50kW"
+    data.raw.furnace["bob-distillery-4"].heating_energy = "50kW"
+    data.raw.furnace["bob-distillery-5"].heating_energy = "50kW"
+
+    data.raw.furnace["bob-distillery-2"].graphics_set.frozen_patch = bobmods.plates.frozenpatch1({ r = 0.45, g = 0.1, b = 0.05 })
+    data.raw.furnace["bob-distillery-2"].graphics_set_flipped.frozen_patch = bobmods.plates.frozenpatch2({ r = 0.45, g = 0.1, b = 0.05 })
+    data.raw.furnace["bob-distillery-3"].graphics_set.frozen_patch = bobmods.plates.frozenpatch1({ r = 0.05, g = 0.3, b = 0.45 })
+    data.raw.furnace["bob-distillery-3"].graphics_set_flipped.frozen_patch = bobmods.plates.frozenpatch2({ r = 0.05, g = 0.3, b = 0.45 })
+    data.raw.furnace["bob-distillery-4"].graphics_set.frozen_patch = bobmods.plates.frozenpatch1({ r = 0.45, g = 0.05, b = 0.45 })
+    data.raw.furnace["bob-distillery-4"].graphics_set_flipped.frozen_patch = bobmods.plates.frozenpatch2({ r = 0.45, g = 0.05, b = 0.45 })
+    data.raw.furnace["bob-distillery-5"].graphics_set.frozen_patch = bobmods.plates.frozenpatch1({ r = 0.05, g = 0.45, b = 0.05 })
+    data.raw.furnace["bob-distillery-5"].graphics_set_flipped.frozen_patch = bobmods.plates.frozenpatch2({ r = 0.05, g = 0.45, b = 0.05 })
+  end
+
 end
