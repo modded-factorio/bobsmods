@@ -212,6 +212,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       animation_speed_coefficient = 32,
       structure_animation_speed_coefficient = 0.7,
       structure_animation_movement_cooldown = 10,
+      icon_draw_specification = {scale = 0.5},
       belt_animation_set = bobmods.logistics.black_belt_animation_set,
       fast_replaceable_group = "transport-belt",
       next_upgrade = "splitter",
@@ -258,6 +259,12 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           scale = 0.5,
         },
       },
+      circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["splitter"],
+      default_input_left_condition = { first = {type="virtual", name="signal-I"}, comparator="<", second=0},
+      default_input_right_condition = { first = {type="virtual", name="signal-I"}, comparator=">", second=0},
+      default_output_left_condition = { first = {type="virtual", name="signal-O"}, comparator="<", second=0},
+      default_output_right_condition = { first = {type="virtual", name="signal-O"}, comparator=">", second=0},
     },
   })
 end
@@ -442,6 +449,7 @@ data:extend({
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
+    icon_draw_specification = {scale = 0.5},
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     next_upgrade = "bob-ultimate-splitter",
@@ -488,6 +496,12 @@ data:extend({
         scale = 0.5,
       },
     },
+    circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["splitter"],
+    default_input_left_condition = { first = {type="virtual", name="signal-I"}, comparator="<", second=0},
+    default_input_right_condition = { first = {type="virtual", name="signal-I"}, comparator=">", second=0},
+    default_output_left_condition = { first = {type="virtual", name="signal-O"}, comparator="<", second=0},
+    default_output_right_condition = { first = {type="virtual", name="signal-O"}, comparator=">", second=0},
   },
 })
 
@@ -669,6 +683,7 @@ data:extend({
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
+    icon_draw_specification = {scale = 0.5},
     belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     speed = 0.15625,
@@ -714,6 +729,12 @@ data:extend({
         scale = 0.5,
       },
     },
+    circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["splitter"],
+    default_input_left_condition = { first = {type="virtual", name="signal-I"}, comparator="<", second=0},
+    default_input_right_condition = { first = {type="virtual", name="signal-I"}, comparator=">", second=0},
+    default_output_left_condition = { first = {type="virtual", name="signal-O"}, comparator="<", second=0},
+    default_output_right_condition = { first = {type="virtual", name="signal-O"}, comparator=">", second=0},
   },
 })
 
