@@ -111,16 +111,26 @@ script.on_configuration_changed(function()
 
   bobmods.enemies.populate_unlock_list()
 
-  --Clear nauvis_faction_table of removed factions
+  --In case someone starts a game with a faction, then removes it, and then adds it again, do recount of all spawners.
   for factionname_for_verification1 in pairs(storage.bobmods.enemies.nauvis_faction_table) do
-    if factionname_for_verification1 ~= "basic" then
-      local confirmed1 = false
-      for i, raw_name in pairs(storage.bobmods.enemies.nauvis_raw_order) do
-        if tostring(factionname_for_verification1) == raw_name then confirmed1 = true end
+    storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification1] = 0
+  end
+  local initial_spawners = game.surfaces.nauvis.find_entities_filtered({ type = "unit-spawner" })
+  for _, detected_spawner in pairs(initial_spawners) do
+    local spawner_faction = bobmods.enemies.identify_faction(detected_spawner.name)
+    storage.bobmods.enemies.nauvis_faction_table[spawner_faction] = storage.bobmods.enemies.nauvis_faction_table[spawner_faction] + 1
+  end
+
+  --Clear nauvis_faction_table of removed factions
+  for factionname_for_verification2 in pairs(storage.bobmods.enemies.nauvis_faction_table) do
+    if factionname_for_verification2 ~= "basic" then
+      local confirmed2 = false
+      for i, raw_name2 in pairs(storage.bobmods.enemies.nauvis_raw_order) do
+        if tostring(factionname_for_verification2) == raw_name2 then confirmed2 = true end
       end
-      if confirmed1 == false then
+      if confirmed2 == false then
         --Set to 0 instead of nil so that identify_faction still works properly, since spawners will not be removed by this process. Other functions will ignore this 0-value so long as the matching faction isn't considered to be unlocked.
-        storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification1] = 0
+        storage.bobmods.enemies.nauvis_faction_table[factionname_for_verification2] = 0
       end
     end
   end
@@ -128,7 +138,7 @@ script.on_configuration_changed(function()
   --Redo faction unlocking
   bobmods.enemies.unlock_factions()
 
-  -- Then remove flags from records
+  --Then remove flags from records
   if storage.bobmods.enemies.faction_flags[1] then
     for i = #storage.bobmods.enemies.faction_flags, 1, -1 do
       for v = #storage.bobmods.enemies.faction_flags[i].factions, 1, -1 do
