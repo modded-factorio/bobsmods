@@ -3,7 +3,7 @@ Version: 2.0.3
 Date: ???
   Features:
     - The order in which enemy factions appear may now be randomized at game start.
-    - New factions may now be added by other mods at game start. Further instructions for how to do this may be found in prototypes/functions.lua.
+    - New factions may now be added by other mods. Instructions for how to do this may be found in prototypes/functions.lua.
     - Factions may also be removed so that they will not appear. Be warned that artifacts will not be reorganized in this case, so removing more than a single faction may make it difficult to get enough of them in some colors.
   Changes:
     - Integrate Bob's Locale Translations mod #445
