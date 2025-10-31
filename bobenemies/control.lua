@@ -895,7 +895,7 @@ script.on_event(defines.events.on_entity_died, function(event)
       end
     end
   end
-end, { { filter = "type", type = "unit-spawner" }, { filter = "force", force = "enemy", mode = "and" }, { filter = "force", force = "enemy", mode = "and" } })
+end, { { filter = "type", type = "unit-spawner" }, { filter = "force", force = "enemy", mode = "and" } })
 
 function bobmods.enemies.identify_faction(test_string)
   local spawner_faction = "basic"
