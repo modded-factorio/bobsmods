@@ -698,6 +698,25 @@ table.insert(data.raw.fire["bob-enemy-electric-fire"].on_damage_tick_effect, {
   },
 })
 
+table.insert(data.raw.fire["bob-enemy-electric-fire"].on_damage_tick_effect, {
+  type = "area",
+  radius = 3,
+  force = "all",
+  filter_enabled = true,
+  trigger_target_mask = { "flying-robot" },
+  ignore_collision_condition = true,
+  action_delivery = {
+    type = "instant",
+    target_effects = {
+      {
+        type = "damage",
+        damage = { type = "electric", amount = 3 },
+        show_in_tooltip = false,
+      },
+    },
+  },
+})
+
 bobmods.enemies.new_spitter({
   name = "bob-medium-electric-spitter",
   icons = {
@@ -1935,7 +1954,7 @@ bobmods.enemies.new_spitter({
   },
   order = "e-d-h",
   tier = 8,
-  max_health = 45000,
+  max_health = 25000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -1976,7 +1995,7 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.unit["bob-giant-explosive-spitter"].max_health = 4500
   data.raw.unit["bob-titan-explosive-spitter"].max_health = 13000
   data.raw.unit["bob-behemoth-explosive-spitter"].max_health = 45000
-  data.raw.unit["bob-leviathan-explosive-spitter"].max_health = 200000
+  data.raw.unit["bob-leviathan-explosive-spitter"].max_health = 140000
 end
 
 --Poison
@@ -2066,6 +2085,7 @@ local poison_attack_action = function(radius, smoke_name, damage, healing)
                 radius = 2 * radius,
                 force = "enemy",
                 trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
+                ignore_collision_condition = true,
                 action_delivery = {
                   type = "instant",
                   target_effects = {
@@ -2117,7 +2137,7 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-small" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-small"),
 
-  attack_action = poison_attack_action(1, "enemy-poison-attack-smoke-small", 6, -2),
+  attack_action = poison_attack_action(1, "enemy-poison-attack-smoke-small", 6, -4.5),
   attack_range = 13,
   attack_damage_modifier = 0.6,
   attack_stream_name = "poison-stream-spitter-small",
@@ -2145,7 +2165,7 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-medium" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium"),
 
-  attack_action = poison_attack_action(1.1, "enemy-poison-attack-smoke-medium", 12, -4),
+  attack_action = poison_attack_action(1.1, "enemy-poison-attack-smoke-medium", 12, -9),
   attack_range = 14,
   attack_damage_modifier = 1.2,
   attack_stream_name = "poison-stream-spitter-medium",
@@ -2173,7 +2193,7 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-big" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-big"),
 
-  attack_action = poison_attack_action(1.15, "enemy-poison-attack-smoke-big", 18, -6),
+  attack_action = poison_attack_action(1.15, "enemy-poison-attack-smoke-big", 18, -18),
   attack_range = 15,
   attack_damage_modifier = 2.4,
   attack_stream_name = "poison-stream-spitter-big",
@@ -2201,7 +2221,7 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-huge" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge"),
 
-  attack_action = poison_attack_action(1.2, "enemy-poison-attack-smoke-huge", 24, -8),
+  attack_action = poison_attack_action(1.2, "enemy-poison-attack-smoke-huge", 24, -36),
   attack_range = 16,
   attack_damage_modifier = 4,
   attack_stream_name = "poison-stream-spitter-huge",
@@ -2229,7 +2249,7 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-giant" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant"),
 
-  attack_action = poison_attack_action(1.35, "enemy-poison-attack-smoke-giant", 30, -20),
+  attack_action = poison_attack_action(1.35, "enemy-poison-attack-smoke-giant", 30, -75),
   attack_range = 17,
   attack_damage_modifier = 6,
   attack_stream_name = "poison-stream-spitter-giant",
@@ -2257,7 +2277,7 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-titan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan"),
 
-  attack_action = poison_attack_action(1.5, "enemy-poison-attack-smoke-titan", 36, -24),
+  attack_action = poison_attack_action(1.5, "enemy-poison-attack-smoke-titan", 36, -126),
   attack_range = 18,
   attack_damage_modifier = 8,
   attack_stream_name = "poison-stream-spitter-titan",
@@ -2285,9 +2305,9 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-behemoth" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-behemoth"),
 
-  attack_action = poison_attack_action(1.65, "enemy-poison-attack-smoke-behemoth", 42, -42),
+  attack_action = poison_attack_action(1.65, "enemy-poison-attack-smoke-behemoth", 42, -210),
   attack_range = 19,
-  attack_damage_modifier = 11,
+  attack_damage_modifier = 10,
   attack_stream_name = "poison-stream-spitter-behemoth",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
@@ -2313,9 +2333,9 @@ bobmods.enemies.new_spitter({
   localised_description = { "entity-description.bob-poison-enemy-leviathan" },
   damaged_trigger_effect = poison_reaction("poison-rage-sticker-leviathan"),
 
-  attack_action = poison_attack_action(1.75, "enemy-poison-attack-smoke-leviathan", 60, -60),
+  attack_action = poison_attack_action(1.75, "enemy-poison-attack-smoke-leviathan", 60, -300),
   attack_range = 20,
-  attack_damage_modifier = 16,
+  attack_damage_modifier = 14,
   attack_stream_name = "poison-stream-spitter-leviathan",
   attack_tint = { r = 0.3, g = 1, b = 0.3, a = 1 },
 
