@@ -125,6 +125,7 @@ bot.shadow_in_motion = bobmods.logistics.logistic_robot_shadow_in_motion()
 bot.shadow_idle_with_cargo = bobmods.logistics.logistic_robot_shadow_idle_with_cargo()
 bot.shadow_in_motion_with_cargo = bobmods.logistics.logistic_robot_shadow_in_motion_with_cargo()
 bot.fast_replaceable_group = "logistic-robot"
+table.insert(bot.resistances, { type = "poison", decrease = 0, percent = 60 })
 
 data:extend({
   util.merge({
@@ -137,6 +138,7 @@ data:extend({
         { type = "fire", decrease = 4, percent = 85 },
         { type = "electric", decrease = 6, percent = 60 },
         { type = "acid", decrease = 4, percent = 60 },
+        { type = "poison", decrease = 0, percent = 70 },
       },
       max_health = 125,
       max_payload_size = 3,
@@ -166,6 +168,7 @@ data:extend({
         { type = "fire", decrease = 8, percent = 85 },
         { type = "electric", decrease = 12, percent = 75 },
         { type = "acid", decrease = 8, percent = 65 },
+        { type = "poison", decrease = 0, percent = 80 },
       },
       max_health = 150,
       max_payload_size = 6,
@@ -195,6 +198,7 @@ data:extend({
         { type = "fire", decrease = 12, percent = 90 },
         { type = "electric", decrease = 20, percent = 90 },
         { type = "acid", decrease = 12, percent = 70 },
+        { type = "poison", decrease = 0, percent = 90 },
       },
       max_health = 175,
       max_payload_size = 11,
@@ -224,6 +228,7 @@ data:extend({
         { type = "fire", decrease = 12, percent = 90 },
         { type = "electric", decrease = 20, percent = 90 },
         { type = "acid", decrease = 12, percent = 70 },
+        { type = "poison", decrease = 0, percent = 90 },
       },
       max_health = 175,
       max_payload_size = 11,
@@ -348,6 +353,7 @@ bot.shadow_idle = bobmods.logistics.construction_robot_shadow_idle()
 bot.shadow_in_motion = bobmods.logistics.construction_robot_shadow_in_motion()
 bot.shadow_working = bobmods.logistics.construction_robot_shadow_working()
 bot.fast_replaceable_group = "construction-robot"
+table.insert(bot.resistances, { type = "poison", decrease = 0, percent = 60 })
 
 data:extend({
   util.merge({
@@ -360,6 +366,7 @@ data:extend({
         { type = "fire", decrease = 4, percent = 85 },
         { type = "electric", decrease = 6, percent = 60 },
         { type = "acid", decrease = 4, percent = 60 },
+        { type = "poison", decrease = 0, percent = 70 },
       },
       max_health = 225,
       max_payload_size = 2,
@@ -388,6 +395,7 @@ data:extend({
         { type = "fire", decrease = 8, percent = 85 },
         { type = "electric", decrease = 12, percent = 75 },
         { type = "acid", decrease = 8, percent = 65 },
+        { type = "poison", decrease = 0, percent = 80 },
       },
       max_health = 350,
       max_payload_size = 4,
@@ -416,6 +424,7 @@ data:extend({
         { type = "fire", decrease = 12, percent = 90 },
         { type = "electric", decrease = 20, percent = 90 },
         { type = "acid", decrease = 12, percent = 70 },
+        { type = "poison", decrease = 0, percent = 90 },
       },
       max_health = 500,
       max_payload_size = 6,
@@ -444,6 +453,7 @@ data:extend({
         { type = "fire", decrease = 12, percent = 90 },
         { type = "electric", decrease = 20, percent = 90 },
         { type = "acid", decrease = 12, percent = 70 },
+        { type = "poison", decrease = 0, percent = 90 },
       },
       max_health = 500,
       max_payload_size = 6,
