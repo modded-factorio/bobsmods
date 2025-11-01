@@ -91,7 +91,6 @@ table.insert(
   data.raw["utility-constants"].default.default_trigger_target_mask_by_type["logistic-robot"],
   "not-fire-unit"
 )
-table.insert(data.raw["utility-constants"].default.default_trigger_target_mask_by_type.unit, "not-fire-unit")
 
 data.raw["utility-constants"].default.default_trigger_target_mask_by_type["spider-vehicle"] = {
   "common",
