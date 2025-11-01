@@ -1123,6 +1123,7 @@ alienfire.pictures[8].tint = { r = 0.5, g = 0.25, b = 0.1 }
 alienfire.on_damage_tick_effect = {
   {
     type = "direct",
+    ignore_collision_condition = true,
     filter_enabled = true,
     trigger_target_mask = { "not-fire-unit" },
     action_delivery = {
@@ -1161,6 +1162,7 @@ alienfire2.localised_name = { "entity-name.bob-enemy-fire" }
 alienfire2.on_damage_tick_effect = {
   {
     type = "direct",
+    ignore_collision_condition = true,
     filter_enabled = true,
     trigger_target_mask = { "not-fire-unit" },
     action_delivery = {
