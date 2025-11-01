@@ -311,7 +311,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       },
       subgroup = "capsule",
       order = "g[laser-robot]-a[robot]",
-      max_health = 100,
+      max_health = 150,
       alert_when_damaged = false,
       collision_box = { { 0, 0 }, { 0, 0 } },
       selection_box = { { -0.5, -1.5 }, { 0.5, -0.5 } },
