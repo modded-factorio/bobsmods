@@ -710,7 +710,7 @@ table.insert(data.raw.fire["bob-enemy-electric-fire"].on_damage_tick_effect, {
     target_effects = {
       {
         type = "damage",
-        damage = { type = "electric", amount = 3 },
+        damage = { type = "electric", amount = 0.3 },
         show_in_tooltip = false,
       },
     },
