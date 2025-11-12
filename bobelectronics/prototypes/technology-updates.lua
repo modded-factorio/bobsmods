@@ -1,29 +1,5 @@
-bobmods.lib.tech.add_prerequisite("automation-2", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("logistics-2", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("circuit-network", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("solar-energy", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("gate", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("defender", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("logistic-science-pack", "bob-electronics")
 bobmods.lib.tech.replace_prerequisite("fast-inserter", "automation-science-pack", "bob-electronics")
-if data.raw.technology["bob-electrolyser-2"] then
-  bobmods.lib.tech.add_prerequisite("bob-electrolyser-2", "bob-electronics")
-end
-if mods["bobmining"] then
-  bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")
-  bobmods.lib.tech.add_prerequisite("bob-area-drills-1", "bob-electronics")
-  if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["resource-category"]["water"] then
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-2", "bob-electronics")
-  end
-end
-if mods["bobrevamp"] then
-  bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-electronics")
-end
-if mods["bobwarfare"] or mods["bobequipment"] then
-  bobmods.lib.tech.add_prerequisite("modular-armor", "bob-electronics")
-end
-if mods["bobwarfare"] then
-  bobmods.lib.tech.add_prerequisite("bob-radar-2", "bob-electronics")
-end
 
 bobmods.lib.tech.add_prerequisite("advanced-circuit", "plastics")
 
