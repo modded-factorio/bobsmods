@@ -15,12 +15,6 @@ if not mods["bobequipment"] then
 end
 
 -- 2.0 revisions
-data.raw.recipe["iron-stick"].enabled = true
-bobmods.lib.tech.remove_recipe_unlock("railway", "iron-stick")
-bobmods.lib.tech.remove_recipe_unlock("circuit-network", "iron-stick")
-bobmods.lib.tech.remove_recipe_unlock("electric-energy-distribution-1", "iron-stick")
-bobmods.lib.tech.remove_recipe_unlock("concrete", "iron-stick")
-
 bobmods.lib.tech.replace_prerequisite("lubricant", "advanced-oil-processing", "oil-processing")
 bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("electric-engine", "chemical-science-pack")
