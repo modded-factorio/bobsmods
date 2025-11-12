@@ -23,6 +23,7 @@ if data.raw.recipe["bob-tinned-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")
 end
 
+bobmods.lib.tech.add_recipe_unlock("electronics", "bob-wooden-board")
 bobmods.lib.tech.add_recipe_unlock("electronics", "bob-basic-circuit-board")
 bobmods.lib.tech.remove_recipe_unlock("electronics", "electronic-circuit")
 
