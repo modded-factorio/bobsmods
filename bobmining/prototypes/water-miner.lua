@@ -447,7 +447,8 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     data.raw["mining-drill"]["bob-water-miner-1"].graphics_set.reset_animation_when_frozen = true
     data.raw["mining-drill"]["bob-water-miner-2"].graphics_set.reset_animation_when_frozen = true
     data.raw["mining-drill"]["bob-water-miner-3"].graphics_set.reset_animation_when_frozen = true
-    data.raw["mining-drill"]["bob-water-miner-4"].graphics_set.reset_animation_when_frozen = true    data.raw["mining-drill"]["bob-water-miner-1"].graphics_set.frozen_patch = frozenpatch
+    data.raw["mining-drill"]["bob-water-miner-4"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-water-miner-1"].graphics_set.frozen_patch = frozenpatch
     data.raw["mining-drill"]["bob-water-miner-2"].graphics_set.frozen_patch = frozenpatch
     data.raw["mining-drill"]["bob-water-miner-3"].graphics_set.frozen_patch = frozenpatch
     data.raw["mining-drill"]["bob-water-miner-4"].graphics_set.frozen_patch = frozenpatch
