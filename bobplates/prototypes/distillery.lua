@@ -547,21 +547,21 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         east = {
           layers = {
             {
-              filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-left.png",
-              width = 72,
-              height = 72,
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
+              x = 64,
               priority = "extra-high",
               scale = 0.5,
-              shift = { -1, 0.15 },
+              shift = util.by_pixel(-16, 18),
             },
             {
-              filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-right.png",
-              width = 72,
-              height = 72,
-              x = 56,
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
               priority = "extra-high",
               scale = 0.5,
-              shift = { 1, 0.15 },
+              shift = util.by_pixel(16, 18),
             },
             {
               filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
@@ -776,21 +776,21 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         west = {
           layers = {
             {
-              filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-left.png",
-              width = 72,
-              height = 72,
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
+              x = 64,
               priority = "extra-high",
               scale = 0.5,
-              shift = { -1, 0.15 },
+              shift = util.by_pixel(-16, 18),
             },
             {
-              filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-right.png",
-              width = 72,
-              height = 72,
-              x = 56,
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
               priority = "extra-high",
               scale = 0.5,
-              shift = { 1, 0.15 },
+              shift = util.by_pixel(16, 18),
             },
             {
               filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
