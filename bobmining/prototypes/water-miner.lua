@@ -407,7 +407,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
           },
         },
       },
-      energy_usage = "180W",
+      energy_usage = "180kW",
       mining_speed = 5,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
