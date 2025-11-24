@@ -92,8 +92,7 @@ data:extend({
       "bob-modules-4",
       "space-science-pack",
     },
-    effects = {
-    },
+    effects = {},
     unit = {
       count = 100,
       ingredients = {
