@@ -335,6 +335,7 @@ if data.raw.technology["bob-titanium-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-pipe-to-ground")
   bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-chest")
+  bobmods.lib.tech.add_prerequisite("logistic-system-3", "bob-titanium-processing")
 end
 
 if data.raw.technology["bob-tungsten-processing"] then
