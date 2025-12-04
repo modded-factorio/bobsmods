@@ -1274,7 +1274,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 10000, type = "bob-plasma" },
+            damage = { amount = 5000, type = "bob-plasma" },
           },
           {
             type = "create-entity",
