@@ -1496,15 +1496,16 @@ end
 
 for _, damagefind in pairs(data.raw.projectile["atomic-rocket"].action.action_delivery.target_effects) do
   if damagefind.damage then --Find the one index that does damage, which will be different depending on whether Space Age is active or not
-    damagefind.damage.amount = 10000
+    damagefind.damage.amount = 5000
     damagefind.damage.type = "bob-plasma"
     break
   end
 end
 
-data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.amount = 1000
+data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.amount = 500
 data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.type = "bob-plasma"
-data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.damage.amount = 4000
+data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.damage.amount = 1000
+data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.upper_damage_modifier = 0.25
 
 data:extend({
   {
