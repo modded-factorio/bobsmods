@@ -384,7 +384,6 @@ local function bob_pipepictures(pipe_type)
   end
 
   return pipepictures
-
 end
 
 local function bob_pipetogroundpictures(pipe_type)
@@ -1573,7 +1572,6 @@ if mods["bobplates"] then
     data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
     data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
   end
- 
 end
 
 if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then

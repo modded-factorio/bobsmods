@@ -462,7 +462,7 @@ if feature_flags["freezing"] and mods["space-age"] then
         scale = 0.5,
         shift = { -0.0078125, 0.1171875 },
       },
-    }
+    },
   }
   data.raw["storage-tank"]["bob-storage-tank-all-corners"].pictures.frozen_patch = frozenpatchall
   data.raw["storage-tank"]["bob-storage-tank-all-corners-2"].pictures.frozen_patch = frozenpatchall

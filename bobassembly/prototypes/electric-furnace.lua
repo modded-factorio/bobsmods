@@ -59,10 +59,10 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
               height = 202,
               scale = 0.5,
               shift = { 0.03125, 0 },
-            }
-          }
+            },
+          },
         },
-        fadeout = true
+        fadeout = true,
       },
       {
         animation = {
@@ -74,7 +74,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
           scale = 0.5,
           shift = { 0.09375, 2.15625 },
         },
-        fadeout = true
+        fadeout = true,
       },
       {
         animation = {
@@ -86,7 +86,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
           priority = "high",
           scale = 0.5,
           shift = { -0.640625, -0.578125 },
-        }
+        },
       },
       {
         animation = {
@@ -98,8 +98,8 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
           priority = "high",
           scale = 0.5,
           shift = { 0.109375, -1.1875 },
-        }
-      }
+        },
+      },
     }
   end
 

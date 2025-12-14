@@ -582,5 +582,4 @@ then
     data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
     data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
   end
-
 end

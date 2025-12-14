@@ -619,7 +619,5 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     data.raw["assembling-machine"]["bob-electronics-machine-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
     data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
     data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-
   end
-
 end

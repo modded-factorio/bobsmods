@@ -581,7 +581,7 @@ data:extend({
             height = 68,
             priority = "high",
             shift = { 0.234375, 0.375 },
-            tint = { r = 0.7, g = 0.25, b = 0.25, },
+            tint = { r = 0.7, g = 0.25, b = 0.25 },
           },
           {
             filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-chemical-tower.png",
@@ -626,10 +626,10 @@ data:extend({
                 height = 202,
                 scale = 0.5,
                 shift = { 0.03125, 0 },
-              }
-            }
+              },
+            },
           },
-          fadeout = true
+          fadeout = true,
         },
         {
           animation = {
@@ -641,7 +641,7 @@ data:extend({
             scale = 0.5,
             shift = { 0.09375, 2.15625 },
           },
-          fadeout = true
+          fadeout = true,
         },
         {
           animation = {
@@ -653,7 +653,7 @@ data:extend({
             priority = "high",
             scale = 0.5,
             shift = { -0.640625, -0.578125 },
-          }
+          },
         },
       },
     },
@@ -850,7 +850,7 @@ data:extend({
             height = 68,
             priority = "high",
             shift = { 0.234375, 0.375 },
-            tint = { r = 0.2, g = 0.6, b = 0.8, },
+            tint = { r = 0.2, g = 0.6, b = 0.8 },
           },
           {
             filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
@@ -887,10 +887,10 @@ data:extend({
                 height = 202,
                 scale = 0.5,
                 shift = { 0.03125, 0 },
-              }
-            }
+              },
+            },
           },
-          fadeout = true
+          fadeout = true,
         },
         {
           animation = {
@@ -902,7 +902,7 @@ data:extend({
             scale = 0.5,
             shift = { 0.09375, 2.15625 },
           },
-          fadeout = true
+          fadeout = true,
         },
         {
           animation = {
@@ -914,7 +914,7 @@ data:extend({
             priority = "high",
             scale = 0.5,
             shift = { -0.640625, -0.578125 },
-          }
+          },
         },
         {
           animation = {
@@ -926,8 +926,8 @@ data:extend({
             priority = "high",
             scale = 0.5,
             shift = { 0.109375, -1.1875 },
-          }
-        }
+          },
+        },
       },
     },
     fast_replaceable_group = "furnace",
@@ -1267,7 +1267,7 @@ if feature_flags["freezing"] and mods["space-age"] then
         scale = 0.5,
         shift = { 0.0234375, 0.1796875 },
       },
-    }
+    },
   }
   data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
   data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch

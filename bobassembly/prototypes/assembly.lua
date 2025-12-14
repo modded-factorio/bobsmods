@@ -94,7 +94,7 @@ data:extend({
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
         secondary_draw_orders = {
-          north = -1
+          north = -1,
         },
       },
       {
@@ -104,7 +104,7 @@ data:extend({
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
         secondary_draw_orders = {
-          north = -1
+          north = -1,
         },
       },
     },
@@ -275,7 +275,7 @@ data:extend({
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
         secondary_draw_orders = {
-          north = -1
+          north = -1,
         },
       },
       {
@@ -285,7 +285,7 @@ data:extend({
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
         secondary_draw_orders = {
-          north = -1
+          north = -1,
         },
       },
     },
@@ -464,7 +464,7 @@ data:extend({
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
         secondary_draw_orders = {
-          north = -1
+          north = -1,
         },
       },
       {
@@ -474,7 +474,7 @@ data:extend({
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
         secondary_draw_orders = {
-          north = -1
+          north = -1,
         },
       },
     },
@@ -649,5 +649,4 @@ if feature_flags["freezing"] and mods["space-age"] then
   data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
   data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
   data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-
 end

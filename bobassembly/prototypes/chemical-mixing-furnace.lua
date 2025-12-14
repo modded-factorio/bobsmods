@@ -31,10 +31,10 @@ then
               height = 202,
               scale = 0.5,
               shift = { 0.03125, 0 },
-            }
-          }
+            },
+          },
         },
-        fadeout = true
+        fadeout = true,
       },
       {
         animation = {
@@ -46,7 +46,7 @@ then
           scale = 0.5,
           shift = { 0.09375, 2.15625 },
         },
-        fadeout = true
+        fadeout = true,
       },
       {
         animation = {
@@ -58,7 +58,7 @@ then
           priority = "high",
           scale = 0.5,
           shift = { -0.640625, -0.578125 },
-        }
+        },
       },
     }
   end
@@ -451,7 +451,8 @@ then
   end
   if feature_flags["freezing"] and mods["space-age"] then
     data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].heating_energy = "100kW"
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].heating_energy = "100kW"data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].graphics_set.frozen_patch = {
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].heating_energy = "100kW"
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].graphics_set.frozen_patch = {
       layers = {
         {
           filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
@@ -468,7 +469,7 @@ then
           scale = 0.5,
           shift = { 0.0234375, 0.1796875 },
         },
-      }
+      },
     }
     data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].graphics_set.frozen_patch = {
       layers = {
@@ -487,16 +488,18 @@ then
           scale = 0.5,
           shift = { 0.0234375, 0.1796875 },
         },
-      }
+      },
     }
 
     local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
     local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-    
-
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_picture_frozen =
+      pipefrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_covers_frozen =
+      pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_picture_frozen =
+      pipefrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_covers_frozen =
+      pcfrozenpatch
   end
 end

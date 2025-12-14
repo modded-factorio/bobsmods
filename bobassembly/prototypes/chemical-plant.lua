@@ -473,5 +473,4 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
     data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
   end
-
 end

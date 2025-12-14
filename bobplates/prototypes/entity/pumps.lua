@@ -664,7 +664,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           height = 80,
           priority = "extra-high",
         },
-      }
+      },
     },
     east = {
       layers = {
@@ -691,7 +691,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           height = 80,
           priority = "extra-high",
         },
-      }
+      },
     },
     south = {
       layers = {
@@ -717,7 +717,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           height = 80,
           priority = "extra-high",
         },
-      }
+      },
     },
     west = {
       layers = {
@@ -743,7 +743,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           height = 80,
           priority = "extra-high",
         },
-      }
+      },
     },
   }
 
@@ -773,7 +773,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           priority = "extra-high",
           shift = { -1, 0 },
         },
-      }
+      },
     },
     east = {
       layers = {
@@ -800,7 +800,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           priority = "extra-high",
           shift = { 0, -1 },
         },
-      }
+      },
     },
     south = {
       layers = {
@@ -827,7 +827,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           priority = "extra-high",
           shift = { 1, 0 },
         },
-      }
+      },
     },
     west = {
       layers = {
@@ -854,7 +854,7 @@ if feature_flags["freezing"] and mods["space-age"] then
           priority = "extra-high",
           shift = { 0, 1 },
         },
-      }
+      },
     },
   }
 
@@ -892,5 +892,4 @@ if feature_flags["freezing"] and mods["space-age"] then
   data.raw["assembling-machine"]["bob-water-pump-2"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
   data.raw["assembling-machine"]["bob-water-pump-3"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
   data.raw["assembling-machine"]["bob-water-pump-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-
 end

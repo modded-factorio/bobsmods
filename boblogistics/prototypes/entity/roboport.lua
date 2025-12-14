@@ -433,7 +433,6 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
     data.raw.roboport["bob-roboport-3"].frozen_patch = frozenpatch
     data.raw.roboport["bob-roboport-4"].frozen_patch = frozenpatch
   end
-
 end
 
 data:extend({
@@ -2436,7 +2435,7 @@ if feature_flags["freezing"] and mods["space-age"] then
         scale = 0.75,
         shift = { 0.5, 0.4296875 },
       },
-    }
+    },
   }
   data.raw.roboport["bob-robo-charge-port"].frozen_patch = chargeportfrozen
   data.raw.roboport["bob-robo-charge-port-2"].frozen_patch = chargeportfrozen
@@ -2535,11 +2534,10 @@ if feature_flags["freezing"] and mods["space-age"] then
         scale = 0.75,
         shift = { 1, 0.9296875 },
       },
-    }
+    },
   }
   data.raw.roboport["bob-robo-charge-port-large"].frozen_patch = chargeportlargefrozen
   data.raw.roboport["bob-robo-charge-port-large-2"].frozen_patch = chargeportlargefrozen
   data.raw.roboport["bob-robo-charge-port-large-3"].frozen_patch = chargeportlargefrozen
   data.raw.roboport["bob-robo-charge-port-large-4"].frozen_patch = chargeportlargefrozen
-
 end

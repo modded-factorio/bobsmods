@@ -542,7 +542,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
         east = {
           layers = {
@@ -580,7 +580,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
         south = {
           layers = {
@@ -617,7 +617,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
         west = {
           layers = {
@@ -655,7 +655,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
       }
     end
@@ -697,7 +697,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
         east = {
           layers = {
@@ -735,7 +735,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
         south = {
           layers = {
@@ -771,7 +771,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
         west = {
           layers = {
@@ -809,18 +809,18 @@ if settings.startup["bobmods-plates-purewater"].value == true then
               tint = tint,
               scale = 0.5,
             },
-          }
+          },
         },
       }
     end
 
-    data.raw.furnace["bob-distillery"].graphics_set.frozen_patch = bobmods.plates.frozenpatch1({ r = 0.4, g = 0.4, b = 0.05 })
-    data.raw.furnace["bob-distillery"].graphics_set_flipped.frozen_patch = bobmods.plates.frozenpatch2({ r = 0.4, g = 0.4, b = 0.05 })
+    data.raw.furnace["bob-distillery"].graphics_set.frozen_patch =
+      bobmods.plates.frozenpatch1({ r = 0.4, g = 0.4, b = 0.05 })
+    data.raw.furnace["bob-distillery"].graphics_set_flipped.frozen_patch =
+      bobmods.plates.frozenpatch2({ r = 0.4, g = 0.4, b = 0.05 })
 
     local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
     data.raw.furnace["bob-distillery"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
     data.raw.furnace["bob-distillery"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-
   end
-
 end
