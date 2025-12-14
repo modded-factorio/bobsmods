@@ -421,3 +421,19 @@ data:extend({
     circuit_wire_max_distance = 9,
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw.radar["bob-radar-2"].heating_energy = "300kW"
+  data.raw.radar["bob-radar-3"].heating_energy = "300kW"
+  data.raw.radar["bob-radar-4"].heating_energy = "300kW"
+  data.raw.radar["bob-radar-5"].heating_energy = "300kW"
+  local frozenpatch = data.raw.radar.radar.frozen_patch
+  data.raw.radar["bob-radar-2"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-3"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-4"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-5"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-2"].reset_orientation_when_frozen = true
+  data.raw.radar["bob-radar-3"].reset_orientation_when_frozen = true
+  data.raw.radar["bob-radar-4"].reset_orientation_when_frozen = true
+  data.raw.radar["bob-radar-5"].reset_orientation_when_frozen = true
+end

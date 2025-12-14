@@ -3,6 +3,7 @@ Version: 2.0.3
 Date: ???
   Changes:
     - Integrate Bob's Locale Translations mod #445
+    - Added support for frozen entities (with Space Age) #477
   Bugfixes:
     - Fixed error with uk locale #447
 ---------------------------------------------------------------------------------------------------
