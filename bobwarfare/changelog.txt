@@ -6,6 +6,7 @@ Date: ???
   Changes:
     - Integrate Bob's Locale Translations mod #445
     - Added support for frozen entities (with Space Age) #477
+    - Buffed atomic explosion damage. Added checks for when nuclear ground tiles are created. #501
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 22. 06. 2025
