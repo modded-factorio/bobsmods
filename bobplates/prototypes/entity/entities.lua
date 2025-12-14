@@ -133,26 +133,26 @@ circuit_connector_definitions["bob-electric-chemical-furnace"] =
   circuit_connector_definitions.create_vector(universal_connector_template, {
     {
       variation = 25,
-      main_offset = util.by_pixel(2, -16),
-      shadow_offset = util.by_pixel(25.5, 30),
+      main_offset = util.by_pixel(0, -15),
+      shadow_offset = util.by_pixel(25.5, 31),
       show_shadow = false,
     },
     {
       variation = 25,
-      main_offset = util.by_pixel(2, -16),
-      shadow_offset = util.by_pixel(25.5, 30),
+      main_offset = util.by_pixel(0, -15),
+      shadow_offset = util.by_pixel(25.5, 31),
       show_shadow = false,
     },
     {
       variation = 25,
-      main_offset = util.by_pixel(2, -16),
-      shadow_offset = util.by_pixel(25.5, 30),
+      main_offset = util.by_pixel(0, -15),
+      shadow_offset = util.by_pixel(25.5, 31),
       show_shadow = false,
     },
     {
       variation = 25,
-      main_offset = util.by_pixel(2, -16),
-      shadow_offset = util.by_pixel(25.5, 30),
+      main_offset = util.by_pixel(0, -15),
+      shadow_offset = util.by_pixel(25.5, 31),
       show_shadow = false,
     },
   })
@@ -565,38 +565,95 @@ data:extend({
     },
     graphics_set = {
       animation = {
-        filename = "__bobplates__/graphics/entity/electric-furnace/electric-chemical-furnace.png",
-        priority = "high",
-        width = 129,
-        height = 100,
-        frame_count = 1,
-        shift = { 0.46875, 0 },
+        layers = {
+          {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
+            width = 239,
+            height = 219,
+            priority = "high",
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
+          },
+          {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-mask.png",
+            frame_count = 1,
+            width = 69,
+            height = 68,
+            priority = "high",
+            shift = { 0.234375, 0.375 },
+            tint = { r = 0.7, g = 0.25, b = 0.25, },
+          },
+          {
+            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-chemical-tower.png",
+            width = 239,
+            height = 219,
+            priority = "high",
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
+          },
+          {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+            draw_as_shadow = true,
+            width = 227,
+            height = 171,
+            priority = "high",
+            scale = 0.5,
+            shift = { 0.3515625, 0.2421875 },
+          },
+        },
       },
       working_visualisations = {
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-            priority = "high",
-            width = 60,
-            height = 56,
-            frame_count = 12,
-            animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
+            layers = {
+              {
+                filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+                frame_count = 12,
+                animation_speed = 0.5,
+                draw_as_glow = true,
+                width = 60,
+                height = 56,
+                priority = "high",
+                scale = 0.5,
+                shift = { 0.0546875, 1.0234375 },
+              },
+              {
+                filename = "__base__/graphics/entity/electric-furnace/electric-furnace-light.png",
+                repeat_count = 12,
+                blend_mode = "additive",
+                draw_as_glow = true,
+                width = 202,
+                height = 202,
+                scale = 0.5,
+                shift = { 0.03125, 0 },
+              }
+            }
           },
-          light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
+          fadeout = true
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-            priority = "high",
-            width = 37,
-            height = 25,
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-ground-light.png",
+            blend_mode = "additive",
+            draw_as_light = true,
+            width = 166,
+            height = 124,
+            scale = 0.5,
+            shift = { 0.09375, 2.15625 },
+          },
+          fadeout = true
+        },
+        {
+          animation = {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
             frame_count = 4,
             animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
+            width = 37,
+            height = 25,
+            priority = "high",
             scale = 0.5,
-          },
+            shift = { -0.640625, -0.578125 },
+          }
         },
       },
     },
@@ -779,62 +836,98 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-mixing-furnace.png",
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
+            width = 239,
+            height = 219,
             priority = "high",
-            width = 129,
-            height = 100,
-            frame_count = 1,
-            shift = { 0.46875, 0 },
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
           },
           {
             filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-mask.png",
-            tint = { r = 0.2, g = 0.6, b = 0.8 },
-            priority = "high",
+            frame_count = 1,
             width = 69,
             height = 68,
-            frame_count = 1,
-            shift = util.by_pixel(7.5, 12),
+            priority = "high",
+            shift = { 0.234375, 0.375 },
+            tint = { r = 0.2, g = 0.6, b = 0.8, },
+          },
+          {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+            draw_as_shadow = true,
+            width = 227,
+            height = 171,
+            priority = "high",
+            scale = 0.5,
+            shift = { 0.3515625, 0.2421875 },
           },
         },
       },
       working_visualisations = {
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-            priority = "high",
-            width = 60,
-            height = 56,
-            frame_count = 12,
-            animation_speed = 0.5,
-            shift = util.by_pixel(1.75, 32.75),
-            scale = 0.5,
+            layers = {
+              {
+                filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+                frame_count = 12,
+                animation_speed = 0.5,
+                draw_as_glow = true,
+                width = 60,
+                height = 56,
+                priority = "high",
+                scale = 0.5,
+                shift = { 0.0546875, 1.0234375 },
+              },
+              {
+                filename = "__base__/graphics/entity/electric-furnace/electric-furnace-light.png",
+                repeat_count = 12,
+                blend_mode = "additive",
+                draw_as_glow = true,
+                width = 202,
+                height = 202,
+                scale = 0.5,
+                shift = { 0.03125, 0 },
+              }
+            }
           },
-          light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
+          fadeout = true
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-            priority = "high",
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-ground-light.png",
+            blend_mode = "additive",
+            draw_as_light = true,
+            width = 166,
+            height = 124,
+            scale = 0.5,
+            shift = { 0.09375, 2.15625 },
+          },
+          fadeout = true
+        },
+        {
+          animation = {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+            frame_count = 4,
+            animation_speed = 0.5,
             width = 37,
             height = 25,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = util.by_pixel(-20.5, -18.5),
+            priority = "high",
             scale = 0.5,
-          },
+            shift = { -0.640625, -0.578125 },
+          }
         },
         {
           animation = {
-            filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
-            priority = "high",
-            width = 23,
-            height = 15,
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
             frame_count = 4,
             animation_speed = 0.5,
-            shift = util.by_pixel(3.5, -38),
+            width = 23,
+            height = 15,
+            priority = "high",
             scale = 0.5,
-          },
-        },
+            shift = { 0.109375, -1.1875 },
+          }
+        }
       },
     },
     fast_replaceable_group = "furnace",
@@ -1145,3 +1238,54 @@ data:extend({
     },
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+  local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+
+  data.raw["assembling-machine"]["bob-electrolyser"].heating_energy = "100kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+
+  data.raw["assembling-machine"]["bob-electric-chemical-furnace"].heating_energy = "100kW"
+  data.raw["assembling-machine"]["bob-electric-chemical-furnace"].graphics_set.frozen_patch = {
+    layers = {
+      {
+        filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+        width = 239,
+        height = 219,
+        scale = 0.5,
+        shift = { 0.0234375, 0.1796875 },
+      },
+      {
+        filename = "__bobplates__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
+        width = 239,
+        height = 219,
+        priority = "high",
+        scale = 0.5,
+        shift = { 0.0234375, 0.1796875 },
+      },
+    }
+  }
+  data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+
+  data.raw["assembling-machine"]["bob-electric-mixing-furnace"].heating_energy = "100kW"
+  data.raw["assembling-machine"]["bob-electric-mixing-furnace"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+    width = 239,
+    height = 219,
+    scale = 0.5,
+    shift = { 0.0234375, 0.1796875 },
+  }
+
+  data.raw["storage-tank"]["bob-small-inline-storage-tank"].heating_energy = "25kW"
+  data.raw["storage-tank"]["bob-small-storage-tank"].heating_energy = "25kW"
+  data.raw["storage-tank"]["bob-small-inline-storage-tank"].fluid_box.pipe_picture_frozen = pipefrozenpatch
+  data.raw["storage-tank"]["bob-small-storage-tank"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+
+  data.raw.furnace["bob-void-pump"].heating_energy = "10kW"
+  data.raw.furnace["bob-void-pump"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+end

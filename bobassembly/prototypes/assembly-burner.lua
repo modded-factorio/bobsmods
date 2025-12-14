@@ -310,6 +310,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
           production_type = "input-output",
           filter = "steam",
           volume = 10,
+          secondary_draw_orders = { north = -1 },
         },
         burns_fluid = false,
         scale_fluid_usage = false,

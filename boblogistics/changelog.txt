@@ -7,6 +7,7 @@ Date: ???
     - Fix Storage tank graphics error #469
   Changes:
     - Integrate Bob's Locale Translations mod #445
+    - Added support for frozen entities (with Space Age) #477
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 22. 06. 2025

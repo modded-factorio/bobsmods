@@ -42,7 +42,7 @@ local function make_disabled_visualization(i)
 end
 
 local function bob_pipepictures(pipe_type)
-  return {
+  local pipepictures = {
     straight_vertical_single = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-vertical-single.png",
       priority = "extra-high",
@@ -253,6 +253,138 @@ local function bob_pipepictures(pipe_type)
     ending_right_disabled_visualization = make_disabled_visualization(2),
     ending_left_disabled_visualization = make_disabled_visualization(8),
   }
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    pipepictures.corner_down_left_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-corner-down-left.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.corner_down_right_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-corner-down-right.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.corner_up_left_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-corner-up-left.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.corner_up_right_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-corner-up-right.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.cross_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-cross.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.ending_down_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.ending_left_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.ending_right_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.ending_up_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.straight_horizontal_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.straight_horizontal_window_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal-window.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.straight_vertical_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-vertical.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.straight_vertical_single_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-vertical-single.png",
+      width = 160,
+      height = 160,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.straight_vertical_window_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-vertical-window.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.t_down_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-t-down.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.t_left_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-t-left.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.t_right_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-t-right.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+    pipepictures.t_up_frozen = {
+      filename = "__space-age__/graphics/entity/frozen/pipe/pipe-t-up.png",
+      width = 128,
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+    }
+  end
+
+  return pipepictures
+
 end
 
 local function bob_pipetogroundpictures(pipe_type)
@@ -785,7 +917,33 @@ data:extend({
   },
 })
 
-if data.raw.item["bob-bronze-alloy"] then
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw.pipe["bob-copper-pipe"].heating_energy = "1kW"
+  data.raw.pipe["bob-plastic-pipe"].heating_energy = "1kW"
+  data.raw.pipe["bob-steel-pipe"].heating_energy = "1kW"
+  data.raw.pipe["bob-stone-pipe"].heating_energy = "1kW"
+  data.raw["pipe-to-ground"]["pipe-to-ground"].heating_energy = "100kW"
+  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].heating_energy = "100kW"
+  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].heating_energy = "100kW"
+  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].heating_energy = "150kW"
+  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].heating_energy = "200kW"
+  local ptgfrozenpatch = data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch
+  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
+  data.raw.pipe["bob-copper-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw.pipe["bob-plastic-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw.pipe["bob-steel-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw.pipe["bob-stone-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+end
+
+if mods["bobplates"] then
   data:extend({
     {
       type = "pipe",
@@ -870,11 +1028,7 @@ if data.raw.item["bob-bronze-alloy"] then
       disabled_visualization = bob_pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
-  })
-end
 
-if data.raw.item["bob-brass-alloy"] then
-  data:extend({
     {
       type = "pipe",
       name = "bob-brass-pipe",
@@ -958,11 +1112,7 @@ if data.raw.item["bob-brass-alloy"] then
       disabled_visualization = bob_pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
-  })
-end
 
-if data.raw.item["bob-silicon-nitride"] then
-  data:extend({
     {
       type = "pipe",
       name = "bob-ceramic-pipe",
@@ -1046,11 +1196,7 @@ if data.raw.item["bob-silicon-nitride"] then
       disabled_visualization = bob_pipetoground_disabled_visualizaton(),
       impact_category = "stone",
     },
-  })
-end
 
-if data.raw.item["bob-titanium-plate"] then
-  data:extend({
     {
       type = "pipe",
       name = "bob-titanium-pipe",
@@ -1134,11 +1280,7 @@ if data.raw.item["bob-titanium-plate"] then
       disabled_visualization = bob_pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
-  })
-end
 
-if data.raw.item["bob-tungsten-plate"] then
-  data:extend({
     {
       type = "pipe",
       name = "bob-tungsten-pipe",
@@ -1222,11 +1364,7 @@ if data.raw.item["bob-tungsten-plate"] then
       disabled_visualization = bob_pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
-  })
-end
 
-if data.raw.item["bob-nitinol-alloy"] then
-  data:extend({
     {
       type = "pipe",
       name = "bob-nitinol-pipe",
@@ -1310,11 +1448,7 @@ if data.raw.item["bob-nitinol-alloy"] then
       disabled_visualization = bob_pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
-  })
-end
 
-if data.raw.item["bob-copper-tungsten-alloy"] then
-  data:extend({
     {
       type = "pipe",
       name = "bob-copper-tungsten-pipe",
@@ -1399,6 +1533,47 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
       impact_category = "metal",
     },
   })
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    data.raw.pipe["bob-brass-pipe"].heating_energy = "1kW"
+    data.raw.pipe["bob-bronze-pipe"].heating_energy = "1kW"
+    data.raw.pipe["bob-ceramic-pipe"].heating_energy = "1kW"
+    data.raw.pipe["bob-copper-tungsten-pipe"].heating_energy = "1kW"
+    data.raw.pipe["bob-nitinol-pipe"].heating_energy = "1kW"
+    data.raw.pipe["bob-titanium-pipe"].heating_energy = "1kW"
+    data.raw.pipe["bob-tungsten-pipe"].heating_energy = "1kW"
+    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].heating_energy = "150kW"
+    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].heating_energy = "200kW"
+    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].heating_energy = "250kW"
+    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].heating_energy = "250kW"
+    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].heating_energy = "250kW"
+    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].heating_energy = "300kW"
+    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].heating_energy = "300kW"
+    local ptgfrozenpatch = data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch
+    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
+    data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-ceramic-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-copper-tungsten-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  end
+ 
 end
 
 if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then

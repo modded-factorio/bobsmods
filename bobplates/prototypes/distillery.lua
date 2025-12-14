@@ -503,4 +503,324 @@ if settings.startup["bobmods-plates-purewater"].value == true then
       fast_replaceable_group = "bob-distillery",
     },
   })
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    data.raw.furnace["bob-distillery"].heating_energy = "50kW"
+    function bobmods.plates.frozenpatch1(tint)
+      return {
+        north = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, -0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, 0.85 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 0,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
+              x = 64,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = util.by_pixel(-16, 18),
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = util.by_pixel(16, 18),
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              x = 128,
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 128,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, -0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, 0.85 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              x = 256,
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 256,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+              width = 80,
+              height = 128,
+              x = 48,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.37, -0.433 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+              width = 80,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.37, -0.433 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              x = 384,
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 384,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+      }
+    end
+
+    function bobmods.plates.frozenpatch2(tint)
+      return {
+        north = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, -0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, 0.85 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              x = 256,
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 256,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+              width = 80,
+              height = 128,
+              x = 48,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.37, -0.433 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+              width = 80,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.37, -0.433 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              x = 384,
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 384,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, -0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, 0.85 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 0,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
+              x = 64,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = util.by_pixel(-16, 18),
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+              width = 64,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = util.by_pixel(16, 18),
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-frozen.png",
+              x = 128,
+              width = 128,
+              height = 192,
+              priority = "extra-high",
+              scale = 0.5,
+            },
+            {
+              filename = "__bobplates__/graphics/entity/distillery/distillery-mask.png",
+              x = 128,
+              width = 128,
+              height = 192,
+              frame_count = 1,
+              tint = tint,
+              scale = 0.5,
+            },
+          }
+        },
+      }
+    end
+
+    data.raw.furnace["bob-distillery"].graphics_set.frozen_patch = bobmods.plates.frozenpatch1({ r = 0.4, g = 0.4, b = 0.05 })
+    data.raw.furnace["bob-distillery"].graphics_set_flipped.frozen_patch = bobmods.plates.frozenpatch2({ r = 0.4, g = 0.4, b = 0.05 })
+
+    local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
+    data.raw.furnace["bob-distillery"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw.furnace["bob-distillery"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+
+  end
+
 end

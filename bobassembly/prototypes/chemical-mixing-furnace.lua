@@ -10,28 +10,55 @@ then
     return {
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-          priority = "high",
-          width = 60,
-          height = 56,
-          frame_count = 12,
-          animation_speed = 0.5,
-          shift = util.by_pixel(1.75, 32.75),
-          scale = 0.5,
+          layers = {
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+              frame_count = 12,
+              animation_speed = 0.5,
+              draw_as_glow = true,
+              width = 60,
+              height = 56,
+              priority = "high",
+              scale = 0.5,
+              shift = { 0.0546875, 1.0234375 },
+            },
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-light.png",
+              repeat_count = 12,
+              blend_mode = "additive",
+              draw_as_glow = true,
+              width = 202,
+              height = 202,
+              scale = 0.5,
+              shift = { 0.03125, 0 },
+            }
+          }
         },
-        light = { intensity = 0.4, size = 6, shift = { 0.0, 1.0 }, color = { r = 1.0, g = 1.0, b = 1.0 } },
+        fadeout = true
       },
       {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-          priority = "high",
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-ground-light.png",
+          blend_mode = "additive",
+          draw_as_light = true,
+          width = 166,
+          height = 124,
+          scale = 0.5,
+          shift = { 0.09375, 2.15625 },
+        },
+        fadeout = true
+      },
+      {
+        animation = {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          animation_speed = 0.5,
+          frame_count = 4,
           width = 37,
           height = 25,
-          frame_count = 4,
-          animation_speed = 0.5,
-          shift = util.by_pixel(-20.5, -18.5),
+          priority = "high",
           scale = 0.5,
-        },
+          shift = { -0.640625, -0.578125 },
+        }
       },
     }
   end
@@ -171,12 +198,44 @@ then
       },
       graphics_set = {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-chemical-mixing-furnace.png",
-          priority = "high",
-          width = 129,
-          height = 100,
-          frame_count = 1,
-          shift = { 0.46875, 0 },
+          layers = {
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
+              priority = "high",
+              width = 239,
+              height = 219,
+              frame_count = 1,
+              shift = util.by_pixel(0.75, 5.75),
+              scale = 0.5,
+            },
+            {
+              filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-mask.png",
+              tint = { r = 0.5, g = 0.15, b = 0.7 },
+              priority = "high",
+              width = 69,
+              height = 68,
+              frame_count = 1,
+              shift = util.by_pixel(7.5, 12),
+            },
+            {
+              filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower.png",
+              width = 239,
+              height = 219,
+              priority = "high",
+              scale = 0.5,
+              shift = { 0.0234375, 0.1796875 },
+            },
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+              priority = "high",
+              width = 227,
+              height = 171,
+              frame_count = 1,
+              draw_as_shadow = true,
+              shift = util.by_pixel(11.25, 7.75),
+              scale = 0.5,
+            },
+          },
         },
         working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       },
@@ -244,12 +303,44 @@ then
       },
       graphics_set = {
         animation = {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-chemical-mixing-furnace-2.png",
-          priority = "high",
-          width = 129,
-          height = 100,
-          frame_count = 1,
-          shift = { 0.46875, 0 },
+          layers = {
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
+              priority = "high",
+              width = 239,
+              height = 219,
+              frame_count = 1,
+              shift = util.by_pixel(0.75, 5.75),
+              scale = 0.5,
+            },
+            {
+              filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-mask.png",
+              tint = { r = 0.15, g = 0.7, b = 0.15 },
+              priority = "high",
+              width = 69,
+              height = 68,
+              frame_count = 1,
+              shift = util.by_pixel(7.5, 12),
+            },
+            {
+              filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower.png",
+              width = 239,
+              height = 219,
+              priority = "high",
+              scale = 0.5,
+              shift = { 0.0234375, 0.1796875 },
+            },
+            {
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+              priority = "high",
+              width = 227,
+              height = 171,
+              frame_count = 1,
+              draw_as_shadow = true,
+              shift = util.by_pixel(11.25, 7.75),
+              scale = 0.5,
+            },
+          },
         },
         working_visualisations = bob_electric_multipurpose_furnace_working_visualisations(),
       },
@@ -357,5 +448,55 @@ then
     bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-electric-mixing-furnace")
   elseif data.raw.technology["bob-alloy-processing-2"] then
     bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-alloy-processing-2")
+  end
+  if feature_flags["freezing"] and mods["space-age"] then
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].heating_energy = "100kW"
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].heating_energy = "100kW"data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].graphics_set.frozen_patch = {
+      layers = {
+        {
+          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+          width = 239,
+          height = 219,
+          scale = 0.5,
+          shift = { 0.0234375, 0.1796875 },
+        },
+        {
+          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
+          width = 239,
+          height = 219,
+          priority = "high",
+          scale = 0.5,
+          shift = { 0.0234375, 0.1796875 },
+        },
+      }
+    }
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].graphics_set.frozen_patch = {
+      layers = {
+        {
+          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+          width = 239,
+          height = 219,
+          scale = 0.5,
+          shift = { 0.0234375, 0.1796875 },
+        },
+        {
+          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
+          width = 239,
+          height = 219,
+          priority = "high",
+          scale = 0.5,
+          shift = { 0.0234375, 0.1796875 },
+        },
+      }
+    }
+
+    local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+    local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    
+
   end
 end
