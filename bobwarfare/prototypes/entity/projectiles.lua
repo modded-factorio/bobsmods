@@ -1471,21 +1471,27 @@ data:extend({
 })
 
 if mods["space-age"] then
-  table.insert(data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects, 2,
+  table.insert(
+    data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects,
+    2,
     {
       type = "create-entity",
       entity_name = "nuke-effects-aquilo",
       check_buildability = true,
     }
   )
-  table.insert(data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects, 2,
+  table.insert(
+    data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects,
+    2,
     {
       type = "create-entity",
       entity_name = "nuke-effects-vulcanus",
       check_buildability = true,
     }
   )
-  table.insert(data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects, 2,
+  table.insert(
+    data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects,
+    2,
     {
       type = "create-entity",
       entity_name = "nuke-effects-space",
@@ -1503,7 +1509,8 @@ for _, damagefind in pairs(data.raw.projectile["atomic-rocket"].action.action_de
 end
 
 data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.amount = 500
-data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.type = "bob-plasma"
+data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.type =
+  "bob-plasma"
 data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.damage.amount = 1000
 data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.upper_damage_modifier = 0.25
 
