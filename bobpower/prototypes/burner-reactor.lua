@@ -441,7 +441,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         width = 22,
         height = 38,
         frame_count = 12,
-        scale = 2/3,
+        scale = 2 / 3,
         shift = { -0.40625 * 1.5, 0.671875 * 1.5 },
       },
       {
@@ -450,10 +450,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         width = 17,
         height = 38,
         frame_count = 12,
-        scale = 2/3,
+        scale = 2 / 3,
         shift = { 0.40625 * 1.5, 0.671875 * 1.5 },
       },
-    }
+    },
   }
 
   data.raw.reactor["bob-fluid-reactor-2"].working_light_picture = {
@@ -464,7 +464,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         width = 22,
         height = 38,
         frame_count = 12,
-        scale = 2/3,
+        scale = 2 / 3,
         shift = { -0.40625 * 1.5, 0.671875 * 1.5 },
       },
       {
@@ -473,10 +473,10 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         width = 17,
         height = 38,
         frame_count = 12,
-        scale = 2/3,
+        scale = 2 / 3,
         shift = { 0.40625 * 1.5, 0.671875 * 1.5 },
       },
-    }
+    },
   }
 
   --If the oil burning steel furnace exists, add a new alternate recipe to craft the fluid reactor from it.
