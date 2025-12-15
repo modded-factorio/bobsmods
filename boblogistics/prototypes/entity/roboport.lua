@@ -422,6 +422,17 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
       default_total_construction_output_signal = { type = "virtual", name = "signal-T" },
     },
   })
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    data.raw.roboport["bob-roboport-2"].heating_energy = "300kW"
+    data.raw.roboport["bob-roboport-3"].heating_energy = "300kW"
+    data.raw.roboport["bob-roboport-4"].heating_energy = "300kW"
+    local frozenpatch = data.raw.roboport.roboport.frozen_patch
+    frozenpatch.shift = { 0.0625, 0.2421875 }
+    data.raw.roboport["bob-roboport-2"].frozen_patch = frozenpatch
+    data.raw.roboport["bob-roboport-3"].frozen_patch = frozenpatch
+    data.raw.roboport["bob-roboport-4"].frozen_patch = frozenpatch
+  end
 end
 
 data:extend({
@@ -2348,3 +2359,185 @@ data:extend({
     default_total_construction_output_signal = { type = "virtual", name = "signal-T" },
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw.roboport["bob-logistic-zone-expander"].heating_energy = "20kW"
+  data.raw.roboport["bob-logistic-zone-expander-2"].heating_energy = "20kW"
+  data.raw.roboport["bob-logistic-zone-expander-3"].heating_energy = "20kW"
+  data.raw.roboport["bob-logistic-zone-expander-4"].heating_energy = "20kW"
+  data.raw.roboport["bob-robochest"].heating_energy = "200kW"
+  data.raw.roboport["bob-robochest-2"].heating_energy = "200kW"
+  data.raw.roboport["bob-robochest-3"].heating_energy = "200kW"
+  data.raw.roboport["bob-robochest-4"].heating_energy = "200kW"
+  data.raw.roboport["bob-robo-charge-port"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-2"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-3"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-4"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-large"].heating_energy = "180kW"
+  data.raw.roboport["bob-robo-charge-port-large-2"].heating_energy = "180kW"
+  data.raw.roboport["bob-robo-charge-port-large-3"].heating_energy = "180kW"
+  data.raw.roboport["bob-robo-charge-port-large-4"].heating_energy = "180kW"
+  data.raw.roboport["bob-logistic-zone-interface"].heating_energy = "20kW"
+
+  local chestfrozenpatch = {
+    filename = "__space-age__/graphics/entity/frozen/roboport/roboport-base.png",
+    x = 57,
+    y = 44,
+    width = 114,
+    height = 81,
+    scale = 0.5,
+    shift = { 0.0625, -0.3359375 },
+  }
+  data.raw.roboport["bob-robochest"].frozen_patch = chestfrozenpatch
+  data.raw.roboport["bob-robochest-2"].frozen_patch = chestfrozenpatch
+  data.raw.roboport["bob-robochest-3"].frozen_patch = chestfrozenpatch
+  data.raw.roboport["bob-robochest-4"].frozen_patch = chestfrozenpatch
+
+  local chargeportfrozen = {
+    layers = {
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { -0.5, -0.5703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 0.5, -0.5703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { -0.5, 0.4296875 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 0.5, 0.4296875 },
+      },
+    },
+  }
+  data.raw.roboport["bob-robo-charge-port"].frozen_patch = chargeportfrozen
+  data.raw.roboport["bob-robo-charge-port-2"].frozen_patch = chargeportfrozen
+  data.raw.roboport["bob-robo-charge-port-3"].frozen_patch = chargeportfrozen
+  data.raw.roboport["bob-robo-charge-port-4"].frozen_patch = chargeportfrozen
+
+  local chargeportlargefrozen = {
+    layers = {
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { -1, -1.0703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 0, -1.0703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 1, -1.0703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { -1, -0.0703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 0, -0.0703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 1, -0.0703125 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { -1, 0.9296875 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 0, 0.9296875 },
+      },
+      {
+        filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+        x = 34,
+        y = 11,
+        width = 34,
+        height = 28,
+        priority = "extra-high",
+        scale = 0.75,
+        shift = { 1, 0.9296875 },
+      },
+    },
+  }
+  data.raw.roboport["bob-robo-charge-port-large"].frozen_patch = chargeportlargefrozen
+  data.raw.roboport["bob-robo-charge-port-large-2"].frozen_patch = chargeportlargefrozen
+  data.raw.roboport["bob-robo-charge-port-large-3"].frozen_patch = chargeportlargefrozen
+  data.raw.roboport["bob-robo-charge-port-large-4"].frozen_patch = chargeportlargefrozen
+end
