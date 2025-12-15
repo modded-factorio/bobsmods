@@ -161,7 +161,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
             width = 206,
             height = 202,
             frame_count = 40,
-            shift = util.by_pixel(-4, -24)
+            shift = util.by_pixel(-4, -24),
           },
           {
             priority = "high",
@@ -173,23 +173,22 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
             height = 82,
             frame_count = 40,
             scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
-          }
+            shift = util.by_pixel(17.75, 14.5),
+          },
         },
       },
     },
   }
 
   local water_miner_base_picture = {
-    sheets =
-    {
+    sheets = {
       {
         filename = "__bobmining__/graphics/entity/water-miner/water-miner-base.png",
         priority = "extra-high",
         width = 261,
         height = 273,
         shift = util.by_pixel(-2.25, -4.75),
-        scale = 0.5
+        scale = 0.5,
       },
       {
         filename = "__bobmining__/graphics/entity/water-miner/water-miner-base-shadow.png",
@@ -197,9 +196,9 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         height = 220,
         scale = 0.5,
         draw_as_shadow = true,
-        shift = util.by_pixel(6, 0.5)
-      }
-    }
+        shift = util.by_pixel(6, 0.5),
+      },
+    },
   }
 
   data:extend({
