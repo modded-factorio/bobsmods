@@ -376,7 +376,7 @@ bobmods.lib.tech.technology_line_icon_constant(
   1,
   7,
   { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
-  "__boblibrary__/graphics/constants/constant-capacity.png"
+  "__core__/graphics/icons/technology/constants/constant-capacity.png"
 )
 
 if settings.startup["bobmods-logistics-disableroboports"].value == true then
