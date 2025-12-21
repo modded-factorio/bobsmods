@@ -379,7 +379,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       order = "d-b-b6",
     },
   })
-  
+
   if not mods["bobclasses"] then
     bobmods.lib.tech.add_science_pack("bob-rtg", "production-science-pack", 1)
     bobmods.lib.tech.add_science_pack("bob-rtg", "utility-science-pack", 1)
