@@ -1289,14 +1289,8 @@ then
       data.raw.unit["bob-titan-spitter"].loot,
       { item = "bob-alien-artifact", count_min = 1, count_max = 2, probability = 0.5 }
     )
-    table.insert(
-      data.raw.unit["behemoth-biter"].loot,
-      { item = "bob-alien-artifact", count_min = 1, count_max = 2 }
-    )
-    table.insert(
-      data.raw.unit["behemoth-spitter"].loot,
-      { item = "bob-alien-artifact", count_min = 1, count_max = 2 }
-    )
+    table.insert(data.raw.unit["behemoth-biter"].loot, { item = "bob-alien-artifact", count_min = 1, count_max = 2 })
+    table.insert(data.raw.unit["behemoth-spitter"].loot, { item = "bob-alien-artifact", count_min = 1, count_max = 2 })
 
     if settings.startup["bobmods-enemies-enablenewartifacts"].value == true then
       table.insert(
@@ -2132,10 +2126,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
   if data.raw.turret["small-worm-turret"].loot == nil then
     data.raw.turret["small-worm-turret"].loot = {}
   end
-  table.insert(
-    data.raw.turret["small-worm-turret"].loot,
-    { item = "bob-alien-artifact", count_min = 1, count_max = 3 }
-  )
+  table.insert(data.raw.turret["small-worm-turret"].loot, { item = "bob-alien-artifact", count_min = 1, count_max = 3 })
 
   if data.raw.turret["medium-worm-turret"].loot == nil then
     data.raw.turret["medium-worm-turret"].loot = {}
@@ -2148,10 +2139,7 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
   if data.raw.turret["big-worm-turret"].loot == nil then
     data.raw.turret["big-worm-turret"].loot = {}
   end
-  table.insert(
-    data.raw.turret["big-worm-turret"].loot,
-    { item = "bob-alien-artifact", count_min = 3, count_max = 6 }
-  )
+  table.insert(data.raw.turret["big-worm-turret"].loot, { item = "bob-alien-artifact", count_min = 3, count_max = 6 })
 
   table.insert(
     data.raw.turret["bob-huge-worm-turret"].loot,
