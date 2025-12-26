@@ -2423,7 +2423,7 @@ bobmods.enemies.new_biter({
   },
   order = "e-c-h",
   tier = 8,
-  max_health = 60000,
+  max_health = 40000,
   explosion_resist = "very-high",
   laser_resist = "low",
   fire_resist = "low",
@@ -2486,7 +2486,7 @@ if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw.unit["bob-giant-explosive-biter"].max_health = 6000
   data.raw.unit["bob-titan-explosive-biter"].max_health = 19000
   data.raw.unit["bob-behemoth-explosive-biter"].max_health = 60000
-  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 250000
+  data.raw.unit["bob-leviathan-explosive-biter"].max_health = 180000
 end
 
 --Poison
@@ -2566,6 +2566,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
         radius = scale,
         force = "enemy",
         trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
+        ignore_collision_condition = true,
         action_delivery = {
           type = "instant",
           target_effects = {
@@ -2623,7 +2624,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.small_tint,
   localised_description = { "entity-description.bob-poison-enemy-small" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "bob-enemy-poison-smoke-small", 6, -2, 2),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-small", "bob-enemy-poison-smoke-small", 6, -4.5, 3),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2677,7 +2678,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.medium_tint,
   localised_description = { "entity-description.bob-poison-enemy-medium" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "bob-enemy-poison-smoke-medium", 12, -4, 3),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-medium", "bob-enemy-poison-smoke-medium", 12, -9, 3.5),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2731,7 +2732,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.big_tint,
   localised_description = { "entity-description.bob-poison-enemy-big" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "bob-enemy-poison-smoke-big", 18, -6, 4),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-big", "bob-enemy-poison-smoke-big", 18, -18, 4.4),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2785,7 +2786,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.huge_tint,
   localised_description = { "entity-description.bob-poison-enemy-huge" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "bob-enemy-poison-smoke-huge", 24, -8, 4.6),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-huge", "bob-enemy-poison-smoke-huge", 24, -36, 5.2),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2839,7 +2840,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.giant_tint,
   localised_description = { "entity-description.bob-poison-enemy-giant" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "bob-enemy-poison-smoke-giant", 30, -20, 5.2),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-giant", "bob-enemy-poison-smoke-giant", 30, -75, 5.9),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2893,7 +2894,7 @@ bobmods.enemies.new_biter({
   tint = bobmods.enemies.poison_tint,
   tint2 = bobmods.enemies.titan_tint,
   localised_description = { "entity-description.bob-poison-enemy-titan" },
-  damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "bob-enemy-poison-smoke-titan", 36, -24, 5.8),
+  damaged_trigger_effect = poison_reaction("poison-rage-sticker-titan", "bob-enemy-poison-smoke-titan", 36, -126, 6.6),
   attack_parameters = {
     type = "projectile",
     range_mode = "bounding-box-to-bounding-box",
@@ -2951,8 +2952,8 @@ bobmods.enemies.new_biter({
     "poison-rage-sticker-behemoth",
     "bob-enemy-poison-smoke-behemoth",
     42,
-    -42,
-    6.4
+    -210,
+    7.3
   ),
   attack_parameters = {
     type = "projectile",
@@ -3011,8 +3012,8 @@ bobmods.enemies.new_biter({
     "poison-rage-sticker-leviathan",
     "bob-enemy-poison-smoke-leviathan",
     60,
-    -60,
-    7
+    -300,
+    8
   ),
   attack_parameters = {
     type = "projectile",

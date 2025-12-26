@@ -234,7 +234,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         },
       },
       subgroup = "capsule",
-      order = "g[laser-robot-capsule]",
+      order = "g[laser-robot]-b[capsule]",
       stack_size = 100,
       drop_sound = {
         filename = "__base__/sound/item/robotic-inventory-move.ogg",
@@ -303,10 +303,15 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
           decrease = 0,
           percent = 90,
         },
+        {
+          type = "poison",
+          decrease = 0,
+          percent = 99,
+        },
       },
       subgroup = "capsule",
-      order = "e-a-d",
-      max_health = 100,
+      order = "g[laser-robot]-a[robot]",
+      max_health = 150,
       alert_when_damaged = false,
       collision_box = { { 0, 0 }, { 0, 0 } },
       selection_box = { { -0.5, -1.5 }, { 0.5, -0.5 } },
@@ -391,4 +396,8 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       order = "e-p-b-c",
     },
   })
+
+  table.insert(data.raw["combat-robot"].defender.resistances, { type = "poison", percent = 95 })
+  table.insert(data.raw["combat-robot"].distractor.resistances, { type = "poison", percent = 85 })
+  table.insert(data.raw["combat-robot"].destroyer.resistances, { type = "poison", percent = 97 })
 end
