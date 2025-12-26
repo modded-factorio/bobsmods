@@ -32,6 +32,11 @@ if mods["aai-industry"] then
   data.raw.recipe["bob-glass"].enabled = false
   bobmods.lib.tech.remove_recipe_unlock("glass-processing", "glass")
   bobmods.lib.tech.add_recipe_unlock("glass-processing", "bob-glass")
+
+  bobmods.lib.tech.add_prerequisite("bob-electrolysis-1", "electronics")
+  bobmods.lib.tech.add_prerequisite("bob-electrolysis-1", "basic-fluid-handling")
+  bobmods.lib.tech.add_prerequisite("bob-chemical-processing-1", "basic-fluid-handling")
+
   if mods["bobtech"] then
     data.raw.technology["sand-processing"].research_trigger = { type = "mine-entity", entity = "bob-quartz" }
     data.raw.technology["sand-processing"].unit = nil
