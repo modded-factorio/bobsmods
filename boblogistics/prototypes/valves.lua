@@ -37,6 +37,8 @@ data:extend({
   {
     type = "valve",
     name = "bob-valve",
+    localised_name = { "entity-name.one-way-valve" },
+    localised_description = { "entity-description.one-way-valve" },
     icon = "__boblogistics__/graphics/icons/pipe/valve.png",
     icon_size = 32,
     icon_draw_specification = {
@@ -195,6 +197,8 @@ data:extend({
   {
     type = "valve",
     name = "bob-overflow-valve",
+    localised_name = { "entity-name.overflow-valve" },
+    localised_description = { "entity-description.overflow-valve" },
     icon = "__boblogistics__/graphics/icons/pipe/overflow-valve.png",
     icon_size = 32,
     icon_draw_specification = {
@@ -354,6 +358,8 @@ data:extend({
   {
     type = "valve",
     name = "bob-topup-valve",
+    localised_name = { "entity-name.top-up-valve" },
+    localised_description = { "entity-description.top-up-valve" },
     icon = "__boblogistics__/graphics/icons/pipe/topup-valve.png",
     icon_size = 32,
     icon_draw_specification = {
