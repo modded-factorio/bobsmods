@@ -3028,11 +3028,6 @@ end
 
 if mods["bobplates"] then
   bobmods.lib.recipe.replace_ingredient("bob-artifact-radar", "iron-gear-wheel", "bob-steel-gear-wheel")
-  if data.raw.technology["bob-artifact-processing"] then
-    bobmods.lib.tech.remove_prerequisite("bob-artifact-processing", "chemical-science-pack")
-    bobmods.lib.tech.add_prerequisite("bob-artifact-processing", "bob-chemical-processing-2")
-    bobmods.lib.tech.remove_science_pack("bob-artifact-processing", "chemical-science-pack")
-  end
 end
 if mods["bobtech"] then
   if data.raw.technology["bob-artifact-processing"] then

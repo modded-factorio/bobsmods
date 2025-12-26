@@ -442,6 +442,19 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     },
   })
 
+  if feature_flags["freezing"] and mods["space-age"] then
+    local frozenpatch = data.raw["mining-drill"].pumpjack.graphics_set.frozen_patch
+    data.raw["mining-drill"]["bob-pumpjack-1"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-pumpjack-2"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-pumpjack-3"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-pumpjack-1"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-pumpjack-2"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-pumpjack-3"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-pumpjack-1"].graphics_set.frozen_patch = frozenpatch
+    data.raw["mining-drill"]["bob-pumpjack-2"].graphics_set.frozen_patch = frozenpatch
+    data.raw["mining-drill"]["bob-pumpjack-3"].graphics_set.frozen_patch = frozenpatch
+  end
+
   data:extend({
     {
       type = "technology",

@@ -30,6 +30,7 @@ data:extend({
     energy_required = 60,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     category = "centrifuging",
     ingredients = {
       { type = "item", name = "bob-plutonium-239", amount = 40, ignored_by_stats = 40 },
@@ -61,6 +62,7 @@ if data.raw.item["bob-thorium-ore"] then
       energy_required = 12,
       enabled = false,
       auto_recycle = false,
+      hide_from_signal_gui = true,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "bob-thorium-ore", amount = 10 },
@@ -116,6 +118,7 @@ if data.raw.item["bob-thorium-ore"] then
         energy_required = 120,
         enabled = false,
         auto_recycle = false,
+        hide_from_signal_gui = true,
         category = "centrifuging",
         ingredients = {
           { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 10 },
@@ -165,6 +168,7 @@ if data.raw.item["bob-thorium-ore"] then
         energy_required = 60,
         enabled = false,
         auto_recycle = false,
+        hide_from_signal_gui = true,
         category = "centrifuging",
         ingredients = {
           { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 5 },
@@ -223,6 +227,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       energy_required = 60,
       enabled = false,
       auto_recycle = false,
+      hide_from_signal_gui = true,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "uranium-235", amount = 5, ignored_by_stats = 3 },
@@ -279,6 +284,7 @@ if settings.startup["bobmods-plates-nuclearupdate"].value == true then
       order = "t[deuterium-processing]-b[deuterium-fuel-reprocessing]",
       energy_required = 120,
       enabled = false,
+      hide_from_signal_gui = true,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 10 },
@@ -327,6 +333,7 @@ else
       energy_required = 60,
       enabled = false,
       auto_recycle = false,
+      hide_from_signal_gui = true,
       category = "centrifuging",
       ingredients = {
         { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 5 },

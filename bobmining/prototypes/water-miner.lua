@@ -148,6 +148,59 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     },
   })
 
+  local water_miner_graphics_set = {
+    animation = {
+      north = {
+        layers = {
+          {
+            priority = "high",
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-horsehead.png",
+            animation_speed = 0.5,
+            scale = 0.5,
+            line_length = 8,
+            width = 206,
+            height = 202,
+            frame_count = 40,
+            shift = util.by_pixel(-4, -24),
+          },
+          {
+            priority = "high",
+            filename = "__bobmining__/graphics/entity/water-miner/water-miner-horsehead-shadow.png",
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            line_length = 8,
+            width = 309,
+            height = 82,
+            frame_count = 40,
+            scale = 0.5,
+            shift = util.by_pixel(17.75, 14.5),
+          },
+        },
+      },
+    },
+  }
+
+  local water_miner_base_picture = {
+    sheets = {
+      {
+        filename = "__bobmining__/graphics/entity/water-miner/water-miner-base.png",
+        priority = "extra-high",
+        width = 261,
+        height = 273,
+        shift = util.by_pixel(-2.25, -4.75),
+        scale = 0.5,
+      },
+      {
+        filename = "__bobmining__/graphics/entity/water-miner/water-miner-base-shadow.png",
+        width = 220,
+        height = 220,
+        scale = 0.5,
+        draw_as_shadow = true,
+        shift = util.by_pixel(6, 0.5),
+      },
+    },
+  }
+
   data:extend({
     {
       type = "mining-drill",
@@ -197,22 +250,8 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         height = 12,
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-      base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      graphics_set = {
-        animation = {
-          north = {
-            priority = "extra-high",
-            width = 116,
-            height = 110,
-            line_length = 10,
-            shift = { 0.125, -0.71875 },
-            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-            tint = { r = 0.2, g = 0.8, b = 1 },
-            frame_count = 40,
-            animation_speed = 0.5,
-          },
-        },
-      },
+      base_picture = water_miner_base_picture,
+      graphics_set = water_miner_graphics_set,
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
       },
@@ -270,22 +309,8 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         height = 12,
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-      base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      graphics_set = {
-        animation = {
-          north = {
-            priority = "extra-high",
-            width = 116,
-            height = 110,
-            line_length = 10,
-            shift = { 0.125, -0.71875 },
-            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-            tint = { r = 0.2, g = 0.8, b = 1 },
-            frame_count = 40,
-            animation_speed = 0.5,
-          },
-        },
-      },
+      base_picture = water_miner_base_picture,
+      graphics_set = water_miner_graphics_set,
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
       },
@@ -341,23 +366,9 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         width = 12,
         height = 12,
       },
-      base_picture = data.raw["mining-drill"].pumpjack.base_picture,
+      base_picture = water_miner_base_picture,
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-      graphics_set = {
-        animation = {
-          north = {
-            priority = "extra-high",
-            width = 116,
-            height = 110,
-            line_length = 10,
-            shift = { 0.125, -0.71875 },
-            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-            tint = { r = 0.2, g = 0.8, b = 1 },
-            frame_count = 40,
-            animation_speed = 0.5,
-          },
-        },
-      },
+      graphics_set = water_miner_graphics_set,
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
       },
@@ -395,7 +406,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
           },
         },
       },
-      energy_usage = "180W",
+      energy_usage = "180kW",
       mining_speed = 5,
       resource_searching_radius = 0.49,
       vector_to_place_result = { 0, 0 },
@@ -414,22 +425,8 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         height = 12,
       },
       monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-      base_picture = data.raw["mining-drill"].pumpjack.base_picture,
-      graphics_set = {
-        animation = {
-          north = {
-            priority = "extra-high",
-            width = 116,
-            height = 110,
-            line_length = 10,
-            shift = { 0.125, -0.71875 },
-            filename = "__bobmining__/graphics/entity/water-miner/water-miner-animation.png",
-            tint = { r = 0.2, g = 0.8, b = 1 },
-            frame_count = 40,
-            animation_speed = 0.5,
-          },
-        },
-      },
+      base_picture = water_miner_base_picture,
+      graphics_set = water_miner_graphics_set,
       working_sound = {
         sound = { filename = "__base__/sound/pumpjack.ogg" },
       },
@@ -437,6 +434,22 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
       circuit_wire_max_distance = 15,
     },
   })
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    local frozenpatch = data.raw["mining-drill"].pumpjack.graphics_set.frozen_patch
+    data.raw["mining-drill"]["bob-water-miner-1"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-water-miner-2"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-water-miner-3"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-water-miner-4"].heating_energy = "50kW"
+    data.raw["mining-drill"]["bob-water-miner-1"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-water-miner-2"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-water-miner-3"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-water-miner-4"].graphics_set.reset_animation_when_frozen = true
+    data.raw["mining-drill"]["bob-water-miner-1"].graphics_set.frozen_patch = frozenpatch
+    data.raw["mining-drill"]["bob-water-miner-2"].graphics_set.frozen_patch = frozenpatch
+    data.raw["mining-drill"]["bob-water-miner-3"].graphics_set.frozen_patch = frozenpatch
+    data.raw["mining-drill"]["bob-water-miner-4"].graphics_set.frozen_patch = frozenpatch
+  end
 
   data:extend({
     {
