@@ -3,6 +3,12 @@ require("prototypes.areadrill-updates")
 require("prototypes.pumpjack-updates")
 require("prototypes.water-miner-updates")
 
+if mods["aai-industry"] then
+  if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["resource-category"]["water"] then
+    bobmods.lib.tech.add_prerequisite("bob-water-miner-1", "electronics")
+  end
+end
+
 if mods["quality"] then
   if settings.startup["bobmods-mining-areadrills"].value == true then
     bobmods.lib.recipe.update_recycling_recipe({
