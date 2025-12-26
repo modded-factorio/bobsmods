@@ -7,9 +7,9 @@ end
 
 data.raw["noise-expression"].enemy_base_intensity.expression = "clamp(distance, 0, 1600) / 325"
 
-data.raw["map-settings"]["map-settings"].enemy_evolution.time_factor = 4e-07
-data.raw["map-settings"]["map-settings"].enemy_evolution.destroy_factor = 0.0004
-data.raw["map-settings"]["map-settings"].enemy_evolution.pollution_factor = 6e-07
+data.raw["map-settings"]["map-settings"].enemy_evolution.time_factor = 2e-07
+data.raw["map-settings"]["map-settings"].enemy_evolution.destroy_factor = 0.00025
+data.raw["map-settings"]["map-settings"].enemy_evolution.pollution_factor = 5e-07
 data.raw["map-settings"]["map-settings"].enemy_expansion.min_expansion_cooldown = 60 * 60 * 6
 data.raw["map-settings"]["map-settings"].enemy_expansion.max_expansion_cooldown = 60 * 60 * 15
 data.raw["map-settings"]["map-settings"].enemy_expansion.settler_group_min_size = 15

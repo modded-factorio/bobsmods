@@ -7,6 +7,7 @@ Date: ???
     - Factions may also be removed so that they will not appear. Be warned that artifacts will not be reorganized in this case, so removing more than a single faction may make it difficult to get enough of them in some colors.
   Changes:
     - Integrate Bob's Locale Translations mod #445
+    - Reduce enemy evolution factor default settings #475
     - Added support for frozen entities (with Space Age) #477
   Bugfixes:
     - Fixed electric breed Factoriopedia description #459
