@@ -433,7 +433,7 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 5 },
     },
     results = {
-      { type = "fluid", name = "bob-hydrogen", amount = 250 },
+      { type = "fluid", name = "bob-hydrogen", amount = 140 },
     },
     main_product = "", -- Causes it to use the recipe name.
     crafting_machine_tint = {
