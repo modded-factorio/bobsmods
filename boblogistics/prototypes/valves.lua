@@ -42,7 +42,7 @@ data:extend({
     icon = "__boblogistics__/graphics/icons/pipe/valve.png",
     icon_size = 32,
     icon_draw_specification = {
-      scale = 0.5
+      scale = 0.5,
     },
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.1, result = "bob-valve" },
@@ -202,7 +202,7 @@ data:extend({
     icon = "__boblogistics__/graphics/icons/pipe/overflow-valve.png",
     icon_size = 32,
     icon_draw_specification = {
-      scale = 0.5
+      scale = 0.5,
     },
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.1, result = "bob-overflow-valve" },
@@ -363,7 +363,7 @@ data:extend({
     icon = "__boblogistics__/graphics/icons/pipe/topup-valve.png",
     icon_size = 32,
     icon_draw_specification = {
-      scale = 0.5
+      scale = 0.5,
     },
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.1, result = "bob-topup-valve" },
@@ -531,6 +531,4 @@ if feature_flags["freezing"] and mods["space-age"] then
   data.raw.valve["bob-topup-valve"].frozen_patch.south = frozenpatchNS
   data.raw.valve["bob-topup-valve"].frozen_patch.east = frozenpatchEW
   data.raw.valve["bob-topup-valve"].frozen_patch.west = frozenpatchEW
-  
-  
 end
