@@ -272,6 +272,7 @@ data:extend({
     category = "chemistry",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 12,
     ingredients = {
       { type = "fluid", name = "bob-liquid-fuel", amount = 20 },

@@ -226,7 +226,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "bob-lithium-water-electrolysis",
+    name = "bob-lithium-perchlorate",
     icon = "__bobplates__/graphics/icons/lithium-perchlorate.png",
     icon_size = 32,
     subgroup = "bob-fluid-electrolysis",
@@ -243,6 +243,7 @@ data:extend({
       { type = "item", name = "bob-lithium-perchlorate", amount = 1 },
       { type = "fluid", name = "bob-hydrogen", amount = 20 },
     },
+    main_product = "bob-lithium-perchlorate",
     allow_decomposition = false,
   },
 

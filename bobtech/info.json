@@ -10,6 +10,7 @@
     "base >= 2.0.33",
     "boblibrary >= 2.0.0",
     "? bobenemies >= 2.0.0",
+    "? space-age >= 2.0.0",
     "? DiscoScience"
   ],
   "description": "Requires Bob's functions library mod.\n\nAdds a Lab MK2\nAdds Transport science pack, and changes advanced logistic based technologies to cost this new science pack.\nIf Alien artifacts are enabled from Bob's Enemies mod, an Alien lab and alien science packs are added, plus Science pack Gold made from Science packs 1, 2, 3 and Military.\nScience pack ingredients are also changed around, to include some more Bob's Mods resources.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
