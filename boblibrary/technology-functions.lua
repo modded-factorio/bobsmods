@@ -371,8 +371,8 @@ end
 
 function bobmods.lib.tech.technology_icon_constant(technology_icon, constant_icon, x, y)
   local scale = 0.5
-  local xshift = x or 64
-  local yshift = y or 64
+  local xshift = x or 100
+  local yshift = y or 100
   if type(technology_icon) == "table" and technology_icon.icon and technology_icon.icon_size then
     local icons = {
       technology_icon,
@@ -381,6 +381,7 @@ function bobmods.lib.tech.technology_icon_constant(technology_icon, constant_ico
         icon_size = 128,
         scale = scale,
         shift = { xshift * scale, yshift * scale },
+        floating = true,
       },
     }
     return icons
@@ -402,7 +403,8 @@ function bobmods.lib.tech.technology_line_icon_constant(technology_line, first, 
             icon = constant_icon,
             icon_size = 128,
             scale = scale,
-            shift = { 64 * scale, 64 * scale },
+            shift = { 100 * scale, 100 * scale },
+            floating = true,
           },
         }
       else

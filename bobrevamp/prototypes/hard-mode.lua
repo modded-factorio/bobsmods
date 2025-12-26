@@ -146,7 +146,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
     },
     {
       type = "recipe",
-      name = "bob-lithium-water-electrolysis",
+      name = "bob-lithium-perchlorate",
       icon = "__bobplates__/graphics/icons/lithium-perchlorate.png",
       icon_size = 32,
       subgroup = "bob-fluid-electrolysis",
@@ -159,11 +159,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         { type = "item", name = "bob-lithium-chloride", amount = 1 },
         { type = "item", name = "bob-sodium-perchlorate", amount = 1 },
       },
-      main_product = "bob-lithium-perchlorate",
       results = {
         { type = "item", name = "bob-lithium-perchlorate", amount = 1 },
         { type = "item", name = "bob-salt", amount = 1 },
       },
+      main_product = "bob-lithium-perchlorate",
       allow_decomposition = false,
     },
     {

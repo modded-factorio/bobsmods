@@ -228,8 +228,8 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "iron-plate", amount = 3 },
-      { type = "item", name = "pipe", amount = 2 },
+      { type = "item", name = "bob-small-inline-storage-tank", amount = 1 },
+      { type = "item", name = "pipe", amount = 1 },
     },
     results = { { type = "item", name = "bob-small-storage-tank", amount = 1 } },
   },

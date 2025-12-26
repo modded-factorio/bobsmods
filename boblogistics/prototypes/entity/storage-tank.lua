@@ -438,3 +438,42 @@ data:extend({
     circuit_wire_max_distance = 15,
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw["storage-tank"]["bob-storage-tank-2"].heating_energy = "100kW"
+  data.raw["storage-tank"]["bob-storage-tank-3"].heating_energy = "100kW"
+  data.raw["storage-tank"]["bob-storage-tank-4"].heating_energy = "100kW"
+  data.raw["storage-tank"]["bob-storage-tank-all-corners"].heating_energy = "100kW"
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-2"].heating_energy = "100kW"
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-3"].heating_energy = "100kW"
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-4"].heating_energy = "100kW"
+  local frozenpatch = data.raw["storage-tank"]["storage-tank"].pictures.frozen_patch
+  data.raw["storage-tank"]["bob-storage-tank-2"].pictures.frozen_patch = frozenpatch
+  data.raw["storage-tank"]["bob-storage-tank-3"].pictures.frozen_patch = frozenpatch
+  data.raw["storage-tank"]["bob-storage-tank-4"].pictures.frozen_patch = frozenpatch
+  local frozenpatchall = {
+    sheets = {
+      {
+        filename = "__space-age__/graphics/entity/frozen/storage-tank/storage-tank.png",
+        frames = 1,
+        width = 219,
+        height = 215,
+        priority = "extra-high",
+        scale = 0.5,
+        shift = { -0.0078125, 0.1171875 },
+      },
+    },
+  }
+  data.raw["storage-tank"]["bob-storage-tank-all-corners"].pictures.frozen_patch = frozenpatchall
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-2"].pictures.frozen_patch = frozenpatchall
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-3"].pictures.frozen_patch = frozenpatchall
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-4"].pictures.frozen_patch = frozenpatchall
+  local frozenpipecovers = data.raw["storage-tank"]["storage-tank"].fluid_box.pipe_covers_frozen
+  data.raw["storage-tank"]["bob-storage-tank-2"].fluid_box.pipe_covers_frozen = frozenpipecovers
+  data.raw["storage-tank"]["bob-storage-tank-3"].fluid_box.pipe_covers_frozen = frozenpipecovers
+  data.raw["storage-tank"]["bob-storage-tank-4"].fluid_box.pipe_covers_frozen = frozenpipecovers
+  data.raw["storage-tank"]["bob-storage-tank-all-corners"].fluid_box.pipe_covers_frozen = frozenpipecovers
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-2"].fluid_box.pipe_covers_frozen = frozenpipecovers
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-3"].fluid_box.pipe_covers_frozen = frozenpipecovers
+  data.raw["storage-tank"]["bob-storage-tank-all-corners-4"].fluid_box.pipe_covers_frozen = frozenpipecovers
+end

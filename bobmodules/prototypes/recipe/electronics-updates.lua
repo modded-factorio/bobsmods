@@ -285,15 +285,6 @@ bobmods.lib.tech.add_recipe_unlock("efficiency-module-2", "bob-efficiency-proces
 bobmods.lib.tech.add_recipe_unlock("efficiency-module-3", "bob-efficiency-processor-2")
 bobmods.lib.tech.add_recipe_unlock("productivity-module-2", "bob-productivity-processor")
 bobmods.lib.tech.add_recipe_unlock("productivity-module-3", "bob-productivity-processor-2")
-bobmods.lib.tech.add_recipe_unlock("advanced-circuit", "bob-module-processor-board")
-bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-module-processor-board-2")
-bobmods.lib.tech.add_prerequisite("advanced-circuit", "modules")
-
-if data.raw.technology["bob-advanced-processing-unit"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-advanced-processing-unit", "bob-module-processor-board-3")
-else
-  bobmods.lib.tech.add_recipe_unlock("processing-unit", "bob-module-processor-board-3")
-end
 
 if mods["quality"] then
   bobmods.lib.tech.add_recipe_unlock("quality-module-2", "bob-quality-processor")
