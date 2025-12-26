@@ -212,6 +212,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       animation_speed_coefficient = 32,
       structure_animation_speed_coefficient = 0.7,
       structure_animation_movement_cooldown = 10,
+      icon_draw_specification = { scale = 0.5 },
       belt_animation_set = bobmods.logistics.black_belt_animation_set,
       fast_replaceable_group = "transport-belt",
       next_upgrade = "splitter",
@@ -258,8 +259,28 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           scale = 0.5,
         },
       },
+      circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["splitter"],
+      default_input_left_condition = { first = { type = "virtual", name = "signal-I" }, comparator = "<", second = 0 },
+      default_input_right_condition = { first = { type = "virtual", name = "signal-I" }, comparator = ">", second = 0 },
+      default_output_left_condition = { first = { type = "virtual", name = "signal-O" }, comparator = "<", second = 0 },
+      default_output_right_condition = { first = { type = "virtual", name = "signal-O" }, comparator = ">", second = 0 },
     },
   })
+
+  --Let basic transport belt act as a burner transport belt not subject to freezing.
+  -- if feature_flags["freezing"] and mods["space-age"] then
+  -- data.raw["transport-belt"]["bob-basic-transport-belt"].heating_energy = "10kW"
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].heating_energy = "25kW"
+  -- data.raw.splitter["bob-basic-splitter"].heating_energy = "40kW"
+  -- local beltfrozenpatch = data.raw["transport-belt"]["transport-belt"].belt_animation_set.frozen_patch
+  -- data.raw["transport-belt"]["bob-basic-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_in = data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_in
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_out = data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_out
+  -- data.raw.splitter["bob-basic-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch
+  -- data.raw.splitter["bob-basic-splitter"].frozen_patch = data.raw.splitter.splitter.frozen_patch
+  -- end
 end
 
 data:extend({
@@ -442,6 +463,7 @@ data:extend({
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
+    icon_draw_specification = { scale = 0.5 },
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     next_upgrade = "bob-ultimate-splitter",
@@ -488,6 +510,12 @@ data:extend({
         scale = 0.5,
       },
     },
+    circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["splitter"],
+    default_input_left_condition = { first = { type = "virtual", name = "signal-I" }, comparator = "<", second = 0 },
+    default_input_right_condition = { first = { type = "virtual", name = "signal-I" }, comparator = ">", second = 0 },
+    default_output_left_condition = { first = { type = "virtual", name = "signal-O" }, comparator = "<", second = 0 },
+    default_output_right_condition = { first = { type = "virtual", name = "signal-O" }, comparator = ">", second = 0 },
   },
 })
 
@@ -669,6 +697,7 @@ data:extend({
     animation_speed_coefficient = 32,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
+    icon_draw_specification = { scale = 0.5 },
     belt_animation_set = bobmods.logistics.green_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     speed = 0.15625,
@@ -714,8 +743,40 @@ data:extend({
         scale = 0.5,
       },
     },
+    circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["splitter"],
+    default_input_left_condition = { first = { type = "virtual", name = "signal-I" }, comparator = "<", second = 0 },
+    default_input_right_condition = { first = { type = "virtual", name = "signal-I" }, comparator = ">", second = 0 },
+    default_output_left_condition = { first = { type = "virtual", name = "signal-O" }, comparator = "<", second = 0 },
+    default_output_right_condition = { first = { type = "virtual", name = "signal-O" }, comparator = ">", second = 0 },
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw["transport-belt"]["bob-turbo-transport-belt"].heating_energy = "10kW"
+  data.raw["underground-belt"]["bob-turbo-underground-belt"].heating_energy = "200kW"
+  data.raw.splitter["bob-turbo-splitter"].heating_energy = "40kW"
+  data.raw["transport-belt"]["bob-ultimate-transport-belt"].heating_energy = "10kW"
+  data.raw["underground-belt"]["bob-ultimate-underground-belt"].heating_energy = "250kW"
+  data.raw.splitter["bob-ultimate-splitter"].heating_energy = "40kW"
+  local beltfrozenpatch3 = data.raw["transport-belt"]["express-transport-belt"].belt_animation_set.frozen_patch
+  data.raw["transport-belt"]["bob-turbo-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
+  data.raw["underground-belt"]["bob-turbo-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
+  data.raw["underground-belt"]["bob-turbo-underground-belt"].structure.frozen_patch_in =
+    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_in
+  data.raw["underground-belt"]["bob-turbo-underground-belt"].structure.frozen_patch_out =
+    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out
+  data.raw.splitter["bob-turbo-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3
+  data.raw.splitter["bob-turbo-splitter"].frozen_patch = data.raw.splitter["express-splitter"].frozen_patch
+  data.raw["transport-belt"]["bob-ultimate-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
+  data.raw["underground-belt"]["bob-ultimate-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
+  data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_in =
+    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_in
+  data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_out =
+    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out
+  data.raw.splitter["bob-ultimate-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3
+  data.raw.splitter["bob-ultimate-splitter"].frozen_patch = data.raw.splitter["express-splitter"].frozen_patch
+end
 
 if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
   if settings.startup["bobmods-logistics-beltoverhaul"].value == true then

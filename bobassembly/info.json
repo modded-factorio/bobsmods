@@ -1,6 +1,6 @@
 {
   "name": "bobassembly",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "factorio_version": "2.0",
   "title": "Bob's Assembling machines mod",
   "author": "Bobingabout",
@@ -9,7 +9,8 @@
   "dependencies": [
     "base >= 2.0.49",
     "boblibrary >= 2.0.1",
-    "? bobplates >= 2.0.0"
+    "? bobplates >= 2.0.0",
+    "? space-age >= 2.0.0"
   ],
   "description": "Requires Bob's functions library mod\n\nThis mod adds assembling machines 4, 5 and 6, and updates the recipe for assembling machine 3 to fit my progression pattern.\nThe mod also adds higher tiers of Electric furnace, Chemical plant and Oil refinery.\nIt also includes the Electronic assembling machine chain, and additional tiers of machines added by Bob's Metals, Chemicals and Intermediates mod.\n\nDesigned to work best with my full mod pack.\nAll additional machine tiers other than assembling machines can be turned off in the mod options."
 }

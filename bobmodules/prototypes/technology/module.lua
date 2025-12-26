@@ -1,3 +1,113 @@
+data:extend({
+  {
+    type = "technology",
+    name = "bob-modules-2",
+    localised_name = { "", { "technology-name.modules" }, " 2" },
+    icon = "__base__/graphics/technology/module.png",
+    icon_size = 256,
+    prerequisites = {
+      "modules",
+      "advanced-circuit",
+      "chemical-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-module-processor-board",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "bob-modules-3",
+    localised_name = { "", { "technology-name.modules" }, " 3" },
+    icon = "__base__/graphics/technology/module.png",
+    icon_size = 256,
+    prerequisites = {
+      "bob-modules-2",
+      "processing-unit",
+      "production-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-module-processor-board-2",
+      },
+    },
+    unit = {
+      count = 100,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "bob-modules-4",
+    localised_name = { "", { "technology-name.modules" }, " 4" },
+    icon = "__base__/graphics/technology/module.png",
+    icon_size = 256,
+    prerequisites = {
+      "bob-modules-3",
+      "utility-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-module-processor-board-3",
+      },
+    },
+    unit = {
+      count = 100,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "bob-modules-5",
+    localised_name = { "", { "technology-name.modules" }, " 5" },
+    icon = "__base__/graphics/technology/module.png",
+    icon_size = 256,
+    prerequisites = {
+      "bob-modules-4",
+      "space-science-pack",
+    },
+    effects = {},
+    unit = {
+      count = 100,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
+      },
+      time = 30,
+    },
+  },
+})
+
 bobmods.lib.tech.remove_prerequisite("modules", "advanced-circuit")
 bobmods.lib.tech.add_prerequisite("modules", "plastics")
 
@@ -9,8 +119,8 @@ data.raw["technology"]["speed-module-3"].icon = "__bobmodules__/graphics/technol
 data.raw["technology"]["speed-module-3"].icon_size = 256
 
 bobmods.lib.tech.remove_prerequisite("speed-module-2", "processing-unit")
-bobmods.lib.tech.add_prerequisite("speed-module-2", "advanced-circuit")
-bobmods.lib.tech.add_prerequisite("speed-module-2", "chemical-science-pack")
+bobmods.lib.tech.add_prerequisite("speed-module-2", "bob-modules-2")
+bobmods.lib.tech.add_prerequisite("speed-module-3", "bob-modules-3")
 bobmods.lib.tech.set_science_pack_count("speed-module-2", 100)
 bobmods.lib.tech.set_science_pack_count("speed-module-3", 150)
 
@@ -38,7 +148,7 @@ data:extend({
     },
     prerequisites = {
       "speed-module-3",
-      "utility-science-pack",
+      "bob-modules-4",
     },
     unit = {
       count = 200,
@@ -51,6 +161,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "speed-module-4",
   },
   {
     type = "technology",
@@ -67,7 +178,7 @@ data:extend({
     },
     prerequisites = {
       "bob-speed-module-4",
-      "space-science-pack",
+      "bob-modules-5",
     },
     unit = {
       count = 250,
@@ -81,6 +192,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "speed-module-5",
   },
 })
 
@@ -93,8 +205,8 @@ data.raw["technology"]["efficiency-module-2"].icon_size = 256
 data.raw["technology"]["efficiency-module-3"].icon_size = 256
 
 bobmods.lib.tech.remove_prerequisite("efficiency-module-2", "processing-unit")
-bobmods.lib.tech.add_prerequisite("efficiency-module-2", "advanced-circuit")
-bobmods.lib.tech.add_prerequisite("efficiency-module-2", "chemical-science-pack")
+bobmods.lib.tech.add_prerequisite("efficiency-module-2", "bob-modules-2")
+bobmods.lib.tech.add_prerequisite("efficiency-module-3", "bob-modules-3")
 bobmods.lib.tech.set_science_pack_count("efficiency-module-2", 100)
 bobmods.lib.tech.set_science_pack_count("efficiency-module-3", 150)
 
@@ -122,7 +234,7 @@ data:extend({
     },
     prerequisites = {
       "efficiency-module-3",
-      "utility-science-pack",
+      "bob-modules-4",
     },
     unit = {
       count = 200,
@@ -135,6 +247,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "efficiency-module-4",
   },
   {
     type = "technology",
@@ -151,7 +264,7 @@ data:extend({
     },
     prerequisites = {
       "bob-efficiency-module-4",
-      "space-science-pack",
+      "bob-modules-5",
     },
     unit = {
       count = 250,
@@ -165,6 +278,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "efficiency-module-5",
   },
 })
 
@@ -177,8 +291,8 @@ data.raw["technology"]["productivity-module-2"].icon_size = 256
 data.raw["technology"]["productivity-module-3"].icon_size = 256
 
 bobmods.lib.tech.remove_prerequisite("productivity-module-2", "processing-unit")
-bobmods.lib.tech.add_prerequisite("productivity-module-2", "advanced-circuit")
-bobmods.lib.tech.add_prerequisite("productivity-module-2", "chemical-science-pack")
+bobmods.lib.tech.add_prerequisite("productivity-module-2", "bob-modules-2")
+bobmods.lib.tech.add_prerequisite("productivity-module-3", "bob-modules-3")
 bobmods.lib.tech.set_science_pack_count("productivity-module-2", 100)
 bobmods.lib.tech.set_science_pack_count("productivity-module-3", 150)
 
@@ -206,7 +320,7 @@ data:extend({
     },
     prerequisites = {
       "productivity-module-3",
-      "utility-science-pack",
+      "bob-modules-4",
     },
     unit = {
       count = 200,
@@ -219,6 +333,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "productivity-module-4",
   },
   {
     type = "technology",
@@ -235,7 +350,7 @@ data:extend({
     },
     prerequisites = {
       "bob-productivity-module-4",
-      "space-science-pack",
+      "bob-modules-5",
     },
     unit = {
       count = 250,
@@ -249,6 +364,7 @@ data:extend({
       },
       time = 60,
     },
+    order = "productivity-module-5",
   },
 })
 
@@ -291,7 +407,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-clean-module-1",
-      "chemical-science-pack",
+      "bob-modules-2",
     },
     unit = {
       count = 100,
@@ -320,8 +436,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-clean-module-2",
-      "processing-unit",
-      "production-science-pack",
+      "bob-modules-3",
     },
     unit = {
       count = 150,
@@ -351,7 +466,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-clean-module-3",
-      "utility-science-pack",
+      "bob-modules-4",
     },
     unit = {
       count = 200,
@@ -378,7 +493,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-clean-module-4",
-      "space-science-pack",
+      "bob-modules-5",
     },
     unit = {
       count = 250,
@@ -434,7 +549,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-create-module-1",
-      "chemical-science-pack",
+      "bob-modules-2",
     },
     unit = {
       count = 100,
@@ -463,8 +578,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-create-module-2",
-      "processing-unit",
-      "production-science-pack",
+      "bob-modules-3",
     },
     unit = {
       count = 150,
@@ -494,7 +608,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-create-module-3",
-      "utility-science-pack",
+      "bob-modules-4",
     },
     unit = {
       count = 200,
@@ -521,7 +635,7 @@ data:extend({
     },
     prerequisites = {
       "bob-pollution-create-module-4",
-      "space-science-pack",
+      "bob-modules-5",
     },
     unit = {
       count = 250,
@@ -538,16 +652,8 @@ data:extend({
   },
 })
 
-bobmods.lib.tech.add_prerequisite("speed-module-3", "processing-unit")
-bobmods.lib.tech.add_prerequisite("efficiency-module-3", "processing-unit")
-bobmods.lib.tech.add_prerequisite("productivity-module-3", "processing-unit")
-
 if data.raw.technology["bob-advanced-processing-unit"] then
-  bobmods.lib.tech.add_prerequisite("bob-speed-module-4", "bob-advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-efficiency-module-4", "bob-advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-productivity-module-4", "bob-advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-pollution-clean-module-4", "bob-advanced-processing-unit")
-  bobmods.lib.tech.add_prerequisite("bob-pollution-create-module-4", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-modules-4", "bob-advanced-processing-unit")
 end
 
 if mods["quality"] then
@@ -560,8 +666,8 @@ if mods["quality"] then
   data.raw.technology["quality-module-3"].icon_size = 256
 
   bobmods.lib.tech.remove_prerequisite("quality-module-2", "processing-unit")
-  bobmods.lib.tech.add_prerequisite("quality-module-2", "advanced-circuit")
-  bobmods.lib.tech.add_prerequisite("quality-module-2", "chemical-science-pack")
+  bobmods.lib.tech.add_prerequisite("quality-module-2", "bob-modules-2")
+  bobmods.lib.tech.add_prerequisite("quality-module-3", "bob-modules-3")
   bobmods.lib.tech.set_science_pack_count("quality-module", 50)
   bobmods.lib.tech.set_science_pack_count("quality-module-2", 100)
   bobmods.lib.tech.set_science_pack_count("quality-module-3", 150)
@@ -590,7 +696,7 @@ if mods["quality"] then
       },
       prerequisites = {
         "quality-module-3",
-        "utility-science-pack",
+        "bob-modules-4",
       },
       unit = {
         count = 200,
@@ -603,6 +709,7 @@ if mods["quality"] then
         },
         time = 60,
       },
+      order = "quality-module-4",
     },
     {
       type = "technology",
@@ -619,7 +726,7 @@ if mods["quality"] then
       },
       prerequisites = {
         "bob-quality-module-4",
-        "space-science-pack",
+        "bob-modules-5",
       },
       unit = {
         count = 250,
@@ -633,12 +740,7 @@ if mods["quality"] then
         },
         time = 60,
       },
+      order = "quality-module-5",
     },
   })
-
-  bobmods.lib.tech.add_prerequisite("quality-module-3", "processing-unit")
-
-  if data.raw.technology["bob-advanced-processing-unit"] then
-    bobmods.lib.tech.add_prerequisite("bob-quality-module-4", "bob-advanced-processing-unit")
-  end
 end

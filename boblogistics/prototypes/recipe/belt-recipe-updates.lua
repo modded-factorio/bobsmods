@@ -6,8 +6,8 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   end
 
   if bobmods.greenhouse then
-    bobmods.lib.recipe.replace_ingredient("bob-basic-underground-belt", "iron-stick", "wood")
-    bobmods.lib.recipe.replace_ingredient("bob-basic-splitter", "iron-stick", "wood")
+    bobmods.lib.recipe.add_ingredient("bob-basic-underground-belt", { type = "item", name = "wood", amount = 2 })
+    bobmods.lib.recipe.add_ingredient("bob-basic-splitter", { type = "item", name = "wood", amount = 4 })
   end
 
   if data.raw.item["bob-tin-plate"] then
