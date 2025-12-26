@@ -10,7 +10,12 @@ end
 
 if mods["aai-industry"] then
   if data.raw.technology["logistics-0"] then
+    data.raw.technology["logistics-0"].localised_name = { "", { "technology-name.logistics" }, " 0" }
     bobmods.lib.tech.add_recipe_unlock("logistics", "transport-belt")
     bobmods.lib.tech.remove_recipe_unlock("basic-logistics", "transport-belt")
+    bobmods.lib.tech.remove_prerequisite("logistics-0", "basic-logistics")
+    bobmods.lib.tech.add_prerequisite("logistics-0", "burner-mechanics")
+    bobmods.lib.tech.remove_prerequisite("basic-logistics", "burner-mechanics")
+    bobmods.lib.tech.remove_prerequisite("logistics", "basic-logistics")
   end
 end
