@@ -692,7 +692,6 @@ script.on_event(defines.events.on_gui_click, function(event)
 
   --Switching characters while flying in a cargo pod causes you to be kicked out, wasting a rocket and possibly stranding you in the middle of a lake or deep space.
   if not game.players[event.player_index].cargo_pod then
-
     wlog("Name of clicked button: " .. tostring(event.element.valid and event.element.name))
     local player = game.players[event.player_index]
     if event.element.valid and event.element.name == "bob_avatar_toggle_gui" then
@@ -791,9 +790,7 @@ script.on_event(defines.events.on_gui_click, function(event)
       storage.players[event.player_index].respawn = false
       storage.players[event.player_index].first_character = false
     end
-
   end
-
 end)
 
 script.on_event(defines.events.on_gui_text_changed, function(event)
