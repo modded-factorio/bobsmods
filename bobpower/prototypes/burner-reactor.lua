@@ -433,6 +433,52 @@ if settings.startup["bobmods-power-heatsources"].value == true then
   data.raw.reactor["bob-fluid-reactor-2"].neighbour_bonus = 0.1
   data.raw.reactor["bob-fluid-reactor-2"].energy_source.emissions_per_minute = { pollution = 25 }
 
+  data.raw.reactor["bob-fluid-reactor"].working_light_picture = {
+    layers = {
+      {
+        filename = "__bobpower__/graphics/burner-reactor/reactor-fire-fluid-1.png",
+        priority = "high",
+        width = 22,
+        height = 38,
+        frame_count = 12,
+        scale = 2 / 3,
+        shift = { -0.40625 * 1.5, 0.671875 * 1.5 },
+      },
+      {
+        filename = "__bobpower__/graphics/burner-reactor/reactor-fire-fluid-2.png",
+        priority = "high",
+        width = 17,
+        height = 38,
+        frame_count = 12,
+        scale = 2 / 3,
+        shift = { 0.40625 * 1.5, 0.671875 * 1.5 },
+      },
+    },
+  }
+
+  data.raw.reactor["bob-fluid-reactor-2"].working_light_picture = {
+    layers = {
+      {
+        filename = "__bobpower__/graphics/burner-reactor/reactor-fire-fluid-1.png",
+        priority = "high",
+        width = 22,
+        height = 38,
+        frame_count = 12,
+        scale = 2 / 3,
+        shift = { -0.40625 * 1.5, 0.671875 * 1.5 },
+      },
+      {
+        filename = "__bobpower__/graphics/burner-reactor/reactor-fire-fluid-2.png",
+        priority = "high",
+        width = 17,
+        height = 38,
+        frame_count = 12,
+        scale = 2 / 3,
+        shift = { 0.40625 * 1.5, 0.671875 * 1.5 },
+      },
+    },
+  }
+
   --If the oil burning steel furnace exists, add a new alternate recipe to craft the fluid reactor from it.
   if
     settings.startup["bobmods-assembly-oilfurnaces"]

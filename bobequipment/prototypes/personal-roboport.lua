@@ -1068,7 +1068,7 @@ data:extend({
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
-    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+    }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     effects = {
       {
         type = "unlock-recipe",
@@ -1100,7 +1100,7 @@ data:extend({
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
-    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+    }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     effects = {
       {
         type = "unlock-recipe",
@@ -1132,7 +1132,7 @@ data:extend({
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
-    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+    }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     effects = {
       {
         type = "unlock-recipe",
@@ -1165,7 +1165,7 @@ data:extend({
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/personal-roboport-equipment.png",
       icon_size = 128,
-    }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+    }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     effects = {
       {
         type = "unlock-recipe",
@@ -1206,7 +1206,7 @@ if combined_roboports == true then
   data.raw.technology["personal-roboport-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
     icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png",
     icon_size = 128,
-  }, "__boblibrary__/graphics/constants/constant-equipment.png")
+  }, "__core__/graphics/icons/technology/constants/constant-equipment.png")
 
   data.raw.item["personal-roboport-mk2-equipment"].icon =
     "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
@@ -1218,7 +1218,7 @@ if combined_roboports == true then
   data.raw.technology["personal-roboport-mk2-equipment"].icons = bobmods.lib.tech.technology_icon_constant({
     icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png",
     icon_size = 128,
-  }, "__boblibrary__/graphics/constants/constant-equipment.png")
+  }, "__core__/graphics/icons/technology/constants/constant-equipment.png")
 
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.buffer_capacity = "75MJ"
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source.input_flow_limit = "7500kW"
@@ -1395,7 +1395,7 @@ if combined_roboports == true then
       icons = bobmods.lib.tech.technology_icon_constant({
         icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk3-equipment.png",
         icon_size = 128,
-      }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+      }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
       effects = {
         {
           type = "unlock-recipe",
@@ -1424,7 +1424,7 @@ if combined_roboports == true then
       icons = bobmods.lib.tech.technology_icon_constant({
         icon = "__bobequipment__/graphics/icons/technology/personal-roboport-mk4-equipment.png",
         icon_size = 128,
-      }, "__boblibrary__/graphics/constants/constant-equipment.png"),
+      }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
       effects = {
         {
           type = "unlock-recipe",

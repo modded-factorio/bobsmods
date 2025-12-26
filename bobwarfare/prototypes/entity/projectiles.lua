@@ -1242,11 +1242,9 @@ data:extend({
             explosion_at_trigger = "explosion",
           },
           {
-            type = "set-tile",
-            tile_name = "nuclear-ground",
-            radius = 12,
-            apply_projection = true,
-            tile_collision_mask = { layers = { water_tile = true } },
+            type = "create-entity",
+            entity_name = "nuke-effects-nauvis",
+            check_buildability = true,
           },
           {
             type = "create-entity",
@@ -1276,7 +1274,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 1000, type = "explosion" },
+            damage = { amount = 5000, type = "bob-plasma" },
           },
           {
             type = "create-entity",
@@ -1312,7 +1310,7 @@ data:extend({
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 2000,
+              repeat_count = 1000,
               radius = 7,
               action_delivery = {
                 type = "projectile",
@@ -1471,6 +1469,50 @@ data:extend({
     hidden = true,
   },
 })
+
+if mods["space-age"] then
+  table.insert(
+    data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects,
+    2,
+    {
+      type = "create-entity",
+      entity_name = "nuke-effects-aquilo",
+      check_buildability = true,
+    }
+  )
+  table.insert(
+    data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects,
+    2,
+    {
+      type = "create-entity",
+      entity_name = "nuke-effects-vulcanus",
+      check_buildability = true,
+    }
+  )
+  table.insert(
+    data.raw["artillery-projectile"]["bob-atomic-artillery-projectile"].action.action_delivery.target_effects,
+    2,
+    {
+      type = "create-entity",
+      entity_name = "nuke-effects-space",
+      check_buildability = true,
+    }
+  )
+end
+
+for _, damagefind in pairs(data.raw.projectile["atomic-rocket"].action.action_delivery.target_effects) do
+  if damagefind.damage then --Find the one index that does damage, which will be different depending on whether Space Age is active or not
+    damagefind.damage.amount = 5000
+    damagefind.damage.type = "bob-plasma"
+    break
+  end
+end
+
+data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.amount = 500
+data.raw.projectile["atomic-bomb-ground-zero-projectile"].action[1].action_delivery.target_effects.damage.type =
+  "bob-plasma"
+data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.damage.amount = 1000
+data.raw.projectile["atomic-bomb-wave"].action[1].action_delivery.target_effects.upper_damage_modifier = 0.25
 
 data:extend({
   {

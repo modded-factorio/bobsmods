@@ -11,6 +11,7 @@
     "boblibrary >= 2.0.1",
     "? bobplates >= 2.0.0",
     "? bobinserters >= 1.3.2",
+    "? space-age >= 2.0.0",
     "? valves",
     "(?) Krastorio2",
     "(?) aai-loaders"

@@ -5,8 +5,10 @@ Date: ???
     - Hide pipe connection arrows #456
     - Fix pipe visualization #458
     - Fix Storage tank graphics error #469
+    - Fixed limited parameters available on buffer and requester chests #498
   Changes:
     - Integrate Bob's Locale Translations mod #445
+    - Added support for frozen entities (with Space Age) #477
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 22. 06. 2025
