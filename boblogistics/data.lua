@@ -19,6 +19,7 @@ end
 require("prototypes.category")
 
 require("prototypes.robot-parts")
+require("prototypes.valves")
 
 require("prototypes.item.train")
 require("prototypes.item.robots")
