@@ -50,6 +50,7 @@ if mods["space-age"] then
   for _, spacerock in pairs(data.raw.asteroid) do
     local has_acid = false
     local has_poison = false
+    spacerock.resistances = spacerock.resistances or {}
     for _, resist in pairs(spacerock.resistances) do
       if resist.type == "acid" then
         has_acid = true

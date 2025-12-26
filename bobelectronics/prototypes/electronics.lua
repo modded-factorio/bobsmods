@@ -286,6 +286,7 @@ data:extend({
     type = "recipe",
     name = "bob-wooden-board",
     category = "crafting",
+    enabled = false,
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },

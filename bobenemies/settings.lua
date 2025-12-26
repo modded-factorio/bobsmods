@@ -75,8 +75,20 @@ data:extend({
     type = "int-setting",
     name = "bobmods-enemies-radarscanlimit",
     setting_type = "startup",
-    default_value = 50,
+    default_value = 100,
     minimum_value = 0,
+  },
+  {
+    type = "bool-setting",
+    name = "bobmods-enemies-randomizeenemies",
+    setting_type = "startup",
+    default_value = false,
+  },
+  {
+    type = "string-setting",
+    name = "bobmods-enemies-factionlist",
+    setting_type = "startup",
+    default_value = "piercing,electric,acid,explosive,poison,fire",
   },
 })
 

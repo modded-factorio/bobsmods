@@ -98,7 +98,11 @@ data:extend({
         secondary_draw_orders = { north = -1 },
       },
     },
-    allowed_effects = {},
+    effect_receiver = {
+      uses_beacon_effects = false,
+    },
+    allowed_effects = { "pollution" },
+    module_slots = mods["bobmodules"] and 2 or 0,
     graphics_set = {
       animation = {
         layers = {
@@ -142,3 +146,18 @@ data:extend({
     impact_category = "glass",
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw["assembling-machine"]["bob-greenhouse"].heating_energy = "250kW"
+  data.raw["assembling-machine"]["bob-greenhouse"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/lab/lab.png",
+    width = 194,
+    height = 174,
+    scale = 0.5,
+    shift = { 0, 0.09375 },
+  }
+  local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+  local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+  data.raw["assembling-machine"]["bob-greenhouse"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-greenhouse"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+end

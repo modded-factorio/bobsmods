@@ -553,6 +553,9 @@ local function bob_gun_turret(inputs)
   else
     turret.circuit_connector = circuit_connector_definitions["laser-turret"]
   end
+  if feature_flags["freezing"] then
+    turret.heating_energy = inputs.heating_energy or "50kW"
+  end
   return turret
 end
 
@@ -649,19 +652,17 @@ local function bob_laser_turret(inputs)
         energy_consumption = inputs.energy_consumption or "800kJ",
         clamp_position = inputs.clamp_position or nil,
         action = {
-          {
-            type = "direct",
-            action_delivery = {
-              {
-                type = "projectile",
-                projectile = inputs.projectile or "laser",
-                starting_speed = inputs.starting_speed or 0.28,
+          type = "direct",
+          action_delivery = {
+            {
+              type = "projectile",
+              projectile = inputs.projectile or "laser",
+              starting_speed = inputs.starting_speed or 0.28,
 
-                direction_deviation = inputs.direction_deviation or nil,
-                range_deviation = inputs.range_deviation or nil,
+              direction_deviation = inputs.direction_deviation or nil,
+              range_deviation = inputs.range_deviation or nil,
 
-                max_range = (inputs.range * 2) or 50,
-              },
+              max_range = (inputs.range * 2) or 50,
             },
           },
         },
@@ -680,6 +681,7 @@ local function bob_laser_turret(inputs)
       damage_modifier = inputs.damage_modifier or 2,
       turn_range = inputs.turn_range,
       ammo_type = {
+        type = "beam",
         energy_consumption = inputs.energy_consumption or "800kJ",
         action = {
           type = "direct",
@@ -694,6 +696,9 @@ local function bob_laser_turret(inputs)
       },
     }
     turret.prepare_range = inputs.prepare_range or preparerange
+  end
+  if feature_flags["freezing"] then
+    turret.heating_energy = inputs.heating_energy or "50kW"
   end
   return turret
 end
@@ -1421,6 +1426,7 @@ data:extend({
     buffer_capacity = "28000kJ",
     input_flow_limit = "15000kW",
     energy_consumption = "22000kJ",
+    heating_energy = "500kW",
 
     type = "projectile",
     projectile = "bob-plasma-projectile",
@@ -1493,6 +1499,7 @@ data:extend({
     buffer_capacity = "40000kJ",
     input_flow_limit = "23000kW",
     energy_consumption = "28000kJ",
+    heating_energy = "500kW",
 
     type = "projectile",
     projectile = "bob-plasma-projectile",
@@ -1565,6 +1572,7 @@ data:extend({
     buffer_capacity = "64000kJ",
     input_flow_limit = "32000kW",
     energy_consumption = "34000kJ",
+    heating_energy = "500kW",
 
     type = "projectile",
     projectile = "bob-plasma-projectile",
@@ -1637,6 +1645,7 @@ data:extend({
     buffer_capacity = "80000kJ",
     input_flow_limit = "42000kW",
     energy_consumption = "40000kJ",
+    heating_energy = "500kW",
 
     type = "projectile",
     projectile = "bob-plasma-projectile",
