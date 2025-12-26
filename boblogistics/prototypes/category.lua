@@ -86,15 +86,21 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "bob-logistic-chests-2",
+    name = "bob-logistic-chests-1",
     group = "logistics",
     order = "a-2",
   },
   {
     type = "item-subgroup",
-    name = "bob-logistic-chests-3",
+    name = "bob-logistic-chests-2",
     group = "logistics",
     order = "a-3",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-logistic-chests-3",
+    group = "logistics",
+    order = "a-4",
   },
   {
     type = "item-subgroup",

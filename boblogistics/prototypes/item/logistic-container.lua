@@ -1,3 +1,9 @@
+data.raw.item["passive-provider-chest"].subgroup = "bob-logistic-chests-1"
+data.raw.item["active-provider-chest"].subgroup = "bob-logistic-chests-1"
+data.raw.item["storage-chest"].subgroup = "bob-logistic-chests-1"
+data.raw.item["buffer-chest"].subgroup = "bob-logistic-chests-1"
+data.raw.item["requester-chest"].subgroup = "bob-logistic-chests-1"
+
 data.raw.item["passive-provider-chest"].order = "b[storage]-[passive-provider-chest-1]"
 data.raw.item["active-provider-chest"].order = "b[storage]-[active-provider-chest-1]"
 data.raw.item["storage-chest"].order = "b[storage]-[storage-chest-1]"

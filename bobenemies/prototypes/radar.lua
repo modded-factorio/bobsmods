@@ -50,7 +50,7 @@ data:extend({
     },
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    energy_per_sector = "2MJ",
+    energy_per_sector = "1MJ",
     max_distance_of_sector_revealed = 4,
     max_distance_of_nearby_sector_revealed = 4,
     energy_per_nearby_scan = "240kJ",
