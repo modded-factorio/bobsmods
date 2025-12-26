@@ -24,57 +24,69 @@ data:extend({
 
   {
     type = "item-subgroup",
-    name = "module-intermediates",
+    name = "bob-module-intermediates-1",
     group = "bobmodules",
-    order = "f-0",
+    order = "f-00",
   },
   {
     type = "item-subgroup",
-    name = "module-boards",
+    name = "bob-module-intermediates-2",
     group = "bobmodules",
-    order = "f-1",
+    order = "f-01",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-module-intermediates-3",
+    group = "bobmodules",
+    order = "f-02",
+  },
+  {
+    type = "item-subgroup",
+    name = "bob-module-intermediates-4",
+    group = "bobmodules",
+    order = "f-03",
   },
   {
     type = "item-subgroup",
     name = "speed-module",
     group = "bobmodules",
-    order = "f-2",
+    order = "f-04",
   },
   {
     type = "item-subgroup",
     name = "efficiency-module",
     group = "bobmodules",
-    order = "f-3",
+    order = "f-05",
   },
   {
     type = "item-subgroup",
     name = "productivity-module",
     group = "bobmodules",
-    order = "f-4",
-  },
-  {
-    type = "item-subgroup",
-    name = "pollution-create-module",
-    group = "bobmodules",
-    order = "f-6",
+    order = "f-06",
   },
   {
     type = "item-subgroup",
     name = "pollution-clean-module",
     group = "bobmodules",
-    order = "f-5",
+    order = "f-07",
+  },
+  {
+    type = "item-subgroup",
+    name = "pollution-create-module",
+    group = "bobmodules",
+    order = "f-08",
   },
   {
     type = "item-subgroup",
     name = "god-module",
     group = "bobmodules",
-    order = "f-9",
+    order = "f-aa",
   },
   {
     type = "item-subgroup",
     name = "module-beacon",
     group = "bobmodules",
-    order = "f-z",
+    order = "f-zz",
   },
 })
 
@@ -84,7 +96,7 @@ if mods["quality"] then
       type = "item-subgroup",
       name = "quality-module",
       group = "bobmodules",
-      order = "f-7",
+      order = "f-09",
     },
   })
 end

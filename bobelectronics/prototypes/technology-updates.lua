@@ -1,29 +1,5 @@
-bobmods.lib.tech.add_prerequisite("automation-2", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("logistics-2", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("circuit-network", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("solar-energy", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("gate", "bob-electronics")
-bobmods.lib.tech.add_prerequisite("defender", "bob-electronics")
+bobmods.lib.tech.add_prerequisite("logistic-science-pack", "bob-electronics")
 bobmods.lib.tech.replace_prerequisite("fast-inserter", "automation-science-pack", "bob-electronics")
-if data.raw.technology["bob-electrolyser-2"] then
-  bobmods.lib.tech.add_prerequisite("bob-electrolyser-2", "bob-electronics")
-end
-if mods["bobmining"] then
-  bobmods.lib.tech.add_prerequisite("bob-drills-2", "bob-electronics")
-  bobmods.lib.tech.add_prerequisite("bob-area-drills-1", "bob-electronics")
-  if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["resource-category"]["water"] then
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-2", "bob-electronics")
-  end
-end
-if mods["bobrevamp"] then
-  bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-electronics")
-end
-if mods["bobwarfare"] or mods["bobequipment"] then
-  bobmods.lib.tech.add_prerequisite("modular-armor", "bob-electronics")
-end
-if mods["bobwarfare"] then
-  bobmods.lib.tech.add_prerequisite("bob-radar-2", "bob-electronics")
-end
 
 bobmods.lib.tech.add_prerequisite("advanced-circuit", "plastics")
 
@@ -47,6 +23,7 @@ if data.raw.recipe["bob-tinned-copper-cable"] then
   bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-tinned-copper-cable")
 end
 
+bobmods.lib.tech.add_recipe_unlock("electronics", "bob-wooden-board")
 bobmods.lib.tech.add_recipe_unlock("electronics", "bob-basic-circuit-board")
 bobmods.lib.tech.remove_recipe_unlock("electronics", "electronic-circuit")
 
@@ -54,6 +31,7 @@ if mods["bobplates"] then
   bobmods.lib.tech.add_prerequisite("bob-electronics", "bob-chemical-processing-1")
   bobmods.lib.tech.add_prerequisite("bob-electronics", "bob-alloy-processing")
   bobmods.lib.tech.add_prerequisite("advanced-circuit", "bob-silicon-processing")
+  bobmods.lib.tech.add_prerequisite("processing-unit", "bob-lead-processing")
   bobmods.lib.tech.add_prerequisite("bob-advanced-processing-unit", "bob-gold-processing")
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-ferric-chloride-solution")
   bobmods.lib.tech.add_prerequisite("bob-chemical-processing-2", "bob-electronics")

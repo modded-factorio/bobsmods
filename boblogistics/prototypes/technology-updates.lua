@@ -15,12 +15,6 @@ if not mods["bobequipment"] then
 end
 
 -- 2.0 revisions
-data.raw.recipe["iron-stick"].enabled = true
-bobmods.lib.tech.remove_recipe_unlock("railway", "iron-stick")
-bobmods.lib.tech.remove_recipe_unlock("circuit-network", "iron-stick")
-bobmods.lib.tech.remove_recipe_unlock("electric-energy-distribution-1", "iron-stick")
-bobmods.lib.tech.remove_recipe_unlock("concrete", "iron-stick")
-
 bobmods.lib.tech.replace_prerequisite("lubricant", "advanced-oil-processing", "oil-processing")
 bobmods.lib.tech.remove_science_pack("lubricant", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("electric-engine", "chemical-science-pack")
@@ -341,6 +335,7 @@ if data.raw.technology["bob-titanium-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-pipe-to-ground")
   bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-chest")
+  bobmods.lib.tech.add_prerequisite("logistic-system-3", "bob-titanium-processing")
 end
 
 if data.raw.technology["bob-tungsten-processing"] then
@@ -381,7 +376,7 @@ bobmods.lib.tech.technology_line_icon_constant(
   1,
   7,
   { icon = "__boblogistics__/graphics/icons/technology/green-inserter.png", icon_size = 128 },
-  "__boblibrary__/graphics/constants/constant-capacity.png"
+  "__core__/graphics/icons/technology/constants/constant-capacity.png"
 )
 
 if settings.startup["bobmods-logistics-disableroboports"].value == true then

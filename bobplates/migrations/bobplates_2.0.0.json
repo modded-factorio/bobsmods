@@ -321,7 +321,7 @@
     ["lithium-chloride", "bob-lithium-chloride"],
     ["lithium-cobalt-oxide", "bob-lithium-cobalt-oxide"],
     ["lithium-ion-battery", "bob-lithium-ion-battery"],
-    ["lithium-water-electrolysis", "bob-lithium-water-electrolysis"],
+    ["lithium-water-electrolysis", "bob-lithium-perchlorate"],
     ["nickel-plate", "bob-nickel-plate"],
     ["nitinol-alloy", "bob-nitinol-alloy"],
     ["nitinol-bearing", "bob-nitinol-bearing"],
