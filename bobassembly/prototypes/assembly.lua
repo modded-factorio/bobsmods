@@ -93,6 +93,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
+        secondary_draw_orders = {
+          north = -1,
+        },
       },
       {
         production_type = "output",
@@ -100,6 +103,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
+        secondary_draw_orders = {
+          north = -1,
+        },
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -268,6 +274,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
+        secondary_draw_orders = {
+          north = -1,
+        },
       },
       {
         production_type = "output",
@@ -275,6 +284,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
+        secondary_draw_orders = {
+          north = -1,
+        },
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -451,6 +463,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
         volume = 1000,
+        secondary_draw_orders = {
+          north = -1,
+        },
       },
       {
         production_type = "output",
@@ -458,6 +473,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         volume = 1000,
+        secondary_draw_orders = {
+          north = -1,
+        },
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -584,3 +602,51 @@ data:extend({
     order = "a-b-f",
   },
 })
+
+if feature_flags["freezing"] and mods["space-age"] then
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].heating_energy = "100kW"
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].heating_energy = "100kW"
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].heating_energy = "100kW"
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.reset_animation_when_frozen = true
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.reset_animation_when_frozen = true
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.reset_animation_when_frozen = true
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen.png",
+    width = 214,
+    height = 218,
+    priority = "high",
+    scale = 0.5,
+    shift = { 0, 0.125 },
+  }
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
+    width = 214,
+    height = 237,
+    priority = "high",
+    scale = 0.5,
+    shift = { 0, -0.0234375 },
+  }
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
+    width = 214,
+    height = 237,
+    priority = "high",
+    scale = 0.5,
+    shift = { 0, -0.0234375 },
+  }
+
+  local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+  local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+end

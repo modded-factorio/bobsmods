@@ -557,4 +557,29 @@ then
       order = "d-e-a4",
     },
   })
+
+  if feature_flags["freezing"] and mods["space-age"] then
+    data.raw["assembling-machine"]["bob-electrolyser-2"].heating_energy = "100kW"
+    data.raw["assembling-machine"]["bob-electrolyser-3"].heating_energy = "100kW"
+    data.raw["assembling-machine"]["bob-electrolyser-4"].heating_energy = "100kW"
+    data.raw["assembling-machine"]["bob-electrolyser-5"].heating_energy = "100kW"
+
+    local pcfrozenpatch = data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+  end
 end

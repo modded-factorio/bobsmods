@@ -111,6 +111,9 @@ data.raw.inserter["bob-steam-inserter"].energy_source = {
     },
   },
 }
+if feature_flags["freezing"] then
+  data.raw.inserter["bob-steam-inserter"].heating_energy = "0kW"
+end
 
 data:extend({
   util.merge({

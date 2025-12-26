@@ -3,6 +3,8 @@ Version: 2.0.4
 Date: ???
   Changes:
     - Integrate Bob's Locale Translations mod #445
+  Bugfixes:
+    - Prevented switching characters mid rocket launch #387
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 22. 06. 2025

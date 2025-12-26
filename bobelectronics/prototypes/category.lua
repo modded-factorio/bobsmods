@@ -24,3 +24,8 @@ data:extend({
     order = "e-a4",
   },
 })
+
+if data.raw["item-group"]["bob-resource-products"] then
+  data.raw["item-subgroup"]["bob-resource"].group = "bob-resource-products"
+  data.raw["item-subgroup"]["bob-resource"].order = "b-b"
+end
