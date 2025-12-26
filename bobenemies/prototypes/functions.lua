@@ -5,13 +5,13 @@
 -- There is an alternative way to add new factions as well, which allows specific factions to appear at specific evolution levels. These special factions are not affected by the randomization setting. This involves using remote interfaces, like in the following example.
 
 -- remote.add_interface("your-mod-name-here", {
-  -- bob_special_factions = function() return {
-    -- { unlock_evo = 0, factions = { "acid" } },
-    -- { unlock_evo = settings.startup["bobmods-enemies-factionsappear"].value + 0.15, factions = { "test1", "test2", "test3" } },
-    -- { unlock_evo = math.min(0.85, math.max(0.45, (settings.startup["bobmods-enemies-factionsappear"].value + 0.3))), factions = { "test4" } },
-    -- { unlock_evo = 0.95, factions = { "test5" } },
-  -- }
-  -- end,
+-- bob_special_factions = function() return {
+-- { unlock_evo = 0, factions = { "acid" } },
+-- { unlock_evo = settings.startup["bobmods-enemies-factionsappear"].value + 0.15, factions = { "test1", "test2", "test3" } },
+-- { unlock_evo = math.min(0.85, math.max(0.45, (settings.startup["bobmods-enemies-factionsappear"].value + 0.3))), factions = { "test4" } },
+-- { unlock_evo = 0.95, factions = { "test5" } },
+-- }
+-- end,
 -- })
 
 -- Note that in the above examples, an unlock_evo less than the setting that controls when factions start to appear is allowed and does work. It is also possible to remove a faction (in this case, "acid") from the normal unlocks and re-add it in this way. The third example shows a simple way to truncate the range of when your faction might start to appear, in the event that the factionsappear setting is set very high or very low (normal range is 0 to 0.6). Keep in mind that if your faction ends up needing an evolution level higher than 0.99 to unlock, it will never do so, unless something happens that forces the evolution level to 1.

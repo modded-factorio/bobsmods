@@ -56,7 +56,6 @@ if not storage.bobmods.enemies.nauvis_post_randomized_order then
   storage.bobmods.enemies.nauvis_post_randomized_order = {}
 end
 
-
 script.on_init(function()
   --Set factions_appear once to prevent issues from cropping up if it is changed mid-game
   storage.bobmods.enemies.factions_appear = settings.startup["bobmods-enemies-factionsappear"].value
@@ -105,8 +104,7 @@ script.on_init(function()
 end)
 
 script.on_configuration_changed(function()
-
-  --Check if any previously existing factions have been removed and delete them from faction lists where necessary. 
+  --Check if any previously existing factions have been removed and delete them from faction lists where necessary.
   local factionstring = settings.startup["bobmods-enemies-factionlist"].value
 
   bobmods.enemies.populate_unlock_list()
@@ -118,7 +116,8 @@ script.on_configuration_changed(function()
   local initial_spawners = game.surfaces.nauvis.find_entities_filtered({ type = "unit-spawner" })
   for _, detected_spawner in pairs(initial_spawners) do
     local spawner_faction = bobmods.enemies.identify_faction(detected_spawner.name)
-    storage.bobmods.enemies.nauvis_faction_table[spawner_faction] = storage.bobmods.enemies.nauvis_faction_table[spawner_faction] + 1
+    storage.bobmods.enemies.nauvis_faction_table[spawner_faction] = storage.bobmods.enemies.nauvis_faction_table[spawner_faction]
+      + 1
   end
 
   --Clear nauvis_faction_table of removed factions
@@ -126,7 +125,9 @@ script.on_configuration_changed(function()
     if factionname_for_verification2 ~= "basic" then
       local confirmed2 = false
       for i, raw_name2 in pairs(storage.bobmods.enemies.nauvis_raw_order) do
-        if tostring(factionname_for_verification2) == raw_name2 then confirmed2 = true end
+        if tostring(factionname_for_verification2) == raw_name2 then
+          confirmed2 = true
+        end
       end
       if confirmed2 == false then
         --Set to 0 instead of nil so that identify_faction still works properly, since spawners will not be removed by this process. Other functions will ignore this 0-value so long as the matching faction isn't considered to be unlocked.
@@ -144,7 +145,9 @@ script.on_configuration_changed(function()
       for v = #storage.bobmods.enemies.faction_flags[i].factions, 1, -1 do
         local confirmed3 = false
         for _, raw_name3 in pairs(storage.bobmods.enemies.nauvis_raw_order) do
-          if storage.bobmods.enemies.faction_flags[i].factions[v] == raw_name3 then confirmed3 = true end
+          if storage.bobmods.enemies.faction_flags[i].factions[v] == raw_name3 then
+            confirmed3 = true
+          end
         end
         if confirmed3 == false then
           --Check each faction on the flag, and remove individually
@@ -157,7 +160,6 @@ script.on_configuration_changed(function()
       end
     end
   end
-
 end)
 
 function bobmods.enemies.populate_unlock_list()
@@ -179,7 +181,6 @@ function bobmods.enemies.populate_unlock_list()
 
   --If order has already been randomized, pre-set factions to unlock in the previously randomized order, minus any removed factions. If new factions have been added, place them at the end of the list.
   if storage.bobmods.enemies.nauvis_post_randomized_order[1] then
-
     local revised_table = {}
 
     for _, factionname_for_reshuffle in pairs(storage.bobmods.enemies.nauvis_post_randomized_order) do
@@ -203,14 +204,18 @@ function bobmods.enemies.populate_unlock_list()
     end
 
     local_faction_table = revised_table
-
   end
 
   --Randomize unlock order if setting enabled. Only allow to be done once per game.
-  if settings.startup["bobmods-enemies-randomizeenemies"].value == true and #local_faction_table > 1 and storage.bobmods.enemies.is_randomized == false then
+  if
+    settings.startup["bobmods-enemies-randomizeenemies"].value == true
+    and #local_faction_table > 1
+    and storage.bobmods.enemies.is_randomized == false
+  then
     for i = #local_faction_table, 2, -1 do
       local shuffle_from = math.random(i)
-      local_faction_table[i], local_faction_table[shuffle_from] = local_faction_table[shuffle_from], local_faction_table[i]
+      local_faction_table[i], local_faction_table[shuffle_from] =
+        local_faction_table[shuffle_from], local_faction_table[i]
     end
     storage.bobmods.enemies.is_randomized = true
     for i = 1, #local_faction_table do
@@ -228,15 +233,15 @@ function bobmods.enemies.populate_unlock_list()
   --Construct subtables for storage.bobmods.enemies.nauvis_faction_unlock_order
   local unlock1 = {
     unlock_evo = storage.bobmods.enemies.factions_appear,
-    factions = {}
+    factions = {},
   }
   local unlock2 = {
     unlock_evo = math.max(0.25, (storage.bobmods.enemies.factions_appear + 0.1)),
-    factions = {}
+    factions = {},
   }
   local unlock3 = {
     unlock_evo = math.min(0.75, math.max(0.35, (storage.bobmods.enemies.factions_appear + 0.2))),
-    factions = {}
+    factions = {},
   }
 
   local faction_count = #local_faction_table
@@ -267,7 +272,7 @@ function bobmods.enemies.populate_unlock_list()
   table.insert(storage.bobmods.enemies.nauvis_faction_unlock_order, unlock2)
   table.insert(storage.bobmods.enemies.nauvis_faction_unlock_order, unlock3)
 
-  --Add any special remote factions. 
+  --Add any special remote factions.
   for interface_name, functions in pairs(remote.interfaces) do
     if functions["bob_special_factions"] then
       local special_table = remote.call(interface_name, "bob_special_factions")
@@ -298,30 +303,26 @@ function bobmods.enemies.populate_unlock_list()
   end
 
   storage.bobmods.enemies.factions_counted = #local_faction_table + 1 --For basic faction
-
 end
 
 function bobmods.enemies.check_faction_completeness(faction_name)
-
   --Only require entities that are needed for the functions here. Units are not a concern here.
   if
-    prototypes.entity["bob-0-" .. faction_name .. "-biter-spawner"] and
-    prototypes.entity["bob-0-" .. faction_name .. "-spitter-spawner"] and
-    prototypes.entity["bob-" .. faction_name .. "-biter-spawner"] and
-    prototypes.entity["bob-" .. faction_name .. "-spitter-spawner"] and
-    prototypes.entity["bob-small-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-medium-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-big-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-huge-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-giant-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-titan-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-behemoth-" .. faction_name .. "-worm-turret"] and
-    prototypes.entity["bob-leviathan-" .. faction_name .. "-worm-turret"]
+    prototypes.entity["bob-0-" .. faction_name .. "-biter-spawner"]
+    and prototypes.entity["bob-0-" .. faction_name .. "-spitter-spawner"]
+    and prototypes.entity["bob-" .. faction_name .. "-biter-spawner"]
+    and prototypes.entity["bob-" .. faction_name .. "-spitter-spawner"]
+    and prototypes.entity["bob-small-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-medium-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-big-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-huge-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-giant-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-titan-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-behemoth-" .. faction_name .. "-worm-turret"]
+    and prototypes.entity["bob-leviathan-" .. faction_name .. "-worm-turret"]
   then
-    if settings.startup["bobmods-enemies-superspawner"].value == true
-    then
-      if prototypes.entity["bob-" .. faction_name .. "-super-spawner"]
-      then
+    if settings.startup["bobmods-enemies-superspawner"].value == true then
+      if prototypes.entity["bob-" .. faction_name .. "-super-spawner"] then
         return true
       else
         return false
@@ -332,11 +333,9 @@ function bobmods.enemies.check_faction_completeness(faction_name)
   else
     return false
   end
-
 end
 
 function bobmods.enemies.unlock_factions()
-
   storage.bobmods.enemies.nauvis_faction_unlock_table = { "basic" }
 
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
@@ -348,7 +347,6 @@ function bobmods.enemies.unlock_factions()
       end
     end
   end
-
 end
 
 function bobmods.enemies.determine_faction_flag(x_coord, y_coord, call_tick)
@@ -451,7 +449,7 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
     { 5, 6, 8, 4, 1, 24 },
     { 10, 5, 4, 3, 0, 22 },
     { 8, 8, 7, 6, 1, 30 },
-    { 0, 4, 3, 2, 1, 10 }
+    { 0, 4, 3, 2, 1, 10 },
   }
 
   for interface_name, functions in pairs(remote.interfaces) do
@@ -628,7 +626,11 @@ end)
 
 script.on_event(defines.events.on_build_base_arrived, function(event)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-  if bobmods.enemies.stop_all ~= true and evo_level >= storage.bobmods.enemies.factions_appear and event.group.surface.name == "nauvis" then
+  if
+    bobmods.enemies.stop_all ~= true
+    and evo_level >= storage.bobmods.enemies.factions_appear
+    and event.group.surface.name == "nauvis"
+  then
     bobmods.enemies.determine_faction_flag(event.group.position.x, event.group.position.y, event.tick)
   end
 end)
@@ -737,7 +739,8 @@ function bobmods.enemies.replace_spawner(original_spawner, flag)
       raise_built = true,
     })
 
-    storage.bobmods.enemies.nauvis_faction_table[faction_name] = storage.bobmods.enemies.nauvis_faction_table[faction_name] + 1
+    storage.bobmods.enemies.nauvis_faction_table[faction_name] = storage.bobmods.enemies.nauvis_faction_table[faction_name]
+      + 1
   else
     --If factions are not unlocked, replace with appropriate basic spawner. Always replacing autoplaced spawners removes all need for checks to avoid double counting, since the functions that call this one all check for only those specific autoplaced entities
     local original_position = original_spawner.position
@@ -869,26 +872,24 @@ script.on_event(defines.events.on_entity_died, function(event)
     --Check nearby flags to see if they are dead
     local all_flags = storage.bobmods.enemies.faction_flags
     for i = #all_flags, 1, -1 do
-      local flag_distance = math.sqrt(
-        ((all_flags[i].x - event.entity.position.x) ^ 2) + ((all_flags[i].y - event.entity.position.y) ^ 2)
-      )
+      local flag_distance =
+        math.sqrt(((all_flags[i].x - event.entity.position.x) ^ 2) + ((all_flags[i].y - event.entity.position.y) ^ 2))
       if flag_distance <= 128 then
         if
           game.surfaces.nauvis.count_entities_filtered({
-              area = {
-                {
-                  all_flags[i].x - 48,
-                  all_flags[i].y - 48,
-                },
-                {
-                  all_flags[i].x + 48,
-                  all_flags[i].y + 48,
-                },
+            area = {
+              {
+                all_flags[i].x - 48,
+                all_flags[i].y - 48,
               },
-              type = "unit-spawner",
-            })
-            <= 1
-            --Compare to 1 because the entity that is currently dying will still be counted as alive. Otherwise, it is reasonable to remove a flag if it is this close to death.
+              {
+                all_flags[i].x + 48,
+                all_flags[i].y + 48,
+              },
+            },
+            type = "unit-spawner",
+          }) <= 1
+          --Compare to 1 because the entity that is currently dying will still be counted as alive. Otherwise, it is reasonable to remove a flag if it is this close to death.
         then
           table.remove(storage.bobmods.enemies.faction_flags, i)
         end
@@ -937,7 +938,7 @@ end, { { filter = "name", name = "bob-artifact-radar" } })
 commands.add_command("bob-enemies-unlocks-check", nil, function(command)
   game.print("Faction unlock order: ")
   for i, unlock_set in pairs(storage.bobmods.enemies.nauvis_faction_unlock_order) do
-    game.print("Unlock set "  .. tostring(i) .. " at evo level " .. tostring(unlock_set.unlock_evo))
+    game.print("Unlock set " .. tostring(i) .. " at evo level " .. tostring(unlock_set.unlock_evo))
     for v, faction_name in pairs(unlock_set.factions) do
       game.print("Faction: " .. faction_name)
     end
@@ -971,11 +972,23 @@ commands.add_command("bob-enemies-flag-check", nil, function(command)
       game.print("Faction 3: " .. check_flag.factions[3])
     end
     game.print("Quality limit: " .. check_flag.quality_limit)
-    game.print("Quality table: " .. check_flag.quality_values[1] .. " " .. check_flag.quality_values[2] .. " " .. check_flag.quality_values[3] .. " " .. check_flag.quality_values[4] .. " " .. check_flag.quality_values[5] .. " Total: " .. check_flag.quality_values[6])
+    game.print(
+      "Quality table: "
+        .. check_flag.quality_values[1]
+        .. " "
+        .. check_flag.quality_values[2]
+        .. " "
+        .. check_flag.quality_values[3]
+        .. " "
+        .. check_flag.quality_values[4]
+        .. " "
+        .. check_flag.quality_values[5]
+        .. " Total: "
+        .. check_flag.quality_values[6]
+    )
     game.print("X: " .. check_flag.x .. ", Y: " .. check_flag.y)
     game.print("Tick: " .. check_flag.tick)
   else
     game.print("Need valid numerical index")
   end
-  
 end)
