@@ -345,7 +345,6 @@ table.insert(data.raw.stream["acid-stream-worm-titan"].initial_action[1].action_
 table.insert(data.raw.stream["acid-stream-worm-behemoth"].initial_action[1].action_delivery.target_effects, bile_gen)
 table.insert(data.raw.stream["acid-stream-worm-leviathan"].initial_action[1].action_delivery.target_effects, bile_gen)
 
-
 --Piercing
 local piercing_shot = function(attack_range, attack_count)
   return {
@@ -1975,7 +1974,13 @@ bobmods.enemies.new_worm({
   tint2 = bobmods.enemies.poison_worm_tint,
   localised_description = { "entity-description.bob-poison-enemy-worm-huge" },
 
-  attack_action = poison_attack_action(2.2, "enemy-poison-attack-smoke-huge", "enemy-poison-defense-smoke-huge", 24, -36),
+  attack_action = poison_attack_action(
+    2.2,
+    "enemy-poison-attack-smoke-huge",
+    "enemy-poison-defense-smoke-huge",
+    24,
+    -36
+  ),
   attack_range = 40,
   attack_damage_modifier = 4,
   attack_stream_name = "poison-stream-worm-huge",

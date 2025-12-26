@@ -69,5 +69,4 @@ data:extend({
       "not-on-map",
     },
   },
-
 })
