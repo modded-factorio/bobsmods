@@ -1,3 +1,21 @@
+--When adding new factions:
+-- Naming conventions must be the same as for the factions added by this mod. You should be able to have any number of Biter/Spawner tiers, but there must be 8 tiers of Worms (small, medium, large, huge, giant, titan, behemoth, leviathan) and 5 Spawners in 3 tiers (bob-0-, bob-, both biter and spitter, and bob-super-).
+-- Faction names must not be a word that would be used elsewhere in any enemy names. For example, "spawner" would cause problems because that word appears in unit-spawner names. Size-related words like "giant", "titan", or "super" also cannot be used. "basic" is also forbidden, since it is used as a placeholder for the vanilla faction. Even a name that contains a forbidden string within it (like "superpowered") will cause problems.
+-- This mod normally unlocks factions in three sets at particular evolution levels. In order to insert a new faction into these sets, the setting "bobmods-enemies-factionlist" must be modified to add your faction to it, either by modifying the default_value or by making it hidden and using forced_value. Default is "piercing,electric,acid,explosive,poison,fire". Factions are separated by commas with no spaces.
+-- There is an alternative way to add new factions as well, which allows specific factions to appear at specific evolution levels. These special factions are not affected by the randomization setting. This involves using remote interfaces, like in the following example.
+
+-- remote.add_interface("your-mod-name-here", {
+-- bob_special_factions = function() return {
+-- { unlock_evo = 0, factions = { "acid" } },
+-- { unlock_evo = settings.startup["bobmods-enemies-factionsappear"].value + 0.15, factions = { "test1", "test2", "test3" } },
+-- { unlock_evo = math.min(0.85, math.max(0.45, (settings.startup["bobmods-enemies-factionsappear"].value + 0.3))), factions = { "test4" } },
+-- { unlock_evo = 0.95, factions = { "test5" } },
+-- }
+-- end,
+-- })
+
+-- Note that in the above examples, an unlock_evo less than the setting that controls when factions start to appear is allowed and does work. It is also possible to remove a faction (in this case, "acid") from the normal unlocks and re-add it in this way. The third example shows a simple way to truncate the range of when your faction might start to appear, in the event that the factionsappear setting is set very high or very low (normal range is 0 to 0.6). Keep in mind that if your faction ends up needing an evolution level higher than 0.99 to unlock, it will never do so, unless something happens that forces the evolution level to 1.
+
 --Biters:
 -- Needed: name, order, tint, tint2, full attack_parameters except for attack sound and animation
 -- Optional: icon, icon_size, flags, max_health, healing_per_tick, factoriopedia_simulation, resistances, impact_category, spawning_time_modifier, distraction_cooldown, min_pursue_time, max_pursue_distance, damaged_trigger_effect, absorptions_to_join_attack, movement_speed, distance_per_frame, range, vision_distance
