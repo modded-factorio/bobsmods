@@ -3,6 +3,7 @@ Version: 2.0.3
 Date: ???
   Changes:
     - Integrate Bob's Locale Translations mod #445
+    - Reduce enemy evolution factor default settings #475
     - Added support for frozen entities (with Space Age) #477
   Bugfixes:
     - Fixed electric breed Factoriopedia description #459
