@@ -1,3 +1,21 @@
+--When adding new factions:
+-- Naming conventions must be the same as for the factions added by this mod. You should be able to have any number of Biter/Spawner tiers, but there must be 8 tiers of Worms (small, medium, large, huge, giant, titan, behemoth, leviathan) and 5 Spawners in 3 tiers (bob-0-, bob-, both biter and spitter, and bob-super-).
+-- Faction names must not be a word that would be used elsewhere in any enemy names. For example, "spawner" would cause problems because that word appears in unit-spawner names. Size-related words like "giant", "titan", or "super" also cannot be used. "basic" is also forbidden, since it is used as a placeholder for the vanilla faction. Even a name that contains a forbidden string within it (like "superpowered") will cause problems.
+-- This mod normally unlocks factions in three sets at particular evolution levels. In order to insert a new faction into these sets, the setting "bobmods-enemies-factionlist" must be modified to add your faction to it, either by modifying the default_value or by making it hidden and using forced_value. Default is "piercing,electric,acid,explosive,poison,fire". Factions are separated by commas with no spaces.
+-- There is an alternative way to add new factions as well, which allows specific factions to appear at specific evolution levels. These special factions are not affected by the randomization setting. This involves using remote interfaces, like in the following example.
+
+-- remote.add_interface("your-mod-name-here", {
+-- bob_special_factions = function() return {
+-- { unlock_evo = 0, factions = { "acid" } },
+-- { unlock_evo = settings.startup["bobmods-enemies-factionsappear"].value + 0.15, factions = { "test1", "test2", "test3" } },
+-- { unlock_evo = math.min(0.85, math.max(0.45, (settings.startup["bobmods-enemies-factionsappear"].value + 0.3))), factions = { "test4" } },
+-- { unlock_evo = 0.95, factions = { "test5" } },
+-- }
+-- end,
+-- })
+
+-- Note that in the above examples, an unlock_evo less than the setting that controls when factions start to appear is allowed and does work. It is also possible to remove a faction (in this case, "acid") from the normal unlocks and re-add it in this way. The third example shows a simple way to truncate the range of when your faction might start to appear, in the event that the factionsappear setting is set very high or very low (normal range is 0 to 0.6). Keep in mind that if your faction ends up needing an evolution level higher than 0.99 to unlock, it will never do so, unless something happens that forces the evolution level to 1.
+
 --Biters:
 -- Needed: name, order, tint, tint2, full attack_parameters except for attack sound and animation
 -- Optional: icon, icon_size, flags, max_health, healing_per_tick, factoriopedia_simulation, resistances, impact_category, spawning_time_modifier, distraction_cooldown, min_pursue_time, max_pursue_distance, damaged_trigger_effect, absorptions_to_join_attack, movement_speed, distance_per_frame, range, vision_distance
@@ -544,7 +562,7 @@ local biter_stats = {
   },
 
   {
-    max_health = 80000,
+    max_health = 60000,
     healing_per_tick = 0.5,
     movement_speed = 0.32,
     scale = 2.5,
@@ -564,7 +582,7 @@ if health_increase == true then
   biter_stats[5].max_health = 8000
   biter_stats[6].max_health = 22000
   biter_stats[7].max_health = 72000
-  biter_stats[8].max_health = 300000
+  biter_stats[8].max_health = 240000
 end
 
 function bobmods.enemies.new_biter(inputs)
@@ -1196,7 +1214,7 @@ local spitter_stats = {
   },
 
   {
-    max_health = 60000,
+    max_health = 30000,
     healing_per_tick = 5,
     movement_speed = 0.22,
     scale = 2.5,
@@ -1217,7 +1235,7 @@ if health_increase == true then
   spitter_stats[5].max_health = 6000
   spitter_stats[6].max_health = 18000
   spitter_stats[7].max_health = 60000
-  spitter_stats[8].max_health = 240000
+  spitter_stats[8].max_health = 180000
 end
 
 function bobmods.enemies.new_spitter(inputs)
@@ -2232,13 +2250,13 @@ local worm_resistances_upup = {
   },
   {
     { type = "laser" },
-    { type = "laser", decrease = 4, percent = 30 },
-    { type = "laser", decrease = 8, percent = 40 },
-    { type = "laser", decrease = 15, percent = 50 },
-    { type = "laser", decrease = 22, percent = 60 },
-    { type = "laser", decrease = 30, percent = 70 },
-    { type = "laser", decrease = 40, percent = 80 },
-    { type = "laser", decrease = 50, percent = 90 },
+    { type = "laser", decrease = 5, percent = 40 },
+    { type = "laser", decrease = 10, percent = 50 },
+    { type = "laser", decrease = 15, percent = 60 },
+    { type = "laser", decrease = 20, percent = 70 },
+    { type = "laser", decrease = 30, percent = 90 },
+    { type = "laser", decrease = 40, percent = 93 },
+    { type = "laser", decrease = 50, percent = 97 },
   },
   {
     { type = "fire", decrease = 2, percent = 60 },
@@ -2334,14 +2352,14 @@ local worm_resistances_down = {
     { type = "explosion", percent = 30 },
   },
   {
-    { type = "laser", percent = -50 },
-    { type = "laser", percent = -45 },
     { type = "laser", percent = -40 },
     { type = "laser", percent = -30 },
     { type = "laser", percent = -20 },
     { type = "laser", percent = -10 },
     { type = "laser" },
     { type = "laser", percent = 10 },
+    { type = "laser", percent = 20 },
+    { type = "laser", percent = 30 },
   },
   {
     { type = "fire", percent = -30 },
@@ -2603,7 +2621,7 @@ local worm_stats = {
   },
 
   {
-    max_health = 100000,
+    max_health = 60000,
     healing_per_tick = 1.5,
     scale = 1.5,
     dying_explosion = "behemoth-worm-die",
@@ -2636,7 +2654,7 @@ if health_increase == true then
   worm_stats[5].max_health = 9000
   worm_stats[6].max_health = 27000
   worm_stats[7].max_health = 80000
-  worm_stats[8].max_health = 320000
+  worm_stats[8].max_health = 280000
 end
 
 local end_attack_speed_multiplier_when_killed = 2
@@ -2892,14 +2910,14 @@ function bobmods.enemies.new_spawner(inputs)
           { "bob-medium-" .. inputs.element .. "-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
           { "bob-big-" .. inputs.element .. "-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
           { "bob-big-" .. inputs.element .. "-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-          { "bob-huge-" .. inputs.element .. "-biter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.0 } } },
-          { "bob-huge-" .. inputs.element .. "-spitter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.0 } } },
-          { "bob-giant-" .. inputs.element .. "-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.25 } } },
-          { "bob-giant-" .. inputs.element .. "-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.25 } } },
-          { "bob-titan-" .. inputs.element .. "-biter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-          { "bob-titan-" .. inputs.element .. "-spitter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-          { "bob-behemoth-" .. inputs.element .. "-biter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
-          { "bob-behemoth-" .. inputs.element .. "-spitter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
+          { "bob-huge-" .. inputs.element .. "-biter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
+          { "bob-huge-" .. inputs.element .. "-spitter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
+          { "bob-giant-" .. inputs.element .. "-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
+          { "bob-giant-" .. inputs.element .. "-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
+          { "bob-titan-" .. inputs.element .. "-biter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+          { "bob-titan-" .. inputs.element .. "-spitter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+          { "bob-behemoth-" .. inputs.element .. "-biter", { { 0.85, 0.0 }, { 0.95, 0.4 } } },
+          { "bob-behemoth-" .. inputs.element .. "-spitter", { { 0.85, 0.0 }, { 0.95, 0.4 } } },
           { "bob-leviathan-" .. inputs.element .. "-biter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
           { "bob-leviathan-" .. inputs.element .. "-spitter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
         }
@@ -2912,14 +2930,14 @@ function bobmods.enemies.new_spawner(inputs)
           { "bob-medium-" .. inputs.element .. "-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
           { "bob-big-" .. inputs.element .. "-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
           { "bob-big-" .. inputs.element .. "-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-          { "bob-huge-" .. inputs.element .. "-biter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.0 } } },
-          { "bob-huge-" .. inputs.element .. "-spitter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.0 } } },
-          { "bob-giant-" .. inputs.element .. "-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.25 } } },
-          { "bob-giant-" .. inputs.element .. "-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.25 } } },
-          { "bob-titan-" .. inputs.element .. "-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-          { "bob-titan-" .. inputs.element .. "-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-          { "bob-behemoth-" .. inputs.element .. "-biter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
-          { "bob-behemoth-" .. inputs.element .. "-spitter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
+          { "bob-huge-" .. inputs.element .. "-biter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
+          { "bob-huge-" .. inputs.element .. "-spitter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
+          { "bob-giant-" .. inputs.element .. "-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.99, 0.0 } } },
+          { "bob-giant-" .. inputs.element .. "-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.99, 0.0 } } },
+          { "bob-titan-" .. inputs.element .. "-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+          { "bob-titan-" .. inputs.element .. "-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+          { "bob-behemoth-" .. inputs.element .. "-biter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
+          { "bob-behemoth-" .. inputs.element .. "-spitter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
           { "bob-leviathan-" .. inputs.element .. "-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
           { "bob-leviathan-" .. inputs.element .. "-spitter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
         }
@@ -2964,7 +2982,7 @@ function bobmods.enemies.new_spawner(inputs)
           { "bob-small-" .. inputs.element .. "-" .. final_class, { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
           { "bob-medium-" .. inputs.element .. "-" .. final_class, { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
           { "bob-big-" .. inputs.element .. "-" .. final_class, { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-          { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.55, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.1 } } },
+          { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.55, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
           { "bob-giant-" .. inputs.element .. "-" .. final_class, { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
           { "bob-titan-" .. inputs.element .. "-" .. final_class, { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
           { "bob-behemoth-" .. inputs.element .. "-" .. final_class, { { 0.85, 0.0 }, { 0.95, 0.3 } } },
@@ -2976,7 +2994,7 @@ function bobmods.enemies.new_spawner(inputs)
           { "bob-small-" .. inputs.element .. "-" .. final_class, { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
           { "bob-medium-" .. inputs.element .. "-" .. final_class, { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
           { "bob-big-" .. inputs.element .. "-" .. final_class, { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-          { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.1 } } },
+          { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
           { "bob-giant-" .. inputs.element .. "-" .. final_class, { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
           { "bob-titan-" .. inputs.element .. "-" .. final_class, { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
           { "bob-behemoth-" .. inputs.element .. "-" .. final_class, { { 0.9, 0.0 }, { 1.0, 0.3 } } },

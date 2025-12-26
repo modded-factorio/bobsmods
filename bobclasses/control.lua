@@ -690,103 +690,106 @@ end)
 script.on_event(defines.events.on_gui_click, function(event)
   wlog("Entered event handler on_gui_click(" .. serpent.line(event) .. ")")
 
-  wlog("Name of clicked button: " .. tostring(event.element.valid and event.element.name))
-  local player = game.players[event.player_index]
-  if event.element.valid and event.element.name == "bob_avatar_toggle_gui" then
-    toggle_avatar_gui(event.element.player_index)
-  end
+  --Switching characters while flying in a cargo pod causes you to be kicked out, wasting a rocket and possibly stranding you in the middle of a lake or deep space.
+  if not game.players[event.player_index].cargo_pod then
+    wlog("Name of clicked button: " .. tostring(event.element.valid and event.element.name))
+    local player = game.players[event.player_index]
+    if event.element.valid and event.element.name == "bob_avatar_toggle_gui" then
+      toggle_avatar_gui(event.element.player_index)
+    end
 
-  if event.element.valid and string.find(event.element.name, "bob_avatar_list_character_") then
-    local i = tonumber(string.match(event.element.name, "%d+"))
-    local characters = game.players[event.player_index].get_associated_characters()
-    local character = characters[i]
-    if character then
-      wlog("Calling switch_character for player " .. event.player_index .. "!")
-      -- Must call switch_character AFTER delete_minimap_gui!
-      --~ switch_character(event.player_index, character)
-      --~ if character.unit_number == storage.players[event.player_index].minimap_unit then
-      --~ delete_minimap_gui(event.player_index)
-      --~ end
-      if character.unit_number == storage.players[event.player_index].minimap_unit then
-        delete_minimap_gui(event.player_index)
+    if event.element.valid and string.find(event.element.name, "bob_avatar_list_character_") then
+      local i = tonumber(string.match(event.element.name, "%d+"))
+      local characters = game.players[event.player_index].get_associated_characters()
+      local character = characters[i]
+      if character then
+        wlog("Calling switch_character for player " .. event.player_index .. "!")
+        -- Must call switch_character AFTER delete_minimap_gui!
+        --~ switch_character(event.player_index, character)
+        --~ if character.unit_number == storage.players[event.player_index].minimap_unit then
+        --~ delete_minimap_gui(event.player_index)
+        --~ end
+        if character.unit_number == storage.players[event.player_index].minimap_unit then
+          delete_minimap_gui(event.player_index)
+        end
+        switch_character(event.player_index, character)
       end
-      switch_character(event.player_index, character)
     end
-  end
 
-  if event.element.valid and string.find(event.element.name, "bob_avatar_list_minimap_") then
-    local i = tonumber(string.match(event.element.name, "%d+"))
-    local characters = game.players[event.player_index].get_associated_characters()
-    local character = characters[i]
-    if character then
-      draw_minimap_gui(event.player_index, character)
+    if event.element.valid and string.find(event.element.name, "bob_avatar_list_minimap_") then
+      local i = tonumber(string.match(event.element.name, "%d+"))
+      local characters = game.players[event.player_index].get_associated_characters()
+      local character = characters[i]
+      if character then
+        draw_minimap_gui(event.player_index, character)
+      end
+      refresh_minimap_buttons(event.player_index)
     end
-    refresh_minimap_buttons(event.player_index)
-  end
 
-  if event.element.valid and string.find(event.element.name, "bob_avatar_list_map_view_") then
-    local i = tonumber(string.match(event.element.name, "%d+"))
-    local characters = game.players[event.player_index].get_associated_characters()
-    local character = characters[i]
-    if character then
-      player.set_controller({
-        type = defines.controllers.remote,
-        position = character.position,
-        surface = character.surface,
-      })
+    if event.element.valid and string.find(event.element.name, "bob_avatar_list_map_view_") then
+      local i = tonumber(string.match(event.element.name, "%d+"))
+      local characters = game.players[event.player_index].get_associated_characters()
+      local character = characters[i]
+      if character then
+        player.set_controller({
+          type = defines.controllers.remote,
+          position = character.position,
+          surface = character.surface,
+        })
+      end
     end
-  end
 
-  if event.element.valid and string.find(event.element.name, "bob_avatar_list_seticon_") then
-    local i = tonumber(string.match(event.element.name, "%d+"))
-    local characters = game.players[event.player_index].get_associated_characters()
-    local character = characters[i]
-    if character then
-      set_character_icon(event.player_index, character)
+    if event.element.valid and string.find(event.element.name, "bob_avatar_list_seticon_") then
+      local i = tonumber(string.match(event.element.name, "%d+"))
+      local characters = game.players[event.player_index].get_associated_characters()
+      local character = characters[i]
+      if character then
+        set_character_icon(event.player_index, character)
+      end
+      refresh_avatar_gui(event.player_index)
     end
-    refresh_avatar_gui(event.player_index)
-  end
 
-  if event.element.valid and event.element.name == "bob_avatar_current_character_seticon" then
-    if player.character then
-      set_character_icon(event.player_index, player.character)
+    if event.element.valid and event.element.name == "bob_avatar_current_character_seticon" then
+      if player.character then
+        set_character_icon(event.player_index, player.character)
+      end
+      refresh_avatar_gui(event.player_index)
     end
-    refresh_avatar_gui(event.player_index)
-  end
 
-  if event.element.valid and event.element.name == "bob_avatar_god" then
-    switch_to_god(event.player_index)
-  end
-  if event.element.valid and event.element.name == "bob_avatar_editor" then
-    switch_to_editor(event.player_index)
-  end
-  if event.element.valid and event.element.name == "bob_avatar_class_select" then
-    draw_class_gui(event.player_index)
-  end
-  if event.element.valid and event.element.name == "bob_avatar_rename" then
-    storage.players[event.player_index].rename_mode = not storage.players[event.player_index].rename_mode
-    refresh_avatar_gui(event.player_index)
-    refresh_buttons_row(event.player_index)
-  end
+    if event.element.valid and event.element.name == "bob_avatar_god" then
+      switch_to_god(event.player_index)
+    end
+    if event.element.valid and event.element.name == "bob_avatar_editor" then
+      switch_to_editor(event.player_index)
+    end
+    if event.element.valid and event.element.name == "bob_avatar_class_select" then
+      draw_class_gui(event.player_index)
+    end
+    if event.element.valid and event.element.name == "bob_avatar_rename" then
+      storage.players[event.player_index].rename_mode = not storage.players[event.player_index].rename_mode
+      refresh_avatar_gui(event.player_index)
+      refresh_buttons_row(event.player_index)
+    end
 
-  wlog("Checking class buttons")
-  for i, class in pairs(storage.classes) do
-    if event.element.valid and event.element.name == class.button.name then
-      wlog("Must create character of class " .. class.button.name .. "!")
-      create_character(event.player_index, class)
+    wlog("Checking class buttons")
+    for i, class in pairs(storage.classes) do
+      if event.element.valid and event.element.name == class.button.name then
+        wlog("Must create character of class " .. class.button.name .. "!")
+        create_character(event.player_index, class)
+        storage.players[event.player_index].respawn = false
+        storage.players[event.player_index].first_character = false
+        close_class_gui(event.player_index)
+      end
+    end
+
+    if event.element.valid and event.element.name == "bob_avatar_gui_close" then
+      close_avatar_gui(event.player_index)
+    end
+    if event.element.valid and event.element.name == "bob_class_gui_close" then
+      close_class_gui(event.player_index)
       storage.players[event.player_index].respawn = false
       storage.players[event.player_index].first_character = false
-      close_class_gui(event.player_index)
     end
-  end
-
-  if event.element.valid and event.element.name == "bob_avatar_gui_close" then
-    close_avatar_gui(event.player_index)
-  end
-  if event.element.valid and event.element.name == "bob_class_gui_close" then
-    close_class_gui(event.player_index)
-    storage.players[event.player_index].respawn = false
-    storage.players[event.player_index].first_character = false
   end
 end)
 
