@@ -19,6 +19,7 @@ data:extend({
     category = "smelting",
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
+    enabled = false,
     auto_recycle = false,
     ingredients = { { type = "item", name = "bob-silver-ore", amount = 1 } },
     results = { { type = "item", name = "bob-silver-plate", amount = 1 } },

@@ -3,6 +3,12 @@ Version: 2.0.4
 Date: ???
   Changes:
     - Updated AAI Industry integration #393
+    - Electrolysis / power rebalance: #418
+      - Reduced the power consumption of electrolysers
+      - Reduced the fuel value of hydrogen
+      - Increased the speed of some electrolysis recipes
+      - Reduced the amount of hydrogen produced by petroleum gas cracking
+      - Reduced the fuel value of petroleum gas
     - Integrate Bob's Locale Translations mod #445
     - Added Jetpack mod compatibility: Enable use of Enriched fuel blocks #467
     - Added support for frozen entities (with Space Age) #477

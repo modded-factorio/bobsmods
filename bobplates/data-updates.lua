@@ -15,27 +15,43 @@ data.raw.recipe["sulfuric-acid"].allow_productivity = false
 --Electrolyser power
 if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   if feature_flags["quality"] then
-    data.raw.fluid["bob-hydrogen"].fuel_value = "35kJ"
-    data.raw.fluid["bob-deuterium"].fuel_value = "35kJ"
+    data.raw.fluid["bob-hydrogen"].fuel_value = "25kJ"
+    data.raw.fluid["bob-deuterium"].fuel_value = "25kJ"
+    data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 250
     data.raw.recipe["bob-water-electrolysis"].energy_required = 2
     data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
     if data.raw.recipe["bob-sodium-chlorate"] then
       data.raw.recipe["bob-sodium-chlorate"].energy_required = 6
       data.raw.recipe["bob-sodium-perchlorate"].energy_required = 2
+    else
+      data.raw.recipe["bob-lithium-water-electrolysis"].energy_required = 2
     end
+  else
+    data.raw.fluid["bob-hydrogen"].fuel_value = "35kJ"
+    data.raw.fluid["bob-deuterium"].fuel_value = "35kJ"
+    data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 180
   end
-  data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "1200kW"
-  data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "13kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].energy_usage = "960kW"
+  data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "11kW"
   data.raw.recipe["bob-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-salt-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-heavy-water-electrolysis"].allow_consumption = false
   if data.raw.recipe["bob-sodium-chlorate"] then
     data.raw.recipe["bob-sodium-chlorate"].allow_consumption = false
     data.raw.recipe["bob-sodium-perchlorate"].allow_consumption = false
+  else
+    data.raw.recipe["bob-lithium-water-electrolysis"].allow_consumption = false
   end
   if data.raw.recipe["bob-brine-electrolysis"] then
     data.raw.recipe["bob-brine-electrolysis"].allow_consumption = false
   end
+  --Change other electrolysis recipes to require less time to compensate.
+  data.raw.recipe["bob-zinc-plate"].energy_required = 1.6
+  data.raw.recipe["bob-nickel-plate"].energy_required = 1.6
+  data.raw.recipe["bob-aluminium-plate"].energy_required = 3.2
+  data.raw.recipe["bob-titanium-plate"].energy_required = 3.2
+  data.raw.recipe["bob-silicon-plate"].energy_required = 3.2
+  data.raw.recipe["bob-lithium"].energy_required = 1.6
 end
 
 data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
@@ -253,7 +269,7 @@ data.raw.fluid["light-oil"].fuel_value = "1.5MJ" --"3MJ"
 data.raw.fluid["light-oil"].emissions_multiplier = 2
 data.raw.fluid["heavy-oil"].fuel_value = "1MJ" --"2MJ"
 data.raw.fluid["heavy-oil"].emissions_multiplier = 3
-data.raw.fluid["petroleum-gas"].fuel_value = "2.3MJ" --"4.6MJ"
+data.raw.fluid["petroleum-gas"].fuel_value = "1.2MJ" --"4.6MJ"
 
 data.raw.item["coal"].fuel_emissions_multiplier = 2
 data.raw.item["solid-fuel"].fuel_emissions_multiplier = 0.8

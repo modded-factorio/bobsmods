@@ -35,4 +35,38 @@ data:extend({
       "not-on-map",
     },
   },
+
+  {
+    type = "projectile",
+    name = "bob-piercing-spine-homing",
+    hidden = true,
+    acceleration = 0,
+    turn_speed = 0,
+    force_condition = "not-same",
+    action = {
+      type = "direct",
+      ignore_collision_condition = true,
+      filter_enabled = true,
+      trigger_target_mask = { "flying-robot" },
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          {
+            type = "damage",
+            damage = { amount = 0.4, type = "physical" },
+            show_in_tooltip = false,
+          },
+          {
+            type = "damage",
+            damage = { amount = 0.4, type = "bob-pierce" },
+            show_in_tooltip = false,
+          },
+        },
+      },
+    },
+    collision_box = { { -0.3, -0.9 }, { 0.3, 0.9 } },
+    flags = {
+      "not-on-map",
+    },
+  },
 })
