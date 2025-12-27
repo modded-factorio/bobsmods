@@ -8,6 +8,6 @@ local function colour_barrel_recipe(fluidname, recipename)
 end
 
 for name, fluid in pairs(data.raw["fluid"]) do
-  colour_barrel_recipe(name, "fill-" .. name .. "-barrel")
+  colour_barrel_recipe(name, name .. "-barrel")
   colour_barrel_recipe(name, "empty-" .. name .. "-barrel")
 end
