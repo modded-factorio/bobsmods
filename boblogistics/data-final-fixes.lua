@@ -18,5 +18,30 @@ if mods["aai-industry"] then
     bobmods.lib.tech.add_recipe_unlock("logistics-0", "copper-cable")
     bobmods.lib.tech.remove_prerequisite("basic-logistics", "burner-mechanics")
     bobmods.lib.tech.remove_prerequisite("logistics", "basic-logistics")
+    data.raw.recipe["transport-belt"].ingredients = {
+      { type = "item", name = "bob-basic-transport-belt", amount = 1 },
+      { type = "item", name = "iron-plate", amount = 2 },
+      { type = "item", name = "motor", amount = 2 },
+    }
+    data.raw.recipe["underground-belt"].ingredients = {
+      { type = "item", name = "bob-basic-underground-belt", amount = 1 },
+      { type = "item", name = "iron-plate", amount = 14 },
+      { type = "item", name = "motor", amount = 20 },
+    }
+    data.raw.recipe.splitter.ingredients = {
+      { type = "item", name = "bob-basic-splitter", amount = 1 },
+      { type = "item", name = "iron-plate", amount = 8 },
+      { type = "item", name = "motor", amount = 4 },
+    }
+    if mods["bobplates"] then
+      bobmods.lib.recipe.replace_ingredient("transport-belt", "iron-plate", "bob-tin-plate")
+      bobmods.lib.recipe.replace_ingredient("underground-belt", "iron-plate", "bob-tin-plate")
+      bobmods.lib.recipe.replace_ingredient("splitter", "iron-plate", "bob-tin-plate")
+    end
+    if mods["quality"] then
+      bobmods.lib.recipe.update_recycling_recipe_single("transport-belt")
+      bobmods.lib.recipe.update_recycling_recipe_single("underground-belt")
+      bobmods.lib.recipe.update_recycling_recipe_single("splitter")
+    end
   end
 end
