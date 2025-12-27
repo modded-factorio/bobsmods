@@ -4,7 +4,7 @@ if mods["aai-industry"] then
   bobmods.lib.item.set_subgroup("glass", "bob-resource")
   bobmods.lib.recipe.hide("glass")
   bobmods.lib.item.hide("glass")
-  data.raw.recipe["bob-glass"].ingredients = {{ type = "item", name = "sand", amount = 3 }}
+  data.raw.recipe["bob-glass"].ingredients = { { type = "item", name = "sand", amount = 3 } }
   data.raw.recipe["glass"].ingredients = nil
   data.raw.recipe["glass"].results = nil
   data.raw.recipe["glass"].main_product = nil
