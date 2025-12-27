@@ -2,6 +2,7 @@
 Version: 2.0.4
 Date: ???
   Changes:
+    - Updated AAI Industry integration #393
     - Electrolysis / power rebalance: #418
       - Reduced the power consumption of electrolysers
       - Reduced the fuel value of hydrogen

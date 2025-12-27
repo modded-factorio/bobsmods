@@ -1,3 +1,8 @@
+if mods["aai-industry"] then
+  if data.raw.technology["logistics-0"] then
+    bobmods.lib.tech.hide("basic-logistics")
+  end
+end
 if mods["aai-containers"] then
   bobmods.lib.tech.add_prerequisite("aai-strongbox-storage", "advanced-circuit")
   data.raw.item["passive-provider-chest"].order = "b[storage]-b"
@@ -32,4 +37,9 @@ end
 if mods["aai-programmable-structures"] then
   data.raw["item-subgroup"]["programmable-structures"].group = "bob-logistics"
   data.raw["item-subgroup"]["programmable-structures"].order = "h1"
+end
+if mods["aai-loaders"] then
+  if data.raw.technology["aai-basic-loader"] then
+    bobmods.lib.tech.add_prerequisite("aai-basic-loader", "steam-power")
+  end
 end
