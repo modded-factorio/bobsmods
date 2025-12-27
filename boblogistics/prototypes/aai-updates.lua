@@ -37,3 +37,8 @@ if mods["aai-programmable-structures"] then
   data.raw["item-subgroup"]["programmable-structures"].group = "bob-logistics"
   data.raw["item-subgroup"]["programmable-structures"].order = "h1"
 end
+if mods["aai-loaders"] then
+  if data.raw.technology["aai-basic-loader"] then
+    bobmods.lib.tech.add_prerequisite("aai-basic-loader", "steam-power")
+  end
+end
