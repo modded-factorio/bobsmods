@@ -702,7 +702,6 @@ table.insert(data.raw.fire["bob-enemy-electric-fire"].on_damage_tick_effect, {
   type = "area",
   radius = 3,
   force = "all",
-  filter_enabled = true,
   trigger_target_mask = { "flying-robot" },
   ignore_collision_condition = true,
   action_delivery = {
