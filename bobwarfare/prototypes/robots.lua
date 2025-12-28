@@ -340,7 +340,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         ammo_category = "laser",
         cooldown = 20,
         range = 20,
-        damage_modifier = 2.5,
+        damage_modifier = 12,
         sound = make_laser_sounds(),
         ammo_type = {
           action = {
@@ -400,4 +400,27 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   table.insert(data.raw["combat-robot"].defender.resistances, { type = "poison", percent = 95 })
   table.insert(data.raw["combat-robot"].distractor.resistances, { type = "poison", percent = 85 })
   table.insert(data.raw["combat-robot"].destroyer.resistances, { type = "poison", percent = 97 })
+  data.raw["combat-robot"].defender.attack_parameters.ammo_type.action.action_delivery.target_effects = {
+    {
+      type = "create-entity",
+      entity_name = "explosion-hit",
+    },
+    {
+      type = "damage",
+      damage = {
+        amount = 8,
+        type = "physical",
+      },
+    },
+    {
+      type = "damage",
+      damage = {
+        amount = 2,
+        type = "bob-pierce",
+      },
+    },
+  }
+  data.raw["combat-robot"].distractor.attack_parameters.damage_modifier = 4
+  data.raw["combat-robot"].destroyer.attack_parameters.damage_modifier = 8
+
 end
