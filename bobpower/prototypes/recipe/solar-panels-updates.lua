@@ -18,6 +18,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       "bob-solar-panel-large-2",
       { type = "item", name = "bob-silver-plate", amount = 16 }
     )
+    bobmods.lib.tech.add_prerequisite("bob-solar-energy-2", "bob-lead-processing")
   end
 
   if data.raw.item["bob-aluminium-plate"] then

@@ -405,6 +405,7 @@ if data.raw.item["bob-silver-plate"] then
     "bob-solar-panel-equipment-2",
     { type = "item", name = "bob-silver-plate", amount = 4 }
   )
+  bobmods.lib.tech.add_prerequisite("bob-solar-panel-equipment-2", "bob-lead-processing")
 end
 
 if data.raw.item["bob-invar-alloy"] then

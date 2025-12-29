@@ -60,11 +60,7 @@ bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide")
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide-2")
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-plate-2")
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-silver-from-lead")
-if bobmods.electronics then
-  bobmods.lib.tech.add_recipe_unlock("bob-electronics", "bob-silver-plate")
-else
-  bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-silver-plate")
-end
+bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-silver-plate")
 bobmods.lib.tech.add_prerequisite("bob-lead-processing", "bob-nickel-processing")
 
 bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-alumina")
