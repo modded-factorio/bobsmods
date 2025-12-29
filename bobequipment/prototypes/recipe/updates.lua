@@ -375,6 +375,7 @@ end
 
 if data.raw.item["bob-module-case"] then
   bobmods.lib.tech.add_recipe_unlock("robotics", "bob-module-case")
+  bobmods.lib.tech.add_prerequisite("robotics", "plastics")
   bobmods.lib.recipe.add_ingredient(
     "bob-personal-roboport-robot-equipment",
     { type = "item", name = "bob-module-case", amount = 1 }

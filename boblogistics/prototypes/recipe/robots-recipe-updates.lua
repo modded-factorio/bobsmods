@@ -457,7 +457,7 @@ if data.raw.item["bob-robot-brain"] then
     { type = "item", name = "bob-robot-tool-construction-4", amount = 1 }
   )
 else
-  bobmods.lib.recipe.add_ingredient("bob-logistic-robot-2", { type = "item", name = "advanced-circuit", amount = 1 })
+  bobmods.lib.recipe.replace_ingredient("logistic-robot", "advanced-circuit", "electronic-circuit")
   bobmods.lib.recipe.add_ingredient(
     "bob-construction-robot-2",
     { type = "item", name = "advanced-circuit", amount = 1 }
