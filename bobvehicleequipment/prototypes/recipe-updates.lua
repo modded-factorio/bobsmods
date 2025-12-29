@@ -1386,13 +1386,11 @@ if data.raw.item["bob-thorium-fuel-cell"] then
     "bob-vehicle-fission-reactor-equipment-4",
     { type = "item", name = "bob-thorium-fuel-cell", amount = 24 }
   )
-  if mods["bobrevamp"] and mods["bobpower"] and settings.startup["bobmods-revamp-nuclear"].value == true then
+  if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-nuclear-power-2")
-
     bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-nuclear-power-2")
   else
     bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-thorium-processing")
-
     bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-thorium-processing")
   end
   bobmods.lib.recipe.remove_ingredient("bob-vehicle-fission-reactor-equipment-5", "uranium-fuel-cell")

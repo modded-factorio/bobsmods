@@ -425,6 +425,7 @@ data:extend({
       "robotics",
       "advanced-circuit",
       "automation-2",
+      "chemical-science-pack",
     },
     unit = {
       count = 250,

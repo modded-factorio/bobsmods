@@ -94,6 +94,7 @@ then
     bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-4", "bob-alien-research")
     bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "bob-alien-research")
     bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-3", "bob-alien-research")
+    bobmods.lib.tech.add_prerequisite("bob-personal-laser-defense-equipment-6", "bob-alien-research")
   end
 else
   if data.raw.technology["bob-productivity-module-5"] then

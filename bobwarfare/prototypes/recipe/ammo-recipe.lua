@@ -180,6 +180,11 @@ data:extend({
       { type = "item", name = "bob-cordite", amount = 1 },
     },
     results = { { type = "item", name = "bob-shotgun-flame-shell", amount = 1 } },
+    crafting_machine_tint = {
+      primary = { r = 0.8, g = 0.0, b = 0.0, a = 0.000 },
+      secondary = { r = 1.0, g = 0.5, b = 0.5, a = 0.000 },
+      tertiary = { r = 0.9, g = 0.25, b = 0.25, a = 0.000 },
+    },
   },
 
   {
