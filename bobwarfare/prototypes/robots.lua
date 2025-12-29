@@ -340,7 +340,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         ammo_category = "laser",
         cooldown = 20,
         range = 20,
-        damage_modifier = 12,
+        damage_modifier = 10,
         sound = make_laser_sounds(),
         ammo_type = {
           action = {
