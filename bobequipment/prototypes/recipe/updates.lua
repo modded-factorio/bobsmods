@@ -469,6 +469,7 @@ if data.raw.item["bob-silicon-wafer"] then
     "bob-solar-panel-equipment-3",
     { type = "item", name = "bob-silicon-wafer", amount = 8 }
   )
+  bobmods.lib.tech.add_prerequisite("solar-panel-equipment", "bob-silicon-processing")
 elseif data.raw.item["bob-silicon-plate"] then
   bobmods.lib.recipe.add_ingredient("solar-panel-equipment", { type = "item", name = "bob-silicon-plate", amount = 3 })
   bobmods.lib.recipe.add_ingredient(
@@ -479,6 +480,7 @@ elseif data.raw.item["bob-silicon-plate"] then
     "bob-solar-panel-equipment-3",
     { type = "item", name = "bob-silicon-plate", amount = 1 }
   )
+  bobmods.lib.tech.add_prerequisite("solar-panel-equipment", "bob-silicon-processing")
 end
 
 if data.raw.item["bob-advanced-processing-unit"] then
