@@ -24,7 +24,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
       data.raw.recipe["bob-sodium-chlorate"].energy_required = 6
       data.raw.recipe["bob-sodium-perchlorate"].energy_required = 2
     else
-      data.raw.recipe["bob-lithium-water-electrolysis"].energy_required = 2
+      data.raw.recipe["bob-lithium-perchlorate"].energy_required = 2
     end
   else
     data.raw.fluid["bob-hydrogen"].fuel_value = "35kJ"
@@ -40,7 +40,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.recipe["bob-sodium-chlorate"].allow_consumption = false
     data.raw.recipe["bob-sodium-perchlorate"].allow_consumption = false
   else
-    data.raw.recipe["bob-lithium-water-electrolysis"].allow_consumption = false
+    data.raw.recipe["bob-lithium-perchlorate"].allow_consumption = false
   end
   if data.raw.recipe["bob-brine-electrolysis"] then
     data.raw.recipe["bob-brine-electrolysis"].allow_consumption = false
