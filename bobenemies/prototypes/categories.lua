@@ -76,6 +76,7 @@ table.insert(
 )
 
 table.insert(data.raw["utility-constants"].default.default_trigger_target_mask_by_type.unit, "not-fire-unit")
+table.insert(data.raw["utility-constants"].default.default_trigger_target_mask_by_type.unit, "not-electric-unit")
 table.insert(
   data.raw["utility-constants"].default.default_trigger_target_mask_by_type["capture-robot"],
   "not-fire-unit"
