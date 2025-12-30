@@ -1,7 +1,10 @@
-bobmods.lib.tech.remove_recipe_unlock("nuclear-power", "heat-pipe")
-bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-2")
+if settings.startup["bobmods-power-steam"].value == true then
+  bobmods.lib.tech.remove_recipe_unlock("nuclear-power", "heat-pipe")
+  bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-2")
+end
 
-if mods["bobplates"] then
+if settings.startup["bobmods-power-nuclear"].value ~= true then
+elseif mods["bobplates"] then
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "bob-nuclear-reactor-2")
   bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-3", "bob-nuclear-reactor-3")
   bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "processing-unit")
