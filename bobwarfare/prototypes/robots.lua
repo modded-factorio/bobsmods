@@ -422,5 +422,4 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   }
   data.raw["combat-robot"].distractor.attack_parameters.damage_modifier = 4
   data.raw["combat-robot"].destroyer.attack_parameters.damage_modifier = 8
-
 end
