@@ -50,13 +50,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "bobmods-plates-nuclearupdate",
-    setting_type = "startup",
-    default_value = true,
-  },
-
-  {
-    type = "bool-setting",
     name = "bobmods-plates-convert-recipes",
     setting_type = "startup",
     default_value = false,

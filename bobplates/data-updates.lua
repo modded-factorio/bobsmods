@@ -128,72 +128,130 @@ bobmods.lib.item.set_subgroup("uranium-238", "bob-nuclear")
 bobmods.lib.recipe.set_subgroup("uranium-processing", "bob-nuclear")
 bobmods.lib.recipe.set_subgroup("kovarex-enrichment-process", "bob-nuclear")
 
-if settings.startup["bobmods-plates-nuclearupdate"].value == true then
-  bobmods.lib.recipe.disallow_productivity("uranium-fuel-cell")
-  bobmods.lib.recipe.remove_ingredient("uranium-fuel-cell", "iron-plate")
-  bobmods.lib.recipe.add_ingredient(
-    "uranium-fuel-cell",
-    { type = "item", name = "bob-empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
-  )
+bobmods.lib.recipe.disallow_productivity("uranium-fuel-cell")
+bobmods.lib.recipe.remove_ingredient("uranium-fuel-cell", "iron-plate")
+bobmods.lib.recipe.add_ingredient(
+  "uranium-fuel-cell",
+  { type = "item", name = "bob-empty-nuclear-fuel-cell", amount = 10, ignored_by_stats = 10 }
+)
 
-  data.raw.technology["nuclear-fuel-reprocessing"].icon =
-    "__bobplates__/graphics/icons/technology/uranium-nuclear-fuel-reprocessing-new.png"
-  data.raw.technology["nuclear-fuel-reprocessing"].icon_size = 128
+data.raw.technology["nuclear-fuel-reprocessing"].icon =
+  "__bobplates__/graphics/icons/technology/uranium-nuclear-fuel-reprocessing-new.png"
+data.raw.technology["nuclear-fuel-reprocessing"].icon_size = 128
 
-  data.raw.recipe["nuclear-fuel-reprocessing"].icon =
-    "__bobplates__/graphics/icons/nuclear/nuclear-fuel-reprocessing.png"
-  data.raw.recipe["nuclear-fuel-reprocessing"].icon_size = 32
+data.raw.recipe["nuclear-fuel-reprocessing"].icon =
+  "__bobplates__/graphics/icons/nuclear/nuclear-fuel-reprocessing.png"
+data.raw.recipe["nuclear-fuel-reprocessing"].icon_size = 32
 
-  -- #427 Since we initialize crafting_machine_tint in the earlier data stage, another mod may have modified the recipe in between.
-  if data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint then
-    data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
+-- #427 Since we initialize crafting_machine_tint in the earlier data stage, another mod may have modified the recipe in between.
+if data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint then
+  data.raw.recipe["nuclear-fuel-reprocessing"].crafting_machine_tint.secondary = { r = 1, g = 0.7, b = 0 } --Right hand module glows plutonium orange-yellow.
+end
+
+data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
+bobmods.lib.recipe.add_ingredient(
+  "nuclear-fuel-reprocessing",
+  { type = "item", name = "depleted-uranium-fuel-cell", amount = 5 }
+) -- +5 from base
+bobmods.lib.recipe.set_result(
+  "nuclear-fuel-reprocessing",
+  { type = "item", name = "uranium-238", amount = 6, ignored_by_productivity = 5 }
+)
+
+bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", {
+  type = "item",
+  name = "bob-empty-nuclear-fuel-cell",
+  amount = 10,
+  ignored_by_productivity = 10,
+  ignored_by_stats = 10,
+})
+bobmods.lib.recipe.add_result(
+  "nuclear-fuel-reprocessing",
+  { type = "item", name = "uranium-235", amount = 1, probability = 0.2 }
+)
+bobmods.lib.recipe.add_result(
+  "nuclear-fuel-reprocessing",
+  { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.8 }
+)
+bobmods.lib.recipe.add_result(
+  "nuclear-fuel-reprocessing",
+  { type = "item", name = "bob-fusion-catalyst", amount = 1 }
+)
+
+-- If Bob's Power is adding higher tier Reactors, then make T2 Thorium and T3 Deuterium
+if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
+  -- T1: Uranium
+  data.raw.item["nuclear-reactor"].localised_name = { "entity-name.bob-uranium-reactor" }
+  data.raw.reactor["nuclear-reactor"].localised_name = { "entity-name.bob-uranium-reactor" }
+  data.raw["fuel-category"]["nuclear"].localised_name = { "fuel-category-name.uranium" }
+  data.raw.reactor["nuclear-reactor"].localised_description =
+    { "", { "entity-description.bob-uranium-reactor" }, { "entity-description.bob-reactor-max-temperature", "1000" } }
+
+  -- T2: Thorium
+  data.raw.reactor["bob-nuclear-reactor-2"].energy_source.fuel_categories = { "bob-thorium" }
+  data.raw.reactor["bob-nuclear-reactor-2"].localised_name = { "entity-name.bob-thorium-reactor" }
+  data.raw.reactor["bob-nuclear-reactor-2"].localised_description =
+    { "", { "entity-description.bob-thorium-reactor" }, { "entity-description.bob-reactor-max-temperature", "1250" } }
+  data.raw.reactor["bob-nuclear-reactor-2"].default_fuel_glow_color = { r = 1.0, g = 1.0, b = 0.0 }
+  data.raw.reactor["bob-nuclear-reactor-2"].icon = "__bobplates__/graphics/icons/nuclear/thorium-reactor.png"
+
+  data.raw.item["bob-thorium-fuel-cell"].fuel_category = "bob-thorium"
+  data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_category = "bob-thorium"
+
+  data.raw.item["bob-nuclear-reactor-2"].localised_name = { "entity-name.bob-thorium-reactor" }
+  data.raw.item["bob-nuclear-reactor-2"].icon = "__bobplates__/graphics/icons/nuclear/thorium-reactor.png"
+
+  bobmods.lib.recipe.remove_ingredient("bob-nuclear-reactor-2", "nuclear-reactor")
+
+  data.raw.technology["bob-nuclear-power-2"].icon = "__bobplates__/graphics/icons/technology/thorium-nuclear-power.png"
+  data.raw.technology["bob-nuclear-power-2"].icon_size = 128
+  data.raw.technology["bob-nuclear-power-2"].localised_name = { "technology-name.bob-thorium-power" }
+
+  -- T3: Deuterium
+  data.raw.reactor["bob-nuclear-reactor-3"].energy_source.fuel_categories = { "bob-deuterium" }
+  data.raw.reactor["bob-nuclear-reactor-3"].localised_name = { "entity-name.bob-deuterium-reactor" }
+  data.raw.reactor["bob-nuclear-reactor-3"].localised_description =
+    { "", { "entity-description.bob-deuterium-reactor" }, { "entity-description.bob-reactor-max-temperature", "1500" } }
+
+  data.raw.item["bob-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
+  data.raw.item["bob-deuterium-fuel-cell-2"].fuel_category = "bob-deuterium"
+
+  data.raw.item["bob-nuclear-reactor-3"].localised_name = { "entity-name.bob-deuterium-reactor" }
+
+  bobmods.lib.recipe.remove_ingredient("bob-nuclear-reactor-3", "bob-nuclear-reactor-2")
+
+  data.raw.technology["bob-nuclear-power-3"].localised_name = { "technology-name.bob-deuterium-power" }
+  data.raw.technology["bob-nuclear-power-3"].icon_size = 128
+
+  if
+    settings.startup["bobmods-plates-bluedeuterium"]
+    and settings.startup["bobmods-plates-bluedeuterium"].value == true
+  then
+    data.raw.reactor["bob-nuclear-reactor-3"].default_fuel_glow_color = { r = 0, g = 0.7, b = 1 }
+    data.raw.reactor["bob-nuclear-reactor-3"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-reactor-blue.png"
+    data.raw.item["bob-nuclear-reactor-3"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-reactor-blue.png"
+    data.raw.technology["bob-nuclear-power-3"].icon =
+      "__bobplates__/graphics/icons/technology/deuterium-nuclear-power-blue.png"
+  else
+    data.raw.reactor["bob-nuclear-reactor-3"].default_fuel_glow_color = { r = 1, g = 0, b = 0.57 }
+    data.raw.reactor["bob-nuclear-reactor-3"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-reactor.png"
+    data.raw.item["bob-nuclear-reactor-3"].icon = "__bobplates__/graphics/icons/nuclear/deuterium-reactor.png"
+    data.raw.technology["bob-nuclear-power-3"].icon =
+      "__bobplates__/graphics/icons/technology/deuterium-nuclear-power.png"
   end
 
-  data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 120 --up from 60
-  bobmods.lib.recipe.add_ingredient(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "depleted-uranium-fuel-cell", amount = 5 }
-  ) -- +5 from base
-  bobmods.lib.recipe.set_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "uranium-238", amount = 6, ignored_by_productivity = 5 }
-  )
-
-  bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", {
-    type = "item",
-    name = "bob-empty-nuclear-fuel-cell",
-    amount = 10,
-    ignored_by_productivity = 10,
-    ignored_by_stats = 10,
-  })
-  bobmods.lib.recipe.add_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "uranium-235", amount = 1, probability = 0.2 }
-  )
-  bobmods.lib.recipe.add_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.8 }
-  )
-  bobmods.lib.recipe.add_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "bob-fusion-catalyst", amount = 1 }
-  )
-else
-  bobmods.lib.recipe.replace_ingredient("uranium-fuel-cell", "iron-plate", "bob-lead-plate")
-
-  bobmods.lib.recipe.set_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "uranium-238", amount = 3, ignored_by_productivity = 2 }
-  )
-  bobmods.lib.recipe.add_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "bob-lead-plate", amount = 5, ignored_by_productivity = 5 }
-  )
-  bobmods.lib.recipe.add_result(
-    "nuclear-fuel-reprocessing",
-    { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.1 }
-  )
+  if mods["quality"] then
+    bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-2", true)
+    bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-3", true)
+  end
 end
+
+data.raw.item["nuclear-fuel"].fuel_acceleration_multiplier = 2
+data.raw.item["nuclear-fuel"].fuel_top_speed_multiplier = 1.25
+data.raw.item["nuclear-fuel"].stack_size = 2
+data.raw.item["nuclear-fuel"].fuel_emissions_multiplier = 5
+data.raw.item["nuclear-fuel"].fuel_glow_color = { r = 0.5, g = 1, b = 0.5 }
+
 
 data.raw["item-subgroup"]["fill-barrel"].group = "fluids"
 data.raw["item-subgroup"]["empty-barrel"].group = "fluids"

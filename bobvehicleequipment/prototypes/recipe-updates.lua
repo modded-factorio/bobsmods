@@ -455,7 +455,7 @@ if mods["bobplates"] then
     { type = "fluid", name = "bob-deuterium", amount = 20 }
   )
   data.raw.recipe["bob-vehicle-big-turret-equipment-3"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-3", "bob-deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-3", "bob-nuclear-power-3")
 end
 
 if data.raw.item["bob-aluminium-plate"] then
@@ -1387,13 +1387,8 @@ if data.raw.item["bob-thorium-fuel-cell"] then
     "bob-vehicle-fission-reactor-equipment-4",
     { type = "item", name = "bob-thorium-fuel-cell", amount = 24 }
   )
-  if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value == true then
-    bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-nuclear-power-2")
-    bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-nuclear-power-2")
-  else
-    bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-thorium-processing")
-    bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-thorium-processing")
-  end
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-nuclear-power-2")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-nuclear-power-2")
   bobmods.lib.recipe.remove_ingredient("bob-vehicle-fission-reactor-equipment-5", "uranium-fuel-cell")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-5",

@@ -20,7 +20,7 @@ if mods["bobplates"] then
   data.raw.recipe["bob-plasma-turret-2"].category = "crafting-with-fluid"
   bobmods.lib.recipe.add_ingredient("bob-plasma-turret-3", { type = "fluid", name = "bob-deuterium", amount = 30 })
   data.raw.recipe["bob-plasma-turret-3"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "bob-deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "bob-nuclear-power-3")
 end
 
 if data.raw.item["bob-gunmetal-alloy"] then
@@ -754,19 +754,19 @@ if data.raw.fluid["bob-deuterium"] then
     { type = "fluid", name = "bob-deuterium", amount = 10 }
   )
   data.raw.recipe["bob-plasma-bullet-projectile"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "bob-deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-bullets", "bob-nuclear-power-3")
 
   bobmods.lib.recipe.add_new_ingredient(
     "bob-shotgun-plasma-shell",
     { type = "fluid", name = "bob-deuterium", amount = 10 }
   )
   data.raw.recipe["bob-shotgun-plasma-shell"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-shotgun-plasma-shells", "bob-deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-shotgun-plasma-shells", "bob-nuclear-power-3")
 
   bobmods.lib.recipe.add_new_ingredient(
     "bob-plasma-rocket-warhead",
     { type = "fluid", name = "bob-deuterium", amount = 10 }
   )
   data.raw.recipe["bob-plasma-rocket-warhead"].category = "crafting-with-fluid"
-  bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "bob-deuterium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-plasma-rocket", "bob-nuclear-power-3")
 end

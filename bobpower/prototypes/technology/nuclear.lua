@@ -1,7 +1,20 @@
-if settings.startup["bobmods-power-nuclear"].value == true then
-  bobmods.lib.tech.remove_recipe_unlock("nuclear-power", "heat-pipe")
-  bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-2")
+bobmods.lib.tech.remove_recipe_unlock("nuclear-power", "heat-pipe")
+bobmods.lib.tech.add_prerequisite("nuclear-power", "bob-heat-pipe-2")
 
+if mods["bobplates"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-2", "bob-nuclear-reactor-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-nuclear-power-3", "bob-nuclear-reactor-3")
+  bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "processing-unit")
+
+  if settings.startup["bobmods-power-steam"].value == true then
+    data.raw.technology["nuclear-power"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
+    data.raw.technology["nuclear-power"].icon_size = 128
+    data.raw.technology["bob-nuclear-power-2"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
+    data.raw.technology["bob-nuclear-power-2"].icon_size = 128
+    data.raw.technology["bob-nuclear-power-3"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
+    data.raw.technology["bob-nuclear-power-3"].icon_size = 128
+  end
+else
   data:extend({
     {
       type = "technology",
@@ -62,13 +75,4 @@ if settings.startup["bobmods-power-nuclear"].value == true then
       order = "e-p-b-e",
     },
   })
-
-  if settings.startup["bobmods-power-steam"].value == true then
-    data.raw.technology["nuclear-power"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
-    data.raw.technology["nuclear-power"].icon_size = 128
-    data.raw.technology["bob-nuclear-power-2"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
-    data.raw.technology["bob-nuclear-power-2"].icon_size = 128
-    data.raw.technology["bob-nuclear-power-3"].icon = "__bobpower__/graphics/icons/technology/nuclear-power.png"
-    data.raw.technology["bob-nuclear-power-3"].icon_size = 128
-  end
 end
