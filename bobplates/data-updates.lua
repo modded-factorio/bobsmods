@@ -139,8 +139,7 @@ data.raw.technology["nuclear-fuel-reprocessing"].icon =
   "__bobplates__/graphics/icons/technology/uranium-nuclear-fuel-reprocessing-new.png"
 data.raw.technology["nuclear-fuel-reprocessing"].icon_size = 128
 
-data.raw.recipe["nuclear-fuel-reprocessing"].icon =
-  "__bobplates__/graphics/icons/nuclear/nuclear-fuel-reprocessing.png"
+data.raw.recipe["nuclear-fuel-reprocessing"].icon = "__bobplates__/graphics/icons/nuclear/nuclear-fuel-reprocessing.png"
 data.raw.recipe["nuclear-fuel-reprocessing"].icon_size = 32
 
 -- #427 Since we initialize crafting_machine_tint in the earlier data stage, another mod may have modified the recipe in between.
@@ -173,10 +172,7 @@ bobmods.lib.recipe.add_result(
   "nuclear-fuel-reprocessing",
   { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.8 }
 )
-bobmods.lib.recipe.add_result(
-  "nuclear-fuel-reprocessing",
-  { type = "item", name = "bob-fusion-catalyst", amount = 1 }
-)
+bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "bob-fusion-catalyst", amount = 1 })
 
 -- If Bob's Power is adding higher tier Reactors, then make T2 Thorium and T3 Deuterium
 if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
@@ -251,7 +247,6 @@ data.raw.item["nuclear-fuel"].fuel_top_speed_multiplier = 1.25
 data.raw.item["nuclear-fuel"].stack_size = 2
 data.raw.item["nuclear-fuel"].fuel_emissions_multiplier = 5
 data.raw.item["nuclear-fuel"].fuel_glow_color = { r = 0.5, g = 1, b = 0.5 }
-
 
 data.raw["item-subgroup"]["fill-barrel"].group = "fluids"
 data.raw["item-subgroup"]["empty-barrel"].group = "fluids"
