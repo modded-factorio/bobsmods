@@ -201,7 +201,6 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
 
   data.raw.technology["bob-nuclear-power-2"].icon = "__bobplates__/graphics/icons/technology/thorium-nuclear-power.png"
   data.raw.technology["bob-nuclear-power-2"].icon_size = 128
-  data.raw.technology["bob-nuclear-power-2"].localised_name = { "technology-name.bob-thorium-power" }
 
   -- T3: Deuterium
   data.raw.reactor["bob-nuclear-reactor-3"].energy_source.fuel_categories = { "bob-deuterium" }
@@ -216,7 +215,6 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
 
   bobmods.lib.recipe.remove_ingredient("bob-nuclear-reactor-3", "bob-nuclear-reactor-2")
 
-  data.raw.technology["bob-nuclear-power-3"].localised_name = { "technology-name.bob-deuterium-power" }
   data.raw.technology["bob-nuclear-power-3"].icon_size = 128
 
   if

@@ -67,6 +67,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-nuclear-power-2",
+    localised_name = { "technology-name.bob-thorium-power" },
     icon = "__bobplates__/graphics/icons/technology/thorium-processing.png",
     icon_size = 128,
     effects = {
@@ -184,6 +185,7 @@ data:extend({
   {
     type = "technology",
     name = "bob-nuclear-power-3",
+    localised_name = { "technology-name.bob-deuterium-power" },
     icon = "__bobplates__/graphics/icons/technology/deuterium.png",
     icon_size = 128,
     order = "e-p-b-e2",
