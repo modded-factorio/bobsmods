@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ???
+Date: 02. 01. 2026
   Features:
     - The order in which enemy factions appear may now be randomized at game start.
     - New factions may now be added by other mods. Instructions for how to do this may be found in prototypes/functions.lua.
