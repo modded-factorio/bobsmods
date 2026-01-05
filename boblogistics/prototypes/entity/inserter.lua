@@ -75,8 +75,8 @@ data:extend({
       max_health = 100,
       extension_speed = 0.125,
       rotation_speed = 0.05,
-      energy_per_movement = "10kJ",
-      energy_per_rotation = "10kJ",
+      energy_per_movement = "4.5kJ",
+      energy_per_rotation = "4.5kJ",
     },
   }),
 })
@@ -88,7 +88,7 @@ data.raw.inserter["bob-steam-inserter"].energy_source = {
   type = "fluid",
   effectivity = 1,
   fluid_box = {
-    volume = 200,
+    volume = 10,
     pipe_connections = {
       { flow_direction = "input-output", position = { 0, 0 }, direction = defines.direction.east },
       { flow_direction = "input-output", position = { 0, 0 }, direction = defines.direction.west },
@@ -100,14 +100,13 @@ data.raw.inserter["bob-steam-inserter"].energy_source = {
   },
   burns_fluid = false,
   scale_fluid_usage = false,
-  fluid_usage_per_tick = (0.7 / 60),
+  fluid_usage_per_tick = 0.002,
   maximum_temperature = 765,
   smoke = {
     {
       name = "light-smoke",
-      frequency = 10 / 32,
+      frequency = 1,
       starting_vertical_speed = 0.08,
-      starting_frame_deviation = 60,
     },
   },
 }
