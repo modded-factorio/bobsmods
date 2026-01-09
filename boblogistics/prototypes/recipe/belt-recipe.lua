@@ -267,16 +267,17 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   end
 
   if mods["space-age"] then
-    data.raw.recipe["bob-basic-transport-belt"].additional_categories = { "pressing" }
-    data.raw.recipe["bob-basic-underground-belt"].additional_categories = { "pressing" }
-    data.raw.recipe["express-transport-belt"].additional_categories = { "pressing" }
-    data.raw.recipe["express-underground-belt"].additional_categories = { "pressing" }
-    data.raw.recipe["express-splitter"].additional_categories = { "pressing" }
+    data.raw.recipe["bob-basic-transport-belt"].category = "pressing"
+    data.raw.recipe["bob-basic-underground-belt"].category = "pressing"
+    data.raw.recipe["express-transport-belt"].category = "pressing"
+    data.raw.recipe["express-underground-belt"].category = "pressing"
+    data.raw.recipe["express-splitter"].category = "pressing"
+  else
+    data.raw.recipe["express-transport-belt"].category = "crafting"
+    data.raw.recipe["express-underground-belt"].category = "crafting"
+    data.raw.recipe["express-splitter"].category = "crafting"
   end
 
-  data.raw.recipe["express-transport-belt"].category = "crafting"
-  data.raw.recipe["express-underground-belt"].category = "crafting"
-  data.raw.recipe["express-splitter"].category = "crafting"
 
 else
   data:extend({
@@ -349,11 +350,11 @@ else
 end
 
 if mods["space-age"] then
-  data.raw.recipe["bob-turbo-transport-belt"].additional_categories = { "pressing" }
-  data.raw.recipe["bob-turbo-underground-belt"].additional_categories = { "pressing" }
-  data.raw.recipe["bob-turbo-splitter"].additional_categories = { "pressing" }
-  data.raw.recipe["bob-ultimate-transport-belt"].additional_categories = { "pressing" }
-  data.raw.recipe["bob-basic-splitter"].additional_categories = { "pressing" }
-  data.raw.recipe["bob-ultimate-underground-belt"].additional_categories = { "pressing" }
-  data.raw.recipe["bob-ultimate-splitter"].additional_categories = { "pressing" }
+  data.raw.recipe["bob-turbo-transport-belt"].category = "pressing"
+  data.raw.recipe["bob-turbo-underground-belt"].category = "pressing"
+  data.raw.recipe["bob-turbo-splitter"].category = "pressing"
+  data.raw.recipe["bob-ultimate-transport-belt"].category = "pressing"
+  data.raw.recipe["bob-basic-splitter"].category = "pressing"
+  data.raw.recipe["bob-ultimate-underground-belt"].category = "pressing"
+  data.raw.recipe["bob-ultimate-splitter"].category = "pressing"
 end
