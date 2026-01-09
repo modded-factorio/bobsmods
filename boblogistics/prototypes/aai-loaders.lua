@@ -143,7 +143,7 @@ if mods["aai-loaders"] then
 
     --Add space-age crafting category
     if mods["space-age"] then
-      data.raw.recipe["aai-basic-loader"].additional_categories = { "pressing" }
+      data.raw.recipe["aai-basic-loader"].category = "pressing"
     end
   end
 
