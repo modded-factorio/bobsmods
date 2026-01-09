@@ -140,7 +140,13 @@ if mods["aai-loaders"] then
       localise = false,
     })
     bobmods.lib.tech.add_prerequisite("aai-loader", "aai-basic-loader")
+
+    --Add space-age crafting category
+    if mods["space-age"] then
+      data.raw.recipe["aai-basic-loader"].additional_categories = { "pressing" }
+    end
   end
+
   AAILoaders.make_tier({
     name = "turbo",
     transport_belt = "bob-turbo-transport-belt",
@@ -292,4 +298,11 @@ if mods["aai-loaders"] then
       end
     end
   end
+
+  --Add space-age crafting category
+  if mods["space-age"] then
+    data.raw.recipe["aai-turbo-loader"].category = "crafting-with-fluid-or-metallurgy"
+    data.raw.recipe["aai-ultimate-loader"].category = "crafting-with-fluid-or-metallurgy"
+  end
+
 end
