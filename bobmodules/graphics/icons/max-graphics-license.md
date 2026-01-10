@@ -1,16 +1,7 @@
-The license below covers these graphics file:
-- basic-circuit-board
-- basic-electronic-circuit-board
-- circuit-board
-- electronic-circuit-board
-- electronic-logic-board
-- electronic-processing-board
-- fibreglass-board
-- multi-layer-circuit-board
-- phenolic-board
-- solder
-- superior-circuit-board
-- wooden-board
+This license covers the images in this directory as specifically called out:
+- module-case.png
+- module-circuit-board.png
+- module-contact.png
 
 MIT License
 

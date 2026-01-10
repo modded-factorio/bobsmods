@@ -4,9 +4,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
 end
 
 -- Add any additional science packs to Lab 2
-if mods["space-age"] then
-  local lab = data.raw["lab"]["lab"]
-  local lab2 = data.raw["lab"]["bob-lab-2"]
+local lab = data.raw["lab"]["lab"]
+local lab2 = data.raw["lab"]["bob-lab-2"]
 
-  bobmods.lib.table_merge(lab2.inputs, lab.inputs)
-end
+bobmods.lib.table_merge(lab2.inputs, lab.inputs)
