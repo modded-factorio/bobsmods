@@ -6,6 +6,8 @@ Date: ???
       - If Bob's Assembling machines mod is enabled, Production science pack will require Assembling machine 3 instead of Assembling machine 2
       - If Bob's Electronics mod is enabled, Automation science pack will require a Basic circuit board (brown) instead of Copper plate
       - If Bob's Electronics mod is enabled, Logistic science pack will require an Electronic circuit (green)
+  Bugfixes:
+    - Allow Lab 2 to accept all science packs #512
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 02. 01. 2026
