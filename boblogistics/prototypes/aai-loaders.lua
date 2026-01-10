@@ -304,5 +304,4 @@ if mods["aai-loaders"] then
     data.raw.recipe["aai-turbo-loader"].category = "crafting-with-fluid-or-metallurgy"
     data.raw.recipe["aai-ultimate-loader"].category = "crafting-with-fluid-or-metallurgy"
   end
-
 end

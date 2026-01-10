@@ -1,5 +1,4 @@
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
-
   data.raw.recipe["transport-belt"].ingredients = {
     { type = "item", name = "iron-plate", amount = 2 },
     { type = "item", name = "iron-gear-wheel", amount = 2 },
@@ -178,9 +177,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         results = { { type = "item", name = "bob-ultimate-splitter", amount = 1 } },
       },
     })
-
   else
-
     data.raw.recipe["underground-belt"].ingredients = {
       { type = "item", name = "transport-belt", amount = 5 },
       { type = "item", name = "iron-plate", amount = 4 },
@@ -277,8 +274,6 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     data.raw.recipe["express-underground-belt"].category = "crafting"
     data.raw.recipe["express-splitter"].category = "crafting"
   end
-
-
 else
   data:extend({
     {
