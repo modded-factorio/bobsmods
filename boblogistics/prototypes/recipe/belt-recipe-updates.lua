@@ -1,4 +1,6 @@
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+  bobmods.lib.recipe.enabled("transport-belt", false)
+
   if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value == true then
     -- Do nothing
   else
