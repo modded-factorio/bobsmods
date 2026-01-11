@@ -2,6 +2,7 @@
 Version: 2.0.5
 Date: ???
   Changes:
+    - Updated Korean locale #506
     - Allow Lithium-ion batteris and Silver zinc batteries to be crafted in a Cryogenic plant #515
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
