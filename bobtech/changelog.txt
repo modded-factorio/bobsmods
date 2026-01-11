@@ -2,6 +2,7 @@
 Version: 2.0.4
 Date: ???
   Changes:
+    - Updated Korean locale #506
     - Science pack recipe changes #510
       - If Bob's Assembling machines mod is enabled, Production science pack will require Assembling machine 3 instead of Assembling machine 2
       - If Bob's Electronics mod is enabled, Automation science pack will require a Basic circuit board (brown) instead of Copper plate
