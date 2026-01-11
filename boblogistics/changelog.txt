@@ -1,16 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: ???
+  Bugfixes:
+    - Adjusted Steam powered inserter speed and consumption #508
+    - Fixed belt crafting categories #511
+---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 02. 01. 2026
   Bugfixes:
-    - Hide pipe connection arrows #456
-    - Fix pipe visualization #458
-    - Fix Storage tank graphics error #469
+    - Hid pipe connection arrows #456
+    - Fixed pipe visualization #458
+    - Fixed Storage tank graphics error #469
     - Fixed limited parameters available on buffer and requester chests #498
   Changes:
     - Updated AAI Industry integration #393
-    - Integrate Bob's Locale Translations mod #445
+    - Integrated Bob's Locale Translations mod #445
     - Added support for frozen entities (with Space Age) #477
-    - Allow splitters to be connected to the circuit network #486
+    - Allowd splitters to be connected to the circuit network #486
     - Re-added valves #488
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3

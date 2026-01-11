@@ -1,3 +1,8 @@
+if mods["bobelectronics"] then
+  bobmods.lib.recipe.replace_ingredient("automation-science-pack", "copper-plate", "bob-basic-circuit-board")
+  bobmods.lib.recipe.add_ingredient("logistic-science-pack", { type = "item", name = "electronic-circuit", amount = 1 })
+end
+
 bobmods.lib.tech.remove_science_pack("logistics-3", "production-science-pack")
 bobmods.lib.tech.replace_prerequisite("logistics-3", "production-science-pack", "chemical-science-pack")
 bobmods.lib.tech.add_prerequisite("logistics-3", "logistics-2")
@@ -233,7 +238,11 @@ end
 if data.raw.item["bob-bronze-alloy"] then
   bobmods.lib.tech.add_prerequisite("chemical-science-pack", "bob-alloy-processing")
 end
-bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")
+if mods["bobassembly"] then
+  bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-3")
+else
+  bobmods.lib.tech.replace_prerequisite("production-science-pack", "productivity-module", "automation-2")
+end
 bobmods.lib.tech.remove_prerequisite("production-science-pack", "railway")
 if data.raw.technology["bob-electrolyser-3"] then
   bobmods.lib.tech.add_prerequisite("production-science-pack", "bob-electrolyser-3")

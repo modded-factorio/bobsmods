@@ -428,3 +428,8 @@ if mods["quality"] then
     "battery",
   })
 end
+
+if mods["space-age"] then
+  data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
+  data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
+end
