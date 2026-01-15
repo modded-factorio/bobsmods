@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
-Date: ???
+Date: 15. 01. 2026
   Bugfixes:
     - Adjusted Steam powered inserter speed and consumption #508
     - Fixed belt crafting categories #511
