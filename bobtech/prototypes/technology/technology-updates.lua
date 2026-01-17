@@ -281,16 +281,11 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("electronics", "copper-cable")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "lab")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "small-electric-pole")
-  data.raw.technology.electronics.research_trigger = nil
-  data.raw.technology.electronics.unit = {
-    count = 20,
-    time = 10,
-    ingredients = {
-      { "automation-science-pack", 1 },
-    },
+  data.raw.technology["electronics"].research_trigger = {
+    type = "craft-item",
+    item = "copper-cable",
+    count = 10,
   }
-  bobmods.lib.tech.remove_prerequisite("automation-science-pack", "electronics")
-  bobmods.lib.tech.add_prerequisite("electronics", "automation-science-pack")
   data.raw.technology["automation-science-pack"].research_trigger = {
     type = "craft-item",
     item = "bob-burner-lab",
