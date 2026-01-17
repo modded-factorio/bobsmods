@@ -281,11 +281,49 @@ if settings.startup["bobmods-burnerphase"].value == true then
   bobmods.lib.tech.remove_recipe_unlock("electronics", "copper-cable")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "lab")
   bobmods.lib.tech.remove_recipe_unlock("electronics", "small-electric-pole")
-  data.raw.technology["electronics"].research_trigger = {
-    type = "craft-item",
-    item = "copper-cable",
-    count = 10,
-  }
+
+  if mods["bobelectronics"] then
+    data.raw.technology.electronics.research_trigger = {
+      type = "craft-item",
+      item = "copper-cable",
+      count = 40,
+    }
+    bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
+    if mods["bobpower"] then
+      bobmods.lib.tech.remove_prerequisite("bob-fluid-generator-1", "electronics")
+    end
+    if mods["bobmining"] then
+      bobmods.lib.tech.remove_prerequisite("bob-water-miner-2", "electronics")
+    end
+    if mods["bobassembly"] then
+      bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "electronics")
+    end
+    if data.raw.technology["bob-chemical-plant"] then
+      bobmods.lib.tech.remove_prerequisite("bob-chemical-plant", "electronics")
+    end
+  else
+    data.raw.technology.electronics.research_trigger = nil
+    data.raw.technology.electronics.unit = {
+      count = 20,
+      time = 10,
+      ingredients = {
+        { "automation-science-pack", 1 },
+      },
+    }
+    bobmods.lib.tech.add_prerequisite("automation", "electronics")
+    bobmods.lib.tech.remove_prerequisite("automation-science-pack", "electronics")
+    bobmods.lib.tech.remove_prerequisite("electric-mining-drill", "automation-science-pack")
+    bobmods.lib.tech.add_prerequisite("electric-mining-drill", "electronics")
+    bobmods.lib.tech.add_prerequisite("electronics", "automation-science-pack")
+    bobmods.lib.tech.add_prerequisite("fast-inserter", "electronics")
+    bobmods.lib.tech.remove_prerequisite("lamp", "automation-science-pack")
+    bobmods.lib.tech.add_prerequisite("lamp", "electronics")
+    bobmods.lib.tech.add_prerequisite("logistics", "electronics")
+    bobmods.lib.tech.add_prerequisite("radar", "electronics")
+    bobmods.lib.tech.remove_prerequisite("repair-pack", "automation-science-pack")
+    bobmods.lib.tech.add_prerequisite("repair-pack", "electronics")
+  end
+
   data.raw.technology["automation-science-pack"].research_trigger = {
     type = "craft-item",
     item = "bob-burner-lab",
@@ -302,16 +340,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
     bobmods.lib.tech.remove_prerequisite("bob-fluid-barrel-processing", "logistic-science-pack")
   end
 
-  bobmods.lib.tech.add_prerequisite("automation", "electronics")
-  bobmods.lib.tech.add_prerequisite("fast-inserter", "electronics")
-  bobmods.lib.tech.remove_prerequisite("lamp", "automation-science-pack")
-  bobmods.lib.tech.add_prerequisite("lamp", "electronics")
-  bobmods.lib.tech.remove_prerequisite("repair-pack", "automation-science-pack")
-  bobmods.lib.tech.add_prerequisite("repair-pack", "electronics")
-  bobmods.lib.tech.add_prerequisite("logistics", "electronics")
-  bobmods.lib.tech.add_prerequisite("radar", "electronics")
-  bobmods.lib.tech.remove_prerequisite("electric-mining-drill", "automation-science-pack")
-  bobmods.lib.tech.add_prerequisite("electric-mining-drill", "electronics")
   if
     mods["bobmining"]
     and settings.startup["bobmods-mining-waterminers"].value == true
@@ -324,21 +352,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-electrolysis-1", "electronics")
     bobmods.lib.tech.add_prerequisite("bob-air-compressor-1", "electronics")
     bobmods.lib.tech.add_prerequisite("bob-water-bore-1", "electronics")
-  end
-  if mods["bobelectronics"] then
-    bobmods.lib.tech.remove_prerequisite("automation-2", "electronics")
-    if mods["bobpower"] then
-      bobmods.lib.tech.remove_prerequisite("bob-fluid-generator-1", "electronics")
-    end
-    if mods["bobmining"] then
-      bobmods.lib.tech.remove_prerequisite("bob-water-miner-2", "electronics")
-    end
-    if mods["bobassembly"] then
-      bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "electronics")
-    end
-    if data.raw.technology["bob-chemical-plant"] then
-      bobmods.lib.tech.remove_prerequisite("bob-chemical-plant", "electronics")
-    end
   end
 
   bobmods.lib.tech.add_science_pack("steel-processing", "logistic-science-pack", 1)
