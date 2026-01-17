@@ -111,4 +111,17 @@ if settings.startup["bobmods-power-poles"].value == true then
       results = { { type = "item", name = "bob-substation-4", amount = 1 } },
     },
   })
+
+  if mods["space-age"] then
+    bobmods.lib.recipe.add_additional_category("bob-big-electric-pole-2", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-big-electric-pole-3", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-big-electric-pole-4", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-medium-electric-pole-2", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-medium-electric-pole-3", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-medium-electric-pole-4", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-substation-2", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-substation-3", "electromagnetics")
+    bobmods.lib.recipe.add_additional_category("bob-substation-4", "electromagnetics")
+  end
+
 end
