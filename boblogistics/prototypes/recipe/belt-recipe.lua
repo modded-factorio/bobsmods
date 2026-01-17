@@ -266,6 +266,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   if mods["space-age"] then
     data.raw.recipe["bob-basic-transport-belt"].category = "pressing"
     data.raw.recipe["bob-basic-underground-belt"].category = "pressing"
+    data.raw.recipe["bob-basic-splitter"].category = "pressing"
     data.raw.recipe["express-transport-belt"].category = "pressing"
     data.raw.recipe["express-underground-belt"].category = "pressing"
     data.raw.recipe["express-splitter"].category = "pressing"
@@ -349,7 +350,6 @@ if mods["space-age"] then
   data.raw.recipe["bob-turbo-underground-belt"].category = "pressing"
   data.raw.recipe["bob-turbo-splitter"].category = "pressing"
   data.raw.recipe["bob-ultimate-transport-belt"].category = "pressing"
-  data.raw.recipe["bob-basic-splitter"].category = "pressing"
   data.raw.recipe["bob-ultimate-underground-belt"].category = "pressing"
   data.raw.recipe["bob-ultimate-splitter"].category = "pressing"
 end

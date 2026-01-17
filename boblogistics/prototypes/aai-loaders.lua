@@ -1,4 +1,4 @@
-if mods["aai-loaders"] then
+if mods["aai-loaders"] and settings.startup["aai-loaders-mode"] and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
   local ingredients = {
     basic = { { type = "item", name = "bob-basic-transport-belt", amount = 1 } },
     regular = { { type = "item", name = "transport-belt", amount = 1 } },
