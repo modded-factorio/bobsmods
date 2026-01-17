@@ -620,4 +620,59 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
     data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
   end
+
+  if mods["space-age"] then
+    data.raw.recipe["beacon"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("beacon", "electromagnetics")
+
+    data.raw.recipe["discharge-defense-equipment"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("discharge-defense-equipment", "electromagnetics")
+
+    data.raw.recipe["accumulator"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("accumulator", "electromagnetics")
+    data.raw.recipe["small-electric-pole"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("small-electric-pole", "electromagnetics")
+    data.raw.recipe["medium-electric-pole"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("medium-electric-pole", "electromagnetics")
+    data.raw.recipe["big-electric-pole"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("big-electric-pole", "electromagnetics")
+    data.raw.recipe["substation"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("substation", "electromagnetics")
+    data.raw.recipe["solar-panel"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("solar-panel", "electromagnetics")
+
+    data.raw.recipe["lightning-rod"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("lightning-rod", "electromagnetics")
+
+    data.raw.recipe["speed-module"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("speed-module", "electromagnetics")
+    data.raw.recipe["speed-module-2"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("speed-module-2", "electromagnetics")
+    data.raw.recipe["speed-module-3"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("speed-module-3", "electromagnetics")
+
+    data.raw.recipe["efficiency-module"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("efficiency-module", "electromagnetics")
+    data.raw.recipe["efficiency-module-2"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("efficiency-module-2", "electromagnetics")
+    data.raw.recipe["efficiency-module-3"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("efficiency-module-3", "electromagnetics")
+
+    data.raw.recipe["productivity-module"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("productivity-module", "electromagnetics")
+    data.raw.recipe["productivity-module-2"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("productivity-module-2", "electromagnetics")
+    data.raw.recipe["productivity-module-3"].category = "crafting"
+    bobmods.lib.recipe.add_additional_category("productivity-module-3", "electromagnetics")
+
+    if mods["quality"] then
+      data.raw.recipe["quality-module"].category = "crafting"
+      bobmods.lib.recipe.add_additional_category("quality-module", "electromagnetics")
+      data.raw.recipe["quality-module-2"].category = "crafting"
+      bobmods.lib.recipe.add_additional_category("quality-module-2", "electromagnetics")
+      data.raw.recipe["quality-module-3"].category = "crafting"
+      bobmods.lib.recipe.add_additional_category("quality-module-3", "electromagnetics")
+    end
+  end
+
 end
