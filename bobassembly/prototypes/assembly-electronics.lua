@@ -622,14 +622,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   if mods["space-age"] then
+    -- Prevent non electronics recipes from being craftable in an electronics assembly machine
     for _, recipe_name in pairs({
       "accumulator",
       "beacon",
       "big-electric-pole",
       "discharge-defense-equipment",
-      "efficiency-module",
-      "efficiency-module-2",
-      "efficiency-module-3",
       "lightning-rod",
       "medium-electric-pole",
       "small-electric-pole",
@@ -638,17 +636,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     }) do
       bobmods.lib.recipe.set_category(recipe_name, "crafting")
       bobmods.lib.recipe.add_additional_category(recipe_name, "electromagnetics")
-    end
-
-    if mods["quality"] then
-      for _, recipe_name in pairs({
-        "quality-module",
-        "quality-module-2",
-        "quality-module-3",
-      }) do
-        bobmods.lib.recipe.set_category(recipe_name, "crafting")
-        bobmods.lib.recipe.add_additional_category(recipe_name, "electromagnetics")
-      end
     end
   end
 end
