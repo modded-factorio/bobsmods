@@ -121,5 +121,4 @@ if settings.startup["bobmods-power-accumulators"].value == true then
     bobmods.lib.recipe.add_additional_category("bob-fast-accumulator-3", "electromagnetics")
     bobmods.lib.recipe.add_additional_category("bob-slow-accumulator-3", "electromagnetics")
   end
-
 end

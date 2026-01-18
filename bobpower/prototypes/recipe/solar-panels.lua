@@ -136,5 +136,4 @@ if settings.startup["bobmods-power-solar"].value == true then
     bobmods.lib.recipe.add_additional_category("bob-solar-panel-3", "electromagnetics")
     bobmods.lib.recipe.add_additional_category("bob-solar-panel-large-3", "electromagnetics")
   end
-
 end

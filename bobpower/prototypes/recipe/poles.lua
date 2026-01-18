@@ -123,5 +123,4 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.recipe.add_additional_category("bob-substation-3", "electromagnetics")
     bobmods.lib.recipe.add_additional_category("bob-substation-4", "electromagnetics")
   end
-
 end
