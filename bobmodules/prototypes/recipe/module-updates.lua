@@ -136,6 +136,8 @@ for _, recipe_name in pairs({
   "bob-pollution-create-processor-3",
   "bob-efficiency-module-4",
   "bob-efficiency-module-5",
+  "bob-god-module",
+  "bob-god-module-productivity",
   "bob-pollution-clean-module-1",
   "bob-pollution-clean-module-2",
   "bob-pollution-clean-module-3",
@@ -165,6 +167,7 @@ end
 
 if mods["quality"] then
   for _, recipe_name in pairs({
+    "bob-god-module-quality",
     "bob-quality-module-4",
     "bob-quality-module-5",
     "bob-quality-processor",

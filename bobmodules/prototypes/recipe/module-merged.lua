@@ -29,11 +29,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
     },
   })
 
-  if mods["space-age"] then
-    bobmods.lib.recipe.add_additional_category("bob-god-module", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-god-module-productivity", "electromagnetics")
-  end
-
   if mods["quality"] then
     data:extend({
       {
@@ -51,10 +46,5 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         results = { { type = "item", name = "bob-god-module-quality", amount = 1 } },
       },
     })
-
-    if mods["space-age"] then
-      bobmods.lib.recipe.add_additional_category("bob-god-module-quality", "electromagnetics")
-    end
-
   end
 end
