@@ -165,6 +165,8 @@ end
 
 if mods["quality"] then
   for _, recipe_name in pairs({
+    "bob-quality-module-4",
+    "bob-quality-module-5",
     "bob-quality-processor",
     "bob-quality-processor-2",
     "bob-quality-processor-3",

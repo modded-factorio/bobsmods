@@ -363,33 +363,4 @@ if mods["quality"] then
       results = { { type = "item", name = "bob-quality-module-5", amount = 1 } },
     },
   })
-
-  if mods["space-age"] then
-    bobmods.lib.recipe.add_additional_category("bob-quality-module-4", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-quality-module-5", "electromagnetics")
-  end
-
-end
-
-if mods["space-age"] then
-  bobmods.lib.recipe.add_additional_category("bob-speed-module-4", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-speed-module-5", "electromagnetics")
-
-  bobmods.lib.recipe.add_additional_category("bob-efficiency-module-4", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-efficiency-module-5", "electromagnetics")
-
-  bobmods.lib.recipe.add_additional_category("bob-productivity-module-4", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-productivity-module-5", "electromagnetics")
-
-  bobmods.lib.recipe.add_additional_category("bob-pollution-clean-module-1", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-clean-module-2", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-clean-module-3", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-clean-module-4", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-clean-module-5", "electromagnetics")
-
-  bobmods.lib.recipe.add_additional_category("bob-pollution-create-module-1", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-create-module-2", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-create-module-3", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-create-module-4", "electromagnetics")
-  bobmods.lib.recipe.add_additional_category("bob-pollution-create-module-5", "electromagnetics")
 end
