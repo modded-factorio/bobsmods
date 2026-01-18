@@ -154,3 +154,8 @@ data:extend({
 })
 
 data.raw.beacon["beacon"].next_upgrade = "bob-beacon-2"
+
+if mods["space-age"] then
+  bobmods.lib.recipe.add_additional_category("bob-beacon-2", "electromagnetics")
+  bobmods.lib.recipe.add_additional_category("bob-beacon-3", "electromagnetics")
+end

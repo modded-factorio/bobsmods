@@ -4,40 +4,6 @@ require("prototypes.recipe.module-updates")
 require("prototypes.recipe.module-merged-updates")
 require("prototypes.technology.module-updates")
 
-if mods["aai-industry"] then
-  if not mods["bobgreenhouse"] then
-    bobmods.lib.recipe.replace_ingredient("bob-module-circuit-board", "bob-wooden-board", "bob-phenolic-board")
-  end
-end
-
-bobmods.lib.recipe.add_additional_category("bob-module-circuit-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-module-processor-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-module-processor-board-2", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-module-processor-board-3", "electronics-with-fluid")
-
-bobmods.lib.recipe.add_additional_category("bob-module-case", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-module-contact", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-speed-processor", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-speed-processor-2", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-speed-processor-3", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-efficiency-processor", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-efficiency-processor-2", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-efficiency-processor-3", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-productivity-processor", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-productivity-processor-2", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-productivity-processor-3", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-pollution-clean-processor", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-pollution-clean-processor-2", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-pollution-clean-processor-3", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-pollution-create-processor", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-pollution-create-processor-2", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-pollution-create-processor-3", "electronics")
-if mods["quality"] then
-  bobmods.lib.recipe.add_additional_category("bob-quality-processor", "electronics")
-  bobmods.lib.recipe.add_additional_category("bob-quality-processor-2", "electronics")
-  bobmods.lib.recipe.add_additional_category("bob-quality-processor-3", "electronics")
-end
-
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-module-contact",

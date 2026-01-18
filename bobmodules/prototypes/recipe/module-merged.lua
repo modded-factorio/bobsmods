@@ -28,6 +28,7 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       results = { { type = "item", name = "bob-god-module-productivity", amount = 1 } },
     },
   })
+
   if mods["quality"] then
     data:extend({
       {
