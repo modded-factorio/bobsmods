@@ -11,6 +11,10 @@ bobmods.lib.machine.copy_categories_from("furnace", "electric-furnace", "bob-mul
 bobmods.lib.machine.copy_categories_from("furnace", "electric-furnace", "bob-multi-purpose-furnace-2")
 
 if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].value == true then
-  bobmods.lib.machine.copy_categories_from("assembling-machine", "assembling-machine-1", "bob-burner-assembling-machine")
+  bobmods.lib.machine.copy_categories_from(
+    "assembling-machine",
+    "assembling-machine-1",
+    "bob-burner-assembling-machine"
+  )
   bobmods.lib.machine.copy_categories_from("assembling-machine", "assembling-machine-3", "bob-steam-assembling-machine")
 end
