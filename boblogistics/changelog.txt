@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: ???
+  Changes:
+    - Updated Korean locale #524
+    - Reduced charge approach distance for robochests. Robots waiting to charge will now wait closer to the robochest. #533
+---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 18. 01. 2026
   Bugfixes:

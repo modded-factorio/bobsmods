@@ -333,8 +333,6 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
     },
   })
 
-  bobmods.lib.tech.ignore_tech_cost_multiplier("automation", false)
-
   if settings.startup["bobmods-assembly-limits"].value == true then
     data.raw["assembling-machine"]["bob-burner-assembling-machine"].ingredient_count = 2
     data.raw["assembling-machine"]["bob-steam-assembling-machine"].ingredient_count = 4
