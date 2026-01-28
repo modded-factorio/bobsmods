@@ -113,7 +113,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       },
       heat_buffer = {
         max_temperature = 750,
-        specific_heat = "5.4MJ",
+        specific_heat = "1.5MJ",
         max_transfer = "10GW",
         connections = {
           {
@@ -230,7 +230,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         connection_patches_disconnected = connection_patches_disconnected("-2"),
         heat_buffer = {
           max_temperature = 1000,
-          specific_heat = "9MJ",
+          specific_heat = "1.5MJ",
           max_transfer = "30GW",
         },
       },
