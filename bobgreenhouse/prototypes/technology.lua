@@ -28,6 +28,7 @@ data:extend({
       },
       time = 15,
     },
+    ignore_tech_cost_multiplier = true,
     order = "f-a-a",
   },
   {
