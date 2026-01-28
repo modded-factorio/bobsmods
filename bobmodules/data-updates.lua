@@ -4,6 +4,20 @@ require("prototypes.recipe.module-updates")
 require("prototypes.recipe.module-merged-updates")
 require("prototypes.technology.module-updates")
 
+if mods["classic-beacon"] then
+  require("__classic-beacon__.prototypes.beacon")
+  data.raw.item["bob-beacon-2"].icon = data.raw.item["beacon"].icon
+  data.raw.item["bob-beacon-3"].icon = data.raw.item["beacon"].icon
+  data.raw.beacon["bob-beacon-2"].icon = data.raw.item["beacon"].icon
+  data.raw.beacon["bob-beacon-3"].icon = data.raw.item["beacon"].icon
+  data.raw.beacon["bob-beacon-2"].graphics_set = data.raw.beacon["beacon"].graphics_set
+  data.raw.beacon["bob-beacon-3"].graphics_set = data.raw.beacon["beacon"].graphics_set
+  data.raw.technology["effect-transmission-2"].icon = data.raw.technology["effect-transmission"].icon
+  data.raw.technology["effect-transmission-3"].icon = data.raw.technology["effect-transmission"].icon
+  data.raw.technology["effect-transmission-2"].icon_size = 128
+  data.raw.technology["effect-transmission-3"].icon_size = 128
+end
+
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-module-contact",

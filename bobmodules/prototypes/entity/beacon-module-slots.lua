@@ -431,6 +431,22 @@ for _, name in pairs(beacons) do
   ---@type data.BeaconPrototype
   local beacon = data.raw["beacon"][name]
 
+  if not beacon.graphics_set.module_visualisations then
+    --Restore module_visualisations if removed by Classic Beacons or other such mods
+    beacon.graphics_set.module_visualisations = {
+      {
+        art_style = "vanilla",
+        use_for_empty_slots = true,
+        tier_offset = 0,
+        slots = {
+          create_vanilla_module_slot_1({ 0, 0 }),
+          create_vanilla_module_slot_2({ 0, 0 }),
+          append_pad_layer(create_vanilla_module_slot_2({ 0, 0 })),
+        },
+      },
+    }
+  end
+
   if beacon.module_slots == 2 then
     -- 5 light modules
     table.insert(beacon.graphics_set.module_visualisations, {

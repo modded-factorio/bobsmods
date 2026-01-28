@@ -155,6 +155,15 @@ data:extend({
 
 data.raw.beacon["beacon"].next_upgrade = "bob-beacon-2"
 
+if mods["classic-beacon"] then
+  data.raw.item["beacon"].icon = "__base__/graphics/icons/beacon.png"
+  data.raw.beacon["beacon"].icon = "__base__/graphics/icons/beacon.png"
+  data.raw.beacon["bob-beacon-2"].icon = "__base__/graphics/icons/beacon.png"
+  data.raw.beacon["bob-beacon-3"].icon = "__base__/graphics/icons/beacon.png"
+  data.raw.technology["effect-transmission"].icon = "__base__/graphics/technology/effect-transmission.png"
+  data.raw.technology["effect-transmission"].icon_size = 256
+end
+
 if mods["space-age"] then
   bobmods.lib.recipe.add_additional_category("bob-beacon-2", "electromagnetics")
   bobmods.lib.recipe.add_additional_category("bob-beacon-3", "electromagnetics")
