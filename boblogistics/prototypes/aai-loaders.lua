@@ -136,7 +136,7 @@ then
         energy_required = 2,
       },
       unlubricated_recipe = {
-        crafting_category = "crafting-with-fluid",
+        crafting_category = "crafting",
         ingredients = unlubricated_ingredients.basic,
         energy_required = 10,
       },
