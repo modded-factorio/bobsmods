@@ -149,6 +149,8 @@ data:extend({
   },
 })
 
+data.raw["lab"]["lab"].next_upgrade = "bob-lab-2"
+
 if feature_flags["freezing"] and mods["space-age"] then
   data.raw.lab["bob-lab-2"].heating_energy = "100kW"
   data.raw.lab["bob-lab-2"].frozen_patch = {
@@ -296,6 +298,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
       },
       fast_replaceable_group = "lab",
+      next_upgrade = "lab",
     },
   })
 
