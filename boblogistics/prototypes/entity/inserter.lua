@@ -64,6 +64,8 @@ local inserter = {
   },
 }
 
+data.raw.inserter["burner-inserter"].next_upgrade = "inserter"
+
 data:extend({
   util.merge({
     data.raw.inserter["inserter"],
@@ -80,6 +82,7 @@ data:extend({
     },
   }),
 })
+data.raw.inserter["bob-steam-inserter"].next_upgrade = nil
 data.raw.inserter["bob-steam-inserter"].hand_base_picture = inserter.graphics.white.hand_base_picture()
 data.raw.inserter["bob-steam-inserter"].hand_closed_picture = inserter.graphics.white.hand_closed_picture()
 data.raw.inserter["bob-steam-inserter"].hand_open_picture = inserter.graphics.white.hand_open_picture()
@@ -297,6 +300,7 @@ if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
   data.raw.inserter["fast-inserter"].localised_name = { "entity-name.bob-express-inserter" }
   data.raw.inserter["bulk-inserter"].localised_name = { "entity-name.bob-express-bulk-inserter" }
 
+  data.raw.inserter["bob-express-inserter"].next_upgrade = "bob-express-bulk-inserter"
   data.raw.inserter["bob-express-inserter"].localised_name = { "entity-name.bob-ultimate-inserter" }
   data.raw.inserter["bob-express-inserter"].icon = "__boblogistics__/graphics/icons/inserter/green-inserter.png"
   data.raw.inserter["bob-express-inserter"].icon_size = 32
