@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Reduced charge approach distance for robochests. Robots waiting to charge will now wait closer to the robochest. #533
   Bugfixes:
+    - Allowed Basic loaders (AAI Loaders mod) to be crafted in Assembling maching 1 / hand crafted when using expensive mode. #535
     - Fixed next_upgrade for Steam powered inserter and Ultimate inserter #542
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
@@ -30,7 +31,7 @@ Date: 02. 01. 2026
     - Updated AAI Industry integration #393
     - Integrated Bob's Locale Translations mod #445
     - Added support for frozen entities (with Space Age) #477
-    - Allowd splitters to be connected to the circuit network #486
+    - Allowed splitters to be connected to the circuit network #486
     - Re-added valves #488
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
