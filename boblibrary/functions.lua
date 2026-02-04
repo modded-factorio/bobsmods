@@ -23,7 +23,7 @@ local function table_find(table1, value)
     end
   end
 
-  return nil;
+  return nil
 end
 
 -- Inserts the new item into the table only if it doesn't already exist. (Index optional.)
