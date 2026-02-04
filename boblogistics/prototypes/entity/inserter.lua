@@ -64,8 +64,6 @@ local inserter = {
   },
 }
 
-data.raw.inserter["burner-inserter"].next_upgrade = "inserter"
-
 data:extend({
   util.merge({
     data.raw.inserter["inserter"],
