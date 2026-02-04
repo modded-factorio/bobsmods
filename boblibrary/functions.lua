@@ -1,14 +1,63 @@
--- Merges table2's contents into table1.
+--- Searches table for given value
+--- Returns index if found, nil otherwise
+local function table_find(table1, value)
+  for index, value_1 in pairs(table1) do
+    if type(value) == "table" then
+      local is_table_same = true
+
+      -- Iterate inner table
+      for _, inner_value in pairs(value) do
+        if not table_find(value_1, inner_value) then
+          is_table_same = false
+        end
+      end
+
+      -- Table is same as value table, thus the value is found
+      if is_table_same then
+        return index
+      end
+    else
+      if value_1 == value then
+        return index
+      end
+    end
+  end
+
+  return nil
+end
+
+-- Inserts the new item into the table only if it doesn't already exist. (Index optional.)
+function bobmods.lib.safe_insert(array, new_item, index)
+  if not table_find(array, new_item) then
+    if index then
+      table.insert(array, index, new_item)
+    else
+      table.insert(array, new_item)
+    end
+  end
+end
+
+--- Safely inserts new items when index is numerical, replaces non-numeric matching indices
+local function safe_insert_and_replace(array, new_item, index)
+  if type(index) == "number" then
+    bobmods.lib.safe_insert(array, new_item, index)
+  else
+    array[index] = new_item
+  end
+end
+
+--- Merges table2's contents into table1.
+--- This will append non-existing values and replace values with matching non-numeric key
 function bobmods.lib.table_merge(table1, table2)
   for index, value in pairs(table2) do
     if type(value) == "table" then
       if type(table1[index]) == "table" then
         bobmods.lib.table_merge(table1[index], table2[index])
       else
-        table1[index] = util.table.deepcopy(table2[index])
+        safe_insert_and_replace(table1, util.table.deepcopy(table2[index]), index)
       end
     else
-      table1[index] = value
+      safe_insert_and_replace(table1, value, index)
     end
   end
 end
@@ -36,23 +85,6 @@ end
 
 function bobmods.lib.belt_speed_ips(ips)
   return ips * 1 / 480
-end
-
---Inserts the new item into the table only if it doesn't already exist. (Index optional. Designed to insert strings only.)
-function bobmods.lib.safe_insert(array, new_item, index)
-  local addit = true
-  for i, item in pairs(array) do
-    if item == new_item then
-      addit = false
-    end
-  end
-  if addit then
-    if index then
-      table.insert(array, index, new_item)
-    else
-      table.insert(array, new_item)
-    end
-  end
 end
 
 --takes an item/fluid/entity(maybe even recipe) and returns a complete icons array.
