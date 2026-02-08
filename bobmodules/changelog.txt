@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed crash with Classic Beacons mod #527
   Changes:
+    - Set minimum values for module settings #540
     - Adjusted modules tech costs #545
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
