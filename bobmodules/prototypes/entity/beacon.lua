@@ -13,6 +13,7 @@ for _, name in pairs(beacons) do
   -- Fallback to the basic beacon if not a supported count of module slots.
   local image_index = module_slots_to_base_image_map[beacon.module_slots] or 1
 
+  beacon.graphics_set = require("__base__/prototypes/entity/beacon-animations")
   beacon.graphics_set.animation_list = {
     {
       render_layer = "floor-mechanics",
