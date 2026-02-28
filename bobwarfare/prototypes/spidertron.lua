@@ -344,6 +344,7 @@ function bobmods.warfare.create_spidertron(arguments)
         filename = "__base__/sound/item/spidertron-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = arguments.item_weight or 1000000
     },
     {
       type = "spider-vehicle",
@@ -899,6 +900,8 @@ bobmods.warfare.create_spidertron({
     { type = "bob-plasma", decrease = 0, percent = 95 },
   },
 })
+
+data.raw["item-with-entity-data"].spidertron.weight = 1000000
 
 data.raw.technology.spidertron.order = "d-e-g-c"
 data:extend({
