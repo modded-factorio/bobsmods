@@ -242,3 +242,22 @@ data:extend({
     circuit_wire_max_distance = 15,
   }),
 })
+
+if mods["space-age"] then
+  local no_space = {
+    { property = "gravity", min = 1 },
+  }
+
+  data.raw["logistic-container"]["bob-passive-provider-chest-2"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-active-provider-chest-2"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-storage-chest-2"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-buffer-chest-2"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-requester-chest-2"].surface_conditions = no_space
+
+  data.raw["logistic-container"]["bob-passive-provider-chest-3"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-active-provider-chest-3"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-storage-chest-3"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-buffer-chest-3"].surface_conditions = no_space
+  data.raw["logistic-container"]["bob-requester-chest-3"].surface_conditions = no_space
+
+end
