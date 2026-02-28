@@ -1,5 +1,6 @@
 data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
 data.raw.item["pumpjack"].order = "b[fluids]-b[pumpjack-1]"
+data.raw.item["pumpjack"].weight = 50000
 
 if settings.startup["bobmods-mining-pumpjacks"].value == true then
   data.raw["mining-drill"]["pumpjack"].next_upgrade = "bob-pumpjack-1"
@@ -26,6 +27,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
     {
       type = "item",
@@ -48,6 +50,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
     {
       type = "item",
@@ -70,6 +73,7 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
   })
 
