@@ -1,4 +1,7 @@
 if settings.startup["bobmods-assembly-chemicalplants"].value == true then
+
+  data.raw.item["chemical-plant"].weight = 40000
+
   data:extend({
     {
       type = "item-subgroup",
@@ -139,6 +142,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 40000,
     },
     {
       type = "item",
@@ -161,6 +165,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 40000,
     },
     {
       type = "item",
@@ -183,6 +188,7 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 40000,
     },
 
     {
