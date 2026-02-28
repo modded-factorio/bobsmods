@@ -21,6 +21,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
     {
       type = "item",
@@ -43,6 +44,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
     {
       type = "item",
@@ -65,6 +67,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
     {
       type = "item",
@@ -87,6 +90,7 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
         filename = "__base__/sound/item/pumpjack-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 50000,
     },
   })
 
