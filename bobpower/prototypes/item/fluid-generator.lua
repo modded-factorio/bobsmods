@@ -20,6 +20,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 100000,
     },
 
     {
@@ -42,6 +43,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 100000,
     },
 
     {
@@ -64,6 +66,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 100000,
     },
   })
 
@@ -95,6 +98,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           volume = 0.8,
         },
       },
+      weight = 100000,
     })
   end
 end
