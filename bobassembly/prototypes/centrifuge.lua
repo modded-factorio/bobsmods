@@ -24,6 +24,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 1000000,
     },
     {
       type = "item",
@@ -46,6 +47,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 1000000,
     },
 
     {
