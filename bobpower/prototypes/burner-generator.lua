@@ -21,6 +21,7 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 100000,
     },
 
     {
@@ -123,4 +124,11 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       },
     },
   })
+
+  if mods["space-age"] then
+    data.raw["burner-generator"]["bob-burner-generator"].surface_conditions = {
+      { property = "pressure", min = 10 },
+    }
+  end
+
 end
