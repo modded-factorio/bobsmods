@@ -306,6 +306,14 @@ if settings.startup["bobmods-burnerphase"].value == true then
     DiscoScience.prepareLab(data.raw["lab"]["bob-burner-lab"])
   end
 
+  local no_space = {
+    { property = "pressure", min = 10 },
+  }
+
+  if mods["space-age"] then
+    data.raw.lab["bob-burner-lab"].surface_conditions = no_space
+  end
+
   if not data.raw["burner-generator"]["bob-burner-generator"] then
     data:extend({
       {
@@ -397,5 +405,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
         },
       },
     })
+
+    if mods["space-age"] then
+      data.raw["burner-generator"]["bob-burner-generator"].surface_conditions = no_space
+    end
+
   end
 end
