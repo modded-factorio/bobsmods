@@ -13,8 +13,12 @@ data:extend({
 --        tint = {r = 0.7, g = 0.1, b = 0.7},
 --        tint = {r = 0.1, g = 0.7, b = 0.1},
 
+
+data.raw.item["assembling-machine-1"].weight = 20000
+
 data.raw.item["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
 data.raw.item["assembling-machine-2"].icon_size = 32
+data.raw.item["assembling-machine-2"].weight = 20000
 data.raw["assembling-machine"]["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
 data.raw["assembling-machine"]["assembling-machine-2"].icon_size = 32
 table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
@@ -30,6 +34,7 @@ table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set
 
 data.raw.item["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/assembling-machine-3.png"
 data.raw.item["assembling-machine-3"].icon_size = 32
+data.raw.item["assembling-machine-3"].weight = 20000
 data.raw["assembling-machine"]["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/assembling-machine-3.png"
 data.raw["assembling-machine"]["assembling-machine-3"].icon_size = 32
 table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
@@ -65,7 +70,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 40000,
+    weight = 20000,
   },
 
   {
@@ -246,7 +251,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 40000,
+    weight = 20000,
   },
 
   {
@@ -435,7 +440,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 40000,
+    weight = 20000,
   },
 
   {
