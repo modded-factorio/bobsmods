@@ -49,7 +49,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 20000,
+      weight = 10000,
     },
 
     {
@@ -185,7 +185,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 40000,
+      weight = 20000,
     },
 
     {
