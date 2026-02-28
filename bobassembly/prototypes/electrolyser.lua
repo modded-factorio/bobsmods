@@ -125,6 +125,7 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 20000,
     },
     {
       type = "item",
@@ -147,6 +148,7 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 20000,
     },
     {
       type = "item",
@@ -169,6 +171,7 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 20000,
     },
 
     {
@@ -192,6 +195,7 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 20000,
     },
 
     {
