@@ -20,6 +20,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
+      weight = 20000,
     },
 
     {
@@ -33,6 +34,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
+      weight = 20000,
     },
 
     {
@@ -46,6 +48,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
+      weight = 20000,
     },
 
     {
@@ -59,6 +62,7 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
+      weight = 20000,
     },
   })
 end
