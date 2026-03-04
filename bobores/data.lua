@@ -130,3 +130,5 @@ data.raw.item["iron-ore"].weight = 5000
 data.raw.item["stone"].weight = 2500
 data.raw.item["coal"].weight = 1000
 data.raw.item["uranium-ore"].weight = 20000
+
+data.raw.item.landfill.weight = 50000 --Needed to compensate for change to stone's weight
