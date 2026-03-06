@@ -19,6 +19,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 50000,
   },
 })
 
@@ -38,6 +39,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 100000,
   },
   {
     type = "item",
@@ -71,6 +73,7 @@ data:extend({
       filename = "__base__/sound/item/fuel-cell-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 1000,
   },
 })
 
@@ -86,6 +89,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 50000,
   },
   {
     type = "item",
@@ -102,6 +106,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 100000,
   },
   {
     type = "item",
@@ -118,6 +123,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 100000,
   },
   {
     type = "item",
@@ -130,6 +136,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 100000,
   },
 })
 
@@ -158,6 +165,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 100000,
   },
   {
     type = "item",
@@ -179,6 +187,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 100000,
   },
 })
 
@@ -207,6 +216,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 100000,
   },
   {
     type = "item",
@@ -219,6 +229,7 @@ data:extend({
     drop_sound = radioactive_drop_move,
     inventory_move_sound = radioactive_drop_move,
     pick_sound = radioactive_pick,
+    weight = 2000,
   },
 })
 
