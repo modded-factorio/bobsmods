@@ -21,7 +21,7 @@ if bobmods.ores.settings.UnsortedGemOre == true then
         filename = "__base__/sound/item/resource-inventory-pickup.ogg",
         volume = 0.6,
       },
-      weight = 2000,
+      weight = 5000,
     },
     {
       type = "recipe",
@@ -70,7 +70,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 2000,
+    weight = 2500,
   },
   {
     type = "item",
@@ -93,7 +93,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 2000,
+    weight = 2500,
   },
   {
     type = "item",
@@ -116,7 +116,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 2000,
+    weight = 2500,
   },
   {
     type = "item",
@@ -139,7 +139,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 2000,
+    weight = 2500,
   },
   {
     type = "item",
@@ -162,7 +162,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 2000,
+    weight = 2500,
   },
   {
     type = "item",
@@ -185,6 +185,6 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 2000,
+    weight = 2500,
   },
 })
