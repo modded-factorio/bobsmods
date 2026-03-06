@@ -142,7 +142,7 @@ if not mods["bobwarfare"] then
       },
       subgroup = "armor",
       infinite = true,
-      order = "f[power-armor-mk3]",
+      order = "e[power-armor-mk3]",
       stack_size = 1,
       equipment_grid = "power-armor-equipment-grid-mk3",
       open_sound = "__base__/sound/armor-open.ogg",
@@ -160,6 +160,7 @@ if not mods["bobwarfare"] then
         volume = 0.7,
       },
       inventory_size_bonus = 40,
+      weight = 1000000,
     },
 
     {
@@ -212,7 +213,7 @@ if not mods["bobwarfare"] then
       },
       subgroup = "armor",
       infinite = true,
-      order = "g[power-armor-mk4]",
+      order = "e[power-armor-mk4]",
       stack_size = 1,
       equipment_grid = "power-armor-equipment-grid-mk4",
       open_sound = "__base__/sound/armor-open.ogg",
@@ -230,6 +231,7 @@ if not mods["bobwarfare"] then
         volume = 0.7,
       },
       inventory_size_bonus = 50,
+      weight = 1000000,
     },
 
     {
@@ -282,7 +284,7 @@ if not mods["bobwarfare"] then
       },
       subgroup = "armor",
       infinite = true,
-      order = "h[power-armor-mk5]",
+      order = "e[power-armor-mk5]",
       stack_size = 1,
       equipment_grid = "power-armor-equipment-grid-mk5",
       open_sound = "__base__/sound/armor-open.ogg",
@@ -300,6 +302,7 @@ if not mods["bobwarfare"] then
         volume = 0.7,
       },
       inventory_size_bonus = 60,
+      weight = 1000000,
     },
 
     {
