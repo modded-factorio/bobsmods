@@ -336,6 +336,13 @@ data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["sulfur"].stack_size = 200
 data.raw.item["wood"].stack_size = 200
 
+-- Weight changes
+data.raw.item["iron-plate"].weight = 1000
+data.raw.item["copper-plate"].weight = 1000
+data.raw.item["steel-plate"].weight = 2500
+data.raw.item["wood"].weight = 2500
+data.raw.item["electric-engine-unit"].weight = 5000
+
 if not bobmods.ores.cobalt.enabled then
   bobmods.lib.tech.remove_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
   bobmods.lib.recipe.hide("bob-cobalt-oxide")
@@ -432,4 +439,5 @@ end
 if mods["space-age"] then
   data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
   data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
+  data.raw["rocket-silo"]["rocket-silo"].to_be_inserted_to_rocket_inventory_size = 50
 end
