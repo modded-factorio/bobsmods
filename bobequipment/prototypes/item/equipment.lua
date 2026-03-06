@@ -6,12 +6,18 @@ data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[p
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equipment-1]"
 data.raw.item["exoskeleton-equipment"].subgroup = "equipment"
 data.raw.item["belt-immunity-equipment"].subgroup = "equipment"
+data.raw.item["belt-immunity-equipment"].weight = 50000
 
 data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
 data.raw.item["energy-shield-equipment"].icon_size = 64
+data.raw.item["energy-shield-equipment"].stack_size = 50
+data.raw.item["energy-shield-equipment"].weight = 40000
 data.raw.item["energy-shield-mk2-equipment"].icon =
   "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png"
 data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
+data.raw.item["energy-shield-mk2-equipment"].stack_size = 50
+data.raw.item["energy-shield-mk2-equipment"].weight = 40000
+data.raw.item["discharge-defense-equipment"].weight = 250000
 
 data:extend({
   {
@@ -35,7 +41,7 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
   {
     type = "item",
@@ -58,7 +64,7 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
   {
     type = "item",
@@ -81,7 +87,7 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
   {
     type = "item",
@@ -104,14 +110,17 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
 })
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
 data.raw.item["battery-equipment"].icon_size = 64
+data.raw.item["battery-equipment"].stack_size = 50
+data.raw.item["battery-equipment"].weight = 100000
 data.raw.item["battery-mk2-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-mk2-equipment.png"
 data.raw.item["battery-mk2-equipment"].icon_size = 64
+data.raw.item["battery-mk2-equipment"].stack_size = 50
 
 data:extend({
   {
@@ -210,6 +219,8 @@ data:extend({
 
 data.raw.item["fission-reactor-equipment"].icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-1.png"
 
+data.raw.item["night-vision-equipment"].weight = 50000
+
 data:extend({
   {
     type = "item",
@@ -299,6 +310,7 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -321,11 +333,13 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
 })
 
 data.raw.item["solar-panel-equipment"].icon = "__bobequipment__/graphics/icons/solar-panel-equipment-1.png"
 data.raw.item["solar-panel-equipment"].icon_size = 32
+data.raw.item["solar-panel-equipment"].weight = 50000
 
 data:extend({
   {
@@ -349,6 +363,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -371,6 +386,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -393,12 +409,14 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
 })
 
 data.raw.item["personal-laser-defense-equipment"].icon =
   "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png"
 data.raw.item["personal-laser-defense-equipment"].icon_size = 128
+data.raw.item["exoskeleton-equipment"].weight = 50000
 
 data:extend({
   {
@@ -538,6 +556,7 @@ data:extend({
       filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -560,5 +579,6 @@ data:extend({
       filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 50000,
   },
 })
