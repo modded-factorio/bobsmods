@@ -20,6 +20,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 5000,
     },
     {
       type = "item",
@@ -41,6 +42,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 5000,
     },
     {
       type = "item",
@@ -62,6 +64,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 5000,
     },
     {
       type = "item",
@@ -83,6 +86,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 5000,
     },
     {
       type = "item",
@@ -104,6 +108,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 25000,
     },
     {
       type = "item",
@@ -125,6 +130,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
         volume = 0.7,
       },
+      weight = 50000,
     },
     {
       type = "item",
@@ -146,6 +152,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/mechanical-large-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 200000,
     },
     {
       type = "item",
@@ -167,6 +174,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
         volume = 0.7,
       },
+      weight = 20000,
     },
   })
 
@@ -697,6 +705,7 @@ data:extend({
     subgroup = "gun",
     order = "g[spidertron-cannon]",
     stack_size = 10,
+    weight = 100000,
   },
 
   {
