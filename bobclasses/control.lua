@@ -277,6 +277,9 @@ function init()
   if not storage.respawn_inventory then
     storage.respawn_inventory = {}
   end
+  if not storage.god_inventories then
+    storage.god_inventories = {}
+  end
 
   storage.classes["bob-ballanced"] = nil
   storage.classes["bob-balanced"] = nil
@@ -592,6 +595,15 @@ end)
 
 script.on_event(defines.events.on_player_created, function(event)
   wlog("Entered event handler on_player_created(" .. serpent.line(event) .. ")")
+
+  if not storage.god_start then
+    storage.god_start = false
+  end
+
+  if game.players[event.player_index].controller_type == defines.controllers.god then
+    storage.god_start = true
+  end
+
   create_button(event.player_index)
   storage.players[event.player_index] = { respawn = false, first_character = true }
   class_select(event.player_index)
@@ -1061,7 +1073,7 @@ function draw_buttons_row(player_index)
     end
 
     if not game.is_multiplayer or player.admin then
-      if settings.global["bobmods-classes-god-mode"].value then
+      if settings.global["bobmods-classes-god-mode"].value or storage.god_start == true then
         gui.add({
           type = "button",
           name = "bob_avatar_god",
@@ -1393,14 +1405,24 @@ function create_character(player_index, class)
 
       if storage.players[player_index].first_character then
         for i, item in pairs(storage.starting_inventory) do
-          player.insert(item)
+          if prototypes.item[item.name] then
+            player.insert(item)
+          end
         end
         if class.starting_inventory then
           for i, item in pairs(class.starting_inventory.add) do
-            player.insert(item)
+            if prototypes.item[item.name] then
+              player.insert(item)
+            end
           end
           for i, item in pairs(class.starting_inventory.replace) do
-            if item.remove and item.add and player.get_item_count(item.remove.name) >= item.remove.count then
+            if
+              item.remove
+              and item.add
+              and prototypes.item[item.remove.name]
+              and prototypes.item[item.add.name]
+              and player.get_item_count(item.remove.name) >= item.remove.count
+            then
               player.remove_item(item.remove)
               player.insert(item.add)
             end
@@ -1409,14 +1431,24 @@ function create_character(player_index, class)
         storage.players[player_index].first_character = false
       elseif storage.players[player_index].respawn then
         for i, item in pairs(storage.respawn_inventory) do
-          player.insert(item)
+          if prototypes.item[item.name] then
+            player.insert(item)
+          end
         end
         if class.respawn_inventory.replace then
           for i, item in pairs(class.respawn_inventory.add) do
-            player.insert(item)
+            if prototypes.item[item.name] then
+              player.insert(item)
+            end
           end
           for i, item in pairs(class.respawn_inventory.replace) do
-            if item.remove and item.add and player.get_item_count(item.remove.name) >= item.remove.count then
+            if
+              item.remove
+              and item.add
+              and prototypes.item[item.remove.name]
+              and prototypes.item[item.add.name]
+              and player.get_item_count(item.remove.name) >= item.remove.count
+            then
               player.remove_item(item.remove)
               player.insert(item.add)
             end
@@ -1458,6 +1490,9 @@ function switch_character(player_index, new_character)
   local player = game.players[player_index]
   if player.controller_type == defines.controllers.editor then
     player.toggle_map_editor() --safety restores the character entity.
+  end
+  if player.controller_type == defines.controllers.god then
+    storage.god_inventories[player.name] = player.get_inventory(defines.inventory.god_main).get_contents() --Saves god controller's inventory in a table labeled with the player's user name to avoid multiplayer issues
   end
   if remote.interfaces["space-exploration"] then
     remote.call("space-exploration", "remote_view_stop", { player = player }) --Attempt to safe exit SatNav mode
@@ -1522,32 +1557,44 @@ end
 function switch_to_god(player_index, old_char)
   wlog("Entered function switch_to_god(" .. player_index .. ")")
 
-  --~ local old_character = game.players[player_index].character
-  local old_character = old_char or game.players[player_index].character
-  game.players[player_index].set_controller({ type = defines.controllers.god })
-  if old_character then
-    game.players[player_index].associate_character(old_character)
-  end
+  if game.players[player_index].controller_type ~= defines.controllers.god then --Do nothing if already using god controller. Avoids issues with inventory reset.
 
-  -- Skip this if called with old_char, i.e. if this function is called in response
-  -- to changes by another mod. If another mod toggled editor/god mode, it's their
-  -- responsibility to announce the change.
-  if not old_char then
-    -- Notify other mods that a character has been exchanged
-    --~ announce("minime", {old = old_character})
-    announce("minime", {
-      old_character = old_character,
-      old_unit_number = old_character and old_character.unit_number,
-      player_index = player_index,
-      god_mode = true,
-    })
-    announce("jetpack", {
-      old_character = old_character,
-      old_character_unit_number = old_character and old_character.unit_number,
-    })
-  end
+    --~ local old_character = game.players[player_index].character
+    local old_character = old_char or game.players[player_index].character
+    game.players[player_index].set_controller({ type = defines.controllers.god })
+    if old_character then
+      game.players[player_index].associate_character(old_character)
+    end
 
-  refresh_avatar_gui(player_index)
+    -- Skip this if called with old_char, i.e. if this function is called in response
+    -- to changes by another mod. If another mod toggled editor/god mode, it's their
+    -- responsibility to announce the change.
+    if not old_char then
+      -- Notify other mods that a character has been exchanged
+      --~ announce("minime", {old = old_character})
+      announce("minime", {
+        old_character = old_character,
+        old_unit_number = old_character and old_character.unit_number,
+        player_index = player_index,
+        god_mode = true,
+      })
+      announce("jetpack", {
+        old_character = old_character,
+        old_character_unit_number = old_character and old_character.unit_number,
+      })
+    end
+
+    if storage.god_inventories[game.players[player_index].name] then
+      for i, items in pairs(storage.god_inventories[game.players[player_index].name]) do
+        if prototypes.item[items.name] then
+          game.players[player_index].insert(items)
+        end
+      end
+    end
+
+    refresh_avatar_gui(player_index)
+
+  end
 end
 
 --Switches to the editor controller, then adds the connected character to the (end of the) association list.
