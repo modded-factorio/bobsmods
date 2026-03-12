@@ -447,7 +447,6 @@ if mods["quality"] then
     "bob-silver-zinc-battery",
     "battery",
     "cargo-landing-pad",
-    "rocket-part",
     "rocket-silo",
     "satellite",
     "speed-module-3",

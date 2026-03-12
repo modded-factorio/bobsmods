@@ -46,7 +46,6 @@ if mods["quality"] then
     "electric-mining-drill",
     "radar",
     "cargo-landing-pad",
-    "rocket-part",
     "rocket-silo",
     "satellite",
     "speed-module-3",
