@@ -45,5 +45,13 @@ if mods["quality"] then
     "repair-pack",
     "electric-mining-drill",
     "radar",
+    "cargo-landing-pad",
+    "rocket-part",
+    "rocket-silo",
+    "satellite",
+    "speed-module-3",
+    "efficiency-module-3",
+    "productivity-module-3",
+    "quality-module-3",
   })
 end
