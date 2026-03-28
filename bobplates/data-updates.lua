@@ -466,5 +466,4 @@ end
 if mods["space-age"] then
   data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
   data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
-  data.raw["rocket-silo"]["rocket-silo"].to_be_inserted_to_rocket_inventory_size = 50
 end
