@@ -926,11 +926,11 @@ end
 
 --Radar section
 script.on_event(defines.events.on_sector_scanned, function(event)
-
   --Convert radar position to origin point of chunk it is in
   local center_x = math.floor(event.radar.position.x / 32) * 32
   local center_y = math.floor(event.radar.position.y / 32) * 32
-  local chunk_range = prototypes.entity["bob-artifact-radar"].get_max_distance_of_nearby_sector_revealed(event.radar.quality)
+  local chunk_range =
+    prototypes.entity["bob-artifact-radar"].get_max_distance_of_nearby_sector_revealed(event.radar.quality)
   local row_size = (2 * chunk_range) + 1
 
   --Store scanned chunk index for new radars
@@ -944,7 +944,10 @@ script.on_event(defines.events.on_sector_scanned, function(event)
   local target_x_end = center_x - (chunk_range * 32) + (row_size * 32) + 1
   local target_y = center_y - (chunk_range * 32) + (storage.bobmods.ground_radar_table[checking_radar] * 32) - 33
 
-  table.insert(storage.bobmods.ground_radar_table_checks, { name = event.radar.surface.name, x1 = target_x, x2 = target_x_end, y1 = target_y })
+  table.insert(
+    storage.bobmods.ground_radar_table_checks,
+    { name = event.radar.surface.name, x1 = target_x, x2 = target_x_end, y1 = target_y }
+  )
 
   --Update chunk index for next cycle
   if storage.bobmods.ground_radar_table[checking_radar] < row_size then
@@ -952,7 +955,6 @@ script.on_event(defines.events.on_sector_scanned, function(event)
   else
     storage.bobmods.ground_radar_table[checking_radar] = 1
   end
-
 end, { { filter = "name", name = "bob-artifact-radar" } })
 
 script.on_event(defines.events.on_tick, function(event)
@@ -961,23 +963,23 @@ script.on_event(defines.events.on_tick, function(event)
   local check_list = storage.ground_radar_check_list
 
   for i = 1, to_check do
-
     if #storage.bobmods.ground_radar_table_checks > 0 then
       local ground_radar_check_stats = storage.bobmods.ground_radar_table_checks[1]
-      for _, found_item in pairs(
-        game.surfaces[ground_radar_check_stats.name].find_entities_filtered({
-          area = { { ground_radar_check_stats.x1, ground_radar_check_stats.y1 }, { ground_radar_check_stats.x2, ground_radar_check_stats.y1 + 33 } },
+      for _, found_item in
+        pairs(game.surfaces[ground_radar_check_stats.name].find_entities_filtered({
+          area = {
+            { ground_radar_check_stats.x1, ground_radar_check_stats.y1 },
+            { ground_radar_check_stats.x2, ground_radar_check_stats.y1 + 33 },
+          },
           type = "item-entity",
-        }
-      )) do
+        }))
+      do
         found_item.order_deconstruction("player")
       end
 
       table.remove(storage.bobmods.ground_radar_table_checks, 1)
     end
-
   end
-
 end)
 
 commands.add_command("bob-enemies-unlocks-check", nil, function(command)
