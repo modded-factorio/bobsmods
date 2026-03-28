@@ -338,7 +338,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
     data.raw["assembling-machine"]["bob-steam-assembling-machine"].ingredient_count = 4
   end
 
-  if mods["space-age"] then
+  if feature_flags["space_travel"] then
     data.raw["assembling-machine"]["bob-burner-assembling-machine"].surface_conditions = {
       { property = "pressure", min = 10 },
     }

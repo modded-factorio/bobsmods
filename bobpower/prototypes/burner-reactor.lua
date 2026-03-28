@@ -508,13 +508,15 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     bobmods.lib.tech.add_recipe_unlock("bob-burner-reactor-1", "bob-fluid-reactor-from-fluid-furnace")
   end
 
-  if mods["space-age"] then
-    local no_space = {
-      { property = "pressure", min = 10 },
-    }
-    data.raw.reactor["bob-burner-reactor"].surface_conditions = no_space
-    data.raw.reactor["bob-burner-reactor-2"].surface_conditions = no_space
-    data.raw.reactor["bob-fluid-reactor"].surface_conditions = no_space
-    data.raw.reactor["bob-fluid-reactor-2"].surface_conditions = no_space
+  if feature_flags["space_travel"] then
+    local function no_space()
+      return {
+        { property = "pressure", min = 10 },
+      }
+    end
+    data.raw.reactor["bob-burner-reactor"].surface_conditions = no_space()
+    data.raw.reactor["bob-burner-reactor-2"].surface_conditions = no_space()
+    data.raw.reactor["bob-fluid-reactor"].surface_conditions = no_space()
+    data.raw.reactor["bob-fluid-reactor-2"].surface_conditions = no_space()
   end
 end

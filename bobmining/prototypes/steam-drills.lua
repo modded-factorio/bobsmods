@@ -92,7 +92,7 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
     end
   end
 
-  if mods["space-age"] then
+  if feature_flags["space_travel"] then
     data.raw["mining-drill"]["bob-steam-mining-drill"].surface_conditions = {}
   end
 end

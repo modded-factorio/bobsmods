@@ -459,7 +459,7 @@ data:extend({
   },
 })
 
-if mods["space-age"] then
+if feature_flags["space_travel"] then
   data.raw.unit["bob-robot-gun-drone"].surface_conditions = {
     { property = "gravity", min = 1 },
   }

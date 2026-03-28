@@ -125,7 +125,7 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
     },
   })
 
-  if mods["space-age"] then
+  if feature_flags["space_travel"] then
     data.raw["burner-generator"]["bob-burner-generator"].surface_conditions = {
       { property = "pressure", min = 10 },
     }

@@ -1239,26 +1239,30 @@ data:extend({
   },
 })
 
-if mods["space-age"] then 
+if feature_flags["space_travel"] then
 
-  local no_space = {
-    { property = "pressure", min = 10 },
-  }
+  local function no_space()
+    return { { property = "pressure", min = 10 } }
+  end
 
-  data.raw["assembling-machine"]["bob-stone-chemical-furnace"].surface_conditions = no_space
-  data.raw["assembling-machine"]["bob-stone-mixing-furnace"].surface_conditions = no_space
-  data.raw["assembling-machine"]["bob-steel-chemical-furnace"].surface_conditions = no_space
-  data.raw["assembling-machine"]["bob-steel-mixing-furnace"].surface_conditions = no_space
+  data.raw["assembling-machine"]["bob-stone-chemical-furnace"].surface_conditions = no_space()
+  data.raw["assembling-machine"]["bob-stone-mixing-furnace"].surface_conditions = no_space()
+  data.raw["assembling-machine"]["bob-steel-chemical-furnace"].surface_conditions = no_space()
+  data.raw["assembling-machine"]["bob-steel-mixing-furnace"].surface_conditions = no_space()
 
-  if feature_flags["freezing"] then
-    local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
-    local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+  if mods["space-age"] then 
+    local function pipefrozenpatch()
+      return util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+    end
+    local function pcfrozenpatch()
+      return util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+    end
 
     data.raw["assembling-machine"]["bob-electrolyser"].heating_energy = "100kW"
-    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
-    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch()
+    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch()
+    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch()
+    data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch()
 
     data.raw["assembling-machine"]["bob-electric-chemical-furnace"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-electric-chemical-furnace"].graphics_set.frozen_patch = {
@@ -1280,8 +1284,8 @@ if mods["space-age"] then
         },
       },
     }
-    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch()
+    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch()
 
     data.raw["assembling-machine"]["bob-electric-mixing-furnace"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-electric-mixing-furnace"].graphics_set.frozen_patch = {
@@ -1294,10 +1298,10 @@ if mods["space-age"] then
 
     data.raw["storage-tank"]["bob-small-inline-storage-tank"].heating_energy = "25kW"
     data.raw["storage-tank"]["bob-small-storage-tank"].heating_energy = "25kW"
-    data.raw["storage-tank"]["bob-small-inline-storage-tank"].fluid_box.pipe_picture_frozen = pipefrozenpatch
-    data.raw["storage-tank"]["bob-small-storage-tank"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["storage-tank"]["bob-small-inline-storage-tank"].fluid_box.pipe_picture_frozen = pipefrozenpatch()
+    data.raw["storage-tank"]["bob-small-storage-tank"].fluid_box.pipe_covers_frozen = pcfrozenpatch()
 
     data.raw.furnace["bob-void-pump"].heating_energy = "10kW"
-    data.raw.furnace["bob-void-pump"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw.furnace["bob-void-pump"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch()
   end
 end

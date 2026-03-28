@@ -76,9 +76,9 @@ if data.raw.item["bob-brass-alloy"] then
     },
   })
 
-  if mods["space-age"] then
+  if feature_flags["space_travel"] then
     data.raw.container["bob-brass-chest"].surface_conditions = {
-      { property = "gravity", min = 1 },
+      { property = "gravity", min = 0.1 },
     }
   end
 
@@ -164,7 +164,7 @@ if data.raw.item["bob-titanium-plate"] then
 
   if mods["space-age"] then
     data.raw.container["bob-titanium-chest"].surface_conditions = {
-      { property = "gravity", min = 1 },
+      { property = "gravity", min = 0.1 },
     }
   end
 

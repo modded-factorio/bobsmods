@@ -616,7 +616,7 @@ data:extend({
   },
 })
 
-if mods["space-age"] then
+if feature_flags["space_travel"] then
   data.raw.car.car.surface_conditions = {
     { property = "gravity", min = 1 },
     { property = "pressure", min = 10 },

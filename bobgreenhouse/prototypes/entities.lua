@@ -147,11 +147,11 @@ data:extend({
   },
 })
 
-if mods["space-age"] then
+if feature_flags["space_travel"] then
   data.raw["assembling-machine"]["bob-greenhouse"].surface_conditions = {
     { property = "gravity", min = 1 },
   }
-  if feature_flags["freezing"] then
+  if mods["space-age"] then
     data.raw["assembling-machine"]["bob-greenhouse"].heating_energy = "250kW"
     data.raw["assembling-machine"]["bob-greenhouse"].graphics_set.frozen_patch = {
       filename = "__space-age__/graphics/entity/frozen/lab/lab.png",
