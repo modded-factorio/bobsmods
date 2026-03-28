@@ -43,8 +43,6 @@ local wall_resistances = {
 data.raw.wall["stone-wall"].max_health = 450
 data.raw.wall["stone-wall"].resistances = wall_resistances
 data.raw.gate.gate.resistances = wall_resistances
-data.raw.wall["stone-wall"].is_military_target = true
-data.raw.gate.gate.is_military_target = true
 
 local reinforced_wall_resistances = {
   {
@@ -104,7 +102,6 @@ data:extend({
     fast_replaceable_group = "wall",
     max_health = 1250,
     repair_speed_modifier = 2,
-    is_military_target = true,
     corpse = "wall-remnants",
     dying_explosion = "wall-explosion",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },

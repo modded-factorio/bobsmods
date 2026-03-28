@@ -62,6 +62,13 @@ script.on_init(function()
 
   bobmods.enemies.populate_unlock_list()
 
+  if not storage.bobmods.ground_radar_table then
+    storage.bobmods.ground_radar_table = {}
+  end
+  if not storage.bobmods.ground_radar_table_checks then
+    storage.bobmods.ground_radar_table_checks = {}
+  end
+
   if bobmods.enemies.stop_all ~= true then
     if game.tick > 600 then
       --If loading into existing game, register all spawners that already exist. Do not count spawners at game start to prevent double counting, as they will be registered as their chunks are generated. Checking for pre-existing Bob's Enemies spawners from previous versions is a must. Keep it simple and don't generate flags or faction spawners at this stage.
@@ -108,6 +115,13 @@ script.on_configuration_changed(function()
   local factionstring = settings.startup["bobmods-enemies-factionlist"].value
 
   bobmods.enemies.populate_unlock_list()
+
+  if not storage.bobmods.ground_radar_table then
+    storage.bobmods.ground_radar_table = {}
+  end
+  if not storage.bobmods.ground_radar_table_checks then
+    storage.bobmods.ground_radar_table_checks = {}
+  end
 
   --In case someone starts a game with a faction, then removes it, and then adds it again, do recount of all spawners.
   for factionname_for_verification1 in pairs(storage.bobmods.enemies.nauvis_faction_table) do
@@ -912,28 +926,61 @@ end
 
 --Radar section
 script.on_event(defines.events.on_sector_scanned, function(event)
-  --Convert radar position to top left coverage limit
-  local target_x = math.floor(event.radar.position.x / 32) * 32 - 128
-  local target_y = math.floor(event.radar.position.y / 32) * 32 - 128
-  target_x = target_x + ((math.random(6) - 1) * 48)
-  target_y = target_y + ((math.random(6) - 1) * 48)
-  --Do not order_deconstruction when enemies are nearby to keep bots from being targeted, and to make it less likely that they will be too busy to repair
-  local found_enemies = game.surfaces[event.radar.surface_index].count_entities_filtered({
-    area = { { target_x - 1, target_y - 1 }, { target_x + 49, target_y + 49 } },
-    force = "enemy",
-    limit = 1,
-  })
-  if found_enemies == 0 then
-    local found_items = game.surfaces[event.radar.surface_index].find_entities_filtered({
-      area = { { target_x - 1, target_y - 1 }, { target_x + 49, target_y + 49 } },
-      type = "item-entity",
-      limit = bobmods.enemies.radar_scan_limit,
-    })
-    for _, found_item in pairs(found_items) do
-      found_item.order_deconstruction("player")
-    end
+  --Convert radar position to origin point of chunk it is in
+  local center_x = math.floor(event.radar.position.x / 32) * 32
+  local center_y = math.floor(event.radar.position.y / 32) * 32
+  local chunk_range =
+    prototypes.entity["bob-artifact-radar"].get_max_distance_of_nearby_sector_revealed(event.radar.quality)
+  local row_size = (2 * chunk_range) + 1
+
+  --Store scanned chunk index for new radars
+  local checking_radar = tostring(event.radar.unit_number)
+  if not storage.bobmods.ground_radar_table[checking_radar] then
+    storage.bobmods.ground_radar_table[checking_radar] = 1
+  end
+
+  --Scan number of chunks equal to one less than chunk_range. Higher quality radars will take longer to scan full territory.
+  local target_x = center_x - (chunk_range * 32) - 1
+  local target_x_end = center_x - (chunk_range * 32) + (row_size * 32) + 1
+  local target_y = center_y - (chunk_range * 32) + (storage.bobmods.ground_radar_table[checking_radar] * 32) - 33
+
+  table.insert(
+    storage.bobmods.ground_radar_table_checks,
+    { name = event.radar.surface.name, x1 = target_x, x2 = target_x_end, y1 = target_y }
+  )
+
+  --Update chunk index for next cycle
+  if storage.bobmods.ground_radar_table[checking_radar] < row_size then
+    storage.bobmods.ground_radar_table[checking_radar] = storage.bobmods.ground_radar_table[checking_radar] + 1
+  else
+    storage.bobmods.ground_radar_table[checking_radar] = 1
   end
 end, { { filter = "name", name = "bob-artifact-radar" } })
+
+script.on_event(defines.events.on_tick, function(event)
+  --Speed up checking ground radar requests if there is a significant backlog
+  local to_check = math.ceil(#storage.bobmods.ground_radar_table_checks / 10)
+  local check_list = storage.ground_radar_check_list
+
+  for i = 1, to_check do
+    if #storage.bobmods.ground_radar_table_checks > 0 then
+      local ground_radar_check_stats = storage.bobmods.ground_radar_table_checks[1]
+      for _, found_item in
+        pairs(game.surfaces[ground_radar_check_stats.name].find_entities_filtered({
+          area = {
+            { ground_radar_check_stats.x1, ground_radar_check_stats.y1 },
+            { ground_radar_check_stats.x2, ground_radar_check_stats.y1 + 33 },
+          },
+          type = "item-entity",
+        }))
+      do
+        found_item.order_deconstruction("player")
+      end
+
+      table.remove(storage.bobmods.ground_radar_table_checks, 1)
+    end
+  end
+end)
 
 commands.add_command("bob-enemies-unlocks-check", nil, function(command)
   game.print("Faction unlock order: ")

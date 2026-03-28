@@ -209,7 +209,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-heavy-water-electrolysis",
+        recipe = "bob-deuterium",
       },
       {
         type = "unlock-recipe",
