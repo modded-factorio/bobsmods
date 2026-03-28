@@ -1,0 +1,6 @@
+{
+  "recipe":
+  [
+    ["bob-heavy-water-electrolysis", "bob-deuterium"]
+  ]
+}

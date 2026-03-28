@@ -3,6 +3,8 @@ Version: 2.0.5
 Date: ???
   Bugfixes:
     - Enemy spawn table adjustments #537
+  Changes:
+    - Make Ground Radar adjust with quality #564
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 15. 01. 2026
