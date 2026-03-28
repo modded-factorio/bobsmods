@@ -880,15 +880,17 @@ data:extend({
       tertiary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
     },
     allow_decomposition = false,
+    main_product = "bob-heavy-water",
   },
 
   {
     type = "recipe",
-    name = "bob-heavy-water-electrolysis",
+    name = "bob-deuterium",
+    localised_name = { "recipe-name.bob-heavy-water-electrolysis" },
     icon = "__bobplates__/graphics/icons/heavy-water-electrolysis.png",
     icon_size = 64,
     subgroup = "bob-fluid-electrolysis",
-    order = "b[fluid-chemistry]-b[bob-heavy-water-electrolysis]",
+    order = "b[fluid-chemistry]-b[bob-deuterium]",
     category = "bob-electrolysis",
     enabled = false,
     energy_required = 1,
@@ -900,6 +902,7 @@ data:extend({
       { type = "fluid", name = "bob-oxygen", amount = 12.5 },
     },
     allow_decomposition = false,
+    main_product = "bob-deuterium",
   },
 
   {

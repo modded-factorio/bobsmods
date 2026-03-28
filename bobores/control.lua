@@ -21,7 +21,6 @@ remote.add_interface("bobores", {
 
     regenerate_entity("bob-nickel-ore")
     regenerate_entity("bob-cobalt-ore")
-    regenerate_entity("bob-sulfur")
     regenerate_entity("bob-gem-ore")
 
     regenerate_entity("bob-lithia-water")
