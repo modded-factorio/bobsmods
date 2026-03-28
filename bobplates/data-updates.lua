@@ -19,7 +19,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.fluid["bob-deuterium"].fuel_value = "25kJ"
     data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 250
     data.raw.recipe["bob-water-electrolysis"].energy_required = 2
-    data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
+    data.raw.recipe["bob-deuterium"].energy_required = 2
     if data.raw.recipe["bob-sodium-chlorate"] then
       data.raw.recipe["bob-sodium-chlorate"].energy_required = 6
       data.raw.recipe["bob-sodium-perchlorate"].energy_required = 2
@@ -35,7 +35,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "11kW"
   data.raw.recipe["bob-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-salt-water-electrolysis"].allow_consumption = false
-  data.raw.recipe["bob-heavy-water-electrolysis"].allow_consumption = false
+  data.raw.recipe["bob-deuterium"].allow_consumption = false
   if data.raw.recipe["bob-sodium-chlorate"] then
     data.raw.recipe["bob-sodium-chlorate"].allow_consumption = false
     data.raw.recipe["bob-sodium-perchlorate"].allow_consumption = false
