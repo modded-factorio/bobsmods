@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Enemy spawn table adjustments #537
   Changes:
+    - Set item weights #553
     - Make Ground Radar adjust with quality #564
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
