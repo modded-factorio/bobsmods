@@ -2,6 +2,7 @@
 Version: 2.0.6
 Date: ???
   Bugfixes:
+    - Fixed Scatter cannnon shells missing rock, trees, etc. #561
     - Fixed Biters / Spitters deliberately targeting walls and gates. #562
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
