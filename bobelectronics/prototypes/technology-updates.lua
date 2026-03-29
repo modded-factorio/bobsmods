@@ -77,3 +77,17 @@ bobmods.lib.tech.remove_recipe_unlock("advanced-oil-processing", "solid-fuel-fro
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-petroleum-gas")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-light-oil")
 bobmods.lib.tech.add_recipe_unlock("flammables", "solid-fuel-from-heavy-oil")
+
+-- Base game updates
+
+if not mods["space-age"] then
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-advanced-processing-unit")
+end
+
+bobmods.lib.tech.add_prerequisite("speed-module-3", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("efficiency-module-3", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("productivity-module-3", "bob-advanced-processing-unit")
+
+if mods["quality"] then
+  bobmods.lib.tech.add_prerequisite("quality-module-3", "bob-advanced-processing-unit")
+end
