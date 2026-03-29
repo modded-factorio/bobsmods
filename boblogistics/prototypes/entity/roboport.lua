@@ -430,11 +430,13 @@ if settings.startup["bobmods-logistics-disableroboports"].value == false then
     data.raw.roboport["bob-roboport-2"].surface_conditions = no_space()
     data.raw.roboport["bob-roboport-3"].surface_conditions = no_space()
     data.raw.roboport["bob-roboport-4"].surface_conditions = no_space()
+  end
 
-    if feature_flags["freezing"] then
-      data.raw.roboport["bob-roboport-2"].heating_energy = "300kW"
-      data.raw.roboport["bob-roboport-3"].heating_energy = "300kW"
-      data.raw.roboport["bob-roboport-4"].heating_energy = "300kW"
+  if feature_flags["freezing"] then
+    data.raw.roboport["bob-roboport-2"].heating_energy = "300kW"
+    data.raw.roboport["bob-roboport-3"].heating_energy = "300kW"
+    data.raw.roboport["bob-roboport-4"].heating_energy = "300kW"
+    if mods["space-age"] then
       local function frozenpatch()
         local result = util.table.deepcopy(data.raw.roboport.roboport.frozen_patch)
         result.shift = { 0.0625, 0.2421875 }
@@ -2395,26 +2397,30 @@ if feature_flags["space_travel"] then
   data.raw.roboport["bob-robo-charge-port-large-4"].surface_conditions = no_space()
 
   data.raw.roboport["bob-logistic-zone-interface"].surface_conditions = no_space()
+  
+end
+  
+if feature_flags["freezing"] then
+
+  data.raw.roboport["bob-logistic-zone-expander"].heating_energy = "20kW"
+  data.raw.roboport["bob-logistic-zone-expander-2"].heating_energy = "20kW"
+  data.raw.roboport["bob-logistic-zone-expander-3"].heating_energy = "20kW"
+  data.raw.roboport["bob-logistic-zone-expander-4"].heating_energy = "20kW"
+  data.raw.roboport["bob-robochest"].heating_energy = "200kW"
+  data.raw.roboport["bob-robochest-2"].heating_energy = "200kW"
+  data.raw.roboport["bob-robochest-3"].heating_energy = "200kW"
+  data.raw.roboport["bob-robochest-4"].heating_energy = "200kW"
+  data.raw.roboport["bob-robo-charge-port"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-2"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-3"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-4"].heating_energy = "80kW"
+  data.raw.roboport["bob-robo-charge-port-large"].heating_energy = "180kW"
+  data.raw.roboport["bob-robo-charge-port-large-2"].heating_energy = "180kW"
+  data.raw.roboport["bob-robo-charge-port-large-3"].heating_energy = "180kW"
+  data.raw.roboport["bob-robo-charge-port-large-4"].heating_energy = "180kW"
+  data.raw.roboport["bob-logistic-zone-interface"].heating_energy = "20kW"
 
   if mods["space-age"] then
-
-    data.raw.roboport["bob-logistic-zone-expander"].heating_energy = "20kW"
-    data.raw.roboport["bob-logistic-zone-expander-2"].heating_energy = "20kW"
-    data.raw.roboport["bob-logistic-zone-expander-3"].heating_energy = "20kW"
-    data.raw.roboport["bob-logistic-zone-expander-4"].heating_energy = "20kW"
-    data.raw.roboport["bob-robochest"].heating_energy = "200kW"
-    data.raw.roboport["bob-robochest-2"].heating_energy = "200kW"
-    data.raw.roboport["bob-robochest-3"].heating_energy = "200kW"
-    data.raw.roboport["bob-robochest-4"].heating_energy = "200kW"
-    data.raw.roboport["bob-robo-charge-port"].heating_energy = "80kW"
-    data.raw.roboport["bob-robo-charge-port-2"].heating_energy = "80kW"
-    data.raw.roboport["bob-robo-charge-port-3"].heating_energy = "80kW"
-    data.raw.roboport["bob-robo-charge-port-4"].heating_energy = "80kW"
-    data.raw.roboport["bob-robo-charge-port-large"].heating_energy = "180kW"
-    data.raw.roboport["bob-robo-charge-port-large-2"].heating_energy = "180kW"
-    data.raw.roboport["bob-robo-charge-port-large-3"].heating_energy = "180kW"
-    data.raw.roboport["bob-robo-charge-port-large-4"].heating_energy = "180kW"
-    data.raw.roboport["bob-logistic-zone-interface"].heating_energy = "20kW"
 
     local function chestfrozenpatch()
       return {
