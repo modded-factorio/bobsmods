@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: ???
+  Bugfixes:
+    - Fixed some fluids / recipes not combining in Factoriopedia #565
+  Changes:
+    - Updated recipes for Rockets and T3 modules to require Advanced processing units instead of Advanced circuits #559
+---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026
   Changes:

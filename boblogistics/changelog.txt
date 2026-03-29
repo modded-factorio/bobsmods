@@ -3,6 +3,7 @@ Version: 2.0.7
 Date: ???
   Changes:
     - Reduced charge approach distance for robochests. Robots waiting to charge will now wait closer to the robochest. #533
+    - Increasd bot health and explosion resistance #563
   Bugfixes:
     - Allowed Basic loaders (AAI Loaders mod) to be crafted in Assembling maching 1 / hand crafted when using expensive mode. #535
     - Fixed next_upgrade for Steam powered inserter and Ultimate inserter #542
