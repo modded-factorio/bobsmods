@@ -9,6 +9,7 @@ data.raw.character.character.icons = {
     icon_size = 128,
   },
 }
+data.raw.character.character.icon = nil
 data.raw.character.character.max_health = 300
 data.raw.character.character.healing_per_tick = 0.18
 data.raw.character.character.ticks_to_stay_in_combat = 480
@@ -480,3 +481,7 @@ end
   },
 ]]
 --
+
+if mods["space-exploration"] then
+  data.raw.character.character.icon = "__core__/graphics/icons/entity/character.png"
+end
