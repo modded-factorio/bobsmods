@@ -214,18 +214,13 @@ function minime_exchanged_characters(event)
   local player_index = event.player_index
   local old_character = event.old_character
   local new_character = event.new_character
-  local editor = event.editor_mode
   local god = event.god_mode
 
   -- Switch to another character
-  if new_character and not (editor or god) then
+  if new_character and not god then
     wlog("Calling refresh_avatar_gui(" .. player_index .. ")")
     refresh_avatar_gui(player_index)
 
-  -- Enter editor mode
-  elseif editor then
-    wlog("Calling switch_to_editor(" .. player_index .. ", " .. tostring(old_character and old_character.name) .. ")")
-    switch_to_editor(player_index, old_character)
   -- Enter god mode
   elseif god then
     wlog("Calling switch_to_god(" .. player_index .. ", " .. tostring(old_character and old_character.name) .. ")")
@@ -681,7 +676,6 @@ script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
   if event.setting_type == "runtime-global" then
     if
       event.setting == "bobmods-classes-god-mode"
-      or event.setting == "bobmods-classes-editor-mode"
       or event.setting == "bobmods-classes-class-select"
       or event.setting == "bobmods-classes-class-select-user"
     then
@@ -770,9 +764,6 @@ script.on_event(defines.events.on_gui_click, function(event)
 
     if event.element.valid and event.element.name == "bob_avatar_god" then
       switch_to_god(event.player_index)
-    end
-    if event.element.valid and event.element.name == "bob_avatar_editor" then
-      switch_to_editor(event.player_index)
     end
     if event.element.valid and event.element.name == "bob_avatar_class_select" then
       draw_class_gui(event.player_index)
@@ -1081,15 +1072,6 @@ function draw_buttons_row(player_index)
           tooltip = { "gui.bob-avatar-god-mode-tooltip" },
         })
         gui.bob_avatar_god.style.minimal_width = 56
-      end
-      if settings.global["bobmods-classes-editor-mode"].value then
-        gui.add({
-          type = "button",
-          name = "bob_avatar_editor",
-          caption = { "gui.bob-avatar-editor-mode" },
-          tooltip = { "gui.bob-avatar-editor-mode-tooltip" },
-        })
-        gui.bob_avatar_editor.style.minimal_width = 56
       end
     end
     if
@@ -1595,48 +1577,4 @@ function switch_to_god(player_index, old_char)
     refresh_avatar_gui(player_index)
 
   end
-end
-
---Switches to the editor controller, then adds the connected character to the (end of the) association list.
--- Added optional argument old_char. Per default, the player's current character will be used, but
--- if this function is called from a remote function, this allows to pass on a different character.
---~ function switch_to_editor(player_index)
-function switch_to_editor(player_index, old_char)
-  wlog("Entered function switch_to_editor(" .. player_index .. ", " .. tostring(old_char and old_char.name) .. ")")
-  wlog(
-    string.format("Controller of player %s: %s", player_index, controllers[game.players[player_index].controller_type])
-  )
-
-  --~ local old_character = game.players[player_index].character
-  local old_character = old_char or game.players[player_index].character
-  game.players[player_index].set_controller({ type = defines.controllers.editor })
-  wlog(
-    string.format(
-      "Controller of player %s after change: %s",
-      player_index,
-      controllers[game.players[player_index].controller_type]
-    )
-  )
-  if old_character then
-    game.players[player_index].associate_character(old_character)
-  end
-
-  -- Skip this if called with old_char, i.e. if this function is called in response
-  -- to changes by another mod. If another mod toggled editor/god mode, it's their
-  -- responsibility to announce the change.
-  if not old_char then
-    -- Notify other mods that a character has been exchanged
-    announce("minime", {
-      old_character = old_character,
-      old_unit_number = old_character and old_character.unit_number,
-      player_index = player_index,
-      editor_mode = true,
-    })
-    announce("jetpack", {
-      old_character = old_character,
-      old_character_unit_number = old_character and old_character.unit_number,
-    })
-  end
-
-  refresh_avatar_gui(player_index)
 end
