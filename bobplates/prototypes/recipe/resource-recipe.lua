@@ -2,6 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-carbon",
+    localised_name = { "item-name.carbon" },
     category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 2,
@@ -11,7 +12,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 5 },
       { type = "item", name = "coal", amount = 1 },
     },
-    results = { { type = "item", name = "bob-carbon", amount = 2 } },
+    results = { { type = "item", name = "carbon", amount = 2 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -222,7 +223,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-carbon-from-wood",
-    localised_name = { "item-name.bob-carbon" },
+    localised_name = { "item-name.carbon" },
     category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     enabled = false,
@@ -231,7 +232,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
-    results = { { type = "item", name = "bob-carbon", amount = 1 } },
+    results = { { type = "item", name = "carbon", amount = 1 } },
     subgroup = "bob-resource",
     order = "c",
     allow_decomposition = false,
@@ -291,3 +292,7 @@ data:extend({
 data.raw.recipe["solid-fuel-from-petroleum-gas"].allow_productivity = false
 data.raw.recipe["solid-fuel-from-light-oil"].allow_productivity = false
 data.raw.recipe["solid-fuel-from-heavy-oil"].allow_productivity = false
+
+if mods["space-age"] then
+  data.raw.recipe["bob-carbon"].allow_productivity = false
+end
