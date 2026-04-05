@@ -195,7 +195,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bob-lithium-perchlorate", amount = 2 },
       { type = "item", name = "bob-lithium-cobalt-oxide", amount = 1 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "plastic-bar", amount = 1 },
     },
     results = { { type = "item", name = "bob-lithium-ion-battery", amount = 1 } },
