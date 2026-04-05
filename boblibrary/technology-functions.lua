@@ -324,7 +324,7 @@ function bobmods.lib.tech.replace_prerequisite_in_all(old, new)
     and data.raw.technology[new]
   then
     for _, techname in pairs(data.raw.technology) do
-      bobmods.lib.tech.replace_prerequisite(techname, old, new)
+      bobmods.lib.tech.replace_prerequisite(techname.name, old, new)
     end
   end
 end
