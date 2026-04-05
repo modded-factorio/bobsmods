@@ -1,4 +1,8 @@
 {
+  "item":
+  [
+    ["bob-carbon", "carbon"]
+  ],
   "recipe":
   [
     ["bob-heavy-water-electrolysis", "bob-deuterium"]
