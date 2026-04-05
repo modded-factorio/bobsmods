@@ -162,3 +162,8 @@ if mods["Nuclear Fuel"] then
     "production-science-pack"
   )
 end
+
+if mods["space-age"] then
+  bobmods.lib.recipe.hide("carbon")
+  bobmods.lib.tech.remove_recipe_unlock("tungsten-carbide", "carbon")
+end
