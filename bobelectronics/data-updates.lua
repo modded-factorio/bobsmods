@@ -5,12 +5,6 @@ require("prototypes.aai-integration")
 data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
 data.raw.item["copper-cable"].order = "0-a1"
 
-if data.raw["recipe-category"]["bob-chemical-furnace"] then
-  if data.raw.recipe["bob-carbon"] then
-    data.raw.recipe["bob-carbon"].category = "bob-chemical-furnace"
-  end
-end
-
 if data.raw["recipe-category"]["bob-mixing-furnace"] then
   if data.raw.recipe["bob-solder-alloy"] then
     data.raw.recipe["bob-solder-alloy"].category = "bob-mixing-furnace"
