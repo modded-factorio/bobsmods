@@ -130,18 +130,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "bob-lithium",
-    icon = "__bobplates__/graphics/icons/plate/lithium-plate.png",
-    icon_size = 64,
-    subgroup = "bob-material",
-    order = "c-a-e[bob-lithium-plate]",
-    stack_size = 200,
-    drop_sound = plate_drop_move,
-    inventory_move_sound = plate_drop_move,
-    pick_sound = plate_pick,
-  },
-  {
-    type = "item",
     name = "bob-cobalt-plate",
     icon = "__bobplates__/graphics/icons/plate/cobalt-plate.png",
     icon_size = 64,
@@ -153,3 +141,22 @@ data:extend({
     pick_sound = plate_pick,
   },
 })
+
+if not data.raw.item.lithium then
+  data:extend({
+    {
+      type = "item",
+      name = "lithium",
+      localised_name = { "item-name.bob-lithium" },
+      icon = "__bobplates__/graphics/icons/plate/lithium-plate.png",
+      icon_size = 64,
+      subgroup = "bob-material",
+      order = "c-a-e[bob-lithium-plate]",
+      stack_size = 200,
+      drop_sound = plate_drop_move,
+      inventory_move_sound = plate_drop_move,
+      pick_sound = plate_pick,
+      weight = 500,
+    },
+  })
+end
