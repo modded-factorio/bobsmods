@@ -450,7 +450,7 @@ if data.raw.item["bob-gilded-copper-cable"] then
 end
 
 if data.raw.item["bob-lithium-ion-battery"] then
-  bobmods.lib.recipe.replace_ingredient("bob-battery-mk3-equipment", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("battery-mk3-equipment", "battery", "bob-lithium-ion-battery")
   bobmods.lib.tech.add_prerequisite("bob-battery-equipment-3", "bob-battery-2")
 
   bobmods.lib.recipe.remove_ingredient("bob-personal-laser-defense-equipment-3", "battery")
