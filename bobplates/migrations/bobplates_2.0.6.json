@@ -5,6 +5,7 @@
   ],
   "recipe":
   [
+    ["bob-carbon", "carbon"],
     ["bob-heavy-water-electrolysis", "bob-deuterium"]
   ]
 }
