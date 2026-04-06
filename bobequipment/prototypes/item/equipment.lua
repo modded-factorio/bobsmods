@@ -120,10 +120,11 @@ data.raw.item["battery-mk2-equipment"].icon_size = 64
 data:extend({
   {
     type = "item",
-    name = "bob-battery-mk3-equipment",
+    name = "battery-mk3-equipment",
+    localised_name = { "item-name.bob-battery-mk3-equipment" },
     icon = "__bobequipment__/graphics/icons/technology/battery-mk3-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "bob-battery-mk3-equipment",
+    place_as_equipment_result = "battery-mk3-equipment",
     subgroup = "equipment",
     order = "c[battery]-c[battery-mk3-equipment]",
     stack_size = 50,
