@@ -166,7 +166,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-battery-mk3-equipment",
+        recipe = "battery-mk3-equipment",
       },
     },
   },
