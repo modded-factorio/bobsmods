@@ -11,7 +11,7 @@ if mods["quality"] then
     "bob-energy-shield-mk6-equipment",
     "battery-equipment",
     "battery-mk2-equipment",
-    "bob-battery-mk3-equipment",
+    "battery-mk3-equipment",
     "bob-battery-mk4-equipment",
     "bob-battery-mk5-equipment",
     "bob-battery-mk6-equipment",
