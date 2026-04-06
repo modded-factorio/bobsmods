@@ -91,7 +91,6 @@
     ["energy-shield-mk6-equipment", "bob-energy-shield-mk6-equipment"],
     ["exoskeleton-equipment-2", "bob-exoskeleton-equipment-2"],
     ["exoskeleton-equipment-3", "bob-exoskeleton-equipment-3"],
-    ["fusion-reactor-equipment", "fission-reactor-equipment"],
     ["fusion-reactor-equipment-2", "bob-fission-reactor-equipment-2"],
     ["fusion-reactor-equipment-3", "bob-fission-reactor-equipment-3"],
     ["fusion-reactor-equipment-4", "bob-fission-reactor-equipment-4"],
@@ -124,7 +123,6 @@
   [
     ["exoskeleton-equipment-2", "bob-exoskeleton-equipment-2"],
     ["exoskeleton-equipment-3", "bob-exoskeleton-equipment-3"],
-    ["fusion-reactor-equipment", "fission-reactor-equipment"],
     ["fusion-reactor-equipment-2", "bob-fission-reactor-equipment-2"],
     ["fusion-reactor-equipment-3", "bob-fission-reactor-equipment-3"],
     ["fusion-reactor-equipment-4", "bob-fission-reactor-equipment-4"],
