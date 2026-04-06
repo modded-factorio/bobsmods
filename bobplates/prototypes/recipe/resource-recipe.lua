@@ -142,7 +142,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "bob-lithium", amount = 1 },
+      { type = "item", name = "lithium", amount = 1 },
       { type = "item", name = "bob-cobalt-oxide", amount = 1 },
     },
     results = { { type = "item", name = "bob-lithium-cobalt-oxide", amount = 2 } },
