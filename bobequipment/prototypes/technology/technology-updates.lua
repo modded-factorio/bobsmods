@@ -109,3 +109,9 @@ end
 if data.raw.technology["bob-productivity-module-5"] then
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-6", "bob-productivity-module-5")
 end
+
+if mods["space-age"] then
+  bobmods.lib.tech.hide("battery-mk3-equipment")
+  data.raw.technology["battery-mk3-equipment"].effects = nil
+  bobmods.lib.tech.replace_prerequisite_in_all("battery-mk3-equipment", "bob-battery-equipment-3")
+end
