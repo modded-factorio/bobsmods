@@ -2,7 +2,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   data:extend({
     {
       type = "fluid",
-      name = "bob-ammonia",
+      name = "ammonia",
       icon = "__bobrevamp__/graphics/icons/ammonia.png",
       icon_size = 64,
       subgroup = "fluid",
@@ -85,7 +85,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   data:extend({
     {
       type = "recipe",
-      name = "bob-ammonia",
+      name = "ammonia",
       icon = "__bobrevamp__/graphics/icons/ammonia.png",
       icon_size = 64,
       order = "b[fluid-chemistry]-b[ammonia]",
@@ -98,9 +98,9 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         { type = "fluid", name = "bob-hydrogen", amount = 24 },
       },
       results = {
-        { type = "fluid", name = "bob-ammonia", amount = 20 },
+        { type = "fluid", name = "ammonia", amount = 20 },
       },
-      main_product = "bob-ammonia",
+      main_product = "ammonia",
       crafting_machine_tint = {
         primary = { r = 0.0, g = 0.0, b = 1.0, a = 0.000 },
         secondary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
@@ -144,7 +144,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
-        { type = "fluid", name = "bob-ammonia", amount = 20 },
+        { type = "fluid", name = "ammonia", amount = 20 },
         { type = "fluid", name = "bob-hydrogen-peroxide", amount = 4 },
       },
       results = {
@@ -210,7 +210,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
   })
 
   if bobmods.plates.make_void_fluid_recipe then
-    bobmods.plates.make_void_fluid_recipe("bob-ammonia", 25, 15)
+    bobmods.plates.make_void_fluid_recipe("ammonia", 25, 15)
   end
 
   if settings.startup["bobmods-revamp-hardmode"].value == true then
@@ -241,7 +241,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "bob-ammonia", amount = 20 },
+          { type = "fluid", name = "ammonia", amount = 20 },
           { type = "fluid", name = "bob-oxygen", amount = 25 },
         },
         results = {
