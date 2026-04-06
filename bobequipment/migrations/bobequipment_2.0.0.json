@@ -1,7 +1,6 @@
 {
   "item":
   [
-    ["battery-mk3-equipment", "bob-battery-mk3-equipment"],
     ["battery-mk4-equipment", "bob-battery-mk4-equipment"],
     ["battery-mk5-equipment", "bob-battery-mk5-equipment"],
     ["battery-mk6-equipment", "bob-battery-mk6-equipment"],
@@ -41,7 +40,6 @@
   ],
   "equipment":
   [
-    ["battery-mk3-equipment", "bob-battery-mk3-equipment"],
     ["battery-mk4-equipment", "bob-battery-mk4-equipment"],
     ["battery-mk5-equipment", "bob-battery-mk5-equipment"],
     ["battery-mk6-equipment", "bob-battery-mk6-equipment"],
@@ -81,7 +79,6 @@
  ],
   "recipe":
   [
-    ["battery-mk3-equipment", "bob-battery-mk3-equipment"],
     ["battery-mk4-equipment", "bob-battery-mk4-equipment"],
     ["battery-mk5-equipment", "bob-battery-mk5-equipment"],
     ["battery-mk6-equipment", "bob-battery-mk6-equipment"],
