@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "bob-carbon",
+    name = "carbon",
     localised_name = { "item-name.carbon" },
     category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
@@ -294,5 +294,6 @@ data.raw.recipe["solid-fuel-from-light-oil"].allow_productivity = false
 data.raw.recipe["solid-fuel-from-heavy-oil"].allow_productivity = false
 
 if mods["space-age"] then
-  data.raw.recipe["bob-carbon"].allow_productivity = false
+  data.raw.recipe["carbon"].allow_productivity = false
+  data.raw.recipe["coal-synthesis"].allow_productivity = false
 end
