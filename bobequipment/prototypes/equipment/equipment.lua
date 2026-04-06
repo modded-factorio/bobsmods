@@ -211,7 +211,8 @@ data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.buffer_capa
 data:extend({
   {
     type = "battery-equipment",
-    name = "bob-battery-mk3-equipment",
+    name = "battery-mk3-equipment",
+    localised_name = { "equipment-name.bob-battery-mk3-equipment" },
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk3-equipment.png",
       width = 32,
