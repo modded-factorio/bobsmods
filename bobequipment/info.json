@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 2.0.33",
-    "boblibrary >= 2.0.0",
+    "boblibrary >= 2.0.4",
     "? bobenemies >= 2.0.0",
     "? bobplates >= 2.0.0",
     "? boblogistics >= 2.0.0"
