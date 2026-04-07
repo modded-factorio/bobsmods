@@ -95,9 +95,41 @@ bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-ge
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing-ball")
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing")
 
-bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium")
-bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-chloride")
-bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-perchlorate")
+if not mods["space-age"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium")
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-chloride")
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-perchlorate")
+else
+  data.raw.technology["bob-battery-2"].prerequisites = {}
+  bobmods.lib.tech.add_prerequisite("bob-battery-2", "battery")
+  bobmods.lib.tech.add_prerequisite("bob-battery-2", "bob-nitrogen-processing")
+  bobmods.lib.tech.add_prerequisite("bob-battery-2", "bob-electrolysis-2")
+  bobmods.lib.tech.add_prerequisite("bob-battery-2", "bob-zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-battery-2", "chemical-science-pack")
+  data.raw.technology["bob-battery-3"].prerequisites = {}
+  bobmods.lib.tech.add_prerequisite("bob-battery-3", "bob-battery-2")
+  bobmods.lib.tech.add_prerequisite("bob-battery-3", "cryogenic-science-pack")
+  bobmods.lib.tech.add_prerequisite("bob-battery-3", "bob-cobalt-processing")
+  bobmods.lib.tech.set_science_packs("bob-battery-3",
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack", 1 },
+      { "chemical-science-pack", 1 },
+      { "production-science-pack", 1 },
+      { "cryogenic-science-pack", 1 },
+    }
+  )
+  data.raw.technology["bob-battery-2"].effects = {}
+  bobmods.lib.tech.add_recipe_unlock("bob-battery-2", "bob-silver-oxide")
+  bobmods.lib.tech.add_recipe_unlock("bob-battery-2", "bob-silver-nitrate")
+  bobmods.lib.tech.add_recipe_unlock("bob-battery-2", "bob-battery-2")
+  data.raw.technology["bob-battery-3"].effects = {}
+  bobmods.lib.tech.add_recipe_unlock("bob-battery-3", "bob-lithium-cobalt-oxide")
+  bobmods.lib.tech.add_recipe_unlock("bob-battery-3", "bob-battery-3")
+  bobmods.lib.tech.hide("bob-lithium-processing")
+  bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-chloride")
+  bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-perchlorate")
+end
 
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-gear-wheel")
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-bearing-ball")
