@@ -222,4 +222,7 @@ if not mods["space-age"] then
       allow_productivity = true,
     },
   })
+else
+  bobmods.lib.recipe.remove_ingredient("lithium", "lithium-brine")
+  bobmods.lib.recipe.add_ingredient("lithium", { type = "item", name = "bob-lithium-chloride", amount = 5 })
 end
