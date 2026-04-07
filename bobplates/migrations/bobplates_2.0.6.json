@@ -1,6 +1,17 @@
 {
+  "item":
+  [
+    ["bob-lithium-ion-battery", "bob-battery-2"],
+    ["lithium-ion-battery", "bob-battery-2"],
+    ["bob-silver-zinc-battery", "bob-battery-2"],
+    ["silver-zinc-battery", "bob-battery-2"]
+  ],
   "recipe":
   [
-    ["bob-heavy-water-electrolysis", "bob-deuterium"]
+    ["bob-heavy-water-electrolysis", "bob-deuterium"],
+    ["bob-lithium-ion-battery", "bob-battery-2"],
+    ["lithium-ion-battery", "bob-battery-2"],
+    ["bob-silver-zinc-battery", "bob-battery-2"],
+    ["silver-zinc-battery", "bob-battery-2"]
   ]
 }
