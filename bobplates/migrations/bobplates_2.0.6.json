@@ -9,8 +9,8 @@
   ],
   "recipe":
   [
-    ["bob-lithium", "lithium"],
     ["bob-heavy-water-electrolysis", "bob-deuterium"],
+    ["bob-lithium", "lithium"],
     ["bob-lithium-ion-battery", "bob-battery-2"],
     ["lithium-ion-battery", "bob-battery-2"],
     ["bob-silver-zinc-battery", "bob-battery-2"],
