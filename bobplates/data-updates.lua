@@ -443,8 +443,8 @@ if mods["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "bob-polishing-wheel",
-    "bob-lithium-ion-battery",
-    "bob-silver-zinc-battery",
+    "bob-battery-2",
+    "bob-battery-3",
     "battery",
     "cargo-landing-pad",
     "rocket-silo",
@@ -454,9 +454,4 @@ if mods["quality"] then
     "productivity-module-3",
     "quality-module-3",
   })
-end
-
-if mods["space-age"] then
-  data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
-  data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
 end
