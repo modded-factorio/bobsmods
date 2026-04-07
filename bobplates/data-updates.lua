@@ -308,7 +308,9 @@ if settings.startup["bobmods-plates-purewater"].value == true then
 
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-distillery")
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water")
-  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
+  if not mods["space-age"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
+  end
 end
 
 data.raw.fluid["petroleum-gas"].gas_temperature = -42
@@ -454,4 +456,14 @@ if mods["quality"] then
     "productivity-module-3",
     "quality-module-3",
   })
+end
+
+if mods["space-age"] then
+  data.raw.fluid["bob-lithia-water"].hidden = true
+  data.raw.resource["bob-lithia-water"].hidden = true
+  data.raw.item["bob-lithia-water-barrel"].hidden = true
+  data.raw.recipe["bob-lithia-water-barrel"].hidden = true
+  data.raw.recipe["empty-bob-lithia-water-barrel"].hidden = true
+  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "bob-lithia-water-barrel")
+  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "empty-bob-lithia-water-barrel")
 end
