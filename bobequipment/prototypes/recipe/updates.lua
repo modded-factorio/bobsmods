@@ -596,7 +596,7 @@ if mods["space-age"] then
     "bob-fission-reactor-equipment-4",
     { type = "item", name = "lithium-plate", amount = 40 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-4", "lithium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-4", "cryogenic-science-pack")
 elseif data.raw.item["lithium"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-fission-reactor-equipment-3",
