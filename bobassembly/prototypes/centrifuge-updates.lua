@@ -9,11 +9,16 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-2", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-titanium-gear-wheel"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-2", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-tungsten-processing")
+  elseif data.raw.item["bob-titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-centrifuge-2", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
-  if data.raw.item["bob-titanium-bearing"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-bearing"] then
+    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-2", "iron-gear-wheel", "bob-stainless-steel-bearing")
+  elseif data.raw.item["bob-titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient("bob-centrifuge-2", { type = "item", name = "bob-titanium-bearing", amount = 50 })
   end
 
@@ -22,8 +27,8 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-3", "bob-nitinol-processing")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-3", "refined-concrete", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-3", "refined-concrete", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-3", "bob-tungsten-alloy-processing")
   end
 
