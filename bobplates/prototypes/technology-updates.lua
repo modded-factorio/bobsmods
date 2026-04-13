@@ -74,18 +74,36 @@ bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-powder
 
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-plate")
 
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungstic-acid")
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-oxide")
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-powdered-tungsten")
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-plate")
-
 bobmods.lib.tech.add_recipe_unlock("bob-invar-processing", "bob-invar-alloy")
 
 bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-alloy")
 
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-alloy")
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-tungsten-carbide")
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-tungsten-carbide-2")
+if not mods["space-age"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungstic-acid")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-oxide")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-powdered-tungsten")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "tungsten-plate")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-gear-wheel")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-alloy")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "tungsten-carbide")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "tungsten-carbide-2")
+else
+  data.raw.technology["bob-tungsten-processing"].localised_name = { "technology-name.bob-chromium-processing" }
+  data.raw.technology["bob-tungsten-processing"].localised_description = { "technology-description.bob-chromium-processing" }
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-chromium-plate")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-stainless-steel-alloy")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-stainless-steel-gear-wheel")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-stainless-steel-bearing-ball")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-stainless-steel-bearing")
+
+  bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "tungsten-carbide-2")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-tungstic-acid")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-tungsten-oxide")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-powdered-tungsten")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "tungsten-plate")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "bob-copper-tungsten-alloy")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "bob-tungsten-gear-wheel")
+end
 
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide-from-copper")
@@ -103,8 +121,6 @@ bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-gear
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-bearing-ball")
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-bearing")
 bobmods.lib.tech.add_prerequisite("bob-titanium-processing", "lubricant")
-
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-gear-wheel")
 
 bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-gear-wheel")
 bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-bearing-ball")
@@ -161,4 +177,8 @@ if mods["Nuclear Fuel"] then
     "kovarex-enrichment-process",
     "production-science-pack"
   )
+end
+
+if mods["space-age"] then
+  bobmods.lib.tech.remove_recipe_unlock("tungsten-carbide", "carbon")
 end
