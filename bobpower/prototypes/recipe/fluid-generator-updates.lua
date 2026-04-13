@@ -88,14 +88,19 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
 
-  if data.raw.item["bob-tungsten-gear-wheel"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+  elseif data.raw.item["bob-tungsten-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
   elseif data.raw.item["bob-steel-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "bob-tungsten-plate")
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "bob-stainless-steel-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-tungsten-processing")
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-tungsten-processing")
   end
 
@@ -132,7 +137,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       )
     end
 
-    if data.raw.item["bob-nitinol-gear-wheel"] then
+    if mods["space-age"] and data.raw.item["bob-tungsten-gear-wheel"] then
+      bobmods.lib.recipe.replace_ingredient("bob-hydrazine-generator", "iron-gear-wheel", "bob-tungsten-gear-wheel")
+      bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "metallurgic-science-pack")
+    elseif data.raw.item["bob-nitinol-gear-wheel"] then
       bobmods.lib.recipe.replace_ingredient("bob-hydrazine-generator", "iron-gear-wheel", "bob-nitinol-gear-wheel")
     end
 
