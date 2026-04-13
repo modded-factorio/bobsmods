@@ -269,10 +269,10 @@ if data.raw.recipe["bob-robot-tool-construction"] then
       { type = "item", name = "bob-nitinol-bearing", amount = 1 }
     )
   end
-  if data.raw.item["bob-tungsten-carbide"] then
+  if data.raw.item["tungsten-carbide"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-robot-tool-logistic-4",
-      { type = "item", name = "bob-tungsten-carbide", amount = 1 }
+      { type = "item", name = "tungsten-carbide", amount = 1 }
     )
     bobmods.lib.tech.add_prerequisite("bob-robots-3", "bob-tungsten-alloy-processing")
   end
