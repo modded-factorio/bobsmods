@@ -342,8 +342,15 @@ if data.raw.technology["bob-titanium-processing"] then
 end
 
 if data.raw.technology["bob-tungsten-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe-to-ground")
+  if not mods["space-age"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe")
+    bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe-to-ground")
+  else
+    bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-stainless-steel-pipe")
+    bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-stainless-steel-pipe-to-ground")
+    bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "bob-tungsten-pipe")
+    bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "bob-tungsten-pipe-to-ground")
+  end
 end
 
 if data.raw.technology["bob-ceramics"] then
@@ -352,8 +359,13 @@ if data.raw.technology["bob-ceramics"] then
 end
 
 if data.raw.technology["bob-tungsten-alloy-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe-to-ground")
+  if not mods["space-age"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe")
+    bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe-to-ground")
+  else
+    bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "bob-copper-tungsten-pipe")
+    bobmods.lib.tech.add_recipe_unlock("tungsten-steel", "bob-copper-tungsten-pipe-to-ground")
+  end
 end
 
 if data.raw.technology["bob-nitinol-processing"] then
