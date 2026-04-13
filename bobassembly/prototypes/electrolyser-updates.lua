@@ -58,8 +58,11 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "steel-plate", "bob-tungsten-plate")
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "steel-plate", "bob-stainless-steel-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-tungsten-processing")
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "steel-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-tungsten-processing")
   end
 
@@ -67,8 +70,11 @@ then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-ceramic-pipe")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "bob-tungsten-carbide")
+  if mods["space-age"] and data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "metallurgic-science-pack")
+  elseif data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "tungsten-carbide")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
