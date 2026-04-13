@@ -37,7 +37,26 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-titanium-bearing"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-bearing"] then
+    bobmods.lib.recipe.add_ingredient("bob-locomotive-3", { type = "item", name = "bob-stainless-steel-bearing", amount = 16 })
+    bobmods.lib.recipe.add_ingredient("bob-cargo-wagon-3", { type = "item", name = "bob-stainless-steel-bearing", amount = 8 })
+    bobmods.lib.recipe.add_ingredient("bob-fluid-wagon-3", { type = "item", name = "bob-stainless-steel-bearing", amount = 8 })
+
+    bobmods.lib.recipe.add_ingredient(
+      "bob-armoured-locomotive-2",
+      { type = "item", name = "bob-stainless-steel-bearing", amount = 16 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-armoured-cargo-wagon-2",
+      { type = "item", name = "bob-stainless-steel-bearing", amount = 8 }
+    )
+    bobmods.lib.recipe.add_ingredient(
+      "bob-armoured-fluid-wagon-2",
+      { type = "item", name = "bob-stainless-steel-bearing", amount = 8 }
+    )
+    bobmods.lib.tech.add_prerequisite("bob-railway-3", "bob-tungsten-processing")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-wagon-3", "bob-tungsten-processing")
+  elseif data.raw.item["bob-titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient("bob-locomotive-3", { type = "item", name = "bob-titanium-bearing", amount = 16 })
     bobmods.lib.recipe.add_ingredient("bob-cargo-wagon-3", { type = "item", name = "bob-titanium-bearing", amount = 8 })
     bobmods.lib.recipe.add_ingredient("bob-fluid-wagon-3", { type = "item", name = "bob-titanium-bearing", amount = 8 })
@@ -73,7 +92,15 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     )
   end
 
-  if data.raw.item["bob-titanium-gear-wheel"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-locomotive-3", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("bob-cargo-wagon-3", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-wagon-3", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+
+    bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+  elseif data.raw.item["bob-titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-locomotive-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.recipe.replace_ingredient("bob-cargo-wagon-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.recipe.replace_ingredient("bob-fluid-wagon-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
@@ -83,14 +110,14 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
+  if data.raw.item["tungsten-carbide"] then
     bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "bob-tungsten-alloy-processing")
     bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "bob-tungsten-alloy-processing")
     if data.raw.item["bob-silicon-nitride"] then
       bobmods.lib.recipe.remove_ingredient("bob-armoured-locomotive-2", "steel-plate")
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-locomotive-2",
-        { type = "item", name = "bob-tungsten-carbide", amount = 15 }
+        { type = "item", name = "tungsten-carbide", amount = 15 }
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-locomotive-2",
@@ -100,7 +127,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       bobmods.lib.recipe.remove_ingredient("bob-armoured-cargo-wagon-2", "steel-plate")
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-cargo-wagon-2",
-        { type = "item", name = "bob-tungsten-carbide", amount = 15 }
+        { type = "item", name = "tungsten-carbide", amount = 15 }
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-cargo-wagon-2",
@@ -110,7 +137,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       bobmods.lib.recipe.remove_ingredient("bob-armoured-fluid-wagon-2", "steel-plate")
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-fluid-wagon-2",
-        { type = "item", name = "bob-tungsten-carbide", amount = 15 }
+        { type = "item", name = "tungsten-carbide", amount = 15 }
       )
       bobmods.lib.recipe.add_ingredient(
         "bob-armoured-fluid-wagon-2",
@@ -120,9 +147,9 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       bobmods.lib.tech.add_prerequisite("bob-armoured-railway-2", "bob-ceramics")
       bobmods.lib.tech.add_prerequisite("bob-armoured-fluid-wagon-2", "bob-ceramics")
     else
-      bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "steel-plate", "bob-tungsten-carbide")
-      bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "steel-plate", "bob-tungsten-carbide")
-      bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "steel-plate", "bob-tungsten-carbide")
+      bobmods.lib.recipe.replace_ingredient("bob-armoured-locomotive-2", "steel-plate", "tungsten-carbide")
+      bobmods.lib.recipe.replace_ingredient("bob-armoured-cargo-wagon-2", "steel-plate", "tungsten-carbide")
+      bobmods.lib.recipe.replace_ingredient("bob-armoured-fluid-wagon-2", "steel-plate", "tungsten-carbide")
     end
   else
     if data.raw.item["bob-silicon-nitride"] then
