@@ -139,3 +139,33 @@ data.raw.item["stone"].subgroup = "bob-ores"
 data.raw.item["iron-ore"].subgroup = "bob-ores"
 data.raw.item["copper-ore"].subgroup = "bob-ores"
 data.raw.item["uranium-ore"].subgroup = "bob-ores"
+
+if bobmods.ores.tungsten.enabled then
+  if mods["space-age"] then
+    data.raw.item["bob-tungsten-ore"].localised_name = { "item-name.bob-chromium-ore" }
+    data.raw.resource["bob-tungsten-ore"].localised_name = { "item-name.bob-chromium-ore" }
+    data.raw.item["bob-tungsten-ore"].icon = "__space-age__/graphics/icons/tungsten-ore.png"
+    data.raw.item["bob-tungsten-ore"].icon_size = 64
+    data.raw.item["tungsten-ore"].icon = "__bobores__/graphics/icons/tungsten-ore.png"
+    data.raw.item["tungsten-ore"].icon_size = 32
+    data.raw.resource["bob-tungsten-ore"].icon = "__space-age__/graphics/icons/tungsten-ore.png"
+    data.raw.resource["bob-tungsten-ore"].icon_size = 64
+    data.raw.resource["tungsten-ore"].icon = "__bobores__/graphics/icons/tungsten-ore.png"
+    data.raw.resource["tungsten-ore"].icon_size = 32
+
+    local tungsten_ore_sheet = util.table.deepcopy(data.raw.resource["bob-tungsten-ore"].stages)
+    local chromium_ore_sheet = util.table.deepcopy(data.raw.resource["tungsten-ore"].stages)
+    local tungsten_item_sheet = util.table.deepcopy(data.raw.item["bob-tungsten-ore"].pictures)
+    local chromium_item_sheet = util.table.deepcopy(data.raw.item["tungsten-ore"].pictures)
+
+    data.raw.resource["bob-tungsten-ore"].stages = chromium_ore_sheet
+    data.raw.resource["tungsten-ore"].stages = tungsten_ore_sheet
+    data.raw.resource["bob-tungsten-ore"].map_color = { r = 0.3828125, g = 0.3359375, b = 0.5859375, a = 1, }
+    data.raw.resource["tungsten-ore"].map_color = { r = 0.75, g = 0, b = 0, a = 1, }
+    data.raw.item["bob-tungsten-ore"].pictures = chromium_item_sheet
+    data.raw.item["tungsten-ore"].pictures = tungsten_item_sheet
+
+    data.raw["autoplace-control"]["bob-tungsten-ore"].localised_name = { "", "[entity=bob-tungsten-ore] ", { "entity-name.bob-chromium-ore" } }
+    data.raw["autoplace-control"]["bob-tungsten-ore"].order = "b-d-bob-chromite-ore"
+  end
+end
