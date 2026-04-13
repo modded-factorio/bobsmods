@@ -24,7 +24,10 @@ bobmods.lib.recipe.add_ingredient("rocket-silo", { type = "item", name = "bob-he
 bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "bob-heat-shield-tile", amount = 100 })
 bobmods.lib.recipe.add_ingredient("cargo-landing-pad", { type = "item", name = "electric-engine-unit", amount = 40 })
 
-if data.raw.item["bob-tungsten-pipe"] then
+if mods["space-age"] and data.raw.item["bob-stainless-steel-pipe"] then
+  bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "bob-stainless-steel-pipe", amount = 30 })
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-tungsten-processing")
+elseif data.raw.item["bob-tungsten-pipe"] then
   bobmods.lib.recipe.add_ingredient("rocket-part", { type = "item", name = "bob-tungsten-pipe", amount = 30 })
 end
 
@@ -34,9 +37,16 @@ if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "steel-plate", "bob-silicon-nitride")
   bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "steel-processing", "bob-ceramics")
 end
-if data.raw.item["bob-tungsten-carbide"] then
-  bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "bob-tungsten-carbide")
-  bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-tungsten-alloy-processing")
+if not mods["space-age"] then
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "tungsten-carbide")
+    bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-tungsten-alloy-processing")
+  end
+else
+  if data.raw.item["bob-stainless-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "bob-stainless-steel-alloy")
+    bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-tungsten-processing")
+  end
 end
 
 if data.raw.item["bob-titanium-plate"] then
