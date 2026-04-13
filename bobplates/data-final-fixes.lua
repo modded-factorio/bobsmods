@@ -15,3 +15,8 @@ end
 if mods["aai-industry"] then
   bobmods.lib.tech.remove_recipe_unlock("glass-processing", "glass")
 end
+
+if mods["space-age"] then
+  bobmods.lib.tech.replace_prerequisite_in_all("bob-tungsten-alloy-processing", "metallurgic-science-pack")
+  bobmods.lib.tech.hide("bob-tungsten-alloy-processing")
+end
