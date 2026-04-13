@@ -13,8 +13,11 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "bob-zinc-processing")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3", "steel-plate", "bob-tungsten-plate")
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3", "steel-plate", "bob-stainless-steel-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "bob-tungsten-processing")
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3", "steel-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "bob-tungsten-processing")
   end
 
@@ -23,7 +26,10 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "bob-ceramics")
   end
 
-  if data.raw.item["bob-copper-tungsten-alloy"] then
+  if mods["space-age"] and data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-4", "steel-plate", "tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-4", "metallurgic-science-pack")
+  elseif data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-4", "steel-plate", "bob-copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-4", "bob-tungsten-alloy-processing")
   end
