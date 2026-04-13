@@ -56,7 +56,10 @@ if settings.startup["bobmods-power-steam"].value == true then
     end
   end
 
-  if data.raw.item["bob-tungsten-gear-wheel"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-2", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-tungsten-processing")
+  elseif data.raw.item["bob-tungsten-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-2", "iron-gear-wheel", "bob-tungsten-gear-wheel")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-tungsten-processing")
   else
@@ -69,13 +72,15 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-2", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-titanium-processing")
   else
-    if data.raw.item["bob-tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-2", "steel-plate", "bob-tungsten-plate")
+    if data.raw.item["tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-2", "steel-plate", "tungsten-plate")
       bobmods.lib.tech.add_prerequisite("bob-steam-turbine-2", "bob-tungsten-processing")
     end
   end
 
-  if data.raw.item["bob-titanium-pipe"] then
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-pipe"] then
+    bobmods.lib.recipe.add_ingredient("bob-steam-turbine-2", { type = "item", name = "bob-stainless-steel-pipe", amount = 5 })
+  elseif data.raw.item["bob-titanium-pipe"] then
     bobmods.lib.recipe.add_ingredient("bob-steam-turbine-2", { type = "item", name = "bob-titanium-pipe", amount = 5 })
   end
 
@@ -100,7 +105,10 @@ if settings.startup["bobmods-power-steam"].value == true then
     end
   end
 
-  if data.raw.item["bob-nitinol-gear-wheel"] then
+  if mods["space-age"] and data.raw.item["bob-tungsten-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "metallurgic-science-pack")
+  elseif data.raw.item["bob-nitinol-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-3", "iron-gear-wheel", "bob-nitinol-gear-wheel")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "bob-nitinol-processing")
   else
@@ -118,8 +126,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-3", "steel-plate", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "bob-nitinol-processing")
   else
-    if data.raw.item["bob-tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-3", "steel-plate", "bob-tungsten-plate")
+    if data.raw.item["tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("bob-steam-turbine-3", "steel-plate", "tungsten-plate")
       bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "bob-tungsten-processing")
     end
   end
