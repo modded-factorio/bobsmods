@@ -254,7 +254,7 @@ local function bob_pipepictures(pipe_type)
     ending_left_disabled_visualization = make_disabled_visualization(8),
   }
 
-  if feature_flags["freezing"] and mods["space-age"] then
+  if mods["space-age"] then
     pipepictures.corner_down_left_frozen = {
       filename = "__space-age__/graphics/entity/frozen/pipe/pipe-corner-down-left.png",
       width = 128,
@@ -916,7 +916,7 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] and mods["space-age"] then
+if feature_flags["freezing"] then
   data.raw.pipe["bob-copper-pipe"].heating_energy = "1kW"
   data.raw.pipe["bob-plastic-pipe"].heating_energy = "1kW"
   data.raw.pipe["bob-steel-pipe"].heating_energy = "1kW"
@@ -926,20 +926,28 @@ if feature_flags["freezing"] and mods["space-age"] then
   data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].heating_energy = "100kW"
   data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].heating_energy = "150kW"
   data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].heating_energy = "200kW"
-  local ptgfrozenpatch = data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch
-  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-  local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
-  data.raw.pipe["bob-copper-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw.pipe["bob-plastic-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw.pipe["bob-steel-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw.pipe["bob-stone-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  if mods["space-age"] then
+    local function frozenpatch()
+      local result = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch)
+      return result
+    end
+    data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].frozen_patch = frozenpatch()
+    data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].frozen_patch = frozenpatch()
+    data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].frozen_patch = frozenpatch()
+    data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].frozen_patch = frozenpatch()
+    local function frozenpatch2()
+      local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
+      return result
+    end
+    data.raw.pipe["bob-copper-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw.pipe["bob-plastic-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw.pipe["bob-steel-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw.pipe["bob-stone-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+  end
 end
 
 if mods["bobplates"] then
@@ -1533,7 +1541,7 @@ if mods["bobplates"] then
     },
   })
 
-  if feature_flags["freezing"] and mods["space-age"] then
+  if feature_flags["freezing"] then
     data.raw.pipe["bob-brass-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-bronze-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-ceramic-pipe"].heating_energy = "1kW"
@@ -1548,29 +1556,131 @@ if mods["bobplates"] then
     data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].heating_energy = "300kW"
     data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].heating_energy = "300kW"
-    local ptgfrozenpatch = data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch
-    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].frozen_patch = ptgfrozenpatch
-    local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
-    data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw.pipe["bob-ceramic-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw.pipe["bob-copper-tungsten-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    if mods["space-age"] then
+      local function frozenpatch()
+        local result = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch)
+        return result
+      end
+      data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].frozen_patch = frozenpatch()
+      local function frozenpatch2()
+        local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
+        return result
+      end
+      data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw.pipe["bob-ceramic-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw.pipe["bob-copper-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
+    end
+  end
+
+  if mods["space-age"] then
+    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].heating_energy = "300kW"
+    data:extend({
+      {
+        type = "pipe",
+        name = "bob-stainless-steel-pipe",
+        icon = "__boblogistics__/graphics/icons/pipe/tungsten-pipe.png",
+        icon_size = 64,
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.4, result = "bob-stainless-steel-pipe" },
+        max_health = 250,
+        corpse = "small-remnants",
+        icon_draw_specification = { scale = 0.5 },
+        resistances = {
+          {
+            type = "fire",
+            percent = 90,
+          },
+        },
+        fast_replaceable_group = "pipe",
+        collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
+        selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+        fluid_box = {
+          volume = 100,
+          pipe_connections = {
+            { position = { 0, 0 }, direction = defines.direction.north },
+            { position = { 0, 0 }, direction = defines.direction.east },
+            { position = { 0, 0 }, direction = defines.direction.south },
+            { position = { 0, 0 }, direction = defines.direction.west },
+          },
+          pipe_covers_frozen = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen),
+          hide_connection_info = true,
+        },
+        heating_energy = "1kW",
+        pictures = bob_pipepictures("tungsten"),
+        impact_category = "metal",
+        working_sound = {
+          sound = {
+            {
+              filename = "__base__/sound/pipe.ogg",
+              volume = 0.65,
+            },
+          },
+          match_volume_to_activity = true,
+          max_sounds_per_prototype = 3,
+        },
+        horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
+        vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
+      },
+
+      {
+        type = "pipe-to-ground",
+        name = "bob-stainless-steel-pipe-to-ground",
+        icon = "__boblogistics__/graphics/icons/pipe/tungsten-pipe-to-ground.png",
+        icon_size = 64,
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.4, result = "bob-stainless-steel-pipe-to-ground" },
+        max_health = 300,
+        corpse = "small-remnants",
+        icon_draw_specification = { scale = 0.5 },
+        resistances = {
+          {
+            type = "fire",
+            percent = 80,
+          },
+        },
+        fast_replaceable_group = "pipe",
+        collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
+        selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+        fluid_box = {
+          volume = 100,
+          pipe_covers = bob_pipecoverspictures("tungsten"),
+          pipe_connections = {
+            { position = { 0, 0 }, direction = defines.direction.north },
+            {
+              position = { 0, 0 },
+              direction = defines.direction.south,
+              connection_type = "underground",
+              max_underground_distance = 25,
+            },
+          },
+          pipe_covers_frozen = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen),
+          hide_connection_info = true,
+        },
+        heating_energy = "250kW",
+        pictures = bob_pipetogroundpictures("tungsten"),
+        frozen_patch = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch),
+        visualization = bob_pipetoground_visualization(),
+        disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+        impact_category = "metal",
+      },
+    })
   end
 end
 
@@ -1587,4 +1697,10 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("bob-tungsten-pipe-to-ground", 4)
   bobmods.logistics.set_pipe_distance("bob-nitinol-pipe-to-ground", 5)
   bobmods.logistics.set_pipe_distance("bob-copper-tungsten-pipe-to-ground", 5)
+  if mods["space-age"] then
+    bobmods.logistics.set_pipe_distance("bob-stainless-steel-pipe-to-ground", 4)
+    bobmods.logistics.set_pipe_distance("bob-tungsten-pipe-to-ground", 5)
+  else
+    bobmods.logistics.set_pipe_distance("bob-tungsten-pipe-to-ground", 4)
+  end
 end
