@@ -317,7 +317,7 @@ if data.raw.item["bob-titanium-plate"] then
   })
 end
 
-if data.raw.item["bob-tungsten-plate"] then
+if data.raw.item["tungsten-plate"] then
   data:extend({
     {
       type = "item",
@@ -414,4 +414,62 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
       pick_sound = pipe_pick,
     },
   })
+end
+
+if mods["space-age"] then
+  if data.raw.item["tungsten-plate"] then
+    data.raw.item["bob-tungsten-pipe"].order = "a[pipe]-a[pipe]-5-1a"
+    data.raw.item["bob-tungsten-pipe-to-ground"].order = "a[pipe]-b[pipe-to-ground]-5-1a"
+  end
+  if data.raw.item["bob-stainless-steel-alloy"] then
+    data:extend({
+      {
+        type = "item",
+        name = "bob-stainless-steel-pipe",
+        icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe.png",
+        icon_size = 64,
+        subgroup = "bob-pipe",
+        order = "a[pipe]-a[pipe]-4-0",
+        place_result = "bob-stainless-steel-pipe",
+        stack_size = 100,
+        drop_sound = {
+          filename = "__base__/sound/item/brick-inventory-move.ogg",
+          volume = 0.5,
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/brick-inventory-move.ogg",
+          volume = 0.5,
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/brick-inventory-pickup.ogg",
+          volume = 0.6,
+        },
+        weight = 5000,
+      },
+
+      {
+        type = "item",
+        name = "bob-stainless-steel-pipe-to-ground",
+        icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe-to-ground.png",
+        icon_size = 64,
+        subgroup = "bob-pipe-to-ground",
+        order = "a[pipe]-b[pipe-to-ground]-4-0",
+        place_result = "bob-stainless-steel-pipe-to-ground",
+        stack_size = 50,
+        drop_sound = {
+          filename = "__base__/sound/item/brick-inventory-move.ogg",
+          volume = 0.5,
+        },
+        inventory_move_sound = {
+          filename = "__base__/sound/item/brick-inventory-move.ogg",
+          volume = 0.5,
+        },
+        pick_sound = {
+          filename = "__base__/sound/item/brick-inventory-pickup.ogg",
+          volume = 0.6,
+        },
+        weight = 20000,
+      },
+    })
+  end
 end
