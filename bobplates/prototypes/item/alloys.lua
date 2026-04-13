@@ -35,6 +35,7 @@ data:extend({
   {
     type = "item",
     name = "bob-copper-tungsten-alloy",
+    localised_name = { "item-name.bob-copper-tungsten-alloy" },
     icon = "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png",
     icon_size = 32,
     subgroup = "bob-alloy",
@@ -43,10 +44,13 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 2500,
+    auto_recycle = true,
   },
   {
     type = "item",
-    name = "bob-tungsten-carbide",
+    name = "tungsten-carbide",
+    localised_name = { "item-name.bob-tungsten-carbide" },
     icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
     icon_size = 64,
     subgroup = "bob-alloy",
@@ -55,6 +59,8 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1250,
+    auto_recycle = true,
   },
   {
     type = "item",
@@ -106,3 +112,21 @@ data:extend({
     pick_sound = plate_pick,
   },
 })
+
+if mods["space-age"] then
+  data:extend({
+    {
+      type = "item",
+      name = "bob-stainless-steel-alloy",
+      icon = "__space-age__/graphics/icons/tungsten-plate.png",
+      subgroup = "bob-alloy",
+      order = "c-b-c[bob-stainless-steel]",
+      stack_size = 200,
+      drop_sound = plate_drop_move,
+      inventory_move_sound = plate_drop_move,
+      pick_sound = plate_pick,
+      weight = 2500,
+      auto_recycle = true,
+    },
+  })
+end
