@@ -40,8 +40,8 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-3", "bob-titanium-processing")
   else
-    if data.raw.item["bob-tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "steel-plate", "bob-tungsten-plate")
+    if data.raw.item["tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("bob-pumpjack-2", "steel-plate", "tungsten-plate")
       bobmods.lib.tech.add_prerequisite("bob-pumpjacks-3", "bob-tungsten-processing")
     end
   end
