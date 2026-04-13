@@ -119,7 +119,7 @@ data:extend({
     name = "bob-tungsten-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "bob-tungsten-plate", amount = 2 },
+      { type = "item", name = "tungsten-plate", amount = 2 },
     },
     results = { { type = "item", name = "bob-tungsten-gear-wheel", amount = 1 } },
     allow_productivity = true,
@@ -258,3 +258,42 @@ data:extend({
     allow_productivity = true,
   },
 })
+
+if mods["space-age"] then
+
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-stainless-steel-gear-wheel",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-stainless-steel-alloy", amount = 2 },
+      },
+      results = { { type = "item", name = "bob-stainless-steel-gear-wheel", amount = 1 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-stainless-steel-bearing-ball",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-stainless-steel-alloy", amount = 1 },
+      },
+      results = { { type = "item", name = "bob-stainless-steel-bearing-ball", amount = 12 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-stainless-steel-bearing",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-stainless-steel-alloy", amount = 1 },
+        { type = "item", name = "bob-stainless-steel-bearing-ball", amount = 16 },
+      },
+      results = { { type = "item", name = "bob-stainless-steel-bearing", amount = 2 } },
+      allow_productivity = true,
+    },
+  })
+end
