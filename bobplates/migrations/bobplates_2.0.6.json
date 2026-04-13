@@ -1,6 +1,14 @@
 {
+  "item":
+  [
+    ["bob-tungsten-carbide", "tungsten-carbide"],
+    ["bob-tungsten-plate", "tungsten-plate"]
+  ],
   "recipe":
   [
     ["bob-heavy-water-electrolysis", "bob-deuterium"]
+    ["bob-tungsten-carbide", "tungsten-carbide"],
+    ["bob-tungsten-carbide-2", "tungsten-carbide-2"],
+    ["bob-tungsten-plate", "tungsten-plate"]
   ]
 }
