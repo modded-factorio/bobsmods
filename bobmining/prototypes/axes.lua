@@ -53,7 +53,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
           },
         },
         prerequisites = { "bob-steel-axe-3", "bob-tungsten-processing" },
-        research_trigger = { type = "craft-item", item = "bob-tungsten-plate", count = 50 },
+        research_trigger = { type = "craft-item", item = "tungsten-plate", count = 50 },
         upgrade = true,
       },
       {
@@ -89,6 +89,12 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
         upgrade = true,
       },
     })
+
+    if mods["space-age"] then
+      data.raw.technology["bob-steel-axe-4"].localised_name = { "technology-name.bob-stainless-steel-axe" }
+      data.raw.technology["bob-steel-axe-4"].research_trigger = { type = "craft-item", item = "bob-stainless-steel-alloy", count = 50 }
+    end
+
   else
     data:extend({
       {
