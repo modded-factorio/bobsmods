@@ -12,8 +12,11 @@ if settings.startup["bobmods-power-steam"].value == true then
   if data.raw.item["bob-brass-pipe"] then
     bobmods.lib.recipe.add_ingredient("bob-heat-exchanger-2", { type = "item", name = "bob-brass-pipe", amount = 4 })
   end
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-heat-exchanger-3", "steel-plate", "bob-tungsten-plate")
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-heat-exchanger-3", "steel-plate", "bob-stainless-steel-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-heat-exchanger-3", "bob-tungsten-processing")
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-heat-exchanger-3", "steel-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-heat-exchanger-3", "bob-tungsten-processing")
   end
   if data.raw.item["bob-ceramic-pipe"] then
