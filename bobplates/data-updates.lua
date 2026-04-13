@@ -459,4 +459,15 @@ end
 if mods["space-age"] then
   data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
   data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
+
+  if data.raw.item["bob-sodium-carbonate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chromium-plate", "stone", "bob-sodium-carbonate")
+  elseif data.raw.item["bob-limestone"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chromium-plate", "stone", "bob-limestone")
+  end
+
+  data.raw["autoplace-control"].calcite.order = "b-e-vulcanus-calcite"
+  data.raw["autoplace-control"].vulcanus_coal.order = "b-e-vulcanus-coal"
+  data.raw["autoplace-control"].sulfuric_acid_geyser.order = "b-e-vulcanus-sulfuric-acid"
+  data.raw["autoplace-control"].tungsten_ore.order = "b-e-vulcanus-tungsten-ore"
 end
