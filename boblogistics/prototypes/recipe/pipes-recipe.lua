@@ -184,14 +184,14 @@ if data.raw.item["bob-titanium-plate"] then
   })
 end
 
-if data.raw.item["bob-tungsten-plate"] then
+if data.raw.item["tungsten-plate"] then
   data:extend({
     {
       type = "recipe",
       name = "bob-tungsten-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "bob-tungsten-plate", amount = 1 },
+        { type = "item", name = "tungsten-plate", amount = 1 },
       },
       results = { { type = "item", name = "bob-tungsten-pipe", amount = 1 } },
     },
@@ -202,11 +202,17 @@ if data.raw.item["bob-tungsten-plate"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "bob-tungsten-pipe", amount = 16 },
-        { type = "item", name = "bob-tungsten-plate", amount = 5 },
+        { type = "item", name = "tungsten-plate", amount = 5 },
       },
       results = { { type = "item", name = "bob-tungsten-pipe-to-ground", amount = 2 } },
     },
   })
+  if mods["space-age"] then
+    data.raw.recipe["bob-tungsten-pipe-to-ground"].ingredients = {
+      { type = "item", name = "bob-tungsten-pipe", amount = 18 },
+      { type = "item", name = "tungsten-plate", amount = 5 },
+    }
+  end
 end
 
 if data.raw.item["bob-nitinol-alloy"] then
@@ -255,6 +261,31 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
         { type = "item", name = "bob-copper-tungsten-alloy", amount = 5 },
       },
       results = { { type = "item", name = "bob-copper-tungsten-pipe-to-ground", amount = 2 } },
+    },
+  })
+end
+
+if data.raw.item["bob-stainless-steel-alloy"] then
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-stainless-steel-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-stainless-steel-alloy", amount = 1 },
+      },
+      results = { { type = "item", name = "bob-stainless-steel-pipe", amount = 1 } },
+    },
+
+    {
+      type = "recipe",
+      name = "bob-stainless-steel-pipe-to-ground",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-stainless-steel-pipe", amount = 16 },
+        { type = "item", name = "bob-stainless-steel-alloy", amount = 5 },
+      },
+      results = { { type = "item", name = "bob-stainless-steel-pipe-to-ground", amount = 2 } },
     },
   })
 end
