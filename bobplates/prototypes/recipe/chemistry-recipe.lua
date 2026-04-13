@@ -949,3 +949,10 @@ data:extend({
 if mods["bobpower"] then
   data.raw.recipe["bob-sodium-hydroxide-sink"].results[1].temperature = 465
 end
+
+if mods["space-age"] then
+
+  bobmods.lib.recipe.replace_ingredient("bob-tungstic-acid", "bob-tungsten-ore", "tungsten-ore")
+  bobmods.lib.recipe.replace_ingredient("bob-tungstic-acid", "bob-hydrogen-chloride", "sulfuric-acid")
+  bobmods.lib.recipe.remove_result("bob-tungstic-acid", "bob-calcium-chloride")
+end
