@@ -93,7 +93,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "bob-tungsten-plate",
+    name = "tungsten-plate",
     enabled = false,
     auto_recycle = false,
     category = "bob-mixing-furnace",
@@ -103,7 +103,7 @@ data:extend({
       { type = "item", name = "bob-nickel-plate", amount = 1 },
       { type = "item", name = "bob-powdered-tungsten", amount = 4 },
     },
-    results = { { type = "item", name = "bob-tungsten-plate", amount = 5 } },
+    results = { { type = "item", name = "tungsten-plate", amount = 5 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -218,3 +218,34 @@ data:extend({
     allow_productivity = true,
   },
 })
+
+
+
+if not mods["space-age"] then
+else
+
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-chromium-plate",
+      category = "bob-chemical-furnace",
+      subgroup = "bob-material-chemical",
+      energy_required = 6.4,
+      enabled = false,
+      auto_recycle = false,
+      ingredients = {
+        { type = "item", name = "bob-tungsten-ore", amount = 2 },
+        { type = "item", name = "stone", amount = 1 },
+        { type = "fluid", name = "sulfuric-acid", amount = 20 },
+        { type = "item", name = "carbon", amount = 1 },
+      },
+      results = { { type = "item", name = "bob-chromium-plate", amount = 2 } },
+      allow_decomposition = false,
+      allow_productivity = true,
+    },
+  })
+
+  bobmods.lib.recipe.set_category("tungsten-plate", "metallurgy")
+  bobmods.lib.recipe.remove_ingredient("tungsten-plate", "bob-nickel-plate")
+  bobmods.lib.recipe.add_ingredient("tungsten-plate", { type = "fluid", name = "molten-iron", amount = 40 })
+end
