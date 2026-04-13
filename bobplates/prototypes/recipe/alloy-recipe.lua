@@ -52,7 +52,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bob-tungsten-carbide",
+    name = "tungsten-carbide",
     enabled = false,
     auto_recycle = false,
     category = "bob-mixing-furnace",
@@ -62,14 +62,14 @@ data:extend({
       { type = "item", name = "bob-tungsten-oxide", amount = 1 },
     },
     results = {
-      { type = "item", name = "bob-tungsten-carbide", amount = 2 },
+      { type = "item", name = "tungsten-carbide", amount = 2 },
     },
     allow_decomposition = false,
     allow_productivity = true,
   },
   {
     type = "recipe",
-    name = "bob-tungsten-carbide-2",
+    name = "tungsten-carbide-2",
     localised_name = { "item-name.bob-tungsten-carbide" },
     enabled = false,
     auto_recycle = false,
@@ -80,7 +80,7 @@ data:extend({
       { type = "item", name = "bob-powdered-tungsten", amount = 1 },
     },
     results = {
-      { type = "item", name = "bob-tungsten-carbide", amount = 2 },
+      { type = "item", name = "tungsten-carbide", amount = 2 },
     },
     allow_decomposition = false,
     allow_productivity = true,
@@ -155,3 +155,27 @@ data:extend({
     allow_productivity = true,
   },
 })
+
+if mods["space-age"] then
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-stainless-steel-alloy",
+      category = "bob-mixing-furnace",
+      energy_required = 32,
+      enabled = false,
+      auto_recycle = false,
+      ingredients = {
+        { type = "item", name = "iron-plate", amount = 11 },
+        { type = "item", name = "bob-chromium-plate", amount = 4 },
+      },
+      results = { { type = "item", name = "bob-stainless-steel-alloy", amount = 10 } },
+      allow_decomposition = false,
+      allow_productivity = true,
+    },
+  })
+
+  bobmods.lib.recipe.set_category("bob-copper-tungsten-alloy", "metallurgy")
+  bobmods.lib.recipe.remove_ingredient("bob-copper-tungsten-alloy", "copper-plate")
+  bobmods.lib.recipe.add_ingredient("bob-copper-tungsten-alloy", { type = "fluid", name = "molten-copper", amount = 80 })
+end
