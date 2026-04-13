@@ -7,8 +7,11 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     bobmods.lib.tech.add_prerequisite("advanced-material-processing-3", "bob-invar-processing")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-2", "stone-brick", "bob-tungsten-plate")
+  if mods["space-age"] and data.raw.item["bob-stainless-steel-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-2", "stone-brick", "bob-stainless-steel-alloy")
+    bobmods.lib.tech.add_prerequisite("advanced-material-processing-3", "bob-tungsten-processing")
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-2", "stone-brick", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("advanced-material-processing-3", "bob-tungsten-processing")
   end
 
@@ -17,8 +20,11 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
     bobmods.lib.tech.add_prerequisite("advanced-material-processing-4", "bob-tungsten-alloy-processing")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-3", "stone-brick", "bob-tungsten-carbide")
+  if mods["space-age"] and data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-3", "stone-brick", "tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("advanced-material-processing-4", "metallurgic-science-pack")
+  elseif data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-3", "stone-brick", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("advanced-material-processing-4", "bob-tungsten-alloy-processing")
   end
 
