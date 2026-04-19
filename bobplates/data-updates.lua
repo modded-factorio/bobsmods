@@ -462,6 +462,7 @@ if mods["space-age"] then
 
   if data.raw.item["bob-sodium-carbonate"] then
     bobmods.lib.recipe.replace_ingredient("bob-chromium-plate", "stone", "bob-sodium-carbonate")
+    bobmods.lib.tech.add_prerequisite("bob-tungsten-processing", "bob-rtg")
   elseif data.raw.item["bob-limestone"] then
     bobmods.lib.recipe.replace_ingredient("bob-chromium-plate", "stone", "bob-limestone")
   end
