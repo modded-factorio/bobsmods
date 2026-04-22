@@ -883,21 +883,25 @@ function add_class_gui_classes(gui, player_index)
     end
     if add_it then
       if class.button.group and gui.table[class.button.group] then
-        gui.table[class.button.group].add({
-          type = "sprite-button",
-          name = class.button.name,
-          tooltip = class.button.tooltip,
-          sprite = class.button.sprite,
-          style = "mod_gui_item_button",
-        })
+        if not gui.table[class.button.group][class.button.name] then
+          gui.table[class.button.group].add({
+            type = "sprite-button",
+            name = class.button.name,
+            tooltip = class.button.tooltip,
+            sprite = class.button.sprite,
+            style = "mod_gui_item_button",
+          })
+        end
       else
-        gui.other.add({
-          type = "sprite-button",
-          name = class.button.name,
-          tooltip = class.button.tooltip,
-          sprite = class.button.sprite,
-          style = "mod_gui_item_button",
-        })
+        if not gui.other[class.button.name] then
+          gui.other.add({
+            type = "sprite-button",
+            name = class.button.name,
+            tooltip = class.button.tooltip,
+            sprite = class.button.sprite,
+            style = "mod_gui_item_button",
+          })
+        end
       end
     end
   end
