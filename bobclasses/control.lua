@@ -1544,7 +1544,6 @@ function switch_to_god(player_index, old_char)
   wlog("Entered function switch_to_god(" .. player_index .. ")")
 
   if game.players[player_index].controller_type ~= defines.controllers.god then --Do nothing if already using god controller. Avoids issues with inventory reset.
-
     --~ local old_character = game.players[player_index].character
     local old_character = old_char or game.players[player_index].character
     game.players[player_index].set_controller({ type = defines.controllers.god })
@@ -1579,6 +1578,5 @@ function switch_to_god(player_index, old_char)
     end
 
     refresh_avatar_gui(player_index)
-
   end
 end
