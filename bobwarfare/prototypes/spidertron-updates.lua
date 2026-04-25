@@ -198,6 +198,40 @@ else --"none"
   add_heavy_spidertron_power_supply()
 end
 
+if feature_flags["space_travel"] then
+  data.raw["spider-vehicle"]["bob-antron"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+  data.raw["spider-vehicle"]["bob-tankotron"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+  data.raw["spider-vehicle"]["bob-logistic-spidertron"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+  data.raw["spider-vehicle"]["bob-heavy-spidertron"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+  local function burner_condition()
+    return { property = "pressure", min = 10 }
+  end
+  if settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "all" then
+    table.insert(data.raw["spider-vehicle"]["bob-antron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-tankotron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-logistic-spidertron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["spidertron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-heavy-spidertron"].surface_conditions, burner_condition())
+  elseif settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "nothighest" then
+    table.insert(data.raw["spider-vehicle"]["bob-antron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-tankotron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-logistic-spidertron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["spidertron"].surface_conditions, burner_condition())
+  elseif settings.startup["bobmods-warfare-spidertron-needsfuel"].value == "default" then
+    table.insert(data.raw["spider-vehicle"]["bob-antron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-tankotron"].surface_conditions, burner_condition())
+    table.insert(data.raw["spider-vehicle"]["bob-logistic-spidertron"].surface_conditions, burner_condition())
+  end
+end
+
 if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   bobmods.lib.tech.add_recipe_unlock("bob-walking-vehicle", "bob-mech-leg-segment")
   bobmods.lib.tech.add_recipe_unlock("bob-walking-vehicle", "bob-mech-knee")

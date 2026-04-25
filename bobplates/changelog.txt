@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed some fluids / recipes not combining in Factoriopedia #565
   Changes:
+    - Disallowed certain entities in space #551
     - Updated recipes for Rockets and T3 modules to require Advanced processing units instead of Advanced circuits #559
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5

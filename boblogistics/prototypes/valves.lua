@@ -491,44 +491,53 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] and mods["space-age"] then
+if feature_flags["freezing"] then
   data.raw.valve["bob-valve"].heating_energy = "10kW"
   data.raw.valve["bob-overflow-valve"].heating_energy = "10kW"
   data.raw.valve["bob-topup-valve"].heating_energy = "10kW"
 
-  local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
-  local frozenpatchNS = {
-    filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-vertical.png",
-    width = 128,
-    height = 128,
-    priority = "extra-high",
-    scale = 0.5,
-  }
-  local frozenpatchEW = {
-    filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
-    width = 128,
-    height = 128,
-    priority = "extra-high",
-    scale = 0.5,
-  }
-  data.raw.valve["bob-valve"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw.valve["bob-valve"].frozen_patch = {}
-  data.raw.valve["bob-valve"].frozen_patch.north = frozenpatchNS
-  data.raw.valve["bob-valve"].frozen_patch.south = frozenpatchNS
-  data.raw.valve["bob-valve"].frozen_patch.east = frozenpatchEW
-  data.raw.valve["bob-valve"].frozen_patch.west = frozenpatchEW
+  if mods["space-age"] then
+    local function frozenpatchcovers()
+      local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
+      return result
+    end
+    local function frozenpatchNS()
+      return {
+        filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-vertical.png",
+        width = 128,
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+      }
+    end
+    local function frozenpatchEW()
+      return {
+        filename = "__space-age__/graphics/entity/frozen/pipe/pipe-straight-horizontal.png",
+        width = 128,
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+      }
+    end
+    data.raw.valve["bob-valve"].fluid_box.pipe_covers_frozen = frozenpatchcovers()
+    data.raw.valve["bob-valve"].frozen_patch = {}
+    data.raw.valve["bob-valve"].frozen_patch.north = frozenpatchNS()
+    data.raw.valve["bob-valve"].frozen_patch.south = frozenpatchNS()
+    data.raw.valve["bob-valve"].frozen_patch.east = frozenpatchEW()
+    data.raw.valve["bob-valve"].frozen_patch.west = frozenpatchEW()
 
-  data.raw.valve["bob-overflow-valve"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw.valve["bob-overflow-valve"].frozen_patch = {}
-  data.raw.valve["bob-overflow-valve"].frozen_patch.north = frozenpatchNS
-  data.raw.valve["bob-overflow-valve"].frozen_patch.south = frozenpatchNS
-  data.raw.valve["bob-overflow-valve"].frozen_patch.east = frozenpatchEW
-  data.raw.valve["bob-overflow-valve"].frozen_patch.west = frozenpatchEW
+    data.raw.valve["bob-overflow-valve"].fluid_box.pipe_covers_frozen = frozenpatchcovers()
+    data.raw.valve["bob-overflow-valve"].frozen_patch = {}
+    data.raw.valve["bob-overflow-valve"].frozen_patch.north = frozenpatchNS()
+    data.raw.valve["bob-overflow-valve"].frozen_patch.south = frozenpatchNS()
+    data.raw.valve["bob-overflow-valve"].frozen_patch.east = frozenpatchEW()
+    data.raw.valve["bob-overflow-valve"].frozen_patch.west = frozenpatchEW()
 
-  data.raw.valve["bob-topup-valve"].fluid_box.pipe_covers_frozen = pcfrozenpatch
-  data.raw.valve["bob-topup-valve"].frozen_patch = {}
-  data.raw.valve["bob-topup-valve"].frozen_patch.north = frozenpatchNS
-  data.raw.valve["bob-topup-valve"].frozen_patch.south = frozenpatchNS
-  data.raw.valve["bob-topup-valve"].frozen_patch.east = frozenpatchEW
-  data.raw.valve["bob-topup-valve"].frozen_patch.west = frozenpatchEW
+    data.raw.valve["bob-topup-valve"].fluid_box.pipe_covers_frozen = frozenpatchcovers()
+    data.raw.valve["bob-topup-valve"].frozen_patch = {}
+    data.raw.valve["bob-topup-valve"].frozen_patch.north = frozenpatchNS()
+    data.raw.valve["bob-topup-valve"].frozen_patch.south = frozenpatchNS()
+    data.raw.valve["bob-topup-valve"].frozen_patch.east = frozenpatchEW()
+    data.raw.valve["bob-topup-valve"].frozen_patch.west = frozenpatchEW()
+  end
 end
