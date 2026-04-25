@@ -479,7 +479,7 @@ if data.raw.fluid["bob-alien-acid"] then
   bobmods.lib.recipe.replace_ingredient("bob-acid-bullet-projectile", "sulfuric-acid", "bob-alien-acid")
   bobmods.lib.recipe.replace_ingredient("bob-shotgun-acid-shell", "sulfuric-acid", "bob-alien-acid")
   bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "sulfuric-acid", "bob-alien-acid")
-else
+elseif data.raw.item["tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "steel-plate", "tungsten-plate")
   if not mods["space-age"] then
     bobmods.lib.tech.add_prerequisite("bob-acid-rocket", "bob-tungsten-processing")
@@ -505,7 +505,7 @@ if data.raw.fluid["bob-alien-explosive"] then
   )
   data.raw.recipe["bob-explosive-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "bob-alien-yellow-research")
-else
+elseif data.raw.item["tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-explosive-rocket-warhead", "steel-plate", "tungsten-plate")
   if not mods["space-age"] then
     bobmods.lib.tech.add_prerequisite("bob-explosive-rocket", "bob-tungsten-processing")
@@ -527,7 +527,7 @@ if data.raw.fluid["bob-alien-poison"] then
   bobmods.lib.recipe.replace_ingredient("bob-poison-artillery-shell", "coal", "bob-alien-poison")
   data.raw.recipe["bob-poison-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-poison-artillery-shells", "bob-alien-green-research")
-else
+elseif data.raw.item["tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-poison-rocket-warhead", "steel-plate", "tungsten-plate")
   if not mods["space-age"] then
     bobmods.lib.tech.add_prerequisite("bob-poison-rocket", "bob-tungsten-processing")
