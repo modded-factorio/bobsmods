@@ -1,5 +1,4 @@
 if settings.startup["bobmods-assembly-chemicalplants"].value == true then
-
   data.raw.item["chemical-plant"].weight = 40000
 
   data:extend({
@@ -467,7 +466,8 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         return result
       end
       local function frozenpatchcovers()
-        local result = util.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].fluid_boxes[1].pipe_covers_frozen)
+        local result =
+          util.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].fluid_boxes[1].pipe_covers_frozen)
         return result
       end
 

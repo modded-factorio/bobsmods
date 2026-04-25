@@ -270,21 +270,21 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
   --Let basic transport belt act as a burner transport belt not subject to freezing.
   -- if feature_flags["freezing"] then
-    -- data.raw["transport-belt"]["bob-basic-transport-belt"].heating_energy = "10kW"
-    -- data.raw["underground-belt"]["bob-basic-underground-belt"].heating_energy = "25kW"
-    -- data.raw.splitter["bob-basic-splitter"].heating_energy = "40kW"
-    -- if mods["space-age"] then
-      -- local function beltfrozenpatch()
-        -- local result = util.table.deepcopy(data.raw["transport-belt"]["transport-belt"].belt_animation_set.frozen_patch)
-        -- return result
-      -- end
-      -- data.raw["transport-belt"]["bob-basic-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch()
-      -- data.raw["underground-belt"]["bob-basic-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch()
-      -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_in = util.table.deepcopy(data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_in)
-      -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_out = util.table.deepcopy(data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_out)
-      -- data.raw.splitter["bob-basic-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch()
-      -- data.raw.splitter["bob-basic-splitter"].frozen_patch = util.table.deepcopy(data.raw.splitter.splitter.frozen_patch)
-    -- end
+  -- data.raw["transport-belt"]["bob-basic-transport-belt"].heating_energy = "10kW"
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].heating_energy = "25kW"
+  -- data.raw.splitter["bob-basic-splitter"].heating_energy = "40kW"
+  -- if mods["space-age"] then
+  -- local function beltfrozenpatch()
+  -- local result = util.table.deepcopy(data.raw["transport-belt"]["transport-belt"].belt_animation_set.frozen_patch)
+  -- return result
+  -- end
+  -- data.raw["transport-belt"]["bob-basic-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch()
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch()
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_in = util.table.deepcopy(data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_in)
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_out = util.table.deepcopy(data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_out)
+  -- data.raw.splitter["bob-basic-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch()
+  -- data.raw.splitter["bob-basic-splitter"].frozen_patch = util.table.deepcopy(data.raw.splitter.splitter.frozen_patch)
+  -- end
   -- end
 end
 
@@ -766,7 +766,8 @@ if feature_flags["freezing"] then
   data.raw.splitter["bob-ultimate-splitter"].heating_energy = "40kW"
   if mods["space-age"] then
     local function beltfrozenpatch3()
-      local result = util.table.deepcopy(data.raw["transport-belt"]["express-transport-belt"].belt_animation_set.frozen_patch)
+      local result =
+        util.table.deepcopy(data.raw["transport-belt"]["express-transport-belt"].belt_animation_set.frozen_patch)
       return result
     end
     data.raw["transport-belt"]["bob-turbo-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
@@ -776,7 +777,8 @@ if feature_flags["freezing"] then
     data.raw["underground-belt"]["bob-turbo-underground-belt"].structure.frozen_patch_out =
       util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out)
     data.raw.splitter["bob-turbo-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3()
-    data.raw.splitter["bob-turbo-splitter"].frozen_patch = util.table.deepcopy(data.raw.splitter["express-splitter"].frozen_patch)
+    data.raw.splitter["bob-turbo-splitter"].frozen_patch =
+      util.table.deepcopy(data.raw.splitter["express-splitter"].frozen_patch)
     data.raw["transport-belt"]["bob-ultimate-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
     data.raw["underground-belt"]["bob-ultimate-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
     data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_in =
@@ -784,7 +786,8 @@ if feature_flags["freezing"] then
     data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_out =
       util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out)
     data.raw.splitter["bob-ultimate-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3()
-    data.raw.splitter["bob-ultimate-splitter"].frozen_patch = util.table.deepcopy(data.raw.splitter["express-splitter"].frozen_patch)
+    data.raw.splitter["bob-ultimate-splitter"].frozen_patch =
+      util.table.deepcopy(data.raw.splitter["express-splitter"].frozen_patch)
   end
 end
 

@@ -570,7 +570,8 @@ then
 
     if mods["space-age"] then
       local function frozenpatchcovers()
-        local result = util.table.deepcopy(data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen)
+        local result =
+          util.table.deepcopy(data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen)
         return result
       end
       data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()

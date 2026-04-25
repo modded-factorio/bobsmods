@@ -130,5 +130,4 @@ if settings.startup["bobmods-power-burnergenerator"].value == true then
       { property = "pressure", min = 10 },
     }
   end
-
 end

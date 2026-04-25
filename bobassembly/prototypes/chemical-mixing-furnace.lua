@@ -493,11 +493,13 @@ then
       }
 
       local function frozenpatch()
-        local result = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+        local result =
+          util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
         return result
       end
       local function frozenpatchcovers()
-        local result = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+        local result =
+          util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
         return result
       end
       data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_picture_frozen =

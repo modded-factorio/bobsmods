@@ -411,6 +411,5 @@ if settings.startup["bobmods-burnerphase"].value == true then
     if feature_flags["space_travel"] then
       data.raw["burner-generator"]["bob-burner-generator"].surface_conditions = no_space()
     end
-
   end
 end

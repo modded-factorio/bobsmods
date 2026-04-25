@@ -162,8 +162,10 @@ if feature_flags["freezing"] then
       scale = 0.5,
       shift = { 0, 0.09375 },
     }
-    local pipefrozenpatch = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
-    local pcfrozenpatch = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+    local pipefrozenpatch =
+      util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+    local pcfrozenpatch =
+      util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
     data.raw["assembling-machine"]["bob-greenhouse"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
     data.raw["assembling-machine"]["bob-greenhouse"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
   end

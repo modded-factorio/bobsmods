@@ -491,7 +491,7 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"]then
+if feature_flags["freezing"] then
   data.raw.valve["bob-valve"].heating_energy = "10kW"
   data.raw.valve["bob-overflow-valve"].heating_energy = "10kW"
   data.raw.valve["bob-topup-valve"].heating_energy = "10kW"

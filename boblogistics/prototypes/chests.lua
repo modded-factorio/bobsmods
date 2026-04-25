@@ -81,7 +81,6 @@ if data.raw.item["bob-brass-alloy"] then
       { property = "gravity", min = 0.1 },
     }
   end
-
 end
 
 if data.raw.item["bob-titanium-plate"] then
@@ -167,5 +166,4 @@ if data.raw.item["bob-titanium-plate"] then
       { property = "gravity", min = 0.1 },
     }
   end
-
 end

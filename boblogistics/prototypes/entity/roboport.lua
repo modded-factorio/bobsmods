@@ -1,6 +1,6 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 local function no_space()
-  return { { property = "pressure", min = 10 } } 
+  return { { property = "pressure", min = 10 } }
 end
 
 data.raw.roboport["roboport"].fast_replaceable_group = "roboport"
@@ -2375,7 +2375,6 @@ data:extend({
 })
 
 if feature_flags["space_travel"] then
-
   data.raw.roboport["bob-logistic-zone-expander"].surface_conditions = no_space()
   data.raw.roboport["bob-logistic-zone-expander-2"].surface_conditions = no_space()
   data.raw.roboport["bob-logistic-zone-expander-3"].surface_conditions = no_space()
@@ -2397,11 +2396,9 @@ if feature_flags["space_travel"] then
   data.raw.roboport["bob-robo-charge-port-large-4"].surface_conditions = no_space()
 
   data.raw.roboport["bob-logistic-zone-interface"].surface_conditions = no_space()
-  
 end
-  
-if feature_flags["freezing"] then
 
+if feature_flags["freezing"] then
   data.raw.roboport["bob-logistic-zone-expander"].heating_energy = "20kW"
   data.raw.roboport["bob-logistic-zone-expander-2"].heating_energy = "20kW"
   data.raw.roboport["bob-logistic-zone-expander-3"].heating_energy = "20kW"
@@ -2421,7 +2418,6 @@ if feature_flags["freezing"] then
   data.raw.roboport["bob-logistic-zone-interface"].heating_energy = "20kW"
 
   if mods["space-age"] then
-
     local function chestfrozenpatch()
       return {
         filename = "__space-age__/graphics/entity/frozen/roboport/roboport-base.png",

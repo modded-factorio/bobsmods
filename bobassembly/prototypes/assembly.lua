@@ -13,7 +13,6 @@ data:extend({
 --        tint = {r = 0.7, g = 0.1, b = 0.7},
 --        tint = {r = 0.1, g = 0.7, b = 0.1},
 
-
 data.raw.item["assembling-machine-1"].weight = 20000
 
 data.raw.item["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
@@ -642,11 +641,13 @@ if feature_flags["freezing"] then
     }
 
     local function frozenpatch()
-      local result = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+      local result =
+        util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
       return result
     end
     local function frozenpatchcovers()
-      local result = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+      local result =
+        util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
       return result
     end
     data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()

@@ -613,17 +613,24 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       }
 
       local function frozenpatch()
-        return util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+        return util.table.deepcopy(
+          data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+        )
       end
       local function frozenpatchcovers()
-        return util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+        return util.table.deepcopy(
+          data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+        )
       end
       data.raw["assembling-machine"]["bob-electronics-machine-1"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
-      data.raw["assembling-machine"]["bob-electronics-machine-1"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+      data.raw["assembling-machine"]["bob-electronics-machine-1"].fluid_boxes[1].pipe_covers_frozen =
+        frozenpatchcovers()
       data.raw["assembling-machine"]["bob-electronics-machine-2"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
-      data.raw["assembling-machine"]["bob-electronics-machine-2"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+      data.raw["assembling-machine"]["bob-electronics-machine-2"].fluid_boxes[1].pipe_covers_frozen =
+        frozenpatchcovers()
       data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
-      data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+      data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_covers_frozen =
+        frozenpatchcovers()
     end
   end
 

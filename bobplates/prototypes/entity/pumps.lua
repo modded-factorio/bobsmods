@@ -640,7 +640,7 @@ if feature_flags["freezing"] then
   data.raw["assembling-machine"]["bob-water-pump-4"].heating_energy = "25kW"
 
   if mods["space-age"] then
-    local function frozenpatch1() 
+    local function frozenpatch1()
       return {
         north = {
           layers = {

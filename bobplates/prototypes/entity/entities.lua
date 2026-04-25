@@ -1240,7 +1240,6 @@ data:extend({
 })
 
 if feature_flags["space_travel"] then
-
   local function no_space()
     return { { property = "pressure", min = 10 } }
   end
@@ -1259,12 +1258,16 @@ if feature_flags["freezing"] then
   data.raw["storage-tank"]["bob-small-storage-tank"].heating_energy = "25kW"
   data.raw.furnace["bob-void-pump"].heating_energy = "10kW"
 
-  if mods["space-age"] then 
+  if mods["space-age"] then
     local function pipefrozenpatch()
-      return util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+      return util.table.deepcopy(
+        data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+      )
     end
     local function pcfrozenpatch()
-      return util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+      return util.table.deepcopy(
+        data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+      )
     end
 
     data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch()
@@ -1291,7 +1294,8 @@ if feature_flags["freezing"] then
         },
       },
     }
-    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch()
+    data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_picture_frozen =
+      pipefrozenpatch()
     data.raw["assembling-machine"]["bob-electric-chemical-furnace"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch()
 
     data.raw["assembling-machine"]["bob-electric-mixing-furnace"].graphics_set.frozen_patch = {
