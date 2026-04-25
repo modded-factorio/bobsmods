@@ -158,15 +158,17 @@ then
     },
   })
 
-  if feature_flags["freezing"] and mods["space-age"] then
+  if feature_flags["freezing"] then
     data.raw.lab["bob-lab-alien"].heating_energy = "100kW"
-    data.raw.lab["bob-lab-alien"].frozen_patch = {
-      filename = "__space-age__/graphics/entity/frozen/lab/lab.png",
-      width = 194,
-      height = 174,
-      scale = 0.5,
-      shift = { 0, 0.046875 },
-    }
+    if mods["space-age"] then
+      data.raw.lab["bob-lab-alien"].frozen_patch = {
+        filename = "__space-age__/graphics/entity/frozen/lab/lab.png",
+        width = 194,
+        height = 174,
+        scale = 0.5,
+        shift = { 0, 0.046875 },
+      }
+    end
   end
 
   if mods["DiscoScience"] and DiscoScience and DiscoScience.prepareLab then
