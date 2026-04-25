@@ -63,7 +63,6 @@ require("prototypes.tungsten-ore")
 require("prototypes.thorium-ore")
 require("prototypes.nickel-ore")
 require("prototypes.cobalt-ore")
-require("prototypes.sulfur")
 require("prototypes.gem-ore")
 
 require("prototypes.fluids")
@@ -98,9 +97,6 @@ if settings.startup["bobmods-ores-enablerutile"].value == true then
 end
 if settings.startup["bobmods-ores-enablesilverore"].value == true then
   bobmods.ores.silver.create_autoplace()
-end
-if settings.startup["bobmods-ores-enablesulfur"].value == true then
-  bobmods.ores.sulfur.create_autoplace()
 end
 if settings.startup["bobmods-ores-enabletinore"].value == true then
   bobmods.ores.tin.create_autoplace()

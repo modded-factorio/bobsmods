@@ -163,12 +163,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "bobmods-ores-enablesulfur",
-    setting_type = "startup",
-    default_value = false,
-  },
-  {
-    type = "bool-setting",
     name = "bobmods-ores-enabletinore",
     setting_type = "startup",
     default_value = false,

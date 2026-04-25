@@ -354,6 +354,7 @@ bot.shadow_in_motion = bobmods.logistics.construction_robot_shadow_in_motion()
 bot.shadow_working = bobmods.logistics.construction_robot_shadow_working()
 bot.fast_replaceable_group = "construction-robot"
 table.insert(bot.resistances, { type = "poison", decrease = 0, percent = 60 })
+table.insert(bot.resistances, { type = "explosion", decrease = 0, percent = 40 })
 
 data:extend({
   util.merge({
@@ -367,8 +368,9 @@ data:extend({
         { type = "electric", decrease = 6, percent = 80 },
         { type = "acid", decrease = 4, percent = 60 },
         { type = "poison", decrease = 0, percent = 80 },
+        { type = "explosion", decrease = 0, percent = 60 },
       },
-      max_health = 225,
+      max_health = 300,
       max_payload_size = 2,
       speed = 0.09,
       max_energy = "3250kJ",
@@ -396,8 +398,9 @@ data:extend({
         { type = "electric", decrease = 12, percent = 90 },
         { type = "acid", decrease = 8, percent = 65 },
         { type = "poison", decrease = 0, percent = 90 },
+        { type = "explosion", decrease = 0, percent = 70 },
       },
-      max_health = 350,
+      max_health = 600,
       max_payload_size = 4,
       speed = 0.12,
       max_energy = "3500kJ",
@@ -423,10 +426,11 @@ data:extend({
       resistances = {
         { type = "fire", decrease = 0, percent = 100 },
         { type = "electric", decrease = 25, percent = 95 },
-        { type = "acid", decrease = 12, percent = 70 },
+        { type = "acid", decrease = 12, percent = 85 },
         { type = "poison", decrease = 0, percent = 95 },
+        { type = "explosion", decrease = 0, percent = 80 },
       },
-      max_health = 500,
+      max_health = 1000,
       max_payload_size = 6,
       speed = 0.15,
       max_energy = "3750kJ",
@@ -452,10 +456,11 @@ data:extend({
       resistances = {
         { type = "fire", decrease = 0, percent = 100 },
         { type = "electric", decrease = 25, percent = 95 },
-        { type = "acid", decrease = 12, percent = 70 },
+        { type = "acid", decrease = 12, percent = 85 },
         { type = "poison", decrease = 0, percent = 95 },
+        { type = "explosion", decrease = 0, percent = 80 },
       },
-      max_health = 500,
+      max_health = 1000,
       max_payload_size = 6,
       speed = 0.15,
       max_energy = "1500kJ",

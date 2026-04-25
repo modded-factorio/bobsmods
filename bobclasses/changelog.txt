@@ -4,9 +4,10 @@ Date: ???
   Changes:
     - Removed Editor mode setting #466
   Bugfixes:
+    - Added additional error checking #539 #576
     - Fixed God mode inventory being deleted #552
     - Fixed compatibility with Pacifist mod #554
-    - Added error checking #539 #576
+    - Added temporary patch to fix a bug in Space Exploration mod that was causing a crash with Bob's Character Classes mod #556
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

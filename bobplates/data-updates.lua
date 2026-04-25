@@ -19,7 +19,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.fluid["bob-deuterium"].fuel_value = "25kJ"
     data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 250
     data.raw.recipe["bob-water-electrolysis"].energy_required = 2
-    data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
+    data.raw.recipe["bob-deuterium"].energy_required = 2
     if data.raw.recipe["bob-sodium-chlorate"] then
       data.raw.recipe["bob-sodium-chlorate"].energy_required = 6
       data.raw.recipe["bob-sodium-perchlorate"].energy_required = 2
@@ -35,7 +35,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "11kW"
   data.raw.recipe["bob-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-salt-water-electrolysis"].allow_consumption = false
-  data.raw.recipe["bob-heavy-water-electrolysis"].allow_consumption = false
+  data.raw.recipe["bob-deuterium"].allow_consumption = false
   if data.raw.recipe["bob-sodium-chlorate"] then
     data.raw.recipe["bob-sodium-chlorate"].allow_consumption = false
     data.raw.recipe["bob-sodium-perchlorate"].allow_consumption = false
@@ -400,7 +400,27 @@ for _, recipe_name in pairs({
   end
 end
 
+-- Base game updates
+
+if not mods["space-age"] then
+  bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-advanced-processing-unit")
+end
+
+bobmods.lib.recipe.replace_ingredient("speed-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.recipe.replace_ingredient("efficiency-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.recipe.replace_ingredient("productivity-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("speed-module-3", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("efficiency-module-3", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("productivity-module-3", "bob-advanced-processing-unit")
+
 if mods["quality"] then
+  bobmods.lib.recipe.replace_ingredient("quality-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("quality-module-3", "bob-advanced-processing-unit")
+
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-air-pump",
     "bob-air-pump-2",
@@ -426,6 +446,13 @@ if mods["quality"] then
     "bob-lithium-ion-battery",
     "bob-silver-zinc-battery",
     "battery",
+    "cargo-landing-pad",
+    "rocket-silo",
+    "satellite",
+    "speed-module-3",
+    "efficiency-module-3",
+    "productivity-module-3",
+    "quality-module-3",
   })
 end
 
