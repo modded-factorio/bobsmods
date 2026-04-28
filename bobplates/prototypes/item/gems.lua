@@ -19,6 +19,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 625,
   },
   {
     type = "item",
@@ -31,6 +32,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 625,
   },
   {
     type = "item",
@@ -43,6 +45,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 625,
   },
   {
     type = "item",
@@ -55,6 +58,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 625,
   },
   {
     type = "item",
@@ -67,6 +71,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 625,
   },
   {
     type = "item",
@@ -79,6 +84,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 625,
   },
 
   {
@@ -92,6 +98,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -104,6 +111,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -116,6 +124,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -128,6 +137,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -140,6 +150,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -152,6 +163,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
 
   {
@@ -165,6 +177,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -177,6 +190,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -189,6 +203,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -201,6 +216,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -213,6 +229,7 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -225,5 +242,6 @@ data:extend({
     drop_sound = gem_drop_move,
     inventory_move_sound = gem_drop_move,
     pick_sound = gem_pick,
+    weight = 500,
   },
 })

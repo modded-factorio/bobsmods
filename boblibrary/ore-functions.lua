@@ -263,6 +263,7 @@ function bobmods.lib.resource.create_item(inputs)
       drop_sound = inputs.drop_sound,
       inventory_move_sound = inputs.inventory_move_sound,
       pick_sound = inputs.pick_sound,
+      weight = inputs.weight or 5000,
     },
   })
   if inputs.icon then
@@ -561,6 +562,7 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         stack_size = inputs.item.stack_size,
         tint = inputs.tint,
         create_variations = inputs.item.create_variations,
+        weight = inputs.item.weight,
       }
       if inputs.drop_sound then
         if inputs.drop_sound.filename and inputs.drop_sound.volume then

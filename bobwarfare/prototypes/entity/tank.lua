@@ -615,3 +615,22 @@ data:extend({
     water_reflection = car_reflection(1.2),
   },
 })
+
+if feature_flags["space_travel"] then
+  data.raw.car.car.surface_conditions = {
+    { property = "gravity", min = 1 },
+    { property = "pressure", min = 10 },
+  }
+  data.raw.car.tank.surface_conditions = {
+    { property = "gravity", min = 1 },
+    { property = "pressure", min = 10 },
+  }
+  data.raw.car["bob-tank-2"].surface_conditions = {
+    { property = "gravity", min = 1 },
+    { property = "pressure", min = 10 },
+  }
+  data.raw.car["bob-tank-3"].surface_conditions = {
+    { property = "gravity", min = 1 },
+    { property = "pressure", min = 10 },
+  }
+end

@@ -217,10 +217,11 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-resource-chemical",
     order = "f[bob-salt]",
-    stack_size = 100,
+    stack_size = 200,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 500,
   },
 
   {
@@ -230,10 +231,11 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-resource-chemical",
     order = "f[bob-lithium-chloride]",
-    stack_size = 100,
+    stack_size = 200,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 500,
   },
 
   {
@@ -243,10 +245,11 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-resource-chemical",
     order = "f[bob-lithium-perchlorate]",
-    stack_size = 100,
+    stack_size = 200,
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -259,6 +262,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -272,6 +276,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -285,6 +290,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 2000,
   },
 
   {
@@ -307,6 +313,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 1000,
   },
 
   {
@@ -320,6 +327,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 5000,
   },
 
   {
@@ -333,6 +341,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 2500,
   },
 
   {
@@ -346,6 +355,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -359,6 +369,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -372,6 +383,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 2000,
   },
 
   {
@@ -385,6 +397,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -398,6 +411,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 
   {
@@ -411,6 +425,7 @@ data:extend({
     drop_sound = powder_drop_move,
     inventory_move_sound = powder_drop_move,
     pick_sound = powder_pick,
+    weight = 1000,
   },
 })
 
