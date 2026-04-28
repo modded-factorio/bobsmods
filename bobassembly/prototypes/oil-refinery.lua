@@ -1,14 +1,14 @@
 if settings.startup["bobmods-assembly-oilrefineries"].value == true then
-  data.raw.item["oil-refinery"].weight =
-    100000, 
-data:extend({
-      {
-        type = "item-subgroup",
-        name = "bob-refinery-machine",
-        group = "production",
-        order = "e-e",
-      },
-    })
+  data.raw.item["oil-refinery"].weight = 100000
+
+  data:extend({
+    {
+      type = "item-subgroup",
+      name = "bob-refinery-machine",
+      group = "production",
+      order = "e-e",
+    },
+  })
 
   data.raw.item["oil-refinery"].order = "d[refinery-1]"
   data.raw.item["oil-refinery"].subgroup = "bob-refinery-machine"
