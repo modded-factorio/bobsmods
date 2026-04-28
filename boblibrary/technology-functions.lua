@@ -316,7 +316,7 @@ function bobmods.lib.tech.replace_prerequisite(technology, old, new)
   end
 end
 
-function bobmods.lib.tech.replace_prerequisite_in_all(old, new)
+function bobmods.lib.tech.global_replace_prerequisite(old, new)
   if
     type(old) == "string"
     and type(new) == "string"

@@ -407,9 +407,3 @@ if mods["aai-industry"] then
   bobmods.lib.tech.add_recipe_unlock("electricity", "bob-copper-pipe")
   bobmods.lib.tech.add_recipe_unlock("electricity", "bob-copper-pipe-to-ground")
 end
-
-if mods["space-age"] then
-  bobmods.lib.tech.replace_prerequisite_in_all("turbo-transport-belt", "logistics-4")
-  data.raw.technology["turbo-transport-belt"].effects = nil
-  bobmods.lib.tech.hide("turbo-transport-belt")
-end
