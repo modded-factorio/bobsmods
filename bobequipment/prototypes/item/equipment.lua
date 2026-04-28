@@ -10,12 +10,10 @@ data.raw.item["belt-immunity-equipment"].weight = 50000
 
 data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
 data.raw.item["energy-shield-equipment"].icon_size = 64
-data.raw.item["energy-shield-equipment"].stack_size = 50
 data.raw.item["energy-shield-equipment"].weight = 40000
 data.raw.item["energy-shield-mk2-equipment"].icon =
   "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png"
 data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
-data.raw.item["energy-shield-mk2-equipment"].stack_size = 50
 data.raw.item["energy-shield-mk2-equipment"].weight = 40000
 data.raw.item["discharge-defense-equipment"].weight = 250000
 
@@ -29,7 +27,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk3-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-c[energy-shield-equipment-mk3]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -53,7 +51,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk4-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-d[energy-shield-equipment-mk4]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -77,7 +75,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk5-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-e[energy-shield-equipment-mk5]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -101,7 +99,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk6-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-f[energy-shield-equipment-mk6]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -120,11 +118,9 @@ data:extend({
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
 data.raw.item["battery-equipment"].icon_size = 64
-data.raw.item["battery-equipment"].stack_size = 50
 data.raw.item["battery-equipment"].weight = 100000
 data.raw.item["battery-mk2-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-mk2-equipment.png"
 data.raw.item["battery-mk2-equipment"].icon_size = 64
-data.raw.item["battery-mk2-equipment"].stack_size = 50
 
 data:extend({
   {
@@ -135,7 +131,7 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk3-equipment",
     subgroup = "equipment",
     order = "c[battery]-c[battery-mk3-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,
@@ -158,7 +154,7 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk4-equipment",
     subgroup = "equipment",
     order = "c[battery]-d[battery-mk4-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,
@@ -181,7 +177,7 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk5-equipment",
     subgroup = "equipment",
     order = "c[battery]-e[battery-mk5-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,
@@ -204,7 +200,7 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk6-equipment",
     subgroup = "equipment",
     order = "c[battery]-f[battery-mk6-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,

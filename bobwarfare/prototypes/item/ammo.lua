@@ -50,7 +50,7 @@ local largeammopickup = {
   volume = 0.7,
 }
 
-data.raw.ammo.rocket.weight = 10000
+data.raw.ammo["rocket"].weight = 10000
 data.raw.ammo["explosive-rocket"].weight = 10000
 
 data:extend({
