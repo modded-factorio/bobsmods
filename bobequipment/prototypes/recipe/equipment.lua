@@ -94,20 +94,10 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "bob-battery-mk4-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "battery", amount = 20 },
     },
     results = { { type = "item", name = "bob-battery-mk5-equipment", amount = 1 } },
-  },
-  {
-    type = "recipe",
-    name = "bob-battery-mk6-equipment",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-      { type = "item", name = "bob-battery-mk5-equipment", amount = 2 },
-      { type = "item", name = "processing-unit", amount = 5 },
-    },
-    results = { { type = "item", name = "bob-battery-mk6-equipment", amount = 1 } },
   },
 })
 
