@@ -153,6 +153,7 @@ then
     data.raw.item["aai-basic-loader"].weight = 20000
   end
 
+  data.raw.technology["aai-turbo-loader"] = nil
   AAILoaders.make_tier({
     name = "turbo",
     transport_belt = "turbo-transport-belt",
