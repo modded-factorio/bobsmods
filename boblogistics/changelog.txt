@@ -7,9 +7,11 @@ Date: ???
     - Set item weights #553
     - Increasd pump speed when Quality mod is not enabled #557
     - Increasd bot health and explosion resistance #563
+    - Improved Turbo belt Space Age compatibility. Renamed Bob's Turbo belt/splitter/underground, removing the "bob-" prefix #569
   Bugfixes:
     - Allowed Basic loaders (AAI Loaders mod) to be crafted in Assembling maching 1 / hand crafted when using expensive mode. #535
     - Fixed next_upgrade for Steam powered inserter and Ultimate inserter #542
+    - Fixed migration replacing Space Age turbo belts in blueprints #549
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 18. 01. 2026

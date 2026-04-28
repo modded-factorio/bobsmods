@@ -8,7 +8,7 @@ then
     regular = { { type = "item", name = "transport-belt", amount = 1 } },
     fast = { { type = "item", name = "fast-transport-belt", amount = 1 } },
     express = { { type = "item", name = "express-transport-belt", amount = 1 } },
-    turbo = { { type = "item", name = "bob-turbo-transport-belt", amount = 1 } },
+    turbo = { { type = "item", name = "turbo-transport-belt", amount = 1 } },
     ultimate = { { type = "item", name = "bob-ultimate-transport-belt", amount = 1 } },
   }
   if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
@@ -153,9 +153,10 @@ then
     data.raw.item["aai-basic-loader"].weight = 20000
   end
 
+  data.raw.technology["aai-turbo-loader"] = nil
   AAILoaders.make_tier({
     name = "turbo",
-    transport_belt = "bob-turbo-transport-belt",
+    transport_belt = "turbo-transport-belt",
     color = { 180, 89, 255 },
     fluid = "lubricant",
     fluid_per_minute = 0.25,
