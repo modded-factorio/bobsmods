@@ -23,6 +23,7 @@ data:extend({
   {
     type = "item",
     name = "bob-energy-shield-mk3-equipment",
+    localised_description = { "item-description.energy-shield-equipment" },
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk3-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-energy-shield-mk3-equipment",
@@ -46,6 +47,7 @@ data:extend({
   {
     type = "item",
     name = "bob-energy-shield-mk4-equipment",
+    localised_description = { "item-description.energy-shield-equipment" },
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk4-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-energy-shield-mk4-equipment",
@@ -69,6 +71,7 @@ data:extend({
   {
     type = "item",
     name = "bob-energy-shield-mk5-equipment",
+    localised_description = { "item-description.energy-shield-equipment" },
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk5-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-energy-shield-mk5-equipment",
@@ -92,6 +95,7 @@ data:extend({
   {
     type = "item",
     name = "bob-energy-shield-mk6-equipment",
+    localised_description = { "item-description.energy-shield-equipment" },
     icon = "__bobequipment__/graphics/equipment/energy-shield-mk6-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-energy-shield-mk6-equipment",
@@ -225,6 +229,7 @@ data:extend({
   {
     type = "item",
     name = "bob-fission-reactor-equipment-2",
+    localised_description = { "item-description.fission-reactor-equipment" },
     icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-2.png",
     place_as_equipment_result = "bob-fission-reactor-equipment-2",
     subgroup = "equipment",
@@ -247,6 +252,7 @@ data:extend({
   {
     type = "item",
     name = "bob-fission-reactor-equipment-3",
+    localised_description = { "item-description.fission-reactor-equipment" },
     icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-3.png",
     place_as_equipment_result = "bob-fission-reactor-equipment-3",
     subgroup = "equipment",
@@ -269,6 +275,7 @@ data:extend({
   {
     type = "item",
     name = "bob-fission-reactor-equipment-4",
+    localised_description = { "item-description.fission-reactor-equipment" },
     icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-4.png",
     place_as_equipment_result = "bob-fission-reactor-equipment-4",
     subgroup = "equipment",
@@ -292,6 +299,7 @@ data:extend({
   {
     type = "item",
     name = "bob-night-vision-equipment-2",
+    localised_description = { "item-description.night-vision-equipment" },
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-night-vision-equipment-2",
@@ -315,6 +323,7 @@ data:extend({
   {
     type = "item",
     name = "bob-night-vision-equipment-3",
+    localised_description = { "item-description.night-vision-equipment" },
     icon = "__base__/graphics/icons/night-vision-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-night-vision-equipment-3",
@@ -345,6 +354,7 @@ data:extend({
   {
     type = "item",
     name = "bob-solar-panel-equipment-2",
+    localised_description = { "item-description.solar-panel-equipment" },
     icon = "__bobequipment__/graphics/icons/solar-panel-equipment-2.png",
     icon_size = 32,
     place_as_equipment_result = "bob-solar-panel-equipment-2",
@@ -368,6 +378,7 @@ data:extend({
   {
     type = "item",
     name = "bob-solar-panel-equipment-3",
+    localised_description = { "item-description.solar-panel-equipment" },
     icon = "__bobequipment__/graphics/icons/solar-panel-equipment-3.png",
     icon_size = 32,
     place_as_equipment_result = "bob-solar-panel-equipment-3",
@@ -391,6 +402,7 @@ data:extend({
   {
     type = "item",
     name = "bob-solar-panel-equipment-4",
+    localised_description = { "item-description.solar-panel-equipment" },
     icon = "__bobequipment__/graphics/icons/solar-panel-equipment-4.png",
     icon_size = 32,
     place_as_equipment_result = "bob-solar-panel-equipment-4",
@@ -538,6 +550,7 @@ data:extend({
   {
     type = "item",
     name = "bob-exoskeleton-equipment-2",
+    localised_description = { "item-description.exoskeleton-equipment" },
     icon = "__base__/graphics/icons/exoskeleton-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-exoskeleton-equipment-2",
@@ -561,6 +574,7 @@ data:extend({
   {
     type = "item",
     name = "bob-exoskeleton-equipment-3",
+    localised_description = { "item-description.exoskeleton-equipment" },
     icon = "__base__/graphics/icons/exoskeleton-equipment.png",
     icon_size = 64,
     place_as_equipment_result = "bob-exoskeleton-equipment-3",

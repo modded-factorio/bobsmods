@@ -2,6 +2,7 @@
 Version: 2.0.5
 Date: ???
   Changes:
+    - Disallowed certain entities in space #551
     - Set item weights #553
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4

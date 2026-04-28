@@ -5,6 +5,8 @@ Date: ???
     - Set item weights #553
   Bugfixes:
     - Made it easier to upgrade labs #541
+  Changes:
+    - Disallowed certain entities in space #551
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 18. 01. 2026

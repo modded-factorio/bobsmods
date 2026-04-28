@@ -369,4 +369,16 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       },
     })
   end
+
+  if feature_flags["space_travel"] then
+    local function no_space()
+      return { { property = "pressure", min = 10 } }
+    end
+    data.raw.generator["bob-fluid-generator"].surface_conditions = no_space()
+    data.raw.generator["bob-fluid-generator-2"].surface_conditions = no_space()
+    data.raw.generator["bob-fluid-generator-3"].surface_conditions = no_space()
+    if data.raw.generator["bob-hydrazine-generator"] then
+      data.raw.generator["bob-hydrazine-generator"].surface_conditions = no_space()
+    end
+  end
 end

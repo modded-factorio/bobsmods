@@ -458,3 +458,19 @@ data:extend({
     run_animation = bobmods.warfare.tank_drone_animation(0.5 * 1.5, tint_drone_plasma, tint_drone_1),
   },
 })
+
+if feature_flags["space_travel"] then
+  data.raw.unit["bob-robot-gun-drone"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+  data.raw.unit["bob-robot-laser-drone"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+  data.raw.unit["bob-robot-flamethrower-drone"].surface_conditions = {
+    { property = "gravity", min = 1 },
+    { property = "pressure", min = 10 },
+  }
+  data.raw.unit["bob-robot-plasma-drone"].surface_conditions = {
+    { property = "gravity", min = 1 },
+  }
+end
