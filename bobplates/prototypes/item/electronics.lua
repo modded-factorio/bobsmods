@@ -1,6 +1,8 @@
 data.raw.item["electronic-circuit"].order = "a[circuits]-a[electronic-circuit]"
 data.raw.item["advanced-circuit"].order = "a[circuits]-b[advanced-circuit]"
 data.raw.item["processing-unit"].order = "a[circuits]-c[processing-unit-1]"
+data.raw.item["processing-unit"].stack_size = 200
+data.raw.item["processing-unit"].weight = 2500
 
 data:extend({
   {
@@ -23,6 +25,7 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {

@@ -1,5 +1,7 @@
 data.raw.item["gun-turret"].order = "b[turret]-a[gun-turret-1]"
 data.raw.item["laser-turret"].order = "b[turret]-b[laser-turret-1]"
+data.raw.item["gun-turret"].weight = 20000
+data.raw.item["flamethrower-turret"].weight = 40000
 
 local turretmovesound = {
   filename = "__base__/sound/item/turret-inventory-move.ogg",
@@ -23,6 +25,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -37,6 +40,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -51,6 +55,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -65,6 +70,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -79,6 +85,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -93,6 +100,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -107,6 +115,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 20000,
   },
 
   {
@@ -121,6 +130,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 40000,
   },
 
   {
@@ -135,6 +145,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 40000,
   },
 
   {
@@ -149,6 +160,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 40000,
   },
 
   {
@@ -163,6 +175,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 40000,
   },
 
   {
@@ -177,6 +190,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 1000000,
   },
 
   {
@@ -191,6 +205,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 1000000,
   },
 
   {
@@ -205,6 +220,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 1000000,
   },
 
   {
@@ -219,6 +235,7 @@ data:extend({
     drop_sound = turretmovesound,
     inventory_move_sound = turretmovesound,
     pick_sound = turretplacesound,
+    weight = 1000000,
   },
 
   {
@@ -242,6 +259,7 @@ data:extend({
       filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
       volume = 0.4,
     },
+    weight = 200000,
   },
 
   {
@@ -265,5 +283,6 @@ data:extend({
       filename = "__base__/sound/item/artillery-large-inventory-pickup.ogg",
       volume = 0.4,
     },
+    weight = 200000,
   },
 })

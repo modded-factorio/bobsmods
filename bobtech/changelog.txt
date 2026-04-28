@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: ???
+  Changes:
+    - Set item weights #553
   Bugfixes:
     - Made it easier to upgrade labs #541
   Changes:

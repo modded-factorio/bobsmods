@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Reduced the time that heat sources take to get up to temperature #529
     - Disallowed certain entities in space #551
+    - Set item weights #553
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 18. 01. 2026

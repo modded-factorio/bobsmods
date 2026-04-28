@@ -149,6 +149,8 @@ then
     if mods["space-age"] then
       data.raw.recipe["aai-basic-loader"].category = "pressing"
     end
+
+    data.raw.item["aai-basic-loader"].weight = 20000
   end
 
   AAILoaders.make_tier({
@@ -308,4 +310,10 @@ then
     data.raw.recipe["aai-turbo-loader"].category = "crafting-with-fluid-or-metallurgy"
     data.raw.recipe["aai-ultimate-loader"].category = "crafting-with-fluid-or-metallurgy"
   end
+
+  data.raw.item["aai-loader"].weight = 20000
+  data.raw.item["aai-fast-loader"].weight = 20000
+  data.raw.item["aai-express-loader"].weight = 20000
+  data.raw.item["aai-turbo-loader"].weight = 20000
+  data.raw.item["aai-ultimate-loader"].weight = 20000
 end
