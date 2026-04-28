@@ -28,7 +28,7 @@ local ball_pick = {
 }
 
 data.raw.item["iron-gear-wheel"].weight = 2000
-data.raw.item.battery.weight = 5000
+data.raw.item["battery"].weight = 5000
 
 data:extend({
   {

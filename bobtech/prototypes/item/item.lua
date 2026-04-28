@@ -7,7 +7,7 @@ local science_pick = {
   volume = 0.6,
 }
 
-data.raw.item.lab.weight = 100000
+data.raw.item["lab"].weight = 100000
 
 data:extend({
   {
