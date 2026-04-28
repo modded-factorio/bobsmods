@@ -5,7 +5,7 @@ data.raw.item["fast-inserter"].order = "e[inserter]-d[express]"
 data.raw.item["bulk-inserter"].order = "e[inserter]-d[express]-c[bulk]"
 
 data.raw.item["burner-inserter"].weight = 10000
-data.raw.item.inserter.weight = 10000
+data.raw.item["inserter"].weight = 10000
 
 local inserter_drop_move = {
   filename = "__base__/sound/item/inserter-inventory-move.ogg",
