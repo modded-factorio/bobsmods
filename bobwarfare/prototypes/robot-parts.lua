@@ -28,6 +28,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = electronicdropsound,
       inventory_move_sound = electronicdropsound,
       pick_sound = electronicpicksound,
+      weight = 5000,
     },
 
     {
@@ -41,6 +42,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = electronicdropsound,
       inventory_move_sound = electronicdropsound,
       pick_sound = electronicpicksound,
+      weight = 5000,
     },
 
     {
@@ -54,6 +56,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = electronicdropsound,
       inventory_move_sound = electronicdropsound,
       pick_sound = electronicpicksound,
+      weight = 5000,
     },
 
     {
@@ -67,6 +70,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = electronicdropsound,
       inventory_move_sound = electronicdropsound,
       pick_sound = electronicpicksound,
+      weight = 5000,
     },
 
     {
@@ -80,6 +84,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = tooldropsound,
       inventory_move_sound = tooldropsound,
       pick_sound = toolpicksound,
+      weight = 10000,
     },
 
     {
@@ -93,6 +98,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = tooldropsound,
       inventory_move_sound = tooldropsound,
       pick_sound = toolpicksound,
+      weight = 10000,
     },
 
     {
@@ -106,6 +112,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = tooldropsound,
       inventory_move_sound = tooldropsound,
       pick_sound = toolpicksound,
+      weight = 10000,
     },
 
     {
@@ -119,6 +126,7 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true and bobmods.war
       drop_sound = tooldropsound,
       inventory_move_sound = tooldropsound,
       pick_sound = toolpicksound,
+      weight = 10000,
     },
   })
 

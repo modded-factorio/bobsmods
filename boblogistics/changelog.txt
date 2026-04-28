@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Reduced charge approach distance for robochests. Robots waiting to charge will now wait closer to the robochest. #533
     - Disallowed certain entities in space #551
+    - Set item weights #553
     - Increasd pump speed when Quality mod is not enabled #557
     - Increasd bot health and explosion resistance #563
   Bugfixes:

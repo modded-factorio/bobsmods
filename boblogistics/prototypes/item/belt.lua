@@ -15,6 +15,12 @@ local mechanical_pick = {
   volume = 0.8,
 }
 
+data.raw.item["transport-belt"].weight = 10000
+data.raw.item["underground-belt"].weight = 20000
+data.raw.item["fast-transport-belt"].weight = 10000
+data.raw.item["fast-underground-belt"].weight = 20000
+data.raw.item["fast-splitter"].weight = 20000
+
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   data:extend({
     {
@@ -29,6 +35,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       drop_sound = belt_drop_move,
       inventory_move_sound = belt_drop_move,
       pick_sound = belt_pick,
+      weight = 10000,
     },
     {
       type = "item",
@@ -42,6 +49,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       drop_sound = mechanical_drop_move,
       inventory_move_sound = mechanical_drop_move,
       pick_sound = mechanical_pick,
+      weight = 20000,
     },
     {
       type = "item",
@@ -73,6 +81,7 @@ data:extend({
     drop_sound = belt_drop_move,
     inventory_move_sound = belt_drop_move,
     pick_sound = belt_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -86,6 +95,7 @@ data:extend({
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
     pick_sound = mechanical_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -114,6 +124,7 @@ data:extend({
     drop_sound = belt_drop_move,
     inventory_move_sound = belt_drop_move,
     pick_sound = belt_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -127,6 +138,7 @@ data:extend({
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
     pick_sound = mechanical_pick,
+    weight = 20000,
   },
   {
     type = "item",
