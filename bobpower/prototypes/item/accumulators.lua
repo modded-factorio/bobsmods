@@ -1,6 +1,7 @@
 if settings.startup["bobmods-power-accumulators"].value == true then
   data.raw["item"]["accumulator"].order = "e[accumulator]-a[accumulator]-a-l"
   data.raw["item"]["accumulator"].subgroup = "bob-energy-accumulator"
+  data.raw["item"]["accumulator"].weight = 20000
 
   local electric_large_drop_move = {
     filename = "__base__/sound/item/electric-large-inventory-move.ogg",
@@ -24,6 +25,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 10000,
     },
 
     {
@@ -38,6 +40,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 10000,
     },
 
     {
@@ -52,6 +55,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 20000,
     },
 
     {
@@ -66,6 +70,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 10000,
     },
 
     {
@@ -80,6 +85,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 10000,
     },
 
     {
@@ -94,6 +100,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 20000,
     },
 
     {
@@ -108,6 +115,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 10000,
     },
 
     {
@@ -122,6 +130,7 @@ if settings.startup["bobmods-power-accumulators"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
+      weight = 10000,
     },
   })
 end

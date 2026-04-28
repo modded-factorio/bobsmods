@@ -24,6 +24,7 @@ data:extend({
       filename = "__base__/sound/item/raw-fish-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 1000,
   },
 
   {
@@ -46,6 +47,7 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 500,
   },
 
   {
@@ -68,6 +70,7 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 500,
   },
 
   {
@@ -81,6 +84,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 500,
   },
 
   {
@@ -94,6 +98,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 625,
   },
 
   {
@@ -107,6 +112,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 1000,
   },
 
   {
@@ -120,6 +126,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 2000,
   },
 
   {
@@ -133,6 +140,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -146,6 +154,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -159,6 +168,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -172,6 +182,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -185,6 +196,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -198,6 +210,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -211,6 +224,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -224,6 +238,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -237,6 +252,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -247,6 +263,10 @@ data:extend({
     subgroup = "bob-ammo-parts",
     order = "fd6",
     stack_size = 100,
+    drop_sound = smallammopartsound,
+    inventory_move_sound = smallammopartsound,
+    pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -260,6 +280,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -273,6 +294,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -286,6 +308,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -299,6 +322,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -312,6 +336,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 500,
   },
 
   {
@@ -325,6 +350,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 2000,
   },
 
   {
@@ -347,6 +373,7 @@ data:extend({
       filename = "__base__/sound/item/weapon-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 125,
   },
 
   {
@@ -369,6 +396,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 2500,
   },
 
   {
@@ -391,6 +419,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -413,6 +442,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -435,6 +465,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -457,6 +488,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -479,6 +511,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -501,6 +534,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -523,6 +557,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -545,6 +580,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 })
 
@@ -560,6 +596,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 3333.33,
   },
 
   {
@@ -573,6 +610,7 @@ data:extend({
     drop_sound = smallammopartsound,
     inventory_move_sound = smallammopartsound,
     pick_sound = smallammopartsound,
+    weight = 5000,
   },
 
   {
@@ -595,5 +633,6 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 })

@@ -7,6 +7,8 @@ local science_pick = {
   volume = 0.6,
 }
 
+data.raw.item["lab"].weight = 100000
+
 data:extend({
   {
     type = "tool",
@@ -54,6 +56,7 @@ data:extend({
       filename = "__base__/sound/item/lab-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 100000,
   },
 })
 
@@ -79,6 +82,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
         filename = "__base__/sound/item/lab-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 100000,
     },
   })
   if not data.raw.item["bob-burner-generator"] then
@@ -104,6 +108,7 @@ if settings.startup["bobmods-burnerphase"].value == true then
           filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
           volume = 0.8,
         },
+        weight = 100000,
       },
     })
   end

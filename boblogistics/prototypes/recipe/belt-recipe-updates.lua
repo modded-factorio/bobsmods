@@ -113,38 +113,32 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   end
 
   if data.raw.item["bob-titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-transport-belt", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-underground-belt", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-splitter", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("turbo-transport-belt", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("turbo-underground-belt", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("turbo-splitter", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("logistics-4", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-transport-belt",
+      "turbo-transport-belt",
       { type = "item", name = "bob-titanium-bearing", amount = 4 }
     )
     if settings.startup["bobmods-logistics-beltrequireprevious"].value == true then
       bobmods.lib.recipe.add_ingredient(
-        "bob-turbo-underground-belt",
+        "turbo-underground-belt",
         { type = "item", name = "bob-titanium-bearing", amount = 20 }
       )
-      bobmods.lib.recipe.add_ingredient(
-        "bob-turbo-splitter",
-        { type = "item", name = "bob-titanium-bearing", amount = 12 }
-      )
+      bobmods.lib.recipe.add_ingredient("turbo-splitter", { type = "item", name = "bob-titanium-bearing", amount = 12 })
     else
-      bobmods.lib.recipe.add_ingredient(
-        "bob-turbo-splitter",
-        { type = "item", name = "bob-titanium-bearing", amount = 4 }
-      )
+      bobmods.lib.recipe.add_ingredient("turbo-splitter", { type = "item", name = "bob-titanium-bearing", amount = 4 })
     end
   end
 
   if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-transport-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-underground-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-splitter", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("turbo-transport-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("turbo-underground-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("turbo-splitter", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
@@ -184,34 +178,28 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 else
   if data.raw.item["bob-titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-transport-belt",
+      "turbo-transport-belt",
       { type = "item", name = "bob-titanium-bearing", amount = 5 }
     )
     bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-underground-belt",
+      "turbo-underground-belt",
       { type = "item", name = "bob-titanium-bearing", amount = 40 }
     )
-    bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-splitter",
-      { type = "item", name = "bob-titanium-bearing", amount = 10 }
-    )
+    bobmods.lib.recipe.add_ingredient("turbo-splitter", { type = "item", name = "bob-titanium-bearing", amount = 10 })
     bobmods.lib.tech.add_prerequisite("logistics-4", "bob-titanium-processing")
   else
+    bobmods.lib.recipe.add_ingredient("turbo-transport-belt", { type = "item", name = "iron-gear-wheel", amount = 5 })
     bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-transport-belt",
-      { type = "item", name = "iron-gear-wheel", amount = 5 }
-    )
-    bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-underground-belt",
+      "turbo-underground-belt",
       { type = "item", name = "iron-gear-wheel", amount = 20 }
     )
-    bobmods.lib.recipe.add_ingredient("bob-turbo-splitter", { type = "item", name = "iron-gear-wheel", amount = 10 })
+    bobmods.lib.recipe.add_ingredient("turbo-splitter", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
 
   if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-transport-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-underground-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.recipe.replace_ingredient("bob-turbo-splitter", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("turbo-transport-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("turbo-underground-belt", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.recipe.replace_ingredient("turbo-splitter", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.tech.add_prerequisite("logistics-4", "bob-titanium-processing")
   end
 

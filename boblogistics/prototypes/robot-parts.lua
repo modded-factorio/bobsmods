@@ -23,6 +23,8 @@ local electronic_pick = {
   volume = 0.7,
 }
 
+data.raw.item["flying-robot-frame"].weight = 10000
+
 if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
   local item = data.raw.item["flying-robot-frame"]
   item.order = "j[flying-robot-frame-1]"
@@ -78,6 +80,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       drop_sound = part_drop_move,
       inventory_move_sound = part_drop_move,
       pick_sound = part_pick,
+      weight = 10000,
     },
     {
       type = "item",
@@ -107,6 +110,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       drop_sound = part_drop_move,
       inventory_move_sound = part_drop_move,
       pick_sound = part_pick,
+      weight = 10000,
     },
     {
       type = "item",
@@ -136,6 +140,7 @@ if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       drop_sound = part_drop_move,
       inventory_move_sound = part_drop_move,
       pick_sound = part_pick,
+      weight = 10000,
     },
 
     {
@@ -276,6 +281,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = electronic_drop_move,
       inventory_move_sound = electronic_drop_move,
       pick_sound = electronic_pick,
+      weight = 5000,
     },
 
     {
@@ -289,6 +295,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = electronic_drop_move,
       inventory_move_sound = electronic_drop_move,
       pick_sound = electronic_pick,
+      weight = 5000,
     },
 
     {
@@ -302,6 +309,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = electronic_drop_move,
       inventory_move_sound = electronic_drop_move,
       pick_sound = electronic_pick,
+      weight = 5000,
     },
 
     {
@@ -315,6 +323,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = electronic_drop_move,
       inventory_move_sound = electronic_drop_move,
       pick_sound = electronic_pick,
+      weight = 5000,
     },
 
     {
@@ -328,6 +337,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -341,6 +351,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -354,6 +365,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -367,6 +379,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -380,6 +393,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -393,6 +407,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -406,6 +421,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
 
     {
@@ -419,6 +435,7 @@ if settings.startup["bobmods-logistics-robotparts"].value == true then
       drop_sound = tool_drop_move,
       inventory_move_sound = tool_drop_move,
       pick_sound = tool_pick,
+      weight = 5000,
     },
   })
 

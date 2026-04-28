@@ -20,6 +20,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 200000,
   },
 
   {
@@ -108,6 +109,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 200000,
   },
 
   {
@@ -198,6 +200,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 200000,
   },
 
   {
@@ -291,6 +294,7 @@ if data.raw.item["bob-alien-artifact"] then
         filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
         volume = 0.7,
       },
+      weight = 200000,
     },
 
     {
@@ -384,6 +388,7 @@ if data.raw.item["bob-alien-artifact"] then
           filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
           volume = 0.7,
         },
+        weight = 200000,
       },
 
       {
