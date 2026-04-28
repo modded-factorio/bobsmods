@@ -125,10 +125,10 @@ data.raw.item["battery-mk2-equipment"].icon_size = 64
 data:extend({
   {
     type = "item",
-    name = "bob-battery-mk3-equipment",
+    name = "battery-mk3-equipment",
     icon = "__bobequipment__/graphics/icons/technology/battery-mk3-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "bob-battery-mk3-equipment",
+    place_as_equipment_result = "battery-mk3-equipment",
     subgroup = "equipment",
     order = "c[battery]-c[battery-mk3-equipment]",
     stack_size = 20,
@@ -177,29 +177,6 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk5-equipment",
     subgroup = "equipment",
     order = "c[battery]-e[battery-mk5-equipment]",
-    stack_size = 20,
-    drop_sound = {
-      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7,
-    },
-    weight = 100000,
-  },
-  {
-    type = "item",
-    name = "bob-battery-mk6-equipment",
-    icon = "__bobequipment__/graphics/icons/technology/battery-mk6-equipment.png",
-    icon_size = 64,
-    place_as_equipment_result = "bob-battery-mk6-equipment",
-    subgroup = "equipment",
-    order = "c[battery]-f[battery-mk6-equipment]",
     stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
