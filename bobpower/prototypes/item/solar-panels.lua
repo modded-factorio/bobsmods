@@ -70,7 +70,7 @@ if settings.startup["bobmods-power-solar"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 20000
+      weight = 20000,
     },
 
     {

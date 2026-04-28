@@ -562,7 +562,7 @@ function bobmods.lib.resource.generate_data_stage(inputs)
         stack_size = inputs.item.stack_size,
         tint = inputs.tint,
         create_variations = inputs.item.create_variations,
-        weight = inputs.item.weight
+        weight = inputs.item.weight,
       }
       if inputs.drop_sound then
         if inputs.drop_sound.filename and inputs.drop_sound.volume then

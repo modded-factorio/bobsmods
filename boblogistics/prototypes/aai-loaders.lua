@@ -316,5 +316,4 @@ then
   data.raw.item["aai-express-loader"].weight = 20000
   data.raw.item["aai-turbo-loader"].weight = 20000
   data.raw.item["aai-ultimate-loader"].weight = 20000
-
 end

@@ -352,7 +352,7 @@ function bobmods.warfare.create_spidertron(arguments)
         filename = "__base__/sound/item/spidertron-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = arguments.item_weight or 1000000
+      weight = arguments.item_weight or 1000000,
     },
     {
       type = "spider-vehicle",
