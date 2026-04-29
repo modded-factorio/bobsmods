@@ -245,6 +245,38 @@ data:extend({
 })
 
 if mods["space-age"] then
- data.raw.item.carbon.icon = "__space-age__/graphics/icons/carbon.png"
- data.raw.item.carbon.icon_size = 64
+  data.raw.item["carbon"].icon = "__space-age__/graphics/icons/carbon.png"
+  data.raw.item["carbon"].icon_size = 64
+
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-carbon-from-acid",
+      localised_name = { "item-name.carbon" },
+      icons = {
+        { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
+        { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
+      },
+      category = "chemistry-or-cryogenics",
+      subgroup = "raw-material",
+      auto_recycle = false,
+      enabled = false,
+      ingredients =
+      {
+        { type = "item", name = "coal", amount = 2 },
+        { type = "fluid", name = "sulfuric-acid", amount = 20 },
+      },
+      energy_required = 1,
+      results = {{ type = "item", name = "carbon", amount = 1 }},
+      allow_productivity = true,
+      allow_decomposition = false,
+      crafting_machine_tint =
+      {
+        primary = { r = 0.000, g = 0.000, b = 0.000, a = 1.000 }, -- #000000ff
+        secondary = { r = 0.293, g = 0.293, b = 0.293, a = 1.000 }, -- #4a4a4aff
+        tertiary = { r = 0.199, g = 0.179, b = 0.070, a = 1.000 }, -- #322d11ff
+        quaternary = { r = 0.293, g = 0.293, b = 0.293, a = 1.000 }, -- #4a4a4aff
+      },
+    },
+  })
 end

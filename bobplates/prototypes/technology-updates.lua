@@ -165,4 +165,5 @@ end
 
 if mods["space-age"] then
   bobmods.lib.tech.remove_recipe_unlock("tungsten-carbide", "carbon")
+  bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-carbon-from-acid")
 end
