@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "bob-carbon",
+    name = "carbon",
     icon = "__bobplates__/graphics/icons/carbon.png",
     icon_size = 32,
     subgroup = "bob-resource",
@@ -243,3 +243,8 @@ data:extend({
     weight = 2000,
   },
 })
+
+if mods["space-age"] then
+  data.raw.item["carbon"].icon = "__space-age__/graphics/icons/carbon.png"
+  data.raw.item["carbon"].icon_size = 64
+end
