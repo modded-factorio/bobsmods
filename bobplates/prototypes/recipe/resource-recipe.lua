@@ -1,3 +1,15 @@
+if mods["space-age"] then
+  local recipe = data.raw.recipe["carbon"]
+  data.raw.recipe["carbon"] = nil
+  recipe.name = "bob-carbon-from-acid"
+  recipe.localised_name = { "item-name.carbon" }
+  recipe.icons = {
+    { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
+    { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
+  }
+  data:extend({ recipe })
+end
+
 data:extend({
   {
     type = "recipe",
