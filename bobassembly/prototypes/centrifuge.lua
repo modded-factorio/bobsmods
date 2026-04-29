@@ -1,7 +1,7 @@
 if settings.startup["bobmods-assembly-centrifuge"].value == true then
   data.raw.item["centrifuge"].order = "g[centrifuge-1]"
+  data.raw.item["centrifuge"].weight = 1000000
   data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group = "centrifuge"
-  data.raw["assembling-machine"]["centrifuge"].weight = 1000000
 
   data:extend({
     {
