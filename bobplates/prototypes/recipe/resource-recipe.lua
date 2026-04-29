@@ -3,6 +3,7 @@ if mods["space-age"] then
   data.raw.recipe["carbon"] = nil
   recipe.name = "bob-carbon-from-acid"
   recipe.localised_name = { "item-name.carbon" }
+  recipe.icon = nil
   recipe.icons = {
     { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
     { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },

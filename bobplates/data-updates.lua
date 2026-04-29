@@ -455,12 +455,16 @@ if mods["quality"] then
     "battery",
     "cargo-landing-pad",
     "rocket-silo",
-    "satellite",
     "speed-module-3",
     "efficiency-module-3",
     "productivity-module-3",
     "quality-module-3",
   })
+  if not mods["space-age"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "satellite",
+    })
+  end
 end
 
 if mods["space-age"] then
