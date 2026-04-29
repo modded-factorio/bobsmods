@@ -296,4 +296,13 @@ data.raw.recipe["solid-fuel-from-heavy-oil"].allow_productivity = false
 if mods["space-age"] then
   data.raw.recipe["carbon"].allow_productivity = false
   data.raw.recipe["coal-synthesis"].allow_productivity = false
+
+  data.raw.recipe["carbon"].icons = {
+    { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
+    { icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
+  }
+  data.raw.recipe["bob-carbon-from-wood"].icons = {
+    { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
+    { icon = "__base__/graphics/icons/wood.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
+  }
 end
