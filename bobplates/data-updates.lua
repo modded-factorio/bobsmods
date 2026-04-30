@@ -51,7 +51,9 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw.recipe["bob-aluminium-plate"].energy_required = 3.2
   data.raw.recipe["bob-titanium-plate"].energy_required = 3.2
   data.raw.recipe["bob-silicon-plate"].energy_required = 3.2
-  data.raw.recipe["bob-lithium"].energy_required = 1.6
+  if not mods["space-age"] then
+    data.raw.recipe["lithium"].energy_required = 1.6
+  end
 end
 
 data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"

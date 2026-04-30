@@ -159,7 +159,7 @@ data:extend({
   },
 })
 
-if not data.raw.item.lithium then
+if not data.raw.item["lithium"] then
   data:extend({
     {
       type = "item",
