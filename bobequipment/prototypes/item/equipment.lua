@@ -6,12 +6,16 @@ data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-a[p
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a[exoskeleton-equipment-1]"
 data.raw.item["exoskeleton-equipment"].subgroup = "equipment"
 data.raw.item["belt-immunity-equipment"].subgroup = "equipment"
+data.raw.item["belt-immunity-equipment"].weight = 50000
 
 data.raw.item["energy-shield-equipment"].icon = "__bobequipment__/graphics/equipment/energy-shield-mk1-equipment.png"
 data.raw.item["energy-shield-equipment"].icon_size = 64
+data.raw.item["energy-shield-equipment"].weight = 40000
 data.raw.item["energy-shield-mk2-equipment"].icon =
   "__bobequipment__/graphics/equipment/energy-shield-mk2-equipment.png"
 data.raw.item["energy-shield-mk2-equipment"].icon_size = 64
+data.raw.item["energy-shield-mk2-equipment"].weight = 40000
+data.raw.item["discharge-defense-equipment"].weight = 250000
 
 data:extend({
   {
@@ -23,7 +27,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk3-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-c[energy-shield-equipment-mk3]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -36,7 +40,7 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
   {
     type = "item",
@@ -47,7 +51,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk4-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-d[energy-shield-equipment-mk4]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -60,7 +64,7 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
   {
     type = "item",
@@ -71,7 +75,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk5-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-e[energy-shield-equipment-mk5]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -84,7 +88,7 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
   {
     type = "item",
@@ -95,7 +99,7 @@ data:extend({
     place_as_equipment_result = "bob-energy-shield-mk6-equipment",
     subgroup = "military-equipment",
     order = "a[shield]-f[energy-shield-equipment-mk6]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/energy-shield-inventory-move.ogg",
       volume = 0.4,
@@ -108,25 +112,26 @@ data:extend({
       filename = "__base__/sound/item/energy-shield-inventory-pickup.ogg",
       volume = 0.4,
     },
-    weight = 100000,
+    weight = 40000,
   },
 })
 
 data.raw.item["battery-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-equipment.png"
 data.raw.item["battery-equipment"].icon_size = 64
+data.raw.item["battery-equipment"].weight = 100000
 data.raw.item["battery-mk2-equipment"].icon = "__bobequipment__/graphics/icons/technology/battery-mk2-equipment.png"
 data.raw.item["battery-mk2-equipment"].icon_size = 64
 
 data:extend({
   {
     type = "item",
-    name = "bob-battery-mk3-equipment",
+    name = "battery-mk3-equipment",
     icon = "__bobequipment__/graphics/icons/technology/battery-mk3-equipment.png",
     icon_size = 64,
-    place_as_equipment_result = "bob-battery-mk3-equipment",
+    place_as_equipment_result = "battery-mk3-equipment",
     subgroup = "equipment",
     order = "c[battery]-c[battery-mk3-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,
@@ -149,7 +154,7 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk4-equipment",
     subgroup = "equipment",
     order = "c[battery]-d[battery-mk4-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,
@@ -172,30 +177,7 @@ data:extend({
     place_as_equipment_result = "bob-battery-mk5-equipment",
     subgroup = "equipment",
     order = "c[battery]-e[battery-mk5-equipment]",
-    stack_size = 50,
-    drop_sound = {
-      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/electric-small-inventory-move.ogg",
-      volume = 1,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
-      volume = 0.7,
-    },
-    weight = 100000,
-  },
-  {
-    type = "item",
-    name = "bob-battery-mk6-equipment",
-    icon = "__bobequipment__/graphics/icons/technology/battery-mk6-equipment.png",
-    icon_size = 64,
-    place_as_equipment_result = "bob-battery-mk6-equipment",
-    subgroup = "equipment",
-    order = "c[battery]-f[battery-mk6-equipment]",
-    stack_size = 50,
+    stack_size = 20,
     drop_sound = {
       filename = "__base__/sound/item/electric-small-inventory-move.ogg",
       volume = 1,
@@ -213,6 +195,8 @@ data:extend({
 })
 
 data.raw.item["fission-reactor-equipment"].icon = "__bobequipment__/graphics/icons/fission-reactor-equipment-1.png"
+
+data.raw.item["night-vision-equipment"].weight = 50000
 
 data:extend({
   {
@@ -307,6 +291,7 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -330,11 +315,13 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
 })
 
 data.raw.item["solar-panel-equipment"].icon = "__bobequipment__/graphics/icons/solar-panel-equipment-1.png"
 data.raw.item["solar-panel-equipment"].icon_size = 32
+data.raw.item["solar-panel-equipment"].weight = 50000
 
 data:extend({
   {
@@ -359,6 +346,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -382,6 +370,7 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -405,12 +394,14 @@ data:extend({
       filename = "__base__/sound/item/electric-large-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 50000,
   },
 })
 
 data.raw.item["personal-laser-defense-equipment"].icon =
   "__bobequipment__/graphics/icons/technology/personal-laser-defense-equipment-1.png"
 data.raw.item["personal-laser-defense-equipment"].icon_size = 128
+data.raw.item["exoskeleton-equipment"].weight = 50000
 
 data:extend({
   {
@@ -551,6 +542,7 @@ data:extend({
       filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -574,5 +566,6 @@ data:extend({
       filename = "__base__/sound/item/exoskeleton-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 50000,
   },
 })

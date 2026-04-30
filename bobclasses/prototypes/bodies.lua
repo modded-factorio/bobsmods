@@ -21,6 +21,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -45,6 +46,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -69,6 +71,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -93,6 +96,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
 
   {
@@ -118,6 +122,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -148,6 +153,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -178,6 +184,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -208,6 +215,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
 
   {
@@ -233,6 +241,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
   {
     type = "item",
@@ -257,6 +266,7 @@ data:extend({
     drop_sound = body_drop_move,
     inventory_move_sound = body_drop_move,
     pick_sound = body_pick,
+    weight = 1000000,
   },
 })
 

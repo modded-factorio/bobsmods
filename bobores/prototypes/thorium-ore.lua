@@ -12,6 +12,7 @@ bobmods.ores.thorium = {
     create = true,
     create_variations = true,
     subgroup = "bob-ores",
+    weight = 20000,
   },
   sprite = {
     sheet = 6, --sheet 6 is a tintable uranium clone

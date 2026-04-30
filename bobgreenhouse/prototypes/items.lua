@@ -22,6 +22,7 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
+    weight = 50000,
   },
   {
     type = "item",
@@ -46,6 +47,7 @@ data:extend({
       volume = 0.7,
       speed = 0.6,
     },
+    weight = 1000,
   },
   {
     type = "item",
@@ -72,6 +74,7 @@ data:extend({
       volume = 0.9,
       speed = 0.6,
     },
+    weight = 500,
   },
   {
     type = "item",
@@ -99,5 +102,6 @@ data:extend({
       volume = 0.7,
       speed = 0.6,
     },
+    weight = 10000,
   },
 })

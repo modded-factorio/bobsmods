@@ -451,7 +451,7 @@ end
 
 if data.raw.item["bob-battery-2"] then
   bobmods.lib.recipe.replace_ingredient("battery-mk3-equipment", "battery", "bob-battery-2")
-  bobmods.lib.tech.add_prerequisite("bob-battery-equipment-3", "bob-battery-2")
+  bobmods.lib.tech.add_prerequisite("battery-mk3-equipment", "bob-battery-2")
 
   bobmods.lib.recipe.remove_ingredient("bob-personal-laser-defense-equipment-3", "battery")
   bobmods.lib.recipe.add_ingredient(
@@ -502,8 +502,8 @@ if data.raw.item["bob-advanced-processing-unit"] then
     "processing-unit",
     "bob-advanced-processing-unit"
   )
-  bobmods.lib.tech.add_prerequisite("bob-battery-equipment-6", "bob-advanced-processing-unit")
-  bobmods.lib.recipe.replace_ingredient("bob-battery-mk6-equipment", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("bob-battery-equipment-5", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("bob-battery-mk5-equipment", "processing-unit", "bob-advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-3", "bob-advanced-processing-unit")
   bobmods.lib.recipe.replace_ingredient(
     "bob-fission-reactor-equipment-3",
@@ -924,10 +924,6 @@ if data.raw.item["bob-alien-artifact-red"] and data.raw.item["bob-alien-artifact
     "bob-energy-shield-mk6-equipment",
     { type = "item", name = "bob-alien-artifact-red", amount = 5 }
   )
-  bobmods.lib.recipe.add_new_ingredient(
-    "bob-battery-mk6-equipment",
-    { type = "item", name = "bob-alien-artifact-red", amount = 5 }
-  )
   if data.raw.fluid["bob-alien-fire"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-fission-reactor-equipment-4",
@@ -944,10 +940,6 @@ if data.raw.item["bob-alien-artifact-red"] and data.raw.item["bob-alien-artifact
 
   bobmods.lib.recipe.add_new_ingredient(
     "bob-energy-shield-mk6-equipment",
-    { type = "item", name = "bob-alien-artifact-green", amount = 5 }
-  )
-  bobmods.lib.recipe.add_new_ingredient(
-    "bob-battery-mk6-equipment",
     { type = "item", name = "bob-alien-artifact-green", amount = 5 }
   )
   bobmods.lib.recipe.add_new_ingredient(
@@ -970,10 +962,6 @@ if data.raw.item["bob-alien-artifact-red"] and data.raw.item["bob-alien-artifact
 elseif data.raw.item["bob-alien-artifact"] then
   bobmods.lib.recipe.add_new_ingredient(
     "bob-energy-shield-mk6-equipment",
-    { type = "item", name = "bob-alien-artifact", amount = 30 }
-  )
-  bobmods.lib.recipe.add_new_ingredient(
-    "bob-battery-mk6-equipment",
     { type = "item", name = "bob-alien-artifact", amount = 30 }
   )
   bobmods.lib.recipe.add_new_ingredient(

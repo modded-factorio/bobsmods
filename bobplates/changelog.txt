@@ -4,7 +4,11 @@ Date: ???
   Bugfixes:
     - Fixed some fluids / recipes not combining in Factoriopedia #565
   Changes:
+    - Disallowed certain entities in space #551
+    - Set item weights #553
+    - Increased the stack size of Processing unit, Carbon, Salt, Lithium chloride, and Lithium perchlorate #553
     - Updated recipes for Rockets and T3 modules to require Advanced processing units instead of Advanced circuits #559
+    - Combined Bob's Carbon and Space Age's Carbon #570
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

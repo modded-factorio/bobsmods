@@ -50,7 +50,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lead-oxide", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "bob-lead-plate", amount = 2 } },
     allow_decomposition = false,
@@ -159,7 +159,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-alumina", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "bob-aluminium-plate", amount = 2 } },
     allow_decomposition = false,
@@ -176,7 +176,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "bob-rutile-ore", amount = 2 },
     },
     results = { { type = "item", name = "bob-titanium-plate", amount = 2 } },
@@ -194,7 +194,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "bob-quartz", amount = 2 },
     },
     results = { { type = "item", name = "bob-silicon-plate", amount = 2 } },

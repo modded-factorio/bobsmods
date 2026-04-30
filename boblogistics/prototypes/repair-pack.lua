@@ -1,6 +1,7 @@
 data.raw["repair-tool"]["repair-pack"].icon = "__boblogistics__/graphics/icons/repair-pack.png"
 data.raw["repair-tool"]["repair-pack"].icon_size = 32
 data.raw["repair-tool"]["repair-pack"].order = "b[repair]-a[repair-pack-1]"
+data.raw["repair-tool"]["repair-pack"].weight = 10000
 
 local repair_drop_move = {
   filename = "__base__/sound/item/repair-pack-inventory-move.ogg",
@@ -25,6 +26,7 @@ data:extend({
     drop_sound = repair_drop_move,
     inventory_move_sound = repair_drop_move,
     pick_sound = repair_pick,
+    weight = 10000,
   },
   {
     type = "repair-tool",
@@ -39,6 +41,7 @@ data:extend({
     drop_sound = repair_drop_move,
     inventory_move_sound = repair_drop_move,
     pick_sound = repair_pick,
+    weight = 10000,
   },
   {
     type = "repair-tool",
@@ -53,6 +56,7 @@ data:extend({
     drop_sound = repair_drop_move,
     inventory_move_sound = repair_drop_move,
     pick_sound = repair_pick,
+    weight = 10000,
   },
   {
     type = "repair-tool",
@@ -67,6 +71,7 @@ data:extend({
     drop_sound = repair_drop_move,
     inventory_move_sound = repair_drop_move,
     pick_sound = repair_pick,
+    weight = 10000,
   },
 })
 

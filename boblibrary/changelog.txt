@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: ???
+  Changes:
+    - Set item weights #553
+    - Added function bobmods.lib.tech.global_replace_prerequisite #569
   Bugfixes:
     - Changed table_merge function to check values not just keys #544
 ---------------------------------------------------------------------------------------------------

@@ -19,6 +19,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -31,6 +32,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -43,6 +45,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 2500,
   },
   {
     type = "item",
@@ -55,6 +58,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1250,
   },
   {
     type = "item",
@@ -67,6 +71,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
 
   {
@@ -80,6 +85,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -92,6 +98,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -104,5 +111,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 2500,
   },
 })
