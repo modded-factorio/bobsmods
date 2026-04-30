@@ -207,7 +207,7 @@ if not mods["space-age"] then
   data:extend({
     {
       type = "recipe",
-      name = "lithium",
+      name = "lithium-plate",
       localised_name = { "item-name.bob-lithium" },
       category = "bob-electrolysis",
       subgroup = "bob-material-electrolysis",
@@ -217,7 +217,7 @@ if not mods["space-age"] then
       ingredients = {
         { type = "item", name = "bob-lithium-chloride", amount = 1 },
       },
-      results = { { type = "item", name = "lithium", amount = 1 } },
+      results = { { type = "item", name = "lithium-plate", amount = 1 } },
       allow_decomposition = false,
       allow_productivity = true,
     },

@@ -353,10 +353,6 @@ end
 if data.raw.item["bob-flying-robot-frame-4"] then
   if data.raw.item["bob-battery-3"] then
     bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-battery-3")
-  else
-    if data.raw.item["bob-battery-2"] then
-      bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-battery-2")
-    end
   end
 
   if data.raw.item["bob-nitinol-alloy"] then

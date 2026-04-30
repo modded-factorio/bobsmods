@@ -52,7 +52,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw.recipe["bob-titanium-plate"].energy_required = 3.2
   data.raw.recipe["bob-silicon-plate"].energy_required = 3.2
   if not mods["space-age"] then
-    data.raw.recipe["lithium"].energy_required = 1.6
+    data.raw.recipe["lithium-plate"].energy_required = 1.6
   end
 end
 

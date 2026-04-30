@@ -159,11 +159,11 @@ data:extend({
   },
 })
 
-if not data.raw.item["lithium"] then
+if not data.raw.item["lithium-plate"] then
   data:extend({
     {
       type = "item",
-      name = "lithium",
+      name = "lithium-plate",
       localised_name = { "item-name.bob-lithium" },
       icon = "__bobplates__/graphics/icons/plate/lithium-plate.png",
       icon_size = 64,

@@ -96,7 +96,7 @@ bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-be
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing")
 
 if not mods["space-age"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium")
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium-plate")
   bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-chloride")
   bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-perchlorate")
 else

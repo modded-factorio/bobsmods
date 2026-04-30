@@ -814,14 +814,14 @@ if mods["space-age"] then
   )
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-6", "cryogenic-science-pack")
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-6", "cryogenic-science-pack")
-elseif data.raw.item["lithium"] then
+elseif data.raw.item["lithium-plate"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-4",
-    { type = "item", name = "lithium", amount = 40 }
+    { type = "item", name = "lithium-plate", amount = 40 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-4",
-    { type = "item", name = "lithium", amount = 20 }
+    { type = "item", name = "lithium-plate", amount = 20 }
   )
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-lithium-processing")
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-lithium-processing")

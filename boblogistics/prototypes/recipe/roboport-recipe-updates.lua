@@ -104,10 +104,6 @@ end
 if data.raw.item["bob-battery-3"] then
   bobmods.lib.recipe.replace_ingredient("bob-roboport-chargepad-4", "battery", "bob-battery-3")
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "bob-battery-3")
-else
-  if data.raw.item["bob-battery-2"] then
-    bobmods.lib.recipe.replace_ingredient("bob-roboport-chargepad-4", "battery", "bob-battery-2")
-  end
 end
 
 if data.raw.item["bob-nitinol-alloy"] then
