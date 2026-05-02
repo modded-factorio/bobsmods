@@ -1,6 +1,4 @@
 if settings.startup["bobmods-assembly-chemicalplants"].value == true then
-  data.raw.item["chemical-plant"].weight = 40000
-
   data:extend({
     {
       type = "item-subgroup",
@@ -141,7 +139,6 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 40000,
     },
     {
       type = "item",
@@ -164,7 +161,6 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 40000,
     },
     {
       type = "item",
@@ -187,7 +183,6 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 40000,
     },
 
     {
@@ -456,37 +451,26 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     },
   })
 
-  if feature_flags["freezing"] then
+  if feature_flags["freezing"] and mods["space-age"] then
+    local frozenpatch = data.raw["assembling-machine"]["chemical-plant"].graphics_set.frozen_patch
     data.raw["assembling-machine"]["bob-chemical-plant-2"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-chemical-plant-3"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-chemical-plant-4"].heating_energy = "100kW"
-    if mods["space-age"] then
-      local function frozenpatch()
-        local result = util.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].graphics_set.frozen_patch)
-        return result
-      end
-      local function frozenpatchcovers()
-        local result =
-          util.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].fluid_boxes[1].pipe_covers_frozen)
-        return result
-      end
-
-      data.raw["assembling-machine"]["bob-chemical-plant-2"].graphics_set.frozen_patch = frozenpatch()
-      data.raw["assembling-machine"]["bob-chemical-plant-3"].graphics_set.frozen_patch = frozenpatch()
-      data.raw["assembling-machine"]["bob-chemical-plant-4"].graphics_set.frozen_patch = frozenpatch()
-
-      data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-    end
+    data.raw["assembling-machine"]["bob-chemical-plant-2"].graphics_set.frozen_patch = frozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-3"].graphics_set.frozen_patch = frozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-4"].graphics_set.frozen_patch = frozenpatch
+    local pcfrozenpatch = data.raw["assembling-machine"]["chemical-plant"].fluid_boxes[1].pipe_covers_frozen
+    data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-2"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-3"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-chemical-plant-4"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
   end
 end

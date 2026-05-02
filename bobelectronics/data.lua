@@ -14,4 +14,3 @@ require("prototypes.technology")
 require("prototypes.tips-and-tricks")
 
 data.raw.item["wood"].stack_size = 200
-data.raw.item["wood"].weight = 2500

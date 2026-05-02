@@ -69,6 +69,13 @@ then
     { "bob-alien-science-pack-red", 1 },
     { "space-science-pack", 1 },
   }
+  data.raw.technology["bob-battery-equipment-6"].unit.ingredients = {
+    { "bob-science-pack-gold", 1 },
+    { "bob-alien-science-pack", 1 },
+    { "bob-alien-science-pack-green", 1 },
+    { "bob-alien-science-pack-red", 1 },
+  }
+  bobmods.lib.tech.remove_prerequisite("bob-battery-equipment-6", "utility-science-pack")
   data.raw.technology["bob-fission-reactor-equipment-4"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },
     { "bob-alien-science-pack", 1 },
@@ -101,9 +108,4 @@ end
 
 if data.raw.technology["bob-productivity-module-5"] then
   bobmods.lib.tech.add_prerequisite("bob-energy-shield-equipment-6", "bob-productivity-module-5")
-end
-
-if mods["space-age"] then
-  bobmods.lib.tech.remove_prerequisite("battery-mk2-equipment", "utility-science-pack")
-  bobmods.lib.tech.remove_science_pack("battery-mk2-equipment", "utility-science-pack")
 end

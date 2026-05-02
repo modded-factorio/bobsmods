@@ -24,7 +24,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
       drop_sound = artifact_drop_move,
       inventory_move_sound = artifact_drop_move,
       pick_sound = artifact_pick,
-      weight = 2000,
     },
   })
 
@@ -195,7 +194,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 80,
       },
       {
         type = "recipe",
@@ -225,7 +223,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 2000,
       },
       {
         type = "recipe",
@@ -260,7 +257,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 2000,
       },
       {
         type = "recipe",
@@ -295,7 +291,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 2000,
       },
       {
         type = "recipe",
@@ -330,7 +325,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 2000,
       },
       {
         type = "recipe",
@@ -365,7 +359,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 2000,
       },
       {
         type = "recipe",
@@ -400,7 +393,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
         drop_sound = artifact_drop_move,
         inventory_move_sound = artifact_drop_move,
         pick_sound = artifact_pick,
-        weight = 2000,
       },
       {
         type = "recipe",
@@ -438,7 +430,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           drop_sound = artifact_drop_move,
           inventory_move_sound = artifact_drop_move,
           pick_sound = artifact_pick,
-          weight = 80,
         },
         {
           type = "recipe",
@@ -467,7 +458,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           drop_sound = artifact_drop_move,
           inventory_move_sound = artifact_drop_move,
           pick_sound = artifact_pick,
-          weight = 80,
         },
         {
           type = "recipe",
@@ -496,7 +486,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           drop_sound = artifact_drop_move,
           inventory_move_sound = artifact_drop_move,
           pick_sound = artifact_pick,
-          weight = 80,
         },
         {
           type = "recipe",
@@ -525,7 +514,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           drop_sound = artifact_drop_move,
           inventory_move_sound = artifact_drop_move,
           pick_sound = artifact_pick,
-          weight = 80,
         },
         {
           type = "recipe",
@@ -554,7 +542,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           drop_sound = artifact_drop_move,
           inventory_move_sound = artifact_drop_move,
           pick_sound = artifact_pick,
-          weight = 80,
         },
         {
           type = "recipe",
@@ -583,7 +570,6 @@ if settings.startup["bobmods-enemies-enableartifacts"].value == true then
           drop_sound = artifact_drop_move,
           inventory_move_sound = artifact_drop_move,
           pick_sound = artifact_pick,
-          weight = 80,
         },
         {
           type = "recipe",

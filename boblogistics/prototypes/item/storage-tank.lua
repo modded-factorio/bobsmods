@@ -1,7 +1,6 @@
 data.raw.item["storage-tank"].order = "b[fluid]-a[storage-tank-1a]"
 data.raw.item["storage-tank"].subgroup = "bob-storage-tank"
 data.raw.item["storage-tank"].icon = "__boblogistics__/graphics/icons/storage-tank-1.png"
-data.raw.item["storage-tank"].weight = 20000
 
 local storage_drop_move = {
   filename = "__base__/sound/item/metal-large-inventory-move.ogg",
@@ -24,7 +23,6 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 
   {
@@ -38,7 +36,6 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 
   {
@@ -52,7 +49,6 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 })
 
@@ -68,7 +64,6 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 
   {
@@ -82,7 +77,6 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 
   {
@@ -96,7 +90,6 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 
   {
@@ -110,6 +103,5 @@ data:extend({
     drop_sound = storage_drop_move,
     inventory_move_sound = storage_drop_move,
     pick_sound = storage_pick,
-    weight = 20000,
   },
 })

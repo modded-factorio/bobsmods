@@ -2,13 +2,11 @@ data.raw.item["logistic-robot"].order = "a[robot]-a[logistic-robot-1]"
 data.raw.item["logistic-robot"].subgroup = "bob-logistic-robots"
 data.raw.item["logistic-robot"].icon = "__boblogistics__/graphics/icons/robots/logistic-robot-1.png"
 data.raw.item["logistic-robot"].icon_size = 32
-data.raw.item["logistic-robot"].weight = 20000
 
 data.raw.item["construction-robot"].order = "a[robot]-b[construction-robot-1]"
 data.raw.item["construction-robot"].subgroup = "bob-construction-robots"
 data.raw.item["construction-robot"].icon = "__boblogistics__/graphics/icons/robots/construction-robot-1.png"
 data.raw.item["construction-robot"].icon_size = 32
-data.raw.item["construction-robot"].weight = 20000
 
 local robot_drop_move = {
   filename = "__base__/sound/item/robotic-inventory-move.ogg",
@@ -32,7 +30,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 20000,
   },
 
   {
@@ -47,7 +44,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 20000,
   },
 
   {
@@ -62,7 +58,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 20000,
   },
 
   {
@@ -77,7 +72,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 40000,
   },
 
   {
@@ -92,7 +86,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 20000,
   },
 
   {
@@ -107,7 +100,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 20000,
   },
 
   {
@@ -122,7 +114,6 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 20000,
   },
 
   {
@@ -137,6 +128,5 @@ data:extend({
     drop_sound = robot_drop_move,
     inventory_move_sound = robot_drop_move,
     pick_sound = robot_pick,
-    weight = 40000,
   },
 })

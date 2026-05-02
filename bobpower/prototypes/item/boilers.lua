@@ -1,7 +1,6 @@
 if settings.startup["bobmods-power-steam"].value == true then
   data.raw.item["boiler"].order = "b[steam-power]-a[boiler-1]"
   data.raw.item["boiler"].subgroup = "bob-energy-boiler"
-  data.raw.item["boiler"].weight = 20000
 
   local steam_drop_move = {
     filename = "__base__/sound/item/steam-inventory-move.ogg",
@@ -25,7 +24,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 20000,
     },
 
     {
@@ -40,7 +38,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 20000,
     },
 
     {
@@ -55,7 +52,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 20000,
     },
 
     {
@@ -70,7 +66,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 20000,
     },
   })
 end

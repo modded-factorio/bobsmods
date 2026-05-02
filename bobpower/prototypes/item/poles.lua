@@ -2,10 +2,6 @@ if settings.startup["bobmods-power-poles"].value == true then
   data.raw.item["medium-electric-pole"].order = "a[energy]-b[medium-electric-pole-1]"
   data.raw.item["big-electric-pole"].order = "a[energy]-c[big-electric-pole-1]"
   data.raw.item["substation"].order = "a[energy]-d[substation-1]"
-  data.raw.item["small-electric-pole"].weight = 20000
-  data.raw.item["medium-electric-pole"].weight = 20000
-  data.raw.item["big-electric-pole"].weight = 40000
-  data.raw.item["substation"].weight = 100000
 
   local electric_large_drop_move = {
     filename = "__base__/sound/item/electric-large-inventory-move.ogg",
@@ -29,7 +25,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 20000,
     },
 
     {
@@ -44,7 +39,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 20000,
     },
 
     {
@@ -59,7 +53,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 20000,
     },
 
     {
@@ -74,7 +67,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 40000,
     },
 
     {
@@ -89,7 +81,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 40000,
     },
 
     {
@@ -104,7 +95,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 40000,
     },
 
     {
@@ -119,7 +109,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 100000,
     },
 
     {
@@ -134,7 +123,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 100000,
     },
 
     {
@@ -149,7 +137,6 @@ if settings.startup["bobmods-power-poles"].value == true then
       drop_sound = electric_large_drop_move,
       inventory_move_sound = electric_large_drop_move,
       pick_sound = electric_large_pick,
-      weight = 100000,
     },
   })
 end

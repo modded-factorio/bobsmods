@@ -191,17 +191,15 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] then
+if feature_flags["freezing"] and mods["space-age"] then
   data.raw.radar["bob-artifact-radar"].heating_energy = "300kW"
-  if mods["space-age"] then
-    data.raw.radar["bob-artifact-radar"].frozen_patch = {
-      filename = "__space-age__/graphics/entity/frozen/radar/radar.png",
-      direction_count = 1,
-      width = 196,
-      height = 254,
-      scale = 0.5,
-      shift = { 0.03125, -0.5 },
-    }
-    data.raw.radar["bob-artifact-radar"].reset_orientation_when_frozen = true
-  end
+  data.raw.radar["bob-artifact-radar"].frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/radar/radar.png",
+    direction_count = 1,
+    width = 196,
+    height = 254,
+    scale = 0.5,
+    shift = { 0.03125, -0.5 },
+  }
+  data.raw.radar["bob-artifact-radar"].reset_orientation_when_frozen = true
 end

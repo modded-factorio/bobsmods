@@ -20,7 +20,6 @@ data:extend({
       filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
   },
 
   {
@@ -113,7 +112,6 @@ data:extend({
       filename = "__base__/sound/item/vehicle-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
   },
 
   {

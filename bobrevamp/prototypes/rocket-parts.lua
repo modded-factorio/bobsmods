@@ -19,7 +19,6 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 20000,
   },
   {
     type = "recipe",

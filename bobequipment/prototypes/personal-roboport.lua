@@ -33,7 +33,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -64,7 +64,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -95,7 +95,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -126,7 +126,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
 
   {
@@ -159,7 +159,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -191,7 +191,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -223,7 +223,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -255,7 +255,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
 
   {
@@ -288,7 +288,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -320,7 +320,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -352,7 +352,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
   {
     type = "item",
@@ -384,7 +384,7 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 25000,
+    weight = 50000,
   },
 
   {
@@ -1199,7 +1199,6 @@ if combined_roboports == true then
   data.raw.item["personal-roboport-equipment"].icon =
     "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
   data.raw.item["personal-roboport-equipment"].icon_size = 128
-  data.raw.item["personal-roboport-equipment"].weight = 100000
   data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.filename =
     "__bobequipment__/graphics/icons/technology/personal-roboport-mk1-equipment.png"
   data.raw["roboport-equipment"]["personal-roboport-equipment"].sprite.width = 128
@@ -1212,7 +1211,6 @@ if combined_roboports == true then
   data.raw.item["personal-roboport-mk2-equipment"].icon =
     "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
   data.raw.item["personal-roboport-mk2-equipment"].icon_size = 128
-  data.raw.item["personal-roboport-mk2-equipment"].weight = 100000
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.filename =
     "__bobequipment__/graphics/icons/technology/personal-roboport-mk2-equipment.png"
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].sprite.width = 128
@@ -1250,7 +1248,6 @@ if combined_roboports == true then
         filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
         volume = 0.35,
       },
-      weight = 100000,
     },
     {
       type = "item",
@@ -1274,7 +1271,6 @@ if combined_roboports == true then
         filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
         volume = 0.35,
       },
-      weight = 100000,
     },
 
     {

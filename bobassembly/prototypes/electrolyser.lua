@@ -125,7 +125,6 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 20000,
     },
     {
       type = "item",
@@ -148,7 +147,6 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 20000,
     },
     {
       type = "item",
@@ -171,7 +169,6 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 20000,
     },
 
     {
@@ -195,7 +192,6 @@ then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 20000,
     },
 
     {
@@ -562,34 +558,28 @@ then
     },
   })
 
-  if feature_flags["freezing"] then
+  if feature_flags["freezing"] and mods["space-age"] then
     data.raw["assembling-machine"]["bob-electrolyser-2"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-electrolyser-3"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-electrolyser-4"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-electrolyser-5"].heating_energy = "100kW"
 
-    if mods["space-age"] then
-      local function frozenpatchcovers()
-        local result =
-          util.table.deepcopy(data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen)
-        return result
-      end
-      data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[3].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-      data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[4].pipe_covers_frozen = frozenpatchcovers()
-    end
+    local pcfrozenpatch = data.raw["assembling-machine"]["bob-electrolyser"].fluid_boxes[1].pipe_covers_frozen
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[3].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-2"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-3"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-4"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
+    data.raw["assembling-machine"]["bob-electrolyser-5"].fluid_boxes[4].pipe_covers_frozen = pcfrozenpatch
   end
 end

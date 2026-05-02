@@ -42,7 +42,6 @@ data:extend({
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 200000,
   },
 
   {
@@ -85,7 +84,6 @@ data:extend({
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 200000,
   },
 
   {
@@ -116,7 +114,6 @@ data:extend({
       filename = "__base__/sound/item/weapon-large-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 200000,
   },
 })
 

@@ -2,17 +2,14 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   data.raw["item-with-entity-data"]["locomotive"].stack_size = 10
   data.raw["item-with-entity-data"]["locomotive"].order = "a[train-system]-e[locomotive-1]"
   data.raw["item-with-entity-data"]["locomotive"].subgroup = "bob-locomotive"
-  data.raw["item-with-entity-data"]["locomotive"].weight = 1000000
 
   data.raw["item-with-entity-data"]["cargo-wagon"].stack_size = 10
   data.raw["item-with-entity-data"]["cargo-wagon"].order = "a[train-system]-f[cargo-wagon-1]"
   data.raw["item-with-entity-data"]["cargo-wagon"].subgroup = "bob-cargo-wagon"
-  data.raw["item-with-entity-data"]["cargo-wagon"].weight = 1000000
 
   data.raw["item-with-entity-data"]["fluid-wagon"].stack_size = 10
   data.raw["item-with-entity-data"]["fluid-wagon"].order = "a[train-system]-h[fluid-wagon-1]"
   data.raw["item-with-entity-data"]["fluid-wagon"].subgroup = "bob-fluid-wagon"
-  data.raw["item-with-entity-data"]["fluid-wagon"].weight = 1000000
 
   local locomotive_drop_move = {
     filename = "__base__/sound/item/locomotive-inventory-move.ogg",
@@ -48,7 +45,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = locomotive_drop_move,
       inventory_move_sound = locomotive_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -63,7 +59,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = locomotive_drop_move,
       inventory_move_sound = locomotive_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -78,7 +73,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = locomotive_drop_move,
       inventory_move_sound = locomotive_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -93,7 +87,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = locomotive_drop_move,
       inventory_move_sound = locomotive_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -108,7 +101,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = wagon_drop_move,
       inventory_move_sound = wagon_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -123,7 +115,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = wagon_drop_move,
       inventory_move_sound = wagon_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -138,7 +129,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = wagon_drop_move,
       inventory_move_sound = wagon_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -153,7 +143,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = wagon_drop_move,
       inventory_move_sound = wagon_drop_move,
       pick_sound = locomotive_pick,
-      weight = 1000000,
     },
 
     {
@@ -168,7 +157,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = fluid_drop_move,
       inventory_move_sound = fluid_drop_move,
       pick_sound = fluid_pick,
-      weight = 1000000,
     },
 
     {
@@ -183,7 +171,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = fluid_drop_move,
       inventory_move_sound = fluid_drop_move,
       pick_sound = fluid_pick,
-      weight = 1000000,
     },
 
     {
@@ -198,7 +185,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = fluid_drop_move,
       inventory_move_sound = fluid_drop_move,
       pick_sound = fluid_pick,
-      weight = 1000000,
     },
 
     {
@@ -213,7 +199,6 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       drop_sound = fluid_drop_move,
       inventory_move_sound = fluid_drop_move,
       pick_sound = fluid_pick,
-      weight = 1000000,
     },
   })
 end

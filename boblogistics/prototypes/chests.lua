@@ -32,7 +32,6 @@ if data.raw.item["bob-brass-alloy"] then
       drop_sound = chest_drop_move,
       inventory_move_sound = chest_drop_move,
       pick_sound = chest_pick,
-      weight = 20000,
     },
     {
       type = "container",
@@ -75,12 +74,6 @@ if data.raw.item["bob-brass-alloy"] then
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
-
-  if feature_flags["space_travel"] then
-    data.raw.container["bob-brass-chest"].surface_conditions = {
-      { property = "gravity", min = 0.1 },
-    }
-  end
 end
 
 if data.raw.item["bob-titanium-plate"] then
@@ -104,7 +97,6 @@ if data.raw.item["bob-titanium-plate"] then
       drop_sound = chest_drop_move,
       inventory_move_sound = chest_drop_move,
       pick_sound = chest_pick,
-      weight = 20000,
     },
     {
       type = "container",
@@ -160,10 +152,4 @@ if data.raw.item["bob-titanium-plate"] then
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
-
-  if mods["space-age"] then
-    data.raw.container["bob-titanium-chest"].surface_conditions = {
-      { property = "gravity", min = 0.1 },
-    }
-  end
 end

@@ -29,7 +29,6 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 50000,
   },
   {
     type = "recipe",

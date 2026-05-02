@@ -19,7 +19,7 @@ data:extend({
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
+    weight = 125000,
   },
 
   {
@@ -109,7 +109,7 @@ data:extend({
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
+    weight = 125000,
   },
 
   {
@@ -200,7 +200,7 @@ data:extend({
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
+    weight = 125000,
   },
 
   {
@@ -292,7 +292,7 @@ data:extend({
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
+    weight = 125000,
   },
 
   {
@@ -383,7 +383,7 @@ data:extend({
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
+    weight = 125000,
   },
 
   {
@@ -473,7 +473,7 @@ data:extend({
       filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 100000,
+    weight = 125000,
   },
 
   {

@@ -18,11 +18,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       icon_size = 32,
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
-      stack_size = 200,
+      stack_size = 100,
       drop_sound = powder_drop_move,
       inventory_move_sound = powder_drop_move,
       pick_sound = powder_pick,
-      weight = 500,
     },
   })
 
@@ -74,11 +73,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 32,
         subgroup = "bob-resource-chemical",
         order = "f[sodium-chlorate]",
-        stack_size = 200,
+        stack_size = 100,
         drop_sound = powder_drop_move,
         inventory_move_sound = powder_drop_move,
         pick_sound = powder_pick,
-        weight = 500,
       },
       {
         type = "item",
@@ -91,7 +89,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         drop_sound = powder_drop_move,
         inventory_move_sound = powder_drop_move,
         pick_sound = powder_pick,
-        weight = 1000,
       },
 
       {
@@ -273,11 +270,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       icon_size = 32,
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
-      stack_size = 200,
+      stack_size = 100,
       drop_sound = powder_drop_move,
       inventory_move_sound = powder_drop_move,
       pick_sound = powder_pick,
-      weight = 1000,
     },
     {
       type = "item",
@@ -299,7 +295,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
         volume = 0.6,
       },
-      weight = 20000,
     },
     {
       type = "recipe",

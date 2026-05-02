@@ -1,21 +1,7 @@
-if mods["space-age"] then
-  local recipe = data.raw.recipe["carbon"]
-  data.raw.recipe["carbon"] = nil
-  recipe.name = "bob-carbon-from-acid"
-  recipe.localised_name = { "item-name.carbon" }
-  recipe.icon = nil
-  recipe.icons = {
-    { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
-    { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
-  }
-  data:extend({ recipe })
-end
-
 data:extend({
   {
     type = "recipe",
-    name = "carbon",
-    localised_name = { "item-name.carbon" },
+    name = "bob-carbon",
     category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     energy_required = 2,
@@ -25,7 +11,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 5 },
       { type = "item", name = "coal", amount = 1 },
     },
-    results = { { type = "item", name = "carbon", amount = 2 } },
+    results = { { type = "item", name = "bob-carbon", amount = 2 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -156,7 +142,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "lithium-plate", amount = 1 },
+      { type = "item", name = "bob-lithium", amount = 1 },
       { type = "item", name = "bob-cobalt-oxide", amount = 1 },
     },
     results = { { type = "item", name = "bob-lithium-cobalt-oxide", amount = 2 } },
@@ -236,7 +222,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-carbon-from-wood",
-    localised_name = { "item-name.carbon" },
+    localised_name = { "item-name.bob-carbon" },
     category = "bob-chemical-furnace",
     subgroup = "bob-material-chemical",
     enabled = false,
@@ -245,7 +231,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
-    results = { { type = "item", name = "carbon", amount = 1 } },
+    results = { { type = "item", name = "bob-carbon", amount = 1 } },
     subgroup = "bob-resource",
     order = "c",
     allow_decomposition = false,
@@ -305,17 +291,3 @@ data:extend({
 data.raw.recipe["solid-fuel-from-petroleum-gas"].allow_productivity = false
 data.raw.recipe["solid-fuel-from-light-oil"].allow_productivity = false
 data.raw.recipe["solid-fuel-from-heavy-oil"].allow_productivity = false
-
-if mods["space-age"] then
-  data.raw.recipe["carbon"].allow_productivity = false
-  data.raw.recipe["coal-synthesis"].allow_productivity = false
-
-  data.raw.recipe["carbon"].icons = {
-    { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
-    { icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
-  }
-  data.raw.recipe["bob-carbon-from-wood"].icons = {
-    { icon = "__space-age__/graphics/icons/carbon.png", icon_size = 64 },
-    { icon = "__base__/graphics/icons/wood.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
-  }
-end

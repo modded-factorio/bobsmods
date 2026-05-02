@@ -19,7 +19,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 5000,
+    weight = 10000,
   },
   {
     type = "item",
@@ -41,7 +41,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 10000,
+    weight = 20000,
   },
 })
 

@@ -254,7 +254,7 @@ local function bob_pipepictures(pipe_type)
     ending_left_disabled_visualization = make_disabled_visualization(8),
   }
 
-  if mods["space-age"] then
+  if feature_flags["freezing"] and mods["space-age"] then
     pipepictures.corner_down_left_frozen = {
       filename = "__space-age__/graphics/entity/frozen/pipe/pipe-corner-down-left.png",
       width = 128,
@@ -916,7 +916,7 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] then
+if feature_flags["freezing"] and mods["space-age"] then
   data.raw.pipe["bob-copper-pipe"].heating_energy = "1kW"
   data.raw.pipe["bob-plastic-pipe"].heating_energy = "1kW"
   data.raw.pipe["bob-steel-pipe"].heating_energy = "1kW"
@@ -926,28 +926,20 @@ if feature_flags["freezing"] then
   data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].heating_energy = "100kW"
   data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].heating_energy = "150kW"
   data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].heating_energy = "200kW"
-  if mods["space-age"] then
-    local function frozenpatch()
-      local result = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch)
-      return result
-    end
-    data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].frozen_patch = frozenpatch()
-    data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].frozen_patch = frozenpatch()
-    data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].frozen_patch = frozenpatch()
-    data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].frozen_patch = frozenpatch()
-    local function frozenpatch2()
-      local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
-      return result
-    end
-    data.raw.pipe["bob-copper-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw.pipe["bob-plastic-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw.pipe["bob-steel-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw.pipe["bob-stone-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-  end
+  local ptgfrozenpatch = data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch
+  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+  local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
+  data.raw.pipe["bob-copper-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw.pipe["bob-plastic-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw.pipe["bob-steel-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw.pipe["bob-stone-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-copper-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-stone-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-steel-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+  data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
 end
 
 if mods["bobplates"] then
@@ -1541,7 +1533,7 @@ if mods["bobplates"] then
     },
   })
 
-  if feature_flags["freezing"] then
+  if feature_flags["freezing"] and mods["space-age"] then
     data.raw.pipe["bob-brass-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-bronze-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-ceramic-pipe"].heating_energy = "1kW"
@@ -1556,37 +1548,29 @@ if mods["bobplates"] then
     data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].heating_energy = "300kW"
     data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].heating_energy = "300kW"
-    if mods["space-age"] then
-      local function frozenpatch()
-        local result = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch)
-        return result
-      end
-      data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].frozen_patch = frozenpatch()
-      local function frozenpatch2()
-        local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
-        return result
-      end
-      data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-ceramic-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-copper-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-    end
+    local ptgfrozenpatch = data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch
+    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].frozen_patch = ptgfrozenpatch
+    local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
+    data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-ceramic-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-copper-tungsten-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
+    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = pcfrozenpatch
   end
 end
 

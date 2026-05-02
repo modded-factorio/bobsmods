@@ -19,7 +19,6 @@ data:extend({
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 1000,
   },
 
   {
@@ -83,7 +82,6 @@ data:extend({
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 1000,
   },
 
   {
@@ -151,7 +149,6 @@ if not data.raw.item["bob-silicon-wafer"] and data.raw.item["bob-silicon-plate"]
         filename = "__base__/sound/item/planner-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 125,
     },
 
     {
@@ -191,7 +188,6 @@ if data.raw.item["bob-tin-plate"] then
         filename = "__base__/sound/item/wood-inventory-pickup.ogg",
         volume = 0.6,
       },
-      weight = 1000,
     },
 
     {

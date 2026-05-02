@@ -145,7 +145,7 @@ bobmods.lib.tech.remove_prerequisite("battery-mk2-equipment", "low-density-struc
 data:extend({
   {
     type = "technology",
-    name = "battery-mk3-equipment",
+    name = "bob-battery-equipment-3",
     localised_description = { "technology-description.battery-equipment" },
     icons = bobmods.lib.tech.technology_icon_constant({
       icon = "__bobequipment__/graphics/icons/technology/battery-mk3-equipment.png",
@@ -153,7 +153,6 @@ data:extend({
     }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     prerequisites = {
       "battery-mk2-equipment",
-      "production-science-pack",
     },
     unit = {
       count = 150,
@@ -162,13 +161,12 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "battery-mk3-equipment",
+        recipe = "bob-battery-mk3-equipment",
       },
     },
   },
@@ -183,8 +181,8 @@ data:extend({
     }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     prerequisites = {
       "processing-unit",
-      "battery-mk3-equipment",
-      "utility-science-pack",
+      "bob-battery-equipment-3",
+      "production-science-pack",
     },
     unit = {
       count = 200,
@@ -194,7 +192,6 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
       },
     },
     effects = {
@@ -215,7 +212,6 @@ data:extend({
     }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
     prerequisites = {
       "bob-battery-equipment-4",
-      "space-science-pack",
     },
     unit = {
       count = 250,
@@ -225,13 +221,43 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "space-science-pack", 1 },
       },
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "bob-battery-mk5-equipment",
+      },
+    },
+  },
+
+  {
+    type = "technology",
+    name = "bob-battery-equipment-6",
+    localised_description = { "technology-description.battery-equipment" },
+    icons = bobmods.lib.tech.technology_icon_constant({
+      icon = "__bobequipment__/graphics/icons/technology/battery-mk6-equipment.png",
+      icon_size = 64,
+    }, "__core__/graphics/icons/technology/constants/constant-equipment.png"),
+    prerequisites = {
+      "bob-battery-equipment-5",
+      "utility-science-pack",
+    },
+    unit = {
+      count = 300,
+      time = 45,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bob-battery-mk6-equipment",
       },
     },
   },

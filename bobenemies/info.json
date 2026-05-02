@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 2.0.33",
-    "boblibrary >= 2.0.4",
+    "boblibrary >= 2.0.0",
     "? space-age >= 2.0.0",
     "(?) combat-mechanics-overhaul >= 0.7.1"
   ],

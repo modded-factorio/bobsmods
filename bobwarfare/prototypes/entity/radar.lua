@@ -422,22 +422,18 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] then
+if feature_flags["freezing"] and mods["space-age"] then
   data.raw.radar["bob-radar-2"].heating_energy = "300kW"
   data.raw.radar["bob-radar-3"].heating_energy = "300kW"
   data.raw.radar["bob-radar-4"].heating_energy = "300kW"
   data.raw.radar["bob-radar-5"].heating_energy = "300kW"
-  if mods["space-age"] then
-    local function frozenpatch()
-      return util.table.deepcopy(data.raw.radar.radar.frozen_patch)
-    end
-    data.raw.radar["bob-radar-2"].frozen_patch = frozenpatch()
-    data.raw.radar["bob-radar-3"].frozen_patch = frozenpatch()
-    data.raw.radar["bob-radar-4"].frozen_patch = frozenpatch()
-    data.raw.radar["bob-radar-5"].frozen_patch = frozenpatch()
-    data.raw.radar["bob-radar-2"].reset_orientation_when_frozen = true
-    data.raw.radar["bob-radar-3"].reset_orientation_when_frozen = true
-    data.raw.radar["bob-radar-4"].reset_orientation_when_frozen = true
-    data.raw.radar["bob-radar-5"].reset_orientation_when_frozen = true
-  end
+  local frozenpatch = data.raw.radar.radar.frozen_patch
+  data.raw.radar["bob-radar-2"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-3"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-4"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-5"].frozen_patch = frozenpatch
+  data.raw.radar["bob-radar-2"].reset_orientation_when_frozen = true
+  data.raw.radar["bob-radar-3"].reset_orientation_when_frozen = true
+  data.raw.radar["bob-radar-4"].reset_orientation_when_frozen = true
+  data.raw.radar["bob-radar-5"].reset_orientation_when_frozen = true
 end

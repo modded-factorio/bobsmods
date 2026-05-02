@@ -160,7 +160,6 @@ if not mods["bobwarfare"] then
         volume = 0.7,
       },
       inventory_size_bonus = 40,
-      weight = 1000000,
     },
 
     {
@@ -192,7 +191,7 @@ if not mods["bobwarfare"] then
         },
         {
           type = "poison",
-          decrease = 8,
+          decrease = 6,
           percent = 60,
         },
         {
@@ -231,7 +230,6 @@ if not mods["bobwarfare"] then
         volume = 0.7,
       },
       inventory_size_bonus = 50,
-      weight = 1000000,
     },
 
     {
@@ -302,7 +300,6 @@ if not mods["bobwarfare"] then
         volume = 0.7,
       },
       inventory_size_bonus = 60,
-      weight = 1000000,
     },
 
     {

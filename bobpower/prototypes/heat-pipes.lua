@@ -14,7 +14,6 @@ then
     "heat-pipe",
     { { type = "item", name = "steel-plate", amount = 5 }, { type = "item", name = "copper-plate", amount = 10 } }
   )
-  data.raw.item["heat-pipe"].weight = 10000
 
   data:extend({
     {
@@ -37,7 +36,6 @@ then
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 10000,
     },
     {
       type = "item",
@@ -59,7 +57,6 @@ then
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 10000,
     },
     {
       type = "item",
@@ -81,7 +78,6 @@ then
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 10000,
     },
 
     {

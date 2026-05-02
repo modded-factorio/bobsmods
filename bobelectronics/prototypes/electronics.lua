@@ -28,7 +28,6 @@ if data.raw.item["bob-tin-plate"] then
       drop_sound = electronic_part_drop_move,
       inventory_move_sound = electronic_part_drop_move,
       pick_sound = electronic_part_pick,
-      weight = 312.5,
     },
 
     {
@@ -58,7 +57,6 @@ data:extend({
     drop_sound = electronic_part_drop_move,
     inventory_move_sound = electronic_part_drop_move,
     pick_sound = electronic_part_pick,
-    weight = 500,
   },
 
   {
@@ -88,7 +86,6 @@ if data.raw.item["bob-gold-plate"] then
       drop_sound = electronic_part_drop_move,
       inventory_move_sound = electronic_part_drop_move,
       pick_sound = electronic_part_pick,
-      weight = 500,
     },
 
     {
@@ -120,7 +117,6 @@ if data.raw.item["bob-solder-alloy"] then
       drop_sound = electronic_part_drop_move,
       inventory_move_sound = electronic_part_drop_move,
       pick_sound = electronic_part_pick,
-      weight = 1000,
     },
 
     {
@@ -153,7 +149,6 @@ data:extend({
     drop_sound = electronic_part_drop_move,
     inventory_move_sound = electronic_part_drop_move,
     pick_sound = electronic_part_pick,
-    weight = 250,
   },
 
   {
@@ -184,7 +179,6 @@ data:extend({
     drop_sound = electronic_part_drop_move,
     inventory_move_sound = electronic_part_drop_move,
     pick_sound = electronic_part_pick,
-    weight = 250,
   },
 
   {
@@ -215,7 +209,6 @@ data:extend({
     drop_sound = electronic_part_drop_move,
     inventory_move_sound = electronic_part_drop_move,
     pick_sound = electronic_part_pick,
-    weight = 250,
   },
 
   {
@@ -247,7 +240,6 @@ data:extend({
     drop_sound = electronic_part_drop_move,
     inventory_move_sound = electronic_part_drop_move,
     pick_sound = electronic_part_pick,
-    weight = 500,
   },
 
   {
@@ -288,7 +280,6 @@ data:extend({
       filename = "__base__/sound/item/wood-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 250,
   },
 
   {
@@ -329,7 +320,6 @@ data:extend({
       volume = 0.8,
       speed = 0.85,
     },
-    weight = 250,
   },
 
   {
@@ -371,7 +361,6 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
-    weight = 250,
   },
 
   {
@@ -409,7 +398,6 @@ data:extend({
       filename = "__base__/sound/item/wood-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 500,
   },
 
   {
@@ -451,7 +439,6 @@ data:extend({
       volume = 0.8,
       speed = 0.85,
     },
-    weight = 1000,
   },
 
   {
@@ -495,7 +482,6 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
-    weight = 1000,
   },
 
   {
@@ -539,7 +525,6 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
-    weight = 2500,
   },
 
   {
@@ -571,7 +556,6 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
-    weight = 1000,
   },
 
   {
@@ -601,7 +585,6 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
-    weight = 1000,
   },
 
   {
@@ -632,7 +615,6 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
-    weight = 1000,
   },
 
   {
@@ -664,7 +646,6 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
-    weight = 2500,
   },
 
   {

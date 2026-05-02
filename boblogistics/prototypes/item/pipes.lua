@@ -59,7 +59,6 @@ data:extend({
       filename = "__base__/sound/item/brick-inventory-pickup.ogg",
       volume = 0.6,
     },
-    weight = 20000,
   },
 
   {
@@ -89,7 +88,6 @@ data:extend({
     drop_sound = pipe_drop_move,
     inventory_move_sound = pipe_drop_move,
     pick_sound = pipe_pick,
-    weight = 20000,
   },
 
   {
@@ -119,7 +117,6 @@ data:extend({
     drop_sound = pipe_drop_move,
     inventory_move_sound = pipe_drop_move,
     pick_sound = pipe_pick,
-    weight = 20000,
   },
 
   {
@@ -167,7 +164,6 @@ data:extend({
       filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 20000,
   },
 })
 
@@ -200,7 +196,6 @@ if data.raw.item["bob-bronze-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-      weight = 20000,
     },
   })
 end
@@ -234,7 +229,6 @@ if data.raw.item["bob-brass-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-      weight = 20000,
     },
   })
 end
@@ -286,7 +280,6 @@ if data.raw.item["bob-silicon-nitride"] then
         filename = "__base__/sound/item/brick-inventory-pickup.ogg",
         volume = 0.6,
       },
-      weight = 20000,
     },
   })
 end
@@ -320,7 +313,6 @@ if data.raw.item["bob-titanium-plate"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-      weight = 20000,
     },
   })
 end
@@ -354,7 +346,6 @@ if data.raw.item["bob-tungsten-plate"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-      weight = 20000,
     },
   })
 end
@@ -388,7 +379,6 @@ if data.raw.item["bob-nitinol-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-      weight = 20000,
     },
   })
 end
@@ -422,7 +412,6 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-      weight = 20000,
     },
   })
 end

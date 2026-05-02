@@ -1,7 +1,6 @@
 if settings.startup["bobmods-power-steam"].value == true then
   data.raw.item["heat-exchanger"].order = "f[nuclear-energy]-b[heat-exchanger-1]"
   data.raw.item["heat-exchanger"].subgroup = "bob-energy-heat-exchanger"
-  data.raw.item["heat-exchanger"].weight = 40000
 
   local steam_drop_move = {
     filename = "__base__/sound/item/steam-inventory-move.ogg",
@@ -25,7 +24,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 40000,
     },
 
     {
@@ -40,7 +38,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 40000,
     },
 
     {
@@ -55,7 +52,6 @@ if settings.startup["bobmods-power-steam"].value == true then
       drop_sound = steam_drop_move,
       inventory_move_sound = steam_drop_move,
       pick_sound = steam_pick,
-      weight = 40000,
     },
   })
 end

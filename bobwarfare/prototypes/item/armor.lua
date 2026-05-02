@@ -165,7 +165,6 @@ data:extend({
       volume = 0.7,
     },
     inventory_size_bonus = 40,
-    weight = 1000000,
   },
 
   {
@@ -245,7 +244,6 @@ data:extend({
       volume = 0.7,
     },
     inventory_size_bonus = 50,
-    weight = 1000000,
   },
 
   {
@@ -324,7 +322,6 @@ data:extend({
       volume = 0.7,
     },
     inventory_size_bonus = 60,
-    weight = 1000000,
   },
 })
 

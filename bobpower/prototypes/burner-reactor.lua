@@ -60,7 +60,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 50000,
     },
     {
       type = "recipe",
@@ -199,7 +198,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 50000,
     },
     {
       type = "recipe",
@@ -260,7 +258,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 50000,
     },
     {
       type = "recipe",
@@ -305,7 +302,6 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 50000,
     },
     {
       type = "recipe",
@@ -506,17 +502,5 @@ if settings.startup["bobmods-power-heatsources"].value == true then
     })
 
     bobmods.lib.tech.add_recipe_unlock("bob-burner-reactor-1", "bob-fluid-reactor-from-fluid-furnace")
-  end
-
-  if feature_flags["space_travel"] then
-    local function no_space()
-      return {
-        { property = "pressure", min = 10 },
-      }
-    end
-    data.raw.reactor["bob-burner-reactor"].surface_conditions = no_space()
-    data.raw.reactor["bob-burner-reactor-2"].surface_conditions = no_space()
-    data.raw.reactor["bob-fluid-reactor"].surface_conditions = no_space()
-    data.raw.reactor["bob-fluid-reactor-2"].surface_conditions = no_space()
   end
 end

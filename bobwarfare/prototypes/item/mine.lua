@@ -1,5 +1,3 @@
-data.raw.item["land-mine"].weight = 10000
-
 data:extend({
   {
     type = "item",
@@ -22,7 +20,6 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 50000,
   },
 
   {
@@ -46,7 +43,6 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 50000,
   },
 
   {
@@ -70,6 +66,5 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 50000,
   },
 })

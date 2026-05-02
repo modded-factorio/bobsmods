@@ -23,9 +23,7 @@ if bobmods.ores.bauxite.create_autoplace then
   end
   if settings.startup["bobmods-plates-groundwater"].value == false then
     bobmods.ores.water.create_autoplace()
-    if not mods["space-age"] then
-      bobmods.ores.lithia_water.create_autoplace()
-    end
+    bobmods.ores.lithia_water.create_autoplace()
   end
   bobmods.ores.thorium.create_autoplace()
 end

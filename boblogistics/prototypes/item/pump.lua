@@ -1,5 +1,4 @@
 data.raw.item["pump"].order = "b[pipe]-c[pump-1]"
-data.raw.item["pump"].weight = 20000
 
 data:extend({
   {
@@ -23,7 +22,6 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 20000,
   },
   {
     type = "item",
@@ -46,7 +44,6 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 20000,
   },
   {
     type = "item",
@@ -69,6 +66,5 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 20000,
   },
 })

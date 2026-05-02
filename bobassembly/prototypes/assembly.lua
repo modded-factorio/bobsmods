@@ -13,11 +13,8 @@ data:extend({
 --        tint = {r = 0.7, g = 0.1, b = 0.7},
 --        tint = {r = 0.1, g = 0.7, b = 0.1},
 
-data.raw.item["assembling-machine-1"].weight = 20000
-
 data.raw.item["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
 data.raw.item["assembling-machine-2"].icon_size = 32
-data.raw.item["assembling-machine-2"].weight = 20000
 data.raw["assembling-machine"]["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
 data.raw["assembling-machine"]["assembling-machine-2"].icon_size = 32
 table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
@@ -33,7 +30,6 @@ table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set
 
 data.raw.item["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/assembling-machine-3.png"
 data.raw.item["assembling-machine-3"].icon_size = 32
-data.raw.item["assembling-machine-3"].weight = 20000
 data.raw["assembling-machine"]["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/assembling-machine-3.png"
 data.raw["assembling-machine"]["assembling-machine-3"].icon_size = 32
 table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
@@ -69,7 +65,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 20000,
+    weight = 40000,
   },
 
   {
@@ -250,7 +246,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 20000,
+    weight = 40000,
   },
 
   {
@@ -439,7 +435,7 @@ data:extend({
       filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 20000,
+    weight = 40000,
   },
 
   {
@@ -607,60 +603,50 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] then
+if feature_flags["freezing"] and mods["space-age"] then
   data.raw["assembling-machine"]["bob-assembling-machine-4"].heating_energy = "100kW"
   data.raw["assembling-machine"]["bob-assembling-machine-5"].heating_energy = "100kW"
   data.raw["assembling-machine"]["bob-assembling-machine-6"].heating_energy = "100kW"
-  if mods["space-age"] then
-    data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.reset_animation_when_frozen = true
-    data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.reset_animation_when_frozen = true
-    data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.reset_animation_when_frozen = true
-    data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.frozen_patch = {
-      filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen.png",
-      width = 214,
-      height = 218,
-      priority = "high",
-      scale = 0.5,
-      shift = { 0, 0.125 },
-    }
-    data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.frozen_patch = {
-      filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
-      width = 214,
-      height = 237,
-      priority = "high",
-      scale = 0.5,
-      shift = { 0, -0.0234375 },
-    }
-    data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.frozen_patch = {
-      filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
-      width = 214,
-      height = 237,
-      priority = "high",
-      scale = 0.5,
-      shift = { 0, -0.0234375 },
-    }
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.reset_animation_when_frozen = true
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.reset_animation_when_frozen = true
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.reset_animation_when_frozen = true
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen.png",
+    width = 214,
+    height = 218,
+    priority = "high",
+    scale = 0.5,
+    shift = { 0, 0.125 },
+  }
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
+    width = 214,
+    height = 237,
+    priority = "high",
+    scale = 0.5,
+    shift = { 0, -0.0234375 },
+  }
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
+    width = 214,
+    height = 237,
+    priority = "high",
+    scale = 0.5,
+    shift = { 0, -0.0234375 },
+  }
 
-    local function frozenpatch()
-      local result =
-        util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
-      return result
-    end
-    local function frozenpatchcovers()
-      local result =
-        util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
-      return result
-    end
-    data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
-    data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[2].pipe_picture_frozen = frozenpatch()
-    data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-    data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-    data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
-    data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[2].pipe_picture_frozen = frozenpatch()
-    data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-    data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-    data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
-    data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_picture_frozen = frozenpatch()
-    data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
-    data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
-  end
+  local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
+  local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-5"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_picture_frozen = pipefrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
+  data.raw["assembling-machine"]["bob-assembling-machine-6"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
 end

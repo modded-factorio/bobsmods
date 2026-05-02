@@ -22,7 +22,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       },
       art_style = "bob-god-base",
       requires_beacon_alt_mode = false,
-      weight = 200000,
     },
     {
       type = "module",
@@ -45,7 +44,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
       },
       art_style = "bob-god-productivity",
       requires_beacon_alt_mode = false,
-      weight = 200000,
     },
   })
   if mods["quality"] then
@@ -71,7 +69,6 @@ if settings.startup["bobmods-modules-enablegodmodules"].value == true then
         },
         art_style = "bob-god-quality",
         requires_beacon_alt_mode = false,
-        weight = 200000,
       },
     })
   end

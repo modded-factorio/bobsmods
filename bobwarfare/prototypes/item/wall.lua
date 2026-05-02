@@ -1,7 +1,5 @@
 data.raw.item["stone-wall"].order = "a[wall]-a[stone-wall]"
 data.raw.item["gate"].order = "a[wall]-b[gate]"
-data.raw.item["stone-wall"].weight = 10000
-data.raw.item["gate"].weight = 20000
 
 data:extend({
   {
@@ -25,7 +23,6 @@ data:extend({
       filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 20000,
   },
   {
     type = "item",
@@ -48,6 +45,5 @@ data:extend({
       filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
       volume = 0.8,
     },
-    weight = 40000,
   },
 })

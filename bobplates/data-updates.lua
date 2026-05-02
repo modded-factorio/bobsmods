@@ -51,9 +51,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw.recipe["bob-aluminium-plate"].energy_required = 3.2
   data.raw.recipe["bob-titanium-plate"].energy_required = 3.2
   data.raw.recipe["bob-silicon-plate"].energy_required = 3.2
-  if not mods["space-age"] then
-    data.raw.recipe["lithium-plate"].energy_required = 1.6
-  end
+  data.raw.recipe["bob-lithium"].energy_required = 1.6
 end
 
 data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
@@ -310,9 +308,7 @@ if settings.startup["bobmods-plates-purewater"].value == true then
 
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-distillery")
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water")
-  if not mods["space-age"] then
-    bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
-  end
+  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
 end
 
 data.raw.fluid["petroleum-gas"].gas_temperature = -42
@@ -339,13 +335,6 @@ data.raw.item["coal"].stack_size = 200
 data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["sulfur"].stack_size = 200
 data.raw.item["wood"].stack_size = 200
-
--- Weight changes
-data.raw.item["iron-plate"].weight = 1000
-data.raw.item["copper-plate"].weight = 1000
-data.raw.item["steel-plate"].weight = 2500
-data.raw.item["wood"].weight = 2500
-data.raw.item["electric-engine-unit"].weight = 5000
 
 if not bobmods.ores.cobalt.enabled then
   bobmods.lib.tech.remove_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
@@ -454,29 +443,20 @@ if mods["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "bob-polishing-wheel",
-    "bob-battery-2",
-    "bob-battery-3",
+    "bob-lithium-ion-battery",
+    "bob-silver-zinc-battery",
     "battery",
     "cargo-landing-pad",
     "rocket-silo",
+    "satellite",
     "speed-module-3",
     "efficiency-module-3",
     "productivity-module-3",
     "quality-module-3",
   })
-  if not mods["space-age"] then
-    bobmods.lib.recipe.update_recycling_recipe({
-      "satellite",
-    })
-  end
 end
 
 if mods["space-age"] then
-  data.raw.fluid["bob-lithia-water"].hidden = true
-  data.raw.resource["bob-lithia-water"].hidden = true
-  data.raw.item["bob-lithia-water-barrel"].hidden = true
-  data.raw.recipe["bob-lithia-water-barrel"].hidden = true
-  data.raw.recipe["empty-bob-lithia-water-barrel"].hidden = true
-  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "bob-lithia-water-barrel")
-  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "empty-bob-lithia-water-barrel")
+  data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
+  data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
 end

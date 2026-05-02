@@ -1,6 +1,5 @@
 if settings.startup["bobmods-power-nuclear"].value == true then
   data.raw.item["nuclear-reactor"].order = "f[nuclear-energy]-a[reactor-1]"
-  data.raw.item["nuclear-reactor"].weight = 1000000
 
   data:extend({
     {
@@ -24,7 +23,6 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
         volume = 0.6,
       },
-      weight = 1000000,
     },
     {
       type = "item",
@@ -47,7 +45,6 @@ if settings.startup["bobmods-power-nuclear"].value == true then
         filename = "__base__/sound/item/reactor-inventory-pickup.ogg",
         volume = 0.6,
       },
-      weight = 1000000,
     },
   })
 end

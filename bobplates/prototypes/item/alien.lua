@@ -27,7 +27,6 @@ then
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 2500,
     },
 
     {
@@ -50,7 +49,6 @@ then
         filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 2500,
     },
 
     {

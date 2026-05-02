@@ -24,8 +24,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
     }
   end
 
-  data.raw.capsule["destroyer-capsule"].weight = 50000
-
   data:extend({
     {
       type = "item",
@@ -47,7 +45,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 10000,
     },
     {
       type = "recipe",
@@ -78,7 +75,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 10000,
     },
     {
       type = "recipe",
@@ -109,7 +105,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 10000,
     },
     {
       type = "recipe",
@@ -179,7 +174,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 10000,
     },
 
     {
@@ -254,7 +248,6 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         filename = "__base__/sound/item/robotic-inventory-pickup.ogg",
         volume = 0.5,
       },
-      weight = 50000,
     },
 
     {

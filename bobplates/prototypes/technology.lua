@@ -80,7 +80,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon",
+        recipe = "bob-carbon",
       },
       {
         type = "unlock-recipe",
@@ -967,7 +967,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-battery-2",
+        recipe = "bob-lithium-ion-battery",
       },
     },
     order = "b-c-a",
@@ -1007,7 +1007,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-battery-3",
+        recipe = "bob-silver-zinc-battery",
       },
     },
     order = "b-c-b",

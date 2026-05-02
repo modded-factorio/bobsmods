@@ -18,13 +18,8 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-limestone")
 
-  if not mods["space-age"] then
-    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate")
-    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate")
-  else
-    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-chlorate")
-    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-perchlorate")
-  end
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate")
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate")
   if data.raw.fluid["bob-pure-water"] then
     bobmods.lib.recipe.replace_ingredient("bob-sodium-chlorate", "water", "bob-pure-water")
     bobmods.lib.recipe.replace_ingredient("bob-sodium-perchlorate", "water", "bob-pure-water")

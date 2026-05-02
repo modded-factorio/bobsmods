@@ -21,7 +21,6 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 10000,
     },
 
     {
@@ -91,10 +90,4 @@ if settings.startup["bobmods-mining-steamminingdrills"].value == true then
       layer.animation_speed = 4
     end
   end
-
-  if feature_flags["space_travel"] then
-    data.raw["mining-drill"]["bob-steam-mining-drill"].surface_conditions = {}
-  end
 end
-
-data.raw.item["burner-mining-drill"].weight = 10000

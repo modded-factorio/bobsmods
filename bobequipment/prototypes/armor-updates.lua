@@ -217,8 +217,4 @@ if not mods["bobwarfare"] then
 
   bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
   bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "processing-unit")
-
-  if data.raw.armor["mech-armor"] then
-    data.raw.armor["mech-armor"].order = "i[mech-armor]"
-  end
 end

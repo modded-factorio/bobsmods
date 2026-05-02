@@ -27,9 +27,6 @@ local ball_pick = {
   speed = 1.6,
 }
 
-data.raw.item["iron-gear-wheel"].weight = 2000
-data.raw.item["battery"].weight = 5000
-
 data:extend({
   {
     type = "item",
@@ -42,7 +39,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-    weight = 5000,
   },
 
   {
@@ -56,7 +52,6 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
-    weight = 200,
   },
 
   {
@@ -70,7 +65,6 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
-    weight = 5000,
   },
 
   {
@@ -84,7 +78,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-    weight = 2000,
   },
 
   {
@@ -98,7 +91,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-    weight = 5000,
   },
 
   {
@@ -112,7 +104,6 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
-    weight = 200,
   },
 
   {
@@ -126,7 +117,6 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
-    weight = 5000,
   },
 
   {
@@ -140,7 +130,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-    weight = 1000,
   },
 
   {
@@ -154,7 +143,6 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
-    weight = 40,
   },
 
   {
@@ -168,7 +156,6 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
-    weight = 1000,
   },
 
   {
@@ -182,7 +169,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-    weight = 5000,
   },
 
   {
@@ -196,7 +182,6 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
-    weight = 80,
   },
 
   {
@@ -210,7 +195,6 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
-    weight = 2000,
   },
 
   {
@@ -224,7 +208,6 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-    weight = 2000,
   },
 
   {
@@ -238,7 +221,6 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
-    weight = 80,
   },
 
   {
@@ -252,13 +234,11 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
-    weight = 2000,
   },
 
   {
     type = "item",
-    name = "bob-battery-2",
-    localised_name = { "item-name.bob-lithium-ion-battery" },
+    name = "bob-lithium-ion-battery",
     icon = "__bobplates__/graphics/icons/lithium-ion-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -276,13 +256,11 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 5000,
   },
 
   {
     type = "item",
-    name = "bob-battery-3",
-    localised_name = { "item-name.bob-silver-zinc-battery" },
+    name = "bob-silver-zinc-battery",
     icon = "__bobplates__/graphics/icons/silver-zinc-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -300,7 +278,6 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
-    weight = 5000,
   },
 
   {
@@ -325,7 +302,6 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
       volume = 1,
     },
-    weight = 5000,
   },
 
   {
@@ -350,13 +326,5 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
       volume = 1,
     },
-    weight = 5000,
   },
 })
-
-if mods["space-age"] then
-  data.raw.item["bob-battery-2"].localised_name = { "item-name.bob-silver-zinc-battery" }
-  data.raw.item["bob-battery-3"].localised_name = { "item-name.bob-lithium-ion-battery" }
-  data.raw.item["bob-battery-2"].icon = "__bobplates__/graphics/icons/silver-zinc-battery.png"
-  data.raw.item["bob-battery-3"].icon = "__bobplates__/graphics/icons/lithium-ion-battery.png"
-end

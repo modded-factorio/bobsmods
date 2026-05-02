@@ -57,7 +57,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 10000,
     },
     util.merge({
       data.raw.furnace["steel-furnace"],
@@ -146,7 +145,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
           volume = 0.8,
         },
-        weight = 10000,
       },
       {
         type = "recipe",
@@ -317,7 +315,6 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
           volume = 0.8,
         },
-        weight = 10000,
       },
       {
         type = "recipe",

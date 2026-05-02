@@ -10,7 +10,6 @@ bobmods.ores.tungsten = {
     create = true,
     create_variations = true,
     subgroup = "bob-ores",
-    weight = 10000,
   },
   sprite = {
     sheet = 1,

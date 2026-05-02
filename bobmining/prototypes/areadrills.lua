@@ -21,7 +21,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 20000,
     },
     {
       type = "item",
@@ -44,7 +43,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 20000,
     },
     {
       type = "item",
@@ -67,7 +65,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 20000,
     },
     {
       type = "item",
@@ -90,7 +87,6 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
         filename = "__base__/sound/item/drill-inventory-pickup.ogg",
         volume = 0.8,
       },
-      weight = 20000,
     },
   })
 

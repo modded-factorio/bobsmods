@@ -10,7 +10,6 @@ bobmods.ores.bauxite = {
     create = true,
     create_variations = true,
     subgroup = "bob-ores",
-    weight = 2500,
   },
   sprite = {
     sheet = 1,

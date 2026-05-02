@@ -66,7 +66,6 @@ data:extend({
     beacon_tint = module_color_map["blue"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -91,7 +90,6 @@ data:extend({
     beacon_tint = module_color_map["blue"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 })
 
@@ -145,7 +143,6 @@ data:extend({
     beacon_tint = module_color_map["green"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -168,7 +165,6 @@ data:extend({
     beacon_tint = module_color_map["green"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 })
 
@@ -234,7 +230,6 @@ data:extend({
     beacon_tint = module_color_map["red-yellow"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -260,7 +255,6 @@ data:extend({
     beacon_tint = module_color_map["red-yellow"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 })
 
@@ -283,7 +277,6 @@ data:extend({
     beacon_tint = module_color_map["pine"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -302,7 +295,6 @@ data:extend({
     beacon_tint = module_color_map["pine"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -321,7 +313,6 @@ data:extend({
     beacon_tint = module_color_map["pine"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -340,7 +331,6 @@ data:extend({
     beacon_tint = module_color_map["pine"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -359,7 +349,6 @@ data:extend({
     beacon_tint = module_color_map["pine"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 })
 
@@ -384,7 +373,6 @@ data:extend({
     beacon_tint = module_color_map["brown"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -405,7 +393,6 @@ data:extend({
     beacon_tint = module_color_map["brown"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -426,7 +413,6 @@ data:extend({
     beacon_tint = module_color_map["brown"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -447,7 +433,6 @@ data:extend({
     beacon_tint = module_color_map["brown"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 
   {
@@ -468,7 +453,6 @@ data:extend({
     beacon_tint = module_color_map["brown"],
     art_style = "bob-5-lights",
     requires_beacon_alt_mode = false,
-    weight = 20000,
   },
 })
 

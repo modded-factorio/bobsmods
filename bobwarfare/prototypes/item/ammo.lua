@@ -50,9 +50,6 @@ local largeammopickup = {
   volume = 0.7,
 }
 
-data.raw.ammo["rocket"].weight = 10000
-data.raw.ammo["explosive-rocket"].weight = 10000
-
 data:extend({
   {
     type = "ammo",
@@ -897,7 +894,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 
   {
@@ -913,7 +910,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 
   {
@@ -929,7 +926,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 
   {
@@ -945,7 +942,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 
   {
@@ -961,7 +958,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 
   {
@@ -977,7 +974,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 
   {
@@ -993,7 +990,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 })
 
@@ -1461,7 +1458,7 @@ data:extend({
     drop_sound = largeammodropmove,
     inventory_move_sound = largeammodropmove,
     pick_sound = largeammopickup,
-    weight = 10000,
+    weight = 40000,
   },
 })
 

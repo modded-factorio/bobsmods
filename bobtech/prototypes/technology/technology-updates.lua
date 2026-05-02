@@ -251,7 +251,7 @@ elseif data.raw.technology["bob-chemical-plant-2"] then
 end
 
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
-if data.raw.item["bob-battery-2"] then
+if data.raw.item["bob-lithium-ion-battery"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "bob-battery-2")
 else
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery")

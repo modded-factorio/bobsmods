@@ -5,6 +5,12 @@ require("prototypes.aai-integration")
 data.raw.item["copper-cable"].subgroup = "bob-electronic-components"
 data.raw.item["copper-cable"].order = "0-a1"
 
+if data.raw["recipe-category"]["bob-chemical-furnace"] then
+  if data.raw.recipe["bob-carbon"] then
+    data.raw.recipe["bob-carbon"].category = "bob-chemical-furnace"
+  end
+end
+
 if data.raw["recipe-category"]["bob-mixing-furnace"] then
   if data.raw.recipe["bob-solder-alloy"] then
     data.raw.recipe["bob-solder-alloy"].category = "bob-mixing-furnace"
@@ -41,14 +47,10 @@ if mods["quality"] then
     "radar",
     "cargo-landing-pad",
     "rocket-silo",
+    "satellite",
     "speed-module-3",
     "efficiency-module-3",
     "productivity-module-3",
     "quality-module-3",
   })
-  if not mods["space-age"] then
-    bobmods.lib.recipe.update_recycling_recipe({
-      "satellite",
-    })
-  end
 end

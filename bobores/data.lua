@@ -121,10 +121,3 @@ data.raw.item["stone"].stack_size = 200
 data.raw.item["coal"].stack_size = 200
 data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["sulfur"].stack_size = 200
-data.raw.item["copper-ore"].weight = 5000
-data.raw.item["iron-ore"].weight = 5000
-data.raw.item["stone"].weight = 2500
-data.raw.item["coal"].weight = 1000
-data.raw.item["uranium-ore"].weight = 20000
-
-data.raw.item.landfill.weight = 50000 --Needed to compensate for change to stone's weight

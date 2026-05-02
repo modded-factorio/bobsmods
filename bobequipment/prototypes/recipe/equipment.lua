@@ -67,14 +67,14 @@ data.raw.recipe["battery-mk2-equipment"].ingredients = {
 data:extend({
   {
     type = "recipe",
-    name = "battery-mk3-equipment",
+    name = "bob-battery-mk3-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "battery-mk2-equipment", amount = 2 },
       { type = "item", name = "battery", amount = 10 },
     },
-    results = { { type = "item", name = "battery-mk3-equipment", amount = 1 } },
+    results = { { type = "item", name = "bob-battery-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -82,7 +82,7 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "battery-mk3-equipment", amount = 2 },
+      { type = "item", name = "bob-battery-mk3-equipment", amount = 2 },
       { type = "item", name = "processing-unit", amount = 5 },
     },
     results = { { type = "item", name = "bob-battery-mk4-equipment", amount = 1 } },
@@ -94,10 +94,20 @@ data:extend({
     energy_required = 10,
     ingredients = {
       { type = "item", name = "bob-battery-mk4-equipment", amount = 2 },
-      { type = "item", name = "processing-unit", amount = 5 },
       { type = "item", name = "battery", amount = 20 },
     },
     results = { { type = "item", name = "bob-battery-mk5-equipment", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "bob-battery-mk6-equipment",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+      { type = "item", name = "bob-battery-mk5-equipment", amount = 2 },
+      { type = "item", name = "processing-unit", amount = 5 },
+    },
+    results = { { type = "item", name = "bob-battery-mk6-equipment", amount = 1 } },
   },
 })
 

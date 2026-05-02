@@ -33,7 +33,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -64,7 +63,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -95,7 +93,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -126,7 +123,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
 
   {
@@ -158,7 +154,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -189,7 +184,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -220,7 +214,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -251,7 +244,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
 
   {
@@ -283,7 +275,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -314,7 +305,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -345,7 +335,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
   {
     type = "item",
@@ -376,7 +365,6 @@ data:extend({
       filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
       volume = 0.35,
     },
-    weight = 50000,
   },
 
   {
@@ -1210,7 +1198,6 @@ if combined_roboports == true then
         filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
         volume = 0.35,
       },
-      weight = 200000,
     },
 
     {
@@ -1234,7 +1221,6 @@ if combined_roboports == true then
         filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
         volume = 0.35,
       },
-      weight = 200000,
     },
 
     {
@@ -1258,7 +1244,6 @@ if combined_roboports == true then
         filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
         volume = 0.35,
       },
-      weight = 200000,
     },
 
     {
@@ -1282,7 +1267,6 @@ if combined_roboports == true then
         filename = "__base__/sound/item/roboport-inventory-pickup.ogg",
         volume = 0.35,
       },
-      weight = 200000,
     },
 
     {
