@@ -9,6 +9,10 @@ Date: ???
     - Increased the stack size of Processing unit, Carbon, Salt, Lithium chloride, and Lithium perchlorate #553
     - Updated recipes for Rockets and T3 modules to require Advanced processing units instead of Advanced circuits #559
     - Combined Bob's Carbon and Space Age's Carbon #570
+    - Lithium fixes #574
+      - Swapped the order of Lithium-ion batteries and Silver-zinc batteries when Space Age is enabled
+      - Combined Bob's Lithium and Space Age's Lithium
+      - Changed the internal name of Bob's batteries to "bob-battery-2" and "bob-battery-3"
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026
