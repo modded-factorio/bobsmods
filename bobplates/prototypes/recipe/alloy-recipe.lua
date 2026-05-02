@@ -143,4 +143,7 @@ if not mods["space-age"] then
   })
 else
   bobmods.lib.recipe.replace_ingredient("tungsten-carbide", "tungsten-ore", "bob-powdered-tungsten")
+
+  bobmods.lib.recipe.set_category("bob-copper-tungsten-alloy", "metallurgy")
+  bobmods.lib.recipe.replace_ingredient("bob-copper-tungsten-alloy", "copper-plate", "molten-copper")
 end
