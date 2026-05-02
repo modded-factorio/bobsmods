@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Set item weights #553
     - Increased the stack size of Sodium chlorate, Sodium perchlorate, Sodium carbonate, Sodium bicarbonate, and Sodium Cobaltate #553
+    - Combined Bob's Ammonia and Space Age's Ammonia #573
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

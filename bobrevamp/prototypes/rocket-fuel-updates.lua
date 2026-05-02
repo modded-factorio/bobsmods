@@ -56,3 +56,31 @@ if data.raw.fluid["ammonia"] and data.raw.fluid["bob-hydrazine"] and data.raw.fl
   bobmods.lib.tech.add_recipe_unlock("rocket-fuel", "bob-dinitrogen-tetroxide")
   bobmods.lib.tech.add_prerequisite("rocket-fuel", "bob-hydrazine")
 end
+
+if data.raw.fluid["ammonia"] and mods["space-age"] then
+  local recipe = data.raw.recipe["solid-fuel-from-ammonia"]
+  recipe.icon = nil
+  recipe.icons = {
+    { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
+    { icon = "__bobrevamp__/graphics/icons/ammonia.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
+  }
+  recipe.subgroup = "bob-chemical-fuels"
+  recipe.order = "b[fluid-chemistry]-f[solid-fuel-from-ammonia]"
+
+  recipe = data.raw.recipe["ammonia-rocket-fuel"]
+  recipe.icon = nil
+  recipe.icons = {
+    { icon = "__base__/graphics/icons/rocket-fuel.png", icon_size = 64 },
+    { icon = "__bobrevamp__/graphics/icons/ammonia.png", icon_size = 64, scale = 0.25, shift = { -8, -8 } },
+  }
+  recipe.subgroup = "bob-chemical-fuels"
+  recipe.order = "d[fluid-chemistry]-b[ammonia-rocket-fuel]"
+
+  recipe = data.raw.recipe["ammoniacal-solution-separation"]
+  recipe.icon = nil
+  recipe.icons = {
+    { icon = "__space-age__/graphics/icons/fluid/ammoniacal-solution.png", icon_size = 64 },
+    { icon = "__space-age__/graphics/icons/ice.png", icon_size = 64, scale = 0.25, shift = { -8, 8 } },
+    { icon = "__bobrevamp__/graphics/icons/ammonia.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+  }
+end
