@@ -42,8 +42,8 @@ if data.raw.item["bob-lead-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-shot", "iron-plate", "bob-lead-plate")
 end
 
-if data.raw.item["bob-tungsten-plate"] then
-  bobmods.lib.recipe.add_ingredient("bob-plasma-turret-2", { type = "item", name = "bob-tungsten-plate", amount = 50 })
+if data.raw.item["tungsten-plate"] then
+  bobmods.lib.recipe.add_ingredient("bob-plasma-turret-2", { type = "item", name = "tungsten-plate", amount = 50 })
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-2", "bob-tungsten-processing")
 end
 
@@ -215,10 +215,10 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
   )
 end
 
-if data.raw.item["bob-tungsten-carbide"] then
-  bobmods.lib.recipe.replace_ingredient("bob-tank-3", "steel-plate", "bob-tungsten-carbide")
+if data.raw.item["tungsten-carbide"] then
+  bobmods.lib.recipe.replace_ingredient("bob-tank-3", "steel-plate", "tungsten-carbide")
   bobmods.lib.tech.add_prerequisite("bob-tanks-3", "bob-tungsten-alloy-processing")
-  bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-3", "concrete", "bob-tungsten-carbide")
+  bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-3", "concrete", "tungsten-carbide")
   bobmods.lib.tech.add_prerequisite("bob-artillery-turret-3", "bob-tungsten-alloy-processing")
 end
 
@@ -436,10 +436,10 @@ if data.raw.item["bob-alien-blue-alloy"] then
   bobmods.lib.recipe.replace_ingredient("bob-ap-bullet-projectile", "steel-plate", "bob-alien-blue-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-shotgun-ap-shell", "steel-plate", "bob-alien-blue-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-piercing-rocket-warhead", "iron-plate", "bob-alien-blue-alloy")
-elseif data.raw.item["bob-tungsten-plate"] then
-  bobmods.lib.recipe.replace_ingredient("bob-shotgun-ap-shell", "steel-plate", "bob-tungsten-plate")
-  bobmods.lib.recipe.replace_ingredient("bob-ap-bullet-projectile", "steel-plate", "bob-tungsten-plate")
-  bobmods.lib.recipe.replace_ingredient("bob-piercing-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+elseif data.raw.item["tungsten-plate"] then
+  bobmods.lib.recipe.replace_ingredient("bob-shotgun-ap-shell", "steel-plate", "tungsten-plate")
+  bobmods.lib.recipe.replace_ingredient("bob-ap-bullet-projectile", "steel-plate", "tungsten-plate")
+  bobmods.lib.recipe.replace_ingredient("bob-piercing-rocket-warhead", "steel-plate", "tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-piercing-rocket", "bob-tungsten-processing")
 end
 
@@ -451,8 +451,8 @@ elseif data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-electric-bullet-projectile", "steel-plate", "bob-gold-plate")
   bobmods.lib.recipe.replace_ingredient("bob-shotgun-electric-shell", "copper-plate", "bob-gold-plate")
   bobmods.lib.recipe.replace_ingredient("bob-electric-rocket-warhead", "copper-plate", "bob-gold-plate")
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+  if data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-rocket-warhead", "steel-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "bob-tungsten-processing")
   end
 end
@@ -461,8 +461,8 @@ if data.raw.fluid["bob-alien-acid"] then
   bobmods.lib.recipe.replace_ingredient("bob-acid-bullet-projectile", "sulfuric-acid", "bob-alien-acid")
   bobmods.lib.recipe.replace_ingredient("bob-shotgun-acid-shell", "sulfuric-acid", "bob-alien-acid")
   bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "sulfuric-acid", "bob-alien-acid")
-elseif data.raw.item["bob-tungsten-plate"] then
-  bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+elseif data.raw.item["tungsten-plate"] then
+  bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "steel-plate", "tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-acid-rocket", "bob-tungsten-processing")
 end
 
@@ -483,8 +483,8 @@ if data.raw.fluid["bob-alien-explosive"] then
   )
   data.raw.recipe["bob-explosive-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "bob-alien-yellow-research")
-elseif data.raw.item["bob-tungsten-plate"] then
-  bobmods.lib.recipe.replace_ingredient("bob-explosive-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+elseif data.raw.item["tungsten-plate"] then
+  bobmods.lib.recipe.replace_ingredient("bob-explosive-rocket-warhead", "steel-plate", "tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-explosive-rocket", "bob-tungsten-processing")
 end
 
@@ -501,8 +501,8 @@ if data.raw.fluid["bob-alien-poison"] then
   bobmods.lib.recipe.replace_ingredient("bob-poison-artillery-shell", "coal", "bob-alien-poison")
   data.raw.recipe["bob-poison-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-poison-artillery-shells", "bob-alien-green-research")
-elseif data.raw.item["bob-tungsten-plate"] then
-  bobmods.lib.recipe.replace_ingredient("bob-poison-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+elseif data.raw.item["tungsten-plate"] then
+  bobmods.lib.recipe.replace_ingredient("bob-poison-rocket-warhead", "steel-plate", "tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-poison-rocket", "bob-tungsten-processing")
 end
 
@@ -535,8 +535,8 @@ if data.raw.fluid["bob-alien-fire"] then
   bobmods.lib.tech.add_prerequisite("bob-fire-artillery-shells", "bob-alien-red-research")
 elseif data.raw.fluid["bob-liquid-fuel"] then
   bobmods.lib.recipe.replace_ingredient("bob-fire-artillery-shell", "light-oil", "bob-liquid-fuel")
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-flame-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+  if data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flame-rocket-warhead", "steel-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-flame-rocket", "bob-tungsten-processing")
   end
 end

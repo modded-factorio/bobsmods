@@ -53,7 +53,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
           },
         },
         prerequisites = { "bob-steel-axe-3", "bob-tungsten-processing" },
-        research_trigger = { type = "craft-item", item = "bob-tungsten-plate", count = 50 },
+        research_trigger = { type = "craft-item", item = "tungsten-plate", count = 50 },
         upgrade = true,
       },
       {

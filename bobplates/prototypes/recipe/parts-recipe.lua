@@ -119,7 +119,7 @@ data:extend({
     name = "bob-tungsten-gear-wheel",
     enabled = false,
     ingredients = {
-      { type = "item", name = "bob-tungsten-plate", amount = 2 },
+      { type = "item", name = "tungsten-plate", amount = 2 },
     },
     results = { { type = "item", name = "bob-tungsten-gear-wheel", amount = 1 } },
     allow_productivity = true,

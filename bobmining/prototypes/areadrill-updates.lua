@@ -31,8 +31,8 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("bob-area-drills-3", "bob-titanium-processing")
   else
-    if data.raw.item["bob-tungsten-plate"] then
-      bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "bob-tungsten-plate")
+    if data.raw.item["tungsten-plate"] then
+      bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-3", "steel-plate", "tungsten-plate")
       bobmods.lib.tech.add_prerequisite("bob-area-drills-3", "bob-tungsten-processing")
     end
   end
@@ -47,8 +47,8 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-area-drills-4", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-4", "steel-plate", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-4", "steel-plate", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-area-drills-4", "bob-tungsten-alloy-processing")
   else
     if data.raw.item["bob-copper-tungsten-alloy"] then

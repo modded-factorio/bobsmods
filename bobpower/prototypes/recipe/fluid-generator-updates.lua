@@ -94,8 +94,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "bob-tungsten-plate")
+  if data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-tungsten-processing")
   end
 

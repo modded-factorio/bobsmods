@@ -41,8 +41,8 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-3", "iron-plate", "bob-copper-tungsten-alloy")
     bobmods.lib.tech.add_prerequisite("bob-electronics-machine-3", "bob-tungsten-alloy-processing")
-  elseif data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-3", "iron-plate", "bob-tungsten-plate")
+  elseif data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-3", "iron-plate", "tungsten-plate")
     bobmods.lib.tech.add_prerequisite("bob-electronics-machine-3", "bob-tungsten-processing")
   end
 
