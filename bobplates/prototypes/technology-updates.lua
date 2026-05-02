@@ -110,15 +110,13 @@ else
   bobmods.lib.tech.add_prerequisite("bob-battery-3", "bob-battery-2")
   bobmods.lib.tech.add_prerequisite("bob-battery-3", "cryogenic-science-pack")
   bobmods.lib.tech.add_prerequisite("bob-battery-3", "bob-cobalt-processing")
-  bobmods.lib.tech.set_science_packs("bob-battery-3",
-    {
-      { "automation-science-pack", 1 },
-      { "logistic-science-pack", 1 },
-      { "chemical-science-pack", 1 },
-      { "production-science-pack", 1 },
-      { "cryogenic-science-pack", 1 },
-    }
-  )
+  bobmods.lib.tech.set_science_packs("bob-battery-3", {
+    { "automation-science-pack", 1 },
+    { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
+    { "production-science-pack", 1 },
+    { "cryogenic-science-pack", 1 },
+  })
   data.raw.technology["bob-battery-2"].effects = {}
   bobmods.lib.tech.add_recipe_unlock("bob-battery-2", "bob-silver-oxide")
   bobmods.lib.tech.add_recipe_unlock("bob-battery-2", "bob-silver-nitrate")

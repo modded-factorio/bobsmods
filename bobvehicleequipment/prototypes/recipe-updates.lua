@@ -190,11 +190,7 @@ else
         "bob-titanium-gear-wheel"
       )
     end
-    bobmods.lib.recipe.replace_ingredient(
-      "bob-vehicle-roboport-chargepad-equipment-3",
-      "battery",
-      "bob-battery-2"
-    )
+    bobmods.lib.recipe.replace_ingredient("bob-vehicle-roboport-chargepad-equipment-3", "battery", "bob-battery-2")
     bobmods.lib.recipe.replace_ingredient(
       "bob-vehicle-roboport-antenna-equipment-3",
       "steel-plate",
@@ -301,11 +297,7 @@ else
         "bob-nitinol-gear-wheel"
       )
     end
-    bobmods.lib.recipe.replace_ingredient(
-      "bob-vehicle-roboport-chargepad-equipment-4",
-      "battery",
-      "bob-battery-3"
-    )
+    bobmods.lib.recipe.replace_ingredient("bob-vehicle-roboport-chargepad-equipment-4", "battery", "bob-battery-3")
     bobmods.lib.recipe.replace_ingredient(
       "bob-vehicle-roboport-antenna-equipment-4",
       "steel-plate",

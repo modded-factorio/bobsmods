@@ -360,4 +360,3 @@ if mods["space-age"] then
   data.raw.item["bob-battery-2"].icon = "__bobplates__/graphics/icons/silver-zinc-battery.png"
   data.raw.item["bob-battery-3"].icon = "__bobplates__/graphics/icons/lithium-ion-battery.png"
 end
-
