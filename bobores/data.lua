@@ -101,7 +101,7 @@ end
 if settings.startup["bobmods-ores-enabletinore"].value == true then
   bobmods.ores.tin.create_autoplace()
 end
-if not mods["space-age"] and settings.startup["bobmods-ores-enabletungstenore"].value == true then
+if settings.startup["bobmods-ores-enabletungstenore"].value == true then
   bobmods.ores.tungsten.create_autoplace()
 end
 if settings.startup["bobmods-ores-enablezincore"].value == true then

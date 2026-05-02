@@ -29,12 +29,14 @@ bobmods.ores.tungsten = {
 }
 
 function bobmods.ores.tungsten.create_autoplace()
-  data.raw.resource["tungsten-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "tungsten-ore",
-    order = "c",
-    base_density = 8,
-    has_starting_area_placement = false,
-    regular_rq_factor_multiplier = 1,
-  })
-  bobmods.ores.tungsten.enabled = true
+  if not mods["space-age"] then
+    data.raw.resource["tungsten-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+      name = "tungsten-ore",
+      order = "c",
+      base_density = 8,
+      has_starting_area_placement = false,
+      regular_rq_factor_multiplier = 1,
+    })
+    bobmods.ores.tungsten.enabled = true
+  end
 end
