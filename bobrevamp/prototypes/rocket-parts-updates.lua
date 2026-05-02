@@ -95,7 +95,7 @@ if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe({
       "space-platform-foundation",
       "space-platform-starter-pack",
-    })  
+    })
   else
     bobmods.lib.recipe.update_recycling_recipe("satellite")
   end
