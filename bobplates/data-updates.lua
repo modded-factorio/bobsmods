@@ -51,7 +51,9 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw.recipe["bob-aluminium-plate"].energy_required = 3.2
   data.raw.recipe["bob-titanium-plate"].energy_required = 3.2
   data.raw.recipe["bob-silicon-plate"].energy_required = 3.2
-  data.raw.recipe["bob-lithium"].energy_required = 1.6
+  if not mods["space-age"] then
+    data.raw.recipe["lithium-plate"].energy_required = 1.6
+  end
 end
 
 data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
@@ -308,7 +310,9 @@ if settings.startup["bobmods-plates-purewater"].value == true then
 
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-distillery")
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water")
-  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
+  if not mods["space-age"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
+  end
 end
 
 data.raw.fluid["petroleum-gas"].gas_temperature = -42
@@ -450,8 +454,8 @@ if mods["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "bob-polishing-wheel",
-    "bob-lithium-ion-battery",
-    "bob-silver-zinc-battery",
+    "bob-battery-2",
+    "bob-battery-3",
     "battery",
     "cargo-landing-pad",
     "rocket-silo",
@@ -468,6 +472,11 @@ if mods["quality"] then
 end
 
 if mods["space-age"] then
-  data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
-  data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
+  data.raw.fluid["bob-lithia-water"].hidden = true
+  data.raw.resource["bob-lithia-water"].hidden = true
+  data.raw.item["bob-lithia-water-barrel"].hidden = true
+  data.raw.recipe["bob-lithia-water-barrel"].hidden = true
+  data.raw.recipe["empty-bob-lithia-water-barrel"].hidden = true
+  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "bob-lithia-water-barrel")
+  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "empty-bob-lithia-water-barrel")
 end

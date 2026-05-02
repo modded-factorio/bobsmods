@@ -257,7 +257,8 @@ data:extend({
 
   {
     type = "item",
-    name = "bob-lithium-ion-battery",
+    name = "bob-battery-2",
+    localised_name = { "item-name.bob-lithium-ion-battery" },
     icon = "__bobplates__/graphics/icons/lithium-ion-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -280,7 +281,8 @@ data:extend({
 
   {
     type = "item",
-    name = "bob-silver-zinc-battery",
+    name = "bob-battery-3",
+    localised_name = { "item-name.bob-silver-zinc-battery" },
     icon = "__bobplates__/graphics/icons/silver-zinc-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -351,3 +353,11 @@ data:extend({
     weight = 5000,
   },
 })
+
+if mods["space-age"] then
+  data.raw.item["bob-battery-2"].localised_name = { "item-name.bob-silver-zinc-battery" }
+  data.raw.item["bob-battery-3"].localised_name = { "item-name.bob-lithium-ion-battery" }
+  data.raw.item["bob-battery-2"].icon = "__bobplates__/graphics/icons/silver-zinc-battery.png"
+  data.raw.item["bob-battery-3"].icon = "__bobplates__/graphics/icons/lithium-ion-battery.png"
+end
+

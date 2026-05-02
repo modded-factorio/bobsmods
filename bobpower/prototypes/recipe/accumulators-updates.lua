@@ -1,8 +1,8 @@
 if settings.startup["bobmods-power-accumulators"].value == true then
-  if data.raw.item["bob-lithium-ion-battery"] then
-    bobmods.lib.recipe.replace_ingredient("bob-large-accumulator-2", "battery", "bob-lithium-ion-battery")
-    bobmods.lib.recipe.replace_ingredient("bob-fast-accumulator-2", "battery", "bob-lithium-ion-battery")
-    bobmods.lib.recipe.replace_ingredient("bob-slow-accumulator-2", "battery", "bob-lithium-ion-battery")
+  if data.raw.item["bob-battery-2"] then
+    bobmods.lib.recipe.replace_ingredient("bob-large-accumulator-2", "battery", "bob-battery-2")
+    bobmods.lib.recipe.replace_ingredient("bob-fast-accumulator-2", "battery", "bob-battery-2")
+    bobmods.lib.recipe.replace_ingredient("bob-slow-accumulator-2", "battery", "bob-battery-2")
     bobmods.lib.tech.add_prerequisite("bob-electric-energy-accumulators-2", "bob-battery-2")
   end
 
@@ -20,16 +20,16 @@ if settings.startup["bobmods-power-accumulators"].value == true then
     end
   end
 
-  if data.raw.item["bob-silver-zinc-battery"] then
-    bobmods.lib.recipe.replace_ingredient("bob-large-accumulator-3", "battery", "bob-silver-zinc-battery")
-    bobmods.lib.recipe.replace_ingredient("bob-fast-accumulator-3", "battery", "bob-silver-zinc-battery")
-    bobmods.lib.recipe.replace_ingredient("bob-slow-accumulator-3", "battery", "bob-silver-zinc-battery")
+  if data.raw.item["bob-battery-3"] then
+    bobmods.lib.recipe.replace_ingredient("bob-large-accumulator-3", "battery", "bob-battery-3")
+    bobmods.lib.recipe.replace_ingredient("bob-fast-accumulator-3", "battery", "bob-battery-3")
+    bobmods.lib.recipe.replace_ingredient("bob-slow-accumulator-3", "battery", "bob-battery-3")
     bobmods.lib.tech.add_prerequisite("bob-electric-energy-accumulators-3", "bob-battery-3")
   else
-    if data.raw.item["bob-lithium-ion-battery"] then
-      bobmods.lib.recipe.replace_ingredient("bob-large-accumulator-3", "battery", "bob-lithium-ion-battery")
-      bobmods.lib.recipe.replace_ingredient("bob-fast-accumulator-3", "battery", "bob-lithium-ion-battery")
-      bobmods.lib.recipe.replace_ingredient("bob-slow-accumulator-3", "battery", "bob-lithium-ion-battery")
+    if data.raw.item["bob-battery-2"] then
+      bobmods.lib.recipe.replace_ingredient("bob-large-accumulator-3", "battery", "bob-battery-2")
+      bobmods.lib.recipe.replace_ingredient("bob-fast-accumulator-3", "battery", "bob-battery-2")
+      bobmods.lib.recipe.replace_ingredient("bob-slow-accumulator-3", "battery", "bob-battery-2")
     end
   end
 

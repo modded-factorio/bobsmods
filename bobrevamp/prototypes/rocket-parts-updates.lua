@@ -69,8 +69,8 @@ if data.raw.recipe["satellite"] then
     bobmods.lib.tech.remove_prerequisite("rocket-silo", "solar-energy")
   end
 
-  if data.raw.item["bob-silver-zinc-battery"] then
-    bobmods.lib.recipe.replace_ingredient("satellite", "accumulator", "bob-silver-zinc-battery")
+  if data.raw.item["bob-battery-3"] then
+    bobmods.lib.recipe.replace_ingredient("satellite", "accumulator", "bob-battery-3")
     bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-battery-3")
     bobmods.lib.tech.remove_prerequisite("rocket-silo", "electric-energy-accumulators")
   end

@@ -201,20 +201,28 @@ data:extend({
     allow_decomposition = false,
     allow_productivity = true,
   },
-
-  {
-    type = "recipe",
-    name = "bob-lithium",
-    category = "bob-electrolysis",
-    subgroup = "bob-material-electrolysis",
-    energy_required = 3.2,
-    enabled = false,
-    auto_recycle = false,
-    ingredients = {
-      { type = "item", name = "bob-lithium-chloride", amount = 1 },
-    },
-    results = { { type = "item", name = "bob-lithium", amount = 1 } },
-    allow_decomposition = false,
-    allow_productivity = true,
-  },
 })
+
+if not mods["space-age"] then
+  data:extend({
+    {
+      type = "recipe",
+      name = "lithium-plate",
+      localised_name = { "item-name.bob-lithium" },
+      category = "bob-electrolysis",
+      subgroup = "bob-material-electrolysis",
+      energy_required = 3.2,
+      enabled = false,
+      auto_recycle = false,
+      ingredients = {
+        { type = "item", name = "bob-lithium-chloride", amount = 1 },
+      },
+      results = { { type = "item", name = "lithium-plate", amount = 1 } },
+      allow_decomposition = false,
+      allow_productivity = true,
+    },
+  })
+else
+  bobmods.lib.recipe.remove_ingredient("lithium", "lithium-brine")
+  bobmods.lib.recipe.add_ingredient("lithium", { type = "item", name = "bob-lithium-chloride", amount = 5 })
+end

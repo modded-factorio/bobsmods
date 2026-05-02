@@ -949,3 +949,8 @@ data:extend({
 if mods["bobpower"] then
   data.raw.recipe["bob-sodium-hydroxide-sink"].results[1].temperature = 465
 end
+
+if mods["space-age"] then
+  bobmods.lib.recipe.replace_ingredient("bob-lithium-chloride", "bob-lithia-water", "lithium-brine")
+  bobmods.lib.recipe.hide("bob-pure-water-from-lithia")
+end
