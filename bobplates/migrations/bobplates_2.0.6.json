@@ -19,6 +19,8 @@
     ["bob-silver-zinc-battery", "bob-battery-3"],
     ["bob-silver-zinc-battery-recycling", "bob-battery-3-recycling"],
     ["bob-tungsten-carbide", "tungsten-carbide"],
-    ["bob-tungsten-plate", "tungsten-plate"]
+    ["bob-tungsten-carbide-recycling", "tungsten-carbide-recycling"],
+    ["bob-tungsten-plate", "tungsten-plate"],
+    ["bob-tungsten-plate-recycling", "tungsten-plate-recycling"]
   ]
 }
