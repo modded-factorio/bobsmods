@@ -1,4 +1,5 @@
 data.raw.item["radar"].order = "d[radar]-a[radar-1]"
+data.raw.item["radar"].weight = 20000
 
 data:extend({
   {
@@ -22,6 +23,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 20000,
   },
 
   {
@@ -45,6 +47,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 20000,
   },
 
   {
@@ -68,6 +71,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 20000,
   },
 
   {
@@ -91,5 +95,6 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 20000,
   },
 })

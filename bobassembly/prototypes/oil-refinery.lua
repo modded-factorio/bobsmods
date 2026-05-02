@@ -1,4 +1,6 @@
 if settings.startup["bobmods-assembly-oilrefineries"].value == true then
+  data.raw.item["oil-refinery"].weight = 100000
+
   data:extend({
     {
       type = "item-subgroup",
@@ -41,6 +43,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 100000,
     },
 
     {
@@ -126,6 +129,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 100000,
     },
 
     {
@@ -212,6 +216,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
         filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
         volume = 0.5,
       },
+      weight = 100000,
     },
 
     {

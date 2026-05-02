@@ -1,0 +1,17 @@
+{
+  "fluid":
+  [
+    ["bob-ammonia", "ammonia"]
+  ],
+  "item":
+  [
+    ["bob-ammonia-barrel", "ammonia-barrel"]
+  ],
+  "recipe":
+  [
+    ["bob-ammonia", "ammonia"],
+    ["empty-bob-ammonia-barrel", "empty-ammonia-barrel"],
+    ["bob-ammonia-barrel", "ammonia-barrel"],
+    ["void-bob-ammonia", "void-ammonia"]
+  ]
+}

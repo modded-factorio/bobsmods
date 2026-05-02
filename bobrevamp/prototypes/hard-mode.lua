@@ -46,6 +46,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
         filename = "__base__/sound/item/resource-inventory-pickup.ogg",
         volume = 0.6,
       },
+      weight = 1000,
     },
     {
       type = "item",
@@ -54,10 +55,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       icon_size = 32,
       subgroup = "bob-resource-chemical",
       order = "f[sodium-chlorate]",
-      stack_size = 100,
+      stack_size = 200,
       drop_sound = powder_drop_move,
       inventory_move_sound = powder_drop_move,
       pick_sound = powder_pick,
+      weight = 500,
     },
     {
       type = "item",
@@ -66,10 +68,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       icon_size = 32,
       subgroup = "bob-resource-chemical",
       order = "f[sodium-perchlorate]",
-      stack_size = 100,
+      stack_size = 200,
       drop_sound = powder_drop_move,
       inventory_move_sound = powder_drop_move,
       pick_sound = powder_pick,
+      weight = 500,
     },
 
     {
@@ -175,7 +178,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
       energy_required = 1,
       main_product = "bob-carbon-dioxide",
       ingredients = {
-        { type = "item", name = "bob-carbon", amount = 1 },
+        { type = "item", name = "carbon", amount = 1 },
         { type = "fluid", name = "bob-oxygen", amount = 25 },
       },
       results = {

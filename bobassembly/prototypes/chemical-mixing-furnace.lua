@@ -449,57 +449,67 @@ then
   elseif data.raw.technology["bob-alloy-processing-2"] then
     bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-alloy-processing-2")
   end
-  if feature_flags["freezing"] and mods["space-age"] then
+  if feature_flags["freezing"] then
     data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].heating_energy = "100kW"
     data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].heating_energy = "100kW"
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].graphics_set.frozen_patch = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
-          width = 239,
-          height = 219,
-          scale = 0.5,
-          shift = { 0.0234375, 0.1796875 },
+    if mods["space-age"] then
+      data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].graphics_set.frozen_patch = {
+        layers = {
+          {
+            filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+            width = 239,
+            height = 219,
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
+          },
+          {
+            filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
+            width = 239,
+            height = 219,
+            priority = "high",
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
+          },
         },
-        {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
-          width = 239,
-          height = 219,
-          priority = "high",
-          scale = 0.5,
-          shift = { 0.0234375, 0.1796875 },
+      }
+      data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].graphics_set.frozen_patch = {
+        layers = {
+          {
+            filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+            width = 239,
+            height = 219,
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
+          },
+          {
+            filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
+            width = 239,
+            height = 219,
+            priority = "high",
+            scale = 0.5,
+            shift = { 0.0234375, 0.1796875 },
+          },
         },
-      },
-    }
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].graphics_set.frozen_patch = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
-          width = 239,
-          height = 219,
-          scale = 0.5,
-          shift = { 0.0234375, 0.1796875 },
-        },
-        {
-          filename = "__bobassembly__/graphics/entity/electric-furnace/electric-furnace-chemical-tower-frozen.png",
-          width = 239,
-          height = 219,
-          priority = "high",
-          scale = 0.5,
-          shift = { 0.0234375, 0.1796875 },
-        },
-      },
-    }
+      }
 
-    local pipefrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen
-    local pcfrozenpatch = data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_picture_frozen =
-      pipefrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_covers_frozen =
-      pcfrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_picture_frozen =
-      pipefrozenpatch
-    data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_covers_frozen =
-      pcfrozenpatch
+      local function frozenpatch()
+        local result =
+          util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_picture_frozen)
+        return result
+      end
+      local function frozenpatchcovers()
+        local result =
+          util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[1].pipe_covers_frozen)
+        return result
+      end
+      data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_picture_frozen =
+        frozenpatch()
+      data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace"].fluid_boxes[1].pipe_covers_frozen =
+        frozenpatchcovers()
+      data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_picture_frozen =
+        frozenpatch()
+      data.raw["assembling-machine"]["bob-electric-chemical-mixing-furnace-2"].fluid_boxes[1].pipe_covers_frozen =
+        frozenpatchcovers()
+    end
   end
 end

@@ -129,15 +129,15 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.tech.add_prerequisite("military-3", "bob-aluminium-processing")
 end
 
-if data.raw.item["bob-lithium-ion-battery"] then
+if data.raw.item["bob-battery-2"] then
   bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-3", "bob-battery-2")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-emerald", "battery", "bob-lithium-ion-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-amethyst", "battery", "bob-lithium-ion-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-emerald", "battery", "bob-battery-2")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-amethyst", "battery", "bob-battery-2")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "battery", "bob-battery-2")
   bobmods.lib.tech.add_prerequisite("bob-laser-turrets-3", "bob-battery-2")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-4", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-4", "battery", "bob-battery-2")
 
-  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-2", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-2", "battery", "bob-battery-2")
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-2", "bob-battery-2")
 end
 
@@ -195,14 +195,14 @@ if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "bob-ceramics")
 end
 
-if data.raw.item["bob-silver-zinc-battery"] then
+if data.raw.item["bob-battery-3"] then
   bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-5", "bob-battery-3")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-diamond", "battery", "bob-silver-zinc-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-topaz", "battery", "bob-silver-zinc-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-diamond", "battery", "bob-battery-3")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-topaz", "battery", "bob-battery-3")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "battery", "bob-battery-3")
   bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "bob-battery-3")
 
-  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-3", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-3", "battery", "bob-battery-3")
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "bob-battery-3")
 end
 
@@ -451,15 +451,17 @@ elseif data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-electric-bullet-projectile", "steel-plate", "bob-gold-plate")
   bobmods.lib.recipe.replace_ingredient("bob-shotgun-electric-shell", "copper-plate", "bob-gold-plate")
   bobmods.lib.recipe.replace_ingredient("bob-electric-rocket-warhead", "copper-plate", "bob-gold-plate")
-  bobmods.lib.recipe.replace_ingredient("bob-electric-rocket-warhead", "steel-plate", "bob-tungsten-plate")
-  bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "bob-tungsten-processing")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("bob-electric-rocket", "bob-tungsten-processing")
+  end
 end
 
 if data.raw.fluid["bob-alien-acid"] then
   bobmods.lib.recipe.replace_ingredient("bob-acid-bullet-projectile", "sulfuric-acid", "bob-alien-acid")
   bobmods.lib.recipe.replace_ingredient("bob-shotgun-acid-shell", "sulfuric-acid", "bob-alien-acid")
   bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "sulfuric-acid", "bob-alien-acid")
-else
+elseif data.raw.item["bob-tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-acid-rocket-warhead", "steel-plate", "bob-tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-acid-rocket", "bob-tungsten-processing")
 end
@@ -481,7 +483,7 @@ if data.raw.fluid["bob-alien-explosive"] then
   )
   data.raw.recipe["bob-explosive-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-explosive-artillery-shells", "bob-alien-yellow-research")
-else
+elseif data.raw.item["bob-tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-explosive-rocket-warhead", "steel-plate", "bob-tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-explosive-rocket", "bob-tungsten-processing")
 end
@@ -499,7 +501,7 @@ if data.raw.fluid["bob-alien-poison"] then
   bobmods.lib.recipe.replace_ingredient("bob-poison-artillery-shell", "coal", "bob-alien-poison")
   data.raw.recipe["bob-poison-artillery-shell"].category = "crafting-with-fluid"
   bobmods.lib.tech.add_prerequisite("bob-poison-artillery-shells", "bob-alien-green-research")
-else
+elseif data.raw.item["bob-tungsten-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-poison-rocket-warhead", "steel-plate", "bob-tungsten-plate")
   bobmods.lib.tech.add_prerequisite("bob-poison-rocket", "bob-tungsten-processing")
 end
@@ -533,8 +535,10 @@ if data.raw.fluid["bob-alien-fire"] then
   bobmods.lib.tech.add_prerequisite("bob-fire-artillery-shells", "bob-alien-red-research")
 elseif data.raw.fluid["bob-liquid-fuel"] then
   bobmods.lib.recipe.replace_ingredient("bob-fire-artillery-shell", "light-oil", "bob-liquid-fuel")
-  bobmods.lib.recipe.replace_ingredient("bob-flame-rocket-warhead", "steel-plate", "bob-tungsten-plate")
-  bobmods.lib.tech.add_prerequisite("bob-flame-rocket", "bob-tungsten-processing")
+  if data.raw.item["bob-tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flame-rocket-warhead", "steel-plate", "bob-tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("bob-flame-rocket", "bob-tungsten-processing")
+  end
 end
 
 if data.raw.item["bob-distractor-robot"] then

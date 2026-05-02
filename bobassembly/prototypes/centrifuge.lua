@@ -1,5 +1,6 @@
 if settings.startup["bobmods-assembly-centrifuge"].value == true then
   data.raw.item["centrifuge"].order = "g[centrifuge-1]"
+  data.raw.item["centrifuge"].weight = 1000000
   data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group = "centrifuge"
 
   data:extend({
@@ -24,6 +25,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 1000000,
     },
     {
       type = "item",
@@ -46,6 +48,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         filename = "__base__/sound/item/mechanical-inventory-pickup.ogg",
         volume = 0.8,
       },
+      weight = 1000000,
     },
 
     {

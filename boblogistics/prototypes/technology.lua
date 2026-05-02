@@ -835,15 +835,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-turbo-transport-belt",
+        recipe = "turbo-transport-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-turbo-underground-belt",
+        recipe = "turbo-underground-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-turbo-splitter",
+        recipe = "turbo-splitter",
       },
     },
     prerequisites = {

@@ -211,7 +211,7 @@ data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source.buffer_capa
 data:extend({
   {
     type = "battery-equipment",
-    name = "bob-battery-mk3-equipment",
+    name = "battery-mk3-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk3-equipment.png",
       width = 32,
@@ -256,27 +256,6 @@ data:extend({
     name = "bob-battery-mk5-equipment",
     sprite = {
       filename = "__bobequipment__/graphics/equipment/battery-mk5-equipment.png",
-      width = 32,
-      height = 64,
-      priority = "medium",
-    },
-    shape = {
-      width = 1,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "750MJ",
-      usage_priority = "tertiary",
-    },
-    categories = { "armor" },
-  },
-  {
-    type = "battery-equipment",
-    name = "bob-battery-mk6-equipment",
-    sprite = {
-      filename = "__bobequipment__/graphics/equipment/battery-mk6-equipment.png",
       width = 32,
       height = 64,
       priority = "medium",

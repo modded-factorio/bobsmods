@@ -166,15 +166,17 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       prototype.icons_positioning[1].multi_row_initial_height_modifier = -0.3
     end
 
-    if feature_flags["freezing"] and mods["space-age"] then
+    if feature_flags["freezing"] then
       prototype.heating_energy = input.heating_energy or "100kW"
-      prototype.graphics_set.frozen_patch = {
-        filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
-        width = 239,
-        height = 219,
-        scale = 0.5,
-        shift = { 0.0234375, 0.1796875 },
-      }
+      if mods["space-age"] then
+        prototype.graphics_set.frozen_patch = {
+          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+          width = 239,
+          height = 219,
+          scale = 0.5,
+          shift = { 0.0234375, 0.1796875 },
+        }
+      end
     end
 
     return prototype

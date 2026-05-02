@@ -37,6 +37,7 @@ data:extend({
     drop_sound = radio_drop_move,
     inventory_move_sound = radio_drop_move,
     pick_sound = radio_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -49,6 +50,7 @@ data:extend({
     drop_sound = radio_drop_move,
     inventory_move_sound = radio_drop_move,
     pick_sound = radio_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -61,6 +63,7 @@ data:extend({
     drop_sound = radio_drop_move,
     inventory_move_sound = radio_drop_move,
     pick_sound = radio_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -73,6 +76,7 @@ data:extend({
     drop_sound = radio_drop_move,
     inventory_move_sound = radio_drop_move,
     pick_sound = radio_pick,
+    weight = 5000,
   },
 })
 
@@ -88,6 +92,7 @@ data:extend({
     drop_sound = charger_drop_move,
     inventory_move_sound = charger_drop_move,
     pick_sound = charger_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -100,6 +105,7 @@ data:extend({
     drop_sound = charger_drop_move,
     inventory_move_sound = charger_drop_move,
     pick_sound = charger_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -112,6 +118,7 @@ data:extend({
     drop_sound = charger_drop_move,
     inventory_move_sound = charger_drop_move,
     pick_sound = charger_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -124,6 +131,7 @@ data:extend({
     drop_sound = charger_drop_move,
     inventory_move_sound = charger_drop_move,
     pick_sound = charger_pick,
+    weight = 5000,
   },
 })
 
@@ -139,6 +147,7 @@ data:extend({
     drop_sound = roboport_drop_move,
     inventory_move_sound = roboport_drop_move,
     pick_sound = roboport_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -151,6 +160,7 @@ data:extend({
     drop_sound = roboport_drop_move,
     inventory_move_sound = roboport_drop_move,
     pick_sound = roboport_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -163,6 +173,7 @@ data:extend({
     drop_sound = roboport_drop_move,
     inventory_move_sound = roboport_drop_move,
     pick_sound = roboport_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -175,5 +186,6 @@ data:extend({
     drop_sound = roboport_drop_move,
     inventory_move_sound = roboport_drop_move,
     pick_sound = roboport_pick,
+    weight = 5000,
   },
 })

@@ -9,6 +9,7 @@ bobmods.ores.lead = {
     create_variations = true,
     subgroup = "bob-ores",
     stack_size = 200,
+    weight = 10000,
   },
   stage_mult = 100,
   sprite = {
