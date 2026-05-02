@@ -32,10 +32,7 @@ elseif data.raw.item["bob-steel-pipe"] then
 end
 
 if data.raw.item["tungsten-carbide"] then
-  bobmods.lib.recipe.add_ingredient(
-    "bob-artillery-wagon-3",
-    { type = "item", name = "tungsten-carbide", amount = 10 }
-  )
+  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "tungsten-carbide", amount = 10 })
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-tungsten-alloy-processing")
 else
   bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })
