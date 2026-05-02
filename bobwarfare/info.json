@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 2.0.33",
-    "boblibrary >= 2.0.1",
-    "? bobplates >= 2.0.0",
+    "boblibrary >= 2.0.4",
+    "? bobplates >= 2.0.6",
     "? bobenemies >= 2.0.0",
     "(?) aai-programmable-vehicles"
   ],

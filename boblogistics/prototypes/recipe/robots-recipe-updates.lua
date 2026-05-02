@@ -310,8 +310,8 @@ else
 end
 
 if data.raw.item["bob-flying-robot-frame-3"] then
-  if data.raw.item["bob-lithium-ion-battery"] then
-    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-3", "battery", "bob-lithium-ion-battery")
+  if data.raw.item["bob-battery-2"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-3", "battery", "bob-battery-2")
   end
 
   if data.raw.item["bob-titanium-plate"] then
@@ -334,8 +334,8 @@ else
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
     end
 
-    if data.raw.item["bob-lithium-ion-battery"] then
-      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-lithium-ion-battery", amount = 2 })
+    if data.raw.item["bob-battery-2"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-battery-2", amount = 2 })
     else
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "battery", amount = 2 })
     end
@@ -351,12 +351,8 @@ else
 end
 
 if data.raw.item["bob-flying-robot-frame-4"] then
-  if data.raw.item["bob-silver-zinc-battery"] then
-    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-silver-zinc-battery")
-  else
-    if data.raw.item["bob-lithium-ion-battery"] then
-      bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-lithium-ion-battery")
-    end
+  if data.raw.item["bob-battery-3"] then
+    bobmods.lib.recipe.replace_ingredient("bob-flying-robot-frame-4", "battery", "bob-battery-3")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
@@ -379,11 +375,11 @@ else
       bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "electric-engine-unit", amount = 1 })
     end
 
-    if data.raw.item["bob-silver-zinc-battery"] then
-      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-silver-zinc-battery", amount = 2 })
+    if data.raw.item["bob-battery-3"] then
+      bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-battery-3", amount = 2 })
     else
-      if data.raw.item["bob-lithium-ion-battery"] then
-        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-lithium-ion-battery", amount = 2 })
+      if data.raw.item["bob-battery-2"] then
+        bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "bob-battery-2", amount = 2 })
       else
         bobmods.lib.recipe.add_ingredient(robot, { type = "item", name = "battery", amount = 2 })
       end

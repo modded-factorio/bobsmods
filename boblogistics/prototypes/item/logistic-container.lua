@@ -45,6 +45,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -71,6 +72,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -97,6 +99,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -123,6 +126,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -149,6 +153,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
 })
 
@@ -178,6 +183,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -204,6 +210,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -230,6 +237,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -256,6 +264,7 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -282,5 +291,6 @@ data:extend({
     drop_sound = chest_drop_move,
     inventory_move_sound = chest_drop_move,
     pick_sound = chest_pick,
+    weight = 20000,
   },
 })

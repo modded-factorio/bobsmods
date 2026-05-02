@@ -278,10 +278,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         { type = "item", name = "iron-gear-wheel", amount = 2 }
       )
     end
-    if data.raw.item["bob-lithium-ion-battery"] then
+    if data.raw.item["bob-battery-2"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-robot-tool-combat-3",
-        { type = "item", name = "bob-lithium-ion-battery", amount = 1 }
+        { type = "item", name = "bob-battery-2", amount = 1 }
       )
     else
       bobmods.lib.recipe.add_ingredient("bob-robot-tool-combat-3", { type = "item", name = "battery", amount = 1 })
@@ -317,10 +317,10 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
         { type = "item", name = "iron-gear-wheel", amount = 2 }
       )
     end
-    if data.raw.item["bob-silver-zinc-battery"] then
+    if data.raw.item["bob-battery-3"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-robot-tool-combat-4",
-        { type = "item", name = "bob-silver-zinc-battery", amount = 1 }
+        { type = "item", name = "bob-battery-3", amount = 1 }
       )
     else
       bobmods.lib.recipe.add_ingredient("bob-robot-tool-combat-4", { type = "item", name = "battery", amount = 1 })

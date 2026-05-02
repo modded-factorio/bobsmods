@@ -27,9 +27,9 @@ data.raw["transport-belt"]["transport-belt"].flags = { "placeable-neutral", "pla
 data.raw["transport-belt"]["fast-transport-belt"].flags = { "placeable-neutral", "player-creation" }
 data.raw["transport-belt"]["express-transport-belt"].flags = { "placeable-neutral", "player-creation" }
 
-data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "bob-turbo-transport-belt"
-data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "bob-turbo-underground-belt"
-data.raw["splitter"]["express-splitter"].next_upgrade = "bob-turbo-splitter"
+data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "turbo-transport-belt"
+data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "turbo-underground-belt"
+data.raw["splitter"]["express-splitter"].next_upgrade = "turbo-splitter"
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   data:extend({
@@ -269,28 +269,33 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   })
 
   --Let basic transport belt act as a burner transport belt not subject to freezing.
-  -- if feature_flags["freezing"] and mods["space-age"] then
+  -- if feature_flags["freezing"] then
   -- data.raw["transport-belt"]["bob-basic-transport-belt"].heating_energy = "10kW"
   -- data.raw["underground-belt"]["bob-basic-underground-belt"].heating_energy = "25kW"
   -- data.raw.splitter["bob-basic-splitter"].heating_energy = "40kW"
-  -- local beltfrozenpatch = data.raw["transport-belt"]["transport-belt"].belt_animation_set.frozen_patch
-  -- data.raw["transport-belt"]["bob-basic-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch
-  -- data.raw["underground-belt"]["bob-basic-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch
-  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_in = data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_in
-  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_out = data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_out
-  -- data.raw.splitter["bob-basic-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch
-  -- data.raw.splitter["bob-basic-splitter"].frozen_patch = data.raw.splitter.splitter.frozen_patch
+  -- if mods["space-age"] then
+  -- local function beltfrozenpatch()
+  -- local result = util.table.deepcopy(data.raw["transport-belt"]["transport-belt"].belt_animation_set.frozen_patch)
+  -- return result
+  -- end
+  -- data.raw["transport-belt"]["bob-basic-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch()
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch()
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_in = util.table.deepcopy(data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_in)
+  -- data.raw["underground-belt"]["bob-basic-underground-belt"].structure.frozen_patch_out = util.table.deepcopy(data.raw["underground-belt"]["underground-belt"].structure.frozen_patch_out)
+  -- data.raw.splitter["bob-basic-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch()
+  -- data.raw.splitter["bob-basic-splitter"].frozen_patch = util.table.deepcopy(data.raw.splitter.splitter.frozen_patch)
+  -- end
   -- end
 end
 
 data:extend({
   {
     type = "transport-belt",
-    name = "bob-turbo-transport-belt",
+    name = "turbo-transport-belt",
     icon = "__boblogistics__/graphics/icons/purple-transport-belt.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "bob-turbo-transport-belt" },
+    minable = { mining_time = 0.1, result = "turbo-transport-belt" },
     max_health = 180,
     corpse = "small-remnants",
     damaged_trigger_effect = hit_effects.entity(),
@@ -314,7 +319,7 @@ data:extend({
     animation_speed_coefficient = 32,
     belt_animation_set = bobmods.logistics.purple_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    related_underground_belt = "bob-turbo-underground-belt",
+    related_underground_belt = "turbo-underground-belt",
     next_upgrade = "bob-ultimate-transport-belt",
     speed = 0.125,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
@@ -324,11 +329,11 @@ data:extend({
 
   {
     type = "underground-belt",
-    name = "bob-turbo-underground-belt",
+    name = "turbo-underground-belt",
     icon = "__boblogistics__/graphics/icons/purple-transport-belt-to-ground.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "bob-turbo-underground-belt" },
+    minable = { mining_time = 0.1, result = "turbo-underground-belt" },
     max_health = 180,
     corpse = "small-remnants",
     damaged_trigger_effect = hit_effects.entity(),
@@ -442,11 +447,11 @@ data:extend({
 
   {
     type = "splitter",
-    name = "bob-turbo-splitter",
+    name = "turbo-splitter",
     icon = "__boblogistics__/graphics/icons/purple-splitter.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "bob-turbo-splitter" },
+    minable = { mining_time = 0.1, result = "turbo-splitter" },
     max_health = 200,
     corpse = "medium-remnants",
     damaged_trigger_effect = hit_effects.entity(),
@@ -752,30 +757,38 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] and mods["space-age"] then
-  data.raw["transport-belt"]["bob-turbo-transport-belt"].heating_energy = "10kW"
-  data.raw["underground-belt"]["bob-turbo-underground-belt"].heating_energy = "200kW"
-  data.raw.splitter["bob-turbo-splitter"].heating_energy = "40kW"
+if feature_flags["freezing"] then
+  data.raw["transport-belt"]["turbo-transport-belt"].heating_energy = "10kW"
+  data.raw["underground-belt"]["turbo-underground-belt"].heating_energy = "200kW"
+  data.raw.splitter["turbo-splitter"].heating_energy = "40kW"
   data.raw["transport-belt"]["bob-ultimate-transport-belt"].heating_energy = "10kW"
   data.raw["underground-belt"]["bob-ultimate-underground-belt"].heating_energy = "250kW"
   data.raw.splitter["bob-ultimate-splitter"].heating_energy = "40kW"
-  local beltfrozenpatch3 = data.raw["transport-belt"]["express-transport-belt"].belt_animation_set.frozen_patch
-  data.raw["transport-belt"]["bob-turbo-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
-  data.raw["underground-belt"]["bob-turbo-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
-  data.raw["underground-belt"]["bob-turbo-underground-belt"].structure.frozen_patch_in =
-    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_in
-  data.raw["underground-belt"]["bob-turbo-underground-belt"].structure.frozen_patch_out =
-    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out
-  data.raw.splitter["bob-turbo-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3
-  data.raw.splitter["bob-turbo-splitter"].frozen_patch = data.raw.splitter["express-splitter"].frozen_patch
-  data.raw["transport-belt"]["bob-ultimate-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
-  data.raw["underground-belt"]["bob-ultimate-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3
-  data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_in =
-    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_in
-  data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_out =
-    data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out
-  data.raw.splitter["bob-ultimate-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3
-  data.raw.splitter["bob-ultimate-splitter"].frozen_patch = data.raw.splitter["express-splitter"].frozen_patch
+  if mods["space-age"] then
+    local function beltfrozenpatch3()
+      local result =
+        util.table.deepcopy(data.raw["transport-belt"]["express-transport-belt"].belt_animation_set.frozen_patch)
+      return result
+    end
+    data.raw["transport-belt"]["turbo-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
+    data.raw["underground-belt"]["turbo-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
+    data.raw["underground-belt"]["turbo-underground-belt"].structure.frozen_patch_in =
+      util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_in)
+    data.raw["underground-belt"]["turbo-underground-belt"].structure.frozen_patch_out =
+      util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out)
+    data.raw.splitter["turbo-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3()
+    data.raw.splitter["turbo-splitter"].frozen_patch =
+      util.table.deepcopy(data.raw.splitter["express-splitter"].frozen_patch)
+    data.raw["transport-belt"]["bob-ultimate-transport-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
+    data.raw["underground-belt"]["bob-ultimate-underground-belt"].belt_animation_set.frozen_patch = beltfrozenpatch3()
+    data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_in =
+      util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_in)
+    data.raw["underground-belt"]["bob-ultimate-underground-belt"].structure.frozen_patch_out =
+      util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"].structure.frozen_patch_out)
+    data.raw.splitter["bob-ultimate-splitter"].belt_animation_set.frozen_patch = beltfrozenpatch3()
+    data.raw.splitter["bob-ultimate-splitter"].frozen_patch =
+      util.table.deepcopy(data.raw.splitter["express-splitter"].frozen_patch)
+  end
 end
 
 if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
@@ -796,9 +809,9 @@ if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
     bobmods.logistics.set_belt_speed("transport-belt", "express-transport-belt", 4)
     bobmods.logistics.set_belt_speed("underground-belt", "express-underground-belt", 4)
 
-    bobmods.logistics.set_belt_speed("splitter", "bob-turbo-splitter", 5)
-    bobmods.logistics.set_belt_speed("transport-belt", "bob-turbo-transport-belt", 5)
-    bobmods.logistics.set_belt_speed("underground-belt", "bob-turbo-underground-belt", 5)
+    bobmods.logistics.set_belt_speed("splitter", "turbo-splitter", 5)
+    bobmods.logistics.set_belt_speed("transport-belt", "turbo-transport-belt", 5)
+    bobmods.logistics.set_belt_speed("underground-belt", "turbo-underground-belt", 5)
 
     bobmods.logistics.set_belt_speed("splitter", "bob-ultimate-splitter", 6)
     bobmods.logistics.set_belt_speed("transport-belt", "bob-ultimate-transport-belt", 6)
@@ -816,9 +829,9 @@ if settings.startup["bobmods-logistics-beltoverhaulspeed"].value == true then
     bobmods.logistics.set_belt_speed("transport-belt", "express-transport-belt", 3)
     bobmods.logistics.set_belt_speed("underground-belt", "express-underground-belt", 3)
 
-    bobmods.logistics.set_belt_speed("splitter", "bob-turbo-splitter", 4)
-    bobmods.logistics.set_belt_speed("transport-belt", "bob-turbo-transport-belt", 4)
-    bobmods.logistics.set_belt_speed("underground-belt", "bob-turbo-underground-belt", 4)
+    bobmods.logistics.set_belt_speed("splitter", "turbo-splitter", 4)
+    bobmods.logistics.set_belt_speed("transport-belt", "turbo-transport-belt", 4)
+    bobmods.logistics.set_belt_speed("underground-belt", "turbo-underground-belt", 4)
 
     bobmods.logistics.set_belt_speed("splitter", "bob-ultimate-splitter", 5)
     bobmods.logistics.set_belt_speed("transport-belt", "bob-ultimate-transport-belt", 5)
@@ -832,13 +845,13 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
     bobmods.logistics.set_belt_distance("underground-belt", 2)
     bobmods.logistics.set_belt_distance("fast-underground-belt", 3)
     bobmods.logistics.set_belt_distance("express-underground-belt", 4)
-    bobmods.logistics.set_belt_distance("bob-turbo-underground-belt", 5)
+    bobmods.logistics.set_belt_distance("turbo-underground-belt", 5)
     bobmods.logistics.set_belt_distance("bob-ultimate-underground-belt", 6)
   else
     bobmods.logistics.set_belt_distance("underground-belt", 1)
     bobmods.logistics.set_belt_distance("fast-underground-belt", 2)
     bobmods.logistics.set_belt_distance("express-underground-belt", 3)
-    bobmods.logistics.set_belt_distance("bob-turbo-underground-belt", 4)
+    bobmods.logistics.set_belt_distance("turbo-underground-belt", 4)
     bobmods.logistics.set_belt_distance("bob-ultimate-underground-belt", 5)
   end
 else

@@ -87,7 +87,7 @@ data:extend({
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 400000,
+    weight = 500000,
   },
 
   {
@@ -179,7 +179,7 @@ data:extend({
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 400000,
+    weight = 500000,
   },
 
   {
@@ -273,7 +273,7 @@ data:extend({
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 400000,
+    weight = 500000,
   },
 
   {
@@ -367,7 +367,7 @@ data:extend({
       filename = "__base__/sound/item/turret-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 400000,
+    weight = 500000,
   },
 
   {

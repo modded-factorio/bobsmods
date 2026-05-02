@@ -8,6 +8,7 @@ local beacon_pick = {
 }
 
 data.raw.item["beacon"].subgroup = "module-beacon"
+data.raw.item["beacon"].weight = 50000
 
 data.raw.beacon["beacon"].fast_replaceable_group = "beacon"
 data.raw.beacon["beacon"].beacon_counter = "total"
@@ -24,6 +25,7 @@ data:extend({
     drop_sound = beacon_drop_move,
     inventory_move_sound = beacon_drop_move,
     pick_sound = beacon_pick,
+    weight = 50000,
   },
 
   {
@@ -37,6 +39,7 @@ data:extend({
     drop_sound = beacon_drop_move,
     inventory_move_sound = beacon_drop_move,
     pick_sound = beacon_pick,
+    weight = 50000,
   },
 
   util.merge({

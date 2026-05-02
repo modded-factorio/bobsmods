@@ -27,7 +27,7 @@ if mods["bobequipment"] then
       for k = 1, 4 do
         grid.put{name = "bob-personal-laser-defense-equipment-6"}
         grid.put{name = "bob-energy-shield-mk6-equipment"}
-        grid.put{name = "bob-battery-mk6-equipment"}
+        grid.put{name = "bob-battery-mk5-equipment"}
       end
 
       for k, equipment in pairs(grid.equipment) do

@@ -257,7 +257,7 @@ end
 
 bobmods.lib.tech.add_prerequisite("bob-robo-modular-3", "processing-unit")
 
-if data.raw.item["bob-lithium-ion-battery"] and data.raw.technology["bob-battery-2"] then
+if data.raw.item["bob-battery-2"] and data.raw.technology["bob-battery-2"] then
   if data.raw.technology["bob-robotics-3"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-3", "bob-battery-2")
   else
@@ -282,7 +282,7 @@ else
   end
 end
 
-if data.raw.item["bob-silver-zinc-battery"] and data.raw.technology["bob-battery-3"] then
+if data.raw.item["bob-battery-3"] and data.raw.technology["bob-battery-3"] then
   if data.raw.technology["bob-robotics-4"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-4", "bob-battery-3")
   else

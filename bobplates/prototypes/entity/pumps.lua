@@ -629,7 +629,7 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] and mods["space-age"] then
+if feature_flags["freezing"] then
   data.raw["assembling-machine"]["bob-air-pump"].heating_energy = "25kW"
   data.raw["assembling-machine"]["bob-air-pump-2"].heating_energy = "25kW"
   data.raw["assembling-machine"]["bob-air-pump-3"].heating_energy = "25kW"
@@ -639,257 +639,265 @@ if feature_flags["freezing"] and mods["space-age"] then
   data.raw["assembling-machine"]["bob-water-pump-3"].heating_energy = "25kW"
   data.raw["assembling-machine"]["bob-water-pump-4"].heating_energy = "25kW"
 
-  local frozenpatch1 = {
-    north = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.5, -0.85 },
+  if mods["space-age"] then
+    local function frozenpatch1()
+      return {
+        north = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, -0.85 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, 1 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-north-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+            },
+          },
         },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.5, 1 },
+        east = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+              width = 80,
+              height = 128,
+              x = 48,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.35, 0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.7, 0.5 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-east-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+            },
+          },
         },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-north-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
+        south = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, -0.85 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, 1 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-south-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+            },
+          },
         },
-      },
-    },
-    east = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
-          width = 80,
-          height = 128,
-          x = 48,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.35, 0.5 },
+        west = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.7, -0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.7, -0.5 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-west-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+            },
+          },
         },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.7, 0.5 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-east-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-        },
-      },
-    },
-    south = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.5, -0.85 },
-        },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.5, 1 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-south-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-        },
-      },
-    },
-    west = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.7, -0.5 },
-        },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.7, -0.5 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-west-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-        },
-      },
-    },
-  }
+      }
+    end
 
-  local frozenpatch2 = {
-    north = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.5, -0.85 },
+    local function frozenpatch2()
+      return {
+        north = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, -0.85 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.5, 1 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-north-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+              shift = { -1, 0 },
+            },
+          },
         },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.5, 1 },
+        east = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.7, -0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.7, -0.5 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-east-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+              shift = { 0, -1 },
+            },
+          },
         },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-north-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-          shift = { -1, 0 },
+        south = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, -0.85 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.5, 1 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-south-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+              shift = { 1, 0 },
+            },
+          },
         },
-      },
-    },
-    east = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.7, -0.5 },
+        west = {
+          layers = {
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { -0.7, 0.5 },
+            },
+            {
+              filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
+              width = 128,
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              shift = { 0.7, 0.5 },
+            },
+            {
+              filename = "__bobplates__/graphics/entity/pump/pump-west-frozen.png",
+              width = 80,
+              height = 80,
+              priority = "extra-high",
+              shift = { 0, 1 },
+            },
+          },
         },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.7, -0.5 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-east-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-          shift = { 0, -1 },
-        },
-      },
-    },
-    south = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-down.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.5, -0.85 },
-        },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-up.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.5, 1 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-south-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-          shift = { 1, 0 },
-        },
-      },
-    },
-    west = {
-      layers = {
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-right.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { -0.7, 0.5 },
-        },
-        {
-          filename = "__space-age__/graphics/entity/frozen/pipe/pipe-ending-left.png",
-          width = 128,
-          height = 128,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = { 0.7, 0.5 },
-        },
-        {
-          filename = "__bobplates__/graphics/entity/pump/pump-west-frozen.png",
-          width = 80,
-          height = 80,
-          priority = "extra-high",
-          shift = { 0, 1 },
-        },
-      },
-    },
-  }
+      }
+    end
 
-  data.raw["assembling-machine"]["bob-air-pump"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-air-pump-2"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-air-pump-3"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-air-pump-4"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-water-pump"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-water-pump-2"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-water-pump-3"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-water-pump-4"].graphics_set.frozen_patch = frozenpatch1
-  data.raw["assembling-machine"]["bob-air-pump"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-air-pump-2"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-air-pump-3"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-air-pump-4"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-water-pump"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-water-pump-2"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-water-pump-3"].graphics_set_flipped.frozen_patch = frozenpatch2
-  data.raw["assembling-machine"]["bob-water-pump-4"].graphics_set_flipped.frozen_patch = frozenpatch2
+    data.raw["assembling-machine"]["bob-air-pump"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-air-pump-2"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-air-pump-3"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-air-pump-4"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-water-pump"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-water-pump-2"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-water-pump-3"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-water-pump-4"].graphics_set.frozen_patch = frozenpatch1()
+    data.raw["assembling-machine"]["bob-air-pump"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-air-pump-2"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-air-pump-3"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-air-pump-4"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-water-pump"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-water-pump-2"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-water-pump-3"].graphics_set_flipped.frozen_patch = frozenpatch2()
+    data.raw["assembling-machine"]["bob-water-pump-4"].graphics_set_flipped.frozen_patch = frozenpatch2()
 
-  local pcfrozenpatch = data.raw.pipe.pipe.fluid_box.pipe_covers_frozen
-  data.raw["assembling-machine"]["bob-air-pump"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump-2"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump-3"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump-4"].fluid_boxes[1].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump-2"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump-3"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-air-pump-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump-2"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump-3"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
-  data.raw["assembling-machine"]["bob-water-pump-4"].fluid_boxes[2].pipe_covers_frozen = pcfrozenpatch
+    local function frozenpatchcovers()
+      return util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
+    end
+    data.raw["assembling-machine"]["bob-air-pump"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump-2"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump-3"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump-4"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump-2"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump-3"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump-4"].fluid_boxes[1].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump-2"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump-3"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-air-pump-4"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump-2"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump-3"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+    data.raw["assembling-machine"]["bob-water-pump-4"].fluid_boxes[2].pipe_covers_frozen = frozenpatchcovers()
+  end
 end

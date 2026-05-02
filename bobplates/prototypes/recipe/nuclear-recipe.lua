@@ -249,7 +249,7 @@ data:extend({
         ignored_by_productivity = 10,
         ignored_by_stats = 10,
       },
-      { type = "item", name = "bob-lithium", amount = 1, probability = 0.1 },
+      { type = "item", name = "lithium-plate", amount = 1, probability = 0.1 },
       { type = "item", name = "bob-fusion-catalyst", amount = 1 },
     },
     crafting_machine_tint = {
