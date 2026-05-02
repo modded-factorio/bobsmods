@@ -126,7 +126,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         enabled = false,
         ingredients = {
           { type = "fluid", name = "bob-brine", amount = 10 },
-          { type = "fluid", name = "bob-ammonia", amount = 25 },
+          { type = "fluid", name = "ammonia", amount = 25 },
         },
         results = {
           { type = "fluid", name = "bob-ammoniated-brine", amount = 10 },
@@ -204,7 +204,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         },
         results = {
           { type = "item", name = "bob-calcium-chloride", amount = 1 },
-          { type = "fluid", name = "bob-ammonia", amount = 50 },
+          { type = "fluid", name = "ammonia", amount = 50 },
           { type = "fluid", name = "water", amount = 10 },
         },
         crafting_machine_tint = {

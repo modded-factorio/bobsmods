@@ -1,7 +1,6 @@
 {
   "fluid":
   [
-    ["ammonia", "bob-ammonia"],
     ["ammoniated-brine", "bob-ammoniated-brine"],
     ["brine", "bob-brine"],
     ["carbon-dioxide", "bob-carbon-dioxide"],
@@ -13,7 +12,6 @@
   ],
   "item":
   [
-    ["ammonia-barrel", "bob-ammonia-barrel"],
     ["ammoniated-brine-barrel", "bob-ammoniated-brine-barrel"],
     ["ammonium-chloride", "bob-ammonium-chloride"],
     ["brine-barrel", "bob-brine-barrel"],
@@ -34,7 +32,6 @@
   ],
   "recipe":
   [
-    ["ammonia", "bob-ammonia"],
     ["ammoniated-brine", "bob-ammoniated-brine"],
     ["ammonium-chloride-recycling", "bob-ammonium-chloride-reprocessing"],
     ["brine", "bob-brine"],
@@ -42,7 +39,6 @@
     ["carbon-dioxide", "bob-carbon-dioxide"],
     ["carbon-dioxide-oil-processing", "bob-carbon-dioxide-oil-processing"],
     ["dinitrogen-tetroxide", "bob-dinitrogen-tetroxide"],
-    ["empty-ammonia-barrel", "empty-bob-ammonia-barrel"],
     ["empty-ammoniated-brine-barrel", "empty-bob-ammoniated-brine-barrel"],
     ["empty-brine-barrel", "empty-bob-brine-barrel"],
     ["empty-carbon-dioxide-barrel", "empty-bob-carbon-dioxide-barrel"],
@@ -52,7 +48,6 @@
     ["empty-nitric-oxide-barrel", "empty-bob-nitric-oxide-barrel"],
     ["empty-sour-gas-barrel", "empty-bob-sour-gas-barrel"],
     ["enriched-fuel-from-hydrazine", "bob-enriched-fuel-from-hydrazine"],
-    ["fill-ammonia-barrel", "bob-ammonia-barrel"],
     ["fill-ammoniated-brine-barrel", "bob-ammoniated-brine-barrel"],
     ["fill-brine-barrel", "bob-brine-barrel"],
     ["fill-carbon-dioxide-barrel", "bob-carbon-dioxide-barrel"],
@@ -74,7 +69,6 @@
     ["sodium-cobaltate", "bob-sodium-cobaltate"],
     ["sodium-perchlorate", "bob-sodium-perchlorate"],
     ["solid-fuel-from-sour-gas", "bob-solid-fuel-from-sour-gas"],
-    ["void-ammonia", "void-bob-ammonia"],
     ["void-carbon-dioxide", "void-bob-carbon-dioxide"],
     ["void-sour-gas", "void-bob-sour-gas"]
   ],
