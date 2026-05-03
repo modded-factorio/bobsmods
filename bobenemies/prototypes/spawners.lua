@@ -107,6 +107,26 @@ data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[4].layers[2]
   bobmods.enemies.spitter_spawner_tint
 data.raw["unit-spawner"]["biter-spawner"].icon = "__bobenemies__/graphics/icons/biter-spawner.png"
 data.raw["unit-spawner"]["spitter-spawner"].icon = "__bobenemies__/graphics/icons/spitter-spawner.png"
+data.raw.corpse["biter-spawner-corpse"].animation_render_layer = "corpse"
+data.raw.corpse["biter-spawner-corpse"].final_render_layer = "corpse"
+data.raw.corpse["spitter-spawner-corpse"].animation_render_layer = "corpse"
+data.raw.corpse["spitter-spawner-corpse"].final_render_layer = "corpse"
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[1].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[2].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[3].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[4].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[1].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[2].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[3].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[4].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[1].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[2].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[3].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[4].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[1].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[2].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[3].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[4].layers)
 
 local new_biter_spawner = table.deepcopy(data.raw["unit-spawner"]["biter-spawner"])
 new_biter_spawner.name = "bob-0-biter-spawner"
