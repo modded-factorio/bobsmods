@@ -13,6 +13,7 @@ Date: ???
       - Swapped the order of Lithium-ion batteries and Silver-zinc batteries when Space Age is enabled
       - Combined Bob's Lithium and Space Age's Lithium
       - Changed the internal name of Bob's batteries to "bob-battery-2" and "bob-battery-3"
+    - Disallowed Compressed air recipe in space #577
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

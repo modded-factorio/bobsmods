@@ -953,4 +953,10 @@ end
 if mods["space-age"] then
   bobmods.lib.recipe.replace_ingredient("bob-lithium-chloride", "bob-lithia-water", "lithium-brine")
   bobmods.lib.recipe.hide("bob-pure-water-from-lithia")
+  data.raw.recipe["bob-liquid-air"].surface_conditions = {
+    {
+      property = "pressure",
+      min = 10,
+    },
+  }
 end
