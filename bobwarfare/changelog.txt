@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed Scatter cannnon shells missing rock, trees, etc. #561
     - Fixed Biters / Spitters deliberately targeting walls and gates. #562
+    - Fixed Spidertron gatling gun missing locale #582
   Changes:
     - Disallowed certain entities in space #551
     - Set item weights #553
