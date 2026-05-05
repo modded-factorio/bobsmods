@@ -192,7 +192,7 @@ if mods["space-age"] and data.raw.item["bob-stainless-steel-alloy"] then
   bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "bob-tungsten-processing")
   bobmods.lib.recipe.add_ingredient("bob-tank-2", { type = "item", name = "bob-stainless-steel-bearing", amount = 15 })
   bobmods.lib.recipe.replace_ingredient("bob-tank-2", "iron-gear-wheel", "bob-stainless-steel-gear-wheel")
-  bobmods.lib.tech.add_prerequisite("bob-tank-2", "bob-tungsten-processing")
+  bobmods.lib.tech.add_prerequisite("bob-tanks-2", "bob-tungsten-processing")
 elseif data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-2", "steel-plate", "bob-titanium-plate")
   bobmods.lib.recipe.replace_ingredient("bob-artillery-turret-2", "iron-gear-wheel", "bob-titanium-gear-wheel")
