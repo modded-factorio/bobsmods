@@ -6,6 +6,7 @@ Date: ???
   Changes:
     - Set minimum values for module settings #540
     - Adjusted modules tech costs #545
+    - Set item weights #553
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 18. 01. 2026

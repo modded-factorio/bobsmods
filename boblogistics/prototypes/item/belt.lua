@@ -15,6 +15,12 @@ local mechanical_pick = {
   volume = 0.8,
 }
 
+data.raw.item["transport-belt"].weight = 10000
+data.raw.item["underground-belt"].weight = 20000
+data.raw.item["fast-transport-belt"].weight = 10000
+data.raw.item["fast-underground-belt"].weight = 20000
+data.raw.item["fast-splitter"].weight = 20000
+
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   data:extend({
     {
@@ -29,6 +35,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       drop_sound = belt_drop_move,
       inventory_move_sound = belt_drop_move,
       pick_sound = belt_pick,
+      weight = 10000,
     },
     {
       type = "item",
@@ -42,6 +49,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       drop_sound = mechanical_drop_move,
       inventory_move_sound = mechanical_drop_move,
       pick_sound = mechanical_pick,
+      weight = 20000,
     },
     {
       type = "item",
@@ -63,38 +71,40 @@ end
 data:extend({
   {
     type = "item",
-    name = "bob-turbo-transport-belt",
+    name = "turbo-transport-belt",
     icon = "__boblogistics__/graphics/icons/purple-transport-belt.png",
     icon_size = 32,
     subgroup = "bob-logistic-tier-4",
     order = "a[transport-belt]-d[turbo-transport-belt]",
-    place_result = "bob-turbo-transport-belt",
+    place_result = "turbo-transport-belt",
     stack_size = 100,
     drop_sound = belt_drop_move,
     inventory_move_sound = belt_drop_move,
     pick_sound = belt_pick,
+    weight = 10000,
   },
   {
     type = "item",
-    name = "bob-turbo-underground-belt",
+    name = "turbo-underground-belt",
     icon = "__boblogistics__/graphics/icons/purple-transport-belt-to-ground.png",
     icon_size = 32,
     subgroup = "bob-logistic-tier-4",
     order = "b[underground-belt]-d[turbo-underground-belt]",
-    place_result = "bob-turbo-underground-belt",
+    place_result = "turbo-underground-belt",
     stack_size = 50,
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
     pick_sound = mechanical_pick,
+    weight = 20000,
   },
   {
     type = "item",
-    name = "bob-turbo-splitter",
+    name = "turbo-splitter",
     icon = "__boblogistics__/graphics/icons/purple-splitter.png",
     icon_size = 32,
     subgroup = "bob-logistic-tier-4",
     order = "c[splitter]-d[turbo-splitter]",
-    place_result = "bob-turbo-splitter",
+    place_result = "turbo-splitter",
     stack_size = 50,
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
@@ -114,6 +124,7 @@ data:extend({
     drop_sound = belt_drop_move,
     inventory_move_sound = belt_drop_move,
     pick_sound = belt_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -127,6 +138,7 @@ data:extend({
     drop_sound = mechanical_drop_move,
     inventory_move_sound = mechanical_drop_move,
     pick_sound = mechanical_pick,
+    weight = 20000,
   },
   {
     type = "item",

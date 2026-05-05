@@ -132,15 +132,15 @@ if data.raw.item["bob-aluminium-plate"] then
   bobmods.lib.tech.add_prerequisite("military-3", "bob-aluminium-processing")
 end
 
-if data.raw.item["bob-lithium-ion-battery"] then
+if data.raw.item["bob-battery-2"] then
   bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-3", "bob-battery-2")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-emerald", "battery", "bob-lithium-ion-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-amethyst", "battery", "bob-lithium-ion-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-emerald", "battery", "bob-battery-2")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-amethyst", "battery", "bob-battery-2")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "battery", "bob-battery-2")
   bobmods.lib.tech.add_prerequisite("bob-laser-turrets-3", "bob-battery-2")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-4", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-4", "battery", "bob-battery-2")
 
-  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-2", "battery", "bob-lithium-ion-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-2", "battery", "bob-battery-2")
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-2", "bob-battery-2")
 end
 
@@ -207,14 +207,14 @@ if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("bob-artillery-turret-2", "bob-ceramics")
 end
 
-if data.raw.item["bob-silver-zinc-battery"] then
+if data.raw.item["bob-battery-3"] then
   bobmods.lib.tech.add_prerequisite("bob-laser-rifle-ammo-5", "bob-battery-3")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-diamond", "battery", "bob-silver-zinc-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-topaz", "battery", "bob-silver-zinc-battery")
-  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-diamond", "battery", "bob-battery-3")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-rifle-battery-topaz", "battery", "bob-battery-3")
+  bobmods.lib.recipe.replace_ingredient("bob-laser-turret-5", "battery", "bob-battery-3")
   bobmods.lib.tech.add_prerequisite("bob-laser-turrets-5", "bob-battery-3")
 
-  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-3", "battery", "bob-silver-zinc-battery")
+  bobmods.lib.recipe.replace_ingredient("bob-plasma-turret-3", "battery", "bob-battery-3")
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-3", "bob-battery-3")
 end
 

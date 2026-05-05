@@ -19,6 +19,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -31,36 +32,43 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
     name = "bob-lead-plate",
     icon = "__bobplates__/graphics/icons/plate/lead-plate.png",
-    icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-f[bob-lead-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
+    weight = 2500,
   },
   {
     type = "item",
     name = "bob-gold-plate",
     icon = "__bobplates__/graphics/icons/plate/gold-plate.png",
-    icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-d[bob-gold-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
+    weight = 2500,
   },
   {
     type = "item",
     name = "bob-nickel-plate",
     icon = "__bobplates__/graphics/icons/plate/nickel-plate.png",
-    icon_size = 64,
     subgroup = "bob-material",
     order = "c-a-f[bob-nickel-plate]",
     stack_size = 200,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -73,6 +81,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -82,6 +91,10 @@ data:extend({
     subgroup = "bob-material",
     order = "c-a-g[bob-aluminium-plate]",
     stack_size = 200,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -94,6 +107,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 500,
   },
   {
     type = "item",
@@ -106,6 +120,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 2500,
   },
   {
     type = "item",
@@ -127,6 +142,7 @@ data:extend({
       filename = "__base__/sound/item/brick-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 1000,
   },
   {
     type = "item",
@@ -139,14 +155,15 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
 })
 
-if not data.raw.item.lithium then
+if not data.raw.item["lithium-plate"] then
   data:extend({
     {
       type = "item",
-      name = "lithium",
+      name = "lithium-plate",
       localised_name = { "item-name.bob-lithium" },
       icon = "__bobplates__/graphics/icons/plate/lithium-plate.png",
       icon_size = 64,

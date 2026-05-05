@@ -1,6 +1,6 @@
 {
   "name": "bobequipment",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "factorio_version": "2.0",
   "title": "Bob's Personal Equipment mod",
   "author": "Bobingabout",
@@ -8,10 +8,11 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 2.0.33",
-    "boblibrary >= 2.0.0",
+    "boblibrary >= 2.0.4",
     "? bobenemies >= 2.0.0",
-    "? bobplates >= 2.0.0",
-    "? boblogistics >= 2.0.0"
+    "? bobplates >= 2.0.6",
+    "? boblogistics >= 2.0.0",
+    "(?) space-age"
   ],
   "description": "Requires Bob's functions library mod.\n\nExpands the range of equipment available in base mod for the modular armor.\n\nAlthough it can function as a stand alone mod, it is intended to be used with the full Bob's Mods set."
 }

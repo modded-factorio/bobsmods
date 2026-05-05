@@ -45,3 +45,18 @@ if mods["aai-industry"] then
     end
   end
 end
+
+if mods["space-age"] then
+  bobmods.lib.tech.global_replace_prerequisite("turbo-transport-belt", "logistics-4")
+  if data.raw.technology["turbo-transport-belt"].effects then
+    for _, effect in pairs(data.raw.technology["turbo-transport-belt"].effects) do
+      if effect.type ~= "unlock-recipe" then
+        table.insert(data.raw.technology["logistics-4"].effects, effect)
+      elseif not bobmods.lib.tech.has_recipe_unlock("logistics-4", effect.recipe) then
+        table.insert(data.raw.technology["logistics-4"].effects, effect)
+      end
+    end
+    data.raw.technology["turbo-transport-belt"].effects = {}
+  end
+  bobmods.lib.tech.hide("turbo-transport-belt")
+end

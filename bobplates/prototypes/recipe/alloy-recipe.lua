@@ -58,7 +58,7 @@ data:extend({
     category = "bob-mixing-furnace",
     energy_required = 6.4,
     ingredients = {
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "bob-tungsten-oxide", amount = 1 },
     },
     results = {
@@ -76,7 +76,7 @@ data:extend({
     category = "bob-mixing-furnace",
     energy_required = 12.8,
     ingredients = {
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "bob-powdered-tungsten", amount = 1 },
     },
     results = {

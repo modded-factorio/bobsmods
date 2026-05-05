@@ -28,6 +28,7 @@ data:extend({
       filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 2000,
   },
   {
     type = "item",
@@ -52,6 +53,7 @@ data:extend({
       volume = 0.8,
       speed = 0.85,
     },
+    weight = 5000,
   },
   {
     type = "item",
@@ -64,6 +66,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -76,6 +79,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -88,6 +92,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -100,6 +105,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 5000,
   },
   {
     type = "item",
@@ -112,6 +118,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 5000,
   },
 })
 
@@ -136,6 +143,7 @@ data:extend({
       filename = "__base__/sound/item/metal-small-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 500,
   },
   {
     type = "item",
@@ -160,6 +168,7 @@ data:extend({
       volume = 0.8,
       speed = 0.85,
     },
+    weight = 2500,
   },
   {
     type = "item",
@@ -184,6 +193,7 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
+    weight = 5000,
   },
   {
     type = "item",
@@ -208,6 +218,7 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
+    weight = 10000,
   },
   {
     type = "item",
@@ -220,6 +231,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -232,6 +244,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -244,6 +257,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -256,6 +270,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -268,6 +283,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -280,6 +296,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -292,6 +309,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -304,6 +322,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 20000,
   },
   {
     type = "item",
@@ -316,6 +335,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 10000,
   },
   {
     type = "item",
@@ -328,6 +348,7 @@ data:extend({
     drop_sound = electronic_board_drop_move,
     inventory_move_sound = electronic_board_drop_move,
     pick_sound = electronic_board_pick,
+    weight = 20000,
   },
 })
 
@@ -344,6 +365,7 @@ if mods["quality"] then
       drop_sound = electronic_board_drop_move,
       inventory_move_sound = electronic_board_drop_move,
       pick_sound = electronic_board_pick,
+      weight = 5000,
     },
     {
       type = "item",
@@ -356,6 +378,7 @@ if mods["quality"] then
       drop_sound = electronic_board_drop_move,
       inventory_move_sound = electronic_board_drop_move,
       pick_sound = electronic_board_pick,
+      weight = 10000,
     },
     {
       type = "item",
@@ -368,6 +391,7 @@ if mods["quality"] then
       drop_sound = electronic_board_drop_move,
       inventory_move_sound = electronic_board_drop_move,
       pick_sound = electronic_board_pick,
+      weight = 20000,
     },
   })
 end

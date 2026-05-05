@@ -24,13 +24,13 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     },
     {
       type = "recipe",
-      name = "bob-turbo-transport-belt",
+      name = "turbo-transport-belt",
       enabled = false,
       ingredients = {
         { type = "item", name = "steel-plate", amount = 2 },
         { type = "item", name = "iron-gear-wheel", amount = 4 },
       },
-      results = { { type = "item", name = "bob-turbo-transport-belt", amount = 1 } },
+      results = { { type = "item", name = "turbo-transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
@@ -77,12 +77,12 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       { type = "item", name = "fast-transport-belt", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
-      "bob-turbo-transport-belt",
+      "turbo-transport-belt",
       { type = "item", name = "express-transport-belt", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "bob-ultimate-transport-belt",
-      { type = "item", name = "bob-turbo-transport-belt", amount = 1 }
+      { type = "item", name = "turbo-transport-belt", amount = 1 }
     )
     bobmods.lib.recipe.add_ingredient(
       "transport-belt",
@@ -127,7 +127,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "bob-turbo-underground-belt",
+        name = "turbo-underground-belt",
         energy_required = 4,
         enabled = false,
         ingredients = {
@@ -135,7 +135,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { type = "item", name = "steel-plate", amount = 14 },
           { type = "item", name = "iron-gear-wheel", amount = 20 },
         },
-        results = { { type = "item", name = "bob-turbo-underground-belt", amount = 2 } },
+        results = { { type = "item", name = "turbo-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -143,7 +143,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         energy_required = 5,
         enabled = false,
         ingredients = {
-          { type = "item", name = "bob-turbo-underground-belt", amount = 2 },
+          { type = "item", name = "turbo-underground-belt", amount = 2 },
           { type = "item", name = "steel-plate", amount = 14 },
           { type = "item", name = "iron-gear-wheel", amount = 20 },
         },
@@ -152,7 +152,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
       {
         type = "recipe",
-        name = "bob-turbo-splitter",
+        name = "turbo-splitter",
         enabled = false,
         energy_required = 2,
         ingredients = {
@@ -161,7 +161,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
           { type = "item", name = "iron-gear-wheel", amount = 14 },
           { type = "item", name = "processing-unit", amount = 5 },
         },
-        results = { { type = "item", name = "bob-turbo-splitter", amount = 1 } },
+        results = { { type = "item", name = "turbo-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -169,7 +169,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
         enabled = false,
         energy_required = 2,
         ingredients = {
-          { type = "item", name = "bob-turbo-splitter", amount = 1 },
+          { type = "item", name = "turbo-splitter", amount = 1 },
           { type = "item", name = "steel-plate", amount = 8 },
           { type = "item", name = "iron-gear-wheel", amount = 14 },
           { type = "item", name = "processing-unit", amount = 5 },
@@ -213,14 +213,14 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     data:extend({
       {
         type = "recipe",
-        name = "bob-turbo-underground-belt",
+        name = "turbo-underground-belt",
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "item", name = "bob-turbo-transport-belt", amount = 5 },
+          { type = "item", name = "turbo-transport-belt", amount = 5 },
           { type = "item", name = "steel-plate", amount = 4 },
         },
-        results = { { type = "item", name = "bob-turbo-underground-belt", amount = 2 } },
+        results = { { type = "item", name = "turbo-underground-belt", amount = 2 } },
       },
       {
         type = "recipe",
@@ -236,16 +236,16 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 
       {
         type = "recipe",
-        name = "bob-turbo-splitter",
+        name = "turbo-splitter",
         enabled = false,
         energy_required = 2,
         ingredients = {
-          { type = "item", name = "bob-turbo-transport-belt", amount = 2 },
+          { type = "item", name = "turbo-transport-belt", amount = 2 },
           { type = "item", name = "steel-plate", amount = 4 },
           { type = "item", name = "iron-gear-wheel", amount = 4 },
           { type = "item", name = "processing-unit", amount = 5 },
         },
-        results = { { type = "item", name = "bob-turbo-splitter", amount = 1 } },
+        results = { { type = "item", name = "turbo-splitter", amount = 1 } },
       },
       {
         type = "recipe",
@@ -279,27 +279,27 @@ else
   data:extend({
     {
       type = "recipe",
-      name = "bob-turbo-transport-belt",
+      name = "turbo-transport-belt",
       enabled = false,
       ingredients = {
         { type = "item", name = "express-transport-belt", amount = 1 },
         { type = "item", name = "iron-gear-wheel", amount = 20 },
       },
-      results = { { type = "item", name = "bob-turbo-transport-belt", amount = 1 } },
+      results = { { type = "item", name = "turbo-transport-belt", amount = 1 } },
     },
     {
       type = "recipe",
-      name = "bob-turbo-underground-belt",
+      name = "turbo-underground-belt",
       enabled = false,
       ingredients = {
         { type = "item", name = "express-underground-belt", amount = 2 },
         { type = "item", name = "iron-gear-wheel", amount = 100 },
       },
-      results = { { type = "item", name = "bob-turbo-underground-belt", amount = 2 } },
+      results = { { type = "item", name = "turbo-underground-belt", amount = 2 } },
     },
     {
       type = "recipe",
-      name = "bob-turbo-splitter",
+      name = "turbo-splitter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -307,7 +307,7 @@ else
         { type = "item", name = "processing-unit", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
       },
-      results = { { type = "item", name = "bob-turbo-splitter", amount = 2 } },
+      results = { { type = "item", name = "turbo-splitter", amount = 2 } },
     },
 
     {
@@ -315,7 +315,7 @@ else
       name = "bob-ultimate-transport-belt",
       enabled = false,
       ingredients = {
-        { type = "item", name = "bob-turbo-transport-belt", amount = 1 },
+        { type = "item", name = "turbo-transport-belt", amount = 1 },
         { type = "item", name = "iron-gear-wheel", amount = 20 },
       },
       results = { { type = "item", name = "bob-ultimate-transport-belt", amount = 2 } },
@@ -325,7 +325,7 @@ else
       name = "bob-ultimate-underground-belt",
       enabled = false,
       ingredients = {
-        { type = "item", name = "bob-turbo-underground-belt", amount = 2 },
+        { type = "item", name = "turbo-underground-belt", amount = 2 },
         { type = "item", name = "iron-gear-wheel", amount = 120 },
       },
       results = { { type = "item", name = "bob-ultimate-underground-belt", amount = 2 } },
@@ -336,7 +336,7 @@ else
       enabled = false,
       energy_required = 2,
       ingredients = {
-        { type = "item", name = "bob-turbo-splitter", amount = 1 },
+        { type = "item", name = "turbo-splitter", amount = 1 },
         { type = "item", name = "processing-unit", amount = 10 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
       },
@@ -346,9 +346,9 @@ else
 end
 
 if mods["space-age"] then
-  data.raw.recipe["bob-turbo-transport-belt"].category = "pressing"
-  data.raw.recipe["bob-turbo-underground-belt"].category = "pressing"
-  data.raw.recipe["bob-turbo-splitter"].category = "pressing"
+  data.raw.recipe["turbo-transport-belt"].category = "pressing"
+  data.raw.recipe["turbo-underground-belt"].category = "pressing"
+  data.raw.recipe["turbo-splitter"].category = "pressing"
   data.raw.recipe["bob-ultimate-transport-belt"].category = "pressing"
   data.raw.recipe["bob-ultimate-underground-belt"].category = "pressing"
   data.raw.recipe["bob-ultimate-splitter"].category = "pressing"

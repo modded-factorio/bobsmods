@@ -50,7 +50,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lead-oxide", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "bob-lead-plate", amount = 2 } },
     allow_decomposition = false,
@@ -159,7 +159,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-alumina", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "bob-aluminium-plate", amount = 2 } },
     allow_decomposition = false,
@@ -176,7 +176,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "bob-rutile-ore", amount = 2 },
     },
     results = { { type = "item", name = "bob-titanium-plate", amount = 2 } },
@@ -194,26 +194,10 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-calcium-chloride", amount = 2 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "item", name = "bob-quartz", amount = 2 },
     },
     results = { { type = "item", name = "bob-silicon-plate", amount = 2 } },
-    allow_decomposition = false,
-    allow_productivity = true,
-  },
-
-  {
-    type = "recipe",
-    name = "bob-lithium",
-    category = "bob-electrolysis",
-    subgroup = "bob-material-electrolysis",
-    energy_required = 3.2,
-    enabled = false,
-    auto_recycle = false,
-    ingredients = {
-      { type = "item", name = "bob-lithium-chloride", amount = 1 },
-    },
-    results = { { type = "item", name = "bob-lithium", amount = 1 } },
     allow_decomposition = false,
     allow_productivity = true,
   },
@@ -221,9 +205,7 @@ data:extend({
 
 
 
-if not mods["space-age"] then
-else
-
+if mods["space-age"] then
   data:extend({
     {
       type = "recipe",
@@ -248,4 +230,26 @@ else
   bobmods.lib.recipe.set_category("tungsten-plate", "metallurgy")
   bobmods.lib.recipe.remove_ingredient("tungsten-plate", "bob-nickel-plate")
   bobmods.lib.recipe.add_ingredient("tungsten-plate", { type = "fluid", name = "molten-iron", amount = 40 })
+
+  bobmods.lib.recipe.remove_ingredient("lithium", "lithium-brine")
+  bobmods.lib.recipe.add_ingredient("lithium", { type = "item", name = "bob-lithium-chloride", amount = 5 })
+else
+  data:extend({
+    {
+      type = "recipe",
+      name = "lithium-plate",
+      localised_name = { "item-name.bob-lithium" },
+      category = "bob-electrolysis",
+      subgroup = "bob-material-electrolysis",
+      energy_required = 3.2,
+      enabled = false,
+      auto_recycle = false,
+      ingredients = {
+        { type = "item", name = "bob-lithium-chloride", amount = 1 },
+      },
+      results = { { type = "item", name = "lithium-plate", amount = 1 } },
+      allow_decomposition = false,
+      allow_productivity = true,
+    },
+  })
 end

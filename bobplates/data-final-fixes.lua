@@ -17,6 +17,7 @@ if mods["aai-industry"] then
 end
 
 if mods["space-age"] then
-  bobmods.lib.tech.replace_prerequisite_in_all("bob-tungsten-alloy-processing", "metallurgic-science-pack")
+  bobmods.lib.tech.global_replace_prerequisite("bob-tungsten-alloy-processing", "metallurgic-science-pack")
   bobmods.lib.tech.hide("bob-tungsten-alloy-processing")
+  bobmods.lib.tech.global_replace_prerequisite("bob-lithium-processing", "cryogenic-science-pack")
 end

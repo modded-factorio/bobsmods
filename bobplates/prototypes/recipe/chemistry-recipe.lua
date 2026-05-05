@@ -700,7 +700,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "copper-ore", amount = 7 },
       { type = "item", name = "stone", amount = 1 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "fluid", name = "bob-hydrogen", amount = 5 },
     },
     results = {
@@ -725,7 +725,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lead-oxide", amount = 7 },
-      { type = "item", name = "bob-carbon", amount = 3 },
+      { type = "item", name = "carbon", amount = 3 },
       { type = "item", name = "bob-nickel-plate", amount = 1 },
     },
     results = {
@@ -746,7 +746,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-silicon-powder", amount = 1 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "bob-silicon-carbide", amount = 2 } },
     allow_productivity = true,
@@ -951,8 +951,17 @@ if mods["bobpower"] then
 end
 
 if mods["space-age"] then
-
   bobmods.lib.recipe.replace_ingredient("bob-tungstic-acid", "bob-tungsten-ore", "tungsten-ore")
   bobmods.lib.recipe.replace_ingredient("bob-tungstic-acid", "bob-hydrogen-chloride", "sulfuric-acid")
   bobmods.lib.recipe.remove_result("bob-tungstic-acid", "bob-calcium-chloride")
+
+  bobmods.lib.recipe.replace_ingredient("bob-lithium-chloride", "bob-lithia-water", "lithium-brine")
+  bobmods.lib.recipe.hide("bob-pure-water-from-lithia")
+
+  data.raw.recipe["bob-liquid-air"].surface_conditions = {
+    {
+      property = "pressure",
+      min = 10,
+    },
+  }
 end

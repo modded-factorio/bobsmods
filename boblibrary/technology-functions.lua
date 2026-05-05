@@ -316,6 +316,14 @@ function bobmods.lib.tech.replace_prerequisite(technology, old, new)
   end
 end
 
+function bobmods.lib.tech.global_replace_prerequisite(old, new)
+  if type(old) == "string" and type(new) == "string" and data.raw.technology[old] and data.raw.technology[new] then
+    for _, techname in pairs(data.raw.technology) do
+      bobmods.lib.tech.replace_prerequisite(techname.name, old, new)
+    end
+  end
+end
+
 function bobmods.lib.tech.add_prerequisite(technology, prerequisite)
   if
     type(technology) == "string"

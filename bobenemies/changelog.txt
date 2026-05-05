@@ -3,7 +3,9 @@ Version: 2.0.5
 Date: ???
   Bugfixes:
     - Enemy spawn table adjustments #537
+    - Fixed artifacts on ground being covered by worm / spawner remains #568
   Changes:
+    - Set item weights #553
     - Make Ground Radar adjust with quality #564
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
