@@ -448,7 +448,7 @@ data:extend({
     prerequisites = {
       "bob-air-compressor-2",
       "bob-zinc-processing",
-      "bob-titanium-processing",
+      "bob-cobalt-processing",
       "processing-unit",
     },
     effects = {
@@ -476,7 +476,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-air-compressor-3",
-      "bob-nitinol-processing",
+      "bob-titanium-processing",
       "electric-engine",
       "bob-advanced-processing-unit",
     },
@@ -559,7 +559,7 @@ data:extend({
     prerequisites = {
       "bob-water-bore-2",
       "bob-zinc-processing",
-      "bob-titanium-processing",
+      "bob-cobalt-processing",
       "processing-unit",
     },
     effects = {
@@ -587,7 +587,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-water-bore-3",
-      "bob-nitinol-processing",
+      "bob-titanium-processing",
       "electric-engine",
       "bob-advanced-processing-unit",
     },
