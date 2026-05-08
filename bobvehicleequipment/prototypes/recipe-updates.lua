@@ -771,7 +771,10 @@ if data.raw.item["bob-titanium-plate"] then
 end
 
 if data.raw.item["bob-silicon-nitride"] then
-  bobmods.lib.recipe.add_ingredient("bob-vehicle-big-turret-equipment-2", { type = "item", name = "bob-silicon-nitride", amount = 50 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-vehicle-big-turret-equipment-2",
+    { type = "item", name = "bob-silicon-nitride", amount = 50 }
+  )
   bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-2", "bob-ceramics")
 end
 
