@@ -108,6 +108,7 @@ if not data.raw.technology["bob-gold-processing"] then
       name = "bob-gold-processing",
       prerequisites = {
         "bob-electrolysis-2",
+        "chemical-science-pack",
       },
       effects = {},
     },
@@ -123,6 +124,7 @@ data.raw.technology["bob-gold-processing"].unit = {
   ingredients = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
   },
 }
 
@@ -186,9 +188,9 @@ if not data.raw.technology["bob-tungsten-processing"] then
       name = "bob-tungsten-processing",
       prerequisites = {
         "bob-chemical-processing-2",
-        "chemical-science-pack",
         "bob-nickel-processing",
         "bob-alloy-processing",
+        "production-science-pack",
       },
       effects = {},
     },
@@ -205,6 +207,7 @@ data.raw.technology["bob-tungsten-processing"].unit = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
     { "chemical-science-pack", 1 },
+    { "production-science-pack", 1 },
   },
 }
 

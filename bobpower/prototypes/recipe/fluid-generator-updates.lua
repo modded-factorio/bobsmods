@@ -33,11 +33,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
     )
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-cobalt-processing")
-  elseif data.raw.item["bob-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient(
-      "bob-fluid-generator-2",
-      { type = "item", name = "bob-steel-bearing", amount = 10 }
-    )
   else
     bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
@@ -45,11 +40,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   if data.raw.item["bob-cobalt-steel-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-2", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-cobalt-processing")
-  elseif data.raw.item["bob-brass-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-2", "iron-gear-wheel", "bob-brass-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-zinc-processing")
-  elseif data.raw.item["bob-steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-2", "iron-gear-wheel", "bob-steel-gear-wheel")
   end
 
   if data.raw.item["bob-invar-alloy"] then
@@ -65,8 +55,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   if data.raw.item["bob-brass-pipe"] then
     bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "bob-brass-pipe", amount = 5 })
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-zinc-processing")
-  elseif data.raw.item["bob-steel-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "bob-steel-pipe", amount = 5 })
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
@@ -79,24 +67,17 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
       "bob-fluid-generator-3",
       { type = "item", name = "bob-titanium-bearing", amount = 10 }
     )
-  elseif data.raw.item["bob-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient(
-      "bob-fluid-generator-3",
-      { type = "item", name = "bob-steel-bearing", amount = 10 }
-    )
   else
     bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "iron-gear-wheel", amount = 10 })
   end
 
-  if data.raw.item["bob-tungsten-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
-  elseif data.raw.item["bob-steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-steel-gear-wheel")
+  if data.raw.item["bob-titanium-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "tungsten-plate")
-    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-tungsten-processing")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "bob-titanium-plate")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-titanium-plate"] then
@@ -152,12 +133,6 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         { type = "item", name = "bob-copper-tungsten-pipe", amount = 5 }
       )
       bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-alloy-processing")
-    elseif data.raw.item["bob-tungsten-pipe"] then
-      bobmods.lib.recipe.add_ingredient(
-        "bob-hydrazine-generator",
-        { type = "item", name = "bob-tungsten-pipe", amount = 5 }
-      )
-      bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-processing")
     end
 
     if data.raw.item["bob-advanced-processing-unit"] then

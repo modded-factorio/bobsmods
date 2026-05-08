@@ -4,9 +4,11 @@ Date: ???
   Bugfixes:
     - Fixed Scatter cannnon shells missing rock, trees, etc. #561
     - Fixed Biters / Spitters deliberately targeting walls and gates. #562
+    - Fixed Spidertron gatling gun missing locale #582
   Changes:
     - Disallowed certain entities in space #551
     - Set item weights #553
+    - Adjust ingredients for some T4 and T5 recipes #583
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

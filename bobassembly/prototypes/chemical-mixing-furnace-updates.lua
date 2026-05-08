@@ -18,19 +18,17 @@ then
     bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-invar-processing")
   end
 
-  if data.raw.item["tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace", "stone-brick", "tungsten-plate")
-    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-tungsten-processing")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace", "stone-brick", "bob-titanium-plate")
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-1", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-tungsten-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace", "pipe", "bob-tungsten-pipe")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace", "pipe", "bob-titanium-pipe")
   end
 
   if data.raw.item["bob-copper-tungsten-pipe"] then
     bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace-2", "pipe", "bob-copper-tungsten-pipe")
-  elseif data.raw.item["bob-tungsten-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electric-chemical-mixing-furnace-2", "pipe", "bob-tungsten-pipe")
   end
 
   if data.raw.item["bob-copper-tungsten-alloy"] then

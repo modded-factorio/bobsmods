@@ -565,14 +565,14 @@ if data.raw.fluid["bob-heavy-water"] then
   bobmods.lib.tech.add_prerequisite("fission-reactor-equipment", "bob-heavy-water-processing")
 end
 
-if data.raw.item["tungsten-plate"] then
+if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.remove_ingredient("bob-fission-reactor-equipment-2", "low-density-structure")
   bobmods.lib.tech.remove_prerequisite("bob-fission-reactor-equipment-2", "low-density-structure")
   bobmods.lib.recipe.add_ingredient(
     "bob-fission-reactor-equipment-2",
-    { type = "item", name = "tungsten-plate", amount = 250 }
+    { type = "item", name = "bob-titanium-plate", amount = 250 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-2", "bob-tungsten-processing")
+  bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-2", "bob-titanium-processing")
 end
 
 if data.raw.item["tungsten-carbide"] then
@@ -589,6 +589,11 @@ if mods["space-age"] then
     { type = "item", name = "lithium-plate", amount = 40 }
   )
   bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-4", "cryogenic-science-pack")
+  bobmods.lib.recipe.add_ingredient(
+    "bob-battery-mk4-equipment",
+    { type = "item", name = "supercapacitor", amount = 10 }
+  )
+  bobmods.lib.tech.add_prerequisite("bob-battery-equipment-4", "electromagnetic-science-pack")
 elseif data.raw.item["lithium-plate"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-fission-reactor-equipment-3",

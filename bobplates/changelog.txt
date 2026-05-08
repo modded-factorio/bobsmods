@@ -13,10 +13,13 @@ Date: ???
       - Swapped the order of Lithium-ion batteries and Silver-zinc batteries when Space Age is enabled
       - Combined Bob's Lithium and Space Age's Lithium
       - Changed the internal name of Bob's batteries to "bob-battery-2" and "bob-battery-3"
+    - Disallowed Compressed air recipe in space #577
     - Tungsten fixes (Space Age) #579
       - Combined Bob's Tungsten and Space Age's Tungsten
       - Updated Tungsten carbide and Tungsten plate recipes to use Powdered tungsten instead of Tungsten ore
       - Updated Copper tungsten recipe to use Molten copper instead of Copper plate
+    - Adjust ingredients for some T4 and T5 recipes #583
+    - Increased the tech tier of Gold processing and Tungsten processing #583
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

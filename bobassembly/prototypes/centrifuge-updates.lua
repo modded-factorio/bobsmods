@@ -32,8 +32,8 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-3", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["bob-nitinol-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-3", "iron-gear-wheel", "bob-nitinol-gear-wheel")
+  if data.raw.item["bob-tungsten-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-3", "iron-gear-wheel", "bob-tungsten-gear-wheel")
   end
 
   if data.raw.item["bob-nitinol-bearing"] then
