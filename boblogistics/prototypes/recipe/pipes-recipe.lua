@@ -184,14 +184,14 @@ if data.raw.item["bob-titanium-plate"] then
   })
 end
 
-if data.raw.item["bob-tungsten-plate"] then
+if data.raw.item["tungsten-plate"] then
   data:extend({
     {
       type = "recipe",
       name = "bob-tungsten-pipe",
       enabled = false,
       ingredients = {
-        { type = "item", name = "bob-tungsten-plate", amount = 1 },
+        { type = "item", name = "tungsten-plate", amount = 1 },
       },
       results = { { type = "item", name = "bob-tungsten-pipe", amount = 1 } },
     },
@@ -202,7 +202,7 @@ if data.raw.item["bob-tungsten-plate"] then
       enabled = false,
       ingredients = {
         { type = "item", name = "bob-tungsten-pipe", amount = 16 },
-        { type = "item", name = "bob-tungsten-plate", amount = 5 },
+        { type = "item", name = "tungsten-plate", amount = 5 },
       },
       results = { { type = "item", name = "bob-tungsten-pipe-to-ground", amount = 2 } },
     },

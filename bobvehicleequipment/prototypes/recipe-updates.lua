@@ -778,15 +778,15 @@ if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-2", "bob-ceramics")
 end
 
-if data.raw.item["bob-tungsten-carbide"] then
+if data.raw.item["tungsten-carbide"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-4",
-    { type = "item", name = "bob-tungsten-carbide", amount = 80 }
+    { type = "item", name = "tungsten-carbide", amount = 80 }
   )
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-4", "bob-tungsten-alloy-processing")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-4",
-    { type = "item", name = "bob-tungsten-carbide", amount = 40 }
+    { type = "item", name = "tungsten-carbide", amount = 40 }
   )
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-4", "bob-tungsten-alloy-processing")
 end

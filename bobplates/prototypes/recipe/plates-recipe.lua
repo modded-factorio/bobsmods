@@ -93,23 +93,6 @@ data:extend({
 
   {
     type = "recipe",
-    name = "bob-tungsten-plate",
-    enabled = false,
-    auto_recycle = false,
-    category = "bob-mixing-furnace",
-    subgroup = "bob-alloy",
-    energy_required = 16,
-    ingredients = {
-      { type = "item", name = "bob-nickel-plate", amount = 1 },
-      { type = "item", name = "bob-powdered-tungsten", amount = 4 },
-    },
-    results = { { type = "item", name = "bob-tungsten-plate", amount = 5 } },
-    allow_decomposition = false,
-    allow_productivity = true,
-  },
-
-  {
-    type = "recipe",
     name = "bob-zinc-plate",
     category = "bob-electrolysis",
     subgroup = "bob-material-electrolysis",
@@ -207,6 +190,22 @@ if not mods["space-age"] then
   data:extend({
     {
       type = "recipe",
+      name = "tungsten-plate",
+      enabled = false,
+      auto_recycle = false,
+      category = "bob-mixing-furnace",
+      subgroup = "bob-alloy",
+      energy_required = 16,
+      ingredients = {
+        { type = "item", name = "bob-nickel-plate", amount = 1 },
+        { type = "item", name = "bob-powdered-tungsten", amount = 4 },
+      },
+      results = { { type = "item", name = "tungsten-plate", amount = 5 } },
+      allow_decomposition = false,
+      allow_productivity = true,
+    },
+    {
+      type = "recipe",
       name = "lithium-plate",
       localised_name = { "item-name.bob-lithium" },
       category = "bob-electrolysis",
@@ -223,6 +222,8 @@ if not mods["space-age"] then
     },
   })
 else
+  bobmods.lib.recipe.replace_ingredient("tungsten-plate", "tungsten-ore", "bob-powdered-tungsten")
+
   bobmods.lib.recipe.remove_ingredient("lithium", "lithium-brine")
   bobmods.lib.recipe.add_ingredient("lithium", { type = "item", name = "bob-lithium-chloride", amount = 5 })
 end

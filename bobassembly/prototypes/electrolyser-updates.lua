@@ -63,8 +63,8 @@ then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-ceramic-pipe")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "tungsten-carbide")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then

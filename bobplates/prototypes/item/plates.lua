@@ -111,19 +111,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "bob-tungsten-plate",
-    icon = "__bobplates__/graphics/icons/plate/tungsten-plate.png",
-    icon_size = 32,
-    subgroup = "bob-material",
-    order = "c-a-i[bob-tungsten-plate]",
-    stack_size = 200,
-    drop_sound = plate_drop_move,
-    inventory_move_sound = plate_drop_move,
-    pick_sound = plate_pick,
-    weight = 2500,
-  },
-  {
-    type = "item",
     name = "bob-silicon-plate",
     icon = "__bobplates__/graphics/icons/plate/silicon-plate.png",
     icon_size = 32,
@@ -176,4 +163,26 @@ if not data.raw.item["lithium-plate"] then
       weight = 500,
     },
   })
+end
+
+if not data.raw.item["tungsten-plate"] then
+  data:extend({
+    {
+      type = "item",
+      name = "tungsten-plate",
+      icon = "__bobplates__/graphics/icons/plate/tungsten-plate.png",
+      icon_size = 32,
+      subgroup = "bob-material",
+      order = "c-a-i[bob-tungsten-plate]",
+      stack_size = 200,
+      drop_sound = plate_drop_move,
+      inventory_move_sound = plate_drop_move,
+      pick_sound = plate_pick,
+      weight = 2500,
+    },
+  })
+else
+  local item = data.raw.item["tungsten-plate"]
+  item.subgroup = "bob-material"
+  item.order = "c-a-i[bob-tungsten-plate]"
 end

@@ -1,0 +1,14 @@
+{
+  "item":
+  [
+    ["bob-tungsten-ore", "tungsten-ore"]
+  ],
+  "entity":
+  [
+    ["bob-tungsten-ore", "tungsten-ore"]
+  ],
+  "recipe":
+  [
+    ["bob-tungsten-ore-recycling", "tungsten-ore-recycling"]
+  ]
+}

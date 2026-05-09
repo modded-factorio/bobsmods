@@ -575,10 +575,10 @@ if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-2", "bob-titanium-processing")
 end
 
-if data.raw.item["bob-tungsten-carbide"] then
+if data.raw.item["tungsten-carbide"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-fission-reactor-equipment-3",
-    { type = "item", name = "bob-tungsten-carbide", amount = 80 }
+    { type = "item", name = "tungsten-carbide", amount = 80 }
   )
   bobmods.lib.tech.add_prerequisite("bob-fission-reactor-equipment-3", "bob-tungsten-alloy-processing")
 end

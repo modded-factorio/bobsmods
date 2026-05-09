@@ -4,7 +4,9 @@
     ["bob-carbon", "carbon"],
     ["bob-lithium", "lithium"],
     ["bob-lithium-ion-battery", "bob-battery-2"],
-    ["bob-silver-zinc-battery", "bob-battery-3"]
+    ["bob-silver-zinc-battery", "bob-battery-3"],
+    ["bob-tungsten-carbide", "tungsten-carbide"],
+    ["bob-tungsten-plate", "tungsten-plate"]
   ],
   "recipe":
   [
@@ -15,6 +17,10 @@
     ["bob-lithium-ion-battery-recycling", "bob-battery-2-recycling"],
     ["bob-lithium-recycling", "lithium-plate-recycling"],
     ["bob-silver-zinc-battery", "bob-battery-3"],
-    ["bob-silver-zinc-battery-recycling", "bob-battery-3-recycling"]
+    ["bob-silver-zinc-battery-recycling", "bob-battery-3-recycling"],
+    ["bob-tungsten-carbide", "tungsten-carbide"],
+    ["bob-tungsten-carbide-recycling", "tungsten-carbide-recycling"],
+    ["bob-tungsten-plate", "tungsten-plate"],
+    ["bob-tungsten-plate-recycling", "tungsten-plate-recycling"]
   ]
 }

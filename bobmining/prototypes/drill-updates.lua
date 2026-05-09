@@ -31,8 +31,8 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-drills-5", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-drills-5", "bob-tungsten-alloy-processing")
   end
 

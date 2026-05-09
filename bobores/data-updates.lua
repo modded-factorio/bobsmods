@@ -139,3 +139,9 @@ data.raw.item["stone"].subgroup = "bob-ores"
 data.raw.item["iron-ore"].subgroup = "bob-ores"
 data.raw.item["copper-ore"].subgroup = "bob-ores"
 data.raw.item["uranium-ore"].subgroup = "bob-ores"
+
+if mods["space-age"] then
+  data.raw.item["calcite"].subgroup = "bob-ores"
+  data.raw.item["holmium-ore"].subgroup = "bob-ores"
+  data.raw.item["tungsten-ore"].subgroup = "bob-ores"
+end

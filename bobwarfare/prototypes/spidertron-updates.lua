@@ -306,8 +306,8 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-mech-leg", "copper-cable", "bob-insulated-cable")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mech-armor-plate", "steel-plate", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mech-armor-plate", "steel-plate", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-tankotron", "bob-tungsten-alloy-processing")
   end
 

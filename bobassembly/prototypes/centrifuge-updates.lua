@@ -22,8 +22,8 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-3", "bob-nitinol-processing")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-3", "refined-concrete", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-centrifuge-3", "refined-concrete", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-3", "bob-tungsten-alloy-processing")
   end
 

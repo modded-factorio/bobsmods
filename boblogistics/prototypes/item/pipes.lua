@@ -325,7 +325,7 @@ if data.raw.item["bob-titanium-plate"] then
   })
 end
 
-if data.raw.item["bob-tungsten-plate"] then
+if data.raw.item["tungsten-plate"] then
   data:extend({
     {
       type = "item",

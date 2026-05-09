@@ -32,8 +32,8 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-tungsten-alloy-processing")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-3", "steel-plate", "bob-tungsten-carbide")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-3", "steel-plate", "tungsten-carbide")
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-tungsten-alloy-processing")
   end
 
