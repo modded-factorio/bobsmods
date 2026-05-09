@@ -573,7 +573,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
+      { type = "item", name = "bob-sodium-hydroxide", amount = 2 },
       { type = "item", name = "bob-bauxite-ore", amount = 1 },
     },
     results = { { type = "item", name = "bob-alumina", amount = 1 } },
