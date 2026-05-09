@@ -40,9 +40,9 @@ end
 if mods["space-age"] then
   bobmods.lib.tech.remove_science_pack("bob-heat-shield", "production-science-pack")
   bobmods.lib.tech.remove_prerequisite("bob-heat-shield", "production-science-pack")
-  if data.raw.item["bob-titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "bob-titanium-plate")
-    bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-titanium-processing")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "bob-invar-alloy")
+    bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-invar-processing")
   end
 elseif data.raw.item["tungsten-carbide"] then
   bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "tungsten-carbide")
