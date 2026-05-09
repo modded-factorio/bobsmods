@@ -5,6 +5,7 @@ Date: ???
     - Reduced the time that heat sources take to get up to temperature #529
     - Disallowed certain entities in space #551
     - Set item weights #553
+    - Adjust ingredients for some T4 and T5 recipes #583
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 18. 01. 2026

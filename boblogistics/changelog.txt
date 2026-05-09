@@ -8,6 +8,8 @@ Date: ???
     - Increasd pump speed when Quality mod is not enabled #557
     - Increasd bot health and explosion resistance #563
     - Improved Turbo belt Space Age compatibility. Renamed Bob's Turbo belt/splitter/underground, removing the "bob-" prefix #569
+    - Adjust ingredients for some T4 and T5 recipes #583
+    - Spread Fluid handling and Railway techs out in the tech tree #584
   Bugfixes:
     - Allowed Basic loaders (AAI Loaders mod) to be crafted in Assembling maching 1 / hand crafted when using expensive mode. #535
     - Fixed next_upgrade for Steam powered inserter and Ultimate inserter #542

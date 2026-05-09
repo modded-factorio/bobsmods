@@ -753,26 +753,29 @@ if data.raw.fluid["bob-heavy-water"] then
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-2", "bob-heavy-water-processing")
 end
 
-if data.raw.item["bob-tungsten-plate"] then
+if data.raw.item["bob-titanium-plate"] then
   bobmods.lib.recipe.remove_ingredient("bob-vehicle-fission-reactor-equipment-3", "low-density-structure")
   bobmods.lib.recipe.remove_ingredient("bob-vehicle-fission-cell-equipment-3", "low-density-structure")
   bobmods.lib.tech.remove_prerequisite("bob-vehicle-fission-reactor-equipment-3", "low-density-structure")
   bobmods.lib.tech.remove_prerequisite("bob-vehicle-fission-cell-equipment-3", "low-density-structure")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-3",
-    { type = "item", name = "bob-tungsten-plate", amount = 250 }
+    { type = "item", name = "bob-titanium-plate", amount = 250 }
   )
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-cell-equipment-3",
-    { type = "item", name = "bob-tungsten-plate", amount = 150 }
+    { type = "item", name = "bob-titanium-plate", amount = 150 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-3", "bob-tungsten-processing")
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-3", "bob-tungsten-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-3", "bob-titanium-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-3", "bob-titanium-processing")
+end
+
+if data.raw.item["bob-silicon-nitride"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-big-turret-equipment-2",
-    { type = "item", name = "bob-tungsten-plate", amount = 50 }
+    { type = "item", name = "bob-silicon-nitride", amount = 50 }
   )
-  bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-2", "bob-tungsten-processing")
+  bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-2", "bob-ceramics")
 end
 
 if data.raw.item["bob-tungsten-carbide"] then

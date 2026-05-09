@@ -1361,7 +1361,7 @@ if mods["bobplates"] then
             position = { 0, 0 },
             direction = defines.direction.south,
             connection_type = "underground",
-            max_underground_distance = 25,
+            max_underground_distance = 30,
           },
         },
         hide_connection_info = true,
@@ -1600,7 +1600,7 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("bob-brass-pipe-to-ground", 3)
   bobmods.logistics.set_pipe_distance("bob-ceramic-pipe-to-ground", 4)
   bobmods.logistics.set_pipe_distance("bob-titanium-pipe-to-ground", 4)
-  bobmods.logistics.set_pipe_distance("bob-tungsten-pipe-to-ground", 4)
+  bobmods.logistics.set_pipe_distance("bob-tungsten-pipe-to-ground", 5)
   bobmods.logistics.set_pipe_distance("bob-nitinol-pipe-to-ground", 5)
   bobmods.logistics.set_pipe_distance("bob-copper-tungsten-pipe-to-ground", 5)
 end
