@@ -87,7 +87,7 @@ then
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "steel-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
