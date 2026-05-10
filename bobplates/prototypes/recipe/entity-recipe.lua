@@ -124,8 +124,8 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-air-pump-2", amount = 1 },
-      { type = "item", name = "bob-brass-alloy", amount = 2 },
-      { type = "item", name = "bob-brass-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-aluminium-plate", amount = 2 },
+      { type = "item", name = "bob-cobalt-steel-gear-wheel", amount = 4 },
       { type = "item", name = "bob-cobalt-steel-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
@@ -140,8 +140,8 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-air-pump-3", amount = 1 },
-      { type = "item", name = "bob-titanium-plate", amount = 2 },
-      { type = "item", name = "bob-titanium-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-brass-alloy", amount = 2 },
+      { type = "item", name = "bob-brass-gear-wheel", amount = 4 },
       { type = "item", name = "bob-titanium-bearing", amount = 4 },
       { type = "item", name = "electric-engine-unit", amount = 1 },
       { type = "item", name = "bob-advanced-processing-unit", amount = 3 },
@@ -185,8 +185,8 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-water-pump-2", amount = 1 },
-      { type = "item", name = "bob-brass-alloy", amount = 2 },
-      { type = "item", name = "bob-brass-gear-wheel", amount = 4 },
+      { type = "item", name = "bob-zinc-plate", amount = 2 },
+      { type = "item", name = "bob-cobalt-steel-gear-wheel", amount = 4 },
       { type = "item", name = "bob-cobalt-steel-bearing", amount = 4 },
       { type = "item", name = "processing-unit", amount = 3 },
       { type = "item", name = "pipe", amount = 2 },
