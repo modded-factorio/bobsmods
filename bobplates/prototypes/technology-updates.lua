@@ -52,9 +52,7 @@ bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-bearing")
 bobmods.lib.tech.add_recipe_unlock("bob-nickel-processing", "bob-nickel-plate")
 
 bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-zinc-plate")
-bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-alloy")
 bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-gunmetal-alloy")
-bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-gear-wheel")
 
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide")
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide-2")
@@ -71,6 +69,9 @@ bobmods.lib.tech.add_recipe_unlock("bob-gold-processing", "bob-gold-plate")
 bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-plate")
 bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-wafer")
 bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-powder")
+
+bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-gear-wheel")
 
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-plate")
 
