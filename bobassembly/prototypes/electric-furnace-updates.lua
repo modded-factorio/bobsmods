@@ -14,7 +14,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-electric-furnace-3", "steel-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("advanced-material-processing-4", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("advanced-material-processing-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["tungsten-plate"] then
