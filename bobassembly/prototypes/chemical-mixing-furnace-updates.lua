@@ -37,7 +37,7 @@ then
       "steel-plate",
       "bob-copper-tungsten-alloy"
     )
-    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-2", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-multi-purpose-furnace-2", "bob-tungsten-processing")
   end
 
   if data.raw.item["tungsten-plate"] then
