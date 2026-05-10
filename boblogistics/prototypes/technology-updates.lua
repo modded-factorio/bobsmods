@@ -349,8 +349,8 @@ end
 if data.raw.technology["bob-tungsten-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe-to-ground")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
 if data.raw.technology["bob-ceramics"] then
