@@ -46,7 +46,7 @@ end
 if bobmods.tech.advanced_logistic_science then
   if data.raw.item["bob-brass-chest"] then
     bobmods.lib.recipe.replace_ingredient("bob-advanced-logistic-science-pack", "steel-chest", "bob-brass-chest")
-    bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-zinc-processing")
+    bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-brass-processing")
   end
   if
     settings.startup["bobmods-logistics-inserteroverhaul"]
