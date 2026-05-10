@@ -205,6 +205,40 @@ if data.raw.item["bob-bronze-alloy"] then
   })
 end
 
+if data.raw.item["bob-aluminium-plate"] then
+  data:extend({
+    {
+      type = "item",
+      name = "bob-aluminium-pipe",
+      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe.png",
+      icon_size = 64,
+      subgroup = "bob-pipe",
+      order = "a[pipe]-a[pipe]-2-4",
+      place_result = "bob-aluminium-pipe",
+      stack_size = 100,
+      drop_sound = pipe_drop_move,
+      inventory_move_sound = pipe_drop_move,
+      pick_sound = pipe_pick,
+      weight = 5000,
+    },
+
+    {
+      type = "item",
+      name = "bob-aluminium-pipe-to-ground",
+      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe-to-ground.png",
+      icon_size = 64,
+      subgroup = "bob-pipe-to-ground",
+      order = "a[pipe]-b[pipe-to-ground]-2-4",
+      place_result = "bob-aluminium-pipe-to-ground",
+      stack_size = 50,
+      drop_sound = pipe_drop_move,
+      inventory_move_sound = pipe_drop_move,
+      pick_sound = pipe_pick,
+      weight = 20000,
+    },
+  })
+end
+
 if data.raw.item["bob-brass-alloy"] then
   data:extend({
     {
