@@ -1626,6 +1626,7 @@ if mods["bobplates"] then
   })
 
   if feature_flags["freezing"] then
+    data.raw.pipe["bob-aluminium-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-brass-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-bronze-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-ceramic-pipe"].heating_energy = "1kW"
@@ -1634,7 +1635,8 @@ if mods["bobplates"] then
     data.raw.pipe["bob-titanium-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-tungsten-pipe"].heating_energy = "1kW"
     data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].heating_energy = "150kW"
-    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].heating_energy = "200kW"
+    data.raw["pipe-to-ground"]["bob-aluminium-pipe-to-ground"].heating_energy = "200kW"
+    data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].heating_energy = "250kW"
@@ -1646,6 +1648,7 @@ if mods["bobplates"] then
         return result
       end
       data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].frozen_patch = frozenpatch()
+      data.raw["pipe-to-ground"]["bob-aluminium-pipe-to-ground"].frozen_patch = frozenpatch()
       data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].frozen_patch = frozenpatch()
       data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].frozen_patch = frozenpatch()
       data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = frozenpatch()
@@ -1656,6 +1659,7 @@ if mods["bobplates"] then
         local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
         return result
       end
+      data.raw.pipe["bob-aluminium-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-ceramic-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
@@ -1663,6 +1667,7 @@ if mods["bobplates"] then
       data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
+      data.raw["pipe-to-ground"]["bob-aluminium-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw["pipe-to-ground"]["bob-ceramic-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
