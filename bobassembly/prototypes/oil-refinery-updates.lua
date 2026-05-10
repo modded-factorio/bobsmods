@@ -55,7 +55,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-4", "stone-brick", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("oil-processing-4", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-tungsten-gear-wheel"] then
