@@ -18,7 +18,7 @@ end
 
 if data.raw.item["bob-brass-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-pump-3", "bob-copper-pipe", "bob-brass-pipe")
-  bobmods.lib.tech.add_prerequisite("bob-fluid-handling-3", "bob-zinc-processing")
+  bobmods.lib.tech.add_prerequisite("bob-fluid-handling-3", "bob-brass-processing")
 end
 
 if data.raw.item["bob-nitinol-alloy"] then
