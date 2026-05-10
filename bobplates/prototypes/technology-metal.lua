@@ -154,6 +154,33 @@ data.raw.technology["bob-silicon-processing"].unit = {
   },
 }
 
+if not data.raw.technology["bob-brass-processing"] then
+  data:extend({
+    {
+      type = "technology",
+      name = "bob-brass-processing",
+      prerequisites = {
+        "bob-zinc-processing",
+        "chemical-science-pack",
+      },
+      effects = {},
+    },
+  })
+end
+
+data.raw.technology["bob-brass-processing"].icon = "__bobplates__/graphics/icons/technology/zinc-processing.png"
+data.raw.technology["bob-brass-processing"].icon_size = 128
+data.raw.technology["bob-brass-processing"].order = "c-b-e0"
+data.raw.technology["bob-brass-processing"].unit = {
+  count = 40,
+  time = 30,
+  ingredients = {
+    { "automation-science-pack", 1 },
+    { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
+  },
+}
+
 if not data.raw.technology["bob-titanium-processing"] then
   data:extend({
     {
