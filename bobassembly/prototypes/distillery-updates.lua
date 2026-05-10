@@ -60,11 +60,11 @@ then
 
   if data.raw.item["bob-copper-tungsten-pipe"] then
     bobmods.lib.recipe.replace_ingredient("bob-distillery-5", "pipe", "bob-copper-tungsten-pipe")
-    bobmods.lib.tech.add_prerequisite("bob-distillery-5", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-distillery-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-distillery-5", "copper-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-distillery-5", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-distillery-5", "bob-tungsten-processing")
   end
 end
