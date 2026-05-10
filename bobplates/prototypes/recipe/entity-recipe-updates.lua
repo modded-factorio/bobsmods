@@ -25,9 +25,9 @@ if data.raw.item["bob-bronze-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-water-pump-2", "pipe", "bob-bronze-pipe")
 end
 
-if data.raw.item["bob-brass-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("bob-air-pump-3", "pipe", "bob-brass-pipe")
-  bobmods.lib.recipe.replace_ingredient("bob-water-pump-3", "pipe", "bob-brass-pipe")
+if data.raw.item["bob-aluminium-pipe"] then
+  bobmods.lib.recipe.replace_ingredient("bob-air-pump-3", "pipe", "bob-aluminium-pipe")
+  bobmods.lib.recipe.replace_ingredient("bob-water-pump-3", "pipe", "bob-aluminium-pipe")
 end
 
 if settings.startup["bobmods-plates-convert-recipes"].value == true then
