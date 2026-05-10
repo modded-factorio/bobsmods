@@ -96,7 +96,7 @@ end
 
 if data.raw.item["tungsten-carbide"] then
   bobmods.lib.recipe.replace_ingredient("bob-assembling-machine-6", "iron-plate", "tungsten-carbide")
-  bobmods.lib.tech.add_prerequisite("automation-6", "bob-tungsten-alloy-processing")
+  bobmods.lib.tech.add_prerequisite("automation-6", "bob-tungsten-processing")
 end
 
 if data.raw.item["bob-nitinol-bearing"] then
