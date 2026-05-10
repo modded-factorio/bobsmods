@@ -17,9 +17,9 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     bobmods.lib.recipe.add_ingredient("chemical-plant", { type = "item", name = "bob-glass", amount = 5 })
   end
 
-  if data.raw.item["bob-invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-2", "steel-plate", "bob-invar-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-2", "bob-invar-processing")
+  if data.raw.item["bob-zinc-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-2", "steel-plate", "bob-zinc-plate")
+    bobmods.lib.tech.add_prerequisite("bob-chemical-plant-2", "bob-zinc-processing")
   end
 
   if data.raw.item["bob-steel-gear-wheel"] then
