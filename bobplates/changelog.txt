@@ -21,6 +21,7 @@ Date: ???
       - Updated Copper tungsten recipe to use Molten copper instead of Copper plate
     - Adjust ingredients for some T4 and T5 recipes #583
     - Increased the tech tier of Gold processing and Tungsten processing #583
+    - Reduce the amount of Hydrogen chloride required for Tungstic acid #589
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026
