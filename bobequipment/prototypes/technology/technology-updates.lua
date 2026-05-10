@@ -54,6 +54,7 @@ then
     { "bob-alien-science-pack", 1 },
     { "bob-alien-science-pack-purple", 1 },
     { "bob-alien-science-pack-yellow", 1 },
+    { "space-science-pack", 1 },
   }
   data.raw.technology["bob-fission-reactor-equipment-3"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },
