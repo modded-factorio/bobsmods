@@ -328,10 +328,10 @@ if data.raw.technology["bob-alloy-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bob-bronze-pipe-to-ground")
 end
 
-if data.raw.technology["bob-zinc-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe-to-ground")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-chest")
+if data.raw.technology["bob-brass-processing"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-chest")
 end
 
 if data.raw.technology["bob-titanium-processing"] then
