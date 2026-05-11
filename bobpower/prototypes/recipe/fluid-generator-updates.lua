@@ -42,9 +42,9 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-cobalt-processing")
   end
 
-  if data.raw.item["bob-invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-2", "iron-plate", "bob-invar-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-invar-processing")
+  if data.raw.item["bob-nickel-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-2", "iron-plate", "bob-nickel-plate")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-nickel-processing")
   end
 
   if data.raw.item["bob-aluminium-plate"] then
@@ -52,9 +52,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-aluminium-processing")
   end
 
-  if data.raw.item["bob-brass-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "bob-brass-pipe", amount = 5 })
-    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-2", "bob-zinc-processing")
+  if data.raw.item["bob-aluminium-pipe"] then
+    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "bob-aluminium-pipe", amount = 5 })
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
@@ -75,9 +74,9 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
   end
 
-  if data.raw.item["bob-titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "bob-titanium-plate")
-    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-titanium-processing")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-fluid-generator-3", "iron-plate", "bob-invar-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-invar-processing")
   end
 
   if data.raw.item["bob-titanium-plate"] then
@@ -85,9 +84,8 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-ceramic-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "bob-ceramic-pipe", amount = 5 })
-    bobmods.lib.tech.add_prerequisite("bob-fluid-generator-3", "bob-ceramics")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "bob-titanium-pipe", amount = 5 })
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
@@ -119,7 +117,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
 
     if data.raw.item["bob-copper-tungsten-alloy"] then
       bobmods.lib.recipe.replace_ingredient("bob-hydrazine-generator", "iron-plate", "bob-copper-tungsten-alloy")
-      bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-alloy-processing")
+      bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-processing")
     end
 
     if data.raw.item["bob-nitinol-alloy"] then
@@ -132,7 +130,7 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         "bob-hydrazine-generator",
         { type = "item", name = "bob-copper-tungsten-pipe", amount = 5 }
       )
-      bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-alloy-processing")
+      bobmods.lib.tech.add_prerequisite("bob-hydrazine-generator", "bob-tungsten-processing")
     end
 
     if data.raw.item["bob-advanced-processing-unit"] then
