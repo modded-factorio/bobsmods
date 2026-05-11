@@ -10,7 +10,7 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-heat-pipe-3")
   elseif data.raw.item["bob-brass-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-2", "copper-plate", "bob-brass-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-zinc-processing")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-brass-processing")
   end
 
   if data.raw.item["bob-titanium-plate"] then
