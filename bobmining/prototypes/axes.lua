@@ -43,7 +43,7 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
       {
         type = "technology",
         name = "bob-steel-axe-4",
-        localised_name = { "technology-name.bob-tungsten-axe" },
+        localised_name = { "technology-name.bob-nitinol-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -52,14 +52,14 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
             modifier = 0.5,
           },
         },
-        prerequisites = { "bob-steel-axe-3", "bob-tungsten-processing" },
-        research_trigger = { type = "craft-item", item = "tungsten-plate", count = 50 },
+        prerequisites = { "bob-steel-axe-3", "bob-nitinol-processing" },
+        research_trigger = { type = "craft-item", item = "bob-nitinol-alloy", count = 50 },
         upgrade = true,
       },
       {
         type = "technology",
         name = "bob-steel-axe-5",
-        localised_name = { "technology-name.bob-nitinol-axe" },
+        localised_name = { "technology-name.bob-tungsten-axe" },
         icon_size = 256,
         icon = "__base__/graphics/technology/steel-axe.png",
         effects = {
@@ -68,8 +68,8 @@ if settings.startup["bobmods-mining-miningaxes"].value == true then
             modifier = 1,
           },
         },
-        prerequisites = { "bob-steel-axe-4", "bob-nitinol-processing" },
-        research_trigger = { type = "craft-item", item = "bob-nitinol-alloy", count = 50 },
+        prerequisites = { "bob-steel-axe-4", "bob-tungsten-processing" },
+        research_trigger = { type = "craft-item", item = "tungsten-carbide", count = 50 },
         upgrade = true,
       },
       {
