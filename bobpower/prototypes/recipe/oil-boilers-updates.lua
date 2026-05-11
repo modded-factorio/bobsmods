@@ -3,29 +3,29 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.recipe.replace_ingredient("bob-oil-boiler", "pipe", "bob-steel-pipe")
   end
 
+  if data.raw.item["bob-nickel-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-2", "steel-plate", "bob-nickel-plate")
+    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "bob-nickel-processing")
+  end
+
+  if data.raw.item["bob-aluminium-pipe"] then
+    bobmods.lib.recipe.add_ingredient("bob-oil-boiler-2", { type = "item", name = "bob-aluminium-pipe", amount = 6 })
+    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "bob-aluminium-processing")
+  end
+
   if data.raw.item["bob-invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-2", "steel-plate", "bob-invar-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "bob-invar-processing")
+    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3", "steel-plate", "bob-invar-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "bob-invar-processing")
   end
 
-  if data.raw.item["bob-brass-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-oil-boiler-2", { type = "item", name = "bob-brass-pipe", amount = 6 })
-    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-2", "bob-zinc-processing")
-  end
-
-  if data.raw.item["bob-titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3", "steel-plate", "bob-titanium-plate")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.add_ingredient("bob-oil-boiler-3", { type = "item", name = "bob-titanium-pipe", amount = 6 })
     bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "bob-titanium-processing")
-  end
-
-  if data.raw.item["bob-ceramic-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-oil-boiler-3", { type = "item", name = "bob-ceramic-pipe", amount = 6 })
-    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-3", "bob-ceramics")
   end
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-4", "steel-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-4", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-oil-boiler-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-copper-tungsten-pipe"] then
@@ -47,23 +47,23 @@ if settings.startup["bobmods-power-steam"].value == true then
       )
     end
 
-    if data.raw.item["bob-brass-pipe"] then
-      bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-2-from-boiler-3", "pipe", "bob-brass-pipe")
+    if data.raw.item["bob-aluminium-pipe"] then
+      bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-2-from-boiler-3", "pipe", "bob-aluminium-pipe")
 
       bobmods.lib.recipe.remove_result("bob-boiler-3-from-oil-boiler-2", "pipe")
       bobmods.lib.recipe.add_result(
         "bob-boiler-3-from-oil-boiler-2",
-        { type = "item", name = "bob-brass-pipe", amount = 2 }
+        { type = "item", name = "bob-aluminium-pipe", amount = 2 }
       )
     end
 
-    if data.raw.item["bob-ceramic-pipe"] then
-      bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3-from-boiler-4", "pipe", "bob-ceramic-pipe")
+    if data.raw.item["bob-titanium-pipe"] then
+      bobmods.lib.recipe.replace_ingredient("bob-oil-boiler-3-from-boiler-4", "pipe", "bob-titanium-pipe")
 
       bobmods.lib.recipe.remove_result("bob-boiler-4-from-oil-boiler-3", "pipe")
       bobmods.lib.recipe.add_result(
         "bob-boiler-4-from-oil-boiler-3",
-        { type = "item", name = "bob-ceramic-pipe", amount = 2 }
+        { type = "item", name = "bob-titanium-pipe", amount = 2 }
       )
     end
 
