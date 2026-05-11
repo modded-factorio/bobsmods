@@ -75,12 +75,12 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       bobmods.lib.recipe.add_ingredient("bob-distractor-robot", { type = "item", name = "steel-plate", amount = 1 })
     end
     bobmods.lib.recipe.add_ingredient("bob-distractor-robot", { type = "item", name = "advanced-circuit", amount = 1 })
-    if data.raw.item["bob-brass-gear-wheel"] then
+    if data.raw.item["bob-cobalt-steel-gear-wheel"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-distractor-robot",
-        { type = "item", name = "bob-brass-gear-wheel", amount = 3 }
+        { type = "item", name = "bob-obalt-steel-gear-wheel", amount = 3 }
       )
-      bobmods.lib.tech.add_prerequisite("distractor", "bob-zinc-processing")
+      bobmods.lib.tech.add_prerequisite("distractor", "bob-cobalt-processing")
     else
       bobmods.lib.recipe.add_ingredient("bob-distractor-robot", { type = "item", name = "iron-gear-wheel", amount = 3 })
     end
@@ -229,20 +229,20 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
   end
 
   if data.raw.recipe["bob-robot-tool-combat-2"] then
-    if data.raw.item["bob-brass-alloy"] then
+    if data.raw.item["bob-cobalt-steel-alloy"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-robot-tool-combat-2",
-        { type = "item", name = "bob-brass-alloy", amount = 1 }
+        { type = "item", name = "bob-cobalt-steel-alloy", amount = 1 }
       )
-      bobmods.lib.tech.add_prerequisite("distractor", "bob-zinc-processing")
+      bobmods.lib.tech.add_prerequisite("distractor", "bob-cobalt-processing")
     else
       bobmods.lib.recipe.add_ingredient("bob-robot-tool-combat-2", { type = "item", name = "steel-plate", amount = 1 })
     end
 
-    if data.raw.item["bob-brass-gear-wheel"] then
+    if data.raw.item["bob-cobalt-steel-gear-wheel"] then
       bobmods.lib.recipe.add_ingredient(
         "bob-robot-tool-combat-2",
-        { type = "item", name = "bob-brass-gear-wheel", amount = 2 }
+        { type = "item", name = "bob-cobalt-steel-gear-wheel", amount = 2 }
       )
     else
       bobmods.lib.recipe.add_ingredient(
