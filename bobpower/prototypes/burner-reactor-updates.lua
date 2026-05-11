@@ -19,7 +19,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
 
   if data.raw.item["bob-brass-pipe"] then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-reactor-2", "pipe", "bob-brass-pipe")
-    bobmods.lib.tech.add_prerequisite("bob-burner-reactor-2", "bob-zinc-processing")
+    bobmods.lib.tech.add_prerequisite("bob-burner-reactor-2", "bob-brass-processing")
   elseif data.raw.item["bob-steel-pipe"] then
     bobmods.lib.recipe.replace_ingredient("bob-fluid-reactor-2", "pipe", "bob-steel-pipe")
   end
