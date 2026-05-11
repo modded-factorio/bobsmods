@@ -30,7 +30,7 @@ if settings.startup["bobmods-mining-areadrills"].value == true then
 
   if data.raw.item["tungsten-carbide"] then
     bobmods.lib.recipe.replace_ingredient("bob-area-mining-drill-4", "steel-plate", "tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-area-drills-4", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-area-drills-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-tungsten-gear-wheel"] then
