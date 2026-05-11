@@ -48,7 +48,7 @@ if not mods["bobwarfare"] then
   end
   if data.raw.item["tungsten-carbide"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
