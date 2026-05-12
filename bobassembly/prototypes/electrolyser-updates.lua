@@ -71,8 +71,8 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-ceramic-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-ceramic-pipe")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-titanium-pipe")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
