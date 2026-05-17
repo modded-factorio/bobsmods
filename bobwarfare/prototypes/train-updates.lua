@@ -3,9 +3,28 @@ if data.raw.item["bob-cobalt-steel-alloy"] then
   bobmods.lib.tech.add_prerequisite("artillery", "bob-cobalt-processing")
 end
 
+if data.raw.item["bob-cobalt-steel-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("artillery-wagon", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
+  bobmods.lib.tech.add_prerequisite("artillery", "bob-cobalt-processing")
+end
+
+if data.raw.item["bob-aluminium-pipe"] then
+  bobmods.lib.recipe.replace_ingredient("artillery-wagon", "pipe", "bob-aluminium-pipe")
+  bobmods.lib.tech.add_prerequisite("artillery", "bob-aluminium-processing")
+end
+
 if data.raw.item["bob-invar-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "steel-plate", "bob-invar-alloy")
+  bobmods.lib.recipe.remove_ingredient("bob-artillery-wagon-2", "steel-plate")
+  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-2", { type = "item", name = "bob-invar-alloy", amount = 20 })
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-2", "bob-invar-processing")
+end
+
+if data.raw.item["bob-silicon-nitride"] then
+  bobmods.lib.recipe.add_ingredient(
+    "bob-artillery-wagon-2",
+    { type = "item", name = "bob-silicon-nitride", amount = 20 }
+  )
+  bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-2", "bob-ceramics")
 end
 
 if data.raw.item["bob-titanium-bearing"] then
@@ -22,31 +41,17 @@ end
 
 if data.raw.item["bob-titanium-gear-wheel"] then
   bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "iron-gear-wheel", "bob-titanium-gear-wheel")
-elseif data.raw.item["bob-steel-gear-wheel"] then
-  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "iron-gear-wheel", "bob-steel-gear-wheel")
 end
 
 if data.raw.item["bob-titanium-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "pipe", "bob-titanium-pipe")
-elseif data.raw.item["bob-steel-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-2", "pipe", "bob-steel-pipe")
 end
 
 if data.raw.item["tungsten-carbide"] then
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "tungsten-carbide", amount = 10 })
+  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "tungsten-carbide", amount = 20 })
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-tungsten-processing")
 else
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })
-end
-
-if data.raw.item["bob-silicon-nitride"] then
-  bobmods.lib.recipe.add_ingredient(
-    "bob-artillery-wagon-3",
-    { type = "item", name = "bob-silicon-nitride", amount = 10 }
-  )
-  bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-ceramics")
-else
-  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 10 })
+  bobmods.lib.recipe.add_ingredient("bob-artillery-wagon-3", { type = "item", name = "steel-plate", amount = 20 })
 end
 
 if data.raw.item["bob-nitinol-alloy"] then
