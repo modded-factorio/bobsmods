@@ -60,15 +60,17 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
 
   if data.raw.item["bob-tungsten-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-4", "iron-gear-wheel", "bob-tungsten-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-oil-refinery-4", "bob-tungsten-processing")
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-nitinol-bearing"] then
     bobmods.lib.recipe.add_ingredient("bob-oil-refinery-4", { type = "item", name = "bob-nitinol-bearing", amount = 5 })
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "bob-nitinol-processing")
   end
 
   if data.raw.item["bob-nitinol-pipe"] then
     bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-4", "pipe", "bob-nitinol-pipe")
+    bobmods.lib.tech.add_prerequisite("oil-processing-4", "bob-nitinol-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
