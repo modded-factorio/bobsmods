@@ -8,16 +8,17 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     end
   end
 
-  if data.raw.item["bob-cobalt-steel-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-2", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-electronics-machine-2", "bob-cobalt-processing")
+  if data.raw.item["bob-brass-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-2", "iron-gear-wheel", "bob-brass-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-electronics-machine-2", "bob-brass-processing")
   end
 
-  if data.raw.item["bob-cobalt-steel-bearing"] then
+  if data.raw.item["bob-titanium-bearing"] then
     bobmods.lib.recipe.add_ingredient(
       "bob-electronics-machine-2",
-      { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
+      { type = "item", name = "bob-titanium-bearing", amount = 5 }
     )
+    bobmods.lib.tech.add_prerequisite("bob-electronics-machine-2", "bob-titanium-processing")
   else
     bobmods.lib.recipe.add_ingredient(
       "bob-electronics-machine-2",
@@ -25,9 +26,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     )
   end
 
-  if data.raw.item["bob-aluminium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-2", "steel-plate", "bob-aluminium-plate")
-    bobmods.lib.tech.add_prerequisite("bob-electronics-machine-2", "bob-aluminium-processing")
+  if data.raw.item["bob-invar-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-2", "steel-plate", "bob-invar-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-electronics-machine-2", "bob-invar-processing")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
