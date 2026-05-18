@@ -20,8 +20,6 @@ end
 if data.raw.item["bob-nickel-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-roboport-chargepad-2", "steel-plate", "bob-nickel-plate")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-2", "steel-plate", "bob-nickel-plate")
-  bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-3", "steel-plate", "bob-nickel-plate")
-  bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-4", "steel-plate", "bob-nickel-plate")
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-2", "bob-nickel-processing")
 end
 
@@ -49,12 +47,13 @@ if data.raw.item["bob-battery-2"] then
 end
 
 if data.raw.item["bob-brass-alloy"] then
-  bobmods.lib.recipe.replace_ingredient("bob-roboport-door-3", "steel-plate", "bob-titanium-plate")
+  bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-3", "steel-plate", "bob-brass-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-3", "iron-gear-wheel", "bob-brass-gear-wheel")
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-3", "bob-brass-processing")
 end
 
 if data.raw.item["bob-titanium-plate"] then
+  bobmods.lib.recipe.replace_ingredient("bob-roboport-door-3", "steel-plate", "bob-titanium-plate")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-chargepad-3", "steel-plate", "bob-titanium-plate")
   if data.raw.recipe["bob-roboport-3"] then
     bobmods.lib.recipe.replace_ingredient("bob-roboport-3", "steel-plate", "bob-titanium-plate")
@@ -98,6 +97,7 @@ if data.raw.item["bob-battery-3"] then
 end
 
 if data.raw.item["bob-nitinol-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-4", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-chargepad-4", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-4", "steel-plate", "bob-nitinol-alloy")
   if data.raw.recipe["bob-roboport-4"] then

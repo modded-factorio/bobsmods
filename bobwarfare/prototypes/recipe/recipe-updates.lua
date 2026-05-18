@@ -57,6 +57,7 @@ if data.raw.item["bob-steel-gear-wheel"] then
 end
 
 if data.raw.item["bob-cobalt-steel-gear-wheel"] then
+  bobmods.lib.recipe.replace_ingredient("artillery-turret", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
   bobmods.lib.recipe.replace_ingredient("bob-sniper-turret-2", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
   bobmods.lib.tech.add_prerequisite("bob-sniper-turrets-2", "bob-cobalt-processing")
   bobmods.lib.recipe.replace_ingredient("tank", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
@@ -76,6 +77,7 @@ if data.raw.item["bob-cobalt-steel-bearing"] then
 end
 
 if data.raw.item["bob-cobalt-steel-alloy"] then
+  bobmods.lib.recipe.replace_ingredient("artillery-turret", "steel-plate", "bob-cobalt-steel-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-gun-turret-3", "steel-plate", "bob-cobalt-steel-alloy")
   bobmods.lib.tech.add_prerequisite("bob-turrets-3", "bob-cobalt-processing")
   bobmods.lib.recipe.replace_ingredient("bob-laser-turret-3", "steel-plate", "bob-cobalt-steel-alloy")
@@ -89,7 +91,7 @@ if data.raw.item["bob-cobalt-steel-alloy"] then
     { type = "item", name = "bob-cobalt-steel-alloy", amount = 75 }
   )
   bobmods.lib.tech.add_prerequisite("bob-plasma-turrets-1", "bob-cobalt-processing")
-  bobmods.lib.recipe.replace_ingredient("bob-radar-3", "iron-gear-wheel", "bob-cobalt-gear-wheel")
+  bobmods.lib.recipe.replace_ingredient("bob-radar-3", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
   bobmods.lib.tech.add_prerequisite("bob-radar-3", "bob-cobalt-processing")
 end
 
