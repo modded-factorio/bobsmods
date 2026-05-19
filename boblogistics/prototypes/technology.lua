@@ -312,7 +312,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       prerequisites = {
         "fluid-wagon",
         "automated-rail-transportation",
-        "chemical-science-pack",
+        "bob-fluid-handling-2",
       },
       unit = {
         count = 100,
