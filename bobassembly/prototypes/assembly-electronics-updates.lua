@@ -1,4 +1,8 @@
 if settings.startup["bobmods-assembly-electronicmachines"].value == true then
+  if data.raw.item["bob-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-1", "iron-gear-wheel", "bob-steel-gear-wheel")
+  end
+
   if data.raw.item["bob-bronze-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-electronics-machine-1", "steel-plate", "bob-bronze-alloy")
     if mods["bobelectronics"] then
