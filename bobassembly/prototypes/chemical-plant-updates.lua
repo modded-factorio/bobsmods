@@ -19,7 +19,9 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
 
   if data.raw.item["bob-bronze-alloy"] then
     bobmods.lib.recipe.replace_ingredient("chemical-plant", "steel-plate", "bob-bronze-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-alloy-processing")
+    if data.raw.technology["bob-chemical-plant"] then
+      bobmods.lib.tech.add_prerequisite("bob-chemical-plant", "bob-alloy-processing")
+    end
   end
 
   if data.raw.item["bob-bronze-pipe"] then

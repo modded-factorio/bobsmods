@@ -290,6 +290,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   if data.raw.item["bob-titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-mech-hip", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.recipe.replace_ingredient("bob-mech-knee", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-walking-vehicle", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-titanium-bearing"] then

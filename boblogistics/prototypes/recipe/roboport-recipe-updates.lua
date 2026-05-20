@@ -91,6 +91,12 @@ end
 if data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-4", "copper-plate", "bob-gold-plate")
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "bob-gold-processing")
+  if mods["bobequipment"] then
+    bobmods.lib.tech.add_prerequisite("bob-personal-roboport-mk4-equipment", "bob-gold-processing")
+  end
+  if mods["bobvehicleequipment"] then
+    bobmods.lib.tech.add_prerequisite("bob-vehicle-roboport-equipment-4", "bob-gold-processing")
+  end
 end
 
 if data.raw.item["bob-gilded-copper-cable"] then

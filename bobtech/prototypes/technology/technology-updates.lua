@@ -292,10 +292,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
     if mods["bobpower"] then
       bobmods.lib.tech.remove_prerequisite("bob-fluid-generator-1", "electronics")
     end
-    if mods["bobmining"] then
+    if data.raw.technology["bob-water-miner-2"] then
       bobmods.lib.tech.remove_prerequisite("bob-water-miner-2", "electronics")
     end
-    if mods["bobassembly"] then
+    if data.raw.technology["bob-electrolyser-2"] then
       bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "electronics")
     end
     if data.raw.technology["bob-chemical-plant"] then
