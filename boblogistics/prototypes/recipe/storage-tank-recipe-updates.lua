@@ -26,6 +26,7 @@ if mods["bobplates"] then
 
     bobmods.lib.recipe.add_ingredient("bob-storage-tank-3", { type = "item", name = "bob-titanium-pipe", amount = 2 })
     bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-3", "pipe", "bob-titanium-pipe")
+    bobmods.lib.tech.add_prerequisite("bob-fluid-handling-3", "bob-titanium-processing")
 
     bobmods.lib.recipe.add_ingredient("bob-storage-tank-4", { type = "item", name = "bob-nitinol-pipe", amount = 2 })
     bobmods.lib.recipe.replace_ingredient("bob-storage-tank-all-corners-4", "pipe", "bob-nitinol-pipe")
