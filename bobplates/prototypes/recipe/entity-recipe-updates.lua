@@ -2,8 +2,8 @@ if data.raw.item["bob-basic-circuit-board"] then
   bobmods.lib.recipe.replace_ingredient("bob-electrolyser", "electronic-circuit", "bob-basic-circuit-board")
 end
 
-if data.raw.item["bob-stone-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("bob-electrolyser", "pipe", "bob-stone-pipe")
+if data.raw.item["bob-copper-pipe"] then
+  bobmods.lib.recipe.replace_ingredient("bob-electrolyser", "pipe", "bob-copper-pipe")
 end
 
 if data.raw.item["bob-copper-pipe"] then
