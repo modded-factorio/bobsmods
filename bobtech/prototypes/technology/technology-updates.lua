@@ -335,7 +335,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if mods["bobplates"] then
     data.raw.recipe["bob-burner-lab"].enabled = false
     bobmods.lib.tech.add_prerequisite("automation-science-pack", "bob-burner-lab")
-    bobmods.lib.recipe.add_ingredient("bob-burner-lab", { type = "item", name = "bob-glass", amount = 5 })
     bobmods.lib.tech.remove_prerequisite("bob-gas-canisters", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-fluid-barrel-processing", "logistic-science-pack")
   end
