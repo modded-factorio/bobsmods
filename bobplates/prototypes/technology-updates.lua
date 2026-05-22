@@ -210,9 +210,5 @@ if mods["space-age"] then
   bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-tungsten-oxide")
   bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-powdered-tungsten")
 
-  -- bobmods.lib.tech.add_science_pack("bob-tungsten-alloy-processing", "space-science-pack", 1)
-  -- bobmods.lib.tech.add_science_pack("bob-tungsten-alloy-processing", "metallurgic-science-pack", 1)
-  -- bobmods.lib.tech.add_prerequisite("bob-tungsten-alloy-processing", "metallurgic-science-pack")
-
   bobmods.lib.tech.remove_recipe_unlock("bob-tungsten-processing", "tungsten-carbide")
 end
