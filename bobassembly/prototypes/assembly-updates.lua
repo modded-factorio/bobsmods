@@ -39,10 +39,7 @@ data.raw.recipe["assembling-machine-3"].ingredients = {
 }
 
 if data.raw.item["bob-bronze-pipe"] then
-  bobmods.lib.recipe.add_ingredient(
-    "assembling-machine-2",
-    { type = "item", name = "bob-bronze-pipe", amount = 5 }
-  )
+  bobmods.lib.recipe.add_ingredient("assembling-machine-2", { type = "item", name = "bob-bronze-pipe", amount = 5 })
   bobmods.lib.tech.add_prerequisite("automation-2", "bob-alloy-processing")
 end
 
@@ -67,10 +64,7 @@ if data.raw.item["bob-cobalt-steel-gear-wheel"] then
 end
 
 if data.raw.item["bob-aluminium-pipe"] then
-  bobmods.lib.recipe.add_ingredient(
-    "assembling-machine-3",
-    { type = "item", name = "bob-aluminium-pipe", amount = 5 }
-  )
+  bobmods.lib.recipe.add_ingredient("assembling-machine-3", { type = "item", name = "bob-aluminium-pipe", amount = 5 })
 end
 
 if data.raw.item["bob-aluminium-plate"] then
@@ -97,10 +91,7 @@ if data.raw.item["bob-brass-gear-wheel"] then
 end
 
 if data.raw.item["bob-brass-pipe"] then
-  bobmods.lib.recipe.add_ingredient(
-    "bob-assembling-machine-4",
-    { type = "item", name = "bob-brass-pipe", amount = 5 }
-  )
+  bobmods.lib.recipe.add_ingredient("bob-assembling-machine-4", { type = "item", name = "bob-brass-pipe", amount = 5 })
 end
 
 if data.raw.item["bob-titanium-plate"] then
@@ -167,7 +158,7 @@ if data.raw.item["bob-advanced-processing-unit"] then
 end
 
 if mods["bobmodules"] then
-bobmods.lib.recipe.remove_ingredient("bob-assembling-machine-6", "processing-unit")
+  bobmods.lib.recipe.remove_ingredient("bob-assembling-machine-6", "processing-unit")
   bobmods.lib.recipe.add_ingredient(
     "bob-assembling-machine-6",
     { type = "item", name = "bob-speed-module-4", amount = 1 }

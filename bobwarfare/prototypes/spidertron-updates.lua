@@ -314,7 +314,10 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-tankotron", "bob-tungsten-processing")
 
     if mods["boblogistics"] then
-      bobmods.lib.recipe.add_ingredient("bob-spidertron-cannon", { type = "item", name = "bob-tungsten-pipe", amount = 4 })
+      bobmods.lib.recipe.add_ingredient(
+        "bob-spidertron-cannon",
+        { type = "item", name = "bob-tungsten-pipe", amount = 4 }
+      )
     end
   end
 

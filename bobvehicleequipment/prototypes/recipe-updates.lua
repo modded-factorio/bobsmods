@@ -62,7 +62,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-2", amount = 8 },
     { type = "item", name = "steel-plate", amount = 4 },
   }
-
 else
   data.raw.recipe["bob-vehicle-roboport-equipment-2"].ingredients = {
     { type = "item", name = "bob-vehicle-roboport-equipment-1", amount = 1 },
@@ -84,11 +83,7 @@ else
         "bob-steel-gear-wheel"
       )
     end
-    bobmods.lib.recipe.replace_ingredient(
-      "bob-vehicle-roboport-antenna-equipment-2",
-      "steel-plate",
-      "bob-nickel-plate"
-    )
+    bobmods.lib.recipe.replace_ingredient("bob-vehicle-roboport-antenna-equipment-2", "steel-plate", "bob-nickel-plate")
     bobmods.lib.recipe.replace_ingredient(
       "bob-vehicle-roboport-chargepad-equipment-2",
       "steel-plate",

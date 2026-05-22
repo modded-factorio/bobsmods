@@ -44,7 +44,10 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   end
 
   if data.raw.item["bob-cobalt-steel-bearing"] then
-    bobmods.lib.recipe.add_ingredient("bob-chemical-plant-2", { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-chemical-plant-2",
+      { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
+    )
   end
 
   if data.raw.item["bob-brass-alloy"] then

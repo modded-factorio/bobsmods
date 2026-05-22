@@ -55,7 +55,6 @@ then
     { type = "item", name = "bob-roboport-chargepad-2", amount = 4 },
     { type = "item", name = "steel-plate", amount = 2 },
   }
-
 else
   data.raw.recipe["personal-roboport-mk2-equipment"].ingredients = {
     { type = "item", name = "personal-roboport-equipment", amount = 1 },

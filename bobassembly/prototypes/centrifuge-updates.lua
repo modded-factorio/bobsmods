@@ -3,7 +3,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
     bobmods.lib.recipe.replace_ingredient("centrifuge", "steel-plate", "bob-cobalt-steel-alloy")
     bobmods.lib.recipe.replace_ingredient("centrifuge", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
     bobmods.lib.tech.add_prerequisite("uranium-processing", "bob-cobalt-processing")
-  
+
     bobmods.lib.recipe.replace_ingredient("bob-centrifuge-2", "refined-concrete", "bob-silicon-nitride")
     bobmods.lib.tech.add_prerequisite("bob-centrifuge-2", "bob-ceramics")
 

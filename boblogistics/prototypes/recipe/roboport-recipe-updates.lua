@@ -8,10 +8,13 @@ bobmods.lib.recipe.set_ingredients("roboport", {
 if mods["bobplates"] then
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-1", "iron-gear-wheel", "bob-steel-gear-wheel")
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-1", { type = "item", name = "bob-steel-bearing", amount = 20 })
-  
+
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-2", "steel-plate", "bob-cobalt-steel-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-2", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
-  bobmods.lib.recipe.add_ingredient("bob-roboport-door-2", { type = "item", name = "bob-cobalt-steel-bearing", amount = 20 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-roboport-door-2",
+    { type = "item", name = "bob-cobalt-steel-bearing", amount = 20 }
+  )
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-2", "bob-cobalt-processing")
   if mods["bobequipment"] then
     bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "bob-cobalt-processing")
@@ -22,7 +25,10 @@ if mods["bobplates"] then
 
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-3", "steel-plate", "bob-titanium-plate")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
-  bobmods.lib.recipe.add_ingredient("bob-roboport-door-3", { type = "item", name = "bob-titanium-bearing", amount = 20 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-roboport-door-3",
+    { type = "item", name = "bob-titanium-bearing", amount = 20 }
+  )
 
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-4", "steel-plate", "bob-nitinol-alloy")
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-4", "iron-gear-wheel", "bob-nitinol-gear-wheel")
@@ -31,7 +37,7 @@ else
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-1", { type = "item", name = "iron-gear-wheel", amount = 20 })
 
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-2", { type = "item", name = "iron-gear-wheel", amount = 20 })
- 
+
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-3", { type = "item", name = "iron-gear-wheel", amount = 20 })
   bobmods.lib.recipe.add_ingredient("bob-roboport-door-3", { type = "fluid", name = "lubricant", amount = 10 })
   bobmods.lib.recipe.set_category("bob-roboport-door-3", "crafting-with-fluid")

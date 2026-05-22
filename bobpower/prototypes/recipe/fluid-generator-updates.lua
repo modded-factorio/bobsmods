@@ -53,7 +53,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["bob-aluminium-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-2", { type = "item", name = "bob-aluminium-pipe", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-fluid-generator-2",
+      { type = "item", name = "bob-aluminium-pipe", amount = 5 }
+    )
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
@@ -85,7 +88,10 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
   end
 
   if data.raw.item["bob-titanium-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-fluid-generator-3", { type = "item", name = "bob-titanium-pipe", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-fluid-generator-3",
+      { type = "item", name = "bob-titanium-pipe", amount = 5 }
+    )
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then

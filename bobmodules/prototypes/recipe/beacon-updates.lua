@@ -33,6 +33,9 @@ if data.raw.item["bob-insulated-cable"] then
 end
 
 if data.raw.item["bob-advanced-processing-unit"] then
-  bobmods.lib.recipe.add_ingredient("bob-beacon-3", { type = "item", name = "bob-advanced-processing-unit", amount = 20 })
+  bobmods.lib.recipe.add_ingredient(
+    "bob-beacon-3",
+    { type = "item", name = "bob-advanced-processing-unit", amount = 20 }
+  )
   bobmods.lib.tech.add_prerequisite("effect-transmission-3", "bob-advanced-processing-unit")
 end
