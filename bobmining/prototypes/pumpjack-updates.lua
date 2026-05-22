@@ -49,9 +49,9 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "bob-advanced-processing-unit")
   end
 
-  if data.raw.item["bob-nitinol-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-3", "pipe", "bob-nitinol-pipe")
-    bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "bob-nitinol-processing")
+  if data.raw.item["bob-tungsten-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-pumpjack-3", "pipe", "bob-tungsten-pipe")
+    bobmods.lib.tech.add_prerequisite("bob-pumpjacks-4", "bob-tungsten-processing")
   end
 
   if mods["Krastorio2"] then

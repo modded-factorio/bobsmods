@@ -350,11 +350,6 @@ if data.raw.technology["bob-tungsten-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
-if data.raw.technology["bob-nitinol-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe-to-ground")
-end
-
 local function remove_inserter_stack_size_bonus(technology)
   if data.raw.technology[technology] and data.raw.technology[technology].effects then
     for i, effect in pairs(data.raw.technology[technology].effects) do

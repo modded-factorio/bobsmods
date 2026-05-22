@@ -76,8 +76,8 @@ if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-chemical-plant-4", "bob-tungsten-processing")
   end
 
-  if data.raw.item["bob-nitinol-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "pipe", "bob-nitinol-pipe")
+  if data.raw.item["bob-tungsten-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-chemical-plant-4", "pipe", "bob-tungsten-pipe")
   end
 
   if data.raw.item["bob-tungsten-gear-wheel"] then

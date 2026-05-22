@@ -1285,90 +1285,6 @@ if mods["bobplates"] then
 
     {
       type = "pipe",
-      name = "bob-nitinol-pipe",
-      icon = "__boblogistics__/graphics/icons/pipe/nitinol-pipe.png",
-      icon_size = 64,
-      flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "bob-nitinol-pipe" },
-      max_health = 300,
-      corpse = "small-remnants",
-      icon_draw_specification = { scale = 0.5 },
-      resistances = {
-        {
-          type = "fire",
-          percent = 90,
-        },
-      },
-      fast_replaceable_group = "pipe",
-      collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
-      selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-      fluid_box = {
-        volume = 100,
-        pipe_connections = {
-          { position = { 0, 0 }, direction = defines.direction.north },
-          { position = { 0, 0 }, direction = defines.direction.east },
-          { position = { 0, 0 }, direction = defines.direction.south },
-          { position = { 0, 0 }, direction = defines.direction.west },
-        },
-        hide_connection_info = true,
-      },
-      pictures = bob_pipepictures("nitinol"),
-      impact_category = "metal",
-      working_sound = {
-        sound = {
-          {
-            filename = "__base__/sound/pipe.ogg",
-            volume = 0.65,
-          },
-        },
-        match_volume_to_activity = true,
-        max_sounds_per_prototype = 3,
-      },
-      horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-      vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
-    },
-
-    {
-      type = "pipe-to-ground",
-      name = "bob-nitinol-pipe-to-ground",
-      icon = "__boblogistics__/graphics/icons/pipe/nitinol-pipe-to-ground.png",
-      icon_size = 64,
-      flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 0.5, result = "bob-nitinol-pipe-to-ground" },
-      max_health = 350,
-      corpse = "small-remnants",
-      icon_draw_specification = { scale = 0.5 },
-      resistances = {
-        {
-          type = "fire",
-          percent = 80,
-        },
-      },
-      fast_replaceable_group = "pipe",
-      collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
-      selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-      fluid_box = {
-        volume = 100,
-        pipe_covers = bob_pipecoverspictures("nitinol"),
-        pipe_connections = {
-          { position = { 0, 0 }, direction = defines.direction.north },
-          {
-            position = { 0, 0 },
-            direction = defines.direction.south,
-            connection_type = "underground",
-            max_underground_distance = 30,
-          },
-        },
-        hide_connection_info = true,
-      },
-      pictures = bob_pipetogroundpictures("nitinol"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
-      impact_category = "metal",
-    },
-
-    {
-      type = "pipe",
       name = "bob-copper-tungsten-pipe",
       icon = "__boblogistics__/graphics/icons/pipe/copper-tungsten-pipe.png",
       icon_size = 64,
@@ -1457,7 +1373,6 @@ if mods["bobplates"] then
     data.raw.pipe["bob-brass-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-bronze-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-copper-tungsten-pipe"].heating_energy = "1kW"
-    data.raw.pipe["bob-nitinol-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-titanium-pipe"].heating_energy = "1kW"
     data.raw.pipe["bob-tungsten-pipe"].heating_energy = "1kW"
     data.raw["pipe-to-ground"]["bob-bronze-pipe-to-ground"].heating_energy = "150kW"
@@ -1466,7 +1381,6 @@ if mods["bobplates"] then
     data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].heating_energy = "250kW"
     data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].heating_energy = "300kW"
-    data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].heating_energy = "300kW"
     if mods["space-age"] then
       local function frozenpatch()
         local result = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].frozen_patch)
@@ -1478,7 +1392,6 @@ if mods["bobplates"] then
       data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].frozen_patch = frozenpatch()
       data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].frozen_patch = frozenpatch()
       data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].frozen_patch = frozenpatch()
-      data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].frozen_patch = frozenpatch()
       local function frozenpatch2()
         local result = util.table.deepcopy(data.raw.pipe.pipe.fluid_box.pipe_covers_frozen)
         return result
@@ -1487,7 +1400,6 @@ if mods["bobplates"] then
       data.raw.pipe["bob-brass-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-bronze-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-copper-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw.pipe["bob-nitinol-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-titanium-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw.pipe["bob-tungsten-pipe"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw["pipe-to-ground"]["bob-aluminium-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
@@ -1496,7 +1408,6 @@ if mods["bobplates"] then
       data.raw["pipe-to-ground"]["bob-titanium-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw["pipe-to-ground"]["bob-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
       data.raw["pipe-to-ground"]["bob-copper-tungsten-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
-      data.raw["pipe-to-ground"]["bob-nitinol-pipe-to-ground"].fluid_box.pipe_covers_frozen = frozenpatch2()
     end
   end
 end
@@ -1511,6 +1422,5 @@ if settings.startup["bobmods-logistics-ugdistanceoverhaul"].value == true then
   bobmods.logistics.set_pipe_distance("bob-brass-pipe-to-ground", 4)
   bobmods.logistics.set_pipe_distance("bob-titanium-pipe-to-ground", 4)
   bobmods.logistics.set_pipe_distance("bob-tungsten-pipe-to-ground", 5)
-  bobmods.logistics.set_pipe_distance("bob-nitinol-pipe-to-ground", 5)
   bobmods.logistics.set_pipe_distance("bob-copper-tungsten-pipe-to-ground", 5)
 end

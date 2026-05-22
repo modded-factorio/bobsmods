@@ -76,7 +76,8 @@ if settings.startup["bobmods-power-steam"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-steam-engine-5", "bob-nitinol-processing")
   end
 
-  if data.raw.item["bob-nitinol-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-steam-engine-5", "pipe", "bob-nitinol-pipe")
+  if data.raw.item["bob-copper-tungsten-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-steam-engine-5", "pipe", "bob-copper-tungsten-pipe")
+    bobmods.lib.tech.add_prerequisite("bob-steam-engine-5", "bob-tungsten-processing")
   end
 end

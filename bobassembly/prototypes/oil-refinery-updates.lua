@@ -37,7 +37,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
       bobmods.lib.recipe.replace_ingredient("oil-refinery", "pipe", "bob-steel-pipe")
       bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-2", "pipe", "bob-aluminium-pipe")
       bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-3", "pipe", "bob-titanium-pipe")
-      bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-4", "pipe", "bob-nitinol-pipe")
+      bobmods.lib.recipe.replace_ingredient("bob-oil-refinery-4", "pipe", "bob-tungsten-pipe")
       bobmods.lib.tech.add_prerequisite("oil-processing-2", "bob-aluminium-processing")
     end
   end

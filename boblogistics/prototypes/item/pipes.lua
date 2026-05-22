@@ -293,40 +293,6 @@ if data.raw.item["tungsten-plate"] then
   })
 end
 
-if data.raw.item["bob-nitinol-alloy"] then
-  data:extend({
-    {
-      type = "item",
-      name = "bob-nitinol-pipe",
-      icon = "__boblogistics__/graphics/icons/pipe/nitinol-pipe.png",
-      icon_size = 64,
-      subgroup = "bob-pipe",
-      order = "a[pipe]-a[pipe]-5-1",
-      place_result = "bob-nitinol-pipe",
-      stack_size = 100,
-      drop_sound = pipe_drop_move,
-      inventory_move_sound = pipe_drop_move,
-      pick_sound = pipe_pick,
-      weight = 5000,
-    },
-
-    {
-      type = "item",
-      name = "bob-nitinol-pipe-to-ground",
-      icon = "__boblogistics__/graphics/icons/pipe/nitinol-pipe-to-ground.png",
-      icon_size = 64,
-      subgroup = "bob-pipe-to-ground",
-      order = "a[pipe]-b[pipe-to-ground]-5-1",
-      place_result = "bob-nitinol-pipe-to-ground",
-      stack_size = 50,
-      drop_sound = pipe_drop_move,
-      inventory_move_sound = pipe_drop_move,
-      pick_sound = pipe_pick,
-      weight = 20000,
-    },
-  })
-end
-
 if data.raw.item["bob-copper-tungsten-alloy"] then
   data:extend({
     {

@@ -74,9 +74,9 @@ if data.raw.item["bob-nitinol-gear-wheel"] then
   bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-nitinol-processing")
 end
 
-if data.raw.item["bob-nitinol-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-3", "pipe", "bob-nitinol-pipe")
-  bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-nitinol-processing")
+if data.raw.item["bob-tungsten-pipe"] then
+  bobmods.lib.recipe.replace_ingredient("bob-artillery-wagon-3", "pipe", "bob-tungsten-pipe")
+  bobmods.lib.tech.add_prerequisite("bob-artillery-wagon-3", "bob-tungsten-processing")
 end
 
 if data.raw.item["bob-advanced-processing-unit"] then

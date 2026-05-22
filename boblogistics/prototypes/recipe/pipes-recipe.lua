@@ -182,29 +182,6 @@ if mods["bobplates"] then
   data:extend({
     {
       type = "recipe",
-      name = "bob-nitinol-pipe",
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "bob-nitinol-alloy", amount = 1 },
-      },
-      results = { { type = "item", name = "bob-nitinol-pipe", amount = 1 } },
-    },
-
-    {
-      type = "recipe",
-      name = "bob-nitinol-pipe-to-ground",
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "bob-nitinol-pipe", amount = 18 },
-        { type = "item", name = "bob-nitinol-alloy", amount = 5 },
-      },
-      results = { { type = "item", name = "bob-nitinol-pipe-to-ground", amount = 2 } },
-    },
-  })
-
-  data:extend({
-    {
-      type = "recipe",
       name = "bob-copper-tungsten-pipe",
       enabled = false,
       ingredients = {
