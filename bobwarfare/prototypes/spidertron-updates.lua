@@ -290,6 +290,7 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
   if data.raw.item["bob-titanium-gear-wheel"] then
     bobmods.lib.recipe.replace_ingredient("bob-mech-hip", "iron-gear-wheel", "bob-titanium-gear-wheel")
     bobmods.lib.recipe.replace_ingredient("bob-mech-knee", "iron-gear-wheel", "bob-titanium-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-walking-vehicle", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-titanium-bearing"] then
@@ -297,18 +298,24 @@ if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
     bobmods.lib.recipe.add_ingredient("bob-mech-knee", { type = "item", name = "bob-titanium-bearing", amount = 2 })
   end
 
-  if data.raw.item["bob-nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mech-leg-segment", "steel-plate", "bob-nitinol-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-walking-vehicle", "bob-nitinol-processing")
+  if data.raw.item["bob-brass-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mech-leg-segment", "steel-plate", "bob-brass-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-walking-vehicle", "bob-brass-processing")
   end
 
   if data.raw.item["bob-insulated-cable"] then
     bobmods.lib.recipe.replace_ingredient("bob-mech-leg", "copper-cable", "bob-insulated-cable")
   end
 
-  if data.raw.item["tungsten-carbide"] then
+  if mods["bobplates"] then
+    bobmods.lib.recipe.replace_ingredient("bob-spidertron-cannon", "steel-plate", "tungsten-plate")
+    bobmods.lib.recipe.replace_ingredient("bob-spidertron-cannon", "iron-gear-wheel", "bob-tungsten-gear-wheel")
     bobmods.lib.recipe.replace_ingredient("bob-mech-armor-plate", "steel-plate", "tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-tankotron", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-tankotron", "bob-tungsten-processing")
+
+    if mods["boblogistics"] then
+      bobmods.lib.recipe.add_ingredient("bob-spidertron-cannon", { type = "item", name = "bob-tungsten-pipe", amount = 4 })
+    end
   end
 
   if data.raw.item["bob-solder"] then

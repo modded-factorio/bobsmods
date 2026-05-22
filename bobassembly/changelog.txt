@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.6
+Version: 2.1.0
 Date: ???
   Bugfixes:
     - Fixed Burner and Steam Assembling machines not being able to craft some recipes #528
@@ -8,6 +8,7 @@ Date: ???
     - Disallowed certain entities in space #551
     - Set item weights #553
     - Adjust ingredients for some T4 and T5 recipes #583
+    - Reworked machine recipe ingredients #585
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 18. 01. 2026

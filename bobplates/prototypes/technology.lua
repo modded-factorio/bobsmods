@@ -447,7 +447,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-air-compressor-2",
-      "bob-zinc-processing",
+      "bob-aluminium-processing",
       "bob-cobalt-processing",
       "processing-unit",
     },
@@ -476,6 +476,7 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-air-compressor-3",
+      "bob-brass-processing",
       "bob-titanium-processing",
       "electric-engine",
       "bob-advanced-processing-unit",

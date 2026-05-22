@@ -1,0 +1,18 @@
+{
+  "item":
+  [
+    ["bob-battery-mk3-equipment", "battery-mk3-equipment"]
+  ],
+  "equipment":
+  [
+    ["bob-battery-mk3-equipment", "battery-mk3-equipment"]
+  ],
+  "recipe":
+  [
+    ["bob-battery-mk3-equipment", "battery-mk3-equipment"]
+  ],
+  "technology":
+  [
+    ["bob-battery-equipment-3", "battery-mk3-equipment"]
+  ]
+}

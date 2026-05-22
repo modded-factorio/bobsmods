@@ -52,9 +52,7 @@ bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-bearing")
 bobmods.lib.tech.add_recipe_unlock("bob-nickel-processing", "bob-nickel-plate")
 
 bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-zinc-plate")
-bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-alloy")
 bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-gunmetal-alloy")
-bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-gear-wheel")
 
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide")
 bobmods.lib.tech.add_recipe_unlock("bob-lead-processing", "bob-lead-oxide-2")
@@ -72,6 +70,9 @@ bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-plate"
 bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-wafer")
 bobmods.lib.tech.add_recipe_unlock("bob-silicon-processing", "bob-silicon-powder")
 
+bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-gear-wheel")
+
 bobmods.lib.tech.add_recipe_unlock("bob-titanium-processing", "bob-titanium-plate")
 
 bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungstic-acid")
@@ -83,8 +84,8 @@ bobmods.lib.tech.add_recipe_unlock("bob-invar-processing", "bob-invar-alloy")
 
 bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-alloy")
 
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-alloy")
-bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "tungsten-carbide")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-alloy")
+bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "tungsten-carbide")
 
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide-from-copper")
@@ -209,9 +210,5 @@ if mods["space-age"] then
   bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-tungsten-oxide")
   bobmods.lib.tech.add_recipe_unlock("tungsten-carbide", "bob-powdered-tungsten")
 
-  bobmods.lib.tech.add_science_pack("bob-tungsten-alloy-processing", "space-science-pack", 1)
-  bobmods.lib.tech.add_science_pack("bob-tungsten-alloy-processing", "metallurgic-science-pack", 1)
-  bobmods.lib.tech.add_prerequisite("bob-tungsten-alloy-processing", "metallurgic-science-pack")
-
-  bobmods.lib.tech.remove_recipe_unlock("bob-tungsten-alloy-processing", "tungsten-carbide")
+  bobmods.lib.tech.remove_recipe_unlock("bob-tungsten-processing", "tungsten-carbide")
 end

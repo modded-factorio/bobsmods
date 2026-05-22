@@ -46,7 +46,7 @@ end
 if bobmods.tech.advanced_logistic_science then
   if data.raw.item["bob-brass-chest"] then
     bobmods.lib.recipe.replace_ingredient("bob-advanced-logistic-science-pack", "steel-chest", "bob-brass-chest")
-    bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-zinc-processing")
+    bobmods.lib.tech.add_prerequisite("bob-advanced-logistic-science-pack", "bob-brass-processing")
   end
   if
     settings.startup["bobmods-logistics-inserteroverhaul"]
@@ -92,6 +92,7 @@ data.raw.recipe["utility-science-pack"].energy_required = 35
 bobmods.lib.recipe.set_result("utility-science-pack", { type = "item", name = "utility-science-pack", amount = 5 })
 
 if settings.startup["bobmods-burnerphase"].value == true then
+  bobmods.lib.recipe.add_ingredient("bob-burner-lab", { type = "item", name = "bob-glass", amount = 5 })
   bobmods.lib.recipe.add_new_ingredient("lab", { type = "item", name = "bob-burner-lab", amount = 1 })
 end
 

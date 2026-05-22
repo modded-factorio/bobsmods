@@ -2,8 +2,8 @@ if data.raw.item["bob-basic-circuit-board"] then
   bobmods.lib.recipe.replace_ingredient("bob-electrolyser", "electronic-circuit", "bob-basic-circuit-board")
 end
 
-if data.raw.item["bob-stone-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("bob-electrolyser", "pipe", "bob-stone-pipe")
+if data.raw.item["bob-copper-pipe"] then
+  bobmods.lib.recipe.replace_ingredient("bob-electrolyser", "pipe", "bob-copper-pipe")
 end
 
 if data.raw.item["bob-copper-pipe"] then
@@ -25,9 +25,10 @@ if data.raw.item["bob-bronze-pipe"] then
   bobmods.lib.recipe.replace_ingredient("bob-water-pump-2", "pipe", "bob-bronze-pipe")
 end
 
-if data.raw.item["bob-brass-pipe"] then
-  bobmods.lib.recipe.replace_ingredient("bob-air-pump-3", "pipe", "bob-brass-pipe")
-  bobmods.lib.recipe.replace_ingredient("bob-water-pump-3", "pipe", "bob-brass-pipe")
+if data.raw.item["bob-aluminium-pipe"] then
+  bobmods.lib.recipe.replace_ingredient("bob-air-pump-3", "pipe", "bob-aluminium-pipe")
+  bobmods.lib.recipe.replace_ingredient("bob-water-pump-3", "pipe", "bob-aluminium-pipe")
+  bobmods.lib.tech.add_prerequisite("bob-water-bore-3", "bob-aluminium-processing")
 end
 
 if settings.startup["bobmods-plates-convert-recipes"].value == true then

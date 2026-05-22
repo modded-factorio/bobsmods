@@ -84,7 +84,7 @@ data:extend({
   },
 })
 
-if data.raw.item["bob-bronze-alloy"] then
+if mods["bobplates"] then
   data:extend({
     {
       type = "recipe",
@@ -107,9 +107,30 @@ if data.raw.item["bob-bronze-alloy"] then
       results = { { type = "item", name = "bob-bronze-pipe-to-ground", amount = 2 } },
     },
   })
-end
 
-if data.raw.item["bob-brass-alloy"] then
+  data:extend({
+    {
+      type = "recipe",
+      name = "bob-aluminium-pipe",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-aluminium-plate", amount = 1 },
+      },
+      results = { { type = "item", name = "bob-aluminium-pipe", amount = 1 } },
+    },
+
+    {
+      type = "recipe",
+      name = "bob-aluminium-pipe-to-ground",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-aluminium-pipe", amount = 14 },
+        { type = "item", name = "bob-aluminium-plate", amount = 5 },
+      },
+      results = { { type = "item", name = "bob-aluminium-pipe-to-ground", amount = 2 } },
+    },
+  })
+
   data:extend({
     {
       type = "recipe",
@@ -132,9 +153,7 @@ if data.raw.item["bob-brass-alloy"] then
       results = { { type = "item", name = "bob-brass-pipe-to-ground", amount = 2 } },
     },
   })
-end
 
-if data.raw.item["bob-silicon-nitride"] then
   data:extend({
     {
       type = "recipe",
@@ -157,9 +176,7 @@ if data.raw.item["bob-silicon-nitride"] then
       results = { { type = "item", name = "bob-ceramic-pipe-to-ground", amount = 2 } },
     },
   })
-end
 
-if data.raw.item["bob-titanium-plate"] then
   data:extend({
     {
       type = "recipe",
@@ -182,9 +199,7 @@ if data.raw.item["bob-titanium-plate"] then
       results = { { type = "item", name = "bob-titanium-pipe-to-ground", amount = 2 } },
     },
   })
-end
 
-if data.raw.item["tungsten-plate"] then
   data:extend({
     {
       type = "recipe",
@@ -207,9 +222,7 @@ if data.raw.item["tungsten-plate"] then
       results = { { type = "item", name = "bob-tungsten-pipe-to-ground", amount = 2 } },
     },
   })
-end
 
-if data.raw.item["bob-nitinol-alloy"] then
   data:extend({
     {
       type = "recipe",
@@ -232,9 +245,7 @@ if data.raw.item["bob-nitinol-alloy"] then
       results = { { type = "item", name = "bob-nitinol-pipe-to-ground", amount = 2 } },
     },
   })
-end
 
-if data.raw.item["bob-copper-tungsten-alloy"] then
   data:extend({
     {
       type = "recipe",

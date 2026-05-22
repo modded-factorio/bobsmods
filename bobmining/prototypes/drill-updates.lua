@@ -11,9 +11,8 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-drills-3", "bob-cobalt-processing")
   end
 
-  if data.raw.item["bob-brass-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "iron-gear-wheel", "bob-brass-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-drills-3", "bob-zinc-processing")
+  if data.raw.item["bob-cobalt-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-2", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
   end
 
   if data.raw.item["bob-titanium-plate"] then
@@ -21,9 +20,9 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-drills-4", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-3", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-drills-4", "bob-titanium-processing")
+  if data.raw.item["bob-brass-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-mining-drill-3", "iron-gear-wheel", "bob-brass-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-drills-4", "bob-brass-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then
@@ -33,7 +32,7 @@ if settings.startup["bobmods-mining-miningdrills"].value == true then
 
   if data.raw.item["tungsten-carbide"] then
     bobmods.lib.recipe.replace_ingredient("bob-mining-drill-4", "steel-plate", "tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-drills-5", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-drills-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-tungsten-gear-wheel"] then

@@ -46,7 +46,7 @@ if mods["space-age"] then
   end
 elseif data.raw.item["tungsten-carbide"] then
   bobmods.lib.recipe.replace_ingredient("bob-heat-shield-tile", "plastic-bar", "tungsten-carbide")
-  bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-tungsten-alloy-processing")
+  bobmods.lib.tech.replace_prerequisite("bob-heat-shield", "plastics", "bob-tungsten-processing")
 end
 
 if data.raw.item["bob-titanium-plate"] then

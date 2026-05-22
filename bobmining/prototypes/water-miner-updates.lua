@@ -21,28 +21,25 @@ if settings.startup["bobmods-mining-waterminers"].value == true and data.raw["re
     bobmods.lib.tech.add_prerequisite("bob-water-miner-3", "bob-aluminium-processing")
   end
 
+  if data.raw.item["bob-cobalt-steel-gear-wheel"] then
+    bobmods.lib.recipe.replace_ingredient("bob-water-miner-3", "iron-gear-wheel", "bob-cobalt-steel-gear-wheel")
+    bobmods.lib.tech.add_prerequisite("bob-water-miner-3", "bob-cobalt-processing")
+  end
+
+  if data.raw.item["bob-plastic-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-water-miner-3", "pipe", "bob-plastic-pipe")
+  end
+
+  if data.raw.item["bob-brass-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-water-miner-4", "steel-plate", "bob-brass-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-water-miner-4", "bob-brass-processing")
+  end
+
   if data.raw.item["bob-brass-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-water-miner-3", "iron-gear-wheel", "bob-brass-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-3", "bob-zinc-processing")
+    bobmods.lib.recipe.replace_ingredient("bob-water-miner-4", "iron-gear-wheel", "bob-brass-gear-wheel")
   end
 
   if data.raw.item["bob-brass-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-water-miner-3", "pipe", "bob-brass-pipe")
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-3", "bob-zinc-processing")
-  end
-
-  if data.raw.item["bob-titanium-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-water-miner-4", "steel-plate", "bob-titanium-plate")
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-4", "bob-titanium-processing")
-  end
-
-  if data.raw.item["bob-titanium-gear-wheel"] then
-    bobmods.lib.recipe.replace_ingredient("bob-water-miner-4", "iron-gear-wheel", "bob-titanium-gear-wheel")
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-4", "bob-titanium-processing")
-  end
-
-  if data.raw.item["bob-titanium-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-water-miner-4", "pipe", "bob-titanium-pipe")
-    bobmods.lib.tech.add_prerequisite("bob-water-miner-4", "bob-titanium-processing")
+    bobmods.lib.recipe.replace_ingredient("bob-water-miner-4", "pipe", "bob-brass-pipe")
   end
 end

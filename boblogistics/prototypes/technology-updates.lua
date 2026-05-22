@@ -328,10 +328,15 @@ if data.raw.technology["bob-alloy-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bob-bronze-pipe-to-ground")
 end
 
-if data.raw.technology["bob-zinc-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe-to-ground")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-chest")
+if data.raw.technology["bob-aluminium-processing"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-aluminium-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-aluminium-pipe-to-ground")
+end
+
+if data.raw.technology["bob-brass-processing"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-chest")
 end
 
 if data.raw.technology["bob-titanium-processing"] then
@@ -344,16 +349,13 @@ end
 if data.raw.technology["bob-tungsten-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
 if data.raw.technology["bob-ceramics"] then
   bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe-to-ground")
-end
-
-if data.raw.technology["bob-tungsten-alloy-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
 if data.raw.technology["bob-nitinol-processing"] then
