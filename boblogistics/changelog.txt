@@ -14,6 +14,7 @@ Date: ???
       - Added Aluminium pipe and pipe to ground
       - Increased tech tier of Bronze pipes
       - Reworked recipe ingredients #585
+    - Removed Stone, Ceramic and Nitinol pipes #586
   Bugfixes:
     - Allowed Basic loaders (AAI Loaders mod) to be crafted in Assembling maching 1 / hand crafted when using expensive mode. #535
     - Fixed next_upgrade for Steam powered inserter and Ultimate inserter #542
