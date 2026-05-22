@@ -170,8 +170,8 @@ else
 end
 
 if settings.startup["bobmods-assembly-limits"].value == true then
-  data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 2
-  data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 4
+  data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 3
+  data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
   data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 6
   data.raw["assembling-machine"]["bob-assembling-machine-4"].ingredient_count = 8
   data.raw["assembling-machine"]["bob-assembling-machine-5"].ingredient_count = 10
