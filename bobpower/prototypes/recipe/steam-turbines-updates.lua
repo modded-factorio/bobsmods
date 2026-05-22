@@ -70,7 +70,10 @@ if settings.startup["bobmods-power-steam"].value == true then
   end
 
   if data.raw.item["bob-copper-tungsten-pipe"] then
-    bobmods.lib.recipe.add_ingredient("bob-steam-turbine-3", { type = "item", name = "bob-copper-tungsten-pipe", amount = 5 })
+    bobmods.lib.recipe.add_ingredient(
+      "bob-steam-turbine-3",
+      { type = "item", name = "bob-copper-tungsten-pipe", amount = 5 }
+    )
     bobmods.lib.tech.add_prerequisite("bob-steam-turbine-3", "bob-tungsten-processing")
   end
 
