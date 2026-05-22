@@ -85,7 +85,7 @@ else
     bobmods.lib.recipe.replace_ingredient(
       "bob-personal-roboport-chargepad-equipment-2",
       "steel-plate",
-      "bob-nickel-alloy"
+      "bob-nickel-plate"
     )
     bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-nickel-processing")
     bobmods.lib.recipe.add_ingredient(
