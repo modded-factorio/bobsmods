@@ -187,34 +187,6 @@ data:extend({
 
   {
     type = "item",
-    name = "bob-ceramic-bearing-ball",
-    icon = "__bobplates__/graphics/icons/ceramic-bearing-ball.png",
-    icon_size = 32,
-    subgroup = "bob-bearings",
-    order = "bae[bob-ball-bearing-ceramic]",
-    stack_size = 500,
-    drop_sound = ball_drop_move,
-    inventory_move_sound = ball_drop_move,
-    pick_sound = ball_pick,
-    weight = 80,
-  },
-
-  {
-    type = "item",
-    name = "bob-ceramic-bearing",
-    icon = "__bobplates__/graphics/icons/ceramic-bearing.png",
-    icon_size = 32,
-    subgroup = "bob-bearings",
-    order = "bbe[bob-bearing-ceramic]",
-    stack_size = 100,
-    drop_sound = bearing_drop_move,
-    inventory_move_sound = bearing_drop_move,
-    pick_sound = bearing_pick,
-    weight = 2000,
-  },
-
-  {
-    type = "item",
     name = "bob-nitinol-gear-wheel",
     icon = "__bobplates__/graphics/icons/nitinol-gear-wheel.png",
     icon_size = 32,

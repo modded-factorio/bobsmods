@@ -27,6 +27,7 @@ Date: ???
       - Increased the tech tier of Nickel, Brass, Invar
       - Added new tech Brass processing
       - Combined techs Tungsten processing and Tungsten alloy processing
+    - Removed Ceramic bearings #586
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

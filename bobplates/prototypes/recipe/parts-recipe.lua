@@ -163,31 +163,6 @@ data:extend({
 
   {
     type = "recipe",
-    name = "bob-ceramic-bearing-ball",
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "bob-silicon-nitride", amount = 1 },
-    },
-    results = { { type = "item", name = "bob-ceramic-bearing-ball", amount = 12 } },
-    allow_productivity = true,
-  },
-
-  {
-    type = "recipe",
-    name = "bob-ceramic-bearing",
-    category = "crafting-with-fluid",
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "bob-silicon-nitride", amount = 1 },
-      { type = "item", name = "bob-ceramic-bearing-ball", amount = 16 },
-      { type = "fluid", name = "lubricant", amount = 10 },
-    },
-    results = { { type = "item", name = "bob-ceramic-bearing", amount = 2 } },
-    allow_productivity = true,
-  },
-
-  {
-    type = "recipe",
     name = "bob-battery-2",
     category = "chemistry",
     energy_required = 5,

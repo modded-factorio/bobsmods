@@ -363,14 +363,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "bob-silicon-nitride",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "bob-ceramic-bearing-ball",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "bob-ceramic-bearing",
-      },
     },
     unit = {
       count = 60,
