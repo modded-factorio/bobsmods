@@ -1,6 +1,8 @@
 {
   "item":
   [
+    ["bob-stone-pipe", "pipe"],
+    ["bob-stone-pipe-to-ground", "pipe-to-ground"],
     ["bob-turbo-splitter", "turbo-splitter"],
     ["bob-turbo-transport-belt", "turbo-transport-belt"],
     ["bob-turbo-underground-belt", "turbo-underground-belt"]
@@ -13,6 +15,8 @@
   ],
   "entity":
   [
+    ["bob-stone-pipe", "pipe"],
+    ["bob-stone-pipe-to-ground", "pipe-to-ground"],
     ["bob-turbo-splitter", "turbo-splitter"],
     ["bob-turbo-transport-belt", "turbo-transport-belt"],
     ["bob-turbo-underground-belt", "turbo-underground-belt"]

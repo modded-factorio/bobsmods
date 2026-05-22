@@ -16,54 +16,6 @@ local pipe_pick = {
 data:extend({
   {
     type = "item",
-    name = "bob-stone-pipe",
-    icon = "__boblogistics__/graphics/icons/pipe/stone-pipe.png",
-    icon_size = 64,
-    subgroup = "bob-pipe",
-    order = "a[pipe]-a[pipe]-1-3",
-    place_result = "bob-stone-pipe",
-    stack_size = 100,
-    drop_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-      volume = 0.6,
-    },
-    weight = 5000,
-  },
-
-  {
-    type = "item",
-    name = "bob-stone-pipe-to-ground",
-    icon = "__boblogistics__/graphics/icons/pipe/stone-pipe-to-ground.png",
-    icon_size = 64,
-    subgroup = "bob-pipe-to-ground",
-    order = "a[pipe]-b[pipe-to-ground]-1-3",
-    place_result = "bob-stone-pipe-to-ground",
-    stack_size = 50,
-    drop_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-      volume = 0.6,
-    },
-    weight = 20000,
-  },
-
-  {
-    type = "item",
     name = "bob-copper-pipe",
     icon = "__boblogistics__/graphics/icons/pipe/copper-pipe.png",
     icon_size = 64,

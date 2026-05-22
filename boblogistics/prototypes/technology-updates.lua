@@ -314,9 +314,6 @@ end
 bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe")
 bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe-to-ground")
 
-bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-stone-pipe")
-bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-stone-pipe-to-ground")
-
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe")
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe-to-ground")
 
@@ -399,13 +396,9 @@ bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "storage-chest")
 bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 if mods["aai-industry"] then
-  bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-stone-pipe")
-  bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-stone-pipe-to-ground")
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-copper-pipe")
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-copper-pipe-to-ground")
 
-  bobmods.lib.tech.add_recipe_unlock("burner-mechanics", "bob-stone-pipe")
-  bobmods.lib.tech.add_recipe_unlock("burner-mechanics", "bob-stone-pipe-to-ground")
   bobmods.lib.tech.add_recipe_unlock("electricity", "bob-copper-pipe")
   bobmods.lib.tech.add_recipe_unlock("electricity", "bob-copper-pipe-to-ground")
 end

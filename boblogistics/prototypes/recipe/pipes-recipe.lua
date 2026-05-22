@@ -1,27 +1,6 @@
 data:extend({
   {
     type = "recipe",
-    name = "bob-stone-pipe",
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "stone-brick", amount = 1 },
-    },
-    results = { { type = "item", name = "bob-stone-pipe", amount = 1 } },
-  },
-
-  {
-    type = "recipe",
-    name = "bob-stone-pipe-to-ground",
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "bob-stone-pipe", amount = 10 },
-      { type = "item", name = "stone-brick", amount = 5 },
-    },
-    results = { { type = "item", name = "bob-stone-pipe-to-ground", amount = 2 } },
-  },
-
-  {
-    type = "recipe",
     name = "bob-copper-pipe",
     enabled = false,
     ingredients = {
