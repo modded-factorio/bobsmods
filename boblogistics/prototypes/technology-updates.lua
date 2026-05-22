@@ -350,11 +350,6 @@ if data.raw.technology["bob-tungsten-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
-if data.raw.technology["bob-ceramics"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe-to-ground")
-end
-
 if data.raw.technology["bob-nitinol-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe-to-ground")

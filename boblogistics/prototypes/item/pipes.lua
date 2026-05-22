@@ -225,58 +225,6 @@ if data.raw.item["bob-brass-alloy"] then
   })
 end
 
-if data.raw.item["bob-silicon-nitride"] then
-  data:extend({
-    {
-      type = "item",
-      name = "bob-ceramic-pipe",
-      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe.png",
-      icon_size = 64,
-      subgroup = "bob-pipe",
-      order = "a[pipe]-a[pipe]-3-3",
-      place_result = "bob-ceramic-pipe",
-      stack_size = 100,
-      drop_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      inventory_move_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      pick_sound = {
-        filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-        volume = 0.6,
-      },
-      weight = 5000,
-    },
-
-    {
-      type = "item",
-      name = "bob-ceramic-pipe-to-ground",
-      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe-to-ground.png",
-      icon_size = 64,
-      subgroup = "bob-pipe-to-ground",
-      order = "a[pipe]-b[pipe-to-ground]-3-3",
-      place_result = "bob-ceramic-pipe-to-ground",
-      stack_size = 50,
-      drop_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      inventory_move_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      pick_sound = {
-        filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-        volume = 0.6,
-      },
-      weight = 20000,
-    },
-  })
-end
-
 if data.raw.item["bob-titanium-plate"] then
   data:extend({
     {

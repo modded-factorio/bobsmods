@@ -136,29 +136,6 @@ if mods["bobplates"] then
   data:extend({
     {
       type = "recipe",
-      name = "bob-ceramic-pipe",
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "bob-silicon-nitride", amount = 1 },
-      },
-      results = { { type = "item", name = "bob-ceramic-pipe", amount = 1 } },
-    },
-
-    {
-      type = "recipe",
-      name = "bob-ceramic-pipe-to-ground",
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "bob-ceramic-pipe", amount = 16 },
-        { type = "item", name = "bob-silicon-nitride", amount = 5 },
-      },
-      results = { { type = "item", name = "bob-ceramic-pipe-to-ground", amount = 2 } },
-    },
-  })
-
-  data:extend({
-    {
-      type = "recipe",
       name = "bob-titanium-pipe",
       enabled = false,
       ingredients = {

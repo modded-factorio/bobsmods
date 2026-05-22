@@ -1,6 +1,8 @@
 {
   "item":
   [
+    ["bob-ceramic-pipe", "bob-titanium-pipe"],
+    ["bob-ceramic-pipe-to-ground", "bob-titanium-pipe-to-ground"],
     ["bob-stone-pipe", "pipe"],
     ["bob-stone-pipe-to-ground", "pipe-to-ground"],
     ["bob-turbo-splitter", "turbo-splitter"],
@@ -15,6 +17,8 @@
   ],
   "entity":
   [
+    ["bob-ceramic-pipe", "bob-titanium-pipe"],
+    ["bob-ceramic-pipe-to-ground", "bob-titanium-pipe-to-ground"],
     ["bob-stone-pipe", "pipe"],
     ["bob-stone-pipe-to-ground", "pipe-to-ground"],
     ["bob-turbo-splitter", "turbo-splitter"],
