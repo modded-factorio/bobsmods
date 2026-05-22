@@ -298,36 +298,6 @@ data.raw.technology["bob-nitinol-processing"].unit = {
   },
 }
 
-if not data.raw.technology["bob-tungsten-alloy-processing"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "bob-tungsten-alloy-processing",
-      prerequisites = {
-        "bob-alloy-processing",
-        "bob-tungsten-processing",
-        "production-science-pack",
-      },
-      effects = {},
-    },
-  })
-end
-
-data.raw.technology["bob-tungsten-alloy-processing"].icon =
-  "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png"
-data.raw.technology["bob-tungsten-alloy-processing"].icon_size = 32
-data.raw.technology["bob-tungsten-alloy-processing"].order = "c-b-e3"
-data.raw.technology["bob-tungsten-alloy-processing"].unit = {
-  count = 75,
-  time = 30,
-  ingredients = {
-    { "automation-science-pack", 1 },
-    { "logistic-science-pack", 1 },
-    { "chemical-science-pack", 1 },
-    { "production-science-pack", 1 },
-  },
-}
-
 if not data.raw.technology["bob-cobalt-processing"] then
   data:extend({
     {

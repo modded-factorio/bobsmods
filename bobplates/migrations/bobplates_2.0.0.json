@@ -449,7 +449,6 @@
     ["thorium-plutonium-fuel-cell", "bob-thorium-plutonium-fuel-cell"],
     ["thorium-processing", "bob-thorium-processing"],
     ["titanium-processing", "bob-titanium-processing"],
-    ["tungsten-alloy-processing", "bob-tungsten-alloy-processing"],
     ["tungsten-processing", "bob-tungsten-processing"],
     ["void-fluid", "bob-void-fluid"],
     ["water-bore-1", "bob-water-bore-1"],
