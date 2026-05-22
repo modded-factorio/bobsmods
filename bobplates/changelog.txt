@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.6
+Version: 2.1.0
 Date: ???
   Bugfixes:
     - Fixed some fluids / recipes not combining in Factoriopedia #565
@@ -22,6 +22,11 @@ Date: ???
     - Adjust ingredients for some T4 and T5 recipes #583
     - Increased the tech tier of Gold processing and Tungsten processing #583
     - Reduced the amount of Hydrogen chloride required for Tungstic acid #589
+    - Reworked plate tiers #585
+      - Reworked machine recipe ingredients
+      - Increased the tech tier of Nickel, Brass, Invar
+      - Added new tech Brass processing
+      - Combined techs Tungsten processing and Tungsten alloy processing
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026

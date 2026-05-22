@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.7
+Version: 2.1.0
 Date: ???
   Bugfixes:
     - Fixed crash with Classic Beacons mod #527
@@ -7,6 +7,7 @@ Date: ???
     - Set minimum values for module settings #540
     - Adjusted modules tech costs #545
     - Set item weights #553
+    - Reworked beacon recipe ingredients #585
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 18. 01. 2026

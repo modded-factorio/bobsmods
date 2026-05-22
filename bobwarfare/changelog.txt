@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.6
+Version: 2.1.0
 Date: ???
   Bugfixes:
     - Fixed Scatter cannnon shells missing rock, trees, etc. #561
@@ -10,6 +10,7 @@ Date: ???
     - Set item weights #553
     - Renamed Laser robot to Devestator robot #578
     - Adjust ingredients for some T4 and T5 recipes #583
+    - Reworked recipe ingredients #585
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15. 01. 2026
