@@ -41,7 +41,7 @@ local function make_disabled_visualization(i)
   }
 end
 
-local function bob_pipepictures(pipe_type)
+function bobmods.logistics.pipepictures(pipe_type)
   local pipepictures = {
     straight_vertical_single = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-straight-vertical-single.png",
@@ -386,7 +386,7 @@ local function bob_pipepictures(pipe_type)
   return pipepictures
 end
 
-local function bob_pipetogroundpictures(pipe_type)
+function bobmods.logistics.pipetogroundpictures(pipe_type)
   return {
     north = {
       filename = "__boblogistics__/graphics/entity/pipe/" .. pipe_type .. "/pipe-to-ground-up.png",
@@ -419,7 +419,7 @@ local function bob_pipetogroundpictures(pipe_type)
   }
 end
 
-local function bob_pipecoverspictures(pipe_type)
+function bobmods.logistics.pipecoverspictures(pipe_type)
   return {
     north = {
       layers = {
@@ -500,7 +500,7 @@ local function bob_pipecoverspictures(pipe_type)
   }
 end
 
-function bob_pipetoground_visualization()
+function bobmods.logistics.pipetoground_visualization()
   return {
     north = {
       filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
@@ -537,7 +537,7 @@ function bob_pipetoground_visualization()
   }
 end
 
-function bob_pipetoground_disabled_visualizaton()
+function bobmods.logistics.pipetoground_disabled_visualizaton()
   return {
     north = {
       filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
@@ -574,9 +574,9 @@ function bob_pipetoground_disabled_visualizaton()
   }
 end
 
-data.raw["pipe"]["pipe"].pictures = bob_pipepictures("iron")
-data.raw["pipe-to-ground"]["pipe-to-ground"]["fluid_box"].pipe_covers = bob_pipecoverspictures("iron")
-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures = bob_pipetogroundpictures("iron")
+data.raw["pipe"]["pipe"].pictures = bobmods.logistics.pipepictures("iron")
+data.raw["pipe-to-ground"]["pipe-to-ground"]["fluid_box"].pipe_covers = bobmods.logistics.pipecoverspictures("iron")
+data.raw["pipe-to-ground"]["pipe-to-ground"].pictures = bobmods.logistics.pipetogroundpictures("iron")
 
 data:extend({
   {
@@ -608,7 +608,7 @@ data:extend({
       },
       hide_connection_info = true,
     },
-    pictures = bob_pipepictures("copper"),
+    pictures = bobmods.logistics.pipepictures("copper"),
     impact_category = "metal",
     working_sound = {
       sound = {
@@ -645,7 +645,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
       volume = 100,
-      pipe_covers = bob_pipecoverspictures("copper"),
+      pipe_covers = bobmods.logistics.pipecoverspictures("copper"),
       pipe_connections = {
         { position = { 0, 0 }, direction = defines.direction.north },
         {
@@ -657,9 +657,9 @@ data:extend({
       },
       hide_connection_info = true,
     },
-    pictures = bob_pipetogroundpictures("copper"),
-    visualization = bob_pipetoground_visualization(),
-    disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+    pictures = bobmods.logistics.pipetogroundpictures("copper"),
+    visualization = bobmods.logistics.pipetoground_visualization(),
+    disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
     impact_category = "metal",
   },
 
@@ -692,7 +692,7 @@ data:extend({
       },
       hide_connection_info = true,
     },
-    pictures = bob_pipepictures("steel"),
+    pictures = bobmods.logistics.pipepictures("steel"),
     impact_category = "metal",
     working_sound = {
       sound = {
@@ -729,7 +729,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
       volume = 100,
-      pipe_covers = bob_pipecoverspictures("steel"),
+      pipe_covers = bobmods.logistics.pipecoverspictures("steel"),
       pipe_connections = {
         { position = { 0, 0 }, direction = defines.direction.north },
         {
@@ -741,9 +741,9 @@ data:extend({
       },
       hide_connection_info = true,
     },
-    pictures = bob_pipetogroundpictures("steel"),
-    visualization = bob_pipetoground_visualization(),
-    disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+    pictures = bobmods.logistics.pipetogroundpictures("steel"),
+    visualization = bobmods.logistics.pipetoground_visualization(),
+    disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
     impact_category = "metal",
   },
 
@@ -776,7 +776,7 @@ data:extend({
       },
       hide_connection_info = true,
     },
-    pictures = bob_pipepictures("plastic"),
+    pictures = bobmods.logistics.pipepictures("plastic"),
     impact_category = "stone", --Closest approximation for sound of hitting plastic
     working_sound = {
       sound = {
@@ -813,7 +813,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
       volume = 100,
-      pipe_covers = bob_pipecoverspictures("plastic"),
+      pipe_covers = bobmods.logistics.pipecoverspictures("plastic"),
       pipe_connections = {
         { position = { 0, 0 }, direction = defines.direction.north },
         {
@@ -825,9 +825,9 @@ data:extend({
       },
       hide_connection_info = true,
     },
-    pictures = bob_pipetogroundpictures("plastic"),
-    visualization = bob_pipetoground_visualization(),
-    disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+    pictures = bobmods.logistics.pipetogroundpictures("plastic"),
+    visualization = bobmods.logistics.pipetoground_visualization(),
+    disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
     impact_category = "stone",
   },
 })
@@ -892,7 +892,7 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipepictures("bronze"),
+      pictures = bobmods.logistics.pipepictures("bronze"),
       impact_category = "metal",
       working_sound = {
         sound = {
@@ -929,7 +929,7 @@ if mods["bobplates"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
         volume = 100,
-        pipe_covers = bob_pipecoverspictures("bronze"),
+        pipe_covers = bobmods.logistics.pipecoverspictures("bronze"),
         pipe_connections = {
           { position = { 0, 0 }, direction = defines.direction.north },
           {
@@ -941,9 +941,9 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipetogroundpictures("bronze"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+      pictures = bobmods.logistics.pipetogroundpictures("bronze"),
+      visualization = bobmods.logistics.pipetoground_visualization(),
+      disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
 
@@ -976,7 +976,7 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipepictures("ceramic"),
+      pictures = bobmods.logistics.pipepictures("ceramic"),
       impact_category = "metal",
       working_sound = {
         sound = {
@@ -1013,7 +1013,7 @@ if mods["bobplates"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
         volume = 100,
-        pipe_covers = bob_pipecoverspictures("ceramic"),
+        pipe_covers = bobmods.logistics.pipecoverspictures("ceramic"),
         pipe_connections = {
           { position = { 0, 0 }, direction = defines.direction.north },
           {
@@ -1025,9 +1025,9 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipetogroundpictures("ceramic"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+      pictures = bobmods.logistics.pipetogroundpictures("ceramic"),
+      visualization = bobmods.logistics.pipetoground_visualization(),
+      disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
 
@@ -1060,7 +1060,7 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipepictures("brass"),
+      pictures = bobmods.logistics.pipepictures("brass"),
       impact_category = "metal",
       working_sound = {
         sound = {
@@ -1097,7 +1097,7 @@ if mods["bobplates"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
         volume = 100,
-        pipe_covers = bob_pipecoverspictures("brass"),
+        pipe_covers = bobmods.logistics.pipecoverspictures("brass"),
         pipe_connections = {
           { position = { 0, 0 }, direction = defines.direction.north },
           {
@@ -1109,9 +1109,9 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipetogroundpictures("brass"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+      pictures = bobmods.logistics.pipetogroundpictures("brass"),
+      visualization = bobmods.logistics.pipetoground_visualization(),
+      disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
 
@@ -1144,7 +1144,7 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipepictures("titanium"),
+      pictures = bobmods.logistics.pipepictures("titanium"),
       impact_category = "metal",
       working_sound = {
         sound = {
@@ -1181,7 +1181,7 @@ if mods["bobplates"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
         volume = 100,
-        pipe_covers = bob_pipecoverspictures("titanium"),
+        pipe_covers = bobmods.logistics.pipecoverspictures("titanium"),
         pipe_connections = {
           { position = { 0, 0 }, direction = defines.direction.north },
           {
@@ -1193,9 +1193,9 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipetogroundpictures("titanium"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+      pictures = bobmods.logistics.pipetogroundpictures("titanium"),
+      visualization = bobmods.logistics.pipetoground_visualization(),
+      disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
 
@@ -1228,7 +1228,7 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipepictures("tungsten"),
+      pictures = bobmods.logistics.pipepictures("tungsten"),
       impact_category = "metal",
       working_sound = {
         sound = {
@@ -1265,7 +1265,7 @@ if mods["bobplates"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
         volume = 100,
-        pipe_covers = bob_pipecoverspictures("tungsten"),
+        pipe_covers = bobmods.logistics.pipecoverspictures("tungsten"),
         pipe_connections = {
           { position = { 0, 0 }, direction = defines.direction.north },
           {
@@ -1277,9 +1277,9 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipetogroundpictures("tungsten"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+      pictures = bobmods.logistics.pipetogroundpictures("tungsten"),
+      visualization = bobmods.logistics.pipetoground_visualization(),
+      disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
 
@@ -1312,7 +1312,7 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipepictures("copper-tungsten"),
+      pictures = bobmods.logistics.pipepictures("copper-tungsten"),
       impact_category = "metal",
       working_sound = {
         sound = {
@@ -1349,7 +1349,7 @@ if mods["bobplates"] then
       selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       fluid_box = {
         volume = 100,
-        pipe_covers = bob_pipecoverspictures("copper-tungsten"),
+        pipe_covers = bobmods.logistics.pipecoverspictures("copper-tungsten"),
         pipe_connections = {
           { position = { 0, 0 }, direction = defines.direction.north },
           {
@@ -1361,9 +1361,9 @@ if mods["bobplates"] then
         },
         hide_connection_info = true,
       },
-      pictures = bob_pipetogroundpictures("copper-tungsten"),
-      visualization = bob_pipetoground_visualization(),
-      disabled_visualization = bob_pipetoground_disabled_visualizaton(),
+      pictures = bobmods.logistics.pipetogroundpictures("copper-tungsten"),
+      visualization = bobmods.logistics.pipetoground_visualization(),
+      disabled_visualization = bobmods.logistics.pipetoground_disabled_visualizaton(),
       impact_category = "metal",
     },
   })
