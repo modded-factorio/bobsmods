@@ -68,13 +68,14 @@ else
     if combined_roboports == true then
       bobmods.lib.recipe.add_ingredient(
         "personal-roboport-mk2-equipment",
-        { type = "item", name = "bob-steel-bearing", amount = 5 }
+        { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
       )
       bobmods.lib.recipe.replace_ingredient(
         "personal-roboport-mk2-equipment",
         "iron-gear-wheel",
-        "bob-steel-gear-wheel"
+        "bob-cobalt-steel-gear-wheel"
       )
+      bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "bob-cobalt-processing")
     end
     bobmods.lib.recipe.replace_ingredient(
       "bob-personal-roboport-antenna-equipment-2",
@@ -87,14 +88,15 @@ else
       "bob-nickel-plate"
     )
     bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-nickel-processing")
+    bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-cobalt-processing")
     bobmods.lib.recipe.add_ingredient(
       "bob-personal-roboport-antenna-equipment-2",
-      { type = "item", name = "bob-steel-bearing", amount = 5 }
+      { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 }
     )
     bobmods.lib.recipe.replace_ingredient(
       "bob-personal-roboport-antenna-equipment-2",
       "iron-gear-wheel",
-      "bob-steel-gear-wheel"
+      "bob-cobalt-steel-gear-wheel"
     )
   end
 end

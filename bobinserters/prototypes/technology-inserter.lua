@@ -126,6 +126,7 @@ if settings.startup["bobmods-inserters-more2"].value == true and not data.raw.te
       prerequisites = {
         "bob-more-inserters-1",
         "logistics-3",
+        "production-science-pack",
       },
       unit = {
         count = 50,

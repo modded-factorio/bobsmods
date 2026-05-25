@@ -158,6 +158,7 @@ if bobmods.tech and bobmods.tech.advanced_logistic_science then
       "production-science-pack",
       "bob-advanced-logistic-science-pack"
     )
+    bobmods.lib.tech.replace_prerequisite("bob-more-inserters-2", "production-science-pack", "bob-advanced-logistic-science-pack")
   end
 end
 

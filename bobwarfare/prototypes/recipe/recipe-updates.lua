@@ -78,11 +78,12 @@ if data.raw.item["bob-cobalt-steel-gear-wheel"] then
 end
 
 if data.raw.item["bob-steel-bearing"] then
-  bobmods.lib.recipe.add_ingredient("bob-radar-3", { type = "item", name = "bob-steel-bearing", amount = 5 })
+  bobmods.lib.recipe.add_ingredient("bob-radar-2", { type = "item", name = "bob-steel-bearing", amount = 5 })
   bobmods.lib.recipe.add_ingredient("bob-gun-turret-3", { type = "item", name = "bob-steel-bearing", amount = 10 })
 end
 
 if data.raw.item["bob-cobalt-steel-bearing"] then
+  bobmods.lib.recipe.add_ingredient("bob-radar-3", { type = "item", name = "bob-cobalt-steel-bearing", amount = 5 })
   bobmods.lib.recipe.add_ingredient(
     "bob-sniper-turret-2",
     { type = "item", name = "bob-cobalt-steel-bearing", amount = 20 }
