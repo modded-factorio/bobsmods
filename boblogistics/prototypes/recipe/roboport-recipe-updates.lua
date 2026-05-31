@@ -1,3 +1,8 @@
+local combined_roboports = true
+if mods["boblogistics"] and settings.startup["bobmods-logistics-disableroboports"].value == true then
+  combined_roboports = false
+end
+
 bobmods.lib.recipe.set_ingredients("roboport", {
   { type = "item", name = "steel-plate", amount = 15 },
   { type = "item", name = "bob-roboport-antenna-1", amount = 5 },
@@ -17,10 +22,18 @@ if mods["bobplates"] then
   )
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-2", "bob-cobalt-processing")
   if mods["bobequipment"] then
-    bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "bob-cobalt-processing")
+    if combined_roboports then
+      bobmods.lib.tech.add_prerequisite("personal-roboport-mk2-equipment", "bob-cobalt-processing")
+    else
+      bobmods.lib.tech.add_prerequisite("bob-personal-roboport-modular-equipment-2", "bob-cobalt-processing")
+    end
   end
   if mods["bobvehicleequipment"] then
-    bobmods.lib.tech.add_prerequisite("bob-vehicle-roboport-equipment-2", "bob-cobalt-processing")
+    if combined_roboports then
+      bobmods.lib.tech.add_prerequisite("bob-vehicle-roboport-equipment-2", "bob-cobalt-processing")
+    else
+      bobmods.lib.tech.add_prerequisite("bob-vehicle-roboport-modular-equipment-2", "bob-cobalt-processing")
+    end
   end
 
   bobmods.lib.recipe.replace_ingredient("bob-roboport-door-3", "steel-plate", "bob-titanium-plate")
@@ -97,10 +110,10 @@ end
 if data.raw.item["bob-gold-plate"] then
   bobmods.lib.recipe.replace_ingredient("bob-roboport-antenna-4", "copper-plate", "bob-gold-plate")
   bobmods.lib.tech.add_prerequisite("bob-robo-modular-4", "bob-gold-processing")
-  if mods["bobequipment"] then
+  if mods["bobequipment"] and combined_roboports then
     bobmods.lib.tech.add_prerequisite("bob-personal-roboport-mk4-equipment", "bob-gold-processing")
   end
-  if mods["bobvehicleequipment"] then
+  if mods["bobvehicleequipment"] and combined_roboports then
     bobmods.lib.tech.add_prerequisite("bob-vehicle-roboport-equipment-4", "bob-gold-processing")
   end
 end

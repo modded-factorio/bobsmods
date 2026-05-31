@@ -4,6 +4,7 @@ if data.raw.item["bob-brass-chest"] then
   bobmods.lib.recipe.replace_ingredient("bob-storage-chest-2", "storage-chest", "bob-brass-chest")
   bobmods.lib.recipe.replace_ingredient("bob-buffer-chest-2", "buffer-chest", "bob-brass-chest")
   bobmods.lib.recipe.replace_ingredient("bob-requester-chest-2", "requester-chest", "bob-brass-chest")
+  bobmods.lib.tech.add_prerequisite("logistic-system-2", "bob-brass-processing")
 
   bobmods.lib.recipe.add_ingredient(
     "bob-passive-provider-chest-2",
