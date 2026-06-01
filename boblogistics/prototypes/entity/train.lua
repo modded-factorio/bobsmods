@@ -93,7 +93,9 @@ if settings.startup["bobmods-logistics-trains"].value == true then
   data.raw.locomotive["locomotive"].resistances = rolling_stock_resistances()
 
   if feature_flags["space_travel"] then
-    table.insert(data.raw.locomotive.locomotive.surface_conditions, { property = "pressure", min = 10 })
+    data.raw.locomotive.locomotive.surface_conditions = {
+      { property = "pressure", min = 10 }
+    }
   end
 
   data:extend({
