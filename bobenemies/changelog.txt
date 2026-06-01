@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: ???
+Date: 01. 06. 2026
   Bugfixes:
     - Enemy spawn table adjustments #537
     - Fixed artifacts on ground being covered by worm / spawner remains #568

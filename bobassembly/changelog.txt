@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: ???
+Date: 01. 06. 2026
   Bugfixes:
     - Fixed Burner and Steam Assembling machines not being able to craft some recipes #528
     - Fixed Automation tech not ignoring tech cost multiplier #534
