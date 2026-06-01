@@ -50,10 +50,10 @@ data:extend({
     },
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    energy_per_sector = "1MJ",
-    max_distance_of_sector_revealed = 4,
-    max_distance_of_nearby_sector_revealed = 4,
-    energy_per_nearby_scan = "240kJ",
+    energy_per_sector = "3MJ",
+    max_distance_of_sector_revealed = 2,
+    max_distance_of_nearby_sector_revealed = 2,
+    energy_per_nearby_scan = "2.5MJ",
     rotation_speed = 0.025,
     energy_source = {
       type = "electric",
@@ -148,6 +148,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 20000,
   },
 
   {
@@ -190,15 +191,17 @@ data:extend({
   },
 })
 
-if feature_flags["freezing"] and mods["space-age"] then
+if feature_flags["freezing"] then
   data.raw.radar["bob-artifact-radar"].heating_energy = "300kW"
-  data.raw.radar["bob-artifact-radar"].frozen_patch = {
-    filename = "__space-age__/graphics/entity/frozen/radar/radar.png",
-    direction_count = 1,
-    width = 196,
-    height = 254,
-    scale = 0.5,
-    shift = { 0.03125, -0.5 },
-  }
-  data.raw.radar["bob-artifact-radar"].reset_orientation_when_frozen = true
+  if mods["space-age"] then
+    data.raw.radar["bob-artifact-radar"].frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/radar/radar.png",
+      direction_count = 1,
+      width = 196,
+      height = 254,
+      scale = 0.5,
+      shift = { 0.03125, -0.5 },
+    }
+    data.raw.radar["bob-artifact-radar"].reset_orientation_when_frozen = true
+  end
 end

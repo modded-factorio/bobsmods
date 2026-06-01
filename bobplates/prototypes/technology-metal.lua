@@ -5,6 +5,7 @@ if not data.raw.technology["bob-nickel-processing"] then
       name = "bob-nickel-processing",
       prerequisites = {
         "bob-electrolysis-1",
+        "logistic-science-pack",
       },
       effects = {},
     },
@@ -19,6 +20,7 @@ data.raw.technology["bob-nickel-processing"].unit = {
   time = 30,
   ingredients = {
     { "automation-science-pack", 1 },
+    { "logistic-science-pack", 1 },
   },
 }
 
@@ -108,6 +110,7 @@ if not data.raw.technology["bob-gold-processing"] then
       name = "bob-gold-processing",
       prerequisites = {
         "bob-electrolysis-2",
+        "chemical-science-pack",
       },
       effects = {},
     },
@@ -123,6 +126,7 @@ data.raw.technology["bob-gold-processing"].unit = {
   ingredients = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
   },
 }
 
@@ -149,6 +153,33 @@ data.raw.technology["bob-silicon-processing"].unit = {
   ingredients = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
+  },
+}
+
+if not data.raw.technology["bob-brass-processing"] then
+  data:extend({
+    {
+      type = "technology",
+      name = "bob-brass-processing",
+      prerequisites = {
+        "bob-zinc-processing",
+        "chemical-science-pack",
+      },
+      effects = {},
+    },
+  })
+end
+
+data.raw.technology["bob-brass-processing"].icon = "__bobplates__/graphics/icons/technology/zinc-processing.png"
+data.raw.technology["bob-brass-processing"].icon_size = 128
+data.raw.technology["bob-brass-processing"].order = "c-b-e0"
+data.raw.technology["bob-brass-processing"].unit = {
+  count = 40,
+  time = 30,
+  ingredients = {
+    { "automation-science-pack", 1 },
+    { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
   },
 }
 
@@ -186,9 +217,9 @@ if not data.raw.technology["bob-tungsten-processing"] then
       name = "bob-tungsten-processing",
       prerequisites = {
         "bob-chemical-processing-2",
-        "chemical-science-pack",
         "bob-nickel-processing",
         "bob-alloy-processing",
+        "production-science-pack",
       },
       effects = {},
     },
@@ -205,6 +236,7 @@ data.raw.technology["bob-tungsten-processing"].unit = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
     { "chemical-science-pack", 1 },
+    { "production-science-pack", 1 },
   },
 }
 
@@ -216,7 +248,7 @@ if not data.raw.technology["bob-invar-processing"] then
       prerequisites = {
         "bob-alloy-processing",
         "bob-nickel-processing",
-        "logistic-science-pack",
+        "chemical-science-pack",
       },
       effects = {},
     },
@@ -232,6 +264,7 @@ data.raw.technology["bob-invar-processing"].unit = {
   ingredients = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
   },
 }
 
@@ -255,36 +288,6 @@ data.raw.technology["bob-nitinol-processing"].icon = "__bobplates__/graphics/ico
 data.raw.technology["bob-nitinol-processing"].icon_size = 32
 data.raw.technology["bob-nitinol-processing"].order = "c-b-h"
 data.raw.technology["bob-nitinol-processing"].unit = {
-  count = 75,
-  time = 30,
-  ingredients = {
-    { "automation-science-pack", 1 },
-    { "logistic-science-pack", 1 },
-    { "chemical-science-pack", 1 },
-    { "production-science-pack", 1 },
-  },
-}
-
-if not data.raw.technology["bob-tungsten-alloy-processing"] then
-  data:extend({
-    {
-      type = "technology",
-      name = "bob-tungsten-alloy-processing",
-      prerequisites = {
-        "bob-alloy-processing",
-        "bob-tungsten-processing",
-        "production-science-pack",
-      },
-      effects = {},
-    },
-  })
-end
-
-data.raw.technology["bob-tungsten-alloy-processing"].icon =
-  "__bobplates__/graphics/icons/plate/copper-tungsten-plate.png"
-data.raw.technology["bob-tungsten-alloy-processing"].icon_size = 32
-data.raw.technology["bob-tungsten-alloy-processing"].order = "c-b-e3"
-data.raw.technology["bob-tungsten-alloy-processing"].unit = {
   count = 75,
   time = 30,
   ingredients = {

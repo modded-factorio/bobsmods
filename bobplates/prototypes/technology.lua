@@ -80,7 +80,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-carbon",
+        recipe = "carbon",
       },
       {
         type = "unlock-recipe",
@@ -363,14 +363,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "bob-silicon-nitride",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "bob-ceramic-bearing-ball",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "bob-ceramic-bearing",
-      },
     },
     unit = {
       count = 60,
@@ -447,8 +439,8 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-air-compressor-2",
-      "bob-zinc-processing",
-      "bob-titanium-processing",
+      "bob-aluminium-processing",
+      "bob-cobalt-processing",
       "processing-unit",
     },
     effects = {
@@ -476,7 +468,8 @@ data:extend({
     icon_size = 32,
     prerequisites = {
       "bob-air-compressor-3",
-      "bob-nitinol-processing",
+      "bob-brass-processing",
+      "bob-titanium-processing",
       "electric-engine",
       "bob-advanced-processing-unit",
     },
@@ -559,7 +552,7 @@ data:extend({
     prerequisites = {
       "bob-water-bore-2",
       "bob-zinc-processing",
-      "bob-titanium-processing",
+      "bob-cobalt-processing",
       "processing-unit",
     },
     effects = {
@@ -587,7 +580,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "bob-water-bore-3",
-      "bob-nitinol-processing",
+      "bob-titanium-processing",
       "electric-engine",
       "bob-advanced-processing-unit",
     },
@@ -967,7 +960,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-lithium-ion-battery",
+        recipe = "bob-battery-2",
       },
     },
     order = "b-c-a",
@@ -1007,7 +1000,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-silver-zinc-battery",
+        recipe = "bob-battery-3",
       },
     },
     order = "b-c-b",

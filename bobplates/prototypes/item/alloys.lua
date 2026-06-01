@@ -19,6 +19,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -31,6 +32,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -43,18 +45,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-  },
-  {
-    type = "item",
-    name = "bob-tungsten-carbide",
-    icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
-    icon_size = 64,
-    subgroup = "bob-alloy",
-    order = "c-b-d[bob-tungsten-carbide]",
-    stack_size = 200,
-    drop_sound = plate_drop_move,
-    inventory_move_sound = plate_drop_move,
-    pick_sound = plate_pick,
+    weight = 2500,
   },
   {
     type = "item",
@@ -67,6 +58,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
 
   {
@@ -80,6 +72,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -92,6 +85,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
   {
     type = "item",
@@ -104,5 +98,28 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 2500,
   },
 })
+
+if not data.raw.item["tungsten-carbide"] then
+  data:extend({
+    {
+      type = "item",
+      name = "tungsten-carbide",
+      icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
+      icon_size = 64,
+      subgroup = "bob-alloy",
+      order = "c-b-d[tungsten-carbide]",
+      stack_size = 200,
+      drop_sound = plate_drop_move,
+      inventory_move_sound = plate_drop_move,
+      pick_sound = plate_pick,
+      weight = 1250,
+    },
+  })
+else
+  local item = data.raw.item["tungsten-carbide"]
+  item.subgroup = "bob-alloy"
+  item.order = "c-b-d[tungsten-carbide]"
+end

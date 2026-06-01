@@ -16,53 +16,6 @@ local pipe_pick = {
 data:extend({
   {
     type = "item",
-    name = "bob-stone-pipe",
-    icon = "__boblogistics__/graphics/icons/pipe/stone-pipe.png",
-    icon_size = 64,
-    subgroup = "bob-pipe",
-    order = "a[pipe]-a[pipe]-1-3",
-    place_result = "bob-stone-pipe",
-    stack_size = 100,
-    drop_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-      volume = 0.6,
-    },
-    weight = 5000,
-  },
-
-  {
-    type = "item",
-    name = "bob-stone-pipe-to-ground",
-    icon = "__boblogistics__/graphics/icons/pipe/stone-pipe-to-ground.png",
-    icon_size = 64,
-    subgroup = "bob-pipe-to-ground",
-    order = "a[pipe]-b[pipe-to-ground]-1-3",
-    place_result = "bob-stone-pipe-to-ground",
-    stack_size = 50,
-    drop_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    inventory_move_sound = {
-      filename = "__base__/sound/item/brick-inventory-move.ogg",
-      volume = 0.5,
-    },
-    pick_sound = {
-      filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-      volume = 0.6,
-    },
-  },
-
-  {
-    type = "item",
     name = "bob-copper-pipe",
     icon = "__boblogistics__/graphics/icons/pipe/copper-pipe.png",
     icon_size = 64,
@@ -88,6 +41,7 @@ data:extend({
     drop_sound = pipe_drop_move,
     inventory_move_sound = pipe_drop_move,
     pick_sound = pipe_pick,
+    weight = 20000,
   },
 
   {
@@ -117,6 +71,7 @@ data:extend({
     drop_sound = pipe_drop_move,
     inventory_move_sound = pipe_drop_move,
     pick_sound = pipe_pick,
+    weight = 20000,
   },
 
   {
@@ -164,6 +119,7 @@ data:extend({
       filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 20000,
   },
 })
 
@@ -196,6 +152,41 @@ if data.raw.item["bob-bronze-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 20000,
+    },
+  })
+end
+
+if data.raw.item["bob-aluminium-plate"] then
+  data:extend({
+    {
+      type = "item",
+      name = "bob-aluminium-pipe",
+      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe.png",
+      icon_size = 64,
+      subgroup = "bob-pipe",
+      order = "a[pipe]-a[pipe]-2-4",
+      place_result = "bob-aluminium-pipe",
+      stack_size = 100,
+      drop_sound = pipe_drop_move,
+      inventory_move_sound = pipe_drop_move,
+      pick_sound = pipe_pick,
+      weight = 5000,
+    },
+
+    {
+      type = "item",
+      name = "bob-aluminium-pipe-to-ground",
+      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe-to-ground.png",
+      icon_size = 64,
+      subgroup = "bob-pipe-to-ground",
+      order = "a[pipe]-b[pipe-to-ground]-2-4",
+      place_result = "bob-aluminium-pipe-to-ground",
+      stack_size = 50,
+      drop_sound = pipe_drop_move,
+      inventory_move_sound = pipe_drop_move,
+      pick_sound = pipe_pick,
+      weight = 20000,
     },
   })
 end
@@ -229,57 +220,7 @@ if data.raw.item["bob-brass-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-    },
-  })
-end
-
-if data.raw.item["bob-silicon-nitride"] then
-  data:extend({
-    {
-      type = "item",
-      name = "bob-ceramic-pipe",
-      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe.png",
-      icon_size = 64,
-      subgroup = "bob-pipe",
-      order = "a[pipe]-a[pipe]-3-3",
-      place_result = "bob-ceramic-pipe",
-      stack_size = 100,
-      drop_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      inventory_move_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      pick_sound = {
-        filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-        volume = 0.6,
-      },
-      weight = 5000,
-    },
-
-    {
-      type = "item",
-      name = "bob-ceramic-pipe-to-ground",
-      icon = "__boblogistics__/graphics/icons/pipe/ceramic-pipe-to-ground.png",
-      icon_size = 64,
-      subgroup = "bob-pipe-to-ground",
-      order = "a[pipe]-b[pipe-to-ground]-3-3",
-      place_result = "bob-ceramic-pipe-to-ground",
-      stack_size = 50,
-      drop_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      inventory_move_sound = {
-        filename = "__base__/sound/item/brick-inventory-move.ogg",
-        volume = 0.5,
-      },
-      pick_sound = {
-        filename = "__base__/sound/item/brick-inventory-pickup.ogg",
-        volume = 0.6,
-      },
+      weight = 20000,
     },
   })
 end
@@ -313,11 +254,12 @@ if data.raw.item["bob-titanium-plate"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 20000,
     },
   })
 end
 
-if data.raw.item["bob-tungsten-plate"] then
+if data.raw.item["tungsten-plate"] then
   data:extend({
     {
       type = "item",
@@ -346,39 +288,7 @@ if data.raw.item["bob-tungsten-plate"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
-    },
-  })
-end
-
-if data.raw.item["bob-nitinol-alloy"] then
-  data:extend({
-    {
-      type = "item",
-      name = "bob-nitinol-pipe",
-      icon = "__boblogistics__/graphics/icons/pipe/nitinol-pipe.png",
-      icon_size = 64,
-      subgroup = "bob-pipe",
-      order = "a[pipe]-a[pipe]-5-1",
-      place_result = "bob-nitinol-pipe",
-      stack_size = 100,
-      drop_sound = pipe_drop_move,
-      inventory_move_sound = pipe_drop_move,
-      pick_sound = pipe_pick,
-      weight = 5000,
-    },
-
-    {
-      type = "item",
-      name = "bob-nitinol-pipe-to-ground",
-      icon = "__boblogistics__/graphics/icons/pipe/nitinol-pipe-to-ground.png",
-      icon_size = 64,
-      subgroup = "bob-pipe-to-ground",
-      order = "a[pipe]-b[pipe-to-ground]-5-1",
-      place_result = "bob-nitinol-pipe-to-ground",
-      stack_size = 50,
-      drop_sound = pipe_drop_move,
-      inventory_move_sound = pipe_drop_move,
-      pick_sound = pipe_pick,
+      weight = 20000,
     },
   })
 end
@@ -412,6 +322,7 @@ if data.raw.item["bob-copper-tungsten-alloy"] then
       drop_sound = pipe_drop_move,
       inventory_move_sound = pipe_drop_move,
       pick_sound = pipe_pick,
+      weight = 20000,
     },
   })
 end

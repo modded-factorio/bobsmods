@@ -46,9 +46,9 @@ if not mods["bobwarfare"] then
     bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk4", "plastic-bar", "bob-silicon-nitride")
     bobmods.lib.tech.add_prerequisite("bob-power-armor-4", "bob-ceramics")
   end
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "bob-tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-alloy-processing")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-power-armor-mk5", "steel-plate", "tungsten-carbide")
+    bobmods.lib.tech.add_prerequisite("bob-power-armor-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
@@ -217,4 +217,8 @@ if not mods["bobwarfare"] then
 
   bobmods.lib.tech.replace_prerequisite("battery-mk2-equipment", "power-armor", "chemical-science-pack")
   bobmods.lib.tech.replace_prerequisite("discharge-defense-equipment", "power-armor", "processing-unit")
+
+  if data.raw.armor["mech-armor"] then
+    data.raw.armor["mech-armor"].order = "i[mech-armor]"
+  end
 end

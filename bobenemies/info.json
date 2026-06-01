@@ -1,6 +1,6 @@
 {
   "name": "bobenemies",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "factorio_version": "2.0",
   "title": "Bob's Enemies mod",
   "author": "Bobingabout",
@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 2.0.33",
-    "boblibrary >= 2.0.0",
+    "boblibrary >= 2.1.0",
     "? space-age >= 2.0.0",
     "(?) combat-mechanics-overhaul >= 0.7.1"
   ],

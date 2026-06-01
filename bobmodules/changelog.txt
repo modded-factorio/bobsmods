@@ -1,8 +1,18 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.7
-Date: ????
+Version: 2.1.1
+Date: ???
   Changes:
     - Updated Korean locale #524
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 01. 06. 2026
+  Bugfixes:
+    - Fixed crash with Classic Beacons mod #527
+  Changes:
+    - Set minimum values for module settings #540
+    - Adjusted modules tech costs #545
+    - Set item weights #553
+    - Reworked beacon recipe ingredients #585
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 18. 01. 2026

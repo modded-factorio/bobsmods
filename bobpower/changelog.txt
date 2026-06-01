@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.5
-Date: ???
+Version: 2.1.0
+Date: 01. 06. 2026
+  Bugfixes:
+    - Fixed solar panel recipes missing Silicon wafers (with Bob's MCI mod) #591
   Changes:
     - Reduced the time that heat sources take to get up to temperature #529
+    - Disallowed certain entities in space #551
+    - Set item weights #553
+    - Adjust ingredients for some T4 and T5 recipes #583
+    - Reworked machine recipe ingredients #585
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 18. 01. 2026

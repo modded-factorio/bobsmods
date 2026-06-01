@@ -8,6 +8,7 @@ if data.raw.item["bob-silver-plate"] then
     "bob-module-processor-board-2",
     { type = "item", name = "bob-silver-plate", amount = 4 }
   )
+  bobmods.lib.tech.add_prerequisite("bob-modules-3", "bob-lead-processing")
 end
 
 if data.raw.item["bob-gold-plate"] then
@@ -15,6 +16,7 @@ if data.raw.item["bob-gold-plate"] then
     "bob-module-processor-board-3",
     { type = "item", name = "bob-gold-plate", amount = 8 }
   )
+  bobmods.lib.tech.add_prerequisite("bob-modules-4", "bob-gold-processing")
 end
 
 if data.raw.item["bob-tinned-copper-cable"] then

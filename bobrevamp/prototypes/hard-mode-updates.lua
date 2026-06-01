@@ -6,11 +6,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   bobmods.lib.recipe.replace_ingredient("bob-calcium-chloride", "stone", "bob-limestone")
   bobmods.lib.recipe.set_ingredient(
     "bob-calcium-chloride",
-    { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 }
+    { type = "fluid", name = "bob-hydrogen-chloride", amount = 25 }
   )
   bobmods.lib.recipe.add_result(
     "bob-calcium-chloride",
-    { type = "fluid", name = "bob-hydrogen", amount = 20, ignored_by_productivity = 20 }
+    { type = "fluid", name = "bob-hydrogen", amount = 10, ignored_by_productivity = 10 }
   )
   data.raw.recipe["bob-calcium-chloride"].main_product = "bob-calcium-chloride"
 
@@ -18,8 +18,13 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-limestone")
 
-  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate")
-  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate")
+  if not mods["space-age"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate")
+    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate")
+  else
+    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-chlorate")
+    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-perchlorate")
+  end
   if data.raw.fluid["bob-pure-water"] then
     bobmods.lib.recipe.replace_ingredient("bob-sodium-chlorate", "water", "bob-pure-water")
     bobmods.lib.recipe.replace_ingredient("bob-sodium-perchlorate", "water", "bob-pure-water")

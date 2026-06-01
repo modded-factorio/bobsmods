@@ -700,7 +700,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "copper-ore", amount = 7 },
       { type = "item", name = "stone", amount = 1 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
       { type = "fluid", name = "bob-hydrogen", amount = 5 },
     },
     results = {
@@ -725,7 +725,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-lead-oxide", amount = 7 },
-      { type = "item", name = "bob-carbon", amount = 3 },
+      { type = "item", name = "carbon", amount = 3 },
       { type = "item", name = "bob-nickel-plate", amount = 1 },
     },
     results = {
@@ -746,7 +746,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "bob-silicon-powder", amount = 1 },
-      { type = "item", name = "bob-carbon", amount = 1 },
+      { type = "item", name = "carbon", amount = 1 },
     },
     results = { { type = "item", name = "bob-silicon-carbide", amount = 2 } },
     allow_productivity = true,
@@ -880,15 +880,17 @@ data:extend({
       tertiary = { r = 0.7, g = 0.7, b = 0.7, a = 0.000 },
     },
     allow_decomposition = false,
+    main_product = "bob-heavy-water",
   },
 
   {
     type = "recipe",
-    name = "bob-heavy-water-electrolysis",
+    name = "bob-deuterium",
+    localised_name = { "recipe-name.bob-heavy-water-electrolysis" },
     icon = "__bobplates__/graphics/icons/heavy-water-electrolysis.png",
     icon_size = 64,
     subgroup = "bob-fluid-electrolysis",
-    order = "b[fluid-chemistry]-b[bob-heavy-water-electrolysis]",
+    order = "b[fluid-chemistry]-b[bob-deuterium]",
     category = "bob-electrolysis",
     enabled = false,
     energy_required = 1,
@@ -900,6 +902,7 @@ data:extend({
       { type = "fluid", name = "bob-oxygen", amount = 12.5 },
     },
     allow_decomposition = false,
+    main_product = "bob-deuterium",
   },
 
   {
@@ -913,8 +916,8 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "bob-tungsten-ore", amount = 2 },
-      { type = "fluid", name = "bob-hydrogen-chloride", amount = 50 },
+      { type = "item", name = "tungsten-ore", amount = 2 },
+      { type = "fluid", name = "bob-hydrogen-chloride", amount = 25 },
     },
     results = {
       { type = "fluid", name = "bob-tungstic-acid", amount = 20 },
@@ -945,4 +948,15 @@ data:extend({
 
 if mods["bobpower"] then
   data.raw.recipe["bob-sodium-hydroxide-sink"].results[1].temperature = 465
+end
+
+if mods["space-age"] then
+  bobmods.lib.recipe.replace_ingredient("bob-lithium-chloride", "bob-lithia-water", "lithium-brine")
+  bobmods.lib.recipe.hide("bob-pure-water-from-lithia")
+  data.raw.recipe["bob-liquid-air"].surface_conditions = {
+    {
+      property = "pressure",
+      min = 10,
+    },
+  }
 end

@@ -17,11 +17,10 @@ remote.add_interface("bobores", {
     regenerate_entity("bob-gold-ore")
     regenerate_entity("bob-bauxite-ore")
     regenerate_entity("bob-rutile-ore")
-    regenerate_entity("bob-tungsten-ore")
+    regenerate_entity("tungsten-ore")
 
     regenerate_entity("bob-nickel-ore")
     regenerate_entity("bob-cobalt-ore")
-    regenerate_entity("bob-sulfur")
     regenerate_entity("bob-gem-ore")
 
     regenerate_entity("bob-lithia-water")

@@ -17,7 +17,7 @@ data:extend({
       },
     },
     unit = {
-      count = 50,
+      count = 200,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
@@ -44,7 +44,7 @@ data:extend({
       },
     },
     unit = {
-      count = 100,
+      count = 300,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
@@ -71,7 +71,7 @@ data:extend({
       },
     },
     unit = {
-      count = 100,
+      count = 500,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
@@ -94,7 +94,7 @@ data:extend({
     },
     effects = {},
     unit = {
-      count = 100,
+      count = 1000,
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },

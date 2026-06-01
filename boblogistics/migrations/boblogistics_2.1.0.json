@@ -1,0 +1,32 @@
+{
+  "item":
+  [
+    ["bob-ceramic-pipe", "bob-titanium-pipe"],
+    ["bob-ceramic-pipe-to-ground", "bob-titanium-pipe-to-ground"],
+    ["bob-nitinol-pipe", "bob-copper-tungsten-pipe"],
+    ["bob-nitinol-pipe-to-ground", "bob-copper-tungsten-pipe-to-ground"],
+    ["bob-stone-pipe", "pipe"],
+    ["bob-stone-pipe-to-ground", "pipe-to-ground"],
+    ["bob-turbo-splitter", "turbo-splitter"],
+    ["bob-turbo-transport-belt", "turbo-transport-belt"],
+    ["bob-turbo-underground-belt", "turbo-underground-belt"]
+  ],
+  "recipe":
+  [
+    ["bob-turbo-splitter", "turbo-splitter"],
+    ["bob-turbo-transport-belt", "turbo-transport-belt"],
+    ["bob-turbo-underground-belt", "turbo-underground-belt"]
+  ],
+  "entity":
+  [
+    ["bob-ceramic-pipe", "bob-titanium-pipe"],
+    ["bob-ceramic-pipe-to-ground", "bob-titanium-pipe-to-ground"],
+    ["bob-nitinol-pipe", "bob-copper-tungsten-pipe"],
+    ["bob-nitinol-pipe-to-ground", "bob-copper-tungsten-pipe-to-ground"],
+    ["bob-stone-pipe", "pipe"],
+    ["bob-stone-pipe-to-ground", "pipe-to-ground"],
+    ["bob-turbo-splitter", "turbo-splitter"],
+    ["bob-turbo-transport-belt", "turbo-transport-belt"],
+    ["bob-turbo-underground-belt", "turbo-underground-belt"]
+  ]
+}

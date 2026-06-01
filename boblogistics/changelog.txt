@@ -1,9 +1,29 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.7
+Version: 2.1.1
 Date: ???
   Changes:
     - Updated Korean locale #524
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 01. 06. 2026
+  Changes:
     - Reduced charge approach distance for robochests. Robots waiting to charge will now wait closer to the robochest. #533
+    - Disallowed certain entities in space #551
+    - Set item weights #553
+    - Increased pump speed when Quality mod is not enabled #557
+    - Increased bot health and explosion resistance #563
+    - Improved Turbo belt Space Age compatibility. Renamed Bob's Turbo belt/splitter/underground, removing the "bob-" prefix #569
+    - Adjust ingredients for some T4 and T5 recipes #583
+    - Spread Fluid handling and Railway techs out in the tech tree #584
+    - Reworked recipe ingredient tiers #585
+      - Added Aluminium pipe and pipe to ground
+      - Increased tech tier of Bronze pipes
+      - Reworked recipe ingredients #585
+    - Removed Stone, Ceramic and Nitinol pipes #586
+  Bugfixes:
+    - Allowed Basic loaders (AAI Loaders mod) to be crafted in Assembling maching 1 / hand crafted when using expensive mode. #535
+    - Fixed next_upgrade for Steam powered inserter and Ultimate inserter #542
+    - Fixed migration replacing Space Age turbo belts in blueprints #549
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 18. 01. 2026
@@ -29,7 +49,7 @@ Date: 02. 01. 2026
     - Updated AAI Industry integration #393
     - Integrated Bob's Locale Translations mod #445
     - Added support for frozen entities (with Space Age) #477
-    - Allowd splitters to be connected to the circuit network #486
+    - Allowed splitters to be connected to the circuit network #486
     - Re-added valves #488
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3

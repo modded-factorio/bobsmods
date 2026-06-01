@@ -63,7 +63,6 @@ require("prototypes.tungsten-ore")
 require("prototypes.thorium-ore")
 require("prototypes.nickel-ore")
 require("prototypes.cobalt-ore")
-require("prototypes.sulfur")
 require("prototypes.gem-ore")
 
 require("prototypes.fluids")
@@ -99,9 +98,6 @@ end
 if settings.startup["bobmods-ores-enablesilverore"].value == true then
   bobmods.ores.silver.create_autoplace()
 end
-if settings.startup["bobmods-ores-enablesulfur"].value == true then
-  bobmods.ores.sulfur.create_autoplace()
-end
 if settings.startup["bobmods-ores-enabletinore"].value == true then
   bobmods.ores.tin.create_autoplace()
 end
@@ -125,3 +121,10 @@ data.raw.item["stone"].stack_size = 200
 data.raw.item["coal"].stack_size = 200
 data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["sulfur"].stack_size = 200
+data.raw.item["copper-ore"].weight = 5000
+data.raw.item["iron-ore"].weight = 5000
+data.raw.item["stone"].weight = 2500
+data.raw.item["coal"].weight = 1000
+data.raw.item["uranium-ore"].weight = 20000
+
+data.raw.item.landfill.weight = 50000 --Needed to compensate for change to stone's weight

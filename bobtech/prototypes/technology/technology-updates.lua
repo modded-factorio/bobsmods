@@ -251,7 +251,7 @@ elseif data.raw.technology["bob-chemical-plant-2"] then
 end
 
 bobmods.lib.tech.replace_prerequisite("utility-science-pack", "robotics", "electric-engine")
-if data.raw.item["bob-lithium-ion-battery"] then
+if data.raw.item["bob-battery-2"] then
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "bob-battery-2")
 else
   bobmods.lib.tech.add_prerequisite("utility-science-pack", "battery")
@@ -292,10 +292,10 @@ if settings.startup["bobmods-burnerphase"].value == true then
     if mods["bobpower"] then
       bobmods.lib.tech.remove_prerequisite("bob-fluid-generator-1", "electronics")
     end
-    if mods["bobmining"] then
+    if data.raw.technology["bob-water-miner-2"] then
       bobmods.lib.tech.remove_prerequisite("bob-water-miner-2", "electronics")
     end
-    if mods["bobassembly"] then
+    if data.raw.technology["bob-electrolyser-2"] then
       bobmods.lib.tech.remove_prerequisite("bob-electrolyser-2", "electronics")
     end
     if data.raw.technology["bob-chemical-plant"] then
@@ -335,7 +335,6 @@ if settings.startup["bobmods-burnerphase"].value == true then
   if mods["bobplates"] then
     data.raw.recipe["bob-burner-lab"].enabled = false
     bobmods.lib.tech.add_prerequisite("automation-science-pack", "bob-burner-lab")
-    bobmods.lib.recipe.add_ingredient("bob-burner-lab", { type = "item", name = "bob-glass", amount = 5 })
     bobmods.lib.tech.remove_prerequisite("bob-gas-canisters", "logistic-science-pack")
     bobmods.lib.tech.remove_prerequisite("bob-fluid-barrel-processing", "logistic-science-pack")
   end

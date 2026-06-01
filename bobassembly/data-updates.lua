@@ -19,11 +19,14 @@ data.raw.fluid["petroleum-gas"].fuel_value = "1.2MJ"
 
 if mods["quality"] then
   bobmods.lib.recipe.update_recycling_recipe({
+    "assembling-machine-2",
     "assembling-machine-3",
     "bob-assembling-machine-4",
     "bob-assembling-machine-5",
     "bob-assembling-machine-6",
+    "centrifuge",
     "chemical-plant",
+    "oil-refinery",
   })
   if data.raw.recipe["bob-fluid-furnace"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-fluid-furnace", false)

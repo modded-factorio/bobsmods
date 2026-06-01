@@ -693,6 +693,11 @@ function bobmods.enemies.new_biter(inputs)
     flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
   })
 
+  table.remove(corpse_prototype.animation.layers)
+  corpse_prototype.animation_render_layer = "corpse"
+  corpse_prototype.final_render_layer = "corpse"
+  corpse_prototype.use_decay_layer = false
+
   data:extend({ biter_prototype, corpse_prototype })
 end
 
@@ -1341,6 +1346,11 @@ function bobmods.enemies.new_spitter(inputs)
     order = "c[corpse]-" .. inputs.order,
     flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
   })
+
+  table.remove(corpse_prototype.animation.layers)
+  corpse_prototype.animation_render_layer = "corpse"
+  corpse_prototype.final_render_layer = "corpse"
+  corpse_prototype.use_decay_layer = false
 
   if not inputs.no_acid_stream == true then
     bobmods.enemies.acid_stream(inputs, final_scale)
@@ -2815,6 +2825,10 @@ function bobmods.enemies.new_worm(inputs)
   worm_corpse_2.icon = "__base__/graphics/icons/big-worm-corpse.png"
   worm_corpse_1.localised_name = { "entity-name.bob-enemies-corpse" }
   worm_corpse_2.localised_name = { "entity-name.bob-enemies-corpse" }
+  worm_corpse_1.animation_render_layer = "corpse"
+  worm_corpse_2.animation_render_layer = "corpse"
+  worm_corpse_1.final_render_layer = "corpse"
+  worm_corpse_2.final_render_layer = "corpse"
 
   if inputs.tint2 then
     table.insert(
@@ -2906,10 +2920,10 @@ function bobmods.enemies.new_spawner(inputs)
         or {
           { "bob-small-" .. inputs.element .. "-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
           { "bob-small-" .. inputs.element .. "-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-          { "bob-medium-" .. inputs.element .. "-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-          { "bob-medium-" .. inputs.element .. "-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-          { "bob-big-" .. inputs.element .. "-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-          { "bob-big-" .. inputs.element .. "-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
+          { "bob-medium-" .. inputs.element .. "-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+          { "bob-medium-" .. inputs.element .. "-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+          { "bob-big-" .. inputs.element .. "-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
+          { "bob-big-" .. inputs.element .. "-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
           { "bob-huge-" .. inputs.element .. "-biter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
           { "bob-huge-" .. inputs.element .. "-spitter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
           { "bob-giant-" .. inputs.element .. "-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
@@ -2932,8 +2946,8 @@ function bobmods.enemies.new_spawner(inputs)
           { "bob-big-" .. inputs.element .. "-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
           { "bob-huge-" .. inputs.element .. "-biter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
           { "bob-huge-" .. inputs.element .. "-spitter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
-          { "bob-giant-" .. inputs.element .. "-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.99, 0.0 } } },
-          { "bob-giant-" .. inputs.element .. "-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.99, 0.0 } } },
+          { "bob-giant-" .. inputs.element .. "-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.95, 0.0 } } },
+          { "bob-giant-" .. inputs.element .. "-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.95, 0.0 } } },
           { "bob-titan-" .. inputs.element .. "-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
           { "bob-titan-" .. inputs.element .. "-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
           { "bob-behemoth-" .. inputs.element .. "-biter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
@@ -2980,8 +2994,8 @@ function bobmods.enemies.new_spawner(inputs)
       final_result_units = inputs.result_units
         or {
           { "bob-small-" .. inputs.element .. "-" .. final_class, { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-          { "bob-medium-" .. inputs.element .. "-" .. final_class, { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-          { "bob-big-" .. inputs.element .. "-" .. final_class, { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
+          { "bob-medium-" .. inputs.element .. "-" .. final_class, { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+          { "bob-big-" .. inputs.element .. "-" .. final_class, { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
           { "bob-huge-" .. inputs.element .. "-" .. final_class, { { 0.55, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
           { "bob-giant-" .. inputs.element .. "-" .. final_class, { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
           { "bob-titan-" .. inputs.element .. "-" .. final_class, { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
@@ -3170,8 +3184,18 @@ function bobmods.enemies.new_spawner(inputs)
       spawner_decay_animation(3, inputs.tint),
     },
     decay_frame_transition_duration = 360,
-    final_render_layer = "lower-object-above-shadow",
+    animation_render_layer = "corpse",
+    final_render_layer = "corpse",
   }
+
+  table.remove(spawner_corpse.animation[1].layers)
+  table.remove(spawner_corpse.animation[2].layers)
+  table.remove(spawner_corpse.animation[3].layers)
+  table.remove(spawner_corpse.animation[4].layers)
+  table.remove(spawner_corpse.decay_animation[1].layers)
+  table.remove(spawner_corpse.decay_animation[2].layers)
+  table.remove(spawner_corpse.decay_animation[3].layers)
+  table.remove(spawner_corpse.decay_animation[4].layers)
 
   if inputs.tint2 then
     table.insert(

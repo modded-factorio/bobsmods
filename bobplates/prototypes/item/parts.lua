@@ -27,6 +27,9 @@ local ball_pick = {
   speed = 1.6,
 }
 
+data.raw.item["iron-gear-wheel"].weight = 2000
+data.raw.item["battery"].weight = 5000
+
 data:extend({
   {
     type = "item",
@@ -39,6 +42,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 5000,
   },
 
   {
@@ -52,6 +56,7 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
+    weight = 200,
   },
 
   {
@@ -65,19 +70,7 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
-  },
-
-  {
-    type = "item",
-    name = "bob-brass-gear-wheel",
-    icon = "__bobplates__/graphics/icons/brass-gear-wheel.png",
-    icon_size = 32,
-    subgroup = "bob-gears",
-    order = "bb[bob-brass-gear-wheel]",
-    stack_size = 100,
-    drop_sound = plate_drop_move,
-    inventory_move_sound = plate_drop_move,
-    pick_sound = plate_pick,
+    weight = 5000,
   },
 
   {
@@ -86,11 +79,12 @@ data:extend({
     icon = "__bobplates__/graphics/icons/cobalt-steel-gear-wheel.png",
     icon_size = 32,
     subgroup = "bob-gears",
-    order = "bc[bob-cobalt-steel-gear-wheel]",
+    order = "bb[bob-cobalt-steel-gear-wheel]",
     stack_size = 100,
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 5000,
   },
 
   {
@@ -99,11 +93,12 @@ data:extend({
     icon = "__bobplates__/graphics/icons/cobalt-steel-bearing-ball.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bac[bob-ball-bearing-cobalt-steel]",
+    order = "bab[bob-ball-bearing-cobalt-steel]",
     stack_size = 500,
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
+    weight = 200,
   },
 
   {
@@ -112,11 +107,26 @@ data:extend({
     icon = "__bobplates__/graphics/icons/cobalt-steel-bearing.png",
     icon_size = 32,
     subgroup = "bob-bearings",
-    order = "bbc[bob-bearing-cobalt-steel]",
+    order = "bbb[bob-bearing-cobalt-steel]",
     stack_size = 100,
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
+    weight = 5000,
+  },
+
+  {
+    type = "item",
+    name = "bob-brass-gear-wheel",
+    icon = "__bobplates__/graphics/icons/brass-gear-wheel.png",
+    icon_size = 32,
+    subgroup = "bob-gears",
+    order = "bc[bob-brass-gear-wheel]",
+    stack_size = 100,
+    drop_sound = plate_drop_move,
+    inventory_move_sound = plate_drop_move,
+    pick_sound = plate_pick,
+    weight = 2000,
   },
 
   {
@@ -130,6 +140,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 1000,
   },
 
   {
@@ -143,6 +154,7 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
+    weight = 40,
   },
 
   {
@@ -156,6 +168,7 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
+    weight = 1000,
   },
 
   {
@@ -169,32 +182,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
-  },
-
-  {
-    type = "item",
-    name = "bob-ceramic-bearing-ball",
-    icon = "__bobplates__/graphics/icons/ceramic-bearing-ball.png",
-    icon_size = 32,
-    subgroup = "bob-bearings",
-    order = "bae[bob-ball-bearing-ceramic]",
-    stack_size = 500,
-    drop_sound = ball_drop_move,
-    inventory_move_sound = ball_drop_move,
-    pick_sound = ball_pick,
-  },
-
-  {
-    type = "item",
-    name = "bob-ceramic-bearing",
-    icon = "__bobplates__/graphics/icons/ceramic-bearing.png",
-    icon_size = 32,
-    subgroup = "bob-bearings",
-    order = "bbe[bob-bearing-ceramic]",
-    stack_size = 100,
-    drop_sound = bearing_drop_move,
-    inventory_move_sound = bearing_drop_move,
-    pick_sound = bearing_pick,
+    weight = 5000,
   },
 
   {
@@ -208,6 +196,7 @@ data:extend({
     drop_sound = plate_drop_move,
     inventory_move_sound = plate_drop_move,
     pick_sound = plate_pick,
+    weight = 2000,
   },
 
   {
@@ -221,6 +210,7 @@ data:extend({
     drop_sound = ball_drop_move,
     inventory_move_sound = ball_drop_move,
     pick_sound = ball_pick,
+    weight = 80,
   },
 
   {
@@ -234,11 +224,13 @@ data:extend({
     drop_sound = bearing_drop_move,
     inventory_move_sound = bearing_drop_move,
     pick_sound = bearing_pick,
+    weight = 2000,
   },
 
   {
     type = "item",
-    name = "bob-lithium-ion-battery",
+    name = "bob-battery-2",
+    localised_name = { "item-name.bob-lithium-ion-battery" },
     icon = "__bobplates__/graphics/icons/lithium-ion-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -256,11 +248,13 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
     type = "item",
-    name = "bob-silver-zinc-battery",
+    name = "bob-battery-3",
+    localised_name = { "item-name.bob-silver-zinc-battery" },
     icon = "__bobplates__/graphics/icons/silver-zinc-battery.png",
     icon_size = 64,
     subgroup = "intermediate-product",
@@ -278,6 +272,7 @@ data:extend({
       filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -302,6 +297,7 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
       volume = 1,
     },
+    weight = 5000,
   },
 
   {
@@ -326,5 +322,13 @@ data:extend({
       filename = "__base__/sound/item/explosive-inventory-move.ogg",
       volume = 1,
     },
+    weight = 5000,
   },
 })
+
+if mods["space-age"] then
+  data.raw.item["bob-battery-2"].localised_name = { "item-name.bob-silver-zinc-battery" }
+  data.raw.item["bob-battery-3"].localised_name = { "item-name.bob-lithium-ion-battery" }
+  data.raw.item["bob-battery-2"].icon = "__bobplates__/graphics/icons/silver-zinc-battery.png"
+  data.raw.item["bob-battery-3"].icon = "__bobplates__/graphics/icons/lithium-ion-battery.png"
+end

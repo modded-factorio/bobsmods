@@ -11,7 +11,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.1,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -27,7 +27,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.1,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -35,7 +35,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.04,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -43,7 +43,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.5,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
 
   {
@@ -76,7 +76,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.2,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -84,7 +84,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.2,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -92,7 +92,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.4,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -100,7 +100,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.04,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
   {
     type = "double-setting",
@@ -108,7 +108,7 @@ data:extend({
     setting_type = "startup",
     default_value = 0.5,
     maximum_value = 1,
-    minimum_value = 0,
+    minimum_value = 0.01,
   },
 
   {
@@ -145,7 +145,7 @@ if mods["quality"] then
       setting_type = "startup",
       default_value = 0.01,
       maximum_value = 1,
-      minimum_value = 0,
+      minimum_value = 0.005,
     },
     {
       type = "double-setting",
@@ -153,7 +153,7 @@ if mods["quality"] then
       setting_type = "startup",
       default_value = 0.01,
       maximum_value = 1,
-      minimum_value = 0,
+      minimum_value = 0.005,
     },
   })
 end

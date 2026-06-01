@@ -158,6 +158,11 @@ if bobmods.tech and bobmods.tech.advanced_logistic_science then
       "production-science-pack",
       "bob-advanced-logistic-science-pack"
     )
+    bobmods.lib.tech.replace_prerequisite(
+      "bob-more-inserters-2",
+      "production-science-pack",
+      "bob-advanced-logistic-science-pack"
+    )
   end
 end
 
@@ -257,7 +262,7 @@ end
 
 bobmods.lib.tech.add_prerequisite("bob-robo-modular-3", "processing-unit")
 
-if data.raw.item["bob-lithium-ion-battery"] and data.raw.technology["bob-battery-2"] then
+if data.raw.item["bob-battery-2"] and data.raw.technology["bob-battery-2"] then
   if data.raw.technology["bob-robotics-3"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-3", "bob-battery-2")
   else
@@ -282,7 +287,7 @@ else
   end
 end
 
-if data.raw.item["bob-silver-zinc-battery"] and data.raw.technology["bob-battery-3"] then
+if data.raw.item["bob-battery-3"] and data.raw.technology["bob-battery-3"] then
   if data.raw.technology["bob-robotics-4"] then
     bobmods.lib.tech.add_prerequisite("bob-robotics-4", "bob-battery-3")
   else
@@ -314,9 +319,6 @@ end
 bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe")
 bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe-to-ground")
 
-bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-stone-pipe")
-bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-stone-pipe-to-ground")
-
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe")
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe-to-ground")
 
@@ -328,10 +330,15 @@ if data.raw.technology["bob-alloy-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-alloy-processing", "bob-bronze-pipe-to-ground")
 end
 
-if data.raw.technology["bob-zinc-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-pipe-to-ground")
-  bobmods.lib.tech.add_recipe_unlock("bob-zinc-processing", "bob-brass-chest")
+if data.raw.technology["bob-aluminium-processing"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-aluminium-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-aluminium-processing", "bob-aluminium-pipe-to-ground")
+end
+
+if data.raw.technology["bob-brass-processing"] then
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-brass-processing", "bob-brass-chest")
 end
 
 if data.raw.technology["bob-titanium-processing"] then
@@ -344,21 +351,8 @@ end
 if data.raw.technology["bob-tungsten-processing"] then
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe")
   bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-tungsten-pipe-to-ground")
-end
-
-if data.raw.technology["bob-ceramics"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-ceramics", "bob-ceramic-pipe-to-ground")
-end
-
-if data.raw.technology["bob-tungsten-alloy-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-alloy-processing", "bob-copper-tungsten-pipe-to-ground")
-end
-
-if data.raw.technology["bob-nitinol-processing"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe")
-  bobmods.lib.tech.add_recipe_unlock("bob-nitinol-processing", "bob-nitinol-pipe-to-ground")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe")
+  bobmods.lib.tech.add_recipe_unlock("bob-tungsten-processing", "bob-copper-tungsten-pipe-to-ground")
 end
 
 local function remove_inserter_stack_size_bonus(technology)
@@ -397,13 +391,9 @@ bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "storage-chest")
 bobmods.lib.tech.add_prerequisite("logistic-system", "construction-robotics")
 
 if mods["aai-industry"] then
-  bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-stone-pipe")
-  bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-stone-pipe-to-ground")
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-copper-pipe")
   bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-copper-pipe-to-ground")
 
-  bobmods.lib.tech.add_recipe_unlock("burner-mechanics", "bob-stone-pipe")
-  bobmods.lib.tech.add_recipe_unlock("burner-mechanics", "bob-stone-pipe-to-ground")
   bobmods.lib.tech.add_recipe_unlock("electricity", "bob-copper-pipe")
   bobmods.lib.tech.add_recipe_unlock("electricity", "bob-copper-pipe-to-ground")
 end

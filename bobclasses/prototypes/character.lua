@@ -481,3 +481,7 @@ end
   },
 ]]
 --
+
+if mods["space-exploration"] then
+  data.raw.character.character.icon = "__core__/graphics/icons/entity/character.png"
+end

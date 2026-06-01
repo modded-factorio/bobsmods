@@ -19,7 +19,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
     data.raw.fluid["bob-deuterium"].fuel_value = "25kJ"
     data.raw.recipe["bob-petroleum-gas-cracking"].results[1].amount = 250
     data.raw.recipe["bob-water-electrolysis"].energy_required = 2
-    data.raw.recipe["bob-heavy-water-electrolysis"].energy_required = 2
+    data.raw.recipe["bob-deuterium"].energy_required = 2
     if data.raw.recipe["bob-sodium-chlorate"] then
       data.raw.recipe["bob-sodium-chlorate"].energy_required = 6
       data.raw.recipe["bob-sodium-perchlorate"].energy_required = 2
@@ -35,7 +35,7 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw["assembling-machine"]["bob-electrolyser"].energy_source.drain = "11kW"
   data.raw.recipe["bob-water-electrolysis"].allow_consumption = false
   data.raw.recipe["bob-salt-water-electrolysis"].allow_consumption = false
-  data.raw.recipe["bob-heavy-water-electrolysis"].allow_consumption = false
+  data.raw.recipe["bob-deuterium"].allow_consumption = false
   if data.raw.recipe["bob-sodium-chlorate"] then
     data.raw.recipe["bob-sodium-chlorate"].allow_consumption = false
     data.raw.recipe["bob-sodium-perchlorate"].allow_consumption = false
@@ -51,7 +51,9 @@ if settings.startup["bobmods-plates-expensive-electrolysis"].value == true then
   data.raw.recipe["bob-aluminium-plate"].energy_required = 3.2
   data.raw.recipe["bob-titanium-plate"].energy_required = 3.2
   data.raw.recipe["bob-silicon-plate"].energy_required = 3.2
-  data.raw.recipe["bob-lithium"].energy_required = 1.6
+  if not mods["space-age"] then
+    data.raw.recipe["lithium-plate"].energy_required = 1.6
+  end
 end
 
 data.raw.item["battery"].icon = "__bobplates__/graphics/icons/battery.png"
@@ -308,7 +310,9 @@ if settings.startup["bobmods-plates-purewater"].value == true then
 
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-distillery")
   bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water")
-  bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
+  if not mods["space-age"] then
+    bobmods.lib.tech.add_recipe_unlock("bob-electrolysis-1", "bob-pure-water-from-lithia")
+  end
 end
 
 data.raw.fluid["petroleum-gas"].gas_temperature = -42
@@ -335,6 +339,13 @@ data.raw.item["coal"].stack_size = 200
 data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["sulfur"].stack_size = 200
 data.raw.item["wood"].stack_size = 200
+
+-- Weight changes
+data.raw.item["iron-plate"].weight = 1000
+data.raw.item["copper-plate"].weight = 1000
+data.raw.item["steel-plate"].weight = 2500
+data.raw.item["wood"].weight = 2500
+data.raw.item["electric-engine-unit"].weight = 5000
 
 if not bobmods.ores.cobalt.enabled then
   bobmods.lib.tech.remove_recipe_unlock("bob-cobalt-processing", "bob-cobalt-oxide")
@@ -400,7 +411,27 @@ for _, recipe_name in pairs({
   end
 end
 
+-- Base game updates
+
+if not mods["space-age"] then
+  bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("rocket-silo", "bob-advanced-processing-unit")
+end
+
+bobmods.lib.recipe.replace_ingredient("speed-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.recipe.replace_ingredient("efficiency-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.recipe.replace_ingredient("productivity-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("speed-module-3", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("efficiency-module-3", "bob-advanced-processing-unit")
+bobmods.lib.tech.add_prerequisite("productivity-module-3", "bob-advanced-processing-unit")
+
 if mods["quality"] then
+  bobmods.lib.recipe.replace_ingredient("quality-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+  bobmods.lib.tech.add_prerequisite("quality-module-3", "bob-advanced-processing-unit")
+
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-air-pump",
     "bob-air-pump-2",
@@ -423,13 +454,29 @@ if mods["quality"] then
     "bob-steel-chemical-furnace",
     "bob-electric-chemical-furnace",
     "bob-polishing-wheel",
-    "bob-lithium-ion-battery",
-    "bob-silver-zinc-battery",
+    "bob-battery-2",
+    "bob-battery-3",
     "battery",
+    "cargo-landing-pad",
+    "rocket-silo",
+    "speed-module-3",
+    "efficiency-module-3",
+    "productivity-module-3",
+    "quality-module-3",
   })
+  if not mods["space-age"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "satellite",
+    })
+  end
 end
 
 if mods["space-age"] then
-  data.raw.recipe["bob-lithium-ion-battery"].category = "chemistry-or-cryogenics"
-  data.raw.recipe["bob-silver-zinc-battery"].category = "chemistry-or-cryogenics"
+  data.raw.fluid["bob-lithia-water"].hidden = true
+  data.raw.resource["bob-lithia-water"].hidden = true
+  data.raw.item["bob-lithia-water-barrel"].hidden = true
+  data.raw.recipe["bob-lithia-water-barrel"].hidden = true
+  data.raw.recipe["empty-bob-lithia-water-barrel"].hidden = true
+  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "bob-lithia-water-barrel")
+  bobmods.lib.tech.remove_recipe_unlock("bob-fluid-barrel-processing", "empty-bob-lithia-water-barrel")
 end

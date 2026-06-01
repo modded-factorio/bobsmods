@@ -1,5 +1,5 @@
 bobmods.ores.tungsten = {
-  name = "bob-tungsten-ore",
+  name = "tungsten-ore",
   tint = { r = 0.75, g = 0.5, b = 0.25 },
   map_color = { r = 0.5, g = 0.0, b = 0.0 },
   mining_time = 3,
@@ -10,6 +10,7 @@ bobmods.ores.tungsten = {
     create = true,
     create_variations = true,
     subgroup = "bob-ores",
+    weight = 10000,
   },
   sprite = {
     sheet = 1,
@@ -28,12 +29,14 @@ bobmods.ores.tungsten = {
 }
 
 function bobmods.ores.tungsten.create_autoplace()
-  data.raw.resource["bob-tungsten-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
-    name = "bob-tungsten-ore",
-    order = "c",
-    base_density = 8,
-    has_starting_area_placement = false,
-    regular_rq_factor_multiplier = 1,
-  })
-  bobmods.ores.tungsten.enabled = true
+  if not mods["space-age"] then
+    data.raw.resource["tungsten-ore"].autoplace = bobmods.lib.resource_autoplace.resource_autoplace_settings({
+      name = "tungsten-ore",
+      order = "c",
+      base_density = 8,
+      has_starting_area_placement = false,
+      regular_rq_factor_multiplier = 1,
+    })
+    bobmods.ores.tungsten.enabled = true
+  end
 end

@@ -242,3 +242,21 @@ data:extend({
     circuit_wire_max_distance = 15,
   }),
 })
+
+if feature_flags["space_travel"] then
+  -- Ban logistic containers from space
+  for _, container_name in pairs({
+    "bob-passive-provider-chest-2",
+    "bob-active-provider-chest-2",
+    "bob-storage-chest-2",
+    "bob-buffer-chest-2",
+    "bob-requester-chest-2",
+    "bob-passive-provider-chest-3",
+    "bob-active-provider-chest-3",
+    "bob-storage-chest-3",
+    "bob-buffer-chest-3",
+    "bob-requester-chest-3",
+  }) do
+    data.raw["logistic-container"][container_name].surface_conditions = { { property = "gravity", min = 0.1 } }
+  end
+end

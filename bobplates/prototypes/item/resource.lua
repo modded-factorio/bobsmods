@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "bob-carbon",
+    name = "carbon",
     icon = "__bobplates__/graphics/icons/carbon.png",
     icon_size = 32,
     subgroup = "bob-resource",
@@ -9,7 +9,7 @@ data:extend({
     fuel_category = "chemical",
     fuel_value = "2MJ", --"4MJ",
     fuel_emissions_multiplier = 0.9,
-    stack_size = 100,
+    stack_size = 200,
     drop_sound = {
       filename = "__base__/sound/item/resource-inventory-move.ogg",
       volume = 0.8,
@@ -22,6 +22,7 @@ data:extend({
       filename = "__base__/sound/item/resource-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 500,
   },
 
   {
@@ -44,6 +45,7 @@ data:extend({
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 1000,
   },
 
   {
@@ -66,6 +68,7 @@ data:extend({
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 1000,
   },
 
   {
@@ -91,6 +94,7 @@ data:extend({
       volume = 0.85,
       speed = 1.6,
     },
+    weight = 1000,
   },
 
   {
@@ -113,6 +117,7 @@ data:extend({
       filename = "__base__/sound/item/planner-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 125,
   },
 
   {
@@ -138,6 +143,7 @@ data:extend({
       volume = 0.6,
       speed = 1.2,
     },
+    weight = 1000,
   },
 
   {
@@ -160,6 +166,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 500,
   },
 
   {
@@ -182,6 +189,7 @@ data:extend({
       filename = "__base__/sound/item/metal-chest-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 5000,
   },
 
   {
@@ -204,6 +212,7 @@ data:extend({
       filename = "__base__/sound/item/plastic-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 5000,
   },
 
   {
@@ -231,5 +240,11 @@ data:extend({
       filename = "__base__/sound/item/solid-fuel-inventory-pickup.ogg",
       volume = 0.7,
     },
+    weight = 2000,
   },
 })
+
+if mods["space-age"] then
+  data.raw.item["carbon"].icon = "__space-age__/graphics/icons/carbon.png"
+  data.raw.item["carbon"].icon_size = 64
+end

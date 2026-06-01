@@ -11,10 +11,10 @@ if data.raw.item["bob-glass"] then
   bobmods.lib.recipe.replace_ingredient("bob-greenhouse", "copper-plate", "bob-glass")
 end
 
-if data.raw.fluid["bob-ammonia"] and data.raw.fluid["bob-nitric-acid"] then
+if data.raw.fluid["ammonia"] and data.raw.fluid["bob-nitric-acid"] then
   data.raw.recipe["bob-fertiliser"].ingredients = {
     { type = "fluid", name = "bob-nitric-acid", amount = 10 },
-    { type = "fluid", name = "bob-ammonia", amount = 10 },
+    { type = "fluid", name = "ammonia", amount = 10 },
   }
 elseif data.raw.fluid["bob-nitrogen"] then
   data.raw.recipe["bob-fertiliser"].ingredients = {

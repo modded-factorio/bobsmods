@@ -21,10 +21,8 @@
     ["quartz", "bob-quartz"],
     ["rutile-ore", "bob-rutile-ore"],
     ["silver-ore", "bob-silver-ore"],
-    ["sulfur", "bob-sulfur"],
     ["thorium-ore", "bob-thorium-ore"],
     ["tin-ore", "bob-tin-ore"],
-    ["tungsten-ore", "bob-tungsten-ore"],
     ["zinc-ore", "bob-zinc-ore"]
   ],
   "recipe":

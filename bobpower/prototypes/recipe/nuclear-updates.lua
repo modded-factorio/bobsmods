@@ -10,12 +10,12 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-heat-pipe-3")
   elseif data.raw.item["bob-brass-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-2", "copper-plate", "bob-brass-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-zinc-processing")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-brass-processing")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-2", "steel-plate", "bob-tungsten-plate")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-tungsten-processing")
+  if data.raw.item["bob-titanium-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-2", "steel-plate", "bob-titanium-plate")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-2", "bob-titanium-processing")
   end
 
   if data.raw.item["bob-lead-plate"] then
@@ -29,12 +29,12 @@ if settings.startup["bobmods-power-nuclear"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-heat-pipe-4")
   elseif data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-3", "copper-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-tungsten-processing")
   end
 
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-3", "steel-plate", "bob-tungsten-carbide")
-    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-tungsten-alloy-processing")
+  if data.raw.item["tungsten-carbide"] then
+    bobmods.lib.recipe.replace_ingredient("bob-nuclear-reactor-3", "steel-plate", "tungsten-carbide")
+    bobmods.lib.tech.add_prerequisite("bob-nuclear-power-3", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then

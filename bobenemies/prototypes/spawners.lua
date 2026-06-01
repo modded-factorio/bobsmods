@@ -6,39 +6,39 @@ local super_spawn
 if settings.startup["bobmods-enemies-biggersooner"].value == true then
   biter_spawn = {
     { "small-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-    { "big-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-    { "bob-huge-biter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.1 } } },
+    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+    { "big-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
+    { "bob-huge-biter", { { 0.55, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
     { "bob-giant-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
-    { "bob-titan-biter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
+    { "bob-titan-biter", { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
     { "behemoth-biter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
     { "bob-leviathan-biter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   spitter_spawn = {
     { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-    { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-    { "bob-huge-spitter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.1 } } },
+    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+    { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
+    { "bob-huge-spitter", { { 0.55, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
     { "bob-giant-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
-    { "bob-titan-spitter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
+    { "bob-titan-spitter", { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
     { "behemoth-spitter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
     { "bob-leviathan-spitter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   super_spawn = {
     { "small-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
     { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.6, 0.0 } } },
-    { "big-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-    { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.6, 0.0 } } },
-    { "bob-huge-biter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.0 } } },
-    { "bob-huge-spitter", { { 0.52, 0.0 }, { 0.65, 0.2 }, { 0.9, 0.0 } } },
-    { "bob-giant-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.25 } } },
-    { "bob-giant-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.25 } } },
-    { "bob-titan-biter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-    { "bob-titan-spitter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-    { "behemoth-biter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
-    { "behemoth-spitter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
+    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
+    { "big-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
+    { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
+    { "bob-huge-biter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
+    { "bob-huge-spitter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
+    { "bob-giant-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
+    { "bob-giant-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
+    { "bob-titan-biter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+    { "bob-titan-spitter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-biter", { { 0.85, 0.0 }, { 0.95, 0.4 } } },
+    { "behemoth-spitter", { { 0.85, 0.0 }, { 0.95, 0.4 } } },
     { "bob-leviathan-biter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
     { "bob-leviathan-spitter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
   }
@@ -47,7 +47,7 @@ else
     { "small-biter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
     { "medium-biter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
     { "big-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.1 } } },
+    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
     { "bob-giant-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
     { "bob-titan-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
     { "behemoth-biter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
@@ -57,7 +57,7 @@ else
     { "small-spitter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
     { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
     { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.1 } } },
+    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
     { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
     { "bob-titan-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
     { "behemoth-spitter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
@@ -70,14 +70,14 @@ else
     { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
     { "big-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
     { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.0 } } },
-    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.2 }, { 0.9, 0.0 } } },
-    { "bob-giant-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.25 } } },
-    { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.25 } } },
-    { "bob-titan-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-    { "bob-titan-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-    { "behemoth-biter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
-    { "behemoth-spitter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
+    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
+    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
+    { "bob-giant-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.95, 0.0 } } },
+    { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.95, 0.0 } } },
+    { "bob-titan-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+    { "bob-titan-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-biter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
+    { "behemoth-spitter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
     { "bob-leviathan-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
     { "bob-leviathan-spitter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
   }
@@ -107,6 +107,26 @@ data.raw["unit-spawner"]["spitter-spawner"].graphics_set.animations[4].layers[2]
   bobmods.enemies.spitter_spawner_tint
 data.raw["unit-spawner"]["biter-spawner"].icon = "__bobenemies__/graphics/icons/biter-spawner.png"
 data.raw["unit-spawner"]["spitter-spawner"].icon = "__bobenemies__/graphics/icons/spitter-spawner.png"
+data.raw.corpse["biter-spawner-corpse"].animation_render_layer = "corpse"
+data.raw.corpse["biter-spawner-corpse"].final_render_layer = "corpse"
+data.raw.corpse["spitter-spawner-corpse"].animation_render_layer = "corpse"
+data.raw.corpse["spitter-spawner-corpse"].final_render_layer = "corpse"
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[1].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[2].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[3].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].animation[4].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[1].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[2].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[3].layers)
+table.remove(data.raw.corpse["biter-spawner-corpse"].decay_animation[4].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[1].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[2].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[3].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].animation[4].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[1].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[2].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[3].layers)
+table.remove(data.raw.corpse["spitter-spawner-corpse"].decay_animation[4].layers)
 
 local new_biter_spawner = table.deepcopy(data.raw["unit-spawner"]["biter-spawner"])
 new_biter_spawner.name = "bob-0-biter-spawner"

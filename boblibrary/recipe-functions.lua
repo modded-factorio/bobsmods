@@ -124,14 +124,19 @@ function bobmods.lib.recipe.add_ingredient(recipe, item_in)
     and type(item) == "table"
     and bobmods.lib.item.get_type(item.name)
   then
-    if data.raw.recipe[recipe].ingredients then
-      bobmods.lib.item.add(data.raw.recipe[recipe].ingredients, item)
+    if not data.raw.recipe[recipe].ingredients then
+      data.raw.recipe[recipe].ingredients = {}
     end
-  else
-    if not (type(recipe) == "string" and data.raw.recipe[recipe]) then
-      log(debug.traceback())
-      bobmods.lib.error.recipe(recipe)
-    end
+    bobmods.lib.item.add(data.raw.recipe[recipe].ingredients, item)
+  elseif not (type(recipe) == "string" and data.raw.recipe[recipe]) then
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe)
+  elseif type(item) == "string" then
+    log(debug.traceback())
+    bobmods.lib.error(item)
+  elseif type(item) == "table" then
+    log(debug.traceback())
+    bobmods.lib.error.item(item.name)
   end
 end
 

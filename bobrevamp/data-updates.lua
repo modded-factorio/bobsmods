@@ -83,7 +83,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
   if data.raw.fluid["bob-hydrogen-sulfide"] then
     bobmods.lib.recipe.add_result(
       "bob-petroleum-gas-sweetening",
-      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 10 }
+      { type = "fluid", name = "bob-hydrogen-sulfide", amount = 15 }
     )
   end
 

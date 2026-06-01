@@ -34,9 +34,14 @@ then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-2", "pipe", "bob-steel-pipe")
   end
 
-  if data.raw.item["bob-invar-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "iron-plate", "bob-invar-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-electrolyser-3", "bob-invar-processing")
+  if data.raw.item["bob-zinc-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "iron-plate", "bob-zinc-plate")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-3", "bob-zinc-processing")
+  end
+
+  if data.raw.item["bob-nickel-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "plastic-bar", "bob-nickel-plate")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-3", "bob-nickel-processing")
   end
 
   if data.raw.item["bob-aluminium-plate"] then
@@ -44,7 +49,9 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-3", "bob-aluminium-processing")
   end
 
-  if data.raw.item["bob-plastic-pipe"] then
+  if data.raw.item["bob-aluminium-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "pipe", "bob-aluminium-pipe")
+  elseif data.raw.item["bob-plastic-pipe"] then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-3", "pipe", "bob-plastic-pipe")
   end
 
@@ -53,32 +60,34 @@ then
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-ceramics")
   end
 
+  if data.raw.item["bob-brass-alloy"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "iron-plate", "bob-brass-alloy")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-brass-processing")
+  end
+
   if data.raw.item["bob-titanium-plate"] then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "iron-plate", "bob-titanium-plate")
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "steel-plate", "bob-titanium-plate")
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-titanium-processing")
   end
 
-  if data.raw.item["bob-tungsten-plate"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "steel-plate", "bob-tungsten-plate")
-    bobmods.lib.tech.add_prerequisite("bob-electrolyser-4", "bob-tungsten-processing")
-  end
-
-  if data.raw.item["bob-ceramic-pipe"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-ceramic-pipe")
-  end
-
-  if data.raw.item["bob-tungsten-carbide"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "bob-tungsten-carbide")
+  if data.raw.item["bob-titanium-pipe"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-4", "pipe", "bob-titanium-pipe")
   end
 
   if data.raw.item["bob-nitinol-alloy"] then
-    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "iron-plate", "bob-nitinol-alloy")
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "plastic-bar", "bob-nitinol-alloy")
     bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-nitinol-processing")
+  end
+
+  if data.raw.item["tungsten-plate"] then
+    bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "iron-plate", "tungsten-plate")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-copper-tungsten-alloy"] then
     bobmods.lib.recipe.replace_ingredient("bob-electrolyser-5", "steel-plate", "bob-copper-tungsten-alloy")
-    bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-tungsten-alloy-processing")
+    bobmods.lib.tech.add_prerequisite("bob-electrolyser-5", "bob-tungsten-processing")
   end
 
   if data.raw.item["bob-advanced-processing-unit"] then

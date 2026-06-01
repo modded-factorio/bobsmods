@@ -145,9 +145,9 @@ if data.raw.technology["bob-alien-blue-research"] then
   bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "bob-alien-blue-research")
   bobmods.lib.tech.add_prerequisite("bob-piercing-rocket", "bob-alien-blue-research")
 else
-  if data.raw.technology["bob-tungsten-processing"] then
-    bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "bob-tungsten-processing")
-    bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "bob-tungsten-processing")
+  if data.raw.technology["bob-titanium-processing"] then
+    bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "bob-titanium-processing")
+    bobmods.lib.tech.add_prerequisite("bob-shotgun-ap-shells", "bob-titanium-processing")
   end
   if data.raw.technology["bob-alien-research"] then
     bobmods.lib.tech.add_prerequisite("bob-ap-bullets", "bob-alien-research")

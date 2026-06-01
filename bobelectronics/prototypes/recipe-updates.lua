@@ -25,8 +25,8 @@ if data.raw.item["bob-tinned-copper-cable"] then
   bobmods.lib.recipe.replace_ingredient("bob-integrated-electronics", "copper-cable", "bob-tinned-copper-cable")
 end
 
-if data.raw.item["bob-carbon"] then
-  bobmods.lib.recipe.replace_ingredient("bob-basic-electronic-components", "coal", "bob-carbon")
+if data.raw.item["carbon"] then
+  bobmods.lib.recipe.replace_ingredient("bob-basic-electronic-components", "coal", "carbon")
 end
 
 if data.raw.item["bob-silicon-wafer"] then
@@ -138,3 +138,19 @@ end
 bobmods.lib.recipe.replace_ingredient("arithmetic-combinator", "copper-cable", "bob-insulated-cable")
 bobmods.lib.recipe.replace_ingredient("decider-combinator", "copper-cable", "bob-insulated-cable")
 bobmods.lib.recipe.replace_ingredient("constant-combinator", "copper-cable", "bob-insulated-cable")
+
+-- Base game updates
+if not mods["space-age"] then
+  bobmods.lib.recipe.replace_ingredient("rocket-silo", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("rocket-part", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("cargo-landing-pad", "processing-unit", "bob-advanced-processing-unit")
+  bobmods.lib.recipe.replace_ingredient("satellite", "processing-unit", "bob-advanced-processing-unit")
+end
+
+bobmods.lib.recipe.replace_ingredient("speed-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.recipe.replace_ingredient("efficiency-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+bobmods.lib.recipe.replace_ingredient("productivity-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+
+if mods["quality"] then
+  bobmods.lib.recipe.replace_ingredient("quality-module-3", "advanced-circuit", "bob-advanced-processing-unit")
+end

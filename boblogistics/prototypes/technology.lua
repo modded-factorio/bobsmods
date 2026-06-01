@@ -5,6 +5,7 @@ data:extend({
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
     prerequisites = {
+      "chemical-science-pack",
       "fluid-handling",
     },
     effects = {
@@ -26,6 +27,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -39,7 +41,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "bob-fluid-handling-2",
-      "chemical-science-pack",
+      "production-science-pack",
     },
     effects = {
       {
@@ -61,6 +63,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -74,7 +77,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "bob-fluid-handling-3",
-      "production-science-pack",
+      "utility-science-pack",
     },
     effects = {
       {
@@ -97,6 +100,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
@@ -124,12 +128,14 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       prerequisites = {
         "advanced-circuit",
         "automated-rail-transportation",
+        "chemical-science-pack",
       },
       unit = {
         count = 100,
         ingredients = {
-          { "automation-science-pack", 2 },
+          { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 20,
       },
@@ -154,13 +160,15 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       prerequisites = {
         "bob-railway-2",
         "processing-unit",
+        "production-science-pack",
       },
       unit = {
         count = 100,
         ingredients = {
-          { "automation-science-pack", 2 },
+          { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
         time = 20,
       },
@@ -253,8 +261,9 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         count = 200,
         time = 30,
         ingredients = {
-          { "automation-science-pack", 2 },
-          { "logistic-science-pack", 2 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
       },
       order = "c-g-a-b-2",
@@ -280,9 +289,10 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         count = 200,
         time = 30,
         ingredients = {
-          { "automation-science-pack", 2 },
-          { "logistic-science-pack", 2 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
       },
       order = "c-g-a-b-3",
@@ -302,7 +312,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       prerequisites = {
         "fluid-wagon",
         "automated-rail-transportation",
-        "chemical-science-pack",
+        "bob-fluid-handling-2",
       },
       unit = {
         count = 100,
@@ -835,15 +845,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bob-turbo-transport-belt",
+        recipe = "turbo-transport-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-turbo-underground-belt",
+        recipe = "turbo-underground-belt",
       },
       {
         type = "unlock-recipe",
-        recipe = "bob-turbo-splitter",
+        recipe = "turbo-splitter",
       },
     },
     prerequisites = {

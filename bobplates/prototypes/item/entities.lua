@@ -20,6 +20,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
+    weight = 20000,
   },
 
   {
@@ -43,6 +44,7 @@ data:extend({
       filename = "__base__/sound/item/brick-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 10000,
   },
   {
     type = "item",
@@ -65,6 +67,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 10000,
   },
   {
     type = "item",
@@ -111,6 +114,7 @@ data:extend({
       filename = "__base__/sound/item/brick-inventory-pickup.ogg",
       volume = 0.6,
     },
+    weight = 10000,
   },
   {
     type = "item",
@@ -133,6 +137,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 10000,
   },
   {
     type = "item",
@@ -179,7 +184,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -203,7 +208,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -227,7 +232,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -251,7 +256,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -275,7 +280,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -299,7 +304,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -323,7 +328,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -347,7 +352,7 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 
   {
@@ -371,6 +376,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 10000,
   },
 
   {
@@ -394,6 +400,7 @@ data:extend({
       filename = "__base__/sound/item/metal-large-inventory-pickup.ogg",
       volume = 0.8,
     },
+    weight = 10000,
   },
 
   {
@@ -417,6 +424,9 @@ data:extend({
       filename = "__base__/sound/item/fluid-inventory-pickup.ogg",
       volume = 0.5,
     },
-    weight = 5000,
+    weight = 10000,
   },
 })
+
+data.raw.item["stone-furnace"].weight = 10000
+data.raw.item["steel-furnace"].weight = 10000
