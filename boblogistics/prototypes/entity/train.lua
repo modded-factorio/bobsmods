@@ -94,7 +94,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
 
   if feature_flags["space_travel"] then
     data.raw.locomotive.locomotive.surface_conditions = {
-      { property = "pressure", min = 10 }
+      { property = "pressure", min = 10 },
     }
   end
 
