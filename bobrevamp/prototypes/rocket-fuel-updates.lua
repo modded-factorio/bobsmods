@@ -57,7 +57,7 @@ if data.raw.fluid["ammonia"] and data.raw.fluid["bob-hydrazine"] and data.raw.fl
   bobmods.lib.tech.add_prerequisite("rocket-fuel", "bob-hydrazine")
 end
 
-if data.raw.fluid["ammonia"] and mods["space-age"] then
+if mods["bobplates"] and mods["space-age"] then
   local recipe = data.raw.recipe["solid-fuel-from-ammonia"]
   recipe.icon = nil
   recipe.icons = {
