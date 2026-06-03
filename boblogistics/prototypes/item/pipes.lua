@@ -123,7 +123,7 @@ data:extend({
   },
 })
 
-if data.raw.item["bob-bronze-alloy"] then
+if mods["bobplates"] then
   data:extend({
     {
       type = "item",
@@ -154,11 +154,7 @@ if data.raw.item["bob-bronze-alloy"] then
       pick_sound = pipe_pick,
       weight = 20000,
     },
-  })
-end
 
-if data.raw.item["bob-aluminium-plate"] then
-  data:extend({
     {
       type = "item",
       name = "bob-aluminium-pipe",
@@ -188,11 +184,7 @@ if data.raw.item["bob-aluminium-plate"] then
       pick_sound = pipe_pick,
       weight = 20000,
     },
-  })
-end
 
-if data.raw.item["bob-brass-alloy"] then
-  data:extend({
     {
       type = "item",
       name = "bob-brass-pipe",
@@ -222,11 +214,7 @@ if data.raw.item["bob-brass-alloy"] then
       pick_sound = pipe_pick,
       weight = 20000,
     },
-  })
-end
 
-if data.raw.item["bob-titanium-plate"] then
-  data:extend({
     {
       type = "item",
       name = "bob-titanium-pipe",
@@ -256,11 +244,7 @@ if data.raw.item["bob-titanium-plate"] then
       pick_sound = pipe_pick,
       weight = 20000,
     },
-  })
-end
 
-if data.raw.item["tungsten-plate"] then
-  data:extend({
     {
       type = "item",
       name = "bob-tungsten-pipe",
@@ -290,11 +274,7 @@ if data.raw.item["tungsten-plate"] then
       pick_sound = pipe_pick,
       weight = 20000,
     },
-  })
-end
 
-if data.raw.item["bob-copper-tungsten-alloy"] then
-  data:extend({
     {
       type = "item",
       name = "bob-copper-tungsten-pipe",

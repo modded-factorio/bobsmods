@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
-Date: ???
+Date: 01. 06. 2026
   Changes:
     - Updated Korean locale #524
+  Bugfixes:
+    - Fixed crash when Space Age mod is enabled and Bob's MCI mod is not enabled #593
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 01. 06. 2026

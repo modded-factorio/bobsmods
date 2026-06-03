@@ -1,6 +1,6 @@
 if script.active_mods["space-age"] then
   local surface = game.surfaces["nauvis"]
-  if surface then
+  if surface and prototypes.entity["tungsten-ore"] then
     local entities = surface.find_entities_filtered({
       name = { "tungsten-ore" },
       type = "resource",
