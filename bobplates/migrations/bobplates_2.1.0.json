@@ -4,7 +4,7 @@
     ["bob-carbon", "carbon"],
     ["bob-ceramic-bearing", "bob-titanium-bearing"],
     ["bob-ceramic-bearing-ball", "bob-titanium-bearing-ball"],
-    ["bob-lithium", "lithium"],
+    ["bob-lithium", "lithium-plate"],
     ["bob-lithium-ion-battery", "bob-battery-2"],
     ["bob-silver-zinc-battery", "bob-battery-3"],
     ["bob-tungsten-carbide", "tungsten-carbide"],
