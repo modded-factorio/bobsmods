@@ -25,7 +25,7 @@ if data.raw.item["bob-tinned-copper-cable"] then
   bobmods.lib.recipe.replace_ingredient("bob-integrated-electronics", "copper-cable", "bob-tinned-copper-cable")
 end
 
-if data.raw.item["carbon"] then
+if mods["bobplates"] and data.raw.item["carbon"] then
   bobmods.lib.recipe.replace_ingredient("bob-basic-electronic-components", "coal", "carbon")
 end
 

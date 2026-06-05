@@ -712,7 +712,7 @@ if data.raw.fluid["hydrogen-chloride"] then
   end
 end
 
-if data.raw.item["carbon"] then
+if mods["bobplates"] and data.raw.item["carbon"] then
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-fission-reactor-equipment-1",
     { type = "item", name = "carbon", amount = 40 }
