@@ -43,5 +43,17 @@ data:extend({
   },
 })
 
+data:extend({
+  {
+    type = "sprite",
+    name = "bobinserters-outline-bar",
+    filename = "__bobinserters__/graphics/gui/outline-bar.png",
+    priority = "extra-high-no-scale",
+    width = 32,
+    height = 2,
+    mipmap_count = 1,
+  },
+})
+
 require("prototypes.styles")
 require("prototypes.technology-inserter")

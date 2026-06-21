@@ -30,6 +30,26 @@ local inserter_checkmark_drop = {
   size = { 64, 64 },
 }
 
+local overlay_arrow_scale = 0.5 / 1.5
+
+local inserter_checkmark_pickup_overlay = {
+  filename = "__bobinserters__/graphics/gui/gui.png",
+  priority = "extra-high-no-scale",
+  scale = overlay_arrow_scale,
+  position = { 76, 37 },
+  size = { 40, 20 },
+  tint = { 255, 255, 255, 160 },
+}
+
+local inserter_checkmark_drop_overlay = {
+  filename = "__bobinserters__/graphics/gui/gui.png",
+  priority = "extra-high-no-scale",
+  scale = overlay_arrow_scale,
+  position = { 140, 37 },
+  size = { 40, 20 },
+  tint = { 255, 255, 255, 160 },
+}
+
 local checkmark = {
   filename = "__bobinserters__/graphics/gui/gui.png",
   position = { 192, 0 },
@@ -232,3 +252,32 @@ data.raw["gui-style"].default.bob_inserter_checkbox_small = {
   size = { 16, 16 },
   checkmark = checkmark_small,
 }
+
+data.raw["gui-style"].default.bob_inserter_checkbox_pickup_overlay = {
+  type = "checkbox_style",
+  font = "default",
+  parent = "bob_inserter_checkbox_pickup",
+  default_graphical_set = blank32,
+  hovered_graphical_set = blank32,
+  clicked_graphical_set = blank32,
+  disabled_graphical_set = blank32,
+  selected_graphical_set = blank32,
+  selected_hovered_graphical_set = blank32,
+  selected_clicked_graphical_set = blank32,
+  checkmark = inserter_checkmark_pickup_overlay,
+}
+
+data.raw["gui-style"].default.bob_inserter_checkbox_drop_overlay = {
+  type = "checkbox_style",
+  font = "default",
+  parent = "bob_inserter_checkbox_drop",
+  default_graphical_set = blank32,
+  hovered_graphical_set = blank32,
+  clicked_graphical_set = blank32,
+  disabled_graphical_set = blank32,
+  selected_graphical_set = blank32,
+  selected_hovered_graphical_set = blank32,
+  selected_clicked_graphical_set = blank32,
+  checkmark = inserter_checkmark_drop_overlay,
+}
+
