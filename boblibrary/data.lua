@@ -31,3 +31,5 @@ require("category-functions")
 require("auto-bottle")
 
 require("ore-icon-variations")
+
+require("graphics.entity.fluid-connectors.fluid-connector-defines")
