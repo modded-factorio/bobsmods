@@ -468,7 +468,12 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
+        pipe_picture = {
+          north = bob_pipe_connector_north(),
+          east = bob_pipe_connector_east_thin(),
+          south = bob_pipe_connector_south_thin(),
+          west = bob_pipe_connector_west_thin(),
+        },
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
@@ -530,9 +535,15 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
+        pipe_picture = {
+          north = bob_pipe_connector_north(),
+          east = bob_pipe_connector_east(),
+          south = bob_pipe_connector_south_thin(),
+          west = bob_pipe_connector_west_thin(),
+        },
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
+        secondary_draw_orders = { north = -1 },
         volume = 1000,
       },
     },
