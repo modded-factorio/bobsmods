@@ -945,6 +945,8 @@ function close_avatar_gui(player_index)
 
     globtable.gui = nil
     globtable.buttons_row = nil
+    globtable.help_row = nil
+    globtable.help_row2 = nil
     globtable.characters_list = nil
     globtable.minimap_gui = nil
     globtable.current_character = nil
@@ -985,7 +987,7 @@ function draw_avatar_gui(player_index)
     horizontal_scroll_policy = "never",
   })
   gui.main_flow.characters_frame.bob_avatar_list.style.minimal_height = 0
-  gui.main_flow.characters_frame.bob_avatar_list.style.maximal_height = 250
+  gui.main_flow.characters_frame.bob_avatar_list.style.maximal_height = 400
   gui.main_flow.characters_frame.bob_avatar_list.style.right_padding = 4
   draw_characters_list(player_index)
 
@@ -994,7 +996,13 @@ function draw_avatar_gui(player_index)
   globtable.buttons_row = gui.add({ type = "flow", name = "cheat_buttons_flow" })
   gui.cheat_buttons_flow.style.top_padding = 8
   gui.cheat_buttons_flow.style.horizontally_stretchable = true
+
+  globtable.help_row = gui.add({ type = "flow", name = "help_message_box" })
+  gui.help_message_box.style.top_padding = 8
+  globtable.help_row2 = gui.add({ type = "flow", name = "help_message_box2" })
+
   draw_buttons_row(player_index)
+  draw_hub_message(player_index)
 end
 
 function draw_current_character_info(player_index)
@@ -1128,8 +1136,12 @@ function draw_characters_list(player_index)
         draw_vertical_lines = false,
       })
     end
-    for i, entity in pairs(characters) do
-      gui.table.add({ type = "label", name = "bob_avatar_list_number_" .. i, caption = string.format("#%d ", i) })
+
+    local char_number = 1
+    for i = #characters, 1, -1 do
+      local entity = characters[i]
+      gui.table.add({ type = "label", name = "bob_avatar_list_number_" .. i, caption = string.format("#%d ", char_number) })
+      char_number = char_number + 1
       if not storage.sprite[entity.unit_number] then
         reset_character_icon(entity)
       end
@@ -1177,7 +1189,37 @@ function draw_characters_list(player_index)
         gui.table["bob_avatar_list_minimap_" .. i].style = "selected_mod_gui_button_28"
       end
     end
+
   end
+end
+
+function draw_hub_message(player_index)
+
+  local player = game.players[player_index]
+  local gui = storage.players[player_index].help_row
+  local gui2 = storage.players[player_index].help_row2
+  if gui and gui2 then
+    gui.clear()
+    gui2.clear()
+
+    if
+      player.character.surface.platform
+      and player.character.surface.platform.hub
+      and (not player.hub)
+    then
+      gui.add({
+        type = "label",
+        name = "help-message-label",
+        caption = { "gui.bob-avatar-hub-help" },
+      })
+      gui2.add({
+        type = "label",
+        name = "help-message-label",
+        caption = { "gui.bob-avatar-hub-help2" },
+      })
+    end
+  end
+
 end
 
 function refresh_buttons_row(player_index)
@@ -1189,6 +1231,7 @@ function refresh_avatar_gui(player_index)
   wlog("Entered function refresh_avatar_gui(" .. player_index .. ")!")
   draw_current_character_info(player_index)
   draw_characters_list(player_index)
+  draw_hub_message(player_index)
 end
 
 function refresh_minimap_buttons(player_index)
