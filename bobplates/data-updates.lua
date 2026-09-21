@@ -468,7 +468,7 @@ if mods["recycler"] then
   if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe({
       "quality-module-3",
-    })  
+    })
   end
   if not mods["space-age"] then
     bobmods.lib.recipe.update_recycling_recipe({
