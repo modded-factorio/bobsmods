@@ -356,11 +356,20 @@ end
 function bobmods.logistics.check_range(event)
   local player = game.players[event.player_index]
   local entity = player.selected
+
+  if not entity then
+    return
+  end
+
+  local entity_name = entity.name
+  if entity.type == "entity-ghost" then
+    entity_name = entity.ghost_name
+  end
+
   if
-    entity
-    and entity.type == "inserter"
+    (entity.type == "inserter" or (entity.type == "entity-ghost" and entity.ghost_type == "inserter"))
     and player.can_reach_entity(entity)
-    and not storage.bobmods.logistics.blacklist[entity.name]
+    and not storage.bobmods.logistics.blacklist[entity_name]
   then
     bobmods.logistics.long_range(entity, player)
   end
