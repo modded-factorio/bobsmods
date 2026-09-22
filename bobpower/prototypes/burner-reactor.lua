@@ -95,6 +95,42 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       },
       consumption = "0.6MW",
       neighbour_bonus = 0.25,
+      neighbour_connectable = {
+        connections = {
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.north,
+              position = { 0, -1.5 }
+            },
+            neighbour_category = { "burner-reactor" }
+          },
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.east,
+              position = { 1.5, 0 }
+            },
+            neighbour_category = { "burner-reactor" }
+          },
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.south,
+              position = { 0, 1.5 }
+            },
+            neighbour_category = { "burner-reactor" }
+          },
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.west,
+              position = { -1.5, 0 }
+            },
+            neighbour_category = { "burner-reactor" }
+          },
+        },
+      },
       scale_energy_usage = false,
       energy_source = {
         type = "burner",
