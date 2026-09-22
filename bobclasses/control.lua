@@ -260,6 +260,12 @@ function init()
   if not storage.names then
     storage.names = {}
   end
+  if not storage.most_recent_name then
+    storage.most_recent_name = {}
+  end
+  if not storage.is_flying then
+    storage.is_flying = {}
+  end
   if not storage.sprite then
     storage.sprite = {}
   end
@@ -588,6 +594,17 @@ script.on_load(function()
   register_minime_events()
 end)
 
+function register_most_recent_name(player, unit_number)
+  --Store saved name of a character in a separate variable table listed by player in order to fix Jetpack name-erasing issue.
+  if unit_number then
+    if storage.names[unit_number] then
+      storage.most_recent_name[player.name] = storage.names[unit_number]
+    else
+      storage.most_recent_name[player.name] = ""
+    end
+  end
+end
+
 script.on_event(defines.events.on_player_created, function(event)
   wlog("Entered event handler on_player_created(" .. serpent.line(event) .. ")")
 
@@ -696,8 +713,24 @@ end)
 script.on_event(defines.events.on_gui_click, function(event)
   wlog("Entered event handler on_gui_click(" .. serpent.line(event) .. ")")
 
+  --Check to see if player is controlling a character that is flying using the Jetpack mod.
+  local jetpack_flying = false
+  if
+    event.element.valid
+    and game.players[event.player_index].character
+    and string.find(game.players[event.player_index].character.name, "-jetpack")
+    --Make an exception if the button being clicked is the map or minimap button, or the gui toggle or close.
+    and (not string.find(event.element.name, "bob_avatar_list_minimap_"))
+    and (not string.find(event.element.name, "bob_avatar_list_map_view_"))
+    and event.element.name ~= "bob_avatar_toggle_gui"
+    and event.element.name ~= "bob_avatar_gui_close"
+  then
+    jetpack_flying = true
+    game.print("Cannot change or rename characters while flying.")
+  end
+
   --Switching characters while flying in a cargo pod causes you to be kicked out, wasting a rocket and possibly stranding you in the middle of a lake or deep space.
-  if not game.players[event.player_index].cargo_pod then
+  if (not game.players[event.player_index].cargo_pod) and jetpack_flying == false then
     wlog("Name of clicked button: " .. tostring(event.element.valid and event.element.name))
     local player = game.players[event.player_index]
     if event.element.valid and event.element.name == "bob_avatar_toggle_gui" then
@@ -809,6 +842,7 @@ script.on_event(defines.events.on_gui_text_changed, function(event)
     local player = game.players[event.player_index]
     if player.character then
       storage.names[player.character.unit_number] = event.element.text
+      register_most_recent_name(player, player.character.unit_number)
     end
   end
 end)
@@ -945,6 +979,8 @@ function close_avatar_gui(player_index)
 
     globtable.gui = nil
     globtable.buttons_row = nil
+    globtable.help_row = nil
+    globtable.help_row2 = nil
     globtable.characters_list = nil
     globtable.minimap_gui = nil
     globtable.current_character = nil
@@ -985,7 +1021,7 @@ function draw_avatar_gui(player_index)
     horizontal_scroll_policy = "never",
   })
   gui.main_flow.characters_frame.bob_avatar_list.style.minimal_height = 0
-  gui.main_flow.characters_frame.bob_avatar_list.style.maximal_height = 250
+  gui.main_flow.characters_frame.bob_avatar_list.style.maximal_height = 400
   gui.main_flow.characters_frame.bob_avatar_list.style.right_padding = 4
   draw_characters_list(player_index)
 
@@ -994,7 +1030,13 @@ function draw_avatar_gui(player_index)
   globtable.buttons_row = gui.add({ type = "flow", name = "cheat_buttons_flow" })
   gui.cheat_buttons_flow.style.top_padding = 8
   gui.cheat_buttons_flow.style.horizontally_stretchable = true
+
+  globtable.help_row = gui.add({ type = "flow", name = "help_message_box" })
+  gui.help_message_box.style.top_padding = 8
+  globtable.help_row2 = gui.add({ type = "flow", name = "help_message_box2" })
+
   draw_buttons_row(player_index)
+  draw_hub_message(player_index)
 end
 
 function draw_current_character_info(player_index)
@@ -1033,6 +1075,18 @@ function draw_current_character_info(player_index)
           name = "bob_avatar_current_character_name",
           caption = entity.prototype.localised_name,
         })
+        --Check if Jetpack (from Jetpack mod) has been turned on or off since the last update. Retrieve backed up name to account for Jetpack mod replacing character.
+        if string.find(entity.name, "-jetpack") then
+          if storage.is_flying[player.name] ~= true and storage.most_recent_name[player.name] and storage.most_recent_name[player.name] ~= "" then
+            storage.names[entity.unit_number] = storage.most_recent_name[player.name]
+          end
+          storage.is_flying[player.name] = true
+        else
+          if storage.is_flying[player.name] == true and storage.most_recent_name[player.name] and storage.most_recent_name[player.name] ~= "" then
+            storage.names[entity.unit_number] = storage.most_recent_name[player.name]
+          end
+          storage.is_flying[player.name] = false
+        end
         if storage.names[entity.unit_number] then
           gui["bob_avatar_current_character_name"].caption = storage.names[entity.unit_number]
         end
@@ -1128,8 +1182,12 @@ function draw_characters_list(player_index)
         draw_vertical_lines = false,
       })
     end
-    for i, entity in pairs(characters) do
-      gui.table.add({ type = "label", name = "bob_avatar_list_number_" .. i, caption = string.format("#%d ", i) })
+
+    local char_number = 1
+    for i = #characters, 1, -1 do
+      local entity = characters[i]
+      gui.table.add({ type = "label", name = "bob_avatar_list_number_" .. i, caption = string.format("#%d ", char_number) })
+      char_number = char_number + 1
       if not storage.sprite[entity.unit_number] then
         reset_character_icon(entity)
       end
@@ -1177,7 +1235,39 @@ function draw_characters_list(player_index)
         gui.table["bob_avatar_list_minimap_" .. i].style = "selected_mod_gui_button_28"
       end
     end
+
   end
+end
+
+function draw_hub_message(player_index)
+
+  local player = game.players[player_index]
+  local gui = storage.players[player_index].help_row
+  local gui2 = storage.players[player_index].help_row2
+  if gui and gui2 then
+    gui.clear()
+    gui2.clear()
+
+    if
+      player.character
+      and player.character.surface
+      and player.character.surface.platform
+      and player.character.surface.platform.hub
+      and (not player.hub)
+    then
+      gui.add({
+        type = "label",
+        name = "help-message-label",
+        caption = { "gui.bob-avatar-hub-help" },
+      })
+      gui2.add({
+        type = "label",
+        name = "help-message-label",
+        caption = { "gui.bob-avatar-hub-help2" },
+      })
+    end
+  end
+
 end
 
 function refresh_buttons_row(player_index)
@@ -1189,6 +1279,7 @@ function refresh_avatar_gui(player_index)
   wlog("Entered function refresh_avatar_gui(" .. player_index .. ")!")
   draw_current_character_info(player_index)
   draw_characters_list(player_index)
+  draw_hub_message(player_index)
 end
 
 function refresh_minimap_buttons(player_index)
@@ -1497,6 +1588,8 @@ function switch_character(player_index, new_character)
   local old_unit_number = old_character and old_character.unit_number
   local new_unit_number = new_character and new_character.unit_number
 
+  register_most_recent_name(player, new_unit_number)
+
   announce("minime", {
     old_character = old_character,
     new_character = new_character,
@@ -1521,13 +1614,11 @@ function switch_character(player_index, new_character)
     if old_unit_number and jetpacks[old_unit_number] and remote.interfaces["jetpack"].block_jetpack then
       wlog("Old character was flying. Must block jetpack of character " .. old_unit_number)
       remote.call("jetpack", "block_jetpack", { character = old_character })
-      old_character.active = false
     end
     -- Unblock jetpack of new character
     if new_unit_number and jetpacks[new_unit_number] and remote.interfaces["jetpack"].unblock_jetpack then
       wlog("New character is flying. Must unblock jetpack of character " .. new_unit_number)
       remote.call("jetpack", "unblock_jetpack", { character = new_character })
-      new_character.active = true
     end
   end
 
