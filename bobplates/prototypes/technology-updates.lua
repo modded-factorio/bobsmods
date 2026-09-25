@@ -40,8 +40,8 @@ bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-liquid-fuel")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-enriched-fuel")
 
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-petroleum-gas-cracking")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-petroleum-gas-cracking", "light-oil-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking", "heavy-oil-cracking", true)
 
 bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 
@@ -96,8 +96,8 @@ bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-be
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing")
 
 if not mods["space-age"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium-plate")
   bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-chloride")
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium-plate")
   bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-perchlorate")
 else
   data.raw.technology["bob-battery-2"].prerequisites = {}
@@ -125,7 +125,7 @@ else
   bobmods.lib.tech.add_recipe_unlock("bob-battery-3", "bob-lithium-cobalt-oxide")
   bobmods.lib.tech.add_recipe_unlock("bob-battery-3", "bob-battery-3")
   bobmods.lib.tech.hide("bob-lithium-processing")
-  bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-chloride")
+  bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-chloride", 1)
   bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-perchlorate")
 end
 

@@ -233,271 +233,97 @@ bobmods.lib.tech.add_prerequisite("uranium-ammo", "bob-bullets")
 bobmods.lib.tech.add_prerequisite("uranium-ammo", "bob-shotgun-shells")
 bobmods.lib.tech.add_recipe_unlock("uranium-ammo", "bob-shotgun-uranium-shell")
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-1"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-1", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-2"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.1 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-2", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.1 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-3"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-3", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-4"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-4", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.2 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.2 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.4 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.4 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.7 }
-)
+bobmods.lib.tech.remove_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "gun-turret" })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "gun-turret", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-gun-turret-2", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-gun-turret-3", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-gun-turret-4", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-gun-turret-5", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-sniper-turret-1", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-sniper-turret-2", modifier = 0.7 })
+bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "turret-attack", turret_id = "bob-sniper-turret-3", modifier = 0.7 })
 
-table.insert(
-  data.raw.technology["physical-projectile-damage-5"].effects,
-  { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 0.9 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-6"].effects,
-  { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1.3 }
-)
-table.insert(
-  data.raw.technology["physical-projectile-damage-7"].effects,
-  { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1 }
-)
+if not mods["space-age"] then
+  bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-5", { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 0.9 }, "cannon-shell")
+  bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-6", { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1.3 }, "cannon-shell")
+  bobmods.lib.tech.add_tech_modifier("physical-projectile-damage-7", { type = "ammo-damage", ammo_category = "artillery-shell", modifier = 1 }, "cannon-shell")
+else
+  bobmods.lib.tech.set_tech_modifier("artillery-shell-damage-1", { ammo_category = "artillery-shell" }, { modifier = 0.5 })
+end
 
-table.insert(
-  data.raw.technology["laser-weapons-damage-1"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["laser-weapons-damage-2"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.2 }
-)
-table.insert(
-  data.raw.technology["laser-weapons-damage-3"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.3 }
-)
-table.insert(
-  data.raw.technology["laser-weapons-damage-4"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["laser-weapons-damage-5"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.5 }
-)
-table.insert(
-  data.raw.technology["laser-weapons-damage-6"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.7 }
-)
-table.insert(
-  data.raw.technology["laser-weapons-damage-7"].effects,
-  { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.7 }
-)
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-1", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.2 }, "laser")
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-2", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.2 }, "laser")
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-3", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.3 }, "laser")
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-4", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.4 }, "laser")
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-5", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.5 }, "laser")
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-6", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.7 }, "laser")
+bobmods.lib.tech.add_tech_modifier("laser-weapons-damage-7", { type = "ammo-damage", ammo_category = "bob-laser-rifle", modifier = 0.7 }, "laser")
 
-table.insert(
-  data.raw.technology["laser-shooting-speed-3"].effects,
-  { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.3 }
-)
-table.insert(
-  data.raw.technology["laser-shooting-speed-4"].effects,
-  { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["laser-shooting-speed-5"].effects,
-  { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.4 }
-)
-table.insert(
-  data.raw.technology["laser-shooting-speed-6"].effects,
-  { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.5 }
-)
-table.insert(
-  data.raw.technology["laser-shooting-speed-7"].effects,
-  { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.5 }
-)
+bobmods.lib.tech.add_tech_modifier("laser-shooting-speed-3", { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.3 })
+bobmods.lib.tech.add_tech_modifier("laser-shooting-speed-4", { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("laser-shooting-speed-5", { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.4 })
+bobmods.lib.tech.add_tech_modifier("laser-shooting-speed-6", { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.5 })
+bobmods.lib.tech.add_tech_modifier("laser-shooting-speed-7", { type = "gun-speed", ammo_category = "bob-laser-rifle", modifier = 0.5 })
 
 bobmods.lib.tech.remove_science_pack("laser-weapons-damage-1", "chemical-science-pack")
 bobmods.lib.tech.remove_science_pack("laser-weapons-damage-2", "chemical-science-pack")
