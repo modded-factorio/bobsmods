@@ -76,8 +76,8 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     bobmods.lib.tech.remove_recipe_unlock("oil-processing", "sulfur")
     bobmods.lib.recipe.hide("sulfur")
   end
-  bobmods.lib.tech.add_recipe_unlock("flammables", "bob-solid-fuel-from-sour-gas")
-  bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-petroleum-gas-sweetening")
+  bobmods.lib.tech.add_recipe_unlock("flammables", "bob-solid-fuel-from-sour-gas", 1)
+  bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-petroleum-gas-sweetening", "bob-oil-processing")
   bobmods.lib.create_gas_bottle(data.raw.fluid["bob-sour-gas"])
 
   if data.raw.fluid["bob-hydrogen-sulfide"] then
