@@ -42,8 +42,8 @@ local function bobshotgunammo(projectile, count, radius)
           source_effects = {
             {
               entity_name = "explosion-gunshot",
-              type = "create-explosion"
-            }
+              type = "create-explosion",
+            },
           },
           target_effects = {
             type = "nested-result",
@@ -57,7 +57,7 @@ local function bobshotgunammo(projectile, count, radius)
                 projectile = projectile,
                 starting_speed = 1,
                 starting_speed_deviation = 0.1,
-                type = "projectile"
+                type = "projectile",
               },
             },
           },
