@@ -455,7 +455,7 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       },
       production_type = "input-output",
       secondary_draw_orders = {
-        north = -1
+        north = -1,
       },
     },
     burns_fluid = true,

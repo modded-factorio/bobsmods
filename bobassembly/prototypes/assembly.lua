@@ -24,7 +24,8 @@ local assembler_shadow = {
   scale = 0.5,
   shift = { 1.421875, 0.015625 },
 }
-local assembler_light = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.working_visualisations)
+local assembler_light =
+  util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.working_visualisations)
 local assembler_pipes = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes)
 
 data.raw.item["assembling-machine-1"].weight = 20000

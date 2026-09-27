@@ -103,7 +103,7 @@ data.raw.inserter["bob-steam-inserter"].energy_source = {
     },
     production_type = "input-output",
     secondary_draw_orders = {
-      north = -1
+      north = -1,
     },
     filter = "steam",
   },

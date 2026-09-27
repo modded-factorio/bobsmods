@@ -62,7 +62,7 @@ function bob_pipe_connector_north(shift_table1, shift_table2)
         shift = shift_table2 or util.by_pixel(15.5, 35),
         draw_as_shadow = true,
       },
-    }
+    },
   }
 end
 
