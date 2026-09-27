@@ -3476,6 +3476,11 @@ for _, wall in pairs(data.raw.wall) do
     wall.damaged_trigger_effect.damage_type_filters = { "fire", "acid", "poison" }
   end
 end
+for _, gate in pairs(data.raw.gate) do
+  if gate.damaged_trigger_effect and gate.damaged_trigger_effect.damage_type_filters then
+    gate.damaged_trigger_effect.damage_type_filters = { "fire", "acid", "poison" }
+  end
+end
 
 if mods["combat-mechanics-overhaul"] then
   for _, mask in pairs({
