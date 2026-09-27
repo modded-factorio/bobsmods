@@ -30,7 +30,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("small-spitter", 3.6),
   },
-  buildable_entities = { "small-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -58,7 +57,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("medium-spitter", 2.6),
   },
-  buildable_entities = { "small-worm-turret", "medium-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -86,7 +84,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("big-spitter", 1.8),
   },
-  buildable_entities = { "medium-worm-turret", "big-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -118,7 +115,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-spitter", 1.5),
   },
-  buildable_entities = { "big-worm-turret", "bob-huge-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -150,7 +146,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-worm-turret", "bob-giant-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -183,7 +178,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-worm-turret", "bob-titan-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -212,7 +206,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("behemoth-spitter", 1),
   },
-  buildable_entities = { "bob-titan-worm-turret", "behemoth-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -245,7 +238,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-spitter", 0.9),
   },
-  buildable_entities = { "behemoth-worm-turret", "bob-leviathan-worm-turret" },
 })
 
 --Piercing
@@ -310,7 +302,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-small-piercing-spitter", 3.6),
   },
-  buildable_entities = { "bob-small-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-small-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -351,7 +342,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-medium-piercing-spitter", 2.6),
   },
-  buildable_entities = { "bob-small-piercing-worm-turret", "bob-medium-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-medium-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -392,7 +382,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-big-piercing-spitter", 1.8),
   },
-  buildable_entities = { "bob-medium-piercing-worm-turret", "bob-big-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-big-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -433,7 +422,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-piercing-spitter", 1.5),
   },
-  buildable_entities = { "bob-big-piercing-worm-turret", "bob-huge-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-huge-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -474,7 +462,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-piercing-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-piercing-worm-turret", "bob-giant-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-giant-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -515,7 +502,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-piercing-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-piercing-worm-turret", "bob-titan-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-titan-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -556,7 +542,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-behemoth-piercing-spitter", 1),
   },
-  buildable_entities = { "bob-titan-piercing-worm-turret", "bob-behemoth-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-behemoth-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -597,7 +582,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-piercing-spitter", 0.9),
   },
-  buildable_entities = { "bob-behemoth-piercing-worm-turret", "bob-leviathan-piercing-worm-turret" },
 })
 
 data.raw.unit["bob-leviathan-piercing-spitter"].attack_parameters.animation.layers[1].animation_speed = 0.8
@@ -695,7 +679,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-small-electric-spitter", 3.6),
   },
-  buildable_entities = { "bob-small-electric-worm-turret" },
 })
 
 table.insert(data.raw.fire["bob-enemy-electric-fire"].on_damage_tick_effect, {
@@ -767,7 +750,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-medium-electric-spitter", 2.6),
   },
-  buildable_entities = { "bob-small-electric-worm-turret", "bob-medium-electric-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -804,7 +786,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-big-electric-spitter", 1.8),
   },
-  buildable_entities = { "bob-medium-electric-worm-turret", "bob-big-electric-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -841,7 +822,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-electric-spitter", 1.5),
   },
-  buildable_entities = { "bob-big-electric-worm-turret", "bob-huge-electric-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -878,7 +858,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-electric-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-electric-worm-turret", "bob-giant-electric-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -915,7 +894,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-electric-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-electric-worm-turret", "bob-titan-electric-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -952,7 +930,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-behemoth-electric-spitter", 1),
   },
-  buildable_entities = { "bob-titan-electric-worm-turret", "bob-behemoth-electric-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -989,7 +966,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-electric-spitter", 0.9),
   },
-  buildable_entities = { "bob-behemoth-electric-worm-turret", "bob-leviathan-electric-worm-turret" },
 })
 
 data.raw.unit["bob-small-electric-spitter"].light = {
@@ -1189,7 +1165,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-small-acid-spitter", 3.6),
   },
-  buildable_entities = { "bob-small-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1239,7 +1214,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-medium-acid-spitter", 2.6),
   },
-  buildable_entities = { "bob-small-acid-worm-turret", "bob-medium-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1289,7 +1263,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-big-acid-spitter", 1.8),
   },
-  buildable_entities = { "bob-medium-acid-worm-turret", "bob-big-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1340,7 +1313,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-acid-spitter", 1.5),
   },
-  buildable_entities = { "bob-big-acid-worm-turret", "bob-huge-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1391,7 +1363,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-acid-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-acid-worm-turret", "bob-giant-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1442,7 +1413,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-acid-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-acid-worm-turret", "bob-titan-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1493,7 +1463,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-behemoth-acid-spitter", 1),
   },
-  buildable_entities = { "bob-titan-acid-worm-turret", "bob-behemoth-acid-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1544,7 +1513,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-acid-spitter", 0.9),
   },
-  buildable_entities = { "bob-behemoth-acid-worm-turret", "bob-leviathan-acid-worm-turret" },
 })
 
 --Explosive
@@ -1711,7 +1679,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-small-explosive-spitter", 3.6),
   },
-  buildable_entities = { "bob-small-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1756,7 +1723,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-medium-explosive-spitter", 2.6),
   },
-  buildable_entities = { "bob-small-explosive-worm-turret", "bob-medium-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1801,7 +1767,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-big-explosive-spitter", 1.8),
   },
-  buildable_entities = { "bob-medium-explosive-worm-turret", "bob-big-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1846,7 +1811,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-explosive-spitter", 1.5),
   },
-  buildable_entities = { "bob-big-explosive-worm-turret", "bob-huge-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1891,7 +1855,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-explosive-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-explosive-worm-turret", "bob-giant-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1936,7 +1899,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-explosive-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-explosive-worm-turret", "bob-titan-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -1981,7 +1943,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-behemoth-explosive-spitter", 1),
   },
-  buildable_entities = { "bob-titan-explosive-worm-turret", "bob-behemoth-explosive-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2026,7 +1987,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-explosive-spitter", 1),
   },
-  buildable_entities = { "bob-behemoth-explosive-worm-turret", "bob-leviathan-explosive-worm-turret" },
 })
 
 if settings.startup["bobmods-enemies-healthincrease"].value == true then
@@ -2122,7 +2082,7 @@ local poison_attack_action = function(radius, smoke_name, damage, healing)
               {
                 type = "area",
                 radius = 2 * radius,
-                force = "enemy",
+                force = "not-friend",
                 trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
                 ignore_collision_condition = true,
                 action_delivery = {
@@ -2185,7 +2145,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-small-poison-spitter", 3.6),
   },
-  buildable_entities = { "bob-small-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2214,7 +2173,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-medium-poison-spitter", 2.6),
   },
-  buildable_entities = { "bob-small-poison-worm-turret", "bob-medium-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2243,7 +2201,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-big-poison-spitter", 1.8),
   },
-  buildable_entities = { "bob-medium-poison-worm-turret", "bob-big-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2272,7 +2229,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-poison-spitter", 1.5),
   },
-  buildable_entities = { "bob-big-poison-worm-turret", "bob-huge-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2301,7 +2257,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-poison-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-poison-worm-turret", "bob-giant-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2330,7 +2285,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-poison-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-poison-worm-turret", "bob-titan-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2359,7 +2313,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-behemoth-poison-spitter", 1),
   },
-  buildable_entities = { "bob-titan-poison-worm-turret", "bob-behemoth-poison-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2388,7 +2341,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-poison-spitter", 0.9),
   },
-  buildable_entities = { "bob-behemoth-poison-worm-turret", "bob-leviathan-poison-worm-turret" },
 })
 
 --Fire
@@ -2472,7 +2424,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-small-fire-spitter", 3.6),
   },
-  buildable_entities = { "bob-small-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2513,7 +2464,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-medium-fire-spitter", 2.6),
   },
-  buildable_entities = { "bob-small-fire-worm-turret", "bob-medium-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2555,7 +2505,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-big-fire-spitter", 1.8),
   },
-  buildable_entities = { "bob-medium-fire-worm-turret", "bob-big-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2597,7 +2546,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-huge-fire-spitter", 1.5),
   },
-  buildable_entities = { "bob-big-fire-worm-turret", "bob-huge-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2639,7 +2587,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-giant-fire-spitter", 1.3),
   },
-  buildable_entities = { "bob-huge-fire-worm-turret", "bob-giant-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2682,7 +2629,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-titan-fire-spitter", 1.15),
   },
-  buildable_entities = { "bob-giant-fire-worm-turret", "bob-titan-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2724,7 +2670,6 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-behemoth-fire-spitter", 1),
   },
-  buildable_entities = { "bob-titan-fire-worm-turret", "bob-behemoth-fire-worm-turret" },
 })
 
 bobmods.enemies.new_spitter({
@@ -2767,5 +2712,4 @@ bobmods.enemies.new_spitter({
   factoriopedia_simulation = {
     init = enemy_simulation("bob-leviathan-fire-spitter", 0.9),
   },
-  buildable_entities = { "bob-behemoth-fire-worm-turret", "bob-leviathan-fire-worm-turret" },
 })
