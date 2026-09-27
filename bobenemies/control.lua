@@ -581,7 +581,14 @@ script.on_event(defines.events.on_chunk_generated, function(event)
     local chunk_spawners = {}
     local chunk_worms = {}
     local chunk_enemies = game.surfaces.nauvis.find_entities_filtered({
-      name = { "biter-spawner", "spitter-spawner", "small-worm-turret", "medium-worm-turret", "big-worm-turret", "behemoth-worm-turret" },
+      name = {
+        "biter-spawner",
+        "spitter-spawner",
+        "small-worm-turret",
+        "medium-worm-turret",
+        "big-worm-turret",
+        "behemoth-worm-turret",
+      },
       area = event.area,
     })
     for _, enemy in pairs(chunk_enemies) do
@@ -1014,20 +1021,66 @@ commands.add_command("bob-enemies-flag-check", nil, function(command)
 end)
 
 script.on_event(defines.events.on_script_trigger_effect, function(event)
-
   if event.effect_id == "piercing-spawner-trapped-script" then
-
     local attack_direction = (event.source_entity.unit_number % 8) + 1
 
     local attack_table = {
-      { { x = -6.8, y = -18.8 }, { x = -3.4 , y = -19.6 }, { x = 0, y = -20 }, { x = 3.4 , y = -19.6 }, { x = 6.8, y = -18.8 }, },
-      { { x = 8.5, y = -18.1}, { x = 11.5, y = -16.4 }, { x = 14.1, y = -14.1 }, { x = 16.4, y = -11.5 }, { x = 18.1, y = -8.5 }, },
-      { { x = 18.8, y = -6.84 }, { x = 19.6, y = -3.4 }, { x = 20, y = 0 }, { x = 18.8, y = 3.4 }, { x = 19.6, y = 6.8 }, },
-      { { x = 18.1, y = 8.5 }, { x = 16.4, y = 11.5 }, { x = 14.1, y = 14.1 }, { x = 11.5, y = 16.4 }, { x = 8.5, y = 18.1}, },
-      { { x = 6.8, y = 18.8 }, { x = 3.4 , y = 19.6 }, { x = 0, y = 20 }, { x = -3.4 , y = 19.6 }, { x = -6.8, y = 18.8 }, },
-      { { x = -8.5, y = 18.1}, { x = -11.5, y = 16.4 }, { x = -14.1, y = 14.1 }, { x = -16.4, y = 11.5 }, { x = -18.1, y = 8.5 }, },
-      { { x = -18.8, y = 6.8 }, { x = -19.6, y = 3.4 }, { x = -20, y = 0 }, { x = -18.8, y = -3.4 }, { x = -19.6, y = -6.8 }, },
-      { { x = -18.1, y = -8.5 }, { x = -16.4, y = -11.5 }, { x = -14.1, y = -14.1 }, { x = -11.5, y = -16.4 }, { x = -8.5, y = -18.1}, },
+      {
+        { x = -6.8, y = -18.8 },
+        { x = -3.4, y = -19.6 },
+        { x = 0, y = -20 },
+        { x = 3.4, y = -19.6 },
+        { x = 6.8, y = -18.8 },
+      },
+      {
+        { x = 8.5, y = -18.1 },
+        { x = 11.5, y = -16.4 },
+        { x = 14.1, y = -14.1 },
+        { x = 16.4, y = -11.5 },
+        { x = 18.1, y = -8.5 },
+      },
+      {
+        { x = 18.8, y = -6.84 },
+        { x = 19.6, y = -3.4 },
+        { x = 20, y = 0 },
+        { x = 18.8, y = 3.4 },
+        { x = 19.6, y = 6.8 },
+      },
+      {
+        { x = 18.1, y = 8.5 },
+        { x = 16.4, y = 11.5 },
+        { x = 14.1, y = 14.1 },
+        { x = 11.5, y = 16.4 },
+        { x = 8.5, y = 18.1 },
+      },
+      {
+        { x = 6.8, y = 18.8 },
+        { x = 3.4, y = 19.6 },
+        { x = 0, y = 20 },
+        { x = -3.4, y = 19.6 },
+        { x = -6.8, y = 18.8 },
+      },
+      {
+        { x = -8.5, y = 18.1 },
+        { x = -11.5, y = 16.4 },
+        { x = -14.1, y = 14.1 },
+        { x = -16.4, y = 11.5 },
+        { x = -18.1, y = 8.5 },
+      },
+      {
+        { x = -18.8, y = 6.8 },
+        { x = -19.6, y = 3.4 },
+        { x = -20, y = 0 },
+        { x = -18.8, y = -3.4 },
+        { x = -19.6, y = -6.8 },
+      },
+      {
+        { x = -18.1, y = -8.5 },
+        { x = -16.4, y = -11.5 },
+        { x = -14.1, y = -14.1 },
+        { x = -11.5, y = -16.4 },
+        { x = -8.5, y = -18.1 },
+      },
     }
 
     for i = 1, 5 do
@@ -1045,7 +1098,5 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
         },
       })
     end
-
   end
-
 end)

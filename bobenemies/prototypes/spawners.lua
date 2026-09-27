@@ -164,7 +164,7 @@ local piercing_spawner_trapped_reaction = {
       type = "script",
       effect_id = "piercing-spawner-trapped-script",
     },
-  }
+  },
 }
 
 local electric_spawner_trapped_reaction = {
@@ -197,10 +197,10 @@ local electric_spawner_trapped_reaction = {
               entity_name = "bob-biter-electric-beam-explosion",
             },
           },
-        }
+        },
       },
     },
-  }
+  },
 }
 
 local acid_spawner_trapped_reaction = {
@@ -247,7 +247,7 @@ local explosive_spawner_trapped_reaction = {
           type = "damage",
           damage = {
             amount = 750,
-            type = "explosion"
+            type = "explosion",
           },
         },
         {
@@ -362,13 +362,12 @@ data:extend({
                 entity_name = "bob-enemy-fire-trapped",
                 probability = 0.15,
               },
-            }
+            },
           },
         },
       },
     },
   },
-
 })
 
 bobmods.enemies.new_spawner({

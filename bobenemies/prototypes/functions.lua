@@ -692,7 +692,10 @@ function bobmods.enemies.new_biter(inputs)
     ai_settings = inputs.ai_settings or default_ai,
     water_reflection = biter_water_reflection(final_scale),
     buildable_entities = inputs.buildable_entities or biter_builds,
-    steering = inputs.steering or { move = { radius = biter_stats[tier].steering_move_radius }, stay = { radius = biter_stats[tier].steering_stay_radius } },
+    steering = inputs.steering or {
+      move = { radius = biter_stats[tier].steering_move_radius },
+      stay = { radius = biter_stats[tier].steering_stay_radius },
+    },
   }
   if inputs.icons then
     biter_prototype.icons = inputs.icons
@@ -905,7 +908,7 @@ local spitter_resistances_up = {
     { type = "electric", decrease = 80, percent = 75 },
   },
   {
-    { type = "acid", percent = 30  },
+    { type = "acid", percent = 30 },
     { type = "acid", decrease = 2, percent = 50 },
     { type = "acid", decrease = 4, percent = 60 },
     { type = "acid", decrease = 8, percent = 70 },
@@ -1381,7 +1384,10 @@ function bobmods.enemies.new_spitter(inputs)
     ai_settings = inputs.ai_settings or default_ai,
     water_reflection = spitter_water_reflection(final_scale),
     buildable_entities = inputs.buildable_entities or spitter_builds,
-    steering = inputs.steering or { move = { radius = spitter_stats[tier].steering_move_radius }, stay = { radius = spitter_stats[tier].steering_stay_radius } },
+    steering = inputs.steering or {
+      move = { radius = spitter_stats[tier].steering_move_radius },
+      stay = { radius = spitter_stats[tier].steering_stay_radius },
+    },
   }
   if inputs.icons then
     spitter_prototype.icons = inputs.icons
@@ -1656,7 +1662,8 @@ function basic_stream_attack(inputs, scale_value)
 end
 
 function bobmods.enemies.acid_stream(inputs, scale_value)
-  local neutral_damage = math.max(5, math.ceil(((inputs.attack_damage or 5) * (inputs.attack_damage_modifier or 5)) / 20))
+  local neutral_damage =
+    math.max(5, math.ceil(((inputs.attack_damage or 5) * (inputs.attack_damage_modifier or 5)) / 20))
   data:extend({
     {
       type = "stream",
@@ -3145,12 +3152,12 @@ function bobmods.enemies.new_spawner(inputs)
             entity_name = "acid-cloud",
             initial_height = 0,
             show_in_tooltip = true,
-            type = "create-smoke"
+            type = "create-smoke",
           },
-          type = "instant"
+          type = "instant",
         },
-        type = "direct"
-      }
+        type = "direct",
+      },
     },
     spawn_decorations_on_expansion = true,
     spawn_decoration = {
