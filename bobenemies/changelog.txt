@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.1
+Date: ???
+  Changes:
+    - Spawners belonging to each enemy faction will have unique responses to being walled in and unable to spawn #636
+    - Enemy expansion parameters adjusted for balance #636
+    - Health adjusted for late game balance. Spawn tables and resistances adjusted early game balance #636
+---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 29. 06. 2026
   Changes:

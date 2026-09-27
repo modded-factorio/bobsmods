@@ -422,7 +422,7 @@ end
 
 function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_factions)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-  if evo_level >= 0.9 then
+  if evo_level >= 0.95 then
     --Randomly add second faction in late mid game if not already selected (35.3% chance), or randomly replace with low chance
     if (not final_factions[2]) and math.random(17) < 7 then
       local faction2 = bobmods.enemies.pick_random_faction()
@@ -436,7 +436,7 @@ function bobmods.enemies.plant_faction_flag(x_coord, y_coord, call_tick, final_f
       end
     end
   end
-  if evo_level >= 0.95 then
+  if evo_level >= 0.98 then
     --Repeat with third faction in late game (23.5% chance)
     if final_factions[2] then
       if (not final_factions[3]) and math.random(17) < 5 then
@@ -581,7 +581,7 @@ script.on_event(defines.events.on_chunk_generated, function(event)
     local chunk_spawners = {}
     local chunk_worms = {}
     local chunk_enemies = game.surfaces.nauvis.find_entities_filtered({
-      name = { "biter-spawner", "spitter-spawner", "small-worm-turret", "medium-worm-turret", "big-worm-turret" },
+      name = { "biter-spawner", "spitter-spawner", "small-worm-turret", "medium-worm-turret", "big-worm-turret", "behemoth-worm-turret" },
       area = event.area,
     })
     for _, enemy in pairs(chunk_enemies) do
@@ -676,204 +676,176 @@ end)
 
 function bobmods.enemies.replace_spawner(original_spawner, flag)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-  if #storage.bobmods.enemies.nauvis_faction_unlock_table > 1 then
-    local original_position = original_spawner.position
-    original_spawner.destroy()
+  local original_position = original_spawner.position
+  original_spawner.destroy()
 
-    local faction_name
-    local faction_name2
-    if flag.factions[3] then
-      faction_name = flag.factions[math.random(3)]
-    elseif flag.factions[2] then
-      faction_name = flag.factions[math.random(2)]
-    else
-      faction_name = flag.factions[1]
-    end
-    if faction_name == "basic" then
-      faction_name2 = ""
-    else
-      faction_name2 = faction_name .. "-"
-    end
-
-    local new_spawner_name
-    if evo_level >= 0.8 and settings.startup["bobmods-enemies-superspawner"].value == true then
-      local which_spawner = math.random(11)
-      if which_spawner <= 5 then
-        new_spawner_name = "bob-" .. faction_name2 .. "biter-spawner"
-      elseif which_spawner <= 10 then
-        new_spawner_name = "bob-" .. faction_name2 .. "spitter-spawner"
-      else
-        new_spawner_name = "bob-" .. faction_name2 .. "super-spawner"
-      end
-    elseif evo_level >= 0.5 then
-      if math.random(2) == 2 then
-        new_spawner_name = "bob-" .. faction_name2 .. "biter-spawner"
-      else
-        new_spawner_name = "bob-" .. faction_name2 .. "spitter-spawner"
-      end
-    else
-      if math.random(2) == 2 then
-        new_spawner_name = "bob-0-" .. faction_name2 .. "biter-spawner"
-      else
-        new_spawner_name = "bob-0-" .. faction_name2 .. "spitter-spawner"
-      end
-    end
-
-    local final_quality
-    if bobmods.enemies.quality_enemies == true then
-      local quality_table = { "normal", "uncommon", "rare", "epic", "legendary" }
-      local quality_random = math.random(flag.quality_values[6])
-      if quality_random <= flag.quality_values[5] then
-        final_quality = 5
-      elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] then
-        final_quality = 4
-      elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] then
-        final_quality = 3
-      elseif
-        quality_random
-        <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] + flag.quality_values[2]
-      then
-        final_quality = 2
-      else
-        final_quality = 1
-      end
-      if final_quality > flag.quality_limit then
-        final_quality = flag.quality_limit
-      end
-      final_quality = quality_table[final_quality]
-    end
-
-    local new_spawner = game.surfaces.nauvis.create_entity({
-      name = new_spawner_name,
-      position = original_position,
-      force = "enemy",
-      quality = final_quality,
-      spawn_decorations = false,
-      move_stuck_players = true,
-      raise_built = true,
-    })
-
-    storage.bobmods.enemies.nauvis_faction_table[faction_name] = storage.bobmods.enemies.nauvis_faction_table[faction_name]
-      + 1
+  local faction_name
+  local faction_name2
+  if flag.factions[3] then
+    faction_name = flag.factions[math.random(3)]
+  elseif flag.factions[2] then
+    faction_name = flag.factions[math.random(2)]
   else
-    --If factions are not unlocked, replace with appropriate basic spawner. Always replacing autoplaced spawners removes all need for checks to avoid double counting, since the functions that call this one all check for only those specific autoplaced entities
-    local original_position = original_spawner.position
-    original_spawner.destroy()
-
-    local new_spawner_name
-    if evo_level >= 0.5 then
-      if math.random(2) == 2 then
-        new_spawner_name = "bob-biter-spawner"
-      else
-        new_spawner_name = "bob-spitter-spawner"
-      end
-    else
-      if math.random(2) == 2 then
-        new_spawner_name = "bob-0-biter-spawner"
-      else
-        new_spawner_name = "bob-0-spitter-spawner"
-      end
-    end
-
-    local new_spawner = game.surfaces.nauvis.create_entity({
-      name = new_spawner_name,
-      position = original_position,
-      force = "enemy",
-      spawn_decorations = false,
-      move_stuck_players = true,
-      raise_built = true,
-    })
-
-    storage.bobmods.enemies.nauvis_faction_table.basic = storage.bobmods.enemies.nauvis_faction_table.basic + 1
+    faction_name = flag.factions[1]
   end
+  if faction_name == "basic" then
+    faction_name2 = ""
+  else
+    faction_name2 = faction_name .. "-"
+  end
+
+  local new_spawner_name
+  if evo_level >= 0.9 and settings.startup["bobmods-enemies-superspawner"].value == true then
+    local which_spawner = math.random(11)
+    if which_spawner <= 5 then
+      new_spawner_name = "bob-" .. faction_name2 .. "biter-spawner"
+    elseif which_spawner <= 10 then
+      new_spawner_name = "bob-" .. faction_name2 .. "spitter-spawner"
+    else
+      new_spawner_name = "bob-" .. faction_name2 .. "super-spawner"
+    end
+  elseif evo_level >= 0.75 then
+    if math.random(2) == 2 then
+      new_spawner_name = "bob-" .. faction_name2 .. "biter-spawner"
+    else
+      new_spawner_name = "bob-" .. faction_name2 .. "spitter-spawner"
+    end
+  elseif evo_level >= 0.5 then
+    local which_spawner = math.random(4)
+    if which_spawner == 1 then
+      new_spawner_name = "bob-" .. faction_name2 .. "biter-spawner"
+    elseif which_spawner == 2 then
+      new_spawner_name = "bob-" .. faction_name2 .. "spitter-spawner"
+    elseif which_spawner == 3 then
+      new_spawner_name = "bob-0-" .. faction_name2 .. "biter-spawner"
+    else
+      new_spawner_name = "bob-0-" .. faction_name2 .. "spitter-spawner"
+    end
+  else
+    if math.random(2) == 2 then
+      new_spawner_name = "bob-0-" .. faction_name2 .. "biter-spawner"
+    else
+      new_spawner_name = "bob-0-" .. faction_name2 .. "spitter-spawner"
+    end
+  end
+
+  local final_quality
+  if bobmods.enemies.quality_enemies == true then
+    local quality_table = { "normal", "uncommon", "rare", "epic", "legendary" }
+    local quality_random = math.random(flag.quality_values[6])
+    if quality_random <= flag.quality_values[5] then
+      final_quality = 5
+    elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] then
+      final_quality = 4
+    elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] then
+      final_quality = 3
+    elseif
+      quality_random
+      <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] + flag.quality_values[2]
+    then
+      final_quality = 2
+    else
+      final_quality = 1
+    end
+    if final_quality > flag.quality_limit then
+      final_quality = flag.quality_limit
+    end
+    final_quality = quality_table[final_quality]
+  end
+
+  local new_spawner = game.surfaces.nauvis.create_entity({
+    name = new_spawner_name,
+    position = original_position,
+    force = "enemy",
+    quality = final_quality,
+    spawn_decorations = false,
+    move_stuck_players = true,
+    raise_built = true,
+  })
+
+  storage.bobmods.enemies.nauvis_faction_table[faction_name] = storage.bobmods.enemies.nauvis_faction_table[faction_name]
+    + 1
 end
 
 function bobmods.enemies.replace_worm(original_worm, flag)
   local evo_level = game.forces.enemy.get_evolution_factor("nauvis")
-  if #storage.bobmods.enemies.nauvis_faction_unlock_table > 1 then
-    local faction_name
-    if flag.factions[3] then
-      faction_name = flag.factions[math.random(3)]
-    elseif flag.factions[2] then
-      faction_name = flag.factions[math.random(2)]
-    else
-      faction_name = flag.factions[1]
-    end
-
-    local worm_tier
-    if evo_level >= 0.95 then
-      worm_tier = 9 - math.random(4)
-    elseif evo_level >= 0.9 then
-      worm_tier = 8 - math.random(4)
-    elseif evo_level >= 0.8 then
-      worm_tier = 7 - math.random(4)
-    elseif evo_level >= 0.7 then
-      worm_tier = 6 - math.random(4)
-    elseif evo_level >= 0.6 then
-      worm_tier = 5 - math.random(4)
-    elseif evo_level >= 0.45 then
-      worm_tier = 4 - math.random(3)
-    elseif evo_level >= 0.3 then
-      worm_tier = 3 - math.random(2)
-    else
-      worm_tier = 1
-    end
-
-    local tiers = { "small-", "medium-", "big-", "huge-", "giant-", "titan-", "behemoth-", "leviathan-" }
-
-    local new_worm_name
-    local do_not_replace = false
-    if faction_name == "basic" then
-      if worm_tier == 1 then
-        do_not_replace = true
-      elseif worm_tier == 2 or worm_tier == 3 or worm_tier == 7 then
-        new_worm_name = tiers[worm_tier] .. "worm-turret"
-      else
-        new_worm_name = "bob-" .. tiers[worm_tier] .. "worm-turret"
-      end
-    else
-      new_worm_name = "bob-" .. tiers[worm_tier] .. faction_name .. "-worm-turret"
-    end
-
-    local final_quality
-    if bobmods.enemies.quality_enemies == true then
-      local quality_table = { "normal", "uncommon", "rare", "epic", "legendary" }
-      local quality_random = math.random(flag.quality_values[6])
-      if quality_random <= flag.quality_values[5] then
-        final_quality = 5
-      elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] then
-        final_quality = 4
-      elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] then
-        final_quality = 3
-      elseif
-        quality_random
-        <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] + flag.quality_values[2]
-      then
-        final_quality = 2
-      else
-        final_quality = 1
-      end
-      if final_quality > flag.quality_limit then
-        final_quality = flag.quality_limit
-      end
-      final_quality = quality_table[final_quality]
-    end
-
-    if do_not_replace == false then
-      local original_position = original_worm.position
-      original_worm.destroy()
-
-      local new_worm = game.surfaces.nauvis.create_entity({
-        name = new_worm_name,
-        position = original_position,
-        force = "enemy",
-        quality = final_quality,
-        spawn_decorations = false,
-        move_stuck_players = true,
-        raise_built = true,
-      })
-    end
+  local faction_name
+  if flag.factions[3] then
+    faction_name = flag.factions[math.random(3)]
+  elseif flag.factions[2] then
+    faction_name = flag.factions[math.random(2)]
+  else
+    faction_name = flag.factions[1]
   end
+
+  local worm_tier
+  if evo_level >= 0.97 then
+    worm_tier = 9 - math.random(4)
+  elseif evo_level >= 0.92 then
+    worm_tier = 8 - math.random(4)
+  elseif evo_level >= 0.86 then
+    worm_tier = 7 - math.random(4)
+  elseif evo_level >= 0.77 then
+    worm_tier = 6 - math.random(4)
+  elseif evo_level >= 0.65 then
+    worm_tier = 5 - math.random(4)
+  elseif evo_level >= 0.55 then
+    worm_tier = 4 - math.random(3)
+  elseif evo_level >= 0.3 then
+    worm_tier = 3 - math.random(2)
+  else
+    worm_tier = 1
+  end
+
+  local tiers = { "small-", "medium-", "big-", "huge-", "giant-", "titan-", "behemoth-", "leviathan-" }
+
+  local new_worm_name
+  if faction_name == "basic" then
+    if worm_tier == 1 or worm_tier == 2 or worm_tier == 3 or worm_tier == 7 then
+      new_worm_name = tiers[worm_tier] .. "worm-turret"
+    else
+      new_worm_name = "bob-" .. tiers[worm_tier] .. "worm-turret"
+    end
+  else
+    new_worm_name = "bob-" .. tiers[worm_tier] .. faction_name .. "-worm-turret"
+  end
+
+  local final_quality
+  if bobmods.enemies.quality_enemies == true then
+    local quality_table = { "normal", "uncommon", "rare", "epic", "legendary" }
+    local quality_random = math.random(flag.quality_values[6])
+    if quality_random <= flag.quality_values[5] then
+      final_quality = 5
+    elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] then
+      final_quality = 4
+    elseif quality_random <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] then
+      final_quality = 3
+    elseif
+      quality_random
+      <= flag.quality_values[5] + flag.quality_values[4] + flag.quality_values[3] + flag.quality_values[2]
+    then
+      final_quality = 2
+    else
+      final_quality = 1
+    end
+    if final_quality > flag.quality_limit then
+      final_quality = flag.quality_limit
+    end
+    final_quality = quality_table[final_quality]
+  end
+
+  local original_position = original_worm.position
+  original_worm.destroy()
+
+  local new_worm = game.surfaces.nauvis.create_entity({
+    name = new_worm_name,
+    position = original_position,
+    force = "enemy",
+    quality = final_quality,
+    spawn_decorations = false,
+    move_stuck_players = true,
+    raise_built = true,
+  })
 end
 
 script.on_event(defines.events.on_entity_died, function(event)
@@ -1006,6 +978,7 @@ end)
 
 commands.add_command("bob-enemies-flag-check", nil, function(command)
   local check_index = tonumber(command.parameter)
+  game.print("Current flag count: " .. tostring(#storage.bobmods.enemies.faction_flags))
   if check_index and storage.bobmods.enemies.faction_flags[check_index] then
     local check_flag = storage.bobmods.enemies.faction_flags[check_index]
     game.print("Flag check: " .. check_index)
@@ -1038,4 +1011,41 @@ commands.add_command("bob-enemies-flag-check", nil, function(command)
   else
     game.print("Need valid numerical index")
   end
+end)
+
+script.on_event(defines.events.on_script_trigger_effect, function(event)
+
+  if event.effect_id == "piercing-spawner-trapped-script" then
+
+    local attack_direction = (event.source_entity.unit_number % 8) + 1
+
+    local attack_table = {
+      { { x = -6.8, y = -18.8 }, { x = -3.4 , y = -19.6 }, { x = 0, y = -20 }, { x = 3.4 , y = -19.6 }, { x = 6.8, y = -18.8 }, },
+      { { x = 8.5, y = -18.1}, { x = 11.5, y = -16.4 }, { x = 14.1, y = -14.1 }, { x = 16.4, y = -11.5 }, { x = 18.1, y = -8.5 }, },
+      { { x = 18.8, y = -6.84 }, { x = 19.6, y = -3.4 }, { x = 20, y = 0 }, { x = 18.8, y = 3.4 }, { x = 19.6, y = 6.8 }, },
+      { { x = 18.1, y = 8.5 }, { x = 16.4, y = 11.5 }, { x = 14.1, y = 14.1 }, { x = 11.5, y = 16.4 }, { x = 8.5, y = 18.1}, },
+      { { x = 6.8, y = 18.8 }, { x = 3.4 , y = 19.6 }, { x = 0, y = 20 }, { x = -3.4 , y = 19.6 }, { x = -6.8, y = 18.8 }, },
+      { { x = -8.5, y = 18.1}, { x = -11.5, y = 16.4 }, { x = -14.1, y = 14.1 }, { x = -16.4, y = 11.5 }, { x = -18.1, y = 8.5 }, },
+      { { x = -18.8, y = 6.8 }, { x = -19.6, y = 3.4 }, { x = -20, y = 0 }, { x = -18.8, y = -3.4 }, { x = -19.6, y = -6.8 }, },
+      { { x = -18.1, y = -8.5 }, { x = -16.4, y = -11.5 }, { x = -14.1, y = -14.1 }, { x = -11.5, y = -16.4 }, { x = -8.5, y = -18.1}, },
+    }
+
+    for i = 1, 5 do
+      game.surfaces.nauvis.create_entity({
+        name = "bob-piercing-spine",
+        position = event.source_entity.position,
+        force = "enemy",
+        base_damage_modifiers = { damage_modifier = 300 },
+        max_range = 20,
+        speed = 2,
+        source = event.source_entity,
+        target = {
+          x = event.source_entity.position.x + attack_table[attack_direction][i].x,
+          y = event.source_entity.position.y + attack_table[attack_direction][i].y,
+        },
+      })
+    end
+
+  end
+
 end)
