@@ -1077,12 +1077,20 @@ function draw_current_character_info(player_index)
         })
         --Check if Jetpack (from Jetpack mod) has been turned on or off since the last update. Retrieve backed up name to account for Jetpack mod replacing character.
         if string.find(entity.name, "-jetpack") then
-          if storage.is_flying[player.name] ~= true and storage.most_recent_name[player.name] and storage.most_recent_name[player.name] ~= "" then
+          if
+            storage.is_flying[player.name] ~= true
+            and storage.most_recent_name[player.name]
+            and storage.most_recent_name[player.name] ~= ""
+          then
             storage.names[entity.unit_number] = storage.most_recent_name[player.name]
           end
           storage.is_flying[player.name] = true
         else
-          if storage.is_flying[player.name] == true and storage.most_recent_name[player.name] and storage.most_recent_name[player.name] ~= "" then
+          if
+            storage.is_flying[player.name] == true
+            and storage.most_recent_name[player.name]
+            and storage.most_recent_name[player.name] ~= ""
+          then
             storage.names[entity.unit_number] = storage.most_recent_name[player.name]
           end
           storage.is_flying[player.name] = false
@@ -1186,7 +1194,11 @@ function draw_characters_list(player_index)
     local char_number = 1
     for i = #characters, 1, -1 do
       local entity = characters[i]
-      gui.table.add({ type = "label", name = "bob_avatar_list_number_" .. i, caption = string.format("#%d ", char_number) })
+      gui.table.add({
+        type = "label",
+        name = "bob_avatar_list_number_" .. i,
+        caption = string.format("#%d ", char_number),
+      })
       char_number = char_number + 1
       if not storage.sprite[entity.unit_number] then
         reset_character_icon(entity)
@@ -1235,12 +1247,10 @@ function draw_characters_list(player_index)
         gui.table["bob_avatar_list_minimap_" .. i].style = "selected_mod_gui_button_28"
       end
     end
-
   end
 end
 
 function draw_hub_message(player_index)
-
   local player = game.players[player_index]
   local gui = storage.players[player_index].help_row
   local gui2 = storage.players[player_index].help_row2
@@ -1253,7 +1263,7 @@ function draw_hub_message(player_index)
       and player.character.surface
       and player.character.surface.platform
       and player.character.surface.platform.hub
-      and (not player.hub)
+      and not player.hub
     then
       gui.add({
         type = "label",
@@ -1267,7 +1277,6 @@ function draw_hub_message(player_index)
       })
     end
   end
-
 end
 
 function refresh_buttons_row(player_index)
