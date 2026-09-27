@@ -414,16 +414,29 @@ if mods["recycler"] then
       local source_recipe = data.raw.recipe[recipe_name]
       local target_recipe = data.raw.recipe[target_recipe_name]
       if source_recipe then
+
+        --Calculate the number of items produced by the relevant recipe
+        local source_output_amount = 1
+        local source_output_index = 1
+        for i, source_results in pairs(source_recipe.results) do
+          if source_results.name == recipe_name then
+            source_output_index = i
+          end
+        end
+
+        if source_recipe.results and source_recipe.results[1] then
+          if source_recipe.results[source_output_index].amount then
+            source_output_amount = source_recipe.results[source_output_index].amount
+          elseif source_recipe.results[source_output_index].amount_min and source_recipe.results[source_output_index].amount_max then
+            source_output_amount = (data.raw.recipe[item_name].results[source_output_index].amount_min + data.raw.recipe[item_name].results[source_output_index].amount_max) / 2
+          end
+        end
+
         if target_recipe then
           local new_time = source_recipe.energy_required or 0.5
-          target_recipe.energy_required = new_time / 16
+          target_recipe.energy_required = (new_time / source_output_amount) / 16
           target_recipe.results = {}
-          local source_output_amount = 1
-          for i, source_results in pairs(source_recipe.results) do
-            if source_results.name == recipe_name then
-              source_output_amount = source_results.amount
-            end
-          end
+
           for i, outputs in pairs(source_recipe.ingredients) do
             if source_recipe.ingredients[i].type == "item" then
               table.insert(target_recipe.results, {
@@ -484,6 +497,64 @@ if mods["recycler"] then
       for i, single_recipe in pairs(recipe_name) do
         bobmods.lib.recipe.update_recycling_recipe_single(single_recipe, true)
       end
+    end
+  end
+
+  function bobmods.lib.recipe.update_recycling_recipe_to_self_recipe(item_name, recycle_time)
+    --Use bobmods.lib.recipe.update_recycling_recipe_icon to update icon if necessary
+    --Checks if an item of the given name exists as any valid type
+
+    local item_type = bobmods.lib.item.get_type(item_name)
+    if type(item_name) == "string" and item_type and item_type ~= "fluid" then
+      local target_recipe_name = item_name .. "-recycling"
+      local target_recipe = data.raw.recipe[target_recipe_name]
+      --Calculate recycle time based on a default recipe of the same name as the item if one exists, or override with recycle_time input
+      local source_output_amount = 1
+      local source_output_index = 1
+      local source_recipe = data.raw.recipe[item_name]
+      if source_recipe then
+        for i, source_results in pairs(source_recipe.results) do
+          if source_results.name == item_name then
+            source_output_index = i
+          end
+        end
+        if source_recipe.results and source_recipe.results[1] then
+          if source_recipe.results[source_output_index].amount then
+            source_output_amount = source_recipe.results[source_output_index].amount
+          elseif source_recipe.results[source_output_index].amount_min and source_recipe.results[source_output_index].amount_max then
+            source_output_amount = (source_recipe.results[source_output_index].amount_min + source_recipe.results[source_output_index].amount_max) / 2
+          end
+        end
+      end
+
+      if target_recipe then
+        local new_time = 0.5 / 16
+        if recycle_time then
+          new_time = recycle_time
+        elseif source_recipe and source_recipe.energy_required then
+          new_time = (source_recipe.energy_required / source_output_amount) / 16
+        end
+
+        target_recipe.results = {
+          {
+            type = "item",
+            name = item_name,
+            amount = 1,
+            ignored_by_stats = 1,
+            independent_probability = 0.25,
+          }
+        }
+        
+      else
+        log(debug.traceback())
+        bobmods.lib.error.recipe(recipe_name)
+      end
+    elseif item_type == "fluid" then
+      log(debug.traceback())
+      log(item_name .. " is a fluid.")
+    else
+      log(debug.traceback())
+      bobmods.lib.error.item(item_name)
     end
   end
 

@@ -16,14 +16,14 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
   bobmods.lib.recipe.set_ingredient("bob-petroleum-gas-cracking", { type = "fluid", name = "water", amount = 20 })
 
-  bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-limestone")
+  bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-limestone", 1)
 
   if not mods["space-age"] then
-    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate")
-    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate")
+    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate", "bob-lithium-perchlorate", true)
+    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate", "bob-lithium-perchlorate", true)
   else
-    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-chlorate")
-    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-perchlorate")
+    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-chlorate", "bob-lithium-perchlorate", true)
+    bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-perchlorate", "bob-lithium-perchlorate", true)
   end
   if data.raw.fluid["bob-pure-water"] then
     bobmods.lib.recipe.replace_ingredient("bob-sodium-chlorate", "water", "bob-pure-water")
@@ -39,12 +39,12 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   )
 
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-carbon-dioxide")
-  bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-carbon-dioxide-oil-processing")
+  bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-carbon-dioxide-oil-processing", "advanced-oil-processing")
   bobmods.lib.tech.add_prerequisite("advanced-oil-processing", "bob-chemical-processing-2")
 
   bobmods.lib.recipe.replace_ingredient("bob-sulfuric-acid-2", "water", "bob-hydrogen-peroxide")
   bobmods.lib.recipe.replace_ingredient("bob-nitric-acid", "water", "bob-hydrogen-peroxide")
-  bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-hydrogen-peroxide")
-  bobmods.lib.tech.add_recipe_unlock("bob-nitrogen-processing", "bob-hydrogen-peroxide")
+  bobmods.lib.tech.add_recipe_unlock("sulfur-processing", "bob-hydrogen-peroxide", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-nitrogen-processing", "bob-hydrogen-peroxide", 1)
   bobmods.lib.tech.remove_recipe_unlock("bob-hydrazine", "bob-hydrogen-peroxide")
 end

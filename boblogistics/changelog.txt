@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.2
 Date: ???
+  Changes:
+    - Improved order of technology effects #633
   Bugfixes:
     - Fixed "Change inserter long range" keyboard shortcut not working for ghosts #616
 ---------------------------------------------------------------------------------------------------
