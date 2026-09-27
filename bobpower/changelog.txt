@@ -3,6 +3,8 @@ Version: 3.0.1
 Date: ???
   Bugfixes:
     - Fixed heat source neighbor bonuses not applying #618
+  Changes:
+    - Various graphics and pipe connector updates #626
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 29. 06. 2026
