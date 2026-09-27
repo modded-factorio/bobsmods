@@ -101,33 +101,33 @@ if settings.startup["bobmods-power-heatsources"].value == true then
             category = "burner-reactor",
             location = {
               direction = defines.direction.north,
-              position = { 0, -1.5 }
+              position = { 0, -1.5 },
             },
-            neighbour_category = { "burner-reactor" }
+            neighbour_category = { "burner-reactor" },
           },
           {
             category = "burner-reactor",
             location = {
               direction = defines.direction.east,
-              position = { 1.5, 0 }
+              position = { 1.5, 0 },
             },
-            neighbour_category = { "burner-reactor" }
+            neighbour_category = { "burner-reactor" },
           },
           {
             category = "burner-reactor",
             location = {
               direction = defines.direction.south,
-              position = { 0, 1.5 }
+              position = { 0, 1.5 },
             },
-            neighbour_category = { "burner-reactor" }
+            neighbour_category = { "burner-reactor" },
           },
           {
             category = "burner-reactor",
             location = {
               direction = defines.direction.west,
-              position = { -1.5, 0 }
+              position = { -1.5, 0 },
             },
-            neighbour_category = { "burner-reactor" }
+            neighbour_category = { "burner-reactor" },
           },
         },
       },
