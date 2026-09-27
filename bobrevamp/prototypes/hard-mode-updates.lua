@@ -20,7 +20,12 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
 
   if not mods["space-age"] then
     bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-chlorate", "bob-lithium-perchlorate", true)
-    bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-sodium-perchlorate", "bob-lithium-perchlorate", true)
+    bobmods.lib.tech.add_recipe_unlock(
+      "bob-lithium-processing",
+      "bob-sodium-perchlorate",
+      "bob-lithium-perchlorate",
+      true
+    )
   else
     bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-chlorate", "bob-lithium-perchlorate", true)
     bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-sodium-perchlorate", "bob-lithium-perchlorate", true)
@@ -39,7 +44,11 @@ if bobmods.plates and settings.startup["bobmods-revamp-hardmode"].value == true 
   )
 
   bobmods.lib.tech.add_recipe_unlock("bob-chemical-processing-2", "bob-carbon-dioxide")
-  bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-carbon-dioxide-oil-processing", "advanced-oil-processing")
+  bobmods.lib.tech.add_recipe_unlock(
+    "advanced-oil-processing",
+    "bob-carbon-dioxide-oil-processing",
+    "advanced-oil-processing"
+  )
   bobmods.lib.tech.add_prerequisite("advanced-oil-processing", "bob-chemical-processing-2")
 
   bobmods.lib.recipe.replace_ingredient("bob-sulfuric-acid-2", "water", "bob-hydrogen-peroxide")

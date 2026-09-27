@@ -251,17 +251,33 @@ local function find_matching_tech_modifier(effects, modifier)
   --Tries to find a match in the given effects table for the given modifier. Returns index, or 0 for no match.
   local match_found = 0
   for i, effect in pairs(effects) do
-    if (effect.type == "unlock-recipe" or effect.type == "change-recipe-productivity") and modifier.recipe and effect.recipe == modifier.recipe then
+    if
+      (effect.type == "unlock-recipe" or effect.type == "change-recipe-productivity")
+      and modifier.recipe
+      and effect.recipe == modifier.recipe
+    then
       match_found = i
     elseif effect.type == "turret-attack" and modifier.turret_id and effect.turret_id == modifier.turret_id then
       match_found = i
-    elseif (effect.type == "ammo-damage" or effect.type == "gun-speed") and modifier.ammo_category and effect.ammo_category == modifier.ammo_category then
+    elseif
+      (effect.type == "ammo-damage" or effect.type == "gun-speed")
+      and modifier.ammo_category
+      and effect.ammo_category == modifier.ammo_category
+    then
       match_found = i
     elseif effect.type == "give-item" and modifier.item and effect.item == modifier.item then
       match_found = i
-    elseif effect.type == "nothing" and modifier.effect_description and serpent.line(effect.effect_description) == serpent.line(modifier.effect_description) then
+    elseif
+      effect.type == "nothing"
+      and modifier.effect_description
+      and serpent.line(effect.effect_description) == serpent.line(modifier.effect_description)
+    then
       match_found = i
-    elseif effect.type == "unlock-space-location" and modifier.space_location and effect.space_location == modifier.space_location then
+    elseif
+      effect.type == "unlock-space-location"
+      and modifier.space_location
+      and effect.space_location == modifier.space_location
+    then
       match_found = i
     elseif effect.type == "unlock-quality" and modifier.quality and effect.quality == modifier.quality then
       match_found = i
@@ -276,7 +292,10 @@ end
 local function find_modifier_insert_index(effects, insert_string)
   local insert_target
   for i, effect in pairs(effects) do
-    if (effect.type == "unlock-recipe" or effect.type == "change-recipe-productivity") and effect.recipe == insert_string then
+    if
+      (effect.type == "unlock-recipe" or effect.type == "change-recipe-productivity")
+      and effect.recipe == insert_string
+    then
       insert_target = i
     elseif effect.type == "turret-attack" and effect.turret_id == insert_string then
       insert_target = i
@@ -310,7 +329,6 @@ local function has_recipe_unlock(technology, recipe)
 end
 
 local function add_recipe_unlock(technology, recipe, insert_at, insert_before)
-
   local addit = true
   if not technology.effects then
     technology.effects = {}
@@ -401,14 +419,8 @@ function bobmods.lib.tech.remove_recipe_unlock(technology, recipe)
 end
 
 function bobmods.lib.tech.add_tech_modifier(technology, modifier, insert_at, insert_before)
-
   --Insert any modifier into a technology's effects. Use a full table for the modifier argument.
-  if
-    type(technology) == "string"
-    and type(modifier) == "table"
-    and data.raw.technology[technology]
-  then
-
+  if type(technology) == "string" and type(modifier) == "table" and data.raw.technology[technology] then
     local valid_modifier = check_tech_modifier_validity(modifier)
 
     if valid_modifier == true then
@@ -418,7 +430,6 @@ function bobmods.lib.tech.add_tech_modifier(technology, modifier, insert_at, ins
       end
 
       if find_matching_tech_modifier(target_technology.effects, modifier) == 0 then
-
         --insert_at allows inputs of both numbers (for indexes) and strings (for placing after specific subtables). For simple or boolean modifiers, match insert_at to the modifier type. Otherwise, match it to the secondary key parameter - usually a category to be modified or a name. In some instances, the same string may match multiple subtables, in which case the new entry will go after the last match. If insert_at is a string or table, "insert_before" can be used to insert the new entry before the target instead of after.
         local insert_target = #target_technology.effects + 1
         if type(insert_at) == "number" then
@@ -435,7 +446,6 @@ function bobmods.lib.tech.add_tech_modifier(technology, modifier, insert_at, ins
         end
 
         table.insert(target_technology.effects, insert_target, modifier)
-
       end
     end
   elseif type(modifier) ~= "table" then
@@ -448,7 +458,6 @@ function bobmods.lib.tech.add_tech_modifier(technology, modifier, insert_at, ins
 end
 
 function bobmods.lib.tech.set_tech_modifier(technology, modifier_ID, new_value)
-
   --Set an existing technology effect to a new value. For modifier_ID argument, give a table that contains the key identifying parameter or parameters. i.e. {ammo_category = "bullet"}, or {turret_id = "gun-turret"}, or for simple modifiers (those that only use "type" and "modifier" parameters), {type = "train-braking-force-bonus"}. new_value must also be a table, and in a few select cases, multiple parameters may be modified at once.
   if
     type(technology) == "string"
@@ -456,7 +465,6 @@ function bobmods.lib.tech.set_tech_modifier(technology, modifier_ID, new_value)
     and type(new_value) == "table"
     and data.raw.technology[technology]
   then
-
     local target_technology = data.raw.technology[technology]
     if not target_technology.effects then
       target_technology.effects = {}
@@ -464,7 +472,6 @@ function bobmods.lib.tech.set_tech_modifier(technology, modifier_ID, new_value)
 
     local matched_index = find_matching_tech_modifier(target_technology.effects, modifier_ID)
     if matched_index ~= 0 then
-
       local target_effect = target_technology.effects[matched_index]
       if target_effect.type == "unlock-recipe" then
         if new_value.recipe then
@@ -525,7 +532,6 @@ function bobmods.lib.tech.set_tech_modifier(technology, modifier_ID, new_value)
         end
       end
     end
-
   elseif type(modifier_ID) ~= "table" then
     log(debug.traceback())
     log("Modifier_ID is not a table.")
@@ -539,14 +545,8 @@ function bobmods.lib.tech.set_tech_modifier(technology, modifier_ID, new_value)
 end
 
 function bobmods.lib.tech.remove_tech_modifier(technology, modifier)
-
   --Remove any modifier into a technology's effects. Use a table for the modifier argument. This function will remove the first effect that matches all parameters given. The table is allowed to be incomplete, so if the "modifier" (or equivalent) parameter of the effect is changed, omitting it will let this function still work.
-  if
-    type(technology) == "string"
-    and type(modifier) == "table"
-    and data.raw.technology[technology]
-  then
-
+  if type(technology) == "string" and type(modifier) == "table" and data.raw.technology[technology] then
     local target_technology = data.raw.technology[technology]
     if not target_technology.effects then
       target_technology.effects = {}
@@ -572,7 +572,6 @@ function bobmods.lib.tech.remove_tech_modifier(technology, modifier)
     if type(remove_index) == "number" then
       table.remove(target_technology.effects, remove_index)
     end
-
   elseif type(modifier) ~= "table" then
     log(debug.traceback())
     log("Modifier is not a table.")

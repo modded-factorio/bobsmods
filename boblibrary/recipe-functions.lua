@@ -414,7 +414,6 @@ if mods["recycler"] then
       local source_recipe = data.raw.recipe[recipe_name]
       local target_recipe = data.raw.recipe[target_recipe_name]
       if source_recipe then
-
         --Calculate the number of items produced by the relevant recipe
         local source_output_amount = 1
         local source_output_index = 1
@@ -427,8 +426,14 @@ if mods["recycler"] then
         if source_recipe.results and source_recipe.results[1] then
           if source_recipe.results[source_output_index].amount then
             source_output_amount = source_recipe.results[source_output_index].amount
-          elseif source_recipe.results[source_output_index].amount_min and source_recipe.results[source_output_index].amount_max then
-            source_output_amount = (data.raw.recipe[item_name].results[source_output_index].amount_min + data.raw.recipe[item_name].results[source_output_index].amount_max) / 2
+          elseif
+            source_recipe.results[source_output_index].amount_min
+            and source_recipe.results[source_output_index].amount_max
+          then
+            source_output_amount = (
+              data.raw.recipe[item_name].results[source_output_index].amount_min
+              + data.raw.recipe[item_name].results[source_output_index].amount_max
+            ) / 2
           end
         end
 
@@ -521,8 +526,14 @@ if mods["recycler"] then
         if source_recipe.results and source_recipe.results[1] then
           if source_recipe.results[source_output_index].amount then
             source_output_amount = source_recipe.results[source_output_index].amount
-          elseif source_recipe.results[source_output_index].amount_min and source_recipe.results[source_output_index].amount_max then
-            source_output_amount = (source_recipe.results[source_output_index].amount_min + source_recipe.results[source_output_index].amount_max) / 2
+          elseif
+            source_recipe.results[source_output_index].amount_min
+            and source_recipe.results[source_output_index].amount_max
+          then
+            source_output_amount = (
+              source_recipe.results[source_output_index].amount_min
+              + source_recipe.results[source_output_index].amount_max
+            ) / 2
           end
         end
       end
@@ -542,9 +553,8 @@ if mods["recycler"] then
             amount = 1,
             ignored_by_stats = 1,
             independent_probability = 0.25,
-          }
+          },
         }
-        
       else
         log(debug.traceback())
         bobmods.lib.error.recipe(recipe_name)
