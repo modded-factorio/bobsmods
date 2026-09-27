@@ -2,7 +2,7 @@
 Version: 3.0.2
 Date: ???
   Changes:
-    - Various graphics and pipe connector updates #626
+    - Various graphics and pipe connector updates #626 #627
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
 Date: 26. 07. 2026
