@@ -8,6 +8,8 @@ Version: 3.0.1
 Date: 26. 07. 2026
   Bugfixes:
     - Fixed recipes not being available in Electromagnetic plant #615
+  Changes:
+    - Update for Factorio 2.1.20 : Item fuel_category replaced with fuel_categories #635
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 29. 06. 2026
