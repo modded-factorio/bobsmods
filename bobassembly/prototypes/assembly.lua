@@ -13,6 +13,20 @@ data:extend({
 --        tint = {r = 0.7, g = 0.1, b = 0.7},
 --        tint = {r = 0.1, g = 0.7, b = 0.1},
 
+local assembler_shadow = {
+  draw_as_shadow = true,
+  filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-shadow.png",
+  width = 54,
+  height = 160,
+  line_length = 1,
+  priority = "high",
+  repeat_count = 64,
+  scale = 0.5,
+  shift = { 1.421875, 0.015625 },
+}
+local assembler_light = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.working_visualisations)
+local assembler_pipes = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes)
+
 data.raw.item["assembling-machine-1"].weight = 20000
 
 data.raw.item["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
@@ -20,32 +34,59 @@ data.raw.item["assembling-machine-2"].icon_size = 32
 data.raw.item["assembling-machine-2"].weight = 20000
 data.raw["assembling-machine"]["assembling-machine-2"].icon = "__bobassembly__/graphics/icons/assembling-machine-2.png"
 data.raw["assembling-machine"]["assembling-machine-2"].icon_size = 32
-table.insert(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers, {
-  filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-  priority = "high",
-  width = 214,
-  height = 237,
-  repeat_count = 64,
-  shift = util.by_pixel(0, -0.75),
-  scale = 0.5,
-  tint = { r = 0.7, g = 0.7, b = 0.1 },
-})
+data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers = {
+  {
+    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-base-yellow.png",
+    width = 200,
+    height = 188,
+    line_length = 1,
+    priority = "high",
+    repeat_count = 64,
+    scale = 0.5,
+    shift = { 0, 0.078125 },
+  },
+  {
+    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-anim-yellow.png",
+    width = 148,
+    height = 158,
+    line_length = 8,
+    priority = "high",
+    frame_count = 64,
+    scale = 0.5,
+    shift = { 0.046875, -0.484375 },
+  },
+  assembler_shadow,
+}
 
 data.raw.item["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/assembling-machine-3.png"
 data.raw.item["assembling-machine-3"].icon_size = 32
 data.raw.item["assembling-machine-3"].weight = 20000
 data.raw["assembling-machine"]["assembling-machine-3"].icon = "__bobassembly__/graphics/icons/assembling-machine-3.png"
 data.raw["assembling-machine"]["assembling-machine-3"].icon_size = 32
-table.insert(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers, {
-  filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-  priority = "high",
-  width = 214,
-  height = 237,
-  repeat_count = 64,
-  shift = util.by_pixel(0, -0.75),
-  scale = 0.5,
-  tint = { r = 0.7, g = 0.2, b = 0.1 },
-})
+data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers = {
+  {
+    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-base-red.png",
+    width = 200,
+    height = 188,
+    line_length = 1,
+    priority = "high",
+    repeat_count = 64,
+    scale = 0.5,
+    shift = { 0, 0.078125 },
+  },
+  {
+    filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-anim-red.png",
+    width = 148,
+    height = 158,
+    line_length = 8,
+    priority = "high",
+    frame_count = 64,
+    scale = 0.5,
+    shift = { 0.046875, -0.484375 },
+  },
+  assembler_shadow,
+}
+data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.working_visualisations = assembler_light
 
 data:extend({
   {
@@ -90,28 +131,7 @@ data:extend({
         percent = 70,
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000,
-        secondary_draw_orders = {
-          north = -1,
-        },
-      },
-      {
-        production_type = "output",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
-        volume = 1000,
-        secondary_draw_orders = {
-          north = -1,
-        },
-      },
-    },
+    fluid_boxes = assembler_pipes,
     fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -121,38 +141,29 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2.png",
+            filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-base.png",
+            width = 200,
+            height = 188,
+            line_length = 1,
             priority = "high",
-            width = 214,
-            height = 218,
-            frame_count = 32,
-            line_length = 8,
-            shift = util.by_pixel(0, 4),
+            repeat_count = 64,
             scale = 0.5,
+            shift = { 0, 0.078125 },
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-            priority = "high",
-            width = 214,
-            height = 237,
-            repeat_count = 32,
-            shift = util.by_pixel(0, -0.75),
-            scale = 0.5,
-            tint = { r = 0.1, g = 0.5, b = 0.7 },
-          },
-          {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-shadow.png",
-            priority = "high",
-            width = 196,
-            height = 163,
-            frame_count = 32,
+            filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-anim.png",
+            width = 148,
+            height = 158,
             line_length = 8,
-            draw_as_shadow = true,
-            shift = util.by_pixel(12, 4.75),
+            priority = "high",
+            frame_count = 64,
             scale = 0.5,
+            shift = { 0.046875, -0.484375 },
           },
+          assembler_shadow,
         },
       },
+      working_visualisations = assembler_light,
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
@@ -271,28 +282,7 @@ data:extend({
         percent = 70,
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000,
-        secondary_draw_orders = {
-          north = -1,
-        },
-      },
-      {
-        production_type = "output",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
-        volume = 1000,
-        secondary_draw_orders = {
-          north = -1,
-        },
-      },
-    },
+    fluid_boxes = assembler_pipes,
     fluid_boxes_off_when_no_fluid_recipe = true,
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
@@ -318,38 +308,29 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-base-purple.png",
+            width = 200,
+            height = 188,
+            line_length = 1,
             priority = "high",
-            width = 214,
-            height = 237,
-            frame_count = 32,
-            line_length = 8,
-            shift = util.by_pixel(0, -0.75),
+            repeat_count = 64,
             scale = 0.5,
+            shift = { 0, 0.078125 },
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-            priority = "high",
-            width = 214,
-            height = 237,
-            repeat_count = 32,
-            shift = util.by_pixel(0, -0.75),
-            scale = 0.5,
-            tint = { r = 0.7, g = 0.1, b = 0.7 },
-          },
-          {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3-shadow.png",
-            priority = "high",
-            width = 260,
-            height = 162,
-            frame_count = 32,
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-anim-purple.png",
+            width = 148,
+            height = 158,
             line_length = 8,
-            draw_as_shadow = true,
-            shift = util.by_pixel(28, 4),
+            priority = "high",
+            frame_count = 64,
             scale = 0.5,
+            shift = { 0.046875, -0.484375 },
           },
+          assembler_shadow,
         },
       },
+      working_visualisations = assembler_light,
     },
     crafting_categories = { "crafting", "advanced-crafting", "crafting-with-fluid" },
     crafting_speed = 2.75,
@@ -460,28 +441,7 @@ data:extend({
         percent = 70,
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
-        volume = 1000,
-        secondary_draw_orders = {
-          north = -1,
-        },
-      },
-      {
-        production_type = "output",
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
-        volume = 1000,
-        secondary_draw_orders = {
-          north = -1,
-        },
-      },
-    },
+    fluid_boxes = assembler_pipes,
     fluid_boxes_off_when_no_fluid_recipe = true,
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
@@ -506,38 +466,29 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3.png",
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-base-green.png",
+            width = 200,
+            height = 188,
+            line_length = 1,
             priority = "high",
-            width = 214,
-            height = 237,
-            frame_count = 32,
-            line_length = 8,
-            shift = util.by_pixel(0, -0.75),
+            repeat_count = 64,
             scale = 0.5,
+            shift = { 0, 0.078125 },
           },
           {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
-            priority = "high",
-            width = 214,
-            height = 237,
-            repeat_count = 32,
-            shift = util.by_pixel(0, -0.75),
-            scale = 0.5,
-            tint = { r = 0.1, g = 0.7, b = 0.1 },
-          },
-          {
-            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-3-shadow.png",
-            priority = "high",
-            width = 260,
-            height = 162,
-            frame_count = 32,
+            filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-2-anim-green.png",
+            width = 148,
+            height = 158,
             line_length = 8,
-            draw_as_shadow = true,
-            shift = util.by_pixel(28, 4),
+            priority = "high",
+            frame_count = 64,
             scale = 0.5,
+            shift = { 0.046875, -0.484375 },
           },
+          assembler_shadow,
         },
       },
+      working_visualisations = assembler_light,
     },
     crafting_categories = { "crafting", "advanced-crafting", "crafting-with-fluid" },
     crafting_speed = 3.5,
@@ -615,18 +566,23 @@ if feature_flags["freezing"] then
     data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.reset_animation_when_frozen = true
     data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.reset_animation_when_frozen = true
     data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.reset_animation_when_frozen = true
+    data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.frozen_patch =
+      util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen", {
+        priority = "high",
+        scale = 0.5,
+      })
     data.raw["assembling-machine"]["bob-assembling-machine-4"].graphics_set.frozen_patch =
       util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen", {
         priority = "high",
         scale = 0.5,
       })
     data.raw["assembling-machine"]["bob-assembling-machine-5"].graphics_set.frozen_patch =
-      util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen", {
+      util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen", {
         priority = "high",
         scale = 0.5,
       })
     data.raw["assembling-machine"]["bob-assembling-machine-6"].graphics_set.frozen_patch =
-      util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen", {
+      util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen", {
         priority = "high",
         scale = 0.5,
       })
