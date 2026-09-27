@@ -6,16 +6,30 @@ data:extend({
     type = "projectile",
     name = "bob-better-shotgun-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.05, -1 }, { 0.05, 1 } },
+    collision_box = { { -0.1, -0.25 }, { 0.1, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
         type = "instant",
         target_effects = {
-          type = "damage",
-          damage = { amount = 12, type = "physical" },
+          {
+            type = "activate-impact",
+            deliver_category = "bullet",
+          },
+          {
+            type = "damage",
+            damage = { amount = 14, type = "physical" },
+          },
+          {
+            type = "create-entity",
+            entity_name = "small-explosion-hit",
+          },
+          {
+            type = "create-sticker",
+            sticker = "shotgun-impact-sticker",
+          },
         },
       },
     },
@@ -34,16 +48,30 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-ap-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.05, -1 }, { 0.05, 1 } },
+    collision_box = { { -0.1, -0.25 }, { 0.1, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
         type = "instant",
         target_effects = {
-          type = "damage",
-          damage = { amount = 14, type = "bob-pierce" },
+          {
+            type = "activate-impact",
+            deliver_category = "bullet",
+          },
+          {
+            type = "damage",
+            damage = { amount = 14, type = "bob-pierce" },
+          },
+          {
+            type = "create-entity",
+            entity_name = "small-explosion-hit",
+          },
+          {
+            type = "create-sticker",
+            sticker = "shotgun-impact-sticker",
+          },
         },
       },
     },
@@ -62,16 +90,30 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-electric-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.05, -1 }, { 0.05, 1 } },
+    collision_box = { { -0.1, -0.25 }, { 0.1, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
         type = "instant",
         target_effects = {
-          type = "damage",
-          damage = { amount = 14, type = "electric" },
+          {
+            type = "activate-impact",
+            deliver_category = "bullet",
+          },
+          {
+            type = "damage",
+            damage = { amount = 14, type = "electric" },
+          },
+          {
+            type = "create-entity",
+            entity_name = "small-explosion-hit",
+          },
+          {
+            type = "create-sticker",
+            sticker = "shotgun-impact-sticker",
+          },
         },
       },
     },
@@ -90,18 +132,14 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-explosive-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.5, -1 }, { 0.5, 1 } },
+    collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
         type = "instant",
         target_effects = {
-          {
-            type = "create-entity",
-            entity_name = "explosion",
-          },
           {
             type = "nested-result",
             action = {
@@ -111,12 +149,20 @@ data:extend({
                 type = "instant",
                 target_effects = {
                   {
+                    type = "activate-impact",
+                    deliver_category = "bullet",
+                  },
+                  {
                     type = "damage",
                     damage = { amount = 10, type = "explosion" },
                   },
                 },
               },
             },
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion",
           },
         },
       },
@@ -146,9 +192,9 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-flame-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.5, -1 }, { 0.5, 1 } },
+    collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -163,12 +209,20 @@ data:extend({
                 type = "instant",
                 target_effects = {
                   {
+                    type = "activate-impact",
+                    deliver_category = "bullet",
+                  },
+                  {
                     type = "damage",
                     damage = { amount = 10, type = "fire" },
                   },
                 },
               },
             },
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion",
           },
         },
       },
@@ -198,9 +252,9 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-acid-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.5, -1 }, { 0.5, 1 } },
+    collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -215,12 +269,20 @@ data:extend({
                 type = "instant",
                 target_effects = {
                   {
+                    type = "activate-impact",
+                    deliver_category = "bullet",
+                  },
+                  {
                     type = "damage",
                     damage = { amount = 10, type = "acid" },
                   },
                 },
               },
             },
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion",
           },
         },
       },
@@ -250,9 +312,9 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-poison-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.5, -1 }, { 0.5, 1 } },
+    collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -267,12 +329,20 @@ data:extend({
                 type = "instant",
                 target_effects = {
                   {
+                    type = "activate-impact",
+                    deliver_category = "bullet",
+                  },
+                  {
                     type = "damage",
                     damage = { amount = 10, type = "poison" },
                   },
                 },
               },
             },
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion",
           },
         },
       },
@@ -302,16 +372,30 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-uranium-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.05, -1 }, { 0.05, 1 } },
+    collision_box = { { -0.1, -0.25 }, { 0.1, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
         type = "instant",
         target_effects = {
-          type = "damage",
-          damage = { amount = 25, type = "physical" },
+          {
+            type = "activate-impact",
+            deliver_category = "bullet",
+          },
+          {
+            type = "damage",
+            damage = { amount = 25, type = "physical" },
+          },
+          {
+            type = "create-entity",
+            entity_name = "small-explosion-hit",
+          },
+          {
+            type = "create-sticker",
+            sticker = "shotgun-impact-sticker",
+          },
         },
       },
     },
@@ -824,15 +908,19 @@ data:extend({
     name = "cannon-projectile-pellet",
     flags = { "not-on-map" },
     force_condition = "not-same",
-    collision_box = { { -0.05, -0.25 }, { 0.05, 0.25 } },
+    collision_box = { { -0.1, -0.25 }, { 0.1, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     piercing_damage = 30,
     action = {
       type = "direct",
       action_delivery = {
         type = "instant",
         target_effects = {
+          {
+            type = "activate-impact",
+            deliver_category = "bullet",
+          },
           {
             type = "damage",
             damage = { amount = 20, type = "physical" },
@@ -844,6 +932,14 @@ data:extend({
           {
             type = "damage",
             damage = { amount = 10, type = "explosion" },
+          },
+          {
+            type = "create-entity",
+            entity_name = "small-explosion-hit",
+          },
+          {
+            type = "create-sticker",
+            sticker = "shotgun-impact-sticker",
           },
         },
       },
@@ -1605,9 +1701,9 @@ data:extend({
     type = "projectile",
     name = "bob-shotgun-plasma-projectile",
     flags = { "not-on-map" },
-    collision_box = { { -0.5, -1 }, { 0.5, 1 } },
+    collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
     acceleration = 0,
-    direction_only = true,
+    hit_at_collision_position = true,
     action = {
       type = "direct",
       action_delivery = {
@@ -1616,22 +1712,42 @@ data:extend({
           {
             type = "nested-result",
             action = {
-              type = "area",
-              radius = 1,
-              action_delivery = {
-                type = "instant",
-                target_effects = {
-                  {
-                    type = "damage",
-                    damage = { amount = 15, type = "bob-plasma" },
+              {
+                type = "area",
+                radius = 1,
+                action_delivery = {
+                  type = "instant",
+                  target_effects = {
+                    {
+                      type = "activate-impact",
+                      deliver_category = "bullet",
+                    },
+                    {
+                      type = "damage",
+                      damage = { amount = 15, type = "bob-plasma" },
+                    },
                   },
-                  {
-                    type = "create-sticker",
-                    sticker = "bob-plasma-sticker",
+                },
+              },
+              {
+                type = "area",
+                radius = 1,
+                force = "not-same",
+                action_delivery = {
+                  type = "instant",
+                  target_effects = {
+                    {
+                      type = "create-sticker",
+                      sticker = "bob-plasma-sticker-small",
+                    },
                   },
                 },
               },
             },
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion",
           },
         },
       },
@@ -1683,7 +1799,7 @@ data:extend({
                   },
                   {
                     type = "create-sticker",
-                    sticker = "bob-plasma-sticker",
+                    sticker = "bob-plasma-sticker-small",
                     show_in_tooltip = true,
                   },
                 },
@@ -1735,25 +1851,19 @@ if
   and data.raw.fluid["bob-alien-fire"]
   and data.raw.fluid["bob-alien-poison"]
 then
-  data.raw.projectile["bob-better-shotgun-projectile"].action.action_delivery.target_effects.damage.amount = 16
-  data.raw.projectile["bob-shotgun-uranium-projectile"].action.action_delivery.target_effects.damage.amount = 24
-  data.raw.projectile["bob-shotgun-ap-projectile"].action.action_delivery.target_effects.damage.amount = 27
-  data.raw.projectile["bob-shotgun-electric-projectile"].action.action_delivery.target_effects.damage.amount = 27
-  data.raw.ammo["bob-shotgun-acid-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["bob-shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.projectile["bob-better-shotgun-projectile"].action.action_delivery.target_effects[2].damage.amount = 16
+  data.raw.projectile["bob-shotgun-uranium-projectile"].action.action_delivery.target_effects[2].damage.amount = 24
+  data.raw.projectile["bob-shotgun-ap-projectile"].action.action_delivery.target_effects[2].damage.amount = 27
+  data.raw.projectile["bob-shotgun-electric-projectile"].action.action_delivery.target_effects[2].damage.amount = 27
+  data.raw.projectile["bob-shotgun-acid-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[2].damage.amount =
     22
-  data.raw.ammo["bob-shotgun-explosive-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[2].damage.amount =
     22
-  data.raw.ammo["bob-shotgun-flame-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["bob-shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.projectile["bob-shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[2].damage.amount =
     22
-  data.raw.ammo["bob-shotgun-poison-shell"].ammo_type.action.repeat_count = 15
-  data.raw.projectile["bob-shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.projectile["bob-shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[2].damage.amount =
     22
-  data.raw.ammo["bob-shotgun-plasma-shell"].ammo_type.action.repeat_count = 15
-  data.raw.ammo["bob-shotgun-plasma-shell"].ammo_type.action.repeat_count = 20
-  data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.action_delivery.target_effects[1].damage.amount =
+  data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action[1].action_delivery.target_effects[2].damage.amount =
     30
 
   data.raw.projectile["bob-piercing-rocket"].action.action_delivery.target_effects[2].damage.amount = 160

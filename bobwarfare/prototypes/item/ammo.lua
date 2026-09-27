@@ -30,6 +30,59 @@ local function bobmissileammo(projectile)
   }
 end
 
+local function bobshotgunammo(projectile, count, radius)
+  return {
+    force_clamp_to_max_range = true,
+    target_type = "direction",
+    action = {
+      {
+        type = "direct",
+        action_delivery = {
+          type = "instant",
+          source_effects = {
+            {
+              entity_name = "explosion-gunshot",
+              type = "create-explosion"
+            }
+          },
+          target_effects = {
+            type = "nested-result",
+            action = {
+              type = "area",
+              radius = radius or 2.5,
+              repeat_count = count or 12,
+              target_entities = false,
+              action_delivery = {
+                inherit_speed = true,
+                projectile = projectile,
+                starting_speed = 1,
+                starting_speed_deviation = 0.1,
+                type = "projectile"
+              },
+            },
+          },
+        },
+      },
+    },
+  }
+end
+
+local aliencount1 = 20
+local aliencount2 = 15
+local alienspread = 2.75
+if
+  data.raw.item["bob-alien-orange-alloy"]
+  and data.raw.item["bob-alien-blue-alloy"]
+  and data.raw.fluid["bob-alien-explosive"]
+  and data.raw.fluid["bob-alien-acid"]
+  and data.raw.fluid["bob-alien-fire"]
+  and data.raw.fluid["bob-alien-poison"]
+then
+  aliencount1 = 24
+  aliencount2 = 18
+  alienspread = 3.25
+end
+
 local ammodropmove = {
   filename = "__base__/sound/item/ammo-small-inventory-move.ogg",
   volume = 0.8,
@@ -432,25 +485,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 20,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-better-shotgun-projectile",
-          starting_speed = 1,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-better-shotgun-projectile", 20, 2.75),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -467,25 +502,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 20,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-ap-projectile",
-          starting_speed = 1,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-ap-projectile", aliencount1, alienspread),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -502,25 +519,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 20,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-electric-projectile",
-          starting_speed = 1,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-electric-projectile", aliencount1, alienspread),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -537,25 +536,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 10,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-explosive-projectile",
-          starting_speed = 0.5,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-explosive-projectile", aliencount2, alienspread),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -572,25 +553,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 10,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-flame-projectile",
-          starting_speed = 0.5,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-flame-projectile", aliencount2, alienspread),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -607,25 +570,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 10,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-acid-projectile",
-          starting_speed = 0.5,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-acid-projectile", aliencount2, alienspread),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -642,25 +587,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 10,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-poison-projectile",
-          starting_speed = 0.5,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-poison-projectile", aliencount2, alienspread),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -677,25 +604,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 20,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-uranium-projectile",
-          starting_speed = 1,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-uranium-projectile", 24, 3.25),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,
@@ -1014,25 +923,7 @@ data:extend({
       },
     },
     ammo_category = "cannon-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 20,
-        action_delivery = {
-          type = "projectile",
-          projectile = "cannon-projectile-pellet",
-          starting_speed = 1,
-          direction_deviation = 0.5,
-          range_deviation = 0.3,
-          max_range = 20,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("cannon-projectile-pellet", 24, 3),
     subgroup = "ammo",
     order = "d[cannon-shell]-c[scatter]",
     stack_size = 100,
@@ -1424,25 +1315,7 @@ data:extend({
     stack_size = 100,
     magazine_size = 10,
     ammo_category = "shotgun-shell",
-    ammo_type = {
-      target_type = "direction",
-      action = {
-        type = "direct",
-        repeat_count = 10,
-        action_delivery = {
-          type = "projectile",
-          projectile = "bob-shotgun-plasma-projectile",
-          starting_speed = 0.5,
-          direction_deviation = 0.4,
-          range_deviation = 0.4,
-          max_range = 15,
-          source_effects = {
-            type = "create-entity",
-            entity_name = "explosion-gunshot",
-          },
-        },
-      },
-    },
+    ammo_type = bobshotgunammo("bob-shotgun-plasma-projectile", 28, 3.5),
     drop_sound = ammodropmove,
     inventory_move_sound = ammodropmove,
     pick_sound = ammopickup,

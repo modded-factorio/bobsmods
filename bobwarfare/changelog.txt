@@ -2,6 +2,7 @@
 Version: 3.0.2
 Date: ???
   Changes:
+    - Update shotgun ammo to match base game changes #624
     - Prevent Devastator robots from grouping up (mitigates incoming splash damage) #631
     - Improved order of technology effects #633
 ---------------------------------------------------------------------------------------------------
