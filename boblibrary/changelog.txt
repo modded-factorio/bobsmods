@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.1
+Date: ???
+  Bugfixes:
+    - Fixed recycling recipe time in bobmods.lib.recipe.update_recycling_recipe_single #633
+  Changes:
+    - Added pipe connector graphics and supporting functions (fluid-connector-defines.lua) #626
+    - Library function changes #633
+      - Added function bobmods.lib.recipe.update_recycling_recipe_to_self_recipe
+      - Added optional parameters insert_at, insert_before to function add_recipe_unlock
+      - Added function bobmods.lib.tech.add_tech_modifier
+      - Added function bobmods.lib.tech.set_tech_modifier
+      - Added function bobmods.lib.tech.remove_tech_modifier
+---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 29. 06. 2026
   Changes:

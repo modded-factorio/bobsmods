@@ -414,4 +414,27 @@ data:extend({
     target_movement_modifier = 0.8,
     damage_per_tick = { amount = 8, type = "bob-plasma" },
   },
+  {
+    type = "sticker",
+    name = "bob-plasma-sticker-small",
+    flags = { "not-on-map" },
+
+    animation = {
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-02.png",
+      draw_as_glow = true,
+      line_length = 10,
+      frame_count = 90,
+      width = 82,
+      height = 106,
+      blend_mode = "additive",
+      animation_speed = 1,
+      scale = 0.4,
+      tint = { r = 0.0, g = 0.2, b = 1, a = 0.5 },
+    },
+
+    duration_in_ticks = 2 * 60,
+    damage_interval = 10,
+    target_movement_modifier = 0.8,
+    damage_per_tick = { amount = 5, type = "bob-plasma" },
+  },
 })
