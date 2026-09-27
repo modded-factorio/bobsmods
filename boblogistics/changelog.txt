@@ -5,6 +5,7 @@ Date: ???
     - Improved order of technology effects #633
   Bugfixes:
     - Fixed "Change inserter long range" keyboard shortcut not working for ghosts #616
+    - Fixed missing underground belt and splitter sounds #617
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
 Date: 26. 07. 2026
