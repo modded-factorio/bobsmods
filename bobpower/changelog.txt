@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
-Date: ???
+Date: 27.09.2027
   Bugfixes:
     - Fixed heat source neighbor bonuses not applying #618
   Changes:

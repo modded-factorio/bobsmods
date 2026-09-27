@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
-Date: ???
+Date: 27.09.2027
   Changes:
     - Various graphics and pipe connector updates #626
     - Update for Factorio 2.1.20 : Item fuel_category replaced with fuel_categories #635

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
-Date: ???
+Date: 27.09.2027
   Changes:
     - Spawners belonging to each enemy faction will have unique responses to being walled in and unable to spawn #636
     - Enemy expansion parameters adjusted for balance #636

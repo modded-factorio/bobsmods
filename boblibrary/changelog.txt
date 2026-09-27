@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
-Date: ???
+Date: 27.09.2027
   Bugfixes:
     - Fixed recycling recipe time in bobmods.lib.recipe.update_recycling_recipe_single #633
   Changes:
