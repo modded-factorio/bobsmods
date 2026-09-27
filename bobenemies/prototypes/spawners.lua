@@ -5,81 +5,81 @@ local spitter_spawn
 local super_spawn
 if settings.startup["bobmods-enemies-biggersooner"].value == true then
   biter_spawn = {
-    { "small-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
-    { "big-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
-    { "bob-huge-biter", { { 0.55, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-giant-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
-    { "bob-titan-biter", { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-    { "behemoth-biter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
-    { "bob-leviathan-biter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "small-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.6, 0.0 } } },
+    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.7, 0.0 } } },
+    { "big-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.79, 0.0 } } },
+    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.4 }, { 0.88, 0.0 } } },
+    { "bob-giant-biter", { { 0.7, 0.0 }, { 0.75, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-titan-biter", { { 0.79, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-biter", { { 0.88, 0.0 }, { 0.95, 0.4 } } },
+    { "bob-leviathan-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   spitter_spawn = {
-    { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
-    { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
-    { "bob-huge-spitter", { { 0.55, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-giant-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 1.0, 0.15 } } },
-    { "bob-titan-spitter", { { 0.75, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.45 } } },
-    { "behemoth-spitter", { { 0.85, 0.0 }, { 0.95, 0.3 } } },
-    { "bob-leviathan-spitter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.6, 0.0 } } },
+    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.7, 0.0 } } },
+    { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.79, 0.0 } } },
+    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.4 }, { 0.88, 0.0 } } },
+    { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.75, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-titan-spitter", { { 0.79, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-spitter", { { 0.88, 0.0 }, { 0.95, 0.4 } } },
+    { "bob-leviathan-spitter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   super_spawn = {
-    { "small-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.5, 0.0 } } },
-    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
-    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.65, 0.0 } } },
-    { "big-biter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
-    { "big-spitter", { { 0.45, 0.0 }, { 0.55, 0.4 }, { 0.7, 0.0 } } },
-    { "bob-huge-biter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-huge-spitter", { { 0.52, 0.0 }, { 0.65, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-giant-biter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
-    { "bob-giant-spitter", { { 0.65, 0.0 }, { 0.75, 0.2 }, { 0.95, 0.0 } } },
-    { "bob-titan-biter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
-    { "bob-titan-spitter", { { 0.72, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
-    { "behemoth-biter", { { 0.85, 0.0 }, { 0.95, 0.4 } } },
-    { "behemoth-spitter", { { 0.85, 0.0 }, { 0.95, 0.4 } } },
-    { "bob-leviathan-biter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
-    { "bob-leviathan-spitter", { { 0.90, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "small-biter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.6, 0.0 } } },
+    { "small-spitter", { { 0.0, 0.3 }, { 0.3, 0.3 }, { 0.6, 0.0 } } },
+    { "medium-biter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.7, 0.0 } } },
+    { "medium-spitter", { { 0.2, 0.0 }, { 0.4, 0.3 }, { 0.7, 0.0 } } },
+    { "big-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.79, 0.0 } } },
+    { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.79, 0.0 } } },
+    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.4 }, { 0.88, 0.0 } } },
+    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.4 }, { 0.88, 0.0 } } },
+    { "bob-giant-biter", { { 0.7, 0.0 }, { 0.75, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.75, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-titan-biter", { { 0.79, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+    { "bob-titan-spitter", { { 0.79, 0.0 }, { 0.85, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-biter", { { 0.88, 0.0 }, { 0.95, 0.4 } } },
+    { "behemoth-spitter", { { 0.88, 0.0 }, { 0.95, 0.4 } } },
+    { "bob-leviathan-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "bob-leviathan-spitter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
   }
 else
   biter_spawn = {
-    { "small-biter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
-    { "medium-biter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
-    { "big-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-giant-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
-    { "bob-titan-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-    { "behemoth-biter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
-    { "bob-leviathan-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "small-biter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.65, 0.0 } } },
+    { "medium-biter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.77, 0.0 } } },
+    { "big-biter", { { 0.55, 0.0 }, { 0.65, 0.4 }, { 0.86, 0.0 } } },
+    { "bob-huge-biter", { { 0.65, 0.0 }, { 0.75, 0.4 }, { 0.92, 0.0 } } },
+    { "bob-giant-biter", { { 0.77, 0.0 }, { 0.82, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-titan-biter", { { 0.86, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-biter", { { 0.92, 0.0 }, { 1.0, 0.4 } } },
+    { "bob-leviathan-biter", { { 0.97, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   spitter_spawn = {
-    { "small-spitter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
-    { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
-    { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 1.0, 0.15 } } },
-    { "bob-titan-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.45 } } },
-    { "behemoth-spitter", { { 0.9, 0.0 }, { 1.0, 0.3 } } },
-    { "bob-leviathan-spitter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "small-spitter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.65, 0.0 } } },
+    { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.77, 0.0 } } },
+    { "big-spitter", { { 0.55, 0.0 }, { 0.65, 0.4 }, { 0.86, 0.0 } } },
+    { "bob-huge-spitter", { { 0.65, 0.0 }, { 0.75, 0.4 }, { 0.92, 0.0 } } },
+    { "bob-giant-spitter", { { 0.77, 0.0 }, { 0.82, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-titan-spitter", { { 0.86, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-spitter", { { 0.92, 0.0 }, { 1.0, 0.4 } } },
+    { "bob-leviathan-spitter", { { 0.97, 0.0 }, { 1.0, leviathanfrequency } } },
   }
   super_spawn = {
-    { "small-biter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
-    { "small-spitter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.6, 0.0 } } },
-    { "medium-biter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
-    { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.7, 0.0 } } },
-    { "big-biter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "big-spitter", { { 0.5, 0.0 }, { 0.6, 0.4 }, { 0.8, 0.0 } } },
-    { "bob-huge-biter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-huge-spitter", { { 0.6, 0.0 }, { 0.7, 0.3 }, { 0.9, 0.0 } } },
-    { "bob-giant-biter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.95, 0.0 } } },
-    { "bob-giant-spitter", { { 0.7, 0.0 }, { 0.8, 0.2 }, { 0.95, 0.0 } } },
-    { "bob-titan-biter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
-    { "bob-titan-spitter", { { 0.8, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
-    { "behemoth-biter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
-    { "behemoth-spitter", { { 0.9, 0.0 }, { 1.0, 0.4 } } },
-    { "bob-leviathan-biter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
-    { "bob-leviathan-spitter", { { 0.95, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "small-biter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.65, 0.0 } } },
+    { "small-spitter", { { 0.0, 0.3 }, { 0.5, 0.3 }, { 0.65, 0.0 } } },
+    { "medium-biter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.77, 0.0 } } },
+    { "medium-spitter", { { 0.2, 0.0 }, { 0.5, 0.3 }, { 0.77, 0.0 } } },
+    { "big-biter", { { 0.55, 0.0 }, { 0.65, 0.4 }, { 0.86, 0.0 } } },
+    { "big-spitter", { { 0.55, 0.0 }, { 0.65, 0.4 }, { 0.86, 0.0 } } },
+    { "bob-huge-biter", { { 0.65, 0.0 }, { 0.75, 0.4 }, { 0.92, 0.0 } } },
+    { "bob-huge-spitter", { { 0.65, 0.0 }, { 0.75, 0.4 }, { 0.92, 0.0 } } },
+    { "bob-giant-biter", { { 0.77, 0.0 }, { 0.82, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-giant-spitter", { { 0.77, 0.0 }, { 0.82, 0.4 }, { 0.98, 0.0 } } },
+    { "bob-titan-biter", { { 0.86, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+    { "bob-titan-spitter", { { 0.86, 0.0 }, { 0.9, 0.3 }, { 1.0, 0.55 } } },
+    { "behemoth-biter", { { 0.92, 0.0 }, { 1.0, 0.4 } } },
+    { "behemoth-spitter", { { 0.92, 0.0 }, { 1.0, 0.4 } } },
+    { "bob-leviathan-biter", { { 0.97, 0.0 }, { 1.0, leviathanfrequency } } },
+    { "bob-leviathan-spitter", { { 0.97, 0.0 }, { 1.0, leviathanfrequency } } },
   }
 end
 
@@ -132,10 +132,22 @@ local new_biter_spawner = table.deepcopy(data.raw["unit-spawner"]["biter-spawner
 new_biter_spawner.name = "bob-0-biter-spawner"
 new_biter_spawner.order = "a-a-a"
 new_biter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
+new_biter_spawner.resistances = {
+  { type = "physical", decrease = 2, percent = 15 },
+  { type = "explosion", decrease = 7, percent = 20 },
+  { type = "fire", decrease = 3, percent = 50 },
+  { type = "acid", percent = 20 },
+}
 local new_spitter_spawner = table.deepcopy(data.raw["unit-spawner"]["spitter-spawner"])
 new_spitter_spawner.name = "bob-0-spitter-spawner"
 new_spitter_spawner.order = "a-a-b"
 new_spitter_spawner.autoplace = enemy_autoplace.enemy_spawner_autoplace("0")
+new_spitter_spawner.resistances = {
+  { type = "physical", decrease = 2, percent = 10 },
+  { type = "explosion", decrease = 10, percent = 30 },
+  { type = "fire", decrease = 3, percent = 50 },
+  { type = "acid", percent = 20 },
+}
 if mods["space-age"] then
   new_biter_spawner.captured_spawner_entity = "captive-biter-spawner"
   new_spitter_spawner.captured_spawner_entity = "captive-biter-spawner"
@@ -143,6 +155,221 @@ end
 data:extend({ new_biter_spawner, new_spitter_spawner })
 data.raw["unit-spawner"]["biter-spawner"].hidden = true
 data.raw["unit-spawner"]["spitter-spawner"].hidden = true
+
+local piercing_spawner_trapped_reaction = {
+  type = "direct",
+  action_delivery = {
+    type = "instant",
+    source_effects = {
+      type = "script",
+      effect_id = "piercing-spawner-trapped-script",
+    },
+  }
+}
+
+local electric_spawner_trapped_reaction = {
+  {
+    type = "cluster",
+    cluster_count = 13,
+    distance = 7,
+    action_delivery = {
+      type = "instant",
+      target_effects = {
+        type = "nested-result",
+        probability = 0.35,
+        action = {
+          type = "line",
+          range = 7,
+          width = 1.5,
+          force = "not-same",
+          action_delivery = {
+            type = "instant",
+            target_effects = {
+              {
+                type = "damage",
+                damage = { amount = 1000, type = "electric" },
+              },
+            },
+          },
+          range_effects = {
+            {
+              type = "create-explosion",
+              entity_name = "bob-biter-electric-beam-explosion",
+            },
+          },
+        }
+      },
+    },
+  }
+}
+
+local acid_spawner_trapped_reaction = {
+  {
+    type = "cluster",
+    cluster_count = 12,
+    distance = 4,
+    distance_deviation = 3,
+    action_delivery = {
+      type = "instant",
+      target_effects = {
+        {
+          type = "create-fire",
+          entity_name = "acid-acid-splash-fire-behemoth",
+        },
+      },
+    },
+  },
+}
+
+local explosive_spawner_trapped_reaction = {
+  {
+    type = "direct",
+    action_delivery = {
+      {
+        type = "instant",
+        source_effects = {
+          {
+            type = "create-explosion",
+            entity_name = "big-artillery-explosion",
+          },
+        },
+      },
+    },
+  },
+  {
+    type = "area",
+    radius = 4.75,
+    force = "not-same",
+    action_delivery = {
+      type = "instant",
+      target_effects = {
+        {
+          type = "damage",
+          damage = {
+            amount = 750,
+            type = "explosion"
+          },
+        },
+        {
+          type = "create-entity",
+          entity_name = "explosion",
+        },
+      },
+    },
+  },
+}
+
+data:extend({
+
+  {
+    type = "smoke-with-trigger",
+    name = "poison-spawner-trapped-reaction",
+    localised_name = { "entity-name.poison-cloud" },
+    flags = { "not-on-map" },
+    hidden = true,
+    show_when_smoke_off = true,
+    animation = {
+      filename = "__bobenemies__/graphics/entity/invisible.png",
+      width = 1,
+      height = 1,
+      frame_count = 1,
+    },
+    affected_by_wind = false,
+    cyclic = true,
+    duration = 240,
+    fade_away_duration = 20,
+    spread_duration = 10,
+    color = { r = 0.3, g = 1, b = 0.3, a = 1 },
+    created_effect = {
+      {
+        type = "cluster",
+        cluster_count = 10,
+        distance = 4,
+        distance_deviation = 4,
+        action_delivery = {
+          type = "instant",
+          target_effects = {
+            type = "create-smoke",
+            show_in_tooltip = false,
+            entity_name = "bob-enemy-poison-smoke-visual-dummy",
+            initial_height = 0,
+          },
+        },
+      },
+    },
+    action_cooldown = 30,
+    action = {
+      type = "direct",
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          {
+            type = "nested-result",
+            action = {
+              {
+                type = "area",
+                radius = 8,
+                force = "not-friend",
+                trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
+                ignore_collision_condition = true,
+                action_delivery = {
+                  type = "instant",
+                  target_effects = {
+                    type = "damage",
+                    damage = { amount = 80, type = "poison" },
+                  },
+                },
+              },
+              {
+                type = "area",
+                radius = 8,
+                force = "ally",
+                entity_flags = { "breaths-air" },
+                action_delivery = {
+                  type = "instant",
+                  target_effects = {
+                    type = "damage",
+                    damage = { amount = -240, type = "poison" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
+  {
+    type = "delayed-active-trigger",
+    name = "fire-spawner-trapped-reaction",
+    delay = 1,
+    repeat_delay = 15,
+    repeat_count = 16,
+    cancel_when_source_is_destroyed = true,
+    action = {
+      {
+        type = "area",
+        radius = 6,
+        trigger_target_mask = { "not-fire-unit" },
+        collision_mode = "distance-from-center",
+        action_delivery = {
+          {
+            type = "instant",
+            target_effects = {
+              {
+                type = "create-fire",
+                entity_name = "bob-enemy-fire-trapped",
+                probability = 0.15,
+              },
+            }
+          },
+        },
+      },
+    },
+  },
+
+})
 
 bobmods.enemies.new_spawner({
   name = "bob-biter-spawner",
@@ -194,12 +421,15 @@ bobmods.enemies.new_spawner({
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   healing_per_tick = 0.03,
   resistances = {
-    { type = "physical", decrease = 3, percent = 20 },
-    { type = "explosion", decrease = 8, percent = 10 },
-    { type = "fire", decrease = 4, percent = 70 },
-    { type = "poison", percent = -20 },
-    { type = "electric", percent = -20 },
+    { type = "physical", decrease = 3, percent = 25 },
+    { type = "bob-pierce", percent = 10 },
+    { type = "explosion", decrease = 7, percent = 20 },
+    { type = "laser", percent = -20 },
+    { type = "fire", decrease = 4, percent = 60 },
+    { type = "poison", percent = -40 },
+    { type = "electric", percent = -40 },
   },
+  spawn_blocked_trigger = piercing_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -213,12 +443,14 @@ bobmods.enemies.new_spawner({
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   healing_per_tick = 0.03,
   resistances = {
-    { type = "physical", decrease = 3, percent = 20 },
-    { type = "explosion", decrease = 8, percent = 10 },
-    { type = "fire", decrease = 4, percent = 70 },
-    { type = "poison", percent = -20 },
-    { type = "electric", percent = -20 },
+    { type = "physical", decrease = 3, percent = 25 },
+    { type = "explosion", decrease = 10, percent = 30 },
+    { type = "laser", percent = -20 },
+    { type = "fire", decrease = 4, percent = 60 },
+    { type = "poison", percent = -40 },
+    { type = "electric", percent = -40 },
   },
+  spawn_blocked_trigger = piercing_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -243,6 +475,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = piercing_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -266,6 +499,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = piercing_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -280,9 +514,12 @@ bobmods.enemies.new_spawner({
   resistances = {
     { type = "physical", decrease = 2, percent = 15 },
     { type = "explosion", decrease = 5 },
-    { type = "laser", percent = 20 },
-    { type = "poison", percent = -20 },
+    { type = "laser", percent = 35 },
+    { type = "fire", percent = 20 },
+    { type = "poison", percent = -40 },
+    { type = "electric", decrease = 5, percent = 25 },
   },
+  spawn_blocked_trigger = electric_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -295,11 +532,14 @@ bobmods.enemies.new_spawner({
   tint2 = bobmods.enemies.electric_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
-    { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 5 },
-    { type = "laser", percent = 20 },
-    { type = "poison", percent = -20 },
+    { type = "physical", decrease = 2, percent = 10 },
+    { type = "explosion", decrease = 5, percent = 10 },
+    { type = "laser", percent = 35 },
+    { type = "fire", percent = 20 },
+    { type = "poison", percent = -40 },
+    { type = "electric", decrease = 5, percent = 25 },
   },
+  spawn_blocked_trigger = electric_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -323,6 +563,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = electric_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -345,6 +586,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = electric_spawner_trapped_reaction,
 })
 
 data.raw["unit-spawner"]["bob-electric-spitter-spawner"].graphics_set.animations[1].layers[2].draw_as_glow = true
@@ -380,7 +622,7 @@ local acid_reaction = function(inputs)
   return {
     {
       type = "create-entity",
-      damage_type_filters = "fire",
+      damage_type_filters = { "fire", "acid", "poison" },
       entity_name = "enemy-damaged-explosion",
       offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
       offsets = { { 0, 0 } },
@@ -467,8 +709,12 @@ bobmods.enemies.new_spawner({
   resistances = {
     { type = "physical", decrease = 2, percent = 15 },
     { type = "explosion", decrease = 5 },
-    { type = "fire", decrease = 3, percent = 60 },
+    { type = "fire", decrease = 3, percent = 50 },
+    { type = "poison", decrease = 5, percent = 25 },
+    { type = "electric", percent = -40 },
+    { type = "acid", decrease = 10, percent = 50 },
   },
+  spawn_blocked_trigger = acid_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -485,10 +731,14 @@ bobmods.enemies.new_spawner({
     fire_name = "acid-acid-splash-fire-small",
   }),
   resistances = {
-    { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 5 },
-    { type = "fire", decrease = 3, percent = 60 },
+    { type = "physical", decrease = 2, percent = 10 },
+    { type = "explosion", decrease = 5, percent = 10 },
+    { type = "fire", decrease = 3, percent = 50 },
+    { type = "poison", decrease = 5, percent = 25 },
+    { type = "electric", percent = -40 },
+    { type = "acid", decrease = 10, percent = 50 },
   },
+  spawn_blocked_trigger = acid_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -516,6 +766,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = acid_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -542,6 +793,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = acid_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -556,8 +808,13 @@ bobmods.enemies.new_spawner({
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
     { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 15, percent = 30 },
+    { type = "explosion", decrease = 15, percent = 35 },
+    { type = "laser", percent = -20 },
+    { type = "fire", percent = 20 },
+    { type = "electric", percent = -40 },
+    { type = "acid", decrease = 10, percent = 50 },
   },
+  spawn_blocked_trigger = explosive_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -571,9 +828,14 @@ bobmods.enemies.new_spawner({
   tint2 = bobmods.enemies.explosive_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
-    { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 15, percent = 30 },
+    { type = "physical", decrease = 2, percent = 10 },
+    { type = "explosion", decrease = 15, percent = 35 },
+    { type = "laser", percent = -20 },
+    { type = "fire", percent = 20 },
+    { type = "electric", percent = -40 },
+    { type = "acid", decrease = 10, percent = 50 },
   },
+  spawn_blocked_trigger = explosive_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -597,6 +859,7 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = explosive_spawner_trapped_reaction,
 })
 
 bobmods.enemies.new_spawner({
@@ -619,13 +882,14 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = explosive_spawner_trapped_reaction,
 })
 
 if settings.startup["bobmods-enemies-healthincrease"].value == true then
   data.raw["unit-spawner"]["bob-0-explosive-biter-spawner"].max_health = 300
   data.raw["unit-spawner"]["bob-0-explosive-spitter-spawner"].max_health = 300
-  data.raw["unit-spawner"]["bob-explosive-biter-spawner"].max_health = 1000
-  data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].max_health = 1000
+  data.raw["unit-spawner"]["bob-explosive-biter-spawner"].max_health = 1200
+  data.raw["unit-spawner"]["bob-explosive-spitter-spawner"].max_health = 1200
 end
 
 bobmods.enemies.new_spawner({
@@ -640,6 +904,23 @@ bobmods.enemies.new_spawner({
   resistances = {
     { type = "physical", decrease = 2, percent = 15 },
     { type = "explosion", decrease = 5 },
+    { type = "fire", decrease = 20 },
+    { type = "poison", decrease = 5, decrease = 25 },
+    { type = "acid", decrease = 10, decrease = 50 },
+  },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          type = "create-smoke",
+          entity_name = "poison-spawner-trapped-reaction",
+          initial_height = 0,
+          show_in_tooltip = true,
+        },
+      },
+    },
   },
 })
 
@@ -653,8 +934,25 @@ bobmods.enemies.new_spawner({
   tint2 = bobmods.enemies.poison_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
   resistances = {
-    { type = "physical", decrease = 2, percent = 15 },
-    { type = "explosion", decrease = 5 },
+    { type = "physical", decrease = 2, percent = 10 },
+    { type = "explosion", decrease = 5, percent = 10 },
+    { type = "fire", decrease = 20 },
+    { type = "poison", decrease = 5, decrease = 25 },
+    { type = "acid", decrease = 10, decrease = 50 },
+  },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          type = "create-smoke",
+          entity_name = "poison-spawner-trapped-reaction",
+          initial_height = 0,
+          show_in_tooltip = true,
+        },
+      },
+    },
   },
 })
 
@@ -679,6 +977,20 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          type = "create-smoke",
+          entity_name = "poison-spawner-trapped-reaction",
+          initial_height = 0,
+          show_in_tooltip = true,
+        },
+      },
+    },
+  },
 })
 
 bobmods.enemies.new_spawner({
@@ -701,6 +1013,20 @@ bobmods.enemies.new_spawner({
     { type = "impact", decrease = 10, percent = 20 },
     { type = "bob-plasma", percent = 50 },
   },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          type = "create-smoke",
+          entity_name = "poison-spawner-trapped-reaction",
+          initial_height = 0,
+          show_in_tooltip = true,
+        },
+      },
+    },
+  },
 })
 
 bobmods.enemies.new_spawner({
@@ -712,10 +1038,23 @@ bobmods.enemies.new_spawner({
   tint = bobmods.enemies.biter_spawner_tint,
   tint2 = bobmods.enemies.fire_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  trigger_target_mask = { "common", "ground-structure" },
   resistances = {
-    { type = "physical", decrease = 2 },
-    { type = "explosion", decrease = 8, percent = 10 },
-    { type = "fire", decrease = 4, percent = 70 },
+    { type = "explosion", decrease = 7, percent = 20 },
+    { type = "laser", percent = 35 },
+    { type = "fire", decrease = 6, percent = 70 },
+    { type = "acid", percent = 20 },
+  },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        {
+          type = "delayed",
+          delayed_trigger = "fire-spawner-trapped-reaction",
+        },
+      },
+    },
   },
 })
 
@@ -728,10 +1067,23 @@ bobmods.enemies.new_spawner({
   tint = bobmods.enemies.spitter_spawner_tint,
   tint2 = bobmods.enemies.fire_spawner_tint,
   autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
+  trigger_target_mask = { "common", "ground-structure" },
   resistances = {
-    { type = "physical", decrease = 2 },
-    { type = "explosion", decrease = 8, percent = 10 },
-    { type = "fire", decrease = 4, percent = 70 },
+    { type = "explosion", decrease = 10, percent = 30 },
+    { type = "laser", percent = 35 },
+    { type = "fire", decrease = 6, percent = 70 },
+    { type = "acid", percent = 20 },
+  },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        {
+          type = "delayed",
+          delayed_trigger = "fire-spawner-trapped-reaction",
+        },
+      },
+    },
   },
 })
 
@@ -752,7 +1104,19 @@ bobmods.enemies.new_spawner({
     { type = "laser", percent = 75 },
     { type = "fire", decrease = 10, percent = 80 },
     { type = "acid", decrease = 10, percent = 50 },
+    { type = "impact", percent = 10 },
     { type = "bob-plasma", percent = 50 },
+  },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        {
+          type = "delayed",
+          delayed_trigger = "fire-spawner-trapped-reaction",
+        },
+      },
+    },
   },
 })
 
@@ -772,7 +1136,19 @@ bobmods.enemies.new_spawner({
     { type = "laser", percent = 75 },
     { type = "fire", decrease = 10, percent = 80 },
     { type = "acid", decrease = 10, percent = 50 },
+    { type = "impact", percent = 10 },
     { type = "bob-plasma", percent = 50 },
+  },
+  spawn_blocked_trigger = {
+    {
+      type = "direct",
+      action_delivery = {
+        {
+          type = "delayed",
+          delayed_trigger = "fire-spawner-trapped-reaction",
+        },
+      },
+    },
   },
 })
 
@@ -852,6 +1228,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "impact", decrease = 100, percent = 35 },
       { type = "bob-plasma", percent = 50 },
     },
+    spawn_blocked_trigger = piercing_spawner_trapped_reaction,
   })
 
   bobmods.enemies.new_spawner({
@@ -874,6 +1251,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "impact", decrease = 100, percent = 35 },
       { type = "bob-plasma", percent = 50 },
     },
+    spawn_blocked_trigger = electric_spawner_trapped_reaction,
   })
 
   data.raw["unit-spawner"]["bob-electric-super-spawner"].graphics_set.animations[1].layers[2].draw_as_glow = true
@@ -915,6 +1293,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "impact", decrease = 100, percent = 35 },
       { type = "bob-plasma", percent = 50 },
     },
+    spawn_blocked_trigger = acid_spawner_trapped_reaction,
   })
 
   bobmods.enemies.new_spawner({
@@ -923,6 +1302,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
     class = "super",
     element = "explosive",
     order = "e-a-e",
+    max_health = 4000,
     tint = bobmods.enemies.super_spawner_tint,
     tint2 = bobmods.enemies.explosive_spawner_tint,
     autoplace = enemy_autoplace.enemy_spawner_autoplace("0"),
@@ -937,6 +1317,7 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "impact", decrease = 100, percent = 35 },
       { type = "bob-plasma", percent = 50 },
     },
+    spawn_blocked_trigger = explosive_spawner_trapped_reaction,
   })
 
   if settings.startup["bobmods-enemies-healthincrease"].value == true then
@@ -965,6 +1346,20 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "impact", decrease = 100, percent = 35 },
       { type = "bob-plasma", percent = 50 },
     },
+    spawn_blocked_trigger = {
+      {
+        type = "direct",
+        action_delivery = {
+          type = "instant",
+          target_effects = {
+            type = "create-smoke",
+            entity_name = "poison-spawner-trapped-reaction",
+            initial_height = 0,
+            show_in_tooltip = true,
+          },
+        },
+      },
+    },
   })
 
   bobmods.enemies.new_spawner({
@@ -986,7 +1381,19 @@ if settings.startup["bobmods-enemies-superspawner"].value == true then
       { type = "poison", percent = 20 },
       { type = "electric", percent = 20 },
       { type = "acid", decrease = 20, percent = 75 },
+      { type = "impact", decrease = 50, percent = 20 },
       { type = "bob-plasma", percent = 50 },
+    },
+    spawn_blocked_trigger = {
+      {
+        type = "direct",
+        action_delivery = {
+          {
+            type = "delayed",
+            delayed_trigger = "fire-spawner-trapped-reaction",
+          },
+        },
+      },
     },
   })
 
