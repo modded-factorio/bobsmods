@@ -1,5 +1,7 @@
 if mods["bobelectronics"] then
-  bobmods.lib.recipe.replace_ingredient("automation-science-pack", "copper-plate", "bob-basic-circuit-board")
+  if not mods["aai-industry"] then
+    bobmods.lib.recipe.replace_ingredient("automation-science-pack", "copper-plate", "bob-basic-circuit-board")
+  end
   bobmods.lib.recipe.add_ingredient("logistic-science-pack", { type = "item", name = "electronic-circuit", amount = 1 })
 end
 
