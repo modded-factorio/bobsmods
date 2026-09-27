@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.2
+Date: ???
+  Bugfixes:
+    - Fixed character name disappearing (with Jetpack mod) #619
+  Changes:
+    - Added insructions on how to get unstuck on a space platform #609
+    - Increased max height of Avatar Switcher #620
+---------------------------------------------------------------------------------------------------
 Version: 3.0.1
 Date: 26. 07. 2026
   Bugfixes:
