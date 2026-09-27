@@ -682,13 +682,6 @@ if data.raw.item["bob-diamond-5"] then
     "bob-personal-laser-defense-equipment-6",
     { type = "item", name = "bob-diamond-5", amount = 1 }
   )
-  if data.raw.recipe["bob-solar-panel-equipment-5"] then
-    bobmods.lib.tech.add_prerequisite("bob-solar-panel-equipment-5", "bob-gem-processing-3")
-    bobmods.lib.recipe.add_ingredient(
-      "bob-solar-panel-equipment-5",
-      { type = "item", name = "bob-diamond-5", amount = 1 }
-    )
-  end
 end
 
 if data.raw.module["bob-speed-module-5"] then

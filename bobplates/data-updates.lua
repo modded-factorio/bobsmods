@@ -193,8 +193,8 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
   data.raw.reactor["bob-nuclear-reactor-2"].default_fuel_glow_color = { r = 1.0, g = 1.0, b = 0.0 }
   data.raw.reactor["bob-nuclear-reactor-2"].icon = "__bobplates__/graphics/icons/nuclear/thorium-reactor.png"
 
-  data.raw.item["bob-thorium-fuel-cell"].fuel_category = "bob-thorium"
-  data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_category = "bob-thorium"
+  data.raw.item["bob-thorium-fuel-cell"].fuel_categories = { "bob-thorium" }
+  data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_categories = { "bob-thorium" }
 
   data.raw.item["bob-nuclear-reactor-2"].localised_name = { "entity-name.bob-thorium-reactor" }
   data.raw.item["bob-nuclear-reactor-2"].icon = "__bobplates__/graphics/icons/nuclear/thorium-reactor.png"
@@ -210,8 +210,8 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
   data.raw.reactor["bob-nuclear-reactor-3"].localised_description =
     { "", { "entity-description.bob-deuterium-reactor" }, { "entity-description.bob-reactor-max-temperature", "1500" } }
 
-  data.raw.item["bob-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
-  data.raw.item["bob-deuterium-fuel-cell-2"].fuel_category = "bob-deuterium"
+  data.raw.item["bob-deuterium-fuel-cell"].fuel_categories = { "bob-deuterium" }
+  data.raw.item["bob-deuterium-fuel-cell-2"].fuel_categories = { "bob-deuterium" }
 
   data.raw.item["bob-nuclear-reactor-3"].localised_name = { "entity-name.bob-deuterium-reactor" }
 
