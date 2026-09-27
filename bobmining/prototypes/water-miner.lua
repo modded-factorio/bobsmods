@@ -11,9 +11,9 @@ local function water_miner_animation()
           scale = 0.5,
           line_length = 8,
           width = 206,
-          height = 202,
+          height = 172,
           frame_count = 40,
-          shift = util.by_pixel(-4, -24),
+          shift = util.by_pixel(-4.5, -29),
         },
         {
           priority = "high",
@@ -21,8 +21,8 @@ local function water_miner_animation()
           animation_speed = 0.5,
           draw_as_shadow = true,
           line_length = 8,
-          width = 309,
-          height = 82,
+          width = 292,
+          height = 78,
           frame_count = 40,
           scale = 0.5,
           shift = util.by_pixel(17.75, 14.5),
@@ -48,11 +48,11 @@ local function water_miner_visualisations(flipped)
       filename = "__bobmining__/graphics/entity/water-miner/water-miner-base"
         .. (flipped and "-flipped" or "")
         .. "-shadow.png",
-      width = 220,
-      height = 220,
+      width = 261,
+      height = 273,
       scale = 0.5,
       draw_as_shadow = true,
-      shift = util.by_pixel(6, 0.5),
+      shift = util.by_pixel(-2, -5),
     },
   }
 

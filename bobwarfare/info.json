@@ -1,6 +1,6 @@
 {
   "name": "bobwarfare",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "factorio_version": "2.1",
   "title": "Bob's Warfare mod",
   "author": "Bobingabout",
@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
     "base >= 2.1.0",
-    "boblibrary >= 3.0.0",
+    "boblibrary >= 3.0.1",
     "? bobplates >= 3.0.0",
     "? bobenemies >= 3.0.0",
     "(?) aai-programmable-vehicles",
