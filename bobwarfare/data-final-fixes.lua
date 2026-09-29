@@ -116,13 +116,13 @@ if mods["combat-mechanics-overhaul"] then
     data.raw.projectile["bob-shotgun-ap-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-electric-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-explosive-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[2].action.force =
+    data.raw.projectile["bob-shotgun-explosive-projectile"].action.action_delivery.target_effects[1].action.force =
       "not-same"
     data.raw.projectile["bob-shotgun-flame-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-flame-projectile"].action.action_delivery.target_effects[1].action.force =
       "not-same"
     data.raw.projectile["bob-shotgun-plasma-projectile"].force_condition = "not-same"
-    data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action.force =
+    data.raw.projectile["bob-shotgun-plasma-projectile"].action.action_delivery.target_effects[1].action[1].force =
       "not-same"
     data.raw.projectile["bob-shotgun-poison-projectile"].force_condition = "not-same"
     data.raw.projectile["bob-shotgun-poison-projectile"].action.action_delivery.target_effects[1].action.force =
