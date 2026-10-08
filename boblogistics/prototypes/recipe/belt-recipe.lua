@@ -263,6 +263,11 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
     })
   end
 
+  -- The express belt recipes above no longer use lubricant
+  bobmods.lib.recipe.set_category("express-transport-belt", "crafting")
+  bobmods.lib.recipe.set_category("express-underground-belt", "crafting")
+  bobmods.lib.recipe.set_category("express-splitter", "crafting")
+
   if mods["space-age"] then
     bobmods.lib.recipe.add_category("bob-basic-transport-belt", "metallurgy")
     bobmods.lib.recipe.add_category("bob-basic-underground-belt", "metallurgy")
