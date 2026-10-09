@@ -90,17 +90,19 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     }
   end
 
-  data.raw.locomotive["locomotive"].resistances = rolling_stock_resistances()
+  local base_locomotive = data.raw.locomotive["locomotive"]
+  base_locomotive.resistances = rolling_stock_resistances()
+  base_locomotive.fast_replaceable_group = "locomotive"
 
   if feature_flags["space_travel"] then
-    data.raw.locomotive.locomotive.surface_conditions = {
+    base_locomotive.surface_conditions = {
       { property = "pressure", min = 10 },
     }
   end
 
   data:extend({
     util.merge({
-      data.raw.locomotive.locomotive,
+      base_locomotive,
       {
         name = "bob-locomotive-2",
         minable = { result = "bob-locomotive-2" },
@@ -118,10 +120,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
           fuel_inventory_size = 4,
         },
         color = { r = 0.92, g = 0.07, b = 0, a = 0.5 },
+        next_upgrade = "bob-locomotive-3",
       },
     }),
     util.merge({
-      data.raw.locomotive.locomotive,
+      base_locomotive,
       {
         name = "bob-locomotive-3",
         minable = { result = "bob-locomotive-3" },
@@ -143,7 +146,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     }),
 
     util.merge({
-      data.raw.locomotive.locomotive,
+      base_locomotive,
       {
         name = "bob-armoured-locomotive",
         minable = { result = "bob-armoured-locomotive" },
@@ -161,10 +164,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
           fuel_inventory_size = 3,
         },
         color = { r = 0.92, g = 0.07, b = 0, a = 0.5 },
+        next_upgrade = "bob-armoured-locomotive-2",
       },
     }),
     util.merge({
-      data.raw.locomotive.locomotive,
+      base_locomotive,
       {
         name = "bob-armoured-locomotive-2",
         minable = { result = "bob-armoured-locomotive-2" },
@@ -185,12 +189,15 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
     }),
   })
+  base_locomotive.next_upgrade = "bob-locomotive-2"
 
-  data.raw["cargo-wagon"]["cargo-wagon"].resistances = rolling_stock_resistances()
+  local base_cargo_wagon = data.raw["cargo-wagon"]["cargo-wagon"]
+  base_cargo_wagon.resistances = rolling_stock_resistances()
+  base_cargo_wagon.fast_replaceable_group = "cargo-wagon"
 
   data:extend({
     util.merge({
-      data.raw["cargo-wagon"]["cargo-wagon"],
+      base_cargo_wagon,
       {
         name = "bob-cargo-wagon-2",
         minable = { result = "bob-cargo-wagon-2" },
@@ -203,10 +210,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         air_resistance = 0.0075, --0.01
         resistances = rolling_stock_resistances(),
         color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },
+        next_upgrade = "bob-cargo-wagon-3",
       },
     }),
     util.merge({
-      data.raw["cargo-wagon"]["cargo-wagon"],
+      base_cargo_wagon,
       {
         name = "bob-cargo-wagon-3",
         minable = { result = "bob-cargo-wagon-3" },
@@ -223,7 +231,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     }),
 
     util.merge({
-      data.raw["cargo-wagon"]["cargo-wagon"],
+      base_cargo_wagon,
       {
         name = "bob-armoured-cargo-wagon",
         minable = { result = "bob-armoured-cargo-wagon" },
@@ -236,10 +244,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         air_resistance = 0.005,
         resistances = rolling_stock_armor_resistances(),
         color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },
+        next_upgrade = "bob-armoured-cargo-wagon-2",
       },
     }),
     util.merge({
-      data.raw["cargo-wagon"]["cargo-wagon"],
+      base_cargo_wagon,
       {
         name = "bob-armoured-cargo-wagon-2",
         minable = { result = "bob-armoured-cargo-wagon-2" },
@@ -255,15 +264,18 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
     }),
   })
+  base_cargo_wagon.next_upgrade = "bob-cargo-wagon-2"
 
-  data.raw["fluid-wagon"]["fluid-wagon"].resistances = rolling_stock_resistances()
+  local base_fluid_wagon = data.raw["fluid-wagon"]["fluid-wagon"]
+  base_fluid_wagon.resistances = rolling_stock_resistances()
 
   local fluidwagonbase = settings.startup["bobmods-logistics-fluidwagonbase"].value * 1000
-  data.raw["fluid-wagon"]["fluid-wagon"].capacity = fluidwagonbase
+  base_fluid_wagon.capacity = fluidwagonbase
+  base_fluid_wagon.fast_replaceable_group = "fluid-wagon"
 
   data:extend({
     util.merge({
-      data.raw["fluid-wagon"]["fluid-wagon"],
+      base_fluid_wagon,
       {
         name = "bob-fluid-wagon-2",
         minable = { result = "bob-fluid-wagon-2" },
@@ -276,10 +288,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         air_resistance = 0.0075, --0.01
         resistances = rolling_stock_resistances(),
         color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },
+        next_upgrade = "bob-fluid-wagon-3",
       },
     }),
     util.merge({
-      data.raw["fluid-wagon"]["fluid-wagon"],
+      base_fluid_wagon,
       {
         name = "bob-fluid-wagon-3",
         minable = { result = "bob-fluid-wagon-3" },
@@ -296,7 +309,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
     }),
 
     util.merge({
-      data.raw["fluid-wagon"]["fluid-wagon"],
+      base_fluid_wagon,
       {
         name = "bob-armoured-fluid-wagon",
         minable = { result = "bob-armoured-fluid-wagon" },
@@ -309,10 +322,11 @@ if settings.startup["bobmods-logistics-trains"].value == true then
         air_resistance = 0.01,
         resistances = rolling_stock_armor_resistances(),
         color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },
+        next_upgrade = "bob-armoured-fluid-wagon-2",
       },
     }),
     util.merge({
-      data.raw["fluid-wagon"]["fluid-wagon"],
+      base_fluid_wagon,
       {
         name = "bob-armoured-fluid-wagon-2",
         minable = { result = "bob-armoured-fluid-wagon-2" },
@@ -328,6 +342,7 @@ if settings.startup["bobmods-logistics-trains"].value == true then
       },
     }),
   })
+  base_fluid_wagon.next_upgrade = "bob-fluid-wagon-2"
 
   if feature_flags["quality"] then
     for _, wagon in pairs({

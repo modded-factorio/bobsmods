@@ -31,7 +31,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     ingredients = {
       { type = "item", name = "bob-plutonium-239", amount = 40, ignored_by_stats = 40 },
       { type = "item", name = "uranium-238", amount = 5, ignored_by_stats = 2 },
@@ -62,7 +62,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     ingredients = {
       { type = "item", name = "bob-thorium-ore", amount = 10 },
     },
@@ -117,7 +117,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     ingredients = {
       { type = "item", name = "bob-depleted-thorium-fuel-cell", amount = 10 },
     },
@@ -180,7 +180,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     ingredients = {
       { type = "item", name = "uranium-235", amount = 5, ignored_by_stats = 3 },
       { type = "item", name = "uranium-238", amount = 15, ignored_by_stats = 10 },
@@ -204,7 +204,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-deuterium-fuel-cell",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -217,7 +217,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-deuterium-fuel-cell-2",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -237,7 +237,7 @@ data:extend({
     energy_required = 120,
     enabled = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     ingredients = {
       { type = "item", name = "bob-depleted-deuterium-fuel-cell", amount = 10 },
     },
@@ -249,7 +249,7 @@ data:extend({
         ignored_by_productivity = 10,
         ignored_by_stats = 10,
       },
-      { type = "item", name = "lithium-plate", amount = 1, probability = 0.1 },
+      { type = "item", name = "lithium-plate", amount = 1, independent_probability = 0.1 },
       { type = "item", name = "bob-fusion-catalyst", amount = 1 },
     },
     crafting_machine_tint = {

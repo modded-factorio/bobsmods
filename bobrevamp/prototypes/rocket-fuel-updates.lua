@@ -10,7 +10,7 @@ if data.raw.fluid["ammonia"] and data.raw.fluid["bob-hydrazine"] and data.raw.fl
   }
   data.raw.recipe["rocket-fuel"].allow_productivity = false
 
-  data.raw.recipe["rocket-fuel"].category = "chemistry"
+  bobmods.lib.recipe.set_category("rocket-fuel", "chemistry")
   data.raw.recipe["rocket-fuel"].crafting_machine_tint = {
     primary = { r = 0.7, g = 0.7, b = 0.3, a = 0.000 },
     secondary = { r = 0.5, g = 0.5, b = 1.0, a = 0.000 },

@@ -6,7 +6,7 @@ data:extend({
     icon_size = 64,
     subgroup = "fluid-recipes",
     order = "a[oil-processing]-c[bob-oil-processing]",
-    category = "oil-processing",
+    categories = { "oil-processing" },
     enabled = false,
     energy_required = 5,
     ingredients = {

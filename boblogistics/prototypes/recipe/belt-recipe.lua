@@ -264,16 +264,12 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   end
 
   if mods["space-age"] then
-    data.raw.recipe["bob-basic-transport-belt"].category = "pressing"
-    data.raw.recipe["bob-basic-underground-belt"].category = "pressing"
-    data.raw.recipe["bob-basic-splitter"].category = "pressing"
-    data.raw.recipe["express-transport-belt"].category = "pressing"
-    data.raw.recipe["express-underground-belt"].category = "pressing"
-    data.raw.recipe["express-splitter"].category = "pressing"
-  else
-    data.raw.recipe["express-transport-belt"].category = "crafting"
-    data.raw.recipe["express-underground-belt"].category = "crafting"
-    data.raw.recipe["express-splitter"].category = "crafting"
+    bobmods.lib.recipe.add_category("bob-basic-transport-belt", "metallurgy")
+    bobmods.lib.recipe.add_category("bob-basic-underground-belt", "metallurgy")
+    bobmods.lib.recipe.add_category("bob-basic-splitter", "metallurgy")
+    bobmods.lib.recipe.add_category("express-transport-belt", "metallurgy")
+    bobmods.lib.recipe.add_category("express-underground-belt", "metallurgy")
+    bobmods.lib.recipe.add_category("express-splitter", "metallurgy")
   end
 else
   data:extend({
@@ -346,10 +342,10 @@ else
 end
 
 if mods["space-age"] then
-  data.raw.recipe["turbo-transport-belt"].category = "pressing"
-  data.raw.recipe["turbo-underground-belt"].category = "pressing"
-  data.raw.recipe["turbo-splitter"].category = "pressing"
-  data.raw.recipe["bob-ultimate-transport-belt"].category = "pressing"
-  data.raw.recipe["bob-ultimate-underground-belt"].category = "pressing"
-  data.raw.recipe["bob-ultimate-splitter"].category = "pressing"
+  bobmods.lib.recipe.add_category("turbo-transport-belt", "metallurgy")
+  bobmods.lib.recipe.add_category("turbo-underground-belt", "metallurgy")
+  bobmods.lib.recipe.add_category("turbo-splitter", "metallurgy")
+  bobmods.lib.recipe.add_category("bob-ultimate-transport-belt", "metallurgy")
+  bobmods.lib.recipe.add_category("bob-ultimate-underground-belt", "metallurgy")
+  bobmods.lib.recipe.add_category("bob-ultimate-splitter", "metallurgy")
 end

@@ -36,9 +36,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         subgroup = "fluid",
         order = "a[fluid]-a[brine]",
         default_temperature = 15,
-        max_temperature = 100,
-        gas_temperature = 100,
-        heat_capacity = "0.2kJ",
         base_color = { r = 0.5, g = 0.5, b = 0.8 },
         flow_color = { r = 1.0, g = 1.0, b = 1.0 },
       },
@@ -60,9 +57,6 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         subgroup = "fluid",
         order = "a[fluid]-a[brine]",
         default_temperature = 15,
-        max_temperature = 100,
-        gas_temperature = 100,
-        heat_capacity = "0.2kJ",
         base_color = { r = 0.5, g = 0.5, b = 0.8 },
         flow_color = { r = 1.0, g = 1.0, b = 1.0 },
       },
@@ -99,7 +93,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         name = "bob-brine",
         subgroup = "fluid-recipes",
         order = "f[brine]",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 0.5,
         enabled = false,
         ingredients = {
@@ -121,7 +115,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         name = "bob-ammoniated-brine",
         subgroup = "fluid-recipes",
         order = "f[ammoniated-brine]",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 1,
         enabled = false,
         ingredients = {
@@ -145,7 +139,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 32,
         subgroup = "bob-resource-chemical",
         order = "f[sodium-bicarbonate]",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 1,
         enabled = false,
         ingredients = {
@@ -170,7 +164,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 32,
         subgroup = "bob-resource-chemical",
         order = "f[sodium-carbonate]",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 1,
         enabled = false,
         ingredients = {
@@ -195,9 +189,10 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 64,
         subgroup = "bob-resource-chemical",
         order = "f[ammonium-chloride-reprocessing]",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 2,
         enabled = false,
+        auto_recycle = false,
         ingredients = {
           { type = "item", name = "bob-ammonium-chloride", amount = 2 },
           { type = "item", name = "bob-limestone", amount = 1 },
@@ -221,7 +216,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 64,
         subgroup = "bob-fluid-electrolysis",
         order = "b[fluid-chemistry]-b[brine-electrolysis]",
-        category = "bob-electrolysis",
+        categories = { "bob-electrolysis" },
         enabled = false,
         energy_required = 1.5,
         ingredients = {
@@ -244,7 +239,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
         icon_size = 32,
         subgroup = "bob-resource-chemical",
         order = "f[sodium-carbonate]",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 5,
         enabled = false,
         ingredients = {
@@ -308,7 +303,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
       icon_size = 32,
       subgroup = "bob-resource-chemical",
       order = "f[sodium-cobaltate]",
-      category = "chemistry",
+      categories = { "chemistry" },
       energy_required = 12,
       enabled = false,
       ingredients = {
@@ -329,7 +324,7 @@ if bobmods.plates and settings.startup["bobmods-revamp-rtg"].value == true then
     {
       type = "recipe",
       name = "bob-rtg",
-      category = "advanced-crafting",
+      categories = { "advanced-crafting" },
       energy_required = 20,
       enabled = false,
       ingredients = {

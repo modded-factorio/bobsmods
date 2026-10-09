@@ -1,54 +1,56 @@
 if settings.startup["bobmods-power-fluidgenerator"].value == true then
   function bobmods.power.fluid_generator_structure()
     return {
-      layers = {
-        { --bodge layer
-          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan-spin.png",
-          priority = "extra-high",
-          width = 1,
-          height = 1,
-          frame_count = 120,
-        },
-        {
-          filename = "__bobpower__/graphics/fluid-generator/fluid-generator.png",
-          priority = "extra-high",
-          width = 264,
-          height = 284,
-          frame_count = 1,
-          repeat_count = 120,
-          shift = util.by_pixel(0, 5.25),
-          scale = 0.5,
-        },
-        {
-          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan.png",
-          priority = "extra-high",
-          width = 78,
-          height = 70,
-          frame_count = 1,
-          repeat_count = 120,
-          shift = util.by_pixel(1, -13.5),
-          scale = 0.5,
-        },
-        {
-          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan-spin.png",
-          priority = "extra-high",
-          width = 60,
-          height = 46,
-          frame_count = 8,
-          repeat_count = 15,
-          shift = util.by_pixel(0, -26),
-          scale = 0.5,
-        },
-        {
-          filename = "__bobpower__/graphics/fluid-generator/fluid-generator-shadow.png",
-          priority = "extra-high",
-          width = 311,
-          height = 194,
-          frame_count = 1,
-          repeat_count = 120,
-          draw_as_shadow = true,
-          shift = util.by_pixel(20, 0),
-          scale = 0.5,
+      animation = {
+        layers = {
+          { --bodge layer
+            filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan-spin.png",
+            priority = "extra-high",
+            width = 1,
+            height = 1,
+            frame_count = 120,
+          },
+          {
+            filename = "__bobpower__/graphics/fluid-generator/fluid-generator.png",
+            priority = "extra-high",
+            width = 264,
+            height = 284,
+            frame_count = 1,
+            repeat_count = 120,
+            shift = util.by_pixel(0, 5.25),
+            scale = 0.5,
+          },
+          {
+            filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan.png",
+            priority = "extra-high",
+            width = 78,
+            height = 70,
+            frame_count = 1,
+            repeat_count = 120,
+            shift = util.by_pixel(1, -13.5),
+            scale = 0.5,
+          },
+          {
+            filename = "__bobpower__/graphics/fluid-generator/fluid-generator-fan-spin.png",
+            priority = "extra-high",
+            width = 60,
+            height = 46,
+            frame_count = 8,
+            repeat_count = 15,
+            shift = util.by_pixel(0, -26),
+            scale = 0.5,
+          },
+          {
+            filename = "__bobpower__/graphics/fluid-generator/fluid-generator-shadow.png",
+            priority = "extra-high",
+            width = 311,
+            height = 194,
+            frame_count = 1,
+            repeat_count = 120,
+            draw_as_shadow = true,
+            shift = util.by_pixel(20, 0),
+            scale = 0.5,
+          },
         },
       },
     }
@@ -100,8 +102,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         usage_priority = "secondary-output",
         emissions_per_minute = { pollution = 20 },
       },
-      horizontal_animation = bobmods.power.fluid_generator_structure(),
-      vertical_animation = bobmods.power.fluid_generator_structure(),
+      pictures = {
+        north = bobmods.power.fluid_generator_structure(),
+        east = bobmods.power.fluid_generator_structure(),
+        south = bobmods.power.fluid_generator_structure(),
+        west = bobmods.power.fluid_generator_structure(),
+      },
       smoke = {
         {
           name = "smoke",
@@ -177,8 +183,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         usage_priority = "secondary-output",
         emissions_per_minute = { pollution = 15 },
       },
-      horizontal_animation = bobmods.power.fluid_generator_structure(),
-      vertical_animation = bobmods.power.fluid_generator_structure(),
+      pictures = {
+        north = bobmods.power.fluid_generator_structure(),
+        east = bobmods.power.fluid_generator_structure(),
+        south = bobmods.power.fluid_generator_structure(),
+        west = bobmods.power.fluid_generator_structure(),
+      },
       smoke = {
         {
           name = "smoke",
@@ -253,8 +263,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
         usage_priority = "secondary-output",
         emissions_per_minute = { pollution = 10 },
       },
-      horizontal_animation = bobmods.power.fluid_generator_structure(),
-      vertical_animation = bobmods.power.fluid_generator_structure(),
+      pictures = {
+        north = bobmods.power.fluid_generator_structure(),
+        east = bobmods.power.fluid_generator_structure(),
+        south = bobmods.power.fluid_generator_structure(),
+        west = bobmods.power.fluid_generator_structure(),
+      },
       smoke = {
         {
           name = "smoke",
@@ -336,8 +350,12 @@ if settings.startup["bobmods-power-fluidgenerator"].value == true then
           usage_priority = "secondary-output",
           emissions_per_minute = { pollution = 1 },
         },
-        horizontal_animation = bobmods.power.fluid_generator_structure(),
-        vertical_animation = bobmods.power.fluid_generator_structure(),
+        pictures = {
+          north = bobmods.power.fluid_generator_structure(),
+          east = bobmods.power.fluid_generator_structure(),
+          south = bobmods.power.fluid_generator_structure(),
+          west = bobmods.power.fluid_generator_structure(),
+        },
         smoke = {
           {
             name = "light-smoke",

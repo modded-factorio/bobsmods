@@ -76,7 +76,7 @@ if settings.startup["bobmods-plates-cheapersteel"].value == true then
     {
       type = "recipe",
       name = "steel-plate",
-      category = "bob-chemical-furnace",
+      categories = { "bob-chemical-furnace" },
       enabled = false,
       energy_required = 3.2,
       ingredients = {
@@ -93,7 +93,7 @@ else
     {
       type = "recipe",
       name = "steel-plate",
-      category = "bob-chemical-furnace",
+      categories = { "bob-chemical-furnace" },
       enabled = false,
       energy_required = 16,
       ingredients = {
@@ -116,7 +116,7 @@ if settings.startup["bobmods-plates-batteryupdate"].value == true then
   bobmods.lib.recipe.add_ingredient("battery", { type = "item", name = "steel-plate", amount = 1 })
 end
 
-data.raw.recipe["steel-plate"].category = "bob-chemical-furnace"
+bobmods.lib.recipe.set_category("steel-plate", "bob-chemical-furnace")
 bobmods.lib.tech.add_prerequisite("steel-processing", "bob-electrolysis-1")
 bobmods.lib.tech.add_prerequisite("steel-processing", "bob-chemical-processing-1")
 
@@ -168,11 +168,11 @@ bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", {
 })
 bobmods.lib.recipe.add_result(
   "nuclear-fuel-reprocessing",
-  { type = "item", name = "uranium-235", amount = 1, probability = 0.2 }
+  { type = "item", name = "uranium-235", amount = 1, shared_probability = { min = 0, max = 0.2 } }
 )
 bobmods.lib.recipe.add_result(
   "nuclear-fuel-reprocessing",
-  { type = "item", name = "bob-plutonium-239", amount = 1, probability = 0.8 }
+  { type = "item", name = "bob-plutonium-239", amount = 1, shared_probability = { min = 0.2, max = 1 } }
 )
 bobmods.lib.recipe.add_result("nuclear-fuel-reprocessing", { type = "item", name = "bob-fusion-catalyst", amount = 1 })
 
@@ -193,8 +193,8 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
   data.raw.reactor["bob-nuclear-reactor-2"].default_fuel_glow_color = { r = 1.0, g = 1.0, b = 0.0 }
   data.raw.reactor["bob-nuclear-reactor-2"].icon = "__bobplates__/graphics/icons/nuclear/thorium-reactor.png"
 
-  data.raw.item["bob-thorium-fuel-cell"].fuel_category = "bob-thorium"
-  data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_category = "bob-thorium"
+  data.raw.item["bob-thorium-fuel-cell"].fuel_categories = { "bob-thorium" }
+  data.raw.item["bob-thorium-plutonium-fuel-cell"].fuel_categories = { "bob-thorium" }
 
   data.raw.item["bob-nuclear-reactor-2"].localised_name = { "entity-name.bob-thorium-reactor" }
   data.raw.item["bob-nuclear-reactor-2"].icon = "__bobplates__/graphics/icons/nuclear/thorium-reactor.png"
@@ -210,8 +210,8 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
   data.raw.reactor["bob-nuclear-reactor-3"].localised_description =
     { "", { "entity-description.bob-deuterium-reactor" }, { "entity-description.bob-reactor-max-temperature", "1500" } }
 
-  data.raw.item["bob-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
-  data.raw.item["bob-deuterium-fuel-cell-2"].fuel_category = "bob-deuterium"
+  data.raw.item["bob-deuterium-fuel-cell"].fuel_categories = { "bob-deuterium" }
+  data.raw.item["bob-deuterium-fuel-cell-2"].fuel_categories = { "bob-deuterium" }
 
   data.raw.item["bob-nuclear-reactor-3"].localised_name = { "entity-name.bob-deuterium-reactor" }
 
@@ -236,7 +236,7 @@ if mods["bobpower"] and settings.startup["bobmods-power-nuclear"].value then
       "__bobplates__/graphics/icons/technology/deuterium-nuclear-power.png"
   end
 
-  if mods["quality"] then
+  if mods["recycler"] then
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-2", true)
     bobmods.lib.recipe.update_recycling_recipe_single("bob-nuclear-reactor-3", true)
   end
@@ -254,6 +254,16 @@ data.raw["item-subgroup"]["barrel"].group = "fluids"
 
 if data.raw["item-subgroup"]["bob-alien-artifact"] then
   data.raw["item-subgroup"]["bob-alien-artifact"].group = "bob-resource-products"
+end
+
+for i, recipe in pairs(data.raw.recipe) do
+  if string.sub(recipe.name, -7) == "-barrel" then
+    bobmods.lib.recipe.set_category(recipe.name, "barrelling")
+    if bobmods.lib.tech.has_recipe_unlock("fluid-handling", recipe.name) then
+      bobmods.lib.tech.remove_recipe_unlock("fluid-handling", recipe.name)
+      bobmods.lib.tech.add_recipe_unlock("bob-fluid-barrel-processing", recipe.name)
+    end
+  end
 end
 
 bobmods.lib.create_gas_bottle(data.raw.fluid["bob-hydrogen"])
@@ -277,16 +287,6 @@ bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-explosive"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-poison"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-alien-fire"])
 bobmods.lib.create_fluid_canister(data.raw.fluid["bob-tungstic-acid"])
-
-for i, recipe in pairs(data.raw.recipe) do
-  if string.sub(recipe.name, -7) == "-barrel" and recipe.category == "crafting-with-fluid" then
-    data.raw.recipe[recipe.name].category = "barrelling"
-    if bobmods.lib.tech.has_recipe_unlock("fluid-handling", recipe.name) then
-      bobmods.lib.tech.remove_recipe_unlock("fluid-handling", recipe.name)
-      bobmods.lib.tech.add_recipe_unlock("bob-fluid-barrel-processing", recipe.name)
-    end
-  end
-end
 
 if settings.startup["bobmods-plates-vanillabarrelling"].value == true then
   bobmods.lib.machine.type_if_add_category("assembling-machine", "crafting-with-fluid", "barrelling") -- Adds barrelling to assembling machines
@@ -431,7 +431,9 @@ bobmods.lib.tech.add_prerequisite("productivity-module-3", "bob-advanced-process
 if mods["quality"] then
   bobmods.lib.recipe.replace_ingredient("quality-module-3", "advanced-circuit", "bob-advanced-processing-unit")
   bobmods.lib.tech.add_prerequisite("quality-module-3", "bob-advanced-processing-unit")
+end
 
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-air-pump",
     "bob-air-pump-2",
@@ -462,8 +464,12 @@ if mods["quality"] then
     "speed-module-3",
     "efficiency-module-3",
     "productivity-module-3",
-    "quality-module-3",
   })
+  if mods["quality"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "quality-module-3",
+    })
+  end
   if not mods["space-age"] then
     bobmods.lib.recipe.update_recycling_recipe({
       "satellite",

@@ -141,9 +141,9 @@ function bobmods.lib.error.result(result, name)
       log(name .. ".amount_max variable not a number.")
     end
   end
-  if result.probability then
-    if not (type(result.probability) == "number") then
-      log(name .. ".probability not a number")
+  if result.independent_probability then
+    if not (type(result.independent_probability) == "number") then
+      log(name .. ".independent_probability not a number")
     end
   end
   if not (result.type == "item" or result.type == "fluid") then

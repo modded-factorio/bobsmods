@@ -102,7 +102,7 @@ function bobmods.lib.item.ingredient(inputs) --returns a valid ingredient only i
   end
 end
 
---Same as ingredient, but has support for amount_min, amount_max and probability
+--Same as ingredient, but has support for amount_min, amount_max, independent_probability, and shared_probability
 function bobmods.lib.item.result_simple(inputs)
   local item = {}
 
@@ -126,8 +126,12 @@ function bobmods.lib.item.result_simple(inputs)
       return nil
     end
 
-    if inputs.probability then
-      item.probability = inputs.probability
+    if inputs.independent_probability then
+      item.independent_probability = inputs.independent_probability
+    end
+
+    if inputs.shared_probability then
+      item.shared_probability = inputs.shared_probability
     end
 
     if inputs.type then
@@ -175,7 +179,8 @@ function bobmods.lib.item.result_simple(inputs)
   if
     type(item.name) == "string"
     and (type(item.amount) == "number" or (type(item.amount_min) == "number" and type(item.amount_max) == "number"))
-    and (item.probability == nil or type(item.probability) == "number")
+    and (item.independent_probability == nil or type(item.independent_probability) == "number")
+    and (item.shared_probability == nil or type(item.shared_probability) == "table")
     and (item.type == "item" or item.type == "fluid")
   then
     return item
@@ -222,12 +227,12 @@ function bobmods.lib.item.combine(item1_in, item2_in)
       item.amount_max = item1.amount + item2.amount_max
     end
 
-    if item1.probability and item2.probability then
-      item.probability = (item1.probability + item2.probability) / 2
-    elseif item1.probability then
-      item.probability = (item1.probability + 1) / 2
-    elseif item2.probability then
-      item.probability = (item2.probability + 1) / 2
+    if item1.independent_probability and item2.independent_probability then
+      item.independent_probability = (item1.independent_probability + item2.independent_probability) / 2
+    elseif item1.independent_probability then
+      item.independent_probability = (item1.independent_probability + 1) / 2
+    elseif item2.independent_probability then
+      item.independent_probability = (item2.independent_probability + 1) / 2
     end
 
     if item1.ignored_by_productivity and item2.ignored_by_productivity then

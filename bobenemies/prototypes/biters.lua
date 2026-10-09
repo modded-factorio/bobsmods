@@ -397,6 +397,7 @@ bobmods.enemies.new_biter({
   fire_resist = "high",
   poison_resist = "low",
   electric_resist = "low",
+  acid_resist = "low",
   tint = bobmods.enemies.piercing_tint,
   tint2 = bobmods.enemies.medium_tint,
   damaged_trigger_effect = piercing_reaction,
@@ -2564,7 +2565,7 @@ local poison_reaction = function(sticker_name, smoke_name, damage, healing, scal
       {
         type = "area",
         radius = scale,
-        force = "enemy",
+        force = "not-friend",
         trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
         ignore_collision_condition = true,
         action_delivery = {

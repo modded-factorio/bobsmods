@@ -6,10 +6,8 @@ data:extend({
     icon_size = 32,
     subgroup = "fluid",
     default_temperature = 25,
-    heat_capacity = "1kJ",
     base_color = { r = 0.7, g = 0.6, b = 0.2 },
     flow_color = { r = 0.5, g = 0.5, b = 0.5 },
-    max_temperature = 100,
     order = "a[fluid]-g[bob-ferric-chloride-solution]",
   },
 
@@ -20,7 +18,7 @@ data:extend({
     icon_size = 32,
     subgroup = "fluid-recipes",
     order = "b[fluid-chemistry]-a[bob-ferric-chloride-solution]",
-    category = "chemistry",
+    categories = { "chemistry" },
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -47,7 +45,7 @@ data:extend({
     icon_size = 32,
     subgroup = "fluid-recipes",
     order = "a[oil-processing]-c[coal-cracking]",
-    category = "chemistry",
+    categories = { "chemistry" },
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -75,7 +73,7 @@ data:extend({
     icon_size = 64,
     subgroup = "fluid-recipes",
     order = "a[oil-processing]-c[bob-oil-processing]",
-    category = "oil-processing",
+    categories = { "oil-processing" },
     enabled = false,
     energy_required = 5,
     ingredients = {

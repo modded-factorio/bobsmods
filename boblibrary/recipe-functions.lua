@@ -325,11 +325,28 @@ function bobmods.lib.recipe.set_subgroup(recipe_name, subgroup)
   end
 end
 
+function bobmods.lib.recipe.has_category(recipe_name, category)
+  if type(recipe_name) == "string" and type(category) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      for _, category_name in pairs(recipe.categories or {}) do
+        if category_name == category then
+          return true
+        end
+      end
+    end
+  else
+    log(debug.traceback())
+    bobmods.lib.error.recipe(recipe_name)
+  end
+  return false
+end
+
 function bobmods.lib.recipe.set_category(recipe_name, category)
   if type(recipe_name) == "string" and type(category) == "string" then
     local recipe = data.raw.recipe[recipe_name]
     if recipe then
-      recipe.category = category
+      recipe.categories = { category }
     end
   else
     log(debug.traceback())
@@ -361,16 +378,16 @@ function bobmods.lib.recipe.disallow_productivity(recipe_name)
   end
 end
 
-function bobmods.lib.recipe.add_additional_category(recipe_name, category_name)
+function bobmods.lib.recipe.add_category(recipe_name, category_name)
   local recipe = data.raw.recipe[recipe_name]
   local category = data.raw["recipe-category"][category_name]
   if recipe and category then
-    recipe.additional_categories = recipe.additional_categories or {}
-    bobmods.lib.safe_insert(recipe.additional_categories, category_name)
+    recipe.categories = recipe.categories or { "crafting" }
+    bobmods.lib.safe_insert(recipe.categories, category_name)
   end
 end
 
-if mods["quality"] then
+if mods["recycler"] then
   function bobmods.lib.recipe.update_recycling_recipe_icon(recipe_name, icon_name, size)
     --Does not handle multiple icons
     local target_recipe = data.raw.recipe[recipe_name]
@@ -397,16 +414,34 @@ if mods["quality"] then
       local source_recipe = data.raw.recipe[recipe_name]
       local target_recipe = data.raw.recipe[target_recipe_name]
       if source_recipe then
+        --Calculate the number of items produced by the relevant recipe
+        local source_output_amount = 1
+        local source_output_index = 1
+        for i, source_results in pairs(source_recipe.results) do
+          if source_results.name == recipe_name then
+            source_output_index = i
+          end
+        end
+
+        if source_recipe.results and source_recipe.results[1] then
+          if source_recipe.results[source_output_index].amount then
+            source_output_amount = source_recipe.results[source_output_index].amount
+          elseif
+            source_recipe.results[source_output_index].amount_min
+            and source_recipe.results[source_output_index].amount_max
+          then
+            source_output_amount = (
+              data.raw.recipe[item_name].results[source_output_index].amount_min
+              + data.raw.recipe[item_name].results[source_output_index].amount_max
+            ) / 2
+          end
+        end
+
         if target_recipe then
           local new_time = source_recipe.energy_required or 0.5
-          target_recipe.energy_required = new_time / 16
+          target_recipe.energy_required = (new_time / source_output_amount) / 16
           target_recipe.results = {}
-          local source_output_amount = 1
-          for i, source_results in pairs(source_recipe.results) do
-            if source_results.name == recipe_name then
-              source_output_amount = source_results.amount
-            end
-          end
+
           for i, outputs in pairs(source_recipe.ingredients) do
             if source_recipe.ingredients[i].type == "item" then
               table.insert(target_recipe.results, {
@@ -429,7 +464,7 @@ if mods["quality"] then
                 recipe_icon_size = data.raw[item_type][recipe_name].icon_size or 64
                 bobmods.lib.recipe.update_recycling_recipe_icon(target_recipe_name, recipe_icon, recipe_icon_size)
               elseif data.raw[item_type][recipe_name].icons then
-                target_recipe.icons = { { icon = "__quality__/graphics/icons/recycling.png" } }
+                target_recipe.icons = { { icon = "__recycler__/graphics/icons/recycling.png" } }
                 for i, icon_replacement in pairs(data.raw[item_type][recipe_name].icons) do
                   local image_size = icon_replacement.icon_size or 64
                   local image_scale = icon_replacement.scale or 1
@@ -441,7 +476,7 @@ if mods["quality"] then
                     tint = icon_replacement.tint,
                   })
                 end
-                table.insert(target_recipe.icons, { icon = "__quality__/graphics/icons/recycling-top.png" })
+                table.insert(target_recipe.icons, { icon = "__recycler__/graphics/icons/recycling-top.png" })
               end
             end
           end
@@ -467,6 +502,69 @@ if mods["quality"] then
       for i, single_recipe in pairs(recipe_name) do
         bobmods.lib.recipe.update_recycling_recipe_single(single_recipe, true)
       end
+    end
+  end
+
+  function bobmods.lib.recipe.update_recycling_recipe_to_self_recipe(item_name, recycle_time)
+    --Use bobmods.lib.recipe.update_recycling_recipe_icon to update icon if necessary
+    --Checks if an item of the given name exists as any valid type
+
+    local item_type = bobmods.lib.item.get_type(item_name)
+    if type(item_name) == "string" and item_type and item_type ~= "fluid" then
+      local target_recipe_name = item_name .. "-recycling"
+      local target_recipe = data.raw.recipe[target_recipe_name]
+      --Calculate recycle time based on a default recipe of the same name as the item if one exists, or override with recycle_time input
+      local source_output_amount = 1
+      local source_output_index = 1
+      local source_recipe = data.raw.recipe[item_name]
+      if source_recipe then
+        for i, source_results in pairs(source_recipe.results) do
+          if source_results.name == item_name then
+            source_output_index = i
+          end
+        end
+        if source_recipe.results and source_recipe.results[1] then
+          if source_recipe.results[source_output_index].amount then
+            source_output_amount = source_recipe.results[source_output_index].amount
+          elseif
+            source_recipe.results[source_output_index].amount_min
+            and source_recipe.results[source_output_index].amount_max
+          then
+            source_output_amount = (
+              source_recipe.results[source_output_index].amount_min
+              + source_recipe.results[source_output_index].amount_max
+            ) / 2
+          end
+        end
+      end
+
+      if target_recipe then
+        local new_time = 0.5 / 16
+        if recycle_time then
+          new_time = recycle_time
+        elseif source_recipe and source_recipe.energy_required then
+          new_time = (source_recipe.energy_required / source_output_amount) / 16
+        end
+
+        target_recipe.results = {
+          {
+            type = "item",
+            name = item_name,
+            amount = 1,
+            ignored_by_stats = 1,
+            independent_probability = 0.25,
+          },
+        }
+      else
+        log(debug.traceback())
+        bobmods.lib.error.recipe(recipe_name)
+      end
+    elseif item_type == "fluid" then
+      log(debug.traceback())
+      log(item_name .. " is a fluid.")
+    else
+      log(debug.traceback())
+      bobmods.lib.error.item(item_name)
     end
   end
 
@@ -510,7 +608,7 @@ if mods["quality"] then
               recipe_icon_size = data.raw[item_type][item_name].icon_size or 64
               bobmods.lib.recipe.update_recycling_recipe_icon(recycling_recipe, recipe_icon, recipe_icon_size)
             elseif data.raw[item_type][item_name].icons then
-              target_recipe.icons = { { icon = "__quality__/graphics/icons/recycling.png" } }
+              target_recipe.icons = { { icon = "__recycler__/graphics/icons/recycling.png" } }
               for i, icon_replacement in pairs(data.raw[item_type][item_name].icons) do
                 local image_size = icon_replacement.icon_size or 64
                 local image_scale = icon_replacement.scale or 1
@@ -522,7 +620,7 @@ if mods["quality"] then
                   tint = icon_replacement.tint,
                 })
               end
-              table.insert(target_recipe.icons, { icon = "__quality__/graphics/icons/recycling-top.png" })
+              table.insert(target_recipe.icons, { icon = "__recycler__/graphics/icons/recycling-top.png" })
             end
           end
         end

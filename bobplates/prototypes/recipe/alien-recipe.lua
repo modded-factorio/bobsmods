@@ -10,7 +10,7 @@ then
     {
       type = "recipe",
       name = "bob-alien-blue-alloy",
-      category = "bob-mixing-furnace",
+      categories = { "bob-mixing-furnace" },
       energy_required = 1,
       enabled = false,
       auto_recycle = false,
@@ -29,7 +29,7 @@ then
     {
       type = "recipe",
       name = "bob-alien-orange-alloy",
-      category = "bob-mixing-furnace",
+      categories = { "bob-mixing-furnace" },
       energy_required = 1,
       enabled = false,
       auto_recycle = false,
@@ -48,7 +48,7 @@ then
     {
       type = "recipe",
       name = "bob-alien-acid",
-      category = "chemistry",
+      categories = { "chemistry" },
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -69,7 +69,7 @@ then
     {
       type = "recipe",
       name = "bob-alien-explosive",
-      category = "chemistry",
+      categories = { "chemistry" },
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -91,7 +91,7 @@ then
     {
       type = "recipe",
       name = "bob-alien-poison",
-      category = "chemistry",
+      categories = { "chemistry" },
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -113,7 +113,7 @@ then
     {
       type = "recipe",
       name = "bob-alien-fire",
-      category = "chemistry",
+      categories = { "chemistry" },
       energy_required = 1,
       enabled = false,
       ingredients = {

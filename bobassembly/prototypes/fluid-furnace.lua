@@ -10,7 +10,12 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           { flow_direction = "input-output", direction = defines.direction.east, position = { 0.5, 0.5 } },
           { flow_direction = "input-output", direction = defines.direction.west, position = { -0.5, 0.5 } },
         },
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = {
+          north = bob_pipe_connector_north(),
+          east = bob_pipe_connector_east_thin(),
+          south = bob_pipe_connector_south_thin(),
+          west = bob_pipe_connector_west_thin(),
+        },
         pipe_covers = pipecoverspictures(),
         production_type = "input-output",
         secondary_draw_orders = {
@@ -42,7 +47,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
       icon = "__base__/graphics/icons/steel-furnace.png",
       icon_size = 64,
       subgroup = "smelting-machine",
-      order = "b[steela-furnace]",
+      order = "b[fluid-furnace]",
       place_result = "bob-fluid-furnace",
       stack_size = 50,
       drop_sound = {
@@ -302,7 +307,7 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
         icon = "__base__/graphics/icons/steel-furnace.png",
         icon_size = 64,
         subgroup = "bob-smelting-machine",
-        order = "b[chemical-boiler-3]",
+        order = "b[chemical-furnace-3]",
         place_result = "bob-fluid-chemical-furnace",
         stack_size = 50,
         drop_sound = {

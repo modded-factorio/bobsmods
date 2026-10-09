@@ -394,7 +394,7 @@ if data.raw.item["bob-alien-artifact"] then
       {
         type = "recipe",
         name = "bob-vehicle-solar-panel-equipment-5",
-        category = "crafting-with-fluid",
+        categories = { "crafting-with-fluid" },
         enabled = false,
         energy_required = 20,
         ingredients = {

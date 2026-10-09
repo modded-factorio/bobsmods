@@ -154,6 +154,22 @@ then
           separation_multiplier = 1 / 1.1,
         },
       },
+      water_reflection = {
+        pictures = {
+          filename = "__base__/graphics/entity/lab/lab-reflection.png",
+          priority = "extra-high",
+          width = 24,
+          height = 24,
+          shift = util.by_pixel(5, 40),
+          variation_count = 1,
+          scale = 5,
+        },
+        rotate = false,
+        orientation_to_variation = false,
+      },
+      circuit_wire_max_distance = lab_circuit_wire_max_distance,
+      circuit_connector = circuit_connector_definitions["lab"],
+      default_technology_level_signal = { type = "virtual", name = "signal-L" },
       fast_replaceable_group = "lab",
     },
   })

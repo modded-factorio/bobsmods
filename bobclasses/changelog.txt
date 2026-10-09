@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.2
+Date: 27.09.2027
+  Bugfixes:
+    - Fixed character name disappearing (with Jetpack mod) #619
+  Changes:
+    - Added insructions on how to get unstuck on a space platform #609
+    - Increased max height of Avatar Switcher #620
+---------------------------------------------------------------------------------------------------
+Version: 3.0.1
+Date: 26. 07. 2026
+  Bugfixes:
+    - Fixed recipes not being available in Electromagnetic plant #615
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 29. 06. 2026
+  Changes:
+    - Update for Factorio 2.1 #603
+---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 01. 06. 2026
   Changes:

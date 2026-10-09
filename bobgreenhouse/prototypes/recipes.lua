@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-fertiliser",
-    category = "chemistry",
+    categories = { "chemistry" },
     energy_required = 3,
     enabled = false,
     ingredients = {
@@ -19,7 +19,6 @@ data:extend({
     name = "bob-seedling",
     main_product = "bob-seedling",
     enabled = false,
-    always_show_products = true,
     ingredients = {
       { type = "item", name = "wood", amount = 1 },
     },
@@ -47,10 +46,9 @@ data:extend({
     name = "bob-basic-greenhouse-cycle",
     subgroup = "bob-greenhouse-items",
     order = "g[greenhouse-cycle-1]",
-    category = "bob-greenhouse",
+    categories = { "bob-greenhouse" },
     energy_required = 60,
     enabled = false,
-    always_show_products = true,
     ingredients = {
       { type = "item", name = "bob-seedling", amount = 10 },
       { type = "fluid", name = "water", amount = 20 },
@@ -66,10 +64,9 @@ data:extend({
     name = "bob-advanced-greenhouse-cycle",
     subgroup = "bob-greenhouse-items",
     order = "g[greenhouse-cycle-2]",
-    category = "bob-greenhouse",
+    categories = { "bob-greenhouse" },
     energy_required = 45,
     enabled = false,
-    always_show_products = true,
     ingredients = {
       { type = "item", name = "bob-seedling", amount = 10 },
       { type = "fluid", name = "water", amount = 20 },

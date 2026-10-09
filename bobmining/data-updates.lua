@@ -9,7 +9,7 @@ if mods["aai-industry"] then
   end
 end
 
-if mods["quality"] then
+if mods["recycler"] then
   if settings.startup["bobmods-mining-areadrills"].value == true then
     bobmods.lib.recipe.update_recycling_recipe({
       "bob-area-mining-drill-1",

@@ -1,8 +1,9 @@
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+
 if settings.startup["bobmods-power-solar"].value == true then
   -- Copied from reskins-library with permission
 
   local solar_panel = data.raw["solar-panel"]["solar-panel"]
-  solar_panel.fast_replaceable_group = "solar-panel"
   solar_panel.next_upgrade = "bob-solar-panel-2"
   solar_panel.picture = {
     layers = {
@@ -69,10 +70,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-small" },
+      fast_replaceable_group = "solar-panel",
       max_health = 100,
       corpse = "medium-remnants",
-      collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -0.85, -0.85 }, { 0.85, 0.85 } },
       selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -132,10 +136,9 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "26.67kW",
-      fast_replaceable_group = "solar-panel",
-      next_upgrade = "bob-solar-panel-small-2",
       impact_category = "glass",
+      production = "26.67kW",
+      next_upgrade = "bob-solar-panel-small-2",
     },
 
     {
@@ -146,10 +149,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-large" },
+      fast_replaceable_group = "solar-panel",
       max_health = 300,
-      corpse = "big-remnants",
-      collision_box = { { -1.9, -1.9 }, { 1.9, 1.9 } },
+      corpse = "solar-panel-remnants",
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -1.85, -1.85 }, { 1.85, 1.85 } },
       selection_box = { { -2.0, -2.0 }, { 2.0, 2.0 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -209,10 +215,9 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "106.67kW",
-      fast_replaceable_group = "solar-panel",
-      next_upgrade = "bob-solar-panel-large-2",
       impact_category = "glass",
+      production = "106.67kW",
+      next_upgrade = "bob-solar-panel-large-2",
     },
 
     {
@@ -223,10 +228,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-small-2" },
+      fast_replaceable_group = "solar-panel",
       max_health = 150,
       corpse = "medium-remnants",
-      collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -0.85, -0.85 }, { 0.85, 0.85 } },
       selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -286,10 +294,9 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "40kW",
-      fast_replaceable_group = "solar-panel",
-      next_upgrade = "bob-solar-panel-small-3",
       impact_category = "glass",
+      production = "40kW",
+      next_upgrade = "bob-solar-panel-small-3",
     },
 
     {
@@ -300,10 +307,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-2" },
+      fast_replaceable_group = "solar-panel",
       max_health = 300,
-      corpse = "big-remnants",
-      collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+      corpse = "solar-panel-remnants",
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -363,10 +373,22 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "90kW",
-      fast_replaceable_group = "solar-panel",
-      next_upgrade = "bob-solar-panel-3",
       impact_category = "glass",
+      production = "90kW",
+      water_reflection = {
+        pictures = {
+          filename = "__base__/graphics/entity/solar-panel/solar-panel-reflection.png",
+          priority = "extra-high",
+          width = 24,
+          height = 24,
+          shift = util.by_pixel(5, 40),
+          variation_count = 1,
+          scale = 5,
+        },
+        rotate = false,
+        orientation_to_variation = false,
+      },
+      next_upgrade = "bob-solar-panel-3",
     },
 
     {
@@ -377,10 +399,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-large-2" },
+      fast_replaceable_group = "solar-panel",
       max_health = 450,
-      corpse = "big-remnants",
-      collision_box = { { -1.9, -1.9 }, { 1.9, 1.9 } },
+      corpse = "solar-panel-remnants",
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -1.85, -1.85 }, { 1.85, 1.85 } },
       selection_box = { { -2.0, -2.0 }, { 2.0, 2.0 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -440,10 +465,9 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "160kW",
-      fast_replaceable_group = "solar-panel",
-      next_upgrade = "bob-solar-panel-large-3",
       impact_category = "glass",
+      production = "160kW",
+      next_upgrade = "bob-solar-panel-large-3",
     },
 
     {
@@ -454,10 +478,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-small-3" },
+      fast_replaceable_group = "solar-panel",
       max_health = 200,
       corpse = "medium-remnants",
-      collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -0.85, -0.85 }, { 0.85, 0.85 } },
       selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -517,8 +544,8 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
+      impact_category = "glass",
       production = "60kW",
-      fast_replaceable_group = "solar-panel",
     },
 
     {
@@ -529,10 +556,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-3" },
+      fast_replaceable_group = "solar-panel",
       max_health = 400,
-      corpse = "big-remnants",
-      collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+      corpse = "solar-panel-remnants",
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -592,9 +622,21 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "135kW",
-      fast_replaceable_group = "solar-panel",
       impact_category = "glass",
+      production = "135kW",
+      water_reflection = {
+        pictures = {
+          filename = "__base__/graphics/entity/solar-panel/solar-panel-reflection.png",
+          priority = "extra-high",
+          width = 24,
+          height = 24,
+          shift = util.by_pixel(5, 40),
+          variation_count = 1,
+          scale = 5,
+        },
+        rotate = false,
+        orientation_to_variation = false,
+      },
     },
 
     {
@@ -605,10 +647,13 @@ if settings.startup["bobmods-power-solar"].value == true then
       icon_size = 64,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "bob-solar-panel-large-3" },
+      fast_replaceable_group = "solar-panel",
       max_health = 600,
-      corpse = "big-remnants",
-      collision_box = { { -1.9, -1.9 }, { 1.9, 1.9 } },
+      corpse = "solar-panel-remnants",
+      dying_explosion = "solar-panel-explosion",
+      collision_box = { { -1.85, -1.85 }, { 1.85, 1.85 } },
       selection_box = { { -2.0, -2.0 }, { 2.0, 2.0 } },
+      damaged_trigger_effect = hit_effects.entity(),
       energy_source = {
         type = "electric",
         usage_priority = "solar",
@@ -668,9 +713,8 @@ if settings.startup["bobmods-power-solar"].value == true then
           },
         },
       },
-      production = "240kW",
-      fast_replaceable_group = "solar-panel",
       impact_category = "glass",
+      production = "240kW",
     },
   })
 end

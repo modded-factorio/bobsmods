@@ -31,7 +31,6 @@ data:extend({
     width = 64,
     height = 64,
     scale = 0.5,
-    mipmap_count = 3,
   },
   {
     type = "sprite",
@@ -41,7 +40,6 @@ data:extend({
     width = 64,
     height = 64,
     scale = 0.5,
-    mipmap_count = 3,
   },
 })
 

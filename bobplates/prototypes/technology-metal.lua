@@ -334,7 +334,7 @@ if not data.raw.technology["bob-lithium-processing"] then
       prerequisites = {
         "bob-chemical-processing-1",
         "bob-electrolysis-1",
-        "logistic-science-pack",
+        "chemical-science-pack",
       },
       effects = {},
     },
@@ -350,5 +350,6 @@ data.raw.technology["bob-lithium-processing"].unit = {
   ingredients = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack", 1 },
+    { "chemical-science-pack", 1 },
   },
 }

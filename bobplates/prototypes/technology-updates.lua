@@ -40,8 +40,8 @@ bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-resin-oil")
 bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-liquid-fuel")
 bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-enriched-fuel")
 
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-petroleum-gas-cracking")
-bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-petroleum-gas-cracking", "light-oil-cracking")
+bobmods.lib.tech.add_recipe_unlock("advanced-oil-processing", "bob-coal-cracking", "heavy-oil-cracking", true)
 
 bobmods.lib.tech.add_recipe_unlock("plastics", "bob-synthetic-wood")
 
@@ -96,8 +96,8 @@ bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-be
 bobmods.lib.tech.add_recipe_unlock("bob-cobalt-processing", "bob-cobalt-steel-bearing")
 
 if not mods["space-age"] then
-  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium-plate")
   bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-chloride")
+  bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "lithium-plate")
   bobmods.lib.tech.add_recipe_unlock("bob-lithium-processing", "bob-lithium-perchlorate")
 else
   data.raw.technology["bob-battery-2"].prerequisites = {}
@@ -125,7 +125,7 @@ else
   bobmods.lib.tech.add_recipe_unlock("bob-battery-3", "bob-lithium-cobalt-oxide")
   bobmods.lib.tech.add_recipe_unlock("bob-battery-3", "bob-battery-3")
   bobmods.lib.tech.hide("bob-lithium-processing")
-  bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-chloride")
+  bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-chloride", 1)
   bobmods.lib.tech.add_recipe_unlock("lithium-processing", "bob-lithium-perchlorate")
 end
 
@@ -150,13 +150,13 @@ if data.raw.technology["bob-alien-research"] then
 end
 
 if
-  data.raw.tool["bob-science-pack-gold"]
-  and data.raw.tool["bob-alien-science-pack-blue"]
-  and data.raw.tool["bob-alien-science-pack-orange"]
-  and data.raw.tool["bob-alien-science-pack-purple"]
-  and data.raw.tool["bob-alien-science-pack-yellow"]
-  and data.raw.tool["bob-alien-science-pack-green"]
-  and data.raw.tool["bob-alien-science-pack-red"]
+  data.raw.item["bob-science-pack-gold"]
+  and data.raw.item["bob-alien-science-pack-blue"]
+  and data.raw.item["bob-alien-science-pack-orange"]
+  and data.raw.item["bob-alien-science-pack-purple"]
+  and data.raw.item["bob-alien-science-pack-yellow"]
+  and data.raw.item["bob-alien-science-pack-green"]
+  and data.raw.item["bob-alien-science-pack-red"]
 then
   data.raw.technology["bob-alien-blue-research"].unit.ingredients =
     { { "bob-science-pack-gold", 1 }, { "bob-alien-science-pack-blue", 1 } }

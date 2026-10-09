@@ -24,7 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-heat-shield-tile",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     energy_required = 30,
     enabled = false,
     ingredients = {

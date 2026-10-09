@@ -17,7 +17,7 @@ if mods["aai-industry"] then
     bobmods.lib.recipe.remove_ingredient("solar-panel", "glass")
   end
   bobmods.lib.recipe.replace_ingredient_in_all("glass", "bob-glass")
-  if mods["quality"] then
+  if mods["recycler"] then
     data.raw.recipe["glass-recycling"].ingredients[1].name = "glass"
     data.raw.recipe["glass-recycling"].results[1].name = "bob-glass"
     bobmods.lib.recipe.update_recycling_recipe({

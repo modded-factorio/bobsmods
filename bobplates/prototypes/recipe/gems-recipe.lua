@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-ruby-3",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-sapphire-3",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
@@ -28,7 +28,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-emerald-3",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
@@ -41,7 +41,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-amethyst-3",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
@@ -54,7 +54,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-topaz-3",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
@@ -67,7 +67,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-diamond-3",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-ruby-4",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.5,
@@ -96,7 +96,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-sapphire-4",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.5,
@@ -111,7 +111,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-emerald-4",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.5,
@@ -126,7 +126,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-amethyst-4",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.5,
@@ -141,7 +141,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-topaz-4",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.5,
@@ -156,7 +156,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-diamond-4",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.5,
@@ -172,7 +172,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-ruby-5",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 17.5,
@@ -186,7 +186,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-sapphire-5",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 17.5,
@@ -200,7 +200,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-emerald-5",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 17.5,
@@ -214,7 +214,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-amethyst-5",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 17.5,
@@ -228,7 +228,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-topaz-5",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 17.5,
@@ -242,7 +242,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-diamond-5",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 17.5,

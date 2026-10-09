@@ -29,7 +29,8 @@ else
   bobmods.lib.tech.add_prerequisite("bob-fertiliser", "sulfur-processing")
 end
 
-if mods["quality"] then
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-greenhouse", false)
   bobmods.lib.recipe.update_recycling_recipe_single("rail", false)
+  bobmods.lib.recipe.update_recycling_recipe_single("bob-fertiliser", false)
 end

@@ -75,6 +75,7 @@ if mods["bobequipment"] then
       end
 
       script.on_event(defines.events.on_tick, function()
+        if not character.valid then return end
         local k, destination = next(points)
         if not k then return end
         local target = {center[1] + destination[1], center[2] + destination[2]}
@@ -237,8 +238,6 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_chase_player 
     game.simulation.camera_zoom = 1
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0
-    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true
-    game.map_settings.steering.moving.radius = 1
 
     local character = game.surfaces[1].create_entity{name = "character", position = {center[1] - 55, center[2] + 4.5}, force = "player"}
     character.walking_state = {walking = true, direction = defines.direction.east}
@@ -284,8 +283,6 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_big_defense =
     game.simulation.camera_zoom = 1
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
-    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true
-    game.map_settings.steering.moving.radius = 3
 
     local bop = function()
       local surface = game.surfaces[1]
@@ -315,8 +312,6 @@ data.raw["utility-constants"].default.main_menu_simulations.nauvis_brutal_defeat
     game.simulation.camera_position = center
     game.simulation.camera_zoom = 1
     game.tick_paused = false
-    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true
-    game.map_settings.steering.moving.radius = 2
 
     game.forces.enemy.set_ammo_damage_modifier("melee", 2)
     game.forces.enemy.set_gun_speed_modifier("melee", 0.5)

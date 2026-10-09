@@ -17,7 +17,7 @@ data.raw.fluid["light-oil"].fuel_value = "1.5MJ"
 data.raw.fluid["light-oil"].emissions_multiplier = 2
 data.raw.fluid["petroleum-gas"].fuel_value = "1.2MJ"
 
-if mods["quality"] then
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "assembling-machine-2",
     "assembling-machine-3",

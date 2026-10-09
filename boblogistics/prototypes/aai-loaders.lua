@@ -131,12 +131,12 @@ then
         },
       },
       recipe = {
-        crafting_category = "crafting",
+        categories = { "crafting" },
         ingredients = ingredients.basic,
         energy_required = 2,
       },
       unlubricated_recipe = {
-        crafting_category = "crafting",
+        categories = { "crafting" },
         ingredients = unlubricated_ingredients.basic,
         energy_required = 10,
       },
@@ -147,7 +147,7 @@ then
 
     --Add space-age crafting category
     if mods["space-age"] then
-      data.raw.recipe["aai-basic-loader"].category = "pressing"
+      bobmods.lib.recipe.add_category("aai-basic-loader", "metallurgy")
     end
 
     data.raw.item["aai-basic-loader"].weight = 20000
@@ -181,12 +181,12 @@ then
       },
     },
     recipe = {
-      crafting_category = "crafting-with-fluid",
+      categories = { "crafting-with-fluid" },
       ingredients = ingredients.turbo,
       energy_required = 2,
     },
     unlubricated_recipe = {
-      crafting_category = "crafting-with-fluid",
+      categories = { "crafting-with-fluid" },
       ingredients = unlubricated_ingredients.turbo,
       energy_required = 10,
     },
@@ -219,12 +219,12 @@ then
       },
     },
     recipe = {
-      crafting_category = "crafting-with-fluid",
+      categories = { "crafting-with-fluid" },
       ingredients = ingredients.ultimate,
       energy_required = 2,
     },
     unlubricated_recipe = {
-      crafting_category = "crafting-with-fluid",
+      categories = { "crafting-with-fluid" },
       ingredients = unlubricated_ingredients.ultimate,
       energy_required = 10,
     },
@@ -306,10 +306,10 @@ then
     end
   end
 
-  --Add space-age crafting category
+  --Add space-age crafting categories
   if mods["space-age"] then
-    data.raw.recipe["aai-turbo-loader"].category = "crafting-with-fluid-or-metallurgy"
-    data.raw.recipe["aai-ultimate-loader"].category = "crafting-with-fluid-or-metallurgy"
+    bobmods.lib.recipe.add_category("aai-turbo-loader", "metallurgy")
+    bobmods.lib.recipe.add_category("aai-ultimate-loader", "metallurgy")
   end
 
   data.raw.item["aai-loader"].weight = 20000

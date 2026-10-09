@@ -3,7 +3,7 @@ if data.raw.fluid["bob-nitric-acid"] then
     {
       type = "recipe",
       name = "bob-sulfuric-nitric-acid",
-      category = "chemistry",
+      categories = { "chemistry" },
       enabled = false,
       energy_required = 0.5,
       ingredients = {
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-glycerol",
-    category = "chemistry",
+    categories = { "chemistry" },
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-nitroglycerin",
-    category = "chemistry",
+    categories = { "chemistry" },
     enabled = false,
     energy_required = 1.5,
     ingredients = {

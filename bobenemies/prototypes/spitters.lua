@@ -2082,7 +2082,7 @@ local poison_attack_action = function(radius, smoke_name, damage, healing)
               {
                 type = "area",
                 radius = 2 * radius,
-                force = "enemy",
+                force = "not-friend",
                 trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
                 ignore_collision_condition = true,
                 action_delivery = {

@@ -61,8 +61,8 @@ if settings.startup["bobmods-mining-pumpjacks"].value == true then
       "bob-pumpjack-3",
     }) do
       local prototype = data.raw["mining-drill"][pumpjack]
-      if prototype and prototype.resource_categories then
-        table.insert(prototype.resource_categories, "oil")
+      if prototype then
+        bobmods.lib.machine.add_resource_category(prototype, "oil")
       end
     end
   end

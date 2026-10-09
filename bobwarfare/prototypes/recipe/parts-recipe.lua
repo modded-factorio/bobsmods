@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-petroleum-jelly",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
@@ -17,7 +17,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-gun-cotton",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-cordite",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "bob-ammo-parts",
     energy_required = 10,
     enabled = false,
@@ -160,7 +160,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-flame-bullet-projectile",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "bob-ammo-parts",
     energy_required = 1,
     enabled = false,
@@ -195,7 +195,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-acid-bullet-projectile",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "bob-ammo-parts",
     energy_required = 1,
     enabled = false,
@@ -426,7 +426,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-acid-rocket-warhead",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -440,7 +440,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-flame-rocket-warhead",
-    category = "chemistry",
+    categories = { "chemistry" },
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -460,7 +460,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-poison-rocket-warhead",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 1,
     enabled = false,
     ingredients = {

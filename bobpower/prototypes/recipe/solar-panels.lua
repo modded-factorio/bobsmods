@@ -127,13 +127,13 @@ if settings.startup["bobmods-power-solar"].value == true then
   })
 
   if mods["space-age"] then
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-small", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-large", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-small-2", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-2", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-large-2", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-small-3", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-3", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-solar-panel-large-3", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-small", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-large", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-small-2", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-2", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-large-2", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-small-3", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-3", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-solar-panel-large-3", "electromagnetics")
   end
 end

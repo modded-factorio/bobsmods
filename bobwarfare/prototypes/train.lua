@@ -1,4 +1,5 @@
-data.raw["artillery-wagon"]["artillery-wagon"].resistances = {
+local base_artillery_wagon = data.raw["artillery-wagon"]["artillery-wagon"]
+base_artillery_wagon.resistances = {
   {
     type = "fire",
     decrease = 25,
@@ -50,8 +51,9 @@ data.raw["artillery-wagon"]["artillery-wagon"].resistances = {
     percent = 90,
   },
 }
+base_artillery_wagon.fast_replaceable_group = "artillery-wagon"
 
-local wagon = util.table.deepcopy(data.raw["artillery-wagon"]["artillery-wagon"])
+local wagon = util.table.deepcopy(base_artillery_wagon)
 wagon.name = "bob-artillery-wagon-2"
 wagon.inventory_size = 2
 wagon.minable = { mining_time = 1, result = "bob-artillery-wagon-2" }
@@ -64,9 +66,10 @@ wagon.gun = "bob-artillery-wagon-cannon-2"
 wagon.turret_rotation_speed = 0.002
 wagon.turn_after_shooting_cooldown = 40
 wagon.cannon_parking_speed = 0.3
+wagon.next_upgrade = "bob-artillery-wagon-3"
 data:extend({ wagon })
 
-local wagon = util.table.deepcopy(data.raw["artillery-wagon"]["artillery-wagon"])
+local wagon = util.table.deepcopy(base_artillery_wagon)
 wagon.name = "bob-artillery-wagon-3"
 wagon.inventory_size = 3
 wagon.minable = { mining_time = 1, result = "bob-artillery-wagon-3" }
@@ -80,6 +83,8 @@ wagon.turret_rotation_speed = 0.003
 wagon.turn_after_shooting_cooldown = 30
 wagon.cannon_parking_speed = 0.35
 data:extend({ wagon })
+
+base_artillery_wagon.next_upgrade = "bob-artillery-wagon-2"
 
 data:extend({
   {

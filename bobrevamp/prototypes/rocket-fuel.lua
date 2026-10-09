@@ -8,8 +8,6 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid",
       order = "a[fluid]-g[ammonia]",
       default_temperature = 15,
-      max_temperature = 100,
-      heat_capacity = "1kJ",
       base_color = { r = 0.5, g = 0.5, b = 1.0 },
       flow_color = { r = 0.5, g = 0.5, b = 1.0 },
       gas_temperature = -34,
@@ -23,11 +21,8 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid",
       order = "a[fluid]-g[dinitrogen-tetroxide]",
       default_temperature = 15,
-      max_temperature = 100,
-      heat_capacity = "1kJ",
       base_color = { r = 0.7, g = 0.7, b = 0.3 },
       flow_color = { r = 0.3, g = 0.3, b = 0.7 },
-      gas_temperature = 21,
     },
 
     {
@@ -38,11 +33,8 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid",
       order = "a[fluid]-g[hydrazine]",
       default_temperature = 15,
-      max_temperature = 100,
-      heat_capacity = "1kJ",
       base_color = { r = 0.7, g = 0.7, b = 1.0 },
       flow_color = { r = 0.3, g = 0.3, b = 0.0 },
-      gas_temperature = 114,
       emissions_multiplier = 1.2,
       fuel_value = "340kJ", --"190kJ", --"380kJ", --halved for 0.17. increased by 80% for changes to hydrazine generator.
     },
@@ -55,11 +47,8 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       subgroup = "fluid",
       order = "a[fluid]-g[hydrogen-peroxide]",
       default_temperature = 15,
-      max_temperature = 100,
-      heat_capacity = "1kJ",
       base_color = { r = 0.0, g = 0.5, b = 1.0 },
       flow_color = { r = 0.7, g = 0.7, b = 0.7 },
-      gas_temperature = 150,
     },
   })
 
@@ -73,8 +62,6 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         subgroup = "fluid",
         order = "a[fluid]-g[bob-nitrogen-dioxide]",
         default_temperature = 25,
-        max_temperature = 100,
-        heat_capacity = "1kJ",
         base_color = { r = 0.8, g = 0.0, b = 1.0 },
         flow_color = { r = 0.8, g = 0.0, b = 1.0 },
         gas_temperature = -12,
@@ -90,7 +77,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       icon_size = 64,
       order = "b[fluid-chemistry]-b[ammonia]",
       energy_required = 1,
-      category = "chemistry",
+      categories = { "chemistry" },
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
@@ -115,7 +102,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       icon_size = 64,
       order = "b[fluid-chemistry]-b[hydrogen-peroxide]",
       energy_required = 1,
-      category = "chemistry",
+      categories = { "chemistry" },
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
@@ -140,7 +127,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       icon_size = 64,
       order = "b[fluid-chemistry]-b[hydrazine]",
       energy_required = 1,
-      category = "chemistry",
+      categories = { "chemistry" },
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
@@ -166,7 +153,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       icon_size = 64,
       order = "b[fluid-chemistry]-b[bob-nitrogen-dioxide]",
       energy_required = 1,
-      category = "chemistry",
+      categories = { "chemistry" },
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
@@ -191,7 +178,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       icon_size = 64,
       order = "b[fluid-chemistry]-b[dinitrogen-tetroxide]",
       energy_required = 1,
-      category = "chemistry",
+      categories = { "chemistry" },
       subgroup = "fluid-recipes",
       enabled = false,
       ingredients = {
@@ -223,8 +210,6 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         subgroup = "fluid",
         order = "a[fluid]-g[nitric-oxide]",
         default_temperature = 15,
-        max_temperature = 100,
-        heat_capacity = "1kJ",
         base_color = { r = 1.0, g = 0.0, b = 1.0 },
         flow_color = { r = 1.0, g = 0.2, b = 1.0 },
         gas_temperature = -152,
@@ -237,7 +222,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         icon_size = 64,
         order = "b[fluid-chemistry]-b[nitric-oxide]",
         energy_required = 1,
-        category = "chemistry",
+        categories = { "chemistry" },
         subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
@@ -263,7 +248,7 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
         icon_size = 64,
         order = "b[fluid-chemistry]-b[bob-nitrogen-dioxide]",
         energy_required = 1,
-        category = "chemistry",
+        categories = { "chemistry" },
         subgroup = "fluid-recipes",
         enabled = false,
         ingredients = {
@@ -288,8 +273,9 @@ if data.raw.fluid["bob-hydrogen"] and data.raw.fluid["bob-oxygen"] and data.raw.
       {
         type = "recipe",
         name = "bob-enriched-fuel-from-hydrazine",
-        category = "chemistry",
+        categories = { "chemistry" },
         enabled = false,
+        auto_recycle = false,
         energy_required = 12,
         ingredients = {
           { type = "fluid", name = "bob-hydrazine", amount = 100 },

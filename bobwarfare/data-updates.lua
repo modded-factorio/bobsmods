@@ -68,7 +68,7 @@ if mods["space-age"] then
   end
 end
 
-if mods["quality"] then
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "artillery-shell",
     "artillery-turret",

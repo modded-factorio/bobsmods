@@ -198,7 +198,7 @@ then
         module_slots = 3,
         icons_positioning = {
           {
-            inventory_index = defines.inventory.assembling_machine_modules,
+            inventory_index = defines.inventory.crafter_modules,
             shift = { 0, 0.7 },
             scale = 0.4,
             multi_row_initial_height_modifier = -0.3,
@@ -228,7 +228,7 @@ then
         module_slots = 4,
         icons_positioning = {
           {
-            inventory_index = defines.inventory.assembling_machine_modules,
+            inventory_index = defines.inventory.crafter_modules,
             shift = { 0, 0.7 },
             scale = 0.4,
             multi_row_initial_height_modifier = -0.3,
@@ -258,7 +258,7 @@ then
         module_slots = 5,
         icons_positioning = {
           {
-            inventory_index = defines.inventory.assembling_machine_modules,
+            inventory_index = defines.inventory.crafter_modules,
             shift = { 0, 0.7 },
             scale = 0.4,
             multi_row_initial_height_modifier = -0.3,

@@ -132,13 +132,13 @@ bobmods.lib.recipe.replace_ingredient("power-armor-mk2", "processing-unit", "adv
 bobmods.lib.recipe.add_new_ingredient("power-armor-mk2", { type = "item", name = "power-armor", amount = 1 })
 
 if
-  data.raw.tool["bob-science-pack-gold"]
-  and data.raw.tool["bob-alien-science-pack-blue"]
-  and data.raw.tool["bob-alien-science-pack-orange"]
-  and data.raw.tool["bob-alien-science-pack-purple"]
-  and data.raw.tool["bob-alien-science-pack-yellow"]
-  and data.raw.tool["bob-alien-science-pack-green"]
-  and data.raw.tool["bob-alien-science-pack-red"]
+  data.raw.item["bob-science-pack-gold"]
+  and data.raw.item["bob-alien-science-pack-blue"]
+  and data.raw.item["bob-alien-science-pack-orange"]
+  and data.raw.item["bob-alien-science-pack-purple"]
+  and data.raw.item["bob-alien-science-pack-yellow"]
+  and data.raw.item["bob-alien-science-pack-green"]
+  and data.raw.item["bob-alien-science-pack-red"]
 then
   data.raw.technology["bob-power-armor-3"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },

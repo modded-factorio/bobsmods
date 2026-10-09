@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-advanced-processing-unit",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -14,3 +14,9 @@ data:extend({
     allow_productivity = true,
   },
 })
+
+if data.raw["recipe-category"]["electronics"] then
+  bobmods.lib.recipe.add_category("bob-advanced-processing-unit", "electronics")
+elseif mods["space-age"] then
+  bobmods.lib.recipe.add_category("bob-advanced-processing-unit", "electromagnetics")
+end

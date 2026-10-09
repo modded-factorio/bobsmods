@@ -1,16 +1,16 @@
 {
   "name": "bobgreenhouse",
-  "version": "2.1.0",
-  "factorio_version": "2.0",
+  "version": "3.0.1",
+  "factorio_version": "2.1",
   "title": "Bob's Greenhouse mod",
   "author": "Bobingabout",
   "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=51",
   "dependencies": [
-    "base >= 2.0.0",
-    "boblibrary >= 2.1.0",
-    "? bobplates >= 2.1.0",
-    "? space-age >= 2.0.0"
+    "base >= 2.1.20",
+    "boblibrary >= 3.0.1",
+    "? bobplates >= 3.0.0",
+    "? space-age >= 2.1.0"
   ],
   "description": "Requires Bob's functions library mod.\n\nThis mod adds a greenhouse, and recipes for it to make wood.\nAlso an advanced recipe that uses Fertiliser to make even more wood"
 }

@@ -69,6 +69,8 @@ data:extend({
         },
       },
     },
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["land-mine"],
   },
 
   {
@@ -127,6 +129,8 @@ data:extend({
         },
       },
     },
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["land-mine"],
   },
 
   {
@@ -194,5 +198,7 @@ data:extend({
         },
       },
     },
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["land-mine"],
   },
 })

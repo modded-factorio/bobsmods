@@ -28,7 +28,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-module-circuit-board",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -44,7 +44,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-module-processor-board",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-module-processor-board-2",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 15,
     enabled = false,
     ingredients = {
@@ -74,7 +74,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-module-processor-board-3",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 20,
     enabled = false,
     ingredients = {

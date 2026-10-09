@@ -22,13 +22,13 @@ bobmods.lib.tech.replace_prerequisite(
 bobmods.lib.tech.set_science_pack_count("personal-roboport-mk2-equipment", 100)
 
 if
-  data.raw.tool["bob-science-pack-gold"]
-  and data.raw.tool["bob-alien-science-pack-blue"]
-  and data.raw.tool["bob-alien-science-pack-orange"]
-  and data.raw.tool["bob-alien-science-pack-purple"]
-  and data.raw.tool["bob-alien-science-pack-yellow"]
-  and data.raw.tool["bob-alien-science-pack-green"]
-  and data.raw.tool["bob-alien-science-pack-red"]
+  data.raw.item["bob-science-pack-gold"]
+  and data.raw.item["bob-alien-science-pack-blue"]
+  and data.raw.item["bob-alien-science-pack-orange"]
+  and data.raw.item["bob-alien-science-pack-purple"]
+  and data.raw.item["bob-alien-science-pack-yellow"]
+  and data.raw.item["bob-alien-science-pack-green"]
+  and data.raw.item["bob-alien-science-pack-red"]
 then
   data.raw.technology["bob-energy-shield-equipment-4"].unit.ingredients = {
     { "bob-science-pack-gold", 1 },

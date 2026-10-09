@@ -16,7 +16,7 @@ data:extend({
     type = "recipe",
     name = "carbon",
     localised_name = { "item-name.carbon" },
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     energy_required = 2,
     enabled = false,
@@ -34,7 +34,7 @@ data:extend({
     type = "recipe",
     name = "bob-resin-wood",
     localised_name = { "item-name.bob-resin" },
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     energy_required = 1,
     enabled = false,
     auto_recycle = false,
@@ -50,7 +50,7 @@ data:extend({
     type = "recipe",
     name = "bob-resin-oil",
     localised_name = { "item-name.bob-resin" },
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "bob-resource-chemical",
     energy_required = 1,
     enabled = false,
@@ -72,7 +72,7 @@ data:extend({
     type = "recipe",
     name = "bob-rubber",
     localised_name = { "item-name.bob-rubber" },
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     enabled = false,
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-glass",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     auto_recycle = false,
@@ -103,7 +103,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-wafer",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     energy_required = 5,
@@ -118,7 +118,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-powder",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     subgroup = "bob-resource",
     enabled = false,
     auto_recycle = false,
@@ -133,7 +133,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-nitride",
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     enabled = false,
     auto_recycle = false,
@@ -150,7 +150,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-lithium-cobalt-oxide",
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     energy_required = 7,
     enabled = false,
@@ -168,7 +168,7 @@ data:extend({
     name = "bob-synthetic-wood",
     icon = "__bobplates__/graphics/icons/synthetic-wood.png",
     icon_size = 32,
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "bob-resource-chemical",
     energy_required = 1,
     enabled = false,
@@ -189,7 +189,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-gas-canister",
-    category = "crafting",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -202,7 +201,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-empty-canister",
-    category = "crafting",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -216,7 +214,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-polishing-compound",
-    category = "chemistry",
+    categories = { "chemistry" },
     enabled = false,
     auto_recycle = false,
     energy_required = 2,
@@ -237,7 +235,7 @@ data:extend({
     type = "recipe",
     name = "bob-carbon-from-wood",
     localised_name = { "item-name.carbon" },
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     enabled = false,
     auto_recycle = false,
@@ -254,7 +252,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-solid-fuel-from-hydrogen",
-    category = "chemistry",
+    categories = { "chemistry" },
     auto_recycle = false,
     energy_required = 3,
     ingredients = {
@@ -283,7 +281,7 @@ data:extend({
     name = "bob-enriched-fuel",
     icon = "__bobplates__/graphics/icons/enriched-fuel.png",
     icon_size = 32,
-    category = "chemistry",
+    categories = { "chemistry" },
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,

@@ -22,12 +22,14 @@ data.raw.fluid["heavy-oil"].fuel_value = "1MJ" --"2MJ"
 data.raw.fluid["heavy-oil"].emissions_multiplier = 3
 data.raw.fluid["petroleum-gas"].fuel_value = "1.2MJ" --"4.6MJ"
 
+data.raw.fluid["steam"].max_temperature = math.max(data.raw.fluid["steam"].max_temperature, 765)
+
 data.raw.item["coal"].fuel_emissions_multiplier = 2
 data.raw.item["solid-fuel"].fuel_emissions_multiplier = 0.8
 data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1.2
 data.raw.item["nuclear-fuel"].fuel_emissions_multiplier = 5
 
-if mods["quality"] then
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "accumulator",
     "nuclear-reactor",

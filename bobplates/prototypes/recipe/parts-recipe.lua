@@ -103,7 +103,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-titanium-bearing",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-titanium-plate", amount = 1 },
@@ -150,7 +150,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-nitinol-bearing",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     ingredients = {
       { type = "item", name = "bob-nitinol-alloy", amount = 1 },
@@ -164,7 +164,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-battery-2",
-    category = "chemistry",
+    categories = { "chemistry" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -186,7 +186,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-battery-3",
-    category = "chemistry",
+    categories = { "chemistry" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -208,7 +208,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-grinding-wheel",
-    category = "crafting",
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -222,7 +221,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-polishing-wheel",
-    category = "crafting",
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -235,8 +233,8 @@ data:extend({
 })
 
 if mods["space-age"] then
-  data.raw.recipe["bob-battery-2"].category = "chemistry-or-cryogenics"
-  data.raw.recipe["bob-battery-3"].category = "chemistry-or-cryogenics"
+  bobmods.lib.recipe.add_category("bob-battery-2", "cryogenics")
+  bobmods.lib.recipe.add_category("bob-battery-3", "cryogenics")
   data.raw.recipe["bob-battery-2"].ingredients = {
     { type = "item", name = "bob-sodium-hydroxide", amount = 2 },
     { type = "item", name = "bob-silver-oxide", amount = 1 },

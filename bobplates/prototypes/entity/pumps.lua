@@ -106,7 +106,7 @@ data:extend({
     module_slots = 1,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.5 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -117,6 +117,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-air-pump",
     next_upgrade = "bob-air-pump-2",
     corpse = "small-remnants",
@@ -173,7 +174,7 @@ data:extend({
     module_slots = 2,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.5 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -184,6 +185,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-air-pump",
     next_upgrade = "bob-air-pump-3",
     corpse = "small-remnants",
@@ -240,7 +242,7 @@ data:extend({
     module_slots = 4,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.7 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -252,6 +254,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-air-pump",
     next_upgrade = "bob-air-pump-4",
     corpse = "small-remnants",
@@ -308,7 +311,7 @@ data:extend({
     module_slots = 6,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.7 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -320,6 +323,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-air-pump",
     corpse = "small-remnants",
     resistances = {
@@ -375,7 +379,7 @@ data:extend({
     module_slots = 1,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.5 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -386,6 +390,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-water-pump",
     next_upgrade = "bob-water-pump-2",
     corpse = "small-remnants",
@@ -442,7 +447,7 @@ data:extend({
     module_slots = 2,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.5 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -453,6 +458,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-water-pump",
     next_upgrade = "bob-water-pump-3",
     corpse = "small-remnants",
@@ -509,7 +515,7 @@ data:extend({
     module_slots = 4,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.7 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -521,6 +527,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-water-pump",
     next_upgrade = "bob-water-pump-4",
     corpse = "small-remnants",
@@ -577,7 +584,7 @@ data:extend({
     module_slots = 6,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.7 },
         scale = 0.4,
         multi_row_initial_height_modifier = -0.3,
@@ -589,6 +596,7 @@ data:extend({
       shift = { 0, -0.15 },
     },
     allowed_effects = { "consumption", "speed", "pollution" },
+    use_mirroring = true,
     fast_replaceable_group = "bob-water-pump",
     corpse = "small-remnants",
     resistances = {

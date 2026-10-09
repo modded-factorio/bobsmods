@@ -479,10 +479,11 @@ if settings.startup["bobmods-plates-purewater"].value == true then
         working_visualisations = bobmods.plates.distillery_working_visualisations_flipped(1),
       },
       allowed_effects = { "consumption", "speed", "pollution" },
+      use_mirroring = true,
       module_slots = 1,
       icons_positioning = {
         {
-          inventory_index = defines.inventory.assembling_machine_modules,
+          inventory_index = defines.inventory.crafter_modules,
           shift = { 0, 0.5 },
           scale = 0.4,
           multi_row_initial_height_modifier = -0.3,

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-lead-plate",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     emissions_multiplier = 6,
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silver-plate",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     enabled = false,
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-tin-plate",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "bob-material-smelting",
     energy_required = 3.2,
     auto_recycle = false,
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-lead-plate-2",
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     energy_required = 6.4,
     enabled = false,
@@ -60,7 +60,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-gold-plate",
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
     enabled = false,
@@ -77,7 +77,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-cobalt-plate",
-    category = "bob-chemical-furnace",
+    categories = { "bob-chemical-furnace" },
     subgroup = "bob-material-chemical",
     energy_required = 3.2,
     enabled = false,
@@ -94,7 +94,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-zinc-plate",
-    category = "bob-electrolysis",
+    categories = { "bob-electrolysis" },
     subgroup = "bob-material-electrolysis",
     energy_required = 3.2,
     enabled = false,
@@ -115,7 +115,7 @@ data:extend({
     icon_size = 64,
     subgroup = "bob-material-electrolysis",
     order = "c-a-f[nickel-plate]",
-    category = "bob-electrolysis",
+    categories = { "bob-electrolysis" },
     enabled = false,
     auto_recycle = false,
     energy_required = 3.2,
@@ -135,7 +135,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-aluminium-plate",
-    category = "bob-electrolysis",
+    categories = { "bob-electrolysis" },
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
@@ -152,7 +152,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-titanium-plate",
-    category = "bob-electrolysis",
+    categories = { "bob-electrolysis" },
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
@@ -170,7 +170,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-silicon-plate",
-    category = "bob-electrolysis",
+    categories = { "bob-electrolysis" },
     subgroup = "bob-material-electrolysis",
     energy_required = 6.4,
     enabled = false,
@@ -193,7 +193,7 @@ if not mods["space-age"] then
       name = "tungsten-plate",
       enabled = false,
       auto_recycle = false,
-      category = "bob-mixing-furnace",
+      categories = { "bob-mixing-furnace" },
       subgroup = "bob-alloy",
       energy_required = 16,
       ingredients = {
@@ -208,7 +208,7 @@ if not mods["space-age"] then
       type = "recipe",
       name = "lithium-plate",
       localised_name = { "item-name.bob-lithium" },
-      category = "bob-electrolysis",
+      categories = { "bob-electrolysis" },
       subgroup = "bob-material-electrolysis",
       energy_required = 3.2,
       enabled = false,

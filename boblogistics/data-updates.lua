@@ -171,7 +171,7 @@ bobmods.lib.item.set_subgroup("express-splitter", "bob-logistic-tier-3")
 -- because there's no specific section for it.
 data.raw["pump"]["pump"].next_upgrade = "bob-pump-2"
 
-if mods["quality"] then
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-active-provider-chest-2",
     "bob-active-provider-chest-3",

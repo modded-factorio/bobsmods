@@ -23,13 +23,10 @@ data.raw.character["bob-character-engineer"].crafting_categories = util.copy(cat
 data.raw.character["bob-character-prospector"].crafting_categories = util.copy(categories)
 
 table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "smelting")
-table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "basic-crafting")
 table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "advanced-crafting")
 table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "smelting")
-table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "basic-crafting")
 table.insert(bobmods.classes.characters["bob-character-miner-2"].crafting_categories, "advanced-crafting")
 table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "smelting")
-table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "basic-crafting")
 table.insert(bobmods.classes.characters["bob-character-engineer"].crafting_categories, "advanced-crafting")
 if data.raw["recipe-category"]["machine-crafting"] then
   table.insert(bobmods.classes.characters["bob-character-miner"].crafting_categories, "machine-crafting")
@@ -46,7 +43,7 @@ end
 
 require("prototypes.recipe-updates")
 
-if mods["quality"] then
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "bob-character-miner",
     "bob-character-miner-2",

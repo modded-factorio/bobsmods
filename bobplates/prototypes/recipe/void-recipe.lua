@@ -9,13 +9,12 @@ function bobmods.plates.make_void_fluid_recipe(name, amount, polution)
       {
         type = "recipe",
         name = "void-" .. name,
-        localised_name = { "recipe-name.bob-void", name },
+        localised_name = { "recipe-name.bob-void", { "fluid-name." .. name } },
         icons = bobmods.plates.get_void_icon(name),
         subgroup = "bob-void",
         order = name,
-        category = "bob-void-fluid",
+        categories = { "bob-void-fluid" },
         hide_from_player_crafting = true,
-        show_amount_in_title = false,
         energy_required = 1,
         ingredients = {
           { type = "fluid", name = name, amount = amount or 25 },

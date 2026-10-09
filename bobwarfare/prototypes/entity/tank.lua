@@ -251,6 +251,7 @@ data:extend({
     alert_icon_shift = util.by_pixel(0, -13),
     immune_to_tree_impacts = true,
     immune_to_rock_impacts = true,
+    immune_to_all_impacts = true,
     energy_per_hit_point = 0.5,
     allow_remote_driving = true,
     equipment_grid = "medium-equipment-grid",
@@ -310,7 +311,7 @@ data:extend({
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     drawing_box_vertical_extension = 0.5,
     effectivity = 0.95,
-    braking_power = "1000kW",
+    braking_force = (1000 * 1000) / 60,
     energy_source = {
       type = "burner",
       effectivity = 1.2,
@@ -328,7 +329,7 @@ data:extend({
     },
     consumption = "800kW",
     terrain_friction_modifier = 0.2,
-    friction = 0.002,
+    friction_force = 0.002,
     light = {
       {
         type = "oriented",
@@ -438,6 +439,7 @@ data:extend({
     alert_icon_shift = util.by_pixel(0, -13),
     immune_to_tree_impacts = true,
     immune_to_rock_impacts = true,
+    immune_to_all_impacts = true,
     energy_per_hit_point = 0.5,
     allow_remote_driving = true,
     equipment_grid = "medium-equipment-grid",
@@ -497,7 +499,7 @@ data:extend({
     selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     drawing_box_vertical_extension = 0.5,
     effectivity = 1,
-    braking_power = "1200kW",
+    braking_force = (1200 * 1000) / 60,
     energy_source = {
       type = "burner",
       effectivity = 1.4,
@@ -515,7 +517,7 @@ data:extend({
     },
     consumption = "1000kW",
     terrain_friction_modifier = 0.2,
-    friction = 0.002,
+    friction_force = 0.002,
     light = {
       {
         type = "oriented",

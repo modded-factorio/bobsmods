@@ -26,7 +26,7 @@ data:extend({
     type = "recipe",
     name = "bob-resin-wood",
     localised_name = { "item-name.bob-resin" },
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
@@ -43,7 +43,7 @@ data:extend({
     type = "recipe",
     name = "bob-resin-oil",
     localised_name = { "item-name.bob-resin" },
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "bob-resource",
     energy_required = 1,
     enabled = false,
@@ -91,7 +91,7 @@ data:extend({
     name = "bob-rubber",
     localised_name = { "item-name.bob-rubber" },
     subgroup = "bob-resource",
-    category = "smelting",
+    categories = { "smelting" },
     energy_required = 3.5,
     enabled = false,
     auto_recycle = false,
@@ -112,7 +112,7 @@ data:extend({
     icon_size = 32,
     subgroup = "bob-resource",
     localised_name = { "recipe-name.bob-synthetic-wood" },
-    category = "chemistry",
+    categories = { "chemistry" },
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -157,7 +157,7 @@ if not data.raw.item["bob-silicon-wafer"] and data.raw.item["bob-silicon-plate"]
     {
       type = "recipe",
       name = "bob-silicon-wafer",
-      category = "advanced-crafting",
+      categories = { "advanced-crafting" },
       enabled = false,
       energy_required = 5,
       ingredients = {
@@ -200,7 +200,7 @@ if data.raw.item["bob-tin-plate"] then
       energy_required = 7,
       enabled = false,
       auto_recycle = false,
-      category = "advanced-crafting",
+      categories = { "advanced-crafting" },
       ingredients = {
         { type = "item", name = "bob-tin-plate", amount = 9 },
         { type = "item", name = "copper-plate", amount = 1 },
@@ -226,7 +226,7 @@ if data.raw.item["bob-tin-plate"] then
         energy_required = 7,
         enabled = false,
         auto_recycle = false,
-        category = "advanced-crafting",
+        categories = { "advanced-crafting" },
         ingredients = {
           { type = "item", name = "bob-tin-plate", amount = 4 },
           { type = "item", name = "bob-lead-plate", amount = 7 },

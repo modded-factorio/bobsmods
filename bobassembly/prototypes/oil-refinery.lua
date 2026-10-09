@@ -16,7 +16,7 @@ if settings.startup["bobmods-assembly-oilrefineries"].value == true then
 
   data.raw["assembling-machine"]["oil-refinery"].icons_positioning = {
     {
-      inventory_index = defines.inventory.assembling_machine_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = { 0, 1 },
     },
   }

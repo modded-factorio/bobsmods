@@ -61,8 +61,18 @@ data:extend({
       volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, 0 }, direction = defines.direction.north, flow_direction = "output" },
-        { position = { 0, 0 }, direction = defines.direction.south, flow_direction = "input-output" },
+        {
+          position = { 0, 0 },
+          direction = defines.direction.north,
+          flow_direction = "output",
+          hide_connection_info = true,
+        },
+        {
+          position = { 0, 0 },
+          direction = defines.direction.south,
+          flow_direction = "input-output",
+          hide_connection_info = true,
+        },
       },
     },
     flow_rate = 20,
@@ -221,8 +231,18 @@ data:extend({
       volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, 0 }, direction = defines.direction.north, flow_direction = "output" },
-        { position = { 0, 0 }, direction = defines.direction.south, flow_direction = "input-output" },
+        {
+          position = { 0, 0 },
+          direction = defines.direction.north,
+          flow_direction = "output",
+          hide_connection_info = true,
+        },
+        {
+          position = { 0, 0 },
+          direction = defines.direction.south,
+          flow_direction = "input-output",
+          hide_connection_info = true,
+        },
       },
     },
     flow_rate = 20,
@@ -382,8 +402,18 @@ data:extend({
       volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, 0 }, direction = defines.direction.north, flow_direction = "output" },
-        { position = { 0, 0 }, direction = defines.direction.south, flow_direction = "input-output" },
+        {
+          position = { 0, 0 },
+          direction = defines.direction.north,
+          flow_direction = "output",
+          hide_connection_info = true,
+        },
+        {
+          position = { 0, 0 },
+          direction = defines.direction.south,
+          flow_direction = "input-output",
+          hide_connection_info = true,
+        },
       },
     },
     flow_rate = 20,

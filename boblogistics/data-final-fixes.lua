@@ -38,7 +38,7 @@ if mods["aai-industry"] then
       bobmods.lib.recipe.replace_ingredient("underground-belt", "iron-plate", "bob-tin-plate")
       bobmods.lib.recipe.replace_ingredient("splitter", "iron-plate", "bob-tin-plate")
     end
-    if mods["quality"] then
+    if mods["recycler"] then
       bobmods.lib.recipe.update_recycling_recipe_single("transport-belt")
       bobmods.lib.recipe.update_recycling_recipe_single("underground-belt")
       bobmods.lib.recipe.update_recycling_recipe_single("splitter")

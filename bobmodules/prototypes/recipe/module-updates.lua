@@ -111,10 +111,17 @@ if mods["aai-industry"] then
   end
 end
 
-bobmods.lib.recipe.add_additional_category("bob-module-circuit-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-module-processor-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-module-processor-board-2", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-module-processor-board-3", "electronics-with-fluid")
+if data.raw["recipe-category"]["electronics-with-fluid"] then
+  bobmods.lib.recipe.add_category("bob-module-circuit-board", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-module-processor-board", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-module-processor-board-2", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-module-processor-board-3", "electronics-with-fluid")
+elseif mods["space-age"] then
+  bobmods.lib.recipe.add_category("bob-module-circuit-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-module-processor-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-module-processor-board-2", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-module-processor-board-3", "electromagnetics")
+end
 
 for _, recipe_name in pairs({
   "bob-module-case",
@@ -162,7 +169,11 @@ for _, recipe_name in pairs({
   "speed-module-2",
   "speed-module-3",
 }) do
-  bobmods.lib.recipe.add_additional_category(recipe_name, "electronics")
+  if data.raw["recipe-category"]["electronics"] then
+    bobmods.lib.recipe.add_category(recipe_name, "electronics")
+  elseif mods["space-age"] then
+    bobmods.lib.recipe.add_category(recipe_name, "electromagnetics")
+  end
 end
 
 if mods["quality"] then
@@ -177,6 +188,10 @@ if mods["quality"] then
     "quality-module-2",
     "quality-module-3",
   }) do
-    bobmods.lib.recipe.add_additional_category(recipe_name, "electronics")
+    if data.raw["recipe-category"]["electronics"] then
+      bobmods.lib.recipe.add_category(recipe_name, "electronics")
+    elseif mods["space-age"] then
+      bobmods.lib.recipe.add_category(recipe_name, "electromagnetics")
+    end
   end
 end

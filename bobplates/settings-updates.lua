@@ -24,6 +24,6 @@ hide_setting("bool-setting", "bobmods-ores-enabletungstenore", true)
 hide_setting("bool-setting", "bobmods-ores-enablezincore", true)
 hide_setting("bool-setting", "bobmods-ores-enablethoriumore", true)
 
-if mods["quality"] then
+if mods["recycler"] then
   hide_setting("bool-setting", "bobmods-plates-convert-recipes", false)
 end

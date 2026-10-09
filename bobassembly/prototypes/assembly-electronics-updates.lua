@@ -63,14 +63,11 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
   end
 
   -- add new electronics crafting categories
-  bobmods.lib.recipe.add_additional_category("copper-cable", "electronics")
-  bobmods.lib.recipe.add_additional_category("electronic-circuit", "electronics")
-  bobmods.lib.recipe.add_additional_category("advanced-circuit", "electronics")
-  bobmods.lib.recipe.add_additional_category("processing-unit", "electronics")
+  bobmods.lib.recipe.add_category("copper-cable", "electronics")
+  bobmods.lib.recipe.add_category("electronic-circuit", "electronics")
+  bobmods.lib.recipe.add_category("advanced-circuit", "electronics")
+  bobmods.lib.recipe.add_category("processing-unit", "electronics")
 
-  if data.raw.recipe["bob-advanced-processing-unit"] then
-    bobmods.lib.recipe.add_additional_category("bob-advanced-processing-unit", "electronics")
-  end
   if data.raw.item["bob-advanced-processing-unit"] then
     bobmods.lib.recipe.replace_ingredient(
       "bob-electronics-machine-3",
@@ -84,5 +81,10 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
     data.raw["assembling-machine"]["bob-electronics-machine-1"].ingredient_count = 3
     data.raw["assembling-machine"]["bob-electronics-machine-2"].ingredient_count = 4
     data.raw["assembling-machine"]["bob-electronics-machine-3"].ingredient_count = 6
+  end
+
+  if mods["space-age"] then
+    bobmods.lib.machine.add_category(data.raw["assembling-machine"]["electromagnetic-plant"], "electronics")
+    bobmods.lib.machine.add_category(data.raw["assembling-machine"]["electromagnetic-plant"], "electronics-with-fluid")
   end
 end

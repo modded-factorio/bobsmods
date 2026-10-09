@@ -169,7 +169,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-shotgun-flame-shell",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
@@ -190,7 +190,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-shotgun-acid-shell",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "bob-ammo",
     energy_required = 0.1,
     enabled = false,
@@ -426,7 +426,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-fire-capsule",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -456,7 +456,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-fire-artillery-shell",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     enabled = false,
     energy_required = 15,
     ingredients = {

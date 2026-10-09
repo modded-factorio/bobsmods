@@ -11,7 +11,7 @@ data.raw.item["lab"].weight = 100000
 
 data:extend({
   {
-    type = "tool",
+    type = "item",
     name = "bob-advanced-logistic-science-pack",
     localised_description = { "item-description.science-pack" },
     icon = "__bobtech__/graphics/icons/logistic-science-pack.png",
@@ -20,10 +20,6 @@ data:extend({
     order = "e[advanced-logistic-science-pack]",
     stack_size = 200,
     weight = 1 * kg,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value",
     drop_sound = science_drop_move,
     inventory_move_sound = science_drop_move,
     pick_sound = science_pick,

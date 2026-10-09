@@ -1181,4 +1181,31 @@ alienfire2.on_damage_tick_effect = {
   },
 }
 
-data:extend({ alienpoisonvisual, alienfire, alienfire2 })
+local alienfire3 = util.table.deepcopy(alienfire)
+alienfire3.name = "bob-enemy-fire-trapped"
+alienfire3.localised_name = { "entity-name.bob-enemy-fire" }
+alienfire3.maximum_damage_multiplier = 80
+alienfire3.maximum_lifetime = 2400
+alienfire3.on_damage_tick_effect = {
+  {
+    type = "direct",
+    ignore_collision_condition = true,
+    filter_enabled = true,
+    trigger_target_mask = { "not-fire-unit" },
+    action_delivery = {
+      type = "instant",
+      target_effects = {
+        {
+          type = "damage",
+          damage = { type = "fire", amount = 1.8 },
+        },
+        {
+          type = "damage",
+          damage = { type = "acid", amount = 1.8 },
+        },
+      },
+    },
+  },
+}
+
+data:extend({ alienpoisonvisual, alienfire, alienfire2, alienfire3 })

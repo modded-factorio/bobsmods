@@ -76,8 +76,8 @@ if settings.startup["bobmods-revamp-oil"].value == true then
     bobmods.lib.tech.remove_recipe_unlock("oil-processing", "sulfur")
     bobmods.lib.recipe.hide("sulfur")
   end
-  bobmods.lib.tech.add_recipe_unlock("flammables", "bob-solid-fuel-from-sour-gas")
-  bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-petroleum-gas-sweetening")
+  bobmods.lib.tech.add_recipe_unlock("flammables", "bob-solid-fuel-from-sour-gas", 1)
+  bobmods.lib.tech.add_recipe_unlock("oil-processing", "bob-petroleum-gas-sweetening", "bob-oil-processing")
   bobmods.lib.create_gas_bottle(data.raw.fluid["bob-sour-gas"])
 
   if data.raw.fluid["bob-hydrogen-sulfide"] then
@@ -96,7 +96,7 @@ if settings.startup["bobmods-revamp-oil"].value == true then
   end
 
   for i, recipe in pairs(data.raw.recipe) do
-    if recipe.category == "oil-processing" then
+    if bobmods.lib.recipe.has_category(recipe.name, "oil-processing") then
       if recipe.results then
         change_pg_to_sg(recipe.results)
       end

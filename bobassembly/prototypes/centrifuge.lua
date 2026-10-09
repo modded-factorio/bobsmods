@@ -12,7 +12,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       subgroup = "production-machine",
       order = "g[centrifuge-2]",
       place_result = "bob-centrifuge-2",
-      stack_size = 50,
+      stack_size = 10,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
         volume = 0.7,
@@ -35,7 +35,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
       subgroup = "production-machine",
       order = "g[centrifuge-3]",
       place_result = "bob-centrifuge-3",
-      stack_size = 50,
+      stack_size = 10,
       drop_sound = {
         filename = "__base__/sound/item/mechanical-inventory-move.ogg",
         volume = 0.7,
@@ -111,7 +111,7 @@ if settings.startup["bobmods-assembly-centrifuge"].value == true then
         module_slots = 6,
         icons_positioning = {
           {
-            inventory_index = defines.inventory.assembling_machine_modules,
+            inventory_index = defines.inventory.crafter_modules,
             shift = { 0, 0.8 },
             multi_row_initial_height_modifier = -0.3,
             max_icons_per_row = 3,

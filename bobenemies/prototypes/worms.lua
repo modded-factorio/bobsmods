@@ -10,7 +10,6 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.small_worm_tint,
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(0, 2)"),
-  build_base_evolution_requirement = 0,
 
   sticker_name = "acid-sticker-small",
 
@@ -38,7 +37,6 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.medium_worm_tint,
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(2, 3)"),
-  build_base_evolution_requirement = 0.3,
 
   sticker_name = "acid-sticker-medium",
 
@@ -67,7 +65,6 @@ bobmods.enemies.new_worm({
   explosion_resist = "high",
   tint = bobmods.enemies.big_worm_tint,
   autoplace = enemy_autoplace.enemy_worm_autoplace("enemy_autoplace_base(4, 4)"),
-  build_base_evolution_requirement = 0.45,
 
   sticker_name = "acid-sticker-big",
 
@@ -1803,9 +1800,9 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
     created_effect = {
       {
         type = "cluster",
-        cluster_count = 3 * (radius ^ 2),
-        distance = 1.5 * radius,
-        distance_deviation = 1.5 * radius,
+        cluster_count = math.ceil(5 * (radius ^ 2)),
+        distance = 3 * radius,
+        distance_deviation = 3 * radius,
         action_delivery = {
           type = "instant",
           target_effects = {
@@ -1827,8 +1824,8 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
             action = {
               {
                 type = "area",
-                radius = 3 * radius,
-                force = "enemy",
+                radius = 5 * radius,
+                force = "not-friend",
                 trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
                 ignore_collision_condition = true,
                 action_delivery = {
@@ -1841,7 +1838,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
               },
               {
                 type = "area",
-                radius = 3 * radius,
+                radius = 5 * radius,
                 force = "ally",
                 entity_flags = { "breaths-air" },
                 action_delivery = {

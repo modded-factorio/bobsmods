@@ -205,10 +205,11 @@ data:extend({
     circuit_connector = circuit_connector_definitions["bob-electrolyser"],
     crafting_categories = { "bob-electrolysis" },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    use_mirroring = true,
     module_slots = 1,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.8 },
       },
     },
@@ -290,7 +291,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
@@ -299,7 +300,7 @@ data:extend({
         volume = 1000,
       },
     },
-    forced_symmetry = "vertical",
+    use_mirroring = true,
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     icon_draw_specification = {
@@ -467,7 +468,12 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = {
+          north = bob_pipe_connector_north(),
+          east = bob_pipe_connector_east_thin(),
+          south = bob_pipe_connector_south_thin(),
+          west = bob_pipe_connector_west_thin(),
+        },
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
@@ -477,7 +483,7 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    forced_symmetry = "vertical",
+    use_mirroring = true,
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     icon_draw_specification = {
@@ -529,9 +535,15 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = {
+          north = bob_pipe_connector_north(),
+          east = bob_pipe_connector_east(),
+          south = bob_pipe_connector_south_thin(),
+          west = bob_pipe_connector_west_thin(),
+        },
         pipe_covers = pipecoverspictures(),
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
+        secondary_draw_orders = { north = -1 },
         volume = 1000,
       },
     },
@@ -541,7 +553,7 @@ data:extend({
     module_slots = 2,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.8 },
       },
     },
@@ -809,7 +821,7 @@ data:extend({
     module_slots = 2,
     icons_positioning = {
       {
-        inventory_index = defines.inventory.assembling_machine_modules,
+        inventory_index = defines.inventory.crafter_modules,
         shift = { 0, 0.8 },
       },
     },
@@ -986,7 +998,7 @@ data:extend({
     collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      pipe_picture = assembler3pipepictures(),
+      pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { direction = defines.direction.north, position = { 0, -0.20 } },
@@ -1076,7 +1088,7 @@ data:extend({
     collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      pipe_picture = assembler3pipepictures(),
+      pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler3pipepictures,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { direction = defines.direction.north, position = { 0, -0.2 } },

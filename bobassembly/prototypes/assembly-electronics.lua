@@ -84,7 +84,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = assembler3pipepictures(),
+          pipe_picture = {
+            north = bob_pipe_connector_north(),
+            east = bob_pipe_connector_east_short(),
+            south = bob_pipe_connector_south_short(),
+            west = bob_pipe_connector_west_short(),
+          },
           pipe_covers = pipecoverspictures(),
           pipe_connections = {
             { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
@@ -94,7 +99,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
       },
       fluid_boxes_off_when_no_fluid_recipe = true,
-      forced_symmetry = "vertical",
+      use_mirroring = true,
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
@@ -110,7 +115,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               frame_count = 32,
               line_length = 8,
               shift = util.by_pixel(0, 2 * 2 / 3),
-              scale = 1 / 3,
+              scale = 0.38,
             },
             {
               filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
@@ -118,7 +123,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               width = 214,
               height = 237,
               repeat_count = 32,
-              scale = 1 / 3,
+              scale = 0.38,
               tint = { r = 0.7, g = 0.7, b = 0.1 },
             },
             {
@@ -131,7 +136,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               repeat_count = 32,
               draw_as_shadow = true,
               shift = util.by_pixel(8.5 * 2 / 3, 5 * 2 / 3),
-              scale = 1 / 3,
+              scale = 0.38,
             },
           },
         },
@@ -163,7 +168,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       module_slots = 2,
       icons_positioning = {
         {
-          inventory_index = defines.inventory.assembling_machine_modules,
+          inventory_index = defines.inventory.crafter_modules,
           shift = { 0, 0.5 },
           scale = 0.4,
           multi_row_initial_height_modifier = -0.3,
@@ -260,7 +265,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = assembler3pipepictures(),
+          pipe_picture = {
+            north = bob_pipe_connector_north(),
+            east = bob_pipe_connector_east_thin(),
+            south = bob_pipe_connector_south_thin(),
+            west = bob_pipe_connector_west_thin(),
+          },
           pipe_covers = pipecoverspictures(),
           pipe_connections = {
             { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
@@ -270,7 +280,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
       },
       fluid_boxes_off_when_no_fluid_recipe = true,
-      forced_symmetry = "vertical",
+      use_mirroring = true,
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
@@ -286,7 +296,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               frame_count = 32,
               line_length = 8,
               shift = util.by_pixel(0, 4 * 2 / 3),
-              scale = 1 / 3,
+              scale = 0.38,
             },
             {
               filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
@@ -294,7 +304,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               width = 214,
               height = 237,
               repeat_count = 32,
-              scale = 1 / 3,
+              scale = 0.38,
               tint = { r = 0.1, g = 0.5, b = 0.7 },
             },
             {
@@ -306,7 +316,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               line_length = 8,
               draw_as_shadow = true,
               shift = util.by_pixel(12 * 2 / 3, 4.75 * 2 / 3),
-              scale = 1 / 3,
+              scale = 0.38,
             },
           },
         },
@@ -338,7 +348,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       module_slots = 4,
       icons_positioning = {
         {
-          inventory_index = defines.inventory.assembling_machine_modules,
+          inventory_index = defines.inventory.crafter_modules,
           shift = { 0, 0.7 },
           scale = 0.4,
           multi_row_initial_height_modifier = -0.3,
@@ -442,7 +452,12 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = assembler3pipepictures(),
+          pipe_picture = {
+            north = bob_pipe_connector_north(),
+            east = bob_pipe_connector_east_thin(),
+            south = bob_pipe_connector_south_thin(),
+            west = bob_pipe_connector_west_thin(),
+          },
           pipe_covers = pipecoverspictures(),
           pipe_connections = {
             { flow_direction = "input", direction = defines.direction.north, position = { 0.5, -0.5 } },
@@ -452,7 +467,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
         },
       },
       fluid_boxes_off_when_no_fluid_recipe = true,
-      forced_symmetry = "vertical",
+      use_mirroring = true,
       collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
       selection_box = { { -1, -1 }, { 1, 1 } },
       fast_replaceable_group = "assembling-machine",
@@ -467,7 +482,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               frame_count = 32,
               line_length = 8,
               shift = util.by_pixel(0, -0.75 * 2 / 3),
-              scale = 1 / 3,
+              scale = 0.38,
             },
             {
               filename = "__bobassembly__/graphics/entity/assembling-machine/assembling-machine-mask.png",
@@ -475,7 +490,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               width = 214,
               height = 237,
               repeat_count = 32,
-              scale = 1 / 3,
+              scale = 0.38,
               tint = { r = 0.1, g = 0.7, b = 0.1 },
             },
             {
@@ -487,7 +502,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
               line_length = 8,
               draw_as_shadow = true,
               shift = util.by_pixel(28 * 2 / 3, 4 * 2 / 3),
-              scale = 1 / 3,
+              scale = 0.38,
             },
           },
         },
@@ -519,7 +534,7 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       module_slots = 6,
       icons_positioning = {
         {
-          inventory_index = defines.inventory.assembling_machine_modules,
+          inventory_index = defines.inventory.crafter_modules,
           shift = { 0, 0.7 },
           scale = 0.4,
           multi_row_initial_height_modifier = -0.3,
@@ -587,30 +602,21 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.reset_animation_when_frozen = true
       data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.reset_animation_when_frozen = true
       data.raw["assembling-machine"]["bob-electronics-machine-3"].graphics_set.reset_animation_when_frozen = true
-      data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.frozen_patch = {
-        filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-1-frozen.png",
-        width = 214,
-        height = 226,
-        priority = "high",
-        scale = 1 / 3,
-        shift = { 0, 0.0625 },
-      }
-      data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.frozen_patch = {
-        filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen.png",
-        width = 214,
-        height = 218,
-        priority = "high",
-        scale = 1 / 3,
-        shift = { 0, 0.125 },
-      }
-      data.raw["assembling-machine"]["bob-electronics-machine-3"].graphics_set.frozen_patch = {
-        filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen.png",
-        width = 214,
-        height = 237,
-        priority = "high",
-        scale = 1 / 3,
-        shift = { 0, -0.0234375 },
-      }
+      data.raw["assembling-machine"]["bob-electronics-machine-1"].graphics_set.frozen_patch =
+        util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-1-frozen", {
+          priority = "high",
+          scale = 0.38,
+        })
+      data.raw["assembling-machine"]["bob-electronics-machine-2"].graphics_set.frozen_patch =
+        util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen", {
+          priority = "high",
+          scale = 0.38,
+        })
+      data.raw["assembling-machine"]["bob-electronics-machine-3"].graphics_set.frozen_patch =
+        util.sprite_load("__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-3-frozen", {
+          priority = "high",
+          scale = 0.38,
+        })
 
       local function frozenpatch()
         return util.table.deepcopy(
@@ -631,24 +637,6 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
       data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_picture_frozen = frozenpatch()
       data.raw["assembling-machine"]["bob-electronics-machine-3"].fluid_boxes[1].pipe_covers_frozen =
         frozenpatchcovers()
-    end
-  end
-
-  if mods["space-age"] then
-    -- Prevent non electronics recipes from being craftable in an electronics assembly machine
-    for _, recipe_name in pairs({
-      "accumulator",
-      "beacon",
-      "big-electric-pole",
-      "discharge-defense-equipment",
-      "lightning-rod",
-      "medium-electric-pole",
-      "small-electric-pole",
-      "solar-panel",
-      "substation",
-    }) do
-      bobmods.lib.recipe.set_category(recipe_name, "crafting")
-      bobmods.lib.recipe.add_additional_category(recipe_name, "electromagnetics")
     end
   end
 end

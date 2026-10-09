@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.2
+Date: 27.09.2027
+  Changes:
+    - Various graphics and pipe connector updates #626
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 29. 06. 2026
+  Bugfixes:
+    - Fixed Space Age compatibility #600
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 29. 06. 2026
+  Changes:
+    - Update for Factorio 2.1 #603
+---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 01. 06. 2026
   Bugfixes:
@@ -131,7 +146,7 @@ Date: 29. 06. 2020
   Changes:
     - Fixed alignment of multipurpose furnaces
     - Internally renamed the furnaces to a standard naming scheme.
-    - Updated for MCI 0.18.9 compatabillity.
+    - Updated for MCI 0.18.9 compatibility.
     - Added fuel values and polution multipliers to Light/Heavy/Crude oil and Petroleum Gas to match MCI and Power mods. (to fuel the Fluid burning furnaces)
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.5

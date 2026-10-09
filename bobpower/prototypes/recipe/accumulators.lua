@@ -112,13 +112,13 @@ if settings.startup["bobmods-power-accumulators"].value == true then
   })
 
   if mods["space-age"] then
-    bobmods.lib.recipe.add_additional_category("bob-fast-accumulator", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-slow-accumulator", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-large-accumulator-2", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-fast-accumulator-2", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-slow-accumulator-2", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-large-accumulator-3", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-fast-accumulator-3", "electromagnetics")
-    bobmods.lib.recipe.add_additional_category("bob-slow-accumulator-3", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-fast-accumulator", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-slow-accumulator", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-large-accumulator-2", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-fast-accumulator-2", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-slow-accumulator-2", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-large-accumulator-3", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-fast-accumulator-3", "electromagnetics")
+    bobmods.lib.recipe.add_category("bob-slow-accumulator-3", "electromagnetics")
   end
 end

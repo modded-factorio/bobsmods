@@ -1,15 +1,20 @@
+local sounds = require("__base__/prototypes/entity/sounds")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+
 -- name, icon, max_health, inventory_size, logistic_mode, picture, circuit_wire_max_distance
 function bobmods.logistics.logistic_container(inputs)
+  local logistic_chest_opened_duration = 7
   return {
     type = "logistic-container",
     name = inputs.name,
     icons = inputs.icons,
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = inputs.name },
-    max_health = inputs.max_health or 150,
+    minable = { mining_time = 0.1, result = inputs.name },
+    max_health = inputs.max_health or 350,
     corpse = "small-remnants",
     collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    damaged_trigger_effect = hit_effects.entity(),
     resistances = inputs.resistances,
     fast_replaceable_group = "container",
     next_upgrade = inputs.next_upgrade,
@@ -20,13 +25,18 @@ function bobmods.logistics.logistic_container(inputs)
     icon_draw_specification = {
       scale = 0.7 or inputs.inventory_icon_scale,
     },
-    open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
-    close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
+    open_sound = sounds.metallic_chest_open,
+    close_sound = sounds.metallic_chest_close,
     impact_category = "metal",
     picture = inputs.picture,
-    animation = inputs.animation,
+    robot_door = {
+      animation_sound = sounds.logistics_chest_open,
+      opened_duration = logistic_chest_opened_duration,
+      animation = inputs.animation,
+    },
     circuit_connector = circuit_connector_definitions["chest"],
-    circuit_wire_max_distance = inputs.circuit_wire_max_distance or 7.5,
+    circuit_wire_max_distance = inputs.circuit_wire_max_distance or default_circuit_wire_max_distance,
+    water_reflection = chest_reflection(),
   }
 end
 

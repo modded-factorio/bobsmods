@@ -127,7 +127,7 @@ if settings.startup["bobmods-assembly-furnaces"].value == true and data.raw.furn
       module_slots = input.module_slots or 2,
       icons_positioning = {
         {
-          inventory_index = defines.inventory.assembling_machine_modules,
+          inventory_index = defines.inventory.crafter_modules,
           shift = { 0, 0.8 },
         },
       },

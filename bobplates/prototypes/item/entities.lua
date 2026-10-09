@@ -99,7 +99,7 @@ data:extend({
     icon = "__bobplates__/graphics/icons/stone-chemical-furnace.png",
     icon_size = 32,
     subgroup = "bob-smelting-machine",
-    order = "b[chemical-boiler-1]",
+    order = "b[chemical-furnace-1]",
     place_result = "bob-stone-chemical-furnace",
     stack_size = 50,
     drop_sound = {
@@ -122,7 +122,7 @@ data:extend({
     icon = "__base__/graphics/icons/steel-furnace.png",
     icon_size = 64,
     subgroup = "bob-smelting-machine",
-    order = "b[chemical-boiler-2]",
+    order = "b[chemical-furnace-2]",
     place_result = "bob-steel-chemical-furnace",
     stack_size = 50,
     drop_sound = {

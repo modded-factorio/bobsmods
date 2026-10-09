@@ -34,7 +34,7 @@ if data.raw.item["bob-tin-plate"] then
     {
       type = "recipe",
       name = "bob-tinned-copper-cable",
-      category = "crafting",
+      categories = { "crafting" },
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-insulated-cable",
-    category = "crafting",
+    categories = { "crafting" },
     enabled = false,
     ingredients = {
       { type = "item", name = "copper-cable", amount = 2 },
@@ -94,7 +94,7 @@ if data.raw.item["bob-gold-plate"] then
     {
       type = "recipe",
       name = "bob-gilded-copper-cable",
-      category = "advanced-crafting",
+      categories = { "advanced-crafting" },
       enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 3 },
@@ -126,7 +126,7 @@ if data.raw.item["bob-solder-alloy"] then
     {
       type = "recipe",
       name = "bob-solder",
-      category = "crafting",
+      categories = { "crafting" },
       energy_required = 2,
       enabled = false,
       auto_recycle = false,
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-basic-electronic-components",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -190,7 +190,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-electronic-components",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     energy_required = 3.5,
     enabled = false,
     ingredients = {
@@ -221,7 +221,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-integrated-electronics",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -253,7 +253,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-processing-electronics",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 7,
     enabled = false,
     ingredients = {
@@ -294,7 +294,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-wooden-board",
-    category = "crafting",
     enabled = false,
     auto_recycle = false,
     ingredients = {
@@ -335,7 +334,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-phenolic-board",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     ingredients = {
@@ -377,7 +376,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-fibreglass-board",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     enabled = false,
     auto_recycle = false,
     ingredients = {
@@ -415,7 +414,6 @@ data:extend({
   {
     type = "recipe",
     name = "bob-basic-circuit-board",
-    category = "crafting",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -457,7 +455,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-circuit-board",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -501,7 +499,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-superior-circuit-board",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -545,7 +543,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-multi-layer-circuit-board",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 15,
     enabled = false,
     ingredients = {
@@ -577,7 +575,6 @@ data:extend({
   {
     type = "recipe",
     name = "electronic-circuit",
-    category = "crafting",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -607,7 +604,6 @@ data:extend({
   {
     type = "recipe",
     name = "advanced-circuit",
-    category = "crafting",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -638,7 +634,7 @@ data:extend({
   {
     type = "recipe",
     name = "processing-unit",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -670,7 +666,7 @@ data:extend({
   {
     type = "recipe",
     name = "bob-advanced-processing-unit",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     energy_required = 15,
     enabled = false,
     ingredients = {
@@ -717,22 +713,48 @@ data.raw["produce-per-hour-achievement"]["computer-age-1"].amount = 1000
 data.raw["produce-per-hour-achievement"]["computer-age-2"].amount = 5000
 data.raw["produce-per-hour-achievement"]["computer-age-3"].amount = 15000
 
-bobmods.lib.recipe.add_additional_category("bob-tinned-copper-cable", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-insulated-cable", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-gilded-copper-cable", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-solder", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-basic-electronic-components", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-electronic-components", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-integrated-electronics", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-processing-electronics", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-wooden-board", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-phenolic-board", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-fibreglass-board", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-basic-circuit-board", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-circuit-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-superior-circuit-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("bob-multi-layer-circuit-board", "electronics-with-fluid")
-bobmods.lib.recipe.add_additional_category("electronic-circuit", "electronics")
-bobmods.lib.recipe.add_additional_category("advanced-circuit", "electronics")
-bobmods.lib.recipe.add_additional_category("processing-unit", "electronics")
-bobmods.lib.recipe.add_additional_category("bob-advanced-processing-unit", "electronics")
+if data.raw["recipe-category"]["electronics"] then
+  bobmods.lib.recipe.add_category("bob-tinned-copper-cable", "electronics")
+  bobmods.lib.recipe.add_category("bob-insulated-cable", "electronics")
+  bobmods.lib.recipe.add_category("bob-gilded-copper-cable", "electronics")
+  bobmods.lib.recipe.add_category("bob-solder", "electronics")
+  bobmods.lib.recipe.add_category("bob-basic-electronic-components", "electronics")
+  bobmods.lib.recipe.add_category("bob-electronic-components", "electronics")
+  bobmods.lib.recipe.add_category("bob-wooden-board", "electronics")
+  bobmods.lib.recipe.add_category("bob-phenolic-board", "electronics")
+  bobmods.lib.recipe.add_category("bob-fibreglass-board", "electronics")
+  bobmods.lib.recipe.add_category("bob-basic-circuit-board", "electronics")
+  bobmods.lib.recipe.add_category("electronic-circuit", "electronics")
+  bobmods.lib.recipe.add_category("advanced-circuit", "electronics")
+  bobmods.lib.recipe.add_category("processing-unit", "electronics")
+  bobmods.lib.recipe.add_category("bob-advanced-processing-unit", "electronics")
+elseif mods["space-age"] then
+  bobmods.lib.recipe.add_category("bob-tinned-copper-cable", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-insulated-cable", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-gilded-copper-cable", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-solder", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-basic-electronic-components", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-electronic-components", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-wooden-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-phenolic-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-fibreglass-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-basic-circuit-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("electronic-circuit", "electromagnetics")
+  bobmods.lib.recipe.add_category("advanced-circuit", "electromagnetics")
+  bobmods.lib.recipe.add_category("processing-unit", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-advanced-processing-unit", "electromagnetics")
+end
+
+if data.raw["recipe-category"]["electronics"] then
+  bobmods.lib.recipe.add_category("bob-circuit-board", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-integrated-electronics", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-multi-layer-circuit-board", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-processing-electronics", "electronics-with-fluid")
+  bobmods.lib.recipe.add_category("bob-superior-circuit-board", "electronics-with-fluid")
+elseif mods["space-age"] then
+  bobmods.lib.recipe.add_category("bob-circuit-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-integrated-electronics", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-multi-layer-circuit-board", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-processing-electronics", "electromagnetics")
+  bobmods.lib.recipe.add_category("bob-superior-circuit-board", "electromagnetics")
+end

@@ -425,18 +425,18 @@ if mods["bobplates"] then
     "bob-vehicle-big-turret-equipment-1",
     { type = "fluid", name = "bob-nitrogen", amount = 100 }
   )
-  data.raw.recipe["bob-vehicle-big-turret-equipment-1"].category = "crafting-with-fluid"
+  bobmods.lib.recipe.set_category("bob-vehicle-big-turret-equipment-1", "crafting-with-fluid")
   bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-1", "bob-nitrogen-processing")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-big-turret-equipment-2",
     { type = "fluid", name = "bob-hydrogen", amount = 50 }
   )
-  data.raw.recipe["bob-vehicle-big-turret-equipment-2"].category = "crafting-with-fluid"
+  bobmods.lib.recipe.set_category("bob-vehicle-big-turret-equipment-2", "crafting-with-fluid")
   bobmods.lib.recipe.add_ingredient(
     "bob-vehicle-big-turret-equipment-3",
     { type = "fluid", name = "bob-deuterium", amount = 20 }
   )
-  data.raw.recipe["bob-vehicle-big-turret-equipment-3"].category = "crafting-with-fluid"
+  bobmods.lib.recipe.set_category("bob-vehicle-big-turret-equipment-3", "crafting-with-fluid")
   bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-3", "bob-nuclear-power-3")
 end
 
@@ -708,7 +708,7 @@ if data.raw.fluid["hydrogen-chloride"] then
       "bob-vehicle-solar-panel-equipment-4",
       { type = "fluid", name = "hydrogen-chloride", amount = 240 }
     )
-    data.raw.recipe["bob-vehicle-solar-panel-equipment-4"].category = "crafting-with-fluid"
+    bobmods.lib.recipe.set_category("bob-vehicle-solar-panel-equipment-4", "crafting-with-fluid")
   end
 end
 
@@ -732,8 +732,8 @@ if data.raw.fluid["bob-heavy-water"] then
     "bob-vehicle-fission-cell-equipment-2",
     { type = "fluid", name = "bob-heavy-water", amount = 25 }
   )
-  data.raw.recipe["bob-vehicle-fission-reactor-equipment-2"].category = "crafting-with-fluid"
-  data.raw.recipe["bob-vehicle-fission-cell-equipment-2"].category = "crafting-with-fluid"
+  bobmods.lib.recipe.set_category("bob-vehicle-fission-reactor-equipment-2", "crafting-with-fluid")
+  bobmods.lib.recipe.set_category("bob-vehicle-fission-cell-equipment-2", "crafting-with-fluid")
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-2", "bob-heavy-water-processing")
   bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-2", "bob-heavy-water-processing")
 end
@@ -1223,7 +1223,7 @@ if data.raw.item["bob-alien-artifact-yellow"] and data.raw.item["bob-alien-artif
       "bob-vehicle-big-turret-equipment-4",
       { type = "fluid", name = "bob-alien-explosive", amount = 500 }
     )
-    data.raw.recipe["bob-vehicle-big-turret-equipment-4"].category = "crafting-with-fluid"
+    bobmods.lib.recipe.set_category("bob-vehicle-big-turret-equipment-4", "crafting-with-fluid")
     bobmods.lib.tech.add_prerequisite("bob-vehicle-big-turret-equipment-4", "bob-alien-yellow-research")
   else
     bobmods.lib.recipe.add_new_ingredient(
@@ -1281,14 +1281,14 @@ if data.raw.item["bob-alien-artifact-red"] and data.raw.item["bob-alien-artifact
       "bob-vehicle-fission-reactor-equipment-5",
       { type = "fluid", name = "bob-alien-fire", amount = 400 }
     )
-    data.raw.recipe["bob-vehicle-fission-reactor-equipment-5"].category = "crafting-with-fluid"
+    bobmods.lib.recipe.set_category("bob-vehicle-fission-reactor-equipment-5", "crafting-with-fluid")
     bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-reactor-equipment-5", "bob-alien-red-research")
 
     bobmods.lib.recipe.add_ingredient(
       "bob-vehicle-fission-cell-equipment-5",
       { type = "fluid", name = "bob-alien-fire", amount = 200 }
     )
-    data.raw.recipe["bob-vehicle-fission-cell-equipment-5"].category = "crafting-with-fluid"
+    bobmods.lib.recipe.set_category("bob-vehicle-fission-cell-equipment-5", "crafting-with-fluid")
     bobmods.lib.tech.add_prerequisite("bob-vehicle-fission-cell-equipment-5", "bob-alien-red-research")
   else
     bobmods.lib.recipe.add_ingredient(
@@ -1322,7 +1322,7 @@ if data.raw.item["bob-alien-artifact-red"] and data.raw.item["bob-alien-artifact
       "bob-vehicle-laser-defense-equipment-6",
       { type = "fluid", name = "bob-alien-poison", amount = 240 }
     )
-    data.raw.recipe["bob-vehicle-laser-defense-equipment-6"].category = "crafting-with-fluid"
+    bobmods.lib.recipe.set_category("bob-vehicle-laser-defense-equipment-6", "crafting-with-fluid")
     bobmods.lib.tech.add_prerequisite("bob-vehicle-laser-defense-equipment-6", "bob-alien-green-research")
   else
     bobmods.lib.recipe.add_ingredient(

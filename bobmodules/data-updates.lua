@@ -4,7 +4,13 @@ require("prototypes.recipe.module-updates")
 require("prototypes.recipe.module-merged-updates")
 require("prototypes.technology.module-updates")
 
-if mods["quality"] then
+if mods["module-category-defaults"] then
+  bobmods.lib.safe_insert(ModuleCategoryDefaults.default_categories, "pollution-clean")
+  bobmods.lib.safe_insert(ModuleCategoryDefaults.default_categories, "pollution-create")
+  bobmods.lib.safe_insert(ModuleCategoryDefaults.default_categories, "god")
+end
+
+if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe({
     "beacon",
     "bob-beacon-2",
@@ -34,11 +40,6 @@ if mods["quality"] then
     "bob-productivity-processor",
     "bob-productivity-processor-2",
     "bob-productivity-processor-3",
-    "bob-quality-module-4",
-    "bob-quality-module-5",
-    "bob-quality-processor",
-    "bob-quality-processor-2",
-    "bob-quality-processor-3",
     "bob-speed-module-4",
     "bob-speed-module-5",
     "bob-speed-processor",
@@ -49,7 +50,20 @@ if mods["quality"] then
     bobmods.lib.recipe.update_recycling_recipe({
       "bob-god-module",
       "bob-god-module-productivity",
-      "bob-god-module-quality",
     })
+  end
+  if mods["quality"] then
+    bobmods.lib.recipe.update_recycling_recipe({
+      "bob-quality-module-4",
+      "bob-quality-module-5",
+      "bob-quality-processor",
+      "bob-quality-processor-2",
+      "bob-quality-processor-3",
+    })
+    if data.raw.recipe["bob-god-module"] then
+      bobmods.lib.recipe.update_recycling_recipe({
+        "bob-god-module-quality",
+      })
+    end
   end
 end

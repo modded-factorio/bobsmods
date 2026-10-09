@@ -137,7 +137,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "crafting", "basic-crafting", "advanced-crafting" },
+      crafting_categories = { "crafting", "advanced-crafting" },
       crafting_speed = 0.25,
       energy_source = {
         type = "burner",
@@ -221,7 +221,12 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = assembler2pipepictures(),
+          pipe_picture = {
+            north = bob_pipe_connector_north_old(),
+            east = bob_pipe_connector_east_old(),
+            south = bob_pipe_connector_south_old(),
+            west = bob_pipe_connector_west_old(),
+          },
           pipe_covers = pipecoverspictures(),
           pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } } },
           secondary_draw_orders = { north = -1 },
@@ -229,7 +234,12 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         },
         {
           production_type = "output",
-          pipe_picture = assembler2pipepictures(),
+          pipe_picture = {
+            north = bob_pipe_connector_north_old(),
+            east = bob_pipe_connector_east_old(),
+            south = bob_pipe_connector_south_old(),
+            west = bob_pipe_connector_west_old(),
+          },
           pipe_covers = pipecoverspictures(),
           pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
           secondary_draw_orders = { north = -1 },
@@ -294,7 +304,7 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       },
-      crafting_categories = { "basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid" },
+      crafting_categories = { "crafting", "advanced-crafting", "crafting-with-fluid" },
       crafting_speed = 2,
       energy_source = {
         type = "fluid",
@@ -306,7 +316,12 @@ if not mods["aai-industry"] and settings.startup["bobmods-assembly-burner"].valu
             { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } },
           },
           pipe_covers = pipecoverspictures(),
-          pipe_picture = assembler2pipepictures(),
+          pipe_picture = {
+            north = bob_pipe_connector_north_old(),
+            east = bob_pipe_connector_east_old(),
+            south = bob_pipe_connector_south_old(),
+            west = bob_pipe_connector_west_old(),
+          },
           production_type = "input-output",
           filter = "steam",
           volume = 10,

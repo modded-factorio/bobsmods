@@ -4,7 +4,7 @@ data:extend({
     name = "bob-bronze-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 3 },
@@ -21,7 +21,7 @@ data:extend({
     name = "bob-brass-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 3 },
@@ -38,7 +38,7 @@ data:extend({
     name = "bob-copper-tungsten-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 16,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 2 },
@@ -55,7 +55,7 @@ data:extend({
     name = "bob-gunmetal-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 32,
     ingredients = {
       { type = "item", name = "copper-plate", amount = 8 },
@@ -74,7 +74,7 @@ data:extend({
     name = "bob-invar-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 16,
     ingredients = {
       { type = "item", name = "bob-nickel-plate", amount = 2 },
@@ -91,7 +91,7 @@ data:extend({
     name = "bob-nitinol-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 16,
     ingredients = {
       { type = "item", name = "bob-nickel-plate", amount = 3 },
@@ -109,7 +109,7 @@ data:extend({
     name = "bob-cobalt-steel-alloy",
     enabled = false,
     auto_recycle = false,
-    category = "bob-mixing-furnace",
+    categories = { "bob-mixing-furnace" },
     energy_required = 32,
     ingredients = {
       { type = "item", name = "iron-plate", amount = 14 },
@@ -128,7 +128,7 @@ if not mods["space-age"] then
       name = "tungsten-carbide",
       enabled = false,
       auto_recycle = false,
-      category = "bob-mixing-furnace",
+      categories = { "bob-mixing-furnace" },
       energy_required = 6.4,
       ingredients = {
         { type = "item", name = "carbon", amount = 1 },
