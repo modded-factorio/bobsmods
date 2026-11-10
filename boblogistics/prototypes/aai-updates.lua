@@ -40,6 +40,10 @@ if mods["aai-programmable-structures"] then
 end
 if mods["aai-loaders"] then
   if data.raw.technology["aai-basic-loader"] then
-    bobmods.lib.tech.add_prerequisite("aai-basic-loader", "steam-power")
+    -- AAI Industry moves steam power behind logistic science, which would put the basic loader after the regular
+    -- loader. There it is only required when the basic loader actually runs on steam.
+    if not mods["aai-industry"] or settings.startup["aai-loaders-mode"].value == "lubricated" then
+      bobmods.lib.tech.add_prerequisite("aai-basic-loader", "steam-power")
+    end
   end
 end
