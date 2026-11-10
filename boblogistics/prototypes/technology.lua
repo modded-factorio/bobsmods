@@ -834,6 +834,11 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       ignore_tech_cost_multiplier = true,
     },
   })
+
+  if mods["space-exploration"] then
+    se_procedural_tech_exclusions = se_procedural_tech_exclusions or {}
+    table.insert(se_procedural_tech_exclusions, "logistics-0")
+  end
 end
 
 data:extend({
