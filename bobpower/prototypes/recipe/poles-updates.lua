@@ -61,4 +61,8 @@ if settings.startup["bobmods-power-poles"].value == true then
     bobmods.lib.tech.add_prerequisite("bob-electric-pole-4", "bob-gold-processing")
     bobmods.lib.tech.add_prerequisite("bob-electric-substation-4", "bob-gold-processing")
   end
+
+  if mods["Krastorio2"] then
+    data.raw["electric-pole"]["kr-superior-substation"].fast_replaceable_group = "electric-pole"
+  end
 end
