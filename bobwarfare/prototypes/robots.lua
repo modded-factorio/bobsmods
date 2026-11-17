@@ -330,6 +330,9 @@ if settings.startup["bobmods-warfare-robotupdate"].value == true then
       follows_player = true,
       friction = 0.01,
       range_from_player = 6.0,
+      separation_range = 1.5,
+      separation_force_factor = 0.01,
+      max_separation_force = 0.01,
       working_sound = sounds.flying_robot(),
       destroy_action = {
         type = "direct",

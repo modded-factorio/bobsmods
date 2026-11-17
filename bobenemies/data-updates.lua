@@ -3471,6 +3471,17 @@ end
 data.raw["active-defense-equipment"]["discharge-defense-equipment"].attack_parameters.ammo_type.action[1].trigger_target_mask =
   { "not-electric-unit" }
 
+for _, wall in pairs(data.raw.wall) do
+  if wall.damaged_trigger_effect and wall.damaged_trigger_effect.damage_type_filters then
+    wall.damaged_trigger_effect.damage_type_filters = { "fire", "acid", "poison" }
+  end
+end
+for _, gate in pairs(data.raw.gate) do
+  if gate.damaged_trigger_effect and gate.damaged_trigger_effect.damage_type_filters then
+    gate.damaged_trigger_effect.damage_type_filters = { "fire", "acid", "poison" }
+  end
+end
+
 if mods["combat-mechanics-overhaul"] then
   for _, mask in pairs({
     "ammo-turret",

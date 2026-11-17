@@ -10,7 +10,12 @@ if settings.startup["bobmods-assembly-oilfurnaces"].value == true then
           { flow_direction = "input-output", direction = defines.direction.east, position = { 0.5, 0.5 } },
           { flow_direction = "input-output", direction = defines.direction.west, position = { -0.5, 0.5 } },
         },
-        pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
+        pipe_picture = {
+          north = bob_pipe_connector_north(),
+          east = bob_pipe_connector_east_thin(),
+          south = bob_pipe_connector_south_thin(),
+          west = bob_pipe_connector_west_thin(),
+        },
         pipe_covers = pipecoverspictures(),
         production_type = "input-output",
         secondary_draw_orders = {

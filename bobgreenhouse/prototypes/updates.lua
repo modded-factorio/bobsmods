@@ -32,5 +32,4 @@ end
 if mods["recycler"] then
   bobmods.lib.recipe.update_recycling_recipe_single("bob-greenhouse", false)
   bobmods.lib.recipe.update_recycling_recipe_single("rail", false)
-  bobmods.lib.recipe.update_recycling_recipe_single("bob-fertiliser", false)
 end

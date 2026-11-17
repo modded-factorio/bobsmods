@@ -20,6 +20,22 @@ data:extend({
             type = "damage",
             damage = { amount = 1, type = "bob-pierce" },
           },
+          {
+            type = "create-entity",
+            entity_name = "explosion-hit",
+            offset_deviation = {
+              { -0.5, -0.5 },
+              { 0.5, 0.5 },
+            },
+            offsets = {
+              { 0, 1 },
+            },
+            only_when_visible = true,
+          },
+          {
+            type = "activate-impact",
+            deliver_category = "bullet",
+          },
         },
       },
     },
@@ -30,7 +46,7 @@ data:extend({
       height = 60,
       priority = "high",
     },
-    collision_box = { { -0.3, -0.9 }, { 0.3, 0.9 } },
+    collision_box = { { -0.3, -1.1 }, { 0.3, 1.1 } },
     flags = {
       "not-on-map",
     },
@@ -64,7 +80,7 @@ data:extend({
         },
       },
     },
-    collision_box = { { -0.3, -0.9 }, { 0.3, 0.9 } },
+    collision_box = { { -0.3, -1.1 }, { 0.3, 1.1 } },
     flags = {
       "not-on-map",
     },

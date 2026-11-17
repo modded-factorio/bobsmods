@@ -1800,9 +1800,9 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
     created_effect = {
       {
         type = "cluster",
-        cluster_count = 3 * (radius ^ 2),
-        distance = 1.5 * radius,
-        distance_deviation = 1.5 * radius,
+        cluster_count = math.ceil(5 * (radius ^ 2)),
+        distance = 3 * radius,
+        distance_deviation = 3 * radius,
         action_delivery = {
           type = "instant",
           target_effects = {
@@ -1824,8 +1824,8 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
             action = {
               {
                 type = "area",
-                radius = 3 * radius,
-                force = "enemy",
+                radius = 5 * radius,
+                force = "not-friend",
                 trigger_target_mask = { "ground-structure", "ground-unit", "flying-robot" },
                 ignore_collision_condition = true,
                 action_delivery = {
@@ -1838,7 +1838,7 @@ local poison_attack_action = function(radius, attack_smoke_name, defense_smoke_n
               },
               {
                 type = "area",
-                radius = 3 * radius,
+                radius = 5 * radius,
                 force = "ally",
                 entity_flags = { "breaths-air" },
                 action_delivery = {

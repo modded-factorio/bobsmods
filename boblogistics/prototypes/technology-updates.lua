@@ -1,4 +1,4 @@
-bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-storage-tank-all-corners")
+bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-storage-tank-all-corners", "storage-tank")
 bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-valve")
 bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-overflow-valve")
 bobmods.lib.tech.add_recipe_unlock("fluid-handling", "bob-topup-valve")
@@ -232,7 +232,7 @@ end
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   bobmods.lib.tech.add_prerequisite("logistics", "logistics-0")
-  bobmods.lib.tech.add_recipe_unlock("logistics", "transport-belt")
+  bobmods.lib.tech.add_recipe_unlock("logistics", "transport-belt", 1)
   bobmods.lib.tech.add_prerequisite("logistic-science-pack", "logistics")
 end
 
@@ -300,24 +300,24 @@ bobmods.lib.tech.remove_recipe_unlock("logistic-robotics", "roboport")
 
 if settings.startup["bobmods-logistics-robotparts"].value == true then
   bobmods.lib.tech.add_recipe_unlock("robotics", "bob-robot-brain")
-  bobmods.lib.tech.add_recipe_unlock("construction-robotics", "bob-robot-tool-construction")
-  bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "bob-robot-tool-logistic")
+  bobmods.lib.tech.add_recipe_unlock("construction-robotics", "bob-robot-tool-construction", "construction-robot", true)
+  bobmods.lib.tech.add_recipe_unlock("logistic-robotics", "bob-robot-tool-logistic", "logistic-robot", true)
 
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-brain-2")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-construction-2")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-logistic-2")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-construction-2", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-tool-logistic-2", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-1", "bob-robot-brain-2", 1)
 
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-brain-3")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-construction-3")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-logistic-3")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-construction-3", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-tool-logistic-3", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-2", "bob-robot-brain-3", 1)
 
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-brain-4")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-construction-4")
-  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-logistic-4")
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-construction-4", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-tool-logistic-4", 1)
+  bobmods.lib.tech.add_recipe_unlock("bob-robots-3", "bob-robot-brain-4", 1)
 end
 
-bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe")
-bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe-to-ground")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe", "pipe-to-ground")
+bobmods.lib.tech.add_recipe_unlock("steam-power", "bob-copper-pipe-to-ground", "bob-copper-pipe")
 
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe")
 bobmods.lib.tech.add_recipe_unlock("steel-processing", "bob-steel-pipe-to-ground")

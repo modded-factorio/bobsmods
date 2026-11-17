@@ -95,6 +95,42 @@ if settings.startup["bobmods-power-heatsources"].value == true then
       },
       consumption = "0.6MW",
       neighbour_bonus = 0.25,
+      neighbour_connectable = {
+        connections = {
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.north,
+              position = { 0, -1.5 },
+            },
+            neighbour_category = { "burner-reactor" },
+          },
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.east,
+              position = { 1.5, 0 },
+            },
+            neighbour_category = { "burner-reactor" },
+          },
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.south,
+              position = { 0, 1.5 },
+            },
+            neighbour_category = { "burner-reactor" },
+          },
+          {
+            category = "burner-reactor",
+            location = {
+              direction = defines.direction.west,
+              position = { -1.5, 0 },
+            },
+            neighbour_category = { "burner-reactor" },
+          },
+        },
+      },
       scale_energy_usage = false,
       energy_source = {
         type = "burner",
@@ -411,8 +447,16 @@ if settings.startup["bobmods-power-heatsources"].value == true then
         { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
       },
       pipe_covers = pipecoverspictures(),
-      pipe_picture = require("__base__/prototypes/entity/assembler-pictures").assembler2pipepictures,
+      pipe_picture = {
+        east = bob_pipe_connector_east(),
+        north = bob_pipe_connector_north(),
+        south = bob_pipe_connector_south(),
+        west = bob_pipe_connector_west(),
+      },
       production_type = "input-output",
+      secondary_draw_orders = {
+        north = -1,
+      },
     },
     burns_fluid = true,
     scale_fluid_usage = true,
