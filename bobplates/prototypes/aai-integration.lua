@@ -38,7 +38,7 @@ if mods["aai-industry"] then
   bobmods.lib.tech.add_prerequisite("bob-chemical-processing-1", "basic-fluid-handling")
 
   if mods["bobtech"] then
-    data.raw.technology["sand-processing"].research_trigger = { type = "mine-entity", entity = "bob-quartz" }
+    data.raw.technology["sand-processing"].research_trigger = { type = "mine-entity", entities = { "bob-quartz" } }
     data.raw.technology["sand-processing"].unit = nil
     data.raw.technology["glass-processing"].research_trigger = { type = "craft-item", item = "sand", count = 10 }
     data.raw.technology["glass-processing"].unit = nil
