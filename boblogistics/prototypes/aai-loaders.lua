@@ -14,7 +14,9 @@ then
   if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
     -- Inserters
     -- AAI Industry moves steam power (and so the steam inserter) behind logistic science
-    local basic_inserter = (mods["aai-industry"] and settings.startup["aai-loaders-mode"].value ~= "lubricated") and "burner-inserter" or "bob-steam-inserter"
+    local basic_inserter = (mods["aai-industry"] and settings.startup["aai-loaders-mode"].value ~= "lubricated")
+        and "burner-inserter"
+      or "bob-steam-inserter"
     table.insert(ingredients.basic, { type = "item", name = basic_inserter, amount = 2 })
     table.insert(ingredients.regular, { type = "item", name = "inserter", amount = 2 })
     table.insert(ingredients.fast, { type = "item", name = "bob-red-bulk-inserter", amount = 2 })
