@@ -267,9 +267,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           production_type = "input",
           pipe_picture = {
             north = bob_pipe_connector_north(),
-            east = bob_pipe_connector_east_thin(),
-            south = bob_pipe_connector_south_thin(),
-            west = bob_pipe_connector_west_thin(),
+            east = bob_pipe_connector_east_short(),
+            south = bob_pipe_connector_south_short(),
+            west = bob_pipe_connector_west_short(),
           },
           pipe_covers = pipecoverspictures(),
           pipe_connections = {
@@ -454,9 +454,9 @@ if settings.startup["bobmods-assembly-electronicmachines"].value == true then
           production_type = "input",
           pipe_picture = {
             north = bob_pipe_connector_north(),
-            east = bob_pipe_connector_east_thin(),
-            south = bob_pipe_connector_south_thin(),
-            west = bob_pipe_connector_west_thin(),
+            east = bob_pipe_connector_east_short(),
+            south = bob_pipe_connector_south_short(),
+            west = bob_pipe_connector_west_short(),
           },
           pipe_covers = pipecoverspictures(),
           pipe_connections = {

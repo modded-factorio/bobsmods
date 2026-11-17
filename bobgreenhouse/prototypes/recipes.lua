@@ -12,6 +12,7 @@ data:extend({
     },
     results = { { type = "item", name = "bob-fertiliser", amount = 1 } },
     allow_productivity = true,
+    auto_recycle = false,
   },
 
   {

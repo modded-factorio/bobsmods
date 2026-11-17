@@ -41,3 +41,6 @@ luac.out
 
 # Working Files
 *.vscode
+
+# Personal/machine-specific Claude Code context (see CLAUDE.md)
+CLAUDE.local.md

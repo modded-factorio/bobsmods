@@ -71,8 +71,6 @@ if settings.startup["bobmods-power-poles"].value == true then
     }),
   })
 
-  data.raw["electric-pole"]["substation"].fast_replaceable_group = "electric-pole"
-
   data:extend({
     util.merge({
       data.raw["electric-pole"]["substation"],
