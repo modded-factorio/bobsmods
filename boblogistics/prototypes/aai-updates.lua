@@ -40,6 +40,12 @@ if mods["aai-programmable-structures"] then
 end
 if mods["aai-loaders"] then
   if data.raw.technology["aai-basic-loader"] then
-    bobmods.lib.tech.add_prerequisite("aai-basic-loader", "steam-power")
+    if not mods["aai-industry"] then
+      bobmods.lib.tech.add_prerequisite("aai-basic-loader", "steam-power")
+    elseif settings.startup["aai-loaders-mode"].value == "lubricated" then
+      bobmods.lib.tech.add_recipe_unlock("aai-basic-loader", "bob-steam-inserter")
+      bobmods.lib.tech.add_recipe_unlock("aai-basic-loader", "boiler")
+      bobmods.lib.tech.remove_recipe_unlock("steam-power", "bob-steam-inserter")
+    end
   end
 end
