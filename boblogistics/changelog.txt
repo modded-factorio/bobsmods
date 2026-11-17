@@ -3,6 +3,8 @@ Version: 3.0.3
 Date: 17.11.2026
   Changes:
     - Improved compatibility with AAI Loaders and AAI Industry #650
+  Bugfixes:
+    - Fixed express belt recipe crafting categories #641
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.2
 Date: 27.09.2026
