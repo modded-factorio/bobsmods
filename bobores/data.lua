@@ -70,6 +70,16 @@ require("prototypes.fluids")
 for i, ore in pairs(bobmods.ores) do
   bobmods.lib.resource.generate_data_stage(ore)
 end
+if mods["space-age"] then
+  data.raw.resource["tungsten-ore"].autoplace = {
+    order = "b",
+    probability_expression = 0
+  }
+  data.raw.resource["tungsten-ore"].map_color = { r = 0.7, g = 0.1, b = 0.1 }
+  data.raw.resource["tungsten-ore"].category = "hard-solid"
+  data.raw.resource["tungsten-ore"].tree_removal_max_distance = 1024
+  data.raw.resource["tungsten-ore"].tree_removal_probability = 0.8
+end
 
 if settings.startup["bobmods-ores-enablebauxite"].value == true then
   bobmods.ores.bauxite.create_autoplace()
