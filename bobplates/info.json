@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 2.1.20",
     "boblibrary >= 3.0.2",
-    "bobores >= 3.0.0",
+    "bobores >= 3.0.1",
     "? bobenemies >= 3.0.0",
     "? space-age >= 2.1.0"
   ],
