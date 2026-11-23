@@ -73,7 +73,7 @@ end
 if mods["space-age"] then
   data.raw.resource["tungsten-ore"].autoplace = {
     order = "b",
-    probability_expression = 0
+    probability_expression = 0,
   }
   data.raw.resource["tungsten-ore"].map_color = { r = 0.7, g = 0.1, b = 0.1 }
   data.raw.resource["tungsten-ore"].category = "hard-solid"
