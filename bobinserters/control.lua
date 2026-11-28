@@ -555,12 +555,25 @@ script.on_event(defines.events.on_gui_checked_state_changed, function(event)
         remote.call("bobinserters", "draw_button_offset_check", { gui = event.element.parent, position = i })
         storage.bobmods.logistics[event.player_index].offset = i
       elseif entity and entity.valid and player.can_reach_entity(entity) then
-        if event.element.parent.name == "bob_inserter_gui_pickup" then
-          bobmods.inserters.gui_pickup_click(entity, event.element)
-        elseif event.element.parent.name == "bob_inserter_gui_drop" then
-          bobmods.inserters.gui_drop_click(entity, event.element)
-        elseif event.element.parent.name == "bob_inserter_gui_offset" then
-          bobmods.inserters.gui_offset_click(entity, event.element)
+        local grid = bobmods.inserters.get_button_grid(event.element)
+        if grid.name == "bob_inserter_gui_pickup" then
+          if event.element.state then
+            bobmods.inserters.gui_pickup_click(entity, event.element)
+          else
+            bobmods.inserters.draw_button_position_check(grid, get_pickup_position(entity))
+          end
+        elseif grid.name == "bob_inserter_gui_drop" then
+          if event.element.state then
+            bobmods.inserters.gui_drop_click(entity, event.element)
+          else
+            bobmods.inserters.draw_button_position_check(grid, select(1, get_split_drop_position(entity)))
+          end
+        elseif grid.name == "bob_inserter_gui_offset" then
+          if event.element.state then
+            bobmods.inserters.gui_offset_click(entity, event.element)
+          else
+            bobmods.inserters.draw_button_offset_check(grid, select(2, get_split_drop_position(entity)))
+          end
         end
       else
         bobmods.inserters.delete_gui(event.player_index)
@@ -573,6 +586,9 @@ script.on_event(defines.events.on_gui_click, function(event)
   local player = game.players[event.player_index]
   local entity = storage.bobmods.inserters[event.player_index].entity
   if event.element.valid then
+    if bobmods.inserters.handle_position_cell_gui_click(event.player_index, event.element) then
+      return
+    end
     if entity and entity.valid and player.can_reach_entity(entity) then
       if event.element.name == "bob_inserter_gui_close" then
         bobmods.inserters.delete_gui(event.player_index)
@@ -610,6 +626,9 @@ script.on_event(defines.events.on_tick, function(event)
           local entity = storage.bobmods.inserters[player.index].entity
           if entity and (not entity.valid or not player.can_reach_entity(entity)) then
             bobmods.inserters.delete_gui(player.index)
+          elseif entity and entity.valid and storage.bobmods.inserters[player.index].pickup then
+            bobmods.inserters.refresh_grid_entity_icons(storage.bobmods.inserters[player.index].pickup, entity)
+            bobmods.inserters.refresh_grid_entity_icons(storage.bobmods.inserters[player.index].drop, entity)
           end
         else
           bobmods.inserters.create_global_table(player.index) -- Create for this specific online player.
@@ -1026,7 +1045,7 @@ function bobmods.inserters.gui_pickup_click(entity, element)
   pickup_position = bobmods.inserters.positions[i]
   set_pickup_position(entity, pickup_position)
   entity.direction = entity.direction -- set direction to force update
-  bobmods.inserters.draw_button_position_check(element.parent, pickup_position)
+  bobmods.inserters.draw_button_position_check(bobmods.inserters.get_button_grid(element), pickup_position)
 end
 
 function bobmods.inserters.gui_drop_click(entity, element)
@@ -1044,7 +1063,7 @@ function bobmods.inserters.gui_offset_click(entity, element)
   new_offset = bobmods.inserters.offset_positions[i]
   set_split_drop_position(entity, get_drop_tile_position(entity), new_offset)
   entity.direction = entity.direction -- set direction to force update
-  bobmods.inserters.draw_button_offset_check(element.parent, new_offset)
+  bobmods.inserters.draw_button_offset_check(bobmods.inserters.get_button_grid(element), new_offset)
 end
 
 function bobmods.inserters.rotate_position(force, pickup_position)
@@ -1465,7 +1484,8 @@ function bobmods.inserters.open_gui(entity, player)
       long2_unlocked,
       more_unlocked,
       more2_unlocked,
-      near_unlocked
+      near_unlocked,
+      entity
     )
   else
     gui = player.gui.screen.add({ type = "frame", name = "bob_inserter_gui", direction = "vertical" })
@@ -1514,7 +1534,8 @@ function bobmods.inserters.open_gui(entity, player)
       long2_unlocked,
       more_unlocked,
       more2_unlocked,
-      near_unlocked
+      near_unlocked,
+      entity
     )
 
     gui.auto_center = true
@@ -1527,6 +1548,414 @@ function bobmods.inserters.open_gui(entity, player)
   gui.style.horizontally_stretchable = false
 end
 
+function bobmods.inserters.get_world_position_from_relative(entity, relative_pos)
+  return { x = entity.position.x + relative_pos.x, y = entity.position.y + relative_pos.y }
+end
+
+function bobmods.inserters.get_tile_area_from_relative(entity, relative_pos)
+  local world_pos = bobmods.inserters.get_world_position_from_relative(entity, relative_pos)
+  return {
+    { world_pos.x - 0.5, world_pos.y - 0.5 },
+    { world_pos.x + 0.5, world_pos.y + 0.5 },
+  }
+end
+
+bobmods.inserters.entity_type_priority = {
+  ["entity-ghost"] = 0,
+  ["container"] = 1,
+  ["logistic-container"] = 1,
+  ["assembling-machine"] = 2,
+  ["furnace"] = 2,
+  ["lab"] = 2,
+  ["mining-drill"] = 2,
+  ["storage-tank"] = 2,
+  ["rocket-silo"] = 2,
+  ["transport-belt"] = 3,
+  ["underground-belt"] = 3,
+  ["splitter"] = 3,
+  ["linked-belt"] = 3,
+  ["loader"] = 3,
+  ["inserter"] = 4,
+}
+
+function bobmods.inserters.get_entity_at_relative_position(entity, relative_pos)
+  if not entity or not entity.valid then
+    return nil
+  end
+  local area = bobmods.inserters.get_tile_area_from_relative(entity, relative_pos)
+  local candidates = entity.surface.find_entities_filtered({ area = area })
+  local best = nil
+  local best_priority = 999
+  for _, candidate in pairs(candidates) do
+    if candidate ~= entity and candidate.valid then
+      local priority = bobmods.inserters.entity_type_priority[candidate.type] or 10
+      if priority < best_priority then
+        best = candidate
+        best_priority = priority
+      end
+    end
+  end
+  return best
+end
+
+function bobmods.inserters.get_entity_sprite(target_entity)
+  if not target_entity or not target_entity.valid then
+    return nil
+  end
+  local name = target_entity.name
+  if target_entity.type == "entity-ghost" then
+    name = target_entity.ghost_name or name
+  end
+  local item_name = nil
+  if target_entity.type == "entity-ghost" and target_entity.ghost_prototype then
+    local items = target_entity.ghost_prototype.items_to_place_this
+    if items and items[1] then
+      item_name = items[1].name
+    end
+  elseif target_entity.prototype.items_to_place_this then
+    local items = target_entity.prototype.items_to_place_this
+    if items and items[1] then
+      item_name = items[1].name
+    end
+  end
+  if item_name and prototypes.item[item_name] then
+    return "item/" .. item_name
+  end
+  if prototypes.entity[name] then
+    return "entity/" .. name
+  end
+  return nil
+end
+
+function bobmods.inserters.get_entity_sprite_at_relative_position(entity, relative_pos)
+  if relative_pos.x == 0 and relative_pos.y == 0 then
+    return nil
+  end
+  return bobmods.inserters.get_entity_sprite(bobmods.inserters.get_entity_at_relative_position(entity, relative_pos))
+end
+
+function bobmods.inserters.get_entity_footprint_id(target_entity)
+  if target_entity.unit_number ~= nil then
+    return target_entity.unit_number
+  end
+  local pos = target_entity.position
+  local name = target_entity.name
+  if target_entity.type == "entity-ghost" then
+    name = target_entity.ghost_name or name
+  end
+  return name .. "@" .. math.floor(pos.x + 0.5) .. "," .. math.floor(pos.y + 0.5)
+end
+
+function bobmods.inserters.build_entity_footprint_cache(inserter_entity)
+  local by_unit = {}
+  local index_sets = {}
+  for i = 1, 49 do
+    local target = bobmods.inserters.get_entity_at_relative_position(inserter_entity, bobmods.inserters.positions[i])
+    if target then
+      local uid = bobmods.inserters.get_entity_footprint_id(target)
+      if not by_unit[uid] then
+        by_unit[uid] = { entity = target, index_set = {} }
+      end
+      by_unit[uid].index_set[i] = true
+      index_sets[i] = uid
+    end
+  end
+  return { by_unit = by_unit, index_sets = index_sets }
+end
+
+function bobmods.inserters.get_position_index_at_offset(pos)
+  for i, grid_pos in ipairs(bobmods.inserters.positions) do
+    if grid_pos.x == pos.x and grid_pos.y == pos.y then
+      return i
+    end
+  end
+  return nil
+end
+
+function bobmods.inserters.get_footprint_edges(index, index_set)
+  local pos = bobmods.inserters.positions[index]
+  local north_i = bobmods.inserters.get_position_index_at_offset({ x = pos.x, y = pos.y - 1 })
+  local south_i = bobmods.inserters.get_position_index_at_offset({ x = pos.x, y = pos.y + 1 })
+  local east_i = bobmods.inserters.get_position_index_at_offset({ x = pos.x + 1, y = pos.y })
+  local west_i = bobmods.inserters.get_position_index_at_offset({ x = pos.x - 1, y = pos.y })
+
+  local function same_footprint(neighbor_i)
+    return neighbor_i and index_set[neighbor_i]
+  end
+
+  return {
+    north = not same_footprint(north_i),
+    south = not same_footprint(south_i),
+    east = not same_footprint(east_i),
+    west = not same_footprint(west_i),
+  }
+end
+
+function bobmods.inserters.get_cell_visual_info(inserter_entity, index, footprint_cache)
+  local uid = footprint_cache.index_sets[index]
+  if not uid then
+    return nil
+  end
+  local footprint = footprint_cache.by_unit[uid]
+  local target_entity = footprint.entity
+  return {
+    sprite = bobmods.inserters.get_entity_sprite(target_entity),
+    edges = bobmods.inserters.get_footprint_edges(index, footprint.index_set),
+  }
+end
+
+function bobmods.inserters.clear_legacy_cell_content(cell, name)
+  local frame = cell[name .. "_frame"]
+  if frame and frame.valid then
+    frame.destroy()
+  end
+  local stack = cell[name .. "_stack"]
+  if stack and stack.valid then
+    stack.destroy()
+  end
+end
+
+function bobmods.inserters.add_border_spacer(parent, width, height)
+  local spacer = parent.add({ type = "empty-widget", ignored_by_interaction = true })
+  spacer.style.width = width
+  spacer.style.height = height
+  return spacer
+end
+
+function bobmods.inserters.add_border_line(parent, width, height)
+  local line = parent.add({
+    type = "sprite",
+    sprite = "bobinserters-outline-bar",
+    ignored_by_interaction = true,
+  })
+  line.style.width = width
+  line.style.height = height
+  line.style.stretch_image_to_widget_size = true
+  return line
+end
+
+function bobmods.inserters.build_border_overlay(layer, name, edges)
+  if not edges.north and not edges.south and not edges.east and not edges.west then
+    return
+  end
+  local border_size = 2
+  local inner_size = 32 - border_size * 2
+  local overlay = layer.add({ type = "flow", name = name .. "_borders", direction = "vertical" })
+  overlay.ignored_by_interaction = true
+  overlay.style.top_margin = -32
+  overlay.style.width = 32
+  overlay.style.height = 32
+  overlay.style.padding = 0
+  overlay.style.vertical_spacing = 0
+
+  local row_north = overlay.add({ type = "flow", direction = "horizontal" })
+  row_north.ignored_by_interaction = true
+  row_north.style.width = 32
+  row_north.style.height = border_size
+  row_north.style.padding = 0
+  row_north.style.horizontal_spacing = 0
+  if edges.north then
+    bobmods.inserters.add_border_line(row_north, 32, border_size)
+  else
+    bobmods.inserters.add_border_spacer(row_north, 32, border_size)
+  end
+
+  local row_middle = overlay.add({ type = "flow", direction = "horizontal" })
+  row_middle.ignored_by_interaction = true
+  row_middle.style.width = 32
+  row_middle.style.height = inner_size
+  row_middle.style.padding = 0
+  row_middle.style.horizontal_spacing = 0
+  if edges.west then
+    bobmods.inserters.add_border_line(row_middle, border_size, inner_size)
+  else
+    bobmods.inserters.add_border_spacer(row_middle, border_size, inner_size)
+  end
+  bobmods.inserters.add_border_spacer(row_middle, inner_size, inner_size)
+  if edges.east then
+    bobmods.inserters.add_border_line(row_middle, border_size, inner_size)
+  else
+    bobmods.inserters.add_border_spacer(row_middle, border_size, inner_size)
+  end
+
+  local row_south = overlay.add({ type = "flow", direction = "horizontal" })
+  row_south.ignored_by_interaction = true
+  row_south.style.width = 32
+  row_south.style.height = border_size
+  row_south.style.padding = 0
+  row_south.style.horizontal_spacing = 0
+  if edges.south then
+    bobmods.inserters.add_border_line(row_south, 32, border_size)
+  else
+    bobmods.inserters.add_border_spacer(row_south, 32, border_size)
+  end
+end
+
+function bobmods.inserters.clear_position_cell_layer(cell, name)
+  bobmods.inserters.clear_legacy_cell_content(cell, name)
+  local layer = cell[name .. "_layer"]
+  if layer and layer.valid then
+    layer.destroy()
+  end
+  local checkbox = cell[name]
+  if checkbox and checkbox.valid then
+    checkbox.style.top_margin = 0
+  end
+end
+
+function bobmods.inserters.get_position_checkbox_from_element(element)
+  if not element or not element.valid then
+    return nil
+  end
+  if element.type == "checkbox" and string.sub(element.name, 1, 6) == "button" then
+    return element
+  end
+  local cell = element.parent
+  while cell and cell.valid do
+    if string.sub(cell.name, -5) == "_cell" then
+      local button_name = string.match(cell.name, "^(button%d+)")
+      if button_name then
+        local checkbox = cell[button_name]
+        if checkbox and checkbox.valid then
+          return checkbox
+        end
+      end
+      return nil
+    end
+    cell = cell.parent
+  end
+  return nil
+end
+
+function bobmods.inserters.handle_position_cell_gui_click(player_index, element)
+  local checkbox = bobmods.inserters.get_position_checkbox_from_element(element)
+  if not checkbox then
+    return false
+  end
+
+  local player = game.players[player_index]
+  local entity = storage.bobmods.inserters[player_index].entity
+  if not entity or not entity.valid or not player.can_reach_entity(entity) then
+    bobmods.inserters.delete_gui(player_index)
+    return true
+  end
+
+  local grid = bobmods.inserters.get_button_grid(checkbox)
+  if grid.name == "bob_inserter_gui_pickup" then
+    bobmods.inserters.gui_pickup_click(entity, checkbox)
+  elseif grid.name == "bob_inserter_gui_drop" then
+    bobmods.inserters.gui_drop_click(entity, checkbox)
+  else
+    return false
+  end
+  return true
+end
+
+function bobmods.inserters.populate_position_cell_content(cell, name, visual)
+  bobmods.inserters.clear_position_cell_layer(cell, name)
+
+  local layer_index = 1
+  for i, child in ipairs(cell.children) do
+    if child.name == name then
+      layer_index = i
+      break
+    end
+  end
+
+  local layer = cell.add({
+    type = "flow",
+    name = name .. "_layer",
+    direction = "vertical",
+    index = layer_index,
+  })
+  layer.ignored_by_interaction = true
+  layer.style.padding = 0
+  layer.style.margin = 0
+  layer.style.vertical_spacing = 0
+  layer.style.width = 32
+  layer.style.height = 32
+
+  local icon = layer.add({
+    type = "sprite",
+    name = name .. "_icon",
+    sprite = visual.sprite,
+    ignored_by_interaction = true,
+  })
+  icon.style.width = 32
+  icon.style.height = 32
+  icon.style.stretch_image_to_widget_size = true
+
+  bobmods.inserters.build_border_overlay(layer, name, visual.edges)
+
+  local checkbox = cell[name]
+  if checkbox and checkbox.valid then
+    checkbox.style.top_margin = -32
+  end
+end
+
+function bobmods.inserters.get_overlay_style(style)
+  if style == "bob_inserter_checkbox_pickup" then
+    return "bob_inserter_checkbox_pickup_overlay"
+  elseif style == "bob_inserter_checkbox_drop" then
+    return "bob_inserter_checkbox_drop_overlay"
+  end
+  return style
+end
+
+function bobmods.inserters.get_button_grid(element)
+  local parent = element.parent
+  if parent.type == "flow" and string.sub(parent.name, -5) == "_cell" then
+    return parent.parent
+  end
+  return parent
+end
+
+function bobmods.inserters.add_position_cell(gui, name, style, entity)
+  local index = tonumber(string.match(name, "button(%d+)"))
+  local cache = bobmods.inserters._current_footprint_cache
+  local visual = entity and index and cache and bobmods.inserters.get_cell_visual_info(entity, index, cache) or nil
+  local has_visual = visual and visual.sprite
+
+  local cell = gui.add({ type = "flow", name = name .. "_cell", direction = "vertical" })
+  cell.style.padding = 0
+  cell.style.margin = 0
+  cell.style.vertical_spacing = 0
+  cell.style.width = 32
+  cell.style.height = 32
+
+  local checkbox = cell.add({
+    type = "checkbox",
+    name = name,
+    state = false,
+    style = has_visual and bobmods.inserters.get_overlay_style(style) or style,
+  })
+  checkbox.style.width = 32
+  checkbox.style.height = 32
+
+  if has_visual then
+    bobmods.inserters.populate_position_cell_content(cell, name, visual)
+  end
+end
+
+function bobmods.inserters.refresh_grid_entity_icons(gui, entity)
+  if not gui or not gui.valid or not entity or not entity.valid then
+    return
+  end
+  local cache = bobmods.inserters.build_entity_footprint_cache(entity)
+  for i = 1, 49 do
+    local name = "button" .. i
+    local cell = gui[name .. "_cell"]
+    if cell and cell.valid then
+      local visual = bobmods.inserters.get_cell_visual_info(entity, i, cache)
+      if visual and visual.sprite then
+        bobmods.inserters.populate_position_cell_content(cell, name, visual)
+      else
+        bobmods.inserters.clear_position_cell_layer(cell, name)
+      end
+    end
+  end
+end
+
 function bobmods.inserters.draw_inserter_gui_main_table(
   gui,
   name,
@@ -1537,7 +1966,8 @@ function bobmods.inserters.draw_inserter_gui_main_table(
   long2_unlocked,
   more_unlocked,
   more2_unlocked,
-  near_unlocked
+  near_unlocked,
+  entity
 )
   local isshort = false
   local islong = false
@@ -1612,7 +2042,8 @@ function bobmods.inserters.draw_inserter_gui_main_table(
     long2_unlocked,
     more2_unlocked,
     islong2,
-    isshort
+    isshort,
+    entity
   )
   bobmods.inserters.draw_button_grid(
     gui_drop,
@@ -1624,7 +2055,8 @@ function bobmods.inserters.draw_inserter_gui_main_table(
     long2_unlocked,
     more2_unlocked,
     islong2,
-    isshort
+    isshort,
+    entity
   )
 
   if near_unlocked then
@@ -1661,36 +2093,39 @@ function bobmods.inserters.draw_offset_grid(gui, position)
   bobmods.inserters.draw_button_offset_check(gui, position)
 end
 
-function bobmods.inserters.draw_button_grid(gui, position, style, long, more, islong, long2, more2, islong2, isshort)
+function bobmods.inserters.draw_button_grid(gui, position, style, long, more, islong, long2, more2, islong2, isshort, entity)
+  bobmods.inserters._current_footprint_cache = (entity and entity.valid)
+    and bobmods.inserters.build_entity_footprint_cache(entity)
+    or nil
   if long2 or islong2 then
     if more then
-      gui.add({ type = "checkbox", name = "button26", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button26", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank26", state = false, style = "bob_inserter_blank" })
     end
     if more2 then
-      gui.add({ type = "checkbox", name = "button27", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button27", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank27", state = false, style = "bob_inserter_blank" })
     end
     if more2 then
-      gui.add({ type = "checkbox", name = "button28", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button28", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank28", state = false, style = "bob_inserter_blank" })
     end
-    gui.add({ type = "checkbox", name = "button29", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button29", style, entity)
     if more2 then
-      gui.add({ type = "checkbox", name = "button30", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button30", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank30", state = false, style = "bob_inserter_blank" })
     end
     if more2 then
-      gui.add({ type = "checkbox", name = "button31", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button31", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank31", state = false, style = "bob_inserter_blank" })
     end
     if more then
-      gui.add({ type = "checkbox", name = "button32", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button32", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank32", state = false, style = "bob_inserter_blank" })
     end
@@ -1698,41 +2133,41 @@ function bobmods.inserters.draw_button_grid(gui, position, style, long, more, is
 
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button33", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button33", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank33", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 or long or islong then
     if more and (long or islong) then
-      gui.add({ type = "checkbox", name = "button1", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button1", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank1", state = false, style = "bob_inserter_blank" })
     end
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button2", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button2", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank2", state = false, style = "bob_inserter_blank" })
     end
     if long or islong then
-      gui.add({ type = "checkbox", name = "button3", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button3", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank3", state = false, style = "bob_inserter_blank" })
     end
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button4", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button4", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank4", state = false, style = "bob_inserter_blank" })
     end
     if more and (long or islong) then
-      gui.add({ type = "checkbox", name = "button5", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button5", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank5", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button34", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button34", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank34", state = false, style = "bob_inserter_blank" })
     end
@@ -1740,119 +2175,119 @@ function bobmods.inserters.draw_button_grid(gui, position, style, long, more, is
 
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button35", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button35", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank35", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 or long or islong then
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button6", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button6", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank6", state = false, style = "bob_inserter_blank" })
     end
   end
   if more and (long or long2 or isshort) then
-    gui.add({ type = "checkbox", name = "button7", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button7", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank7", state = false, style = "bob_inserter_blank" })
   end
   if long or long2 or isshort then
-    gui.add({ type = "checkbox", name = "button8", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button8", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank8", state = false, style = "bob_inserter_blank" })
   end
   if more and (long or long2 or isshort) then
-    gui.add({ type = "checkbox", name = "button9", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button9", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank9", state = false, style = "bob_inserter_blank" })
   end
   if long2 or islong2 or long or islong then
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button10", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button10", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank10", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button36", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button36", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank36", state = false, style = "bob_inserter_blank" })
     end
   end
 
   if long2 or islong2 then
-    gui.add({ type = "checkbox", name = "button37", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button37", style, entity)
   end
   if long2 or islong2 or long or islong then
     if long or islong then
-      gui.add({ type = "checkbox", name = "button11", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button11", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank11", state = false, style = "bob_inserter_blank" })
     end
   end
   if long or long2 or isshort then
-    gui.add({ type = "checkbox", name = "button12", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button12", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank12", state = false, style = "bob_inserter_blank" })
   end
   gui.add({ type = "checkbox", name = "middle", state = false, style = "bob_inserter_middle" })
   if long or long2 or isshort then
-    gui.add({ type = "checkbox", name = "button14", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button14", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank14", state = false, style = "bob_inserter_blank" })
   end
   if long2 or islong2 or long or islong then
     if long or islong then
-      gui.add({ type = "checkbox", name = "button15", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button15", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank15", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 then
-    gui.add({ type = "checkbox", name = "button38", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button38", style, entity)
   end
 
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button39", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button39", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank39", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 or long or islong then
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button16", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button16", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank16", state = false, style = "bob_inserter_blank" })
     end
   end
   if more and (long or long2 or isshort) then
-    gui.add({ type = "checkbox", name = "button17", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button17", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank17", state = false, style = "bob_inserter_blank" })
   end
   if long or long2 or isshort then
-    gui.add({ type = "checkbox", name = "button18", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button18", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank18", state = false, style = "bob_inserter_blank" })
   end
   if more and (long or long2 or isshort) then
-    gui.add({ type = "checkbox", name = "button19", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button19", style, entity)
   else
     gui.add({ type = "checkbox", name = "blank19", state = false, style = "bob_inserter_blank" })
   end
   if long2 or islong2 or long or islong then
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button20", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button20", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank20", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button40", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button40", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank40", state = false, style = "bob_inserter_blank" })
     end
@@ -1860,41 +2295,41 @@ function bobmods.inserters.draw_button_grid(gui, position, style, long, more, is
 
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button41", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button41", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank41", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 or long or islong then
     if more and (long or islong) then
-      gui.add({ type = "checkbox", name = "button21", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button21", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank21", state = false, style = "bob_inserter_blank" })
     end
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button22", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button22", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank22", state = false, style = "bob_inserter_blank" })
     end
     if long or islong then
-      gui.add({ type = "checkbox", name = "button23", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button23", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank23", state = false, style = "bob_inserter_blank" })
     end
     if more2 and (long or islong) then
-      gui.add({ type = "checkbox", name = "button24", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button24", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank24", state = false, style = "bob_inserter_blank" })
     end
     if more and (long or islong) then
-      gui.add({ type = "checkbox", name = "button25", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button25", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank25", state = false, style = "bob_inserter_blank" })
     end
   end
   if long2 or islong2 then
     if more2 then
-      gui.add({ type = "checkbox", name = "button42", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button42", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank42", state = false, style = "bob_inserter_blank" })
     end
@@ -1902,47 +2337,61 @@ function bobmods.inserters.draw_button_grid(gui, position, style, long, more, is
 
   if long2 or islong2 then
     if more then
-      gui.add({ type = "checkbox", name = "button43", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button43", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank43", state = false, style = "bob_inserter_blank" })
     end
     if more2 then
-      gui.add({ type = "checkbox", name = "button44", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button44", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank44", state = false, style = "bob_inserter_blank" })
     end
     if more2 then
-      gui.add({ type = "checkbox", name = "button45", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button45", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank45", state = false, style = "bob_inserter_blank" })
     end
-    gui.add({ type = "checkbox", name = "button46", state = false, style = style })
+    bobmods.inserters.add_position_cell(gui, "button46", style, entity)
     if more2 then
-      gui.add({ type = "checkbox", name = "button47", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button47", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank47", state = false, style = "bob_inserter_blank" })
     end
     if more2 then
-      gui.add({ type = "checkbox", name = "button48", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button48", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank48", state = false, style = "bob_inserter_blank" })
     end
     if more then
-      gui.add({ type = "checkbox", name = "button49", state = false, style = style })
+      bobmods.inserters.add_position_cell(gui, "button49", style, entity)
     else
       gui.add({ type = "checkbox", name = "blank49", state = false, style = "bob_inserter_blank" })
     end
   end
 
+  bobmods.inserters._current_footprint_cache = nil
   bobmods.inserters.draw_button_position_check(gui, position)
+end
+
+function bobmods.inserters.get_grid_button(gui, index)
+  local name = "button" .. index
+  if gui[name] then
+    return gui[name]
+  end
+  local cell = gui[name .. "_cell"]
+  if cell and cell.valid and cell[name] then
+    return cell[name]
+  end
+  return nil
 end
 
 function bobmods.inserters.draw_button_position_check(gui, position)
   for i, new_position in ipairs(bobmods.inserters.positions) do
-    if gui["button" .. i] then
-      gui["button" .. i].state = false
+    local button = bobmods.inserters.get_grid_button(gui, i)
+    if button then
+      button.state = false
       if check_position(position, new_position) then
-        gui["button" .. i].state = true
+        button.state = true
       end
     end
   end
@@ -1950,10 +2399,11 @@ end
 
 function bobmods.inserters.draw_button_offset_check(gui, position)
   for i, new_position in ipairs(bobmods.inserters.offset_positions) do
-    if gui["button" .. i] then
-      gui["button" .. i].state = false
+    local button = gui["button" .. i]
+    if button then
+      button.state = false
       if check_position(position, new_position) then
-        gui["button" .. i].state = true
+        button.state = true
       end
     end
   end
@@ -1971,6 +2421,12 @@ function bobmods.inserters.refresh_position_checkboxes(entity, player)
   end
   if storage.bobmods.inserters[player.index].offset then
     bobmods.inserters.draw_button_offset_check(storage.bobmods.inserters[player.index].offset, drop_offset)
+  end
+  if storage.bobmods.inserters[player.index].pickup then
+    bobmods.inserters.refresh_grid_entity_icons(storage.bobmods.inserters[player.index].pickup, entity)
+  end
+  if storage.bobmods.inserters[player.index].drop then
+    bobmods.inserters.refresh_grid_entity_icons(storage.bobmods.inserters[player.index].drop, entity)
   end
 end
 
@@ -1998,7 +2454,8 @@ offset: the index in table bobmods.inserters.offset_positions to define the offs
       tech_unlocked(force, bobmods.inserters.long2_technology),
       tech_unlocked(force, bobmods.inserters.more_technology),
       tech_unlocked(force, bobmods.inserters.more2_technology),
-      tech_unlocked(force, bobmods.inserters.near_technology)
+      tech_unlocked(force, bobmods.inserters.near_technology),
+      data.entity
     )
   end,
 
